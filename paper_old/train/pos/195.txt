@@ -1,0 +1,267 @@
+Learning_NNP Weighted_NNP Sentimental_NNP Terms_NNS for_IN Classification_NNP Abstract_NNP Extracting_VBG sentiment_NN and_CC topic_NN lexicons_NNS is_VBZ im_SYM -_: portant_NN in_IN natural_JJ language_NN processing_NN and_CC opinion_NN mining_NN ._.
+Previous_JJ works_NNS have_VBP been_VBN done_VBN to_TO successfully_RB judge_VB whether_IN a_DT term_NN is_VBZ an_DT emotional_JJ term_NN or_CC not_RB ._.
+However_RB ,_, little_JJ work_NN has_VBZ been_VBN done_VBN in_IN measuring_VBG degrees_NNS of_IN senti_NNS -_: ment_NN for_IN these_DT terms_NNS ._.
+For_IN example_NN ,_, the_DT word_NN excellent_JJ has_VBZ stronger_JJR positive_JJ sentiment_NN than_IN the_DT word_NN good_JJ or_CC okay_JJ ._.
+In_IN this_DT paper_NN ,_, we_PRP dis_SYM -_: cuss_NN how_WRB to_TO model_VB this_DT intricate_JJ sentimental_JJ d_SYM -_: ifference_NN ._.
+A_DT simple_JJ and_CC effective_JJ model_NN is_VBZ pro-_JJ posed_VBD based_VBN on_IN logistic_JJ regression_NN to_TO extrac_VB -_: t_NN emotional_JJ terms_NNS and_CC each_DT term_NN is_VBZ assigned_VBN to_TO a_DT sentiment_NN weight_NN ._.
+These_DT sentimentally_RB weighted_JJ terms_NNS can_MD be_VB used_VBN for_IN sentiment_NN clas_NNS -_: sification_NN tasks_NNS ._.
+The_DT new_JJ model_NN is_VBZ tested_VBN using_VBG uni-gram_NN ,_, bi-gram_NN and_CC mixed-gram_NN language_NN models_NNS on_IN two_CD benchmark_JJ datasets_NNS ._.
+The_DT em_NN -_: pirical_JJ results_NNS show_VBP the_DT effectiveness_NN and_CC effi_SYM -_: ciency_NN of_IN the_DT new_JJ proposed_JJ sentiment_NN model_NN ._.
+1_CD Introduction_NNP Sentiment_NN analysis_NN is_VBZ an_DT important_JJ task_NN in_IN natural_JJ language_NN processing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- for_IN analyzing_VBG people_NNS 's_POS opinions_NNS ,_, attitudes_NNS and_CC emotions_NNS towards_IN certain_JJ ser_NN -_: vices_NNS and_CC products_NNS -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+It_PRP helps_VBZ to_TO survey_VB unstructured_JJ public_JJ opinions_NNS of_IN large_JJ scale_NN like_IN free_JJ discussions_NNS in_IN online_JJ forums_NNS or_CC posts_NNS in_IN so_RB -_: cial_JJ networks_NNS ._.
+When_WRB we_PRP think_VBP of_IN emotive_JJ reviews_NNS or_CC comments_NNS ,_, we_PRP are_VBP inclined_VBN to_TO think_VB of_IN predicates_NNS of_IN personal_JJ taste_NN -LRB-_-LRB- boring_JJ ,_, fun_NN -RRB-_-RRB- ,_, exclamatives_NNS -LRB-_-LRB- awesome_JJ ,_, Li_NNP and_CC Guo_NNP have_VBP contributed_VBN equally_RB to_TO this_DT work_NN and_CC should_MD be_VB considered_VBN as_IN co-first_JJ authors_NNS ._.
+damn_RB -RRB-_-RRB- and_CC other_JJ emotional_JJ words_NNS or_CC terms_NNS that_WDT are_VBP more_RBR or_CC less_RBR contributed_VBN to_TO convey_VB sentimental_JJ infor_NN -_: mation_NN of_IN our_PRP$ opinions_NNS ._.
+Once_IN we_PRP get_VBP knowledge_NN of_IN these_DT dominant_JJ emotional_JJ terms_NNS ,_, we_PRP could_MD judge_VB the_DT sentimental_JJ polarity_NN -LRB-_-LRB- positive_JJ or_CC negative_JJ -RRB-_-RRB- of_IN a_DT given_VBN sentence_NN or_CC document_NN ._.
+Unfortunately_RB ,_, for_IN particular_JJ utterance_NN in_IN a_DT given_VBN context_NN ,_, such_JJ significant_JJ emo_NN -_: tional_JJ terms_NNS are_VBP not_RB always_RB so_RB apparent_JJ ._.
+We_PRP hope_VBP to_TO find_VB a_DT way_NN to_TO automatically_RB extract_VB these_DT emotional_JJ terms_NNS from_IN corpus_NN ._.
+Sentiment_NN classification_NN can_MD be_VB simply_RB considered_VBN as_IN a_DT binary_JJ text_NN classification_NN task_NN ._.
+Most_JJS previous_JJ works_NNS focused_VBD on_IN using_VBG supervised_JJ machine_NN learn_VBP -_: ing_NN methods_NNS based_VBN on_IN the_DT N-gram_JJ language_NN model_NN to_TO do_VB sentiment_NN classification_NN ._.
+However_RB ,_, sentiment_NN weights_NNS of_IN terms_NNS have_VBP not_RB been_VBN obviously_RB consid_SYM -_: ered_VBN in_IN these_DT works_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT method_NN to_TO extract_VB sentiment_NN terms_NNS by_IN assuming_VBG that_IN every_DT distinct_JJ term_NN in_IN the_DT corpus_NN has_VBZ an_DT unique_JJ senti_NN -_: ment_NN weight_NN and_CC the_DT sentiment_NN of_IN a_DT sentence_NN or_CC doc_NN -_: ument_NN is_VBZ determined_VBN by_IN a_DT nonlinear_JJ combination_NN of_IN sentiment_NN weights_NNS ._.
+We_PRP employ_VBP logistic_JJ regression_NN to_TO estimate_VB sentiment_NN weights_NNS of_IN terms_NNS and_CC use_VB these_DT weights_NNS to_TO predict_VB the_DT sentiment_NN of_IN unseen_JJ sentences_NNS or_CC documents_NNS ._.
+N_NNP -_: gram_NN language_NN model_NN ,_, especially_RB uni-gram_JJ and_CC bi-gram_JJ ,_, are_VBP considered_VBN in_IN this_DT research_NN ._.
+For_IN ex_FW -_: ample_JJ ,_, in_IN movie_NN reviews_NNS ,_, we_PRP can_MD often_RB see_VB terms_NNS like_IN worth_JJ watching_VBG ,_, that_IN expresses_VBZ strong_JJ positive_JJ emotion_NN ._.
+Though_IN the_DT word_NN watching_VBG is_VBZ emotionally_RB neutral_JJ ,_, it_PRP will_MD be_VB assigned_VBN to_TO some_DT positive_JJ weights_NNS alone_RB with_IN worth_NN ._.
+Such_JJ large_JJ weight_NN may_MD become_VB troublesome_JJ in_IN sentences_NNS containing_VBG watching_VBG on_IN -_: ly_RB ._.
+In_IN this_DT paper_NN ,_, we_PRP develop_VBP a_DT mixed-gram_NN model_NN by_IN embedding_VBG both_DT uni-gram_NN and_CC bi-gram_NN together_RB ._.
+Therefore_RB ,_, the_DT bi-gram_JJ term_NN worth_JJ watching_VBG will_MD be_VB assigned_VBN with_IN large_JJ positive_JJ weights_NNS ._.
+2_CD Related_VBN Works_NNP Sentiment_NN analysis_NN has_VBZ attracted_VBN great_JJ attention_NN in_IN natural_JJ language_NN processing_NN and_CC text_NN mining_NN -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+Dominant_JJ approaches_NNS in_IN sentimen_NN -_: t_NN classification_NN generally_RB follow_VBP traditional_JJ classifi_NNS -_: cation_NN approaches_NNS -LRB-_-LRB- Xia_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, where_WRB a_DT docu_NN -_: ment_NN is_VBZ regarded_VBN as_IN a_DT bag-of-words_NNS -LRB-_-LRB- BoW_NN -RRB-_-RRB- ,_, mapped_VBD into_IN a_DT feature_NN vector_NN ,_, and_CC then_RB classified_VBN by_IN ma_SYM -_: chine_NN learning_VBG methods_NNS such_JJ as_IN Naive_NNP Bayes_NNP -LRB-_-LRB- NB_NNP -RRB-_-RRB- -LRB-_-LRB- Lewis_NNP ,_, 1998_CD -RRB-_-RRB- ,_, Maximum_NNP Entropy_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- -LRB-_-LRB- Nigam_NNP et_FW al._FW ,_, 1999_CD -RRB-_-RRB- or_CC support_NN vector_NN machines_NNS -LRB-_-LRB- SVM_NNP -RRB-_-RRB- -LRB-_-LRB- Joshi_NNP and_CC Penstein-Rose_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT effectiveness_NN of_IN these_DT machine_NN learning_VBG methods_NNS for_IN sentiment_NN clas_NNS -_: sification_NN is_VBZ evaluated_VBN in_IN -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- Hu_NNP and_CC Liu_NNP ,_, 2004_CD -RRB-_-RRB- proposed_VBD a_DT lexicon-based_JJ al_NN -_: gorithm_NN to_TO explore_VB the_DT sentiment_NN orientation_NN of_IN a_DT sentence_NN ._.
+Their_PRP$ model_NN is_VBZ based_VBN on_IN a_DT sentiment_NN lex_SYM -_: icon_NN created_VBN by_IN boosting_VBG with_IN given_VBN negative_JJ and_CC positive_JJ sentiment_NN word_NN seeds_NNS and_CC the_DT antonyms_NNS and_CC synonyms_NNS relations_NNS in_IN WordNet_NNP ._.
+-LRB-_-LRB- Kim_NNP and_CC Hovy_NNP ,_, 2006_CD -RRB-_-RRB- studied_VBN supervised_JJ learning_VBG methods_NNS like_IN ME_NNP for_IN sentiment_NN classification_NN ._.
+While_IN -LRB-_-LRB- Aue_NNP and_CC Ga_NNP -_: mon_NN ,_, 2005_CD -RRB-_-RRB- used_VBN semi-supervised_JJ learning_NN based_VBN on_IN Expectation_NNP Maximization_NNP -LRB-_-LRB- EM_NNP -RRB-_-RRB- of_IN the_DT NB_NNP classifier_NN to_TO learn_VB from_IN both_DT labeled_VBN and_CC unlabeled_JJ sentences_NNS ._.
+In_IN terms_NNS of_IN representation_NN of_IN documents_NNS ,_, BoW_NN could_MD nicely_RB reduce_VB a_DT piece_NN of_IN text_NN with_IN arbitrary_JJ length_NN to_TO a_DT fixed_VBN length_NN vector_NN ._.
+In_IN recent_JJ years_NNS ,_, by_IN exploiting_VBG the_DT co-occurrence_NN pattern_NN of_IN words_NNS ,_, em_SYM -_: bedding_NN model_NN is_VBZ used_VBN to_TO gain_VB lower-dimensional_JJ ,_, compact_JJ and_CC meaningful_JJ vectors_NNS for_IN words_NNS or_CC docu_NN -_: ments_NNS -LRB-_-LRB- Le_NNP and_CC Mikolov_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+Deep_JJ neural_JJ network_NN approaches_NNS like_IN convolutional_JJ neural_JJ network_NN -LRB-_-LRB- CN_SYM -_: N_NNP -RRB-_-RRB- can_MD also_RB bring_VB significant_JJ improvement_NN to_TO senti_NNS -_: ment_NN classification_NN task_NN -LRB-_-LRB- Kim_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+However_RB ,_, deep_JJ learning_NN -LRB-_-LRB- DL_NNP -RRB-_-RRB- methods_NNS are_VBP always_RB computationally_RB expensive_JJ ._.
+In_IN this_DT paper_NN ,_, we_PRP still_RB focus_VB on_IN BoW_NN and_CC expect_VB to_TO get_VB competitive_JJ results_NNS compared_VBN to_TO non_VB -_: DL_NNP methods_NNS ._.
+With_IN the_DT respect_NN of_IN sentiment_NN weight_NN extraction_NN ,_, some_DT works_NNS have_VBP been_VBN done_VBN include_VBP the_DT following_NN :_: -LRB-_-LRB- Kaji_NNP and_CC Kitsuregawa_NNP ,_, 2007_CD -RRB-_-RRB- did_VBD the_DT work_NN on_IN tack_NN -_: ling_VBG the_DT problem_NN of_IN determining_VBG the_DT semantic_JJ ori_NN -_: entation_NN -LRB-_-LRB- or_CC polarity_NN -RRB-_-RRB- of_IN words_NNS ;_: -LRB-_-LRB- Wiebe_NNP ,_, 2000_CD -RRB-_-RRB- pro-_JJ posed_VBD an_DT approach_NN to_TO find_VB subjective_JJ adjectives_NNS us_PRP -_: ing_VBG the_DT results_NNS of_IN word_NN clustering_VBG according_VBG to_TO their_PRP$ distributional_JJ similarity_NN ;_: -LRB-_-LRB- Qiu_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- proposed_VBD a_DT double_JJ propagation_NN algorithm_NN to_TO expand_VB opinion_NN words_NNS and_CC extract_VB target_NN words_NNS ._.
+There_EX are_VBP also_RB some_DT related_JJ works_NNS in_IN sentiment_NN lexicon_NN extraction_NN :_: -LRB-_-LRB- Jin_NNP and_CC Ho_NNP ,_, 2009_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2010b_JJ -RRB-_-RRB- showed_VBD that_IN supervised_JJ learning_NN methods_NNS can_MD achieve_VB state-of_JJ -_: the-art_JJ results_NNS for_IN lexicon_NN extraction_NN ._.
+In_IN the_DT domain_NN -_: specific_JJ lexicon_NN extraction_NN ,_, -LRB-_-LRB- Park_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- got_VBD significant_JJ improvement_NN by_IN using_VBG active_JJ learning_VBG method_NN ._.
+-LRB-_-LRB- Potts_NNP and_CC Schwarz_NNP ,_, 2010_CD -RRB-_-RRB- used_VBN logistic_JJ re_SYM -_: gression_NN -LRB-_-LRB- LR_NNP -RRB-_-RRB- to_TO get_VB the_DT terms_NNS '_POS weights_NNS correspond_VBP -_: ing_NN to_TO different_JJ ratings_NNS ._.
+-LRB-_-LRB- Pappas_NNP and_CC Belis_NNP ,_, 2014_CD -RRB-_-RRB- fo_SYM -_: cused_VBN on_IN the_DT relevant_JJ weights_NNS of_IN sentences_NNS in_IN a_DT given_VBN document_NN for_IN aspect_NN rating_NN prediction_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP will_MD compare_VB our_PRP$ model_NN to_TO classical_JJ models_NNS in_IN sentiment_NN classification_NN and_CC show_VB the_DT results_NNS of_IN term_NN extraction_NN ._.
+3_CD Polarity_NNP Model_NNP of_IN Sentiment_NN Given_VBN a_DT sentimental_JJ text_NN of_IN being_VBG positive_JJ or_CC nega_JJ -_: tive_JJ ,_, it_PRP is_VBZ easy_JJ to_TO see_VB that_IN the_DT sentiment_NN contributions_NNS of_IN its_PRP$ consisting_VBG terms_NNS are_VBP different_JJ ._.
+Some_DT terms_NNS like_IN excellent_JJ ,_, good_JJ occur_VBP more_RBR often_RB in_IN positive_JJ docu_NN -_: ments_NNS ,_, that_DT implies_VBZ high_JJ sentiment_NN contributions_NNS and_CC should_MD be_VB assigned_VBN to_TO large_JJ sentiment_NN weights_NNS ._.
+For_IN some_DT object_NN nouns_NNS or_CC action_NN verbs_NNS like_IN take_NN ,_, walk_NN ,_, very_RB likely_JJ they_PRP appear_VBP equally_RB in_IN both_DT positive_JJ or_CC negative_JJ documents_NNS ,_, therefore_RB ,_, they_PRP usually_RB carry_VBP lit_VBN -_: tle_NN sentiment_NN ._.
+Such_JJ terms_NNS are_VBP neutral_JJ and_CC should_MD be_VB assigned_VBN with_IN small_JJ sentiment_NN weights_NNS ._.
+In_IN this_DT sim_NN -_: ple_NN Polarity_NNP Model_NNP ,_, we_PRP assume_VBP that_IN the_DT sentiment_NN of_IN a_DT sentence_NN is_VBZ a_DT function_NN of_IN the_DT sentimental_JJ weights_NNS of_IN its_PRP$ consisting_VBG terms_NNS ._.
+A_DT term_NN is_VBZ consisting_VBG of_IN one_CD word_NN in_IN uni-gram_NN model_NN and_CC two_CD words_NNS in_IN bi-gram_NN model_NN ._.
+Different_JJ terms_NNS in_IN a_DT sentence_NN represent_VBP dif_NN -_: ferent_JJ weights_NNS to_TO some_DT degrees_NNS ._.
+For_IN example_NN ,_, given_VBN the_DT following_JJ sentence_NN from_IN a_DT movie_NN review_NN :_: The_DT movie_NN is_VBZ good_JJ ,_, I_PRP really_RB like_IN it_PRP can_MD be_VB divided_VBN into_IN fol_NN -_: lowing_VBG uni-gram_JJ terms_NNS :_: S_NNP =_SYM -LCB-_-LRB- the_DT ,_, movie_NN ,_, is_VBZ ,_, good_JJ ,_, I_PRP ,_, really_RB ,_, like_IN ,_, it_PRP -RCB-_-RRB- or_CC the_DT following_JJ bi-gram_NN terms_NNS :_: S_NNP =_SYM -LCB-_-LRB- the_DT movie_NN ,_, movie_NN is_VBZ ,_, is_VBZ good_JJ ,_, good_JJ I_PRP ,_, I_PRP really_RB ,_, really_RB like_IN ,_, like_IN it_PRP -RCB-_-RRB- For_IN the_DT uni-gram_JJ case_NN ,_, the_DT associated_VBN sentimen_NN -_: tweighttotermti_NNS iswi_FW for1_FW ≤_FW i_FW ≤_FW 8_CD ._.
+Thesen_SYM -_: timent_NN score_NN h_NN of_IN the_DT above_JJ sentence_NN is_VBZ :_: -LCB-_-LRB- xj1_CD ,_, xj2_CD ,_, ..._: ,_, xji_FW ,_, ..._: ,_, xjN_NNP -RCB-_-RRB- denotes_VBZ the_DT jth_NN docu_NN -_: ment_NN 's_POS feature_NN vector_NN where_WRB xji_FW represents_VBZ the_DT ith_NN term_NN 's_POS feature_NN value_NN in_IN the_DT jth_NN document_NN ._.
+We_PRP can_MD initialize_VB w_NN randomly_RB and_CC calculate_VB sentiment_NN score_NN by_IN using_VBG logistic_JJ function_NN :_: 1_CD hj_NN =_SYM 1_CD +_CD exp_NN -LRB-_-LRB- −_FW wTxj_FW -RRB-_-RRB- ;_: 1_CD ≤_CD j_NN ≤_CD M_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- where_WRB M_NNP is_VBZ the_DT total_JJ number_NN of_IN documents_NNS in_IN the_DT training_NN corpus_NN ._.
+In_IN order_NN to_TO minimize_VB the_DT squared_VBN error_NN :_: -LRB-_-LRB- ∑_SYM 8_CD -RRB-_-RRB- h_VBP =_SYM f_SYM wixi_FW i_FW =_SYM 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- where_WRB xi_FW is_VBZ the_DT feature_NN value_NN of_IN a_DT given_VBN term_NN ti_NNS ._.
+It_PRP could_MD be_VB the_DT frequency_NN ,_, binary_JJ value_NN -LRB-_-LRB- appears_VBZ in_IN the_DT particular_JJ document_NN or_CC not_RB -RRB-_-RRB- or_CC the_DT TF-IDF_NNP value_NN of_IN the_DT term_NN ._.
+The_DT TF-IDF_NNP value_NN for_IN a_DT term_NN is_VBZ defined_VBN by_IN :_: nij_JJ M_NNP xi_FW =_SYM tfi_FW ∗_FW idfi_FW =_SYM ∑_FW n_FW log_VB |_JJ j_NN :_: t_SYM ∈_FW d_LS |_FW -LRB-_-LRB- 2_LS -RRB-_-RRB- kkj_FW ij_FW where_WRB nij_NN is_VBZ the_DT number_NN of_IN appearance_NN of_IN term_NN ti_NNS in_IN document_NN dj_NN and_CC M_NNP is_VBZ the_DT number_NN of_IN documents_NNS in_IN training_NN corpus_NN D_NNP =_SYM -LCB-_-LRB- d1_CD ,_, ..._: ,_, dM_NNP -RCB-_-RRB- ._.
+Therefore_RB ,_, Eq_NNP ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- can_MD be_VB written_VBN in_IN general_JJ case_NN as_IN the_DT following_NN :_: h_VB =_SYM f_LS -LRB-_-LRB- wT_NNP x_LS -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- Moreover_RB ,_, we_PRP define_VBP the_DT sentiment_NN polarity_NN of_IN a_DT term_NN xi_NN according_VBG to_TO its_PRP$ sentiment_NN weight_NN wi_NN ._.
+ti_FW is_VBZ a_DT positive_JJ term_NN iff_NN wi_FW >>_FW 0_CD ;_: ti_FW is_VBZ a_DT negative_JJ term_NN iff_NN wi_FW <<_FW 0_CD ;_: whenwi_FW ≈_FW 0_CD ,_, itmeansti_FW isaneutralterm_FW which_WDT carries_VBZ little_JJ or_CC no_RB sentimental_JJ information_NN at_IN all_DT ._.
+Such_JJ neutral_JJ terms_NNS are_VBP very_RB common_JJ in_IN natural_JJ language_NN ,_, for_IN example_NN ,_, nouns_NNS like_IN car_NN ,_, house_NN ,_, verbs_NNS like_IN jump_NN ,_, move_NN but_CC not_RB the_DT verbs_NNS like_IN hate_NN ,_, like_IN and_CC enjoy_VB ._.
+It_PRP is_VBZ not_RB easy_JJ to_TO set_VB thresholds_NNS among_IN posi_NNS -_: tive_JJ ,_, neutral_JJ and_CC negative_JJ ,_, because_IN that_DT is_VBZ quite_RB data_NNS dependent_JJ ._.
+We_PRP will_MD test_VB thresholding_NN based_VBN on_IN senti_NNS -_: ment_NN weights_NNS in_IN Section_NN 4_CD ._.
+Function_NN f_SYM -LRB-_-LRB- ·_NN -RRB-_-RRB- is_VBZ a_DT nonlin_NN -_: ear_NN function_NN to_TO smooth_VB the_DT linear_JJ combination_NN of_IN the_DT sentimental_JJ weights_NNS ._.
+We_PRP can_MD use_VB logistic_JJ function_NN or_CC neural_JJ networks_NNS ._.
+3.1_CD Sentiment_NN Weight_NNP Learning_NNP In_IN this_DT section_NN ,_, we_PRP are_VBP going_VBG to_TO use_VB logistic_JJ regres_NNS -_: sion_NN -LRB-_-LRB- LR_NNP -RRB-_-RRB- and_CC Gradient_NNP Descent_NNP algorithm_NN -LRB-_-LRB- GD_VBN -RRB-_-RRB- to_TO learn_VB the_DT sentiment_NN weight_NN based_VBN on_IN given_VBN training_NN data_NNS ._.
+We_PRP use_VBP w_JJ =_SYM -LCB-_-LRB- w1_CD ,_, w2_CD ,_, ..._: ,_, wN_NNP -RCB-_-RRB- to_TO represen_VB -_: t_IN the_DT weight_NN vector_NN where_WRB wi_NNS :_: i_FW ∈_FW -LCB-_-LRB- 1,2_CD ,_, ..._: ,_, N_NNP -RCB-_-RRB- is_VBZ the_DT sentimental_JJ weight_NN of_IN term_NN ti_NNS ,_, where_WRB T_NNP =_SYM -LCB-_-LRB- t1_CD ,_, t2_CD ,_, ..._: ,_, tN_NNP -RCB-_-RRB- is_VBZ a_DT set_NN of_IN terms_NNS in_IN a_DT corpus_NN based_VBN on_IN uni-gram_NN or_CC bi-gram_NN ._.
+We_PRP use_VBP y_SYM ∈_FW -LCB-_-LRB- 0_CD ,_, 1_CD -RCB-_-RRB- to_TO rep_NN -_: resent_VBP the_DT document_NN 's_POS sentiment_NN label_NN -LRB-_-LRB- 0_CD for_IN nega_JJ -_: tive_JJ and_CC 1_CD for_IN positive_JJ -RRB-_-RRB- ,_, and_CC h_NN to_TO represent_VB the_DT sen_NN -_: timent_NN score_NN of_IN the_DT given_VBN document_NN ._.
+Vector_NNP xj_NNP =_SYM 1_CD ∑_CD M_NNP 2_CD j_NN =_SYM 1_CD -LRB-_-LRB- hj_NN −_CD yj_NN -RRB-_-RRB- 2_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- E_NNP =_SYM we_PRP can_MD update_VB w_NN given_VBN hi_NNS ,_, yi_NNS and_CC xi_NNS using_VBG the_DT Gra_NNP -_: dient_NN Descent_NN algorithm_NN :_: w_VB :_: =_SYM w_SYM −_SYM α_FW -LRB-_-LRB- hj_SYM −_SYM yj_FW -RRB-_-RRB- xj_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- where_WRB α_NN is_VBZ the_DT learning_NN rate_NN ._.
+We_PRP iterate_VBP the_DT process_NN until_IN convergence_NN and_CC use_VB the_DT final_JJ w_NN to_TO predict_VB the_DT new_JJ unseen_JJ document_NN 's_POS score_NN hˆ_NN by_IN Eq_NNP ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+We_PRP then_RB can_MD predict_VB the_DT sentiment_NN label_NN by_IN :_: -LCB-_-LRB- ˆ_FW y_FW =_SYM 0_CD if_IN h_NN <_CD 0.5_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- 1_CD otherwise_RB In_IN addition_NN ,_, the_DT computational_JJ complexity_NN of_IN LR_NNP is_VBZ O_NNP -LRB-_-LRB- |_JJ V_NNP |_NN -RRB-_-RRB- ,_, where_WRB |_JJ V_NNP |_NN is_VBZ the_DT size_NN of_IN vocabulary_NN ._.
+3.2_CD Mixed-gram_NN Model_NNP In_IN this_DT section_NN ,_, we_PRP will_MD discuss_VB some_DT details_NNS of_IN the_DT sentiment_NN term_NN extraction_NN based_VBN on_IN the_DT N-gram_NNP model_NN ._.
+Previous_JJ work_NN shows_VBZ that_IN bi-gram_NN is_VBZ generally_RB better_JJR than_IN uni-gram_NN ,_, since_IN bi-gram_NN has_VBZ more_JJR semantic_JJ information_NN of_IN word_NN order_NN or_CC word_NN position_NN -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+As_IN we_PRP have_VBP seen_VBN before_IN ,_, terms_NNS like_IN good_JJ movie_NN or_CC bad_JJ script_NN often_RB appear_VBP in_IN pairs_NNS in_IN reviews_NNS or_CC comments_NNS ._.
+In_IN uni-gram_JJ model_NN ,_, since_IN the_DT word_NN movie_NN appears_VBZ together_RB with_IN good_JJ in_IN positive_JJ examples_NNS ,_, it_PRP is_VBZ likely_JJ to_TO be_VB assigned_VBN sentimentally_RB positive_JJ value_NN ._.
+The_DT neutral_JJ word_NN movie_NN may_MD become_VB problematic_JJ in_IN classification_NN for_IN its_PRP$ wrongly_RB assigned_VBN positive_JJ sentiment_NN value_NN ._.
+However_RB ,_, if_IN we_PRP consider_VBP the_DT same_JJ example_NN in_IN bi-gram_NN model_NN ,_, the_DT positive_JJ sentiment_NN value_NN will_MD be_VB assigned_VBN to_TO good_JJ movie_NN ._.
+The_DT word_NN comes_VBZ after_IN moive_NN could_MD be_VB very_RB random_JJ and_CC it_PRP Top_JJ 10_CD Positive_JJ Terms_NNS Excellent_JJ Perfect_NNP Wonderful_JJ Amazing_JJ Great_JJ Favourite_NNP Best_JJS Brilliant_JJ Highly_NNP Superb_NNP 0_CD 50 100 150_CD Sentiment_NN Weight_NNP wo_MD n't_RB be_VB biased_VBN on_IN certain_JJ special_JJ bi-gram_NN terms_NNS starting_VBG with_IN movie_NN ._.
+Ideally_RB ,_, weights_NNS should_MD be_VB assigned_VBN to_TO sentimentally_RB segmented_JJ terms_NNS ._.
+For_IN example_NN ,_, This_DT is_VBZ a_DT good_JJ movie_NN ,_, actors_NNS are_VBP excellent_JJ !_.
+should_MD be_VB segmented_JJ to_TO :_: This_DT |_NN is_VBZ a_DT |_RB good_JJ movie_NN |_NN actors_NNS |_VBP are_VBP |_JJ excellent_JJ |_NN !_.
+This_DT may_MD bring_VB a_DT new_JJ problem_NN of_IN sentimental_JJ segmentation_NN and_CC it_PRP is_VBZ beyond_IN the_DT scope_NN of_IN this_DT paper_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP simply_RB use_VBP mixed-gram_JJ model_NN that_WDT is_VBZ a_DT mixture_NN of_IN both_DT uni-gram_NN and_CC bi-gram_NN ._.
+Then_RB ,_, the_DT mixed-gram_JJ terms_NNS of_IN the_DT above_JJ example_NN are_VBP the_DT following_NN :_: This_DT |_NN is_VBZ |_CD a_DT |_RB good_JJ |_NN movie_NN |_NN actors_NNS |_VBP are_VBP |_JJ excellent_JJ |_NN This_DT is_VBZ |_CD is_VBZ a_DT |_NN a_DT good_JJ |_NN good_JJ movie_NN |_NN movie_NN actors_NNS |_VBP actors_NNS are_VBP |_CD are_VBP excellent_JJ |_NN !_.
+4_CD Experimental_JJ Studies_NNP 4.1_CD Datasets_NNPS We_PRP choose_VBP two_CD benchmark_JJ datasets_NNS for_IN sentimen_NNS -_: t_NN classification_NN in_IN our_PRP$ experiments_NNS ._.
+The_DT first_JJ is_VBZ the_DT IMDB_NNP data_NNS of_IN online_JJ movie_NN reviews_NNS -LRB-_-LRB- Maas_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, it_PRP contains_VBZ 25000_CD reviews_NNS -LRB-_-LRB- 12500_CD positive_JJ and_CC 12500_CD negative_JJ -RRB-_-RRB- for_IN training_NN and_CC 25000_CD -LRB-_-LRB- 12500_CD posi_SYM -_: tive_JJ and_CC 12500_CD negative_JJ -RRB-_-RRB- for_IN test_NN ._.
+The_DT second_JJ dataset_NN is_VBZ the_DT Product_NNP Review_NNP including_VBG DVD_NNP ,_, electronics_NNS ,_, books_NNS and_CC kitchens_NNS ;_: each_DT of_IN them_PRP contains_VBZ 1000_CD pos_SYM -_: itive_JJ and_CC 1000_CD negative_JJ reviews_NNS ._.
+In_IN the_DT following_VBG ex_FW -_: periments_NNS ,_, for_IN the_DT fair_JJ comparison_NN to_TO other_JJ models_NNS ,_, we_PRP do_VBP not_RB use_VB any_DT external_JJ resources_NNS like_IN sentiment_NN lexicons_NNS or_CC WordNet_NNP ._.
+In_IN addition_NN ,_, stop_VB words_NNS are_VBP not_RB removed_VBN during_IN the_DT text_NN preprocessing_NN period_NN ._.
+4.2_CD Sentiment_NN Term_NNP Extraction_NNP By_IN using_VBG the_DT logistic_JJ regression_NN discussed_VBN above_IN ,_, we_PRP first_RB test_VBP the_DT model_NN on_IN the_DT IMDB_NNP dataset_NN ._.
+Sentiment_NN weight_NN for_IN each_DT term_NN is_VBZ estimated_VBN based_VBN on_IN uni-gram_NN and_CC mixed-gram_NN ,_, respectively_RB ._.
+Top_JJ 20_CD sentiment_NN terms_NNS with_IN associated_VBN weights_NNS based_VBN on_IN the_DT uni-gram_NN model_NN are_VBP listed_VBN in_IN Table_NNP 1_CD ._.
+And_CC top_JJ 20_CD sentiment_NN terms_NNS of_IN mixed-gram_NN are_VBP list_NN -_: ed_VBN in_IN Table_NNP 2_CD ._.
+The_DT associated_VBN weights_NNS of_IN top_JJ 10_CD pos_SYM -_: itive_NN ,_, negative_JJ and_CC neutral_JJ terms_NNS are_VBP shown_VBN in_IN Fig_NNP -_: ure_NN 1_CD to_TO 3_CD ._.
+Weights_NNS for_IN positives_NNS terms_NNS are_VBP positive_JJ values_NNS and_CC weights_NNS for_IN negative_JJ terms_NNS are_VBP negative_JJ Figure_NN 1_CD :_: Top_JJ 10_CD positive_JJ terms_NNS in_IN the_DT IMDB_NNP corpus_NN ._.
+ex_FW -_: cellent_NN is_VBZ the_DT strongest_JJS positive_JJ term_NN ._.
+Top_JJ 10_CD Negative_JJ Terms_NNS Unfortunately_RB Bad_JJ Worse_JJR Dull_NNP Terrible_NNP Poor_NNP Boring_NNP Waste_NNP Awful_NNP Worst_RBS −_SYM 200_CD −_CD 150_CD −_NN 100_CD −_CD 50_CD 0_CD Sentiment_NN Weight_NNP Figure_NNP 2_CD :_: Top_JJ 10_CD negative_JJ terms_NNS in_IN the_DT IMDB_NNP corpus_NN ._.
+worst_JJS is_VBZ the_DT strongest_JJS negative_JJ term_NN ._.
+Top_JJ 10_CD Neutral_NNP Terms_NNS Shifting_VBG Angsty_JJ Realisation_NNP Cory_NNP Tactic_NNP Wallows_NNP Ungainly_NNP Virginity_NNP Minutiae_NNP Scuttle_NNP −_NN 1_CD −_CD 0.5_CD 0_CD 0.5_CD 1_CD Sentiment_NN Weight_NNP −_CD 3_CD x_SYM 10_CD Figure_NN 3_CD :_: Top_JJ 10_CD neutral_JJ terms_NNS in_IN the_DT IMDB_NNP corpus_NN ._.
+12000_CD 10000_CD 8000_CD 6000_CD 4000_CD 2000_CD 0_CD Mixed_NNP −_CD gram_NN Sentiment_NN Weight_NNP Distribution_NN -LSB-_NNP −_CD 50_CD ,_, −_CD 5_CD -RSB-_NNP -LSB-_NNP −_NN 5_CD ,_, −_CD 1_CD -RSB-_NNP -LSB-_NNP −_CD 1.0_CD ,_, −_CD 0.5_CD -RSB-_NNP -LSB-_NNP −_CD 0.5_CD ,_, −_CD 0.2_CD -RSB-_NNP -LSB-_NNP −_CD 0.2,0_CD -RSB-_NNP -LSB-_NNP 0,0.2_CD -RSB-_NNP -LSB-_NNP 0.2,0.5_CD -RSB-_NNP -LSB-_NNP 0.5,1.0_CD -RSB-_NNP -LSB-_NNP 1,5_CD -RSB-_NNP -LSB-_NNP 5,50_CD -RSB-_NNP Sentiment_NN Weight_NNP Intervals_NNP Table_NNP 1_CD :_: Top_JJ 20_CD sentiment_NN terms_NNS based_VBN on_IN the_DT uni-gram_NN model_NN ._.
+Polarity_NN Sentiment_NN Terms_NNS -LRB-_-LRB- Uni-gram_JJ -RRB-_-RRB- Positive_JJ excellent_JJ ,_, perfect_JJ ,_, wonderful_JJ ,_, amazing_JJ great_JJ ,_, favourite_NN ,_, best_RB ,_, brilliant_JJ highly_RB ,_, superb_JJ ,_, today_NN ,_, enjoyed_VBD loved_VBN ,_, fun_NN ,_, bit_NN ,_, enjoyable_JJ beautiful_JJ ,_, fantastic_JJ ,_, job_NN ,_, definitely_RB Negative_JJ worst_JJS ,_, awful_JJ ,_, waste_NN ,_, boring_VBG poor_JJ ,_, terrible_JJ ,_, dull_JJ ,_, worse_JJR bad_JJ ,_, unfortunately_RB ,_, annoying_JJ ,_, horrible_JJ poorly_RB ,_, nothing_NN ,_, stupid_JJ ,_, script_NN ridiculous_JJ ,_, lame_JJ ,_, oh_UH ,_, disappointing_JJ Table_NNP 2_CD :_: Top_JJ 20_CD sentiment_NN terms_NNS based_VBN on_IN the_DT mixed_JJ -_: gram_NN model_NN ._.
+Figure_NN 4_CD :_: Weight_NNP distribution_NN of_IN mixed-gram_NN on_IN the_DT IMD_NNP -_: B_NNP dataset_NN ._.
+Figure_NN 5_CD :_: Emotional_JJ word_NN clouds_NNS of_IN positive_JJ and_CC negative_JJ reviews_NNS from_IN the_DT IMDB_NNP dataset_NN ._.
+signing_VBG the_DT emotional_JJ cloud_NN ,_, the_DT fontsize_NN of_IN a_DT term_NN in_IN emotional_JJ word-cloud_NN is_VBZ proportional_JJ to_TO its_PRP$ senti_NNS -_: ment_NN weight_NN ._.
+For_IN example_NN ,_, in_IN Figure_NN 5_CD ,_, we_PRP can_MD see_VB that_IN love_NN is_VBZ strongly_RB positive_JJ and_CC in_IN this_DT review_NN it_PRP has_VBZ a_DT higher_JJR feature_NN value_NN than_IN excellent_JJ so_IN we_PRP put_VBP love_NN in_IN the_DT center_NN of_IN word-cloud_NN and_CC select_VB the_DT biggest_JJS fontsize_NN for_IN it_PRP ._.
+Polarity_NN Sentiment_NN Terms_NNS -LRB-_-LRB- Mixed-gram_NN -RRB-_-RRB- Positive_JJ great_JJ ,_, the_DT best_JJS ,_, excellent_JJ ,_, perfect_JJ wonderful_JJ ,_, amazing_JJ ,_, a_DT bit_NN ,_, a_DT great_JJ well_RB worth_JJ ,_, is_VBZ a_DT ,_, a_DT must_MD ,_, fun_NN my_PRP$ favorite_JJ ,_, today_NN ,_, very_RB good_JJ ,_, brilliant_JJ definitely_RB worth_JJ ,_, is_VBZ great_JJ ,_, very_RB well_RB ,_, superb_JJ Negative_JJ the_DT worst_JJS ,_, bad_JJ ,_, worst_JJS ,_, awful_JJ boring_NN ,_, poor_JJ ,_, no_DT ,_, terrible_JJ waste_NN ,_, nothing_NN ,_, waste_NN of_IN ,_, at_IN all_DT worse_JJR ,_, not_RB even_RB ,_, dull_JJ ,_, horrible_JJ poorly_RB ,_, stupid_JJ ,_, annoying_JJ ,_, lame_JJ values_NNS ._.
+Weights_NNS for_IN neutral_JJ terms_NNS are_VBP close_JJ to_TO ze_VB -_: ro_NN ._.
+For_IN 10_CD most_RBS neutral_JJ terms_NNS ,_, the_DT weight_NN values_NNS are_VBP within_IN -LSB-_NNP −_CD 0.001_CD ,_, 0.001_CD -RSB-_NN ._.
+The_DT learned_VBN term_NN weights_NNS have_VBP a_DT big_JJ variance_NN ,_, which_WDT indicates_VBZ that_IN a_DT small_JJ set_NN of_IN terms_NNS carrying_VBG strong_JJ sentiment_NN than_IN other_JJ terms_NNS ._.
+The_DT weight_NN distribution_NN of_IN mixed-gram_NN can_MD be_VB seen_VBN from_IN Figure_NN 4_CD ._.
+Most_JJS weights_NNS are_VBP within_IN the_DT range_NN of_IN -LSB-_NNP −_CD 5_CD ,_, 5_CD -RSB-_NN ._.
+On_IN -_: ly_RB a_DT small_JJ number_NN of_IN terms_NNS are_VBP with_IN strong_JJ sentiment_NN weights_NNS and_CC dominant_JJ in_IN sentiment_NN analysis_NN such_JJ as_IN great_JJ ,_, excellent_JJ ,_, bad_JJ ,_, worst_JJS ._.
+Furthermore_RB ,_, sentiment_NN weights_NNS can_MD help_VB to_TO draw_VB emotional_JJ word_NN clouds_NNS of_IN positives_NNS reviews_NNS and_CC negative_JJ reviews_NNS ._.
+The_DT color_NN of_IN term_NN shows_VBZ its_PRP$ sentiment_NN ;_: the_DT deeper_JJR the_DT color_NN is_VBZ ,_, the_DT stronger_JJR sentiment_NN the_DT term_NN has_VBZ ._.
+We_PRP use_VBP cold_JJ colors_NNS -LRB-_-LRB- blue_JJ ,_, cyan_JJ -RRB-_-RRB- to_TO represent_VB negativity_NN and_CC warm_JJ colors_NNS -LRB-_-LRB- red_JJ ,_, yellow_JJ and_CC orange_NN -RRB-_-RRB- to_TO represent_VB positivity_NN ._.
+Two_CD sample_NN emotional_JJ clouds_NNS for_IN IMDB_NNP positive_JJ reviews_NNS and_CC negative_JJ reviews_NNS are_VBP shown_VBN in_IN Figure_NN 5_CD ._.
+In_IN de_FW -_: Length_NNP of_IN Intervals_NNPS Table_NNP 3_CD :_: Given_VBN different_JJ percentages_NNS of_IN terms_NNS with_IN high_JJ -_: est_NN TF-IDF_NN values_NNS based_VBN on_IN uni-gram_NN ,_, classification_NN re_SYM -_: sults_NNS on_IN the_DT IMDB_NNP dataset_NN show_NN that_IN some_DT important_JJ terms_NNS contribute_VBP much_RB to_TO the_DT sentimental_JJ polarity_NN ._.
+Table_NNP 5_CD :_: Influence_NN of_IN types_NNS of_IN features_NNS on_IN the_DT IMDB_NNP dataset_NN ._.
+N-gram_NNP Model_NNP Feature_NNP Type_NNP Test_NNP Error_NNP Uni-gram_NNP Uni-gram_NNP Uni-gram_NNP TF-IDF_NNP TF_NNP Binary_NNP 11.19_CD %_NN 12.25_CD %_NN 14.61_CD %_NN Bi-gram_NN Bi-gram_NN Bi-gram_NN TF-IDF_NNP TF_NNP Binary_NNP 11.24_CD %_NN 12.35_CD %_NN 17.36_CD %_NN Mixed-gram_JJ Mixed-gram_NN Mixed-gram_NN TF-IDF_NNP TF_NNP Binary_NNP 9.70_CD %_NN 10.88_CD %_NN 14.51_CD %_NN Highest_NNP TF-IDF_NNP Terms_NNS Percentage_NN -LRB-_-LRB- %_NN -RRB-_-RRB- Training_VBG Error_NN Test_NN Error_NN 100_CD %_NN 90_CD %_NN 80_CD %_NN 50_CD %_NN 20_CD %_NN 4.26_CD %_NN 6.36_CD %_NN 6.37_CD %_NN 6.56_CD %_NN 9.17_CD %_NN 11.19_CD %_NN 11.26_CD %_NN 11.34_CD %_NN 13.13_CD %_NN 23.40_CD %_NN Table_NNP 4_CD :_: Influence_NN of_IN truncating_VBG low-weight_JJ terms_NNS in_IN d_SYM -_: ifferent_JJ percentages_NNS base_NN on_IN mixed-gram_NN on_IN the_DT IMDB_NNP dataset_NN ._.
+4.3_CD Truncating_VBG based_VBN on_IN Term_NNP Feature_NNP and_CC Sentiment_NN Weight_NNP In_IN this_DT experiment_NN ,_, we_PRP conduct_VBP experiments_NNS by_IN deleting_VBG some_DT terms_NNS with_IN low_JJ feature_NN values_NNS or_CC sen_SYM -_: timent_NN weights_NNS to_TO check_VB the_DT contributions_NNS of_IN impor_NN -_: tant_JJ terms_NNS to_TO the_DT sentiment_NN of_IN a_DT sentence_NN or_CC docu_NN -_: ment_NN ._.
+After_IN training_NN ,_, terms_NNS are_VBP sorted_VBN by_IN TF-IDF_NN values_NNS and_CC different_JJ percentages_NNS of_IN terms_NNS with_IN high_JJ -_: est_NN TF-IDF_NN values_NNS are_VBP tested_VBN for_IN sentiment_NN classifica_NN -_: tion_NN ._.
+Training_NN and_CC test_NN accuracy_NN are_VBP shown_VBN in_IN Table_NNP 3_CD ._.
+As_IN we_PRP can_MD see_VB from_IN the_DT results_NNS ,_, after_IN truncating_VBG 20_CD %_NN unimportant_JJ words_NNS in_IN terms_NNS of_IN TF-IDF_NN values_NNS ,_, the_DT error_NN rate_NN increases_VBZ only_RB slightly_RB from_IN 11.19_CD %_NN to_TO 11.34_CD %_NN ._.
+Even_RB truncating_VBG 50_CD %_NN of_IN unimportant_JJ terms_NNS ,_, the_DT accuracy_NN can_MD still_RB remains_VBZ around_IN 13.13_CD %_NN ._.
+The_DT results_NNS demonstrate_VBP the_DT contribution_NN of_IN impor_NN -_: tant_JJ terms_NNS to_TO the_DT sentimental_JJ polarity_NN ._.
+This_DT agrees_VBZ with_IN our_PRP$ common_JJ sense_NN that_WDT only_RB a_DT small_JJ percentage_NN of_IN important_JJ words_NNS decide_VBP a_DT sentence_NN or_CC document_NN of_IN being_VBG positive_JJ or_CC negative_JJ ._.
+Most_JJS of_IN words_NNS carries_VBZ little_JJ or_CC no_RB sentimental_JJ information_NN at_IN all_DT ._.
+Table_NNP 4_CD gives_VBZ the_DT error_NN rate_NN of_IN classification_NN by_IN deleting_VBG neutral_JJ terms_NNS ._.
+We_PRP can_MD see_VB from_IN the_DT table_NN ,_, it_PRP shows_VBZ that_IN a_DT big_JJ percentage_NN of_IN neutral_JJ words_NNS have_VBP not_RB contributed_VBN much_RB to_TO the_DT sentiment_NN of_IN a_DT documen_NN -_: t._IN Even_RB we_PRP only_RB keep_VBP 10_CD %_NN of_IN the_DT highly_RB weighted_JJ terms_NNS ,_, the_DT error_NN rate_NN is_VBZ 13.88_CD %_NN ,_, only_RB 4.17_CD %_NN worse_JJR comparing_VBG to_TO using_VBG all_PDT the_DT terms_NNS ._.
+100_CD %_NN is_VBZ an_DT ex_FW -_: treme_NN case_NN that_IN we_PRP can_MD only_RB make_VB random_JJ guesses_NNS ._.
+4.4_CD N-gram_NNP Model_NNP for_IN Sentiment_NN Classification_NN In_IN this_DT section_NN ,_, we_PRP test_VBP the_DT performance_NN of_IN vari_FW -_: ous_JJ N_NNP -_: gram_NN models_NNS -LRB-_-LRB- uni-gram_NN ,_, bi-gram_NN and_CC mixed_JJ -_: gram_NN -RRB-_-RRB- with_IN different_JJ types_NNS of_IN feature_NN values_NNS include_VBP TF-IDF_NNP ,_, TF_NNP only_RB and_CC Binary_NNP ._.
+The_DT experimental_JJ re_NN -_: sults_NNS on_IN the_DT IMDB_NNP dataset_NN are_VBP listed_VBN in_IN Table_NNP 5_CD ._.
+As_IN we_PRP can_MD see_VB from_IN the_DT results_NNS ,_, TF-IDF_NNP feature_NN outper_NN -_: forms_NNS other_JJ two_CD types_NNS of_IN feature_NN in_IN all_DT N_NNP -_: gram_NN mod_NN -_: els_NNS ._.
+And_CC mixed-gram_NN performs_VBZ best_JJS among_IN these_DT models_NNS and_CC achieves_VBZ 9.70_CD %_NN in_IN test_NN accuracy_NN ._.
+Many_JJ researchers_NNS have_VBP reported_VBN their_PRP$ results_NNS on_IN the_DT IMDB_NNP dataset_NN for_IN fair_JJ comparisons_NNS ._.
+In_IN partic_JJ -_: ular_JJ ,_, one_CD of_IN the_DT most_RBS significant_JJ improvement_NN re_SYM -_: cently_NN was_VBD the_DT work_NN of_IN -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- in_IN which_WDT they_PRP found_VBD that_IN bigram_NN features_NNS works_VBZ the_DT best_JJS and_CC yields_VBZ a_DT considerable_JJ improvement_NN of_IN 2_CD %_NN in_IN error_NN rate_NN ._.
+Another_DT important_JJ contribution_NN is_VBZ -LRB-_-LRB- Dahl_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- in_IN which_WDT they_PRP combine_VBP a_DT Restricted_NNP Boltzmann_NNP Machines_NNP model_NN with_IN BoW_NN ._.
+The_DT best_JJS re_SYM -_: sult_NN so_RB far_RB was_VBD reported_VBN by_IN -LRB-_-LRB- Le_NNP and_CC Mikolov_NNP ,_, 2014_CD -RRB-_-RRB- in_IN which_WDT deep_JJ learning_NN was_VBD used_VBN and_CC it_PRP involves_VBZ a_DT big_JJ computing_NN resources_NNS ._.
+The_DT method_NN we_PRP proposed_VBD -LRB-_-LRB- LR_NNP +_NNP mixed-gram_NN -RRB-_-RRB- is_VBZ the_DT simplest_JJS one_NN and_CC with_IN least_JJS computational_JJ time_NN ._.
+By_IN truncating_VBG about_IN 5_CD %_NN low_JJ -_: weight_NN terms_NNS and_CC with_IN learning_VBG rate_NN α_FW =_SYM 0.01_CD ,_, the_DT Percentage_NN Error_NN Percentage_NN Error_NN 10_CD %_NN 20_CD %_NN 30_CD %_NN 40_CD %_NN 50_CD %_NN 9.71_CD %_NN 9.76_CD %_NN 9.78_CD %_NN 9.83_CD %_NN 9.97_CD %_NN 60_CD %_NN 70_CD %_NN 80_CD %_NN 90_CD %_NN 100_CD %_NN 10.35_CD %_NN 10.77_CD %_NN 11.72_CD %_NN 13.88_CD %_NN 50.00_CD %_NN Influence_NN given_VBN Different_NNP Truncating_NNP Percentage_NN 0.9_CD 0.85_CD 0.8_CD 0.75_CD 0.7_CD 0.65_CD 0.6_CD 0.55_CD 0.5_CD 0_CD 0.1_CD 0.2_CD 0.3_CD 0.4_CD 0.5_CD 0.6_CD 0.7_CD 0.8_CD 0.9_CD 1_CD Truncating_VBG Percentage_NN books_NNS dvd_VBD electronics_NNS kitchen_NN Table_NNP 6_CD :_: Performance_NNP comparison_NN of_IN LR_NNP +_NNP mixed-gram_NN to_TO other_JJ approaches_NNS on_IN the_DT IMDB_NNP dataset_NN ._.
+Our_PRP$ model_NN ranks_VBZ the_DT 3rd_CD in_IN performance_NN ,_, but_CC it_PRP is_VBZ with_IN least_JJS model_NN com_NN -_: plexity_NN and_CC computational_JJ time_NN ._.
+Sentiment_NN Classification_NN Model_NNP Error_NNP BoW_NNP -LRB-_-LRB- bnc_JJ -RRB-_-RRB- -LRB-_-LRB- Maas_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- LDA_NNP -LRB-_-LRB- Maas_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- Full_NNP +_NNP Unlabeled_NNP +_VBD BoW_NNP -LRB-_-LRB- Maas_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- 12.20_CD %_NN 32.58_CD %_NN 11.11_CD %_NN WRRBM_NNP -LRB-_-LRB- Dahl_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- WRRBM+B_NNP oW_NNP -LRB-_-LRB- bnc_JJ -RRB-_-RRB- -LRB-_-LRB- Dahl_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- 12.58_CD %_NN 10.77_CD %_NN MNB-uni_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- MNB-bi_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- SVM-uni_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- SVM-bi_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- NBSVM-uni_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- NBSVM-bi_JJ -LRB-_-LRB- Wang_NNP and_CC Manning_NNP ,_, 2012_CD -RRB-_-RRB- PV+U_NN nlabled_VBN -LRB-_-LRB- Le_NNP and_CC Mikolov_NNP ,_, 2014_CD -RRB-_-RRB- 16.45_CD %_NN 13.41_CD %_NN 13.05_CD %_NN 10.84_CD %_NN 11.71_CD %_NN 8.78_CD %_NN 7.42_CD %_NN LR-mixed-gram_NN -LRB-_-LRB- Our_PRP$ model_NN -RRB-_-RRB- 9.67_CD %_NN Table_NNP 7_CD :_: Comparisons_NNS to_TO baseline_JJ approaches_NNS on_IN the_DT Product_NNP Review_NNP dataset_NN ._.
+Accuracy_NN of_IN other_JJ methods_NNS were_VBD reported_VBN in_IN -LRB-_-LRB- Fattah_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+test_NN accuracy_NN can_MD be_VB improved_VBN up_RP to_TO 9.67_CD %_NN -LRB-_-LRB- bottom_JJ line_NN of_IN Table_NNP 6_CD -RRB-_-RRB- ._.
+It_PRP can_MD be_VB ranked_VBN among_IN best_JJS models_NNS in_IN efficiency_NN and_CC scalability_NN ._.
+We_PRP also_RB conduct_VBP experiments_NNS on_IN the_DT Product_NNP Re_NNP -_: view_NN dataset_NN ._.
+In_IN our_PRP$ experiments_NNS ,_, like_IN what_WP we_PRP have_VBP done_VBN to_TO the_DT IMDB_NNP dataset_NN ,_, we_PRP do_VBP not_RB remove_VB any_DT stopwords_NNS or_CC apply_VB any_DT stemming_VBG in_IN preprocessing_NN ,_, while_IN the_DT baseline_NN approaches_VBZ in_IN -LRB-_-LRB- Fattah_NNP ,_, 2015_CD -RRB-_-RRB- have_VBP used_VBN these_DT techniques_NNS ._.
+We_PRP do_VBP n't_RB handle_VB the_DT problem_NN of_IN orthographic_JJ mistakes_NNS ,_, abbreviations_NNS ,_, idiomatic_JJ expressions_NNS or_CC ironic_JJ sentences_NNS either_CC ._.
+From_IN Table_NNP 7_CD ,_, we_PRP can_MD find_VB that_IN our_PRP$ model_NN also_RB has_VBZ comparable_JJ performance_NN to_TO the_DT baseline_NN approaches_NNS ._.
+Thought_NNP it_PRP performs_VBZ slightly_RB worse_JJR than_IN SVM_NNP ,_, this_DT may_MD be_VB caused_VBN by_IN the_DT sparsity_NN of_IN data_NNS ._.
+And_CC truncat_SYM -_: ing_VBG low-weight_JJ terms_NNS during_IN prediction_NN could_MD bring_VB an_DT improvement_NN on_IN accuracy_NN by_IN 1-2_CD %_NN ._.
+Curves_NNS in_IN Figure_NN 6_CD shows_VBZ the_DT performance_NN by_IN truncating_VBG dif_SYM -_: ferent_JJ percentages_NNS of_IN low-weight_JJ terms_NNS ._.
+Figure_NN 6_CD :_: Test_NNP accuracy_NN with_IN truncating_VBG different_JJ percent_NN -_: ages_NNS of_IN low-weight_JJ terms_NNS on_IN the_DT Product_NNP Review_NNP dataset_NN ._.
+5_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT model_NN of_IN using_VBG Logis_NNP -_: tic_JJ Regression_NN with_IN Gradient_NNP Descent_NNP algorithm_NN for_IN extracting_VBG sentiment_NN terms_NNS and_CC learning_VBG sentimen_NNS -_: t_NN weights_NNS ._.
+We_PRP assume_VBP the_DT sentiment_NN of_IN a_DT sentence_NN or_CC documents_NNS is_VBZ a_DT function_NN of_IN sentiment_NN weights_NNS of_IN consisting_VBG terms_NNS ._.
+The_DT extracted_VBN sentiment_NN terms_NNS can_MD be_VB drawn_VBN as_IN emotional_JJ clouds_NNS ._.
+We_PRP find_VBP that_IN a_DT small_JJ number_NN of_IN terms_NNS contribute_VBP much_RB to_TO the_DT sentiment_NN of_IN a_DT document_NN ,_, most_JJS terms_NNS are_VBP sort_NN of_IN neutral_JJ ._.
+Based_VBN on_IN experimental_JJ studies_NNS on_IN two_CD benchmark_JJ detests_VBZ ,_, we_PRP find_VBP that_DT terms_NNS with_IN low_JJ feature_NN value_NN and_CC low_JJ sen_NN -_: timent_NN weight_NN make_VBP little_JJ contribution_NN to_TO sentiment_NN classification_NN ._.
+By_IN deleting_VBG these_DT unimportant_JJ terms_NNS ,_, we_PRP can_MD save_VB significant_JJ computational_JJ time_NN without_IN losing_VBG much_JJ accuracy_NN ._.
+In_IN sentiment_NN classification_NN ,_, we_PRP have_VBP tested_VBN our_PRP$ model_NN based_VBN on_IN different_JJ N_NNP -_: gram_NN models_NNS and_CC find_VB that_IN the_DT mixed-gram_NN model_NN outper_NN -_: forms_NNS both_DT uni-gram_NN and_CC bi-gram_NN models_NNS ._.
+Extensive_JJ experimental_JJ results_NNS show_VBP our_PRP$ proposed_VBN method_NN can_MD extract_VB precise_JJ sentiment_NN terms_NNS and_CC achieve_VB a_DT high_JJ level_NN accuracy_NN in_IN classification_NN on_IN given_VBN benchmark_NN datasets_NNS ._.
+In_IN future_JJ work_NN ,_, we_PRP intend_VBP to_TO use_VB different_JJ features_NNS and_CC more_JJR complex_JJ function_NN instead_RB of_IN logistic_JJ func_NN -_: tion_NN to_TO investigate_VB underlying_JJ relations_NNS between_IN sen_NN -_: timent_NN of_IN a_DT sentence_NN and_CC its_PRP$ consisting_VBG terms_NNS ._.
+In_IN dealing_VBG with_IN sparse_JJ dataset_NN ,_, especially_RB the_DT cases_NNS like_IN single-sentence_JJ short_JJ text_NN ,_, some_DT priori_FW information_NN like_IN training_NN word-vector_NN from_IN deep_JJ learning_NN could_MD Code_NNP will_MD be_VB released_VBN upon_IN the_DT acceptance_NN of_IN this_DT paper_NN ._.
+Category_NN ANN_NNP SVM_NNP LR-mixed-gram_NNP Books_NNPS DVD_NNP Electronics_NNP Kitchen_NN 18.3_CD %_NN 18.4_CD %_NN 16.3_CD %_NN 14.8_CD %_NN 17.2_CD %_NN 16.3_CD %_NN 15.1_CD %_NN 13.6_CD %_NN 19.8_CD %_NN 19.9_CD %_NN 15.6_CD %_NN 13.8_CD %_NN Test_NN Accuracy_NNP be_VB used_VBN to_TO deal_VB with_IN the_DT problem_NN ._.
+In_IN addition_NN ,_, more_JJR syntax_NN information_NN should_MD also_RB be_VB taken_VBN into_IN consid_NN -_: eration_NN in_IN our_PRP$ future_JJ work_NN ._.
+Acknowledgements_NNS This_DT work_NN is_VBZ supported_VBN by_IN the_DT National_NNP Science_NNP Foundation_NNP of_IN China_NNP Nos._NNP 61305047_CD and_CC 61401012_CD ._.
+References_NNS Anthony_NNP Aue_NNP and_CC Michael_NNP Gamon_NNP ._.
+2005_CD ._.
+Customizing_VBG sentiment_NN classifiers_NNS to_TO new_JJ domains_NNS :_: a_DT case_NN study_NN ._.
+In_IN RANLP_NNP ._.
+Peter_NNP F._NNP Brown_NNP ,_, Vincent_NNP J._NNP Della_NNP Pietra_NNP ,_, Stephen_NNP A._NNP Della_NNP Pietra_NNP ,_, and_CC Robert_NNP L._NNP Mercer_NNP ._.
+1993_CD ._.
+The_DT mathematics_NN of_IN machine_NN translation_NN :_: Parameter_NN estimation_NN ._.
+In_IN Com_NNP -_: putational_JJ Linguistics_NNP ,_, 19_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- pp_NN :_: 263-311_CD ._.
+George_NNP E._NNP Dahl_NNP ,_, Ryan_NNP P._NNP Adams_NNP ,_, and_CC Hugo_NNP Larochelle_NNP ._.
+2012_CD ._.
+Training_VBG Restricted_NNP Boltzmann_NNP Machines_NNS on_IN word_NN observations_NNS ._.
+arXiv_NNP :1202.5695_CD ._.
+Mohamed_NNP ._.
+A._NN Fattah_NNP ._.
+2015_CD ._.
+New_NNP term_NN weighting_NN schemes_NNS with_IN combination_NN of_IN multiple_JJ classifiers_NNS for_IN sentiment_NN analysis_NN ._.
+In_IN Neurocomputing_NNP ,_, pp_NN :_: 434-442_CD ._.
+William_NNP A._NNP Gale_NNP ,_, Kenneth_NNP W._NNP Church_NNP ._.
+1993_CD ._.
+A_DT program_NN for_IN aligning_VBG sentences_NNS in_IN bilingual_JJ corpora_NN ._.
+In_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, 19_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- pp_NN :_: 75-102_CD ._.
+Vasileios_NNP Hatzivassiloglou_NNP and_CC Kathleen_NNP R._NNP McKeown_NNP ._.
+1997_CD ._.
+Predicting_VBG the_DT semantic_JJ orientation_NN of_IN adjec_JJ -_: tives_NNS ,_, In_IN Proceedings_NNP of_IN ACL_NNP ,_, pp_NN :_: 174-181_CD ._.
+Minqing_VBG Hu_NNP and_CC Bing_NNP Liu_NNP ._.
+2004_CD ._.
+Mining_NN and_CC summariz_NN -_: ing_VBG customer_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN SIGKDD_NNP ,_, pp_NN :_: 168-177_CD Wei_NNP Jin_NNP and_CC Hung_NNP H._NNP Ho_NNP ._.
+2009_CD ._.
+A_DT novel_NN lexicalized_VBD HMM-based_JJ learning_VBG framework_NN for_IN web_NN opinion_NN min_SYM -_: ing_NN ._.
+In_IN Proceedings_NNP of_IN ICML_NNP ,_, pp_NN :_: 465-472_CD ._.
+Mahesh_NNP Joshi_NNP and_CC Carolyn_NNP Penstein-Rose_NNP ._.
+2009_CD ._.
+Gen_SYM -_: eralizing_VBG dependency_NN features_NNS for_IN opinion_NN mining_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, pp_NN :_: 313-316_CD Nobuhiro_NNP Kaji_NNP and_CC Masaru_NNP Kitsuregawa_NNP ._.
+2007_CD ._.
+Building_NNP lexicon_NN for_IN Sentiment_NN Analysis_NN from_IN Massive_JJ Collec_NNP -_: tion_NN of_IN HTML_NNP Documents_NNS ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ,_, pp_NN :_: 1075-1083_CD ._.
+Nigam_NNP ,_, Kamal_NNP ,_, John_NNP Lafferty_NNP ,_, and_CC Andrew_NNP McCallum_NNP 1999_CD ._.
+Using_VBG maximum_JJ entropy_NN for_IN text_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN IJCAI_NNP ,_, pp_NN :_: 61-67_CD ._.
+Yoon_NNP Kim_NNP ._.
+2014_CD ._.
+Convolutional_JJ neural_JJ networks_NNS for_IN sentence_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ,_, pp_NN :_: 1746-1751_CD Soo-Min_NNP Kim_NNP and_CC Eduard_NNP Hovy_NNP ._.
+2006_CD ._.
+Automatic_NNP iden_SYM -_: tification_NN of_IN pro_JJ and_CC con_JJ reasons_NNS in_IN online_JJ reviews_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, pp_NN :_: 483-490_CD Quoc_NNP Le_NNP and_CC Tomas_NNP Mikolov_NNP ._.
+2014_CD ._.
+Distribut_NNP -_: ed_VBD representations_NNS of_IN sentences_NNS and_CC documents_NNS ._.
+arX_SYM -_: iv_SYM :1405.4053_CD ._.
+David_NNP D._NNP Lewis_NNP 1998_CD ._.
+Naive_JJ -LRB-_-LRB- Bayes_NNP -RRB-_-RRB- at_IN forty_CD :_: the_DT inde_JJ -_: pendence_NN assumption_NN in_IN information_NN retrieval_NN ,_, In_IN em_NN Proceedings_NNP of_IN LNCS_NNP ,_, pp_NN :_: 4-18_CD ._.
+Fangtao_NNP Li_NNP ,_, Minlie_NNP Huang_NNP and_CC Xiaoyan_NNP Zhu_NNP ._.
+2010b_JJ ._.
+Sentiment_NN analysis_NN with_IN global_JJ topics_NNS and_CC local_JJ depen_NN -_: dency_NN ._.
+In_IN Proceedings_NNP of_IN AAAI_NNP ,_, pp_NN :_: 1371-1376_CD ._.
+Fangtao_NNP Li_NNP ,_, Sinno_NNP J._NNP Pan_NNP ,_, Ou_NNP Jin_NNP ,_, Qiang_NNP Yang_NNP and_CC Xiaoy_NNP -_: an_DT Zhu_NNP ._.
+2012_CD ._.
+Cross-Domain_NNP Co-Extraction_NNP of_IN Senti_NNP -_: ment_NN and_CC Topic_NNP Lexicons_NNPS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, pp_NN :_: 410-419_CD Chenghua_NNP Lin_NNP and_CC Yulan_NNP He_PRP ._.
+2009_CD ._.
+Joint_NNP sentiment/topic_JJ model_NN for_IN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN CIK_NNP -_: M_NNP ,_, pp_NN :_: 375-384_CD ._.
+Andrew_NNP L._NNP Maas_NNP ,_, Raymond_NNP E._NNP Daly_NNP ,_, Peter_NNP T._NNP Pham_NNP ,_, Dan_NNP Huang_NNP ,_, Andrew_NNP Y._NNP Ng_NNP ,_, and_CC Christopher_NNP Potts_NNP ._.
+2011_CD ._.
+Learning_NNP word_NN vectors_NNS for_IN sentiment_NN analysis_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN ACL_NNP ,_, pp_NN :_: 142-150_CD Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+:_: sentiment_NN classification_NN us_PRP -_: ing_NN machine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ,_, pp_NN :_: 79-86_CD Sungrae_NNP Park_NNP ,_, Wonsung_NNP Lee_NNP ,_, Il-Chul_NNP Moon_NNP ._.
+2015_CD ._.
+Ef_SYM -_: ficient_JJ extraction_NN of_IN domain_NN specific_JJ sentiment_NN lexicon_NN with_IN active_JJ learning_NN ._.
+In_IN Pattern_NNP Recognition_NNP Letters_NNS ,_, p_SYM -_: p_NN :_: 38-44_CD Nikolaos_NNP Pappas_NNP ,_, Andrei_NNP Popescu-Belis_NNP ._.
+2014_CD ._.
+Explain_VB -_: ing_VBG the_DT Stars_NNP :_: Weighted_NNP Multiple-Instance_NNP Learning_NNP for_IN Aspect-Based_NNP Sentiment_NN Analysis_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ,_, pp_NN :_: 455-466_CD Christopher_NNP Potts_NNP ,_, Florian_NNP Schwarz_NNP ._.
+2010_CD ._.
+Affective_JJ `_`` this_DT '_'' ,_, In_IN Linguistic_NNP Issues_NNP in_IN Language_NNP Technology_NNP ,_, p_SYM -_: p_NN :_: 1-30_CD Guang_NNP Qiu_NNP ,_, Bing_NNP Liu_NNP ,_, Jiajun_NNP Bu_NNP ,_, and_CC Chun_NNP Chen_NNP ._.
+2011_CD ._.
+Opinion_NN word_NN expansion_NN and_CC target_NN extraction_NN through_IN double_JJ propagation_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, 37_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: pp_NN :_: 9-27_CD Sida_NNP Wang_NNP and_CC Christopher_NNP D._NNP Manning_NNP 2012_CD ._.
+Baselines_NNS and_CC bigrams_NNS :_: Simple_NN ,_, good_JJ sentiment_NN and_CC text_NN classifi_NNS -_: cation_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, pp_NN :_: 90-94_CD Janyce_NNP M._NNP Wiebe_NNP ._.
+2000_CD ._.
+Learning_NNP subjective_JJ adjective_NN from_IN corpora_NN ._.
+In_IN Proceedings_NNP of_IN AAAI_NNP ,_, pp_NN :_: 735-740_CD ._.
+Rui_NNP Xia_NNP ,_, Chengqing_NNP Zong_NNP ,_, and_CC Shoushan_NNP Li_NNP ._.
+2011_CD ._.
+En_SYM -_: semble_NN of_IN feature_NN sets_NNS and_CC classification_NN algorithms_NNS for_IN sentiment_NN classification_NN ._.
+Inf_NNP ._.
+Sci_NNP ,_, pp_NN :_: 1138-1152_CD ._.
+Lun_NNP Yan_NNP and_CC Yan_NNP Zhang_NNP ._.
+2012_CD ._.
+News_NNP Sentiment_NN Analy_NNP -_: sis_NN Based_VBN on_IN Cross-Domain_NNP Sentiment_NN Word_NN Lists_NNS and_CC Content_NN Classifiers_NNS ._.
+Advanced_NNP Data_NNP Mining_NNP and_CC Ap_NNP -_: plications_NNS ._.
+Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+pp_NN :_: 577-588_CD ._.

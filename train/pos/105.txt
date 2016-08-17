@@ -1,0 +1,288 @@
+Reducing_VBG Lexical_NNP Features_NNP in_IN Parsing_NNP by_IN Word_NNP Embeddings_NNP Abstract_NNP The_NNP high-dimensionality_NN of_IN lexical_JJ features_NNS in_IN parsing_NN can_MD be_VB memory_NN consuming_NN and_CC cause_NN over-fitting_JJ problems_NNS ._.
+We_PRP propose_VBP a_DT general_JJ framework_NN to_TO replace_VB all_DT lexical_JJ feature_NN tem_NN -_: plates_NNS by_IN low-dimensional_JJ features_NNS induced_VBD from_IN word_NN embeddings_NNS ._.
+Applied_NNP to_TO a_DT near_JJ state-of-the-art_JJ dependency_NN parser_NN -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, our_PRP$ method_NN improves_VBZ the_DT baseline_NN ,_, performs_VBZ better_JJR than_IN using_VBG cluster_NN bit_NN string_NN features_NNS ,_, and_CC outperforms_VBZ a_DT recent_JJ neural_NN net_NN -_: work_NN based_VBN parser_NN ._.
+A_DT further_JJ analysis_NN shows_VBZ that_IN our_PRP$ framework_NN has_VBZ the_DT effect_NN hypothe_NN -_: sized_VBN by_IN Andreas_NNP and_CC Klein_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, namely_RB -LRB-_-LRB- i_FW -RRB-_-RRB- connecting_VBG unseen_JJ words_NNS to_TO known_JJ ones_NNS ,_, and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- encouraging_JJ common_JJ behaviors_NNS among_IN in_IN -_: vocabulary_JJ words_NNS ._.
+1_CD Introduction_NNP Lexical_NNP features_NNS are_VBP powerful_JJ machine_NN learning_VBG in_IN -_: gredients_NNS for_IN many_JJ NLP_NNP tasks_NNS ,_, but_CC the_DT very_RB high_JJ -_: dimensional_JJ feature_NN space_NN brought_VBN by_IN these_DT features_NNS can_MD be_VB memory_NN consuming_NN and_CC cause_NN over-fitting_JJ problems_NNS ._.
+Is_VBZ it_PRP possible_JJ to_TO use_VB low-dimensional_JJ word_NN embeddings_NNS to_TO reduce_VB the_DT high-dimensionality_NN of_IN lexical_JJ features_NNS ?_.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT gen_NN -_: eral_JJ framework_NN for_IN this_DT purpose_NN ._.
+As_IN a_DT proof_NN of_IN con_NN -_: cept_NN ,_, we_PRP apply_VBP the_DT framework_NN to_TO dependency_NN pars_NNS -_: ing_NN ,_, since_IN this_DT is_VBZ a_DT task_NN where_WRB lexical_JJ features_NNS are_VBP essential_JJ ._.
+Our_PRP$ approach_NN is_VBZ illustrated_VBN in_IN Figure_NN 1_CD ._.
+Con_NN -_: sider_JJR a_DT transition-based_JJ dependency_NN parser_NN -LRB-_-LRB- Yamada_NNP and_CC Matsumoto_NNP ,_, 2003_CD ;_: Nivre_NNP et_FW al._FW ,_, 2006_CD ;_: Zhang_NNP and_CC Clark_NNP ,_, 2008_CD ;_: Huang_NNP and_CC Sagae_NNP ,_, 2010_CD ;_: Zhang_NNP Templates_NNPS :_: s0wsaw_VB =_SYM -LRB-_-LRB- ..._: 1_CD s0wlook_CD =_SYM -LRB-_-LRB- ..._: 0_CD ..._: 0_CD ..._: -RRB-_-RRB- 1_CD ..._: -RRB-_-RRB- q0wyou_CD q0wme_CD =_SYM -LRB-_-LRB- ..._: 1_CD =_SYM -LRB-_-LRB- ..._: 0_CD ..._: 0_CD ..._: -RRB-_-RRB- 1_CD ..._: -RRB-_-RRB- Weights_NNS :_: ⋮_CD W_NNP -LRB-_-LRB- s0wsaw_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- s0wlook_CD -RRB-_-RRB- ⋮_CD W_NNP -LRB-_-LRB- q0wyou_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- q0wme_JJ -RRB-_-RRB- ⋮_CD W_NNP -LRB-_-LRB- s0e1_CD -RRB-_-RRB- ⋮_CD W_NNP -LRB-_-LRB- s0ed_VBN -RRB-_-RRB- Replace_VB lexical_JJ feature_NN templates_NNS by_IN embedding_VBG features_NNS ·_VBP ·_CD =_SYM Scores_NNS =_SYM Scores_NNS Features_NNS :_: s0esaw_CD =_SYM -LRB-_-LRB- 0.6_CD ,_, ..._: ,_, 0.2_CD -RRB-_-RRB- q0eyou_CD =_SYM -LRB-_-LRB- 0.5_CD ,_, ..._: ,_, 0.8_CD -RRB-_-RRB- s0elook_CD =_SYM -LRB-_-LRB- 0.4_CD ,_, ..._: ,_, 0.3_CD -RRB-_-RRB- q0eme_CD W_NNP -LRB-_-LRB- q0e1_CD -RRB-_-RRB- ..._: ._.
+⋮_CD =_SYM -LRB-_-LRB- 0.7_CD ,_, ..._: ,_, 0.9_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- q0ed_VBN -RRB-_-RRB- Figure_NN 1_CD :_: Each_DT lexical_JJ feature_NN template_NN is_VBZ replaced_VBN by_IN a_DT small_JJ number_NN of_IN embedding_VBG features_NNS ._.
+and_CC Nivre_NNP ,_, 2011_CD -RRB-_-RRB- ,_, in_IN which_WDT the_DT words_NNS on_IN top_NN of_IN the_DT stack_VB and_CC the_DT queue_NN -LRB-_-LRB- denoted_VBN by_IN s0w_CD and_CC q0w_CD ,_, re_SYM -_: spectively_NN -RRB-_-RRB- are_VBP typically_RB used_VBN as_IN features_NNS to_TO calcu_VB -_: late_JJ scores_NNS of_IN transitions_NNS ._.
+When_WRB s0w_NN is_VBZ used_VBN as_IN a_DT feature_NN template_NN ,_, the_DT features_NNS in_IN this_DT template_NN -LRB-_-LRB- e.g._FW s0_FW wsaw_FW and_CC s0_CD wlook_NN -RRB-_-RRB- can_MD be_VB viewed_VBN as_IN one-hot_JJ vec_NN -_: tors_NNS of_IN a_DT dimension_NN of_IN the_DT lexicon_NN size_NN -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+Corresponding_VBG to_TO s0w_VB ,_, a_DT weight_NN is_VBZ assigned_VBN to_TO each_DT word_NN -LRB-_-LRB- e.g._FW W_NNP -LRB-_-LRB- s0_JJ wsaw_NN -RRB-_-RRB- and_CC W_NNP -LRB-_-LRB- s0_JJ wlook_NN -RRB-_-RRB- -RRB-_-RRB- for_IN calcu_NN -_: lating_VBG a_DT transition_NN score_NN ._.
+Instead_RB ,_, we_PRP propose_VBP to_TO utilize_VB a_DT d-dimensional_JJ word_NN embedding_NN ,_, and_CC re_SYM -_: place_NN the_DT feature_NN template_NN s0w_CD by_IN d_LS features_NNS ,_, namely_RB s0e1_CD ,_, ..._: ,_, s0ed_JJ ._.
+Given_VBN the_DT vector_NN representation_NN of_IN a_DT word_NN -LRB-_-LRB- e.g._FW ,_, esaw_VB =_SYM -LRB-_-LRB- 0.6_CD ,_, ..._: ,_, 0.2_CD -RRB-_-RRB- -RRB-_-RRB- ,_, we_PRP replace_VBP the_DT lexical_JJ feature_NN -LRB-_-LRB- e.g._FW s0_FW wsaw_FW -RRB-_-RRB- by_IN a_DT linear_JJ combination_NN of_IN the_DT d_LS features_NNS -LRB-_-LRB- e.g._FW ,_, s0esaw_CD :_: =_SYM 0.6_CD s0e1_CD +_NN ..._: +_IN 0.2_CD s0_CD ed_VBN -RRB-_-RRB- ._.
+Then_RB ,_, instead_RB of_IN the_DT weights_NNS in_IN a_DT num_NN -_: ber_NN of_IN lexicon_NN size_NN assigned_VBN to_TO s0w_VB ,_, now_RB we_PRP use_VBP d_SYM s3_FW s2_FW s1_FW s0_FW stack_VB has_VBZ contributed_VBN to_TO the_DT power_NN of_IN neural_JJ based_VBN ap_SYM -_: proaches_NNS ._.
+In_IN this_DT work_NN ,_, we_PRP conjecture_NN that_IN the_DT power_NN may_MD partly_RB come_VB from_IN the_DT low-dimensionality_NN of_IN word_NN embeddings_NNS ,_, and_CC this_DT advantage_NN can_MD be_VB trans_NNS -_: ferred_VBN to_TO traditional_JJ feature_NN based_VBN systems_NNS ._.
+Our_PRP$ ex_FW -_: periments_NNS support_VBP this_DT conjecture_NN ,_, and_CC we_PRP expect_VBP the_DT proposed_VBN method_NN to_TO help_VB more_JJR mature_JJ ,_, proven-to_JJ -_: work_NN existing_VBG systems_NNS ._.
+Machine_NN learning_NN techniques_NNS have_VBP been_VBN proposed_VBN for_IN reducing_VBG model_NN size_NN and_CC imposing_VBG feature_NN spar_NN -_: sity_NN -LRB-_-LRB- Suzuki_NNP et_FW al._FW ,_, 2011_CD ;_: Yogatama_NNP and_CC Smith_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+Compared_VBN to_TO these_DT methods_NNS ,_, our_PRP$ approach_NN is_VBZ simple_JJ ,_, without_IN extra_JJ twists_NNS of_IN objective_JJ functions_NNS or_CC learning_VBG algorithms_NNS ._.
+More_RBR importantly_RB ,_, by_IN using_VBG word_NN embeddings_NNS to_TO reduce_VB lexical_JJ features_NNS ,_, we_PRP ex_FW -_: plicitly_RB exploit_VBP the_DT inherited_VBN syntactic_NN and_CC semantic_JJ similarities_NNS between_IN words_NNS ._.
+Another_DT technique_NN to_TO reduce_VB features_NNS is_VBZ dimen_SYM -_: sion_NN reduction_NN by_IN matrix_NN or_CC tensor_NN factorization_NN -LRB-_-LRB- Ar_SYM -_: gyriou_NN et_FW al._FW ,_, 2007_CD ;_: Lei_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, but_CC typically_RB applied_VBN to_TO supervised_JJ learning_NN ._.
+In_IN contrast_NN ,_, we_PRP use_VBP word_NN embeddings_NNS trained_VBN from_IN unlabeled_JJ or_CC auto_NN -_: matically_RB labeled_VBN corpora_NN ,_, bringing_VBG the_DT aspects_NNS of_IN semi-supervised_JJ learning_NN or_CC self-training_NN ._.
+3_CD Formalization_NN In_IN this_DT section_NN ,_, we_PRP formalize_VBP the_DT framework_NN of_IN re_NN -_: ducing_VBG lexical_JJ features_NNS ._.
+We_PRP take_VBP transition-based_JJ parsing_NN as_IN an_DT example_NN ,_, but_CC the_DT framework_NN can_MD be_VB ap_SYM -_: plied_VBD to_TO other_JJ systems_NNS using_VBG lexical_JJ features_NNS ._.
+3.1_CD Transition-based_JJ Parsing_NNP In_IN typical_JJ transition-based_JJ parsing_NN ,_, input_NN words_NNS are_VBP put_VBN into_IN a_DT queue_NN and_CC partially_RB built_VBN parse_NN trees_NNS are_VBP cached_VBN in_IN a_DT stack_VB -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+At_IN each_DT step_NN ,_, a_DT shift_NN -_: reduce_VB action_NN is_VBZ selected_VBN ,_, which_WDT consumes_VBZ words_NNS from_IN the_DT queue_NN and/or_CC build_VB new_JJ structures_NNS in_IN the_DT stack_VB ._.
+For_IN the_DT set_NN of_IN actions_NNS ,_, we_PRP adopt_VBP the_DT arc_NN -_: standard_JJ system_NN -LRB-_-LRB- Yamada_NNP and_CC Matsumoto_NNP ,_, 2003_CD ;_: Nivre_NNP ,_, 2008_CD ;_: Huang_NNP and_CC Sagae_NNP ,_, 2010_CD -RRB-_-RRB- ,_, in_IN which_WDT the_DT actions_NNS are_VBP :_: weights_NNS -LRB-_-LRB- i.e._FW ,_, W_NNP -LRB-_-LRB- s0e1_CD -RRB-_-RRB- ,_, ..._: ,_, W_NNP -LRB-_-LRB- s0ed_VBN -RRB-_-RRB- -RRB-_-RRB- to_TO calculate_VB a_DT transition_NN score_NN ._.
+In_IN this_DT work_NN ,_, we_PRP reduce_VBP feature_NN space_NN dimensionality_NN by_IN replacing_VBG all_DT lexical_JJ fea_NN -_: tures_NNS ,_, including_VBG combined_VBN features_NNS such_JJ as_IN s0wq0w_CD ,_, by_IN the_DT word_NN embedding_VBG features_NNS ._.
+In_IN experiments_NNS ,_, we_PRP applied_VBD the_DT framework_NN to_TO a_DT near_JJ state-of-the-art_JJ dependency_NN parser_NN -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, evaluated_VBN different_JJ vector_NN operations_NNS for_IN replacing_VBG combined_VBN lexical_JJ features_NNS ,_, and_CC ex_FW -_: plored_VBN different_JJ word_NN embeddings_NNS trained_VBN from_IN un_SYM -_: labeled_VBN or_CC automatically_RB labeled_VBN corpora_NN ._.
+We_PRP ex_FW -_: pect_NN word_NN embeddings_NNS to_TO augment_VB parsing_VBG accuracy_NN ,_, by_IN the_DT mechanism_NN hypothesized_VBN in_IN Andreas_NNP and_CC Klein_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, namely_RB -LRB-_-LRB- i_FW -RRB-_-RRB- to_TO connect_VB unseen_JJ words_NNS to_TO known_JJ ones_NNS ,_, and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- to_TO encourage_VB common_JJ be_VB -_: haviors_NNS among_IN in-vocabulary_JJ words_NNS ._.
+In_IN contrast_NN to_TO the_DT negative_JJ results_NNS reported_VBN in_IN Andreas_NNP and_CC Klein_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, we_PRP find_VBP that_IN our_PRP$ framework_NN indeed_RB has_VBZ these_DT effects_NNS ,_, and_CC significantly_RB improves_VBZ the_DT baseline_NN ._.
+As_IN a_DT comparison_NN ,_, our_PRP$ method_NN performs_VBZ better_JJR than_IN the_DT technique_NN of_IN replacing_VBG words_NNS by_IN cluster_NN bit_NN strings_NNS -LRB-_-LRB- Koo_NNP et_FW al._FW ,_, 2008_CD ;_: Bansal_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, and_CC the_DT results_NNS outperform_VBP a_DT neural_JJ network_NN based_VBN parser_NN -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+2_CD Related_JJ Work_NN A_DT lot_NN of_IN recent_JJ work_NN has_VBZ been_VBN done_VBN on_IN training_NN word_NN vectors_NNS -LRB-_-LRB- Mnih_NNP and_CC Hinton_NNP ,_, 2009_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013_CD ;_: Lebret_NNP and_CC Collobert_NNP ,_, 2014_CD ;_: Pennington_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, and_CC utilizing_VBG word_NN vectors_NNS in_IN various_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Turian_JJ et_FW al._FW ,_, 2010_CD ;_: Andreas_NNP and_CC Klein_NNP ,_, 2014_CD ;_: Bansal_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT common_JJ approach_NN -LRB-_-LRB- Turian_JJ et_FW al._FW ,_, 2010_CD ;_: Koo_NNP et_FW al._FW ,_, 2008_CD ;_: Bansal_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ to_TO use_VB vector_NN representations_NNS in_IN new_JJ fea_NN -_: tures_NNS ,_, added_VBD to_TO -LRB-_-LRB- near_IN -RRB-_-RRB- state-of-the-art_JJ systems_NNS ,_, and_CC make_VB improvement_NN ._.
+As_IN a_DT result_NN ,_, the_DT feature_NN space_NN gets_VBZ even_RB larger_JJR ._.
+We_PRP instead_RB propose_VBP to_TO reduce_VB lex_SYM -_: ical_NN features_NNS by_IN word_NN embeddings_NNS ._.
+To_TO our_PRP$ own_JJ sur_NN -_: prise_NN ,_, though_IN the_DT feature_NN space_NN gets_VBZ much_RB smaller_JJR ,_, the_DT resulted_VBD system_NN performs_VBZ better_JJR ._.
+Another_DT stream_NN of_IN research_NN is_VBZ to_TO use_VB word_NN embed_VBD -_: dings_NNS in_IN whole_JJ neural_JJ network_NN architectures_NNS -LRB-_-LRB- Col_SYM -_: lobert_NN et_FW al._FW ,_, 2011_CD ;_: Socher_NNP et_FW al._FW ,_, 2013_CD ;_: Chen_NNP and_CC Manning_NNP ,_, 2014_CD ;_: Weiss_NNP et_FW al._FW ,_, 2015_CD ;_: Dyer_NNP et_FW al._FW ,_, 2015_CD ;_: Watanabe_NNP and_CC Sumita_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+Though_IN this_DT is_VBZ a_DT promising_JJ direction_NN and_CC has_VBZ brought_VBN breakthroughs_NNS in_IN the_DT field_NN ,_, the_DT question_NN is_VBZ left_VBN open_RP on_IN what_WP exactly_RB q0_VBP q1_CD q2_JJ queue_NN saw_VBD you_PRP with_IN her_PRP$ s0l_JJ Figure_NN 2_CD :_: An_DT internal_JJ state_NN of_IN a_DT dependency_NN parser_NN ._.
+I_PRP 1_CD ._.
+Shift_NN ,_, which_WDT pops_VBZ the_DT top_NN of_IN the_DT queue_NN and_CC pushes_VBZ it_PRP to_TO the_DT stack_VB ;_: 2_LS ._.
+Reduce-Left_NNP ,_, which_WDT replaces_VBZ the_DT top_JJ two_CD trees_NNS in_IN the_DT stack_VB by_IN their_PRP$ consolidated_JJ tree_NN ,_, left_VBD as_IN child_NN ;_: 3_LS ._.
+Reduce-Right_NNP ,_, which_WDT replaces_VBZ the_DT top_JJ two_CD trees_NNS in_IN the_DT stack_VB by_IN their_PRP$ consolidated_JJ tree_NN ,_, right_RB as_IN child_NN ._.
+Following_VBG Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, we_PRP use_VBP the_DT max_NN -_: violation_NN perceptron_NN for_IN global_JJ learning_NN and_CC beam_NN -_: search_NN for_IN decoding_NN ._.
+In_IN order_NN to_TO select_VB the_DT appropriate_JJ action_NN ,_, a_DT set_NN of_IN features_NNS are_VBP used_VBN for_IN calculating_VBG transition_NN scores_NNS of_IN each_DT action_NN ._.
+The_DT features_NNS are_VBP typically_RB extracted_VBN from_IN internal_JJ states_NNS of_IN the_DT queue_NN and_CC the_DT stack_VBP ._.
+For_IN example_NN ,_, if_IN we_PRP denote_VBP the_DT elements_NNS in_IN the_DT stack_VB by_IN s0_CD ,_, s1_CD ,_, ..._: from_IN the_DT top_NN ,_, and_CC elements_NNS in_IN the_DT queue_NN by_IN q0_CD ,_, q1_CD ,_, ..._: from_IN the_DT front_NN ;_: then_RB ,_, the_DT words_NNS such_JJ as_IN s0_CD w_NN and_CC q0_CD w_NN ,_, the_DT POS-tags_NNS such_JJ as_IN s0_CD t_NN ,_, and_CC the_DT combined_VBN word_NN and_CC POS-tags_NNS such_JJ as_IN s0wt_NN are_VBP used_VBN as_IN features_NNS ._.
+Other_JJ features_NNS include_VBP the_DT POS-tag_JJ s0lt_NN -LRB-_-LRB- where_WRB s0l_JJ denotes_NNS the_DT leftmost_JJS child_NN of_IN s0_CD ,_, and_CC s0r_JJ denotes_NNS the_DT rightmost_JJ child_NN of_IN s0_CD -RRB-_-RRB- ,_, and_CC the_DT combined_VBN feature_NN s0wq0w_CD ,_, etc._FW ._.
+If_IN the_DT corresponding_JJ words_NNS and_CC POS-tags_NNS are_VBP specified_VBN in_IN a_DT concrete_JJ state_NN ,_, we_PRP use_VBP subscripts_NNS of_IN w_NN and_CC t_NN to_TO denote_VB the_DT concrete_JJ feature_NN ._.
+For_IN ex_FW -_: ample_JJ ,_, from_IN the_DT state_NN illustrated_VBD in_IN Figure_NN 2_CD ,_, we_PRP can_MD extract_VB features_NNS such_JJ as_IN s0wsaw_CD ,_, q0wyou_CD ,_, s0tVBD_NNP ,_, s0wsawtVBD_NNP ,_, s0ltPRP_NNP ,_, and_CC s0wsawq0wyou_CD ,_, etc._FW ._.
+For_IN the_DT purpose_NN of_IN this_DT work_NN ,_, we_PRP mainly_RB focus_VB on_IN the_DT words_NNS -LRB-_-LRB- e.g._FW ,_, wsaw_NN ,_, wyou_NN -RRB-_-RRB- in_IN the_DT above_JJ features_NNS ._.
+Other_JJ parts_NNS ,_, including_VBG positions_NNS such_JJ as_IN s0_CD and_CC q0_CD ,_, and_CC POS-tags_NNS such_JJ as_IN tVBD_NNP ,_, are_VBP regarded_VBN as_IN formal_JJ symbols_NNS ._.
+3.2_CD Reducing_VBG Lexical_NNP Features_NNP Formally_RB ,_, we_PRP define_VBP lexial_JJ features_NNS as_IN the_DT features_NNS comprising_VBG one_CD or_CC more_JJR words_NNS ,_, possibly_RB in_IN combina_NN -_: tion_NN with_IN other_JJ symbols_NNS ._.
+We_PRP propose_VBP to_TO replace_VB lex_SYM -_: ical_NN features_NNS as_IN follows_VBZ ,_, and_CC leaving_VBG other_JJ features_NNS -LRB-_-LRB- e.g._FW s0tVBD_FW -RRB-_-RRB- unchanged_JJ in_IN the_DT system_NN ._.
+Lexical_NNP Feature_NNP of_IN One_CD Word_NN Let_VB sw_RB be_VB a_DT one_CD word_NN lexical_JJ feature_NN ,_, where_WRB w_NN is_VBZ the_DT word_NN and_CC s_PRP is_VBZ an_DT arbitrary_JJ symbol_NN ._.
+Let_VB e_LS =_SYM -LRB-_-LRB- vi_FW -RRB-_-RRB- 1_CD ≤_CD i_FW ≤_FW d_LS be_VB a_DT d-dimensional_JJ vector_NN representation_NN of_IN the_DT word_NN w_NN ,_, where_WRB vi_FW is_VBZ the_DT i-th_JJ entry_NN ._.
+Then_RB ,_, we_PRP replace_VBP sw_NN by_IN se_FW ,_, a_DT linear_JJ combination_NN of_IN se1_CD ,_, ..._: ,_, sed_VBN :_: se_FW :_: =_SYM d_LS i_FW =_SYM 1_CD vi_FW ·_FW -LRB-_-LRB- sei_FW -RRB-_-RRB- ._.
+For_IN example_NN ,_, assume_VB that_IN the_DT word_NN ``_`` saw_VBD ''_'' has_VBZ a_DT vec_NN -_: tor_NN representation_NN esaw_NN =_SYM -LRB-_-LRB- 0.6_CD ,_, ..._: ,_, 0.2_CD -RRB-_-RRB- ._.
+Then_RB ,_, the_DT feature_NN s0wsaw_CD is_VBZ replaced_VBN by_IN s0esaw_CD :_: =_SYM 0.6_CD s0e1_CD +_NN ..._: +_IN 0.2_CD s0ed_CD ._.
+In_IN the_DT above_JJ ,_, s0e1_JJ ,_, ..._: ,_, s0ed_VBN are_VBP introduced_VBN to_TO re_VB -_: place_NN the_DT feature_NN template_NN s0w_NN ._.
+Note_VB that_DT ,_, instead_RB of_IN using_VBG a_DT different_JJ feature_NN s0wx_CD for_IN each_DT different_JJ word_NN x_LS ,_, now_RB we_PRP only_RB have_VBP d_LS features_NNS ,_, s0e1_CD ,_, ..._: ,_, s0ed_JJ ,_, commonly_RB used_VBN by_IN all_DT words_NNS ,_, across_IN the_DT feature_NN tem_NN -_: plate_NN s0_CD w_NN ._.
+As_IN another_DT example_NN ,_, in_IN the_DT case_NN of_IN features_NNS com_NN -_: bining_VBG a_DT word_NN and_CC its_PRP$ POS_NNP tag_NN ,_, such_JJ as_IN s0_CD tVBD_NNP wsaw_NN ,_, we_PRP treat_VBP s0tVBD_JJ as_IN a_DT formal_JJ symbol_NN and_CC replace_VB the_DT feature_NN as_IN the_DT following_NN :_: s0tVBDesaw_NNS :_: =_SYM 0.6_CD s0tVBDe1_JJ +_NN ..._: +_CD 0.2_CD s0tVBDed_VBN ._.
+Lexical_NNP Feature_NNP of_IN Two_CD or_CC More_JJR Words_NNS For_IN lex_SYM -_: ical_NN features_NNS of_IN two_CD or_CC more_JJR words_NNS ,_, such_JJ as_IN s0wq0w_CD ,_, we_PRP replace_VBP the_DT words_NNS by_IN a_DT combination_NN of_IN the_DT two_CD or_CC more_JJR corresponding_JJ word_NN vectors_NNS ._.
+More_RBR precisely_RB ,_, for_IN a_DT two-word_JJ lexical_JJ feature_NN sw1w2_CD ,_, assume_VB that_IN the_DT vectors_NNS e1_FW =_SYM -LRB-_-LRB- ui_FW -RRB-_-RRB- 1_CD ≤_CD i_FW ≤_FW d_LS and_CC e2_CD =_SYM -LRB-_-LRB- vi_FW -RRB-_-RRB- 1_CD ≤_CD i_FW ≤_FW d_LS rep_NN -_: resent_VBP w1_CD and_CC w2_CD ,_, respectively_RB ._.
+Then_RB ,_, we_PRP propose_VBP the_DT following_VBG operations1_CD to_TO replace_VB sw1w2_NN :_: •_CD OUTER_NNP PRODUCT_NN -LRB-_-LRB- ⊗_FW -RRB-_-RRB- :_: dd_VBD s_PRP -LRB-_-LRB- e1_FW ⊗_FW e2_FW -RRB-_-RRB- :_: =_SYM uivj_FW ·_FW -LRB-_-LRB- seie_JJ ̃j_NN -RRB-_-RRB- ,_, i_FW =_SYM 1_CD j_NN =_SYM 1_CD Forexample_NNP ,_, ifesaw_NN =_SYM -LRB-_-LRB- 0.6_CD ,_, ..._: ,0.2_CD -RRB-_-RRB- andeyou_NN =_SYM -LRB-_-LRB- 0.5_CD ,_, ..._: ,_, 0.8_CD -RRB-_-RRB- ,_, then_RB s0wsawq0wyou_CD is_VBZ replaced_VBN by_IN :_: s0q0_NNS -LRB-_-LRB- esaw_FW ⊗_FW eyou_FW -RRB-_-RRB- :_: =_SYM -LRB-_-LRB- 0.6_CD ×_CD 0.5_CD -RRB-_-RRB- s0q0e1e_CD ̃1_CD +_NN ..._: +_NN -LRB-_-LRB- 0.6_CD ×_CD 0.8_CD -RRB-_-RRB- s0q0e1e_CD ̃d_NN +_NN ..._: +_NN -LRB-_-LRB- 0.2_CD ×_CD 0.8_CD -RRB-_-RRB- s0q0ede_CD ̃d_NN ._.
+Here_RB ,_, e_SYM ̃1_CD ,_, ..._: ,_, e_SYM ̃d_FW are_VBP copies_NNS of_IN e1_CD ,_, ..._: ,_, ed_VBN ._.
+1Operations_NNS for_IN more_JJR than_IN three_CD word_NN vectors_NNS are_VBP similar_JJ ._.
+Dev_NNP Test_NNP Unseen_NNP Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 91.93_CD 91.68_CD 89.01_CD Different_NNP Operations_NNP ,_, using_VBG STATE_NNP embedding_NN :_: OUTER_NNP SUM_NNP CONCATENATION_NNP 92.57_CD ∗_CD 92.25_CD ∗_NN 92.18_CD 92.20_CD ∗_NN 91.85_CD 91.86_CD 90.27_CD ∗_NN 90.10_CD ∗_CD 89.96_CD Different_NNP Embeddings_NNP ,_, using_VBG OUTER_NNP operation_NN :_: PLAIN_NNP TREE_NNP STATE_NNP 92.33_CD ∗_CD 92.37_CD ∗_NN 92.57_CD ∗_CD 91.78_CD 92.09_CD ∗_NN 92.20_CD ∗_CD 90.08_CD ∗_NN 89.82_CD 90.27_CD ∗_NN Cluster_NNP Bit_NN String_NNP :_: PLAIN_NNP TREE_NNP STATE_NNP Bansal_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- 91.71_CD 90.38_CD 91.31_CD 92.06_CD 91.20_CD 90.07_CD 90.96_CD 91.75_CD 89.18_CD 88.00_CD 89.04_CD 90.13_CD Neural_NNP Network_NNP -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- :_: Random_NNP PLAIN_NNP TREE_NNP STATE_NNP 86.37_CD 90.68_CD 91.06_CD 91.03_CD 86.19_CD 90.48_CD 90.82_CD 90.57_CD 81.06_CD 87.02_CD 87.38_CD 87.88_CD •_NN SUM_NNP -LRB-_-LRB- +_VBN -RRB-_-RRB- :_: s_PRP -LRB-_-LRB- e1_FW +_FW e2_FW -RRB-_-RRB- :_: =_SYM -LRB-_-LRB- ui_FW +_FW vi_FW -RRB-_-RRB- ·_NN -LRB-_-LRB- sei_FW -RRB-_-RRB- ._.
+d_LS i_FW =_SYM 1_CD Following_VBG the_DT previous_JJ example_NN ,_, s0wsawq0wyou_CD is_VBZ replaced_VBN by_IN :_: s0q0_NNS -LRB-_-LRB- esaw_FW +_FW eyou_FW -RRB-_-RRB- :_: =_SYM -LRB-_-LRB- 0.6_CD +_CD 0.5_CD -RRB-_-RRB- s0q0e1_CD +_NN ..._: +_NN -LRB-_-LRB- 0.2_CD +_SYM 0.8_CD -RRB-_-RRB- s0q0ed_VBN ._.
+•_NN CONCATENATION_NNP -LRB-_-LRB- ⊕_CD -RRB-_-RRB- :_: dd_VBD s_PRP -LRB-_-LRB- e1_FW ⊕_FW e2_FW -RRB-_-RRB- :_: =_SYM ui_FW ·_FW -LRB-_-LRB- sei_FW -RRB-_-RRB- +_JJ vj_NN ·_NN -LRB-_-LRB- se_FW ̃j_FW -RRB-_-RRB- ._.
+i_FW =_SYM 1_CD j_NN =_SYM 1_CD Following_VBG the_DT example_NN ,_, replace_VB s0wsawq0wyou_CD by_IN sq_NN -LRB-_-LRB- e_SYM ⊕_FW e_LS -RRB-_-RRB- :_: =_SYM 0.6_CD sqe_NN +_NN ..._: +0.2_CD sqe_NN 00sawyou_CD 001_CD 00d_CD +_NN 0.5_CD s0q0e_CD ̃1_CD +_NN ..._: +_SYM 0.8_CD s0q0e_CD ̃d_NN ._.
+Theoretically_RB ,_, OUTER_NNP PRODUCT_NNP is_VBZ the_DT natural_JJ operation_NN ,_, because_IN if_IN s0_CD wx_NN and_CC q0_CD wy_NN are_VBP regarded_VBN as_IN high-dimensional_JJ one-hot_JJ vectors_NNS -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ,_, the_DT feature_NN combination_NN s0_CD wx_NN q0_CD wy_NN corresponds_NNS to_TO the_DT outer_JJ product_NN of_IN s0_CD wx_NN and_CC q0_CD wy_NN -LRB-_-LRB- i.e._FW ,_, s0_JJ wx_NN q0_CD wy_NN fires_NNS when_WRB s0wx_JJ and_CC q0wy_JJ fire_NN -RRB-_-RRB- ._.
+Empirically_RB ,_, we_PRP find_VBP that_IN OUTER_NNP indeed_RB performs_VBZ the_DT best_JJS among_IN the_DT three_CD operations_NNS ;_: however_RB ,_, the_DT outer_JJ product_NN also_RB intro_NN -_: duces_NNS d2_VBP embedding_VBG features_NNS ,_, many_JJ more_JJR than_IN the_DT d_LS features_NNS in_IN SUM_NNP or_CC 2d_JJ features_NNS in_IN CONCATENA_NNP -_: TION_NNP ._.
+We_PRP also_RB find_VBP that_DT SUM_NNP performs_VBZ better_JJR than_IN CONCATENATION_NNP ,_, being_VBG both_DT effective_JJ and_CC low_JJ -_: dimensional_JJ -LRB-_-LRB- Section_NN 4.1_CD -RRB-_-RRB- ._.
+4_CD Experiments_NNS We_PRP reimplemented_VBD the_DT parser_NN of_IN Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- and_CC replaced_VBD all_DT lexical_JJ feature_NN templates_NNS by_IN em_SYM -_: bedding_NN features_NNS ,_, according_VBG to_TO our_PRP$ framework_NN ._.
+We_PRP set_VBP beam_NN size_NN to_TO 8_CD ,_, and_CC report_NN unlabeled_JJ attachment_NN scores_NNS -LRB-_-LRB- UAS_NNP -RRB-_-RRB- on_IN the_DT standard_JJ Penn_NNP Treebank_NNP -LRB-_-LRB- PTB_NNP -RRB-_-RRB- split_NN ,_, using_VBG the_DT data_NNS attached_VBN to_TO Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS system2_NN ._.
+POS-tags_NNS are_VBP assigned_VBN by_IN Stanford_NNP Tag_NNP -_: ger3_NN ._.
+To_TO highlight_VB the_DT effect_NN of_IN word_NN embeddings_NNS on_IN unseen_JJ words_NNS ,_, we_PRP also_RB report_VBP UAS_NNP on_IN 148_CD sentences_NNS in_IN the_DT Dev_NNP ._.
+set_VBN which_WDT contain_VBP words_NNS in_IN vocabulary_NN Table_NNP 1_CD :_: Parsing_NNP Results_NNS -LRB-_-LRB- UAS_NNP -RRB-_-RRB- ._.
+Numbers_NNS marked_VBN by_IN as_IN -_: terisk_NN -LRB-_-LRB- ∗_FW -RRB-_-RRB- are_VBP statistically_RB significant_JJ -LRB-_-LRB- p_JJ <_NN 0.05_CD -RRB-_-RRB- ,_, com_NN -_: pared_VBN to_TO the_DT baseline_NN -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- under_IN a_DT paired_VBN bootstrap_JJ test_NN ._.
+of_IN the_DT embeddings_NNS but_CC unseen_JJ in_IN PTB_NNP training_NN data_NNS -LRB-_-LRB- Unseen_NNP -RRB-_-RRB- ._.
+We_PRP built_VBD 300_CD dimensional_JJ word_NN embeddings_NNS from_IN 6_CD months_NNS articles_NNS in_IN New_NNP York_NNP Times_NNP Corpus4_NNP -LRB-_-LRB- 01/2007_CD -06_CD /_NN 2007_CD ,_, 1.5_CD M_NNP sentences_NNS -RRB-_-RRB- ,_, for_IN words_NNS of_IN frequencies_NNS greater_JJR than_IN 50_CD ._.
+Word_NN vectors_NNS are_VBP ob_SYM -_: tained_VBN from_IN singular_JJ value_NN decomposition_NN -LRB-_-LRB- SVD_NNP -RRB-_-RRB- of_IN the_DT PPMI_NNP matrices_NNS -LRB-_-LRB- Levy_NNP and_CC Goldberg_NNP ,_, 2014b_CD -RRB-_-RRB- ,_, for_IN co-occurrence_NN matrices_NNS of_IN target_NN words_NNS with_IN various_JJ types_NNS of_IN contexts_NNS -LRB-_-LRB- Levy_NNP and_CC Goldberg_NNP ,_, 2014a_CD -RRB-_-RRB- ,_, to_TO be_VB specified_VBN later_RB ._.
+We_PRP choose_VBP SVD_NNP for_IN training_NN word_NN vectors_NNS because_IN it_PRP is_VBZ fast_RB ;_: and_CC recent_JJ research_NN sug_NN -_: gests_NNS that_WDT SVD_NNP can_MD perform_VB as_RB well_RB as_IN other_JJ embed_JJ -_: ding_NN methods_NNS -LRB-_-LRB- Levy_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+We_PRP investigated_VBD the_DT following_JJ types_NNS of_IN contexts_NNS for_IN training_NN word_NN vectors_NNS :_: PLAIN_NNP ,_, which_WDT uses_VBZ words_NNS within_IN a_DT window_NN of_IN 3_CD to_TO each_DT side_NN of_IN the_DT target_NN word_NN as_IN contexts_NNS ;_: TREE_NNP ,_, which_WDT uses_VBZ words_NNS within_IN 3_CD steps_NNS of_IN the_DT target_NN in_IN the_DT dependency_NN trees_NNS ,_, obtained_VBN from_IN applying_VBG Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS parser_NN to_TO the_DT cor_NN -_: pus_NN ;_: and_CC STATE_NNP ,_, which_WDT records_VBZ the_DT internal_JJ states_NNS of_IN 2_CD http://acl.cs.qc.edu/_NN ̃lhuang_VBD /_CD 3_CD http://nlp.stanford.edu/software/corenlp.shtml_NN 4_CD https://catalog.ldc.upenn.edu/LDC2008T19_CD %_NN #_# !_.
+&_CC '_'' !_. ''_'' '_'' !_.
+%_NN '_'' #_# !_.
+#_# !_.
+%_NN #_# !_. ''_''
+#_# '_'' %_NN '_'' ''_'' '_'' %_NN #_# !_.
+%_NN #_# !_.
+%_NN &_CC !_.
+#_# #_# !_.
+#_# !_.
+%_NN #_# !_. ''_''
+#_# &_CC #_# %_NN &_CC %_NN #_# ''_'' #_# '_'' ''_'' #_# $_$ ''_'' #_# &_CC ''_'' ''_'' !_. ''_''
+#_# &_CC !_. ''_''
+#_# $_$ ''_'' #_# $_$ ''_'' #_# &_CC ''_'' ''_'' !_. ''_''
+#_# &_CC !_. ''_''
+#_# $_$ ''_'' #_# $_$ ''_'' #_# -LRB-_-LRB- ''_'' #_# -RRB-_-RRB- ''_'' #_# *_SYM &_CC ''_'' #_# &_CC ''_'' #_# $_$ ''_'' #_# '_'' ''_'' #_# -LRB-_-LRB- ''_'' #_# -RRB-_-RRB- ''_'' #_# *_SYM ''_'' #_# +_CD ''_'' #_# ,_, ''_'' #_# -_: &_CC -LRB-_-LRB- !_. ''_'' '_'' !_. ''_''
+&_CC !_. ''_''
+%_NN !_. ''_''
+#_# -LRB-_-LRB- !_. ''_'' '_'' !_. ''_''
+&_CC !_. ''_''
+%_NN !_. ''_''
+#_# Figure_NN 3_CD :_: We_PRP plot_VBP X_NNP by_IN the_DT weight_NN of_IN the_DT feature_NN s0wx_CD ,_, and_CC Y_NNP by_IN the_DT weight_NN of_IN s0ex_CD ,_, for_IN x_LS of_IN high_JJ -LRB-_-LRB- Left_VBN -RRB-_-RRB- and_CC middle_JJ -LRB-_-LRB- Right_NNP -RRB-_-RRB- frequency_NN words_NNS ._.
+Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS parser_NN ,_, and_CC uses_VBZ words_NNS at_IN posi_SYM -_: tions_NNS -LCB-_-LRB- s1_CD ,_, s2_CD ,_, s3_CD ,_, s0l_CD ,_, s0r_CD ,_, s1l_CD ,_, s1r_CD ,_, q0_CD ,_, q1_CD ,_, q2_CD -RCB-_-RRB- as_IN con_NN -_: texts_NNS for_IN a_DT target_NN s0_NN ._.
+These_DT positions_NNS are_VBP where_WRB pars_SYM -_: ing_NN features_NNS are_VBP extracted_VBN from_IN ._.
+We_PRP expect_VBP TREE_NNP and_CC STATE_NNP to_TO encode_VB more_JJR syntactic_NN related_VBN infor_NN -_: mation_NN ._.
+4.1_CD Parsing_NNP Results_NNS The_DT parsing_NN results_NNS are_VBP shown_VBN in_IN Table_NNP 1_CD ._.
+We_PRP find_VBP that_IN ,_, the_DT OUTER_NNP operation_NN used_VBN for_IN combined_VBN fea_NN -_: tures_NNS and_CC the_DT STATE_NNP contexts_NNS for_IN training_NN word_NN vec_SYM -_: tors_NNS perform_VBP the_DT best_JJS for_IN transition-based_JJ parsing_NN ,_, but_CC other_JJ settings_NNS also_RB improve_VBP the_DT baseline_NN -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, especially_RB for_IN sentences_NNS containing_VBG un_SYM -_: seen_VBN words_NNS ._.
+We_PRP conducted_VBD paired_VBN bootstrap_JJ test_NN to_TO compare_VB our_PRP$ proposed_VBN method_NN with_IN the_DT baseline_NN ,_, and_CC find_VB out_RP that_IN most_JJS improvements_NNS are_VBP statistically_RB sig_NN -_: nificant_NN ._.
+We_PRP also_RB compared_VBN with_IN the_DT method_NN of_IN replacing_VBG words_NNS in_IN lexical_JJ features_NNS by_IN cluster_NN bit_NN strings_NNS -LRB-_-LRB- Koo_NNP et_FW al._FW ,_, 2008_CD ;_: Bansal_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+We_PRP use_VBP bit_RB strings_NNS constructed_VBN from_IN hierarchical_JJ clusters_NNS induced_VBD from_IN the_DT previous_JJ word_NN embeddings_NNS ;_: as_RB well_RB as_IN the_DT the_DT bit_NN strings_NNS constructed_VBN in_IN Bansal_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- 5_CD ._.
+Lengths_NNS of_IN the_DT bit_NN strings_NNS are_VBP set_VBN to_TO 4_CD ,_, 6_CD ,_, 8_CD ,_, 12_CD ,_, 16_CD ,_, and_CC 20_CD ._.
+It_PRP turns_VBZ out_RP that_IN the_DT performance_NN gains_NNS are_VBP not_RB as_IN sig_NN -_: nificant_NN as_IN our_PRP$ proposed_VBN method_NN ._.
+For_IN reference_NN ,_, we_PRP report_VBP results_NNS by_IN a_DT neural_JJ net_NN -_: work_NN based_VBN parser_NN -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- ,_, since_IN our_PRP$ method_NN shares_NNS a_DT similar_JJ motivation_NN with_IN Chen_NNP and_CC Manning_NNP 's_POS work_NN ,_, i.e._FW to_TO use_VB low-dimensional_JJ dense_JJ features_NNS instead_RB of_IN high-dimensional_JJ sparse_JJ features_NNS in_IN parsing_NN ,_, aiming_VBG to_TO obtain_VB better_JJR gener_SYM -_: alization_NN ._.
+For_IN initializing_VBG word_NN embeddings_NNS in_IN the_DT neural_JJ network_NN ,_, we_PRP tried_VBD 300_CD dimensional_JJ random_JJ 5_CD http://ttic.uchicago.edu/_NN ̃mbansal_JJ /_NN Figure_NN 4_CD :_: We_PRP plot_VBP X_NNP by_IN cosine_NN similarities_NNS between_IN words_NNS ,_, and_CC Y_NN by_IN cosine_NN similarities_NNS of_IN weights_NNS ,_, learned_VBD for_IN lexical_JJ features_NNS -LRB-_-LRB- Upper_NNP -RRB-_-RRB- and_CC embedding_VBG features_NNS -LRB-_-LRB- Lower_JJR -RRB-_-RRB- ._.
+Words_NNS are_VBP of_IN high_JJ -LRB-_-LRB- Left_VBN -RRB-_-RRB- and_CC middle_JJ -LRB-_-LRB- Right_NNP -RRB-_-RRB- frequencies_NNS ._.
+vectors_NNS and_CC the_DT PLAIN_NNP ,_, TREE_NNP ,_, STATE_NNP vectors_NNS as_IN de_FW -_: scribed_VBD previously_RB ._.
+We_PRP find_VBP that_DT pre-trained_JJ word_NN embeddings_NNS can_MD improve_VB performance_NN ,_, with_IN TREE_NN and_CC STATE_NNP slightly_RB better_JJR than_IN PLAIN_NNP ,_, suggesting_VBG that_IN TREE_NNP and_CC STATE_NNP may_MD contain_VB more_JJR informa_NN -_: tion_NN useful_JJ to_TO parsing_NN ._.
+However_RB ,_, the_DT STATE_NNP vector_NN is_VBZ not_RB as_IN powerful_JJ as_IN used_VBN with_IN Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS parser_NN ,_, suggesting_VBG that_IN for_IN a_DT given_VBN baseline_NN ,_, it_PRP may_MD be_VB more_RBR helpful_JJ to_TO train_VB word_NN vectors_NNS from_IN contexts_NNS specific_JJ to_TO that_DT baseline_NN ._.
+Chen_NNP and_CC Manning_NNP 's_POS parser_NN generally_RB performs_VBZ worse_JJR than_IN Huang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS baseline_NN ,_, suggesting_VBG that_IN we_PRP can_MD not_RB immediately_RB ob_SYM -_: tain_VB a_DT better_JJR parser_NN by_IN switching_VBG to_TO neural_JJ networks_NNS ;_: other_JJ factors_NNS ,_, such_JJ as_IN global_JJ optimization_NN and_CC care_NN -_: fully_RB selected_VBN features_NNS may_MD still_RB have_VB merits_NNS ,_, which_WDT makes_VBZ our_PRP$ method_NN useful_JJ for_IN improving_VBG existing_VBG ma_SYM -_: ture_NN parsers_NNS ._.
+4.2_CD Analysis_NN Is_VBZ our_PRP$ modified_VBN parser_NN really_RB a_DT feature_NN reduction_NN of_IN the_DT baseline_NN system_NN ,_, i.e._FW is_VBZ the_DT parsing_NN model_NN trained_VBN for_IN embedding_VBG features_NNS actually_RB correlated_VBN to_TO the_DT baseline_NN parsing_NN model_NN using_VBG lexical_JJ fea_NN -_: tures_NNS ?_.
+In_IN Figure_NN 3_CD ,_, we_PRP plot_VBP weights_NNS learned_VBD for_IN the_DT feature_NN s0_CD wx_NN as_IN X_NNP ,_, and_CC weights_NNS for_IN s0_CD ex_FW as_IN Y_NNP ,_, where_WRB x_LS ranges_VBZ over_RB high_JJ or_CC middle_JJ frequency_NN words_NNS ._.
+The_DT weight_NN for_IN s0ex_CD is_VBZ calculated_VBN by_IN taking_VBG inner_JJ product_NN of_IN the_DT vector_NN s0ex_CD and_CC the_DT weight_NN vec_NN -_: tor_NN -LRB-_-LRB- W_NNP -LRB-_-LRB- s0e1_CD -RRB-_-RRB- ,_, ..._: ,_, W_NNP -LRB-_-LRB- s0ed_VBN -RRB-_-RRB- -RRB-_-RRB- ._.
+As_IN the_DT direction_NN of_IN ''_'' #_# '_'' !_. !_. ''_''
+#_# !_. ''_''
+%_NN !_. ''_''
+&_CC !_. ''_'' '_''
+-LRB-_-LRB- !_. !_. ''_''
+#_# !_. ''_''
+%_NN !_. ''_''
+&_CC !_. ''_'' '_''
+-LRB-_-LRB- ààà_FW ààà_FW ààà_FW ààà_FW ààà_FW à_FW ààà_FW à_FW ``_`` The_DT Rochester_NNP ,_, N.Y._NNP ,_, photographic_JJ giant_NN recently_RB began_VBD marketing_VBG T_SYM -_: Max_NNP 3200_CD ,_, one_CD of_IN the_DT fastest_JJS and_CC most_RBS sensitive_JJ monochrome_NN films_NNS ._. ''_''
+Figure_NN 6_CD :_: Improved_VBN parsing_NN results_NNS on_IN parallel_JJ structure_NN of_IN adjectives_NNS ._.
+mensionality_NN ._.
+This_DT property_NN may_MD have_VB two_CD favor_NN -_: able_JJ effects_NNS on_IN parsing_NN ,_, as_IN hypothesized_VBN in_IN Andreas_NNP and_CC Klein_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- :_: -LRB-_-LRB- i_FW -RRB-_-RRB- to_TO connect_VB unseen_JJ words_NNS to_TO known_JJ ones_NNS ,_, and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- to_TO encourage_VB common_JJ behav_NN -_: iors_NNS among_IN in-vocabulary_JJ words_NNS ._.
+The_DT effects_NNS on_IN unseen_JJ words_NNS have_VBP been_VBN observed_VBN To_TO illustrate_VB the_DT effects_NNS on_IN in-vocabulary_JJ words_NNS ,_, we_PRP take_VBP a_DT specific_JJ parallel_NN structure_NN of_IN adjectives_NNS ._.
+More_RBR precisely_RB ,_, we_PRP consider_VBP an_DT internal_JJ state_NN of_IN the_DT parser_NN such_JJ that_IN :_: s1_CD t_NN and_CC s0_CD t_NN have_VBP POS-tags_JJ JJ_NNP ,_, JJS_NNP or_CC JJR_NNP ;_: and_CC s0lt_CD has_VBZ a_DT POS-tag_JJ CC_NNP or_CC Comma_NNP ._.
+Then_RB ,_, in_IN 98.8_CD %_NN instances_NNS of_IN such_PDT a_DT state_NN in_IN the_DT train_NN -_: ing_NN data_NNS ,_, the_DT golden_JJ label_NN action_NN is_VBZ Reduce-Left_NNP ,_, suggesting_VBG a_DT strong_JJ tendency_NN of_IN the_DT state_NN to_TO become_VB a_DT parallel_JJ structure_NN of_IN adjectives_NNS ,_, such_JJ as_IN ``_`` black_JJ and_CC white_JJ ''_'' ._.
+However_RB ,_, when_WRB we_PRP parse_VBP New_NNP York_NNP Times_NNP data_NNS using_VBG the_DT baseline_NN parser_NN ,_, the_DT proportion_NN of_IN Reduce-Left_NNP action_NN when_WRB facing_VBG the_DT state_NN de_IN -_: creases_NNS to_TO 96.7_CD %_NN ,_, suggesting_VBG that_IN this_DT tendency_NN is_VBZ ``_`` While_IN it_PRP is_VBZ possible_JJ that_IN the_DT Big_NNP Green_NNP initiative_NN will_MD be_VB ruled_VBN unconsti_NNS -_: tutional_JJ ,_, it_PRP is_VBZ of_IN course_NN conceivable_JJ that_IN in_IN modern_JJ California_NNP it_PRP could_MD slide_VB through_IN ._. ''_''
+Figure_NN 5_CD :_: Improved_VBN parsing_NN results_NNS with_IN unseen_JJ -LRB-_-LRB- bold_JJ -RRB-_-RRB- words_NNS ._.
+ààà_IN à_IN the_DT regression_NN lines_NNS show_VBP ,_, weights_NNS learned_VBD for_IN s0ex_CD are_VBP positively_RB correlated_VBN to_TO weights_NNS learned_VBN for_IN s0wx_CD ._.
+It_PRP suggests_VBZ that_IN the_DT parsing_NN model_NN trained_VBN for_IN em_SYM -_: bedding_NN features_NNS is_VBZ indeed_RB correlated_VBN to_TO the_DT parsing_NN model_NN of_IN the_DT baseline_NN ,_, which_WDT implies_VBZ that_IN the_DT base_NN -_: ààà_IN à_NN line_NN parser_NN and_CC our_PRP$ modified_VBN parser_NN would_MD have_VB sim_SYM -_: ilar_JJ behaviors_NNS ._.
+This_DT may_MD explain_VB the_DT significance_NN results_NNS reported_VBD in_IN Table_NNP 1_CD :_: though_IN our_PRP$ improve_VB -_: ments_NNS against_IN the_DT baseline_NN is_VBZ fairly_RB moderate_JJ ,_, they_PRP are_VBP still_RB statistically_RB significant_JJ because_IN our_PRP$ modi_SYM -_: fied_VBD parser_NN behaves_VBZ similarly_RB as_IN the_DT baseline_NN parser_NN ,_, but_CC would_MD correct_VB the_DT mistakes_NNS made_VBN by_IN the_DT base_NN -_: line_NN while_IN preserving_VBG most_RBS originally_RB correct_JJ labels_NNS ._.
+Such_JJ improvements_NNS are_VBP easier_JJR to_TO achieve_VB statistical_JJ significance_NN -LRB-_-LRB- Berg-Kirkpatrick_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, and_CC are_VBP arguably_RB indicating_VBG better_JJR generalization_NN ._.
+in_IN the_DT Unseen_NNP column_NN in_IN Table_NNP 1_CD ,_, and_CC we_PRP present_VBP a_DT concrete_JJ example_NN in_IN Figure_NN 5_CD ._.
+In_IN this_DT example_NN ,_, ``_`` con_NN -_: ceivable_NN ''_'' is_VBZ unseen_JJ in_IN the_DT training_NN data_NNS ,_, thus_RB can_MD not_RB be_VB recognized_VBN by_IN the_DT baseline_NN parser_NN ;_: however_RB ,_, its_PRP$ word_NN vector_NN is_VBZ similar_JJ to_TO ``_`` subjective_JJ ''_'' and_CC ``_`` undeni_FW -_: ably_RB ''_'' ,_, whose_WP$ behaviors_NNS are_VBP learned_VBN and_CC generalized_VBN to_TO ``_`` conceivable_JJ ''_'' ,_, by_IN our_PRP$ modified_VBN parser_NN using_VBG em_SYM -_: bedding_NN features_NNS ._.
+So_RB how_WRB does_VBZ our_PRP$ modified_VBN parser_NN improve_VB from_IN the_DT baseline_NN ?_.
+In_IN Figure_NN 4_CD ,_, we_PRP plot_VBP cosine_NN similar_JJ -_: ities_NNS between_IN word_NN vectors_NNS as_IN X_NNP ,_, and_CC cosine_NN simi_NNS -_: larities_NNS between_IN weight_NN vectors_NNS of_IN all_DT one-word_JJ lex_NN -_: ical_NN features_NNS as_IN Y_NNP ,_, compared_VBN to_TO the_DT similarities_NNS of_IN weights_NNS of_IN the_DT corresponding_JJ embedding_NN features_NNS ._.
+The_DT plots_NNS show_VBP that_IN ,_, for_IN similar_JJ words_NNS ,_, the_DT learned_VBN weights_NNS for_IN the_DT corresponding_JJ lexical_NN features_NNS are_VBP only_RB slightly_RB similar_JJ ;_: but_CC after_IN the_DT lexical_JJ features_NNS are_VBP reduced_VBN to_TO low-dimensional_JJ embedding_NN features_NNS ,_, the_DT learned_VBN weights_NNS for_IN the_DT corresponding_JJ features_NNS are_VBP more_RBR strongly_RB correlated_VBN ._.
+In_IN other_JJ words_NNS ,_, weights_NNS for_IN embedding_VBG features_NNS encourage_VBP similar_JJ behaviors_NNS between_IN similar_JJ words_NNS ,_, due_JJ to_TO a_DT much_RB lower_JJR di_FW -_: baseline_NN STATE_NNP +_CD OUTER_NNP 92_CD 90_CD 88_CD 86_CD 84_CD 82_CD 0.01_CD 0.1_CD 1_CD Used_VBN proportion_NN of_IN training_NN data_NNS Figure_NN 7_CD :_: UAS_NNS on_IN Dev_NNP ._.
+set_NN ,_, of_IN models_NNS trained_VBN on_IN less_JJR data_NNS ._.
+not_RB fully_RB generalized_VBN as_IN a_DT rule_NN for_IN parallel_JJ structure_NN of_IN adjectives_NNS ._.
+This_DT is_VBZ not_RB astonishing_JJ ,_, because_IN POS_NNP -_: tags_NNS and_CC surface_NN forms_NNS of_IN lexical_JJ features_NNS are_VBP diverse_JJ in_IN the_DT training_NN data_NNS ._.
+However_RB ,_, when_WRB we_PRP use_VBP our_PRP$ mod_NN -_: ified_VBD parser_NN ,_, the_DT proportion_NN of_IN Reduce-Left_NNP ac_SYM -_: tion_NN turns_VBZ out_RP to_TO be_VB 99.4_CD %_NN ,_, significantly_RB higher_JJR than_IN using_VBG the_DT baseline_NN parser_NN according_VBG to_TO a_DT permutation_NN test_NN ._.
+It_PRP suggests_VBZ that_IN our_PRP$ modified_VBN parser_NN generalizes_NNS and_CC strengthens_VBZ the_DT rule_NN of_IN parallel_JJ structure_NN ,_, by_IN en_IN -_: forcing_VBG similar_JJ behaviors_NNS among_IN similar_JJ adjectives_NNS ._.
+A_DT concrete_JJ example_NN of_IN improvement_NN is_VBZ presented_VBN in_IN Figure_NN 6_CD ._.
+In_IN Figure_NN 7_CD ,_, we_PRP vary_VBP the_DT size_NN of_IN training_NN data_NNS and_CC plot_NN UAS_NNS of_IN the_DT obtained_VBN parsing_NN models_NNS ._.
+As_IN the_DT figure_NN shows_VBZ ,_, our_PRP$ modified_VBN parser_NN using_VBG embedding_VBG features_NNS constantly_RB outperforms_VBZ the_DT baseline_NN ._.
+How_WRB -_: ever_RB ,_, the_DT performance_NN of_IN both_DT settings_NNS decrease_VBP as_IN the_DT training_NN data_NNS size_NN decreases_VBZ ,_, suggesting_VBG that_IN there_EX may_MD not_RB be_VB much_JJ syntactic_NN information_NN encoded_VBD in_IN the_DT word_NN embeddings_NNS ,_, even_RB though_IN the_DT word_NN embed_VBD -_: dings_NNS are_VBP trained_VBN on_IN internal_JJ states_NNS of_IN the_DT baseline_NN parser_NN ,_, which_WDT is_VBZ trained_VBN on_IN full_JJ training_NN data_NNS ._.
+We_PRP believe_VBP this_DT graph_NN indicates_VBZ that_IN ,_, word_NN embeddings_NNS can_MD help_VB parsing_NN ,_, but_CC not_RB because_IN they_PRP encode_VBP ex_FW -_: tra_NN syntactic_NN information_NN ;_: rather_RB ,_, it_PRP is_VBZ because_IN word_NN embeddings_NNS bring_VBP better_JJR generalization_NN ._.
+5_CD Conclusion_NN We_PRP have_VBP proposed_VBN a_DT framework_NN for_IN reducing_VBG lexi_SYM -_: cal_NN features_NNS by_IN word_NN embeddings_NNS ,_, and_CC applied_VBD the_DT framework_NN to_TO transition-based_JJ dependency_NN parsing_NN ._.
+A_DT near_IN state-of-the-art_JJ parser_NN is_VBZ improved_VBN ,_, even_RB though_IN the_DT features_NNS are_VBP reduced_VBN ._.
+This_DT work_NN is_VBZ still_RB preliminary_JJ ,_, as_IN we_PRP have_VBP only_RB tested_VBN on_IN one_CD parser_NN ;_: however_RB ,_, our_PRP$ results_NNS are_VBP promising_JJ and_CC our_PRP$ analysis_NN suggests_VBZ that_IN the_DT proposed_VBN method_NN may_MD indeed_RB bring_VB better_JJR generalization_NN ._.
+We_PRP believe_VBP our_PRP$ framework_NN can_MD help_VB more_RBR systems_NNS to_TO reduce_VB lexical_JJ features_NNS and_CC al_SYM -_: leviate_NN the_DT risk_NN of_IN overfitting_NN ,_, thanks_NNS to_TO its_PRP$ generality_NN ._.
+References_NNP Jacob_NNP Andreas_NNP and_CC Dan_NNP Klein_NNP ._.
+2014_CD ._.
+How_WRB much_RB do_VBP word_NN embeddingsencodeaboutsyntax_NN ?_.
+InProceedingsof_NNP ACL_NNP ._.
+Andreas_NNP Argyriou_NNP ,_, Theodoros_NNP Evgeniou_NNP ,_, and_CC Massimil_NNP -_: iano_NN Pontil_NNP ._.
+2007_CD ._.
+Multi-task_JJ feature_NN learning_NN ._.
+In_IN Ad_NNP -_: vances_NNS in_IN NIPS_NNP ._.
+Mohit_NNP Bansal_NNP ,_, Kevin_NNP Gimpel_NNP ,_, and_CC Karen_NNP Livescu_NNP ._.
+2014_CD ._.
+Tailoring_VBG continuous_JJ word_NN representations_NNS for_IN depen_NN -_: dency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.
+Taylor_NNP Berg-Kirkpatrick_NNP ,_, David_NNP Burkett_NNP ,_, and_CC Dan_NNP Klein_NNP ._.
+2012_CD ._.
+An_DT empirical_JJ investigation_NN of_IN statistical_JJ signifi_NNS -_: cance_NN in_IN nlp_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP-CoNLL_NNP ._.
+Danqi_NNP Chen_NNP and_CC Christopher_NNP D_NNP Manning_NNP ._.
+2014_CD ._.
+A_DT fast_JJ and_CC accurate_JJ dependency_NN parser_NN using_VBG neural_JJ net_NN -_: works_NNS ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ._.
+Ronan_NNP Collobert_NNP ,_, Jason_NNP Weston_NNP ,_, Le_NNP ́on_NNP Bottou_NNP ,_, Michael_NNP Karlen_NNP ,_, Koray_NNP Kavukcuoglu_NNP ,_, and_CC Pavel_NNP Kuksa_NNP ._.
+2011_CD ._.
+Natural_JJ language_NN processing_NN -LRB-_-LRB- almost_RB -RRB-_-RRB- from_IN scratch_NN ._.
+J._NNP Mach_NNP ._.
+Learn_VB ._.
+Res._NNP ,_, 12_CD ._.
+Chris_NNP Dyer_NNP ,_, Miguel_NNP Ballesteros_NNP ,_, Wang_NNP Ling_NNP ,_, Austin_NNP Matthews_NNP ,_, and_CC Noah_NNP A._NNP Smith_NNP ._.
+2015_CD ._.
+Transition_NN -_: based_VBN dependency_NN parsing_VBG with_IN stack_VB long_JJ short-term_JJ memory_NN ._.
+In_IN Proceedings_NNP of_IN ACL-IJCNLP_NNP ._.
+Liang_NNP Huang_NNP and_CC Kenji_NNP Sagae_NNP ._.
+2010_CD ._.
+Dynamic_NNP program_NN -_: ming_VBG for_IN linear-time_JJ incremental_JJ parsing_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN ACL_NNP ._.
+Liang_NNP Huang_NNP ,_, Suphan_NNP Fayong_NNP ,_, and_CC Yang_NNP Guo_NNP ._.
+2012_CD ._.
+Structured_VBN perceptron_NN with_IN inexact_JJ search_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN NAACL-HLT_NN ._.
+Terry_NNP Koo_NNP ,_, Xavier_NNP Carreras_NNP ,_, and_CC Michael_NNP Collins_NNP ._.
+2008_CD ._.
+Simple_NN semi-supervised_JJ dependency_NN parsing_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN ACL_NNP ._.
+Re_NNP ́miLebretandRonanCollobert_NNP ._.
+2014_CD ._.
+Wordem_NNP -_: beddings_NNS through_IN Hellinger_NNP PCA_NNP ._.
+In_IN Proceedings_NNP of_IN EACL_NNP ._.
+Tao_NNP Lei_NNP ,_, Yu_NNP Xin_NNP ,_, Yuan_NNP Zhang_NNP ,_, Regina_NNP Barzilay_NNP ,_, and_CC Tommi_NNP Jaakkola_NNP ._.
+2014_CD ._.
+Low-rank_JJ tensors_NNS for_IN scoring_VBG dependency_NN structures_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.
+Omer_NNP Levy_NNP and_CC Yoav_NNP Goldberg_NNP ._.
+2014a_NNS ._.
+Dependency_NN -_: based_VBN word_NN embeddings_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.
+UAS_NNP acuracy_NN Omer_NNP Levy_NNP and_CC Yoav_NNP Goldberg_NNP ._.
+2014b_JJ ._.
+Neural_JJ word_NN em_SYM -_: bedding_NN as_IN implicit_JJ matrix_NN factorization_NN ._.
+In_IN Advances_NNS in_IN NIPS_NNP ._.
+Omer_NNP Levy_NNP ,_, Yoav_NNP Goldberg_NNP ,_, and_CC Ido_NNP Dagan_NNP ._.
+2015_CD ._.
+Im_SYM -_: proving_VBG distributional_JJ similarity_NN with_IN lessons_NNS learned_VBN from_IN word_NN embeddings_NNS ._.
+Trans_NNP ._.
+ACL_NNP ,_, 3_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP Corrado_NNP ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013_CD ._.
+Distributed_VBN representations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ compositionality_NN ._.
+In_IN Advances_NNS in_IN NIPS_NNP ._.
+Andriy_NNP Mnih_NNP and_CC Geoffrey_NNP E._NNP Hinton_NNP ._.
+2009_CD ._.
+A_DT scalable_JJ hierarchical_JJ distributed_VBN language_NN model_NN ._.
+In_IN Advances_NNS in_IN NIPS_NNP ._.
+Joakim_NNP Nivre_NNP ,_, Johan_NNP Hall_NNP ,_, Jens_NNP Nilsson_NNP ,_, Gu_NNP ̈ls_VBZ ̧en_JJ Eryigˇit_NN ,_, and_CC Svetoslav_NNP Marinov_NNP ._.
+2006_CD ._.
+Labeled_VBN pseudo_NN -_: projective_JJ dependency_NN parsing_VBG with_IN support_NN vector_NN ma_SYM -_: chines_NNS ._.
+In_IN Proceedings_NNP of_IN CoNLL_NNP ._.
+Joakim_NNP Nivre_NNP ._.
+2008_CD ._.
+Algorithms_NNS for_IN deterministic_JJ incre_NN -_: mental_JJ dependency_NN parsing_NN ._.
+Comput_NNP ._.
+Linguist_NN ._.
+Jeffrey_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+2014_CD ._.
+Glove_NNP :_: Global_NNP vectors_NNS for_IN word_NN rep_NN -_: resentation_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ._.
+Richard_NNP Socher_NNP ,_, John_NNP Bauer_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, and_CC Ng_NNP Andrew_NNP Y._NNP 2013_CD ._.
+Parsing_VBG with_IN compositional_JJ vector_NN grammars_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.
+Jun_NNP Suzuki_NNP ,_, Hideki_NNP Isozaki_NNP ,_, and_CC Masaaki_NNP Nagata_NNP ._.
+2011_CD ._.
+Learning_NNP condensed_JJ feature_NN representations_NNS from_IN large_JJ unsupervised_JJ data_NNS sets_NNS for_IN supervised_JJ learning_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN ACL-HLT_NN ._.
+Joseph_NNP Turian_NNP ,_, Lev-Arie_NNP Ratinov_NNP ,_, and_CC Yoshua_NNP Bengio_NNP ._.
+2010_CD ._.
+Word_NN representations_NNS :_: A_DT simple_JJ and_CC general_JJ method_NN for_IN semi-supervised_JJ learning_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.
+Taro_NNP Watanabe_NNP and_CC Eiichiro_NNP Sumita_NNP ._.
+2015_CD ._.
+Transition_NN -_: based_VBN neural_JJ constituent_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN ACL-IJCNLP_NNP ._.
+David_NNP Weiss_NNP ,_, Chris_NNP Alberti_NNP ,_, Michael_NNP Collins_NNP ,_, and_CC Slav_NNP Petrov_NNP ._.
+2015_CD ._.
+Structured_VBN training_NN for_IN neural_JJ net_NN -_: work_NN transition-based_JJ parsing_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP -_: IJCNLP_NNP ._.
+Hiroyasu_NNP Yamada_NNP and_CC Yuji_NNP Matsumoto_NNP ._.
+2003_CD ._.
+Statistical_NNP dependency_NN analysis_NN with_IN support_NN vector_NN machines_NNS ._.
+In_IN In_IN Proceedings_NNP of_IN IWPT_NNP ._.
+Dani_NNP Yogatama_NNP and_CC Noah_NNP A._NNP Smith_NNP ._.
+2014_CD ._.
+Linguistic_JJ structured_JJ sparsity_NN in_IN text_NN categorization_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN ACL_NNP ._.
+Yue_NNP Zhang_NNP and_CC Stephen_NNP Clark_NNP ._.
+2008_CD ._.
+A_DT tale_NN of_IN two_CD parsers_NNS :_: Investigating_VBG and_CC combining_VBG graph-based_JJ and_CC transition-based_JJ dependency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ._.
+Yue_NNP Zhang_NNP and_CC Joakim_NNP Nivre_NNP ._.
+2011_CD ._.
+Transition-based_JJ dependency_NN parsing_VBG with_IN rich_JJ non-local_JJ features_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ._.

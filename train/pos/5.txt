@@ -1,0 +1,464 @@
+Distinguishing_VBG between_IN True_JJ and_CC False_JJ Stories_NNP using_VBG various_JJ Linguistic_NNP Features_NNP Abstract_NNP This_DT paper_NN analyzes_VBZ what_WP linguistic_NN features_NNS differentiate_VBP true_JJ and_CC false_JJ stories_NNS written_VBN in_IN Hebrew_NNP ._.
+To_TO do_VB so_RB ,_, we_PRP have_VBP defined_VBN four_CD feature_NN sets_NNS containing_VBG 145_CD features_NNS :_: POS_SYM -_: tags_NNS ,_, quantitative_JJ ,_, repetition_NN ,_, and_CC special_JJ expressions_NNS ._.
+The_DT examined_VBD corpus_NN contains_VBZ stories_NNS that_WDT were_VBD composed_VBN by_IN 48_CD native_JJ Hebrew_NNP speakers_NNS who_WP were_VBD asked_VBN to_TO tell_VB both_DT false_JJ and_CC true_JJ stories_NNS ._.
+Classification_NN experiments_NNS on_IN all_DT possible_JJ combinations_NNS of_IN these_DT four_CD feature_NN sets_NNS using_VBG five_CD supervised_JJ machine_NN learning_VBG methods_NNS have_VBP been_VBN applied_VBN ._.
+The_DT Part_NN of_IN Speech_NNP -LRB-_-LRB- POS_NNP -RRB-_-RRB- set_NN was_VBD superior_JJ to_TO all_DT others_NNS and_CC has_VBZ been_VBN found_VBN as_IN a_DT key_JJ component_NN ._.
+The_DT best_JJS accuracy_NN result_NN -LRB-_-LRB- 89.6_CD %_NN -RRB-_-RRB- has_VBZ been_VBN achieved_VBN by_IN a_DT combination_NN of_IN sixteen_CD POS-tags_NNS and_CC one_CD quantitative_JJ feature_NN ._.
+1_CD Introduction_NNP ``_`` A_DT lie_NN is_VBZ a_DT false_JJ statement_NN to_TO a_DT person_NN or_CC group_NN made_VBN by_IN another_DT person_NN or_CC group_NN who_WP knows_VBZ it_PRP is_VBZ not_RB the_DT whole_JJ truth_NN ,_, intentionally_RB ''_'' -LRB-_-LRB- Freitas_NNP -_: Magalhães_NNS ,_, 2013_CD -RRB-_-RRB- ._.
+Dilmon_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- defines_VBZ a_DT lie_NN as_IN ``_`` a_DT linguistic_JJ message_NN that_WDT conveys_VBZ a_DT falsehood_NN or_CC in_IN which_WDT the_DT truth_NN is_VBZ intentionally_RB manipulated_VBN ,_, in_IN Rakefet_NNP Dilmon_NNP Dept._NNP of_IN Hebrew_NNP and_CC Semitic_NNP Languages_NNP Bar-Ilan_NNP University_NNP 5290002_CD Ramat-Gan_NNP ,_, Israel_NNP rak2@bezeqint.net_NNP Daniel_NNP Nissim_NNP Cohen_NNP Dept._NNP of_IN Computer_NNP Science_NNP Jerusalem_NNP College_NNP of_IN Technology_NNP 21_CD Havaad_NNP Haleumi_NNP St._NNP ,_, P.O.B._NNP 16031_CD 9116001_CD Jerusalem_NNP ,_, Israel_NNP sdanielco@gmail.com_NNP order_NN to_TO arouse_VB in_IN the_DT listener_NN a_DT belief_NN which_WDT he_PRP would_MD not_RB otherwise_RB have_VB held_VBN ._. ''_''
+The_DT efforts_NNS to_TO discover_VB linguistic_JJ cues_NNS to_TO detect_VB lies_NNS are_VBP based_VBN on_IN the_DT assumption_NN that_IN there_EX are_VBP differences_NNS between_IN the_DT language_NN of_IN an_DT individual_JJ when_WRB he_PRP -LRB-_-LRB- or_CC she_PRP -RRB-_-RRB- is_VBZ not_RB telling_VBG the_DT truth_NN and_CC his_PRP$ -LRB-_-LRB- or_CC her_PRP$ -RRB-_-RRB- ``_`` normal_JJ ,_, ''_'' truthful_JJ language_NN ._.
+Fraser_NNP -LRB-_-LRB- 1991_CD -RRB-_-RRB- claims_VBZ that_IN these_DT differences_NNS are_VBP the_DT outcome_NN of_IN a_DT feeling_NN of_IN stress_NN ,_, which_WDT is_VBZ manifest_JJ in_IN a_DT decline_NN in_IN capacity_NN for_IN cognitive_JJ integration_NN ,_, in_IN precision_NN ,_, in_IN organization_NN ,_, and_CC in_IN ranking_JJ things_NNS ._.
+These_DT difficulties_NNS result_VBP in_IN a_DT change_NN in_IN the_DT normal_JJ elements_NNS of_IN the_DT speaker_NN 's_POS language_NN ._.
+There_EX were_VBD a_DT few_JJ studies_NNS during_IN the_DT last_JJ four_CD decades_NNS concerning_VBG verbal_JJ cues_NNS that_WDT characterize_VBP a_DT lie_NN discourse_NN ._.
+Dulaney_NNP -LRB-_-LRB- 1982_CD -RRB-_-RRB- finds_VBZ that_IN the_DT response_NN time_NN was_VBD shorter_JJR ,_, there_EX were_VBD fewer_JJR special_JJ words_NNS ,_, a_DT smaller_JJR number_NN of_IN verbs_NNS in_IN the_DT past_JJ tense_JJ ,_, and_CC a_DT faster_JJR speech_NN rhythm_NN when_WRB an_DT individual_NN was_VBD lying_VBG ;_: there_EX were_VBD fewer_JJR words_NNS in_IN the_DT discourse_NN ,_, as_RB well_RB as_IN a_DT tendency_NN to_TO short_JJ messages_NNS ._.
+Knapp_NNP et_FW al._FW -LRB-_-LRB- 1974_CD -RRB-_-RRB- find_VBP that_IN there_EX were_VBD more_JJR general_JJ declarations_NNS and_CC fewer_JJR factual_JJ ones_NNS ,_, linguistic_JJ ambiguity_NN ,_, repeated_VBN declarations_NNS ,_, more_JJR markers_NNS of_IN diminishment_NN -LRB-_-LRB- few_JJ ,_, a_DT little_JJ ,_, hardly_RB -RRB-_-RRB- and_CC fewer_JJR group_NN markers_NNS -LRB-_-LRB- we_PRP ,_, our_PRP$ ,_, all_DT of_IN us_PRP -RRB-_-RRB- ,_, more_JJR markers_NNS of_IN the_DT other_JJ -LRB-_-LRB- they_PRP -RRB-_-RRB- and_CC fewer_JJR personal_JJ declarations_NNS -LRB-_-LRB- I_PRP ,_, me_PRP -RRB-_-RRB- ._.
+Hollien_NNP and_CC Rosenberg_NNP -LRB-_-LRB- 1991_CD -RRB-_-RRB- use_NN lexical_JJ breakdown_NN to_TO investigate_VB deception_NN -LRB-_-LRB- type-token_JJ ratio_NN -_: TTR_NNP -RRB-_-RRB- ,_, and_CC finds_VBZ less_RBR linguistic_JJ diversity_NN when_WRB a_DT person_NN is_VBZ practicing_VBG deception_NN ._.
+The_DT studies_NNS of_IN Dilmon_NNP -LRB-_-LRB- 2007_CD ;_: 2008_CD ;_: 2012_CD -RRB-_-RRB- conduct_VB a_DT comprehensive_JJ examination_NN of_IN the_DT linguistic_JJ criteria_NNS that_WDT differentiate_VBP between_IN the_DT discourse_NN of_IN truth_NN and_CC of_IN deception_NN in_IN the_DT Hebrew_NNP language_NN ,_, and_CC attempt_NN to_TO produce_VB a_DT primary_JJ test_NN of_IN the_DT cognitive_JJ and_CC emotional_JJ functions_NNS involved_VBN in_IN the_DT latter_JJ type_NN of_IN discourse_NN ._.
+Forty_CD three_CD verbal_JJ criteria_NNS -LRB-_-LRB- Section_NN 2.2_CD -RRB-_-RRB- were_VBD classified_VBN according_VBG to_TO the_DT cognitive_JJ and_CC emotional_JJ functions_NNS affecting_VBG the_DT speaker_NN ,_, also_RB addressing_VBG his_PRP$ level_NN of_IN awareness_NN of_IN these_DT functions_NNS ._.
+Except_IN one_CD verbal_JJ criterion_NN that_WDT was_VBD automatically_RB computed_VBN by_IN a_DT program_NN ,_, the_DT values_NNS of_IN all_DT other_JJ criteria_NNS for_IN each_DT story_NN were_VBD computed_VBN by_IN hand_NN ._.
+This_DT study_NN starts_VBZ from_IN the_DT end_NN of_IN the_DT studies_NNS of_IN Dilmon_NNP ._.
+Firstly_RB ,_, we_PRP implemented_VBD and/or_CC applied_VBD four_CD feature_NN sets_NNS :_: POS-tag_JJ features_NNS ,_, quantitative_JJ features_NNS ,_, repetition_NN features_NNS ,_, and_CC special_JJ expressions_NNS ._.
+Secondly_RB ,_, the_DT application_NN of_IN the_DT features_NNS is_VBZ automatically_RB done_VBN by_IN a_DT computer_NN program_NN in_IN contrast_NN to_TO Dilmon_NNP 's_POS features_NNS -LRB-_-LRB- 42_CD of_IN her_PRP$ 43_CD features_NNS were_VBD computed_VBN by_IN hand_NN for_IN each_DT story_NN -RRB-_-RRB- ._.
+Thirdly_RB ,_, in_IN contrast_NN to_TO Dilmon_NNP 's_POS studies_NNS that_IN found_VBD which_WDT are_VBP the_DT specific_JJ criteria_NNS that_WDT are_VBP statistically_RB significant_JJ differentiators_NNS ,_, we_PRP apply_VBP five_CD supervised_JJ machine_NN learning_NN -LRB-_-LRB- ML_NNP -RRB-_-RRB- methods_NNS and_CC various_JJ combinations_NNS of_IN feature_NN sets_NNS to_TO find_VB the_DT best_JJS method_NN for_IN single-document_JJ classification_NN ,_, i.e._FW ,_, for_IN each_DT input_NN story_NN identifying_VBG whether_IN it_PRP is_VBZ a_DT true_JJ or_CC a_DT false_JJ story_NN ._.
+That_DT will_MD potentially_RB lead_VB to_TO find_VB discoveries_NNS concerning_VBG distinguishing_VBG between_IN truth_NN and_CC false_JJ stories_NNS ._.
+The_DT task_NN of_IN distinguishing_VBG between_IN true_JJ and_CC false_JJ story_NN as_RB well_RB as_IN the_DT interpretation_NN of_IN the_DT obtained_VBN results_NNS are_VBP of_IN practical_JJ interest_NN for_IN any_DT language_NN in_IN general_JJ and_CC for_IN Hebrew_NNP in_IN particular_JJ ._.
+Such_JJ a_DT system_NN can_MD be_VB of_IN great_JJ help_NN to_TO the_DT work_NN of_IN organizations_NNS ,_, such_JJ as_IN workplaces_NNS ,_, detective_NN agencies_NNS ,_, police_NNS ,_, and_CC courts_NNS ,_, to_TO identify_VB various_JJ types_NNS of_IN stories_NNS ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Section_NN 2_CD presents_NNS relevant_JJ background_NN on_IN linguistic_JJ examination_NN in_IN relevant_JJ systems_NNS ,_, linguistic_JJ examination_NN between_IN discourses_NNS of_IN truth_NN and_CC deception_NN ,_, text_NN classification_NN ,_, and_CC text_NN classification_NN of_IN deception_NN and_CC true_JJ stories_NNS ._.
+Section_NN 3_CD describes_VBZ the_DT classification_NN model_NN and_CC the_DT chosen_VBN feature_NN sets_NNS ._.
+Section_NN 4_CD presents_VBZ the_DT examined_VBN corpus_NN ,_, the_DT experimental_JJ results_NNS and_CC their_PRP$ analysis_NN ._.
+Finally_RB ,_, Section_NNP 5_CD summarizes_VBZ the_DT main_JJ findings_NNS and_CC suggests_VBZ future_JJ directions_NNS ._.
+2_CD RelevantBackground_NNP 2.1_CD Linguistic_NNP examination_NN in_IN relevant_JJ systems_NNS Argamon_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- describe_VBP an_DT automatic_JJ process_NN that_WDT profiles_NNS the_DT author_NN of_IN an_DT anonymous_JJ text_NN ._.
+Accurate_JJ profiling_NN of_IN an_DT unknown_JJ author_NN is_VBZ important_JJ for_IN various_JJ tasks_NNS such_JJ as_IN criminal_JJ investigations_NNS ,_, market_NN research_NN ,_, and_CC national_JJ security_NN ._.
+The_DT deciphering_VBG the_DT profile_NN of_IN someone_NN is_VBZ performed_VBN in_IN the_DT following_JJ way_NN :_: Given_VBN a_DT corpus_NN of_IN documents_NNS ,_, marked_VBD as_IN ``_`` male_JJ ''_'' and_CC ``_`` female_JJ ''_'' ._.
+Only_RB four_CD features_NNS were_VBD selected_VBN :_: sex_NN ,_, age_NN ,_, mother_NN tongue_NN ,_, and_CC neurotic_JJ level_NN of_IN disturbance_NN behavior_NN ._.
+Combination_NN of_IN linguistic_JJ features_NNS and_CC various_JJ ML_NNP methods_NNS -LRB-_-LRB- Support_NN vector_NN machines_NNS and_CC Bayesian_JJ regression_NN -RRB-_-RRB- enable_VBP an_DT automated_JJ system_NN to_TO effectively_RB determine_VB several_JJ such_JJ aspects_NNS of_IN an_DT anonymous_JJ author_NN ._.
+Chaski_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- presents_VBZ a_DT computational_JJ ,_, stylometric_JJ method_NN that_WDT has_VBZ obtained_VBN 95_CD %_NN accuracy_NN and_CC has_VBZ been_VBN successfully_RB used_VBN in_IN investigating_VBG and_CC adjudicating_VBG several_JJ crimes_NNS involving_VBG digital_JJ evidence_NN ._.
+Chaski_NNP 's_POS approach_NN focuses_VBZ on_IN language_NN features_NNS that_WDT are_VBP easily_RB achievable_JJ ,_, e.g._FW ,_, word_NN length_NN ,_, sentence_NN length_NN ,_, word_NN frequency_NN ,_, and_CC the_DT distribution_NN of_IN words_NNS according_VBG to_TO different_JJ lengths_NNS ._.
+Strous_JJ et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- describe_VBP an_DT automatic_JJ process_NN that_WDT characterizes_VBZ and_CC identifies_VBZ schizophrenia_NN in_IN writing_VBG ._.
+This_DT study_NN investigates_VBZ and_CC analyzes_VBZ computer_NN texts_NNS written_VBN by_IN 36_CD schizophrenia_NN patients_NNS ._.
+Each_DT document_NN contains_VBZ from_IN 300_CD to_TO 500_CD words_NNS ._.
+The_DT system_NN tested_VBN differences_NNS between_IN these_DT documents_NNS to_TO documents_NNS written_VBN by_IN people_NNS who_WP are_VBP not_RB sick_JJ with_IN this_DT disease_NN ._.
+Observations_NNS have_VBP shown_VBN that_IN methods_NNS using_VBG lexical_JJ and_CC syntactic_JJ features_NNS obtained_VBD 83.3_CD %_NN accuracy_NN ._.
+60_CD features_NNS were_VBD chosen_VBN for_IN the_DT classification_NN process_NN :_: the_DT 25_CD most_RBS frequent_JJ words_NNS in_IN the_DT corpus_NN ,_, the_DT 20_CD most_RBS frequent_JJ letter_NN tri-grams_NNS ,_, and_CC the_DT average_JJ number_NN of_IN 15_CD repetitive_JJ words_NNS ._.
+The_DT main_JJ conclusions_NNS are_VBP :_: -LRB-_-LRB- 1_CD -RRB-_-RRB- Some_DT of_IN the_DT basic_JJ processes_NNS in_IN schizophrenia_NN are_VBP evident_JJ in_IN writing_VBG ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- Automatically_RB identified_VBN characteristics_NNS of_IN schizophrenic_JJ writing_NN are_VBP closely_RB related_VBN to_TO the_DT clinical_JJ description_NN of_IN the_DT disorder_NN ;_: and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- Automatic_NNP classification_NN of_IN samples_NNS in_IN writing_NN of_IN schizophrenia_NN is_VBZ possible_JJ ._.
+2.2_CD Linguistic_NNP examination_NN between_IN discourses_NNS of_IN truth_NN and_CC deception_NN Hancock_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- found_VBD that_IN ``_`` liars_NNS tended_VBD to_TO produce_VB more_JJR words_NNS ,_, fewer_JJR first_JJ person_NN singular_JJ but_CC more_RBR third_JJ person_NN pronouns_NNS ,_, and_CC more_JJR sense_NN words_NNS than_IN truth-tellers_NNS ''_'' ._.
+Only_RB a_DT small_JJ number_NN of_IN criteria_NNS were_VBD examined_VBN ,_, the_DT discourse_NN being_VBG studied_VBN was_VBD written_VBN on_IN a_DT computer_NN ,_, the_DT motivation_NN to_TO lie_VB came_VBD from_IN preliminary_JJ instructions_NNS ,_, and_CC the_DT discourse_NN examined_VBD was_VBD a_DT conversation_NN -LRB-_-LRB- not_RB a_DT full_JJ text_NN -RRB-_-RRB- ._.
+The_DT studies_NNS of_IN Dilmon_NNP -LRB-_-LRB- 2007_CD ;_: 2008_CD ;_: 2012_CD -RRB-_-RRB- dealt_VBN with_IN discovering_VBG linguistic_JJ differences_NNS between_IN the_DT discourse_NN of_IN truth_NN and_CC discourse_NN of_IN deception_NN ._.
+Dilmon_NNP 's_POS studies_NNS present_VBP an_DT investigation_NN of_IN 48_CD couples_NNS of_IN stories_NNS told_VBN by_IN 48_CD subjects_NNS ._.
+Each_DT of_IN them_PRP told_VBD a_DT true_JJ story_NN and_CC a_DT false_JJ story_NN ._.
+The_DT comparison_NN was_VBD made_VBN using_VBG linguistic_JJ instruments_NNS ,_, and_CC the_DT results_NNS obtained_VBN were_VBD examined_VBN statistically_RB ._.
+The_DT 48_CD subjects_NNS are_VBP native_JJ Hebrew_NNP speakers_NNS of_IN both_DT sexes_NNS ,_, of_IN different_JJ ages_NNS and_CC a_DT variety_NN of_IN backgrounds_NNS -LRB-_-LRB- with_IN no_DT criminal_JJ background_NN -RRB-_-RRB- ._.
+The_DT subjects_NNS were_VBD being_VBG instructed_VBN to_TO take_VB part_NN in_IN a_DT game_NN in_IN which_WDT they_PRP had_VBD to_TO tell_VB two_CD stories_NNS from_IN their_PRP$ past_NN ,_, one_CD true_JJ and_CC the_DT other_JJ an_DT invention_NN ,_, and_CC the_DT ``_`` real_JJ ''_'' subjects_NNS would_MD have_VB to_TO guess_VB which_WDT of_IN the_DT stories_NNS was_VBD true_JJ and_CC which_WDT an_DT invention_NN ._.
+In_IN this_DT way_NN ,_, the_DT subjects_NNS themselves_PRP chose_VBD where_WRB and_CC how_WRB they_PRP would_MD mislead_VB ,_, and_CC they_PRP would_MD be_VB motivated_VBN to_TO provide_VB stories_NNS that_WDT would_MD make_VB it_PRP hard_JJ to_TO identify_VB them_PRP as_IN stories_NNS of_IN deception_NN ._.
+That_DT is_VBZ to_TO say_VB ,_, they_PRP tried_VBD to_TO escape_VB detection_NN ,_, as_RB would_MD be_VB the_DT case_NN in_IN an_DT actual_JJ deceptive_JJ situation_NN ._.
+Apart_RB from_IN this_DT instruction_NN ,_, they_PRP received_VBD no_DT other_JJ instructions_NNS as_IN to_TO subject_JJ matter_NN ,_, length_NN ,_, or_CC any_DT other_JJ issue_NN of_IN the_DT story_NN 's_POS substance_NN ._.
+Dilmon_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- compared_VBN between_IN the_DT true_JJ stories_NNS and_CC the_DT false_JJ stories_NNS ._.
+Her_PRP$ assumption_NN is_VBZ that_IN the_DT true_JJ stories_NNS indicate_VBP the_DT subject_NN 's_POS ordinary_JJ ,_, ``_`` normal_JJ ''_'' language_NN ,_, while_IN the_DT false_JJ stories_NNS indicate_VBP deviations_NNS from_IN that_DT normal_JJ language_NN ._.
+43_CD criteria_NNS were_VBD defined_VBN by_IN her_PRP$ to_TO analyze_VB the_DT language_NN of_IN truth_NN and_CC falsity_NN ._.
+Part_NN of_IN the_DT criteria_NNS were_VBD translated_VBN to_TO Hebrew_NNP from_IN the_DT foreign_JJ literature_NN ._.
+Other_JJ criteria_NNS were_VBD collected_VBN after_IN interviews_NNS with_IN an_DT attorney_NN ,_, a_DT police_NN investigator_NN ,_, a_DT military_JJ police_NN investigator_NN ,_, and_CC two_CD psychologists_NNS who_WP had_VBD worked_VBN for_IN the_DT police_NN ._.
+These_DT criteria_NNS belong_VBP to_TO the_DT following_VBG areas_NNS :_: morphology_NN ,_, syntax_NN ,_, semantics_NNS ,_, discourse_NN analysis_NN ,_, and_CC speech_NN prosody_NN ._.
+42_CD out_IN of_IN 43_CD criteria_NNS were_VBD calculated_VBN manually_RB ._.
+All_PDT these_DT criteria_NNS were_VBD examined_VBN whether_IN they_PRP differentiate_VBP between_IN the_DT discourse_NN of_IN truth_NN and_CC of_IN deception_NN ._.
+Statistical_NNP analyses_NNS using_VBG MANOVA_NNP were_VBD performed_VBN with_IN repeated_VBN measures_NNS for_IN each_DT linguistic_JJ criterion_NN ._.
+19_CD criteria_NNS were_VBD found_VBN to_TO differentiate_VB significantly_RB between_IN the_DT two_CD types_NNS of_IN discourse_NN ._.
+5_CD out_IN of_IN the_DT 19_CD criteria_NNS that_WDT have_VBP been_VBN found_VBN as_IN significant_JJ belong_VBP to_TO the_DT morphology_NN area_NN as_IN follows_VBZ :_: 1_LS -_: #_# of_IN past_JJ tense_JJ verbs_NNS ,_, 2_LS -_: #_# of_IN present_JJ tense_JJ verbs_NNS ,_, 3_LS -_: #_# of_IN future_JJ tense_JJ verbs_NNS ,_, 4_LS -_: #_# of_IN first_JJ person_NN verbs_NNS ,_, and_CC 5_LS -_: #_# of_IN third_JJ person_NN verbs_NNS ._.
+All_PDT these_DT criteria_NNS are_VBP normalized_VBN by_IN the_DT #_# of_IN verbs_NNS in_IN the_DT tested_VBN story_NN ._.
+2.3_CD Text_NN classification_NN Text_NN classification_NN -LRB-_-LRB- TC_NNP -RRB-_-RRB- is_VBZ a_DT supervised_JJ learning_NN task_NN that_WDT assigns_VBZ natural_JJ language_NN text_NN documents_NNS to_TO one_CD or_CC more_JJR predefined_JJ categories_NNS -LRB-_-LRB- Sebastiani_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+The_DT TC_NNP task_NN is_VBZ one_CD of_IN the_DT most_RBS fundamental_JJ tasks_NNS in_IN data_NNS mining_NN -LRB-_-LRB- DM_NNP -RRB-_-RRB- and_CC machine_NN learning_NN -LRB-_-LRB- ML_NNP -RRB-_-RRB- literature_NN -LRB-_-LRB- Aggarwal_NNP and_CC Zhai_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+TC_NNP has_VBZ been_VBN applied_VBN in_IN various_JJ domains_NNS ,_, e.g._FW ,_, document_NN indexing_NN ,_, document_NN filtering_VBG ,_, information_NN retrieval_NN -LRB-_-LRB- IR_NNP -RRB-_-RRB- ,_, information_NN extraction_NN -LRB-_-LRB- IE_NNP -RRB-_-RRB- ,_, spam_NN filtering_VBG ,_, text_NN filtering_VBG ,_, text_NN mining_NN ,_, and_CC word_NN sense_NN disambiguation_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- -LRB-_-LRB- Pazienza_NNP ,_, 1997_CD ;_: Knight_NNP ,_, 1999_CD ;_: Sebastiani_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+There_EX are_VBP two_CD main_JJ types_NNS of_IN TC_NNP :_: TC_NNP according_VBG to_TO categories_NNS and_CC to_TO stylistic_JJ classification_NN ._.
+TC_NNP according_VBG to_TO categories_NNS -LRB-_-LRB- e.g._FW ,_, disciplines_NNS ,_, domains_NNS ,_, and_CC topics_NNS -RRB-_-RRB- is_VBZ usually_RB based_VBN on_IN content_JJ words_NNS and/or_CC n-grams_NNS -LRB-_-LRB- Cavnar_NNP and_CC Trenkle_NNP ,_, 1994_CD ;_: Damashek_NNP ,_, 1995_CD ;_: Martins_NNP and_CC Silva_NNP ,_, 2005_CD ;_: Liparas_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Literature_NN documents_NNS ,_, for_IN instance_NN ,_, are_VBP different_JJ from_IN scientific_JJ documents_NNS in_IN their_PRP$ content_JJ words_NNS and_CC n-grams_NNS ._.
+However_RB ,_, stylistic_JJ classification_NN ,_, e.g._FW ,_, authorship_NN attribution_NN -LRB-_-LRB- Stamatatos_NNP ,_, 2009_CD ;_: Koppel_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, ethnicity/time/place_FW -LRB-_-LRB- HaCohen-Kerner_NNP et_FW al._FW ,_, 2010A_NNP ;_: 2010B_NNP -RRB-_-RRB- ,_, genre_NN -LRB-_-LRB- Stamatatos_NNP ,_, 2000_CD ;_: Lim_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, gender_VB -LRB-_-LRB- Hota_NNP et_FW al._FW ,_, 2006_CD ;_: Koppel_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ,_, opinion_NN mining_NN -LRB-_-LRB- Dave_NNP et_NNP al._NNP ,_, 2003_CD -RRB-_-RRB- ,_, computer_NN science_NN conference_NN classification_NN -LRB-_-LRB- HaCohen-Kerner_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, and_CC sentiment_NN analysis_NN -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ,_, is_VBZ usually_RB based_VBN on_IN various_JJ linguistic_JJ features_NNS ,_, such_JJ as_IN function_NN words_NNS ,_, orthographic_JJ features_NNS ,_, parts_NNS of_IN speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- -LRB-_-LRB- or_CC syntactic_JJ -RRB-_-RRB- features_NNS ,_, quantitative_JJ features_NNS ,_, topographic_JJ features_NNS ,_, and_CC vocabulary_NN richness_NN ._.
+2.4_CD TC_NNP of_IN deception_NN and_CC true_JJ stories_NNS POS_NNP tagging_VBG when_WRB tested_VBN on_IN a_DT corpus_NN of_IN 90K_NNP tokens_NNS ._.
+3_LS ._.
+Applying_VBG five_CD ML_NNP methods_NNS for_IN each_DT possible_JJ combination_NN of_IN feature_NN sets_NNS using_VBG default_NN parameters_NNS ._.
+4_LS ._.
+Filtering_VBG out_RP non-relevant_JJ features_NNS using_VBG InfoGain_NNP -LRB-_-LRB- IG_NNP -RRB-_-RRB- -LRB-_-LRB- Yang_NNP and_CC Pedersen_NNP ,_, 1997_CD -RRB-_-RRB- and_CC re_SYM -_: applying_VBG the_DT best_JJS ML_NN method_NN found_VBN in_IN stage_NN #_# 3_CD ._.
+Features_NNS In_IN this_DT paper_NN ,_, we_PRP consider_VBP 145_CD features_NNS divided_VBN into_IN four_CD meaningful_JJ linguistic_JJ feature_NN sets_NNS as_IN follows_VBZ :_: 123_CD POS-tag_NN features_NNS ,_, 4_CD quantitative_JJ features_NNS ,_, 9_CD repetition_NN features_NNS ,_, and_CC 9_CD special_JJ expressions_NNS ._.
+These_DT four_CD feature_NN sets_NNS have_VBP neither_RB been_VBN defined_VBN nor_CC applied_VBN by_IN Dilmon_NNP ._.
+In_IN this_DT research_NN ,_, some_DT of_IN Dilmon_NNP 's_POS -LRB-_-LRB- 2008_CD -RRB-_-RRB- criteria_NNS have_VBP not_RB been_VBN examined_VBN -LRB-_-LRB- e.g._FW ,_, discourse_NN analysis_NN and_CC prosodic_JJ elements_NNS as_IN stuttering_NN and_CC hesitation_NN marks_NNS -RRB-_-RRB- because_IN it_PRP was_VBD difficult_JJ to_TO automatically_RB detect_VB them_PRP ._.
+However_RB ,_, features_NNS such_JJ as_IN tense_JJ verbs_NNS and_CC person_NN verbs_NNS have_VBP been_VBN applied_VBN among_IN the_DT POS-tag_JJ feature_NN set_NN ._.
+We_PRP did_VBD not_RB choose_VB the_DT bag_NN of_IN words_NNS -LRB-_-LRB- BOW_NNP -RRB-_-RRB- or_CC N-gram_JJ -LRB-_-LRB- which_WDT are_VBP usually_RB the_DT most_RBS frequent_JJ continuous_JJ sequences_NNS of_IN N-grams_NNS -RRB-_-RRB- as_IN features_NNS because_IN they_PRP are_VBP too_RB simple_JJ ;_: they_PRP have_VBP less_JJR meaning_NN and_CC they_PRP can_MD be_VB partially_RB seen_VBN as_IN a_DT black_JJ box_NN ._.
+As_IN an_DT example_NN of_IN their_PRP$ low_JJ significance_NN is_VBZ the_DT fact_NN that_IN the_DT linear_JJ ordering_VBG of_IN the_DT N-grams_NNS within_IN the_DT text_NN is_VBZ ignored_VBN ._.
+That_DT is_VBZ to_TO say_VB ,_, these_DT representations_NNS are_VBP essentially_RB independent_JJ of_IN the_DT sequence_NN of_IN words_NNS in_IN the_DT collection_NN ._.
+The_DT first_JJ chosen_VBN feature_NN set_VBN contains_VBZ 123_CD POS_SYM -_: tag_NN features_NNS automatically_RB extracted_VBN by_IN Adler_NNP 's_POS tagger_NN for_IN the_DT Hebrew_NNP language_NN -LRB-_-LRB- Adler_NNP ,_, 2007_CD ;_: Adler_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+This_DT set_NN contains_VBZ features_NNS ,_, which_WDT belong_VBP to_TO many_JJ feature_VBP sub-sets_NNS :_: 7_CD prefix_NN types_NNS ,_, 28_CD part-of-speech_NN tags_NNS ,_, 3_CD gender_NN types_NNS ,_, 5_CD number_NN types_NNS ,_, 4_CD person_NN types_NNS ,_, 3_CD status_NN types_NNS ,_, 7_CD tense_JJ types_NNS ,_, 4_CD pronoun_NN types_NNS ,_, 8_CD named-entity_NN types_NNS ,_, 4_CD interrogative_JJ types_NNS ,_, 3_CD prefix_NN types_NNS ,_, 15_CD punctuation_NN types_NNS ,_, 5_CD number_NN suffix_NN types_NNS ,_, 4_CD person_NN suffix_NN types_NNS ,_, 2_CD polarity_NN types_NNS ,_, 7_CD Hebrew_JJ verbal_JJ stem_NN types_NNS ,_, 3_CD conjunction_NN types_NNS ,_, 5_CD number_NN types_NNS ,_, 3_CD gender_NN suffix_NN types_NNS ,_, and_CC 3_CD quantifier_NN types_NNS ._.
+The_DT second_JJ feature_NN set_NN is_VBZ the_DT quantitative_JJ set_NN containing_VBG 4_CD types_NNS of_IN average_JJ #_# of_IN letters_NNS per_IN word_NN ,_, average_JJ #_# of_IN letters_NNS per_IN sentence_NN ,_, average_JJ #_# of_IN words_NNS per_IN sentence_NN ,_, and_CC TTR_NNP -LRB-_-LRB- the_DT number_NN of_IN different_JJ word_NN types_NNS in_IN a_DT text_NN divided_VBN by_IN the_DT total_JJ number_NN of_IN word_NN tokens_NNS -RRB-_-RRB- ._.
+Mihalcea_NNP and_CC Strapparava_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- present_JJ initial_JJ experiments_NNS in_IN the_DT recognition_NN of_IN deceptive_JJ language_NN ._.
+They_PRP introduce_VBP three_CD data_NNS sets_NNS of_IN true_JJ and_CC lying_VBG texts_NNS containing_VBG 100_CD true_JJ and_CC 100_CD false_JJ statements_NNS for_IN each_DT dataset_NN ._.
+They_PRP use_VBP two_CD classifiers_NNS :_: Naïve_NNP Bayes_NNP and_CC SVM_NNP ._.
+Their_PRP$ features_NNS were_VBD words_NNS belonging_VBG to_TO several_JJ special_JJ word_NN classes_NNS ,_, e.g._FW ,_, friends_NNS -LRB-_-LRB- friend_NN ,_, companion_NN ,_, body_NN -RRB-_-RRB- ,_, and_CC self_NN -LRB-_-LRB- our_PRP$ ,_, myself_PRP ,_, mine_JJ ,_, ours_JJ -RRB-_-RRB- ._.
+No_DT feature_NN selection_NN was_VBD performed_VBN ,_, and_CC stopwords_NNS were_VBD not_RB removed_VBN ._.
+Using_VBG a_DT 10-fold_JJ cross-validation_JJ test_NN their_PRP$ accuracy_NN results_NNS were_VBD around_RB 70_CD %_NN ._.
+Ott_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- develop_VB a_DT dataset_NN containing_VBG 400_CD truthful_JJ hotel_NN reviews_NNS and_CC 400_CD deceptive_JJ hotel_NN reviews_NNS ._.
+Their_PRP$ features_NNS were_VBD Linguistic_NNP Inquiry_NNP and_CC Word_NNP Count_NNP -LRB-_-LRB- LIWC_NNP -RRB-_-RRB- features_VBZ extracted_VBN by_IN the_DT LIWC_NNP software_NN -LRB-_-LRB- Pennebaker_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, relative_JJ POS_NNP frequencies_NNS extracted_VBN by_IN the_DT Stanford_NNP Parser_NNP -LRB-_-LRB- Klein_NNP and_CC Manning_NNP ,_, 2003_CD -RRB-_-RRB- and_CC 3_CD n-gram_JJ feature_NN sets_NNS -LRB-_-LRB- unigrams_NNS ,_, bigrams_NNS ,_, and_CC trigrams_NNS -RRB-_-RRB- ._.
+Ott_NNP et_FW al._FW show_NN that_IN the_DT detection_NN of_IN deceptive_JJ opinion_NN spam_NN is_VBZ well_RB beyond_IN the_DT capabilities_NNS of_IN human_JJ judges_NNS ._.
+Using_VBG Naïve_NNP Bayes_NNP and_CC SVMlight_NNP -LRB-_-LRB- Joachims_NNP ,_, 1999_CD -RRB-_-RRB- and_CC a_DT 5-fold_JJ cross-validation_NN test_NN they_PRP have_VBP found_VBN that_IN a_DT bigram-based_JJ classification_NN based_VBN on_IN unigrams_NNS and_CC bigrams_NNS obtained_VBD an_DT accuracy_NN of_IN 89.6_CD %_NN ,_, and_CC a_DT combination_NN of_IN LIWC_NNP features_NNS ,_, unigrams_NNS and_CC bigrams_NNS performed_VBD slightly_RB better_JJR -LRB-_-LRB- 89.8_CD %_NN -RRB-_-RRB- ._.
+3_CD The_DT Classification_NN Model_NNP and_CC the_DT Chosen_NNP Feature_NNP Sets_VBZ We_PRP decided_VBD to_TO use_VB Dilmon_NNP 's_POS stories_NNS as_IN our_PRP$ data_NN set_NN ._.
+We_PRP defined_VBD ,_, programmed_VBN and_CC automatically_RB calculated_VBN features_NNS for_IN the_DT input_NN stories_NNS ._.
+In_IN contrast_NN to_TO Dilmon_NNP ,_, who_WP calculated_VBD the_DT ability_NN of_IN each_DT feature_NN alone_RB to_TO statistically_RB distinguish_VB between_IN true_JJ and_CC false_JJ stories_NNS ,_, we_PRP investigated_VBD the_DT ability_NN of_IN various_JJ combinations_NNS of_IN features_NNS to_TO classify_VB between_IN true_JJ and_CC false_JJ stories_NNS using_VBG various_JJ ML_NNP methods_NNS ._.
+The_DT main_JJ stages_NNS of_IN the_DT model_NN are_VBP as_IN follows_VBZ :_: 1_LS ._.
+Building_VBG a_DT corpus_NN containing_VBG 96_CD stories_NNS -LRB-_-LRB- 48_CD false_JJ and_CC 48_CD true_JJ stories_NNS -RRB-_-RRB- ._.
+2_LS ._.
+Computing_NNP all_DT four_CD feature_NN sets_NNS including_VBG the_DT POS-tag_JJ features_NNS using_VBG the_DT tagger_NN built_VBN by_IN Adler_NNP -LRB-_-LRB- Adler_NNP ,_, 2007_CD ;_: Adler_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+This_DT tagger_NN achieved_VBD 93_CD %_NN accuracy_NN for_IN word_NN segmentation_NN and_CC The_DT third_JJ feature_NN set_NN is_VBZ the_DT repetition_NN features_VBZ containing_VBG the_DT following_VBG 9_CD features_NNS :_: normalized_JJ #_# of_IN n-gram_JJ words_NNS -LRB-_-LRB- for_IN n_NN =_SYM 1_CD ,_, 2_CD ,_, 3_CD ,_, 4_CD -RRB-_-RRB- that_WDT repeat_VBP themselves_PRP in_IN the_DT same_JJ sentence_NN ,_, respectively_RB ,_, normalized_JJ #_# of_IN `_`` ha_FW '_'' -LRB-_-LRB- i.e._FW ,_, ``_`` the_DT ''_'' ,_, the_DT definite_JJ article_NN in_IN Hebrew_NNP -RRB-_-RRB- ,_, and_CC normalized_VBD #_# of_IN n-gram_JJ words_NNS -LRB-_-LRB- for_IN n_NN =_SYM 1_CD ,_, 2_CD ,_, 3_CD ,_, 4_CD -RRB-_-RRB- that_WDT repeat_VBP themselves_PRP in_IN the_DT entire_JJ text_NN only_RB once_RB ,_, twice_RB ,_, 3_CD ,_, or_CC 4_CD times_NNS ,_, respectively_RB ._.
+The_DT normalization_NN is_VBZ done_VBN by_IN a_DT division_NN of_IN the_DT computed_JJ value_NN to_TO the_DT number_NN of_IN word_NN tokens_NNS in_IN the_DT document_NN ._.
+The_DT fourth_JJ and_CC the_DT last_JJ feature_NN set_NN is_VBZ the_DT special_JJ expressions_NNS set_VBP that_IN contains_VBZ the_DT normalized_JJ #_# of_IN the_DT following_VBG 9_CD features_NNS :_: intensifiers_NNS ,_, minimizing_VBG markers_NNS ,_, negative_JJ expressions_NNS ,_, positive_JJ expressions_NNS ,_, time_NN expressions_NNS ,_, expressions_NNS of_IN doubt_NN ,_, Emotive_JJ words_NNS and_CC words_NNS describing_VBG emotions_NNS ,_, demonstrative_JJ pronouns_NNS ,_, generalized_VBN words_NNS ,_, `_`` et_FW '_'' -LRB-_-LRB- a_DT term_NN used_VBN to_TO indicate_VB a_DT direct_JJ object_NN -RRB-_-RRB- ,_, and_CC `_`` shel_NN '_'' -LRB-_-LRB- i.e._FW ,_, of_IN ,_, belonging_VBG to_TO -RRB-_-RRB- ._.
+4_CD Corpus_NNP and_CC Experimental_NNP Results_NNS The_DT examined_VBN corpus_NN -LRB-_-LRB- supplied_VBN by_IN Dilmon_NNP -RRB-_-RRB- contains_VBZ 96_CD stories_NNS -LRB-_-LRB- 48_CD false_JJ and_CC 48_CD true_JJ stories_NNS -RRB-_-RRB- that_WDT were_VBD told_VBN by_IN 48_CD native_JJ Hebrew_NNP speakers_NNS -LRB-_-LRB- 23_CD men_NNS and_CC 25_CD women_NNS -RRB-_-RRB- between_IN the_DT ages_NNS of_IN 20_CD and_CC 45_CD ._.
+The_DT reasons_NNS for_IN relatively_RB small_JJ number_NN of_IN subjects_NNS are_VBP :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT subjects_NNS did_VBD not_RB receive_VB payment_NN for_IN their_PRP$ participation_NN ;_: each_DT one_CD of_IN them_PRP volunteered_VBD to_TO participate_VB ._.
+It_PRP is_VBZ not_RB easy_JJ to_TO find_VB many_JJ volunteers_NNS for_IN such_JJ action_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT course_NN of_IN Dilmon_NNP 's_POS study_NN included_VBD a_DT recording_NN of_IN the_DT stories_NNS ,_, varying_VBG in_IN length_NN from_IN five_CD minutes_NNS to_TO an_DT hour_NN ._.
+Then_RB an_DT accurate_JJ transcription_NN of_IN the_DT stories_NNS was_VBD required_VBN -LRB-_-LRB- receiving_VBG over_IN 100_CD pages_NNS of_IN transcribed_VBN text_NN -RRB-_-RRB- and_CC a_DT careful_JJ count_NN of_IN all_PDT the_DT linguistic_JJ characteristics_NNS ._.
+Table_NNP 1_CD presents_NNS general_JJ information_NN about_IN this_DT corpus_NN ._.
+Table_NNP 1_CD ._.
+General_NNP information_NN about_IN the_DT corpus_NN ._.
+Five_CD supervised_JJ ML_NNP methods_NNS including_VBG two_CD decision_NN tree_NN methods_NNS have_VBP been_VBN selected_VBN ._.
+The_DT accuracy_NN rate_NN of_IN each_DT ML_NNP method_NN was_VBD estimated_VBN by_IN a_DT 10-fold_JJ cross-validation_NN test_NN ._.
+These_DT ML_NNP methods_NNS include_VBP SMO_NNP and_CC Naïve_NNP Bayes_NNP -LRB-_-LRB- that_WDT were_VBD examined_VBN in_IN the_DT two_CD previous_JJ studies_NNS about_IN true/false_JJ classification_NN mentioned_VBN in_IN sub-section_NN 2.4_CD -RRB-_-RRB- ._.
+The_DT five_CD applied_VBD ML_NNP methods_NNS are_VBP :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Reduced_VBN Error_NNP Pruning_NNP -LRB-_-LRB- REP_NNP -RRB-_-RRB- -_: Tree_NN is_VBZ a_DT fast_JJ decision_NN tree_NN learner_NN ,_, which_WDT builds_VBZ a_DT decision/regression_NN tree_NN using_VBG information_NN gain/variance_NN and_CC prunes_VBZ it_PRP using_VBG reduced-error_JJ pruning_NN with_IN back_RB fitting_JJ -LRB-_-LRB- Witten_NNP and_CC Frank_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+This_DT algorithm_NN sorts_NNS values_NNS for_IN only_RB numeric_JJ attributes_NNS ._.
+Missing_VBG values_NNS are_VBP dealt_VBN with_IN by_IN splitting_NN the_DT corresponding_JJ instances_NNS into_IN pieces_NNS ._.
+Because_IN the_DT tree_NN grows_VBZ linearly_RB with_IN the_DT size_NN of_IN the_DT samples_NNS presented_VBN ,_, and_CC that_IN ,_, after_IN a_DT while_NN ,_, no_DT accuracy_NN is_VBZ gained_VBN through_IN the_DT increased_VBN tree_NN complexity_NN ,_, pruning_NN becomes_VBZ helpful_JJ if_IN used_VBN carefully_RB -LRB-_-LRB- Elomaa_NNP and_CC Kääriäinen_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- J48_CD is_VBZ an_DT improved_JJ variant_NN of_IN the_DT C4_NNP .5_CD decision_NN tree_NN induction_NN -LRB-_-LRB- Quinlan_NNP ,_, 1993_CD ;_: Quinlan_NNP ,_, 2014_CD -RRB-_-RRB- implemented_VBN in_IN WEKA_NNP ._.
+J48_CD is_VBZ a_DT classifier_NN that_WDT generates_VBZ pruned_VBN or_CC unpruned_JJ C4_NNP .5_CD decision_NN trees_NNS ._.
+The_DT algorithm_NN uses_VBZ greedy_JJ techniques_NNS and_CC is_VBZ a_DT variant_NN of_IN ID3_NNP ,_, which_WDT determines_VBZ at_IN each_DT step_NN the_DT most_RBS predictive_JJ attribute_NN ,_, and_CC splits_VBZ a_DT node_NN based_VBN on_IN this_DT attribute_NN ._.
+J48_CD attempts_NNS to_TO account_VB for_IN noise_NN and_CC missing_VBG data_NNS ._.
+It_PRP also_RB deals_VBZ with_IN numeric_JJ attributes_NNS by_IN determining_VBG where_WRB thresholds_NNS for_IN decision_NN splits_VBZ should_MD be_VB placed_VBN ._.
+The_DT main_JJ parameters_NNS that_WDT can_MD be_VB set_VBN for_IN this_DT algorithm_NN are_VBP the_DT confidence_NN threshold_NN ,_, the_DT minimum_JJ number_NN of_IN instances_NNS per_IN leaf_NN and_CC the_DT number_NN of_IN folds_NNS for_IN REP._NNP As_IN described_VBN earlier_RBR ,_, trees_NNS are_VBP one_CD of_IN the_DT easiest_JJS thing_NN that_WDT could_MD be_VB understood_VBN because_IN of_IN their_PRP$ nature_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Sequential_NNP Minimal_NNP Optimization_NNP -LRB-_-LRB- SMO_NNP ;_: Platt_NNP 1998_CD ;_: Keerthi_NNP et_NNP al._IN 2001_CD ;_: Hastie_NNP and_CC Tibshirani_NNP ,_, 1998_CD -RRB-_-RRB- is_VBZ a_DT variant_NN of_IN the_DT Support_NN Vectors_NNP Machines_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ML_NNP method_NN -LRB-_-LRB- Cortes_NNP and_CC Vapnik_NNP 1995_CD ;_: Vapnik_NNP 2013_CD -RRB-_-RRB- ._.
+The_DT SMO_NNP technique_NN is_VBZ an_DT iterative_JJ algorithm_NN created_VBN to_TO solve_VB the_DT optimization_NN problem_NN often_RB seen_VBN in_IN SVM_NNP techniques_NNS ._.
+SMO_NNP divides_VBZ this_DT problem_NN into_IN a_DT series_NN of_IN smallest_JJS possible_JJ sub-problems_NNS ,_, which_WDT are_VBP then_RB resolved_VBN analytically_RB ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- Logistic_JJ regression_NN -LRB-_-LRB- LR_NNP ;_: Cessie_NNP et_FW al._FW ,_, 1992_CD -RRB-_-RRB- is_VBZ a_DT variant_NN of_IN a_DT probabilistic_JJ statistical_JJ classification_NN model_NN that_WDT is_VBZ used_VBN for_IN predicting_VBG the_DT outcome_NN of_IN a_DT categorical_JJ dependent_JJ variable_JJ -LRB-_-LRB- i.e._FW ,_, a_DT class_NN label_NN -RRB-_-RRB- based_VBN on_IN one_CD feature_NN or_CC more_JJR -LRB-_-LRB- Cessie_NNP et_FW al._FW ,_, 1992_CD ;_: Landwehr_NNP et_FW al._FW ,_, 2005_CD ;_: Sumner_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Type_NN of_IN story_NN Total_JJ #_# of_IN words_NNS Avg_NNP ._.
+#_# of_IN words_NNS per_IN story_NN Median_JJ value_NN of_IN words_NNS per_IN story_NN Std_NNP ._.
+of_IN words_NNS per_IN story_NN True_JJ 8722_CD 181.7_CD 155.5_CD 145.03_CD False_NNP 6720_CD 140_CD 113.5_CD 103.09_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- Naïve_NNP Bayes_NNP -LRB-_-LRB- NB_NNP ;_: John_NNP and_CC Langley_NNP ,_, 1995_CD ;_: McCallum_NNP and_CC Nigam_NNP ,_, 1998_CD -RRB-_-RRB- is_VBZ a_DT set_NN of_IN probabilistic_JJ classifiers_NNS with_IN strong_JJ -LRB-_-LRB- naive_JJ -RRB-_-RRB- independence_NN assumptions_NNS between_IN the_DT features_NNS ._.
+The_DT Naive_NNP Bayes_NNP Classifier_NNP method_NN is_VBZ usually_RB based_VBN on_IN the_DT so-called_JJ Bayesian_JJ theorem_NN -LRB-_-LRB- the_DT current_JJ probability_NN is_VBZ computed_VBN based_VBN on_IN a_DT previous_JJ related_JJ probability_NN -RRB-_-RRB- and_CC is_VBZ particularly_RB suited_VBN when_WRB the_DT number_NN of_IN the_DT features_NNS is_VBZ high_JJ ._.
+These_DT ML_NNP methods_NNS have_VBP been_VBN applied_VBN using_VBG the_DT WEKA_NNP platform_NN -LRB-_-LRB- Witten_NNP and_CC Frank_NNP ,_, 2005_CD ;_: Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- using_VBG the_DT default_NN parameters_NNS ._.
+After_IN finding_VBG the_DT best_JJS ML_NN method_NN we_PRP have_VBP performed_VBN further_JJ experiments_NNS using_VBG only_RB this_DT method_NN ._.
+Non_SYM -_: relevant_JJ features_NNS were_VBD filtered_VBN out_RP using_VBG Information_NN gain_NN -LRB-_-LRB- InfoGain_NNP ,_, IG_NNP -RRB-_-RRB- ,_, a_DT feature_NN selection_NN metric_JJ for_IN text_NN classification_NN ._.
+IG_NNP is_VBZ a_DT popular_JJ measure_NN of_IN feature_NN goodness_NN in_IN text_NN classification_NN -LRB-_-LRB- Yang_NNP and_CC Pedersen_NNP ,_, 1997_CD -RRB-_-RRB- ._.
+It_PRP measures_VBZ the_DT number_NN of_IN bits_NNS of_IN information_NN obtained_VBN for_IN category_NN prediction_NN by_IN knowing_VBG the_DT presence_NN or_CC absence_NN of_IN a_DT feature_NN ._.
+In_IN their_PRP$ comparative_JJ study_NN ,_, Yang_NNP and_CC Pedersen_NNP reported_VBD that_IN IG_NNP and_CC Chi_NNP performed_VBD best_JJS in_IN their_PRP$ multi-class_JJ benchmarks_NNS ._.
+Forman_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- reported_VBD that_IN IG_NNP is_VBZ the_DT best_JJS filtering_VBG method_NN when_WRB one_CD is_VBZ limited_VBN to_TO 20-50_CD features_NNS ._.
+In_IN Forman_NNP 's_POS experiments_NNS ,_, IG_NNP dominates_VBZ the_DT performance_NN of_IN Chi_NNP for_IN every_DT size_NN of_IN the_DT feature_NN set_NN ._.
+The_DT accuracy_NN of_IN each_DT ML_NNP method_NN was_VBD estimated_VBN by_IN a_DT 10-fold_JJ cross-validation_NN test_NN ._.
+Repetitions_NNS -LRB-_-LRB- R_NN -RRB-_-RRB- ,_, and_CC Special_JJ Expressions_NNS -LRB-_-LRB- S_NNP -RRB-_-RRB- ._.
+Therefore_RB ,_, there_EX are_VBP 24_CD =_SYM 16_CD combinations_NNS of_IN feature_NN sets_NNS -LRB-_-LRB- including_VBG the_DT empty_JJ set_NN -RRB-_-RRB- ._.
+For_IN each_DT ML_NNP method_NN we_PRP tried_VBD all_DT 15_CD non-empty_JJ combinations_NNS of_IN feature_NN sets_NNS ._.
+Table_NNP 2_CD presents_VBZ the_DT accuracy_NN results_NNS for_IN the_DT classification_NN of_IN true/false_JJ stories_NNS according_VBG to_TO all_DT 15_CD combinations_NNS of_IN feature_NN sets_NNS ._.
+These_DT results_NNS were_VBD obtained_VBN by_IN applying_VBG the_DT 5_CD supervised_JJ ML_NNP methods_NNS mentioned_VBN in_IN Section_NN 3_CD ._.
+Several_JJ general_JJ conclusions_NNS can_MD be_VB drawn_VBN from_IN Table_NNP 2_CD :_: The_DT first_JJ 4_CD rows_NNS present_VBP the_DT accuracy_NN results_NNS using_VBG only_RB one_CD feature_NN set_NN ._.
+The_DT best_JJS result_NN for_IN 3_CD ML_NNP methods_NNS -LRB-_-LRB- SMO_NNP ,_, J48_NNP and_CC NB_NNP -RRB-_-RRB- was_VBD achieved_VBN by_IN the_DT POS-tags_JJ set_NN ._.
+The_DT best_JJS result_NN out_IN of_IN these_DT results_NNS was_VBD obtained_VBN by_IN the_DT POS-tags_JJ set_NN using_VBG SMO_NNP ._.
+Similar_JJ to_TO Ott_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- we_PRP related_VBD to_TO the_DT accuracy_NN results_NNS achieved_VBN by_IN the_DT POS-tag_NN features_NNS -LRB-_-LRB- 80.2_CD %_NN -RRB-_-RRB- as_IN the_DT baseline_NN with_IN which_WDT to_TO compare_VB our_PRP$ other_JJ results_NNS ._.
+The_DT POS-tags_JJ feature_NN set_NN -LRB-_-LRB- 80.2_CD %_NN -RRB-_-RRB- is_VBZ superior_JJ to_TO the_DT other_JJ single_JJ sets_NNS ._.
+Several_JJ possible_JJ explanations_NNS for_IN this_DT finding_NN are_VBP :_: this_DT set_NN includes_VBZ the_DT largest_JJS number_NN of_IN features_NNS -LRB-_-LRB- 123_CD -RRB-_-RRB- ,_, and_CC these_DT features_NNS include_VBP widespread_JJ information_NN about_IN the_DT whole_JJ text_NN ,_, which_WDT is_VBZ relevant_JJ to_TO the_DT task_NN at_IN hand_NN ._.
+The_DT SMO_NNP method_NN obtained_VBD the_DT best_JJS accuracy_NN result_NN results_NNS for_IN most_JJS of_IN the_DT set_NN combinations_NNS -LRB-_-LRB- in_IN 8_CD out_IN of_IN 15_CD experiments_NNS -RRB-_-RRB- ._.
+The_DT best_JJS accuracy_NN result_NN using_VBG a_DT combination_NN of_IN 2_CD sets_NNS -LRB-_-LRB- 83.3_CD %_NN -RRB-_-RRB- was_VBD obtained_VBN using_VBG a_DT combination_NN of_IN the_DT POS-tags_JJ and_CC the_DT special_JJ expressions_NNS ._.
+The_DT best_JJS accuracy_NN result_NN in_IN Table_NNP 2_CD -LRB-_-LRB- 84.4_CD %_NN -RRB-_-RRB- was_VBD obtained_VBN using_VBG a_DT combination_NN of_IN 3_CD sets_NNS :_: POS_SYM -_: tags_NNS ,_, quantitative_JJ and_CC the_DT special_JJ expressions_NNS ._.
+The_DT addition_NN of_IN the_DT repetitions_NNS features_NNS to_TO the_DT 3_CD sets_NNS -LRB-_-LRB- i.e._FW ,_, the_DT combination_NN of_IN all_DT 4_CD sets_NNS -RRB-_-RRB- led_VBD to_TO a_DT decline_NN in_IN the_DT results_NNS -LRB-_-LRB- 81.3_CD %_NN -RRB-_-RRB- ._.
+The_DT repetitions_NNS set_VBN was_VBD the_DT set_VBN with_IN the_DT worst_JJS results_NNS compared_VBN with_IN the_DT other_JJ sets_NNS for_IN all_DT five_CD ML_NNP methods_NNS ._.
+The_DT improvement_NN rate_NN from_IN the_DT best_JJS set_NN to_TO the_DT best_JJS combination_NN of_IN sets_NNS is_VBZ 4.2_CD %_NN ._.
+Since_IN SMO_NNP has_VBZ been_VBN found_VBN as_IN the_DT best_JJS ML_NN method_NN for_IN our_PRP$ classification_NN task_NN ,_, we_PRP decided_VBD to_TO do_VB further_JJ experiments_NNS using_VBG only_RB SMO_NNP and_CC IG_NNP -LRB-_-LRB- as_IN explained_VBN above_IN -RRB-_-RRB- ._.
+Combinations_NNS of_IN feature_NN sets_NNS Rep_NNP -_: Tree_NNP J48_NNP SMO_NNP LR_NNP NB_NNP P_NNP 60.4_CD 68.8_CD 80.2_CD 63.5_CD 78.1_CD Q_NNP 61.5_CD 61.5_CD 67.7_CD 64.6_CD 66.7_CD R_NN 52.1_CD 57.3_CD 60.4_CD 61.5_CD 61.5_CD S_NNP 68.8_CD 66.7_CD 77.1_CD 77.1_CD 68.8_CD P_NNP ,_, Q_NNP 62.5_CD 66.7_CD 82.3_CD 68.8_CD 79.2_CD P_NNP ,_, R_NNP 60.4_CD 70.8_CD 75.0_CD 65.5_CD 78.2_CD P_NNP ,_, S_NNP 57.3_CD 67.7_CD 83.3_CD 62.5_CD 79.2_CD Q_NNP ,_, R_NNP 60.4_CD 67.7_CD 63.5_CD 67.7_CD 67.7_CD Q_NNP ,_, S_NNP 70.8_CD 69.8_CD 77.1_CD 76.0_CD 74.0_CD R_NN ,_, S_NNP 70.8_CD 60.4_CD 75.0_CD 75.0_CD 68.8_CD P_NNP ,_, Q_NNP ,_, R_NNP 62.5_CD 67.7_CD 77.1_CD 67.7_CD 79.2_CD P_NNP ,_, R_NNP ,_, S_NNP 71.9_CD 65.6_CD 81.3_CD 71.9_CD 79.2_CD P_NNP ,_, Q_NNP ,_, S_NNP 58.3_CD 66.7_CD 84.4_CD 76.0_CD 81.3_CD Q_NNP ,_, R_NNP ,_, S_NNP 68.8_CD 66.7_CD 75.0_CD 76.0_CD 70.8_CD P_NNP ,_, Q_NNP ,_, R_NNP ,_, S_NNP 58.3_CD 63.5_CD 81.3_CD 69.8_CD 80.2_CD Table_NNP 2_CD ._.
+Accuracy_NN results_NNS for_IN the_DT classification_NN of_IN True/False_NNP stories_NNS ._.
+In_IN this_DT research_NN ,_, there_EX are_VBP four_CD feature_NN sets_NNS -LRB-_-LRB- section_NN 3_LS -RRB-_-RRB- :_: POS-tags_NNS -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, Quantitative_JJ -LRB-_-LRB- Q_NNP -RRB-_-RRB- ,_, Combinations_NNS of_IN feature_NN sets_NNS SMO_VBP before_IN IG_NNP SMO_NNP after_IN IG_NNP #_# of_IN feat_NN ._.
+Acc_NNP ._.
+#_# of_IN feat_NN ._.
+Acc_NNP ._.
+True_JJ False_JJ P_NN R_NN F_NN P_NNP R_NNP F_NN P_NNP 123_CD 80.2_CD 15_CD 86.5_CD 80.9_CD 79.2_CD 80.0_CD 79.6_CD 81.3_CD 80.4_CD Q_NNP 4_CD 67.7_CD 1_CD 57.3_CD 68.4_CD 27.1_CD 38.8_CD 54.5_CD 87.5_CD 67.2_CD R_NN 9_CD 60.4_CD 1_CD 53.1_CD 53.1_CD 54.2_CD 53.6_CD 53.2_CD 52.1_CD 52.6_CD S_NNP 9_CD 77.1_CD 4_CD 69.8_CD 67.3_CD 77.1_CD 71.8_CD 73.2_CD 62.5_CD 67.4_CD P_NNP ,_, Q_NNP 127_CD 82.3_CD 17_CD 89.6_CD 91.3_CD 87.5_CD 89.4_CD 88.0_CD 91.7_CD 89.8_CD P_NNP ,_, R_NNP 132_CD 75.0_CD 17_CD 87.5_CD 90.9_CD 83.3_CD 87.0_CD 84.6_CD 91.7_CD 88.0_CD P_NNP ,_, S_NNP 132_CD 83.3_CD 20_CD 85.4_CD 88.6_CD 81.3_CD 84.8_CD 82.7_CD 89.6_CD 86.0_CD Q_NNP ,_, R_NNP 13_CD 63.5_CD 2_CD 63.5_CD 65.1_CD 58.3_CD 61.5_CD 62.3_CD 68.8_CD 65.3_CD Q_NNP ,_, S_NNP 14_CD 77.1_CD 5_CD 78.1_CD 77.6_CD 79.2_CD 78.4_CD 78.7_CD 77.1_CD 77.9_CD R_NN ,_, S_NNP 13_CD 75.0_CD 4_CD 69.8_CD 67.3_CD 77.1_CD 71.8_CD 73.2_CD 62.5_CD 67.4_CD P_NNP ,_, Q_NNP ,_, R_NNP 136_CD 77.1_CD 18_CD 88.5_CD 91.1_CD 85.4_CD 88.2_CD 86.3_CD 91.7_CD 88.9_CD P_NNP ,_, R_NNP ,_, S_NNP 136_CD 81.3_CD 20_CD 85.4_CD 88.6_CD 81.3_CD 84.8_CD 82.7_CD 89.6_CD 86.0_CD P_NNP ,_, Q_NNP ,_, S_NNP 137_CD 84.4_CD 21_CD 89.6_CD 93.2_CD 85.4_CD 89.1_CD 86.5_CD 93.8_CD 90.0_CD Q_NNP ,_, R_NNP ,_, S_NNP 22_CD 75.0_CD 6_CD 79.2_CD 78.0_CD 81.3_CD 79.6_CD 80.4_CD 77.1_CD 78.7_CD P_NNP ,_, Q_NNP ,_, R_NNP ,_, S_NNP 145_CD 81.3_CD 22_CD 89.6_CD 93.2_CD 85.4_CD 89.1_CD 86.5_CD 93.8_CD 90.0_CD Table_NNP 3_CD ._.
+Accuracy_NN results_NNS for_IN combinations_NNS of_IN feature_NN sets_NNS using_VBG SMO_NNP and_CC IG_NNP ._.
+Table_NNP 3_CD presents_VBZ the_DT accuracy_NN results_NNS for_IN all_DT combinations_NNS of_IN feature_NN sets_NNS using_VBG SMO_NNP -LRB-_-LRB- the_DT best_JJS ML_NN method_NN according_VBG to_TO Table_NNP 2_CD -RRB-_-RRB- before_RB and_CC after_RB filtering_VBG out_RP non-relevant_JJ features_NNS using_VBG IG_NNP ._.
+In_IN addition_NN ,_, for_IN the_DT stage_NN after_IN activating_VBG IG_NNP we_PRP also_RB present_VBP the_DT precision_NN ,_, recall_NN ,_, and_CC F-score_JJ results_NNS for_IN each_DT type_NN of_IN story_NN -LRB-_-LRB- true_JJ ,_, false_JJ -RRB-_-RRB- for_IN all_DT possible_JJ combinations_NNS of_IN the_DT four_CD feature_NN sets_NNS ._.
+The_DT following_VBG conclusions_NNS can_MD be_VB drawn_VBN from_IN Table_NNP 3_CD regarding_VBG the_DT classification_NN of_IN True/False_NNP stories_NNS using_VBG SMO_NNP and_CC IG_NNP :_: The_DT best_JJS accuracy_NN result_NN -LRB-_-LRB- 89.6_CD %_NN -RRB-_-RRB- has_VBZ been_VBN achieved_VBN by_IN three_CD different_JJ combination_NN sets_NNS ._.
+The_DT combination_NN with_IN the_DT smallest_JJS number_NN of_IN feature_NN sets_NNS ,_, is_VBZ the_DT combination_NN of_IN two_CD sets_NNS :_: POS-tag_JJ and_CC quantitative_JJ ,_, which_WDT contains_VBZ 17_CD features_NNS including_VBG 16_CD POS-tag_NN features_NNS and_CC one_CD quantitative_JJ feature_NN ._.
+The_DT improvement_NN rate_NN of_IN this_DT combination_NN of_IN two_CD sets_NNS from_IN the_DT initial_JJ state_NN before_IN performing_VBG IG_NNP to_TO the_DT state_NN after_IN performing_VBG IG_NNP is_VBZ 7.3_CD %_NN ._.
+This_DT improvement_NN has_VBZ been_VBN achieved_VBN due_JJ to_TO the_DT filtering_VBG out_IN of_IN 110_CD features_NNS out_IN 127_CD !_.
+The_DT relatively_RB similar_JJ accuracy_NN ,_, precision_NN ,_, recall_NN ,_, and_CC F-score_JJ results_NNS for_IN both_DT types_NNS of_IN stories_NNS -LRB-_-LRB- true_JJ ,_, false_JJ -RRB-_-RRB- for_IN all_DT types_NNS of_IN set_VBN combinations_NNS represent_VBP that_IN the_DT classification_NN results_NNS are_VBP at_IN the_DT same_JJ level_NN of_IN quality_NN for_IN both_DT types_NNS of_IN stories_NNS ._.
+By_IN looking_VBG at_IN the_DT results_NNS of_IN the_DT best_JJS combinations_NNS in_IN Table_NNP 3_CD -LRB-_-LRB- colored_VBN with_IN red_JJ and_CC blue_JJ -RRB-_-RRB- ,_, we_PRP see_VBP that_DT on_IN the_DT one_CD hand_NN ,_, the_DT precision_NN values_NNS are_VBP higher_JJR for_IN the_DT true_JJ stories_NNS -LRB-_-LRB- i.e._FW ,_, less_JJR false_JJ positives_NNS ;_: which_WDT means_VBZ that_IN the_DT system_NN has_VBZ a_DT high_JJ ability_NN to_TO present_VB only_RB relevant_JJ true_JJ stories_NNS -RRB-_-RRB- ,_, and_CC on_IN the_DT other_JJ hand_NN ,_, the_DT recall_NN values_NNS are_VBP higher_JJR for_IN the_DT false_JJ stories_NNS -LRB-_-LRB- i.e._FW ,_, less_JJR false_JJ negatives_NNS ;_: which_WDT means_VBZ that_IN the_DT system_NN has_VBZ a_DT high_JJ ability_NN to_TO present_VB all_DT relevant_JJ false_JJ stories_NNS -RRB-_-RRB- Detailed_JJ results_NNS for_IN the_DT best_JJS combination_NN -LRB-_-LRB- 16_CD POS-tag_NN features_NNS and_CC one_CD quantitative_JJ feature_NN -RRB-_-RRB- using_VBG SMO_NNP and_CC IG_NNP are_VBP presented_VBN in_IN Tables_NNP 4_CD and_CC 5_CD ._.
+Table_NNP 4_CD presents_VBZ the_DT suitable_JJ confusion_NN matrix_NN and_CC Table_NNP 5_CD shows_VBZ the_DT values_NNS of_IN the_DT ROC_NNP and_CC PRC_NNP areas_NNS ._.
+The_DT area_NN under_IN the_DT ROC_NNP curve_NN -LRB-_-LRB- Bradley_NNP 1997_CD ;_: Fawcett_NNP 2006_CD -RRB-_-RRB- and_CC the_DT area_NN under_IN the_DT PRC_NNP curve_NN ,_, i.e._FW ,_, the_DT area_NN under_IN the_DT precision-recall_JJ curve_NN -LRB-_-LRB- Boyd_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- are_VBP often_RB used_VBN to_TO evaluate_VB the_DT performance_NN of_IN ML_NNP methods_NNS ._.
+Table_NNP 4_CD ._.
+The_DT confusion_NN matrix_NN ._.
+Table_NNP 5_CD ._.
+The_DT ROC_NNP and_CC PRC_NNP areas_NNS ._.
+Actual_JJ answer_NN True_JJ False_NNP Classifier_NNP 's_POS answer_NN True_JJ TP_NNP =_SYM 44_CD FP_NNP =_SYM 4_CD False_NNP FN_NNP =_SYM 6_CD TN_NNP =_SYM 4_CD 2_CD True_JJ False_JJ ROC_NNP area_NN 89.6_CD 89.6_CD PRC_NNP area_NN 86.1_CD 84.8_CD Using_VBG the_DT TP_NNP ,_, FP_NNP ,_, FN_NNP ,_, FP_NNP ,_, and_CC TN_NNP values_NNS in_IN the_DT confusion_NN matrix_NN ,_, are_VBP computed_VBN the_DT four_CD popular_JJ measures_NNS :_: recall_NN ,_, precision_NN ,_, accuracy_NN and_CC f_SYM -_: measure_NN -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- ._.
+The_DT ROC_NNP area_NN is_VBZ around_IN 90_CD %_NN and_CC the_DT PRC_NNP area_NN is_VBZ around_IN 85_CD %_NN -86_CD %_NN indicating_VBG very_RB good_JJ classification_NN performance_NN of_IN the_DT SMO_NNP method_NN using_VBG the_DT 17_CD chosen_VBN features_NNS ._.
+Another_DT deeper_JJR observation_NN shows_NNS several_JJ interesting_JJ findings_NNS about_IN the_DT most_RBS distinguishing_JJ features_NNS according_VBG to_TO the_DT IG_NNP method_NN -LRB-_-LRB- i.e._FW ,_, features_NNS that_WDT received_VBD the_DT highest_JJS weights_NNS -RRB-_-RRB- ._.
+Table_NNP 6_CD presents_VBZ some_DT distinguishing_VBG POS_NN features_NNS ._.
+From_IN a_DT pragmatic_JJ standpoint_NN ,_, a_DT deception_NN is_VBZ a_DT deviation_NN from_IN Grice_NNP 's_POS -LRB-_-LRB- 1975_CD -RRB-_-RRB- ``_`` Cooperative_NNP Principle_NNP ''_'' ,_, which_WDT is_VBZ subdivided_VBN into_IN 4_CD maxims_NNS :_: of_IN quantity_NN ,_, of_IN quality_NN ,_, of_IN relation_NN ,_, and_CC of_IN manner_NN ._.
+He_PRP stresses_VBZ that_IN the_DT meticulous_JJ observance_NN of_IN the_DT maxim_NN of_IN quality_NN is_VBZ a_DT fundamental_JJ pre-condition_NN that_WDT ensure_VB the_DT operation_NN of_IN the_DT other_JJ maxims_NNS ._.
+Mey_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- claims_VBZ that_IN concealment_NN technics_NNS -LRB-_-LRB- e.g._FW ,_, deliberate_JJ omission_NN ,_, and_CC uninformative_JJ or_CC disinformative_JJ remarks_NNS -RRB-_-RRB- contradict_VBP the_DT Cooperative_NNP Principle_NNP of_IN Grice_NNP ._.
+By_IN using_VBG negative_JJ words_NNS and_CC third_JJ person_NN verbs_NNS ,_, the_DT speaker_NN is_VBZ violating_VBG the_DT maxim_NN of_IN quality_NN ._.
+5_CD Summary_NNP and_CC Future_NNP Work_NNP In_IN this_DT paper_NN ,_, we_PRP present_VBP a_DT methodology_NN for_IN distinguishing_VBG between_IN true_JJ and_CC false_JJ stories_NNS based_VBN on_IN various_JJ linguistic_JJ features_NNS ._.
+The_DT POS-tag_JJ set_NN containing_VBG 123_CD features_NNS was_VBD superior_JJ to_TO all_DT other_JJ sets_NNS with_IN an_DT accuracy_NN result_NN of_IN 80.2_CD %_NN ._.
+The_DT best_JJS accuracy_NN result_NN -LRB-_-LRB- 89.6_CD %_NN -RRB-_-RRB- was_VBD obtained_VBN by_IN SMO_NNP and_CC IG_NNP using_VBG two_CD feature_NN sets_NNS including_VBG only_JJ sixteen_CD POS-tag_NN features_NNS and_CC one_CD quantitative_JJ feature_NN ._.
+These_DT results_NNS suggest_VBP that_IN stylistic_JJ differences_NNS between_IN any_DT types_NNS of_IN true_JJ and_CC false_JJ stories_NNS can_MD be_VB quantified_VBN along_IN the_DT lines_NNS presented_VBN in_IN this_DT paper_NN ._.
+The_DT main_JJ contribution_NN of_IN this_DT research_NN is_VBZ the_DT careful_JJ feature_NN set_VBN engineering_NN based_VBN on_IN analyses_NNS construction_NN of_IN feature_NN sets_NNS derived_VBN from_IN previous_JJ studies_NNS ._.
+This_DT together_RB with_IN the_DT competition_NN between_IN five_CD well-known_JJ supervised_JJ ML_NNP methods_NNS ,_, and_CC filtering_VBG out_IN of_IN non-relevant_JJ features_NNS using_VBG IG_NNP for_IN SMO_NNP -LRB-_-LRB- the_DT best_JJS found_VBN ML_NNP method_NN -RRB-_-RRB- ,_, yields_NNS considerably_RB improved_VBD accuracy_NN results_NNS ._.
+Future_JJ research_NN proposals_NNS are_VBP :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Apply_RB this_DT classification_NN model_NN to_TO other_JJ types_NNS of_IN true_JJ and_CC false_JJ stories_NNS coming_VBG from_IN other_JJ domains_NNS and_CC written_VBN in_IN various_JJ languages_NNS ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- Implement_VB feature_NN sets_NNS with_IN a_DT focus_NN on_IN special_JJ compound_NN linguistic_NN features_NNS that_WDT differentiate_VBP between_IN true_JJ and_CC false_JJ stories_NNS ,_, speech_NN features_NNS such_JJ as_IN hesitations_NNS or_CC repetitions_NNS ,_, n-gram_JJ features_NNS and_CC other_JJ types_NNS of_IN stylistic_JJ feature_NN sets_NNS ;_: -LRB-_-LRB- 3_LS -RRB-_-RRB- Perform_VB experiments_NNS to_TO see_VB if_IN some_DT interactions_NNS at_IN feature_NN level_NN ,_, not_RB feature_NN set_VBN level_NN ,_, have_VBP any_DT impact_NN on_IN the_DT classification_NN accuracy_NN ;_: and_CC -LRB-_-LRB- 4_LS -RRB-_-RRB- Perform_VB experiments_NNS of_IN distinguishing_VBG between_IN true_JJ and_CC false_JJ stories_NNS by_IN people_NNS ,_, and_CC comparing_VBG their_PRP$ results_NNS versus_CC those_DT performed_VBN by_IN our_PRP$ system_NN ._.
+Distingin_NNP ._.
+POS_NN features_NNS Finding_VBG Meaning_VBG Person-1_NN -LRB-_-LRB- first_JJ person_NN -RRB-_-RRB- The_DT average_NN of_IN this_DT feature_NN for_IN the_DT true_JJ stories_NNS is_VBZ significantly_RB higher_JJR Truthful_JJ people_NNS use_VBP relatively_RB more_RBR first_JJ person_NN pronouns_NNS Person-3_NNP -LRB-_-LRB- third_JJ person_NN -RRB-_-RRB- The_DT average_NN of_IN this_DT feature_NN for_IN the_DT false_JJ stories_NNS is_VBZ significantly_RB higher_JJR Liars_NNPS use_VBP relatively_RB more_RBR third_JJ person_NN pronouns_NNS POS_SYM -_: negation_NN -LRB-_-LRB- negation_NN words_NNS -RRB-_-RRB- The_DT average_NN of_IN this_DT feature_NN for_IN the_DT false_JJ stories_NNS is_VBZ significantly_RB higher_JJR Liars_NNPS use_VBP relatively_RB more_RBR negation_JJ words_NNS Table_NNP 6_CD ._.
+Distinguishing_VBG POS_NNP features_NNS according_VBG to_TO SMO_NNP and_CC IG_NNP ._.
+Our_PRP$ findings_NNS concerning_VBG the_DT use_NN of_IN first-person_NN pronouns_NNS ,_, and_CC negative_JJ words_NNS are_VBP consistent_JJ with_IN the_DT conclusions_NNS of_IN Hancock_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- who_WP found_VBD that_IN the_DT discourse_NN of_IN deception_NN used_VBN fewer_JJR first-person_NN pronouns_NNS ,_, and_CC more_RBR negative_JJ words_NNS ._.
+Our_PRP$ findings_NNS concerning_VBG use_NN of_IN first_JJ and_CC third_JJ person_NN pronouns_NNS are_VBP also_RB consistent_JJ with_IN the_DT conclusions_NNS of_IN Knapp_NNP et_FW al._FW -LRB-_-LRB- 1974_CD -RRB-_-RRB- who_WP found_VBD that_IN a_DT lie_NN discourse_NN contains_VBZ more_RBR markers_NNS of_IN the_DT other_JJ and_CC fewer_JJR personal_JJ declarations_NNS -LRB-_-LRB- I_PRP ,_, me_PRP -RRB-_-RRB- ._.
+Furthermore_RB ,_, our_PRP$ findings_NNS are_VBP also_RB consistent_JJ with_IN some_DT of_IN Dilmon_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT use_NN of_IN negative_JJ words_NNS in_IN the_DT false_JJ stories_NNS might_MD reveals_VBZ the_DT speaker_NN 's_POS negative_JJ attitude_NN toward_IN his_PRP$ invention_NN ,_, and_CC his_PRP$ insecurity_NN from_IN being_VBG in_IN the_DT position_NN of_IN misleading_VBG the_DT listener_NN ,_, and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- Higher_JJR use_NN of_IN verbs_NNS in_IN the_DT third_JJ person_NN and_CC minimal_JJ use_NN of_IN verbs_NNS in_IN the_DT first_JJ person_NN in_IN false_JJ stories_NNS may_MD imply_VB the_DT speaker_NN 's_POS desire_NN to_TO distance_VB himself_PRP from_IN a_DT description_NN of_IN the_DT event_NN and_CC from_IN the_DT possibility_NN of_IN accepting_VBG responsibility_NN for_IN his_PRP$ actions_NNS ._.
+References_NNS Meni_NNP Adler_NNP ._.
+2007_CD ._.
+Hebrew_NNP Morphological_NNP Disambiguation_NNP :_: An_DT Unsupervised_JJ Stochastic_NNP Word_NN -_: based_VBN Approach_NNP ,_, Ph.D._NNP ._.
+Dissertation_NNP ,_, Ben_NNP Gurion_NNP University_NNP ,_, Israel_NNP ._.
+Meni_NNP Adler_NNP ,_, Yael_NNP Netzer_NNP ,_, David_NNP Gabay_NNP ,_, Yoav_NNP Goldberg_NNP ,_, and_CC Michael_NNP Elhadad_NNP ._.
+2008_CD ._.
+Tagging_VBG a_DT Hebrew_NNP Corpus_NNP :_: The_DT Case_NN of_IN Participles_NNPS ,_, In_IN Proceedings_NNP of_IN the_DT LREC-2008_NN ,_, European_JJ Language_NNP Resources_NNPS Association_NNP ,_, Marrakech_NNP ,_, Morocco_NNP ._.
+Charu_NNP C._NNP Aggarwal_NNP and_CC ChengXiang_NNP Zhai_NNP ._.
+2012_CD ._.
+Mining_NNP text_NN data_NNS ._.
+New_NNP York_NNP ,_, NY_NNP :_: Springer_NNP ._.
+Kendrick_NNP Boyd_NNP ,_, Kevin_NNP H._NNP Eng_NNP ,_, and_CC C._NNP David_NNP Page_NNP ._.
+2013_CD ._.
+Area_NNP under_IN the_DT Precision-Recall_NNP Curve_NNP :_: Point_NNP Estimates_NNS and_CC Confidence_NN Intervals_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Machine_NN learning_NN and_CC knowledge_NN discovery_NN in_IN databases_NNS ,_, pages_NNS 451-466_CD ._.
+Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+Andrew_NNP P._NNP Bradley_NNP ._.
+1997_CD ._.
+The_DT use_NN of_IN the_DT Area_NN under_IN the_DT ROC_NNP Curve_NN in_IN the_DT Evaluation_NN of_IN Machine_NN Learning_NNP Algorithms_NNPS ._.
+Pattern_NN Recognition_NN 30_CD :_: 1145_CD --_: 1159_CD ._.
+doi_FW :_: 10.1016_CD /_CD S0031-3203_NN -LRB-_-LRB- 96_CD -RRB-_-RRB- 00142-2_CD Leo_NNP Breiman_NNP ._.
+2001_CD ._.
+Random_NNP Forests_NNPS ._.
+Machine_NN Learning_NNP ,_, 45_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 5_CD --_: 32_CD ._.
+William_NNP B._NNP Cavnar_NNP and_CC John_NNP M._NNP Trenkle_NNP ._.
+1994_CD ._.
+N_NNP -_: Gram-Based_NNP Text_NNP Categorization_NNP ._.
+Ann_NNP Arbor_NNP MI_NNP ,_, 48113_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 161-175_CD ._.
+Renato_NNP F._NNP Corrêa_NNP and_CC Teresa_NNP B._NNP Ludermir_NNP ._.
+2002_CD ._.
+Automatic_NNP Text_NNP Categorization_NNP :_: Case_NNP Study_NNP ,_, In_IN Proceedings_NNP of_IN the_DT VII_NNP Brazilian_JJ Symposium_NN on_IN Neural_NNP Networks_NNP ,_, SBRN_NNP 2002_CD ,_, page_NN 150_CD ,_, IEEE_NNP Corinna_NNP Cortes_NNP and_CC Vladimir_NNP Vapnik_NNP ._.
+1995_CD ._.
+Support_NN -_: vector_NN Networks_NNP ._.
+Machine_NN learning_NN ,_, 20_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 273_CD --_: 297_CD ._.
+Marc_NNP Damashek_NNP ._.
+1995_CD ._.
+Gauging_VBG Similarity_NN with_IN N_NNP -_: grams_NNS :_: Language-independent_JJ Categorization_NN of_IN Text_NN ,_, Science_NNP ,_, 267_CD -LRB-_-LRB- 5199_CD -RRB-_-RRB- :_: 843-848_CD ._.
+Kushal_NNP Dave_NNP ,_, Steve_NNP Lawrence_NNP ,_, and_CC David_NNP M._NNP Pennock_NNP ._.
+2003_CD ._.
+Mining_NN the_DT Peanut_NNP Gallery_NNP :_: Opinion_NNP Extraction_NNP and_CC Semantic_NNP Classification_NNP of_IN Product_NNP Reviews_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 12th_JJ international_JJ conference_NN on_IN World_NNP Wide_NNP Web_NNP ,_, pages_NNS 519-528_CD ,_, ACM_NNP ._.
+Rakefet_NNP Dilmon_NNP ._.
+2004_CD ._.
+Linguistic_NNP Differences_NNS between_IN Lie_NN and_CC Truth_NN in_IN Spoken_NNP Hebrew_NNP --_: Doctoral_NNP Dissertation_NNP ._.
+Bar_NNP Ilan_NNP University_NNP ,_, Ramat_NNP Gan_NNP ,_, Israel_NNP -LRB-_-LRB- in_IN Hebrew_NNP -RRB-_-RRB- ._.
+Rakefet_NNP Dilmon_NNP ._.
+2007_CD ._.
+Fiction_NN or_CC Fact_NN ?_.
+Comparing_VBG True_JJ and_CC Untrue_JJ Anecdotes_NNS ,_, Hebrew_NNP Linguistics_NNP ,_, 59_CD :_: 23-42_JJ -LRB-_-LRB- in_IN Hebrew_NNP -RRB-_-RRB- ._.
+Rakefet_NNP Dilmon_NNP ._.
+2008_CD ._.
+Between_IN Thinking_VBG and_CC Speaking_VBG -_: Linguistic_NNP Tools_NNP for_IN Detecting_VBG a_DT Fabrication_NN ,_, Journal_NNP of_IN Pragmatics_NNPS ,_, 41_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :_: 1152_CD -_: 1170_CD ._.
+Rakefet_NNP Dilmon_NNP ._.
+2012_CD ._.
+Linguistic_NNP Examination_NNP of_IN Police_NNP Testimony_NNP --_: Falsehood_NN or_CC Truth_NN ?_.
+In_IN :_: R._NNP Peled_NNP -_: Laskov_NNP ,_, E._NNP Shoham_NNP &_CC M._NNP Carmon_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, False_NNP Convictions_NNPS :_: Philosophical_JJ ,_, Organizational_JJ and_CC Psychological_JJ Aspects_NNS -LRB-_-LRB- 433_CD pages_NNS -RRB-_-RRB- ,_, Perlstein-Ginosar_NNP &_CC Ashkelon_NNP Academic_NNP College_NNP ,_, Tel-Aviv_NNP ,_, pages_NNS 95_CD -_: 114_CD -LRB-_-LRB- in_IN Hebrew_NNP -RRB-_-RRB- ._.
+Rakefet_NNP Dilmon_NNP ._.
+2013_CD ._.
+False_JJ speech_NN ,_, linguistic_JJ aspects_NNS in_IN Hebrew_NNP ,_, in_IN :_: D._NNP A._NNP Russell_NNP ,_, G._NNP Khan_NNP ,_, &_CC D._NNP L._NNP Vanderzwaag_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, The_DT Encyclopedia_NNP of_IN Hebrew_NNP Language_NNP and_CC Linguistics_NNP ,_, Leiden_NNP ,_, Brill_NNP ,_, Boston_NNP and_CC Tokyo_NNP ,_, pages_NNS 542-546_CD ._.
+Earl_NNP F._NNP Dulaney_NNP ._.
+1982_CD ._.
+Changes_NNS in_IN Language_NN Behavior_NN as_IN a_DT Function_NN of_IN Veracity_NNP ._.
+Human_JJ Communication_NNP Research_NNP ,_, 9_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 75-82_CD ._.
+Tapio_NNP Elomaa_NNP ,_, Matti_NNP Kääriäinen_NNP ._.
+2001_CD ._.
+An_DT Analysis_NN of_IN Reduced_NNP Error_NNP Pruning_NNP ._.
+Journal_NNP of_IN Artificial_NNP Intelligence_NNP Research_NNP 15_CD :_: 163_CD --_: 187_CD ._.
+doi_FW :_: 10.1613_CD /_CD jair_NN .816_CD Tom_NNP Fawcett_NNP ,_, 2006_CD ._.
+An_DT Introduction_NN to_TO ROC_NNP Analysis_NNP ._.
+Pattern_NN Recognition_NN Letters_NNS ,_, 27_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :_: 861_CD --_: 874_CD ._.
+doi_FW :_: 10.1016_CD /_CD j.patrec_JJ .2005.10.010_CD George_NNP Forman_NNP ._.
+2003_CD ._.
+An_DT Extensive_JJ Empirical_NNP Study_NNP of_IN Feature_NNP Selection_NNP Metrics_NNPS for_IN Text_NNP Classification_NNP ,_, The_DT Journal_NNP of_IN machine_NN learning_VBG research_NN ,_, 3_CD :_: 1289-1305_CD ._.
+Bruce_NNP Fraser_NNP ._.
+1991_CD ._.
+Questions_NNS of_IN Witness_NNP Credibility_NN ._.
+Working_VBG Papers_NNP Series_NNP ,_, Program_NN on_IN Negotiation_NN ._.
+Cambridge_NNP ,_, MA_NNP :_: Harvard_NNP Law_NNP School_NNP ,_, pages_NNS 3-91_CD ._.
+Armindo_NNP Freitas-Magalha_NNP ̃es_VBZ ._.
+2013_CD ._.
+The_DT Face_NNP of_IN Lies_NNPS ._.
+Porto_NNP :_: FEELab_NNP Science_NNP Books_NNPS ._.
+ISBN_NNP 978-989_CD -_: 98524-0-2_CD ._.
+Herbert_NNP P._NNP Grice_NNP ._.
+1975_CD ._.
+Logic_NN and_CC conversation_NN ._.
+In_IN Cole_NNP Peter_NNP &_CC Jerry_NNP L._NNP Morgan_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Syntax_NNP and_CC semantics_NNS ,_, vol_NN ._.
+3_CD Speech_NN acts_NNS :_: 41-58_CD ._.
+New_NNP York_NNP :_: Academic_NNP Press_NNP ._.
+Yaakov_NNP HaCohen-Kerner_NNP ,_, Hananya_NNP Beck_NNP ,_, Elchai_NNP Yehudai_NNP ,_, and_CC Dror_NNP Mughaz_NNP ._.
+2010A_CD ._.
+Stylistic_NNP Feature_NNP Sets_VBZ as_IN Classifiers_NNS of_IN Documents_NNS According_VBG to_TO their_PRP$ Historical_NNP Period_NNP and_CC Ethnic_NNP Origin_NNP ._.
+Applied_NNP Artificial_NNP Intelligence_NNP ,_, 24_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- :_: 847-862_CD ._.
+Yaakov_NNP HaCohen-Kerner_NNP ,_, Hananya_NNP Beck_NNP ,_, Elchai_NNP Yehudai_NNP ,_, Mordechay_NNP Rosenstein_NNP ,_, and_CC Dror_NNP Mughaz_NNP ._.
+2010B_CD ._.
+Cuisine_NNP :_: Classification_NN using_VBG Stylistic_NNP Feature_NNP Sets_VBZ and/or_CC Name-Based_JJ Feature_NNP Sets_NNPS ._.
+Journal_NNP of_IN the_DT American_NNP Society_NNP for_IN information_NN Science_NNP &_CC Technology_NNP -LRB-_-LRB- JASIST_NNP -RRB-_-RRB- ,_, 61_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :_: 1644-1657_CD ._.
+Yaakov_NNP HaCohen-Kerner_NNP ,_, Avi_NNP Rosenfeld_NNP ,_, Maor_NNP Tzidkani_NNP ,_, and_CC Daniel_NNP Nisim_NNP Cohen_NNP ._.
+2013_CD ._.
+Classifying_VBG Papers_NNP from_IN Different_NNP Computer_NNP Science_NNP Conferences_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Advanced_NNP Data_NNP Mining_NNP &_CC Applications_NNS ._.
+ADMA_NNP 2013_CD ,_, Part_NNP I_PRP ,_, LNAI_NNP 8346_CD ,_, pages_NNS 529-541_CD ,_, Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+Mark_NNP Hall_NNP ,_, Eibe_NNP Frank_NNP ,_, Geoffrey_NNP Holmes_NNP ,_, Bernhard_NNP Pfahringer_NNP ,_, Peter_NNP Reutemann_NNP ,_, and_CC Ian_NNP H._NNP Witten_NNP ._.
+2009_CD ._.
+The_DT WEKA_NNP Data_NNP Mining_NNP Software_NNP ._.
+ACM_NNP SIGKDD_NNP Explorations_NNPS Newsletter_NNP ,_, 11_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :10_CD ._.
+Jeffrey_NNP T._NNP Hancock_NNP ,_, Lauren_NNP Curry_NNP ,_, and_CC Saurabh_NNP Goorha_NNP ,_, Michael_NNP Woodworth_NNP ._.
+2005_CD ._.
+Automated_VBN Linguistic_NNP Analysis_NNP of_IN Deceptive_NNP and_CC Truthful_NNP Synchronous_NNPS Computer-Mediated_NNP Communication_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 38th_JJ Hawaii_NNP International_NNP Conference_NNP on_IN System_NNP Science_NNP ,_, pages_NNS 1-10_CD ._.
+Trevor_NNP Hastie_NNP and_CC Robert_NNP Tibshirani_NNP ._.
+1998_CD ._.
+Classification_NN by_IN Pairwise_NNP Coupling_NNP ._.
+The_DT annals_NN of_IN statistics_NNS ,_, 26_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 451-471_CD ._.
+Harry_NNP Hollien_NNP and_CC Aaron_NNP E._NNP Rosenberg_NNP ._.
+1991_CD ._.
+The_DT Acoustics_NNP of_IN Crime_NN :_: The_DT new_JJ Science_NN of_IN Forensic_NNP Phonetics_NNP ._.
+New_NNP York_NNP :_: Plenum_NN ._.
+Sobhan_NNP R._NNP Hota_NNP ,_, Shlomo_NNP Argamon_NNP ,_, and_CC Rebecca_NNP Chung_NNP ._.
+2006_CD ._.
+Gender_NN in_IN Shakespeare_NNP :_: Automatic_NNP Stylistics_NNPS Gender_NNP Character_NNP Classification_NNP Using_VBG Syntactic_NNP ,_, Lexical_NNP and_CC Lemma_NNP Features_NNP ._.
+Digital_NNP Humanities_NNP and_CC Computer_NNP Science_NNP -LRB-_-LRB- DHCS_NNP -RRB-_-RRB- ._.
+George_NNP H._NNP John_NNP ,_, Pat_NNP Langley_NNP ._.
+1995_CD ._.
+Estimating_VBG Continuous_JJ Distributions_NNS in_IN Bayesian_NNP Classifiers_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 11th_JJ Conference_NN on_IN Uncertainty_NN in_IN Artificial_NNP Intelligence_NNP ,_, San_NNP Mateo_NNP ,_, pages_NNS 338-345_CD ._.
+Thorste_NNP Joachims_NNP ._.
+1999_CD ._.
+Making_VBG Large_JJ Scale_NNP SVM_NNP Learning_NNP Practical_NNP ._.
+In_IN Advances_NNS in_IN kernel_NN methods_NNS ,_, page_NN 184_CD ._.
+MIT_NNP Press_NNP ._.
+S._NNP Sathiya_NNP Keerthi_NNP ,_, Shirish_NNP K._NNP Shevade_NNP ,_, Chiranjib_NNP Bhattacharyya_NNP ,_, and_CC Karuturi_NNP R._NNP K._NNP Murthy_NNP ._.
+2001_CD ._.
+Improvements_NNP to_TO Platt_NNP 's_POS SMO_NNP Algorithm_NNP for_IN SVM_NNP Classifier_NNP Design_NNP ._.
+Neural_NNP Computation_NNP ,_, 13_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 637_CD -_: 649_CD ._.
+Dan_NNP Klein_NNP and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2003_CD ._.
+Accurate_JJ Unlexicalized_NNP Parsing_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 41st_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, Volume_NN 1_CD :_: 423-430_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Kevin_NNP Knight_NNP ._.
+1999_CD ._.
+Mining_NNP Online_NNP Text_NNP ,_, Commun_NNP ._.
+ACM_NNP ,_, 42_CD -LRB-_-LRB- 11_CD -RRB-_-RRB- :_: 58-61_CD ._.
+Moshe_NNP Koppel_NNP ,_, Shlomo_NNP Argamon_NNP ,_, and_CC Anat_NNP R._NNP Shimoni_NNP ._.
+2002_CD ._.
+Automatically_RB Categorizing_VBG Written_VBN Texts_NNS by_IN Author_NN Gender_NN ._.
+Lit_NNP Linguist_NNP Computing_NNP ,_, 17_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 401-412_CD ._.
+Moshe_NNP Koppel_NNP ,_, Jonathan_NNP Schler_NNP ,_, and_CC Shlomo_NNP Argamon_NNP 2011_CD ._.
+Authorship_NN Attribution_NN in_IN the_DT Wild_NNP ._.
+Language_NNP Resources_NNP &_CC Evaluation_NNP ,_, 45_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 83-94_CD ._.
+Mark_NNP L._NNP Knapp_NNP ,_, Roderick_NNP P._NNP Hart_NNP ,_, and_CC Harry_NNP S._NNP Dennis_NNP ._.
+1974_CD ._.
+An_DT Exploration_NN of_IN Deception_NN as_IN a_DT Communication_NNP Construct_NNP ._.
+Communication_NNP Research_NNP ,_, 1_CD :_: 15-29_CD ._.
+doi_FW :10.1111_CD /_CD j._NN 1468_CD -_: 2958.1974_CD ._.
+tb00250.x_CD Niels_NNP Landwehr_NNP ,_, Mark_NNP Hall_NNP ,_, and_CC Eibe_NNP Frank_NNP ._.
+2005_CD ._.
+Logistic_NNP Model_NNP Trees_NNP ._.
+Machine_NN Learning_NNP ,_, 59_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :_: 161-205_CD ._.
+Chul_NNP S._NNP Lim_NNP ,_, Kong_NNP J._NNP Lee_NNP ,_, and_CC Gil_NNP C._NNP Kim_NNP ._.
+2005_CD ._.
+Multiple_JJ Sets_NNS of_IN Features_NNS for_IN Automatic_NNP Genre_NNP Classification_NNP of_IN Web_NNP Documents_NNS ._.
+Information_NN processing_NN &_CC management_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: 1263-1276_CD ._.
+Dimitris_NNP Liparas_NNP ,_, Yaakov_NNP HaCohen-Kerner_NNP ,_, Stefanos_NNP Vrochidis_NNP ,_, Anastasia_NNP Moumtzidou_NNP ,_, and_CC Ioannis_NNP Kompatsiaris_NNP ._.
+2014_CD ._.
+News_NNP Articles_NNPS Classification_NNP Using_VBG Random_NNP Forests_NNPS and_CC Weighted_NNP Multimodal_NNP Features_NNPS ._.
+In_IN Multidisciplinary_NNP Information_NNP Retrieval_NNP ,_, Proceedings_NNP of_IN the_DT 7th_NNP Information_NNP Retrieval_NNP Facility_NNP Conference_NNP ,_, pages_NNS 63-75_CD ._.
+Springer_NNP International_NNP Publishing_NNP ._.
+Martins_NNP ,_, B._NNP ,_, Silva_NNP M._NNP J._NNP 2005_CD ._.
+Language_NN Identification_NN in_IN Web_NNP Pages_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 2005_CD ACM_NNP symposium_NN on_IN applied_VBN computing_NN ,_, pages_NNS 764-768_CD ._.
+ACM_NNP Jacob_NNP Mey_NNP ._.
+2001_CD ._.
+Pragmatics_NNS :_: An_DT introduction_NN ._.
+Malden_NNP ,_, MA_NNP :_: Blackwell_NNP Publishers_NNPS ._.
+Andrew_NNP McCallum_NNP and_CC Kamal_NNP Nigam_NNP ._.
+1998_CD ._.
+A_DT Comparison_NN of_IN Event_NNP Models_NNPS for_IN Naive_NNP Bayes_NNP Text_NNP Classification_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT AAAI-98_NNP workshop_NN on_IN learning_VBG for_IN text_NN categorization_NN ,_, Vol_NNP ._.
+752_CD ,_, pages_NNS 41-48_CD ._.
+Rada_NNP Mihalcea_NNP ,_, and_CC Carlo_NNP Strapparava_NNP ._.
+2009_CD ._.
+The_DT Lie_NN Detector_NNP :_: Explorations_NNS in_IN the_DT Automatic_NNP Recognition_NN of_IN Deceptive_JJ Language_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP -_: IJCNLP_NNP 2009_CD Conference_NN ,_, Short_JJ Papers_NNP ,_, pages_NNS 309_CD -_: 312_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Myle_NNP Ott_NNP ,_, Yejin_NNP Choi_NNP ,_, Claire_NNP Cardie_NNP ,_, Jeffrey_NNP T._NNP Hancock_NNP ._.
+2011_CD ._.
+Finding_VBG Deceptive_JJ Opinion_NN Spam_NN by_IN any_DT Stretch_NNP of_IN the_DT Imagination_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS ,_, Volume_NN 1_CD ,_, pages_NNS 309-319_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+:_: Sentiment_NN Classification_NN using_VBG Machine_NN Learning_NNP Techniques_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT ACL-02_NN conference_NN on_IN Empirical_JJ methods_NNS in_IN natural_JJ language_NN processing_NN -LRB-_-LRB- EMNLP_NNP '_POS 02_CD -RRB-_-RRB- ,_, Volume_NN 10_CD ,_, pages_NNS 79-86_CD ._.
+Maria_NNP T._NNP Pazienza_NNP ._.
+-LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+1997_CD ._.
+Information_NNP Extraction_NNP :_: A_NNP Multidisciplinary_NNP Approach_NNP to_TO an_DT Emerging_VBG Information_NNP Technology_NNP ._.
+Springer_NNP International_NNP Publishing_NNP ._.
+James_NNP W._NNP Pennebaker_NNP ,_, Cindy_NNP K._NNP Chung_NNP ,_, Molly_NNP Ireland_NNP ,_, Amy_NNP Gonzales_NNP ,_, and_CC Roger_NNP J._NNP Booth_NNP ._.
+2007_CD ._.
+The_DT Development_NNP and_CC Psychometric_NNP Properties_NNP of_IN LIWC2007_NNP ._.
+John_NNP C._NNP Platt_NNP ._.
+1998_CD ._.
+Sequential_NNP Minimal_NNP Optimization_NNP :_: A_NNP Fast_NNP Algorithm_NNP for_IN Training_NNP Support_NN Vector_NNP Machines_NNP ._.
+Advances_NNS in_IN Kernel_NNP MethodsSupport_NNP Vector_NNP Learning_NNP ,_, 208:1_CD --_: 21_CD ._.
+J._NNP Ross_NNP Quinlan_NNP ._.
+1993_CD ._.
+Programs_NNS for_IN Machine_NN Learning_NNP ._.
+Volume_NN 240_CD ._.
+Elsevier_NNP ._.
+J._NNP Ross_NNP Quinlan_NNP ._.
+2014_CD ._.
+C4_CD ._.
+5_CD :_: Programs_NNS for_IN Machine_NN Learning_NNP ._.
+Elsevier_NNP ._.
+Fabrizio_NNP Sebastiani_NNP ._.
+2002_CD ._.
+Machine_NN Learning_NNP in_IN Automated_NNP Text_NNP Categorization_NNP ._.
+ACM_JJ computing_NN surveys_NNS -LRB-_-LRB- CSUR_NNP -RRB-_-RRB- ,_, 34_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 1-47_CD ._.
+Fabrizio_NNP Sebastiani_NNP ._.
+2005_CD ._.
+Text_NN Categorization_NN ,_, pages_NNS 683-687_CD ._.
+Retrieved_VBN from_IN :_: http://nmis.isti.cnr.it/sebastiani/Publications/EDTA05_NNS ._.
+pdf_NN Efstathios_NNP Stamatatos_NNP ,_, Nikos_NNP Fakotakis_NNP ,_, and_CC George_NNP Kokkinakis_NNP ._.
+2000_CD ._.
+Automatic_NNP Text_NNP Categorization_NNP in_IN Terms_NNS of_IN Genre_NNP and_CC Author_NN ._.
+Comput_NNP ._.
+Linguist_NNP ,_, 26_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 471-495_CD ._.
+Efstathios_NNP Stamatatos_NNP ._.
+2009_CD ._.
+A_DT Survey_NN of_IN Modern_NNP Authorship_NNP Attribution_NNP Methods_NNPS ._.
+Journal_NNP of_IN the_DT American_NNP Society_NNP for_IN information_NN Science_NNP &_CC Technology_NNP -LRB-_-LRB- JASIST_NNP -RRB-_-RRB- ,_, 60_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 538-556_CD ._.
+Marc_NNP Sumner_NNP ,_, Eibe_NNP Frank_NNP ,_, and_CC Mark_NNP Hall_NNP ._.
+2005_CD ._.
+Speeding_VBG up_RP Logistic_NNP Model_NNP Tree_NNP Induction_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Knowledge_NNP Discovery_NNP in_IN Databases_NNP ,_, PKDD_NNP 2005_CD ,_, pages_NNS 675-683_CD ,_, Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+Vladimir_NNP Vapnik_NNP ._.
+2013_CD ._.
+The_DT Nature_NN of_IN Statistical_NNP Learning_NNP Theory_NNP ._.
+Springer_NNP Science_NNP &_CC Business_NNP Media_NNP ._.
+Ian_NNP H._NNP Witten_NNP and_CC Eibe_NNP Frank_NNP ,_, E._NNP 2005_CD ._.
+Data_NNP Mining_NNP :_: Practical_NNP Machine_NNP Learning_NNP Tools_NNPS &_CC Techniques_NNPS ,_, Second_NNP Edition_NNP -LRB-_-LRB- Morgan_NNP Kaufmann_NNP Series_NNP in_IN Data_NNP Management_NNP Systems_NNP -RRB-_-RRB- ._.
+San_NNP Mateo_NNP ,_, CA_NNP :_: Morgan_NNP Kaufmann_NNP ._.
+Yiming_NNP Yang_NNP ._.
+1999_CD ._.
+An_DT Evaluation_NN of_IN Statistical_NNP Approaches_NNPS to_TO Text_NNP Categorization_NNP ._.
+Information_NNP Retrieval_NNP ,_, 1_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :_: 69-90_CD ._.
+Yiming_NNP Yang_NNP and_CC Jan_NNP O._NNP Pedersen_NNP ._.
+1997_CD ._.
+A_DT Comparative_NNP Study_NNP on_IN Feature_NNP Selection_NNP in_IN Text_NNP Categorization_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 14th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, 97_CD :_: 412_CD --_: 420_CD ._.

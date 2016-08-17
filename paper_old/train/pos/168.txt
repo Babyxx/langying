@@ -1,0 +1,287 @@
+Well-Formed_JJ Dependency_NN to_TO String_NNP translation_NN with_IN BTG_NNP Grammar_NNP Abstract_NNP This_DT paper_NN proposes_VBZ a_DT well-formed_JJ depen_NN -_: dency_NN to_TO string_VB translation_NN model_NN with_IN BTG_NNP grammar_NN ._.
+By_IN enabling_VBG the_DT usage_NN of_IN well_RB -_: formed_VBN sub-structures_NNS and_CC allowing_VBG flexible_JJ reordering_NN of_IN them_PRP ,_, our_PRP$ approach_NN is_VBZ effective_JJ to_TO relieve_VB the_DT problems_NNS of_IN parsing_NN error_NN and_CC flatness_NN in_IN dependency_NN structure_NN ._.
+To_TO utilize_VB the_DT well-formed_JJ dependency_NN rules_NNS during_IN decod_NN -_: ing_NN ,_, we_PRP adapt_VBP the_DT tree_NN traversal_NN decoding_VBG algo_SYM -_: rithm_NN into_IN a_DT bottom-up_JJ CKY_NNP algorithm_NN ._.
+And_CC a_DT lexicalized_VBN reordering_NN model_NN is_VBZ used_VBN to_TO en_IN -_: courage_NN the_DT proper_JJ combination_NN of_IN two_CD neigh_NN -_: bouring_NN blocks_NNS ._.
+Experiment_NN results_NNS demon_NN -_: strate_NN that_IN our_PRP$ approach_NN can_MD effectively_RB im_SYM -_: prove_VB the_DT performance_NN by_IN more_JJR than_IN 2_CD BLEU_NNP score_NN over_IN the_DT baseline_NN ._.
+1_CD Introduction_NNP Due_NNP to_TO the_DT merits_NNS of_IN holding_VBG shallow_JJ semantic_JJ infor_NN -_: mation_NN and_CC cross-lingual_JJ consistency_NN -LRB-_-LRB- Fox_NNP ,_, 2002_CD -RRB-_-RRB- ,_, dependency_NN grammar_NN has_VBZ attracted_VBN much_JJ attention_NN in_IN the_DT field_NN of_IN machine_NN translation_NN -LRB-_-LRB- Lin_NNP ,_, 2004_CD ;_: Quirk_NNP et_FW al._FW ,_, 2005_CD ;_: Ding_NNP and_CC Palmer_NNP ,_, 2005_CD ;_: Shen_NNP et_FW al._FW ,_, 2008_CD ;_: Xie_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT dependency-to-string_NN model_NN -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- falls_VBZ into_IN the_DT paradigm_NN of_IN ''_'' translation_NN after_IN under_IN -_: standing_NN ''_'' ,_, which_WDT tries_VBZ to_TO understand_VB the_DT structure_NN and_CC meaning_NN of_IN source_NN text_NN ._.
+However_RB ,_, there_EX are_VBP two_CD typical_JJ problems_NNS for_IN this_DT approach_NN ._.
+One_CD is_VBZ that_IN the_DT model_NN is_VBZ prone_JJ to_TO be_VB affected_VBN by_IN parsing_VBG errors_NNS ._.
+Dependency-to-string_JJ model_NN adopts_VBZ a_DT unique_JJ source_NN side_NN tree_NN structure_NN as_IN fixed_VBN input_NN and_CC constructs_VBZ the_DT output_NN by_IN converting_VBG each_DT sub-structure_NN into_IN target_NN side_NN ._.
+If_IN there_EX is_VBZ some_DT errors_NNS in_IN the_DT source_NN depen_NN -_: dency_NN tree_NN ,_, for_IN example_NN ,_, a_DT prepositional_JJ subtree_NN is_VBZ attached_VBN to_TO a_DT wrong_JJ head_NN ,_, the_DT model_NN can_MD hardly_RB re_VB -_: cover_VB the_DT error_NN ._.
+Figure_NN 1_CD -LRB-_-LRB- a_DT -RRB-_-RRB- shows_VBZ another_DT parsing_NN error_NN ,_, in_IN the_DT correct_JJ parsing_NN result_NN ,_, ''_'' 与北韩_CD ..._: 国家_CD ''_'' should_MD forms_NNS a_DT subtree_NN with_IN ''_'' 国家_FW ''_'' as_IN the_DT head_NN ,_, and_CC then_RB this_DT subtree_NN is_VBZ dominant_JJ by_IN ''_'' 之一_FW ''_'' ._.
+The_DT other_JJ problem_NN is_VBZ that_IN dependency_NN structure_NN is_VBZ too_RB flat_JJ for_IN the_DT translation_NN task_NN ._.
+Since_IN dependency_NN -_: to-string_NN model_NN requires_VBZ a_DT head_NN and_CC all_DT its_PRP$ depen_NN -_: dents_NNS to_TO be_VB translated_VBN as_IN a_DT whole_NN ,_, the_DT flatness_NN of_IN the_DT structure_NN will_MD make_VB rules_NNS difficult_JJ to_TO be_VB matched_VBN dur_SYM -_: ing_NN decoding_NN ._.
+Furthermore_RB ,_, it_PRP will_MD also_RB lower_VB the_DT ro_NN -_: bustness_NN of_IN translation_NN rules_NNS ,_, since_IN many_JJ giant_JJ and_CC low-frequency_JJ rules_NNS will_MD be_VB extracted_VBN ._.
+Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- shows_VBZ an_DT example_NN of_IN the_DT flat_JJ structure_NN ._.
+The_DT head_NN word_NN ''_'' 提供_NN ''_'' has_VBZ five_CD dependents_NNS in_IN the_DT structure_NN ._.
+If_IN no_DT rule_NN can_MD be_VB matched_VBN ,_, only_RB the_DT glue_NN rule_NN can_MD be_VB applied_VBN ._.
+As_IN a_DT result_NN ,_, the_DT prepositional_JJ subtree_NN ''_'' 为_SYM 了_FW ..._: 义务_CD ''_'' can_MD not_RB be_VB correctly_RB reordered_VBN to_TO the_DT end_NN in_IN the_DT target_NN side_NN ._.
+Existing_VBG solutions_NNS for_IN the_DT above_JJ problems_NNS include_VBP -LRB-_-LRB- Meng_NNP et_FW al._FW ,_, 2013_CD ;_: Xie_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT form_NN -_: mer_NN incorporates_VBZ phrasal_JJ nodes_NNS of_IN constituency_NN trees_NNS in_IN the_DT source_NN side_NN of_IN translation_NN rules_NNS ,_, and_CC the_DT lat_NN -_: ter_NN modifies_VBZ translation_NN rules_NNS during_IN decoding_VBG to_TO al_SYM -_: low_JJ the_DT usage_NN of_IN phrases_NNS which_WDT are_VBP compatible_JJ with_IN well-formed_JJ structures_NNS ._.
+Since_IN these_DT two_CD approaches_NNS still_RB adopt_VB head-dependent_JJ structure_NN as_IN the_DT backbone_NN of_IN the_DT translation_NN rule_NN ,_, the_DT freedom_NN of_IN generating_VBG translation_NN candidates_NNS is_VBZ limited_VBN ._.
+On_IN the_DT contrary_NN ,_, we_PRP propose_VBP to_TO use_VB BTG_NNP grammar_NN to_TO combine_VB the_DT translations_NNS of_IN two_CD adjacent_JJ well_NN -_: formed_VBN structures_NNS ._.
+To_TO incorporate_VB the_DT BTG_NNP rules_NNS 之一_VBP 有_SYM 少数国家_FW 与北韩有邦交的_FW 美国_FW 不_FW 会_FW 提供_FW 为了_FW 报酬_FW 为了让北韩履行义务_FW 任何报酬_FW -LRB-_-LRB- a_DT -RRB-_-RRB- Figure_NN 1_CD :_: Examples_NNS of_IN parsing_NN error_NN -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC flatness_NN -LRB-_-LRB- b_NN -RRB-_-RRB- into_IN the_DT model_NN ,_, we_PRP adapt_VBP the_DT tree_NN traversal_NN decoding_VBG algorithm_NN into_IN a_DT bottom-up_JJ CKY_NNP algorithm_NN ._.
+Large_JJ scale_NN experiments_NNS show_VBP that_IN our_PRP$ approach_NN can_MD im_SYM -_: prove_VB the_DT performance_NN by_IN more_JJR than_IN 2_CD BLEU_NNP score_NN over_IN the_DT baseline_NN ,_, and_CC it_PRP is_VBZ also_RB superior_JJ to_TO the_DT two_CD approaches_NNS mentioned_VBN above_IN ._.
+2_CD Background_NN We_PRP briefly_RB review_VBP the_DT dependency_NN to_TO string_VB model_NN and_CC the_DT BTG_NNP grammar_NN in_IN this_DT section_NN ,_, which_WDT are_VBP the_DT bases_NNS of_IN our_PRP$ proposed_VBN model_NN ._.
+2.1_CD Dependency-to-String_NNP Model_NNP The_NNP dependency-to-string_NN model_NN proposed_VBN by_IN -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- translates_VBZ a_DT source_NN dependency_NN tree_NN by_IN applying_VBG head-dependents_NNS translation_NN rule_NN at_IN each_DT head_NN node_NN in_IN a_DT recursive_JJ way_NN ._.
+A_DT head-dependents_JJ translation_NN rule_NN consists_VBZ of_IN a_DT head-dependents_JJ frag_NN -_: ment_NN in_IN the_DT source_NN side_NN and_CC its_PRP$ translation_NN correspon_NN -_: dence_NN in_IN the_DT target_NN side_NN ._.
+The_DT rule_NN r1_CD in_IN Figure_NN 2_CD is_VBZ an_DT example_NN of_IN their_PRP$ translation_NN rule_NN ._.
+This_DT rule_NN speci_NN -_: fies_NNS the_DT translation_NN of_IN the_DT head_NN node_NN ''_'' 提供_NN ''_'' and_CC leaf_NN nodes_NNS ''_'' 布什_FW ''_'' ,_, and_CC also_RB the_DT reordering_NN relation_NN of_IN the_DT non-terminal_JJ nodes_NNS ,_, including_VBG the_DT internal_JJ node_NN ''_'' 为_NN ''_'' and_CC the_DT generalized_VBN internal_JJ node_NN ''_'' 优惠_NN ''_'' ._.
+The_DT word_NN or_CC POS_NNP tag_NN at_IN each_DT non-terminal_JJ node_NN in_IN the_DT rule_NN describes_VBZ its_PRP$ matching_JJ condition_NN ._.
+For_IN example_NN ,_, X2_NNP :_: NN_NNP in_IN r1_CD means_VBZ the_DT second_JJ non-terminal_JJ must_MD be_VB a_DT noun_NN while_IN matching_VBG this_DT rule_NN ._.
+In_IN principle_NN ,_, all_DT nodes_NNS ,_, i.e._FW ,_, head_NN ,_, internal_JJ and_CC leaf_NN nodes_NNS in_IN the_DT de_FW -_: pendency_NN tree_NN ,_, can_MD be_VB generalized_VBN to_TO their_PRP$ POS_NNP tags_NNS -LRB-_-LRB- or_CC other_JJ categories_NNS -RRB-_-RRB- to_TO relieve_VB data_NNS sparsity_NN ._.
+By_IN including_VBG a_DT head_NN and_CC all_DT its_PRP$ dependents_NNS into_IN one_CD rule_NN ,_, the_DT dependency-to-string_NN model_NN is_VBZ good_JJ at_IN long_JJ distance_NN reordering_NN ._.
+However_RB ,_, this_DT structure_NN is_VBZ not_RB robust_JJ enough_JJ due_JJ to_TO parsing_VBG errors_NNS and_CC flatness_NN ._.
+2.2_CD BTG_NNP Grammar_NNP -LRB-_-LRB- b_NN -RRB-_-RRB- Bracketing_VBG transduction_NN grammar_NN -LRB-_-LRB- BTG_NNP -RRB-_-RRB- -LRB-_-LRB- Wu_NNP ,_, 1997_CD -RRB-_-RRB- is_VBZ a_DT special_JJ case_NN of_IN synchronous_JJ context_NN free_JJ grammar_NN ._.
+There_EX are_VBP only_RB two_CD types_NNS of_IN rules_NNS in_IN this_DT grammar_NN :_: X_NNP →_CD -LSB-_NNP X1_NNP ,_, X2_NNP -RSB-_NNP |_NN X_NNP →_CD <_CD X1_NNP ,_, X2_NNP >_CD X_NNP →_CD x/y_JJ The_DT first_JJ type_NN of_IN rule_NN is_VBZ used_VBN to_TO merge_VB the_DT trans_NNS -_: lations_NNS of_IN two_CD neighbouring_JJ blocks_NNS X1_NNP and_CC X2_NNP with_IN monotone_NN or_CC swap_NN order_NN ,_, and_CC the_DT second_JJ type_NN of_IN rule_NN is_VBZ used_VBN to_TO translate_VB source_NN phrase_NN x_LS in_IN to_TO target_VB phrase_NN y._NN Due_JJ to_TO its_PRP$ simplicy_NN and_CC effectiveness_NN of_IN modeling_NN bilingual_JJ correspondence_NN ,_, BTG_NNP grammar_NN is_VBZ widely_RB used_VBN translation_NN modeling_NN -LRB-_-LRB- Xiong_NNP et_FW al._FW ,_, 2006_CD ;_: Li_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, word_NN alignment_NN -LRB-_-LRB- Zhang_NNP and_CC Gildea_NNP ,_, 2005_CD ;_: Haghighi_NNP et_FW al._FW ,_, 2009_CD ;_: Pauls_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ,_, translation_NN system_NN combination_NN -LRB-_-LRB- Karakos_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, etc._FW 3_CD Well-Formed_JJ Dependency_NN to_TO String_NNP Model_NNP In_IN this_DT section_NN ,_, we_PRP describe_VBP our_PRP$ well-formed_JJ depen_NN -_: dency_NN to_TO string_VB model_NN with_IN BTG_NNP grammar_NN ,_, and_CC ex_FW -_: plain_JJ how_WRB it_PRP relieves_VBZ the_DT problems_NNS of_IN parsing_NN error_NN and_CC flatness_NN ._.
+3.1_CD Modified_VBN Well-formed_JJ structure_NN Similar_JJ to_TO -LRB-_-LRB- Shen_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, we_PRP define_VBP two_CD kinds_NNS of_IN well-formed_JJ dependency_NN structures_NNS ,_, i.e._FW ,_, fixed_VBN struc_SYM -_: ture_NN and_CC floating_VBG structure_NN ._.
+Fixed_VBN structure_NN consists_VBZ of_IN the_DT heads_NNS of_IN a_DT sequence_NN of_IN sibling_VBG trees_NNS and_CC the_DT common_JJ head_NN of_IN these_DT trees_NNS ;_: and_CC floating_VBG structure_NN consists_VBZ of_IN the_DT heads_NNS of_IN a_DT sequence_NN of_IN sibling_VBG trees_NNS without_IN their_PRP$ common_JJ head_NN ._.
+The_DT difference_NN between_IN 提供_CD 布什_CD 为_NN 优惠_CD 为民众_CD 减税优惠_CD Bush_NNP provides_VBZ tax_NN relief_NN to_TO the_DT pepole_NN r1_NN :_: 布什_CD X1_NNP :_: 为_SYM 提供_SYM X2_NNP :_: NN_NNP |_NNP |_VBD |_CD Bush_NNP provides_VBZ X2_NNP X1_NNP r2_NN :_: X1_NNP :_: 为_SYM 提供_SYM X2_NNP :_: NN_NNP |_NNP |_VBD |_CD provides_VBZ X2_NNP X1_NNP Head_NNP node_NN in_IN the_DT rules_NNS are_VBP marked_VBN with_IN bold_JJ face_NN ._.
+NN_NNP is_VBZ the_DT POS_NNP tag_NN of_IN the_DT source_NN word_NN ''_'' 优惠_NN ''_'' ._.
+Figure_NN 2_CD :_: examples_NNS of_IN dependency_NN to_TO string_VB rule_NN -LRB-_-LRB- r1_CD -RRB-_-RRB- and_CC well-formed_JJ dependency_NN to_TO string_VB rule_NN -LRB-_-LRB- r2_FW -RRB-_-RRB- our_PRP$ definition_NN and_CC that_IN in_IN Shen_NNP et_FW al._FW ,_, 2008_CD is_VBZ that_IN we_PRP only_RB include_VBP the_DT heads_NNS of_IN subtrees_NNS in_IN our_PRP$ structure_NN ,_, while_IN they_PRP include_VBP the_DT whole_JJ subtrees_NNS ._.
+The_DT shad_NN -_: owed_VBN part_NN with_IN red_JJ box_NN in_IN Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- is_VBZ an_DT example_NN of_IN fixed_VBN structure_NN ,_, which_WDT consists_VBZ of_IN a_DT head_NN ''_'' 提供_NN ''_'' and_CC the_DT heads_NNS of_IN two_CD continuous_JJ sibling_VBG trees_NNS ''_'' 为_SYM 了_FW ''_'' and_CC ''_'' 报酬_FW ''_'' ._.
+And_CC the_DT shadowed_JJ part_NN with_IN green_JJ box_NN in_IN Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- is_VBZ an_DT example_NN of_IN floating_VBG struc_NN -_: ture_NN ,_, which_WDT consists_VBZ of_IN the_DT heads_NNS of_IN three_CD continuous_JJ sibling_VBG trees_NNS ''_'' 美国_FW ''_'' ,_, ''_'' 不_FW ''_'' and_CC ''_'' 会_FW ''_'' ._.
+Given_VBN a_DT sentence_NN w1w2_NN ..._: wn_NN ,_, let_VB di_FW denote_VBP the_DT head_NN index_NN of_IN wi_NNS ,_, our_PRP$ fixed_VBN and_CC floating_VBG structure_NN can_MD be_VB formally_RB defined_VBN as_IN follows_VBZ ,_, Definition_NNP 1_CD A_DT fixed_VBN structure_NN fh_NN ,_, C_NNP with_IN head_NN h_NN and_CC children_NNS C_NNP ,_, where_WRB h_SYM ∈_SYM -LSB-_SYM 1_CD ,_, n_SYM -RSB-_NNP and_CC C_NNP ⊆_CD -LCB-_-LRB- 1_CD ,_, ..._: ,_, n_JJ -RCB-_-RRB- ,_, is_VBZ a_DT two-level_JJ tree_NN fragment_NN which_WDT satisfies_VBZ the_DT following_VBG condi_NN -_: tions_NNS :_: --_: ∀_CD k_NN ∈_CD C_NNP ,_, dk_NN =_SYM h_FW --_: ∀_CD min_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ≤_CD k_NN ≤_CD max_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ,_, dk_FW ̸_FW =_SYM h_VBP Definition_NNP 2_CD A_DT floating_VBG structure_NN fC_NN with_IN children_NNS C_NNP ,_, where_WRB C_$ ⊆_CD -LCB-_-LRB- 1_CD ,_, ..._: ,_, n_JJ -RCB-_-RRB- ,_, is_VBZ a_DT one_CD level_NN tree_NN fragment_NN which_WDT satisfies_VBZ the_DT following_JJ conditions_NNS :_: --_: ∃_CD h_NN ,_, ∀_CD k_NN ∈_CD C_NNP ,_, dk_NN =_SYM h_FW --_: ∀_CD min_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ≤_CD k_NN ≤_CD max_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ,_, dk_FW ̸_FW =_SYM h_SYM 3.2_CD Well-Formed_JJ Dependency-to-String_NNP Rule_NNP Our_PRP$ well-formed_JJ dependency_NN to_TO string_VB translation_NN rule_NN consists_VBZ of_IN a_DT well-formed_JJ dependency_NN structure_NN in_IN the_DT source_NN side_NN and_CC its_PRP$ translation_NN correspondence_NN in_IN the_DT target_NN side_NN ._.
+This_DT definition_NN extends_VBZ the_DT rule_NN proposed_VBN in_IN -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- to_TO cover_VB all_RB well_RB -_: formed_VBN dependency_NN structures_NNS in_IN the_DT source_NN side_NN ,_, rather_RB than_IN using_VBG complete_JJ head-dependents_NNS struc_SYM -_: tures_NNS only_RB ._.
+The_DT rule_NN r2_NN is_VBZ an_DT examples_NNS of_IN our_PRP$ trans_NNS -_: lation_NN rule_NN ._.
+Compared_VBN with_IN r1_CD ,_, this_DT rule_NN does_VBZ not_RB contain_VB ''_'' 布什_FW ''_'' in_IN the_DT source_NN side_NN -LRB-_-LRB- and_CC its_PRP$ translation_NN in_IN the_DT target_NN side_NN -RRB-_-RRB- ._.
+Since_IN it_PRP contains_VBZ less_JJR context_NN ,_, this_DT rule_NN is_VBZ more_RBR flexible_JJ to_TO be_VB applied_VBN during_IN decoding_VBG ._.
+For_IN example_NN ,_, if_IN ''_'' 布什_FW ''_'' is_VBZ replaced_VBN with_IN a_DT pronoun_NN ''_'' 他_NN ''_'' in_IN a_DT testing_NN sentence_NN ,_, this_DT rule_NN can_MD still_RB be_VB ap_SYM -_: plied_VBD ._.
+However_RB ,_, r1_NN can_MD not_RB be_VB applied_VBN in_IN this_DT case_NN even_RB if_IN it_PRP is_VBZ generalized_VBN ,_, since_IN the_DT POS_NNP tag_NN of_IN ''_'' 他_FW ''_'' does_VBZ not_RB match_VB that_IN of_IN ''_'' 布什_FW ''_'' ._.
+Our_PRP$ translation_NN rules_NNS can_MD be_VB extracted_VBN from_IN aligned_VBN dependency_NN tree_NN and_CC string_NN pair_NN by_IN travers_NNS -_: ing_VBG the_DT tree_NN and_CC enumerating_VBG the_DT well-formed_JJ struc_NN -_: ture_NN at_IN each_DT node_NN ._.
+Following_VBG previous_JJ work_NN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD ;_: Galley_NNP et_FW al._FW ,_, 2004_CD ;_: Chiang_NNP ,_, 2005_CD -RRB-_-RRB- ,_, we_PRP impose_VBP alignment_NN constraint_NN for_IN rule_NN extraction_NN ._.
+The_DT intuition_NN is_VBZ that_IN words_NNS in_IN the_DT one_CD side_NN -LRB-_-LRB- source/target_JJ -RRB-_-RRB- can_MD not_RB be_VB aligned_VBN to_TO words_NNS outside_IN the_DT other_JJ side_NN ,_, and_CC the_DT word_NN alignment_NN within_IN non-terminals_NNS also_RB need_VBP to_TO satisfy_VB this_DT constraint_NN ._.
+Formally_RB ,_, for_IN a_DT non-terminal_JJ node_NN n_NN ,_, we_PRP define_VBP node_JJ span_NN nsp_NN -LRB-_-LRB- n_VBN -RRB-_-RRB- as_IN the_DT closure_NN of_IN the_DT indexes_NNS of_IN those_DT words_NNS that_WDT n_VBP is_VBZ alinged_VBN to_TO ,_, and_CC sub-tree_JJ span_NN ssp_NN -LRB-_-LRB- n_VBN -RRB-_-RRB- as_IN the_DT closure_NN of_IN node_JJ spans_NNS of_IN all_PDT the_DT nodes_NNS in_IN the_DT subtree_NN rooted_VBN with_IN n_NN ._.
+These_DT two_CD spans_NNS are_VBP set_VBN to_TO φ_VB for_IN terminals_NNS ._.
+In_IN addition_NN ,_, we_PRP use_VBP Ns_NNS to_TO denote_VB the_DT set_NN of_IN all_PDT the_DT terminal_NN indexes_NNS in_IN the_DT source_NN side_NN ,_, and_CC Nt_NN to_TO denote_VB the_DT set_NN of_IN all_PDT the_DT terminal_NN indexes_NNS in_IN the_DT target_NN side_NN ._.
+Function_NN a_DT -LRB-_-LRB- ·_NN -RRB-_-RRB- is_VBZ used_VBN to_TO get_VB the_DT indexes_NNS of_IN the_DT aligned_VBN words_NNS for_IN a_DT give_VB word_NN ._.
+Then_RB the_DT alignment_NN constraint_NN can_MD be_VB described_VBN as_IN follows_VBZ ,_, --_: ∀_CD k_NN ∈_CD Ns_NNS ,_, a_DT -LRB-_-LRB- k_NN -RRB-_-RRB- ∈_CD Nt_NN --_: ∀_CD k_NN ∈_CD Nt_NN ,_, a_DT -LRB-_-LRB- k_NN -RRB-_-RRB- ∈_FW Ns_FW --_: nsp_NN -LRB-_-LRB- head_NN -RRB-_-RRB- ∩_FW n_FW ∈_FW children_NNS ssp_VBP -LRB-_-LRB- n_VBN -RRB-_-RRB- =_SYM Φ_NNP A_NNP minor_JJ difference_NN in_IN our_PRP$ constraint_NN with_IN -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- is_VBZ that_IN we_PRP allow_VBP the_DT alignment_NN of_IN terminals_NNS to_TO be_VB overlaped_VBN ._.
+For_IN example_NN ,_, in_IN Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- ,_, if_IN the_DT two_CD terminals_NNS ''_'' 不_FW ''_'' and_CC ''_'' 会_FW ''_'' align_VB to_TO a_DT single_JJ target_NN word_NN ''_'' wo_MD n't_RB ''_'' ,_, we_PRP consider_VBP the_DT alignment_NN constraint_NN is_VBZ satisfied_JJ ,_, while_IN they_PRP consider_VBP it_PRP as_IN invalid_JJ ._.
+3.3_CD Apply_NNP Dependency_NNP to_TO String_NNP Rules_NNPS with_IN BTG_NNP Rules_NNPS We_PRP use_VBP the_DT examples_NNS in_IN Figure_NN 1_CD to_TO illustrate_VB how_WRB the_DT well-formed_JJ dependency_NN to_TO string_VB rules_NNS together_RB with_IN BTG_NNP rules_NNS can_MD be_VB used_VBN to_TO overcome_VB the_DT prob_NN -_: lems_NNS of_IN parsing_NN error_NN and_CC flatness_NN ._.
+A_DT plausible_JJ derivation_NN for_IN the_DT example_NN in_IN Figure_NN 1_CD -LRB-_-LRB- a_DT -RRB-_-RRB- is_VBZ shown_VBN in_IN Figure_NN 3_CD ,_, in_IN which_WDT the_DT subtree_NN ''_'' 与_NN ..._: 的_CD ''_'' ,_, the_DT float_NN -_: ing_NN structure_NN ''_'' 少数国家_CD ''_'' and_CC the_DT head_NN node_NN is_VBZ trans_NNS -_: lated_VBN first_RB ,_, then_RB the_DT translations_NNS of_IN the_DT first_JJ two_CD parts_NNS can_MD be_VB combined_VBN with_IN a_DT BTG_NNP rule_NN of_IN swap_NN order_NN ._.
+The_DT final_JJ translation_NN can_MD be_VB achieved_VBN by_IN applying_VBG another_DT BTG_NNP rule_NN of_IN swap_NN order_NN to_TO the_DT translation_NN just_RB obtained_VBN and_CC the_DT translation_NN of_IN ''_'' 之一_FW ''_'' ._.
+Note_VB that_IN this_DT is_VBZ not_RB the_DT only_JJ derivation_NN that_WDT can_MD lead_VB to_TO a_DT correct_JJ translation_NN ._.
+We_PRP can_MD also_RB combine_VB the_DT trans_NNS -_: lation_NN of_IN floating_VBG structure_NN ''_'' 少数国家_CD ''_'' and_CC the_DT head_NN node_NN first_RB ,_, then_RB combine_VBP with_IN the_DT translation_NN of_IN the_DT first_JJ subtree_NN ._.
+Similarly_RB ,_, for_IN the_DT example_NN in_IN Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- ,_, we_PRP can_MD first_RB translate_VB the_DT floating_VBG structure_NN ''_'' 美_SYM 国不会_FW ''_'' and_CC the_DT fixed_VBN structure_NN ''_'' 为了_NN ..._: 提供_CD ..._: 报_SYM 酬_FW ''_'' ,_, then_RB combine_VBP them_PRP with_IN an_DT BTG_NNP rule_NN of_IN mono_NN -_: tone_NN order_NN to_TO produce_VB the_DT final_JJ translation_NN ._.
+4_LS Decoding_VBG 4.1_CD Model_NNP We_PRP use_VBP the_DT standard_JJ log-linear_NN model_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2002_CD -RRB-_-RRB- to_TO score_VB the_DT translation_NN hypothesis_NN during_IN de_FW -_: coding_NN ._.
+For_IN a_DT specific_JJ derivation_NN d_LS that_WDT converts_VBZ a_DT source_NN dependency_NN tree_NN T_NNP into_IN a_DT target_NN string_NN s_VBZ ,_, the_DT score_NN of_IN d_LS will_MD be_VB ,_, P_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- ∝_SYM φi_FW -LRB-_-LRB- d_LS -RRB-_-RRB- λi_FW i_FW where_WRB φi_FW are_VBP features_NNS defined_VBN on_IN derivations_NNS and_CC λi_NNS are_VBP corresponding_JJ weight_NN for_IN each_DT feature_NN ._.
+The_DT features_NNS adopted_VBN in_IN this_DT paper_NN include_VBP bidirec_NN -_: tional_JJ translation_NN probabilities_NNS ,_, bidirectional_JJ lexical_JJ weights_NNS ,_, language_NN model_NN ,_, rule_NN penalty_NN ,_, word_NN penalty_NN and_CC reordering_NN probability_NN for_IN BTG_NNP rules_NNS ._.
+For_IN the_DT last_JJ feature_NN ,_, we_PRP use_VBP a_DT maximum_NN entropy_NN model_NN to_TO estimation_NN the_DT probability_NN and_CC the_DT same_JJ 之一_CD r1_CD ,_, r2_CD ,_, r3_CD one_CD of_IN a_DT few_JJ count_NN ._.
+r4_CD r4_CD one_CD of_IN 有_CD 与北韩有邦交的_CD having_VBG dep_NN ._.
+rel_NN ._.
+with_IN north_JJ korea_NN a_DT few_JJ count_NN ._.
+having_VBG dep_NN ._.
+rel_NN ._.
+with_IN north_JJ korea_NN one_CD of_IN a_DT few_JJ count_NN ._.
+having_VBG dep_NN ._.
+rel_NN ._.
+with_IN north_JJ korea_NN r1_NN :_: 之一_FW |_FW |_FW |_FW one_CD of_IN r2_NN :_: 与北韩有邦交的_CD |_CD |_NN |_NN having_VBG dep_NN ._.
+rel_NN ._.
+with_IN north_JJ korea_NN r3_NN :_: 少数国家_FW |_FW |_FW |_FW a_DT few_JJ countries_NNS r4_VBP :_: X1X2_NNP |_NNP |_VBD |_CD X2X1_NNP Figure_NNP 3_CD :_: a_DT plausible_JJ derivation_NN with_IN well-formed_JJ de_IN -_: pendency_NN to_TO string_VB and_CC BTG_NNP grammar_NN for_IN the_DT exam_NN -_: ple_NN in_IN Figure_NN 1_CD -LRB-_-LRB- a_DT -RRB-_-RRB- features_NNS in_IN -LRB-_-LRB- Xiong_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- are_VBP adopted_VBN ,_, includ_SYM -_: ing_NN beginning_NN and_CC ending_VBG words_NNS in_IN the_DT two_CD blocks_NNS to_TO be_VB reordered_VBN ,_, from_IN both_DT the_DT source_NN and_CC target_NN side_NN ._.
+So_RB there_EX are_VBP eight_CD activated_VBN features_NNS in_IN total_NN for_IN each_DT instance_NN ._.
+4.2_CD Decoding_NNP Algorithm_NNP The_NNP decoding_VBG algorithm_NN is_VBZ described_VBN in_IN Algorithm_NNP 1_CD ._.
+The_DT algorithm_NN begins_VBZ by_IN translating_VBG each_DT word_NN in_IN the_DT sentence_NN ,_, then_RB proceed_VB to_TO translate_VB larger_JJR spans_NNS 少数_VBP 国家_CD Algorithm_NNP 1_CD :_: CKY_NNP decoding_VBG algorithm_NN with_IN well_RB formed_VBN dependency_NN to_TO string_VB rules_NNS Input_NNP :_: Source_NNP dependency_NN tree_NN T_NN with_IN N_NNP words_NNS Output_NN :_: Target_NNP translation_NN for_IN span_NN :1_CD →_CD N_NNP do_VB for_IN start_NN :1_CD →_CD N_NNP +1_CD -_: span_NN do_VBP generate_VB initial_JJ candidates_NNS with_IN well_RB formed_VBN dependency_NN to_TO string_VB rule_NN ;_: for_IN span_NN lhs_NNS :1_CD →_CD span-1_NNS do_VBP if_IN -LCB-_-LRB- span_NN lhs_NNS ,_, span_NN rhs_NNS ,_, span_NN -RCB-_-RRB- ⊆_CD well-formed_JJ structure_NN then_RB generate_VB initial_JJ candidates_NNS with_IN BTG_NNP rules_NNS ;_: end_NN end_NN generate_VB KBEST_NNP candidates_NNS with_IN cube_NN pruning_NN ;_: end_NN end_NN return_VB the_DT top_JJ candidate_NN over_IN the_DT whole_JJ sentence_NN in_IN an_DT bottom_NN up_RP manner_NN ._.
+When_WRB translating_VBG a_DT span_NN compatible_JJ with_IN a_DT well-formed_JJ structure_NN ,_, there_EX are_VBP two_CD ways_NNS to_TO generate_VB translation_NN candidates_NNS ._.
+One_CD is_VBZ based_VBN on_IN fixed_VBN or_CC floating_VBG rules_NNS which_WDT covers_VBZ the_DT whole_JJ span_NN ,_, and_CC the_DT other_JJ is_VBZ combining_VBG the_DT transla_NN -_: tion_NN candidates_NNS in_IN two_CD sub-spans_NNS with_IN BTG_NNP rule_NN of_IN monotone_NN or_CC swap_NN order_NN ._.
+The_DT two_CD sub-spans_NNS also_RB need_VBP to_TO be_VB compatible_JJ with_IN well-formed_JJ structure_NN ._.
+The_DT cube_NN prunning_VBG algorithm_NN -LRB-_-LRB- Chiang_NNP ,_, 2007_CD ;_: Huang_NNP and_CC Chiang_NNP ,_, 2007_CD -RRB-_-RRB- is_VBZ used_VBN to_TO expand_VB the_DT initial_JJ can_NN -_: didates_VBZ until_IN Kbest_NNP candidates_NNS have_VBP been_VBN generated_VBN ._.
+Finally_RB ,_, the_DT top_JJ candidate_NN over_IN the_DT whole_JJ sentence_NN will_MD be_VB returned_VBN as_IN output_NN ._.
+5_CD Experiments_NNS We_PRP evaluate_VBP the_DT performance_NN of_IN our_PRP$ model_NN on_IN Chi_NNP -_: nese_NN to_TO English_NNP translation_NN ._.
+And_CC we_PRP re-implement_VBP the_DT dependency_NN to_TO string_VB model_NN for_IN performance_NN comparison_NN ._.
+5.1_CD Data_NNP preparation_NN Two_CD sets_NNS of_IN training_NN data_NNS are_VBP adopted_VBN in_IN our_PRP$ exper_NN -_: iments_NNS ._.
+The_DT smaller_JJR one_CD consists_VBZ of_IN 270k_JJ sentence_NN pairs_NNS ,_, and_CC the_DT larger_JJR one_CD consists_VBZ of_IN 2.1_CD M_NNP sentence_NN pairs_NNS ._.
+All_PDT the_DT training_NN data_NN comes_VBZ from_IN the_DT LDC_NNP corpus1_CD ._.
+And_CC we_PRP use_VBP NIST_NNP 02_CD test_NN set_VBN as_IN our_PRP$ de_FW -_: velopment_NN set_NN ,_, NIST_NNP 03_CD and_CC 04_CD test_NN set_VBN as_IN our_PRP$ test_NN 1_CD Including_VBG LDC2000T50_NNP ,_, LDC2002E18_NNP ,_, LDC2003E07_NNP ,_, LDC2003E14_NNP ,_, LDC200407_NNP ,_, LDC2005T06_NNP ,_, LDC2002L27_NNP ,_, LDC2005T10_NNP and_CC LDC_NNP 2005T34_NNP ._.
+as_IN output_NN ;_: set_NN ._.
+The_DT case_NN insensitive_JJ NIST_NNP BLEU-4_NN metric_JJ -LRB-_-LRB- Pa_NNP -_: pineni_NNS et_FW al._FW ,_, 2002_CD -RRB-_-RRB- is_VBZ adopted_VBN for_IN evaluation_NN ._.
+We_PRP use_VBP the_DT SRILM_NNP toolkit_NN to_TO train_VB a_DT 5-gram_JJ language_NN model_NN with_IN Kneser-Ney_NNP smoothing_VBG on_IN the_DT Xinhua_NNP portion_NN of_IN the_DT Gigaword_NNP corpus_NN ._.
+The_DT source_NN side_NN of_IN the_DT training_NN and_CC dev/test_JJ set_NN are_VBP segmented_JJ with_IN our_PRP$ in_IN house_NN segmentation_NN tool_NN -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+And_CC they_PRP are_VBP parsed_VBN with_IN Stan_NNP -_: ford_NN Parser_NNP -LRB-_-LRB- De_NNP Marneffe_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, which_WDT also_RB generates_VBZ POS_NNP tag_NN for_IN each_DT word_NN ._.
+The_DT dependency_NN relations_NNS on_IN edges_NNS are_VBP not_RB used_VBN in_IN this_DT work_NN ._.
+Word_NN alignments_NNS are_VBP obtained_VBN with_IN our_PRP$ in_IN house_NN tool_NN -LRB-_-LRB- Wang_NNP and_CC Zong_NNP ,_, 2013_CD -RRB-_-RRB- ,_, which_WDT takes_VBZ depen_SYM -_: dency_NN cohesion_NN constraints_NNS into_IN consideration_NN while_IN doing_VBG word_NN alignments_NNS ._.
+And_CC we_PRP use_VBP the_DT MaxEnt_NNP toolkit2_CD to_TO to_TO estimate_VB the_DT context_NN sensitive_JJ reorder_NN -_: ing_NN probability_NN for_IN BTG_NNP rules_NNS ._.
+The_DT weights_NNS of_IN the_DT features_NNS are_VBP tuned_VBN with_IN MERT_NNP -LRB-_-LRB- Och_NNP ,_, 2003_CD -RRB-_-RRB- to_TO maxi_VB -_: mize_VB the_DT BLEU_NNP score_NN on_IN the_DT development_NN set_NN ._.
+5.2_CD Results_NNS The_DT strength_NN of_IN our_PRP$ model_NN lies_VBZ in_IN two_CD aspects_NNS ._.
+First_RB ,_, our_PRP$ translation_NN unit_NN is_VBZ more_RBR fine-grained_JJ than_IN that_DT in_IN the_DT original_JJ dependency_NN to_TO tree_NN model_NN ,_, which_WDT en_IN -_: ables_VBZ the_DT translation_NN of_IN many_JJ linguistically_RB plausible_JJ phrases_NNS ;_: second_JJ ,_, we_PRP allow_VBP flexible_JJ reorderings_NNS for_IN adjacent_JJ blocks_NNS under_IN the_DT guide_NN of_IN context_NN informa_NN -_: tion_NN ._.
+To_TO check_VB whether_IN these_DT two_CD points_NNS hold_VBP ,_, two_CD sets_NNS of_IN experiments_NNS are_VBP conducted_VBN in_IN line_NN ._.
+Initially_RB ,_, 2https_NNS :_: /_SYM /_SYM github.com/lzhang10/maxent_CD System_NNP 02_CD -LRB-_-LRB- dev_NN -RRB-_-RRB- 03_CD dep2str_CD 33.50_CD 31.92_CD wf-d2s_NNS 35.03_CD 33.31_CD -LRB-_-LRB- mono_NN -RRB-_-RRB- wf-d2s_JJ 35.86_CD 34.04_CD 04_CD Average_JJ 32.59_CD 32.67_CD 34.50_CD 34.28_CD 35.20_CD 35.03_CD 6_CD Related_NNP Work_NNP The_NNP work_NN that_WDT is_VBZ most_RBS similar_JJ to_TO ours_PRP is_VBZ -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+However_RB ,_, there_EX are_VBP several_JJ significant_JJ dif_NN -_: ferences_NNS between_IN these_DT two_CD work_NN ._.
+First_NNP They_PRP incor_SYM -_: porate_NN well-formed_JJ dependency_NN rules_NNS during_IN decod_NN -_: ing_NN by_IN modify_VB the_DT matched_VBN dependency_NN rules_NNS ''_'' on_IN the_DT fly_NN ''_'' ._.
+For_IN example_NN ,_, assume_VB there_EX is_VBZ a_DT matched_VBN rule_NN ''_'' X1_NNP :_: NR_NNP X2_NNP :_: AD_NNP X3_NNP :_: VV_NNP X1_NNP :_: 为了提供_CD X2_NNP :_: 报_SYM 酬_FW |_FW |_FW |_FW X1_FW X2_FW X3_FW provide_VB X5_NNP X4_NNP ''_'' for_IN the_DT head_NN -_: dependents_NNS structure_NN in_IN Figure_NN 1_CD -LRB-_-LRB- b_NN -RRB-_-RRB- ._.
+in_IN order_NN to_TO use_VB the_DT phrase_NN ''_'' 美国不会_FW |_FW |_FW |_FW us_PRP wo_MD n't_RB ''_'' during_IN decoding_NN ,_, they_PRP will_MD compress_VB the_DT three_CD nodes_NNS into_IN one_CD pseudo_NN node_NN ''_'' NR_NNP AD_NNP VV_NNP ''_'' ._.
+Then_RB the_DT above_JJ rule_NN will_MD be_VB -_: come_VB ''_'' X1_NNP :_: NR_NNP AD_NNP VV_NNP X2_NNP :_: 为了_SYM ∗_SYM 提供_SYM X3_NNP :_: 报酬_FW |_FW |_FW |_FW X1_FW provide_VB X3_NNP X2_NNP ''_'' ._.
+This_DT new_JJ rule_NN will_MD inherit_VB the_DT translation_NN probabilities_NNS from_IN the_DT original_JJ rule_NN ._.
+In_IN the_DT case_NN that_IN there_EX is_VBZ no_DT matched_VBN rule_NN or_CC the_DT probability_NN estimation_NN is_VBZ unreliable_JJ due_JJ to_TO sparsity_NN ,_, this_DT method_NN wo_MD n't_RB work_VB well_RB ._.
+Another_DT difference_NN is_VBZ that_IN they_PRP only_RB use_VBP phrasal_JJ rules_NNS corresponding_JJ to_TO well_RB formed_VBN dependency_NN structures_NNS ,_, while_IN we_PRP allow_VBP variables_NNS to_TO be_VB contained_VBN in_IN the_DT well-formed_JJ dependency_NN rules_NNS ._.
+The_DT two_CD problems_NNS of_IN parsing_NN error_NN and_CC flatness_NN also_RB exist_VBP in_IN constituency_NN tree_NN ._.
+In_IN order_NN to_TO make_VB full_JJ use_NN of_IN the_DT sub-structures_NNS ,_, there_EX have_VBP been_VBN a_DT lot_NN of_IN work_NN ,_, including_VBG tree_NN sequence_NN to_TO string_VB transla_NN -_: tion_NN -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, tree_NN binarization_NN -LRB-_-LRB- Zhang_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, forest-based_JJ translation_NN -LRB-_-LRB- Mi_FW et_FW al._FW ,_, 2008_CD -RRB-_-RRB- and_CC fuzzy_JJ rule_NN matching_NN -LRB-_-LRB- Zhang_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+7_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT work_NN ,_, we_PRP propose_VBP a_DT well-formed_JJ dependency_NN to_TO string_VB model_NN to_TO address_VB the_DT problems_NNS of_IN parsing_NN error_NN and_CC flatness_NN ._.
+By_IN introducing_VBG translation_NN rules_NNS corresponding_JJ to_TO well-formed_JJ sub-structures_NNS ,_, we_PRP are_VBP able_JJ to_TO learn_VB more_JJR reliable_JJ translation_NN equivalents_NNS ._.
+During_IN decoding_NN ,_, we_PRP propose_VBP to_TO use_VB BTG_NNP grammar_NN with_IN lexicalized_VBN reordering_NN to_TO combine_VB translations_NNS of_IN two_CD neighbouring_JJ well-formed_JJ structures_NNS ,_, which_WDT is_VBZ more_RBR flexible_JJ than_IN previous_JJ work_NN ._.
+Experiment_NN re_SYM -_: sults_NNS demonstrate_VBP that_IN our_PRP$ model_NN can_MD significantly_RB improve_VB translation_NN performance_NN ._.
+Although_IN our_PRP$ model_NN is_VBZ more_RBR flexible_JJ to_TO generate_VB translation_NN candidates_NNS ,_, it_PRP also_RB brings_VBZ more_JJR challenges_NNS to_TO model_VB translation_NN quality_NN ._.
+In_IN the_DT future_NN ,_, we_PRP will_MD explore_VB more_RBR powerful_JJ features_NNS to_TO better_RBR score_VB the_DT translation_NN candidates_NNS ._.
+Table_NNP 1_CD :_: Effects_NNPS of_IN applying_VBG well-formed_JJ depen_NN -_: dency_NN to_TO string_VB rules_NNS and_CC allowing_VBG flexible_JJ reorder_NN -_: ing_NN ._.
+The_DT system_NN wf-d2s_NNS -LRB-_-LRB- mono_FW -RRB-_-RRB- denotes_VBZ our_PRP$ well_NN -_: formed_VBN dependency_NN to_TO string_VB model_NN with_IN monotone_NN reordering_NN ,_, and_CC wf-d2s_JJ denotes_NNS our_PRP$ model_NN with_IN flex_SYM -_: ible_JJ reordering_NN of_IN two_CD directions_NNS ._.
+System_NNP dep2str_CD wf-d2s_JJ 02_CD -LRB-_-LRB- dev_NN -RRB-_-RRB- 35.24_CD 37.07_CD ∗_NN 03_CD 04_CD 34.45_CD 34.50_CD 36.38_CD ∗_NN 37.01_CD ∗_CD Average_JJ 34.73_CD 36.82_CD Table_NNP 2_CD :_: Experiment_NN results_NNS with_IN small_JJ and_CC large_JJ training_NN data_NNS ._.
+The_DT ''_'' *_SYM ''_'' denotes_NNS that_IN the_DT results_NNS are_VBP significantly_RB better_JJR than_IN the_DT baseline_NN -LRB-_-LRB- dep2str_CD -RRB-_-RRB- sys_SYM -_: tem_NN -LRB-_-LRB- p_SYM <_SYM 0.01_CD -RRB-_-RRB- ._.
+we_PRP only_RB allow_VBP BTG_NNP rule_NN with_IN monotone_NN order_NN ,_, i.e._FW translation_NN of_IN each_DT well-formed_JJ structure_NN are_VBP con_JJ -_: catenated_VBN sequentially_RB ,_, which_WDT is_VBZ equivalent_JJ to_TO glue_NN rule_NN ._.
+Then_RB BTG_NNP rules_NNS with_IN both_DT orders_NNS are_VBP enabled_VBN ,_, with_IN context_NN sensitive_JJ reordering_NN module_NN ._.
+We_PRP con_VBP -_: duct_VB the_DT experiments_NNS with_IN the_DT small_JJ training_NN data_NN set_NN ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 1_CD ._.
+Compared_VBN with_IN de_FW -_: pendency_NN to_TO string_VB rules_NNS ,_, applying_VBG well-formed_JJ de_IN -_: pendency_NN to_TO string_VB rules_NNS significantly_RB improves_VBZ the_DT performance_NN by_IN more_JJR than_IN 1.5_CD BLEU_NNP score_NN on_IN av_SYM -_: erage_NN ._.
+If_IN flexible_JJ reordering_NN is_VBZ further_JJ allowed_VBN ,_, ad_NN -_: ditional_JJ improvement_NN of_IN 0.7_CD BLEU_NNP score_NN can_MD be_VB achieved_VBN ._.
+Table_NNP 2_CD shows_VBZ the_DT performance_NN of_IN our_PRP$ model_NN with_IN large_JJ training_NN set_NN ._.
+Experiment_NN results_NNS show_VBP that_IN our_PRP$ model_NN keeps_VBZ its_PRP$ edge_NN even_RB with_IN large_JJ training_NN data_NNS ._.
+On_IN average_NN ,_, more_JJR than_IN 2_CD point_NN in_IN BLEU_NNP score_NN are_VBP gained_VBN over_RP the_DT baseline_NN ._.
+This_DT improvement_NN is_VBZ much_RB larger_JJR than_IN -LRB-_-LRB- Meng_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Both_DT of_IN them_PRP report_VBP improvement_NN of_IN about_IN 0.9_CD point_NN in_IN BLEU_NNP score_NN over_IN the_DT baseline_NN on_IN their_PRP$ dataset_NN ._.
+Acknowledgments_NNS This_DT research_NN work_NN was_VBD funded_VBN by_IN the_DT Natural_JJ Science_NN Foundation_NNP of_IN China_NNP under_IN Grant_NNP No._NN 61402478_CD ._.
+The_DT authors_NNS would_MD like_VB to_TO thank_VB Keh-Yih_NNP Su_NNP for_IN insightful_JJ discussions_NNS ._.
+References_NNS David_NNP Chiang_NNP ._.
+2005_CD ._.
+A_DT hierarchical_JJ phrase-based_JJ model_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 05_CD -RRB-_-RRB- ,_, pages_NNS 263_CD --_: 270_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+David_NNP Chiang_NNP ._.
+2007_CD ._.
+Hierarchical_JJ phrase-based_JJ transla_NN -_: tion_NN ._.
+computational_JJ linguistics_NNS ,_, 33_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :201_CD --_: 228_CD ._.
+Marie-Catherine_NNP De_NNP Marneffe_NNP ,_, Bill_NNP MacCartney_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+2006_CD ._.
+Generating_NNP typed_VBD depen_SYM -_: dency_NN parses_VBZ from_IN phrase_NN structure_NN parses_VBZ ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN LREC_NNP ,_, volume_NN 6_CD ,_, pages_NNS 449_CD --_: 454_CD ._.
+Yuan_NNP Ding_NNP and_CC Martha_NNP Palmer_NNP ._.
+2005_CD ._.
+Machine_NN trans_NNS -_: lation_NN using_VBG probabilistic_JJ synchronous_JJ dependency_NN in_IN -_: sertion_NN grammars_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS -LRB-_-LRB- ACL_NN '_'' 05_CD -RRB-_-RRB- ,_, pages_NNS 541_CD --_: 548_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Heidi_NNP Fox_NNP ._.
+2002_CD ._.
+Phrasal_JJ cohesion_NN and_CC statistical_JJ ma_SYM -_: chine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2002_CD Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 304_CD --_: 3111_CD ._.
+Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, July_NNP ._.
+Michel_NNP Galley_NNP ,_, Mark_NNP Hopkins_NNP ,_, Kevin_NNP Knight_NNP ,_, and_CC Daniel_NNP Marcu_NNP ._.
+2004_CD ._.
+What_WP 's_VBZ in_IN a_DT translation_NN rule_NN ?_.
+In_IN Daniel_NNP Marcu_NNP Susan_NNP Dumais_NNP and_CC Salim_NNP Roukos_NNP ,_, ed_SYM -_: itors_NNS ,_, HLT-NAACL_NNP 2004_CD :_: Main_NNP Proceedings_NNP ,_, pages_NNS 273_CD --_: 280_CD ,_, Boston_NNP ,_, Massachusetts_NNP ,_, USA_NNP ,_, May_NNP 2_LS -_: May_NNP 7_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Aria_NNP Haghighi_NNP ,_, John_NNP Blitzer_NNP ,_, John_NNP DeNero_NNP ,_, and_CC Dan_NNP Klein_NNP ._.
+2009_CD ._.
+Better_RBR word_NN alignments_NNS with_IN supervised_JJ itg_NN models_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Joint_NNP Conference_NN of_IN the_DT 47th_JJ Annual_JJ Meeting_VBG of_IN the_DT ACL_NNP and_CC the_DT 4th_JJ Inter_NNP -_: national_JJ Joint_NNP Conference_NN on_IN Natural_JJ Language_NN Pro-_JJ cessing_NN of_IN the_DT AFNLP_NNP ,_, pages_NNS 923_CD --_: 931_CD ,_, Suntec_NNP ,_, Singa_NNP -_: pore_NN ,_, August_NNP ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Liang_NNP Huang_NNP and_CC David_NNP Chiang_NNP ._.
+2007_CD ._.
+Forest_NNP rescoring_NN :_: Faster_JJR decoding_VBG with_IN integrated_VBN language_NN models_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 45th_JJ Annual_JJ Meeting_VBG of_IN the_DT Asso_NNP -_: ciation_NN of_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 144_CD --_: 151_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, June_NNP ._.
+Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS ._.
+Damianos_NNP Karakos_NNP ,_, Jason_NNP Eisner_NNP ,_, Sanjeev_NNP Khudanpur_NNP ,_, and_CC Markus_NNP Dreyer_NNP ._.
+2008_CD ._.
+Machine_NN translation_NN sys_SYM -_: tem_NN combination_NN using_VBG itg-based_JJ alignments_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN ACL-08_NN :_: HLT_NNP ,_, Short_NNP Papers_NNP ,_, pages_NNS 81_CD --_: 84_CD ,_, Columbus_NNP ,_, Ohio_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Philipp_NNP Koehn_NNP ,_, Franz_NNP Josef_NNP Och_NNP ,_, and_CC Daniel_NNP Marcu_NNP ._.
+2003_CD ._.
+Statistical_NNP phrase-based_JJ translation_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2003_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS on_IN Human_JJ Language_NN Technology-Volume_NNP 1_CD ,_, pages_NNS 48_CD --_: 54_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Peng_NNP Li_NNP ,_, Yang_NNP Liu_NNP ,_, and_CC Maosong_NNP Sun_NNP ._.
+2013_CD ._.
+Recursive_JJ autoencoders_NNS for_IN ITG-based_JJ translation_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 567_CD --_: 577_CD ,_, Seat_NN -_: tle_NN ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS ._.
+Dekang_NNP Lin_NNP ._.
+2004_CD ._.
+A_DT path-based_JJ transfer_NN model_NN for_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN Coling_NNP 2004_CD ,_, pages_NNS 625_CD --_: 630_CD ,_, Geneva_NNP ,_, Switzerland_NNP ,_, Aug_NNP 23_CD --_: Aug_NNP 27_CD ._.
+COLING_NNP ._.
+Yang_NNP Liu_NNP ,_, Yun_NNP Huang_NNP ,_, Qun_NNP Liu_NNP ,_, and_CC Shouxun_NNP Lin_NNP ._.
+2007_CD ._.
+Forest-to-string_JJ statistical_JJ translation_NN rules_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 45th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP of_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 704_CD --_: 711_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Fandong_NNP Meng_NNP ,_, Jun_NNP Xie_NNP ,_, Linfeng_NNP Song_NN ,_, Yajuan_NNP Lu_NNP ̈_CD ,_, and_CC Qun_NNP Liu_NNP ._.
+2013_CD ._.
+Translation_NN with_IN source_NN constituency_NN and_CC dependency_NN trees_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Lan_SYM -_: guage_NN Processing_NNP ,_, pages_NNS 1066_CD --_: 1076_CD ,_, Seattle_NNP ,_, Wash_NNP -_: ington_NN ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Haitao_NNP Mi_NNP ,_, Liang_NNP Huang_NNP ,_, and_CC Qun_NNP Liu_NNP ._.
+2008_CD ._.
+Forest_NN -_: based_VBN translation_NN ._.
+In_IN Proceedings_NNP of_IN ACL-08_NNP :_: HLT_NNP ,_, pages_NNS 192_CD --_: 199_CD ,_, Columbus_NNP ,_, Ohio_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2002_CD ._.
+Discrimi_NNP -_: native_JJ training_NN and_CC maximum_NN entropy_NN models_NNS for_IN sta_NN -_: tistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN 40th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 295_CD --_: 302_CD ,_, Philadelphia_NNP ,_, Pennsylva_NNP -_: nia_NN ,_, USA_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Franz_NNP Josef_NNP Och_NNP ._.
+2003_CD ._.
+Minimum_NNP error_NN rate_NN training_NN in_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 41st_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, pages_NNS 160_CD --_: 167_CD ,_, Sapporo_NNP ,_, Japan_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Kishore_NNP Papineni_NNP ,_, Salim_NNP Roukos_NNP ,_, Todd_NNP Ward_NNP ,_, and_CC Wei_NNP -_: Jing_NNP Zhu_NNP ._.
+2002_CD ._.
+Bleu_NNP :_: a_DT method_NN for_IN automatic_JJ eval_NN -_: uation_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN 40th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 311_CD --_: 318_CD ,_, Philadelphia_NNP ,_, Pennsylva_NNP -_: nia_NN ,_, USA_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Adam_NNP Pauls_NNP ,_, Dan_NNP Klein_NNP ,_, David_NNP Chiang_NNP ,_, and_CC Kevin_NNP Knight_NNP ._.
+2010_CD ._.
+Unsupervised_JJ syntactic_NN alignment_NN with_IN inversion_NN transduction_NN grammars_NNS ._.
+In_IN Human_NNP Lan_NNP -_: guage_NN Technologies_NNPS :_: The_DT 2010_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 118_CD --_: 126_CD ,_, Los_NNP An_NNP -_: geles_NNS ,_, California_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Chris_NNP Quirk_NNP ,_, Arul_NNP Menezes_NNP ,_, and_CC Colin_NNP Cherry_NNP ._.
+2005_CD ._.
+De_NNP -_: pendency_NN treelet_NN translation_NN :_: Syntactically_RB informed_VBN phrasal_JJ SMT_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS -LRB-_-LRB- ACL_NN '_'' 05_CD -RRB-_-RRB- ,_, pages_NNS 271_CD --_: 279_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Libin_NNP Shen_NNP ,_, Jinxi_NNP Xu_NNP ,_, and_CC Ralph_NNP Weischedel_NNP ._.
+2008_CD ._.
+A_DT new_JJ string-to-dependency_NN machine_NN translation_NN algo_SYM -_: rithm_NN with_IN a_DT target_NN dependency_NN language_NN model_NN ._.
+In_IN Proceedings_NNP of_IN ACL-08_NNP :_: HLT_NNP ,_, pages_NNS 577_CD --_: 585_CD ,_, Colum_NNP -_: bus_NN ,_, Ohio_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Zhiguo_NNP Wang_NNP and_CC Chengqing_NNP Zong_NNP ._.
+2013_CD ._.
+Large-scale_JJ word_NN alignment_NN using_VBG soft_JJ dependency_NN cohesion_NN con_NN -_: straints_NNS ._.
+Transactions_NNS of_IN the_DT Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNP ,_, 1:291_CD --_: 300_CD ._.
+Kun_NNP Wang_NNP ,_, Chengqing_NNP Zong_NNP ,_, and_CC Keh-Yih_NNP Su_NNP ._.
+2010_CD ._.
+A_DT character-based_JJ joint_JJ model_NN for_IN chinese_JJ word_NN segmen_NNS -_: tation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 23rd_JJ International_NNP Con_NN -_: ference_NN on_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- Coling_NNP 2010_CD -RRB-_-RRB- ,_, pages_NNS 1173_CD --_: 1181_CD ,_, Beijing_NNP ,_, China_NNP ,_, August_NNP ._.
+Coling_NNP 2010_CD Organizing_NNP Committee_NNP ._.
+Dekai_NNP Wu_NNP ._.
+1997_CD ._.
+Stochastic_NNP inversion_NN transduction_NN grammars_NNS and_CC bilingual_JJ parsing_NN of_IN parallel_JJ corpora_NN ._.
+Computational_JJ linguistics_NNS ,_, 23_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :377_CD --_: 403_CD ._.
+Jun_NNP Xie_NNP ,_, Haitao_NNP Mi_NNP ,_, and_CC Qun_NNP Liu_NNP ._.
+2011_CD ._.
+A_DT novel_NN dependency-to-string_NN model_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2011_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Process_NNP -_: ing_NN ,_, pages_NNS 216_CD --_: 226_CD ,_, Edinburgh_NNP ,_, Scotland_NNP ,_, UK._NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Jun_NNP Xie_NNP ,_, Jinan_NNP Xu_NNP ,_, and_CC Qun_NNP Liu_NNP ._.
+2014_CD ._.
+Augment_VB dependency-to-string_JJ translation_NN with_IN fixed_VBN and_CC float_NN -_: ing_VBG structures_NNS ._.
+In_IN Proceedings_NNP of_IN COLING_NNP 2014_CD ,_, the_DT 25th_JJ International_NNP Conference_NNP on_IN Computational_NNP Lin_NNP -_: guistics_NNS :_: Technical_NNP Papers_NNP ,_, pages_NNS 2217_CD --_: 2226_CD ,_, Dublin_NNP ,_, Ireland_NNP ,_, August_NNP ._.
+Dublin_NNP City_NNP University_NNP and_CC Associa_NNP -_: tion_NN for_IN Computational_NNP Linguistics_NNP ._.
+Deyi_NNP Xiong_NNP ,_, Qun_NNP Liu_NNP ,_, and_CC Shouxun_NNP Lin_NNP ._.
+2006_CD ._.
+Maxi_SYM -_: mum_JJ entropy_NN based_VBN phrase_NN reordering_NN model_NN for_IN sta_NN -_: tistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Computational_NNP Linguis_NNP -_: tics_NNS and_CC 44th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 521_CD --_: 528_CD ,_, Sydney_NNP ,_, Australia_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Hao_NNP Zhang_NNP and_CC Daniel_NNP Gildea_NNP ._.
+2005_CD ._.
+Stochastic_NNP lexical_JJ -_: ized_VBN inversion_NN transduction_NN grammar_NN for_IN alignment_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Asso_NNP -_: ciation_NN for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 05_CD -RRB-_-RRB- ,_, pages_NNS 475_CD --_: 482_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Hao_NNP Zhang_NNP ,_, Liang_NNP Huang_NNP ,_, Daniel_NNP Gildea_NNP ,_, and_CC Kevin_NNP Knight_NNP ._.
+2006_CD ._.
+Synchronous_JJ binarization_NN for_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Human_NNP Language_NNP Technology_NNP Conference_NNP of_IN the_DT NAACL_NNP ,_, Main_NNP Confer_NNP -_: ence_NN ,_, pages_NNS 256_CD --_: 263_CD ,_, New_NNP York_NNP City_NNP ,_, USA_NNP ,_, June_NNP ._.
+As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Jiajun_NNP Zhang_NNP ,_, Feifei_NNP Zhai_NNP ,_, and_CC Chengqing_NNP Zong_NNP ._.
+2011_CD ._.
+Augmenting_VBG string-to-tree_JJ translation_NN models_NNS with_IN fuzzy_JJ use_NN of_IN source-side_JJ syntax_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2011_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 204_CD --_: 215_CD ,_, Edinburgh_NNP ,_, Scotland_NNP ,_, UK._NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.

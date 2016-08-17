@@ -1,0 +1,285 @@
+A_DT Machine_NN Learning_NNP Method_NNP to_TO Distinguish_NNP Machine_NNP Translation_NN from_IN Human_JJ Translation_NN Abstract_NNP This_DT paper_NN introduces_VBZ a_DT machine_NN learning_VBG ap_SYM -_: proach_NN to_TO distinguish_VB machine_NN translation_NN texts_NNS from_IN human_JJ texts_NNS in_IN the_DT sentence_NN level_NN au_SYM -_: tomatically_RB ._.
+In_IN stead_NN of_IN traditional_JJ methods_NNS ,_, we_PRP extract_VBP some_DT linguistic_JJ features_NNS only_RB from_IN the_DT target_NN language_NN side_NN to_TO train_VB the_DT predic_JJ -_: tion_NN model_NN and_CC these_DT features_NNS are_VBP independent_JJ of_IN the_DT source_NN language_NN ._.
+Our_PRP$ prediction_NN mod_NN -_: el_FW presents_VBZ an_DT indicator_NN to_TO measure_VB how_WRB much_JJ a_DT sentence_NN generated_VBN by_IN a_DT machine_NN translation_NN system_NN looks_VBZ like_IN a_DT real_JJ human_JJ translation_NN ._.
+Furthermore_RB ,_, the_DT indicator_NN can_MD directly_RB and_CC ef_SYM -_: fectively_RB enhance_VB statistical_JJ machine_NN transla_NN -_: tion_NN systems_NNS ,_, which_WDT can_MD be_VB proved_VBN as_IN BLEU_NNP score_NN improvements_NNS ._.
+1_CD Introduction_NNP The_NNP translation_NN performance_NN of_IN Statistical_NNP Machine_NNP Translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- systems_NNS has_VBZ been_VBN improved_VBN sig_SYM -_: nificantly_RB within_IN this_DT decade_NN ._.
+However_RB ,_, it_PRP is_VBZ still_RB in_IN -_: comparable_JJ to_TO the_DT human_JJ translation_NN -LRB-_-LRB- Feng_NNP et_FW al._FW ,_, 2012_CD ;_: Li_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Most_JJS translation_NN text_NN gen_SYM -_: erated_VBN by_IN SMT_NNP systems_NNS can_MD be_VB understood_VBN in_IN some_DT degree_NN but_CC still_RB not_RB good_JJ enough_RB ._.
+However_RB ,_, a_DT signif_NN -_: icant_NN proportion_NN of_IN text_NN that_IN exists_VBZ serious_JJ mistakes_NNS and_CC even_RB does_VBZ not_RB make_VB sense_NN ,_, and_CC these_DT text_NN can_MD be_VB easily_RB recognized_VBN by_IN human_JJ ._.
+It_PRP is_VBZ not_RB difficult_JJ to_TO understand_VB the_DT reason_NN why_WRB SMT_NNP systems_NNS generate_VBP ill-formed_JJ or_CC non-sense_JJ sen_NN -_: tences_NNS ._.
+SMT_NNP systems_NNS combine_VBP probability_NN models_NNS in_IN a_DT log-linear_JJ framework_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- ,_, where_WRB the_DT systems_NNS always_RB attempt_VBP to_TO find_VB a_DT sentence_NN with_IN the_DT highest_JJS probability_NN from_IN the_DT candidates_NNS ._.
+Howev_NNP -_: er_NN ,_, Language_NNP Model_NNP -LRB-_-LRB- LM_NNP -RRB-_-RRB- ,_, such_JJ as_IN n-gram_JJ LM_NNP ,_, and_CC ∗_CD Correspondence_NN author_NN ._.
+reordering_NN model_NN only_RB have_VBP limited_VBN capacity_NN to_TO rep_NN -_: resent_VB context_NN ,_, where_WRB sentences_NNS with_IN local_JJ optimum_JJ could_MD often_RB be_VB output_NN ._.
+Meanwhile_RB ,_, it_PRP can_MD be_VB a_DT very_RB different_JJ thing_NN for_IN the_DT entire_JJ translation_NN sentence_NN due_JJ to_TO complicated_JJ semantic_JJ and_CC pragmatic_JJ issues_NNS ._.
+Therefore_RB ,_, to_TO improve_VB SMT_NNP performance_NN ,_, if_IN poor_JJ -_: ly_RB translated_VBN sentences_NNS can_MD be_VB distinguished_JJ auto_NN -_: matically_RB ,_, it_PRP is_VBZ possible_JJ for_IN us_PRP to_TO refine_VB these_DT sen_SYM -_: tences_NNS by_IN some_DT extra_JJ efforts_NNS ._.
+In_IN this_DT paper_NN ,_, to_TO order_VB to_TO define_VB the_DT quality_NN of_IN the_DT sentence_NN generated_VBN by_IN SMT_NNP systems_NNS ,_, we_PRP borrow_VBP the_DT idea_NN from_IN the_DT evalua_NN -_: tion_NN of_IN machine_NN translation_NN task_NN ,_, that_IN the_DT more_JJR like_IN human_JJ translation_NN text_NN ,_, the_DT better_JJR the_DT machine_NN trans_NNS -_: lation_NN output_NN is_VBZ ._.
+Considering_VBG that_IN the_DT poorly_RB translat_NN -_: ed_VBN sentences_NNS show_VBP great_JJ difference_NN from_IN human_JJ tex_NN -_: t_NN ,_, we_PRP compare_VBP text_NN generated_VBN by_IN SMT_NNP systems_NNS with_IN human_JJ translations_NNS ._.
+This_DT comparison_NN motivates_VBZ us_PRP to_TO design_VB a_DT predictor_NN to_TO tell_VB whether_IN a_DT sentence_NN is_VBZ machine_NN generated_VBD or_CC human_JJ generated_VBN ._.
+Above_IN all_DT ,_, such_PDT a_DT predictor_NN can_MD be_VB treated_VBN as_IN a_DT binary_JJ classifica_NN -_: tion_NN problem_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP Support_NN Vector_NNP Machines_NNP -LRB-_-LRB- SVMs_NNS -RRB-_-RRB- -LRB-_-LRB- Hearst_NNP et_FW al._FW ,_, 1998_CD -RRB-_-RRB- to_TO solve_VB such_PDT a_DT prob_NN -_: lem_NN ._.
+The_DT benefits_NNS of_IN SVMs_NNS for_IN text_NN categorization_NN have_VBP been_VBN identified_VBN since_IN it_PRP learns_VBZ well_RB with_IN many_JJ relevant_JJ features_NNS -LRB-_-LRB- Joachims_NNPS ,_, 1998_CD -RRB-_-RRB- ._.
+In_IN order_NN to_TO find_VB those_DT poorly_RB SMT-translated_JJ sentences_NNS ,_, we_PRP train_VBP an_DT SVM-classifier_NN on_IN a_DT feature_NN space_NN ._.
+Most_JJS features_NNS are_VBP linguistically_RB motivated_VBN only_RB from_IN the_DT target_NN lan_NN -_: guage_NN side_NN ._.
+As_IN only_RB target_NN language_NN is_VBZ concerned_VBN ,_, our_PRP$ model_NN will_MD be_VB facilitated_VBN of_IN some_DT direct_JJ applica_NN -_: tions_NNS ._.
+Among_IN all_DT features_NNS ,_, a_DT major_JJ part_NN is_VBZ related_VBN to_TO the_DT syntactic_NN parser_NN ._.
+The_DT parsing_NN structure_NN of_IN the_DT out_JJ -_: put_JJ sentence_NN is_VBZ very_RB sensible_JJ to_TO the_DT quality_NN of_IN SMT_NNP outputs_NNS ._.
+We_PRP therefore_RB especially_RB select_JJ these_DT fea_SYM -_: tures_NNS related_VBN to_TO the_DT branching_VBG properties_NNS of_IN the_DT parse_NN tree_NN ._.
+One_CD of_IN the_DT reason_NN is_VBZ that_IN it_PRP had_VBD become_VBN appar_NN -_: ent_NN from_IN failure_NN analysis_NN in_IN -LRB-_-LRB- Corston-Oliver_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- that_WDT SMT_NNP system_NN output_NN tended_VBD to_TO favor_VB right_NN -_: branching_VBG structures_NNS over_IN noun_NN compounding_NN ._.
+The_DT remainder_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN fol_NN -_: lows_NNS :_: In_IN Section_NN 2_CD ,_, we_PRP will_MD give_VB a_DT quick_JJ review_NN on_IN SMT_NNP and_CC revelent_JJ classification_NN tasks_NNS ._.
+The_DT SVM_NNP ap_SYM -_: proaches_NNS and_CC all_PDT the_DT features_NNS used_VBN in_IN our_PRP$ method_NN will_MD be_VB presented_VBN in_IN Section_NN 3_CD ._.
+Section_NN 4_CD will_MD give_VB a_DT de_FW -_: scription_NN on_IN the_DT experiments_NNS and_CC an_DT analysis_NN of_IN cor_NN -_: responding_VBG results_NNS ._.
+Last_JJ ,_, we_PRP will_MD conclude_VB our_PRP$ work_NN in_IN Section_NN 5_CD ._.
+2_CD Related_JJ Work_NN In_IN the_DT classification_NN task_NN part_NN ,_, as_IN our_PRP$ goal_NN is_VBZ to_TO distin_VB -_: guish_JJ sentences_NNS with_IN different_JJ quality_NN ,_, we_PRP are_VBP actu_SYM -_: ally_NN working_VBG on_IN confidence_NN estimation_NN or_CC automatic_JJ evaluation_NN of_IN SMT_NNP systems_NNS -LRB-_-LRB- Doddington_NNP ,_, 2002_CD ;_: Pa_NNP -_: pineni_NNS et_FW al._FW ,_, 2002_CD ;_: Zhang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Early_RB work_NN on_IN automatic_JJ evaluation_NN of_IN machine_NN translation_NN text_NN estimates_VBZ the_DT quality_NN at_IN the_DT word_NN lev_NN -_: el_FW -LRB-_-LRB- Gandrabur_NNP and_CC Foster_NNP ,_, 2003_CD ;_: Ueffing_NNP and_CC Ney_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+Namely_RB ,_, n-gram_JJ features_NNS played_VBD an_DT impor_NN -_: tant_JJ role_NN in_IN translation_NN quality_NN differentiation_NN ._.
+How_WRB -_: ever_RB ,_, this_DT paper_NN considers_VBZ deep_JJ level_NN of_IN linguistic_JJ fea_NN -_: tures_NNS such_JJ as_IN those_DT derived_VBN from_IN parsing_VBG tree_NN instead_RB of_IN n-gram_NN features_NNS ._.
+Liu_NNP and_CC Gildea_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- also_RB used_VBN features_NNS related_VBN to_TO the_DT syntactic_NN parser_NN ._.
+Compared_VBN with_IN our_PRP$ work_NN ,_, they_PRP cared_VBD more_RBR about_IN detailed_JJ syntax_NN properties_NNS of_IN the_DT sentences_NNS on_IN the_DT parse_NN trees_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP less_JJR properties_NNS but_CC more_JJR syntactic_NN structure_NN features_NNS ._.
+Corston-Oliver_NNP et_FW al._FW -LRB-_-LRB- 2001_CD -RRB-_-RRB- adopted_VBN parse_NN tree_NN related_VBN features_NNS to_TO evaluating_VBG MT._NNP Their_PRP$ work_NN shows_VBZ a_DT high_JJ accuracy_NN in_IN the_DT classification_NN task_NN ._.
+However_RB ,_, the_DT generation_NN of_IN their_PRP$ training_NN and_CC test_NN data_NNS should_MD limit_VB to_TO the_DT same_JJ SMT_NNP system_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP de_FW -_: vote_NN to_TO developing_VBG a_DT model_NN that_WDT is_VBZ capable_JJ of_IN distin_NN -_: guishing_VBG texts_NNS generated_VBN by_IN multiple_JJ sourced_JJ SMT_NNP systems_NNS from_IN human_JJ texts_NNS ._.
+To_TO achieve_VB such_PDT an_DT aim_NN ,_, we_PRP will_MD introduce_VB quite_RB different_JJ types_NNS of_IN features_NNS such_JJ as_IN emotion_NN agreement_NN inside_IN a_DT sentence_NN ._.
+In_IN the_DT statistical_JJ machine_NN translation_NN systems_NNS part_NN ,_, the_DT performance_NN is_VBZ depended_VBN on_IN the_DT LM_NNP and_CC trans_NNS -_: lation_NN model_NN ._.
+Traditional_JJ Back-off_NN n-gram_JJ LM_SYM -_: s_PRP -LRB-_-LRB- BNLMs_NNS -RRB-_-RRB- -LRB-_-LRB- Chen_NNP and_CC Goodman_NNP ,_, 1996_CD ;_: Chen_NNP and_CC Goodman_NNP ,_, 1999_CD ;_: Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- have_VBP been_VBN wide_JJ -_: ly_RB used_VBN for_IN probability_NN estimation_NN and_CC BNLMs_NNP al_SYM -_: so_RB show_VB up_RP in_IN many_JJ other_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Jia_NNP and_CC Zhao_NNP ,_, 2014_CD ;_: Zhang_NNP et_FW al._FW ,_, 2012_CD ;_: Xu_NNP and_CC Zhao_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Recently_RB ,_, a_DT better_JJR probability_NN estimation_NN method_NN ,_, Continuous-Space_NNP Language_NNP Models_NNP -LRB-_-LRB- C_NNP -_: SLMs_NNS -RRB-_-RRB- ,_, especially_RB Neural_NNP Network_NNP Language_NNP Mod_NNP -_: els_NNS -LRB-_-LRB- NNLMs_NNS -RRB-_-RRB- -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Schwenk_NNP ,_, 2007_CD ;_: Le_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- are_VBP being_VBG used_VBN in_IN SMT_NNP tasks_NNS -LRB-_-LRB- Son_NNP et_FW al._FW ,_, 2010_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD ;_: Wang_NNP et_FW al._FW ,_, 2013_CD ;_: Wang_NNP et_FW al._FW ,_, 2015_CD ;_: Wang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Also_RB ,_, Neural_NNP Network_NNP Translation_NN Model_NNP -_: s_PRP -LRB-_-LRB- NNTMs_NNS -RRB-_-RRB- show_VBP a_DT success_NN in_IN SMT_NNP -LRB-_-LRB- Kalchbrenner_NNP and_CC Blunsom_NNP ,_, 2013_CD ;_: Blunsom_NNP et_FW al._FW ,_, 2014_CD ;_: Devlin_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT high_JJ cost_NN of_IN CSLMs_NNP makes_VBZ it_PRP difficult_JJ to_TO decoding_VBG directly_RB ._.
+This_DT leads_VBZ to_TO a_DT n_SYM -_: best_JJS reranking_NN method_NN which_WDT is_VBZ available_JJ for_IN our_PRP$ pa_NN -_: per_IN -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+3_CD The_DT Proposed_NNP Approach_NNP In_IN this_DT Section_NN ,_, we_PRP present_VBP a_DT machine_NN learning_VBG method_NN to_TO distinguish_VB poor_JJ translated_VBN sentences_NNS from_IN good_JJ ones_NNS ._.
+3.1_CD Support_NN Vector_NNP Machine_NN For_IN text_NN classification_NN tasks_NNS ,_, Many_JJ approaches_NNS have_VBP been_VBN proposed_VBN -LRB-_-LRB- Sebastiani_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+Among_IN these_DT approaches_NNS ,_, SVM_NNP has_VBZ shown_VBN widely_RB applications_NNS -LRB-_-LRB- Joachims_NNPS ,_, 1998_CD ;_: Joachims_NNP ,_, 1999_CD ;_: Joachims_NNP ,_, 2002_CD ;_: Tong_NNP and_CC Koller_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+And_CC in_IN following_VBG subsec_NN -_: tion_NN we_PRP will_MD introduces_VBZ how_WRB to_TO formalize_VB the_DT pro-_JJ posed_VBN task_NN ._.
+The_DT training_NN corpus_NN for_IN the_DT classifier_NN includes_VBZ l_NN human_JJ translation_NN sentences_NNS as_IN positive_JJ samples_NNS and_CC l_NN corresponding_JJ SMT_NNP outputs_NNS as_IN negative_JJ sam_NN -_: ples_NNS ._.
+For_IN a_DT sentence_NN S_NNP ,_, it_PRP can_MD be_VB represented_VBN by_IN an_DT N-dimensional_JJ feature_NN vector_NN V_NNP -LCB-_-LRB- v1_CD ,_, v2_CD ,_, ·_CD ·_CD ·_NN ,_, vN_NNP -RCB-_-RRB- ,_, where_WRB N_NNP is_VBZ total_JJ number_NN of_IN all_PDT the_DT features_NNS ,_, and_CC in_IN most_JJS cases_NNS ,_, vi_FW is_VBZ a_DT real_JJ number_NN feature_NN normalized_VBN by_IN the_DT length_NN LS_NNP of_IN sentence_NN S._NNP With_IN the_DT above_JJ training_NN corpus_NN ,_, we_PRP will_MD train_VB an_DT SVM_NNP classifier_NN with_IN linear_JJ kernel_NN ._.
+The_DT SVM_NNP predic_NN -_: tion_NN function_NN is_VBZ defined_VBN as_IN the_DT following_NN :_: +1_CD ,_, h_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- ≥_SYM 0_CD predict_VBP -LRB-_-LRB- S_NNP -RRB-_-RRB- =_SYM −_SYM 1_CD ,_, h_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- <_SYM 0_CD where_WRB In_IN this_DT paper_NN ,_, Liblinear_NNP -LRB-_-LRB- Fan_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- is_VBZ adopt_VB -_: ed_VBN as_IN our_PRP$ SVM_NNP implementation_NN and_CC the_DT parameter_NN soft_JJ margin_NN width_NN is_VBZ optimized_VBN over_IN a_DT small_JJ devel_NN -_: opment_NN set_NN ._.
+3.2_CD Features_NNS In_IN this_DT subsection_NN ,_, we_PRP will_MD present_VB our_PRP$ feature_NN col_NN -_: lections_NNS ._.
+Considering_VBG that_IN only_RB the_DT properties_NNS of_IN target_NN lan_NN -_: guage_NN are_VBP involved_VBN in_IN our_PRP$ expectation_NN ,_, we_PRP decide_VBP to_TO use_VB specific_JJ types_NNS of_IN linguistic_JJ features_NNS to_TO present_VB the_DT quality_NN of_IN the_DT sentence_NN ._.
+A_DT very_RB important_JJ type_NN of_IN linguistic_JJ features_NNS is_VBZ directly_RB linked_VBN to_TO syntactic_JJ structure_NN of_IN sentence_NN ._.
+When_WRB getting_VBG the_DT parse_NN tree_NN of_IN a_DT sentence_NN ,_, we_PRP can_MD exploit_VB a_DT number_NN of_IN available_JJ properties_NNS ,_, such_JJ as_IN sen_NN -_: tence_NN structure_NN and_CC the_DT densities_NNS of_IN constituent_JJ types_NNS ,_, to_TO design_VB as_IN our_PRP$ features_NNS ._.
+For_IN parser_NN implementation_NN ,_, we_PRP use_VBP Stanford_NNP Lex_NNP -_: icalized_VBD Parser_NNP version_NN 3.3.1_CD ._.
+-LRB-_-LRB- De_NNP Marneffe_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Figure_NN 1_CD gives_VBZ an_DT example_NN of_IN a_DT parse_NN tree_NN ._.
+The_DT features_NNS related_VBN to_TO the_DT parse_NN tree_NN are_VBP as_IN the_DT following1_NNS :_: •_CD number_NN of_IN right-branching_JJ nodes_NNS for_IN all_DT con_NN -_: stituent_JJ types_NNS and_CC for_IN Noun_NNP Phrases_NNP -LRB-_-LRB- NPs_NNP -RRB-_-RRB- ._.
+Using_VBG Figure_NN 1_CD as_IN an_DT example_NN ,_, there_EX are_VBP 13_CD right-branching_JJ nodes_NNS for_IN all_DT constituent_JJ types_NNS in_IN colorful_JJ frames_NNS ,_, including_VBG one_CD NP_NNP in_IN the_DT red_JJ frame_NN ._.
+Normalized_VBN by_IN the_DT length_NN of_IN the_DT sen_NN -_: tence_NN 16_CD ,_, feature_NN scores_NNS are_VBP respectively_RB 0.8125_CD and_CC 0.0625_CD ._.
+•_CD number_NN of_IN left-branching_JJ nodes_NNS for_IN all_DT con_NN -_: stituent_JJ types_NNS and_CC for_IN NPs_NNP •_CD number_NN of_IN pre-modifiers_NNS ,_, adjectives_NNS before_IN nouns_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP •_CD number_NN of_IN post-modifiers_NNS ,_, adjectives_NNS after_IN nouns_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP •_CD branchingindex,thenumberofright-branching_JJ nodes_NNS minus_CC number_NN of_IN left-branching_JJ nodes_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP 1In_NNP default_NN ,_, all_PDT the_DT following_VBG counting_VBG numbers_NNS for_IN feature_NN score_NN computation_NN are_VBP normalized_VBN by_IN the_DT length_NN of_IN the_DT sentence_NN ._.
+•_NN branching_VBG weight_NN index_NN ,_, number_NN of_IN tokens_NNS cov_SYM -_: ered_VBN by_IN right-branching_JJ nodes_NNS minus_CC number_NN of_IN tokens_NNS covered_VBN by_IN left-branching_JJ nodes_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP •_CD modification_NN index_NN ,_, the_DT number_NN of_IN pre_NN -_: modifiers_NNS minus_CC the_DT number_NN of_IN post-modifiers_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP •_CD modification_NN weight_NN index_NN ,_, length_NN in_IN tokens_NNS of_IN all_DT pre-modifiers_NNS minus_CC length_NN in_IN tokens_NNS of_IN all_DT post-modifiers_NNS ,_, for_IN all_DT constituent_JJ types_NNS and_CC for_IN NPs_NNP We_PRP also_RB consider_VBP density_NN of_IN function_NN words_NNS as_RB well_RB as_IN the_DT pronouns_NNS ,_, where_WRB SMT_NNP systems_NNS make_VBP mistakes_NNS frequently_RB ._.
+All_DT densities_NNS are_VBP computed_VBN by_IN counting_VBG the_DT words_NNS with_IN sentence_NN length_NN normaliza_NN -_: tion_NN :_: •_CD overall_JJ function_NN word_NN density_NN •_CD density_NN of_IN determiners_NNS •_VBP density_NN of_IN quantifiers_NNS •_VBP density_NN of_IN pronouns_NNS •_VBP density_NN of_IN prepositions_NNS •_VBP density_NN of_IN punctuation_NN marks_NNS •_VBP density_NN of_IN auxiliary_JJ verbs_NNS •_VBP density_NN of_IN conjunctions_NNS •_VBP density_NN of_IN different_JJ pronoun_NN :_: Wh_SYM -_: ,_, 1st_CD ,_, 2nd_CD ,_, and_CC 3rd_CD person_NN pronouns_NNS The_DT presence_NN of_IN out_IN of_IN vocabulary_NN -LRB-_-LRB- OOV_NNP -RRB-_-RRB- word_NN usually_RB make_VBP situations_NNS more_RBR complicated_VBN ._.
+Also_RB ,_, problem_NN like_IN subject-verb_JJ disagreement_NN are_VBP easy_JJ to_TO be_VB detected_VBN ._.
+Therefore_RB ,_, we_PRP give_VBP a_DT group_NN of_IN lexical_JJ -_: level_NN features_NNS :_: •_CD number_NN of_IN OOV_NNP words_NNS •_VBD types_NNS of_IN the_DT immediate_JJ children_NNS of_IN the_DT root_NN •_CD subject-verb_NN disagreement_NN h_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- =_SYM w1v1_FW +_FW w2v2_FW +_FW ..._: +_SYM wNvN_NNP In_IN additional_JJ ,_, we_PRP score_VBP emotion_NN agreement_NN inside_IN a_DT sentence_NN as_IN features_NNS ._.
+This_DT is_VBZ motivated_VBN by_IN the_DT ob_NN -_: servation_NN that_IN a_DT reasonable_JJ sentence_NN should_MD have_VB a_DT consistent_JJ emotion_NN strength_NN among_IN different_JJ words_NNS ._.
+To_TO evaluate_VB such_JJ agreement_NN ,_, we_PRP build_VBP a_DT dictionary_JJ Demotion_NN especially_RB for_IN emotion_NN words_NNS in_IN advance_NN ,_, in_IN which_WDT each_DT word_NN si_FW can_MD be_VB scored_VBN from_IN −_CD 3_CD to_TO +3_CD ._.
+We_PRP score_VBP all_PDT the_DT words_NNS into_IN these_DT categories_NNS with_IN a_DT linear_JJ model_NN to_TO describe_VB the_DT strength_NN of_IN emotion_NN ._.
+To_TO a_DT sentence_NN ,_, the_DT average_JJ scoring_NN and_CC standard_JJ devia_NN -_: tion_NN will_MD be_VB considered_VBN :_: •_SYM μemotion_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- •_SYM σemotion_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- where_WRB S_NNP is_VBZ a_DT sentence_NN with_IN length_NN len_NN ._.
+Finally_RB ,_, sizes_NNS of_IN the_DT following_VBG constituents_NNS are_VBP measured_VBN :_: •_JJ sentence_NN length_NN •_CD parse_VBP tree_NN depth_NN •_CD maximal_JJ and_CC average_JJ NP_NNP length_NN •_CD maximal_JJ and_CC average_JJ Adjective_NNP Phrase_NNP -LRB-_-LRB- ADJP_NNP -RRB-_-RRB- length_NN •_CD maximal_JJ and_CC average_JJ Prepositional_NNP Phrase_NNP -LRB-_-LRB- PP_NNP -RRB-_-RRB- length_NN •_CD maximal_JJ and_CC average_JJ Adverb_NNP Phrase_NNP -LRB-_-LRB- ADVP_NNP -RRB-_-RRB- length_NN 4_CD Experiment_NN 4.1_CD Classification_NN In_IN this_DT subsection_NN ,_, we_PRP will_MD give_VB experiment_NN details_NNS of_IN the_DT prediction_NN model_NN ._.
+In_IN all_DT of_IN our_PRP$ experiments_NNS ,_, the_DT default_NN settings2_CD of_IN Moses_NNP -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- and_CC GIZA_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- are_VBP used_VBN for_IN system_NN building_NN ._.
+For_IN each_DT SMT_NNP system_NN ,_, a_DT 5-gram_JJ LM_NNP -LRB-_-LRB- Chen_NNP and_CC Goodman_NNP ,_, 1996_CD -RRB-_-RRB- is_VBZ trained_VBN on_IN the_DT target_NN side_NN of_IN training_NN set_VBD us_PRP -_: ing_VBG IRST_NNP LM_NNP Toolkit_NNP ._.
+We_PRP use_VBP four_CD language_NN pairs_NNS from_IN version_NN 7_CD of_IN the_DT Europarl_NNP corpus3_NN -LRB-_-LRB- Koehn_NNP ,_, 2005_CD -RRB-_-RRB- as_IN our_PRP$ exper_NN -_: iment_NN data_NNS and_CC train_NN four_CD SMT_NNP systems_NNS ,_, respec_FW -_: tively_RB :_: French-English_JJ ,_, German-English_JJ ,_, Italian_JJ -_: English_NNP and_CC Danish-English_NNP ._.
+Considering_VBG the_DT consistency_NN of_IN system_NN and_CC con_NN -_: venience_NN of_IN analysis_NN ,_, all_PDT these_DT four_CD systems_NNS use_VBP En_SYM -_: glish_NN as_IN target_NN language_NN ._.
+We_PRP use_VBP these_DT four_CD systems_NNS to_TO generate_VB translation_NN text_NN ._.
+We_PRP randomly_RB pick_VBP 5K_JJ sentences_NNS from_IN the_DT French_JJ corpus_NN ,_, noted_VBD as_IN F_NN 1_CD -LRB-_-LRB- 5K_NN -RRB-_-RRB- ,_, and_CC translated_VBN into_IN En_SYM -_: glish_JJ sentences_NNS E1_NNP -LRB-_-LRB- 5K_NNP -RRB-_-RRB- as_IN our_PRP$ negative_JJ samples_NNS ,_, by_IN SMT_NNP system_NN ._.
+The_DT corresponding_JJ English_JJ part_NN E1_CD ′_NN of_IN F_NN 1_CD is_VBZ used_VBN as_IN the_DT positive_JJ samples_NNS ._.
+-LCB-_-LRB- E1_CD ,_, E1_CD ′_CD -RCB-_-RRB- forms_VBZ the_DT required_JJ training_NN set_NN ._.
+Then_RB ,_, we_PRP randomly_RB 2In_JJ this_DT paper_NN ,_, we_PRP build_VBP only_RB phrase-based_JJ SMT_NNP for_IN experi_NNS -_: ment_NN implementation_NN ._.
+However_RB ,_, we_PRP believe_VBP this_DT method_NN is_VBZ fea_SYM -_: sible_NN for_IN other_JJ SMT_NNP systems_NNS ,_, such_JJ as_IN syntax-based_JJ SMT_NNP ._.
+3_CD http://www.statmt.org/europarl/_NN Figure_NN 1_CD :_: An_DT Example_NN of_IN Parse_NNP Tree_NNP pick_NN 10K_NNP sentences_NNS from_IN each_DT of_IN French_JJ F_NN 2_CD -LRB-_-LRB- 10K_CD -RRB-_-RRB- ,_, German_JJ G2_NNP -LRB-_-LRB- 10K_NNP -RRB-_-RRB- ,_, Italian_JJ I2_NN -LRB-_-LRB- 10K_CD -RRB-_-RRB- and_CC Danish_JJ D2_NN -LRB-_-LRB- 10K_CD -RRB-_-RRB- corpora_NN and_CC translate_VB them_PRP into_IN English_JJ text_NN E2_NNP -LRB-_-LRB- 40K_NNP -RRB-_-RRB- ._.
+Another_DT 40K_JJ sentences_NNS are_VBP extracted_VBN from_IN English_NNP E2_NNP ′_NNP -LRB-_-LRB- 40K_NNP -RRB-_-RRB- ._.
+-LCB-_-LRB- E2_CD ,_, E2_CD ′_CD -RCB-_-RRB- forms_VBZ a_DT multi_NNS -_: model-translated-text_JJ test_NN set_NN ._.
+F_NN 2_CD has_VBZ no_DT cover_NN with_IN F1_CD ._.
+The_DT prediction_NN results_NNS are_VBP shown_VBN in_IN Table_NNP 1_CD :_: Table_NNP 1_CD :_: Classification_NN Accuracy_NNP 4.2_CD Feedback_NNP to_TO SMT_NNP system_NN One_CD direct_JJ application_NN of_IN our_PRP$ prediction_NN model_NN is_VBZ to_TO provide_VB feedback_NN to_TO SMT_NNP systems_NNS ._.
+We_PRP select_VBP the_DT French-English_JJ SMT_NNP system_NN that_IN we_PRP built_VBD above_IN as_IN our_PRP$ baseline_NN ._.
+For_IN the_DT sake_NN of_IN mod_NN -_: ifying_VBG the_DT system_NN as_RB little_JJ as_IN possible_JJ ,_, we_PRP consider_VBP an_DT n-best_JJ list_NN and_CC reranking_NN method_NN on_IN the_DT output_NN candidates_NNS of_IN the_DT baseline_NN ._.
+We_PRP make_VBP a_DT slight_JJ change_NN on_IN the_DT prediction_NN model_NN so_IN that_IN it_PRP can_MD give_VB a_DT confidence_NN score_NN between_IN 0_CD and_CC 1_CD on_IN each_DT sentence_NN ._.
+The_DT nearer_IN with_IN 1_CD its_PRP$ score_NN is_VBZ ,_, the_DT better_JJR the_DT sentence_NN will_MD be_VB ._.
+For_IN each_DT SMT_NNP output_NN sentence_NN ,_, we_PRP choose_VBP a_DT 1000-candidate4_JJ list_NN sorted_VBN by_IN the_DT baseline_NN ,_, and_CC score_VB them_PRP by_IN our_PRP$ prediction_NN mod_NN -_: el_FW ._.
+We_PRP check_VBP each_DT candidate_NN by_IN the_DT original_JJ sort_NN ,_, and_CC find_VB out_RP the_DT first_JJ candidate_NN whose_WP$ score_NN is_VBZ greater_JJR than_IN a_DT threshold_NN H_NNP as_IN our_PRP$ new_JJ output_NN .5_CD In_IN case_NN that_IN no_DT candidates_NNS satisfy_VBP the_DT condition_NN ,_, we_PRP simply_RB give_VB the_DT origin_NN output_NN ._.
+In_IN our_PRP$ experiment_NN ,_, we_PRP set_VBP H_NNP empirically_RB ._.
+Table_NNP 2_CD shows_VBZ the_DT 1.6_CD BLEU_NNP score_NN refined_VBN by_IN our_PRP$ method_NN ._.
+Table_NNP 2_CD :_: BLEU_NNP scores_NNS 4This_NNP is_VBZ an_DT empirical_JJ value_NN ._.
+5We_RB considered_VBN directly_RB adding_VBG SVM_NNP score_NN as_IN a_DT new_JJ feature_NN into_IN SMT_NNP system_NN ,_, however_RB our_PRP$ current_JJ method_NN shown_VBN in_IN this_DT paper_NN gets_VBZ better_JJR results_NNS ._.
+Also_RB ,_, this_DT method_NN is_VBZ more_RBR efficient_JJ ._.
+4.3_CD Discussion_NNP We_PRP will_MD discuss_VB how_WRB our_PRP$ method_NN works_VBZ by_IN examples_NNS ._.
+Table_NNP 3_CD shows_VBZ a_DT translation_NN and_CC refined_VBN example_NN ._.
+S_NNP Quelle_NNP que_NN soit_FW la_FW bonne_FW re_FW ́ponse_FW ,_, la_DT ques_NNS -_: tion_JJ est_NN que_FW la_FW de_FW ́termination_FW des_FW mesures_FW a_FW `_`` prendre_FW concernant_FW la_FW race_NN repre_NN ́sente_NNP un_JJ proble_NN `_`` me_PRP dominant_JJ dans_FW la_FW politique_FW ame_FW ́ricaine_FW ._.
+T_NNP Whatever_WDT the_DT answer_NN ,_, the_DT question_NN is_VBZ the_DT determination_NN of_IN the_DT action_NN on_IN the_DT race_NN is_VBZ a_DT dominant_JJ issue_NN in_IN American_JJ politics_NNS ._.
+R_NN Whatever_WDT the_DT answer_NN ,_, the_DT question_NN is_VBZ that_IN determining_VBG what_WP to_TO do_VB about_IN race_NN is_VBZ a_DT dominant_JJ issue_NN in_IN American_JJ politics_NNS ._.
+Ref_NNP Regardless_RB of_IN the_DT correct_JJ answer_NN ,_, the_DT point_NN is_VBZ that_IN determining_VBG what_WP to_TO do_VB about_IN race_NN is_VBZ a_DT dominant_JJ issue_NN in_IN US_NNP politics_NNS ._.
+Table_NNP 3_CD :_: A_DT Translation_NN Example_NN ._.
+S_NNP :_: Source_NNP ,_, T_NNP :_: Target_NNP ,_, R_NNP :_: Refined_VBN ,_, and_CC Ref_NNP :_: Reference_NNP According_VBG to_TO the_DT analysis_NN ,_, the_DT parse_NN tree_NN structure_NN of_IN output_NN T_NNP is_VBZ seriously_RB right-deviated_JJ ,_, while_IN sen_SYM -_: tence_NN R_NN has_VBZ a_DT more_RBR balance_NN tree_NN structure_NN ._.
+Our_PRP$ pre_SYM -_: diction_NN model_NN will_MD consider_VB R_NNP as_IN a_DT good_JJ translation_NN but_CC T_NNP as_IN a_DT bad_JJ one_CD ._.
+When_WRB reordering_NN candidates_NNS ,_, our_PRP$ algorithm_NN successfully_RB selects_VBZ R_NN as_IN output_NN instead_RB of_IN T_NNP ._.
+In_IN addition_NN ,_, compared_VBN with_IN reference_NN sentence_NN ,_, we_PRP see_VBP that_IN R_NN is_VBZ an_DT even_RB better_JJR translation_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP present_VBP an_DT indicator_NN that_WDT using_VBG lin_SYM -_: guistic_NN features_NNS to_TO train_VB an_DT SVM_NNP classifier_NN to_TO distin_VB -_: guish_NN poor_JJ SMT_NNP sentences_NNS from_IN good_JJ ones_NNS ._.
+We_PRP use_VBP single-MT-model-generated_JJ text_NN as_IN training_NN data_NNS and_CC multi-MT-model-generated_JJ text_NN as_IN test_NN data_NNS to_TO show_VB the_DT stability_NN of_IN our_PRP$ method_NN ._.
+With_IN the_DT help_NN of_IN a_DT se_FW -_: ries_NNS of_IN features_NNS derived_VBN from_IN parse_NN tree_NN ,_, emotion_NN a_SYM -_: greement_NN and_CC lexical_NN features_NNS ,_, our_PRP$ classifier_NN gives_VBZ ac_SYM -_: ceptable_JJ accuracy_NN ._.
+In_IN addition_NN ,_, we_PRP show_VBP that_IN such_PDT a_DT predicator_NN can_MD effectively_RB enhance_VB the_DT correspond_VB -_: ing_NN SMT_NNP task_NN ._.
+Acknowledgements_NNP Thank_VB all_PDT the_DT reviewers_NNS for_IN valuable_JJ comments_NNS and_CC suggestions_NNS on_IN our_PRP$ paper_NN ._.
+Rui_NNP Wang_NNP and_CC Hai_NNP Zhao_NNP Data_NNP Set_NNP Accuracy_NNP Training_NNP set_VBD 92.3_CD %_NN Test_NN set_VBN 74.2_CD %_NN MT_NNP System_NNP BLEU_NNP Score_NN Baseline_NNP 23.5_CD Refined_VBN H_NNP =_SYM 0.6_CD 24.7_CD Refined_VBN H_NNP =_SYM 0.7_CD 25.1_CD Refined_VBN H_NNP =_SYM 0.8_CD 23.9_CD were_VBD partially_RB supported_VBN by_IN National_NNP Natural_NNP Sci_NNP -_: ence_NN Foundation_NNP of_IN China_NNP -LRB-_-LRB- No._NN 60903119_CD ,_, No._NN 61170114_CD and_CC No._NN 61272248_CD -RRB-_-RRB- ,_, the_DT National_NNP Basic_NNP Research_NNP Program_NNP of_IN China_NNP -LRB-_-LRB- No._NN 2013CB329401_CD -RRB-_-RRB- ,_, the_DT Science_NN and_CC Technology_NNP Commission_NNP of_IN Shang_NNP -_: hai_FW Municipality_NNP -LRB-_-LRB- No._NN 13511500200_CD -RRB-_-RRB- ,_, the_DT European_NNP Union_NNP Seventh_NNP Framework_NNP Program_NNP -LRB-_-LRB- No._NN 247619_CD -RRB-_-RRB- ,_, the_DT Cai_NNP Yuanpei_NNP Program_NNP -LRB-_-LRB- CSC_NNP fund_NN 201304490199_CD and_CC 201304490171_CD -RRB-_-RRB- ,_, and_CC the_DT art_NN and_CC science_NN inter_NN -_: discipline_NN funds_NNS of_IN Shanghai_NNP Jiao_NNP Tong_NNP Universi_NNP -_: ty_NN -LRB-_-LRB- A_DT study_NN on_IN mobilization_NN mechanism_NN and_CC alerting_VBG threshold_NN setting_VBG for_IN online_JJ community_NN ,_, and_CC media_NNS image_NN and_CC psychology_NN evaluation_NN :_: a_DT computational_JJ intelligence_NN approach_NN -RRB-_-RRB- ._.
+We_PRP appreciate_VBP all_DT your_PRP$ opin_NN -_: ions_NNS and_CC supports_NNS ._.
+References_NNS Yoshua_NNP Bengio_NNP ,_, Re_NNP ́jean_JJ Ducharme_NNP ,_, Pascal_NNP Vincent_NNP ,_, and_CC Christian_NNP Janvin_NNP ._.
+2003_CD ._.
+A_DT neural_JJ probabilistic_JJ lan_NN -_: guage_NN model_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Re_NNP -_: search_NN ,_, 3:1137_CD --_: 1155_CD ._.
+Phil_NNP Blunsom_NNP ,_, Edward_NNP Grefenstette_NNP ,_, Nal_NNP Kalchbrenner_NNP ,_, et_FW al._FW 2014_CD ._.
+A_DT convolutional_JJ neural_JJ network_NN for_IN mod_NN -_: elling_VBG sentences_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Stanley_NNP F_NN Chen_NNP and_CC Joshua_NNP Goodman_NNP ._.
+1996_CD ._.
+An_DT empiri_NN -_: cal_NN study_NN of_IN smoothing_VBG techniques_NNS for_IN language_NN model_NN -_: ing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 34th_JJ annual_JJ meeting_NN on_IN As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 310_CD --_: 318_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Stanley_NNP F._NNP Chen_NNP and_CC Joshua_NNP Goodman_NNP ._.
+1999_CD ._.
+An_DT em_SYM -_: pirical_NN study_NN of_IN smoothing_VBG techniques_NNS for_IN language_NN modeling_NN ._.
+Computer_NNP Speech_NNP &_CC Language_NNP ,_, volume_NN 13_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :359_CD --_: 393_CD -LRB-_-LRB- 35_CD -RRB-_-RRB- ._.
+Simon_NNP Corston-Oliver_NNP ,_, Michael_NNP Gamon_NNP ,_, and_CC Chris_NNP Brockett_NNP ._.
+2001_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO the_DT automatic_JJ evaluation_NN of_IN machine_NN translation_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 39th_JJ Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 148_CD --_: 155_CD ._.
+Asso_SYM -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Marie-Catherine_NNP De_NNP Marneffe_NNP ,_, Bill_NNP MacCartney_NNP ,_, Christo_NNP -_: pher_NN D_NNP Manning_NNP ,_, et_FW al._FW 2006_CD ._.
+Generating_NNP typed_VBD de_IN -_: pendency_NN parses_VBZ from_IN phrase_NN structure_NN parses_VBZ ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ,_, volume_NN 6_CD ,_, pages_NNS 449_CD --_: 454_CD ._.
+Jacob_NNP Devlin_NNP ,_, Rabih_NNP Zbib_NNP ,_, Zhongqiang_NNP Huang_NNP ,_, Thomas_NNP Lamar_NNP ,_, Richard_NNP Schwartz_NNP ,_, and_CC John_NNP Makhoul_NNP ._.
+2014_CD ._.
+Fast_NNP and_CC robust_JJ neural_JJ network_NN joint_JJ models_NNS for_IN statis_NNS -_: tical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, volume_NN 1_CD ,_, pages_NNS 1370_CD --_: 1380_CD ._.
+George_NNP Doddington_NNP ._.
+2002_CD ._.
+Automatic_NNP evaluation_NN of_IN ma_FW -_: chine_NN translation_NN quality_NN using_VBG n-gram_JJ co-occurrence_NN statistics_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT second_JJ internation_NN -_: al_JJ conference_NN on_IN Human_NNP Language_NNP Technology_NNP Re_NNP -_: search_NN ,_, pages_NNS 138_CD --_: 145_CD ._.
+Morgan_NNP Kaufmann_NNP Publishers_NNPS Inc._NNP ._.
+Rong-En_JJ Fan_NN ,_, Kai-Wei_NNP Chang_NNP ,_, Cho-Jui_NNP Hsieh_NNP ,_, Xiang-Rui_NNP Wang_NNP ,_, and_CC Chih-Jen_NNP Lin_NNP ._.
+2008_CD ._.
+Liblinear_NNP :_: A_NNP library_NN for_IN large_JJ linear_JJ classification_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 9:1871_CD --_: 1874_CD ._.
+Yang_NNP Feng_NNP ,_, Dongdong_NNP Zhang_NNP ,_, Mu_NNP Li_NNP ,_, Ming_NNP Zhou_NNP ,_, and_CC Qun_NNP Liu_NNP ._.
+2012_CD ._.
+Hierarchical_JJ chunk-to-string_JJ trans_NNS -_: lation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistic_NNP -_: s_PRP :_: Long_NNP Papers-Volume_NNP 1_CD ,_, pages_NNS 950_CD --_: 958_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Simona_NNP Gandrabur_NNP and_CC George_NNP Foster_NNP ._.
+2003_CD ._.
+Confidence_NN estimation_NN for_IN translation_NN prediction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 7th_JJ conference_NN on_IN Natural_JJ language_NN learning_VBG at_IN HLT-NAACL_NNP 2003-Volume_NNP 4_CD ,_, pages_NNS 95_CD --_: 102_CD ._.
+Associa_SYM -_: tion_NN for_IN Computational_NNP Linguistics_NNP ._.
+Marti_NNP A._NNP Hearst_NNP ,_, Susan_NNP T_NNP Dumais_NNP ,_, Edgar_NNP Osman_NNP ,_, John_NNP Platt_NNP ,_, and_CC Bernhard_NNP Scholkopf_NNP ._.
+1998_CD ._.
+Support_NN vector_NN machines_NNS ._.
+Intelligent_NNP Systems_NNPS and_CC their_PRP$ Applications_NNS ,_, IEEE_NNP ,_, 13_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :18_CD --_: 28_CD ._.
+Zhongye_NNP Jia_NNP and_CC Hai_NNP Zhao_NNP ._.
+2014_CD ._.
+A_DT joint_JJ graph_NN mod_NN -_: el_NN for_IN pinyin-to-chinese_JJ conversion_NN with_IN typo_NN correc_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1512_CD --_: 1523_CD ._.
+Thorsten_NNP Joachims_NNP ._.
+1998_CD ._.
+Text_NN categorization_NN with_IN sup_NN -_: port_NN vector_NN machines_NNS :_: Learning_NNP with_IN many_JJ relevan_NN -_: t_NN features_NNS ._.
+Springer_NNP ._.
+Thorsten_NNP Joachims_NNP ._.
+1999_CD ._.
+Transductive_JJ inference_NN for_IN text_NN classification_NN using_VBG support_NN vector_NN machines_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, volume_NN 99_CD ,_, pages_NNS 200_CD --_: 209_CD ._.
+Thorsten_NNP Joachims_NNP ._.
+2002_CD ._.
+Learning_NNP to_TO classify_VB text_NN using_VBG support_NN vector_NN machines_NNS :_: Methods_NNS ,_, theory_NN and_CC algo_NN -_: rithms_NNS ._.
+Kluwer_NNP Academic_NNP Publishers_NNPS ._.
+Nal_NNP Kalchbrenner_NNP and_CC Phil_NNP Blunsom_NNP ._.
+2013_CD ._.
+Recurren_NNP -_: t_NN continuous_JJ translation_NN models_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 1700_CD --_: 1709_CD ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Richard_NNP Zens_NNP ,_, et_FW al._FW 2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 45th_JJ annual_JJ meeting_NN of_IN the_DT Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNPS on_IN interactive_JJ poster_NN and_CC demonstra_NN -_: tion_NN sessions_NNS ,_, pages_NNS 177_CD --_: 180_CD ._.
+Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNPS ._.
+Philipp_NNP Koehn_NNP ._.
+2005_CD ._.
+Europarl_NNP :_: A_DT parallel_JJ corpus_NN for_IN s_PRP -_: tatistical_JJ machine_NN translation_NN ._.
+In_IN Machine_NN Translation_NN summit_NN ,_, volume_NN 5_CD ,_, pages_NNS 79_CD --_: 86_CD ._.
+Citeseer_NNP ._.
+Hai-Son_NNP Le_NNP ,_, Ilya_NNP Oparin_NNP ,_, Alexandre_NNP Allauzen_NNP ,_, Jean-Luc_NNP Gauvain_NNP ,_, and_CC Franc_NNP ̧ois_VBZ Yvon_NNP ._.
+2011_CD ._.
+Structured_VBN out_RP -_: put_VB layer_NN neural_JJ network_NN language_NN model_NN ._.
+In_IN 2011_CD IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, pages_NNS 5524_CD --_: 5527_CD ._.
+IEEE_NNP ._.
+Junhui_NNP Li_NNP ,_, Zhaopeng_NNP Tu_NNP ,_, Guodong_NNP Zhou_NNP ,_, and_CC Josef_NNP van_NNP Genabith_NNP ._.
+2012_CD ._.
+Head-driven_JJ hierarchical_JJ phrase_NN -_: based_VBN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS :_: Short_JJ Papers-Volume_JJ 2_CD ,_, pages_NNS 33_CD --_: 37_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Ding_NNP Liu_NNP and_CC Daniel_NNP Gildea_NNP ._.
+2005_CD ._.
+Syntactic_NN features_NNS for_IN evaluation_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP Workshop_NNP on_IN Intrinsic_NNP and_CC Extrinsic_NNP Evalu_NNP -_: ation_NN Measures_NNS for_IN Machine_NN Translation_NN and/or_CC Sum_SYM -_: marization_NN ,_, pages_NNS 25_CD --_: 32_CD ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT systemat_NN -_: ic_JJ comparison_NN of_IN various_JJ statistical_JJ alignment_NN models_NNS ._.
+Computational_JJ linguistics_NNS ,_, 29_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :19_CD --_: 51_CD ._.
+Kishore_NNP Papineni_NNP ,_, Salim_NNP Roukos_NNP ,_, Todd_NNP Ward_NNP ,_, and_CC Wei_NNP -_: Jing_NNP Zhu_NNP ._.
+2002_CD ._.
+Bleu_NNP :_: a_DT method_NN for_IN automatic_JJ eval_NN -_: uation_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ annual_JJ meeting_NN on_IN association_NN for_IN computational_JJ linguistics_NNS ,_, pages_NNS 311_CD --_: 318_CD ._.
+Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNPS ._.
+Holger_NNP Schwenk_NNP ,_, Daniel_NNP Dchelotte_NNP ,_, and_CC Jean-Luc_NNP Gau_NNP -_: vain_JJ ._.
+2006_CD ._.
+Continuous_JJ space_NN language_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT COLING/ACL_NNP on_IN Main_NNP conference_NN poster_NN sessions_NNS ,_, pages_NNS 723_CD --_: 730_CD ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Holger_NNP Schwenk_NNP ._.
+2007_CD ._.
+Continuous_JJ space_NN language_NN models_NNS ._.
+Computer_NNP Speech_NNP &_CC Language_NNP ,_, 21_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :492_CD --_: 518_CD ._.
+Fabrizio_NNP Sebastiani_NNP ._.
+2002_CD ._.
+Machine_NN learning_NN in_IN automat_NN -_: ed_VBN text_NN categorization_NN ._.
+ACM_JJ computing_NN surveys_NNS -LRB-_-LRB- C_NNP -_: SUR_NNP -RRB-_-RRB- ,_, 34_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 47_CD ._.
+Le_NNP Hai_NNP Son_NNP ,_, Alexandre_NNP Allauzen_NNP ,_, Guillaume_NNP Wisniewski_NNP ,_, and_CC Franc_NNP ̧ois_VBZ Yvon_NNP ._.
+2010_CD ._.
+Training_VBG continuous_JJ space_NN language_NN models_NNS :_: Some_DT practical_JJ issues_NNS ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2010_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 778_CD --_: 788_CD ._.
+Asso_SYM -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Le_NNP Hai_NNP Son_NNP ,_, Alexandre_NNP Allauzen_NNP ,_, and_CC Franc_NNP ̧ois_VBZ Yvon_NNP ._.
+2012_CD ._.
+Continuous_JJ space_NN translation_NN models_NNS with_IN neu_NN -_: ral_NN networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD conference_NN of_IN the_DT north_NN american_JJ chapter_NN of_IN the_DT association_NN for_IN com_NN -_: putational_JJ linguistics_NNS :_: Human_JJ language_NN technologies_NNS ,_, pages_NNS 39_CD --_: 48_CD ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+Srilm_NNP --_: an_DT extensible_JJ language_NN modeling_NN toolkit_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 7th_JJ Interna_NNP -_: tional_JJ Conference_NN on_IN Spoken_NNP Language_NNP Processing_NNP ,_, pages_NNS 901_CD --_: 904_CD ._.
+Simon_NNP Tong_NNP and_CC Daphne_NNP Koller_NNP ._.
+2002_CD ._.
+Support_NN vec_SYM -_: tor_NN machine_NN active_JJ learning_NN with_IN applications_NNS to_TO text_NN classification_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Re_NNP -_: search_NN ,_, 2:45_CD --_: 66_CD ._.
+Nicola_NNP Ueffing_NNP and_CC Hermann_NNP Ney_NNP ._.
+2005_CD ._.
+Application_NN of_IN word-level_JJ confidence_NN measures_NNS in_IN interactive_JJ statisti_NNS -_: cal_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 10th_JJ Annual_JJ Conference_NN of_IN the_DT European_NNP Association_NNP for_IN Machine_NNP Translation_NN ,_, pages_NNS 262_CD --_: 270_CD ._.
+Rui_NNP Wang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Isao_NNP Goto_NNP ,_, Eiichro_NNP Sumi_NNP -_: ta_NN ,_, Hai_NNP Zhao_NNP ,_, and_CC Bao-Liang_NNP Lu_NNP ._.
+2013_CD ._.
+Convert_VB -_: ing_VBG continuous-space_JJ language_NN models_NNS into_IN n-gram_JJ language_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 845_CD --_: 850_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao-Liang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2014_CD ._.
+Neural_JJ network_NN based_VBN bilin_NN -_: gual_JJ language_NN model_NN growing_VBG for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 189_CD --_: 195_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao-Liang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2015_CD ._.
+Bilingual_JJ continuous-space_JJ language_NN model_NN growing_VBG for_IN statistical_JJ machine_NN trans_NNS -_: lation_NN ._.
+IEEE/ACM_NNP Transactions_NNS on_IN Audio_NNP ,_, Speech_NNP ,_, and_CC Language_NNP Processing_NNP ._.
+Qiongkai_NNP Xu_NNP and_CC Hai_NNP Zhao_NNP ._.
+2012_CD ._.
+Using_VBG deep_JJ lin_NN -_: guistic_NN features_NNS for_IN finding_VBG deceptive_JJ opinion_NN spam_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 24th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1341_CD --_: 1350_CD ._.
+Cite_SYM -_: seer_NN ._.
+Xiaotian_NNP Zhang_NNP ,_, Hai_NNP Zhao_NNP ,_, and_CC Cong_NNP Hui_NNP ._.
+2012_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO convert_VB ccgbank_NN to_TO pen_NN -_: n_SYM treebank_FW ._.
+In_IN Proceedings_NNP of_IN the_DT 24th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 535_CD --_: 542_CD ._.
+Jingyi_NNP Zhang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Eiichro_NNP Sumita_NNP ,_, and_CC Hai_NNP Zhao_NNP ._.
+2014_CD ._.
+Learning_NNP hierarchical_JJ translation_NN spans_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 183_CD --_: 188_CD ._.

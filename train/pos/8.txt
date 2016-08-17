@@ -1,0 +1,277 @@
+RealTextasg_NNP :_: A_NNP Model_NNP to_TO Present_NNP Answers_NNS Utilizing_VBG the_DT Linguistic_NNP Structure_NNP of_IN Source_NNP Question_NNP Abstract_NNP Recent_JJ trends_NNS in_IN Question_NNP Answering_NNP -LRB-_-LRB- QA_NNP -RRB-_-RRB- have_VBP led_VBN to_TO numerous_JJ studies_NNS focusing_VBG on_IN pre_NN -_: senting_VBG answers_NNS in_IN a_DT form_NN which_WDT closely_RB re_SYM -_: sembles_VBZ a_DT human_JJ generated_VBN answer_NN ._.
+These_DT studies_NNS have_VBP used_VBN a_DT range_NN of_IN techniques_NNS which_WDT use_VBP the_DT structure_NN of_IN knowledge_NN ,_, generic_JJ lin_NN -_: guistic_JJ structures_NNS and_CC template_NN based_VBN ap_SYM -_: proaches_NNS to_TO construct_VB answers_NNS as_IN close_JJ as_IN pos_SYM -_: sible_NN to_TO a_DT human_JJ generate_VB answer_NN ,_, referred_VBD to_TO as_IN human_JJ competitive_JJ answers_NNS ._.
+This_DT paper_NN re_SYM -_: ports_NNS the_DT results_NNS of_IN an_DT empirical_JJ study_NN which_WDT uses_VBZ the_DT linguistic_JJ structure_NN of_IN the_DT source_NN ques_NNS -_: tion_NN as_IN the_DT basis_NN for_IN a_DT human_JJ competitive_JJ answer_NN ._.
+We_PRP propose_VBP a_DT typed_VBN dependency_NN based_VBN approach_NN to_TO generate_VB an_DT answer_NN sen_NN -_: tence_NN where_WRB linguistic_JJ structure_NN of_IN the_DT ques_NNS -_: tion_NN is_VBZ transformed_VBN and_CC realized_VBN into_IN a_DT sen_NN -_: tence_NN containing_VBG the_DT answer_NN ._.
+We_PRP employ_VBP the_DT factoid_NN questions_NNS from_IN QALD-2_NN training_NN ques_NNS -_: tion_JJ set_NN to_TO extract_VB typed_VBN dependency_NN patterns_NNS based_VBN on_IN the_DT root_NN of_IN the_DT parse_NN tree_NN ._.
+Using_VBG iden_SYM -_: tified_VBN patterns_NNS we_PRP generate_VBP a_DT rule_NN set_VBN which_WDT is_VBZ used_VBN to_TO generate_VB a_DT natural_JJ language_NN sentence_NN containing_VBG the_DT answer_NN extracted_VBN from_IN a_DT knowl_NN -_: edge_NN source_NN ,_, realized_VBD into_IN a_DT linguistically_RB cor_SYM -_: rect_JJ sentence_NN ._.
+The_DT evaluation_NN of_IN the_DT approach_NN is_VBZ performed_VBN using_VBG QALD-2_NN testing_NN factoid_NN questions_NNS sets_VBZ with_IN a_DT 78.84_CD %_NN accuracy_NN ._.
+The_DT top-10_JJ patterns_NNS extracted_VBN from_IN training_NN dataset_NN were_VBD able_JJ to_TO cover_VB 69.19_CD %_NN of_IN test_NN questions_NNS ._.
+1_CD Introduction_NNP Question_NNP Answering_NNP -LRB-_-LRB- QA_NNP -RRB-_-RRB- comprises_VBZ of_IN four_CD main_JJ tasks_NNS ;_: question_NN processing_NN ,_, answer_NN search_NN ,_, answer_NN extraction_NN ,_, and_CC answer_VB presentation_NN ._.
+The_DT first_JJ three_CD tasks_NNS focus_VB on_IN extracting_VBG the_DT answer_NN while_IN the_DT last_JJ aims_NNS to_TO present_VB the_DT extracted_VBN answer_NN in_IN a_DT human_JJ -_: like_IN format_NN ._.
+With_IN the_DT rise_NN of_IN trend_NN towards_IN build_VB -_: ing_VBG human-competitive_JJ QA_NNP systems_NNS ,_, there_RB been_VBN a_DT corresponding_JJ demand_NN for_IN the_DT extracted_VBN to_TO be_VB pre_SYM -_: sented_VBN in_IN a_DT human_JJ competitive_JJ form_NN rather_RB than_IN the_DT bare_JJ answer_NN as_IN a_DT single_JJ word_NN or_CC a_DT phrase_NN ._.
+A_DT wide_JJ range_NN of_IN answer_NN presentation_NN schemes_NNS have_VBP been_VBN reported_VBN including_VBG user_NN tailored_VBN answers_NNS -LRB-_-LRB- Mendes_NNP and_CC Coheur_NNP ,_, 2013_CD ;_: Maybury_NNP ,_, 2008_CD ;_: Kolomiyets_NNP and_CC Moens_NNP ,_, 2011_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014a_CD -RRB-_-RRB- ,_, justification_NN based_VBN answers_NNS -LRB-_-LRB- Mendes_NNP and_CC Coheur_NNP ,_, 2013_CD ;_: May_NNP -_: bury_VB ,_, 2008_CD ;_: McGuinness_NNP ,_, 2004_CD ;_: Saint-Dizier_NNP and_CC Moens_NNP ,_, 2011_CD -RRB-_-RRB- ,_, presentation_NN of_IN paragraph_NN level_NN text_NN summaries_NNS with_IN the_DT extracted_VBN answer_NN -LRB-_-LRB- Mendes_NNP and_CC Coheur_NNP ,_, 2013_CD ;_: Lin_NNP et_FW al._FW ,_, 2003_CD ;_: Perera_NNP ,_, 2012b_CD ;_: Per_IN -_: era_NN ,_, 2012a_JJ -RRB-_-RRB- ,_, presentation_NN of_IN hot_JJ links_NNS with_IN answers_NNS -LRB-_-LRB- McGuinness_NNP ,_, 2004_CD -RRB-_-RRB- ,_, and_CC presentation_NN of_IN navigable_JJ related_JJ answers_NNS and_CC contextual_JJ information_NN -LRB-_-LRB- Saint_NNP -_: Dizier_NNP and_CC Moens_NNP ,_, 2011_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2015a_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014b_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014c_JJ -RRB-_-RRB- ._.
+All_DT of_IN the_DT mentioned_VBN models_NNS aim_VBP to_TO build_VB an_DT answer_NN which_WDT closely_RB resembles_VBZ a_DT human_JJ generated_VBN answer_NN ._.
+However_RB ,_, an_DT approach_NN that_WDT has_VBZ not_RB been_VBN explored_VBN in_IN the_DT mentioned_VBN models_NNS is_VBZ to_TO exploit_VB the_DT structure_NN of_IN the_DT question_NN in_IN the_DT formulation_NN of_IN the_DT answer_NN ._.
+A_DT hu_SYM -_: man_NN generated_VBD answer_NN is_VBZ based_VBN both_DT on_IN the_DT answer_NN structure_NN as_RB well_RB as_IN how_WRB the_DT question_NN was_VBD formu_SYM -_: lated_VBN -LRB-_-LRB- Singer_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, given_VBN the_DT ques_NNS -_: tion_NN ``_`` Which_WDT river_NN does_VBZ the_DT Brookyln_NNP Bride_NNP cross_VB ?_. ''_''
+,_, the_DT expected_VBN answer_NN sentence_NN would_MD be_VB of_IN the_DT form_NN of_IN ``_`` The_DT Brookyln_NNP Bridge_NNP crosses_VBZ East_NNP River_NNP ''_'' ._.
+It_PRP is_VBZ essential_JJ to_TO understand_VB the_DT types_NNS of_IN ques_NNS -_: tions_NNS and_CC their_PRP$ linguistic_JJ structure_NN in_IN order_NN to_TO suc_SYM -_: cessfully_NN generate_VB a_DT sentence_NN with_IN the_DT answer_NN em_SYM -_: bedded_VBN in_IN it_PRP ._.
+The_DT questions_NNS can_MD be_VB divided_VBN in_IN to_TO two_CD main_JJ categories_NNS based_VBN on_IN their_PRP$ interrogative_JJ cat_NN -_: egories_NNS ;_: wh-interrogative_JJ and_CC polar_JJ interrogatives_NNS ._.
+A_DT wh-interrogative_JJ is_VBZ aimed_VBN at_IN getting_VBG an_DT answer_NN which_WDT represents_VBZ another_DT entity_NN or_CC a_DT property_NN of_IN a_DT resource_NN mentioned_VBN in_IN the_DT question_NN ,_, on_IN the_DT other_JJ hand_NN a_DT polar_JJ interrogative_JJ requests_NNS a_DT true/false_NN -LRB-_-LRB- yes/no_JJ -RRB-_-RRB- answer_NN ._.
+These_DT two_CD types_NNS require_VBP two_CD different_JJ answer_NN sen_NN -_: tence_NN generation_NN schemes_NNS ;_: wh-interrogatives_NNS require_VBP to_TO embed_VB the_DT answer_NN to_TO the_DT modified_VBN source_NN question_NN linguistic_JJ structure_NN and_CC the_DT polar_JJ interrogatives_NNS need_VBP to_TO transform_VB the_DT same_JJ question_NN without_IN further_JJ em_NN -_: bedding_NN ,_, however_RB it_PRP still_RB needs_VBZ modification_NN based_VBN on_IN the_DT answer_NN ._.
+Table_NNP 1_CD shows_VBZ the_DT interrogative_JJ types_NNS with_IN examples_NNS and_CC Part-Of-Speech_NNP -LRB-_-LRB- POS_NNP -RRB-_-RRB- tags_NNS asso_SYM -_: ciated_VBN with_IN them_PRP and_CC the_DT expected_VBN answer_NN sentences_NNS ._.
+This_DT paper_NN focuses_VBZ on_IN answer_NN sentence_NN generation_NN based_VBN on_IN typed_VBN dependency_NN parsing_NN ._.
+To_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, no_DT previous_JJ study_NN has_VBZ investigated_VBN this_DT method_NN of_IN generating_VBG an_DT answer_NN sentence_NN utiliz_NN -_: ing_VBG the_DT source_NN question_NN 's_POS linguistic_JJ structure_NN ._.
+The_DT methodology_NN we_PRP introduce_VBP here_RB is_VBZ based_VBN on_IN linguis_NNS -_: tics_NNS ._.
+The_DT core_NN idea_NN is_VBZ that_IN the_DT generation_NN of_IN an_DT an_DT -_: swer_NN sentence_NN is_VBZ initiated_VBN by_IN identifying_VBG the_DT root_NN of_IN the_DT parse_NN tree_NN and_CC then_RB proceed_VB to_TO build_VB the_DT sen_NN -_: tence_NN using_VBG the_DT nominal_JJ subject_NN ,_, a_DT key_JJ feature_NN of_IN a_DT Subject-Verb-Object_NNP -LRB-_-LRB- SVO_NNP -RRB-_-RRB- style_NN language_NN such_JJ as_IN English_NNP ._.
+In_IN order_NN to_TO identify_VB the_DT grammatical_JJ rela_NN -_: tion_NN that_IN holds_VBZ the_DT parts_NNS of_IN question_NN with_IN the_DT root_NN ,_, we_PRP employ_VBP typed_VBN dependency_NN parse_NN of_IN the_DT complete_JJ question_NN ._.
+The_DT typed_VBN dependency_NN based_VBN patterns_NNS ex_FW -_: tracted_VBN using_VBG a_DT training_NN dataset_NN are_VBP used_VBN to_TO construct_VB the_DT framework_NN ._.
+Answer_NN merging_VBG and_CC further_JJ real_JJ -_: ization_NN of_IN the_DT sentence_NN are_VBP implemented_VBN in_IN order_NN to_TO provide_VB a_DT human-like_JJ natural_JJ language_NN answer_NN sen_NN -_: tence_NN ._.
+The_DT complete_JJ framework_NN -LRB-_-LRB- implemented_VBN in_IN Java_NNP -RRB-_-RRB- and_CC the_DT datasets_NNS are_VBP available_JJ for_IN download_NN from_IN the_DT project_NN website1_CD ._.
+The_DT remaining_VBG part_NN of_IN the_DT paper_NN proceeds_NNS as_IN fol_NN -_: lows_NNS ._.
+Section_NN 2_CD introduces_VBZ the_DT methodology_NN of_IN an_DT -_: swer_NN sentence_NN generation_NN ._.
+We_PRP discuss_VBP the_DT process_NN under_IN four_CD main_JJ themes_NNS ;_: extracting_VBG syntactic_JJ pat_NN -_: terns_NNS ,_, applying_VBG patterns_NNS to_TO new_JJ questions_NNS ,_, answer_NN merging_VBG ,_, and_CC further_JJ realization_NN ._.
+Section_NN 3_CD describes_VBZ 1_CD http://rivinduperera.com/information/_JJ realtext.html_NN the_DT experimental_JJ framework_NN including_VBG the_DT results_NNS ._.
+A_DT discussion_NN on_IN related_JJ work_NN which_WDT investigates_VBZ differ_VBP -_: ent_NN answer_NN presentation_NN methods_NNS in_IN natural_JJ language_NN is_VBZ presented_VBN in_IN Section_NN 4_CD ._.
+Section_NN 5_CD concludes_VBZ the_DT paper_NN with_IN an_DT overview_NN of_IN future_JJ work_NN ._.
+2_CD Answer_NNP Sentence_NNP Generation_NNP In_IN this_DT section_NN we_PRP explain_VBP the_DT Answer_NNP Sentence_NNP Gen_NNP -_: eration_NN -LRB-_-LRB- ASG_NNP -RRB-_-RRB- process_NN which_WDT has_VBZ a_DT pipeline_NN archi_NNS -_: tecture_NN as_IN shown_VBN in_IN Fig._NNP 1_CD ._.
+The_DT process_NN is_VBZ com_NN -_: prised_VBN of_IN three_CD main_JJ components_NNS ;_: pattern_NN processing_NN -LRB-_-LRB- pattern_NN extraction_NN and_CC application_NN -RRB-_-RRB- ,_, answer_VB merg_SYM -_: ing_NN ,_, and_CC sentence_NN realization_NN ._.
+The_DT pattern_NN process_NN -_: ing_NN component_NN is_VBZ responsible_JJ of_IN deriving_VBG typed_VBN de_IN -_: pendency_NN based_VBN patterns_NNS to_TO transform_VB a_DT question_NN back_RB into_IN a_DT natural_JJ sentence_NN ._.
+It_PRP is_VBZ also_RB responsible_JJ for_IN identifying_VBG and_CC applying_VBG the_DT appropriate_JJ pattern_NN based_VBN on_IN the_DT typed_VBN dependency_NN parse_NN of_IN a_DT question_NN ._.
+The_DT answer_NN merging_VBG module_NN embeds_VBZ the_DT answer_NN in_IN wh-interrogatives_NNS preserving_VBG the_DT naturalness_NN of_IN the_DT sentence_NN ._.
+The_DT sentence_NN realization_NN module_NN applies_VBZ grammar_NN based_VBN realization_NN if_IN needed_VBN and_CC further_JJ re_SYM -_: alizes_IN the_DT answer_NN sentence_NN ._.
+2.1_CD Pattern_NN extraction_NN The_DT pattern_NN identification_NN process_NN first_RB identifies_VBZ the_DT interrogative_JJ type_NN of_IN the_DT question_NN ._.
+We_PRP employed_VBD the_DT Stanford_NNP parser2_CD to_TO parse_VB the_DT question_NN and_CC to_TO iden_VB -_: tify_VB the_DT POS_NNP tag_NN of_IN a_DT wh-determiner_NN ._.
+However_RB ,_, POS_NNP tagging_VBG itself_PRP can_MD not_RB be_VB used_VBN to_TO classify_VB questions_NNS because_IN of_IN two_CD reasons_NNS ._.
+Firstly_RB ,_, a_DT sentence_NN can_MD be_VB formed_VBN using_VBG an_DT embedded_VBN interrogative_JJ such_JJ as_IN ``_`` I_PRP wonder_VBP what_WP he_PRP likes_VBZ to_TO eat_VB for_IN the_DT dinner_NN ''_'' or_CC ``_`` Do_VBP only_RB what_WP is_VBZ assigned_VBN to_TO you_PRP ''_'' ._.
+In_IN aforementioned_JJ examples_NNS ,_, the_DT former_JJ is_VBZ an_DT embedded_VBN interrogative_JJ to_TO explain_VB the_DT speaker_NN 's_POS perspective_NN and_CC the_DT latter_NN is_VBZ a_DT command_NN ,_, however_RB both_DT can_MD not_RB be_VB considered_VBN as_IN questions_NNS ._.
+The_DT second_JJ reason_NN is_VBZ that_IN when_WRB forming_VBG a_DT sentence_NN using_VBG relative_JJ clauses_NNS -LRB-_-LRB- both_DT restrictive_JJ and_CC non-restrictive_JJ -RRB-_-RRB- the_DT joining_VBG token_JJ is_VBZ also_RB POS_VBZ tagged_VBN as_IN wh-determiner_NN ._.
+For_IN instance_NN ,_, the_DT sentence_NN ``_`` Chess_NNP is_VBZ a_DT good_JJ game_NN that_WDT is_VBZ interesting_JJ too_RB ''_'' contains_VBZ the_DT wh-determiner_NN -LRB-_-LRB- WRB_NNP -RRB-_-RRB- POS_NNP tag_NN -LRB-_-LRB- based_VBN on_IN Penn_NNP Tree_NNP -_: bank_NN guidelines_NNS -RRB-_-RRB- associated_VBN with_IN token_JJ ``_`` that_WDT ''_'' ._.
+Due_JJ to_TO these_DT factors_NNS ,_, we_PRP consider_VBP three_CD features_NNS ,_, the_DT POS_NNP 2_CD http://nlp.stanford.edu/software/_NNP lex_SYM -_: parser.shtml_NN Table_NNP 1_CD :_: Interrogative_JJ types_NNS with_IN examples_NNS and_CC associated_VBN POS_NNP tags_NNS ._.
+POS_NNP tags_NNS are_VBP compliant_JJ with_IN the_DT Penn_NNP Treebank_NNP guidelines_NNS ._.
+Interrogative_JJ tokens_NNS POS_VBP tags_NNS Question_NN -_: 1_CD Answer_NNP Answer_NNP sentence_NN Question_NN -_: 2_CD Answer_NNP Answer_NNP sentence_NN Wh-interrogative_JJ Who_WP ,_, What_WP ,_, Where_WRB ,_, Which_WDT ,_, How_WRB WP_NNP ,_, WRB_NNP ,_, WDT_NNP When_WRB ,_, Polar_NNP interrogative_JJ Is_VBZ ,_, Are_VBP ,_, Was_VBD ,_, Were_VBD VBZ_NNP ,_, VBP_NNP ,_, VBD_NNP Was_VBD Natalie_NNP Portman_NNP born_VBN in_IN the_DT United_NNP States_NNPS ?_.
+Fasle/No_NNP Natalie_NNP Portman_NNP was_VBD not_RB born_VBN in_IN the_DT United_NNP States_NNPS ._.
+Is_VBZ Cristian_NNP Bale_NNP starring_VBG in_IN Batman_NNP Be_VB -_: gins_NNS ?_.
+True/Yes_NNP Cristian_NNP Bale_NNP is_VBZ starring_VBG in_IN Batman_NNP Be_VB -_: gins_NNS ._.
+Which_WDT river_NN does_VBZ the_DT Brooklyn_NNP Bridge_NNP cross_VB ?_.
+East_NNP River_NNP The_NNP Brookyln_NNP Bridge_NNP crosses_VBZ East_NNP River_NNP ._.
+How_WRB many_JJ films_NNS did_VBD Hal_NNP Roach_NNP pro-_JJ duce_NN ?_.
+509_CD Hal_NNP Roach_NNP produced_VBD 509_CD films_NNS ._.
+Figure_NN 1_CD :_: Schematic_JJ representation_NN of_IN the_DT overall_JJ Answer_NNP Sentence_NNP Generation_NNP -LRB-_-LRB- ASG_NNP -RRB-_-RRB- process_NN tag_NN ,_, the_DT relative_JJ position_NN in_IN the_DT sentence_NN ,_, and_CC whether_IN they_PRP belong_VBP to_TO the_DT wh-lexicons_NNS -LRB-_-LRB- who_WP ,_, when_WRB ,_, what_WP ,_, etc._FW -RRB-_-RRB- ._.
+Once_RB the_DT interrogative_JJ type_NN is_VBZ identified_VBN ,_, the_DT pat_NN -_: terns_NNS can_MD be_VB extracted_VBN using_VBG a_DT development_NN question_NN set_VBN ._.
+Each_DT pattern_NN is_VBZ a_DT collection_NN of_IN first_JJ level_NN typed_VBD dependency_NN relations_NNS as_IN a_DT directed_VBN graph_NN based_VBN on_IN the_DT root_NN node_NN of_IN the_DT parse_NN tree_NN whose_WP$ nodes_NNS are_VBP generic_JJ ._.
+The_DT order_NN of_IN typed_VBN dependency_NN relations_NNS are_VBP not_RB significant_JJ as_IN linguistic_JJ structure_NN may_MD vary_VB based_VBN on_IN the_DT formation_NN of_IN the_DT question_NN ._.
+Table_NNP 2_CD shows_VBZ some_DT patterns_NNS and_CC with_IN example_NN questions_NNS ._.
+Each_DT extracted_VBN pattern_NN is_VBZ associated_VBN with_IN rule_NN sets_NNS to_TO generate_VB a_DT sentence_NN ._.
+These_DT rules_NNS specify_VBP how_WRB nominal_JJ subject_NN ,_, direct_JJ object_NN ,_, clausal_JJ complements_VBZ ,_, and_CC other_JJ typed_VBN dependency_NN relations_NNS should_MD be_VB ag_SYM -_: gregated_VBN to_TO form_VB a_DT natural_JJ sentence_NN ._.
+2.2_CD Identifying_NNP and_CC applying_VBG patterns_NNS Once_IN the_DT pattern_NN database_NN is_VBZ built_VBN ,_, an_DT appropriate_JJ pattern_NN for_IN a_DT given_VBN question_NN can_MD be_VB retrieved_VBN by_IN analysing_VBG the_DT typed_VBN dependency_NN parse_NN of_IN that_DT ques_NNS -_: tion_NN ._.
+In_IN the_DT identification_NN process_NN ,_, the_DT order_NN of_IN the_DT relations_NNS in_IN the_DT typed_VBN dependency_NN pattern_NN is_VBZ insignif_SYM -_: icant_NN as_IN we_PRP only_RB consider_VBP the_DT relations_NNS from_IN the_DT root_NN node_NN to_TO another_DT generic_JJ node_NN ._.
+When_WRB applying_VBG the_DT pattern_NN ,_, the_DT parse_NN tree_NN is_VBZ trans_NNS -_: formed_VBN to_TO a_DT list_NN of_IN phrases_NNS based_VBN on_IN the_DT root-based_JJ relations_NNS ._.
+Also_RB more_RBR importantly_RB ,_, the_DT phrase_NN is_VBZ gen_SYM -_: erated_JJ based_VBN on_IN the_DT order_NN of_IN appearance_NN of_IN tokens_NNS in_IN the_DT source_NN question_NN ._.
+An_DT example_NN scenario_NN of_IN phrase_NN extraction_NN is_VBZ shown_VBN in_IN Table_NNP 3_CD ._.
+These_DT phrases_NNS are_VBP then_RB aggregated_JJ based_VBN on_IN the_DT rules_NNS specified_VBN for_IN each_DT pattern_NN ._.
+Table_NNP 2_CD :_: Syntactic_JJ patterns_NNS extracted_VBN from_IN Typed_VBN dependency_NN relations_NNS ._.
+The_DT pattern_NN is_VBZ derived_VBN from_IN the_DT typed_VBN depen_NN -_: dencies_NNS from_IN the_DT root_NN token_JJ ._.
+The_DT sign_NN X_NNP represents_VBZ a_DT slot_NN which_WDT can_MD be_VB replaced_VBN with_IN a_DT single_JJ or_CC multiple_JJ tokens_NNS even_RB if_IN there_EX exist_VBP typed_VBD dependency_NN relations_NNS among_IN those_DT multiple_JJ tokens_NNS ._.
+The_DT sign_NN R_NN represents_VBZ the_DT root_NN token_JJ of_IN the_DT parse_NN tree_NN ._.
+Type_NN dependency_NN Extracted_VBN pattern_NN dobj_NN aux_FW det_FW the_DT Brooklyn_NNP amod_NN prep_NN website_NN ROOT_NNP cross_VB ?_.
+Cruise_NN ?_.
+ROOT_NN nn_NN of_IN dobj_NN nsubj_NN det_NN nsubj_JJ aux_NN Which_WDT ROOT_NNP river_NN does_VBZ Bridge_NNP pobj_NNP Tom_NNP R_NNP X_NNP ROOT_NNP cop_NN nsubj_NN R_NN X_NNP X_NNP X_NNP X_NNP cop_NN nsubj_NN det_NN official_JJ nn_NN What_WP is_VBZ the_DT Type_NN dependency_NN Table_NNP 3_CD :_: Phrase_NN extraction_NN from_IN typed_VBN dependencies_NNS Extracted_VBN phrases_NNS det_VBP cop_NN dobj_JJ aux_NN det_NN the_DT Brooklyn_NNP amod_NN prep_NN nn_NN nsubj_NN ROOT_NN cross_VB ?_.
+Cruise_NN ?_.
+-LRB-_-LRB- i_FW -RRB-_-RRB- Which_WDT river_NN -LRB-_-LRB- ii_FW -RRB-_-RRB- does_VBZ -LRB-_-LRB- iii_FW -RRB-_-RRB- the_DT Brooklyn_NNP Bridge_NNP -LRB-_-LRB- iv_FW -RRB-_-RRB- cross_NN -LRB-_-LRB- i_FW -RRB-_-RRB- What_WP -LRB-_-LRB- ii_FW -RRB-_-RRB- is_VBZ -LRB-_-LRB- iii_FW -RRB-_-RRB- the_DT official_JJ website_NN of_IN Tom_NNP Cruise_NNP Which_WDT ROOT_NNP What_WP 2.3_CD Answer_NN merging_VBG river_NN does_VBZ Bridge_NNP pobj_NNP Tom_NNP is_VBZ the_DT official_JJ website_NN of_IN nsubj_JJ det_NN nn_NN It_PRP is_VBZ also_RB required_VBN to_TO embed_VB the_DT answer_NN to_TO the_DT syn_NN -_: tactic_NN structure_NN when_WRB the_DT pattern_NN has_VBZ been_VBN identified_VBN to_TO transform_VB the_DT question_NN back_RB into_IN natural_JJ language_NN sentence_NN ._.
+In_IN wh-interrogatives_NNS this_DT require_VBP embed_SYM -_: ding_VBG another_DT language_NN segment_NN ,_, however_RB for_IN polar_JJ interrogatives_NNS this_DT component_NN should_MD target_VB on_IN mod_NN -_: ifying_VBG the_DT polar_JJ token_JJ based_VBN on_IN the_DT answer_NN ._.
+For_IN wh-interrogatives_NNS ,_, we_PRP have_VBP designed_VBN the_DT model_NN to_TO embed_VB the_DT answer_NN based_VBN on_IN the_DT type_NN of_IN the_DT wh-token_JJ ._.
+This_DT model_NN is_VBZ depicted_VBN in_IN Table_NNP 4_CD for_IN six_CD different_JJ wh-tokens_NNS ._.
+It_PRP is_VBZ also_RB important_JJ to_TO note_VB that_IN the_DT wh-token_JJ ``_`` why_WRB ''_'' is_VBZ not_RB considered_VBN ,_, since_IN the_DT cur_NN -_: rent_VB paper_NN focuses_VBZ only_RB on_IN factoid_NN questions_NNS -LRB-_-LRB- e.g._FW ,_, how_WRB tall_JJ is_VBZ Claudia_NNP Schiffer_NNP ?_. -RRB-_-RRB-
+and_CC definitional_JJ ques_NNS -_: tions_NNS -LRB-_-LRB- e.g._FW ,_, why_WRB the_DT sky_NN is_VBZ blue_JJ ?_. -RRB-_-RRB-
+which_WDT often_RB start_VBP with_IN wh-token_JJ ``_`` why_WRB ''_'' are_VBP out_IN of_IN the_DT current_JJ scope_NN of_IN the_DT paper_NN ._.
+The_DT main_JJ reason_NN for_IN this_DT elimination_NN is_VBZ that_IN definitional_JJ questions_NNS does_VBZ not_RB require_VB answer_NN sentences_NNS as_IN answer_NN is_VBZ a_DT explanation_NN ._.
+Table_NNP 4_CD :_: Answer_NN merging_VBG schema_NN for_IN wh-interrogatives_NNS ._.
+Existing_VBG preposition_NN is_VBZ a_DT one_NN that_WDT is_VBZ already_RB appeared_VBN in_IN the_DT phrase_NN and_CC new_JJ prepositions_NNS are_VBP added_VBN based_VBN on_IN the_DT answer_NN ._.
+Wh-token_JJ Merging_VBG schema_NN Which_WDT Existing_VBG preposition_NN +_NN Answer_NNP What_WP Existing_VBG preposition_NN +_NN Answer_NNP Whom_NNP Existing_VBG preposition_NN +_NN Answer_NNP How_WRB Naturalized_JJ answer_NN -LRB-_-LRB- once_RB /_CD twice_RB /_CD thrice_NN -RRB-_-RRB- Answer_NN +_NN Rest_VB of_IN the_DT Phrase_NNP When_WRB New_NNP preposition_NN +_NN Answer_NNP Where_WRB New_NNP preposition_NN +_NNP Answer_NNP In_IN addition_NN to_TO the_DT answer_NN merging_VBG schema_NN shown_VBN in_IN Table_NNP 4_CD ,_, the_DT model_NN also_RB embeds_VBZ measurement_NN units_NNS and_CC converts_NNS numbers_NNS to_TO words_NNS ._.
+For_IN exam_NN -_: ple_NN ,_, if_IN a_DT number_NN has_VBZ appeared_VBN as_IN the_DT first_JJ word_NN of_IN an_DT answer_NN sentence_NN ,_, they_PRP are_VBP converted_VBN to_TO a_DT lexi_NN -_: cal_JJ form_NN -LRB-_-LRB- e.g._FW ,_, 31_CD ⇒_NN Thirty_CD one_CD -RRB-_-RRB- ._.
+If_IN a_DT question_NN re_SYM -_: quires_VBZ the_DT height_NN of_IN an_DT entity_NN -LRB-_-LRB- e.g._FW ,_, person_NN or_CC moun_NN -_: tain_NN -RRB-_-RRB- as_IN the_DT answer_NN then_RB appropriate_JJ measurement_NN unit_NN is_VBZ added_VBN which_WDT is_VBZ extracted_VBN from_IN the_DT knowledge_NN source_NN utilized_VBN for_IN the_DT answer_NN ._.
+However_RB ,_, the_DT query_NN built_VBN to_TO extract_VB the_DT answer_NN needs_VBZ to_TO be_VB analysed_VBN in_IN order_NN to_TO determine_VB whether_IN answer_NN requires_VBZ a_DT mea_NN -_: surement_NN unit_NN ._.
+The_DT queries_NNS generated_VBD in_IN QA_NNP sys_SYM -_: tems_NNS highly_RB depend_VBP on_IN the_DT answer_NN extraction_NN source_NN ._.
+For_IN example_NN ,_, a_DT QA_NNP system_NN which_WDT utilizes_VBZ a_DT database_NN will_MD employ_VB SQL_NNP as_IN the_DT query_NN language_NN and_CC trans_NNS -_: forming_VBG the_DT natural_JJ language_NN question_NN into_IN a_DT SQL_NNP query_NN will_MD be_VB a_DT major_JJ task_NN for_IN the_DT query_NN process_NN -_: ing_NN module_NN of_IN the_DT QA_NNP system_NN ._.
+The_DT experiments_NNS described_VBN in_IN this_DT paper_NN utilizes_VBZ a_DT Linked_NNP Data_NNP re_SYM -_: source_NN ,_, DBpedia_NNP ,_, as_IN the_DT answer_NN extraction_NN data_NNS re_SYM -_: source_NN -LRB-_-LRB- more_JJR information_NN on_IN this_DT selection_NN is_VBZ de_IN -_: scribed_VBN in_IN Section_NN 3.1_CD -RRB-_-RRB- ._.
+Use_NN of_IN DBpedia_NNP as_IN the_DT data_NNS resource_NN required_VBD us_PRP to_TO implement_VB a_DT SPARQL3_NNP -LRB-_-LRB- SPARQL_NNP Protocol_NNP and_CC RDF_NNP Query_NNP Language_NNP -RRB-_-RRB- pro-_JJ cessing_NN module_NN ._.
+In_IN particular_JJ ,_, we_PRP used_VBD the_DT Jena4_NNP to_TO parse_VB the_DT SPARQL_NNP query_NN and_CC identify_VB queried_VBN pred_SYM -_: icate_NN from_IN the_DT SPARQL_NNP ._.
+The_DT module_NN then_RB searches_VBZ the_DT queried_VBN predicate_NN in_IN a_DT local_JJ lexicon_NN database_NN -LRB-_-LRB- this_DT is_VBZ built_VBN as_IN a_DT different_JJ task_NN in_IN this_DT research_NN -LRB-_-LRB- Perera_NNP et_FW al._FW ,_, 2015_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2015b_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2015c_JJ -RRB-_-RRB- -RRB-_-RRB- to_TO identify_VB whether_IN it_PRP is_VBZ associated_VBN with_IN a_DT measurement_NN unit_NN ._.
+Listing_NN 1_CD depicts_VBZ an_DT example_NN sce_NN -_: 3SPARQL_NNP is_VBZ the_DT query_NN language_NN used_VBN for_IN Linked_NNP Data_NNP 4_CD https://jena.apache.org/_NNP Example_NNP phrases_NNS in_IN which_WDT country_NN for_IN What_WP city_NN for_IN whom_WP how_WRB often_RB how_WRB many_JJ films_NNS When_WRB Where_WRB Merged_NNP answer_NN in_IN New_NNP Zealand_NNP for_IN London_NNP for_IN Barack_NNP Obama_NNP twice_RB 509_CD films_NNS in_IN 1990_CD in_IN New_NNP York_NNP nario_NN of_IN identifying_VBG the_DT measurement_NN unit_NN associated_VBN with_IN height_NN ontology_NN property_NN of_IN DBpedia_NNP ._.
+2.4_CD Sentence_NN realization_NN The_DT sentence_NN realization_NN is_VBZ based_VBN on_IN a_DT linguistic_JJ real_JJ -_: ization_NN module_NN which_WDT can_MD further_RB realize_VB the_DT answer_NN sentence_NN ._.
+However_RB ,_, by_IN this_DT stage_NN ,_, the_DT answer_NN sen_NN -_: tence_NN is_VBZ nearly_RB built_VBN except_IN for_IN the_DT verb_NN inflections_NNS ._.
+Therefore_RB ,_, this_DT modules_NNS focuses_VBZ on_IN realization_NN of_IN pe_NN -_: riphrastic_JJ tense_JJ in_IN occasions_NNS where_WRB the_DT verb_NN can_MD be_VB inflected_VBN without_IN compromising_VBG the_DT semantics_NNS -LRB-_-LRB- e.g._FW ,_, does_VBZ cross_VB ⇒_CD crosses_NNS -RRB-_-RRB- ._.
+Also_RB more_RBR importantly_RB the_DT formation_NN of_IN active_JJ voice_NN based_VBN questions_NNS -LRB-_-LRB- identi_NNS -_: fied_VBN using_VBG POS_NNP tagging_VBG -RRB-_-RRB- often_RB requires_VBZ periphrastic_JJ tense_JJ embedded_VBN in_IN the_DT question_NN -LRB-_-LRB- e.g._FW ,_, Which_WDT river_NN does_VBZ the_DT Brooklyn_NNP Bridge_NNP cross_VB ?_.
+⇒_NN does_VBZ cross_VB ⇒_CD crosses_NNS -RRB-_-RRB- ._.
+We_PRP used_VBD a_DT specially_RB built_VBN verb_NN infor_NN -_: mation_NN database_NN to_TO identify_VB different_JJ inflections_NNS of_IN verbs_NNS ._.
+This_DT database_NN was_VBD built_VBN using_VBG VerbNet_NNP and_CC contains_VBZ 3773_CD records_NNS where_WRB each_DT corresponds_NNS to_TO a_DT unique_JJ verb_NN ._.
+However_RB ,_, VerbNet_NNP does_VBZ not_RB provided_VBN verb_NN inflections_NNS ._.
+Therefore_RB ,_, we_PRP reverse_VBP engineered_VBN the_DT Porter_NNP stemming_VBG algorithm_NN -LRB-_-LRB- Porter_NNP ,_, 1980_CD -RRB-_-RRB- to_TO gen_VB -_: erate_VB the_DT verb_NN inflections_NNS ._.
+An_DT example_NN set_NN of_IN records_NNS of_IN this_DT database_NN is_VBZ shown_VBN in_IN Table_NNP 5_CD ._.
+3_CD Experimental_JJ framework_NN This_DT section_NN explains_VBZ the_DT experimental_JJ framework_NN used_VBN to_TO evaluate_VB the_DT answer_NN sentence_NN generation_NN pro-_JJ cess_NN ._.
+Due_JJ to_TO absence_NN of_IN a_DT method_NN that_WDT can_MD be_VB directly_RB compared_VBN to_TO ,_, we_PRP report_VBP the_DT experiments_NNS in_IN various_JJ dimensions_NNS ;_: syntactic_JJ accuracy_NN ,_, execution_NN time_NN ,_, and_CC memory_NN requirements_NNS ._.
+The_DT last_JJ two_CD factors_NNS has_VBZ been_VBN added_VBN to_TO the_DT evaluation_NN as_IN QA_NNP has_VBZ now_RB moved_VBN closer_RBR PREFIX_JJ res_NNS :_: <_SYM http://dbpedia.org/resource/_SYM >_CD PREFIX_NNP dbo_NN :_: <_CD http://dbpedia.org/ontology/_NN >_NN SELECT_NNP DISTINCT_NNP ?_.
+height_NN WHERE_NNP -LCB-_-LRB- res_NNS :_: Claudia_Schiffer_NNP dbo_NN :_: height_NN ?_.
+height_NN ._. -RCB-_-RRB-
+⇒_CD ?_.
+height_NN ⇒_SYM dbo_FW :_: height_NN ⇒_CD meters_NNS -LRB-_-LRB- m_FW -RRB-_-RRB- Listing_NN 1_CD :_: An_DT example_NN scenario_NN of_IN identifying_VBG the_DT measurement_NN unit_NN associated_VBN with_IN queried_VBN predicate_NN by_IN parsing_VBG the_DT SPARQL_NNP query_NN Table_NNP 5_CD :_: An_DT example_NN set_NN of_IN records_NNS from_IN verb_NN information_NN database_NN ._.
+-LRB-_-LRB- Base_NNP =_SYM Base_NNP form_NN of_IN the_DT verb_NN ,_, PT_NNP =_SYM Past_NNP tense_JJ ,_, PP_NNP =_SYM Past_NNP participle_NN ,_, TPS_NNP =_SYM Third_LS person_NN singular_JJ ,_, Frames_NNS =_SYM aggregation_NN of_IN all_DT frames_NNS found_VBD for_IN the_DT verb_NN in_IN VerbNet_NNP -RRB-_-RRB- Base_NNP PT_NNP PP_NNP abandon_VB abandoned_VBN abandoned_VBN abase_VB abased_JJ abased_JJ abash_NN abashed_JJ abashed_JJ ING_NNP abandoning_VBG abasing_VBG abashing_VBG TPS_NNP abandons_VBZ abases_NNS abases_VBZ Frames_NNP NP_NNP V_NNP NP.initial_NNP location_NN NP_NNP V_NNP NP.patient_NNP ,_, NP_NNP V_NNP ADV-Middle_NNP ,_, NP_NNP V_NNP NP_NNP PP.instrument_NNP NP.cause_NNP V_NNP NP_NNP ,_, NP_NNP V_NNP NP_NNP ,_, NP_NNP V_NNP ADV_NNP -_: Middle_NNP ,_, NP_NNP V_NNP NP-PRO-ARB_NNP ,_, NP_NNP V_NNP NP_NNP ADJ_NNP to_TO achieving_VBG the_DT long-held_JJ illusive_JJ goal_NN of_IN accuracy_NN ,_, hence_RB we_PRP have_VBP now_RB started_VBN to_TO also_RB look_VB at_IN real-time_JJ performance_NN and_CC computational_JJ efficiency_NN ._.
+3.1_CD Datasets_NNPS Table_NNP 6_CD :_: Statistics_NNS related_VBN to_TO the_DT question_NN sets_VBZ Total_JJ Factoid_NNP The_DT experiments_NNS were_VBD carried_VBN out_IN using_VBG factoid_NN questions_NNS extracted_VBN from_IN QALD-2_NN datasets_NNS ._.
+The_DT QALD-2_NN training_NN dataset_NN is_VBZ used_VBN to_TO extract_VB typed_VBN de_IN -_: pendency_NN patterns_NNS -LRB-_-LRB- as_IN the_DT development_NN dataset_NN -RRB-_-RRB- and_CC the_DT testing_NN dataset_NN is_VBZ used_VBN to_TO evaluate_VB the_DT framework_NN ._.
+The_DT statistics_NNS related_VBN to_TO the_DT dataset_NN is_VBZ summarized_VBN in_IN Table_NNP 6_CD ._.
+The_DT training_NN set_VBN contained_VBD a_DT record_NN ``_`` Give_VB me_PRP the_DT homepage_NN of_IN Forbes_NNP ''_'' ._.
+This_DT record_NN does_VBZ not_RB form_VB a_DT linguistic_JJ representation_NN of_IN any_DT type_NN of_IN inter_NN -_: rogative_JJ question_NN and_CC therefore_RB could_MD not_RB be_VB consid_VBN -_: ered_VBN for_IN pattern_NN extraction_NN ._.
+3.2_CD Results_NNS and_CC discussion_NN The_DT evaluation_NN of_IN the_DT framework_NN focused_VBD on_IN two_CD as_IN -_: pects_NNS ;_: the_DT syntactic_NN and_CC semantic_JJ accuracy_NN of_IN the_DT approach_NN ,_, and_CC the_DT memory_NN and_CC processing_NN require_VBP -_: ment_NN ._.
+The_DT latter_NN was_VBD employed_VBN to_TO identify_VB the_DT via_IN -_: bility_NN of_IN the_DT methodology_NN for_IN real-time_JJ systems_NNS ._.
+We_PRP were_VBD able_JJ to_TO identify_VB 18_CD distinct_JJ wh_SYM -_: interrogative_JJ patterns_NNS and_CC 7_CD polar_JJ interrogative_JJ pat_NN -_: Training_VBG 100_CD set_VBN Testing_NNP 99_CD set_VBN Wh_NNP -_: Polar_NNP interrogatives_VBZ inter_NN -_: roga_SYM -_: tives_NNS 50_CD 41_CD 8_CD 52_CD 43_CD 9_CD terns_NNS ._.
+However_RB ,_, based_VBN on_IN the_DT syntactic_NN structure_NN identified_VBN ,_, these_DT patterns_NNS can_MD be_VB generalized_VBN under_IN certain_JJ interrogative_JJ patterns_NNS ._.
+Throughout_IN this_DT study_NN we_PRP will_MD be_VB referring_VBG to_TO the_DT extended_JJ list_NN of_IN patterns_NNS -LRB-_-LRB- 18_CD wh-interrogative_JJ and_CC 7_CD polar_JJ interrogative_JJ pat_NN -_: terns_NNS -RRB-_-RRB- ._.
+Using_VBG these_DT patterns_NNS ,_, answer_VB sentences_NNS were_VBD generated_VBN for_IN the_DT testing_NN dataset_NN with_IN a_DT 78.84_CD %_NN accu_NN -_: racy_JJ ._.
+Except_IN for_IN 11_CD questions_NNS where_WRB the_DT framework_NN completely_RB failed_VBD to_TO generate_VB answer_NN sentences_NNS ,_, all_DT others_NNS were_VBD syntactically_RB and_CC semantically_RB accurate_JJ ._.
+These_DT 11_CD questions_NNS include_VBP 5_CD wh-interrogatives_NNS and_CC 6_CD polar_JJ interrogatives_NNS ._.
+The_DT framework_NN failed_VBD to_TO gen_VB -_: erate_JJ answer_NN sentences_NNS for_IN these_DT questions_NNS mainly_RB due_JJ to_TO the_DT absence_NN of_IN rules_NNS -LRB-_-LRB- for_IN 10_CD questions_NNS -RRB-_-RRB- and_CC the_DT errors_NNS in_IN the_DT typed_VBN dependency_NN parse_NN -LRB-_-LRB- for_IN 1_CD ques_NNS -_: tion_NN -RRB-_-RRB- ._.
+Table_NNP 7_CD shows_VBZ a_DT selected_VBN set_NN of_IN generated_VBD an_DT -_: swer_NN sentences_NNS together_RB with_IN questions_NNS ._.
+It_PRP is_VBZ also_RB important_JJ to_TO analyse_VB the_DT coverage_NN pro-_JJ vided_VBN for_IN the_DT test_NN dataset_NN by_IN the_DT extracted_VBN patterns_NNS from_IN training_NN dataset_NN ._.
+Fig._NN 2_CD shows_VBZ the_DT number_NN of_IN testing_NN dataset_NN cases_NNS covered_VBN by_IN top-k_JJ patterns_NNS ex_FW -_: tracted_VBN from_IN training_NN dataset_NN ._.
+The_DT top-10_JJ patterns_NNS were_VBD able_JJ successfully_RB cover_VB 69.19_CD %_NN of_IN the_DT ques_NNS -_: tions_NNS from_IN the_DT testing_NN dataset_NN ._.
+Furthermore_RB ,_, the_DT cov_NN -_: erage_NN of_IN 51.91_CD %_NN of_IN the_DT questions_NNS through_IN top-4_JJ pat_NN -_: terns_NNS shows_VBZ that_IN the_DT top_JJ patterns_NNS are_VBP highly_RB represen_JJ -_: tative_NN ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Heap_NNP memory_NN allocation_NN -LRB-_-LRB- b_NN -RRB-_-RRB- Execution_NN time_NN for_IN key_JJ components_NNS Figure_NN 3_CD :_: Memory_NN and_CC execution_NN analysis_NN for_IN ASG_NNP pro-_JJ cess_NN ._.
+The_DT analysis_NN is_VBZ performed_VBN for_IN test_NN dataset_NN which_WDT contains_VBZ 52_CD factoid_NN question_NN ._.
+4_LS Related_VBN work_NN A_DT considerable_JJ amount_NN of_IN literature_NN has_VBZ been_VBN pub_NN -_: lished_VBN on_IN answer_NN presentation_NN ._.
+However_RB ,_, to_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN answer_NN sentence_NN generation_NN is_VBZ not_RB studied_VBN in_IN any_DT present_JJ model_NN ._.
+Therefore_RB ,_, this_DT section_NN provides_VBZ a_DT broader_JJR review_NN of_IN answer_NN presentation_NN ._.
+Benamara_NNP and_CC Dizier_NNP -LRB-_-LRB- Benamara_NNP and_CC Dizier_NNP ,_, 2003_CD -RRB-_-RRB- present_VBP the_DT cooperative_JJ question_NN answer_NN -_: ing_NN approach_NN which_WDT generates_VBZ natural_JJ language_NN re_SYM -_: sponses_NNS for_IN given_VBN questions_NNS ._.
+The_DT idea_NN of_IN cooper_NN -_: ative_JJ question_NN answering_VBG dates_NNS back_RB to_TO 1986_CD with_IN the_DT invention_NN of_IN cooperative_JJ interface_NN for_IN informa_NN -_: tion_NN systems_NNS ._.
+Then_RB several_JJ researchers_NNS involved_VBD the_DT cooperative_JJ interfaces_NNS for_IN QA_NNP systems_NNS ._.
+In_IN essence_NN ,_, a_DT cooperative_JJ QA_NNP system_NN moves_VBZ a_DT few_JJ steps_NNS further_RB from_IN ordinary_JJ question_NN answering_VBG systems_NNS by_IN pro-_JJ viding_VBG an_DT explanation_NN of_IN the_DT answer_NN ,_, describing_VBG if_IN the_DT system_NN is_VBZ unable_JJ to_TO find_VB an_DT answer_NN or_CC by_IN provid_NN -_: ing_NN links_NNS to_TO the_DT user_NN to_TO get_VB more_JJR information_NN for_IN the_DT given_VBN question_NN ._.
+However_RB ,_, the_DT development_NN of_IN this_DT description_NN is_VBZ entirely_RB based_VBN on_IN the_DT external_JJ knowl_NN -_: edge_NN source_NN ,_, and_CC the_DT linguistic_JJ structure_NN is_VBZ not_RB con_JJ -_: sidered_VBN to_TO present_VB the_DT answer_NN ._.
+A_DT successful_JJ attempt_NN to_TO move_VB beyond_IN the_DT ex_FW -_: 70_CD 60_CD 50_CD 40_CD 30_CD 2_CD 4_CD 6_CD 8_CD 10_CD Top-k_JJ patterns_NNS -LRB-_-LRB- k_NN 10_CD -RRB-_-RRB- Figure_NN 2_CD :_: The_DT coverage_NN provided_VBN for_IN the_DT test_NN dataset_NN by_IN the_DT extracted_VBN patterns_NNS from_IN training_NN dataset_NN ._.
+The_DT coverage_NN is_VBZ depicted_VBN as_IN a_DT percentage_NN of_IN questions_NNS transformed_VBN ac_SYM -_: curately_RB by_IN top-k_JJ patterns_NNS which_WDT are_VBP extracted_VBN from_IN train_NN -_: ing_NN dataset_NN ._.
+The_DT dashed_VBN line_NN shows_VBZ the_DT point_NN where_WRB 50_CD %_NN coverage_NN is_VBZ reached_VBN ._.
+Another_DT aspect_NN of_IN the_DT evaluation_NN of_IN the_DT framework_NN was_VBD to_TO analyse_VB the_DT memory_NN and_CC execution_NN analysis_NN ._.
+Fig._NN 3_CD -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC Fig._NNP 3_CD -LRB-_-LRB- b_NN -RRB-_-RRB- depicts_VBZ the_DT heap_NN memory_NN al_SYM -_: location_NN for_IN the_DT answer_NN sentence_NN generation_NN process_NN and_CC execution_NN time_NN analysis_NN respectively_RB ._.
+The_DT re_SYM -_: markably_RB high_JJ heap_NN memory_NN allocation_NN -LRB-_-LRB- more_JJR than_IN 600_CD Mb_NNP -RRB-_-RRB- indicates_VBZ that_IN the_DT current_JJ architecture_NN needs_VBZ further_JJ work_NN to_TO work_VB in_IN limited-memory_JJ environ_NN -_: ments_NNS ._.
+However_RB ,_, the_DT execution_NN time_NN analysis_NN shows_VBZ that_IN the_DT framework_NN can_MD be_VB adapted_VBN to_TO real-time_JJ sys_NNS -_: tems_NNS ._.
+Coverage_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- Table_NNP 7_CD :_: Selected_JJ set_NN of_IN generated_VBN answer_NN sentences_NNS together_RB with_IN questions_NNS QALD_NNP Id_NN 2_CD 4_CD 20_CD 53_CD 78_CD Question_NN Who_WP was_VBD the_DT successor_NN of_IN of_IN John_NNP F._NNP Kennedy_NNP ?_.
+How_WRB many_JJ students_NNS does_VBZ the_DT Free_NNP University_NNP in_IN Amsterdam_NNP have_VBP ?_.
+How_WRB tall_JJ is_VBZ Michael_NNP Jordan_NNP ?_.
+What_WP is_VBZ the_DT ruling_VBG party_NN in_IN Lisbon_NNP ?_.
+Was_VBD Margaret_NNP Thatcher_NNP a_DT chemist_NN ?_.
+act_NN answer_NN by_IN presenting_VBG users_NNS with_IN additional_JJ in_IN -_: formation_NN in_IN sentence_NN form_NN is_VBZ presented_VBN by_IN Bosma_NNP -LRB-_-LRB- Bosma_NNP ,_, 2005_CD -RRB-_-RRB- utilizing_VBG summarization_NN techniques_NNS ._.
+In_IN this_DT research_NN Bosma_NNP -LRB-_-LRB- Bosma_NNP ,_, 2005_CD -RRB-_-RRB- assumes_VBZ that_IN a_DT QA_NNP system_NN has_VBZ already_RB extracted_VBN a_DT sentence_NN that_WDT contains_VBZ the_DT exact_JJ answer_NN ._.
+Then_RB based_VBN on_IN this_DT candi_NN -_: date_NN sentence_NN ,_, Bosma_NNP -LRB-_-LRB- Bosma_NNP ,_, 2005_CD -RRB-_-RRB- tries_VBZ to_TO gener_VB -_: ate_VBD an_DT answer_NN response_NN by_IN utilizing_VBG information_NN ac_SYM -_: quired_VBN from_IN a_DT collection_NN of_IN sentences_NNS ._.
+He_PRP coins_NNS the_DT term_NN ,_, an_DT intensive_JJ answer_NN to_TO refer_VB to_TO the_DT answer_NN gen_NN -_: erated_VBN from_IN the_DT system_NN ._.
+The_DT process_NN of_IN generating_VBG intensive_JJ answer_NN is_VBZ based_VBN on_IN summarization_NN using_VBG rhetorical_JJ structures_NNS ._.
+Another_DT answer_NN presentation_NN method_NN based_VBN on_IN summarization_NN is_VBZ presented_VBN by_IN Demner-Fushman_NNP and_CC Lin_NNP -LRB-_-LRB- Demner-Fushman_NNP and_CC Lin_NNP ,_, 2006_CD -RRB-_-RRB- ._.
+They_PRP introduce_VBP the_DT concept_NN of_IN extractive_JJ summaries_NNS to_TO present_VB with_IN extracted_VBN answer_NN ._.
+This_DT model_NN has_VBZ some_DT similarity_NN with_IN the_DT one_CD presented_VBN by_IN Bosma_NNP -LRB-_-LRB- Bosma_NNP ,_, 2005_CD -RRB-_-RRB- ,_, but_CC like_IN in_IN Bosmas_NNP model_NN ,_, Demner-Fushman_NNP and_CC Lin_NNP -LRB-_-LRB- Demner-Fushman_NNP and_CC Lin_NNP ,_, 2006_CD -RRB-_-RRB- do_VBP not_RB make_VB use_NN of_IN specifically_RB generated_VBN weighted_JJ graph_NN to_TO identify_VB relevant_JJ sentences_NNS to_TO include_VB in_IN the_DT sum_NN -_: mary_NN ._.
+Instead_RB Demner-Fushman_NNP and_CC Lin_NNP -LRB-_-LRB- Demner_NNP -_: Fushman_NNP and_CC Lin_NNP ,_, 2006_CD -RRB-_-RRB- generates_VBZ the_DT answer_NN by_IN ag_SYM -_: gregating_VBG the_DT top_JJ three_CD ranked_VBD sentences_NNS by_IN a_DT regres_NNS -_: sion_NN model_NN ._.
+Vargas-Vera_NNP and_CC Motta_NNP -LRB-_-LRB- Vargas-Vera_NNP and_CC Motta_NNP ,_, 2004_CD -RRB-_-RRB- present_RB an_DT ontology_NN based_VBN QA_NNP system_NN ,_, AQUA_NNP ._.
+Although_IN AQUA_NNP is_VBZ primarily_RB aimed_VBN at_IN ex_FW -_: tracting_VBG answers_NNS from_IN a_DT given_VBN ontology_NN ,_, it_PRP also_RB con_VBP -_: tributes_NNS to_TO answer_VB presentation_NN by_IN providing_VBG an_DT en_FW -_: riched_JJ answer_NN ._.
+The_DT AQUA_NNP system_NN extracts_VBZ ontology_JJ concepts_NNS from_IN the_DT entities_NNS mentioned_VBN in_IN the_DT question_NN and_CC present_JJ those_DT concepts_NNS in_IN aggregated_JJ natural_JJ lan_NN -_: Answer_NN sentence_NN The_DT successor_NN of_IN John_NNP F._NNP Kennedy_NNP was_VBD Lyn_NNP -_: don_VBP B._NNP Johnson_NNP ._.
+The_DT Free_NNP University_NNP in_IN Amsterdam_NNP has_VBZ 22730_CD students_NNS ._.
+Michael_NNP Jordan_NNP is_VBZ 1.9812_CD m_NN tall_JJ ._.
+The_DT ruling_VBG party_NN in_IN Lisbon_NNP is_VBZ Socialist_NNP Party_NNP -LRB-_-LRB- Portugal_NNP -RRB-_-RRB- ._.
+Margaret_NNP Thatcher_NNP was_VBD a_DT chemist_NN ._.
+guage_NN ._.
+However_RB ,_, the_DT research_NN does_VBZ not_RB contribute_VB towards_IN identifying_VBG the_DT most_RBS appropriate_JJ context_NN for_IN the_DT given_VBN question_NN and_CC answer_NN ._.
+In_IN addition_NN ,_, no_DT spe_NN -_: cific_JJ effort_NN is_VBZ taken_VBN to_TO identify_VB how_WRB the_DT aggregated_JJ concepts_NNS need_VBP to_TO presented_VBN ._.
+However_RB ,_, the_DT benefit_NN that_WDT researchers_NNS achieved_VBN by_IN building_VBG the_DT enriching_VBG module_NN on_IN top_NN of_IN an_DT ontology_NN is_VBZ that_IN the_DT related_VBN in_IN -_: formation_NN can_MD be_VB easily_RB acquired_VBN using_VBG the_DT relations_NNS in_IN the_DT ontology_NN ._.
+5_CD Conclusion_NN and_CC future_JJ work_NN The_DT purpose_NN of_IN the_DT current_JJ study_NN was_VBD to_TO build_VB a_DT framework_NN to_TO generate_VB answer_NN sentences_NNS using_VBG the_DT linguistic_JJ structure_NN of_IN the_DT question_NN with_IN embedded_VBN answer_NN ._.
+At_IN the_DT core_NN of_IN the_DT framework_NN ,_, we_PRP used_VBD typed_VBN dependency_NN based_VBN patterns_NNS extraction_NN and_CC the_DT gen_NN -_: erated_JJ sentence_NN was_VBD further_JJ realized_VBN through_IN multi_NNS -_: ple_NN strategies_NNS ._.
+We_PRP designed_VBD the_DT experiment_NN to_TO de_FW -_: termine_IN the_DT accuracy_NN and_CC as_RB well_RB as_IN the_DT resource_NN requirements_NNS ._.
+The_DT results_NNS confirmed_VBD that_IN the_DT ap_NN -_: proach_NN can_MD be_VB successfully_RB applied_VBN in_IN QA_NNP systems_NNS with_IN a_DT reasonable_JJ level_NN of_IN accuracy_NN ._.
+However_RB ,_, the_DT study_NN found_VBD that_IN the_DT framework_NN needs_VBZ further_JJ work_NN to_TO extend_VB it_PRP to_TO the_DT mobile_JJ platforms_NNS as_IN the_DT current_JJ architecture_NN consumes_VBZ considerable_JJ memory_NN during_IN execution_NN ,_, mainly_RB due_JJ to_TO loading_VBG of_IN the_DT pre-trained_JJ dependency_NN parser_NN model_NN ._.
+In_IN addition_NN ,_, the_DT current_JJ study_NN focused_VBD only_RB on_IN grammatical_JJ accuracy_NN ._.
+We_PRP plan_VBP to_TO extend_VB the_DT evaluation_NN to_TO consider_VB other_JJ fac_NN -_: tors_NNS of_IN answer_NN sentences_NNS including_VBG suitability_NN and_CC cohesion_NN ._.
+In_IN addition_NN to_TO aforementioned_JJ experimen_NNS -_: tal_JJ investigations_NNS ,_, further_JJ studies_NNS need_VBP to_TO be_VB carried_VBN out_RP to_TO enrich_VB the_DT proposed_VBN strategy_NN as_RB well_RB as_IN com_NN -_: bine_VB it_PRP with_IN other_JJ possible_JJ strategies_NNS to_TO further_JJ ad_NN -_: vance_NN the_DT answer_NN presentation_NN ._.
+References_NNP Farah_NNP Benamara_NNP and_CC Patrick_NNP Saint_NNP Dizier_NNP ._.
+2003_CD ._.
+Dy_SYM -_: namic_JJ Generation_NNP of_IN Cooperative_NNP Natural_NNP Language_NNP Responses_NNS in_IN WEBCOOP_NNP ._.
+In_IN 9th_JJ European_JJ Work_NN -_: shop_NN on_IN Natural_JJ Language_NN Generation_NNP -LRB-_-LRB- ENLG-2003_NNP -RRB-_-RRB- at_IN EACL_NNP 2003_CD ,_, Budapest_NNP ,_, Hungary_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Wauter_NNP Bosma_NNP ._.
+2005_CD ._.
+Extending_VBG answers_NNS using_VBG dis_SYM -_: course_NN structure_NN ._.
+In_IN Recent_JJ Advances_NNS in_IN Natural_JJ Lan_SYM -_: guage_NN Processing_NNP ,_, Borovets_NNP ,_, Bulgaria_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Dina_NNP Demner-Fushman_NNP and_CC Jimmy_NNP Lin_NNP ._.
+2006_CD ._.
+Answer_NN extraction_NN ,_, semantic_JJ clustering_NN ,_, and_CC extractive_JJ summa_NN -_: rization_NN for_IN clinical_JJ question_NN answering_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Compu_NNP -_: tational_JJ Linguistics_NNPS and_CC the_DT 44th_JJ annual_JJ meeting_NN of_IN the_DT ACL_NNP -_: ACL_NN '_'' 06_CD ,_, pages_NNS 841_CD --_: 848_CD ,_, Morristown_NNP ,_, NJ_NNP ,_, USA_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Oleksandr_NNP Kolomiyets_NNP and_CC Marie-Francine_NNP Moens_NNPS ._.
+2011_CD ._.
+A_DT survey_NN on_IN question_NN answering_VBG technology_NN from_IN an_DT information_NN retrieval_NN perspective_NN ._.
+Information_NNP Sci_NNP -_: ences_NNS ,_, 181_CD -LRB-_-LRB- 24_CD -RRB-_-RRB- :5412_CD --_: 5434_CD ,_, December_NNP ._.
+Jimmy_NNP Lin_NNP ,_, Dennis_NNP Quan_NNP ,_, Vineet_NNP Sinha_NNP ,_, Karun_NNP Bakshi_NNP ,_, David_NNP Huynh_NNP ,_, Boris_NNP Katz_NNP ,_, and_CC David_NNP R._NNP Karger_NNP ._.
+2003_CD ._.
+What_WP Makes_VBZ a_DT Good_JJ Answer_NN ?_.
+The_DT Role_NN of_IN Context_NNP in_IN Question_NNP Answering_NNP ._.
+In_IN Interact_NNP ._.
+Mark_NNP Maybury_NNP ._.
+2008_CD ._.
+New_NNP Directions_NNP In_IN Question_NNP Answering_NNP ._.
+In_IN Tomek_NNP Strzalkowski_NNP and_CC Sanda_NNP M._NNP Harabagiu_NNP ,_, editors_NNS ,_, Advances_NNS in_IN Open_NNP Domain_NNP Ques_NNP -_: tion_NN Answering_NN ,_, volume_NN 32_CD of_IN Text_NN ,_, Speech_NNP and_CC Language_NNP Technology_NNP ,_, chapter_NN New_NNP Direct_NNP ._.
+Springer_NNP Netherlands_NNP ,_, Dordrecht_NNP ._.
+D_NNP L_NNP McGuinness_NNP ._.
+2004_CD ._.
+Question_NN answering_NN on_IN the_DT se_FW -_: mantic_JJ Web_NNP ._.
+Ana_NNP Christina_NNP Mendes_NNP and_CC Luisa_NNP Coheur_NNP ._.
+2013_CD ._.
+When_WRB the_DT answer_NN comes_VBZ into_IN question_NN in_IN question-answering_NN :_: survey_NN and_CC open_JJ issues_NNS ._.
+Natural_JJ Language_NN Engineer_NN -_: ing_NN ,_, 19_CD -LRB-_-LRB- 01_CD -RRB-_-RRB- :1_CD --_: 32_CD ,_, January_NNP ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014a_NNS ._.
+Interaction_NNP his_PRP$ -_: tory_JJ based_VBN answer_NN formulation_NN for_IN question_NN answering_NN ._.
+In_IN International_NNP Conference_NNP on_IN Knowledge_NNP Engineer_NNP -_: ing_NN and_CC Semantic_NNP Web_NNP -LRB-_-LRB- KESW_NNP -RRB-_-RRB- ,_, pages_NNS 128_CD --_: 139_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014b_JJ ._.
+Real_JJ text-cs_NNS -_: corpus_NN based_VBN domain_NN independent_JJ content_NN selection_NN model_NN ._.
+In_IN IEEE_NNP International_NNP Conference_NNP on_IN Tools_NNPS with_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- ICTAI_NNP -RRB-_-RRB- ,_, pages_NNS 599_CD --_: 606_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014c_JJ ._.
+The_DT role_NN of_IN linked_VBN data_NNS in_IN content_NN selection_NN ._.
+In_IN Pacific_NNP Rim_NNP In_IN -_: ternational_JJ Conference_NN on_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- PRI_NNP -_: CAI_NNP -RRB-_-RRB- ,_, pages_NNS 573_CD --_: 586_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015a_NNS ._.
+Answer_NN presen_SYM -_: tation_NN with_IN contextual_JJ information_NN :_: A_DT case_NN study_NN using_VBG syntactic_NN and_CC semantic_JJ models_NNS ._.
+In_IN 28th_JJ Australasian_JJ Joint_NNP Conference_NN on_IN Artificial_NNP Intelligence_NNP ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015b_JJ ._.
+Generat_NNP -_: ing_NN lexicalization_NN patterns_NNS for_IN linked_VBN open_JJ data_NNS ._.
+In_IN Second_JJ Workshop_NNP on_IN Natural_NNP Language_NNP Processing_NNP and_CC Linked_NNP Open_NNP Data_NNP collocated_VBN with_IN 10th_JJ Recent_JJ Advances_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- RANLP_NNP -RRB-_-RRB- ,_, pages_NNS 2_CD --_: 5_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015c_JJ ._.
+A_DT multi_NNS -_: strategy_NN approach_NN for_IN lexicalizing_VBG linked_VBN open_JJ data_NNS ._.
+In_IN International_NNP Conference_NNP on_IN Intelligent_NNP Text_NNP Process_NNP -_: ing_NN and_CC Computational_NNP Linguistics_NNP -LRB-_-LRB- CICLing_NNP -RRB-_-RRB- ,_, pages_NNS 348_CD --_: 363_CD ._.
+Rivindu_NNP Perera_NNP ,_, Parma_NNP Nand_NNP ,_, and_CC Gisela_NNP Klette_NNP ._.
+2015_CD ._.
+Realtext-lex_NN :_: A_DT lexicalization_NN framework_NN for_IN linked_VBN open_JJ data_NNS ._.
+In_IN 14th_JJ International_NNP Semantic_NNP Web_NNP Con_NN -_: ference_NN ._.
+Rivindu_NNP Perera_NNP ._.
+2012a_NNS ._.
+Ipedagogy_NNP :_: Question_NN answer_NN -_: ing_NN system_NN based_VBN on_IN web_NN information_NN clustering_NN ._.
+In_IN IEEE_NNP Fourth_JJ International_NNP Conference_NNP on_IN Technology_NNP for_IN Education_NNP -LRB-_-LRB- T4E_NNP -RRB-_-RRB- ._.
+Rivindu_NNP Perera_NNP ._.
+2012b_JJ ._.
+Scholar_NN :_: Cognitive_NNP Computing_NNP Approach_NNP for_IN Question_NNP Answering_NNP ._.
+Honours_NNP thesis_NN ,_, University_NNP of_IN Westminster_NNP ._.
+M.F._NNP Porter_NNP ._.
+1980_CD ._.
+An_DT algorithm_NN for_IN suffix_NN stripping_VBG ._.
+Program_NN ,_, 14_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :130_CD --_: 137_CD ._.
+Patrick_NNP Saint-Dizier_NNP and_CC Marie_NNP Francine_NNP Moens_NNP ._.
+2011_CD ._.
+Knowledge_NN and_CC reasoning_NN for_IN question_NN answering_NN :_: Research_NNP perspectives_NNS ._.
+Information_NNP Processing_NNP and_CC Management_NNP ,_, 47:899_CD --_: 906_CD ._.
+Murray_NNP Singer_NNP ._.
+2013_CD ._.
+Psychology_NN of_IN Language_NN :_: An_DT In_IN -_: troduction_NN to_TO Sentence_NN and_CC Discourse_NN Processes_NNS ._.
+Psy_SYM -_: chology_NN Press_NNP ._.
+M_NNP Vargas-Vera_NNP and_CC E_NNP Motta_NNP ._.
+2004_CD ._.
+AQUAontology_SYM -_: based_VBN question_NN answering_VBG system_NN ._.
+In_IN Mexican_JJ Inter_NNP -_: national_JJ Conference_NN on_IN Artificial_NNP Intelligence_NNP ,_, Mexico_NNP City_NNP ,_, Mexico_NNP ._.
+Springer-Verlag_NNP ._.

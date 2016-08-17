@@ -1,0 +1,307 @@
+An_DT Empirical_JJ Study_NN on_IN Sentiment_NN Classification_NN of_IN Chinese_JJ Review_NNP using_VBG Word_NNP Embedding_NNP Abstract_NNP In_IN this_DT article_NN ,_, how_WRB word_NN embeddings_NNS can_MD be_VB used_VBN as_IN features_NNS in_IN Chinese_JJ sentiment_NN classi_NNS -_: fication_NN is_VBZ presented_VBN ._.
+Firstly_RB ,_, a_DT Chinese_JJ opin_NN -_: ion_NN corpus_NN is_VBZ built_VBN with_IN a_DT million_CD comments_NNS from_IN hotel_NN review_NN websites_NNS ._.
+Then_RB the_DT word_NN embeddings_NNS which_WDT represent_VBP each_DT comment_NN are_VBP used_VBN as_IN input_NN in_IN different_JJ machine_NN learning_VBG methods_NNS for_IN sentiment_NN classification_NN ,_, includ_NN -_: ing_NN SVM_NNP ,_, Logistic_NNP Regression_NNP ,_, Convolutional_NNP Neural_NNP Network_NNP -LRB-_-LRB- CNN_NNP -RRB-_-RRB- and_CC ensemble_NN meth_NN -_: ods_NNS ._.
+These_DT methods_NNS get_VB better_JJR performance_NN compared_VBN with_IN N-gram_JJ models_NNS using_VBG Naive_NNP Bayes_NNP -LRB-_-LRB- NB_NNP -RRB-_-RRB- and_CC Maximum_NNP Entropy_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- ._.
+Finally_RB ,_, a_DT combination_NN of_IN machine_NN learning_VBG methods_NNS is_VBZ proposed_VBN which_WDT presents_VBZ an_DT out_IN -_: standing_VBG performance_NN in_IN precision_NN ,_, recall_NN and_CC F1_CD score_NN ._.
+After_IN selecting_VBG the_DT most_RBS useful_JJ methods_NNS to_TO construct_VB the_DT combinational_JJ model_NN and_CC testing_NN over_IN the_DT corpus_NN ,_, the_DT final_JJ F1_CD score_NN is_VBZ 0.920_CD ._.
+1_CD Introduction_NNP Sentiment_NN analysis_NN or_CC opinion_NN mining_NN is_VBZ the_DT com_NN -_: putational_JJ study_NN of_IN people_NNS 's_POS opinions_NNS ,_, appraisals_NNS ,_, attitudes_NNS ,_, and_CC emotions_NNS toward_IN entities_NNS ,_, individuals_NNS ,_, issues_NNS ,_, events_NNS ,_, topics_NNS and_CC their_PRP$ attributes_NNS -LRB-_-LRB- Liu_NNP and_CC Zhang_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT task_NN of_IN sentiment_NN analysis_NN is_VBZ technically_RB challenging_JJ and_CC practically_RB very_RB use_VB -_: ful_NN ._.
+For_IN example_NN ,_, businesses_NNS always_RB want_VBP to_TO find_VB public_JJ or_CC consumer_NN opinions_NNS about_IN their_PRP$ products_NNS and_CC services_NNS ._.
+Consumers_NNS also_RB need_VBP a_DT sounding_VBG board_NN rather_RB than_IN thinking_VBG alone_RB while_IN making_VBG de_FW -_: cisions_NNS ._.
+With_IN the_DT development_NN of_IN Internet_NNP ,_, opinion_NN -_: ated_VBN texts_NNS from_IN social_JJ media_NNS -LRB-_-LRB- e.g._FW ,_, reviews_NNS ,_, blogs_NNS and_CC micro-blogs_NNS -RRB-_-RRB- are_VBP used_VBN frequently_RB for_IN decision_NN making_NN ,_, which_WDT makes_VBZ automated_JJ sentiment_NN analysis_NN techniques_NNS more_RBR and_CC more_RBR important_JJ ._.
+Among_IN those_DT tasks_NNS of_IN the_DT sentiment_NN analysis_NN ,_, the_DT key_JJ one_CD is_VBZ to_TO classify_VB the_DT polarity_NN of_IN given_VBN texts_NNS ._.
+Many_JJ works_NNS have_VBP been_VBN done_VBN in_IN recent_JJ years_NNS to_TO improve_VB English_JJ sentiment_NN polarity_NN classification_NN ._.
+There_EX are_VBP two_CD categories_NNS of_IN such_JJ works_NNS ._.
+One_CD is_VBZ called_VBN ``_`` machine_NN learning_NN ''_'' which_WDT is_VBZ firstly_RB proposed_VBN to_TO determine_VB whether_IN a_DT review_NN is_VBZ positive_JJ or_CC negative_JJ by_IN using_VBG three_CD machine_NN learning_VBG methods_NNS ,_, including_VBG NB_NNP ,_, ME_NNP and_CC SVM_NNP -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+The_DT other_JJ category_NN called_VBN ``_`` semantic_JJ orientation_NN ''_'' is_VBZ applied_VBN to_TO classify_VB words_NNS into_IN various_JJ classes_NNS by_IN giving_VBG a_DT score_NN to_TO each_DT word_NN to_TO evaluate_VB the_DT strength_NN of_IN sentiment_NN ._.
+And_CC an_DT overall_JJ score_NN is_VBZ calculated_VBN to_TO assign_VB the_DT review_NN to_TO a_DT specific_JJ class_NN -LRB-_-LRB- Turney_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+Recently_RB ,_, researchers_NNS have_VBP tried_VBN to_TO handle_VB tasks_NNS of_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- with_IN the_DT help_NN of_IN deep_JJ learning_NN approaches_NNS ._.
+Among_IN those_DT ap_SYM -_: proaches_NNS ,_, a_DT useful_JJ one_CD called_VBN word2vec_CD has_VBZ attracted_VBN increasing_VBG interest_NN ._.
+Word2vec_JJ translates_NNS words_NNS to_TO vector_NN representations_NNS -LRB-_-LRB- called_VBN word_NN embeddings_NNS -RRB-_-RRB- ef_SYM -_: ficiently_RB by_IN using_VBG skip-gram_NN algorithm_NN -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ._.
+It_PRP is_VBZ also_RB proposed_VBN that_IN the_DT induced_JJ vector_NN representations_NNS capture_VBP meaningful_JJ syntactic_NN and_CC semantic_JJ regularities_NNS ,_, for_IN example_NN ,_, ``_`` King_NNP ''_'' -_: ``_`` Man_NN ''_'' +_IN ``_`` Woman_NNP ''_'' results_NNS in_IN a_DT vector_NN very_RB close_RB to_TO ``_`` Queen_NNP ''_'' -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- ._.
+Besides_IN ,_, with_IN the_DT advancement_NN of_IN information_NN technology_NN ,_, for_IN the_DT first_JJ time_NN in_IN Chinese_JJ history_NN ,_, a_DT huge_JJ volume_NN of_IN Chinese_JJ opinionated_JJ data_NNS recorded_VBN in_IN digital_JJ form_NN is_VBZ ready_JJ for_IN analysis_NN ._.
+Though_IN Chi_NNP -_: nese_JJ language_NN plays_VBZ an_DT important_JJ role_NN in_IN economic_JJ globalization_NN ,_, there_EX are_VBP few_JJ works_NNS have_VBP been_VBN done_VBN for_IN Chinese_JJ sentiment_NN analysis_NN with_IN huge_JJ databases_NNS ._.
+It_PRP inspires_VBZ us_PRP to_TO make_VB an_DT empirical_JJ study_NN on_IN Chinese_JJ sentiment_NN with_IN bigger_JJR databases_NNS than_IN usual_JJ ._.
+The_DT remain_VBP of_IN the_DT article_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Section_NN 2_CD briefly_NN describes_VBZ related_JJ work_NN ._.
+Section_NN 3_CD describes_VBZ details_NNS of_IN the_DT methods_NNS used_VBN in_IN training_NN procedure_NN ._.
+Section_NN 4_CD reports_NNS and_CC discusses_VBZ the_DT results_NNS ._.
+Finally_RB ,_, we_PRP summarize_VBP our_PRP$ works_NNS in_IN Section_NN 5_CD ._.
+2_CD Related_JJ work_NN According_VBG to_TO Liu_NNP and_CC Zhang_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, the_DT sentiment_NN analysis_NN research_NN mainly_RB started_VBD from_IN early_JJ 2000_CD by_IN Turney_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Pang_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Turney_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- firstly_RB used_VBD a_DT few_JJ semantically_RB words_NNS -LRB-_-LRB- e.g._FW ,_, excellent_JJ and_CC poor_JJ -RRB-_-RRB- to_TO label_VB other_JJ phrases_NNS with_IN the_DT hit_NN counts_VBZ by_IN queries_NNS through_IN search_NN engines_NNS ._.
+Then_RB ,_, researchers_NNS had_VBD also_RB proposed_VBN several_JJ custom_NN tech_NN -_: niques_NNS specifically_RB for_IN sentiment_NN classification_NN ,_, e.g._FW ,_, the_DT score_NN function_NN based_VBN on_IN words_NNS in_IN positive_JJ and_CC negative_JJ reviews_NNS -LRB-_-LRB- Dave_NNP et_NNP al._NNP ,_, 2003_CD -RRB-_-RRB- and_CC feature_VBP weighting_NN schemes_NNS used_VBN to_TO enhance_VB classification_NN accuracy_NN -LRB-_-LRB- Paltoglou_NNP and_CC Thelwall_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+Besides_IN ,_, the_DT other_JJ situation_NN of_IN sentiment_NN analysis_NN is_VBZ to_TO rep_NN -_: resent_VB texts_NNS by_IN vectors_NNS which_WDT indicate_VBP these_DT words_NNS appear_VBP in_IN the_DT text_NN but_CC do_VBP not_RB preserve_VB word_NN order_NN ._.
+And_CC a_DT machine_NN learning_VBG approach_NN will_MD be_VB used_VBN for_IN classification_NN in_IN the_DT end_NN ._.
+In_IN such_JJ way_NN ,_, Pang_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- considered_VBN classifying_VBG documents_NNS according_VBG to_TO standard_JJ machine_NN learning_VBG techniques_NNS ._.
+In_IN ad_NN -_: dition_NN ,_, subsequent_JJ research_NN used_VBD more_JJR features_NNS in_IN learning_NN ,_, making_VBG the_DT main_JJ task_NN of_IN sentiment_NN clas_NNS -_: sification_NN engineer_NN an_DT effective_JJ set_NN of_IN features_NNS -LRB-_-LRB- Pang_NNP and_CC Lee_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+However_RB ,_, compared_VBN to_TO English_JJ sentiment_NN analy_NN -_: sis_NN ,_, there_EX are_VBP relatively_RB few_JJ investigations_NNS conducted_VBN on_IN Chinese_JJ sentiment_NN classification_NN until_IN 2005_CD -LRB-_-LRB- Ye_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Li_NNP and_CC Sun_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- presented_VBD a_DT study_NN on_IN comparison_NN of_IN different_JJ machine_NN learning_VBG ap_SYM -_: proaches_NNS under_IN different_JJ text_NN representation_NN schemes_NNS and_CC feature_NN weighting_NN schemes_NNS ._.
+They_PRP found_VBD that_IN SVM_NNP achieved_VBD the_DT best_JJS performance_NN ._.
+After_IN that_DT ,_, Tan_NNP and_CC Zhang_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- found_VBD 6,000_CD or_CC bigger_JJR for_IN the_DT size_NN of_IN features_NNS would_MD be_VB sufficient_JJ for_IN Chinese_JJ sentiment_NN analysis_NN ,_, and_CC sentiment_NN classifiers_NNS were_VBD severely_RB dependent_JJ on_IN domains_NNS or_CC topics_NNS ._.
+Nowadays_RB ,_, inspired_VBN by_IN the_DT availability_NN of_IN large_JJ text_NN corpus_NN and_CC the_DT success_NN of_IN deep_JJ learning_NN approaches_NNS ,_, some_DT researchers_NNS -LRB-_-LRB- e.g._FW ,_, Collobert_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, Johnson_NNP and_CC Zhang_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- -RRB-_-RRB- deviated_VBN from_IN traditional_JJ methods_NNS and_CC tried_VBD to_TO train_VB neural_JJ networks_NNS such_JJ as_IN Convolutional_NNP Neural_NNP Networks_NNP -LRB-_-LRB- CNN_NNP -RRB-_-RRB- for_IN NLP_NNP tasks_NNS -LRB-_-LRB- e.g._FW ,_, named_VBN entity_NN recognition_NN and_CC sentiment_NN analysis_NN -RRB-_-RRB- ._.
+Among_IN them_PRP ,_, Xu_NNP and_CC Sarikaya_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC Kalchbrenner_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- got_VBD some_DT state-of-the-art_JJ performance_NN ._.
+But_CC the_DT work_NN of_IN Collobert_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- was_VBD paid_VBN most_RBS attention_NN for_IN describing_VBG a_DT unified_VBN architecture_NN for_IN NLP_NNP tasks_NNS which_WDT learned_VBD features_NNS by_IN training_VBG a_DT deep_JJ neural_JJ network_NN even_RB when_WRB being_VBG given_VBN very_RB limited_JJ prior_RB knowledge_NN ._.
+These_DT NLP_NNP tasks_NNS included_VBD part-of-speech_JJ tagging_NN ,_, chunking_VBG ,_, named-entity_JJ recognition_NN ,_, language_NN model_NN learning_NN and_CC semantic_JJ role_NN labeling_VBG ._.
+3_CD Methodology_NNP This_DT section_NN presents_VBZ the_DT methodology_NN used_VBN in_IN our_PRP$ experiment_NN ._.
+3.1_CD 3.1.1_CD Feature_NN selection_NN methods_NNS Sentiment_NN lexicon_NN and_CC CHI_NNP A_NNP sentiment_NN lexicon_NN accommodating_VBG sentiment_NN words_NNS plays_VBZ an_DT important_JJ role_NN in_IN sentiment_NN analysis_NN ._.
+A_DT combination_NN of_IN two_CD Chinese_JJ sentiment_NN lexicons_NNS -LRB-_-LRB- Hownet_NNP -LRB-_-LRB- Dong_NNP and_CC Dong_NNP ,_, 2006_CD -RRB-_-RRB- and_CC DLLEX_NNP -LRB-_-LRB- Xu_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- -RRB-_-RRB- is_VBZ constructed_VBN ,_, including_VBG 30406_CD words_NNS in_IN total_NN ._.
+After_IN removing_VBG those_DT words_NNS which_WDT do_VBP not_RB appear_VB in_IN the_DT corpus_NN ,_, 10444_CD sentiment_NN words_NNS are_VBP pre_SYM -_: served_VBD ._.
+After_IN several_JJ experiments_NNS ,_, CHI_NNP -LRB-_-LRB- Galavotti_NNP et_FW al._FW ,_, 2000_CD -RRB-_-RRB- is_VBZ chosen_VBN for_IN information_NN gain_NN ._.
+Finally_RB ,_, 150_CD most_RBS valuable_JJ words_NNS are_VBP added_VBN into_IN the_DT new_JJ lexicon_NN ._.
+At_IN last_JJ ,_, 10543_CD words_NNS are_VBP obtained_VBN as_IN features_NNS ._.
+3.1.2_CD Word2vec_JJ Word2vec_JJ -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- has_VBZ gained_VBN kinds_NNS of_IN traction_NN today_NN ._.
+As_IN the_DT name_NN shows_VBZ ,_, it_PRP trans_VBZ -_: lates_VBZ words_NNS to_TO vectors_NNS called_VBN word_NN embeddings_NNS ._.
+That_DT is_VBZ to_TO say_VB ,_, it_PRP gets_VBZ the_DT vector_NN representations_NNS of_IN words_NNS ._.
+Gensim1_NNP ,_, a_DT python_NN tool_NN is_VBZ used_VBN to_TO get_VB word2vec_JJ module_NN ._.
+The_DT method_NN of_IN training_NN word2vec_CD model_NN is_VBZ unsupervised_JJ learning_NN and_CC 300_CD is_VBZ set_VBN as_IN the_DT quantity_NN 1http_CD :_: /_SYM /_SYM radimrehurek.com/gensim/_NN of_IN the_DT dimension_NN of_IN vectors_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT word_NN embeddings_NNS of_IN a_DT Chinese_JJ hotel_NN review_NN which_WDT means_VBZ the_DT room_NN is_VBZ very_RB clean_JJ and_CC neat_JJ ._.
+For_IN convenient_JJ display_NN ,_, each_DT value_NN of_IN dimension_NN is_VBZ multiplied_VBN by_IN 10,000_CD and_CC indicated_VBN by_IN di_FW -LRB-_-LRB- i_FW =_SYM 1_CD ,_, ..._: ,_, 300_CD -RRB-_-RRB- ._.
+word_NN ddd_NN ..._: d_SYM 1_CD 2_CD 2_CD 300_CD with_IN largest_JJS entropy_NN ._.
+Thus_RB ,_, the_DT estimate_NN of_IN P_NNP -LRB-_-LRB- cj_FW |_FW d_LS -RRB-_-RRB- is_VBZ showed_VBN as_IN follows_VBZ P_NNP -LRB-_-LRB- cj_FW |_FW d_LS -RRB-_-RRB- =_SYM 1_CD exp_NN m_NN λi_FW ,_, c_NN Fi_NNP ,_, c_NN -LRB-_-LRB- d_LS ,_, cj_NN -RRB-_-RRB- π_NN -LRB-_-LRB- d_LS -RRB-_-RRB- i_FW =_SYM 1_CD j_NN j_NN 1_CD if_IN ni_NNS >_VBP 0andx_CD =_SYM cj_FW Fi_FW ,_, cj_NN -LRB-_-LRB- d_LS ,_, x_LS -RRB-_-RRB- =_SYM 0_CD otherwise_RB where_WRB π_NN -LRB-_-LRB- d_LS -RRB-_-RRB- is_VBZ a_DT normalization_NN function_NN and_CC λi_NN ,_, cj_NN is_VBZ the_DT weight_NN of_IN fj_NN in_IN maximum_NN entropy_NN cj.The_NNP other_JJ parameters_NNS are_VBP defined_VBN in_IN the_DT same_JJ way_NN as_IN Section_NN 3.2.1_CD ._.
+After_IN fifteen_CD iterations_NNS of_IN the_DT improved_VBN iter_NN -_: ative_JJ scaling_VBG algorithm_NN -LRB-_-LRB- Pietra_NNP et_FW al._FW ,_, 1997_CD -RRB-_-RRB- imple_SYM -_: mented_VBN in_IN Natural_JJ Language_NN Toolkit_NNP -LRB-_-LRB- Bird_NNP ,_, 2006_CD -RRB-_-RRB- ,_, theparametersofλi_FW ,_, cj_JJ areadjustedtomaximizethe_NN entropy_NN of_IN distribution_NN of_IN training_NN data_NNS ._.
+3.2.3_CD Support_NN Vector_NNP Machines_NNP Support_NN Vector_NNP Machines_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- is_VBZ a_DT very_RB effec_JJ -_: tive_JJ machine_NN learning_VBG method_NN firstly_RB introduced_VBN by_IN -LRB-_-LRB- Cortes_NNP and_CC Vapnik_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+SVM_NNP constructs_VBZ a_DT hyper_JJ -_: plane_NN or_CC a_DT set_NN of_IN hyperplanes_NNS in_IN a_DT high_JJ dimensional_JJ space_NN represented_VBN by_IN w_NN ._.
+Since_IN the_DT larger_JJR the_DT margin_NN ,_, the_DT lower_JJR the_DT error_NN of_IN the_DT classifier_NN ,_, after_IN training_NN ,_, the_DT largest_JJS distance_NN of_IN support_NN vector_NN to_TO nearest_JJS training_NN -_: data_NNS point_NN in_IN any_DT classes_NNS is_VBZ achieved_VBN ._.
+Then_RB the_DT problem_NN of_IN maximizing_VBG the_DT margin_NN turns_VBZ to_TO The_DT room_NN very_RB clean_JJ neat_JJ average_JJ value_NN -1102_CD -202_CD -668_CD -6_CD 355_CD -605_CD -287_CD -343_CD 1077_CD -101_CD -399_CD -274_CD -374_CD -148_CD -118_CD ..._: -646_CD ..._: -460_CD ..._: -232_CD ..._: -986_CD ..._: -581_CD 3.2_CD 3.2.1_CD Table_NNP 1_CD :_: An_DT example_NN of_IN review_NN vector_NN Traditional_JJ methods_NNS Naive_NNP Bayes_NNP Classification_NNP Naive_NNP Bayes_NNP -LRB-_-LRB- NB_NNP -RRB-_-RRB- is_VBZ widely_RB used_VBN in_IN sentiment_NN classification_NN which_WDT is_VBZ used_VBN to_TO classify_VB a_DT given_VBN re_SYM -_: view_NN document_NN d_LS to_TO the_DT class_NN c_NN ∗_CD =_SYM argmaxcP_NNP -LRB-_-LRB- c_NN |_NN d_LS -RRB-_-RRB- ._.
+According_VBG to_TO Bayes_NNP 's_POS rule_NN ,_, P_NNP -LRB-_-LRB- cj_FW |_FW d_LS -RRB-_-RRB- =_SYM P_NNP -LRB-_-LRB- cj_FW -RRB-_-RRB- P_NNP -LRB-_-LRB- d_LS |_SYM cj_FW -RRB-_-RRB- P_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- where_WRB cj_NN is_VBZ a_DT kind_NN of_IN class_NN and_CC P_NN -LRB-_-LRB- d_LS -RRB-_-RRB- plays_VBZ no_DT role_NN in_IN selecting_VBG c_NN ∗_NN ._.
+Let_NNP 's_POS mark_NN f1_CD ,_, f2_CD ,_, ..._: fm_NN as_IN the_DT set_NN of_IN features_NNS that_WDT appear_VBP in_IN all_DT reviews_NNS ,_, and_CC set_VBD ni_NNS -LRB-_-LRB- d_LS -RRB-_-RRB- as_IN the_DT number_NN of_IN times_NNS fi_FW appears_VBZ in_IN d._NN Usually_RB ,_, ni_NNS -LRB-_-LRB- d_LS -RRB-_-RRB- is_VBZ set_VBN as_IN 1_CD ,_, if_IN fi_FW appears_VBZ more_JJR than_IN one_CD time_NN ._.
+Then_RB ,_, a_DT formulation_NN can_MD be_VB gotten_VBN as_IN P_NNP -LRB-_-LRB- cj_FW |_FW d_LS -RRB-_-RRB- =_SYM P_NNP -LRB-_-LRB- cj_FW -RRB-_-RRB- mi_FW P_FW -LRB-_-LRB- fi_FW |_FW cj_FW -RRB-_-RRB- ni_NNS -LRB-_-LRB- d_LS -RRB-_-RRB- argmin_IN 1_CD |_CD |_FW w_FW |_FW |_FW 2_CD where_WRB the_DT estimation_NN of_IN P_NNP -LRB-_-LRB- fi_FW |_FW cj_FW -RRB-_-RRB- is_VBZ calculated_VBN as_IN follows_VBZ ,_, using_VBG add-one_JJ smoothing_NN ˆ_NN 1_CD +_CD nij_NN P_NNP -LRB-_-LRB- fi_FW |_FW cj_FW -RRB-_-RRB- =_SYM m_FW +_FW mk_FW =_SYM 1nkj_CD 3.2.2_CD Maximum_NNP Entropy_NNP Classification_NNP Maximum_NNP Entropy_NNP Classification_NNP follows_VBZ the_DT principle_NN of_IN maximum_NN entropy_NN -LRB-_-LRB- Jaynes_NNP ,_, 1957_CD -RRB-_-RRB- ,_, which_WDT means_VBZ ,_, subject_JJ to_TO precisely_RB stated_VBN prior_RB data_NNS -LRB-_-LRB- such_JJ as_IN a_DT proposition_NN that_WDT expresses_VBZ testable_JJ information_NN -RRB-_-RRB- ,_, the_DT probability_NN distribution_NN which_WDT best_JJS represents_VBZ the_DT current_JJ state_NN of_IN knowledge_NN is_VBZ the_DT one_CD L_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- =_SYM αi_FW −_FW 2_CD αiαjyiyjk_NN -LRB-_-LRB- xi_FW ,_, xj_NN -RRB-_-RRB- i_FW =_SYM 1_CD i_FW ,_, j_JJ n_NN 1_CD T_NNP =_SYM αi_FW −_FW 2_CD αiαjyiyjxi_NNS xj_VBP i_FW =_SYM 1_CD i_FW ,_, j_SYM subjecttoαi_FW ≥_FW 0_CD -LRB-_-LRB- i_FW =_SYM 1_CD ,_, ..._: ,_, n_VBN -RRB-_-RRB- ._.
+Usually_RB ,_, thekernel_NN here_RB is_VBZ linear_JJ ,_, which_WDT means_VBZ k_NN -LRB-_-LRB- xi_FW ,_, xj_NN -RRB-_-RRB- =_SYM xi_FW ·_FW xj_FW For_IN SVM_NNP models_NNS ,_, python_NN tool_NN scikit-learn_NN -LRB-_-LRB- Pe_SYM -_: dregosa_NN et_FW al._FW ,_, 2011_CD -RRB-_-RRB- is_VBZ chosen_VBN for_IN training_NN and_CC test_NN -_: ing_NN ._.
+Scikit-learn2_NN was_VBD started_VBN in_IN 2007_CD as_IN a_DT Google_NNP 2_CD http://scikit-learn.org_JJ P_NN -LRB-_-LRB- d_LS -RRB-_-RRB- ̃_SYM n1_CD 2_CD y_NN i_FW -LRB-_-LRB- w_FW ·_FW x_LS i_FW −_FW b_NN -RRB-_-RRB- ≥_SYM 1_CD w_NN ,_, b_NN where_WRB and_CC its_PRP$ unconstrained_JJ dual_JJ form_NN is_VBZ the_DT following_VBG optimization_NN problem_NN :_: maximize_VB L_NNP ̃_CD -LRB-_-LRB- α_NN -RRB-_-RRB- where_WRB Summer_NNP of_IN Code_NNP project_NN ,_, and_CC has_VBZ became_VBD the_DT most_RBS efficient_JJ and_CC useful_JJ tool_NN for_IN data_NNS mining_NN and_CC analysis_NN in_IN Python_NNP ._.
+With_IN all_DT default_NN parameters_NNS ,_, LinearSVC_NNP and_CC SVC_NNP with_IN linear_JJ kernel_NN are_VBP used_VBN in_IN our_PRP$ article_NN ._.
+3.3_CD Ensemble_NN methods_NNS Ensemble_NNP methods_NNS -LRB-_-LRB- Dietterich_NNP ,_, 2000_CD ;_: Friedman_NNP ,_, 2001_CD ;_: Ridgeway_NNP ,_, 2007_CD -RRB-_-RRB- are_VBP supervised_VBN learning_VBG algorithm_NN which_WDT commonly_RB combine_VBP multiple_JJ hypotheses_NNS to_TO form_VB a_DT better_JJR one_NN ._.
+There_EX are_VBP two_CD families_NNS of_IN ensemble_NN methods_NNS ,_, averaging_VBG methods_NNS and_CC boosting_VBG methods_NNS ._.
+In_IN averaging_VBG methods_NNS ,_, several_JJ estimators_NNS will_MD be_VB built_VBN to_TO average_VB their_PRP$ predictions_NNS ._.
+It_PRP is_VBZ a_DT kind_NN of_IN vote_NN ,_, namely_RB ,_, on_IN average_NN ._.
+The_DT combined_VBN estimator_NN is_VBZ usually_RB better_JJR than_IN any_DT of_IN the_DT fundamental_JJ estimators_NNS since_IN its_PRP$ variance_NN is_VBZ reduced_VBN -LRB-_-LRB- e.g._FW ,_, Bagging_VBG methods_NNS and_CC Forests_NNS of_IN randomized_JJ trees_NNS -RRB-_-RRB- ._.
+By_IN contrast_NN ,_, in_IN boosting_VBG methods_NNS ,_, fundamental_JJ estimators_NNS are_VBP built_VBN sequentially_RB and_CC each_DT one_CD tries_VBZ to_TO reduce_VB the_DT bias_NN of_IN the_DT combined_VBN estimator_NN ._.
+The_DT idea_NN behind_IN it_PRP is_VBZ to_TO combine_VB several_JJ weak_JJ models_NNS to_TO generate_VB a_DT more_RBR powerful_JJ ensemble_NN model_NN -LRB-_-LRB- e.g._FW ,_, AdaBoost_NNP and_CC Gradient_NNP Tree_NNP Boosting_NNP -RRB-_-RRB- ._.
+The_DT ensemble_NN method_NN modules_NNS are_VBP chosen_VBN from_IN scikit-learn_NN ,_, including_VBG AdaBoost_NNP ,_, Gradient_NNP Tree_NNP Boosting_NNP and_CC Random_NNP Forests_NNPS ._.
+For_IN each_DT Chinese_JJ review_NN ,_, the_DT average_JJ value_NN of_IN word_NN embeddings_NNS is_VBZ used_VBN as_IN the_DT input_NN ._.
+3.4_CD CNN_NNP methods_NNS CNN_NNP is_VBZ short_JJ for_IN Convolutional_NNP Neural_NNP Networks_NNP ._.
+Its_PRP$ key_JJ module_NN is_VBZ to_TO calculates_VBZ the_DT convolution_NN be_VB -_: tween_NN input_NN and_CC output_NN ._.
+Just_RB as_IN CNN_NNP used_VBN in_IN com_NN -_: puter_NN vision_NN ,_, a_DT matrix_NN is_VBZ needed_VBN ,_, as_IN the_DT input_NN of_IN CNN_NNP ._.
+After_IN several_JJ experiments_NNS ,_, we_PRP set_VBP D_NNP =_SYM 60_CD as_IN the_DT dimension_NN quantity_NN of_IN word_NN embeddings_NNS for_IN CNN_NNP ._.
+If_IN there_EX are_VBP L_NNP words_NNS in_IN a_DT sentence_NN ,_, combine_VBP their_PRP$ word_NN embeddings_NNS together_RB to_TO construct_VB a_DT matrix_NN of_IN size_NN L_NNP ×_CD D_NNP as_IN shown_VBN in_IN Figure_NN 1_CD ._.
+L_NNP =_SYM 60_CD is_VBZ set_VBN since_IN fixed_VBN L_NNP is_VBZ needed_VBN ,_, and_CC which_WDT means_VBZ ,_, only_RB 60_CD words_NNS are_VBP preserved_VBN from_IN the_DT beginning_NN of_IN a_DT review_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, if_IN the_DT length_NN is_VBZ less_JJR than_IN 60_CD ,_, the_DT matrix_NN will_MD be_VB filled_VBN with_IN used_VBN vectors_NNS from_IN the_DT beginning_NN of_IN the_DT review_NN by_IN repeating_VBG them_PRP ._.
+At_IN last_JJ ,_, every_DT review_NN is_VBZ represented_VBN by_IN a_DT matrix_NN of_IN size_NN 60_CD ×_CD 60_CD ._.
+Formally_RB ,_, in_IN computer_NN vision_NN ,_, given_VBN n_JJ images_NNS -LRB-_-LRB- Xl_NNP ,_, l_NN =_SYM 1_CD ,_, ..._: ,_, n_VBN -RRB-_-RRB- of_IN size_NN r_SYM ×_FW c_NN ,_, k_NN kernels_NNS of_IN size_NN Figure_NN 1_CD :_: Illustration_NNP of_IN Convnets_NNPS a_DT ×_NN b_NN are_VBP set_VBN ._.
+For_IN each_DT kernel_NN patches_VBZ a_DT small_JJ image_NN -LRB-_-LRB- Xs_NNPS -RRB-_-RRB- in_IN the_DT large_JJ image_NN -LRB-_-LRB- Xl_NNP -RRB-_-RRB- ,_, K_NNP -LRB-_-LRB- kerneli_FW ,_, Xs_NNP -RRB-_-RRB- is_VBZ computed_JJ ,_, where_WRB K_NNP -LRB-_-LRB- -RRB-_-RRB- is_VBZ the_DT kernel_NN function_NN ,_, giving_VBG us_PRP k_NN ×_NN -LRB-_-LRB- r_SYM −_FW a_FW +_FW 1_LS -RRB-_-RRB- ×_CD -LRB-_-LRB- c_NN −_CD b_NN +_SYM 1_LS -RRB-_-RRB- array_NN of_IN convolved_JJ features_NNS -LRB-_-LRB- more_JJR detail_NN ,_, see_VBP the_DT tutorial3_CD -RRB-_-RRB- ._.
+Max-pooling_NN is_VBZ the_DT key_JJ module_NN to_TO help_VB training_NN deeper_JJR model_NN ._.
+It_PRP works_VBZ like_IN this_DT :_: Expect_VB that_IN there_EX is_VBZ a_DT 60_CD ×_NN 60_CD matrix_NN ._.
+Let_NNP 's_POS set_VBN pooling_VBG size_NN 10_CD ×_CD 10_CD ,_, then_RB the_DT 60_CD ×_NN 60_CD matrix_NN will_MD be_VB divided_VBN into_IN 36_CD small_JJ matrixes_NNS of_IN size_NN 10_CD ×_CD 10_CD ._.
+Just_RB pick_VB the_DT biggest_JJS value_NN in_IN each_DT small_JJ matrix_NN and_CC combine_VB them_PRP together_RB ._.
+At_IN last_JJ a_DT 6_CD ×_NN 6_CD matrix_NN instead_RB of_IN 60_CD ×_CD 60_CD matrix_NN is_VBZ gotten_VBN ._.
+Extending_VBG the_DT implementation_NN 4_CD of_IN the_DT lenet5_NNS -LRB-_-LRB- LeCun_JJ et_FW al._FW ,_, 1998_CD -RRB-_-RRB- ,_, the_DT convolutional_JJ layer_NN and_CC max-pooling_NN layer_NN are_VBP merged_VBN as_IN one_CD layer_NN ._.
+The_DT structure_NN of_IN ConvNets_NNS used_VBN is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+Layer_NN Frame_NN Kernel_NNP Kernel_NNP size_NN Pool_NNP 1_CD 60_CD ×_NN 60_CD 40_CD 5_CD ×_NN 5_CD 2_CD ×_CD 1_CD 2_CD 28_CD ×_NN 56_CD 50_CD 3_CD 12_CD ×_NN 52_CD 50_CD 4_CD 4_CD ×_NN 48_CD −_NN 5_CD ×_NN 5_CD 2_CD ×_CD 1_CD 5_CD ×_NN 5_CD 2_CD ×_NN 1_CD −_CD −_NN Table_NNP 2_CD :_: Parameters_NNS of_IN CNN_NNP layers_NNS With_IN the_DT fourth_JJ layer_NN ,_, a_DT fully-connect_JJ sigmoidal_JJ layer_NN is_VBZ constructed_VBN to_TO classify_VB the_DT output_NN values_NNS ._.
+After_IN experiments_NNS ,_, there_EX are_VBP some_DT rules_NNS can_MD be_VB con_JJ -_: cluded_VBN :_: •_CD The_DT quantity_NN of_IN the_DT word_NN embedding_VBG dimen_NNS -_: sions_NNS shall_MD be_VB more_JJR than_IN 50_CD ._.
+•_CD Do_VBP not_RB use_VB pooling_VBG between_IN the_DT dimensions_NNS of_IN word_NN embedding_NN -LRB-_-LRB- thus_RB ,_, in_IN Table_NNP 2_CD ,_, the_DT size_NN of_IN pooling_VBG is_VBZ 2_CD ×_CD 1_CD -RRB-_-RRB- ._.
+•_NNP Adding_VBG more_RBR fully-connect_JJ sigmoidal_JJ layer_NN dose_NN not_RB help_VB in_IN improving_VBG F1_NNP score_NN ._.
+3_CD http://ufldl.stanford.edu/wiki/index.php_NN 4_CD http://deeplearning.net/tutorial/lenet.html#lenet_NN 0.90_CD 0.88_CD 0.86_CD 0.84_CD 0.82_CD 0.80_CD 0.78_CD 0.76_CD 0.74_CD 0.3_CD 0.6_CD 0.9_CD 1.2_CD 1.5_CD 1.8_CD 2.1_CD 2.4_CD amount_NN of_IN reviews_NNS -LRB-_-LRB- 10_CD ^_NN 3_CD -RRB-_-RRB- 2.7_CD 3.0_CD best_JJS f_LS LR_NNP performance_NN o_NN best_JJS performance_NN o_NN worst_JJS performance_NN worst_JJS performance_NN f_LS NB_NNP of_IN LR_NNP of_IN NB_NNP 0.90_CD 0.88_CD 0.86_CD 0.84_CD 0.82_CD 0.80_CD 0.78_CD 0.76_CD 0.740_CD 20_CD 40_CD 60_CD 80_CD amount_NN of_IN reviews_NNS -LRB-_-LRB- 10_CD ^_NN 3_CD -RRB-_-RRB- 160_CD 180_CD best_JJS f_LS LR_NNP performance_NN o_NN best_JJS performance_NN o_NN worst_JJS performance_NN worst_JJS performance_NN f_LS NB_NNP of_IN LR_NNP of_IN NB_NNP 100 120 140_CD -LRB-_-LRB- a_DT -RRB-_-RRB- The_DT worst_JJS performance_NN of_IN NB_NNP is_VBZ worse_JJR than_IN the_DT best_JJS -LRB-_-LRB- b_NN -RRB-_-RRB- The_DT worst_JJS performance_NN of_IN NB_NNP is_VBZ better_JJR than_IN the_DT best_JJS performance_NN of_IN LR_NNP performance_NN of_IN LR_NNP Figure_NNP 2_CD :_: The_DT performance_NN curves_VBZ with_IN different_JJ amount_NN of_IN reviews_NNS ._.
+4_CD Experiment_NN results_NNS 4.1_CD Corpuses_NNP Unlike_IN English_NNP corpuses_NNS ,_, Chinese_JJ corpuses_NNS are_VBP rel_SYM -_: atively_RB small_JJ and_CC usually_RB focus_VB on_IN POS_NNP tagging_VBG -LRB-_-LRB- Mingqin_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ,_, parsing_NN -LRB-_-LRB- Xue_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- and_CC translating_VBG -LRB-_-LRB- Xiao_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+In_IN Chinese_JJ sentiment_NN classification_NN ,_, the_DT most_RBS popular_JJ corpus_NN is_VBZ ChnSen_NNP -_: tiCorp_NNP -LRB-_-LRB- Tan_NNP and_CC Zhang_NNP ,_, 2008_CD -RRB-_-RRB- with_IN 7,000_CD positive_JJ reviews_NNS and_CC 3,000_CD negative_JJ reviews5_NNS ._.
+Since_IN the_DT amount_NN of_IN data_NNS collected_VBN by_IN previous_JJ Chinese_JJ NLP_NNP researchers_NNS is_VBZ too_RB small_JJ for_IN our_PRP$ work_NN ,_, we_PRP build_VBP a_DT new_JJ corpus_NN ,_, MioChnCorp_NNP ,_, with_IN a_DT million_CD Chinese_JJ hotel_NN reviews_NNS ._.
+The_DT corpus_NN is_VBZ public_JJ and_CC can_MD be_VB downloaded_VBN directly6_CD ._.
+The_DT reviews_NNS are_VBP crawled_VBN and_CC filtrated_VBN from_IN the_DT website7_CD which_WDT has_VBZ coarse-grained_VBN rating_NN -LRB-_-LRB- 5-star_JJ scale_NN -RRB-_-RRB- for_IN each_DT review_NN ._.
+We_PRP give_VBP up_RP the_DT 3-star_JJ reviews_NNS which_WDT may_MD be_VB ambiguous_JJ ,_, and_CC mark_NN the_DT five-star_JJ and_CC four-star_JJ reviews_NNS as_IN positive_JJ and_CC the_DT rest_NN as_IN negative_JJ ._.
+Finally_RB 908189_CD positive_JJ reviews_NNS and_CC 101762_CD negative_JJ reviews_NNS are_VBP obtained_VBN ._.
+After_IN word_NN segmentation8_CD being_VBG done_VBN ,_, the_DT sentiment_NN classification_NN process_NN is_VBZ executed_VBN ._.
+Since_IN ChnSentiCorp_NNP is_VBZ small_JJ ,_, the_DT result_NN may_MD be_VB unstable_JJ ._.
+Thus_RB ,_, Tan_NNP and_CC Zhang_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- gave_VBD the_DT best_JJS performance_NN and_CC mean_VB performance_NN to_TO evaluate_VB a_DT classification_NN method_NN ._.
+Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- tried_VBD to_TO get_VB 5_CD http://www.datatang.com/data/11936_CD 6_CD http://pan.baidu.com/s/1dDo9s8h_NN 7_CD http://www.dianping.com/hotel_NN 8_CD https://github.com/fxsjy/jieba_NN a_DT believable_JJ result_NN using_VBG the_DT average_JJ value_NN from_IN 30_CD experiments_NNS ._.
+See_VB Figure_NN 2_CD ,_, Naive_NNP Bayes_NNP and_CC Logis_NNP -_: tic_JJ Regression_NN are_VBP used_VBN as_IN classification_NN methods_NNS to_TO show_VB the_DT performance_NN curves_VBZ with_IN different_JJ amount_NN of_IN reviews_NNS ._.
+The_DT first_JJ sub-graph_NN is_VBZ tested_VBN on_IN ChnSen_NNP -_: tiCorp_NNP ,_, the_DT second_JJ on_IN is_VBZ tested_VBN on_IN MioChNCorp_NNP ._.
+Balanced_JJ corpuses_NNS are_VBP split_VBN into_IN 3_CD equal-sized_JJ folds_NNS ,_, two_CD for_IN training_NN ,_, the_DT rest_NN for_IN testing_NN ._.
+After_IN repeating_VBG each_DT experiment_NN five_CD times_NNS ,_, the_DT best_JJS performance_NN and_CC worst_JJS performance_NN are_VBP marked_VBN ._.
+At_IN last_JJ ,_, two_CD con_NN -_: clusions_NNS can_MD be_VB made_VBN :_: Firstly_RB ,_, when_WRB the_DT amount_NN of_IN reviews_NNS is_VBZ less_JJR than_IN 60,000_CD ,_, the_DT performance_NN will_MD be_VB improbable_JJ -LRB-_-LRB- the_DT best_JJS performance_NN of_IN model_NN minus_CC worst_JJS performance_NN is_VBZ bigger_JJR than_IN 0.01_CD -RRB-_-RRB- ._.
+Secondly_RB ,_, more_JJR data_NNS usually_RB help_VBP to_TO get_VB better_JJR performance_NN ,_, but_CC the_DT performance_NN will_MD be_VB finally_RB stable_JJ when_WRB data_NNS are_VBP big_JJ enough_RB -LRB-_-LRB- e.g._FW ,_, 120,000_CD reviews_NNS -RRB-_-RRB- ._.
+4.2_CD The_DT performance_NN measure_NN F1_CD score_NN -LRB-_-LRB- also_RB called_VBN F-measure_NN -RRB-_-RRB- is_VBZ a_DT measurement_NN of_IN a_DT test_NN 's_POS accuracy_NN which_WDT combines_VBZ recall_NN and_CC pre_NN -_: cision_NN as_IN follows_VBZ :_: F1_CD =_SYM 2_CD ·_CD Precision_NNP ·_NNP Recall_VB P_NNP recision_NN +_NN Recall_VB correct_JJ positive_JJ predictions_NNS amount_NN Recall_VB =_SYM positive_JJ example_NN amount_NN P_NNP recision_NN =_SYM correct_JJ positive_JJ predictions_NNS amount_NN positive_JJ predictions_NNS amount_NN since_IN there_EX are_VBP two_CD categories_NNS -LRB-_-LRB- positive_JJ and_CC negative_JJ -RRB-_-RRB- in_IN MioChnCorp_NNP ,_, Macro_NNP F1_NNP is_VBZ used_VBN to_TO evaluate_VB the_DT F1_NNP score_NN F1_CD score_NN performance_NN of_IN classification_NN method_NN over_IN the_DT cor_NN -_: pus_VBZ Macro_NNP F1_NNP =_SYM Postive_JJ F1_CD +_NN Negative_JJ F1_NN 2_CD in_IN the_DT rest_NN of_IN this_DT article_NN ,_, F1_CD score_NN means_VBZ Macro_NNP F1_NNP score_NN ._.
+4.3_CD Experimental_JJ design_NN Nine_CD methods_NNS are_VBP designed_VBN to_TO classify_VB MioChnCorp_NNP using_VBG different_JJ features_NNS ._.
+NB_NNP and_CC ME_NNP use_VBP 10543_CD words_NNS -LRB-_-LRB- the_DT sentimental_JJ words_NNS and_CC CHI_NNP words_NNS -RRB-_-RRB- ._.
+LinearSVC_NNP use_NN unigram_NN and_CC bigram_NN ._.
+Five_CD methods_NNS -LRB-_-LRB- SVC_NNP ,_, LR_NNP ,_, AdaBoost_NNP ,_, Gradient_NNP Tree_NNP Boosting_NNP -LRB-_-LRB- GBT_NNP -RRB-_-RRB- and_CC Random_NNP Forests_NNPS -LRB-_-LRB- RF_NNP -RRB-_-RRB- -RRB-_-RRB- use_VBP the_DT average_JJ vectors_NNS of_IN word_NN embeddings_NNS and_CC CHI_NNP words_NNS -LRB-_-LRB- extending_VBG the_DT dimension_NN quantity_NN to_TO 450_CD -RRB-_-RRB- ._.
+CNN_NNP use_VBP the_DT matrix_NN constructed_VBN by_IN word_NN embeddings_NNS from_IN words_NNS in_IN a_DT review_NN as_IN feature_NN ._.
+Though_IN all_DT of_IN these_DT models_NNS are_VBP effective_JJ ,_, the_DT combination_NN of_IN different_JJ machine_NN learning_VBG methods_NNS is_VBZ supposed_VBN to_TO acquire_VB better_JJR F1_NNP score_NN ._.
+There_EX are_VBP two_CD ways_NNS to_TO combine_VB those_DT methods_NNS ._.
+First_NNP is_VBZ vote_NN ,_, the_DT idea_NN is_VBZ simple_JJ ,_, ``_`` the_DT minority_NN is_VBZ subordinate_JJ to_TO the_DT majority_NN ''_'' -LRB-_-LRB- marked_VBN as_IN Vote_NN all_RB -RRB-_-RRB- ._.
+The_DT other_JJ way_NN is_VBZ to_TO over-fit_VB in_IN the_DT validate_JJ set_NN ._.
+Add_VB one_CD more_JJR fold_VB for_IN validating_VBG into_IN these_DT tree_NN folds_VBZ ._.
+After_IN training_NN ,_, nine_CD models_NNS will_MD be_VB constructed_VBN ._.
+And_CC each_DT model_NN gives_VBZ one_CD predication_NN list_NN for_IN validating_VBG set_NN ._.
+For_IN each_DT review_NN ,_, there_EX are_VBP nine_CD predications_NNS -LRB-_-LRB- e.g._FW ,_, -LSB-_JJ 0_CD 0_CD 1_CD 0_CD 1_CD 0_CD 0_CD 1_CD 0_CD -RSB-_NNP ,_, 0_CD means_VBZ negative_JJ ,_, 1_CD means_VBZ positive_JJ -RRB-_-RRB- ._.
+Using_VBG the_DT predication_NN vectors_NNS of_IN validating_VBG reviews_NNS as_IN input_NN ,_, and_CC the_DT labels_NNS of_IN validating_VBG reviews_NNS as_IN the_DT Logistic_NNP Regression_NN output_NN ,_, after_IN training_NN on_IN validating_VBG set_NN ,_, the_DT combination_NN model_NN -LRB-_-LRB- called_VBN LR_NNP all_PDT -RRB-_-RRB- is_VBZ built_VBN to_TO test_VB on_IN testing_NN set_NN ._.
+The_DT Framework_NNP of_IN LR_NNP all_DT is_VBZ shown_VBN in_IN Algorithm_NNP 1_CD ._.
+4.4_CD Comparison_NNP and_CC analysis_NN Table_NNP 3_CD ,_, Table_NNP 4_CD and_CC Table_NNP 5_CD show_VBP the_DT perfor_NN -_: mance_NN of_IN different_JJ machine_NN learning_VBG methods_NNS ._.
+Sub_SYM -_: jected_VBN to_TO hardware_NN recourse_NN -LRB-_-LRB- RAM_NNP :8_CD G_NNP ,_, CPU_NNP :_: Intel_NNP I5_NNP ,_, GPU_NNP :_: GTX960M_NNP -RRB-_-RRB- ,_, the_DT experiments_NNS are_VBP explored_VBN over_IN corpuses_NNS with_IN tree_NN size_NN :_: 40,000_CD ,_, 80,000_CD and_CC 120,000_CD ._.
+Each_DT corpus_NN is_VBZ divided_VBN into_IN four_CD folds_NNS which_WDT are_VBP equal_JJ in_IN size_NN ,_, two_CD for_IN training_NN ,_, one_CD for_IN validating_VBG ,_, the_DT rest_NN for_IN testing_NN ._.
+Algorithm_NNP 1_CD Framework_NN of_IN combination_NN model_NN Input_NNP :_: The_DT experiment_NN set_NN of_IN labelled_VBN samples_NNS :_: train_NN set_NN ,_, validate_VBP set_VBN and_CC test_NN set_NN ;_: n_NN machine_NN learning_VBG classifiers_NNS -LRB-_-LRB- marked_VBN as_IN Ci_NNP ,_, i_FW =_SYM 1_CD ,_, ..._: ,_, n_VBN -RRB-_-RRB- with_IN default_NN parameters_NNS Output_NN :_: For_IN each_DT classifier_NN Ci_NNP ,_, train_NN on_IN train_NN set_NN ;_: 1_CD :_: TestonvalidatesetbyCiandstoringpredica_NNP -_: tion_NN as_IN validate_NN list_NN i_FW ;_: 2_CD :_: Use_NNP logistic_JJ regression_NN to_TO predicate_VB the_DT label_NN list_NN of_IN validate_NN set_VBN by_IN combination_NN data_NNS of_IN validate_NN list_NN i_FW -LRB-_-LRB- i_FW =_SYM 1_CD ,_, ..._: ,_, n_VBN -RRB-_-RRB- and_CC store_VBP the_DT model_NN as_IN LR_NNP all_DT ;_: 3_LS :_: For_IN each_DT classifier_NN Ci_NNP ,_, test_NN over_IN test_NN set_VBN ,_, and_CC storing_VBG the_DT predication_NN as_IN test_NN list_NN i_FW ;_: 4_LS :_: Use_NNP test_NN list_NN i_FW as_IN input_NN of_IN LR_NNP all_DT and_CC produce_VBP final_JJ predication_NN of_IN test_NN set_VBN ,_, storing_VBG as_IN test_NN list_NN 5_CD :_: return_VB Ci_NNP -LRB-_-LRB- i_FW =_SYM 1_CD ,_, ..._: ,_, n_VBN -RRB-_-RRB- ,_, LR_NNP all_DT ,_, test_NN list_NN ;_: There_EX are_VBP nine_CD methods_NNS to_TO construct_VB the_DT LR_NNP all_DT model_NN ,_, but_CC not_RB all_DT of_IN them_PRP make_VBP contribution_NN ._.
+Weka_NNP Explorer9_NNP provides_VBZ attribute_NN selection_NN module_NN to_TO choose_VB most_JJS useful_JJ attributes_NNS to_TO the_DT target_NN attribute_NN -LRB-_-LRB- namely_RB ,_, the_DT label_NN list_NN of_IN validate_NN set_VBN in_IN our_PRP$ situation_NN -RRB-_-RRB- ._.
+Extracting_VBG the_DT validate_NN list_NN i_FW -LRB-_-LRB- 0_CD <_CD =_SYM i_FW <_FW n_FW -RRB-_-RRB- used_VBN in_IN Algorithm_NNP 1_CD ,_, and_CC combining_VBG these_DT nine_CD prediction_NN lists_NNS with_IN the_DT label_NN list_NN of_IN validate_JJ set_NN ,_, totally_RB ,_, ten_CD attributes_NNS will_MD be_VB gotten_VBN ._.
+With_IN 10-fold_JJ cross-validation_NN ,_, CfsSubsetEval_NNP attribute_NN evaluator_NN and_CC BestFisrt_NNP search_NN Method_NNP ,_, Weka_NNP selects_VBZ five_CD most_RBS valuable_JJ attributes_NNS -LRB-_-LRB- ME_NNP ,_, SVC_NNP ,_, LinearSVC_NNP ,_, RF_NNP and_CC CNN_NNP -RRB-_-RRB- ._.
+It_PRP is_VBZ reasonable_JJ because_IN they_PRP are_VBP most_RBS outstanding_JJ machine_NN learning_VBG models_NNS which_WDT represent_VBP their_PRP$ own_JJ feature_NN selection_NN methods_NNS ._.
+Considering_VBG the_DT limit_NN of_IN hardware_NN resource_NN and_CC running_VBG time_NN ,_, LR_NNP is_VBZ used_VBN to_TO instead_RB of_IN SVC_NNP and_CC CNN_NNP is_VBZ abandoned_VBN ._.
+The_DT result_NN is_VBZ shown_VBN in_IN Figure_NN 3_CD ._.
+To_TO our_PRP$ surprise_NN ,_, even_RB only_RB four_CD feature_NN is_VBZ chosen_VBN ,_, the_DT F1_NNP score_NN is_VBZ not_RB reduced_VBN ._.
+The_DT more_JJR reviews_NNS we_PRP use_VBP in_IN model_NN building_NN ,_, typically_RB the_DT better_JJR performance_NN we_PRP get_VBP till_IN the_DT per_FW -_: formance_NN is_VBZ stable_JJ ._.
+SVM_NNP -LRB-_-LRB- linearSVC_NNP and_CC SVC_NNP with_IN linear_JJ kernel_NN -RRB-_-RRB- has_VBZ best_JJS performance_NN not_RB only_RB 9http_CD :_: /_SYM /_SYM www.cs.waikato.ac.nz/ml/weka/_FW per_FW formanc_FW e_LS of_IN LR_NNP __CD all_DT performanc_NN performanc_NN e_LS of_IN LinearSVC_NNP performanc_NN performanc_NN e_LS of_IN RF_NNP e_LS of_IN LR_NNP e_LS of_IN ME_NNP 0.92_CD 0.91_CD 0.90_CD 0.89_CD 0.88_CD 0.87_CD 0.86_CD 0.85_CD 2_CD 4_CD 6_CD 8_CD 10_CD 12_CD 14_CD 16_CD 18_CD 20_CD amount_NN of_IN reviews_NNS -LRB-_-LRB- 10_CD ^_NN 4_LS -RRB-_-RRB- Pre0_JJ Rec0_NNP Pre1_NNP Rec1_NNP F1_NNP NB_NNP .843_CD ME_NNP .914_CD LinearSVC_NNP .898_CD LR_NNP .902_CD SVC_NNP .910_CD Adaboost_NNP .898_CD GBT_NNP .897_CD RF_NNP .910_CD CNN_NNP .905_CD Vote_NN all_DT .790_CD LR_NNP all_DT .915_CD .896_CD .889_CD .850_CD .859_CD .881_CD .883_CD .879_CD .882_CD .878_CD .882_CD .867_CD .871_CD .866_CD .870_CD .850_CD .860_CD .865_CD .870_CD .955_CD .943_CD .893_CD .896_CD .833_CD .864_CD .910_CD .880_CD .900_CD .890_CD .905_CD .892_CD .913_CD .895_CD .902_CD .885_CD .890_CD .883_CD .916_CD .883_CD .909_CD .887_CD .747_CD .849_CD .917_CD .905_CD Table_NNP 3_CD :_: Different_JJ performance_NN over_IN 40,000_CD reviews_NNS Pre0_JJ Rec0_NNP Pre1_NNP Rec1_NNP F1_NNP Figure_NNP 3_CD :_: The_DT performance_NN curves_NNS of_IN combination_NN model_NN and_CC sub-models_NNS with_IN different_JJ amount_NN of_IN reviews_NNS not_RB reach_VB the_DT expectant_JJ performance_NN ._.
+Firstly_RB ,_, the_DT amount_NN of_IN reviews_NNS is_VBZ not_RB big_JJ enough_RB to_TO train_VB a_DT deep_JJ learning_NN model_NN ._.
+Secondly_RB ,_, the_DT architecture_NN of_IN the_DT model_NN may_MD not_RB be_VB enough_JJ suitable_JJ as_IN a_DT language_NN model_NN ._.
+Finally_RB ,_, the_DT features_NNS -LRB-_-LRB- word_NN embeddings_NNS with_IN 60_CD dimensions_NNS -RRB-_-RRB- for_IN CNN_NNP is_VBZ not_RB accurate_JJ enough_RB to_TO present_VB syntax_NN and_CC semantics_NNS in_IN sentence_NN ._.
+Vote_NN all_DT does_VBZ not_RB work_VB well_RB in_IN improving_VBG performance_NN ,_, but_CC has_VBZ the_DT highest_JJS negative_JJ recall_NN and_CC positive_JJ preci_NNS -_: sion_NN ._.
+LR_NNP all_DT has_VBZ better_JJR performance_NN than_IN Vote_NN all_DT because_IN the_DT same_JJ weights_NNS chosen_VBN by_IN Vote_NN all_DT make_VBP these_DT sub-models_NNS are_VBP equally_RB important_JJ ._.
+5_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT article_NN ,_, an_DT empirical_JJ study_NN of_IN sentiment_NN cate_NN -_: gorization_NN on_IN Chinese_JJ hotel_NN review_NN is_VBZ introduced_VBN ._.
+In_IN order_NN to_TO conduct_VB this_DT experiment_NN ,_, a_DT Chinese_JJ corpus_NN ,_, MioChnCorp10_NNP ,_, with_IN a_DT million_CD Chinese_JJ hotel_NN re_SYM -_: views_NNS is_VBZ collected_VBN ._.
+Using_VBG MioChnCorp_NNP ,_, a_DT word2vec_JJ model_NN is_VBZ trained_VBN to_TO present_VB distributed_VBN representa_SYM -_: tions_NNS of_IN words_NNS and_CC phrases_NNS in_IN Chinese_JJ hotel_NN domain_NN ._.
+Then_RB the_DT experimental_JJ results_NNS indicate_VBP that_IN the_DT more_RBR data_NNS we_PRP use_VBP ,_, the_DT better_JJR performance_NN we_PRP get_VBP ._.
+And_CC 60,000_CD or_CC larger_JJR size_NN -LRB-_-LRB- e.g._FW 120,000_CD -RRB-_-RRB- of_IN reviews_NNS are_VBP sufficient_JJ in_IN sentiment_NN analysis_NN of_IN Chinese_JJ hotel_NN review_NN ._.
+What_WP 's_VBZ more_JJR ,_, we_PRP employ_VBP word_NN embeddings_NNS as_IN input_NN features_NNS without_IN any_DT sentiment_NN lexicons_NNS ,_, and_CC find_VB such_JJ features_NNS perform_VBP well_RB by_IN using_VBG ensemble_NN methods_NNS ,_, LR_NNP ,_, SVM_NNP and_CC CNN_NNP ._.
+With_IN respect_NN to_TO these_DT learning_VBG methods_NNS ,_, SVM_NNP works_VBZ best_JJS ._.
+Though_IN CNN_NNP 10_CD http://pan.baidu.com/s/1dDo9s8h_NNP NB_NNP .836_CD .900_CD ME_NNP .907_CD .853_CD LinearSVC_NNP .895_CD .886_CD LR_NNP .910_CD .876_CD SVC_NNP .910_CD .876_CD Adaboost_NNP .899_CD .866_CD GBT_NNP .897_CD .868_CD RF_NNP .910_CD .868_CD CNN_NNP .904_CD .864_CD Vote_NN all_DT .786_CD .957_CD LR_NNP all_DT .915_CD .895_CD .892_CD .823_CD .862_CD .861_CD .913_CD .883_CD .887_CD .897_CD .891_CD .880_CD .913_CD .894_CD .880_CD .914_CD .895_CD .871_CD .903_CD .884_CD .872_CD .901_CD .885_CD .874_CD .914_CD .891_CD .869_CD .909_CD .886_CD .945_CD .739_CD .846_CD .897_CD .912_CD .906_CD Table_NNP 4_CD :_: Different_JJ performance_NN over_IN 80,000_CD reviews_NNS Pre0_JJ Rec0_NNP Pre1_NNP Rec1_NNP F1_NNP NB_NNP .839_CD .900_CD ME_NNP .908_CD .850_CD LinearSVC_NNP .900_CD .891_CD LR_NNP .897_CD .882_CD SVC_NNP .905_CD .881_CD Adaboost_NNP .896_CD .864_CD GBT_NNP .896_CD .867_CD RF_NNP .910_CD .870_CD CNN_NNP .915_CD .853_CD Vote_NN all_DT .777_CD .965_CD LR_NNP all_DT .917_CD .901_CD .892_CD .827_CD .863_CD .859_CD .913_CD .882_CD .892_CD .901_CD .896_CD .884_CD .900_CD .890_CD .884_CD .907_CD .894_CD .869_CD .899_CD .882_CD .871_CD .890_CD .883_CD .876_CD .914_CD .892_CD .862_CD .920_CD .887_CD .953_CD .724_CD .842_CD .903_CD .919_CD .910_CD Table_NNP 5_CD :_: Different_JJ performance_NN over_IN 120,000_CD reviews_NNS in_IN traditional_JJ bag_NN of_IN words_NNS models_NNS ,_, but_CC also_RB in_IN word_NN embedding_VBG models_NNS ._.
+Three_CD ensemble_NN methods_NNS work_VBP similarly_RB and_CC bigger_JJR data_NNS help_VBP to_TO improve_VB their_PRP$ performance_NN obviously_RB ._.
+There_EX may_MD be_VB three_CD reasons_NNS why_WRB CNN_NNP works_VBZ better_RBR than_IN NB_NNP and_CC ME_NNP ,_, but_CC does_VBZ F1_CD score_NN works_VBZ not_RB as_RB good_JJ as_IN expect_VBP ,_, it_PRP still_RB has_VBZ better_JJR performance_NN than_IN NB_NNP and_CC ME_NNP ._.
+The_DT roles_NNS we_PRP used_VBD to_TO construct_VB the_DT CNN_NNP model_NN is_VBZ introduce_VB in_IN Section_NN 3_CD ._.
+Finally_RB ,_, a_DT methodology_NN ,_, LR_NNP all_DT is_VBZ constructed_VBN to_TO combine_VB different_JJ machine_NN learning_VBG methods_NNS and_CC get_VB an_DT outstanding_JJ performance_NN in_IN precision_NN ,_, recall_NN and_CC F1_CD score_NN of_IN 0.920_CD ._.
+In_IN the_DT future_NN ,_, more_JJR work_NN will_MD be_VB explored_VBN in_IN building_VBG better_JJR CNN_NNP model_NN for_IN Chinese_JJ sentimental_JJ analysis_NN and_CC constructing_VBG combinational_JJ model_NN in_IN other_JJ tasks_NNS of_IN NLP_NNP using_VBG word_NN embedding_NN ._.
+6_CD Acknowledgements_NNS The_DT financial_JJ support_NN for_IN this_DT work_NN is_VBZ provided_VBN by_IN The_DT Fundamental_JJ Research_NNP Funds_NNPS for_IN the_DT Central_NNP Universities_NNS ,_, No_UH ._.
+ZYGX2014J065_NNS ._.
+References_NNS Steven_NNP Bird_NNP ._.
+2006_CD ._.
+Nltk_NNP :_: the_DT natural_JJ language_NN toolkit_NN ._.
+In_IN Proceedings_NNP of_IN the_DT COLING/ACL_NNP on_IN Interactive_NNP presentation_NN sessions_NNS ,_, pages_NNS 69_CD --_: 72_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Ronan_NNP Collobert_NNP ,_, Jason_NNP Weston_NNP ,_, Le_NNP ́on_NNP Bottou_NNP ,_, Michael_NNP Karlen_NNP ,_, Koray_NNP Kavukcuoglu_NNP ,_, and_CC Pavel_NNP Kuksa_NNP ._.
+2011_CD ._.
+Natural_JJ language_NN processing_NN -LRB-_-LRB- almost_RB -RRB-_-RRB- from_IN scratch_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 12:2493_CD --_: 2537_CD ._.
+Corinna_NNP Cortes_NNP and_CC Vladimir_NNP Vapnik_NNP ._.
+1995_CD ._.
+Support_NN -_: vector_NN networks_NNS ._.
+Machine_NN learning_NN ,_, 20_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :273_CD --_: 297_CD ._.
+Kushal_NNP Dave_NNP ,_, Steve_NNP Lawrence_NNP ,_, and_CC David_NNP M_NNP Pennock_NNP ._.
+2003_CD ._.
+Mining_NN the_DT peanut_NN gallery_NN :_: Opinion_NN extraction_NN and_CC semantic_JJ classification_NN of_IN product_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 12th_JJ international_JJ conference_NN on_IN World_NNP Wide_NNP Web_NNP ,_, pages_NNS 519_CD --_: 528_CD ._.
+ACM_NNP ._.
+Thomas_NNP G_NNP Dietterich_NNP ._.
+2000_CD ._.
+Ensemble_NN methods_NNS in_IN machine_NN learning_NN ._.
+In_IN Multiple_JJ classifier_NN systems_NNS ,_, pages_NNS 1_CD --_: 15_CD ._.
+Springer_NNP ._.
+Zhendong_NNP Dong_NNP and_CC Qiang_NNP Dong_NNP ._.
+2006_CD ._.
+HowNet_NNP and_CC the_DT Computation_NNP of_IN Meaning_NNP ._.
+World_NNP Scientific_NNP ._.
+Jerome_NNP H_NNP Friedman_NNP ._.
+2001_CD ._.
+Greedy_JJ function_NN approximation_NN :_: a_DT gradient_NN boosting_VBG machine_NN ._.
+Annals_NNS of_IN statistics_NNS ,_, pages_NNS 1189_CD --_: 1232_CD ._.
+Luigi_NNP Galavotti_NNP ,_, Fabrizio_NNP Sebastiani_NNP ,_, and_CC Maria_NNP Simi_NNP ._.
+2000_CD ._.
+Feature_NN selection_NN and_CC negative_JJ evidence_NN in_IN automated_JJ text_NN categorization_NN ._.
+In_IN Proceedings_NNP of_IN KDD_NNP ._.
+Edwin_NNP T_NNP Jaynes_NNP ._.
+1957_CD ._.
+Information_NN theory_NN and_CC statistical_JJ mechanics_NNS ._.
+Physical_JJ review_NN ,_, 106_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :620_CD ._.
+Rie_NNP Johnson_NNP and_CC Tong_NNP Zhang_NNP ._.
+2014_CD ._.
+Effective_JJ use_NN of_IN word_NN order_NN for_IN text_NN categorization_NN with_IN convolutional_JJ neural_JJ networks_NNS ._.
+arXiv_JJ preprint_NN arXiv_NNP :1412.1058_CD ._.
+Nal_NNP Kalchbrenner_NNP ,_, Edward_NNP Grefenstette_NNP ,_, and_CC Phil_NNP Blun_NNP -_: som_NN ._.
+2014_CD ._.
+A_DT convolutional_JJ neural_JJ network_NN for_IN modelling_VBG sentences_NNS ._.
+arXiv_JJ preprint_NN arXiv_NNP :1404.2188_CD ._.
+Yann_NNP LeCun_NNP ,_, Le_NNP ́on_NNP Bottou_NNP ,_, Yoshua_NNP Bengio_NNP ,_, and_CC Patrick_NNP Haffner_NNP ._.
+1998_CD ._.
+Gradient-based_JJ learning_VBG applied_VBN to_TO document_VB recognition_NN ._.
+Proceedings_NNP of_IN the_DT IEEE_NNP ,_, 86_CD -LRB-_-LRB- 11_CD -RRB-_-RRB- :2278_CD --_: 2324_CD ._.
+Jun_NN Li_NNP and_CC Maosong_NNP Sun_NNP ._.
+2007_CD ._.
+Experimental_JJ study_NN on_IN sentiment_NN classification_NN of_IN chinese_JJ review_NN using_VBG machine_NN learning_VBG techniques_NNS ._.
+In_IN Natural_JJ Language_NN Processing_NNP and_CC Knowledge_NNP Engineering_NNP ,_, 2007_CD ._.
+NLP_SYM -_: KE_NNP 2007_CD ._.
+International_NNP Conference_NNP on_IN ,_, pages_NNS 393_CD --_: 400_CD ._.
+IEEE_NNP ._.
+Bing_NNP Liu_NNP and_CC Lei_NNP Zhang_NNP ._.
+2012_CD ._.
+A_DT survey_NN of_IN opinion_NN mining_NN and_CC sentiment_NN analysis_NN ._.
+In_IN Mining_NNP text_NN data_NNS ,_, pages_NNS 415_CD --_: 463_CD ._.
+Springer_NNP ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP S_NNP Corrado_NNP ,_, and_CC Jeff_NNP Dean_NNP ._.
+2013a_NNS ._.
+Distributed_VBN representations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ compositionality_NN ._.
+In_IN Advances_NNS in_IN neural_JJ information_NN processing_NN systems_NNS ,_, pages_NNS 3111_CD --_: 3119_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Wen-tau_NNP Yih_NNP ,_, and_CC Geoffrey_NNP Zweig_NNP ._.
+2013b_JJ ._.
+Linguistic_JJ regularities_NNS in_IN continuous_JJ space_NN word_NN representations_NNS ._.
+In_IN HLT-NAACL_NNP ,_, pages_NNS 746_CD --_: 751_CD ._.
+Li_NNP Mingqin_NNP ,_, Li_NNP Juanzi_NNP ,_, Dong_NNP Zhendong_NNP ,_, Wang_NNP Zuoying_NNP ,_, and_CC Lu_NNP Dajin_NNP ._.
+2003_CD ._.
+Building_VBG a_DT large_JJ chinese_JJ corpus_NN annotated_VBN with_IN semantic_JJ dependency_NN ._.
+In_IN Proceedings_NNP of_IN the_DT second_JJ SIGHAN_NNP workshop_NN on_IN Chinese_JJ language_NN processing-Volume_JJ 17_CD ,_, pages_NNS 84_CD --_: 91_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Georgios_NNP Paltoglou_NNP and_CC Mike_NNP Thelwall_NNP ._.
+2010_CD ._.
+A_DT study_NN of_IN information_NN retrieval_NN weighting_NN schemes_NNS for_IN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 48th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1386_CD --_: 1395_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+and_CC sentiment_NN analysis_NN ._.
+information_NN retrieval_NN ,_, 2_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :1_CD --_: 135_CD ._.
+Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+:_: sentiment_NN classification_NN using_VBG machine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT ACL-02_NN conference_NN on_IN Empirical_JJ methods_NNS in_IN natural_JJ language_NN processing-Volume_JJ 10_CD ,_, pages_NNS 79_CD --_: 86_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Fabian_NNP Pedregosa_NNP ,_, Gae_NNP ̈l_NNP Varoquaux_NNP ,_, Alexandre_NNP Gramfort_NNP ,_, Vincent_NNP Michel_NNP ,_, Bertrand_NNP Thirion_NNP ,_, Olivier_NNP Grisel_NNP ,_, Mathieu_NNP Blondel_NNP ,_, Peter_NNP Prettenhofer_NNP ,_, Ron_NNP Weiss_NNP ,_, Vincent_NNP Dubourg_NNP ,_, et_FW al._FW 2011_CD ._.
+Scikit-learn_NN :_: Machine_NN 2008_CD ._.
+Opinion_NN mining_NN Foundations_NNS and_CC trends_NNS in_IN learning_VBG in_IN python_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 12:2825_CD --_: 2830_CD ._.
+Stephen_NNP Della_NNP Pietra_NNP ,_, Vincent_NNP Della_NNP Pietra_NNP ,_, and_CC John_NNP Lafferty_NNP ._.
+1997_CD ._.
+Inducing_VBG features_NNS of_IN random_JJ fields_NNS ._.
+Pattern_NN Analysis_NN and_CC Machine_NN Intelligence_NNP ,_, IEEE_NNP Transactions_NNS on_IN ,_, 19_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :380_CD --_: 393_CD ._.
+Greg_NNP Ridgeway_NNP ._.
+2007_CD ._.
+Generalized_NNP boosted_VBD models_NNS :_: A_DT guide_NN to_TO the_DT gbm_NN package_NN ._.
+Update_NNP ,_, 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :2007_CD ._.
+Songbo_NNP Tan_NNP and_CC Jin_NNP Zhang_NNP ._.
+2008_CD ._.
+An_DT empirical_JJ study_NN of_IN sentiment_NN analysis_NN for_IN chinese_JJ documents_NNS ._.
+Expert_NNP Systems_NNPS with_IN Applications_NNS ,_, 34_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :2622_CD --_: 2629_CD ._.
+Peter_NNP D_NNP Turney_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN or_CC thumbs_NNS down_IN ?_.
+:_: semantic_JJ orientation_NN applied_VBD to_TO unsupervised_JJ classification_NN of_IN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ annual_JJ meeting_NN on_IN association_NN for_IN computational_JJ linguistics_NNS ,_, pages_NNS 417_CD --_: 424_CD ._.
+Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNPS ._.
+Richard_NNP Xiao_NNP ._.
+2010_CD ._.
+How_WRB different_JJ is_VBZ translated_VBN chinese_JJ from_IN native_JJ chinese_NN ?_.
+a_DT corpus-based_JJ study_NN of_IN translation_NN universals_NNS ._.
+International_NNP Journal_NNP of_IN Corpus_NNP Linguistics_NNPS ,_, 15_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :5_CD --_: 35_CD ._.
+Puyang_NNP Xu_NNP and_CC Ruhi_NNP Sarikaya_NNP ._.
+2013_CD ._.
+Convolutional_JJ neural_JJ network_NN based_VBN triangular_JJ crf_NN for_IN joint_JJ intent_NN detection_NN and_CC slot_NN filling_NN ._.
+In_IN Automatic_NNP Speech_NNP Recognition_NNP and_CC Understanding_NNP -LRB-_-LRB- ASRU_NNP -RRB-_-RRB- ,_, 2013_CD IEEE_NNP Workshop_NNP on_IN ,_, pages_NNS 78_CD --_: 83_CD ._.
+IEEE_NNP ._.
+LH_NNP Xu_NNP ,_, HF_NNP Lin_NNP ,_, and_CC Jing_NNP Zhao_NNP ._.
+2008_CD ._.
+Construction_NN and_CC analysis_NN of_IN emotional_JJ corpus_NN ._.
+Journal_NNP of_IN Chinese_NNPS information_NN processing_NN ,_, 22_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :116_CD --_: 122_CD ._.
+Naiwen_NNP Xue_NNP ,_, Fei_NNP Xia_NNP ,_, Fu-Dong_NNP Chiou_NNP ,_, and_CC Marta_NNP Palmer_NNP ._.
+2005_CD ._.
+The_DT penn_JJ chinese_JJ treebank_NN :_: Phrase_NN structure_NN annotation_NN of_IN a_DT large_JJ corpus_NN ._.
+Natural_JJ language_NN engineering_NN ,_, 11_CD -LRB-_-LRB- 02_CD -RRB-_-RRB- :207_CD --_: 238_CD ._.
+Qiang_NNP Ye_NNP ,_, Bin_NNP Lin_NNP ,_, and_CC Yi-Jun_NNP Li_NNP ._.
+2005_CD ._.
+Sentiment_NN classification_NN for_IN chinese_JJ reviews_NNS :_: A_DT comparison_NN between_IN svm_NN and_CC semantic_JJ approaches_NNS ._.
+In_IN Machine_NN Learning_NNP and_CC Cybernetics_NNP ,_, 2005_CD ._.
+Proceedings_NNP of_IN 2005_CD International_NNP Conference_NNP on_IN ,_, volume_NN 4_CD ,_, pages_NNS 2341_CD --_: 2346_CD ._.
+IEEE_NNP ._.
+Zhongwu_NNP Zhai_NNP ,_, Hua_NNP Xu_NNP ,_, Bada_NNP Kang_NNP ,_, and_CC Peifa_NNP Jia_NNP ._.
+2011_CD ._.
+Exploiting_VBG effective_JJ features_NNS for_IN chinese_JJ sentiment_NN classification_NN ._.
+Expert_NNP Systems_NNPS with_IN Applications_NNS ,_, 38_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :9139_CD --_: 9146_CD ._.

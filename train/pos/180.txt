@@ -1,0 +1,760 @@
+A_DT Survey_NN on_IN Anaphora_NNP Resolution_NNP among_IN Asian_NNP Languages_NNP Abstract_NNP Anaphora_NNP resolution_NN identifies_VBZ the_DT relationship_NN between_IN two_CD entities_NNS those_DT refer_VBP to_TO the_DT same_JJ real_JJ world_NN object_NN ._.
+Almost_RB all_DT NLP_NNP applications_NNS such_JJ as_IN machine_NN translation_NN ,_, information_NN extraction_NN ,_, automatic_JJ summarization_NN ,_, question_NN answering_NN and_CC natural_JJ language_NN generation_NN requires_VBZ successful_JJ identification_NN and_CC resolution_NN of_IN anaphora_NN ._.
+Importance_NN of_IN this_DT field_NN in_IN various_JJ regional_JJ languages_NNS is_VBZ evident_JJ from_IN numerous_JJ research_NN results_NNS published_VBN recently_RB in_IN major_JJ journals_NNS and_CC conferences_NNS ._.
+This_DT article_NN presents_VBZ a_DT comprehensive_JJ survey_NN of_IN approaches_NNS followed_VBD in_IN various_JJ Asian_JJ languages_NNS including_VBG Arabic_NNP ,_, Chinese_NNP ,_, Hindi_NNP ,_, Japanese_NNP ,_, Tamil_NNP and_CC Turkish_JJ ,_, which_WDT covers_VBZ the_DT results_NNS of_IN almost_RB last_JJ twenty_CD years_NNS of_IN explore_VBP in_IN this_DT field_NN ._.
+Various_JJ research_NN issues_NNS faced_VBD including_VBG nature_NN ,_, special_JJ challenges_NNS ,_, approaches_VBZ selected_VBN ,_, feature_NN set_NN ,_, data_NNS sources_NNS and_CC evaluation_NN metrics_NNS of_IN each_DT language_NN is_VBZ discussed_VBN in_IN detail_NN ._.
+This_DT aims_VBZ to_TO act_VB as_IN a_DT preliminary_JJ aid_NN for_IN the_DT beginners_NNS who_WP delve_VBP into_IN anaphora_NN resolution_NN for_IN any_DT non-English_JJ language_NN ._.
+Introduction_NN On_IN one_CD side_NN this_DT is_VBZ a_DT boon_NN that_WDT human_JJ languages_NNS have_VBP evolved_VBN to_TO include_VB various_JJ shortcuts_NNS to_TO refers_VBZ the_DT previously_RB introduced_VBN entities_NNS in_IN the_DT discourse_NN ,_, on_IN the_DT other_JJ side_NN this_DT actually_RB not_RB a_DT bane_NN but_CC really_RB tough_JJ to_TO teach_VB computers_NNS the_DT art_NN of_IN figuring_VBG ,_, which_WDT short_RB cut_VBD goes_VBZ with_IN which_WDT entity_NN ._.
+Entities_NNS in_IN natural_JJ language_NN text_NN are_VBP not_RB identified_VBN with_IN convenient_JJ unit_NN ids_FW ,_, but_CC rather_RB with_IN constantly_RB changing_VBG descriptions_NNS ._.
+For_IN an_DT example_NN ,_, ``_`` David_NNP Ernest_NNP Duke_NNP -LRB-_-LRB- born_VBN July_NNP 1_CD ,_, 1950_CD -RRB-_-RRB- is_VBZ a_DT former_JJ Grand_NNP Wizard_NNP of_IN the_DT Knights_NNP of_IN the_DT Ku_NNP Klux_NNP Klan_NNP an_DT American_JJ activist_NN and_CC writer_NN ,_, and_CC former_JJ Republican_NNP Louisiana_NNP State_NNP Representative_NNP ._.
+He_PRP was_VBD a_DT candidate_NN in_IN the_DT Democratic_JJ Dr._NNP C._NNP Deisy_NNP Dept._NNP ._.
+Computer_NNP Science_NNP and_CC Engineering_NNP Thiagarajar_NNP College_NNP of_IN Engineering_NNP Madurai_NNP India_NNP cdcse@tce.edu_NNP presidential_JJ primaries_NNS in_IN 1988_CD and_CC the_DT Republican_JJ presidential_JJ primaries_NNS in_IN 1992_CD ._.
+Duke_NNP has_VBZ unsuccessfully_RB run_VBN for_IN the_DT Louisiana_NNP State_NNP Senate_NNP ,_, U.S._NNP Senate_NNP ,_, U.S._NNP House_NNP of_IN Representatives_NNPS ,_, and_CC Governor_NNP of_IN Louisiana_NNP ._. ''_''
+-LSB-_NNP Pablon_NNP 2013_CD -RSB-_NNP ._.
+Here_RB „_CD David_NNP Emest_NNP Duke_NNP ‟_CD ,_, „_CD He_PRP ‟_CD and_CC „_CD Duke_NNP ‟_IN the_DT three_CD descriptions_NNS refer_VBP the_DT same_JJ entity_NN ._.
+It_PRP is_VBZ essential_JJ to_TO construct_VB a_DT system_NN for_IN automatic_JJ detection_NN and_CC collection_NN of_IN all_DT textual_JJ descriptors_NNS that_WDT refer_VBP to_TO the_DT same_JJ entity_NN within_IN a_DT co-reference_NN chain_NN either_CC intra_NN or_CC inter_NN documents_NNS ._.
+The_DT problem_NN of_IN mapping_VBG linguistics_NNS expressions_NNS into_IN these_DT underlying_VBG entities_NNS is_VBZ known_VBN as_IN reference_NN resolution_NN ._.
+This_DT can_MD be_VB used_VBN to_TO find_VB the_DT complete_JJ information_NN about_IN an_DT entity_NN ,_, even_RB when_WRB referenced_VBN by_IN a_DT different_JJ name_NN ._.
+Anaphora_NNP is_VBZ the_DT reference_NN to_TO an_DT entity_NN that_WDT has_VBZ been_VBN previously_RB introduced_VBN into_IN the_DT discourse_NN ._.
+It_PRP describes_VBZ an_DT asymmetric_JJ relation_NN between_IN two_CD linguistic_JJ expressions_NNS ,_, an_DT anaphor_NN and_CC an_DT antecedent_NN where_WRB ,_, anaphor_NN -LRB-_-LRB- He_PRP -RRB-_-RRB- is_VBZ the_DT referring_VBG expression_NN and_CC antecedent_NN -LRB-_-LRB- David_NNP Emest_NNP Duke_NNP -RRB-_-RRB- is_VBZ the_DT one_CD being_VBG referred_VBN -LSB-_NNP Denis_NNP 2007_CD -RSB-_NNP ._.
+Both_DT corefer_JJ each_DT other_JJ ._.
+Anaphora_NNP expressions_NNS can_MD be_VB classified_VBN into_IN two_CD broad_JJ categories_NNS as_IN nominal_JJ -LSB-_NNP Katja_NNP et_NNP al._IN 2003_CD ;_: Katja_NNP and_CC Malvina_NNP 2005_CD -RSB-_NNP and_CC non-nominal_JJ anaphora_NN ._.
+Reflexive_JJ -LRB-_-LRB- himself_PRP -RRB-_-RRB- -LSB-_NNP Sobha_NNP and_CC Patnaik_NNP 1998_CD ;_: Petra_NNP et_NNP al._IN 2011_CD ;_: Li_NNP et_FW al._FW 2010_CD -RSB-_NNP ,_, pronoun_NN -LRB-_-LRB- he_PRP ,_, it_PRP -RRB-_-RRB- -LSB-_NNP Hobbs_NNP 1978_CD ;_: Bernan_NNP 1987_CD ;_: Mitkov_NNP 1998_CD ;_: Denis_NNP et_NNP al._IN 2007_CD -RSB-_NNP ,_, definite_JJ -LRB-_-LRB- The_DT book_NN -RRB-_-RRB- -LSB-_NNP Vieira_NNP and_CC Poesio_NNP 2000_CD ;_: Versley_NNP 2006_CD ;_: Naoyainoue_NNP et_NNP al._IN 2010_CD -RSB-_NNP and_CC demonstrative_JJ -LRB-_-LRB- That_DT man_NN -RRB-_-RRB- -LSB-_NNP Markert_NNP and_CC Nissim_NNP 2005_CD -RSB-_NNP are_VBP the_DT subclasses_NNS of_IN Nominal_JJ Anaphora_NNP and_CC gapping_NN -LRB-_-LRB- zero_CD anaphora_NN -RRB-_-RRB- -LSB-_NNP Yeh_NNP et_FW al._FW 2004a_FW and_CC 2007_CD ;_: Seki_NNP et_FW al._FW 2002_CD ;_: Iida_NNP et_FW al._FW 2005_CD ;_: Chen_NNP and_CC Yeh_NNP Chen_NNP 2005_CD ;_: Peng_NNP et_NNP al._IN 2009_CD -RSB-_NNP ,_, temporal_JJ expressions_NNS and_CC locative_JJ expressions_NNS are_VBP the_DT subclasses_NNS of_IN non-nominal_JJ anaphora_NN ._.
+Most_JJS of_IN the_DT co_NN reference_NN research_NN focus_NN is_VBZ done_VBN towards_IN nominal_JJ anaphora_NN as_IN non-nominal_JJ anaphora_NN is_VBZ assumed_VBN to_TO occur_VB infrequently_RB and_CC comparatively_RB resolving_VBG nominal_JJ anaphora_NN has_VBZ wider_JJR application_NN scope_NN in_IN many_JJ NLP_NNP tasks_NNS ._.
+But_CC exceptionally_RB possibility_NN for_IN the_DT occurrence_NN of_IN zero_CD anaphora_NN is_VBZ more_RBR in_IN regional_JJ languages_NNS like_IN Chinese_JJ -LSB-_NNP Yeh_NNP et_FW al._FW 2004a_FW and_CC 2007_CD ;_: Chen_NNP and_CC Yeh_NNP Chen_NNP 2005_CD ;_: Peng_NNP et_FW al._FW 2009_CD -RSB-_NNP and_CC Japanese_NNP -LSB-_NNP Seki_NNP et_FW al._FW 2002_CD ;_: Iida_NNP et_FW al._FW 2005_CD -RSB-_NNP ._.
+For_IN better_JJR understanding_NN of_IN the_DT text_NN ,_, reference_NN resolution_NN is_VBZ an_DT unavoidable_JJ task_NN to_TO be_VB accomplished_VBN ._.
+It_PRP plays_VBZ a_DT vital_JJ role_NN in_IN many_JJ NLP_NNP applications_NNS including_VBG information_NN extraction_NN -LSB-_NNP Wellner_NNP and_CC McCallum_NNP 2004_CD ;_: Mykowiecka_NNP et_NNP al._IN 2009_CD ;_: Kameyama_NNP and_CC Megumi_NNP 1997_CD -RSB-_NNP ,_, question_NN answering_VBG -LSB-_NNP Ahn_NNP et_FW al._FW 2004_CD ;_: Lo_NNP and_CC Lam_NNP 2006_CD ;_: Knott_NNP and_CC Vlugter_NNP 2008_CD -RSB-_NNP ,_, automatic_JJ summarization_NN -LSB-_NNP Azzam_NNP et_FW al._FW 1999_CD ;_: Bergler_NNP et_NNP al._IN 2003_CD ;_: Steinberger_NNP et_NNP al._IN 2007_CD -RSB-_NNP ,_, Opinion_NNP Mining_NNP -LSB-_NNP Jakob_NNP et_NNP al._IN 2010_CD -RSB-_NNP ,_, Topic_NNP identification_NN -LSB-_NNP Chen_NNP and_CC Yeh_NNP 2005_CD -RSB-_NNP ,_, Machine_NNP Translation_NN -LSB-_NNP Dutta_NNP et_FW al._FW 2009_CD -RSB-_NNP and_CC natural_JJ language_NN generation_NN -LSB-_NNP Barzilay_NNP and_CC Lapata_NNP 2006_CD -RSB-_NNP ._.
+So_RB reference_NN resolution_NN among_IN various_JJ natural_JJ languages_NNS is_VBZ another_DT attention_NN needed_VBD area_NN for_IN the_DT NLP_NNP research_NN community_NN ._.
+This_DT work_NN has_VBZ been_VBN initiated_VBN and_CC achieved_VBN some_DT encouraging_JJ results_NNS in_IN various_JJ regional_JJ languages_NNS -LRB-_-LRB- apart_RB from_IN English_NNP -RRB-_-RRB- including_VBG Arabic_NNP -LSB-_NNP Souha_NNP et_FW al._FW 2009_CD ;_: Zitouni_NNP et_NNP al._IN 2009a_CD ,_, 2009b_CD ;_: Hammami_NNP et_NNP al._IN 2010_CD -RSB-_NNP ,_, Chinese_NNP -LSB-_NNP Chen_NNP and_CC Yi-Chun_NNP 2005_CD ;_: Peng_NNP et_FW al._FW 2009_CD ;_: Wang_NNP et_FW al._FW 2006_CD ;_: Yeh_NNP et_FW al._FW 2004a_FW ,_, 2004b_JJ ,_, 2007_CD ;_: Yeh_NNP and_CC Ching-Long_NNP 1995_CD ;_: Li_NNP et_FW al._FW 2010_CD -RSB-_NNP ,_, German_NNP -LSB-_NNP Hartrumpf_NNP 2001_CD ;_: Strube_NNP et_FW al._FW 2002_CD ;_: Versley_NNP 2006_CD ;_: Klenner_NNP and_CC Ailloud_NNP 2008_CD -RSB-_NNP ,_, Hindi_NNP -LSB-_NNP Sobha_NNP 1999_CD ;_: Prasad_NNP and_CC Strube_NNP 2000_CD ,_, 2003_CD ;_: Dutta_NNP et_NNP al._IN 2008_CD ,_, 2009_CD ,_, 2010_CD ,_, 2011_CD ;_: Triveni_NNP et_FW al._FW 2012_CD -RSB-_NNP ,_, Japanese_NNP -LSB-_NNP Murata_NNP and_CC Nagao_NNP 1997_CD ;_: Seki_NNP et_FW al._FW 2002_CD ;_: Sasano_NNP and_CC Ryohei_NNP 2008_CD ;_: Naoya_NNP et_NNP al._IN 2010_CD -RSB-_NNP ,_, Malayalam_NNP -LSB-_NNP Sobha_NNP and_CC Patnaik_NNP 1998_CD ,_, 1999_CD ,_, 2002_CD ;_: Sobha_NNP 1999_CD -RSB-_NNP ,_, Tamil_NNP -LSB-_NNP Narayana_NNP et_FW al._FW 2007_CD ;_: Balaji_NNP et_NNP al._IN 2011_CD ;_: Akilandeswari_NNP et_NNP al._IN 2012_CD -RSB-_NNP and_CC Turkish_JJ -LSB-_NNP Tin_NNP and_CC Akman_NNP 1992_CD ;_: Turan_NNP 1996_CD ;_: Kilicaslan_NNP et_NNP al._IN 2009_CD -RSB-_NNP ._.
+This_DT paper_NN presents_VBZ a_DT shriveled_VBN view_NN over_IN the_DT works_NNS that_WDT had_VBD been_VBN carried_VBN out_RP for_IN anaphora_NN resolution_NN among_IN some_DT of_IN the_DT Asian_JJ languages_NNS including_VBG Arabic_NNP ,_, Chinese_NNP ,_, Hindi_NNP ,_, Japanese_NNP ,_, Tamil_NNP and_CC Turkish_JJ ._.
+A_DT comprehensive_JJ view_NN is_VBZ provided_VBN that_DT covers_VBZ the_DT additional_JJ challenges_NNS faced_VBN ,_, PNG_NNP -LRB-_-LRB- Person_NNP ,_, Number_NNP ,_, Gender_NNP -RRB-_-RRB- agreement_NN ,_, list_NN of_IN additional_JJ features_NNS -LRB-_-LRB- apart_RB from_IN universal_JJ set_NN of_IN features_NNS -RRB-_-RRB- and_CC data_NNS sources_NNS for_IN each_DT language_NN with_IN discussion_NN about_IN the_DT methods_NNS and_CC their_PRP$ results_NNS ._.
+This_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+Chapter_NN 2_CD provides_VBZ a_DT overview_NN of_IN the_DT area_NN with_IN definitions_NNS of_IN important_JJ terms_NNS ._.
+Chapter_NN 3_CD explains_VBZ the_DT three_CD important_JJ approaches_NNS of_IN anaphora_NN resolution_NN and_CC common_JJ evaluation_NN metrics_NNS ._.
+Chapter_NN 4_CD surveys_NNS how_WRB these_DT approaches_NNS are_VBP tuned_VBN to_TO get_VB adopted_VBN for_IN some_DT of_IN the_DT Asian_JJ languages_NNS ._.
+Chapter_NN 5_CD describes_VBZ some_DT vital_JJ experimental_JJ aspects_NNS which_WDT were_VBD given_VBN additional_JJ care_NN for_IN each_DT language_NN ._.
+Finally_RB the_DT last_JJ chapter_NN gives_VBZ the_DT summary_NN of_IN the_DT article_NN ._.
+Approaches_NNS Computational_JJ approaches_NNS for_IN reference_NN resolution_NN for_IN the_DT universal_JJ language_NN ,_, English_NNP has_VBZ a_DT quite_RB long_JJ history_NN since_IN 1960_CD ._.
+Based_VBN on_IN the_DT level_NN of_IN automation_NN and_CC resolution_NN methods_NNS of_IN various_JJ algorithms_NNS are_VBP classified_VBN under_IN knowledge_NN based_VBN ,_, heuristic_JJ based_VBN and_CC Machine_NN learning_NN based_VBN approaches_NNS ._.
+Figure_NN 1_CD explains_VBZ the_DT hierarchical_JJ view_NN of_IN reference_NN resolution_NN algorithms_NNS of_IN these_DT approaches_NNS ._.
+Fig._NNP 1_CD ._.
+Hierarchical_JJ View_NNP of_IN Reference_NNP Resolution_NNP Approaches_NNPS ._.
+Knowledge_NN based_VBN system_NN In_IN early_JJ days_NNS references_NNS were_VBD resolved_VBN by_IN heuristic_JJ based_VBN approaches_NNS which_WDT need_VBP enormous_JJ knowledge_NN about_IN linguistic_JJ theory_NN ._.
+Based_VBN on_IN the_DT linguistic_JJ knowledge_NN best_JJS suitable_JJ antecedent_NN is_VBZ identified_VBN by_IN reducing_VBG the_DT size_NN of_IN antecedent_NN set_NN ._.
+These_DT systems_NNS were_VBD developed_VBN from_IN 60s_CD through_IN 80s_CD with_IN minimum_JJ amount_NN of_IN automation_NN for_IN the_DT preprocessing_JJ steps_NNS ._.
+Most_JJS of_IN such_JJ systems_NNS were_VBD originated_VBN a_DT crowd_NN of_IN hand_NN crafted_VBN rules_NNS to_TO select_VB the_DT best_JJS suited_VBN antecedent_NN for_IN each_DT anaphor_NN ._.
+These_DT constraints_NNS are_VBP described_VBN by_IN various_JJ syntactic_NN ,_, semantic_JJ and_CC pragmatic_JJ features_NNS ._.
+Hobbs_NNP et_NNP al._IN -LSB-_NNP 1978_CD -RSB-_NNP explained_VBD this_DT approach_NN by_IN deepest-first_JJ search_NN procedure_NN on_IN syntactic_JJ parse_NN tree_NN of_IN a_DT sentence_NN to_TO find_VB the_DT first_JJ candidate_NN that_IN satisfies_VBZ a_DT set_NN of_IN constraints_NNS and_CC preferences_NNS ._.
+It_PRP makes_VBZ use_NN of_IN syntactic_JJ constraints_NNS while_IN resolving_VBG pronouns_NNS ._.
+The_DT search_NN starts_VBZ from_IN the_DT immediately_RB dominating_VBG noun_NN phrase_NN of_IN a_DT pronoun_NN ._.
+This_DT approach_NN can_MD further_RB be_VB classified_VBN into_IN three_CD classes_NNS ._.
+First_NNP is_VBZ the_DT syntax_NN based_VBN approach_NN of_IN Hobbs_NNP et_NNP al._IN -LSB-_NNP 1976_CD ,_, 1978_CD -RSB-_NNP ,_, that_IN explains_VBZ a_DT Naïve_JJ algorithm_NN for_IN pronoun_NN resolution_NN ._.
+Here_RB the_DT constraints_NNS are_VBP derived_VBN by_IN syntactic_NN and_CC morphological_JJ information_NN ._.
+Though_IN it_PRP showed_VBD a_DT good_JJ performance_NN up_IN to_TO 88_CD %_NN ,_, its_PRP$ drawback_NN is_VBZ its_PRP$ need_NN for_IN the_DT complete_JJ perfect_JJ parser_NN ,_, which_WDT is_VBZ still_RB a_DT challenging_JJ task_NN to_TO achieve_VB ._.
+Second_JJ one_NN is_VBZ the_DT Discourse_NN based_VBN approaches_NNS -LSB-_NNP Brennan_NNP et_FW al._FW 1987_CD ,_, Grosz_NNP et_FW al._FW 1995_CD ,_, Kehler_NNP -LSB-_NNP 1997_CD ,_, 2002_CD -RSB-_NNP ,_, Asher_NNP and_CC Lascardies_NNP 2003_CD and_CC Beaver_NNP 2004_CD -RSB-_NNP are_VBP based_VBN on_IN centering_VBG theory_NN -LSB-_NNP Tetreault_NNP 2001_CD -RSB-_NNP that_IN model_NN relationships_NNS among_IN focus_NN of_IN attention_NN ,_, choice_NN of_IN referring_VBG expression_NN and_CC perceived_VBN coherence_NN of_IN utterances_NNS within_IN a_DT discourse_NN ._.
+This_DT approach_NN focuses_VBZ on_IN the_DT attention_NN of_IN the_DT discourse_NN participants_NNS ._.
+Third_JJ approach_NN is_VBZ a_DT multi_NNS factor_NN approach_NN which_WDT is_VBZ a_DT mixture_NN of_IN previous_JJ two_CD approaches_NNS ._.
+Here_RB constraints_NNS and_CC preferences_NNS are_VBP constructed_VBN based_VBN on_IN the_DT syntactic_NN ,_, semantic_JJ and_CC pragmatic_JJ features_NNS -LSB-_NNP Carbonell_NNP and_CC Brown_NNP 1988_CD -RSB-_NNP ._.
+The_DT main_JJ problem_NN of_IN this_DT approach_NN is_VBZ recorded_VBN as_RB ,_, some_DT conflicts_NNS between_IN preferences_NNS are_VBP yet_RB to_TO be_VB resolved_VBN ._.
+Building_NN such_JJ system_NN is_VBZ difficult_JJ due_JJ to_TO the_DT need_NN of_IN strong_JJ linguistic_JJ knowledge_NN and_CC henceforth_NN is_VBZ expensive_JJ ._.
+And_CC it_PRP is_VBZ poor_JJ at_IN portability_NN to_TO extend_VB to_TO other_JJ domains_NNS or_CC languages_NNS ._.
+Heuristic_NNP Based_VBD Approaches_NNS The_DT approaches_NNS of_IN 90_CD ‟_CD s_PRP that_WDT are_VBP capable_JJ of_IN working_VBG with_IN poor_JJ quality_NN information_NN with_IN design_NN simplicity_NN and_CC better_JJR robustness_NN are_VBP also_RB called_VBN as_RB knowledge_NN poor_JJ approaches_NNS ._.
+A_DT salience_NN based_VBN algorithm_NN of_IN Resolution_NNP Anaphora_NNP Procedure_NNP -LRB-_-LRB- RAP_NNP -RRB-_-RRB- was_VBD developed_VBN by_IN Lappin_NNP and_CC Leass_NNP -LSB-_NNP 1994_CD -RSB-_NNP to_TO resolve_VB third_JJ person_NN pronouns_NNS ._.
+RAP_NN algorithm_NN operates_VBZ based_VBN on_IN salience_NN measures_NNS derived_VBN from_IN syntactic_JJ structure_NN ._.
+To_TO compute_VB the_DT salience_NN measure_NN this_DT system_NN needs_VBZ a_DT perfect_JJ morphological_JJ analyzer_NN and_CC a_DT full_JJ syntactic_NN parser_NN ._.
+The_DT system_NN accuracy_NN was_VBD recorded_VBN as_IN 86_CD %_NN ._.
+Kennedy_NNP et_NNP al._IN -LSB-_NNP 1996_CD -RSB-_NNP proposed_VBD a_DT extended_JJ RAP_NNP approach_NN where_WRB the_DT parse_NN tree_NN is_VBZ substituted_VBN with_IN a_DT list_NN of_IN morphological_JJ features_NNS and_CC the_DT experimental_JJ result_NN was_VBD about_IN 75.4_CD %_NN ._.
+Baldwin_NNP -LSB-_NNP 1997_CD -RSB-_NNP uses_VBZ noun_NN phrase_NN and_CC clause_NN chunking_NN to_TO determine_VB mentions_VBZ by_IN constructing_VBG high_JJ precision_NN rules_NNS and_CC uses_VBZ shallow_JJ patterns_NNS to_TO identify_VB a_DT small_JJ number_NN of_IN cases_NNS that_WDT can_MD be_VB reliably_RB resolved_VBN ._.
+With_IN hand_NN annotated_JJ gender_NN information_NN Baldwin_NNP -LSB-_NNP 1995_CD -RSB-_NNP obtained_VBD 92_CD %_NN precision_NN ,_, at_IN 60_CD %_NN recall_NN for_IN a_DT corpus_NN of_IN three_CD stories_NNS ._.
+Mitkov_NNP -LSB-_NNP 1998_CD -RSB-_NNP have_VBP proposed_VBN an_DT approach_NN used_VBD a_DT wider_JJR list_NN of_IN different_JJ salience_NN features_NNS that_WDT assign_VBP a_DT score_NN to_TO antecedent_NN candidates_NNS and_CC subsequently_RB select_VB the_DT highest_JJS scoring_VBG candidates_NNS ._.
+He_PRP evaluated_VBD his_PRP$ approach_NN with_IN a_DT small_JJ corpus_NN of_IN technical_JJ manuals_NNS -LRB-_-LRB- 223_CD pronouns_NNS -RRB-_-RRB- and_CC achieved_VBD the_DT performance_NN as_IN 89.7_CD %_NN ._.
+Machine_NN Learning_NNP Systems_NNPS More_RBR recently_RB reference_NN resolution_NN research_NN has_VBZ given_VBN the_DT focus_NN towards_IN the_DT statistical_JJ and_CC machine_NN learning_NN approaches_NNS due_JJ to_TO their_PRP$ domain_NN independence_NN and_CC extendibility_NN to_TO different_JJ languages_NNS ._.
+McCarthy_NNP and_CC Lehnert_NNP -LSB-_NNP 1995_CD -RSB-_NNP developed_VBD the_DT first_JJ machine_NN learning_VBG approach_NN ,_, the_DT Mention-Pair_NNP model_NN based_VBN on_IN decision_NN tree_NN algorithm_NN trained_VBN with_IN MUC-5_NNP English_NNP Joint_NNP venture_NN corpus_NN on_IN all_DT possible_JJ pairs_NNS in_IN the_DT training_NN set_NN and_CC showed_VBD a_DT result_NN better_JJR than_IN the_DT heuristic_JJ approaches_NNS ._.
+All_DT possible_JJ markables_NNS in_IN a_DT training_NN document_NN are_VBP determined_VBN by_IN a_DT pipe-line_NN of_IN language_NN processing_NN modules_NNS ,_, and_CC training_NN examples_NNS in_IN the_DT form_NN of_IN feature_NN vectors_NNS are_VBP generated_VBN to_TO appropriate_JJ pair_NN of_IN markables_NNS ._.
+These_DT training_NN examples_NNS are_VBP then_RB given_VBN to_TO a_DT learning_NN algorithm_NN to_TO build_VB a_DT classifier_NN ._.
+For_IN test_NN document_NN all_DT markables_NNS are_VBP determined_VBN and_CC potential_JJ pairs_NNS of_IN coreferring_VBG markables_NNS are_VBP presented_VBN to_TO the_DT classifier_NN ,_, which_WDT decides_VBZ whether_IN the_DT two_CD markables_NNS actually_RB corefer_VBP ._.
+This_DT model_NN was_VBD further_JJ extended_VBN with_IN a_DT set_NN of_IN twelve_CD features_NNS by_IN Soon_RB et_FW al._FW -LSB-_NNP 2001_CD -RSB-_NNP ,_, Ng_NNP and_CC Carnie_NNP -LSB-_NNP 2002_CD -RSB-_NNP which_WDT is_VBZ also_RB a_DT mention_NN pair_NN model_NN that_WDT classifies_VBZ whether_IN two_CD mentions_VBZ are_VBP coreferent_JJ or_CC not_RB ._.
+Problem_NNP with_IN their_PRP$ approach_NN is_VBZ its_PRP$ insufficient_JJ information_NN to_TO make_VB an_DT informed_VBN co-reference_NN decision_NN and_CC each_DT candidate_NN antecedents_NNS is_VBZ considered_VBN independently_RB of_IN the_DT others_NNS ._.
+These_DT models_NNS are_VBP called_VBN as_RB single_JJ candidate_NN model_NN where_WRB a_DT candidate_NN is_VBZ the_DT antecedent_NN of_IN an_DT anaphor_NN ._.
+This_DT only_JJ considers_VBZ the_DT candidates_NNS of_IN an_DT anaphor_NN in_IN isolation_NN ,_, which_WDT is_VBZ incapable_JJ of_IN effectively_RB capturing_VBG the_DT preference_NN relation_NN between_IN candidates_NNS for_IN its_PRP$ training_NN ._.
+Next_JJ is_VBZ twin_JJ candidate_NN model_NN -LSB-_NNP Connolly_NNP et_FW al._FW 1997_CD ;_: Iida_NNP et_FW al._FW 2005_CD ;_: Luo_NNP ._.
+2007_CD -RSB-_JJ recast_NN anaphora_NN resolution_NN as_IN preference_NN classification_NN problem_NN that_WDT determines_VBZ the_DT preference_NN between_IN two_CD competing_VBG candidates_NNS for_IN the_DT antecedent_NN of_IN a_DT given_VBN anaphor_NN ._.
+That_DT is_VBZ positive_JJ and_CC negative_JJ instances_NNS are_VBP created_VBN which_WDT makes_VBZ the_DT training_NN even_RB better_RBR ._.
+Denis_NNP and_CC Balridge_NNP -LSB-_NNP 2008_CD -RSB-_NNP proposed_VBD a_DT ranking_JJ model_NN where_WRB the_DT candidates_NNS are_VBP ordered_VBN based_VBN on_IN their_PRP$ preference_NN and_CC the_DT best_JJS one_NN is_VBZ the_DT antecedent_NN ._.
+Luo_NNP and_CC Zitouni_NNP -LSB-_NNP 2004_CD -RSB-_NNP and_CC Yang_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP explained_VBD entity_NN mention_NN model_NN with_IN improved_VBN expressiveness_NN ,_, that_IN identifies_VBZ whether_IN a_DT mention_NN and_CC a_DT preceding_VBG possibly_RB partially_RB formed_VBN cluster_NN are_VBP coreferent_JJ or_CC not_RB ._.
+This_DT allows_VBZ computation_NN of_IN cluster_NN level_NN features_NNS ._.
+Drawback_NN of_IN this_DT system_NN is_VBZ each_DT candidate_NN cluster_NN is_VBZ considered_VBN independently_RB of_IN the_DT others_NNS ._.
+Dennis_NNP and_CC Baldridge_NNP -LSB-_NNP 2007_CD ,_, 2008_CD -RSB-_JJ proposed_VBD a_DT Mention_NNP ranking_JJ model_NN that_WDT imposes_VBZ a_DT ranking_NN on_IN a_DT set_NN of_IN candidate_NN antecedents_NNS ._.
+Parallelism_NN is_VBZ its_PRP$ strength_NN ,_, i.e._FW this_DT considers_VBZ all_PDT the_DT candidate_NN antecedents_NNS simultaneously_RB ._.
+Main_NNP problem_NN of_IN such_JJ models_NNS is_VBZ it_PRP has_VBZ insufficient_JJ information_NN to_TO make_VB an_DT informed_VBN co-reference_NN decision_NN ._.
+Clustering_VBG based_VBN -LRB-_-LRB- unsupervised_JJ -RRB-_-RRB- approaches_NNS are_VBP selected_VBN because_IN they_PRP take_VBP a_DT more_JJR global_JJ view_NN of_IN constructing_VBG co-reference_NN chains_NNS and_CC are_VBP based_VBN either_RB on_IN constraint_NN propagation_NN -LSB-_NNP Klenner_NNP et_NNP al._IN 2008_CD -RSB-_NNP or_CC on_IN probabilistic_JJ approach_NN -LSB-_NNP Kehler_NNP 1997_CD ;_: Culotta_NNP et_NNP al._IN 2007_CD -RSB-_NNP ._.
+Anaphora_NNP Resolution_NNP in_IN Different_NNP Languages_NNP Co-reference_NN resolution_NN -LRB-_-LRB- CRR_NNP -RRB-_-RRB- has_VBZ a_DT quite_RB long_JJ history_NN for_IN English_NNP documents_NNS ._.
+Other_JJ than_IN English_JJ automation_NN of_IN CRR_NNP still_RB has_VBZ a_DT long_JJ way_NN to_TO reach_VB ._.
+Still_RB some_DT noteworthy_JJ approaches_NNS have_VBP been_VBN found_VBN for_IN the_DT languages_NNS like_IN Spanish_JJ ,_, Japanese_JJ ,_, French_JJ and_CC German_JJ ._.
+Though_IN there_EX are_VBP number_NN of_IN effective_JJ algorithms_NNS developed_VBD for_IN co-reference_NN resolution_NN of_IN the_DT Universal_NNP language_NN English_NNP ,_, those_DT systems_NNS can_MD not_RB be_VB applied_VBN directly_RB over_IN the_DT regional_JJ languages_NNS due_JJ to_TO various_JJ reasons_NNS ._.
+For_IN an_DT example_NN in_IN English_NNP number_NN agreement_NN can_MD be_VB detected_VBN through_IN word_NN inflection_NN and_CC part-of-speech_NN tags_NNS ._.
+In_IN the_DT same_JJ way_NN it_PRP is_VBZ also_RB possible_JJ in_IN many_JJ Indo_NNP -_: European_JJ languages_NNS like_IN Tamil_NNP ._.
+But_CC there_EX is_VBZ no_DT such_JJ simple_JJ rule_NN in_IN Chinese_JJ to_TO distinguish_VB whether_IN a_DT word_NN is_VBZ singular_JJ or_CC plural_JJ ._.
+Proper_JJ names_NNS and_CC abbreviations_NNS are_VBP identified_VBN by_IN capitalization_NN -LSB-_NNP Vieira_NNP and_CC Poesio_NNP 1997_CD ,_, 2000_CD -RSB-_NNP in_IN English_NNP ._.
+But_CC many_JJ of_IN the_DT Asian_JJ languages_NNS do_VBP not_RB use_VB capitalization_NN ._.
+Word_NN segmentation_NN itself_PRP is_VBZ a_DT crucial_JJ problem_NN in_IN Chinese_NNP ._.
+For_IN the_DT past_JJ two_CD decades_NNS these_DT algorithms_NNS have_VBP been_VBN altered_VBN to_TO get_VB adopted_VBN for_IN other_JJ regional_JJ languages_NNS including_VBG Japanese_JJ ,_, Chinese_JJ ,_, Arabic_NNP ,_, Turkish_JJ ,_, Spanish_JJ ,_, Polish_JJ ,_, etc._FW ._.
+This_DT paper_NN is_VBZ an_DT attempt_NN to_TO survey_VB the_DT various_JJ algorithmic_JJ details_NNS of_IN reference_NN resolution_NN for_IN Asian_JJ languages_NNS ._.
+So_RB that_IN it_PRP may_MD act_VB as_IN a_DT preliminary_JJ aid_NN to_TO the_DT researchers_NNS who_WP are_VBP interested_JJ in_IN developing_VBG a_DT reference_NN resolution_NN system_NN for_IN any_DT non_NN -_: English_NNP language_NN ._.
+Electronically-available_JJ resources_NNS Arabic_NNP Arabic_NNP has_VBZ a_DT complex_JJ and_CC unusual_JJ morphology_NN ._.
+As_IN Arabic_NNP is_VBZ highly_RB inflected_VBN by_IN its_PRP$ morphology_NN ,_, an_DT important_JJ preprocessing_VBG step_NN is_VBZ segmentation_NN because_IN partial_JJ parts_NNS of_IN the_DT sentences_NNS are_VBP the_DT mentions_VBZ and_CC is_VBZ being_VBG segmented_JJ by_IN WFST_NNP -LRB-_-LRB- Weighted_NNP Finite_NNP State_NNP Transducers_NNPS -RRB-_-RRB- -LSB-_NNP Zitouni_NNP 2009a_NNS ,_, 2009b_JJ -RSB-_NN ._.
+Nouns_NNS in_IN Literary_NNP Arabic_NNP have_VBP three_CD grammatical_JJ cases_NNS -LRB-_-LRB- nominative_JJ ,_, accusative_JJ ,_, and_CC genitive_NN -RRB-_-RRB- ,_, three_CD numbers_NNS -LRB-_-LRB- singular_JJ ,_, dual_JJ and_CC plural_JJ -RRB-_-RRB- ,_, two_CD genders_NNS -LRB-_-LRB- masculine_JJ and_CC feminine_JJ -RRB-_-RRB- and_CC three_CD states_NNS -LRB-_-LRB- indefinite_JJ ,_, definite_JJ and_CC construct_VB -RRB-_-RRB- ._.
+Pronouns_NNS in_IN Literary_NNP Arabic_NNP are_VBP marked_VBN for_IN person_NN ,_, number_NN and_CC gender_NN ._.
+Zitouni_NNP and_CC Florian_NNP -LSB-_NNP 2009b_JJ -RSB-_NNP proposed_VBD a_DT propagation_NN approach_NN for_IN mention_NN detection_NN in_IN low_JJ ,_, medium_JJ or_CC high_JJ resource_NN languages_NNS that_WDT benefits_VBZ from_IN projecting_VBG the_DT output_NN of_IN a_DT system_NN trained_VBN in_IN a_DT resource-rich_JJ language_NN ,_, such_JJ as_IN English_NNP ._.
+It_PRP is_VBZ possible_JJ to_TO lend_VB training_NN data_NNS available_JJ in_IN one_CD resource-rich_JJ language_NN -LRB-_-LRB- English_NNP -RRB-_-RRB- to_TO another_DT resource-poor_JJ language_NN -LRB-_-LRB- Arabic_NNP -RRB-_-RRB- to_TO build_VB decently_RB performing_VBG baseline_JJ mention_NN detection_NN system_NN ._.
+This_DT approach_NN needs_VBZ a_DT mention_NN detection_NN system_NN of_IN resource-rich_JJ language_NN and_CC a_DT machine_NN translation_NN system_NN ,_, both_DT of_IN which_WDT can_MD be_VB readily_RB attained_VBN ._.
+As_IN per_IN the_DT experiment_NN done_VBN on_IN ACE_NNP 2007_CD datasets_NNS among_IN the_DT four_CD languages_NNS Arabic_NNP ,_, Chinese_NNP ,_, English_NNP and_CC Spanish_NNP and_CC according_VBG to_TO the_DT results_NNS ,_, English_NNP is_VBZ selected_VBN as_IN the_DT resource_NN rich_JJ language_NN ._.
+The_DT main_JJ advantage_NN is_VBZ that_IN the_DT Arabic_NNP mention_NN detection_NN system_NN is_VBZ trained_VBN without_IN the_DT training_NN data_NNS of_IN Arabic_NNP ._.
+Zitouni_NNP et_NNP al._IN -LSB-_NNP 2009a_NNS -RRB-_-RRB- have_VBP worked_VBN on_IN the_DT mention_NN detection_NN and_CC chaining_NN of_IN Arabic_NNP co_SYM -_: references_NNS by_IN the_DT construction_NN of_IN statistical_JJ model_NN based_VBN on_IN maximum_NN entropy_NN ._.
+Bell_NNP tree_NN -LSB-_NNP Luo_NNP 2004_CD -RSB-_NNP is_VBZ the_DT approach_NN selected_VBN for_IN linking_VBG the_DT mentions_VBZ ._.
+It_PRP represents_VBZ the_DT search_NN space_NN of_IN the_DT co-reference_NN resolution_NN problem_NN where_WRB each_DT leaf_NN node_NN corresponds_VBZ to_TO a_DT possible_JJ co-reference_NN outcome_NN ._.
+The_DT two_CD Bell_NNP tree_NN models_NNS developed_VBD are_VBP linking_VBG and_CC starting_VBG model_NN and_CC maximum_NN entropy_NN linking_VBG model_NN ._.
+A_DT binary_JJ entropy_NN model_NN is_VBZ trained_VBN to_TO compute_VB the_DT linking_VBG probability_NN between_IN a_DT partial_JJ entity_NN and_CC a_DT mention_NN ._.
+Souha_NNP et_NNP al._IN -LSB-_NNP 2009_CD -RSB-_NNP proposed_VBD an_DT anaphoric_JJ annotating_NN tool_NN for_IN Arabic_NNP which_WDT aims_VBZ to_TO build_VB a_DT real_JJ corpus_NN which_WDT will_MD be_VB used_VBN for_IN anaphora_NN resolution_NN -LRB-_-LRB- i.e._FW ,_, either_CC for_IN system_NN training_NN or_CC evaluation_NN -RRB-_-RRB- ._.
+Their_PRP$ system_NN detects_VBZ the_DT Arabic_NNP pronouns_NNS automatically_RB and_CC allows_VBZ the_DT human_JJ annotator_NN to_TO select_VB several_JJ anaphoric_JJ pronouns_NNS related_VBN to_TO the_DT same_JJ antecedent_NN ._.
+The_DT types_NNS of_IN pronouns_NNS dealt_VBN are_VBP pronominal_JJ anaphora_NN ,_, lexical_JJ anaphora_NN ,_, comparative_JJ anaphora_NN and_CC verb_NN anaphora_NN ._.
+Chinese_JJ Lack_NN of_IN morphological_JJ and_CC orthographic_JJ clues_NNS makes_VBZ the_DT construction_NN of_IN Chinese_JJ co-reference_NN resolution_NN system_NN difficult_JJ ._.
+Since_IN Chinese_NNP has_VBZ no_DT inflection_NN ,_, conjugation_NN ,_, or_CC case_NN markers_NNS ,_, the_DT pronominal_JJ system_NN is_VBZ relatively_RB simple_JJ ._.
+A_DT third_JJ person_NN pronoun_NN can_MD be_VB used_VBN to_TO replace_VB and_CC intersentential_JJ ZA_NNP -LRB-_-LRB- Zero_NNP Anaphora_NNP -RRB-_-RRB- ,_, except_IN for_IN first_JJ -_: and_CC second_JJ -_: person_NN pronouns_NNS ,_, without_IN changing_VBG the_DT meaning_NN of_IN the_DT sentence_NN ._.
+Yeh_NNP -LSB-_NNP 1995_CD -RSB-_NNP presented_VBD a_DT anaphora_NN generating_VBG system_NN ._.
+Yeh_NNP and_CC Chen_NNP -LSB-_NNP 2004a_JJ -RSB-_NNP proposed_VBD a_DT anaphora_NN resolution_NN system_NN by_IN making_VBG use_NN of_IN a_DT shallow_JJ parser_NN ._.
+Chen_NNP -LSB-_NNP 2009_CD -RSB-_NNP developed_VBD the_DT two-phase_JJ -LRB-_-LRB- occurrence_NN detection_NN ,_, antecedent_NN detection_NN -RRB-_-RRB- model_NN of_IN zero_CD anaphora_NN resolution_NN ._.
+Chinese_JJ linguistic_JJ knowledge_NN is_VBZ used_VBN for_IN occurrence_NN detection_NN and_CC centering_VBG model_NN of_IN local_JJ discourse_NN were_VBD adopted_VBN for_IN opt_VB selection_NN of_IN the_DT antecedent_NN ._.
+Experiments_NNS were_VBD done_VBN for_IN newspaper_NN articles_NNS and_CC showed_VBD precision_NN rate_NN of_IN phase-I_NNP is_VBZ 84_CD %_NN and_CC recall_NN rate_NN of_IN phase-II_NNP is_VBZ 70_CD %_NN ._.
+Wang_NNP et_NNP al._IN -LSB-_NNP 2006_CD -RSB-_JJ proposed_VBN unsupervised_JJ approach_NN for_IN co-reference_NN resolution_NN ._.
+The_DT system_NN was_VBD evaluated_VBN on_IN an_DT annotated_JJ corpus_NN TDT3_NN using_VBG MUC-7_NNP scorer_NN ._.
+Centering_VBG theory_NN and_CC constraint_NN based_VBN approach_NN of_IN zero_CD anaphora_NN resolution_NN in_IN subject_JJ and_CC object_NN position_NN was_VBD proposed_VBN by_IN Yeh_NNP and_CC Chen_NNP -LSB-_NNP 2007_CD -RSB-_NNP ._.
+This_DT was_VBD evaluated_VBN with_IN precision_NN rate_NN of_IN 81_CD %_NN and_CC recall_NN rate_NN of_IN 70_CD %_NN ._.
+Peng_NNP and_CC Araki_NNP -LSB-_NNP 2009_CD -RSB-_NNP proposed_VBD a_DT learning_NN classifier_NN based_VBN on_IN maximum_NN entropy_NN ._.
+Apart_RB from_IN the_DT regular_JJ features_NNS -LRB-_-LRB- grammatical_JJ ,_, lexical_JJ ,_, positional_JJ and_CC semantic_JJ -RRB-_-RRB- two_CD more_JJR new_JJ features_NNS SEM-CONSI_NNP and_CC SEM-RELA_NNP were_VBD introduced_VBN to_TO extract_VB additional_JJ semantic_JJ information_NN from_IN web_NN ._.
+SEM_SYM -_: CONSI_NNP is_VBZ the_DT rank_NN of_IN the_DT semantic_JJ consistency_NN of_IN antecedent_NN candidates_NNS ._.
+SEM-RELA_NN is_VBZ the_DT semantic_JJ relations_NNS between_IN the_DT heads_NNS of_IN the_DT predicates_NNS in_IN sentences_NNS containing_VBG ZA_NNP and_CC antecedent_NN candidates_NNS ._.
+This_DT is_VBZ obtained_VBN by_IN querying_VBG the_DT web_NN using_VBG some_DT patterns_NNS ._.
+An_DT application_NN of_IN Chinese_JJ anaphora_NN system_NN topic_NN identification_NN was_VBD presented_VBN by_IN Yeh_NNP and_CC Chen_NNP -LSB-_NNP 2004b_JJ -RSB-_NN ._.
+Japanese_JJ F_NN A_DT convenient_JJ point_NN with_IN Japanese_JJ is_VBZ there_EX is_VBZ a_DT strict_JJ word_NN order_NN that_IN a_DT verb_NN must_MD be_VB placed_VBN at_IN the_DT end_NN of_IN the_DT sentence_NN ._.
+As_IN the_DT basic_JJ structure_NN is_VBZ topic_NN -_: comment_NN ,_, the_DT topic_NN of_IN the_DT sentence_NN can_MD easily_RB be_VB identified_VBN ._.
+An_DT important_JJ critic_NN in_IN Japanese_NNP is_VBZ that_IN nouns_NNS have_VBP no_DT grammatical_JJ number_NN ,_, gender_NN or_CC article_NN aspect_NN ._.
+Japanese_JJ pronouns_NNS can_MD take_VB modifiers_NNS as_IN any_DT other_JJ noun_NN may_MD ._.
+Here_RB ,_, pronouns_NNS are_VBP not_RB used_VBN much_JJ ;_: most_RBS anaphors_NNS are_VBP represented_VBN by_IN proper_JJ noun_NN phrases_NNS or_CC common_JJ noun_NN phrases_NNS or_CC omitted_VBN phrases_NNS -LRB-_-LRB- zero_CD anaphora_NN -RRB-_-RRB- ._.
+Murata_NNP and_CC Nagao_NNP -LSB-_NNP 1997_CD -RSB-_NNP proposed_VBD a_DT rule_NN based_VBN reference_NN resolution_NN approach_NN for_IN determining_VBG the_DT referents_NNS of_IN noun_NN phrases_NNS by_IN using_VBG referential_JJ properties_NNS ,_, modifiers_NNS and_CC possessors_NNS and_CC showed_VBD the_DT experiment_NN results_NNS with_IN 78.7_CD %_NN of_IN precision_NN and_CC 77.3_CD %_NN of_IN recall_NN for_IN a_DT corpus_NN of_IN Fairy_NNP tales_NNS ._.
+The_DT famous_JJ machine_NN learning_VBG approach_NN was_VBD proposed_VBN by_IN Iida_NNP et_NNP al._IN -LSB-_NNP 2005_CD -RSB-_NNP which_WDT is_VBZ similar_JJ to_TO the_DT ML_NNP approach_NN of_IN Ng_NNP and_CC Cardie_NNP ._.
+Here_RB the_DT experiments_NNS are_VBP done_VBN over_IN a_DT corpus_NN of_IN news_NN paper_NN articles_NNS and_CC obtained_VBD results_NNS with_IN 76.7_CD %_NN precision_NN and_CC 65.9_CD %_NN recallrates_NNS ._.
+Sasano_NNP -LSB-_NNP 2008_CD -RSB-_NNP presented_VBD a_DT knowledge_NN rich_JJ approach_NN to_TO Japanese_JJ co-reference_NN resolution_NN system_NN ._.
+He_PRP has_VBZ addressed_VBN proper_JJ noun_NN co-reference_NN and_CC common_JJ noun_NN co-reference_NN by_IN acquiring_VBG knowledge_NN from_IN large_JJ raw_JJ corpus_NN and_CC dictionary_NN definition_NN sentences_NNS ._.
+Articles_NNPS play_VBP a_DT major_JJ role_NN in_IN anaphoricity_NN determination_NN with_IN the_DT feature_NN definite_JJ noun_NN phrase_NN and_CC definite_JJ pronoun_NN ._.
+But_CC Japanese_JJ language_NN has_VBZ no_DT articles_NNS ._.
+They_PRP designed_VBD a_DT approach_NN that_WDT uses_VBZ information_NN extraction_NN patterns_NNS to_TO identify_VB contextual_JJ roles_NNS Bean_NNP and_CC Riloff_NNP -LSB-_NNP 2004_CD -RSB-_NNP using_VBG supervised_JJ learning_NN ._.
+This_DT contextual_JJ knowledge_NN improved_VBN co-reference_NN performance_NN for_IN pronouns_NNS -LRB-_-LRB- not_RB for_IN noun_NN phrases_NNS -RRB-_-RRB- ._.
+Japanese_NNP is_VBZ a_DT language_NN where_WRB arbitrary_JJ verb_NN arguments_NNS may_MD be_VB realized_VBN as_IN a_DT zero_CD pronoun_NN -LRB-_-LRB- omitted_VBN pronoun_NN -RRB-_-RRB- and_CC the_DT detection_NN of_IN zeroes_NNS is_VBZ as_RB challenging_JJ as_IN their_PRP$ resolution_NN ._.
+Seki_NNP et_NNP al._IN -LSB-_NNP 2002_CD -RSB-_NNP proposed_VBD a_DT approach_NN where_WRB the_DT non-filled_JJ argument_NN slot_NN is_VBZ filled_VBN by_IN a_DT zero_CD pronoun_NN by_IN constructing_VBG preferences_NNS which_WDT are_VBP extracted_VBN from_IN a_DT large_JJ unannotated_JJ corpus_NN by_IN noting_VBG the_DT co_NN -_: occurrence_NN of_IN overt_JJ NPs_NNP ._.
+Their_PRP$ model_NN is_VBZ constructed_VBN based_VBN on_IN probabilistic_JJ theory_NN ._.
+Iida_NNP et_NNP al._IN -LSB-_NNP 2003a_NNS ,_, 2003b_JJ -RSB-_NNP presented_VBD a_DT tournament_NN model_NN and_CC a_DT centering_VBG theory_NN based_VBN salience_NN model_NN for_IN zero_CD anaphora_NN resolution_NN ._.
+Iida_NNP et_NNP al._IN -LSB-_NNP 2005_CD -RSB-_NNP developed_VBD classification-then-search_JJ model_NN for_IN noun-phrase_JJ resolution_NN which_WDT inherits_VBZ all_PDT the_DT advantages_NNS of_IN Ng_NNP and_CC Cardie_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+This_DT model_NN uses_VBZ nonanaphoric_JJ occurrences_NNS along_IN with_IN anaphoric_JJ occurrences_NNS to_TO build_VB an_DT anaphoricity_NN classifier_NN and_CC determines_VBZ the_DT anaphoricity_NN of_IN a_DT given_VBN NP_NNP taking_VBG the_DT information_NN of_IN its_PRP$ most_RBS likely_JJ candidate_NN antecedent_NN into_IN account_NN ._.
+Iida_NNP et_NNP al._IN -LSB-_NNP 2007_CD -RSB-_NNP dealt_VBD the_DT zero_CD anaphora_NN resolution_NN as_IN two_CD subtask_NN :_: intrasentential_JJ and_CC intersentential_JJ ._.
+Here_RB the_DT syntactic_JJ patterns_NNS of_IN the_DT zero_CD pronouns_NNS and_CC their_PRP$ antecedents_NNS are_VBP the_DT useful_JJ clues_NNS for_IN intrasentential_JJ zero_CD anaphora_NN resolution_NN ._.
+Each_DT subtask_NN is_VBZ handled_VBN by_IN selection-then-classification_NN of_IN Iida_NNP et_NNP al._IN -LSB-_NNP 2005_CD -RSB-_NNP ._.
+Experiments_NNS were_VBD done_VBN over_IN NAIST_NNP text_NN corpus_NN developed_VBN by_IN Iida_NNP et_NNP al._IN -LSB-_NNP 2007_CD -RSB-_NNP ._.
+Naoya_NNP et_NNP al._IN -LSB-_NNP 2010_CD -RSB-_NNP concentrated_VBD only_RB on_IN the_DT definite_JJ pronouns_NNS of_IN Japanese_JJ and_CC showed_VBD an_DT encouraging_JJ results_NNS ._.
+Turkish_JJ F_NN Turkish_JJ is_VBZ also_RB a_DT morphologically_RB rich_JJ language_NN ._.
+Special_JJ attention_NN is_VBZ needed_VBN as_IN Turkish_JJ has_VBZ no_DT noun_NN classes_NNS or_CC grammatical_JJ gender_NN ._.
+It_PRP is_VBZ gender_NN neutral_JJ by_IN both_DT pronouns_NNS and_CC names_NNS ._.
+Turkish_JJ pronoun_NN types_NNS are_VBP personal_JJ with_IN six_CD cases_NNS -LRB-_-LRB- absolute_JJ ,_, accusative_JJ ,_, dative_JJ ,_, locative_JJ ,_, ablative_JJ and_CC genitive_JJ -RRB-_-RRB- ,_, demonstrative_JJ ,_, interrogative_JJ ,_, relative_JJ and_CC reflexive_JJ pronouns_NNS ._.
+Probably_RB the_DT first_JJ contextual_JJ information_NN based_VBN anaphora_NN resolution_NN system_NN for_IN Turkish_JJ was_VBD proposed_VBN by_IN Tin_NNP and_CC Akman_NNP -LSB-_NNP 1992_CD ,_, 1994_CD -RSB-_NNP ,_, offered_VBD a_DT computation_NN framework_NN where_WRB the_DT information_NN oriented_VBN features_NNS of_IN situation_NN theory_NN were_VBD used_VBN for_IN resolving_VBG pronominal_JJ anaphora_NN ._.
+Turan_NNP -LSB-_NNP 1996_CD -RSB-_NNP proposed_VBD a_DT discourse_NN level_NN anaphoric_JJ relations_NNS system_NN for_IN Turkish_JJ by_IN following_VBG the_DT centering_VBG theory_NN -LSB-_NNP Grosz_NNP et_FW al._FW 1995_CD -RSB-_NNP ._.
+Kilicaslan_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP developed_VBD a_DT learning_NN model_NN for_IN pronoun_NN resolution_NN in_IN Turkish_JJ and_CC evaluated_VBD the_DT classification_NN performance_NN of_IN the_DT learning_NN models_NNS -LRB-_-LRB- NaiveBayes_NNS ,_, SVM_NNP ,_, neural_JJ network_NN and_CC K_NNP -_: nearest_JJS classifiers_NNS -RRB-_-RRB- and_CC shown_VBN that_IN non-linear_JJ models_NNS behaves_VBZ better_JJR ._.
+As_IN Turkish_JJ frequently_RB employed_VBN null_JJ pronouns_NNS and_CC relatively_RB less_RBR informative_JJ open_JJ pronouns_NNS ,_, make_VBP reference_NN resolution_NN system_NN of_IN Turkish_JJ is_VBZ more_RBR challenging_JJ than_IN English_NNP ._.
+This_DT system_NN addresses_NNS four_CD types_NNS of_IN open_JJ pronouns_NNS namely_RB personal_JJ ,_, locative_JJ ,_, reflexive_JJ and_CC reciprocal_JJ ._.
+As_IN there_EX is_VBZ no_DT annotated_JJ corpus_NN available_JJ for_IN Turkish_JJ 20_CD different_JJ child_NN stories_NNS -LRB-_-LRB- with_IN 1149_CD pronouns_NNS --_: includes_VBZ all_PDT the_DT 4_CD types_NNS -RRB-_-RRB- were_VBD made_VBN involved_VBN in_IN the_DT experimentation_NN and_CC obtained_VBD the_DT f-measure_JJ results_NNS from_IN 64_CD %_NN to_TO 74_CD %_NN ._.
+able_JJ 1_CD :_: Font_NNP guide_NN Indian_JJ Languages_NNP Computational_NNP models_NNS of_IN anaphora_NN resolution_NN for_IN many_JJ Indian_JJ languages_NNS like_IN Bengali_NNP ,_, Hindi_NNP ,_, Malayalam_NNP ,_, Sanskrit_NNP ,_, Tamil_NNP and_CC Telugu_NNP have_VBP almost_RB fifteen_CD years_NNS of_IN history_NN ._.
+Sobha_NNP and_CC Patnaik_NNP -LSB-_NNP 1998_CD ,_, 1999a_CD -RSB-_JJ proposed_VBN algorithms_NNS for_IN Malayalam_NNP Anaphora_NNP resolution_NN ._.
+Sobha_NNP ._.
+and_CC Patnaik_NNP -LSB-_NNP 1999b_CD -RSB-_NNP developed_VBD a_DT multilingual_JJ -LSB-_NNP Luo_NNP 2005_CD -RSB-_NNP system_NN called_VBD VASITH_NNP for_IN resolving_VBG anaphora_NN in_IN two_CD different_JJ Indian_JJ languages_NNS ,_, Malayalam_NNP and_CC Hindi_NNP ._.
+Computational_JJ grammars_NNS of_IN these_DT two_CD languages_NNS were_VBD explained_VBN in_IN detail_NN and_CC syntactic_JJ rules_NNS have_VBP been_VBN formed_VBN to_TO develop_VB the_DT rule_NN based_VBN system_NN ._.
+A_DT major_JJ limitation_NN of_IN this_DT system_NN was_VBD that_IN it_PRP uses_VBZ only_RB the_DT syntactic_NN knowledge_NN and_CC there_EX was_VBD no_DT incorporation_NN of_IN semantic_JJ or_CC any_DT form_NN of_IN real_JJ world_NN knowledge_NN ._.
+With_IN a_DT very_RB short_JJ discourse_NN the_DT system_NN showed_VBD success_NN rate_NN up_IN to_TO 96_CD %_NN ._.
+Most_JJS systems_NNS were_VBD developed_VBN on_IN based_VBN syntactic_JJ nature_NN of_IN the_DT language_NN ._.
+In_IN recent_JJ days_NNS semantic_JJ knowledge_NN incorporated_VBN systems_NNS are_VBP started_VBN developing_VBG ._.
+Languages_NNS in_IN India_NNP belong_VBP to_TO two_CD different_JJ categories_NNS Indo-Aryan_NNP and_CC Indo_NNP Dravidian_NNP ._.
+In_IN this_DT paper_NN for_IN each_DT category_NN one_CD language_NN is_VBZ selected_VBN -LRB-_-LRB- Hindi_NNP and_CC Tamil_NNP -RRB-_-RRB- for_IN surveying_VBG ._.
+1.1.1_CD Hindi_NNP Hindi_NNP has_VBZ rich_JJ case_NN system_NN ,_, though_IN case_NN marking_VBG is_VBZ not_RB obligatory_JJ ._.
+Pronouns_NNS are_VBP unmarked_JJ for_IN gender_NN and_CC only_RB partially_RB marked_VBN for_IN number_NN ._.
+i.e._FW ,_, Hindi_NNP pronouns_NNS in_IN first_JJ ,_, second_JJ and_CC third_JJ person_NN do_VBP not_RB have_VB gender_NN information_NN ._.
+But_CC the_DT clue_NN is_VBZ in_IN the_DT verbal_JJ structure_NN of_IN the_DT language_NN ._.
+i.e._FW ,_, Hindi_NNP has_VBZ verb_NN agreement_NN with_IN the_DT subject_JJ or_CC the_DT direct_JJ object_NN ._.
+The_DT agreement_NN inflection_NN is_VBZ marked_VBN for_IN person_NN ,_, number_NN and_CC gender_NN ._.
+Rashmi_NNP and_CC Michael_NNP -LSB-_NNP 2000_CD -RSB-_NNP proposed_VBD a_DT system_NN that_WDT interprets_VBZ third_JJ personal_JJ pronouns_NNS to_TO realize_VB anaphoric_JJ relationships_NNS between_IN noun_NN phrases_NNS ._.
+This_DT work_NN followed_VBD two_CD methodologies_NNS namely_RB centering_VBG theory_NN for_IN mention_NN detection_NN and_CC ranking_JJ model_NN to_TO resolve_VB the_DT mentions_VBZ that_DT are_VBP pronouns_NNS ._.
+This_DT approach_NN is_VBZ experimented_VBN with_IN two_CD algorithms_NNS namely_RB ,_, BFP_NNP algorithm_NN -LSB-_NNP Brennan_NNP et_NNP al._IN 1987_CD -RSB-_NN and_CC S-list_JJ algorithm_NN -LSB-_NNP Strube_NNP 1998_CD -RSB-_NNP and_CC justified_VBD a_DT encouraging_JJ result_NN ._.
+-LRB-_-LRB- comparing_VBG with_IN a_DT straightforward_JJ system-only_JJ centering_VBG theory_NN and_CC no_DT ranking_JJ model_NN -RRB-_-RRB- ._.
+Sobha_NNP and_CC Patnaik_NNP -LSB-_NNP 2002_CD -RSB-_NNP proposed_VBD a_DT rule_NN based_VBN approach_NN of_IN Hindi_NNP anaphora_NN resolution_NN system_NN ._.
+Prasad_NNP and_CC Strube_NNP -LSB-_NNP 2000_CD ,_, 2003_CD -RSB-_NN are_VBP based_VBN on_IN centering_VBG theory_NN and_CC salience_NN factors_NNS were_VBD handled_VBN based_VBN on_IN the_DT grammatical_JJ nature_NN of_IN the_DT language_NN ._.
+The_DT baseline_NN system_NN of_IN pronominal_JJ -LRB-_-LRB- reflexive_JJ and_CC possessive_JJ -RRB-_-RRB- resolution_NN system_NN for_IN Hindi_NNP based_VBN on_IN Hobb_NNP ‟_CD s_PRP algorithm_NN was_VBD developed_VBN by_IN Kamlesh_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP ._.
+The_DT article_NN of_IN Triveni_NNP et_FW al._IN -LSB-_NNP 2012_CD -RSB-_NNP describes_VBZ the_DT various_JJ issues_NNS and_CC challenges_NNS involved_VBN with_IN Hindi_NNP anaphora_NN resolution_NN system_NN and_CC surveyed_VBN various_JJ works_NNS addressing_VBG them_PRP ._.
+They_PRP mentioned_VBD the_DT major_JJ issues_NNS as_IN the_DT need_NN of_IN an_DT annotated_JJ corpus_NN and_CC need_NN of_IN grammatical_JJ structure_NN to_TO resolve_VB ambiguity_NN in_IN gender_NN identification_NN ._.
+A_DT comparative_JJ study_NN with_IN result_NN analysis_NN has_VBZ been_VBN done_VBN on_IN various_JJ approaches_NNS of_IN anaphora_NN resolution_NN ._.
+1.1.2_CD Tamil_NNP Like_IN other_JJ Indo-Dravidian_JJ languages_NNS Tamil_NNP agglutinative_JJ language_NN ._.
+Tamil_JJ words_NNS consist_VBP of_IN a_DT lexical_JJ root_NN with_IN one_CD or_CC more_JJR affixes_NNS attached_VBN ._.
+Most_JJS of_IN the_DT time_NN by_IN analyzing_VBG the_DT morphemes_NNS of_IN a_DT noun_NN phrase_NN -LRB-_-LRB- NP_NNP -RRB-_-RRB- person_NN ,_, number_NN ,_, gender_NN and_CC many_JJ like_IN agreement_NN features_NNS can_MD be_VB identified_VBN ._.
+Tamil_NN does_VBZ not_RB have_VB a_DT definite_JJ article_NN ._.
+So_IN the_DT feature_NN ,_, definite_JJ pronoun_NN agreement_NN between_IN the_DT anaphor_NN and_CC antecedent_NN can_MD never_RB be_VB identified_VBN ._.
+Tamil_NNP has_VBZ person_NN ,_, number_NN and_CC gender_NN agreement_NN ._.
+Murthi_NNP et_NNP al._IN -LSB-_NNP 2007_CD -RSB-_NNP proposed_VBD a_DT salience_NN measure_NN approach_NN and_CC machine_NN learning_NN based_VBN algorithm_NN for_IN pronominal_JJ resolution_NN in_IN Tamil_NNP ._.
+This_DT paper_NN introduces_VBZ a_DT set_NN of_IN fine_JJ tuned_VBN salience_NN factors_NNS and_CC weights_NNS that_WDT more_JJR suitable_JJ for_IN the_DT relatively_RB free_JJ word_NN order_NN languages_NNS ._.
+The_DT system_NN if_IN experimented_VBN with_IN a_DT corpus_NN from_IN CIIL_NNP -LRB-_-LRB- Central_NNP Institute_NNP of_IN Indian_NNP Languages_NNP ,_, Mysore_NNP ,_, India_NNP -RRB-_-RRB- and_CC got_VBD 86.32_CD %_NN of_IN precision_NN and_CC 80.9_CD %_NN of_IN recall_NN rates_NNS for_IN various_JJ cases_NNS of_IN nominative_JJ ,_, accusative_JJ ,_, genitive_JJ ,_, dative_JJ ,_, locative_JJ and_CC instrumental_JJ ._.
+Akilandeswari_NNP et_NNP al._IN -LSB-_NNP 2012_CD -RSB-_NNP proposed_VBD a_DT machine_NN learning_VBG system_NN for_IN the_DT most_RBS common_JJ pronominals_NNS of_IN Tamil_NNP discourse_NN -_: avan_NN ,_, aval_NN ,_, athu_NN and_CC its_PRP$ suffixes_NNS ._.
+The_DT five_CD categories_NNS of_IN features_NNS were_VBD word_NN ,_, POS_NNP ,_, chunk_NN ,_, syntactic_JJ information_NN ,_, clause_NN and_CC NER_NNP information_NN ._.
+These_DT features_NNS were_VBD utilized_VBN to_TO develop_VB the_DT system_NN using_VBG conditional_JJ random_JJ field_NN -LRB-_-LRB- CRF_NNP -RRB-_-RRB- model_NN ._.
+The_DT system_NN was_VBD tested_VBN with_IN a_DT tourism_NN domain_NN data_NNS of_IN 10000_CD sentences_NNS and_CC showed_VBD encouraging_JJ results_NNS ._.
+An_DT approach_NN to_TO resolve_VB anaphors_NNS of_IN persons_NNS ,_, places_NNS ,_, plurals_NNS and_CC events_NNS in_IN Tamil_NNP text_NN was_VBD proposed_VBN by_IN Balaji_NNP et_NNP al._IN -LSB-_NNP 2012_CD -RSB-_NNP ._.
+Most_JJS of_IN the_DT previous_JJ approaches_NNS were_VBD based_VBN on_IN syntactic_NN knowledge_NN of_IN the_DT language_NN ,_, here_RB is_VBZ an_DT approach_NN that_WDT incorporates_VBZ semantic_JJ information_NN -LRB-_-LRB- by_IN using_VBG Universal_NNP Networking_NNP Language_NNP -RRB-_-RRB- also_RB ._.
+Their_PRP$ triggering_VBG tuple_NN approach_NN works_VBZ with_IN reduction_NN of_IN ambiguity_NN while_IN resolving_VBG ._.
+This_DT system_NN is_VBZ evaluated_VBN with_IN a_DT corpus_NN from_IN tourism_NN and_CC news_NN domain_NN and_CC achieved_VBD 84_CD %_NN accuracy_NN and_CC is_VBZ compared_VBN with_IN the_DT previous_JJ rule_NN based_VBN system_NN ._.
+Experimental_JJ Aspects_NNS Here_RB the_DT language_NN dependent_JJ additional_JJ issues_NNS and_CC the_DT tackling_VBG actions_NNS taken_VBN while_IN implementing_VBG the_DT systems_NNS were_VBD explained_VBN ._.
+General_NNP Algorithm_NNP Whichever_NNP may_MD be_VB the_DT language_NN and_CC whatever_WDT may_MD be_VB the_DT approach_NN selected_VBN ,_, the_DT outline_NN or_CC order_NN of_IN the_DT steps_NNS remains_VBZ almost_RB the_DT same_JJ -LSB-_NNP Denis_NNP 2007_CD -RSB-_NNP ._.
+The_DT way_NN these_DT steps_NNS are_VBP being_VBG carried_VBD out_RP depends_VBZ on_IN the_DT methodology_NN and_CC nature_NN of_IN the_DT language_NN ._.
+Keeping_VBG that_IN in_IN mind_NN the_DT simplified_VBN version_NN of_IN the_DT general_JJ algorithm_NN is_VBZ presented_VBN in_IN figure_NN 2_CD ._.
+Fig._NN 2_CD ._.
+Architectural_JJ modules_NNS of_IN anaphora_NN resolution_NN ._.
+Mention_NNP Detection_NNP A_NNP series_NN of_IN preprocessing_VBG steps_NNS need_VBP to_TO be_VB taken_VBN to_TO identity_NN the_DT exact_JJ list_NN of_IN mentions_VBZ -LRB-_-LRB- for_IN step_NN 1_CD in_IN generic_JJ algorithm_NN -RRB-_-RRB- ._.
+Common_JJ list_NN of_IN preprocessing_VBG that_IN found_VBN in_IN most_JJS of_IN the_DT papers_NNS are_VBP tokenization_NN ,_, segmentation_NN ,_, morphological_JJ processing_NN ,_, POS_NNP tagging_NN ,_, Noun_NNP Phrase_NNP identification_NN ,_, named_VBN entity_NN recognition_NN ,_, nested_VBN noun_NN phrase_NN extraction_NN semantic_JJ class_NN determination_NN -LSB-_NNP Soon_RB et_FW al._FW 2001_CD -RSB-_NNP ._.
+Depending_VBG on_IN the_DT nature_NN of_IN a_DT language_NN mention_NN detection_NN may_MD need_VB additional_JJ actions_NNS ._.
+For_IN Arabic_NNP text_NN segmentation_NN is_VBZ an_DT important_JJ step_NN which_WDT is_VBZ must_MD in_IN order_NN to_TO detect_VB partial_JJ parts_NNS of_IN a_DT word_NN as_IN a_DT mention_NN ._.
+Most_JJS of_IN the_DT regional_JJ languages_NNS suffer_VBP from_IN no_DT capitalization_NN ,_, free_JJ word_NN order_NN ,_, heavy_JJ conjugation_NN ,_, omitted_VBN pronouns_NNS etc._FW ._.
+Special_JJ attention_NN has_VBZ to_TO be_VB given_VBN to_TO handle_VB these_DT issues_NNS to_TO resolve_VB anaphors_NNS efficiently_RB ._.
+Table_NNP 2_CD explains_VBZ the_DT special_JJ challenges_NNS that_WDT met_VBD in_IN processing_VBG a_DT regional_JJ language_NN ._.
+Person_NN ,_, number_NN and_CC gender_NN -LRB-_-LRB- PNG_NNP -RRB-_-RRB- agreement_NN between_IN the_DT anaphora_NN and_CC antecedent_NN are_VBP some_DT of_IN the_DT important_JJ features_NNS to_TO be_VB analyzed_VBN ._.
+This_DT task_NN can_MD directly_RB be_VB identified_VBN in_IN some_DT languages_NNS like_IN Tamil_NNP -LRB-_-LRB- noun_NN phrases_NNS are_VBP the_DT indicators_NNS -RRB-_-RRB- ,_, in_IN languages_NNS like_IN Hindi_NNP verbal_JJ structures_NNS need_VBP to_TO be_VB analyzed_VBN and_CC for_IN languages_NNS like_IN Japanese_JJ it_PRP is_VBZ even_RB more_RBR difficult_JJ ,_, need_VB for_IN context_NN based_VBN analysis_NN ._.
+Table_NNP 3_CD ._.
+explains_VBZ the_DT summary_NN of_IN PNG_NNP agreement_NN analysis_NN of_IN these_DT languages_NNS is_VBZ explained_VBN ._.
+Table_NNP 3_CD ._.
+PNG_NNP Agreement_NNP in_IN Regional_NNP Languages_NNP Table_NNP Languag_NNP e_LS Arabic_NNP Chinese_NNP Hindi_NNP Japanese_NNP Tamil_NNP Turkish_JJ 2_CD ._.
+Specific_JJ Challenges_VBZ met_VBN for_IN Different_NNP Languages_NNP Language_NNP Arabic_NNP Chinese_NNP Hindi_NNP Japanese_NNP Tamil_NNP Turkish_JJ P-agree_NN NP_NNP analysis_NN NP_NNP analysis_NN NP_NNP analysis_NN NP_NNP Analysis_NNP NP_NNP analysis_NN NP_NNP analysis_NN N-agree_NNP G-agree_NNP NP_NNP analysis_NN NP_NNP analysis_NN NP_NNP analysis_NN NP_NNP analysis_NN NP&VP_NNP analysis_NN VP_NNP analysis_NN NP_NNP analysis_NN Context_NNP based_VBN analysis_NN NP_NNP analysis_NN NP_NNP analysis_NN NP_NNP analysis_NN Semantic_JJ analysis_NN Challenge/Complicatio_NNP n_VBZ morphological_JJ richness_NN mention_NN as_IN partial_JJ part_NN of_IN a_DT word_NN lack_NN of_IN morphologic_JJ clues_NNS lack_VBP of_IN orthographic_JJ clues_NNS no_DT case_NN markers_NNS Ambiguity_NN in_IN gender_NN identification_NN Partially_RB marked_VBD numbers_NNS Poor_NNP grammatical_JJ support_NN for_IN gender_NN ,_, number_NN ,_, article_NN determination_NN Ambiguity_NN at_IN morphological_JJ level_NN Ambiguity_NN at_IN semantic_JJ level_NN Partial_NNP free_JJ word_NN order_NN morphological_JJ richness_NN null_JJ pronouns-more_NN common_JJ Tackling_NNP Steps_VBZ Segmentation_NN character_NN by_IN character_NN analyzation_NN Semantic_JJ class_NN determination_NN analyzing_VBG verb/auxiliary_JJ verb_NN phrase_NN conjugation_NN Dictionary_NNP definition_NN Context_NNP based_VBN analysis_NN Morphologica_NNP l_NN analysis_NN Extracting_VBG semantical_JJ features_NNS syntactic_NN structure_NN study_NN semantic_JJ discourse_NN knowledge_NN Reference_NNP Imed_NNP et_NNP al._IN -LSB-_NNP 2009_CD -RSB-_NNP Peng_NNP and_CC Araki_NNP -LSB-_NNP 2009_CD -RSB-_NNP Kamlesh_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP Triveni_NNP et_FW al._IN -LSB-_NNP 2012_CD -RSB-_NNP Sasano_NNP -LSB-_NNP 2008_CD -RSB-_NNP Akilandeswar_NNP i_FW et_FW al._FW -LSB-_NNP 2012_CD -RSB-_NNP Balaji_NNP et_NNP al._IN -LSB-_NNP 2011_CD -RSB-_NNP Kilicaslan_NNP et_NNP al._IN -LSB-_NNP 2009_CD -RSB-_NNP P_SYM -_: Person_NN N_NNP -_: Number_NNP G_NNP --_: Gender_NNP Feature_NNP Set_NNP There_EX are_VBP some_DT 8_CD -LSB-_NNP McCarthy_NNP and_CC Lehnert_NNP ,_, 1995_CD -RSB-_NN to_TO 66_CD -LSB-_NNP Aone_NNP and_CC Bennet_NNP ,1995_CD -RSB-_NN features_NNS may_MD be_VB listed_VBN for_IN better_JJR handling_NN of_IN anaphors_NNS ._.
+The_DT most_RBS common_JJ categories_NNS of_IN features_NNS are_VBP grammatical_JJ ,_, lexical_JJ ,_, positional_JJ and_CC semantic_JJ classes_NNS -LSB-_NNP Kilicaslan_NNP 2009_CD -RSB-_NNP which_WDT are_VBP called_VBN as_RB universal_JJ set_NN of_IN features_NNS ._.
+Table_NNP 4_CD lists_NNS universal_JJ features_NNS between_IN the_DT anaphora_NN and_CC antecedent_NN candidates_NNS that_WDT may_MD be_VB found_VBN in_IN most_JJS of_IN the_DT papers_NNS ._.
+Feature_NN Case_NN agreement_NN Grammati_NNP cal_JJ role_NN Overtness_NNP Type_NNP Semantic_NNP type_NN Person_NN agreement_NN Number_NNP agreement_NN Gender_NNP agreement_NN Position_NNP Table_NNP 4_CD ._.
+Universal_NNP Set_NNP of_IN Features_NNPS Definition_NNP Both_DT nominative/accusative/dative_JJ /_NN locative/genitive/ablative_JJ /_NN i_FW nstrumental_FW Either_CC is_VBZ a_DT subject_JJ or_CC object_NN Open_NNP or_CC zero_CD pronoun_NN Pronoun_NNP is_VBZ personal/locative/reflexive_JJ /_CD reciprocal_JJ Referent_NNP of_IN a_DT antecedent_NN is_VBZ animal/human_JJ being/a_NN place/an_NN abstract_JJ obhect/physical_JJ object_NN Both_DT first/second/third_JJ Both_DT with_IN singular/plural_JJ Both_DT male/female/neutral_JJ Distance_NNP between_IN these_DT two_CD There_EX may_MD be_VB a_DT slight_JJ variation_NN in_IN the_DT selection_NN feature_NN set_VBN for_IN a_DT particular_JJ language_NN depending_VBG on_IN its_PRP$ grammatical_JJ support_NN ._.
+For_IN example_NN in_IN the_DT languages_NNS like_IN Hindi_NNP and_CC Japanese_NNP there_EX is_VBZ really_RB poor_JJ support_NN for_IN direct_JJ identification_NN gender_NN and_CC number_NN information_NN ._.
+To_TO identify_VB this_DT information_NN in_IN Hindi_NNP verbal_JJ structure_NN is_VBZ used_VBN and_CC in_IN Japanese_JJ semantic_JJ features_NNS is_VBZ incorporated_VBN ._.
+Likewise_RB figure_NN 3_CD explains_VBZ the_DT recommended_VBN set_NN of_IN additional_JJ features_NNS for_IN each_DT language_NN ._.
+Fig._NN 3_CD ._.
+Special_JJ List_NN of_IN Features_NNS for_IN each_DT Language_NNP Data_NNP Sources_NNS As_IN most_JJS recent_JJ resolution_NN approaches_NNS are_VBP based_VBN on_IN machine_NN learning_VBG methods_NNS ,_, there_EX is_VBZ an_DT extensive_JJ emerge_VBP for_IN train_NN and_CC test_NN data_NNS ._.
+And_CC it_PRP is_VBZ also_RB important_JJ to_TO work_VB with_IN the_DT standard_JJ corpora_NN so_IN that_IN the_DT approach_NN can_MD be_VB evaluated_VBN -LRB-_-LRB- correctness_JJ measure_NN -RRB-_-RRB- and_CC compared_VBN better_JJR ._.
+While_IN English_NNP and_CC many_JJ European_JJ language_NN corpora_NN have_VBP been_VBN created_VBN and_CC made_VBN available_JJ recently_RB ,_, the_DT number_NN of_IN publicly_RB available_JJ Asian_JJ language_NN corpora_NN is_VBZ very_RB limited_VBN ._.
+Mitkov_NNP -LSB-_NNP 2010_CD -RSB-_NNP have_VBP listed_VBN the_DT five_CD issues_NNS that_WDT are_VBP being_VBG faced_VBN by_IN anaphora_NN resolving_VBG systems_NNS ._.
+One_CD of_IN the_DT major_JJ issues_NNS is_VBZ about_IN corpus_JJ annotation_NN ._.
+Most_JJS of_IN the_DT time_NN evaluation_NN is_VBZ conducted_VBN against_IN a_DT corpus_NN which_WDT is_VBZ annotated_VBN by_IN humans_NNS ._.
+Therefore_RB reliable_JJ annotation_NN is_VBZ very_RB important_JJ ._.
+In_IN contrast_NN to_TO the_DT wide_JJ variety_NN of_IN languages_NNS in_IN Asia_NNP ,_, the_DT number_NN of_IN publicly_RB available_JJ Asian_JJ language_NN corpora_NN is_VBZ very_RB limited_VBN ._.
+This_DT situation_NN needs_VBZ to_TO be_VB improved_VBN ._.
+Table_NNP 5_CD explains_VBZ the_DT various_JJ referentially_JJ annotated_JJ corpora_NN in_IN different_JJ languages_NNS ._.
+Chinese_JJ Japanese_JJ Hindi_NNS ,_, Tamil_NNP ,_, Turkish_JJ OntoNotes_NNP 3.0_CD ACE-2005_NNP OntoNotes_NNP 3.0_CD NAIST_NNP Text_NNP Corpus_NNP -LRB-_-LRB- so_RB far_RB -RRB-_-RRB- No_DT public_JJ annotated_JJ Corpus_NNP 200K_NNP words_NNS 200K_JJ words_NNS 1224K_NNP words_NNS 38K_NNP sentences_NNS Authors_NNS used_VBN different_JJ corpus_NN of_IN various_JJ sizes_NNS al._IN -LSB-_NNP 2006_CD -RSB-_NNP Weischedel_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP Walker_NNP et_NNP al._IN -LSB-_NNP 2006_CD -RSB-_NNP Weischedel_NNP et_NNP al._IN -LSB-_NNP 2008_CD -RSB-_NNP Iida_NNP et_NNP al._IN -LSB-_NNP 2007_CD -RSB-_NNP -_: Table_NNP 5_CD ._.
+Annotated_NNP Corpus_NNP Language_NNP Corpora_NNP Size_NN -LRB-_-LRB- ~_FW -RRB-_-RRB- Arabic_NNP ACE-2005_NNP 100K_NNP words_NNS Anaphora_NNP resolution_NN is_VBZ an_DT must_MD focus_VB topic_NN for_IN any_DT regional_JJ language_NN processing_NN research_NN groups_NNS as_IN it_PRP has_VBZ great_JJ scope_NN in_IN almost_RB all_DT natural_JJ language_NN understanding_NN applications_NNS ._.
+This_DT offers_VBZ an_DT inclusive_JJ outlook_NN of_IN the_DT last_JJ twenty_CD years_NNS of_IN focus_NN on_IN the_DT computational_JJ dealing_NN of_IN anaphora_NN resolution_NN among_IN various_JJ Asian_JJ languages_NNS -LRB-_-LRB- Arabic_NNP ,_, Chinese_NNP ,_, Hindi_NNP ,_, Japanese_NNP ,_, Tamil_NNP and_CC Turkish_JJ -RRB-_-RRB- for_IN the_DT factors_NNS including_VBG additional_JJ challenges_NNS -LRB-_-LRB- nature_NN of_IN language_NN -RRB-_-RRB- ,_, algorithms_NNS selected_VBN ,_, features_NNS involved_VBN ,_, corpus_NN or_CC dataset_NN for_IN evaluation_NN and_CC acquired_VBD results_NNS ._.
+No_DT capitalization_NN ,_, morphological_JJ richness_NN ,_, free_JJ word_NN order_NN ,_, semantic_JJ focus_NN and_CC heavy_JJ conjugations_NNS are_VBP some_DT of_IN the_DT identified_VBN issues_NNS and_CC were_VBD needed_VBN additional_JJ processing_NN to_TO resolve_VB anaphors_NNS ._.
+Comparison_NN among_IN the_DT results_NNS could_MD not_RB be_VB evaluated_VBN properly_RB due_JJ to_TO the_DT lack_NN of_IN corpus_NN development_NN ._.
+There_EX are_VBP many_JJ more_JJR open_JJ issues_NNS are_VBP still_RB need_VB to_TO be_VB resolved_VBN effectively_RB depending_VBG on_IN the_DT nature_NN of_IN a_DT language_NN ,_, not_RB only_RB for_IN anaphora_NN resolution_NN and_CC also_RB for_IN the_DT supporting_VBG tasks_NNS -LRB-_-LRB- POS_NNP tagger_NN ,_, Named_VBN entity_NN recognizer_NN -RRB-_-RRB- and_CC corpus_VBZ development_NN ._.
+References_NNS A._NN KNOTT_NNP ,_, P._NNP VLUGTE_NNP ._.
+2008_CD ._.
+Multi-agent_JJ human_JJ --_: machine_NN dialogue_NN :_: issues_NNS in_IN dialogue_NN management_NN and_CC referring_VBG expression_NN semantics_NNS ._.
+Artificial_JJ Intelligence_NNP ._.
+172_CD ._.
+69_CD --_: 102_CD ._.
+AHN_NNP ,_, KISUH_NNP ,_, JOHAN_NNP BOS_NNP ,_, JAMES_NNP R._NNP CURRAN_NNP ,_, DAVE_NNP KOR_NNP ,_, MALVINA_NNP NISSIM_NNP ,_, BONNIE_NNP WEBBER_NNP ._.
+2005_CD ._.
+Question_NN answering_VBG with_IN QED_NNP at_IN TREC-2005_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Fourteenth_NNP Text_NNP REtrieval_NNP Conference_NNP ,_, Gaithersburg_NNP ,_, Md._NNP ,_, 15_CD --_: 18_CD November_NNP ._.
+AKILANDESWARI_NNP ,_, A_DT AND_CC SOBHA_NNP ,_, LALITHA_NNP DEVI_NNP ._.
+2012_CD ._.
+Resolution_NNP for_IN Pronouns_NNP in_IN Tamil_NNP Using_VBG CRF_NNP ._.
+Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Machine_NN Translation_NN and_CC Parsing_NNP in_IN Indian_NNP Languages_NNP -LRB-_-LRB- MTPIL-2012_NNP -RRB-_-RRB- ,_, COLING_NNP 2012_CD ,_, Mumbai_NNP ,_, December_NNP 2012_CD ._.
+pages_NNS 103_CD --_: 112_CD ,_, Conclusions_NNPS Reference_NNP Walker_NNP et_NNP AONE_NNP ,_, C._NNP AND_NNP BENNET_NNP ,_, S.W._NNP ._.
+1995_CD ._.
+Evaluating_VBG automated_VBN and_CC manual_JJ acquisition_NN of_IN anaphora_NN resolution_NN rules_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 95_CD ._.
+PP_NNP 122-129_CD ._.
+ASHER_NNP ._.
+NICHOLAS_NNP AND_CC LASCARIDES_NNP ._.
+ALEX._NNP 2003_CD ._.
+Logics_NNS of_IN Conversation_NN ._.
+Cambridge_NNP University_NNP Press_NNP ,_, Cambridge_NNP ,_, UK_NNP ._.
+AZZAM_NNP ._.
+S_NNP ,_, K._NNP HUMPHREYS_NNP ,_, R._NNP GAIZAUSKAS_NNP ._.
+1999_CD ._.
+Using_VBG co_SYM -_: reference_NN chains_NNS for_IN text_NN summarization_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP Workshop_NNP on_IN Co-reference_NN and_CC its_PRP$ Applications_NNS ,_, College_NNP Park_NNP ,_, MD._NNP ._.
+B._NNP WELLNER_NNP ,_, A._NN MCCALLUM_NNP ,_, F._NNP PENG_NNP ,_, M._NNP HAY_NNP ._.
+2004_CD ._.
+An_DT integrated_VBN ,_, conditional_JJ model_NN of_IN information_NN extraction_NN and_CC co_SYM -_: reference_NN with_IN application_NN to_TO citation_NN matching_NN ._.
+In_IN AUAI_NNP '_POS 04_CD :_: Proceedings_NNP of_IN the_DT 20th_JJ conference_NN on_IN Uncertainty_NN in_IN artificial_JJ intelligence_NN ,_, pages_NNS 593_CD --_: 601_CD ,_, Arlington_NNP ,_, Virginia_NNP ,_, United_NNP States_NNPS ._.
+AUAI_NNP Press_NNP ._.
+BALAJI_NNP J_NNP ,_, T_NNP V_NNP GEETHA_NNP ,_, RANJANI_NNP PARTHASARATHI_NNP ,_, MADHAN_NNP KARKY_NNP ._.
+2011_CD ._.
+Anaphora_NNP Resolution_NNP in_IN Tamil_NNP using_VBG Universal_NNP Networking_NNP Language_NNP ._.
+IICAI_NNP 2011.1405-1415_CD ._.
+BALAJI_NNP J_NNP ,_, T_NNP V_NNP GEETHA_NNP ,_, RANJANI_NNP PARTHASARATHI_NNP ,_, MADHAN_NNP KARKY_NNP ._.
+2012_CD ._.
+Two-Stage_NNP Bootstrapping_NNP for_IN Anaphora_NNP Resolution_NNP ._.
+Proceedings_NNP of_IN COLING_NNP 2012_CD :_: Posters_NNS ,_, COLING_NNP 2012_CD ,_, Mumbai_NNP ,_, December_NNP 2012_CD ._.
+pages_NNS 507_CD --_: 516_CD ,_, BALDWIN_NNP ,_, B._NNP 1995_CD ._.
+Cogniac_NNP :_: A_NNP discourse_NN processing_NN engine_NN ._.
+Doctoral_JJ Dissertation_NNP ,_, University_NNP of_IN Pennsylvania_NNP ._.
+BARZILAY_NNP REGINA_NNP ,_, LAPATA_NNP MIRELLA_NNP ._.
+2006_CD ._.
+Aggregation_NN via_IN set_VBN partitioning_NN for_IN natural_JJ language_NN generation_NN ._.
+In_IN HLT-NAACL_NNP -_: 06_CD ,_, pages_NNS 359_CD --_: 366_CD ,_, New_NNP York_NNP City_NNP ,_, USA_NNP ._.
+BEAN_NN ,_, D._NNP AND_NNP E._NNP RILOFF_NNP ._.
+2004_CD ._.
+Unsupervised_JJ learning_NN of_IN contextual_JJ role_NN knowledge_NN for_IN co-reference_NN resolution_NN ._.
+In_IN Proc_NNP ._.
+of_IN NAACL_NNP ._.
+BEAN_NN ,_, DAVID_NNP AND_CC ELLEN_NNP RILOFF_NNP ._.
+1999_CD ._.
+Corpus-based_JJ identification_NN of_IN non-anaphoric_JJ noun_NN phrases_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 37th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, College_NNP Park_NNP ,_, Md._NNP ,_, 20_CD --_: 26_CD June_NNP ._.
+BEAVER_NNP ._.
+DAVID_NNP ._.
+2004_CD ._.
+The_DT optimization_NN of_IN discourse_NN anaphora_NN ._.
+Linguistics_NNPS and_CC Philosophy_NNP ._.
+27_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+BERGLER_NNP S._NNP et_NNP al._IN 2003_CD ._.
+Using_VBG Knowledge-poor_JJ Co-reference_NN Resolution_NN for_IN Text_NNP Summarization_NNP ._.
+In_IN Proceedings_NNP of_IN Document_NNP Understanding_NNP Conference_NNP ._.
+May_NNP 31-June_NNP 1_CD ,_, NIST_NNP ,_, USA_NNP ,_, 85-92_CD ._.
+BRENNAN_NNP ,_, S.E._NNP ,_, M.W._NNP FRIEDMAN_NNP ,_, AND_CC C.J._NNP POLLARD_NNP ._.
+1987_CD ._.
+A_DT centering_VBG approach_NN to_TO pronouns_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 25th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, Stanford_NNP ,_, Cal._NNP ,_, 6_CD --_: 9_CD July_NNP ,_, pages_NNS 155_CD --_: 162_CD ._.
+CARBONELL_NNP ,_, JAIME_NNP G._NNP AND_CC BROWN_NNP ,_, RALF_NNP D._NNP Anaphora_NNP resolution_NN :_: a_DT multi-strategy_JJ approach_NN ._.
+Proceedings_NNP of_IN COLING_NNP ,_, pages_NNS 96_CD --_: 101_CD ,_, 1988_CD ._.
+CHEN_NNP ._.
+YI-CHUN_NN ._.
+2005_CD ._.
+Chinese_JJ Zero_NNP Anaphora_NNP Resolution_NNP and_CC Its_PRP$ Applications_NNS ,_, Ph.D._NNP ._.
+Dissertation_NNP ,_, Tatung_NNP University_NNP ._.
+CONNOLLY_NNP ._.
+DENNIS_NNP ,_, BURGER_NNP ._.
+JOHN_NNP D._NNP AND_NNP DAY_NNP ._.
+DAVID_NNP S._NNP 1997_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO anaphoric_JJ reference_NN ._.
+In_IN D._NNP B._NNP Jones_NNP and_CC H._NNP L._NNP Somers_NNP ,_, editors_NNS ,_, New_NNP Methods_NNPS in_IN Language_NNP Processing_NNP ,_, pages_NNS 133_CD --_: 153_CD ._.
+UCL_NNP Press_NNP ._.
+CULOTTA_NNP ,_, ARON_NNP ,_, MICHAEL_NNP WICK_NNP ,_, AND_CC ANDREW_NNP MCCALLUM_NNP ._.
+2007_CD ._.
+First-order_JJR probabilistic_JJ models_NNS for_IN co_SYM -_: reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN Human_NNP Language_NNP Technologies_NNP 2007_CD :_: The_DT Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, Rochester_NNP ,_, N.Y._NNP ,_, 22_CD --_: 27_CD April_NNP ,_, pages_NNS 81_CD --_: 88_CD ._.
+DENIS_NNP P_NNP ,_, BALDRIDGE_NNP J._NNP 2008_CD ._.
+Specialized_NNP models_NNS and_CC ranking_VBG for_IN co-reference_NN resolution_NN ._.
+In_IN :_: Proceedings_NNP of_IN the_DT 2008_CD conference_NN on_IN empirical_JJ methods_NNS in_IN natural_JJ language_NN processing_NN ._.
+Honolulu_NNP -LRB-_-LRB- HI_NNP -RRB-_-RRB- :_: Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+p._SYM 660_CD --_: 9_CD ._.
+DENIS_NNP ,_, PASCAL_NNP AND_CC JASON_NNP BALDRIDGE_NNP ._.
+2007_CD ._.
+A_DT ranking_JJ approach_NN to_TO pronoun_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 20th_JJ International_NNP Joint_NNP Conference_NNP on_IN Artificial_NNP Intelligence_NNP ,_, Hyderabad_NNP ,_, India_NNP ,_, 6_CD --_: 12_CD January_NNP ,_, pages_NNS 1588_CD --_: 1593_CD ._.
+DENIS_NNP ,_, PASCAL_NNP ._.
+2007_CD ._.
+New_NNP learning_VBG Models_NNS for_IN Robust_NNP Reference_NNP Resolution_NNP ._.
+Doctoral_JJ Dissertation_NNP ._.
+University_NNP of_IN Texas_NNP at_IN Austin_NNP ._.
+DUTTA_NNP KAMLESH_NNP ,_, NUPUR_NNP PRAKASH_NNP ,_, AND_CC SAROJ_NNP KAUSHIK_NNP ._.
+2008_CD ._.
+Resolving_NNP Pronominal_NNP Anaphora_NNP in_IN Hindi_NNP using_VBG Hobbs_NNP ‟_NNP Algorithm_NNP ._.
+Web_NNP Journal_NNP of_IN Formal_NNP Computation_NNP and_CC Cognitive_NNP Linguistics_NNPS ._.
+Vol_NNP ._.
+1_LS ._.
+No._NN 10_CD ._.
+DUTTA_NNP ._.
+K_NNP ,_, PRAKASH_NNP ._.
+N_NNP ,_, KAUSHIK_NNP ._.
+S._NNP 2009_CD ._.
+Application_NN of_IN Pronominal_NNP Divergence_NNP and_CC Anaphora_NNP Resolution_NNP in_IN English_NNP -_: Hindi_NNP Machine_NNP Translation_NN ._.
+Research_NNP journal_NN ``_`` POLIBITS_NNP ''_'' Computer_NNP Science_NNP and_CC Computer_NNP Engineering_NNP with_IN Applications_NNS ,_, Issue_NNP 39_CD ,_, pp-55-58_CD ,_, 2009_CD ._.
+DUTTA_NNP ._.
+K_NNP ,_, PRAKASH_NNP ._.
+N_NNP ,_, KAUSHIK_NNP ._.
+S._NNP 2010_CD ._.
+Probabilistic_NNP Neural_NNP Network_NNP Approach_NNP to_TO the_DT Classification_NN of_IN Demonstrative_JJ Pronouns_NNS for_IN Indirect_NNP Anaphora_NNP in_IN Hindi_NNP ._.
+Expert_NNP Systems_NNPS with_IN Applications_NNS :_: An_DT International_NNP Journal_NNP ,_, Volume_NN 37_CD ,_, Issue_NN 8_CD ,_, pp._SYM 5607-5613_CD ,_, Elsevier_NNP ._.
+DUTTA_NNP ._.
+K_NNP ,_, PRAKASH_NNP ._.
+N_NNP ,_, KAUSHIK_NNP ._.
+S._NNP 2011_CD ._.
+Machine_NN Learning_NNP Approach_NNP for_IN the_DT Classification_NN of_IN Demonstrative_JJ Pronouns_NNS for_IN Indirect_NNP Anaphora_NNP in_IN Hindi_NNP News_NNP Items_NNS ._.
+Prague_NNP Bulletin_NNP of_IN Mathematical_NNP Linguistics_NNP ._.
+Versita_NNP ,_, Vol_NNP ._.
+95_CD ,_, pp._SYM 33-50_CD ._.
+GOOCH_NNP ._.
+P_NN ,_, A._NN ROUDSARI_NNP ._.
+2012_CD ._.
+Lexical_JJ patterns_NNS ,_, features_NNS and_CC knowledge_NN resources_NNS for_IN co-reference_NN resolution_NN in_IN clinical_JJ notes_NNS ._.
+Journal_NNP of_IN Biomedical_NNP Informatics_NNPS ._.
+45_CD 901_CD --_: 912_CD ._.
+GROSZ_NNP ,_, B._NNP J._NNP ,_, JOSHI_NNP ,_, A._NN K._NNP ,_, AND_CC WEINSTEIN_NNP ,_, S._NNP 1995_CD ._.
+Centering_VBG :_: A_DT framework_NN for_IN modeling_NN the_DT local_JJ coherence_NN of_IN discourse_NN ._.
+Computa_NNP ._.
+Linguist._NNP ,_, 21_CD ,_, 2_CD ,_, 203_CD --_: 226_CD ._.
+HAMMAMI_NNP ,_, S.M._NNP ,_, SALLEMI_NNP ,_, R._NNP ,_, BELGUITH_NNP ,_, L.H._NNP :_: A_NNP BAYESIAN_NNP ._.
+2010_CD ._.
+classifier_NN for_IN the_DT identification_NN of_IN non_NN -_: referential_JJ pronouns_NNS in_IN Arabic_NNP ._.
+In_IN :_: INFOS_NNS ,_, Special_JJ Track_NNP On_IN Natural_NNP Language_NNP Processing_NNP and_CC Knowledge_NNP Mining_NNP ._.
+HARTRUMPF_NNP ,_, SVEN_NNP ._.
+2001_CD ._.
+Co-reference_NN resolution_NN with_IN syntactico-semantic_JJ rules_NNS and_CC corpus_NN statistics_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 3rd_CD Conference_NN on_IN Computational_NNP Natural_NNP Language_NNP Learning_NNP ,_, Toulouse_NNP ,_, France_NNP ,_, 6_CD --_: 7_CD July_NNP ,_, pages_NNS 137_CD --_: 144_CD ._.
+HIRST_NNP ,_, G._NNP 1981_CD ._.
+Anaphora_NNP in_IN Natural_NNP Language_NNP Understanding_NNP :_: A_DT Survey_NN ._.
+Lecture_NN Notes_NNS in_IN Computer_NNP Science_NNP 119_CD ._.
+Berlin_NNP :_: Springer_NNP -_: Verlag_NNP ._.
+HOBBS_NNP JERRY_NNP ._.
+1976_CD ._.
+Pronoun_NNP resolution_NN ._.
+Technical_NNP report_NN ._.
+CUNY_NNP ._.
+HOBBS_NNP JERRY_NNP ._.
+1978_CD ._.
+Resolving_NNP pronoun_NN references_NNS ._.
+Lingua_NNP ._.
+44:339_CD --_: 352_CD ._.
+HOBBS_NNP JERRY_NNP ._.
+1979_CD ._.
+Coherence_NN and_CC co-reference_NN ._.
+Technical_NNP report_NN ._.
+SRI_NNP International_NNP ._.
+HOBBS_NNP ,_, J._NNP 1978_CD ._.
+Resolving_NNP pronoun_NN references_NNS ._.
+Lingua_NNP 44_CD ,_, 311_CD --_: 338_CD ._.
+IIDA_NNP ,_, R._NNP ,_, INUI_NNP ,_, K._NNP ,_, AND_CC MATSUMOTO_NNP ,_, Y._NNP 2005_CD ._.
+Anaphora_NNP Resolution_NNP by_IN Antecedent_NNP Identification_NNP Followed_VBN by_IN Anaphoricity_NNP Determination_NNP ._.
+ACM_NNP Trans_NNP ._.
+Asian_JJ Lang_NNP ._.
+Inf_NNP ._.
+Process_NN ._.
+4_CD ,_, 4_CD ,_, -LRB-_-LRB- December_NNP 2005_CD -RRB-_-RRB- ,_, 18_CD pages-417-434_NN ._.
+IIDA_NNP ,_, R._NNP ,_, INUI_NNP ,_, K._NNP ,_, AND_CC MATSUMOTO_NNP ,_, Y._NNP 2007_CD ._.
+Zero-anaphora_NN resolution_NN by_IN learning_VBG rich_JJ syntactic_NN pattern_NN features_NNS ._.
+ACM_NNP Trans_NNP ._.
+Asian_JJ Lang_NNP ._.
+Inf_NNP ._.
+Process_NN ._.
+6_CD ,_, 4_CD ,_, Article_NNP 12_CD -LRB-_-LRB- December_NNP 2007_CD -RRB-_-RRB- ,_, 22_CD pages_NNS ._.
+DOI_NNP =_SYM 10.1145_CD /_CD 1316457.1316458_CD ._.
+http://doi.acm.org/10.1145/1316457.1316458_NNS ._.
+IIDA_NNP ,_, R._NNP ,_, K._NNP INUI_NNP ,_, H._NNP TAKAMURA_NNP ,_, AND_CC Y._NNP MATSUMOTO_NNP ._.
+2003a_NNS ._.
+Incorporating_VBG contextual_JJ cues_NNS in_IN trainable_JJ models_NNS for_IN co_SYM -_: reference_NN resolution_NN ._.
+In_IN Proc_NNP ._.
+EACL_NNP Workshop_NNP on_IN the_DT Computational_NNP Treatment_NNP of_IN Anaphora_NNP ._.
+IIDA_NNP ,_, RYU_NNP ,_, KENTARO_NNP INUI_NNP ,_, HIROYA_NNP TAKAMURA_NNP ,_, AND_CC YUJI_NNP MATSUMOTO_NNP ._.
+2003b_JJ ._.
+Incorporating_VBG contextual_JJ cues_NNS in_IN trainable_JJ models_NNS for_IN co-reference_NN resolution_NN ._.
+In_IN R._NNP Dale_NNP ,_, K._NNP van_NNP Dempter_NNP ,_, and_CC R._NNP Mitkov_NNP ,_, eds._FW ,_, Proceedings_NNP of_IN the_DT EACL-03_NNP Workshop_NNP on_IN the_DT Computational_NNP Treatment_NNP of_IN Anaphora_NNP ._.
+Budapest_NNP ._.
+JAKOB_NNP ,_, NIKLAS_NNP ,_, IRYNA_NNP GUREVYCH_NNP ._.
+2010_CD ._.
+Using_VBG anaphora_NN resolution_NN to_TO improve_VB opinion_NN target_NN identification_NN in_IN movie_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 48th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, Uppsala_NNP ,_, Sweden_NNP ,_, 11_CD --_: 16_CD July_NNP ,_, pages_NNS 263_CD --_: 268_CD ._.
+KAMEYAMA_NNP ,_, MEGUMI_NNP ._.
+1997_CD ._.
+Recognizing_VBG referential_JJ links_NNS :_: An_DT information_NN extraction_NN perspective_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP -_: Workshop_NNP on_IN Operational_NNP Factors_NNP in_IN Practical_NNP ,_, Robust_NNP Anaphora_NNP Resolution_NNP for_IN Unrestricted_NNP Texts_NNPS ,_, pages_NNS 46_CD --_: 53_CD ,_, Madrid_NNP ._.
+KAMP_NNP ,_, H._NNP 1979_CD ._.
+Events_NNS ,_, instant_NN and_CC temporal_JJ reference_NN ._.
+In_IN Semantics_NNS from_IN Different_JJ Points_NNS of_IN View_NNP ._.
+Springer-Verlag_NNP ,_, pages_NNS 376_CD --_: 417_CD ._.
+KEHLER_NNP ANDREW_NNP ._.
+1997_CD ._.
+Probabilistic_NNP co-reference_NN in_IN information_NN extraction_NN ._.
+In_IN Proceedings_NNP EMNLP-97_NNP ._.
+pages_NNS 163_CD --_: 173_CD ._.
+KEHLER_NNP ANDREW_NNP ._.
+2002_CD ._.
+Coherence_NN ,_, Reference_NNP ,_, and_CC the_DT Theory_NNP of_IN Grammar_NNP ._.
+CSLI_NNP ._.
+KEHLER_NNP ,_, ANDREW_NNP ,_, LAURA_NNP KERTZ_NNP ,_, HANNAH_NNP ROHDE_NNP ,_, AND_CC JEFFREY_NNP ELMAN_NNP ._.
+2008_CD ._.
+Coherence_NN and_CC co-reference_NN revisited_VBN ._.
+Journal_NNP of_IN Semantics_NNPS ._.
+25_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 44_CD ._.
+KENNEDY_NNP ,_, CHRISTOPHER_NNP AND_CC BRANIMIR_NNP BOGURAEV_NNP ._.
+1996_CD ._.
+Anaphora_NNP for_IN everyone_NN :_: Pronominal_NNP anaphora_NN resolution_NN without_IN a_DT parser_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, Copenhagen_NNP ._.
+Denmark_NNP ,_, 5_CD --_: 9_CD August_NNP ,_, vol_NN ._.
+1_CD ,_, pages_NNS 113_CD --_: 118_CD ._.
+KILICASLAN_NNP YILMAZ_NNP ,_, EDIP_NNP SERDER_NNP GUNER_NNP ,_, SAVAS_NNP Y1LD1R1M_NNP ._.
+2009_CD ._.
+Learning-based_JJ pronoun_NN resolution_NN for_IN Turkish_JJ with_IN a_DT comparative_JJ evaluation_NN ,_, Computer_NNP Speech_NNP and_CC Language_NNP ._.
+23_CD ._.
+311_CD --_: 331_CD ._.
+KLENNER_NNP ,_, MANFRED_NNP ETIENNE_NNP AILLOUD_NNP ._.
+2008_CD ._.
+Enhancing_VBG co_SYM -_: reference_NN clustering_NN ._.
+In_IN Second_JJ Bergen_NNP Workshop_NNP on_IN Anaphora_NNP Resolution_NNP -LRB-_-LRB- WAR_NN II_NNP -RRB-_-RRB- ._.
+KLENNER_NNP ,_, MANFRED_NNP AND_CC ́_CD ETIENNE_NNP AILLOUD_NNP ._.
+2008_CD ._.
+Enhancing_VBG co-reference_NN clustering_NN ._.
+In_IN Second_JJ sBergen_NNP Workshop_NNP on_IN Anaphora_NNP Resolution_NNP -LRB-_-LRB- WAR_NN II_NNP -RRB-_-RRB- ._.
+LAPPIN_NNP ,_, S._NNP AND_NNP LEASS_NNP ,_, H._NNP J._NNP 1994_CD ._.
+An_DT algorithm_NN for_IN pronominal_JJ anaphora_NN resolution_NN ._.
+Computa_NNP ._.
+Linguist_NN ._.
+20_CD ,_, 4_CD ,_, 535_CD --_: 561_CD ._.
+LI_NNP ,_, X.Q._NNP ,_, ZHOU_NNP ,_, X.L._NNP 2010_CD ._.
+Who_WP is_VBZ Ziji_NNP ?_.
+ERP_NNP Responses_NNS to_TO the_DT Chinese_JJ Reflexive_NNP Pronoun_NNP During_IN Sentence_NNP Comprehension_NNP ._.
+Brain_NN Research_NN 1331_CD ,_, 96_CD --_: 104_CD ._.
+LO_NNP ,_, KA_NNP KAN_NNP ,_, WAI_NNP LAM_NNP ._.
+2006_CD ._.
+Using_VBG semantic_JJ relations_NNS with_IN world_NN knowledge_NN for_IN question_NN answering_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Fifteenth_NNP Text_NNP REtrieval_NNP Conference_NNP ,_, Gaithersburg_NNP ,_, Md._NNP ,_, 14_CD --_: 17_CD November_NNP ._.
+LUO_NNP ,_, X._NNP AND_CC ZITOUNI_NNP ,_, I._NNP 2005_CD ._.
+Multi-lingual_JJ co-reference_NN resolution_NN with_IN syntactic_NN features_NNS ._.
+In_IN Proceedings_NNP of_IN Human_NNP Language_NNP Technology_NNP Conference_NNP and_CC Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP ._.
+660_CD --_: 667_CD ._.
+LUO_NNP ._.
+XIAOQIANG_NNP ,_, ITTYCHERIAH_NNP ._.
+ABE_NNP ,_, JING_NNP ._.
+HOGYAN_NNP ,_, KAMBHATLA_NNP ._.
+NANDA_NNP ,_, AND_CC ROUKOS_NNS ._.
+SALIM_NNP ._.
+2004_CD ._.
+A_DT mention-synchronous_JJ co-reference_NN resolution_NN algorithm_NN based_VBN on_IN the_DT bell_NN tree_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP 2004_CD ._.
+pages_NNS 135_CD --_: 142_CD ._.
+Barcelona_NNP ,_, Spain_NNP ._.
+LUO_NNP ._.
+XIAOQIANG_NNP ._.
+2007_CD ._.
+Co-reference_NN or_CC not_RB :_: a_DT twin_NN model_NN for_IN co_SYM -_: reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN HLT-NAACL_NNP 2007_CD ._.
+pages_NNS 73_CD --_: 80_CD ._.
+Rochester_NNP ,_, NY_NNP ._.
+MARKERT_NNP ,_, KATJA_NNP ,_, NISSIM_NNP MALVINA_NNP ,_, NATALIA_NNP N._NNP MODJESKA_NNP ._.
+2003_CD ._.
+Using_VBG the_DT Web_NNP for_IN nominal_JJ anaphora_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT EACL_NNP Workshop_NNP on_IN the_DT Computational_NNP Treatment_NNP of_IN Anaphora_NNP ,_, pages_NNS 39_CD --_: 46_CD ,_, Budapest_NNP ._.
+MARKERT_NNP ,_, KATJA_NNP ,_, NISSIM_NNP MALVINA_NNP ._.
+2005_CD ._.
+Comparing_VBG Knowledge_NNP Sources_NNS for_IN Nominal_JJ Anaphora_NNP Resolution_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, Volume_NN 31_CD ,_, Number_NN 3_CD ,_, 367-402_CD ._.
+MCCARTHY_NNP ,_, J._NNP F._NNP AND_NNP LEHNERT_NNP ,_, W._NNP G._NNP 1995_CD ._.
+Using_VBG decision_NN trees_NNS for_IN co-reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 14th_JJ International_NNP Joint_NNP Conference_NNP on_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- IJCAI_NNP -RRB-_-RRB- ._.
+1050_CD --_: 1055_CD ._.
+MITKOV_NNP ,_, R._NNP 2010_CD ._.
+Outstanding_JJ issues_NNS in_IN anaphora_NN resolution_NN ._.
+In_IN Al._NNP ._.
+Gelbukh_NNP -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB- ._.
+Computational_NNP Linguistics_NNPS and_CC Intelligent_NNP Text_NNP Processing_NNP ,_, 110-125_CD ._.
+Springer_NNP -LRB-_-LRB- keynote_JJ speech_NN -RRB-_-RRB- ._.
+MITKOV_NNP ._.
+RUSLAN_NNP ._.
+1998_CD ._.
+Robust_JJ pronoun_NN resolution_NN with_IN limited_JJ knowledge_NN ._.
+In_IN Proceedings_NNP of_IN COLING-ACL_NNP ._.
+pages_NNS 869_CD --_: 875_CD ._.
+MURATA_NNP ,_, M._NNP AND_NNP NAGAO_NNP ,_, M._NNP 1997_CD ._.
+Resolution_NN of_IN verb_NN ellipsis_NN in_IN Japanese_JJ sentences_NNS using_VBG surface_NN expressions_NNS and_CC examples_NNS ._.
+In_IN Proceedings_NNP of_IN 4th_JJ Natural_JJ Language_NN Processing_NNP Pacific_NNP Rim_NNP Symposium_NNP ._.
+75_CD --_: 80_CD ._.
+MYKOWIECKA_NNP AGNIESZKA_NNP ,_, MAŁGORZATA_NNP MARCINIAK_NNP ,_, ANNA_NNP KUPS_NNP ́C_NNP ._.
+2009_CD ._.
+Rule-based_JJ information_NN extraction_NN from_IN patients_NNS ‟_VBP clinical_JJ data_NNS ._.
+Journal_NNP of_IN Biomedical_NNP Informatics_NNPS ._.
+42_CD 923_CD --_: 936_CD ._.
+NAOYA_NNP INOUE_NNP ,_, R._NNP ,_, INUI_NNP ,_, K._NNP ,_, AND_CC MATSUMOTO_NNP ,_, Y._NNP 2010_CD ._.
+Resolving_NNP Direct_NNP and_CC Indirect_NNP Anaphora_NNP for_IN Japanese_NNP Definite_NNP Anaphora_NNP Pronouns_NNP ._.
+Journal_NNP of_IN Natural_NNP Language_NNP processing.vol_NNP ._.
+17_CD No._NN 1_CD -LRB-_-LRB- January_NNP 2010_CD -RRB-_-RRB- ,_, 26_CD pages_NNS ._.
+NARAYANA_NNP MURTHI_NNP ,_, K.N_NNP ,_, SOBHA_NNP ,_, L_NNP ,_, MUTHUKUMARI_NNP ,_, B._NNP 2007_CD ._.
+Pronominal_NNP Resolution_NNP in_IN Tamil_NNP Using_VBG Machine_NN Learning_NNP Approach_NNP ._.
+The_DT First_NNP Workshop_NNP on_IN Anaphora_NNP Resolution_NNP -LRB-_-LRB- WAR_NN I_PRP -RRB-_-RRB- ,_, Ed_NNP Christer_NNP Johansson_NNP ,_, Cambridge_NNP Scholars_NNPS Publishing_NNP ,_, 15_CD Angerton_NNP Gardens_NNPS ,_, Newcastle_NNP ,_, NE5_NNP 2JA_NNP ,_, UK_NNP pp.39-50_JJ NG_NNP ,_, V._NNP AND_CC CARDIE_NNP ,_, C._NNP 2002_CD ._.
+Improving_NN machine_NN learning_VBG approaches_NNS to_TO co-reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP -RRB-_-RRB- ._.
+104_CD --_: 111_CD ._.
+PABLO_NNP N._NNP MENDES_NNP ._.
+2013_CD ._.
+DBpedia_NNP People_NNP ‟_NNP s_VBZ Grammatical_NNP Genders_NNP ._.
+http://dbpedia.org/Datasets/NLP_NNP ._.
+PENG_NNP ,_, JING_NNP AND_CC ARAKI_NNP ,_, KENJI_NNP ._.
+2007_CD ._.
+Zero-Anaphora_NNP Resolution_NNP in_IN Chinese_NNP Using_VBG Maximum_NNP Entropy_NNP ._.
+IEICE_NNP Trans_NNP ._.
+INF_NNP ._.
+&_CC SYST_NNP ._.
+VOL_NNP ._.
+E90-D_NN ._.
+No._NN 7_CD ._.
+POESIO_NNP ._.
+MASSIMO_NNP ,_, PAOLO_NNP ._.
+SIMONE_NNP PONZETTO_NNP ,_, VERSLEY_NNP YANNICK_NNP ._.
+2010_CD ._.
+Computational_JJ models_NNS of_IN anaphora_NN resolution_NN :_: A_DT survey_NN ._.
+PRADHEEP_NNP ELANGO_NNP ._.
+2005_CD ._.
+Co-reference_NN Resolution_NN :_: A_DT Survey_NN ._.
+Technical_NNP Report_NNP ,_, University_NNP of_IN Wisconsin_NNP Madison_NNP PRASAD_NNP R._NNP ,_, AND_CC STRUBE_NNP ,_, M._NNP 2003_CD ._.
+Constraints_NNS on_IN The_DT Generation_NNP of_IN Referring_VBG Expressions_NNS ,_, With_IN Special_JJ Reference_NNP To_TO Hindi_NNP ,_, A_DT PhD_NNP dissertation_NN University_NNP of_IN Pennsylvania_NNP ._.
+PRASAD_NNP R._NNP ,_, AND_CC STRUBE_NNP ,_, M._NNP ._.
+2000_CD ._.
+Discourse_NN salience_NN and_CC pronoun_NN resolution_NN in_IN Hindi_NNP ._.
+U._NNP Penn_NNP Working_NNP Papers_NNP in_IN Linguistics_NNP ._.
+Volume_NN 6.3_CD ,_, pp._SYM 189-208_CD ._.
+RYOHEI_NNP SASANO_NNP ,_, DAISUKE_NNP KAWAHARA_NNP ,_, AND_CC SADAO_NNP KUROHASHI_NNP ._.
+Improving_NN Co-reference_NN Resolution_NNP Using_VBG Bridging_VBG Reference_NNP Resolution_NNP and_CC Automatically_RB Acquired_VBN Synonyms_NNPS ,_, Springer_NNP SASANO_NNP ,_, RYOHEI_NNP ._.
+2008_CD ._.
+Japanese_JJ Anaphora_NNP Resolution_NNP Based_VBD on_IN Automatically_RB Acquired_VBN World_NNP Knowledge_NNP ._.
+Doctoral_JJ dissertation_NN ._.
+December_NNP 2008_CD ._.
+SASANO_NNP ,_, RYOHEI._NNP ,_, KAWAHARA_NNP ,_, DAISUKE_NNP ._.
+AND_CC KUROHASHI_NNP SADAO_NNP ._.
+2007_CD ._.
+Improving_NN Co-reference_NN Resolution_NNP Using_VBG Bridging_VBG Reference_NNP Resolution_NNP and_CC Automatically_RB Acquired_VBN Synonyms_NNPS ._.
+SpringerLInk_NNP Anaphora_NNP :_: analysis_NN ,_, algorithms_NNS and_CC applications_NNS ._.
+Vol_NNP ._.
+4410_CD ._.
+125-136_CD ._.
+SEKI_NNP ,_, K._NNP ,_, FUJII_NNP ,_, A._NN ,_, AND_CC ISHIKAWA_NNP ,_, T._NNP 2002_CD ._.
+A_DT probabilistic_JJ method_NN for_IN analyzing_VBG Japanese_JJ anaphora_NN integrating_VBG zero_CD pronoun_NN detection_NN and_CC resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 19th_JJ Inter-national_JJ Conference_NN on_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- COLING_NNP -RRB-_-RRB- ._.
+911_CD --_: 917_CD ._.
+SOBHA_NNP L_NNP AND_CC B.N._NNP PATNAIK_NNP ._.
+1998_CD ._.
+An_DT Algorithm_NNP for_IN Pronoun_NNP and_CC Reflexive_NNP Resolution_NNP in_IN Malayalam_NNP ._.
+Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, Speech_NNP and_CC Document_NNP processing_NN ._.
+C63-66_NN ._.
+SOBHA_NNP L_NNP AND_CC B.N.PATNAIK_NNP ._.
+1999_CD ._.
+One-pronoun_NN resolution_NN in_IN Malayalam_NNP ._.
+Indian_JJ Linguistics_NNPS ._.
+SOBHA_NNP L._NNP 1999_CD ._.
+Anaphora_NNP Resolution_NNP In_IN Malayalam_NNP and_CC Hindi_NNP ._.
+Unpublished_JJ Doctoral_JJ dissertation_NN ._.
+Mahatma_NNP Gandhi_NNP University_NNP ,_, Kottayam_NNP ,_, Kerala_NNP ._.
+SOBHA_NNP ,_, L._NNP AND_NNP PATNAIK_NNP ,_, B.N._NNP 2002_CD ._.
+Vasisht_NNP ''_'' --_: An_DT anaphora_NN resolution_NN system_NN for_IN Malayalam_NNP and_CC Hindi_NNP ,_, Symposium_NNP on_IN Translation_NN Support_NN Systems_NNPS ,_, IIT_NNP Kanpur_NNP 15-17_CD March_NNP ._.
+SOON_RB ,_, W._NNP M._NNP ,_, NG_NNP ,_, H._NNP T._NNP ,_, AND_CC LIM_NNP ,_, D._NNP C._NNP Y._NNP 2001_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO co-reference_NN resolution_NN of_IN noun_NN phrases_NNS ._.
+Computa_NNP ._.
+Linguist_NN ._.
+27_CD ,_, 4_CD ,_, 521_CD --_: 544_CD ._.
+SOUHA_NNP HAMMAMI_NNP ,_, LAMIA_NNP BELGUITH_NNP ,_, AND_CC ABDELMAJID_NNP BEN_NNP HAMADOU_NNP ._.
+Arabic_NNP Anaphora_NNP Resolution_NNP :_: Corpora_NNP Annotation_NNP with_IN Coreferential_NNP Links_NNP ._.
+The_DT International_NNP Arab_NNP Journal_NNP of_IN Information_NNP Technology_NNP ,_, Vol_NNP ._.
+6_CD ,_, No._NN 5_CD ,_, November_NNP 2009_CD ._.
+481-489_CD ._.
+STEINBERGER_NNP ,_, J._NNP ,_, M._NNP POESIO_NNP ,_, M._NNP KABADJOV_NNP ,_, K._NNP JEZEK_NNP ._.
+2007_CD ._.
+Two_CD uses_NNS of_IN anaphora_NN resolution_NN in_IN summarization_NN ._.
+Information_NNP Processing_NNP and_CC Management_NNP ._.
+43:1663_CD --_: 1680_CD ._.
+STRUBE_NNP ,_, MICHAEL_NNP ,_, STEFAN_NNP RAPP_NNP ,_, CHRISTOPH_NNP M_NNP ̈ULLER_NNP ._.
+2002_CD ._.
+The_DT influence_NN of_IN minimum_JJ edit_JJ distance_NN on_IN reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2002_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, Philadelphia_NNP ,_, Penn._NNP ,_, 6_CD --_: 7_CD July_NNP ,_, pages_NNS 312_CD --_: 319_CD ._.
+STRUBE_NNP ,_, MICHAEL_NNP ._.
+1998_CD ._.
+Never_RB look_VB back_RB :_: An_DT alternative_NN to_TO Centering_NNP ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 17th_JJ Int_NNP ._.
+Conference_NN on_IN Computational_NNP Linguistics_NNPS and_CC 36th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS ;_: Montr_NNP ́eal_NNP ,_, Qu_NNP ́ebec_FW ,_, Canada_NNP ._.
+10_CD --_: 14_CD August_NNP 1998_CD ,_, 1251_CD --_: 1257_CD ._.
+STRUBE_NNP ,_, M._NNP AND_NNP M_NNP ̈ULLER_NNP ,_, C._NNP 2003_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO pronoun_NN resolution_NN in_IN spoken_VBN dialogue_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 41st_CD ACL_NN ._.
+168_CD --_: 175_CD ._.
+TETREAULT_NNP ._.
+JOEL_NNP ._.
+2001_CD ._.
+A_DT corpus-based_JJ evaluation_NN of_IN centering_VBG and_CC pronoun_NN resolution_NN ._.
+Computational_NNP Linguistics_NNPS ._.
+27_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :507_CD --_: 520_CD ._.
+TIN_NN E_NN ,_, Akman_NNP V._NNP 1992_CD ._.
+Anaphora_NNP in_IN Turkish_JJ :_: a_DT computational_JJ framework_NN ._.
+In_IN :_: Proceedings_NNP of_IN Sixth_NNP International_NNP Turkish_JJ Linguistics_NNPS Conference_NNP ._.
+Anadolu_NNP University_NNP ,_, Eskis_ehir_NNP ._.
+TIN_NN E_NN ,_, Akman_NNP V._NNP 1994_CD ._.
+Situated_VBN processing_NN of_IN pronominal_JJ anaphora_NN ._.
+In_IN :_: Proceedings_NNP of_IN Second_NNP Conference_NNP for_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- KONVENS_NNP '_POS 94_CD -RRB-_-RRB- ._.
+University_NNP of_IN Vienna_NNP ,_, Austria_NNP ,_, pp._NNP 369_CD --_: 378_CD ._.
+TRIVENI_NNP LAL_NNP PAL_NNP ,_, KAMLESH_NNP DUTTA_NNP ,_, PARDEEP_NNP SINGH_NNP ._.
+2012_CD ._.
+Anaphora_NNP Resolution_NNP in_IN Hindi_NNP :_: Issues_NNS and_CC Challenges_VBZ ._.
+International_NNP Journal_NNP of_IN Computer_NNP Applications_NNS ._.
+-LRB-_-LRB- 0975_CD --_: 8887_CD -RRB-_-RRB- Volume_NN 42_CD --_: No._NN 18_CD ._.
+TURAN_NNP U_NNP D._NNP 1996_CD ._.
+Null_NNP vs._FW Overt_NNP Subjects_NNPS in_IN Turkish_JJ Discourse_NN :_: A_DT Centering_VBG Analysis_NN ._.
+PhD_NNP Dissertation_NNP ,_, University_NNP of_IN Pennsylvania_NNP ._.
+VERSLEY_NNP ,_, YANNICK_NNP ._.
+2006_CD ._.
+A_DT constraint-based_JJ approach_NN to_TO noun_NN phrase_NN co-reference_NN resolution_NN in_IN German_JJ newspaper_NN text_NN ._.
+In_IN Konferenz_NNP zur_NNP Verarbeitung_NNP Nat_NNP ̈urlicher_NNP Sprache_NNP -LRB-_-LRB- KONVENS_NNP 2006_CD -RRB-_-RRB- ._.
+VIEIRA_NNP ,_, RENATA_NNP MASSIMO_NNP POESIO_NNP ._.
+1997_CD ._.
+Processing_NNP definite_JJ descriptions_NNS in_IN corpora_NN ._.
+In_IN Corpus-based_JJ and_CC Computational_NNP Approaches_NNPS to_TO Discourse_NNP Anaphora_NNP ._.
+UCL_NNP Press_NNP ._.
+VIEIRA_NNP ,_, RENATA_NNP MASSIMO_NNP POESIO_NNP ._.
+2000_CD ._.
+An_DT empirically_RB based_VBN system_NN for_IN processing_VBG definite_JJ descriptions_NNS ._.
+Computational_NNP Linguistics_NNP 26_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :539_CD --_: 593_CD ._.
+WALKER_NNP ,_, CHRISTOPHER_NNP ,_, STEPHANIE_NNP STRASSEL_NNP ,_, JULIE_NNP MEDERO_NNP ,_, AND_CC KAZUAKI_NNP MAEDA_NNP ._.
+2006_CD ._.
+ACE_NN 2005_CD multilingual_JJ training_NN Corpus_NNP ._.
+LDC2006T06_NNP ,_, Philadelphia_NNP ,_, Penn._NNP :_: Linguistic_NNP Data_NNP Consortium_NNP ._.
+WANG_NNP ,_, CHI-SHING_NNP ._.
+AND_CC NGAI_NNP ,_, GRACE_NNP ._.
+2006_CD ._.
+A_DT Clustering_NNP Approach_NNP for_IN Unsupervised_NNP Chinese_NNP Co-reference_NNP Resolution_NNP ,_, Proceedings_NNP of_IN the_DT Fifth_NNP SIGHAN_NNP Workshop_NNP on_IN Chinese_NNP Language_NNP Processing_NNP ,_, pages_NNS 40_CD --_: 47_CD ,_, Sydney_NNP ,_, July_NNP 2006_CD ._.
+c2006_NNP Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+WEISCHEDEL_NNP ,_, RALPH_NNP ,_, SAMEER_NNP PRADHAN_NNP ,_, LANCE_NNP RAMSHAW_NNP ,_, MARTHA_NNP PALMER_NNP ,_, NIANWEN_NNP XUE_NNP ,_, MITCHELL_NNP MARCUS_NNP ,_, ANN_NNP TAYLOR_NNP ,_, CRAIG_NNP GREENBERG_NNP ,_, EDUARD_NNP HOVY_NNP ,_, ROBERT_NNP BELVIN_NNP ,_, AND_CC ANN_NNP HOUSTON_NNP ._.
+2008_CD ._.
+Ontonotes_NNP release_NN 2.0_CD ._.
+LDC2008T04_NNP ,_, Philadelphia_NNP ,_, Penn._NNP :_: Linguistic_NNP Data_NNP Consortium_NNP ._.
+YANG_NNP X_NNP ,_, SU_NNP J_NNP ,_, LANG_NNP J_NNP ,_, TAN_NNP CL_NNP ,_, LIU_NNP T_NNP ,_, LI_NNP S._NNP 2008_CD ._.
+An_DT entity_NN -_: mention_VB model_NN for_IN co-reference_NN resolution_NN with_IN inductive_JJ logic_NN programming_NN ._.
+In_IN Proceedings_NNP of_IN ACL-08_NNP :_: HLT_NNP ._.
+Columbus_NNP -LRB-_-LRB- OH_NNP -RRB-_-RRB- ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+p._SYM 843_CD --_: 51_CD ._.
+YANG_NNP ,_, X._NNP ,_, SU_NNP ,_, J._NNP ,_, AND_CC TAN_NNP ,_, C._NNP L._NNP 2005_CD ._.
+Improving_NN pronoun_NN resolution_NN using_VBG statistics-based_JJ semantic_JJ compatibility_NN information_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP -RRB-_-RRB- ._.
+165_CD --_: 172_CD ._.
+YEH_NNP ,_, CHING-LONG_NNP AND_CC CHEN_NNP ,_, YI-CHUN_NNP ,_, 2004a_CD ,_, Zero_NNP Anaphora_NNP Resolution_NNP in_IN Chinese_NNP with_IN Shallow_NNP Parsing_NNP ,_, Journal_NNP of_IN Chinese_NNP Language_NNP and_CC Computing_NNP ._.
+YEH_NNP ,_, CHING-LONG_NNP AND_CC CHEN_NNP ,_, YI-CHUN_NNP ,_, 2004b_CD ,_, Topic_NNP Identification_NNP in_IN Chinese_NNP Based_VBD on_IN Centering_NNP Model_NNP ._.
+Proceedings_NNP of_IN ACL_NNP Workshop_NNP on_IN Reference_NNP Resolution_NNP and_CC Its_PRP$ Applications_NNS ,_, Barcelona_NNP ,_, Spain_NNP ._.
+YEH_NNP ,_, CHING-LONG_NNP ,_, 1995_CD ,_, Generation_NNP of_IN Anaphors_NNP in_IN Chinese_NNP ,_, Ph.D._NNP thesis_NN ,_, University_NNP of_IN Edinburgh_NNP ._.
+YEH_NNP ,_, CHING-LONG_NNP ._.
+AND_CC CHEN_NNP ,_, YI-CHUN_NNP ._.
+2007_CD ._.
+Zero_NNP Anaphora_NNP Resolution_NNP in_IN Chinese_NNP with_IN Shallow_NNP Parsing_NNP ._.
+Journal_NNP of_IN Chinese_NNP Language_NNP and_CC Computing_NNP 17_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 41-56_CD ._.
+ZHENG_NNP ._.
+JIAPING_NNP ,_, CHAPMAN_NNP ._.
+W_NNP WENDY_NNP ,_, CROWLEY_NNP ._.
+S_NNP REBECCA_NNP ,_, SAVOVA_NNP ._.
+K_NNP GUERGANA_NNP ._.
+2011_CD ._.
+Co-reference_NN resolution_NN :_: A_DT review_NN of_IN general_JJ methodologies_NNS and_CC applications_NNS in_IN the_DT clinical_JJ domain_NN ._.
+Journal_NNP of_IN Biomedical_NNP Informatics_NNP 44_CD -LRB-_-LRB- 2011_CD -RRB-_-RRB- 1113_CD --_: 1122_CD ._.
+ZITOUNI_NNP IMED_NNP ,_, XIAOQIANG_NNP LUO_NNP ,_, RADU_NNP FLORIAN_NNP ._.
+A_DT Cascaded_NNP Approach_NNP to_TO Mention_VB Detection_NNP and_CC Chaining_NNP in_IN Arabic_NNP ._.
+IEEE_NNP Transactions_NNS on_IN Audio_NNP ,_, Speech_NNP and_CC Language_NNP Processing_NNP ,_, vol_NN ._.
+17_CD ,_, no._NN 5_CD ,_, 2009a_CD ._.
+ZITOUNI_NNP ,_, I._NNP AND_NNP FLORIAN_NNP ,_, R._NNP 2009b_CD ._.
+Cross_NNP language_NN information_NN propagation_NN for_IN Arabic_NNP mention_VB detection_NN ._.
+ACM_NNP Trans_NNP ._.
+Asian_JJ Lang_NNP ._.
+Inform_VB ._.
+Process_NN ._.
+8_CD ,_, 4_CD ,_, Article_NNP 17_CD -LRB-_-LRB- December_NNP 2009_CD -RRB-_-RRB- ,_, 21_CD pages_NNS ._.
+DOI_NNP =_SYM 10.1145_CD /_CD 1644879.1644884_CD ._.
+http://doi.acm.org/10.1145/1644879.1644884_NNS ._.

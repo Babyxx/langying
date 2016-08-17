@@ -1,0 +1,341 @@
+Enhancing_VBG Root_NN Extractors_NNS Using_VBG Light_NN Stemmers_NNP Abstract_NNP The_NNP rise_NN of_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- opened_VBD new_JJ possibilities_NNS for_IN various_JJ applications_NNS that_WDT were_VBD not_RB applicable_JJ before_IN ._.
+A_DT morphological-rich_JJ language_NN such_JJ as_IN Ara_NNP -_: bic_NN introduces_VBZ a_DT set_NN of_IN features_NNS ,_, such_JJ as_IN roots_NNS ,_, that_WDT would_MD assist_VB the_DT progress_NN of_IN NLP_NNP ._.
+Many_JJ tools_NNS were_VBD developed_VBN to_TO capture_VB the_DT process_NN of_IN root_NN extraction_NN -LRB-_-LRB- stemming_VBG -RRB-_-RRB- ._.
+Stemmers_NNS have_VBP improved_VBN many_JJ NLP_NNP tasks_NNS without_IN explicit_JJ knowledge_NN about_IN its_PRP$ stemming_VBG accuracy_NN ._.
+In_IN this_DT paper_NN ,_, a_DT study_NN is_VBZ conducted_VBN to_TO evaluate_VB various_JJ Arabic_NNP stemmers_NNS ._.
+The_DT study_NN is_VBZ done_VBN as_IN a_DT series_NN of_IN comparisons_NNS using_VBG a_DT manually_RB annotated_VBN dataset_NN ,_, which_WDT shows_VBZ the_DT efficiency_NN of_IN Arabic_NNP stemmers_NNS ,_, and_CC points_VBZ out_RP potential_JJ improvements_NNS to_TO existing_VBG stemmers_NNS ._.
+The_DT pa_NN -_: per_IN also_RB presents_VBZ enhanced_JJ root_NN extractors_NNS by_IN using_VBG light_JJ stemmers_NNS as_IN a_DT preprocessing_NN phase_NN ._.
+1_CD Introduction_NNP Natural_NNP Languages_NNP -LRB-_-LRB- NLs_NNP -RRB-_-RRB- are_VBP the_DT medium_NN that_WDT allow_VBP two_CD or_CC more_JJR parties_NNS to_TO communicate_VB and_CC interact_VB ._.
+Linguistics_NNS have_VBP captured_VBN NLs_NNP as_IN a_DT set_NN of_IN sophisti_NNS -_: cated_JJ rules_NNS that_WDT describe_VBP the_DT usage_NN of_IN a_DT language_NN ._.
+The_DT merger_NN between_IN linguistics_NNS and_CC computer_NN sci_SYM -_: ence_NN began_VBD to_TO formalize_VB into_IN Natural_JJ Language_NN Pro-_JJ cessing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- in_IN mid_NN 1950s_NNS -LRB-_-LRB- Nadkarni_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Machine_NN Translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- -LRB-_-LRB- Hutchins_NNP ,_, 2004_CD -RRB-_-RRB- was_VBD one_CD of_IN the_DT first_JJ tasks_NNS of_IN NLP_NNP ._.
+MT_NNP takes_VBZ one_CD language_NN as_IN an_DT input_NN then_RB predicts_VBZ the_DT output_NN in_IN another_DT lan_NN -_: guage_NN ._.
+Linguistic_JJ complexity_NN limited_VBD the_DT develop_VB -_: ment_NN of_IN MT_NNP ,_, and_CC other_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Nadkarni_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+There_EX exists_VBZ various_JJ NLP_NNP tasks_NNS ._.
+For_IN exam_NN -_: ple_NN ,_, Text_NNP Summarization_NNP -LRB-_-LRB- Jing_NNP and_CC McKeown_NNP ,_, 2000_CD -RRB-_-RRB- -LRB-_-LRB- Nenkova_NNP ,_, 2005_CD -RRB-_-RRB- ,_, Part_NN of_IN Speech_NNP Tagging_NNP -LRB-_-LRB- POST_NNP -RRB-_-RRB- -LRB-_-LRB- Habash_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ,_, word_NN segmentation_NN -LRB-_-LRB- Monroe_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, sentiment_NN analysis_NN -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ,_, and_CC many_JJ more_JJR tasks_NNS ._.
+Each_DT task_NN has_VBZ a_DT specific_JJ goal_NN which_WDT can_MD be_VB achieved_VBN by_IN utilizing_VBG another_DT NLP_NNP task_NN ._.
+For_IN exam_NN -_: ple_NN ,_, sentiment_NN analysis_NN utilizes_VBZ stemming_VBG algorithms_NNS -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ._.
+Many_JJ NLP_NNP tasks_NNS are_VBP a_DT part_NN of_IN more_JJR complex_JJ tasks_NNS ._.
+Text_NN plays_VBZ a_DT central_JJ role_NN in_IN NLP_NNP and_CC can_MD be_VB found_VBN in_IN different_JJ forms_NNS ,_, such_JJ as_IN simple_JJ text_NN or_CC extracted_VBN rom_NN images_NNS -LRB-_-LRB- Fathalla_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, this_DT increases_VBZ text_NN resources_NNS and_CC hence_RB increases_VBZ the_DT need_NN for_IN more_JJR concise_JJ text_NN forms_NNS ._.
+Stemming_VBG analysis_NN is_VBZ essential_JJ for_IN many_JJ complex_JJ tasks_NNS ._.
+Stemming_VBG is_VBZ a_DT way_NN of_IN reducing_VBG a_DT given_VBN word_NN into_IN a_DT concise_JJ representation_NN while_IN preserving_VBG most_JJS of_IN its_PRP$ linguistic_JJ features_NNS -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+Arabic_NNP language_NN is_VBZ highly_RB supportive_JJ for_IN stemming_VBG analy_SYM -_: sis_NN ._.
+Arabic_NNP language_NN is_VBZ a_DT derivative_JJ language_NN ,_, where_WRB words_NNS are_VBP constructed_VBN from_IN basic_JJ forms_NNS called_VBN roots_NNS -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+Stemming_VBG for_IN the_DT Arabic_NNP language_NN is_VBZ the_DT process_NN of_IN deriving_VBG back_RP the_DT root_NN of_IN a_DT given_VBN word_NN ._.
+Some_DT stemmers_NNS derive_VBP multiple_JJ roots_NNS for_IN a_DT single_JJ word_NN ,_, hence_RB ,_, various_JJ techniques_NNS were_VBD used_VBN to_TO disambiguate_VB multiple_JJ roots_NNS ._.
+For_IN example_NN ,_, utilizing_VBG a_DT words_NNS context_NN was_VBD used_VBN in_IN the_DT technique_NN Context_NNP -_: Based_VBD Arabic_NNP Stemmer_NNP ,_, CBAS_NNP ,_, proposed_VBN in_IN -LRB-_-LRB- El_NNP -_: Defrawy_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Arabic_NNP stemmers_NNS are_VBP utilized_VBN for_IN many_JJ tasks_NNS ,_, such_JJ as_IN sentiment_NN analysis_NN -LRB-_-LRB- Saleh_NNP and_CC El-Sonbaty_NNP ,_, 2007_CD -RRB-_-RRB- -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ,_, question_NN answering_NN -LRB-_-LRB- Ezzeldin_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, and_CC Information_NNP Retrieval_NNP -LRB-_-LRB- IR_NNP -RRB-_-RRB- -LRB-_-LRB- Aljlayl_NNP and_CC Frieder_NNP ,_, 2002a_CD -RRB-_-RRB- -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, ._. -RRB-_-RRB-
+2005_CD In_IN this_DT paper_NN ,_, a_DT study_NN is_VBZ conducted_VBN to_TO analyze_VB and_CC compare_VB different_JJ Arabic_NNP stemmers_NNS from_IN different_JJ perspectives_NNS ,_, using_VBG a_DT manually_RB annotated_VBN dataset_NN ._.
+Moreover_RB ,_, the_DT paper_NN presents_VBZ an_DT enhanced_JJ version_NN of_IN root_NN extractors_NNS using_VBG light_JJ stemmers_NNS for_IN prepro_NN -_: cessing_NN ._.
+The_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ,_, section_NN 2_CD presents_VBZ a_DT concise_JJ introduction_NN of_IN Arabic_NNP morphol_NN -_: ogy_NN ,_, which_WDT gives_VBZ the_DT basic_JJ intuition_NN of_IN Arabic_NNP stem_NN -_: ming_VBG analysis_NN ._.
+Section_NN 3_CD discusses_VBZ various_JJ tech_SYM -_: niques_NNS and_CC strategies_NNS used_VBN to_TO develop_VB Arabic_NNP stem_NN -_: mers_NNS ,_, followed_VBN by_IN a_DT detailed_JJ comparison_NN and_CC evalu_NN -_: ation_NN of_IN existing_VBG Arabic_NNP stemmers_NNS in_IN section_NN 4_CD ._.
+Fi_SYM -_: nally_RB ,_, a_DT conclusion_NN is_VBZ presented_VBN in_IN section_NN 5_CD ._.
+2_CD Background_NN Understanding_NN the_DT linguistic_JJ theory_NN about_IN deriva_NN -_: tional_JJ analysis_NN provides_VBZ intuitive_JJ reasoning_NN behind_IN different_JJ choices_NNS Arabic_NNP stemmers_NNS would_MD do_VB ,_, and_CC highlights_VBZ their_PRP$ capabilities_NNS ,_, strengths_NNS ,_, and_CC weak_JJ -_: nesses_NNS ._.
+This_DT section_NN outlines_VBZ the_DT theory_NN behind_IN Ara_NNP -_: bicmorphologyandthemainchallengesassociated_VBN with_IN it_PRP ._.
+Arabic_NNP morphology_NN is_VBZ the_DT study_NN of_IN a_DT words_NNS construction_NN ,_, a_DT new_JJ word_NN generated_VBD from_IN a_DT root_NN -LRB-_-LRB- Ry_SYM -_: ding_NN ,_, 2005_CD -RRB-_-RRB- ._.
+A_DT new_JJ word_NN is_VBZ generated_VBN by_IN changing_VBG its_PRP$ root_NN ._.
+For_IN example_NN ,_, the_DT word_NN ناجح_NN -LRB-_-LRB- na_TO ̄gˇh._NNP ,_, means_VBZ ''_'' Successful_JJ ''_'' -RRB-_-RRB- isgeneratedfromrootحجن_NN -LRB-_-LRB- nu_FW ̄ngˇym_FW h.a_FW ̄_FW ,_, means_VBZ ''_'' Success_NN ''_'' -RRB-_-RRB- by_IN adding_VBG ا_CD -LRB-_-LRB- lf_NN -RRB-_-RRB- in_IN the_DT mid_NN -_: dle_NN ._.
+Arabic_NNP morphology_NN uses_VBZ a_DT set_NN of_IN templates_NNS which_WDT are_VBP called_VBN patterns_NNS ._.
+Patterns_NNS are_VBP accurately_RB defin_SYM -_: ing_NN possible_JJ changes_NNS to_TO a_DT root_NN to_TO generate_VB a_DT word_NN ._.
+Pattern_NN is_VBZ a_DT sequence_NN of_IN letters_NNS that_WDT captures_VBZ the_DT structure_NN of_IN the_DT new_JJ word_NN -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+There_EX are_VBP two_CD types_NNS of_IN letters_NNS that_WDT constitute_VBP the_DT pattern_NN ._.
+The_DT first_JJ is_VBZ a_DT generic_JJ set_NN of_IN letters_NNS ف_VBP -LRB-_-LRB- fa_JJ ̄_NN -RRB-_-RRB- ع_NN -LRB-_-LRB- yn_VBN -RRB-_-RRB- la_DT ̄m_NN -RRB-_-RRB- that_WDT represent_VBP a_DT roots_NNS letters_NNS ._.
+The_DT second_JJ -LRB-_-LRB- ل_CD type_NN is_VBZ augmented_VBN letters_NNS ,_, which_WDT represents_VBZ possi_NNS -_: ble_JJ additions_NNS ._.
+Augmented_VBN letters_NNS are_VBP represented_VBN by_IN themselves_PRP in_IN the_DT pattern_NN ,_, such_JJ as_IN the_DT pattern_NN fa_NN ̄_CD l_NN ,_, means_VBZ ''_'' Actor_NNP of_IN the_DT verb_NN ''_'' -RRB-_-RRB- which_WDT used_VBD to_TO -LRB-_-LRB- فاعل_CD generate_VBP the_DT word_NN ناجح_NN -LRB-_-LRB- na_TO ̄gˇh._NNP ,_, means_VBZ ''_'' Successful_JJ ''_'' -RRB-_-RRB- ,_, the_DT augmented_JJ letter_NN ا_NN -LRB-_-LRB- lf_FW -RRB-_-RRB- is_VBZ represented_VBN by_IN itself_PRP in_IN the_DT pattern_NN ._.
+There_EX are_VBP ten_CD letters_NNS which_WDT can_MD be_VB used_VBN as_IN augmented_JJ letters_NNS ._.
+It_PRP has_VBZ been_VBN collected_VBN in_IN the_DT word_NN سألتمونيها_NN -LRB-_-LRB- s_PRP ltmu_VBD ̄nyha_JJ ̄_NN -RRB-_-RRB- ._.
+The_DT root-pattern_NN system_NN -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- starts_VBZ by_IN substituting_VBG a_DT roots_NNS letter_NN into_IN the_DT patterns_NNS generic_JJ letters_NNS ,_, where_WRB a_DT new_JJ word_NN is_VBZ generated_VBN ._.
+There_EX are_VBP some_DT cases_NNS where_WRB some_DT additional_JJ modifications_NNS are_VBP required_VBN ,_, com_NN -_: monly_NN due_JJ to_TO grammatical_JJ rules_NNS and_CC letters_NNS compat_SYM -_: ibility_NN ,_, which_WDT is_VBZ not_RB captured_VBN neither_RB in_IN the_DT root_NN nor_CC the_DT pattern_NN ._.
+2.1_CD Vocalization_NN and_CC Mutation_NN Vocalization_NN is_VBZ a_DT words_NNS letter_NN transformed_VBN from_IN one_CD form_NN to_TO another_DT ,_, mostly_RB due_JJ to_TO grammatical_JJ or_CC phonological_JJ rules_NNS ._.
+Vocalization_NN defines_VBZ the_DT rules_NNS of_IN handling_VBG weak_JJ letters_NNS ,_, and_CC Hamza_NNP -LRB-_-LRB- ء_CD ,_, Arabic_NNP let_VBD -_: ق_CD ter_NN -RRB-_-RRB- in_IN different_JJ situations_NNS ._.
+For_IN example_NN ,_, the_DT root_NN qa_NN ̄f_NN wa_NN ̄w_FW la_FW ̄m_FW ,_, means_VBZ ''_'' Saying_VBG ''_'' -RRB-_-RRB- transforms_VBZ to_TO -LRB-_-LRB- و_FW ل_FW the_DT word_NN قال_NN -LRB-_-LRB- qa_FW ̄l_FW ,_, means_VBZ ''_'' Said_VBD ''_'' -RRB-_-RRB- depending_VBG on_IN the_DT tense_JJ of_IN the_DT sentence_NN ,_, where_WRB the_DT weak_JJ letter_NN و_NN -LRB-_-LRB- wa_FW ̄w_FW -RRB-_-RRB- is_VBZ transformed_VBN into_IN the_DT weak_JJ letter_NN ا_NN -LRB-_-LRB- lf_FW -RRB-_-RRB- ._.
+Similarity_NN ,_, mutation_NN follows_VBZ a_DT similar_JJ behavior_NN but_CC for_IN a_DT differ_VBP -_: ent_JJ reason_NN ._.
+For_IN example_NN ,_, the_DT word_NN إضتراب_CD -LRB-_-LRB- d.tra_NN ̄b_NN ,_, means_VBZ ''_'' Disturbance_NN ''_'' -RRB-_-RRB- transforms_VBZ to_TO إضطراب_CD -LRB-_-LRB- d._FW t.ra_FW ̄b_FW ,_, means_VBZ ''_'' Disturbance_NN ''_'' -RRB-_-RRB- ,_, due_JJ to_TO phonological_JJ incom_NN -_: patibilitybetweenض_NN -LRB-_-LRB- d.a_FW ̄d_FW ._. -RRB-_-RRB-
+andت_NN -LRB-_-LRB- ta_FW ̄_FW -RRB-_-RRB- whichresults_NNS t.a_VBP ̄_CD -RRB-_-RRB- ._.
+Vocalization_NN -LRB-_-LRB- ط_FW ta_FW ̄_FW -RRB-_-RRB- being_VBG transformed_VBN to_TO -LRB-_-LRB- ت_CD and_CC mutation_NN are_VBP common_JJ challenges_NNS that_WDT face_VBP con_JJ -_: structing_VBG Arabic_NNP stemmers_NNS ._.
+2.2_CD Prefixes_NNPS and_CC Suffixes_NNPS Addition_NNP Prefixes_NNPS and_CC suffixes_NNS addition_NN -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- is_VBZ a_DT categorization_NN to_TO a_DT type_NN of_IN augmented_JJ letters_NNS ._.
+It_PRP de_IN -_: scribes_NNS the_DT augmented_JJ letters_NNS additions_NNS to_TO the_DT front_NN or_CC to_TO the_DT end_NN of_IN the_DT root_NN ._.
+Patterns_NNS can_MD be_VB defined_VBN to_TO represent_VB such_JJ additions_NNS ._.
+However_RB ,_, some_DT letters_NNS can_MD be_VB added_VBN to_TO the_DT front_NN or_CC the_DT end_NN which_WDT are_VBP not_RB part_NN of_IN augmented_JJ letters_NNS ._.
+For_IN example_NN ,_, the_DT word_NN -RRB-_-RRB- ka_FW ̄f_FW -LRB-_-LRB- ك_FW kta_FW ̄bk_FW ,_, means_VBZ ''_'' your_PRP$ book_NN ''_'' -RRB-_-RRB- ,_, the_DT letter_NN -LRB-_-LRB- كتابك_CD at_IN the_DT end_NN is_VBZ added_VBN as_IN an_DT indication_NN to_TO ownership_NN ._.
+It_PRP is_VBZ not_RB part_NN of_IN the_DT word_NN itself_PRP and_CC it_PRP is_VBZ also_RB not_RB part_NN of_IN augmented_JJ letters_NNS ._.
+Defining_VBG new_JJ patterns_NNS with_IN pre_NN -_: fixes_NNS and_CC suffixes_NNS attached_VBN not_RB only_RB would_MD increase_VB the_DT number_NN of_IN patterns_NNS ,_, but_CC it_PRP will_MD also_RB break_VB the_DT augmented_JJ letters_NNS rule_NN ,_, which_WDT is_VBZ preferable_JJ to_TO de_FW -_: fine_NN in_IN a_DT separate_JJ process_NN to_TO avoid_VB breaking_VBG the_DT Ara_NNP -_: bic_JJ linguistic_JJ model_NN of_IN having_VBG ten_CD augmented_JJ letters_NNS ._. -RRB-_-RRB-
+̄s_FW ltmu_FW ̄nyha_FW -LRB-_-LRB- سألتمونيها_CD 2.3_CD Stopwords_NNP Arabic_NNP language_NN defines_VBZ a_DT set_NN of_IN words_NNS that_WDT have_VBP a_DT special_JJ meaning_NN ,_, such_JJ في_NN -LRB-_-LRB- fy_FW ,_, means_VBZ ''_'' In_IN ''_'' -RRB-_-RRB- and_CC mn_JJ ,_, means_VBZ ''_'' From_IN ''_'' -RRB-_-RRB- ._.
+Such_JJ words_NNS do_VBP not_RB follow_VB -LRB-_-LRB- من_CD root-pattern_NN substitution_NN and_CC commonly_RB have_VBP some_DT static_JJ forms_NNS -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ part_NN of_IN Arabic_NNP mor_SYM -_: phology_NN to_TO identify_VB such_JJ words_NNS and_CC skip_VB it_PRP ._.
+2.4_CD Diacritics_NNPS Diacritics_NNPS -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- are_VBP part_NN of_IN Arabic_NNP words_NNS semantics_NNS ._.
+It_PRP encapsulates_VBZ a_DT set_NN of_IN invaluable_JJ features_NNS capturing_VBG grammatical_JJ ,_, morphological_JJ ,_, and_CC phonological_JJ information_NN ._.
+Diacritics_NNS are_VBP an_DT -_: notations_NNS on_IN individual_JJ letters_NNS of_IN a_DT word_NN ,_, but_CC it_PRP is_VBZ optional_JJ -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Most_JJS of_IN the_DT Arabic_NNP readers_NNS depend_VBP on_IN their_PRP$ intuition_NN to_TO capture_VB such_JJ information_NN ._.
+Many_JJ Arabic_NNP resources_NNS do_VBP not_RB include_VB Diacritics_NNP ,_, such_JJ as_IN newspapers_NNS and_CC non-linguistic_JJ books_NNS ,_, which_WDT creates_VBZ another_DT challenge_NN for_IN Stem_NN -_: ming_NN algorithms_NNS ._.
+Stemming_VBG is_VBZ the_DT reverse_JJ process_NN of_IN derivational_JJ analysis_NN ,_, where_WRB for_IN a_DT given_VBN word_NN a_DT root_NN needs_VBZ to_TO be_VB extracted_VBN ._.
+For_IN Arabic_NNP speakers_NNS ,_, stemming_VBG is_VBZ fairly_RB simple_JJ even_RB with_IN missing_VBG information_NN ._.
+They_PRP are_VBP capable_JJ of_IN deducing_VBG the_DT correct_JJ root_NN ._.
+But_CC ,_, for_IN computational_JJ devices_NNS ,_, it_PRP is_VBZ a_DT highly_RB complex_JJ pro-_JJ cess_NN ._.
+Even_RB with_IN a_DT complete_JJ representation_NN of_IN Arabic_NNP morphology_NN ,_, the_DT missing_VBG information_NN of_IN input_NN ,_, such_JJ as_IN diacritics_NNS ,_, may_MD lead_VB to_TO a_DT set_NN of_IN possible_JJ results_NNS ._.
+The_DT challenges_NNS presented_VBN above_IN enforce_VB scientists_NNS to_TO make_VB different_JJ assumptions_NNS when_WRB constructing_VBG stemmers_NNS to_TO find_VB an_DT appropriate_JJ balance_NN between_IN correct_JJ and_CC incorrect_JJ results_NNS ._.
+3_CD Related_JJ Work_NN Various_JJ stemmers_NNS were_VBD developed_VBN to_TO utilize_VB Arabic_NNP morphological_JJ features_NNS ._.
+Each_DT stemmer_NN developed_VBD some_DT mechanism_NN to_TO extract_VB these_DT features_NNS ._.
+In_IN this_DT section_NN ,_, weexploremajorstemmers_NNS ,_, andtheirtech_NN -_: niques_NNS ._.
+3.1_CD Khoja_NNP Stemmer_NNP Khoja_NNP stemmer_NN -LRB-_-LRB- Khoja_NNP and_CC Garside_NNP ,_, 1999_CD -RRB-_-RRB- starts_VBZ by_IN removing_VBG diacritics_NNS ,_, punctuation_NN ,_, and_CC non_SYM -_: characters_NNS of_IN the_DT input_NN word_NN ._.
+The_DT word_NN then_RB follows_VBZ a_DT set_NN of_IN predefined_JJ paths_NNS ,_, such_JJ as_IN a_DT decision_NN tree_NN ._.
+The_DT paths_NNS are_VBP initially_RB based_VBN on_IN the_DT words_NNS length_NN then_RB a_DT series_NN of_IN prefixes_NNS and_CC suffixes_NNS removals_NNS are_VBP defined_VBN ._.
+The_DT resulting_VBG word_NN gets_VBZ matched_VBN with_IN a_DT set_NN of_IN prede_NN -_: fined_VBN patterns_NNS ._.
+The_DT matching_JJ process_NN is_VBZ highly_RB com_NN -_: plex_NN ,_, since_IN it_PRP involves_VBZ an_DT additional_JJ set_NN of_IN linguis_NNS -_: tic_JJ rules_NNS ._.
+Finally_RB ,_, the_DT extracted_VBN root_NN gets_VBZ validated_VBN against_IN a_DT set_NN roots_NNS dictionary_NN ,_, then_RB the_DT process_NN is_VBZ ter_SYM -_: minated_VBN if_IN the_DT root_NN is_VBZ correct_JJ ._.
+In_IN case_NN the_DT extracted_VBN root_NN is_VBZ incorrect_JJ ,_, the_DT stemmer_NN continues_VBZ searching_VBG for_IN other_JJ root_NN possibilities_NNS ._.
+The_DT process_NN is_VBZ termi_SYM -_: nated_VBN when_WRB it_PRP reaches_VBZ the_DT first_JJ correct_JJ root_NN ,_, or_CC af_SYM -_: ter_NN exhaustive_JJ search_NN without_IN finding_VBG a_DT root_NN ,_, and_CC it_PRP is_VBZ then_RB marked_VBN as_IN an_DT un-stemmed_JJ word_NN ._.
+The_DT num_NN -_: ber_NN of_IN used_VBN patterns_NNS is_VBZ relatively_RB small_JJ ,_, indicating_VBG that_IN Khoja_NNP stemmer_NN is_VBZ intensively_RB dependent_JJ on_IN pre_NN -_: fixes_NNS and_CC suffixes_NNS removal_NN ._.
+Khoja_NNP stemmer_NN is_VBZ one_CD of_IN the_DT closest_JJS simulations_NNS to_TO the_DT manual_NN root_NN extraction_NN ._.
+The_DT decisions_NNS made_VBN by_IN Khoja_NNP stemmer_NN are_VBP static_JJ ,_, where_WRB it_PRP has_VBZ a_DT linguistic_JJ justification_NN for_IN each_DT deci_FW -_: sion_NN ._.
+But_CC ,_, it_PRP does_VBZ not_RB capture_VB the_DT dynamics_NNS of_IN the_DT language_NN and_CC it_PRP does_VBZ not_RB explore_VB all_DT linguistic_JJ pos_NN -_: sibilities_NNS ._.
+Khoja_NNP stemmer_NN turns_VBZ out_RP to_TO be_VB a_DT powerful_JJ tool_NN -LRB-_-LRB- AlSughaiyer_NNP and_CC AlKharashi_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+However_RB ,_, it_PRP does_VBZ not_RB involve_VB other_JJ important_JJ cases_NNS ,_, such_JJ as_IN mutation_NN ,_, and_CC the_DT complexity_NN of_IN its_PRP$ decisions_NNS makes_VBZ it_PRP challenging_VBG to_TO update_VB ._.
+3.2_CD Sebawi_NNP Stemmer_NNP Sebawi_NNP -LRB-_-LRB- Darwish_NNP ,_, 2002_CD -RRB-_-RRB- uses_VBZ a_DT different_JJ approach_NN to_TO build_VB an_DT Arabic_NNP stemmer_NN ._.
+It_PRP utilizes_VBZ a_DT set_NN of_IN word_NN -_: root_NN pairs_NNS to_TO deduce_VB Arabic_NNP patterns_NNS ,_, prefixes_NNS ,_, and_CC suffixes_NNS ._.
+The_DT knowledge_NN of_IN the_DT word_NN and_CC root_NN makes_VBZ it_PRP possible_JJ to_TO segment_NN the_DT word_NN into_IN three_CD parts_NNS ,_, pre_SYM -_: fix_NN ,_, suffix_NN ,_, and_CC stem_NN -LRB-_-LRB- infix_FW -RRB-_-RRB- ._.
+The_DT stems_VBZ characters_NNS are_VBP then_RB aligned_VBN with_IN roots_NNS characters_NNS to_TO formulate_VB a_DT pat_NN -_: tern_NN ._.
+The_DT deduced_VBN patterns_NNS vary_VBP from_IN linguistically_RB defined_VBN patters_NNS -LRB-_-LRB- Darwish_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, the_DT wordمكتوب_NN -LRB-_-LRB- mktu_FW ̄b_FW ,_, means_VBZ ''_'' Written_VBN ''_'' -RRB-_-RRB- whenaligned_VBN with_IN its_PRP$ root_NN ك_CD ت_CD ب_NN -LRB-_-LRB- ka_FW ̄f_FW ta_FW ̄_FW ba_FW ̄_FW ,_, ''_'' Writing_VBG ''_'' -RRB-_-RRB- would_MD re_VB -_: sult_NN م_NN -LRB-_-LRB- mym_NN -RRB-_-RRB- as_IN prefix_NN and_CC pattern_NN فعول_NN -LRB-_-LRB- f_LS u_SYM ̄l_FW -RRB-_-RRB- instead_RB oftheactualpatternمفعول_JJ -LRB-_-LRB- mf_FW u_FW ̄l_FW -RRB-_-RRB- ._.
+Sebawi_NNP -LRB-_-LRB- Darwish_NNP ,_, 2002_CD -RRB-_-RRB- keeps_VBZ track_NN of_IN prefixes_NNS ,_, suffixes_NNS ,_, and_CC deduced_VBD pattern_NN counts_NNS ,_, which_WDT will_MD be_VB used_VBN in_IN the_DT stemming_VBG analysis_NN ._.
+In_IN the_DT root_NN extraction_NN process_NN ,_, an_DT input_NN word_NN is_VBZ entered_VBN ,_, the_DT stemmer_NN searches_NNS for_IN possible_JJ matches_NNS in_IN the_DT deduced_VBN patterns_NNS ,_, when_WRB it_PRP matches_VBZ prefix_NN ,_, suffix_NN ,_, and_CC pattern_NN ,_, a_DT root_NN is_VBZ extracted_VBN ._.
+How_WRB -_: ever_RB ,_, there_EX is_VBZ a_DT potential_NN that_IN the_DT input_NN word_NN would_MD match_VB two_CD or_CC more_JJR patterns_NNS ;_: Sebawi_NNP utilizes_VBZ the_DT fre_NN -_: quencies_NNS computed_VBN from_IN the_DT pattern_NN deduction_NN to_TO as_IN -_: sociate_VB a_DT score_NN with_IN each_DT possible_JJ match_NN based_VBN on_IN the_DT conditional_JJ probability_NN of_IN prefix_NN ,_, suffix_NN ,_, and_CC de_IN -_: duced_VBN pattern_NN ._.
+Finally_RB ,_, the_DT resulting_VBG roots_NNS are_VBP com_NN -_: pared_VBN to_TO an_DT Arabic_NNP root_NN dictionary_NN to_TO validate_VB their_PRP$ existence_NN -LRB-_-LRB- Darwish_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+The_DT deduction_NN of_IN pattern_NN removes_VBZ the_DT need_NN for_IN manually_RB enumerating_VBG them_PRP ._.
+However_RB ,_, the_DT deduced_VBN patterns_NNS are_VBP different_JJ from_IN the_DT linguistic_JJ patterns_NNS ,_, deduced_VBD patterns_NNS introduce_VB new_JJ patterns_NNS not_RB previously_RB used_VBN and_CC in_IN many_JJ cases_NNS de_IN -_: duced_VBN frequencies_NNS will_MD not_RB reflect_VB the_DT actual_JJ linguis_NNS -_: tic_JJ frequencies_NNS ._.
+3.3_CD Light10_NNP Stemmer_NNP Light_NNP stemming_VBG is_VBZ a_DT less_RBR complex_JJ version_NN of_IN stem_NN -_: ming_VBG analysis_NN -LRB-_-LRB- AlSughaiyer_NNP and_CC AlKharashi_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Light_NN stemmers_NNS are_VBP more_RBR concerned_JJ with_IN removing_VBG the_DT prefix_NN and_CC suffix_NN of_IN a_DT word_NN -LRB-_-LRB- AlSughaiyer_NNP and_CC AlKharashi_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Aljlayl_NNP and_CC Frieder_NNP -LRB-_-LRB- 2002b_JJ -RRB-_-RRB- con_NN -_: struct_VB a_DT light_JJ stemmer_NN to_TO show_VB that_IN light_JJ stemming_VBG has_VBZ a_DT higher_JJR potential_NN than_IN root_NN extraction_NN with_IN re_SYM -_: spect_NN to_TO Information_NNP Retrieval_NNP -LRB-_-LRB- IR_NNP -RRB-_-RRB- ._.
+Larkey_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- conducted_VBN a_DT similar_JJ study_NN by_IN constructing_VBG a_DT set_NN of_IN light_JJ stemmers_NNS and_CC comparing_VBG them_PRP with_IN Khoja_NNP stemmer_NN ._.
+Both_DT types_NNS of_IN stemming_VBG analysis_NN showed_VBD improvement_NN in_IN IR_NNP -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT Light10_NNP outperforms_VBZ various_JJ stem_NN -_: mers_NNS in_IN IR_NNP and_CC it_PRP is_VBZ widely_RB used_VBN in_IN IR_NNP -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+Light10_NNP is_VBZ a_DT fast_RB and_CC straightforward_JJ al_SYM -_: gorithm_NN ._.
+It_PRP starts_VBZ by_IN removing_VBG punctuation_NN ,_, diacrit_NN -_: ics_FW ,_, and_CC non-Arabic_JJ letters_NNS ._.
+It_PRP mainly_RB normalizes_VBZ the_DT Hamza_NNP with_IN all_DT of_IN its_PRP$ variations_NNS to_TO ا_CD -LRB-_-LRB- lf_NN -RRB-_-RRB- ._.
+Then_RB it_PRP starts_VBZ by_IN removing_VBG prefixes_NNS according_VBG to_TO a_DT set_NN of_IN con_NN -_: straints_NNS ._.
+3.4_CD ISRI_NNP Stemmer_NNP ISRI_NNP stemmer_NN -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- is_VBZ another_DT sim_NN -_: ulation_NN for_IN the_DT linguistic_JJ process_NN similar_JJ to_TO Khoja_NNP stemmer_NN -LRB-_-LRB- Khoja_NNP and_CC Garside_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+It_PRP starts_VBZ by_IN nor_CC -_: malizing_VBG the_DT input_NN word_NN ,_, removing_VBG diacritics_NNS ,_, and_CC non-related_JJ Arabic_NNP characters_NNS ._.
+The_DT key_NN in_IN normal_JJ -_: ization_NN is_VBZ unifying_JJ the_DT different_JJ forms_NNS of_IN Hamza_NNP to_TO lf_VB -RRB-_-RRB- which_WDT differs_VBZ from_IN Khoja_NNP stemmer_NN -LRB-_-LRB- Khoja_NNP -LRB-_-LRB- ا_CD and_CC Garside_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+The_DT normalized_JJ word_NN then_RB fol_SYM -_: lows_NNS a_DT series_NN of_IN decisions_NNS to_TO remove_VB possible_JJ pre_NN -_: fixes_NNS that_WDT is_VBZ three_CD ,_, or_CC less_JJR characters_NNS ,_, and_CC then_RB map_VB it_PRP to_TO a_DT group_NN of_IN patterns_NNS according_VBG to_TO its_PRP$ length_NN ._.
+ISRI_NNP searches_NNS for_IN possible_JJ matches_NNS within_IN a_DT groups_NNS pat_SYM -_: terns_NNS ,_, if_IN there_EX is_VBZ no_DT match_NN ;_: it_PRP starts_VBZ by_IN removing_VBG possible_JJ suffixes_NNS ._.
+The_DT stemming_VBG process_NN should_MD be_VB stopped_VBN when_WRB the_DT remaining_VBG length_NN of_IN the_DT input_NN word_NN is_VBZ three_CD or_CC less_JJR characters_NNS ._.
+Another_DT key_JJ difference_NN from_IN Khoja_NNP stemmer_NN is_VBZ that_IN ISRI_NNP does_VBZ not_RB validate_VB roots_NNS against_IN any_DT type_NN of_IN dictionaries_NNS ._.
+ISRI_NNP is_VBZ more_RBR oriented_JJ towards_IN finding_VBG the_DT minimal_JJ representation_NN of_IN an_DT input_NN word_NN which_WDT can_MD be_VB used_VBN for_IN information_NN retrieval_NN ._.
+The_DT lack_NN of_IN dictionary_NN has_VBZ some_DT side_NN ef_SYM -_: fects_NNS ,_, such_JJ as_IN the_DT extracted_VBN roots_NNS are_VBP not_RB necessarily_RB correct_VB ,_, the_DT root_NN could_MD be_VB a_DT meaningless_JJ set_NN of_IN char_NN -_: acters_NNS ._.
+Roots_NNS would_MD be_VB unreliable_JJ for_IN further_JJ pro-_JJ cessing_NN ,_, specially_RB for_IN linguistic_JJ based_VBN tasks_NNS ._.
+3.5_CD Tashaphyne_NNP Stemmer_NNP Tashaphyne_NNP is_VBZ a_DT light_JJ weight_NN Arabic_NNP stemmer_NN -LRB-_-LRB- Zer_SYM -_: rouki_NN ,_, 2010_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ uses_VBZ similar_JJ approach_NN to_TO ISRI_NNP stemmer_NN ._.
+Since_IN ,_, it_PRP searches_VBZ for_IN the_DT minimum_NN repre_NN -_: sentation_NN of_IN an_DT Arabic_NNP word_NN -LRB-_-LRB- Zerrouki_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+But_CC ,_, It_PRP is_VBZ not_RB as_RB greedy_JJ as_IN ISRI_NNP stemmer_NN ._.
+It_PRP starts_VBZ by_IN remov_NN -_: ing_VBG non-related_JJ letters_NNS in_IN the_DT root_NN extraction_NN process_NN ,_, such_JJ as_IN diacritics_NNS ._.
+It_PRP uses_VBZ two_CD lists_NNS of_IN prefixes_NNS and_CC suffixes_NNS to_TO segment_NN a_DT given_VBN word_NN ._.
+Tashaphyne_NNP pro-_JJ vides_NNS both_DT a_DT light_JJ stem_NN or_CC a_DT root_NN to_TO the_DT input_NN word_NN ._.
+3.6_CD ElixirFM_NNP Morphological_NNP Analyzer_NNP ElixirFM_NNP -LRB-_-LRB- Smrzˇ_NNP ,_, 2007_CD -RRB-_-RRB- is_VBZ a_DT functional_JJ morphologi_NN -_: cal_NN analyzer_NN that_WDT utilizes_VBZ syntactic_NN features_NNS to_TO distin_VB -_: guish_VB a_DT words_NNS sense_NN -LRB-_-LRB- Smrzˇ_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+Arabic_NNP Gram_NNP -_: mar_NN and_CC Morphology_NN are_VBP highly_RB correlated_VBN -LRB-_-LRB- Ryding_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+Many_JJ of_IN the_DT prefixes_NNS and_CC suffixes_NNS additions_NNS have_VBP grammatical_JJ justification_NN ,_, which_WDT contributes_VBZ to_TO the_DT formulation_NN of_IN patterns_NNS ,_, such_JJ as_IN pronoun_NN addi_SYM -_: tions_NNS ._.
+ElixirFM_NNP uses_VBZ such_JJ correlation_NN to_TO improve_VB the_DT root_NN extraction_NN process_NN ;_: it_PRP uses_VBZ Prague_NNP Arabic_NNP Dependency_NNP Treebank_NNP -LRB-_-LRB- PADT_NNP -RRB-_-RRB- -LRB-_-LRB- Smrz_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- to_TO provide_VB annotated_JJ syntactic_NN features_NNS associated_VBN with_IN Buckwalter_NNP stem_NN dictionary_NN -LRB-_-LRB- Buckwalter_NNP ,_, 2002_CD -RRB-_-RRB- for_IN additional_JJ morphological_JJ knowledge_NN ._.
+ElixirFM_NNP also_RB handles_VBZ many_JJ cases_NNS ,_, such_JJ as_IN mutation_NN ,_, using_VBG or_CC -_: thographical_JJ and_CC phonological_JJ rules_NNS ._.
+The_DT ElixirFM_NNP generates_VBZ all_DT possible_JJ roots_NNS and_CC associates_NNS all_DT de_FW -_: duced_VBN features_NNS -LRB-_-LRB- reasons_NNS -RRB-_-RRB- to_TO distinguish_VB word_NN senses_NNS ._.
+It_PRP also_RB provides_VBZ additional_JJ options_NNS ,_, such_JJ as_IN inflecting_VBG words_NNS in_IN various_JJ forms_NNS ._.
+ElixirFM_NNP provides_VBZ various_JJ levels_NNS of_IN analysis_NN ,_, such_JJ as_IN resolving_VBG words_NNS with_IN or_CC without_IN tokenization_NN ._.
+3.7_CD MADAMIRA_NNP Morphlogical_NNP Analyzer_NNP MADAMIRA_NNP -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ a_DT morpholog_NN -_: ical_JJ analyzer_NN that_WDT provides_VBZ a_DT set_NN of_IN valuable_JJ fea_NN -_: tures_NNS including_VBG stemming_VBG ._.
+MADAMIRA_NNP -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ composed_VBN of_IN two_CD sub-tools_NNS ,_, MADA_NNP -LRB-_-LRB- Habash_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- and_CC AMIRA_NNP -LRB-_-LRB- Diab_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+MADA_NNP annotates_VBZ the_DT input_NN word_NN with_IN every_DT possible_JJ morphological_JJ feature_NN ,_, such_JJ as_IN diacritics_NNS and_CC lemma_NNS -LRB-_-LRB- Habash_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+MADA_NNP is_VBZ capa_NN -_: ble_NN of_IN predicting_VBG 19_CD morphological_JJ features_NNS by_IN using_VBG 14_CD distinct_JJ Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- and_CC N_NNP -_: gram_NN language_NN model_NN to_TO predicte_VB the_DT other_JJ 5_CD features_NNS -LRB-_-LRB- Habash_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+AMIRA_NNP -LRB-_-LRB- Diab_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- includes_VBZ a_DT word_NN Tokenizer_NNP ,_, POST_NNP ,_, and_CC Base_NNP Phrase_NNP Chucker_NNP -LRB-_-LRB- BPC_NNP -RRB-_-RRB- ,_, where_WRB some_DT tasks_NNS intersect_VBP with_IN MADA_NNP ._.
+AMIRA_NNP uses_VBZ a_DT machine_NN learning_VBG approach_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- for_IN its_PRP$ predictions_NNS ._.
+AMIRA_NNP analysis_NN is_VBZ not_RB as_RB deep_JJ as_IN MADA_NNP with_IN respect_NN to_TO the_DT intersected_JJ tasks_NNS which_WDT makes_VBZ AMIRA_NNP relatively_RB faster_RBR -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT merger_NN extends_VBZ both_DT tools_NNS -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ a_DT dynamic_JJ tool_NN that_WDT provides_VBZ a_DT set_NN of_IN valuable_JJ features_NNS to_TO other_JJ tasks_NNS ,_, such_JJ as_IN Ma_NNP -_: chine_NN Translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- and_CC Named_VBN Entity_NNP Recogni_NNP -_: tion_NN -LRB-_-LRB- NER_NNP -RRB-_-RRB- -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+MADAMIRA_NNP pro-_JJ vides_NNS a_DT light_JJ stemming_VBG analysis_NN feature_NN where_WRB it_PRP re_SYM -_: moves_NNS prefix_NN and_CC suffix_NN from_IN a_DT word_NN ._.
+It_PRP is_VBZ a_DT pow_NN -_: erful_JJ tool_NN that_WDT captures_VBZ underlying_VBG data_NNS dynamics_NNS ._.
+However_RB ,_, it_PRP is_VBZ dependent_JJ on_IN the_DT data_NNS quality_NN and_CC the_DT learning_NN features_NNS ._.
+4_CD Stemmers_NNP Evaluation_NNP and_CC Enhancement_NNP Arabic_NNP stemmers_NNS have_VBP been_VBN evaluated_VBN using_VBG a_DT stan_NN -_: dard_NN IR_NNP test_NN ,_, due_JJ to_TO the_DT lack_NN of_IN existing_VBG stemmed_VBD datasets_NNS -LRB-_-LRB- Smirnov_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+In_IN this_DT section_NN ,_, the_DT stemmers_NNS are_VBP evaluated_VBN using_VBG a_DT manually_RB stemmed_VBD dataset_NN ._.
+In_IN addition_NN ,_, an_DT enhancement_NN for_IN the_DT root_NN extractors_NNS discussed_VBN in_IN the_DT Related_NNP Work_NNP section_NN is_VBZ obtained_VBN by_IN using_VBG light_JJ stemmers_NNS as_IN a_DT preprocessing_JJ step_NN to_TO root_VB extractors_NNS ._.
+The_DT results_NNS of_IN the_DT enhance_VB -_: ment_NN are_VBP shown_VBN in_IN tables_NNS 2_CD ,_, 3_CD ,_, and_CC 4_CD ._.
+4.1_CD Evaluation_NNP Dataset_NNP A_NNP set_NN of_IN 29_CD manually_RB annotated_VBN documents_NNS were_VBD used_VBN for_IN stemmers_NNS evaluation_NN ._.
+The_DT dataset_NN is_VBZ part_NN of_IN International_NNP Corpus_NNP of_IN Arabic_NNP -LRB-_-LRB- ICA_NNP -RRB-_-RRB- -LRB-_-LRB- Alansary_JJ et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+ICA_NNP is_VBZ a_DT collection_NN of_IN Arabic_NNP documents_NNS obtained_VBN from_IN various_JJ resources_NNS such_JJ as_IN newspa_NN -_: pers_NNS ,_, magazines_NNS ,_, and_CC books_NNS -LRB-_-LRB- Alansary_JJ et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+ICA_NNP was_VBD collected_VBN and_CC annotated_VBN to_TO give_VB a_DT complete_JJ representation_NN of_IN the_DT Arabic_NNP language_NN to_TO be_VB used_VBN in_IN Arabic_NNP NLP_NNP research_NN -LRB-_-LRB- Alansary_JJ et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+The_DT 29_CD documents_NNS contain_VBP 10_CD ,_, 302_CD tokens_NNS ._.
+Only_RB 8_CD ,_, 941_CD words_NNS are_VBP Arabic_NNP words_NNS ,_, while_IN the_DT remaining_VBG are_VBP to_TO -_: kens_NNS ,_, such_JJ as_IN ''_'' /_FW T_FW ''_'' -LRB-_-LRB- beginning_NN of_IN a_DT title_NN -RRB-_-RRB- ._.
+Only_RB 6_CD ,_, 323_CD words_NNS have_VBP associated_VBN roots_NNS and_CC 3_CD ,_, 629_CD unique_JJ word_NN -_: root_NN pairs_NNS of_IN the_DT 10_CD ,_, 302_CD tokens_NNS ._.
+Every_DT word_NN has_VBZ a_DT various_JJ set_NN of_IN features_NNS associated_VBN with_IN it_PRP for_IN evaluat_NN -_: ing_VBG the_DT discussed_VBN stemmers_NNS ,_, such_JJ as_IN stem_NN and_CC root_NN ._.
+This_DT makes_VBZ the_DT dataset_NN an_DT ideal_JJ reference_NN for_IN evalu_NN -_: ating_VBG the_DT introduced_VBN stemmers_NNS ._.
+However_RB ,_, some_DT fea_NN -_: tures_NNS were_VBD left_VBN blank_JJ because_IN the_DT words_NNS do_VBP not_RB have_VB the_DT associated_VBN feature_NN ,_, such_JJ as_IN stopwords_NNS ,_, as_IN shown_VBN in_IN Figure_NN 1_CD ._.
+The_DT dataset_NN will_MD be_VB used_VBN to_TO conduct_VB a_DT series_NN of_IN comparisons_NNS to_TO evaluate_VB Arabic_NNP stemmers_NNS from_IN various_JJ perspectives_NNS ._.
+4.2_CD Evaluation_NN Criteria_NNP Arabic_NNP roots_NNS and_CC stems_VBZ provide_VB a_DT valuable_JJ set_NN of_IN characteristics_NNS that_WDT are_VBP useful_JJ for_IN many_JJ computa_NN -_: tional_JJ tasks_NNS -LRB-_-LRB- Aljlayl_NNP and_CC Frieder_NNP ,_, 2002a_CD -RRB-_-RRB- -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- -LRB-_-LRB- Ezzeldin_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Various_JJ tasks_NNS re_SYM -_: quire_NN different_JJ perspectives_NNS such_JJ as_IN Information_NNP Re_NNP -_: trieval_NN would_MD use_VB roots_NNS for_IN grouping_VBG ,_, and_CC other_JJ may_MD use_VB linguistic_JJ features_NNS of_IN roots_NNS ._.
+The_DT linguistic_JJ accuracy_NN provides_VBZ a_DT representative_JJ measure_NN for_IN the_DT efficiency_NN of_IN the_DT stemmer_NN in_IN lin_NN -_: guistic_JJ based_VBN tasks_NNS ._.
+Linguistic_JJ accuracy_NN is_VBZ com_NN -_: puted_VBN as_IN the_DT ratio_NN between_IN the_DT number_NN of_IN correctly_RB stemmed_VBD words_NNS and_CC the_DT number_NN of_IN the_DT input_NN words_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, roots_NNS can_MD be_VB used_VBN as_IN a_DT word_NN 's_POS label_NN ,_, which_WDT can_MD group_VB linguistically_RB similar_JJ words_NNS ._.
+Another_DT set_NN of_IN measures_NNS were_VBD used_VBN to_TO measure_VB the_DT macro_NN and_CC micro_NN classification_NN capabilities_NNS of_IN the_DT roots_NNS ._.
+The_DT difference_NN between_IN macro_NN and_CC micro_NN is_VBZ that_IN the_DT size_NN of_IN class_NN if_IN reflected_VBN on_IN the_DT micro_NN measure_NN where_WRB the_DT the_DT macro_NN measure_NN treats_VBZ classes_NNS equally_RB regardless_RB of_IN class_NN 's_POS size_NN ._.
+The_DT following_VBG set_NN of_IN equations_NNS are_VBP used_VBN to_TO provide_VB macro_NN and_CC micro_NN classification_NN measurements_NNS -LRB-_-LRB- Manning_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- :_: 4.3_CD Evaluation_NNP Results_NNS The_DT stem_NN and_CC root_NN features_NNS of_IN the_DT evaluation_NN data_NN set_NN allow_VBP to_TO investigate_VB the_DT two_CD types_NNS of_IN stemming_VBG algo_SYM -_: rithms_NNS ,_, light_JJ stemming_VBG and_CC root_NN extraction_NN ._.
+The_DT light_JJ stemmers_NNS that_WDT are_VBP used_VBN in_IN the_DT experiment_NN are_VBP Light10_NNP ni_FW =_SYM 1_CD |_CD Xi_NNP ∩_CD Yi_NNP |_CD Accuracy_NNP macro_NN =_SYM ni_FW =_SYM 1_CD |_CD Xi_NNP ∪_CD Yi_NNP |_CD ni_NNS =_SYM 1_CD |_CD Xi_NNP ∩_CD Yi_NNP |_NNP Precision_NNP macro_NN =_SYM ni_FW =_SYM 1_CD |_CD Xi_NNP |_CD ni_NNS =_SYM 1_CD |_CD Xi_NNP ∩_CD Yi_NNP |_CD Recall_VB macro_NN =_SYM ni_FW =_SYM 1_CD |_CD Yi_NNP |_CD ni_NNS =_SYM 1_CD |_CD Xi_NNP ∩_CD Yi_NNP |_SYM F1_CD macro_NN =_SYM ni_FW =_SYM 1_CD |_CD Xi_NNP |_FW +_FW |_FW Yi_FW |_FW 1_LS n_FW |_FW Xi_FW ∩_FW Yi_FW |_FW Accuracy_NNP micro_NN =_SYM n_FW i_FW =_SYM 1_CD |_CD Xi_NNP ∪_CD Yi_NNP |_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 1_CD n_NN |_NN Xi_NNP ∩_CD Yi_NNP |_NNP Precision_NNP micro_NN =_SYM n_FW i_FW =_SYM 1_CD |_CD Xi_NNP |_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 1_LS n_FW |_FW Xi_FW ∩_FW Yi_FW |_FW Recall_VB micro_NN =_SYM n_FW i_FW =_SYM 1_CD |_CD Yi_NNP |_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- 1_CD n_NN |_NN Xi_NNP ∩_CD Yi_NNP |_SYM F1_CD micro_NN =_SYM n_FW i_FW =_SYM 1_CD |_CD Xi_NNP |_FW +_FW |_FW Yi_FW |_FW -LRB-_-LRB- 4_LS -RRB-_-RRB- Figure_NN 1_CD :_: Evaluation_NNP Dataset_NNP ._.
+Where_WRB :_: And_CC n_NN is_VBZ the_DT number_NN of_IN candidate_NN roots_NNS ._.
+X_NNP is_VBZ the_DT set_NN of_IN candidate_NN roots_NNS ._.
+Xi_NNP is_VBZ an_DT indvidual_JJ candiate_NN root_NN ._.
+Y_NN is_VBZ the_DT set_NN of_IN -LRB-_-LRB- semantically_RB -RRB-_-RRB- correct_JJ roots_NNS ._.
+Yi_NNP is_VBZ an_DT indvidual_JJ -LRB-_-LRB- semantically_RB -RRB-_-RRB- correct_JJ root_NN ._.
+Table_NNP 1_CD :_: Light_NNP Stemmer_NNP Linguistic_NNP Accuracy_NNP Light_NNP Stemmer_NNP linguistic_JJ Accuracy_NNP Light10_NNP 47.83_CD %_NN Table_NNP 2_CD :_: Stemmers_NNP Lingustic_NNP Accuracy_NNP MADAMIRA_NNP -LRB-_-LRB- MADA_NNP -RRB-_-RRB- 91.73_CD %_NN Stemmer_NNP Khoja_NNP MADA_NNP +_VBD Khoja_NNP ISRI_NNP MADA_NNP +_VBD ISRI_NNP Tashaphyne_NNP -LRB-_-LRB- TASH_NNP -RRB-_-RRB- MADA_NNP +_CD TASH_NNP ElixirFM_NNP linguistic_JJ Accuracy_NNP 72.1_CD %_NN 72.1_CD %_NN 14.2_CD %_NN 16.91_CD %_NN 30.3_CD %_NN 38.23_CD %_NN linguistic_JJ Coverage_NNP 72.1_CD %_NN 72.1_CD %_NN 14.2_CD %_NN 16.91_CD %_NN 30.3_CD %_NN 38.23_CD %_NN NA_NNP Table_NNP 3_CD :_: Stemmers_NNP Macro_NNP Classification_NNP Statistics_NNPS 98.15_CD %_NN Stemmer_NNP Khoja_NNP MADA_NNP +_VBD Khoja_NNP ISRI_NNP MADA_NNP +_VBD ISRI_NNP TASH_NNP MADA_NNP +_VBD TASH_NNP Accuracy_NNP Precision_NNP 57.53_CD %_NN 57.53_CD %_NN 57.53_CD %_NN 57.53_CD %_NN 10.43_CD %_NN 10.43_CD %_NN 15.40_CD %_NN 15.40_CD %_NN 25.07_CD %_NN 25.07_CD %_NN 41.79_CD %_NN 41.79_CD %_NN Recall_VB F1_CD 59.59_CD %_NN 58.55_CD %_NN 59.59_CD %_NN 58.55_CD %_NN 10.49_CD %_NN 10.46_CD %_NN 15.60_CD %_NN 15.50_CD %_NN 25.15_CD %_NN 25.11_CD %_NN 41.85_CD %_NN 41.82_CD %_NN Table_NNP 4_CD :_: Stemmers_NNP Micro_NNP Classification_NNP Statistics_NNPS Stemmer_NNP Khoja_NNP MADA_NNP +_VBD Khoja_NNP ISRI_NNP MADA_NNP +_VBD ISRI_NNP TASH_NNP MADA_NNP +_VBD TASH_NNP Accuracy_NNP 71.42_CD %_NN 71.42_CD %_NN 14.20_CD %_NN 17.25_CD %_NN 30.42_CD %_NN 39.61_CD %_NN Precision_NNP Recall_VB 95.38_CD %_NN 73.98_CD %_NN 95.38_CD %_NN 73.98_CD %_NN 97.34_CD %_NN 14.25_CD %_NN 96.59_CD %_NN 17.36_CD %_NN 99.45_CD %_NN 30.47_CD %_NN 99.86_CD %_NN 39.62_CD %_NN F1_CD 83.33_CD %_NN 83.33_CD %_NN 24.87_CD %_NN 29.43_CD %_NN 46.11_CD %_NN 56.74_CD %_NN and_CC MADAMIRA_NNP stemmers_NNS ,_, while_IN the_DT root_NN extrac_NN -_: tors_NNS stemmers_NNS are_VBP Khoja_NNP ,_, ISRI_NNP ,_, and_CC Tashaphyne_NNP ._.
+The_DT experiments_NNS also_RB investigate_VBP combining_VBG the_DT two_CD types_NNS of_IN stemming_VBG algorithms_NNS ,_, where_WRB light_JJ stem_NN -_: ming_NN is_VBZ used_VBN as_IN preprocessing_VBG for_IN root_NN extractors_NNS ._.
+It_PRP combines_VBZ MADAMIRA_NNP stemmer_NN with_IN Khoja_NNP ,_, ISRI_NNP ,_, and_CC Tashaphyne_NNP stemmers_NNS ._.
+Only_RB unique_JJ words_NNS in_IN the_DT dataset_NN having_VBG an_DT associated_VBN root_NN feature_NN are_VBP used_VBN in_IN the_DT test_NN ._.
+Table_NNP 1_CD shows_VBZ the_DT improvement_NN of_IN the_DT light_JJ stem_NN -_: ming_VBG algorithm_NN MADAMIRA_NNP over_IN Light10_NNP stem_NN -_: mer_NN ._.
+MADAMIRA_NNP gives_VBZ an_DT accuracy_NN of_IN 91.73_CD %_NN with_IN roughly_RB 44_CD %_NN accuracy_NN improvement_NN over_IN Light10_NNP ._.
+Using_VBG the_DT MADAMIRA_NNP light_NN stemmer_NN as_IN a_DT pre-processing_JJ phase_NN before_IN root_NN extraction_NN using_VBG Khoja_NNP ,_, ISRI_NNP ,_, and_CC Tashaphanye_NNP stemmers_NNS improves_VBZ the_DT accuracy_NN of_IN root_NN extraction_NN ._.
+Table_NNP 2_CD shows_VBZ the_DT linguistic_JJ accuracy_NN of_IN Khoja_NNP ,_, ISRI_NNP ,_, and_CC Tashaphanye_NNP stemmers_NNS in_IN standalone_JJ mode_NN and_CC when_WRB preceded_VBN by_IN MADAMIRA_NNP pre_SYM -_: processing_NN ._.
+There_EX is_VBZ a_DT substantial_JJ difference_NN be_VB -_: tween_NN Khoja_NNP stemmer_NN and_CC the_DT other_JJ two_CD ,_, ISRI_NNP and_CC Tashaphyne_NNP ,_, with_IN at_IN least_JJS 40_CD %_NN linguistic_JJ accuracy_NN gap_NN ._.
+This_DT is_VBZ due_JJ to_TO the_DT usage_NN of_IN a_DT roots_NNS dictionary_NN by_IN Khoja_NNP ._.
+But_CC when_WRB adding_VBG MADAMIRA_NNP as_IN a_DT pre_NN -_: processing_VBG phase_NN ,_, there_EX is_VBZ a_DT noticeable_JJ improvement_NN in_IN ISRI_NNP and_CC Tashaphanye_NNP by_IN roughly_RB 2_CD %_NN and_CC 8_CD %_NN ,_, re_SYM -_: spectively_RB ._.
+There_EX is_VBZ no_DT effect_NN of_IN using_VBG MADAMIRA_NNP with_IN Khoja_NNP ,_, this_DT is_VBZ due_JJ to_TO the_DT robust_JJ segmentation_NN of_IN Khoja_NNP and_CC the_DT existence_NN of_IN dictionary_JJ validation_NN ._.
+The_DT ElixirFM_NNP morphological_JJ trees_NNS were_VBD not_RB suffi_JJ -_: cient_NN to_TO disambiguate_VB the_DT generated_VBN roots_NNS ._.
+However_RB ,_, it_PRP provides_VBZ a_DT valuable_JJ set_NN of_IN features_NNS and_CC substantial_JJ root_NN converge_NN which_WDT can_MD be_VB used_VBN for_IN further_JJ analy_NN -_: sis_NN ._.
+The_DT usage_NN of_IN MADAMIRA_NNP is_VBZ also_RB reflected_VBN on_IN the_DT classification_NN and_CC clustering_NN measures_NNS ._.
+As_IN no_DT -_: ticed_VBN ,_, the_DT increase_NN of_IN linguistic_JJ accuracy_NN increases_NNS related_VBN measures_NNS ,_, namely_RB ,_, classification_NN and_CC cluster_NN -_: ing_NN ._.
+Table_NNP 2_CD also_RB shows_VBZ the_DT effectiveness_NN of_IN gener_NN -_: ating_VBG possible_JJ roots_NNS of_IN ElixirFM_NNP ._.
+However_RB ,_, the_DT syn_NN -_: tactic_NN strategy_NN for_IN distinguishing_VBG words_NNS '_POS senses_NNS is_VBZ not_RB completely_RB effective_JJ in_IN producing_VBG only_RB one_CD root_NN ._.
+Classification_NN has_VBZ a_DT distinctive_JJ property_NN ,_, that_WDT is_VBZ grouping_VBG similar_JJ words_NNS ._.
+By_IN comparing_VBG Tables_NNP 3_CD and_CC 4_CD ,_, there_EX is_VBZ a_DT noticeable_JJ increase_NN in_IN clustering_VBG mea_NN -_: sures_NNS over_IN classification_NN ._.
+This_DT due_JJ to_TO the_DT fact_NN that_DT size_NN of_IN classes_NNS is_VBZ being_VBG reflected_VBN to_TO the_DT micro_NN clas_SYM -_: sification_NN measure_NN where_WRB it_PRP is_VBZ ignored_VBN with_IN macro_NN classification_NN measure_NN ._.
+The_DT performance_NN of_IN stemming_VBG algorithms_NNS can_MD be_VB noticeably_RB improved_VBN by_IN applying_VBG some_DT minor_JJ changes_NNS ,_, such_JJ as_IN normalization_NN processes_NNS ._.
+For_IN ex_FW -_: ample_JJ ,_, changing_VBG the_DT form_NN of_IN Hamaz_NNP -LRB-_-LRB- ء_CD ,_, an_DT Arabic_NNP letter_NN -RRB-_-RRB- ._.
+Such_JJ changes_NNS would_MD not_RB affect_VB only_RB linguis_SYM -_: tic_JJ based_VBN task_NN but_CC also_RB related_VBN non-linguistic_JJ tasks_NNS ._.
+5_CD Conclusion_NNP Stemmers_NNP are_VBP employed_VBN in_IN various_JJ tasks_NNS ,_, such_JJ as_IN information_NN retrieval_NN -LRB-_-LRB- IR_NNP -RRB-_-RRB- -LRB-_-LRB- Aljlayl_NNP and_CC Frieder_NNP ,_, 2002a_CD -RRB-_-RRB- -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- and_CC sentiment_NN analysis_NN -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- ._.
+Stemmers_NNS achieve_VBP a_DT notice_NN -_: able_JJ improvement_NN in_IN related_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ._.
+However_RB ,_, the_DT evaluation_NN of_IN stemmers_NNS does_VBZ not_RB explicitly_RB show_VB the_DT stemming_VBG efficiency_NN -LRB-_-LRB- Smirnov_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, direct_JJ evalaution_NN was_VBD used_VBN to_TO study_VB the_DT behaviour_NN of_IN Arabic_NNP stem_NN -_: mers_NNS ._.
+The_DT paper_NN investigates_VBZ two_CD types_NNS of_IN stemming_VBG algorithms_NNS ,_, namely_RB ,_, light_JJ stemmers_NNS and_CC root_NN extrac_NN -_: tors_NNS ._.
+The_DT light_JJ stemmers_NNS studied_VBN were_VBD MADAMIRA_NNP -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC Light10_NNP -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+And_CC ,_, the_DT root_NN extractors_NNS studied_VBN were_VBD Khoja_NNP -LRB-_-LRB- Khoja_NNP and_CC Garside_NNP ,_, 1999_CD -RRB-_-RRB- ,_, ISRI_NNP -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, and_CC Tashaphyne_NNP -LRB-_-LRB- Zerrouki_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT mea_NN -_: sures_NNS used_VBN to_TO compare_VB the_DT stemmers_NNS were_VBD the_DT lin_NN -_: guistic_JJ accuracy_NN and_CC coverage_NN ,_, in_IN addition_NN to_TO macro_NN and_CC micro_NN classification_NN measures_NNS ._.
+The_DT results_NNS ob_SYM -_: tained_VBN show_NN that_IN the_DT increase_NN of_IN linguistic_JJ accuracy_NN increases_VBZ the_DT effectivness_NN in_IN other_JJ tasks_NNS -LRB-_-LRB- Oraby_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- -LRB-_-LRB- Ezzeldin_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+This_DT study_NN and_CC IR_NNP 's_POS results_NNS -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- show_VBP that_IN low_JJ linguistic_JJ accuracy_NN in_IN stemming_VBG al_SYM -_: gorithms_NNS does_VBZ not_RB necessarily_RB affect_VB efficiency_NN of_IN a_DT stemmer_NN in_IN information_NN retrieval_NN ,_, possibly_RB due_JJ to_TO the_DT presence_NN frequently_RB correct_JJ events_NNS -LRB-_-LRB- extracted_VBN roots_NNS -RRB-_-RRB- ._.
+For_IN example_NN ,_, ISRI_NNP stemmer_NN has_VBZ an_DT accu_NN -_: racy_JJ of_IN 14.2_CD %_NN ,_, but_CC performs_VBZ efficiently_RB and_CC shows_VBZ competitive_JJ result_NN with_IN Khoja_NNP in_IN IR_NNP -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+The_DT study_NN shows_VBZ another_DT set_NN of_IN possible_JJ im_SYM -_: provements_NNS ,_, which_WDT is_VBZ using_VBG light_JJ stemmers_NNS as_IN pre_NN -_: processing_NN for_IN the_DT root_NN extraction_NN task_NN ._.
+Different_JJ studies_NNS show_VBP that_IN light_JJ stemming_VBG has_VBZ a_DT higher_JJR po_SYM -_: tential_NN for_IN improving_VBG IR_NNP than_IN root_NN extraction_NN -LRB-_-LRB- Larkey_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- -LRB-_-LRB- Taghva_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Using_VBG light_JJ stem_NN -_: ming_VBG associated_VBN with_IN root_NN extraction_NN methods_NNS would_MD build_VB a_DT complete_JJ hierarchical_JJ representation_NN of_IN Ara_NNP -_: bic_JJ words_NNS ,_, in_IN addition_NN ,_, light_JJ stemming_VBG improves_VBZ the_DT performance_NN of_IN other_JJ stemmers_NNS ._.
+The_DT study_NN con_NN -_: ducted_VBN and_CC the_DT results_NNS obtained_VBD show_NN the_DT correla_NN -_: tion_NN between_IN linguistic_JJ accuracy_NN and_CC other_JJ measures_NNS ,_, the_DT increase_NN in_IN linguistic_JJ accuracy_NN increases_NNS other_JJ related_VBN mesures_NNS ._.
+The_DT existence_NN of_IN multiple_JJ Arabic_NNP stemmers_NNS adds_VBZ richness_NN to_TO the_DT stemming_VBG analysis_NN task_NN ._.
+Each_DT of_IN the_DT discussed_VBN stemmers_NNS has_VBZ its_PRP$ own_JJ strengths_NNS and_CC weaknesses_NNS ,_, where_WRB the_DT weaknesses_NNS could_MD be_VB reduced_VBN by_IN combining_VBG multiple_JJ stemmers_NNS in_IN effective_JJ ways_NNS ._.
+References_NNP Sameh_NNP Alansary_NNP ,_, Magdy_NNP Nagi_NNP ,_, and_CC Noha_NNP Adly_NNP ._.
+2007_CD ._.
+Building_VBG an_DT international_JJ corpus_NN of_IN arabic_JJ -LRB-_-LRB- ica_NN -RRB-_-RRB- :_: progress_NN of_IN compilation_NN stage_NN ._.
+Mohammed_NNP Aljlayl_NNP and_CC Ophir_NNP Frieder_NNP ._.
+2002a_NNS ._.
+On_IN arabic_JJ search_NN :_: improving_VBG the_DT retrieval_NN effectiveness_NN via_IN a_DT light_JJ stemming_VBG approach_NN ._.
+pages_NNS 340_CD --_: 347_CD Mohammed_NNP Aljlayl_NNP and_CC Ophir_NNP Frieder_NNP ._.
+2002b_JJ ._.
+On_IN arabic_JJ search_NN :_: improving_VBG the_DT retrieval_NN effectiveness_NN via_IN a_DT light_JJ stemming_VBG approach_NN ._.
+pages_NNS 340_CD --_: 347_CD Imad_NNP A_NNP AlSughaiyer_NNP and_CC Ibrahim_NNP A_NNP AlKharashi_NNP ._.
+2004_CD ._.
+Arabic_NNP morphological_JJ analysis_NN techniques_NNS :_: A_DT compre_NN -_: hensive_NN survey_NN ._.
+Journal_NNP of_IN the_DT American_NNP Society_NNP for_IN Information_NNP Science_NNP and_CC Technology_NNP ,_, 55_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :189_CD --_: 213_CD Tim_NNP Buckwalter_NNP ._.
+2002_CD ._.
+Buckwalter_NNP Arabic_NNP morphologi_SYM -_: cal_NN analyzer_NN version_NN 1.0_CD ._.
+Kareem_NNP Darwish_NNP ._.
+2002_CD ._.
+Building_VBG a_DT shallow_JJ arabic_JJ mor_NN -_: phological_JJ analyzer_NN in_IN one_CD day_NN ._.
+pages_NNS 1_CD --_: 8_CD ._.
+Mona_NNP Diab_NNP ,_, Kadri_NNP Hacioglu_NNP ,_, and_CC Daniel_NNP Jurafsky_NNP ._.
+2007_CD ._.
+Automated_VBN methods_NNS for_IN processing_VBG arabic_JJ text_NN :_: from_IN tokenization_NN to_TO base_NN phrase_NN chunking_NN ._.
+Arabic_NNP Compu_NNP -_: tational_JJ Morphology_NNP :_: Knowledge-based_JJ and_CC Empiri_NNP -_: cal_NN Methods_NNS ._.
+Kluwer/Springer_NNP ._.
+Mahmoud_NNP El-Defrawy_NNP ,_, Yasser_NNP El-Sonbaty_NNP ,_, and_CC Nahla_NNP A_NNP Belal_NNP ._.
+2015_CD ._.
+Cbas_NNP :_: Context_NNP based_VBN arabic_JJ stemmer_NN ._.
+In_IN -_: ternational_JJ Journal_NNP on_IN Natural_NNP Language_NNP Computing_NNP -LRB-_-LRB- IJNLC_NNP -RRB-_-RRB- ._.
+Ahmed_NNP Magdy_NNP Ezzeldin_NNP ,_, Mohamed_NNP Hamed_NNP Kholief_NNP ,_, and_CC Yasser_NNP El-Sonbaty_NNP ._.
+2013_CD ._.
+Alqasim_NNP :_: Arabic_NNP language_NN question_NN answer_NN selection_NN in_IN machines_NNS ._.
+In_IN Informa_NNP -_: tion_NN Access_NNP Evaluation_NNP ._.
+Multilinguality_NNP ,_, Multimodal_NNP -_: ity_NN ,_, and_CC Visualization_NNP ,_, volume_NN 8138_CD ,_, pages_NNS 100_CD --_: 103_CD Springer_NNP ._.
+Ahmed_NNP Magdy_NNP Ezzeldin_NNP ,_, Yasser_NNP El-Sonbaty_NNP ,_, and_CC Mo_NNP -_: hamed_VBD Hamed_NNP Kholief_NNP ._.
+2015_CD ._.
+Exploring_VBG the_DT effects_NNS of_IN root_NN expansion_NN ,_, sentence_NN splitting_NN and_CC ontology_NN on_IN arabic_JJ answer_NN selection_NN ._.
+Natural_JJ Language_NN Process_NNP -_: ing_NN and_CC Cognitive_NNP Science_NNP :_: Proceedings_NNP 2014_CD ,_, page_NN 273_CD Radwa_NNP Fathalla_NNP ,_, Yasser_NNP El-Sonbaty_NNP ,_, and_CC Mohamed_NNP A_NNP Is_VBZ -_: mail_NN ._.
+2007_CD ._.
+Extraction_NN of_IN arabic_JJ words_NNS form_VBP complex_JJ color_NN image_NN ._.
+In_IN 9th_JJ IEEE_NNP International_NNP Conference_NNP on_IN Document_NNP Analysis_NNP and_CC Recognition_NNP -LRB-_-LRB- ICDAR_NNP 2007_CD -RRB-_-RRB- ,_, pages_NNS 1223_CD --_: 1227_CD ,_, Brazil_NNP ,_, 23-26_CD September_NNP ._.
+IEEE_NNP ._.
+Nizar_NNP Habash_NNP ,_, Owen_NNP Rambow_NNP ,_, and_CC Ryan_NNP Roth_NNP ._.
+2009_CD ._.
+Mada_NNP +_JJ tokan_NN :_: A_DT toolkit_NN for_IN arabic_JJ tokenization_NN ,_, di_FW -_: acritization_NN ,_, morphological_JJ disambiguation_NN ,_, pos_VBZ tag_NN -_: ging_NN ,_, stemming_VBG and_CC lemmatization_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2nd_CD International_NNP Conference_NNP on_IN Arabic_NNP Language_NNP Resources_NNP and_CC Tools_NNP -LRB-_-LRB- MEDAR_NNP -RRB-_-RRB- ,_, Cairo_NNP ,_, Egypt_NNP ,_, pages_NNS 102_CD --_: 109_CD ._.
+John_NNP Hutchins_NNP ._.
+2004_CD ._.
+The_DT first_JJ public_JJ demonstration_NN of_IN machine_NN translation_NN :_: the_DT georgetown-ibm_NN system_NN ,_, 7th_JJ january_JJ 1954_CD ._.
+Hongyan_NNP Jing_NNP and_CC Kathleen_NNP R_NNP McKeown_NNP ._.
+2000_CD ._.
+Cut_NNP and_CC paste_NN based_VBN text_NN summarization_NN ._.
+pages_NNS 178_CD --_: 185_CD ._.
+Shereen_NNP Khoja_NNP and_CC Roger_NNP Garside_NNP ._.
+1999_CD ._.
+Stemming_VBG ara_SYM -_: bic_NN text_NN ._.
+Lancaster_NNP ,_, UK_NNP ,_, Computing_NNP Department_NNP ,_, Lan_NNP -_: caster_NN University_NNP ._.
+Leah_NNP S_NNP Larkey_NNP ,_, Lisa_NNP Ballesteros_NNP ,_, and_CC Margaret_NNP E_NNP Con_NN -_: nell_NN ._.
+2002_CD ._.
+Improving_NN stemming_VBG for_IN arabic_JJ informa_NN -_: tion_NN retrieval_NN :_: light_JJ stemming_VBG and_CC co-occurrence_NN anal_JJ -_: ysis_NN ._.
+pages_NNS 275_CD --_: 282_CD Leah_NNP S_NNP Larkey_NNP ,_, Lisa_NNP Ballesteros_NNP ,_, and_CC Margaret_NNP E_NNP Connell_NNP ._.
+2007_CD ._.
+Light_NNP stemming_VBG for_IN arabic_JJ information_NN retrieval_NN ._.
+In_IN Arabic_NNP computational_JJ morphology_NN ,_, pages_NNS 221_CD --_: 243 140206045_CD 9_CD ._.
+Springer_NNP ._.
+Christopher_NNP D_NNP Manning_NNP ,_, Prabhakar_NNP Raghavan_NNP ,_, and_CC Hin_NNP -_: rich_JJ Schu_NNP ̈tze_NN ._.
+2008_CD ._.
+Introduction_NN to_TO information_NN re_SYM -_: trieval_NN ,_, volume_NN 1_CD ._.
+Cambridge_NNP university_NN press_NN Cam_NNP -_: bridge_NN ._.
+Will_MD Monroe_NNP ,_, Spence_NNP Green_NNP ,_, and_CC Christopher_NNP D_NNP Man_NNP -_: ning_NN ._.
+2014_CD ._.
+Word_NN segmentation_NN of_IN informal_JJ arabic_JJ with_IN domain_NN adaptation_NN ._.
+ACL_NNP ,_, Short_NNP Papers_NNP ._.
+Prakash_NNP M_NNP Nadkarni_NNP ,_, Lucila_NNP Ohno-Machado_NNP ,_, and_CC Wendy_NNP W_NNP Chapman_NNP ._.
+2011_CD ._.
+Natural_JJ language_NN process_NN -_: ing_NN :_: an_DT introduction_NN ._.
+Journal_NNP of_IN the_DT American_NNP Medical_NNP Informatics_NNP Association_NNP ,_, 18_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :544_CD --_: 551_CD Ani_NNP Nenkova_NNP ._.
+2005_CD ._.
+Automatic_NNP text_NN summarization_NN of_IN newswire_NN :_: Lessons_NNS learned_VBD from_IN the_DT document_NN under_IN -_: standing_VBG conference_NN ._.
+5:1436_CD --_: 1441_CD ._.
+Shereen_NNP Oraby_NNP ,_, Yasser_NNP El-Sonbaty_NNP ,_, and_CC Mohamad_NNP Abou_NNP El-Nasr_NNP ._.
+2013a_NNS ._.
+Finding_VBG opinion_NN strength_NN using_VBG rule_NN -_: based_VBN parsing_NN for_IN arabic_JJ sentiment_NN analysis_NN ._.
+In_IN Ad_NNP -_: vances_NNS in_IN Soft_NNP Computing_NNP and_CC Its_PRP$ Applications_NNS ,_, volume_NN 8266_CD ,_, pages_NNS 509_CD --_: 520_CD Shereen_NNP M_NNP Oraby_NNP ,_, Yasser_NNP El-Sonbaty_NNP ,_, and_CC Mo_NNP -_: hamad_NN Abou_NNP El-Nasr_NNP ._.
+2013b_JJ ._.
+Exploring_VBG the_DT effects_NNS of_IN word_NN roots_NNS for_IN arabic_JJ sentiment_NN analysis_NN ._.
+In_IN Confer_NNP -_: ence_NN on_IN Natural_JJ Language_NN Processing_NNP ,_, Nagoya_NNP ,_, Japan_NNP ,_, October_NNP ._.
+Arfath_NNP Pasha_NNP ,_, Mohamed_NNP Al-Badrashiny_NNP ,_, Ahmed_NNP El_NNP Kholy_NNP ,_, Ramy_NNP Eskander_NNP ,_, Mona_NNP Diab_NNP ,_, Nizar_NNP Habash_NNP ,_, Manoj_NNP Pooleery_NNP ,_, Owen_NNP Rambow_NNP ,_, and_CC Ryan_NNP Roth_NNP ._.
+2014_CD ._.
+Madamira_NNP :_: A_NNP fast_RB ,_, comprehensive_JJ tool_NN for_IN mor_NN -_: phological_JJ analysis_NN and_CC disambiguation_NN of_IN arabic_JJ ._.
+In_IN In_IN Proceedings_NNP of_IN the_DT 9th_NNP International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ,_, Reykjavik_NNP ,_, Ice_NNP -_: land_NN ._.
+Karin_NNP C_NNP 2005_CD ._.
+A_DT reference_NN grammar_NN of_IN modern_JJ standard_JJ Arabic_NNP ._.
+Cambridge_NNP University_NNP Press_NNP ._.
+Sherine_NNP Nagi_NNP Saleh_NNP and_CC Yasser_NNP El-Sonbaty_NNP ._.
+2007_CD ._.
+A_DT fea_NN -_: ture_NN selection_NN algorithm_NN with_IN redundancy_NN reduction_NN for_IN text_NN classification_NN ._.
+In_IN Computer_NNP and_CC information_NN sci_SYM -_: ences_NNS ,_, 2007_CD ._.
+iscis_FW 2007_CD ._.
+22nd_JJ international_JJ symposium_NN on_IN ,_, pages_NNS 1_CD --_: 6_CD Ilia_NNP Smirnov_NNP ._.
+2008_CD ._.
+Overview_NNP of_IN stemming_VBG algorithms_NNS ._.
+Mechanical_JJ Translation_NN ._.
+Otakar_NNP Smrz_NNP ,_, Viktor_NNP Bielicky_NNP ́_NN ,_, Iveta_NNP Kourilova_NNP ́_NN ,_, Jakub_NNP Kra_NNP ́cmar_NNP ,_, Jan_NNP Hajic_NNP ,_, and_CC Petr_NNP Zema_NNP ́nek_NNP ._.
+2008_CD ._.
+Prague_NNP arabic_JJ dependency_NN treebank_NN :_: A_DT word_NN on_IN the_DT million_CD words_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Arabic_NNP and_CC Local_NNP Languages_NNP -LRB-_-LRB- LREC_NNP 2008_CD -RRB-_-RRB- ,_, Marrakech_NNP ,_, Morocco_NNP ,_, pages_NNS 16_CD --_: 23_CD ._.
+Otakar_NNP Smrzˇ_NNP ._.
+2007_CD ._.
+Elixirfm_NNP :_: implementation_NN of_IN func_NN -_: tional_JJ arabic_JJ morphology_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2007_CD Workshop_NNP on_IN Computational_NNP Approaches_NNPS to_TO Semitic_NNP Languages_NNPS :_: Common_JJ Issues_NNS and_CC Resources_NNPS ,_, pages_NNS 1_CD --_: 8_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Kazem_NNP Taghva_NNP ,_, Rania_NNP Elkhoury_NNP ,_, and_CC Jeffrey_NNP S_NNP Coombs_NNP ._.
+2005_CD ._.
+Arabic_NNP stemming_VBG without_IN a_DT root_NN dictionary_NN ._.
+pages_NNS 152_CD --_: 157_CD ._.
+Taha_NNP Zerrouki_NNP ._.
+2010_CD ._.
+Tashaphyne_NNP ,_, arabic_JJ light_JJ stem_NN -_: mer/segment_NN ._.
+http://tashaphyne.sourceforge.net_NN ._.

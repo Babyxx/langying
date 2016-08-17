@@ -1,0 +1,193 @@
+An_DT Efficient_JJ Annotation_NNP for_IN Phrasal_NNP Verbs_NNP using_VBG Dependency_NNP Information_NNP Abstract_NNP In_IN this_DT paper_NN ,_, we_PRP present_VBP an_DT efficient_JJ semi_NN -_: automatic_JJ method_NN for_IN annotating_VBG English_JJ phrasal_JJ verbs_NNS on_IN the_DT OntoNotes_NNP corpus_NN ._.
+Our_PRP$ method_NN first_RB constructs_VBZ a_DT phrasal_JJ verb_NN dictio_NN -_: nary_PDT based_VBN on_IN Wiktionary_NNP ,_, then_RB annotates_VBZ each_DT candidate_NN example_NN on_IN the_DT corpus_NN as_IN an_DT either_RB a_DT phrasal_JJ verb_NN usage_NN or_CC a_DT literal_JJ one_CD ._.
+For_IN effi_SYM -_: cient_NN annotation_NN ,_, we_PRP use_VBP the_DT dependency_NN struc_NN -_: ture_NN of_IN a_DT sentence_NN to_TO filter_NN out_RP highly_RB plausi_SYM -_: ble_NN positive_JJ and_CC negative_JJ cases_NNS ,_, resulting_VBG in_IN a_DT drastic_JJ reduction_NN of_IN annotation_NN cost_NN ._.
+We_PRP also_RB show_VBP that_IN a_DT naive_JJ binary_JJ classification_NN achieves_VBZ better_JJR MWE_NNP identification_NN perfor_NN -_: mance_NN than_IN rule-based_JJ and_CC sequence-labeling_JJ methods_NNS ._.
+1_CD Introduction_NNP Multiword_NNP Expressions_NNS -LRB-_-LRB- MWEs_NNS -RRB-_-RRB- are_VBP roughly_RB de_IN -_: fined_VBN as_IN those_DT that_WDT have_VBP ``_`` idiosyncratic_JJ interpreta_NN -_: tions_NNS that_WDT cross_VBP word_NN boundaries_NNS -LRB-_-LRB- or_CC spaces_NNS -RRB-_-RRB- ''_'' -LRB-_-LRB- Sag_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ._.
+Vocabulary_JJ sizes_NNS of_IN single_JJ words_NNS and_CC MWEs_NNS have_VBP roughly_RB the_DT same_JJ size_NN ,_, thus_RB MWE_NNP iden_SYM -_: tification_NN is_VBZ a_DT crucial_JJ issue_NN for_IN deep_JJ analysis_NN of_IN nat_NN -_: ural_JJ language_NN text_NN ._.
+Indeed_RB ,_, it_PRP has_VBZ been_VBN shown_VBN in_IN the_DT literature_NN that_WDT MWE_NNP identification_NN helps_VBZ vari_SYM -_: ous_JJ NLP_NNP applications_NNS ,_, such_JJ as_IN information_NN retrieval_NN ,_, machine_NN translation_NN ,_, and_CC syntactic_NN parsing_NN -LRB-_-LRB- New_NNP -_: man_NN et_FW al._FW ,_, 2012_CD ;_: Ghoneim_NNP and_CC Diab_NNP ,_, 2013_CD ;_: Nivre_NNP and_CC Nilsson_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Since_IN huge_JJ cost_NN is_VBZ necessary_JJ for_IN annotation_NN ,_, there_EX are_VBP few_JJ corpora_NNS that_WDT are_VBP suffi_SYM -_: ciently_RB annotated_VBN for_IN English_NNP MWEs_NNPS ._.
+Schneider_NNP et_FW al._FW -LRB-_-LRB- 2014b_JJ -RRB-_-RRB- constructed_VBD an_DT MWE-annotated_JJ corpus_NN on_IN English_NNP Web_NNP Treebank_NNP ,_, and_CC proposed_VBD a_DT sequen_NN -_: -LRB-_-LRB- a_DT -RRB-_-RRB- We_PRP bring_VBP our_PRP$ computers_NNS up_RP ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- She_PRP goes_VBZ over_IN the_DT question_NN ._.
+-LRB-_-LRB- c_NN -RRB-_-RRB- Someone_NN goes_VBZ over_IN there_RB ._.
+Figure_NN 1_CD :_: a_DT positive_JJ instance_NN -LRB-_-LRB- a_DT -RRB-_-RRB- of_IN a_DT separable_JJ expression_NN ``_`` bring_VB up_RP ''_'' ,_, a_DT positive_JJ instance_NN -LRB-_-LRB- b_NN -RRB-_-RRB- and_CC a_DT negative_JJ instance_NN -LRB-_-LRB- c_NN -RRB-_-RRB- of_IN an_DT inseparable_JJ expression_NN ``_`` go_VB over_RP ''_'' ._.
+tial_JJ labeling_VBG method_NN for_IN MWE_NNP identification_NN ._.
+How_WRB -_: ever_RB ,_, they_PRP tried_VBD to_TO manually_RB cover_VB the_DT types_NNS of_IN com_NN -_: prehensive_JJ MWEs_NNS ,_, and_CC the_DT number_NN of_IN instances_NNS for_IN each_DT MWE_NNP was_VBD very_RB limited_VBN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP an_DT efficient_JJ annota_NN -_: tion_NN method_NN for_IN separable_JJ MWEs_NNS appearing_VBG in_IN a_DT syntactic_JJ annotated_JJ corpus_NN like_IN the_DT OntoNotes_NNP cor_NN -_: pus_NN ._.
+Although_IN most_JJS of_IN natural_JJ languages_NNS gener_SYM -_: ally_NN have_VBP a_DT separable_JJ MWEs_NNS ,_, an_DT effort_NN for_IN separa_NN -_: ble_NN MWE_NNP annotation_NN is_VBZ extremely_RB limited_VBN ._.
+There_EX -_: fore_NN ,_, we_PRP believe_VBP that_IN constructing_VBG a_DT large-scale_JJ cor_NN -_: pus_NN for_IN separable_JJ MWEs_NNPS is_VBZ useful_JJ to_TO develop_VB and_CC compare_VB techniques_NNS of_IN MWE_NNP identification_NN ._.
+We_PRP es_SYM -_: pecially_NN focus_NN on_IN phrasal_JJ verbs_NNS that_WDT are_VBP a_DT majority_NN of_IN separable_JJ MWEs_NNS ,_, and_CC propose_VB an_DT efficient_JJ method_NN for_IN phrasal_JJ verb_NN annotation_NN ._.
+To_TO efficiently_RB identify_VB MWE_NNP usages_NNS ,_, we_PRP exploit_VBP dependency_NN structures_NNS on_IN OntoNotes_NNP 1_CD ._.
+We_PRP also_RB report_VBP experiments_NNS on_IN MWE_NNP identification_NN based_VBN on_IN a_DT binary_JJ classification_NN ,_, and_CC show_VBP that_IN it_PRP achieves_VBZ better_JJR performance_NN than_IN rule_NN -_: based_VBN and_CC sequence-labeling_JJ methods_NNS ._.
+Further_RB ,_, we_PRP explore_VBP effective_JJ features_NNS for_IN achieving_VBG high_JJ perfor_NN -_: mance_NN on_IN the_DT MWE_NNP identification_NN task_NN ._.
+Our_PRP$ contributions_NNS are_VBP summarized_VBN as_IN follows_VBZ :_: -LRB-_-LRB- 1_CD -RRB-_-RRB- 1We_JJ use_NN English_NNP OntoNotes_NNP corpus_VBZ converted_VBN into_IN the_DT Stan_NNP -_: ford_NN Dependency_NN annotation_NN format_NN ._.
+Table_NNP 1_CD :_: The_DT number_NN of_IN MWE_NNP types_NNS ._.
+VB_NNP RB_NNP IN_IN JJ_NNP PRP_NNP DT_NNP 994_CD 395_CD 94_CD 17_CD 14_CD 12_CD go_VBP over_IN far_RB from_IN in_IN front_NN of_IN ad_NN hoc_FW anything_NN else_RB a_DT few_JJ types_NNS example_NN no_DT way_NN Other_JJ We_PRP propose_VBP an_DT efficient_JJ semi-automatic_JJ method_NN for_IN annotating_VBG phrasal_JJ verbs_NNS on_IN OntoNotes_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- We_PRP show_VBP that_IN SVM-based_JJ naive_JJ classification_NN is_VBZ suffi_SYM -_: cient_NN for_IN accurate_JJ MWE_NNP identification_NN ._.
+We_PRP also_RB in_IN -_: vestigate_NN effective_JJ features_NNS for_IN MWE_NNP identification_NN ._.
+2_CD Related_JJ Work_NN MWEs_NNS can_MD be_VB roughly_RB divided_VBN into_IN two_CD categories_NNS ,_, separable_JJ and_CC non-separable_JJ -LRB-_-LRB- or_CC fixed_VBN -RRB-_-RRB- MWEs_NNPS ._.
+Pre_SYM -_: vious_JJ work_NN annotated_VBD fixed_VBN MWEs_NNS on_IN Penn_NNP Tree_NNP -_: bank_NN ,_, where_WRB they_PRP used_VBD syntactic_JJ trees_NNS of_IN Penn_NNP Tree_NNP -_: bank_NN and_CC an_DT MWE_NNP dictionary_NN that_WDT is_VBZ extracted_VBN from_IN Wiktionary_NNP -LRB-_-LRB- Shigeto_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN Schneider_NNP et_FW al._FW -LRB-_-LRB- 2014b_JJ -RRB-_-RRB- ,_, they_PRP annotated_VBD all_DT types_NNS of_IN MWEs_NNS on_IN En_NNP -_: glish_JJ Web_NNP Treebank_NNP completely_RB by_IN hand_NN ._.
+Afterward_RB ,_, they_PRP added_VBD to_TO supersenses_NNS ,_, which_WDT mean_VBP coarse_JJ -_: grained_VBN semantic_JJ classes_NNS of_IN lexical_JJ units_NNS -LRB-_-LRB- Schneider_NNP and_CC Smith_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+In_IN MWE_NNP identification_NN tasks_NNS ,_, previous_JJ work_NN in_IN -_: tegrated_JJ MWE_NNP recognition_NN into_IN POS_NNP tagging_VBG -LRB-_-LRB- Con_NN -_: stant_NN and_CC Sigogne_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+An_DT MWE_NNP identification_NN method_NN using_VBG Conditional_NNP Random_NNP Fields_NNPS was_VBD also_RB presented_VBN together_RB with_IN the_DT data_NN set_NN -LRB-_-LRB- Shigeto_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+A_DT joint_JJ model_NN of_IN MWE_NNP identification_NN and_CC constituency_NN parsing_NN was_VBD proposed_VBN -LRB-_-LRB- Constant_JJ et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+They_PRP allocated_VBD IOB2_CD tags_NNS to_TO MWEs_NNS and_CC used_VBN MWEs_NNS as_IN special_JJ features_NNS when_WRB reranking_VBG the_DT parse_NN tree_NN ._.
+However_RB ,_, it_PRP is_VBZ difficult_JJ for_IN these_DT methods_NNS to_TO de_FW -_: tect_NN discontinuous_JJ MWEs_NNS ._.
+In_IN contrast_NN ,_, as_IN for_IN methods_NNS that_WDT can_MD handle_VB sepa_NN -_: rable_JJ MWEs_NNS ,_, Boukobza_NNP and_CC Rappoport_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- tack_NN -_: led_VBD MWE_NNP detection_NN on_IN specific_JJ MWE_NNP types_NNS with_IN a_DT binary_JJ classification_NN method_NN ._.
+In_IN a_DT framework_NN of_IN a_DT sequential_JJ labeling_VBG method_NN for_IN MWE_NNP detection_NN ,_, a_DT new_JJ IOB_NNP tag_NN scheme_NN ,_, which_WDT is_VBZ augmented_VBN to_TO capture_VB discontinuous_JJ MWEs_NNS and_CC distinguish_VBP strong_JJ MWEs_NNS from_IN week_NN MWEs_NNS ,_, was_VBD presented_VBN -LRB-_-LRB- Schneider_NNP et_FW al._FW ,_, 2014a_JJ -RRB-_-RRB- ._.
+Here_RB strong_JJ MWEs_NNS indicate_VBP the_DT expres_NNS -_: 2I_NNP ,_, O_NNP and_CC B_NNP indicate_VBP Inside_IN ,_, Outside_JJ and_CC Begin_VB in_IN a_DT chunk_NN respectively_RB ._.
+6_CD sion_NN which_WDT has_VBZ strong_JJ idiomaticity_NN ,_, and_CC week_NN one_CD indicate_VBP the_DT expression_NN which_WDT is_VBZ to_TO more_RBR likely_JJ to_TO be_VB a_DT compositional_JJ phrase_NN or_CC collocation_NN ._.
+Addi_SYM -_: tionally_RB ,_, words_NNS between_IN components_NNS of_IN MWEs_NNS are_VBP called_VBN gaps_NNS ,_, and_CC the_DT sequential_JJ labeling_VBG method_NN that_IN allocates_VBZ IOB_NNP tags_NNS even_RB to_TO discontinuous_JJ sequences_NNS ._.
+This_DT model_NN is_VBZ capable_JJ of_IN capturing_VBG unknown_JJ MWEs_NNS ,_, but_CC it_PRP is_VBZ difficult_JJ to_TO detect_VB new_JJ expressions_NNS with_IN high_JJ accuracy_NN ._.
+3_CD Corpus_NNP Annotation_NNP In_IN this_DT section_NN ,_, we_PRP present_VBP our_PRP$ annotation_NN scheme_NN for_IN phrasal_JJ verbs_NNS ._.
+Our_PRP$ scheme_NN mainly_RB consists_VBZ of_IN three_CD steps_NNS :_: acquisition_NN of_IN phrasal_JJ verbs_NNS ,_, identifica_NN -_: tion_NN of_IN phrasal_JJ verb_NN occurrences_NNS on_IN OntoNotes_NNS ,_, and_CC semi-automatic_JJ MWE_NNP classification_NN with_IN our_PRP$ heuris_SYM -_: tic_JJ rules_NNS ._.
+3.1_CD Acquisition_NNP of_IN Phrasal_NNP Verbs_NNP First_NNP ,_, we_PRP extract_VBP phrasal_JJ verb_NN candidates_NNS from_IN the_DT English_NNP part_NN of_IN Wiktionary3_NNP ._.
+In_IN particular_JJ ,_, we_PRP parse_VBP a_DT dump_NN data_NNS of_IN Wiktionary_NNP and_CC extract_VB verb_NN entries_NNS that_WDT are_VBP composed_VBN of_IN two_CD or_CC more_JJR words_NNS ._.
+We_PRP also_RB collect_VBP phrasal_JJ verb_NN candidates_NNS from_IN the_DT Web_NNP ._.
+For_IN each_DT MWE_NNP candidate_NN ,_, we_PRP manually_RB check_VBP if_IN they_PRP ac_SYM -_: tually_RB function_NN as_IN a_DT phrasal_JJ verb_NN ._.
+Moreover_RB ,_, we_PRP man_VBP -_: ually_RB annotate_VBP whether_IN their_PRP$ candidates_NNS are_VBP ``_`` separa_NN -_: ble_NN ''_'' or_CC ``_`` inseparable_JJ ''_'' and_CC whether_IN they_PRP are_VBP ``_`` transi_FW -_: tive_JJ ''_'' or_CC ``_`` intransitive_JJ ''_'' ._.
+By_IN ``_`` separable_JJ ''_'' ,_, we_PRP mean_VBP an_DT object_NN noun_NN phrase_NN can_MD intervene_VB between_IN the_DT main_JJ verb_NN and_CC a_DT particle_NN -LRB-_-LRB- e.g._FW look_VB the_DT tower_NN up_RP -RRB-_-RRB- ._.
+Note_VB that_DT separable_JJ phrasal_JJ verbs_NNS do_VBP not_RB always_RB have_VBP an_DT intervening_VBG object_NN and_CC also_RB that_IN inseparable_JJ phrasal_JJ verbs_NNS can_MD be_VB intervened_VBN by_IN an_DT adverb_NN -LRB-_-LRB- e.g._FW consist_VBP largely_RB of_IN -RRB-_-RRB- ._.
+3_CD https://en.wiktionary.org/_NN Table_NNP 2_CD :_: Statistics_NNS in_IN phrasal_JJ verb_NN annotation_NN Table_NNP 3_CD :_: Annotation_NNP rules_NNS for_IN phrasal_JJ verb_NN candidates_NNS ._.
+-LRB-_-LRB- In_IN this_DT table_NN ,_, ``_`` p_NN ''_'' is_VBZ positive_JJ ,_, ``_`` n_FW ''_'' is_VBZ negative_JJ ,_, ``_`` m_FW ''_'' means_VBZ manual_NN annotation_NN ._. -RRB-_-RRB-
+Annotation_NNP type_NN manual_NN annotations_NNS automatic_JJ annotations_NNS Total_JJ #_# instances_NNS 4022_CD 18574_CD 22596_CD pobj_NN direct_JJ continuous_JJ dependency_NN or_CC not_RB dependency_NN label_NN ROOT_NN punct_NN False_NNP True_NNP False_NNP True_JJ False_NNP True_JJ False_NNP ∗_CD prt_NN n_NN True_JJ prep_JJ p_NN True_JJ prep_NN m_FW False_FW prep_FW m_FW False_FW prep_FW n_FW ∗_FW other_JJ m_NN ∗_CD other_JJ n_NN True_JJ ∗_CD prt_NN p_NN nsubj_NN prep_NN It_PRP prt_VBD nsubj_JJ prep_NN breaks_NNS ROOT_VBP down_RP in_IN sunlight_NN ._.
+question_NN ._.
+She_PRP goes_VBZ over_IN punct_NN pobj_NN det_NN the_DT instance_NN of_IN a_DT phrasal_JJ verb_NN ,_, we_PRP use_VBP the_DT following_VBG re_SYM -_: lation_NN between_IN the_DT verb_NN and_CC the_DT particle_NN that_WDT com_NN -_: prise_VB the_DT phrasal_JJ verb_NN candidate_NN :_: whether_IN the_DT verb_NN and_CC the_DT particle_NN appear_VBP adjacently_RB or_CC not_RB and_CC whether_IN the_DT verb_NN and_CC the_DT particle_NN have_VBP direct_JJ dependency_NN or_CC not_RB ,_, and_CC if_IN so_RB the_DT label_NN of_IN the_DT dependency_NN ._.
+Table_NNP 3_CD shows_VBZ the_DT whole_JJ annotation_NN rules_NNS ._.
+In_IN these_DT rules_NNS ,_, we_PRP especially_RB focus_VB on_IN the_DT dependency_NN labels_NNS prt_NN and_CC prep_NN in_IN Stanford_NNP dependency_NN -LRB-_-LRB- de_FW Marn_NNP -_: effe_NN and_CC Manning_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT prt_NN label_NN ,_, which_WDT directly_RB connects_VBZ a_DT verb_NN and_CC a_DT particle_NN ,_, may_MD indi_VB -_: cate_VB the_DT usage_NN of_IN a_DT phrasal_JJ verb_NN ,_, and_CC the_DT prep_JJ la_NNP -_: bel_NN indicates_VBZ a_DT modifier_NN to_TO a_DT verb_NN as_IN a_DT prepositional_JJ phrase_NN ._.
+Thus_RB ,_, we_PRP assume_VBP instances_NNS which_WDT have_VBP a_DT di_FW -_: rect_NN prt_NN dependency_NN as_IN positive_JJ instances_NNS ._.
+In_IN the_DT case_NN of_IN prep_NN ,_, there_EX is_VBZ a_DT possibility_NN of_IN phrasal_JJ verbs_NNS or_CC not_RB ._.
+However_RB ,_, we_PRP assume_VBP instances_NNS which_WDT are_VBP ad_NN -_: jacent_NN ,_, have_VBP a_DT direct_JJ prep_NN relation_NN ,_, and_CC exist_VBP in_IN our_PRP$ MWE_NNP lexicon_NN as_IN positive_JJ instances_NNS ._.
+If_IN an_DT instance_NN is_VBZ either_RB not_RB adjacent_JJ or_CC having_VBG no_DT direct_JJ relation_NN with_IN its_PRP$ particle_NN or_CC preposition_NN ,_, we_PRP put_VBP it_PRP for_IN a_DT candidate_NN of_IN manual_NN checking_NN ._.
+In_IN this_DT way_NN ,_, we_PRP have_VBP constructed_VBN annotation_NN rules_NNS for_IN MWE_NNP making_VBG full_JJ use_NN of_IN syn_NN -_: tactic_NN information_NN ._.
+For_IN example_NN ,_, the_DT instance_NN of_IN ``_`` break_VB down_RP ''_'' in_IN Figure_NN 2_CD has_VBZ a_DT direct_JJ relation_NN with_IN label_NN prt_NN ,_, thus_RB the_DT first_JJ rule_NN in_IN Table_NNP 3_CD is_VBZ applied_VBN ._.
+However_RB ,_, there_EX are_VBP overlapping_VBG ambiguities_NNS that_WDT are_VBP not_RB covered_VBN by_IN these_DT rules_NNS ._.
+For_IN example_NN ,_, an_DT instance_NN ``_`` catch_VB up_RP with_IN ''_'' can_MD be_VB labeled_VBN as_IN positive_JJ ,_, but_CC another_DT instance_NN ``_`` catch_VB up_RP ''_'' of_IN the_DT part_NN of_IN ``_`` catch_VB up_RP with_IN ''_'' ,_, may_MD also_RB be_VB labeled_VBN as_IN positive_JJ ._.
+When_WRB such_PDT an_DT ambiguity_NN oc_SYM -_: Figure_NN 2_CD :_: Examples_NNS of_IN prt_NN -LRB-_-LRB- break_VB down_RP -RRB-_-RRB- and_CC prep_NN -LRB-_-LRB- go_VB over_IN -RRB-_-RRB- ._.
+3.2_CD Identification_NN of_IN Phrasal_NNP Verb_NNP Occurrences_NNPS in_IN OntoNotes_NNP Second_NNP ,_, we_PRP retrieve_VBP all_DT possible_JJ occurrences_NNS of_IN phrasal_JJ verbs_NNS in_IN OntoNotes_NNP ._.
+Here_RB ,_, we_PRP convert_VBP a_DT sur_NN -_: face_NN word_NN into_IN a_DT lemma_NN form_NN using_VBG Python-NLTK4_NNP ,_, then_RB match_VBP the_DT phrasal_JJ verb_NN candidates_NNS with_IN lemma_NN -_: tized_VBN words_NNS in_IN OntoNotes_NNP ._.
+We_PRP regard_VBP this_DT match_NN -_: ing_NN pattern_NN as_IN an_DT instance_NN ._.
+In_IN Figure_NN 1_CD ,_, instances_NNS -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- are_VBP positive_JJ instances_NNS where_WRB they_PRP are_VBP used_VBN as_IN phrasal_JJ verbs_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, -LRB-_-LRB- c_NN -RRB-_-RRB- is_VBZ a_DT negative_JJ in_IN -_: stance_NN where_WRB ``_`` go_VB over_RP ''_'' is_VBZ not_RB used_VBN as_IN a_DT phrasal_JJ verb_NN but_CC is_VBZ used_VBN in_IN the_DT literal_JJ meaning_NN ._.
+We_PRP extract_VBP dis_SYM -_: continuous_JJ patterns_NNS as_RB well_RB since_IN phrasal_JJ verbs_NNS have_VBP a_DT potential_NN of_IN appearing_VBG discontinuously_RB ._.
+3.3_CD Semi-Automatic_NNP Annotation_NNP Third_NNP ,_, we_PRP check_VBP each_DT instance_NN whether_IN it_PRP is_VBZ used_VBN as_IN a_DT positive_JJ case_NN or_CC a_DT negative_JJ one_CD ._.
+Since_IN it_PRP is_VBZ too_RB costly_JJ to_TO check_VB all_DT instances_NNS manually_RB ,_, we_PRP propose_VBP to_TO make_VB use_NN of_IN dependency_NN structures_NNS on_IN OntoNotes_NNS to_TO per_IN -_: form_NN semi-automatic_JJ annotation_NN ._.
+Indeed_RB ,_, we_PRP use_VBP the_DT Stanford_NNP dependency_NN converted_VBD from_IN phrase_NN struc_NN -_: ture_NN trees_NNS on_IN OnteNotes_NNP corpus_NN ._.
+For_IN each_DT possible_JJ 4_CD http://www.nltk.org/_NN Table_NNP 4_CD :_: Corpus_NNP statistics_NNS of_IN MWEs_NNS ._.
+#_# instances_NNS Table_NNP 6_CD :_: The_DT Feature_NNP list_NN ._.
+W_NNP ,_, G_NNP are_VBP the_DT position_NN list_NN of_IN the_DT target_NN MWEs_NNS to_TO detect_VB and_CC of_IN gaps_NNS ._.
+h_NN and_CC t_NN are_VBP the_DT position_NN of_IN the_DT head_NN MWEs_NNS and_CC the_DT tail_NN ._.
+ci_NNP ,_, li_NNS and_CC pi_NNS is_VBZ the_DT ith_NN context_NN word_NN ,_, lemma_NN and_CC POS_NNP respectively_RB ._.
+-LSB-_NNP ci_FW -RSB-_NNP kj_NN is_VBZ the_DT substring_NN from_IN jth_NN to_TO kth_NN in_IN ci_NN ._.
+F_NN -LRB-_-LRB- x_LS -RRB-_-RRB- is_VBZ the_DT set_NN that_WDT consisted_VBD of_IN each_DT element_NN in_IN the_DT xth_NN feature_NN set_VBN ._.
+positive_JJ instances_NNS negative_JJ instances_NNS Total_JJ 13214_CD 41167_CD 54381_CD Table_NNP 5_CD :_: Evaluation_NN of_IN annotation_NN rules_NNS ._.
+Precision_NN Recall_VB F-value_JJ basic_JJ features_NNS 1_CD ci_NNS ,_, li_FW ,_, pi_FW |_FW i_FW ∈_FW W_NNP 2_CD ci_FW ,_, li_FW ,_, pi_FW |_FW i_FW ∈_FW W_NNP 3_CD floor_NN -LRB-_-LRB- |_CD G_NNP |_NN -RRB-_-RRB- i_FW context_NN features_NNS 4_CD ci_NNS ,_, li_FW ,_, pi_FW |_FW h_FW −_FW 3_CD i_FW =_SYM h_SYM −_SYM 1_CD 5_CD ci_NNS ,_, li_FW ,_, pi_FW |_FW t_FW +3_FW i_FW =_SYM t_SYM +1_CD for_IN i_FW in_IN -LCB-_-LRB- 1,2,3,4,5_CD -RCB-_-RRB- 62.72_CD 82.60_CD 71.30_CD curred_VBN ,_, we_PRP manually_RB checked_VBD their_PRP$ instances_NNS ._.
+As_IN a_DT result_NN of_IN annotation_NN rules_NNS ,_, we_PRP could_MD reduce_VB the_DT cost_NN of_IN manual_NN annotation_NN considerably_RB as_IN shown_VBN in_IN Ta_NNP -_: ble_NN 2_CD ._.
+After_IN annotating_VBG phrasal_JJ verbs_NNS on_IN OntoNotes_NNS ,_, we_PRP merge_VBP our_PRP$ annotation_NN with_IN the_DT fixed_VBN MWE_NNP annota_NN -_: tion_NN done_VBN by_IN -LRB-_-LRB- Shigeto_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+However_RB ,_, similar_JJ overlapping_VBG ambiguities_NNS have_VBP been_VBN generated_VBN again_RB in_IN this_DT time_NN -LRB-_-LRB- s.t._FW ``_`` get_VB out_IN of_IN ''_'' and_CC ``_`` out_IN of_IN ''_'' -RRB-_-RRB- ,_, we_PRP also_RB manually_RB eliminate_VB these_DT ambiguities_NNS ._.
+In_IN Table_NNP 4_CD ,_, we_PRP show_VBP statistics_NNS about_IN our_PRP$ con_NN -_: structed_VBN corpus_NN after_IN merging_VBG ._.
+In_IN total_JJ ,_, 54381_CD in_IN -_: stances_NNS are_VBP extracted_VBN from_IN the_DT 37015_CD sentences_NNS on_IN OntoNotes_NNS ,_, 4_CD Evaluation_NN of_IN Annotation_NNP Rule_NNP In_IN order_NN to_TO evaluate_VB our_PRP$ annotation_NN method_NN ,_, we_PRP also_RB validate_VBP it_PRP on_IN English_NNP Web_NNP Treebank_NNP annotated_VBN by_IN -LRB-_-LRB- Schneider_NNP et_FW al._FW ,_, 2014b_JJ -RRB-_-RRB- ._.
+We_PRP first_RB apply_VB our_PRP$ method_NN to_TO English_NNP Web_NNP Treebank_NNP ,_, then_RB evaluate_VB the_DT qual_NN -_: ity_NN of_IN automatic_JJ annotation_NN between_IN automatically_RB -_: annotated_JJ positive_JJ instances_NNS and_CC gold_NN MWEs_NNS on_IN En_NNP -_: glish_JJ Web_NNP Treebank_NNP ._.
+However_RB ,_, there_EX is_VBZ a_DT large_JJ dif_NN -_: ference_NN between_IN both_DT MWE_NNP candidates_NNS since_IN anno_NN -_: tators_NNS -LRB-_-LRB- the_DT dictionary-based_JJ rule_NN method_NN and_CC human_JJ -RRB-_-RRB- and_CC domains_NNS of_IN two_CD corpora_NN are_VBP different_JJ ._.
+In_IN view_NN of_IN this_DT ,_, we_PRP evaluate_VBP only_RB common_JJ phrasal_JJ verbs_NNS be_VB -_: tween_VB two_CD corpora_NN ._.
+In_IN Table_NNP 5_CD we_PRP show_VBP the_DT results_NNS of_IN evaluating_VBG an_DT -_: notation_NN rules_NNS ._.
+We_PRP obtain_VB a_DT sufficient_JJ recall_NN ,_, but_CC the_DT precision_NN is_VBZ lower_JJR than_IN we_PRP expected_VBD ._.
+However_RB ,_, we_PRP consider_VBP this_DT is_VBZ unavoidable_JJ because_IN annotators_NNS and_CC domains_NNS are_VBP different_JJ as_IN we_PRP have_VBP described_VBN pre_SYM -_: ciously_NN ._.
+6_CD pi_NNS |_VBP i_FW ∈_FW G_NNP suffix_NN &_CC prefix_NN features_NNS 7_CD -LSB-_NNP ci_FW -RSB-_NNP j1_CD |_SYM 3j_CD =_SYM 1_CD 8_CD -LSB-_NNP c_NN -RSB-_NNP |_SYM ci_FW |_FW |_FW |_FW ci_FW |_FW i_FW j_FW j_FW =_SYM |_SYM ci_FW |_FW −_FW 3_CD 9_CD -LSB-_NN ci_FW -RSB-_FW j1_FW |_FW 3j_FW =_SYM 1_CD 10_CD -LSB-_NNP ci_FW -RSB-_NNP |_SYM ci_FW |_FW |_FW |_FW ci_FW |_FW j_FW j_FW =_SYM |_SYM ci_FW |_FW −_FW 3_CD 11_CD -LSB-_NNP ci_FW -RSB-_NNP j1_CD |_SYM 3j_CD =_SYM 1_CD 12_CD -LSB-_NNP ci_FW -RSB-_NNP |_SYM ci_FW |_FW |_FW |_FW ci_FW |_FW j_FW j_FW =_SYM |_SYM ci_FW |_FW −_FW 3_CD combination_NN features_NNS 13_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 14_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 15_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 16_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 17_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 18_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 19_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 20_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 21_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 22_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 23_CD -LRB-_-LRB- e1_FW ,_, e2_FW -RRB-_-RRB- ∈_CD -LCB-_-LRB- F_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 5_CD Experiments_NNS foriinh_VBP −_CD 1toh_JJ −_NN 3_CD foriinh_NN −_CD 1toh_CD −_NN 3_CD foriint_NN +1_CD tot_NN +3_CD foriint_NN +1_CD tot_NN +3_CD foriinG_NNP foriinG_NNP ×_CD F_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 8_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 10_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 11_CD -RRB-_-RRB- -RCB-_-RRB- ×_CD F_NN -LRB-_-LRB- 12_CD -RRB-_-RRB- -RCB-_-RRB- In_IN this_DT section_NN ,_, we_PRP evaluate_VBP the_DT performance_NN of_IN MWE_NNP identification_NN task_NN on_IN our_PRP$ MWE-annotated_JJ OntoNotes_NNS ._.
+The_DT MWE-annotated_JJ corpus_NN used_VBN in_IN our_PRP$ experiments_NNS contains_VBZ fixed_VBN MWE_NNP annotations_NNS -LRB-_-LRB- Shigeto_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- and_CC our_PRP$ phrasal_JJ verb_NN annota_NN -_: tions_NNS ._.
+The_DT corpus_NN is_VBZ split_VBN into_IN 2_CD sets_NNS :_: 33313_CD sen_NN -_: tences_NNS -LRB-_-LRB- 48970_CD instances_NNS -RRB-_-RRB- for_IN training_NN ,_, and_CC 3702_CD sen_SYM -_: tences_NNS -LRB-_-LRB- 5411_CD instances_NNS -RRB-_-RRB- for_IN testing_NN ._.
+In_IN these_DT experi_NNS -_: ments_NNS ,_, the_DT system_NN identifies_VBZ MWEs_NNS given_VBN a_DT sentence_NN with_IN gold_NN POS_NNP ._.
+5.1_CD Compared_VBN Methods_NNPS We_PRP compare_VBP SVM-based_JJ binary_JJ classification_NN method_NN against_IN rule-based_JJ and_CC sequential_JJ labeling_VBG method_NN -LRB-_-LRB- Schneider_NNP et_FW al._FW ,_, 2014a_JJ -RRB-_-RRB- ._.
+The_DT SVM_NNP method_NN simply_RB classifies_VBZ each_DT candidate_NN instance_NN as_IN positive_JJ case_NN or_CC negative_JJ one_CD ._.
+For_IN the_DT rule-based_JJ method_NN ,_, we_PRP use_VBP the_DT following_VBG two_CD simple_JJ rules_NNS ._.
+The_DT first_JJ one_CD is_VBZ ``_`` if_IN the_DT target_NN MWE_NNP is_VBZ an_DT instance_NN of_IN an_DT inseparable_JJ phrasal_JJ verb_NN and_CC there_EX is_VBZ no_DT gap_NN between_IN the_DT verb_NN and_CC the_DT particle_NN -LRB-_-LRB- or_CC preposition_NN -RRB-_-RRB- ,_, then_RB it_PRP is_VBZ regarded_VBN as_IN positive_JJ ._. ''_''
+The_DT second_JJ one_CD is_VBZ ``_`` if_IN the_DT target_NN MWE_NNP is_VBZ an_DT instance_NN of_IN a_DT separable_JJ phrasal_JJ verb_NN and_CC the_DT gap_NN is_VBZ 0_CD or_CC equal_JJ to_TO 1_CD ,_, then_RB it_PRP is_VBZ regarded_VBN as_IN posi_NNS -_: tive_JJ ._. ''_''
+Since_IN our_PRP$ dictionary_NN has_VBZ information_NN whether_IN the_DT target_NN MWE_NNP is_VBZ separable_JJ or_CC not_RB ,_, we_PRP can_MD use_VB this_DT information_NN ._.
+Table_NNP 6_CD shows_VBZ the_DT features_NNS that_WDT are_VBP used_VBN for_IN SVM_NNP ,_, which_WDT are_VBP categorized_VBN as_IN four_CD types_NNS :_: basic_JJ features_NNS ,_, context_NN features_NNS ,_, suffix_NN &_CC prefix_NN features_NNS ,_, and_CC com_NN -_: bination_NN features_NNS ._.
+In_IN this_DT table_NN ,_, bold_JJ c_NN ,_, l_NN and_CC p_NN are_VBP sequences_NNS that_WDT are_VBP concatenated_VBN context_NN words_NNS ,_, lem_SYM -_: mas_FW ,_, POS_NNP sequences_NNS of_IN target_NN MWEs_NNS respectively_RB ._.
+In_IN respect_NN to_TO a_DT classifier_NN ,_, we_PRP used_VBD SVMlight5_NNS with_IN a_DT linear_JJ kernel_NN ._.
+For_IN sequential_JJ labeling_VBG method_NN ,_, we_PRP follow_VBP the_DT previous_JJ work_NN -LRB-_-LRB- Schneider_NNP et_FW al._FW ,_, 2014a_JJ -RRB-_-RRB- for_IN MWE_NNP identification_NN ._.
+Their_PRP$ work_NN exploits_VBZ six_CD types_NNS of_IN tags_NNS ,_, that_DT is_VBZ ,_, -LCB-_-LRB- O_NNP o_NN B_NNP b_NN I_PRP i_FW -RCB-_-RRB- ,_, to_TO handle_VB with_IN separa_NN -_: ble_NN MWE_NNP identification_NN ,_, where_WRB O_NNP ,_, B_NNP ,_, I_PRP tags_NNS indi_SYM -_: cate_NN Outside_JJ ,_, Begin_NNP ,_, Inside_NNP ,_, and_CC o_NN ,_, b_NN ,_, i_FW tags_NNS indicate_VBP outside_RB ,_, begin_VB ,_, inside_IN in_IN gaps_NNS respectively_RB ._.
+In_IN the_DT ex_FW -_: periments_NNS ,_, we_PRP use_VBP their_PRP$ implementation6_JJ with_IN exact_JJ match_NN evaluation_NN and_CC set_VBD the_DT recall-oriented_JJ hyper_JJ -_: parameter_NN ρ_NN to_TO 0_CD ._.
+5_CD http://svmlight.joachims.org/_NN 6_CD http://www.cs.cmu.edu/_NN ̃ark_NN /_NN LexSem_NNP /_NNP Table_NNP 8_CD :_: Investigation_NNP of_IN effectiveness_NN of_IN features_NNS ._.
+F-value_JJ 94.02_CD Table_NNP 7_CD :_: The_DT experimental_JJ results_NNS ._.
+Precision_NN Recall_VB F-value_JJ Rule-based_JJ method_NN Augmented_NNP IOB_NNP -LRB-_-LRB- Schneider_NNP et_FW al._FW ,_, 2014a_JJ -RRB-_-RRB- SVM_NNP 62.93_CD 97.78_CD 93.37_CD 91.44_CD 93.77_CD 94.27_CD 76.58_CD 92.40_CD 94.02_CD basic_JJ features_NNS +_VBP context_NN features_NNS +_VBP suffix_NN &_CC prefix_NN features_NNS 93.06_CD 92.89_CD 93.69_CD 5.2_CD +_NN combination_NN features_NNS Experimental_JJ Results_NNS Table_NNP 7_CD summarizes_VBZ the_DT experimental_JJ results_NNS ._.
+In_IN the_DT table_NN ,_, we_PRP can_MD see_VB that_IN SVM-based_JJ binary_JJ classifica_NN -_: tion_NN outperforms_VBZ the_DT rule-based_JJ and_CC sequential_JJ label_NN -_: ing_NN method_NN ._.
+This_DT result_NN suggests_VBZ that_IN simple_JJ binary_JJ classification_NN is_VBZ sufficient_JJ for_IN accurate_JJ MWE_NNP identi_NNS -_: fication_NN ._.
+We_PRP also_RB investigated_VBD which_WDT features_NNS are_VBP effective_JJ for_IN our_PRP$ MWE_NNP identification_NN task_NN ._.
+Table_NNP 8_CD summa_NN -_: rizes_NNS this_DT analysis_NN result_NN ._.
+In_IN the_DT table_NN ,_, we_PRP can_MD see_VB that_IN adding_VBG context_NN features_NNS ,_, suffix_NN &_CC prefix_NN features_NNS ,_, and_CC those_DT combinatorial_JJ ones_NNS to_TO basic_JJ features_NNS suc_SYM -_: cessfully_JJ boost_NN the_DT identification_NN performance_NN ._.
+Fur_NNP -_: ther_NN investigation_NN of_IN combinatorial_JJ features_NNS could_MD be_VB helpful_JJ for_IN achieving_VBG better_JJR results_NNS ,_, but_CC we_PRP leave_VBP this_DT for_IN future_JJ work_NN ._.
+In_IN error_NN analysis_NN ,_, we_PRP found_VBD it_PRP is_VBZ difficult_JJ for_IN our_PRP$ method_NN to_TO detect_VB the_DT mutually-overlapping_JJ MWEs_NNS ._.
+For_IN example_NN ,_, there_EX should_MD be_VB the_DT positive_JJ instance_NN of_IN ``_`` come_VBN out_IN of_IN ''_'' and_CC the_DT negative_JJ instance_NN of_IN ``_`` out_IN of_IN ''_'' in_IN nature_NN ,_, but_CC our_PRP$ model_NN may_MD say_VB ``_`` positive_JJ ''_'' for_IN both_DT instances_NNS ._.
+Resolution_NN of_IN such_JJ conflicting_JJ cases_NNS should_MD be_VB investigated_VBN for_IN future_JJ work_NN ._.
+Moreover_RB ,_, we_PRP have_VBP found_VBN that_IN it_PRP is_VBZ hard_JJ to_TO rec_NN -_: ognize_NN fixed_VBN MWEs_NNP ,_, which_WDT appear_VBP continuously_RB but_CC are_VBP in_IN literal_JJ usages_NNS ._.
+For_IN example_NN ,_, ``_`` a_DT bit_NN ''_'' in_IN ``_`` is_VBZ really_RB a_DT bit_NN player_NN on_IN the_DT stage_NN ''_'' is_VBZ in_IN literal_JJ usages_NNS ._.
+Our_PRP$ model_NN tends_VBZ to_TO predict_VB ``_`` positive_JJ ''_'' for_IN such_PDT an_DT instance_NN ._.
+6_CD Conclusion_NNP Multiword_NNP Expressions_NNPS :_: From_IN Parsing_VBG and_CC Generation_NNP to_TO the_DT Real_JJ World_NNP ,_, MWE_NNP '_POS 11_CD ,_, pages_NNS 49_CD --_: 56_CD ._.
+Matthieu_NNP Constant_JJ ,_, Anthony_NNP Sigogne_NNP ,_, and_CC Patrick_NNP Wa_NNP -_: trin_NN ._.
+2012_CD ._.
+Discriminative_JJ strategies_NNS to_TO integrate_VB mul_SYM -_: tiword_NN expression_NN recognition_NN and_CC parsing_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP -RRB-_-RRB- ,_, pages_NNS 204_CD --_: 212_CD ._.
+Marie-Catherine_NNP de_NNP Marneffe_NNP and_CC Christopher_NNP D._NNP Man_NNP -_: ning_NN ._.
+2008_CD ._.
+The_DT stanford_NN typed_VBD dependencies_NNS repre_SYM -_: sentation_NN ._.
+In_IN Coling_NNP 2008_CD :_: Proceedings_NNP of_IN the_DT Work_NN -_: shop_NN on_IN Cross-Framework_NNP and_CC Cross-Domain_NNP Parser_NNP Evaluation_NNP ,_, CrossParser_NNP '_POS 08_CD ,_, pages_NNS 1_CD --_: 8_CD ._.
+Mahmoud_NNP Ghoneim_NNP and_CC Mona_NNP Diab_NNP ._.
+2013_CD ._.
+Multiword_JJ expressions_NNS in_IN the_DT context_NN of_IN statistical_JJ machine_NN trans_NNS -_: lation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Sixth_NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- IJC_NNP -_: NLP_NNP -RRB-_-RRB- ,_, pages_NNS 1181_CD --_: 1187_CD ._.
+David_NNP Newman_NNP ,_, Nagendra_NNP Koilada_NNP ,_, Jey_NNP Lau_NNP ,_, and_CC Tim_NNP Baldwin_NNP ._.
+2012_CD ._.
+Bayesian_JJ text_NN segmentation_NN for_IN in_IN -_: dex_NN term_NN identification_NN and_CC keyphrase_NN extraction_NN ._.
+In_IN International_NNP Conference_NNP on_IN Computational_NNP Linguis_NNP -_: tics_NNS -LRB-_-LRB- COLING_NNP -RRB-_-RRB- ,_, pages_NNS 2077_CD --_: 2092_CD ._.
+Joakim_NNP Nivre_NNP and_CC Jens_NNP Nilsson_NNP ._.
+2004_CD ._.
+Multiword_NNP units_NNS in_IN syntactic_NN parsing_NN ._.
+In_IN Workshop_NNP on_IN Methodologies_NNPS and_CC Evaluation_NNP of_IN Multiword_NNP Units_NNP in_IN Real-World_NNP Ap_NNP -_: plications_NNS ,_, pages_NNS 39_CD --_: 46_CD ._.
+Ivan_NNP A._NNP Sag_NNP ,_, Timothy_NNP Baldwin_NNP ,_, Francis_NNP Bond_NNP ,_, Ann_NNP Copestake_NNP ,_, and_CC Dan_NNP Flickinger_NNP ._.
+2001_CD ._.
+Multiword_NNP ex_FW -_: pressions_NNS :_: A_DT pain_NN in_IN the_DT neck_NN for_IN NLP_NNP ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 3rd_CD International_NNP Conference_NNP on_IN Intelligent_NNP Text_NNP Processing_NNP and_CC Computational_NNP Linguistics_NNP -LRB-_-LRB- CICLing_NNP -_: 2002_CD -RRB-_-RRB- ,_, pages_NNS 1_CD --_: 15_CD ._.
+Nathan_NNP Schneider_NNP and_CC Noah_NNP A._NNP Smith_NNP ._.
+2015_CD ._.
+A_DT cor_NN -_: pus_NN and_CC model_NN integrating_VBG multiword_JJ expressions_NNS and_CC supersenses_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2015_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- NAACL_NNP -RRB-_-RRB- :_: Human_NNP Lan_NNP -_: guage_NN Technologies_NNPS ,_, pages_NNS 1537_CD --_: 1547_CD ._.
+Nathan_NNP Schneider_NNP ,_, Emily_NNP Danchik_NNP ,_, Chris_NNP Dyer_NNP ,_, and_CC A._NN Noah_NNP Smith_NNP ._.
+2014a_NNS ._.
+Discriminative_JJ lexical_JJ seman_NN -_: tic_JJ segmentation_NN with_IN gaps_NNS :_: Running_VBG the_DT MWE_NNP gamut_NN ._.
+Transactions_NNS of_IN the_DT Association_NNP of_IN Computational_NNP Lin_NNP -_: guistics_NNS -LRB-_-LRB- TACL_NNP -RRB-_-RRB- --_: Volume_NN 2_CD ,_, Issue_NN 1_CD ,_, pages_NNS 193_CD --_: 206_CD ._.
+Nathan_NNP Schneider_NNP ,_, Spencer_NNP Onuffer_NNP ,_, Nora_NNP Kazour_NNP ,_, Emily_NNP Danchik_NNP ,_, Michael_NNP T._NNP Mordowanec_NNP ,_, Henrietta_NNP Conrad_NNP ,_, and_CC Noah_NNP A._NNP Smith_NNP ._.
+2014b_JJ ._.
+Comprehensive_NNP annota_NN -_: tion_NN of_IN multiword_JJ expressions_NNS in_IN a_DT social_JJ web_NN corpus_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Ninth_NNP International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC_NNP '_POS 14_CD -RRB-_-RRB- ,_, pages_NNS 455_CD --_: 461_CD ._.
+Yutaro_NNP Shigeto_NNP ,_, Ai_NNP Azuma_NNP ,_, Sorami_NNP Hisamoto_NNP ,_, Shuhei_NNP Kondo_NNP ,_, Tomoya_NNP Kouse_NNP ,_, Keisuke_NNP Sakaguchi_NNP ,_, Akifumi_NNP Yoshimoto_NNP ,_, Frances_NNP Yung_NNP ,_, and_CC Yuji_NNP Matsumoto_NNP ._.
+2013_CD ._.
+We_PRP presented_VBD an_DT semi-automatic_JJ method_NN for_IN anno_NN -_: tating_VBG English_JJ phrasal_JJ verbs_NNS on_IN the_DT OntoNotes_NNP cor_NN -_: pus_NN ._.
+For_IN efficient_JJ annotation_NN ,_, we_PRP use_VBP the_DT dependency_NN structure_NN of_IN a_DT sentence_NN to_TO filter_NN out_RP positive_JJ and_CC nega_JJ -_: tive_JJ cases_NNS ,_, resulting_VBG in_IN a_DT drastic_JJ reduction_NN of_IN annota_NN -_: tion_NN cost_NN ._.
+We_PRP also_RB reported_VBD that_IN binary_JJ classification_NN method_NN outperformed_VBD rule-based_JJ and_CC sequential_JJ la_NNP -_: beling_VBG method_NN ._.
+In_IN order_NN to_TO improve_VB the_DT accuracy_NN ,_, we_PRP need_VBP a_DT better_JJR model_NN that_WDT takes_VBZ wider_JJR contexts_NNS into_IN consideration_NN ._.
+We_PRP consider_VBP integration_NN of_IN syntactic_NN parsing_NN into_IN MWE_NNP identification_NN is_VBZ one_CD of_IN such_JJ di_FW -_: rections_NNS ._.
+This_DT paper_NN also_RB have_VBP described_VBN MWE_NNP annotation_NN on_IN OntoNotes_NNS ._.
+We_PRP will_MD make_VB the_DT constructed_VBN dataset_NN available_JJ on_IN our_PRP$ website7_CD ._.
+We_PRP are_VBP hoping_VBG that_IN stud_NN -_: ies_NNS on_IN MWEs_NNS are_VBP increased_VBN by_IN using_VBG our_PRP$ dataset_NN ._.
+There_EX are_VBP MWE_NNP types_NNS that_IN we_PRP have_VBP n't_RB handled_VBN at_IN this_DT work_NN ._.
+For_IN example_NN ,_, some_DT flexible_JJ MWEs_NNS such_JJ as_IN ``_`` take_VB into_IN account_NN ''_'' are_VBP not_RB annotated_VBN ._.
+Thus_RB ,_, we_PRP plan_VBP to_TO annotate_VB other_JJ discontinuous_JJ MWE_NNP types_NNS on_IN OntoNotes_NNP so_RB as_IN to_TO cover_VB all_DT MWEs_NNS on_IN OntoNotes_NNS ._.
+We_PRP also_RB believe_VBP that_IN MWEs_NNS can_MD include_VB syntactic_NN patterns_NNS ,_, such_JJ as_IN ``_`` not_RB only_RB ..._: but_CC also_RB ''_'' ._.
+To_TO deeply_RB analyze_VB a_DT natural_JJ language_NN text_NN ,_, we_PRP should_MD explore_VB such_JJ directions_NNS in_IN future_NN ._.
+Acknowledgments_NNP We_PRP thank_VBP the_DT annotator_NN Kayo_NNP Yamashita_NNP and_CC the_DT anonymous_JJ reviewers_NNS for_IN their_PRP$ valuable_JJ comments_NNS ._.
+This_DT work_NN has_VBZ been_VBN supported_VBN by_IN JSPS_NNP KAKENHI_NNP Grant_NNP Numbers_NNPS 15K16053_NNP and_CC 26240035_CD ._.
+A_DT part_NN of_IN this_DT research_NN was_VBD executed_VBN under_IN the_DT Commis_NNP -_: sioned_VBN Research_NN of_IN National_NNP Institute_NNP of_IN Information_NNP and_CC Communications_NNP Technology_NNP -LRB-_-LRB- NICT_NNP -RRB-_-RRB- ,_, Japan_NNP ._.
+References_NNS Ram_NNP Boukobza_NNP and_CC Ari_NNP Rappoport_NNP ._.
+2009_CD ._.
+Multi-word_JJ expression_NN identification_NN using_VBG sentence_NN surface_NN fea_NN -_: tures_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2009_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 468_CD --_: 477_CD ._.
+Matthieu_NNP Constant_JJ and_CC Anthony_NNP Sigogne_NNP ._.
+2011_CD ._.
+MWU_SYM -_: aware_JJ part-of-speech_NN tagging_VBG with_IN a_DT CRF_NNP model_NN and_CC lexical_JJ resources_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN 7http_CD :_: /_SYM /_SYM cl.naist.jp_SYM /_SYM en/index_FW ._.
+php?Code_NNP and_CC Data_NNP Construction_NNP of_IN English_NNP MWE_NNP dictionary_NN and_CC its_PRP$ ap_SYM -_: plication_NN to_TO POS_NNP tagging_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 9th_JJ Workshop_NNP on_IN Multiword_NNP Expressions_NNS ,_, pages_NNS 139_CD --_: 144_CD ._.

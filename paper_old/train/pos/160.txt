@@ -1,0 +1,350 @@
+Idioms_NNS :_: Formally_RB Flexible_JJ but_CC Semantically_NNP Non-transparent_JJ Abstract_NNP Contrary_JJ to_TO popular_JJ beliefs_NNS ,_, idioms_NNS show_VBP a_DT high_JJ degree_NN of_IN formal_JJ flexibility_NN ,_, ranging_VBG from_IN word-like_JJ idioms_NNS to_TO those_DT which_WDT are_VBP like_IN almost_RB regular_JJ phrases_NNS ._.
+However_RB ,_, we_PRP argue_VBP that_IN their_PRP$ meanings_NNS are_VBP not_RB transparent_JJ ,_, i.e._FW they_PRP are_VBP non-compositional_JJ ,_, regardless_RB of_IN their_PRP$ syntactic_NN flexibility_NN ._.
+In_IN this_DT paper_NN ,_, firstly_RB ,_, we_PRP will_MD introduce_VB a_DT framework_NN to_TO represent_VB their_PRP$ syntactic_NN flexibility_NN ,_, which_WDT is_VBZ developed_VBN in_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, and_CC will_MD observe_VB some_DT consequences_NNS of_IN the_DT framework_NN on_IN the_DT lexicon_NN and_CC the_DT set_NN of_IN rules_NNS ._.
+Secondly_RB ,_, there_EX seem_VBP to_TO be_VB some_DT phenomena_NNS which_WDT can_MD only_RB be_VB handled_VBN under_IN the_DT assumption_NN that_IN the_DT component_NN parts_NNS of_IN idioms_NNS have_VBP their_PRP$ own_JJ separate_JJ meanings_NNS ._.
+However_RB ,_, we_PRP will_MD show_VB that_IN all_PDT the_DT phenomena_NNS ,_, focusing_VBG on_IN the_DT behavior_NN of_IN idiom-internal_JJ adjectives_NNS ,_, can_MD be_VB accounted_VBN for_IN effectively_RB without_IN assuming_VBG separate_JJ meanings_NNS of_IN parts_NNS ,_, which_WDT confirms_VBZ the_DT non-transparency_NN of_IN idioms_NNS ._.
+1_CD Introduction_NNP Although_IN idioms_NNS are_VBP generally_RB assumed_VBN to_TO be_VB non_SYM -_: compositional_JJ and_CC ,_, hence_RB ,_, non-flexible_JJ ,_, it_PRP has_VBZ been_VBN well_RB attested_VBD that_IN they_PRP are_VBP not_RB fixed_VBN expressions_NNS formally_RB ._.
+Even_RB one_CD of_IN the_DT most_RBS fixed_JJ idioms_NNS like_IN -LSB-_JJ kick_NN the_DT bucket_NN -RSB-_NNP show_NN morphological_JJ flexibility_NN in_IN the_DT behavior_NN of_IN the_DT verb_NN kick_NN ._.
+Many_JJ other_JJ idioms_NNS show_VBP some_DT degree_NN of_IN syntactic_JJ flexibility_NN with_IN reference_NN to_TO various_JJ types_NNS of_IN syntactic_NN behavior_NN ._.
+Even_RB the_DT non-compositionality_NN of_IN them_PRP has_VBZ been_VBN challenged_VBN ,_, especially_RB by_IN those_DT who_WP are_VBP working_VBG under_IN the_DT framework_NN of_IN cognitive_JJ linguistics_NNS -LRB-_-LRB- cf._NNP Croft_NNP &_CC Cruse_NNP 2004_CD :_: Ch_NNP ._.
+9_CD ,_, and_CC Gibbs_NNP 2007_CD -RRB-_-RRB- ._.
+Reflecting_VBG this_DT trend_NN ,_, Wasow_NNP et_FW al._FW -LRB-_-LRB- 1983_CD -RRB-_-RRB- and_CC Nunberg_NNP et_FW al._FW -LRB-_-LRB- 1994_CD -RRB-_-RRB- ,_, for_IN example_NN ,_, argue_VBP that_IN syntactic_JJ flexibility_NN is_VBZ closely_RB related_VBN to_TO semantic_JJ transparency_NN ._.
+In_IN this_DT paper_NN ,_, however_RB ,_, we_PRP are_VBP going_VBG to_TO show_VB that_IN idioms_NNS can_MD better_RB be_VB analyzed_VBN as_IN semantically_RB non-transparent_JJ although_IN they_PRP are_VBP formally_RB flexible_JJ ,_, providing_VBG further_JJ evidence_NN for_IN the_DT analysis_NN in_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Adopting_VBG 1_CD Culicover_NNP 's_POS -LRB-_-LRB- 2009_CD -RRB-_-RRB- definition_NN of_IN construction_NN ,_, Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- assumes_VBZ that_IN all_DT and_CC only_RB idioms_NNS are_VBP represented_VBN as_IN constructions_NNS ._.
+Under_IN this_DT view_NN ,_, grammar_NN consists_VBZ of_IN three_CD components_NNS :_: the_DT set_NN of_IN lexical_JJ items_NNS -LRB-_-LRB- i.e._FW the_DT lexicon_NN -RRB-_-RRB- ,_, the_DT set_NN of_IN rules_NNS and_CC the_DT set_NN of_IN constructions_NNS ._.
+He_PRP introduces_VBZ some_DT ``_`` notations_NNS /_VBP conventions_NNS ,_, ''_'' which_WDT apply_VBP to_TO regular_JJ phrase_NN structures_NNS ,_, to_TO represent_VB the_DT restrictions_NNS operating_VBG on_IN idioms_NNS ._.
+Employing_VBG these_DT notations_NNS ,_, he_PRP provides_VBZ representations_NNS of_IN various_JJ types_NNS of_IN formal_JJ properties_NNS of_IN idioms_NNS -LRB-_-LRB- in_IN English_NNP and_CC Korean_NNP -RRB-_-RRB- :_: from_IN the_DT least_JJS flexible_JJ ones_NNS to_TO the_DT most_RBS flexible_JJ ones_NNS ._.
+However_RB ,_, the_DT meanings_NNS of_IN idioms_NNS are_VBP supposed_VBN to_TO come_VB from_IN the_DT whole_JJ idioms/constructions_NNS rather_RB than_IN from_IN their_PRP$ component_NN parts_NNS compositionally_RB ._.
+In_IN section_NN 2_CD ,_, we_PRP will_MD introduce_VB a_DT framework_NN to_TO represent_VB the_DT syntactic_NN flexibility_NN of_IN idioms_NNS ,_, which_WDT is_VBZ developed_VBN in_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+We_PRP will_MD also_RB observe_VB some_DT consequences_NNS of_IN the_DT framework_NN on_IN the_DT lexicon_NN and_CC the_DT set_NN of_IN rules_NNS ._.
+Then_RB ,_, in_IN section_NN 3_CD ,_, we_PRP will_MD examine_VB some_DT phenomena_NNS which_WDT seem_VBP to_TO be_VB handled_VBN only_RB by_IN assuming_VBG that_IN the_DT component_NN parts_NNS of_IN idioms_NNS have_VBP their_PRP$ own_JJ separate_JJ meanings_NNS ._.
+It_PRP will_MD be_VB shown_VBN ,_, however_RB ,_, that_IN all_PDT the_DT phenomena_NNS can_MD be_VB accounted_VBN for_IN effectively_RB without_IN assuming_VBG 1_CD The_DT definition_NN is_VBZ as_IN follows_VBZ -LRB-_-LRB- Culicover_NNP 2009_CD :_: 33_CD -RRB-_-RRB- :_: ``_`` A_DT construction_NN is_VBZ a_DT syntactically_RB complex_JJ expression_NN whose_WP$ meaning_NN is_VBZ not_RB entirely_RB predictable_JJ from_IN the_DT meanings_NNS of_IN its_PRP$ parts_NNS and_CC the_DT way_NN they_PRP are_VBP combined_VBN in_IN the_DT structure_NN ._. ''_''
+Hee-Rahk_NNP Chae_NNP Hankuk_NNP Univ._NNP of_IN Foreign_NNP Studies_NNP Oedae-ro_NN 81_CD ,_, Mohyeon_NNP ,_, Yongin_NNP Gyeonggi_NNP 17035_CD ,_, Korea_NNP hrchae@hufs.ac.kr_NNP separate_JJ meanings_NNS of_IN parts_NNS ._.
+We_PRP will_MD focus_VB on_IN the_DT behavior_NN of_IN idiom-internal_JJ adjectives_NNS ,_, which_WDT is_VBZ the_DT most_RBS difficult_JJ to_TO treat_VB properly_RB under_IN the_DT assumption_NN of_IN semantic_JJ non-transparency_NN of_IN idioms_NNS ._.
+2_CD Formal_NNP Flexibility_NNP Traditionally_RB idioms_NNS are_VBP classified_VBN into_IN two_CD classes_NNS :_: ``_`` decomposable_JJ idioms_NNS ''_'' /_CD ``_`` idiomatically_RB combining_VBG expressions_NNS -LRB-_-LRB- ICEs_NNS -RRB-_-RRB- ''_'' and_CC ``_`` non_SYM -_: decomposable_JJ idioms_NNS ''_'' /_CD ``_`` idiomatic_JJ phrases_NNS -LRB-_-LRB- IPs_NNS -RRB-_-RRB- ''_'' -LRB-_-LRB- Nunberg_NNP 1978_CD ,_, Nunberg_NNP et_FW al._FW 1994_CD ,_, Jackendoff_NNP 1997_CD ,_, Sag_NNP et_NNP al._IN 2002_CD ,_, etc._FW -RRB-_-RRB- ._.
+Jackendoff_NNP -LRB-_-LRB- 1997_CD :_: 168_CD -_: 169_CD -RRB-_-RRB- analyzes_VBZ the_DT two_CD classes_NNS as_IN follows_VBZ :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- A_DT decomposable_JJ idiom_NN :_: bury_VB the_DT hatchet_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- A_DT non-decomposable_JJ idiom_NN :_: kick_VB the_DT bucket_NN In_IN the_DT former_JJ ,_, which_WDT has_VBZ the_DT meaning_NN of_IN `_`` reconcile_VB a_DT disagreement_NN '_'' or_CC `_`` settle_VB a_DT conflict_NN ,_, '_'' the_DT two_CD component_NN parts_NNS bury_VB and_CC -LSB-_VB the_DT hatchet_NN -RSB-_NN are_VBP assumed_VBN to_TO have_VB their_PRP$ own_JJ meanings_NNS and_CC are_VBP separated_VBN from_IN each_DT other_JJ syntactically_RB because_IN the_DT NP_NNP can_MD be_VB ``_`` moved_VBN ''_'' around_IN ._.
+In_IN the_DT latter_JJ ,_, no_DT component_NN parts_NNS have_VBP separate_JJ meanings_NNS and_CC they_PRP are_VBP all_DT connected_JJ syntactically_RB ._.
+Espinal_NNP &_CC Mateu_NNP -LRB-_-LRB- 2010_CD :_: 1397_CD -RRB-_-RRB- ,_, however_RB ,_, argue_VBP that_IN the_DT distinction_NN is_VBZ ``_`` not_RB as_IN clear-cut_JJ and_CC uniform_JJ as_IN has_VBZ been_VBN assumed_VBN ._. ''_''
+d._FW i_FW -RRB-_-RRB- *_SYM Bill_NNP ate_VBD his_PRP$ -LSB-_NNP own/inner_NN heart_NN -RSB-_NNP out_RP ._.
+ii_FW -RRB-_-RRB- *_SYM We_PRP were_VBD laughing_VBG our_PRP$ -LSB-_JJ two_CD heads_NNS -RSB-_NNP off_RP ._.
+The_DT examples_NNS in_IN -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- show_NN ICE-like_JJ properties_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, those_DT in_IN -LRB-_-LRB- c_NN -RRB-_-RRB- and_CC -LRB-_-LRB- d_LS -RRB-_-RRB- show_VBP their_PRP$ IP-like_JJ properties_NNS ._.
+In_IN addition_NN ,_, Wulff_NNP -LRB-_-LRB- 2013_CD :_: 279_CD -RRB-_-RRB- makes_VBZ it_PRP clear_JJ that_IN idioms_NNS are_VBP not_RB to_TO be_VB classified_VBN into_IN separate_JJ categories_NNS :_: ``_`` ..._: ,_, resulting_VBG in_IN a_DT `_`` multi-dimensional_JJ continuum_NN '_'' of_IN differently_RB formally_RB and_CC semantically_RB irregular_JJ and_CC cognitively_RB entrenched_JJ expressions_NNS that_WDT ultimately_RB blurs_VBZ the_DT boundaries_NNS of_IN idiom_NN types_NNS as_IN described_VBN in_IN Fillmore_NNP et_FW al._FW -LRB-_-LRB- 1988_CD -RRB-_-RRB- and_CC various_JJ other_JJ ,_, nonconstructionist_JJ idiom_NN typologies_NNS ..._: ''_'' According_VBG to_TO Chae_NNP -LRB-_-LRB- 2014_CD :_: 495-6_CD -RRB-_-RRB- ,_, however_RB ,_, Espinal_NNP &_CC Mateu_NNP 's_POS -LRB-_-LRB- 2010_CD -RRB-_-RRB- analysis_NN is_VBZ not_RB very_RB reasonable_JJ ,_, either_RB ._.
+They_PRP argue_VBP all_PDT the_DT internal_JJ elements_NNS of_IN idioms_NNS have_VBP metaphoric/non-literal_JJ meanings_NNS and_CC the_DT meanings_NNS of_IN the_DT whole_JJ idioms_NNS can_MD be_VB derived_VBN from_IN them_PRP compositionally_RB ._.
+First_NNP of_IN all_DT ,_, it_PRP is_VBZ not_RB clear_JJ how_WRB the_DT metaphoric_JJ meanings_NNS of_IN the_DT internal_JJ elements_NNS can_MD be_VB obtained_VBN ._.
+Hence_RB ,_, we_PRP will_MD need_VB a_DT framework_NN which_WDT is_VBZ formal_JJ enough_RB to_TO be_VB computationally_RB useful_JJ ,_, and_CC which_WDT is_VBZ flexible_JJ enough_RB to_TO handle_VB all_PDT the_DT -LRB-_-LRB- morphological_JJ and_CC syntactic_JJ -RRB-_-RRB- idiosyncrasies_NNS of_IN idioms_NNS ._.
+For_IN this_DT purpose_NN ,_, Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- provides_VBZ a_DT system_NN for_IN the_DT representation_NN of_IN idiomatic_JJ constructions_NNS .2_CD Based_VBN on_IN the_DT fact_NN that_IN idiomatic_JJ expressions_NNS are_VBP typical_JJ examples_NNS showing_VBG irregularities_NNS on_IN various_JJ levels_NNS ,_, Chae_NNP -LRB-_-LRB- 2014_CD :_: 501_CD -RRB-_-RRB- introduces_VBZ four_CD notations_NNS /_VBP conventions_NNS to_TO indicate_VB lexical_JJ and_CC formal_JJ restrictions_NNS operating_VBG on_IN idioms_NNS :_: -LRB-_-LRB- 4_LS -RRB-_-RRB- a._IN <_CD ..._: >_NN :_: the_DT phrase_NN is_VBZ a_DT syntactic_JJ ``_`` island_NN ''_'' -LRB-_-LRB- no_DT extraction_NN is_VBZ allowed_VBN -RRB-_-RRB- ._.
+b._IN /_CD ..._: /_NN :_: the_DT phrase_NN can_MD not_RB be_VB further_JJ expandable_JJ by_IN internal_JJ elements_NNS ._.
+c._FW -LCB-_-LRB- ..._: -RCB-_-RRB- :_: only_RB the_DT lexical_JJ items_NNS listed_VBN inside_IN the_DT brackets_NNS are_VBP allowed_VBN to_TO occur_VB ._.
+d._FW CAPITALIZATION_NNP :_: lexical_JJ items_NNS in_IN capital_NN letters_NNS have_VBP to_TO be_VB inflected_VBN for_IN their_PRP$ specific_JJ forms_NNS ._.
+The_DT former_JJ two_CD are_VBP used_VBN to_TO restrict_VB -LRB-_-LRB- external_JJ and_CC internal_JJ -RRB-_-RRB- syntactic_JJ behavior_NN ,_, and_CC the_DT latter_JJ two_CD to_TO regulate_VB lexical_JJ and_CC morphological_JJ behavior_NN ._.
+2_CD The_DT system_NN was_VBD developed_VBN on_IN the_DT basis_NN of_IN English_NNP idioms_NNS ._.
+However_RB ,_, its_PRP$ main_JJ purpose_NN was_VBD to_TO analyze_VB Korean_JJ data_NNS in_IN such_JJ idiom_NN dictionaries_NNS as_IN No_DT -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Choi_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+The_DT system_NN has_VBZ been_VBN proved_VBN to_TO be_VB very_RB successful_JJ in_IN representing_VBG Korean_JJ idioms_NNS and_CC ,_, hence_RB ,_, would_MD be_VB effective_JJ in_IN analyzing_VBG idioms_NNS in_IN other_JJ languages_NNS as_RB well_RB ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- a._FW b._FW c._FW i_FW -RRB-_-RRB- John_NNP laughed_VBD his_PRP$ head_NN off_RP ._.
+ii_FW -RRB-_-RRB- We_PRP laughed_VBD our_PRP$ heads_NNS off_RP ._.
+Bill_NNP cried_VBD his_PRP$ eyes_NNS out_RP on_IN Wednesday_NNP ,_, and_CC he_PRP cried_VBD them_PRP out_RP again_RB on_IN Sunday_NNP ._.
+i_FW -RRB-_-RRB- *_SYM Whose/which_NNP heart_NN did_VBD Bill_NNP eat_VB out_RP ?_.
+ii_FW -RRB-_-RRB- *_SYM His_PRP$ heart_NN ,_, Bill_NNP ate_VBD out_RP ._.
+Employing_VBG the_DT notations_NNS in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- provides_VBZ analyses_NNS of_IN various_JJ types_NNS of_IN idioms_NNS -LRB-_-LRB- in_IN English_NNP and_CC Korean_NNP -RRB-_-RRB- on_IN the_DT basis_NN of_IN their_PRP$ formal_JJ properties_NNS :_: from_IN the_DT least_JJS flexible_JJ ones_NNS to_TO the_DT most_RBS flexible_JJ ones_NNS ._.
+Please_VB note_NN that_IN the_DT notations_NNS apply_VBP to_TO regular_JJ phrase_NN structures_NNS ._.
+Regular_JJ properties_NNS of_IN idioms_NNS are_VBP captured_VBN by_IN way_NN of_IN these_DT phrase_NN structures_NNS and_CC their_PRP$ irregular_JJ properties_NNS are_VBP captured_VBN with_IN reference_NN to_TO the_DT notations_NNS ._.
+We_PRP can_MD analyze_VB the_DT -LSB-_NNP V_NNP one_NN 's_POS head_NN off_IN -RSB-_NNP idiom_NN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- as_IN follows_VBZ ,_, under_IN our_PRP$ representational_JJ system_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- A_DT new_JJ analysis_NN of_IN -LSB-_NNP V_NNP one_NN 's_POS head_NN off_IN -RSB-_NNP The_NNP <_NNP ..._: >_NN on_IN the_DT VP_NNP indicates_VBZ that_IN no_DT internal_JJ elements_NNS can_MD be_VB extracted_VBN out_IN of_IN the_DT VP_NNP ._.
+The_DT /_NN ..._: /_CD on_IN the_DT NP_NNP indicates_VBZ that_IN the_DT node_NN can_MD not_RB be_VB expanded_VBN further_RBR ._.
+The_DT -LCB-_-LRB- ..._: -RCB-_-RRB- under_IN lexical_JJ categories_NNS indicates_VBZ that_IN only_RB those_DT lexical_JJ items_NNS inside_IN it_PRP are_VBP allowed_VBN in_IN the_DT position_NN ._.
+Under_IN the_DT N_NNP node_NN ,_, two_CD lexical_JJ items_NNS are_VBP listed_VBN ,_, which_WDT means_VBZ that_IN any_DT of_IN them_PRP is_VBZ allowed_VBN in_IN that_DT position_NN ._.
+The_DT position_NN under_IN V_NNP is_VBZ open_JJ because_IN it_PRP has_VBZ no_DT -LCB-_-LRB- ..._: -RCB-_-RRB- ._.
+As_IN the_DT lexical_JJ items_NNS under_IN the_DT Det_NNP and_CC N_NNP are_VBP capitalized_VBN ,_, they_PRP are_VBP required_VBN to_TO have_VB specific_JJ inflectional_JJ forms_NNS in_IN actual_JJ sentences_NNS ._.
+Under_IN the_DT present_JJ framework_NN ,_, one_CD of_IN the_DT most_RBS rigid_JJ idioms_NNS can_MD be_VB represented_VBN as_IN follows_VBZ -LRB-_-LRB- Chae_NNP 2014_CD :_: 505-6_CD -RRB-_-RRB- :_: lexical_JJ items_NNS are_VBP enclosed_VBN with_IN the_DT notation_NN -LCB-_-LRB- ..._: -RCB-_-RRB- ,_, which_WDT has_VBZ only_RB a_DT single_JJ member_NN ._.
+The_DT flexibility_NN will_MD increase_VB as_IN more_JJR lexical_JJ items_NNS are_VBP capitalized_VBN ,_, as_IN more_JJR lexical_JJ items_NNS appear_VBP in_IN -LCB-_-LRB- ..._: -RCB-_-RRB- ,_, and_CC as_IN <_CD ..._: >_CD or_CC /_CD ..._: /_NN disappears_VBZ ,_, eventually_RB to_TO become_VB regular/non-idiomatic_JJ phrases_NNS ._.
+We_PRP assume_VBP that_IN the_DT framework_NN introduced_VBN in_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- is_VBZ formal_JJ enough_RB to_TO be_VB computationally_RB useful_JJ and_CC flexible_JJ enough_RB to_TO handle_VB various_JJ types_NNS of_IN formal_JJ properties_NNS of_IN idioms_NNS ._.
+The_DT behavior_NN of_IN idioms_NNS is_VBZ regular_JJ to_TO the_DT extent_NN that_IN they_PRP are_VBP represented_VBN on_IN phrase_NN structures_NNS ,_, and_CC is_VBZ irregular_JJ to_TO the_DT extent_NN that_IN their_PRP$ structures_NNS are_VBP regulated_VBN by_IN the_DT notations_NNS in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+The_DT present_JJ framework_NN has_VBZ the_DT effect_NN of_IN simplifying_VBG the_DT main_JJ components_NNS of_IN the_DT grammar_NN of_IN a_DT language_NN ,_, namely_RB ,_, the_DT lexicon_NN and_CC the_DT rule_NN set_NN ._.
+Firstly_RB ,_, the_DT framework_NN makes_VBZ it_PRP possible_JJ to_TO reduce_VB the_DT number_NN of_IN lexical_JJ items_NNS or_CC their_PRP$ senses_NNS ._.
+For_IN example_NN ,_, -LSB-_NNP ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- eps_SYM -_: `_`` be_VB preposterous_JJ '_'' -RSB-_NNP in_IN Korean_NNP is_VBZ a_DT typical_JJ idiom_NN ._.
+Its_PRP$ literal_JJ meaning_NN is_VBZ something_NN like_IN `_`` there_EX is_VBZ no_DT EI_NNP ._. '_''
+The_DT ``_`` word_NN ''_'' ei_FW ,_, although_IN it_PRP can_MD be_VB followed_VBN by_IN the_DT nominative_JJ marker_NN -_: ka_FW ,_, does_VBZ not_RB have_VB its_PRP$ own_JJ meaning_NN and_CC it_PRP can_MD only_RB be_VB used_VBN as_IN a_DT part_NN of_IN the_DT idiom_NN ._.
+Korean_JJ dictionaries_NNS list_NN both_CC the_DT idiom_NN -LSB-_NNP ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- eps_SYM -_: -RSB-_NN and_CC the_DT word_NN ei_FW as_IN separate_JJ entries_NNS ,_, which_WDT is_VBZ necessary_JJ because_IN an_DT adverb_NN like_IN cengmal_JJ `_`` really_RB '_'' can_MD be_VB inserted_VBN between_IN ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- and_CC eps_SYM -_: ,_, -LSB-_NNP ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- cengmal_JJ eps_SYM -_: `_`` be_VB really_RB preposterous_JJ '_'' -RSB-_NNP ._.
+Under_IN the_DT present_JJ approach_NN ,_, however_RB ,_, ei_FW does_VBZ not_RB have_VB to_TO be_VB listed_VBN as_IN a_DT separate_JJ entry_NN and_CC ,_, hence_RB ,_, we_PRP can_MD reduce_VB the_DT number_NN of_IN lexical_JJ items_NNS ._.
+We_PRP do_VBP not_RB need_VB the_DT putative_JJ word_NN because_IN the_DT construction_NN representing_VBG the_DT idiom_NN is_VBZ flexible_JJ enough_RB to_TO allow_VB regular_JJ adverbs_NNS in_IN between_IN the_DT two_CD parts_NNS of_IN the_DT idiom_NN ,_, as_IN we_PRP can_MD see_VB in_IN chapter_NN 3_CD ._.
+Next_JJ ,_, let_VB us_PRP consider_VB how_WRB we_PRP can_MD simplify_VB the_DT rule_NN set_NN ._.
+The_DT expression_NN -LSB-_NNP ..._: V1-tunci_NNS ..._: V2-tunci_JJ kan-ey_JJ `_`` regardless_RB of_IN whether_IN S1_CD or_CC S2_CD '_'' -RSB-_NNP is_VBZ an_DT idiom_NN -LRB-_-LRB- No_DT 2002_CD :_: 268_CD -RRB-_-RRB- ._.
+It_PRP can_MD be_VB analyzed_VBN as_IN follows_VBZ :_: -LRB-_-LRB- 7_CD -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- As_IN the_DT XP_NNP has_VBZ both_DT <_CD ..._: >_CD and_CC /_CD ..._: /_CD ,_, no_DT elements_NNS inside_IN it_PRP can_MD be_VB extracted_VBN outward_JJ ,_, and_CC it_PRP can_MD not_RB be_VB further_JJ expanded_VBN internally_RB ._.
+In_IN addition_NN ,_, all_PDT the_DT The_DT idiom_NN has_VBZ not_RB only_RB semantic_JJ anomalies_NNS but_CC also_RB syntactic_JJ anomalies_NNS ._.
+No_DT other_JJ NPs_NNP in_IN Korean_NNP have_VBP the_DT structure_NN of_IN -LSB-_NNP S1_NNP S2_NNP N_NNP -RSB-_NNP ,_, in_IN which_WDT the_DT head_NN noun_NN has_VBZ two_CD sentential_JJ complements_VBZ ._.
+If_IN we_PRP are_VBP going_VBG to_TO handle_VB the_DT structure_NN with_IN phrase_NN structure_NN rules_NNS ,_, we_PRP have_VBP to_TO posit_VB a_DT rule_NN of_IN the_DT following_NN :_: -LSB-_NNP NP_NNP →_NNP S_NNP S_NNP N_NNP -RSB-_NNP ._.
+This_DT NP_NNP is_VBZ very_RB special_JJ in_IN the_DT sense_NN that_IN it_PRP has_VBZ a_DT unique_JJ internal_JJ structure_NN of_IN -LSB-_NNP S1_NNP S2_NNP N_NNP -RSB-_NNP ._.
+In_IN addition_NN ,_, as_IN it_PRP can_MD occur_VB only_RB before_IN the_DT postposition_NN -_: ey_NN ,_, its_PRP$ distribution_NN is_VBZ severely_RB limited_VBN ._.
+These_DT facts_NNS will_MD render_VB the_DT rule_NN set_VBN very_RB complex_JJ ._.
+Under_IN our_PRP$ approach_NN ,_, however_RB ,_, the_DT construction_NN in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- is_VBZ listed_VBN in_IN the_DT set_NN of_IN constructions_NNS ._.
+Then_RB ,_, we_PRP do_VBP not_RB have_VB to_TO account_VB for_IN the_DT special_JJ properties_NNS of_IN the_DT idiom_NN with_IN complex_JJ phrase_NN structure_NN rules_NNS and_CC unmotivated_JJ stipulations_NNS ._.
+3_CD Semantic_JJ Non-transparency_NN We_PRP assume_VBP that_IN idioms_NNS are_VBP syntactically_RB flexible_JJ and_CC semantically_RB non-transparent_JJ ._.
+We_PRP have_VBP seen_VBN that_IN their_PRP$ syntactic_NN flexibility_NN can_MD be_VB handled_VBN effectively_RB with_IN the_DT framework_NN introduced_VBN in_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+In_IN this_DT section_NN ,_, we_PRP will_MD focus_VB on_IN their_PRP$ semantic_JJ non-transparency_NN ._.
+This_DT assumption_NN is_VBZ based_VBN on_IN the_DT observation_NN that_IN the_DT component_NN parts_NNS of_IN idioms_NNS do_VBP not_RB have_VB independent_JJ meanings_NNS and_CC ,_, hence_RB ,_, that_IN the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN can_MD not_RB be_VB obtained_VBN from_IN their_PRP$ parts_NNS compositionally_RB ._.
+We_PRP will_MD first_RB review_VB the_DT issue_NN over_IN the_DT compositionality_NN of_IN idiomatic_JJ expressions_NNS ._.
+Then_RB ,_, we_PRP will_MD observe_VB those_DT phenomena_NNS which_WDT have_VBP led_VBN some_DT scholars_NNS to_TO assume_VB that_IN the_DT component_NN parts_NNS have_VBP separate_JJ meanings_NNS ._.
+Finally_RB ,_, we_PRP will_MD develop_VB a_DT framework_NN in_IN which_WDT we_PRP can_MD handle_VB the_DT phenomena_NNS ,_, especially_RB idiom-internal_JJ modification_NN ,_, without_IN assuming_VBG separate_JJ meanings_NNS of_IN parts_NNS ._.
+3.1_CD The_DT Issue_NN :_: Compositionality_NNP There_EX has_VBZ been_VBN a_DT controversy_NN over_IN the_DT issue_NN whether_IN idioms_NNS conform_VB to_TO the_DT principle_NN of_IN compositionality_NN or_CC not_RB ._.
+From_IN a_DT non-compositional_JJ point_NN of_IN view_NN ,_, for_IN example_NN ,_, Nicolas_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- argues_VBZ that_IN the_DT parts_NNS of_IN an_DT idiom_NN do_VBP not_RB have_VB individual_JJ meanings_NNS ._.
+Schenk_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- argues_VBZ that_IN there_EX is_VBZ no_DT relation_NN between_IN the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN and_CC the_DT meanings_NNS of_IN its_PRP$ parts_NNS ._.
+In_IN addition_NN ,_, Culicover_NNP &_CC Jackendoff_NNP -LRB-_-LRB- 2005_CD :_: 34_CD -RRB-_-RRB- makes_VBZ it_PRP clear_JJ that_IN ``_`` there_EX is_VBZ no_DT way_NN to_TO predict_VB the_DT meanings_NNS of_IN ..._: from_IN the_DT words_NNS ''_'' in_IN various_JJ types_NNS of_IN ``_`` lexical_JJ VP_NN idioms_NNS ''_'' -LRB-_-LRB- cf._NNP Goldberg_NNP 1995_CD -RRB-_-RRB- ._.
+However_RB ,_, many_JJ other_JJ works_NNS stand_VBP on_IN the_DT other_JJ side_NN :_: Wasow_NNP et_FW al._FW -LRB-_-LRB- 1983_CD -RRB-_-RRB- ,_, Nunberg_NNP et_FW al._FW -LRB-_-LRB- 1994_CD -RRB-_-RRB- ,_, Geeraerts_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, Gibbs_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, Sag_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- ,_, Espinal_NNP &_CC Mateu_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, and_CC others_NNS ._.
+One_CD of_IN the_DT most_RBS difficult_JJ challenges_NNS of_IN compositional_JJ approaches_NNS lies_VBZ in_IN figuring_VBG out_RP the_DT meanings_NNS of_IN the_DT parts_NNS of_IN an_DT idiom_NN ._.
+For_IN example_NN ,_, it_PRP is_VBZ generally_RB assumed_VBN that_IN the_DT meanings_NNS of_IN spill_NN and_CC beans_NNS in_IN the_DT idiom_NN -LSB-_NNP spill_VB the_DT beans_NNS -RSB-_NNP are_VBP `_`` divulge_VB '_'' and_CC `_`` information_NN ,_, '_'' respectively_RB ._.
+However_RB ,_, it_PRP is_VBZ unlikely_JJ that_IN we_PRP can_MD get_VB at_IN their_PRP$ meanings_NNS ,_, if_IN there_EX are_VBP individual_JJ meanings_NNS ,_, without_IN consulting_VBG the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN -LRB-_-LRB- cf._FW Geeraerts_FW 1995_CD ,_, Gibbs_NNP 2007_CD :_: 707_CD -RRB-_-RRB- ._.
+Then_RB ,_, we_PRP do_VBP not_RB have_VB to_TO worry_VB about_IN the_DT meanings_NNS of_IN individual_JJ parts_NNS from_IN the_DT beginning_NN ,_, because_IN the_DT reason_NN we_PRP need_VBP to_TO know_VB the_DT individual_JJ meanings_NNS is_VBZ to_TO compute_VB the_DT meaning_NN of_IN the_DT whole_JJ idiomatic_JJ meaning_NN ._.
+Although_IN there_EX are_VBP many_JJ cognitive_JJ linguistic_JJ approaches_NNS which_WDT seek_VBP to_TO obtain_VB the_DT meanings_NNS of_IN the_DT parts_NNS on_IN the_DT basis_NN of_IN people_NNS 's_POS conceptual_JJ knowledge_NN ,_, they_PRP can_MD only_RB provide_VB partial_JJ answers_NNS ,_, as_IN is_VBZ hinted_VBN in_IN Gibbs_NNP -LRB-_-LRB- 2007_CD :_: 709_CD ,_, 717_CD -RRB-_-RRB- ._.
+From_IN a_DT computational_JJ point_NN of_IN view_NN ,_, partial_JJ answers_NNS would_MD be_VB largely_RB the_DT same_JJ as_IN no_DT answers_NNS ._.
+Non-compositional_JJ approaches_NNS may_MD run_VB into_IN difficulties_NNS as_RB well_RB ,_, in_IN such_JJ cases_NNS as_IN the_DT following_NN :_: i_FW -RRB-_-RRB- when_WRB a_DT part_NN of_IN the_DT idiom_NN is_VBZ displaced_VBN from_IN its_PRP$ ``_`` original_JJ ''_'' position_NN -LRB-_-LRB- cf._FW -LRB-_-LRB- 8d_CD -RRB-_-RRB- -RRB-_-RRB- ,_, and_CC ii_FW -RRB-_-RRB- when_WRB a_DT part_NN is_VBZ modified_VBN -LRB-_-LRB- cf._FW -LRB-_-LRB- 9-10_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+In_IN these_DT cases_NNS ,_, it_PRP would_MD be_VB very_RB difficult_JJ to_TO compute_VB the_DT idiomatic_JJ meaning_NN without_IN recourse_NN to_TO the_DT meanings_NNS of_IN the_DT individual_JJ parts_NNS ,_, especially_RB under_IN surface-oriented_JJ frameworks_NNS -LRB-_-LRB- cf._FW Wasow_NNP et_FW al._FW 1983_CD -RRB-_-RRB- ._.
+Without_IN handling_VBG these_DT cases_NNS appropriately_RB ,_, a_DT non_NN -_: compositional_JJ approach_NN would_MD not_RB be_VB viable_JJ ._.
+When_WRB an_DT internal_JJ element_NN of_IN an_DT idiom_NN is_VBZ displaced_VBN from_IN its_PRP$ original_JJ position_NN ,_, as_IN in_IN -LSB-_NNP the_DT hatchet_NN we_PRP want_VBP to_TO bury_VB after_IN years_NNS of_IN fighting_VBG -RSB-_NNP ,_, it_PRP would_MD not_RB be_VB easy_JJ to_TO capture_VB the_DT idiomatic_JJ meaning_NN in_IN surface-oriented_JJ frameworks_NNS ,_, which_WDT do_VBP not_RB have_VB ``_`` underlying_VBG ''_'' structures_NNS ,_, because_IN parts_NNS of_IN the_DT idiom_NN are_VBP separated_VBN from_IN each_DT other_JJ by_IN a_DT syntactic_JJ operation_NN ._.
+Note_VB that_DT idioms_NNS are_VBP generally_RB assumed_VBN to_TO be_VB word-like_JJ fixed_VBN expressions_NNS in_IN previous_JJ non-compositional_JJ approaches_NNS ._.
+However_RB ,_, in_IN our_PRP$ approach_NN ,_, the_DT identity_NN of_IN the_DT idiom_NN can_MD be_VB captured_VBN with_IN reference_NN to_TO the_DT construction_NN describing_VBG the_DT idiom_NN ,_, which_WDT is_VBZ in_IN the_DT set_NN of_IN constructions_NNS ._.
+As_IN for_IN idiom-internal_JJ modifiers_NNS ,_, there_EX are_VBP three_CD types_NNS to_TO be_VB considered_VBN ._.
+Firstly_RB ,_, adverbs_NNS can_MD occur_VB before_IN verbs_NNS inside_IN some_DT idioms_NNS ._.
+Secondly_RB ,_, adjectives_NNS can_MD occur_VB before_IN nouns_NNS in_IN a_DT few_JJ idioms_NNS and_CC function_NN as_IN nominal_JJ modifiers_NNS ._.
+Thirdly_RB ,_, adjectives_NNS in_IN some_DT idioms_NNS function_NN ,_, surprisingly_RB ,_, as_IN verbal_JJ modifiers_NNS ._.
+More_RBR surprisingly_RB ,_, Nicolas_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- shows_VBZ that_IN most_JJS idiom-internal_JJ adjectives_NNS function_VBP as_IN verbal_JJ modifiers_NNS ,_, i.e._FW they_PRP have_VBP the_DT function_NN of_IN modifying_VBG the_DT whole_JJ idiom_NN or_CC its_PRP$ predicate_NN ._.
+We_PRP have_VBP reached_VBN largely_RB the_DT same_JJ conclusion_NN after_IN examining_VBG the_DT idioms_NNS in_IN two_CD Korean_JJ idiom_NN dictionaries_NNS :_: No_DT -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Choi_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Although_IN English_NNP does_VBZ not_RB seem_VB to_TO have_VB examples_NNS of_IN the_DT first_JJ type_NN ,_, Korean_NNP has_VBZ some_DT ._.
+This_DT difference_NN may_MD be_VB due_JJ to_TO the_DT word_NN order_NN difference_NN between_IN the_DT two_CD languages_NNS :_: Korean_JJ is_VBZ a_DT head-final_JJ language_NN ,_, while_IN English_NNP is_VBZ a_DT head-initial_JJ language_NN ._.
+As_IN an_DT adverb_NN occurs_VBZ before_IN the_DT string_NN of_IN V-NP_NNP in_IN English_NNP ,_, it_PRP is_VBZ not_RB clear_JJ whether_IN it_PRP modifies_VBZ V_NNP or_CC VP_NNP ._.
+In_IN addition_NN ,_, regardless_RB of_IN whether_IN it_PRP modifies_VBZ V_NNP or_CC VP_NNP ,_, the_DT effect_NN is_VBZ the_DT same_JJ ._.
+Even_RB when_WRB it_PRP modifies_VBZ V_NNP ,_, the_DT influence_NN will_MD go_VB over_IN to_TO the_DT whole_JJ VP_NNP because_IN V_NNP is_VBZ the_DT head_NN of_IN VP_NNP ._.
+On_IN the_DT other_JJ hand_NN ,_, an_DT adverb_NN can_MD occur_VB inside_IN the_DT NP-V_NNP string_NN in_IN Korean_JJ ,_, which_WDT clearly_RB shows_VBZ that_IN it_PRP modifies_VBZ V_NNP ._.
+As_IN we_PRP saw_VBD above_RB ,_, the_DT Korean_JJ idiom_NN -LSB-_NNP ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- eps_SYM -_: `_`` be_VB preposterous_JJ '_'' -RSB-_NNP can_MD be_VB modified_VBN by_IN an_DT internal_JJ adverb_NN such_JJ as_IN cengmal_JJ `_`` really_RB ,_, '_'' -LSB-_NNP ei_FW -LRB-_-LRB- -_: ka_FW -RRB-_-RRB- cengmal_JJ eps_SYM -_: `_`` be_VB really_RB preposterous_JJ '_'' -RSB-_NNP -LRB-_-LRB- cf._NNP Chae_NNP 2014_CD :_: 511_CD -RRB-_-RRB- ._.
+When_WRB the_DT internal_JJ modifiers_NNS are_VBP adverbs_NNS ,_, it_PRP is_VBZ not_RB very_RB surprising_JJ that_IN they_PRP have_VBP the_DT function_NN of_IN modifying_VBG the_DT whole_JJ idiom_NN ,_, because_IN the_DT modified_VBN element_NN ,_, i.e._FW V_FW ,_, is_VBZ the_DT head_NN of_IN VP_NNP ._.
+3.2_CD Any_DT Compositional_NNP Phenomena_NNP ?_.
+To_TO begin_VB with_IN ,_, we_PRP want_VBP to_TO make_VB it_PRP clear_JJ that_IN we_PRP can_MD not_RB derive_VB the_DT meanings_NNS of_IN idioms_NNS from_IN their_PRP$ component_NN parts_NNS compositionally_RB ._.
+It_PRP is_VBZ a_DT well_RB -_: known_VBN fact_NN that_IN we_PRP can_MD guess_VB the_DT meanings_NNS of_IN component_NN parts_NNS only_RB when_WRB we_PRP know_VBP the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN -LRB-_-LRB- cf._NNP Gibbs_NNP 2007_CD :_: 709_CD ,_, 717_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, we_PRP can_MD not_RB usually_RB figure_VBP out_RP that_IN the_DT meanings_NNS of_IN spill_NN and_CC beans_NNS in_IN the_DT idiom_NN -LSB-_NNP spill_VB the_DT beans_NNS -RSB-_NNP are_VBP `_`` divulge_VB '_'' and_CC `_`` information_NN ,_, '_'' respectively_RB ,_, unless_IN we_PRP know_VBP the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN ,_, i.e._FW `_`` divulge_VB information_NN ._. '_''
+If_IN it_PRP is_VBZ not_RB the_DT case_NN ,_, those_DT who_WP are_VBP learning_VBG English_NNP would_MD predict_VB the_DT meaning_NN of_IN the_DT idiom_NN correctly_RB on_IN the_DT basis_NN of_IN the_DT -LRB-_-LRB- literal_JJ -RRB-_-RRB- meanings_NNS of_IN spill_NN and_CC beans_NNS ,_, which_WDT is_VBZ very_RB unlikely_JJ ._.
+If_IN we_PRP can_MD only_RB figure_VB out_RP the_DT individual_JJ meanings_NNS with_IN reference_NN to_TO the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN ,_, we_PRP do_VBP not_RB have_VB to_TO worry_VB about_IN the_DT meanings_NNS of_IN individual_JJ parts_NNS from_IN the_DT beginning_NN ._.
+As_IN we_PRP all_DT know_VBP ,_, we_PRP need_VBP to_TO know_VB the_DT meanings_NNS of_IN individual_JJ words_NNS to_TO compute_VB the_DT meaning_NN of_IN the_DT whole_JJ expression_NN ._.
+Despite_IN the_DT problems_NNS described_VBN above_IN ,_, there_EX has_VBZ been_VBN a_DT tradition_NN which_WDT takes_VBZ it_PRP for_IN granted_VBN that_IN individual_JJ words_NNS in_IN idioms_NNS have_VBP to_TO have_VB their_PRP$ own_JJ meanings_NNS ._.
+Nunberg_NNP et_FW al._FW -LRB-_-LRB- 1994_CD :_: 500-3_JJ -RRB-_-RRB- is_VBZ one_CD of_IN the_DT forerunners_NNS :_: ``_`` modification_NN ,_, quantification_NN ,_, topicalization_NN ,_, ellipsis_NN ,_, and_CC anaphora_NN provide_VBP powerful_JJ evidence_NN that_IN the_DT pieces_NNS of_IN many_JJ idioms_NNS have_VBP identifiable_JJ meanings_NNS which_WDT interact_VBP semantically_RB with_IN other_JJ ''_'' -LRB-_-LRB- cf._NNP Wasow_NNP et_FW al._FW 1983_CD ;_: Croft_NNP &_CC Cruse_NNP 2004_CD :_: ch_NN ._.
+9_CD ,_, Gibbs_NNP 2007_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- a._IN -LSB-_NNP kick_VBP the_DT filthy_JJ habit_NN -RSB-_NNP b._NNP Pat_NNP got_VBD the_DT job_NN by_IN -LSB-_NNP pulling_VBG strings_NNS that_WDT were_VBD n't_RB available_JJ to_TO anyone_NN else_RB -RSB-_NNP ._.
+c._IN -LSB-_JJ touch_NN a_DT couple_NN of_IN nerves_NNS -RSB-_NNP d._NNP Those_DT strings_NNS ,_, he_PRP would_MD n't_RB pull_VB for_IN you_PRP ._.
+e._FW My_PRP$ goose_NN is_VBZ cooked_VBN ,_, but_CC yours_VBZ is_VBZ n't_RB ____VB ._.
+f._NNP Although_IN the_DT FBI_NNP kept_VBD taps_NNS on_IN Jane_NNP Fonda_NNP ,_, the_DT CIA_NNP kept_VBD them_PRP on_IN Vanesa_NNP Redgrave_NNP ._.
+It_PRP would_MD be_VB very_RB difficult_JJ to_TO account_VB for_IN these_DT data_NNS if_IN we_PRP do_VBP not_RB assume_VB that_DT individual_JJ words_NNS in_IN idioms_NNS have_VBP their_PRP$ own_JJ meanings_NNS ._.
+In_IN -LRB-_-LRB- a-b_JJ -RRB-_-RRB- ,_, at_IN least_JJS formally_RB ,_, a_DT part_NN of_IN the_DT idiom_NN is_VBZ modified_VBN ._.
+In_IN -LRB-_-LRB- c_NN -RRB-_-RRB- ,_, a_DT part_NN is_VBZ quantified_VBN ._.
+In_IN -LRB-_-LRB- d_LS -RRB-_-RRB- ,_, a_DT part_NN is_VBZ topicalized_VBN ._.
+In_IN -LRB-_-LRB- e_SYM -_: f_LS -RRB-_-RRB- ,_, an_DT anaphor_NN or_CC a_DT deleted_VBN part_NN refers_VBZ to_TO a_DT part_NN of_IN the_DT idiom_NN concerned_VBN ._.
+Under_IN traditional_JJ approaches_NNS ,_, we_PRP would_MD not_RB be_VB able_JJ to_TO account_VB for_IN the_DT phenomena_NNS in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- appropriately_RB unless_IN we_PRP assume_VBP that_IN individual_JJ words_NNS have_VBP their_PRP$ own_JJ identities_NNS ._.
+Under_IN the_DT spirit_NN of_IN Chae_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, however_RB ,_, we_PRP can_MD account_VB for_IN the_DT phenomena_NNS in_IN -LRB-_-LRB- c-f_JJ -RRB-_-RRB- easily_RB ._.
+We_PRP are_VBP assuming_VBG that_IN all_DT and_CC only_RB idioms_NNS are_VBP represented_VBN as_IN constructions_NNS and_CC that_IN constructions_NNS can_MD represent_VB formal_JJ flexibilities_NNS of_IN idioms_NNS ._.
+In_IN our_PRP$ analysis_NN of_IN the_DT idiom_NN in_IN -LRB-_-LRB- c_NN -RRB-_-RRB- ,_, the_DT position_NN of_IN Det/QP_NNP is_VBZ open_JJ in_IN the_DT construction_NN concerned_JJ .3_NN For_IN the_DT constructions_NNS in_IN -LRB-_-LRB- d-f_JJ -RRB-_-RRB- ,_, the_DT syntactic_JJ mechanisms_NNS involved_VBN ,_, i.e._FW those_DT responsible_JJ for_IN figuring_VBG out_RP the_DT antecedents_NNS of_IN gaps_NNS or_CC anaphora_NN ,_, will_MD identify_VB the_DT relevant_JJ entities_NNS ._.
+For_IN example_NN ,_, -LSB-_NNP those_DT strings_NNS -RSB-_NNP will_MD be_VB identified_VBN as_IN the_DT object_NN NP_NNP of_IN pull_NN in_IN -LRB-_-LRB- d_LS -RRB-_-RRB- and_CC yours_NNS will_MD be_VB identified_VBN as_IN your_PRP$ goose_NN in_IN -LRB-_-LRB- e_LS -RRB-_-RRB- ._.
+Then_RB ,_, the_DT idiom_NN concerned_VBN will_MD be_VB identified_VBN with_IN reference_NN to_TO the_DT construction_NN describing_VBG it_PRP ,_, which_WDT is_VBZ in_IN the_DT set_NN of_IN constructions_NNS ._.
+That_DT is_VBZ ,_, the_DT relevant_JJ construction_NN will_MD be_VB invoked_VBN and_CC ,_, hence_RB ,_, its_PRP$ meaning_NN as_RB well_RB ,_, without_IN recourse_NN to_TO the_DT individual_JJ words_NNS involved_VBN ._.
+To_TO be_VB more_RBR specific_JJ about_IN the_DT topicalized_VBN example_NN in_IN -LRB-_-LRB- 8d_CD -RRB-_-RRB- ,_, it_PRP can_MD be_VB analyzed_VBN the_DT same_JJ way_NN as_IN other_JJ topicalized_JJ sentences_NNS ._.
+Just_RB as_IN a_DT regular_JJ VP_NNP which_WDT has_VBZ a_DT displaced_VBN object_NN is_VBZ analyzed_VBN as_IN VP/NP_NNP ,_, the_DT idiomatic_JJ VP_NNP -LSB-_NNP pull_VB e_SYM -RSB-_NNP ,_, which_WDT has_VBZ its_PRP$ own_JJ idiomatic_JJ meaning_NN and_CC is_VBZ lacking_VBG -LSB-_NNP those_DT strings_NNS -RSB-_NNP ,_, is_VBZ analyzed_VBN as_IN VP/NP_NNP ._.
+When_WRB the_DT missing_VBG NP_NNP ,_, i.e._FW the_DT 3_CD If_IN different_JJ determiners_NNS and/or_CC quantifiers_NNS allowed_VBN in_IN the_DT idiom_NN result_NN in_IN different_JJ meanings_NNS ,_, such_JJ data_NNS could_MD be_VB handled_VBN with_IN the_DT mechanisms_NNS for_IN idiom-internal_JJ adjectives_NNS in_IN section_NN 3.3_CD ._.
+NP_NNP value_NN of_IN the_DT SLASH_NNP -LRB-_-LRB- /_CD -RRB-_-RRB- feature_NN ,_, gets_VBZ licensed_JJ ,_, the_DT whole_JJ idiom_NN obtains_VBZ its_PRP$ meaning_NN from_IN the_DT construction_NN concerned_VBN ._.
+This_DT is_VBZ not_RB possible_JJ in_IN previous_JJ non-compositional_JJ approaches_NNS because_IN idioms_NNS are_VBP generally_RB assumed_VBN to_TO be_VB word-like_JJ fixed_VBN expressions_NNS ._.
+The_DT difficulty_NN lies_VBZ in_IN the_DT analysis_NN of_IN such_JJ data_NNS as_IN those_DT in_IN -LRB-_-LRB- 8a-b_JJ -RRB-_-RRB- ._.
+As_IN an_DT adjective_NN or_CC a_DT relative_JJ clause_NN modifies_VBZ a_DT noun_NN which_WDT is_VBZ a_DT part_NN of_IN the_DT idiom_NN ,_, there_EX does_VBZ not_RB seem_VB to_TO be_VB an_DT easy_JJ way_NN of_IN accounting_NN for_IN the_DT data_NNS without_IN assuming_VBG that_IN all_PDT the_DT component_NN parts_NNS of_IN the_DT idiom_NN have_VBP their_PRP$ meanings_NNS ._.
+However_RB ,_, in_IN the_DT next_JJ section_NN ,_, we_PRP will_MD see_VB that_IN the_DT data_NNS can_MD better_RB be_VB analyzed_VBN without_IN such_PDT an_DT assumption_NN ._.
+3.3_CD Idiom-internal_JJ Modification_NNP Among_IN the_DT three_CD types_NNS of_IN idiom-internal_JJ modifiers_NNS mentioned_VBN in_IN section_NN 3.1_CD ,_, we_PRP will_MD consider_VB how_WRB we_PRP can_MD account_VB for_IN the_DT second_JJ and_CC third_JJ types_NNS ,_, i.e._FW the_DT behavior_NN of_IN idiom-internal_JJ adjectives_NNS ._.
+We_PRP will_MD see_VB that_IN the_DT framework_NN to_TO be_VB developed_VBN here_RB can_MD handle_VB the_DT phenomena_NNS without_IN assuming_VBG separate_JJ meanings_NNS of_IN idiom_NN parts_NNS ._.
+This_DT implies_VBZ that_IN idiom_NN -_: internal_JJ modifiers_NNS are_VBP not_RB part_NN of_IN the_DT idiom_NN ._.
+It_PRP will_MD be_VB also_RB shown_VBN that_IN the_DT meaning_NN of_IN the_DT whole_JJ expression_NN can_MD be_VB obtained_VBN compositionally_RB from_IN that_DT of_IN the_DT idiom_NN and_CC that_IN of_IN the_DT modifier_NN ._.
+With_IN reference_NN to_TO such_JJ data_NNS as_IN in_IN -LRB-_-LRB- 8a-b_JJ -RRB-_-RRB- ,_, Nicolas_NNP -LRB-_-LRB- 1995_CD :_: 233_CD ,_, 239-10_CD -RRB-_-RRB- argues_VBZ that_IN the_DT internal_JJ modification_NN in_IN V-NP_JJ idioms_NNS ``_`` is_VBZ systematically_RB interpretable_JJ as_IN modification_NN of_IN the_DT whole_JJ idiom_NN ._. ''_''
+4_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- a._IN -LSB-_NNP make_VBP rapid_JJ headway_NN -RSB-_NNP `_`` progress_NN rapidly_RB '_'' b._SYM -LSB-_NNP be_VB at_IN a_DT temporary_JJ loose_JJ end_NN -RSB-_NNP `_`` be_VB unoccupied_JJ temporarily_RB '_'' c._SYM -LSB-_NN pull_VB no_DT strings_NNS -RSB-_NNP `_`` do_VB not_RB exert_VB influence_NN '_'' In_IN these_DT examples_NNS all_PDT the_DT idiom-internal_JJ adjectives_NNS are_VBP interpreted_VBN as_IN adverbials_NNS ._.
+It_PRP seems_VBZ to_TO be_VB true_JJ that_IN most_JJS of_IN the_DT adjectives_NNS in_IN idioms_NNS have_VBP the_DT function_NN of_IN modifying_VBG the_DT whole_JJ idiom_NN ._.
+However_RB ,_, there_EX are_VBP some_DT examples_NNS where_WRB the_DT idiom-internal_JJ adjective_NN does_VBZ not_RB have_VB an_DT adverbial_JJ function_NN ,_, including_VBG those_DT in_IN -LRB-_-LRB- 8a-b_JJ -RRB-_-RRB- ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- a._IN -LSB-_NNP bury_VB the_DT old/bloody/violent_JJ hatchet_NN -RSB-_NNP `_`` settle_VB an_DT old/bloody/violent_JJ conflict_NN '_'' b._SYM -LSB-_NNP bury_VB the_DT ancestral_JJ hatchet_NN -RSB-_NNP `_`` reconcile_VB an_DT ancestral_JJ disagreement_NN '_'' c._SYM -LSB-_JJ spill_NN the_DT salacious_JJ beans_NNS -RSB-_NNP `_`` divulge_VB the_DT salacious_JJ information_NN '_'' 4_CD Nicolas_NNP -LRB-_-LRB- 1995_CD :_: 244_CD ,_, 249_CD -RRB-_-RRB- even_RB argues_VBZ that_IN he_PRP could_MD not_RB find_VB any_DT counter-examples_NNS to_TO the_DT adverbial_JJ function_NN of_IN adjectives_NNS in_IN his_PRP$ chosen_VBN corpus_NN of_IN fifty_CD million_CD words_NNS ._.
+In_IN all_DT these_DT examples_NNS ,_, the_DT underlined_VBN adjectives_NNS have_VBP the_DT function_NN of_IN modifying_VBG some_DT nominal_JJ elements_NNS of_IN the_DT meanings_NNS of_IN the_DT whole_JJ idiom_NN ._.
+Please_VB note_NN that_IN they_PRP do_VBP not_RB have_VB the_DT following_VBG meanings_NNS :_: -LRB-_-LRB- 11_CD -RRB-_-RRB- a._FW `_`` settle_VB a_DT conflict_NN in_IN a_DT -LRB-_-LRB- n_VBN -RRB-_-RRB- old/bloody/violent_JJ way_NN '_'' b._FW `_`` ancestrally_RB reconcile_VBP a_DT disagreement_NN '_'' c._FW `_`` salaciously_RB divulge_VB information_NN '_'' In_IN the_DT case_NN of_IN the_DT idiom_NN -LSB-_NNP bury_VB the_DT hatchet_NN -RSB-_NNP ,_, the_DT adjective_NN official_NN leads_VBZ to_TO an_DT adverbial_JJ function_NN :_: -LSB-_NNP bury_VB the_DT official_JJ hatchet_NN -RSB-_NNP `_`` settle/reconcile_VBD a_DT conflict/disagreement_NN officially_RB ._. '_''
+On_IN the_DT other_JJ hand_NN ,_, as_IN we_PRP can_MD see_VB in_IN -LRB-_-LRB- 10a-b_JJ -RRB-_-RRB- ,_, the_DT adjectives_NNS old/bloody_JJ /_NN violent/ancestral_NN induce_VB an_DT adjectival_JJ function_NN in_IN the_DT idiom_NN ._.
+This_DT shows_VBZ that_IN the_DT function_NN of_IN an_DT idiom-internal_JJ adjective_NN is_VBZ determined_VBN by_IN the_DT interactions_NNS between_IN the_DT adjective_NN and_CC the_DT idiom_NN within_IN which_WDT the_DT adjective_NN is_VBZ located_VBN ._.
+The_DT issue_NN ,_, then_RB ,_, is_VBZ how_WRB we_PRP can_MD account_VB for_IN the_DT adverbial_JJ and_CC adjectival_JJ functions_NNS of_IN idiom-internal_JJ adjectives_NNS without_IN assuming_VBG that_IN the_DT component_NN parts_NNS of_IN an_DT idiom_NN have_VBP separate_JJ meanings_NNS ._.
+As_IN the_DT first_JJ step_NN to_TO the_DT solution_NN ,_, let_VB us_PRP examine_VB the_DT characteristics_NNS of_IN the_DT idiom_NN -LSB-_NNP bury_VB the_DT hatchet_NN -RSB-_NN more_RBR closely_RB ._.
+When_WRB it_PRP contains_VBZ an_DT adjective_NN inside_RB ,_, the_DT adjective_NN can_MD be_VB interpreted_VBN either_CC as_IN adjectively_JJ or_CC as_IN adverbially_RB ._.
+As_IN we_PRP can_MD see_VB in_IN -LRB-_-LRB- 10a-b_JJ -RRB-_-RRB- ,_, such_JJ adjectives_NNS as_IN old_JJ ,_, bloody_JJ ,_, violent_JJ and_CC ancestral_JJ lead_NN to_TO an_DT adjectival_JJ reading_NN ._.
+In_IN -LSB-_JJ bury_VB the_DT old_JJ hatchet_NN -RSB-_NNP ,_, for_IN example_NN ,_, it_PRP is_VBZ clear_JJ that_IN the_DT adjective_NN old_JJ combines_NNS with_IN the_DT noun_NN hatchet_NN syntactically_RB ._.
+As_IN an_DT adjective_NN ,_, it_PRP has_VBZ the_DT right_JJ formal_JJ properties_NNS to_TO be_VB in_IN a_DT position_NN between_IN a_DT determiner_NN and_CC a_DT noun_NN ._.
+However_RB ,_, from_IN a_DT semantic_JJ point_NN of_IN view_NN ,_, it_PRP is_VBZ not_RB compatible_JJ with_IN the_DT literal_JJ meaning_NN of_IN hatchet_NN ._.
+It_PRP is_VBZ compatible_JJ only_RB with_IN the_DT seemingly_RB idiomatic_JJ meaning_NN of_IN hatchet_NN ,_, i.e._FW `_`` disagreement/conflict_NN ._. '_''
+We_PRP have_VBP to_TO realize_VB here_RB that_IN there_EX is_VBZ a_DT mismatch_NN between_IN syntactic_NN and_CC semantic_JJ behavior_NN in_IN the_DT combination_NN ._.
+That_DT is_VBZ ,_, the_DT combination_NN is_VBZ ``_`` indirect/abnormal_JJ ''_'' rather_RB than_IN ``_`` direct/normal_JJ ._. ''_''
+In_IN a_DT direct/normal_JJ combination_NN ,_, on_IN the_DT other_JJ hand_NN ,_, there_EX is_VBZ no_DT such_JJ mismatch_NN between_IN syntactic_NN and_CC semantic_JJ behavior_NN ._.
+For_IN example_NN ,_, in_IN -LSB-_NNP the_DT tall_JJ man_NN -RSB-_NNP ,_, the_DT adjective_NN tall_JJ modifies_VBZ the_DT noun_NN man_NN not_RB only_RB syntactically_RB but_CC also_RB semantically_RB ._.
+The_DT -LRB-_-LRB- literal_JJ -RRB-_-RRB- meaning_NN of_IN man_NN is_VBZ compatible_JJ with_IN that_DT of_IN tall_JJ ._.
+We_PRP have_VBP to_TO be_VB very_RB careful_JJ not_RB to_TO assume_VB that_IN the_DT meaning_NN of_IN `_`` disagreement/conflict_NN '_'' is_VBZ directly_RB related_VBN to_TO the_DT hatchet_NN in_IN -LSB-_NNP bury_VB the_DT hatchet_NN -RSB-_NNP ._.
+It_PRP comes_VBZ from_IN the_DT argument_NN of_IN the_DT meaning_NN of_IN the_DT whole_JJ idiom_NN `_`` settle/reconcile_VBD a_DT conflict_NN /_NN disagreement_NN ,_, '_'' which_WDT can_MD be_VB represented_VBN as_IN -LSB-_JJ SETTLE_NNS -LRB-_-LRB- -LSB-_JJ -RSB-_NN ,_, CONFLICT_NNP -RRB-_-RRB- -RSB-_NNP formally_RB ._.
+This_DT becomes_VBZ clear_JJ with_IN such_JJ idioms_NNS as_IN -LSB-_JJ kick_NN the_DT bucket_NN -RSB-_NNP and_CC -LSB-_NNP pull_VB the_DT wool_NN over_IN one_CD 's_POS eyes_NNS `_`` deceive_VB one_CD '_'' -RSB-_NNP ,_, which_WDT can_MD be_VB represented_VBN as_IN -LSB-_NNP DIE_NNP -LRB-_-LRB- -LSB-_NNP -RSB-_NNP -RRB-_-RRB- -RSB-_NNP and_CC -LSB-_NNP DECEIVE_NNP -LRB-_-LRB- -LSB-_NNP -RSB-_NNP ,_, ONE_CD -RRB-_-RRB- -RSB-_NN ,_, respectively_RB ._.
+In_IN the_DT former_JJ ,_, -LSB-_JJ the_DT bucket_NN -RSB-_NNP has_VBZ no_DT -LRB-_-LRB- direct_JJ -RRB-_-RRB- reflections_NNS on_IN the_DT whole_JJ meaning_NN ._.
+In_IN the_DT latter_JJ ,_, neither_DT -LSB-_NNP the_DT wool_NN -RSB-_NNP nor_CC eyes_NNS have_VBP any_DT direct_JJ reflections_NNS on_IN the_DT meaning_NN ._.
+Hence_RB ,_, when_WRB we_PRP say_VBP that_IN old_JJ in_IN -LSB-_NNP bury_VB the_DT old_JJ hatchet_NN -RSB-_NNP is_VBZ compatible_JJ with_IN ``_`` the_DT seemingly_RB idiomatic_JJ meaning_NN ''_'' of_IN hatchet_NN ,_, we_PRP mean_VBP that_IN it_PRP is_VBZ compatible_JJ with_IN the_DT argument_NN of_IN the_DT whole_JJ idiomatic_JJ meaning_NN ,_, i.e._FW CONFLICT_NNP ,_, rather_RB than_IN with_IN the_DT idiomatic_JJ non-literal_JJ meaning_NN of_IN hatchet_NN itself_PRP ._.
+The_DT indirect_JJ nature_NN of_IN the_DT combination_NN of_IN idiom_NN -_: internal_JJ adjectives_NNS and_CC their_PRP$ host_NN nouns_NNS become_VBP more_RBR evident_JJ when_WRB the_DT adjectives_NNS function_VBP as_IN adverbials_NNS ._.
+In_IN -LSB-_JJ bury_VB the_DT official_JJ hatchet_NN `_`` settle_VB the_DT conflict_NN officially_RB '_'' -RSB-_NNP ,_, for_IN example_NN ,_, the_DT adjective_JJ official_JJ combines_NNS with_IN the_DT noun_NN hatchet_NN syntactically_RB .5_CD However_RB ,_, from_IN a_DT semantic_JJ point_NN of_IN view_NN ,_, it_PRP neither_DT combines_NNS with_IN the_DT literal_JJ meaning_NN of_IN hatchet_NN nor_CC the_DT assumed_JJ idiomatic_JJ meaning_NN of_IN hatchet_NN `_`` disagreement/conflict_NN ._. '_''
+As_IN it_PRP is_VBZ not_RB compatible_JJ even_RB with_IN the_DT argument_NN of_IN the_DT idiomatic_JJ meaning_NN CONFLICT_NNP ,_, the_DT combination_NN becomes_VBZ more_RBR different_JJ from_IN a_DT regular_JJ one_CD ._.
+As_IN it_PRP does_VBZ not_RB have_VB any_DT adjectival_JJ role_NN semantically_RB ,_, it_PRP is_VBZ ``_`` coerced_VBN ''_'' to_TO perform_VB an_DT adverbial_JJ role_NN -LRB-_-LRB- with_IN the_DT addition_NN of_IN a_DT semantic_JJ adverbializer_NN ,_, which_WDT can_MD be_VB regarded_VBN as_IN a_DT counterpart_NN of_IN the_DT formal_JJ -_: ly_RB ending_VBG -RRB-_-RRB- .6_CD Now_RB the_DT adjective_NN can_MD combine_VB with_IN the_DT 5_CD whole_JJ idiomatic_JJ meaning_NN or_CC its_PRP$ predicate_NN ,_, i.e._FW SETTLE_VB ._.
+On_IN the_DT basis_NN of_IN the_DT observations_NNS above_IN ,_, we_PRP conclude_VBP that_IN idiom-internal_JJ adjectives_NNS and_CC their_PRP$ host_NN nouns_NNS do_VBP not_RB have_VB direct_JJ relationships_NNS ._.
+Although_IN their_PRP$ combinations_NNS are_VBP regular_JJ formally_RB ,_, the_DT adjective_NN does_VBZ not_RB combine_VB with_IN its_PRP$ host_NN noun_NN semantically_RB ._.
+This_DT means_VBZ that_IN the_DT adjective_NN is_VBZ not_RB part_NN of_IN the_DT idiom_NN concerned_VBN ,_, and_CC more_RBR importantly_RB that_IN the_DT component_NN parts_NNS of_IN idioms_NNS do_VBP not_RB have_VB to_TO have_VB their_PRP$ own_JJ separate_JJ meanings_NNS ._.
+We_PRP can_MD conceptualize_VB the_DT licensing_NN of_IN idiom_NN -_: internal_JJ adjectives_NNS as_IN follows_VBZ ._.
+Formally_RB ,_, the_DT adjective_NN is_VBZ licensed_VBN as_IN far_RB as_IN it_PRP satisfies_VBZ the_DT morphological_JJ and_CC distributional_JJ properties_NNS required_VBN in_IN the_DT position_NN ._.
+For_IN example_NN ,_, in_IN -LSB-_NNP bury_VB the_DT old/official_JJ hatchet_NN -RSB-_NNP the_DT words_NNS old_JJ and_CC official_JJ ,_, as_IN adjectives_NNS ,_, satisfy_VBP the_DT requirements_NNS for_IN being_VBG in_IN the_DT position_NN between_IN a_DT determiner_NN and_CC a_DT noun_NN ._.
+Under_IN our_PRP$ framework_NN ,_, we_PRP just_RB need_VBP to_TO leave_VB the_DT NP_NNP dominating_VBG -LSB-_NNP the_DT hatchet_NN -RSB-_NNP not_RB enclosed_VBD with_IN /_CD ..._: /_CD ,_, to_TO indicate_VB that_IN this_DT idiom_NN allows_VBZ an_DT internal_JJ adjective_NN ._.
+Semantically_RB ,_, the_DT adjective_NN is_VBZ licensed_VBN when_WRB it_PRP has_VBZ a_DT meaning_NN which_WDT is_VBZ compatible_JJ either_CC with_IN an_DT argument_NN of_IN the_DT whole_JJ idiomatic_JJ meaning_NN or_CC with_IN the_DT whole_JJ meaning_NN or_CC its_PRP$ predicate_NN ._.
+In_IN the_DT former_JJ case_NN ,_, the_DT adjective_NN leads_VBZ to_TO an_DT adjectival_JJ function_NN ._.
+In_IN the_DT latter_JJ case_NN ,_, on_IN the_DT other_JJ hand_NN ,_, it_PRP leads_VBZ to_TO an_DT adverbial_JJ function_NN ._.
+As_IN for_IN the_DT semantic_JJ licensing_NN of_IN -LSB-_NNP bury_VB the_DT old_JJ hatchet_NN -RSB-_NNP ,_, we_PRP have_VBP to_TO check_VB first_JJ whether_IN the_DT meaning_NN of_IN old_JJ ,_, say_VB OLD_NNP ,_, is_VBZ compatible_JJ with_IN an_DT argument_NN of_IN the_DT whole_JJ idiomatic_JJ meaning_NN ,_, i.e._FW -LSB-_FW SETTLE_VB -LRB-_-LRB- -LSB-_JJ -RSB-_NN ,_, CONFLICT_NNP -RRB-_-RRB- -RSB-_NNP ._.
+As_IN OLD_NNP is_VBZ compatible_JJ with_IN the_DT argument_NN CONFLICT_NNP ,_, the_DT whole_JJ expression_NN has_VBZ the_DT meaning_NN of_IN `_`` settle_VB an_DT old_JJ conflict_NN ._. '_''
+Now_RB ,_, turning_VBG to_TO the_DT semantic_JJ licensing_NN of_IN -LSB-_NNP bury_VB the_DT official_JJ hatchet_NN -RSB-_NNP ,_, we_PRP need_VBP to_TO check_VB the_DT compatibility_NN of_IN OFFICIAL_NNP with_IN CONFLICT_NNP ._.
+As_IN this_DT is_VBZ not_RB a_DT normal_JJ combination_NN ,_, there_EX have_VBP to_TO be_VB other_JJ possibilities_NNS ._.
+We_PRP are_VBP assuming_VBG that_IN ,_, at_IN this_DT point_NN ,_, the_DT adjective_NN is_VBZ coerced_VBN to_TO have_VB an_DT adverbial_JJ meaning_NN ._.
+Then_RB ,_, we_PRP need_VBP to_TO check_VB whether_IN the_DT coerced_VBN adverbial_JJ meaning_NN of_IN OFFICIAL_NNP ,_, say_VBP OFFICIALLY_RB ,7_CD is_VBZ compatible_JJ with_IN the_DT idiomatic_JJ Ward_NNP 2004_CD -RRB-_-RRB- ._.
+The_DT underlined_VBD parts_NNS are_VBP coerced_VBN interpretations_NNS ._.
+7_CD We_PRP can_MD represent_VB the_DT coerced_VBN adverbial_JJ meaning_NN of_IN the_DT adjective_NN concerned_VBN with_IN a_DT pattern_NN of_IN the_DT following_NN -LRB-_-LRB- cf._FW footnote_NN 10_CD -RRB-_-RRB- :_: -LSB-_NNP in_IN the_DT viewpoint/manner_NN /_NN ..._: of_IN being_VBG AdjP_NNP -RSB-_NNP ._.
+According_VBG to_TO Nicolas_NNP -LRB-_-LRB- 1995_CD :_: 249_CD -RRB-_-RRB- ,_, ``_`` the_DT most_RBS commonly_RB available_JJ kind_NN of_IN internal_JJ modification_NN is_VBZ ..._: viewpoint_NN modification_NN ,_, ..._: about_IN 85_CD %_NN ..._: ''_'' Then_RB ,_, the_DT expression_NN -LSB-_NNP bury_VB the_DT official_JJ hatchet_NN -RSB-_NNP would_MD be_VB Although_IN it_PRP has_VBZ an_DT adverbial_JJ function_NN ,_, the_DT word_NN official_NN in_IN -LSB-_NNP bury_VB the_DT official_JJ hatchet_NN -RSB-_NNP is_VBZ still_RB an_DT adjective_NN ._.
+It_PRP is_VBZ an_DT adjective_NN because_IN it_PRP shows_VBZ the_DT same_JJ syntactic_NN distribution_NN as_IN regular_JJ adjectives_NNS ._.
+Notice_NNP that_IN syntactic_JJ categories_NNS are_VBP primarily_RB determined_VBN by_IN syntactic_JJ distribution_NN ._.
+All_DT idiom-internal_JJ elements_NNS keep_VBP their_PRP$ formal_JJ identities_NNS in_IN our_PRP$ approach_NN ,_, regardless_RB of_IN their_PRP$ functions_NNS ._.
+6_CD The_DT term_NN ``_`` coercion_NN ''_'' can_MD be_VB defined_VBN as_IN follows_VBZ -LRB-_-LRB- Culicover_NNP 2009_CD :_: 472_CD -RRB-_-RRB- :_: ``_`` an_DT interpretation_NN that_WDT is_VBZ added_VBN to_TO the_DT normal_JJ interpretation_NN of_IN a_DT word_NN as_IN a_DT consequence_NN of_IN the_DT syntactic_JJ configuration_NN in_IN which_WDT it_PRP appears_VBZ ._. ''_''
+Typical_JJ cases_NNS of_IN coercion_NN are_VBP exemplified_VBN in_IN the_DT sentence_NN -LSB-_NNP the_DT ham_NN sandwich_NN over_IN in_IN the_DT corner_NN wants_VBZ another_DT coffee_NN -RSB-_NNP ,_, which_WDT can_MD be_VB paraphrased_VBN as_IN -LSB-_NNP the_DT person_NN contextually_RB associated_VBN with_IN a_DT ham_NN sandwich_NN over_IN in_IN the_DT corner_NN wants_VBZ another_DT cup_NN of_IN coffee_NN -RSB-_NNP -LRB-_-LRB- Culicover_NNP &_CC Jackendoff_NNP 2005_CD :_: 227-8_CD ;_: cf._NNP Nunberg_NNP 1979_CD ,_, meaning_VBG or_CC its_PRP$ predicate_NN ,_, i.e._FW SETTLE_VB ._.
+As_IN this_DT combination_NN is_VBZ fine_JJ ,_, the_DT whole_JJ expression_NN can_MD have_VB the_DT meaning_NN of_IN `_`` settle_VB a_DT conflict_NN officially_RB ._. '_''
+Of_IN course_NN ,_, there_EX would_MD be_VB cases_NNS where_WRB both_DT types_NNS of_IN combinations_NNS are_VBP possible_JJ ._.
+In_IN such_JJ cases_NNS ,_, the_DT expressions_NNS concerned_VBN would_MD be_VB ambiguous_JJ between_IN an_DT adjectival_JJ reading_NN and_CC an_DT adverbial_JJ reading_NN ._.
+We_PRP can_MD see_VB a_DT similar_JJ phenomenon_NN of_IN indirect_JJ combination_NN in_IN some_DT non-idiomatic_JJ phrases_NNS :8_CD -LRB-_-LRB- 12_CD -RRB-_-RRB- a_DT ._.
+We_PRP -LSB-_VBP had_VBD a_DT quick_JJ cup_NN of_IN coffee_NN -RSB-_NN before_IN lunch_NN ._.
+b_NN ._.
+He_PRP had_VBD to_TO find_VB -LSB-_NNP a_DT fast_JJ road_NN -RSB-_NN to_TO get_VB there_RB we_PRP call_VBP ``_`` indirect_JJ combination_NN ._. ''_''
+Hence_RB ,_, we_PRP can_MD conclude_VB that_IN idiom-internal_JJ adjectives_NNS are_VBP not_RB part_NN of_IN the_DT idiom_NN ._.
+That_DT is_VBZ ,_, they_PRP should_MD not_RB be_VB a_DT part_NN of_IN the_DT idiom_NN concerned_VBN ._.
+The_DT only_JJ thing_NN we_PRP need_VBP to_TO do_VB with_IN the_DT idiom_NN is_VBZ to_TO keep_VB the_DT NP_NNP containing_VBG the_DT host_NN noun_NN not_RB enclosed_VBN with_IN /_CD ..._: /_NN ._.
+4_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP have_VBP introduced_VBN a_DT framework_NN to_TO represent_VB the_DT syntactic_NN flexibility_NN of_IN idioms_NNS ._.
+Under_IN this_DT framework_NN ,_, we_PRP have_VBP examined_VBN some_DT phenomena_NNS which_WDT seem_VBP to_TO be_VB accounted_VBN for_IN only_RB by_IN assuming_VBG separate_JJ meanings_NNS of_IN the_DT parts_NNS of_IN idioms_NNS ._.
+However_RB ,_, we_PRP have_VBP shown_VBN that_IN we_PRP can_MD account_VB for_IN all_PDT the_DT phenomena_NNS without_IN such_PDT an_DT assumption_NN ._.
+This_DT is_VBZ accomplished_VBN by_IN positing_VBG the_DT set_NN of_IN constructions_NNS as_IN a_DT major_JJ component_NN of_IN grammar_NN and_CC by_IN capturing_VBG the_DT indirect_JJ nature_NN of_IN the_DT combination_NN between_IN idiom-internal_JJ adjectives_NNS and_CC their_PRP$ host_NN idioms_NNS ._.
+Focusing_VBG on_IN the_DT behavior_NN of_IN idiom-internal_JJ adjectives_NNS ,_, we_PRP have_VBP conceptualized_VBN a_DT framework_NN to_TO account_VB for_IN the_DT indirectness_NN in_IN the_DT combination_NN of_IN adjectives_NNS and_CC their_PRP$ host_NN idioms_NNS ._.
+By_IN elucidating_VBG the_DT nature_NN of_IN this_DT combination_NN ,_, we_PRP are_VBP absolved_JJ from_IN the_DT almost_RB impossible_JJ task_NN ,_, especially_RB from_IN a_DT computational_JJ point_NN of_IN view_NN ,_, of_IN assigning_VBG separate_JJ meanings_NNS to_TO the_DT component_NN parts_NNS of_IN idioms_NNS ._.
+Consequently_RB ,_, we_PRP came_VBD to_TO prove_VB that_DT idioms_NNS are_VBP formally_RB flexible_JJ and_CC semantically_RB non-transparent_JJ ._.
+If_IN we_PRP could_MD not_RB figure_VB out_RP that_IN idiom-internal_JJ modifiers_NNS are_VBP not_RB part_NN of_IN idioms_NNS ,_, we_PRP would_MD not_RB have_VB reached_VBN the_DT conclusion_NN that_IN idioms_NNS are_VBP not_RB transparent/compositional_JJ ._.
+Acknowledgments_NNS I_PRP appreciate_VBP the_DT comments_NNS from_IN the_DT reviewers_NNS of_IN PACLIC_NNP 28_CD and_CC PACLIC_NNP 29_CD ._.
+I_PRP also_RB express_VB my_PRP$ sincere_JJ appreciations_NNS to_TO Jeehoon_NNP Kim_NNP and_CC the_DT reviewers_NNS of_IN BCGL_NNP 8_CD -LRB-_-LRB- The_DT 8th_JJ Brussels_NNP Conference_NN on_IN Generative_NNP Linguistics_NNPS :_: The_DT Grammar_NN of_IN Idioms_NNS -RRB-_-RRB- ._.
+This_DT work_NN was_VBD supported_VBN by_IN the_DT 2015_CD research_NN fund_NN of_IN Hankuk_NNP University_NNP of_IN Foreign_NNP Studies_NNP ._.
+References_NNS Chae_NNP ,_, Hee-Rahk_NNP ._.
+2014_CD ._.
+A_DT Representational_NNP System_NNP of_IN Idiomatic_NNP Constructions_NNP :_: For_IN the_DT Building_NN of_IN Computational_NNP Resources_NNPS ._.
+Linguistic_NNP Research_NNP ,_, 31_CD :_: 491-518_CD ._.
+sentence_NN semantically_RB well-formed_JJ and_CC that_IN plays_VBZ a_DT role_NN in_IN the_DT sentence_NN 's_POS truth-conditions_NNS ''_'' -LRB-_-LRB- cf._NNP Jackendoff_NNP 1997_CD -RRB-_-RRB- ._.
+in_IN time_NN ._.
+The_DT underlined_VBD adjectives_NNS quick_JJ and_CC fast_JJ are_VBP positioned_VBN between_IN a_DT determiner_NN and_CC a_DT noun_NN and_CC ,_, hence_RB ,_, they_PRP are_VBP in_IN the_DT right_JJ positions_NNS ._.
+However_RB ,_, they_PRP have_VBP meanings_NNS which_WDT can_MD not_RB be_VB combined_VBN with_IN the_DT meanings_NNS of_IN their_PRP$ host_NN nouns_NNS ._.
+The_DT expressions_NNS in_IN the_DT square_JJ brackets_NNS mean_VBP roughly_RB `_`` drank_VBD a_DT cup_NN of_IN coffee_NN quickly_RB '_'' and_CC `_`` a_DT road_NN where_WRB we_PRP can_MD drive_VB fast_RB ,_, '_'' respectively_RB ._.
+A_DT cup_NN can_MD not_RB be_VB quick_JJ and_CC a_DT road_NN itself_PRP ,_, if_IN it_PRP is_VBZ not_RB a_DT moving_VBG road_NN ,_, can_MD not_RB be_VB fast_RB ._.
+We_PRP can_MD see_VB that_IN the_DT adjectives_NNS here_RB are_VBP used_VBN adverbially_RB -LRB-_-LRB- with_IN an_DT appropriate_JJ amount_NN of_IN coercion_NN -RRB-_-RRB- ,_, just_RB like_IN those_DT in_IN idioms_NNS ._.
+From_IN these_DT examples_NNS of_IN indirect_JJ combination_NN ,9_CD we_PRP can_MD see_VB that_IN our_PRP$ assumptions_NNS about_IN the_DT indirect_JJ combination_NN in_IN idioms_NNS are_VBP not_RB unmotivated_JJ ._.
+In_IN this_DT section_NN ,_, we_PRP have_VBP provided_VBN a_DT framework_NN to_TO account_VB for_IN the_DT behavior_NN of_IN idiom-internal_JJ adjectives_NNS without_IN assuming_VBG separate_JJ meanings_NNS of_IN the_DT parts_NNS of_IN idioms_NNS ._.
+We_PRP have_VBP seen_VBN that_IN the_DT meaning_NN of_IN an_DT idiom_NN containing_VBG an_DT internal_JJ adjective_NN can_MD be_VB obtained_VBN from_IN that_DT of_IN the_DT idiom_NN and_CC that_IN of_IN the_DT modifier_NN compositionally_RB ._.
+Although_IN the_DT combination_NN is_VBZ not_RB direct_JJ as_IN in_IN regular_JJ phrases_NNS ,_, it_PRP is_VBZ not_RB random_JJ but_CC follows_VBZ a_DT general_JJ pattern10_NN of_IN what_WP interpreted_VBD as_IN `_`` settle_VB a_DT conflict_NN in_IN the_DT viewpoint/manner_NN of_IN being_VBG official_JJ ._. '_''
+8_CD The_DT data_NNS in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- were_VBD brought_VBN up_RP to_TO me_PRP by_IN Jeehoon_NNP Kim_NNP -LRB-_-LRB- p.c._FW -RRB-_-RRB- ._.
+9_CD One_NN might_MD assume_VB that_IN -LSB-_NNP have_VBP a_DT cup_NN of_IN coffee_NN -RSB-_NNP is_VBZ a_DT kind_NN of_IN idioms_NNS ,_, probably_RB due_JJ to_TO the_DT ``_`` lightness_NN ''_'' of_IN the_DT verb_NN have_VBP ._.
+If_IN so_RB ,_, the_DT combination_NN of_IN this_DT idiom_NN and_CC quick_JJ can_MD be_VB accounted_VBN for_IN with_IN the_DT same_JJ mechanisms_NNS as_IN those_DT for_IN idioms_NNS ._.
+However_RB ,_, -LSB-_NNP a_DT road_NN -RSB-_NN does_VBZ not_RB have_VB any_DT properties_NNS of_IN idioms_NNS ._.
+10_CD According_VBG to_TO Culicover_NNP &_CC Jackendoff_NNP -LRB-_-LRB- 2005_CD :_: 228_CD -RRB-_-RRB- ,_, there_EX is_VBZ a_DT consensus_NN in_IN the_DT literature_NN that_WDT coerced_VBD interpretations_NNS are_VBP ``_`` the_DT product_NN of_IN auxiliary_JJ principles_NNS of_IN interpretation_NN ..._: they_PRP contribute_VBP material_NN that_WDT makes_VBZ the_DT Choi_NNP ,_, Kyeong_NNP Bong_NNP ._.
+2014_CD ._.
+A_DT Dictionary_NNP of_IN Korean_NNP Idioms_NNPS -LSB-_NNP written_VBN in_IN Korean_JJ -RSB-_NN ._.
+Ilchokak_NNP ._.
+Croft_NNP ,_, William_NNP ,_, and_CC D._NNP Alan_NNP Cruse_NNP ._.
+2004_CD ._.
+Cognitive_NNP Linguistics_NNPS ._.
+Cambridge_NNP Univ._NNP ._.
+Press_NNP ._.
+Culicover_NNP ,_, Peter_NNP ._.
+2009_CD ._.
+Natural_JJ Language_NN Syntax_NNP ._.
+Oxford_NNP Univ._NNP ._.
+Press_NNP ._.
+Culicover_NNP ,_, Peter_NNP ,_, and_CC Ray_NNP Jackendoff_NNP ._.
+2005_CD ._.
+Simpler_JJR Syntax.OxfordUniv.Press_NNPS ._.
+Espinal_NNP ,_, M._NNP Teresa_NNP ,_, and_CC Jaume_NNP Mateu_NNP ._.
+2010_CD ._.
+On_IN Classes_NNS of_IN Idioms_NNS and_CC Their_PRP$ Interpretation_NNP ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 42_CD :_: 1397-1411_CD ._.
+Everaert_NNP ,_, Martin_NNP ,_, Erik-Jan_NNP van_NNP der_NNP Linden_NNP ,_, Andre_NNP Schenk_NNP ,_, and_CC Rob_NNP Schreuder_NNP ,_, eds_VBZ ._.
+1995_CD ._.
+Idioms_NNS :_: Structural_JJ and_CC Psychological_JJ Perspectives_NNS ._.
+Lawrence_NNP Erlbaum_NNP Associates_NNPS ,_, Inc._NNP ._.
+Fillmore_NNP ,_, Charles_NNP J._NNP ,_, Paul_NNP Kay_NNP and_CC Mary_NNP C._NNP O’Connor_NNP ._.
+1988_CD ._.
+Regularity_NN and_CC Idiomaticity_NNP in_IN Grammatical_NNP Constructions_NNP :_: The_DT Case_NN of_IN let_VB alone_RB ._.
+Language_NN ,_, 64_CD :_: 501-538_CD ._.
+Geeraerts_NNP ,_, Dirk_NNP ._.
+1995_CD ._.
+Specialization_NN and_CC Reinterpretation_NN in_IN Idioms_NNS ._.
+In_IN Everaert_NNP et_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+Gibbs_NNP ,_, Raymond_NNP W._NNP ,_, Jr._NNP 1995_CD ._.
+Idiomaticity_NNP and_CC Human_NNP Cognition_NNP ._.
+In_IN Everaert_NNP et_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+Gibbs_NNP ,_, Raymond_NNP W._NNP ,_, Jr._NNP 2007_CD ._.
+Idioms_NNS and_CC Formulaic_JJ Language_NN ._.
+In_IN Dirk_NNP Geeraerts_NNP and_CC Hubert_NNP Cuyckens_NNP ,_, eds_VBZ ._.
+Oxford_NNP Handbook_NNP of_IN Cognitive_NNP Linguistics_NNP ._.
+Oxford_NNP Univ._NNP ._.
+Press_NNP ._.
+Goldberg_NNP ,_, Adele_NNP E._NNP 1995_CD ._.
+Constructions_NNP :_: A_NNP Construction_NNP Grammar_NNP Approach_NNP to_TO Argument_NNP Structure_NNP ._.
+Univ._NNP of_IN Chicago_NNP Press_NNP ._.
+Jackendoff_NNP ,_, Ray_NNP ._.
+1997_CD ._.
+The_DT Architecture_NNP of_IN the_DT Language_NNP Faculty_NNP ._.
+MIT_NNP Press_NNP ._.
+Nicolas_NNP ,_, Tim_NNP ._.
+1995_CD ._.
+Semantics_NNS of_IN Idiom_NNP Modification_NNP ._.
+In_IN Everaert_NNP et_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+No_DT ,_, Yongkyoon_NNP ._.
+2002_CD ._.
+A_DT Dictionary_NNP of_IN Basic_NNP Idioms_NNPS on_IN Grammatical_NNP Principles_NNPS -LSB-_NNP written_VBN in_IN Korean_JJ -RSB-_NN ._.
+Hankookmunhwasa_NNP ._.
+Nunberg_NNP ,_, Geoffrey_NNP ._.
+1978_CD ._.
+The_DT Pragmatics_NNPS of_IN Reference_NNP ._.
+Indiana_NNP Univ._NNP ._.
+Linguistics_NNP ,_, Bloomington_NNP ._.
+Nunberg_NNP ,_, Geoffrey_NNP ._.
+1979_CD ._.
+The_DT Nonuniqueness_NNP of_IN Semantic_NNP Solutions_NNPS :_: Polysemy_NNP ._.
+Linguistics_NNPS and_CC Philosophy_NNP 3_CD :_: 143-184_CD ._.
+Nunberg_NNP ,_, Geoffrey_NNP ,_, Ivan_NNP Sag_NNP ,_, and_CC Thomas_NNP Wasow_NNP ._.
+1994_CD ._.
+Idioms_NNS ._.
+Language_NN ,_, 70_CD :_: 491-538_CD ._.
+Sag_NNP ,_, Ivan_NNP ,_, Timothy_NNP Baldwin_NNP ,_, Francis_NNP Bond_NNP ,_, Ann_NNP Copestake_NNP ,_, and_CC Dan_NNP Flickinger_NNP ._.
+2002_CD ._.
+Multiword_NNP Expressions_NNPS :_: A_DT Pain_NN in_IN the_DT Neck_NNP for_IN NLP_NNP ._.
+In_IN Alexander_NNP Gelbuk_NNP ,_, ed_VBD ._.
+Computational_NNP Linguistics_NNPS and_CC Intelligent_NNP Text_NNP Processing_NNP :_: Third_NNP International_NNP Conference_NNP -LRB-_-LRB- CICLing-2002_NNP -RRB-_-RRB- ._.
+Springer-Verlag_NNP ._.
+Schenk_NNP ,_, Andre_NNP ._.
+1995_CD ._.
+The_DT Syntactic_NNP Behavior_NNP of_IN Idioms_NNPS ._.
+In_IN Everaert_NNP et_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+Ward_NNP ,_, Gregory_NNP ._.
+2004_CD ._.
+Equatives_NNS and_CC Deferred_JJ Reference_NNP ._.
+Language_NN 80_CD :_: 262-289_CD ._.
+Wasow_NNP ,_, Thomas_NNP ,_, Ivan_NNP Sag_NNP ,_, and_CC Geoffrey_NNP Nunberg_NNP ._.
+1983_CD ._.
+Idioms_NNS :_: An_DT Interim_NNP Report_NNP ._.
+In_IN S._NNP Hattori_NNP and_CC K._NNP Inoue_NNP ,_, eds_VBZ ._.
+Proceedings_NNP of_IN the_DT XIIIth_NNP International_NNP Congress_NNP of_IN Linguists_NNPS ._.
+CIPL_NNP ,_, Tokyo_NNP ._.
+Wulff_NNP ,_, Stefanie_NNP ._.
+2013_CD ._.
+Words_NNS and_CC Idioms_NNS ._.
+In_IN Thomas_NNP Hoffmann_NNP and_CC Graeme_NNP Trousdale_NNP ,_, eds_VBZ ._.
+The_DT Handbook_NNP of_IN Construction_NNP Grammar_NNP ._.
+Oxford_NNP Univ._NNP ._.
+Press_NNP ._.

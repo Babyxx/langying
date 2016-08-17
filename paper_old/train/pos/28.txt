@@ -1,0 +1,223 @@
+Unsupervised_JJ Domain_NNP Adaptation_NNP for_IN Word_NNP Sense_NN Disambiguation_NNP using_VBG Stacked_NNP Denoising_NNP Autoencoder_NNP Abstract_NNP In_IN this_DT paper_NN ,_, we_PRP propose_VBP an_DT unsupervised_JJ do_VBP -_: main_JJ adaptation_NN for_IN Word_NN Sense_NN Disambigua_NNP -_: tion_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- using_VBG Stacked_NNP Denoising_NNP Autoen_NNP -_: coder_NN -LRB-_-LRB- SdA_NNP -RRB-_-RRB- ._.
+SdA_NNP is_VBZ an_DT unsupervised_JJ learn_VBP -_: ing_VBG method_NN of_IN obtaining_VBG the_DT abstract_JJ feature_NN set_NN of_IN input_NN data_NNS using_VBG Neural_NNP Network_NNP ._.
+The_DT abstract_JJ feature_NN set_VBN absorbs_VBZ the_DT difference_NN of_IN domains_NNS ,_, and_CC thus_RB SdA_NNP can_MD solve_VB a_DT problem_NN of_IN domain_NN adaptation_NN ._.
+However_RB ,_, SdA_NNP does_VBZ not_RB always_RB cope_VB with_IN any_DT problems_NNS of_IN domain_NN adaptation_NN ._.
+Especially_RB ,_, difficulty_NN of_IN domain_NN adaptation_NN for_IN WSD_NNP depends_VBZ on_IN the_DT combina_NN -_: tion_NN of_IN a_DT source_NN domain_NN ,_, a_DT target_NN domain_NN and_CC a_DT target_NN word_NN ._.
+As_IN a_DT result_NN ,_, any_DT method_NN of_IN do_VBP -_: main_JJ adaptation_NN for_IN WSD_NNP has_VBZ adverse_JJ effect_NN for_IN a_DT part_NN of_IN the_DT problem_NN ,_, Therefore_RB ,_, we_PRP de_FW -_: fined_VBN the_DT similarity_NN between_IN two_CD domains_NNS ,_, and_CC judge_NN whether_IN we_PRP use_VBP SdA_NNP or_CC not_RB through_IN this_DT similarity_NN ._.
+This_DT approach_NN avoids_VBZ an_DT adverse_JJ effect_NN of_IN SdA_NNP ._.
+In_IN the_DT experiments_NNS ,_, we_PRP have_VBP used_VBN three_CD domains_NNS from_IN the_DT Balanced_NNP Cor_NNP -_: pus_NN of_IN Contemporary_NNP Written_VBD Japanese_JJ and_CC 16_CD target_NN words_NNS ._.
+In_IN comparison_NN with_IN baseline_NN ,_, our_PRP$ method_NN has_VBZ got_VBN higher_JJR average_JJ accuracies_NNS for_IN all_DT combinations_NNS of_IN two_CD domains_NNS ._.
+Further_JJ -_: more_JJR ,_, we_PRP have_VBP obtained_VBN better_JJR results_NNS against_IN conventional_JJ domain_NN adaptation_NN methods_NNS ._.
+1_CD Introduction_NNP In_IN this_DT paper_NN ,_, we_PRP propose_VBP an_DT unsupervised_JJ method_NN of_IN domain_NN adaptation_NN for_IN Word_NN Sense_NN Disambigua_NNP -_: tion_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- using_VBG Stacked_NNP Denoising_NNP Autoencoder_NNP -LRB-_-LRB- SdA_NNP -RRB-_-RRB- ._.
+WSD_NNP is_VBZ the_DT task_NN of_IN identifying_VBG the_DT sense_NN of_IN a_DT target_NN word_NN in_IN a_DT sentence_NN ._.
+In_IN general_JJ ,_, supervised_JJ learning_NN ,_, such_JJ as_IN Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ,_, can_MD be_VB used_VBN for_IN this_DT task_NN because_IN of_IN the_DT fact_NN that_IN this_DT approach_NN is_VBZ highly_RB accurate_JJ ._.
+However_RB ,_, if_IN the_DT training_NN and_CC test_NN data_NNS come_VBP from_IN different_JJ domains_NNS ,_, the_DT accuracy_NN of_IN this_DT approach_NN is_VBZ lowered_VBN ._.
+This_DT problem_NN is_VBZ called_VBN a_DT domain_NN adaptation_NN -LRB-_-LRB- Søgaard_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ consid_JJ -_: ered_VBD that_IN this_DT problem_NN occurs_VBZ due_JJ to_TO the_DT difference_NN between_IN the_DT distributions_NNS of_IN features_NNS in_IN training_NN and_CC test_NN data_NNS ._.
+SdA_NNP is_VBZ an_DT unsupervised_JJ learning_NN method_NN of_IN ob_SYM -_: taining_VBG the_DT abstract_JJ feature_NN of_IN the_DT input_NN data_NNS -LRB-_-LRB- ba_SYM -_: sic_JJ feature_NN -RRB-_-RRB- using_VBG Neural_NNP Network_NNP -LRB-_-LRB- Vincent_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Recently_RB it_PRP has_VBZ been_VBN shown_VBN that_IN a_DT higher_JJR ac_SYM -_: curacy_NN in_IN voice_NN and_CC character_NN recognition_NN has_VBZ been_VBN obtained_VBN using_VBG SdA_NNP -LRB-_-LRB- Le_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+We_PRP have_VBP ap_SYM -_: plied_VBD this_DT method_NN to_TO a_DT domain_NN adaptation_NN for_IN WSD_NNP and_CC have_VBP shown_VBN that_IN the_DT abstract_JJ feature_NN obtained_VBN through_IN SdA_NNP can_MD avoid_VB the_DT problem_NN of_IN domain_NN adap_SYM -_: tation_NN ._.
+It_PRP is_VBZ well-known_JJ from_IN previous_JJ works_NNS that_IN the_DT most_RBS efficient_JJ methods_NNS for_IN domain_NN adaptation_NN for_IN WSD_NNP depend_VBP on_IN the_DT combination_NN of_IN training_NN data_NNS -LRB-_-LRB- from_IN the_DT source_NN domain_NN -RRB-_-RRB- and_CC test_NN data_NNS -LRB-_-LRB- from_IN the_DT tar_NN -_: get_VB domain_NN -RRB-_-RRB- -LRB-_-LRB- Komiya_NNP and_CC Okumura_NNP ,_, 2011_CD -RRB-_-RRB- -LRB-_-LRB- Komiya_NNP and_CC Okumura_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Furthermore_RB ,_, in_IN an_DT unsuper_JJ -_: vised_VBN domain_NN adaptation_NN method_NN ,_, even_RB if_IN the_DT accu_NN -_: racy_JJ is_VBZ improved_VBN in_IN the_DT combination_NN of_IN the_DT source_NN and_CC target_NN domains_NNS ,_, the_DT accuracy_NN rate_NN hardly_RB im_SYM -_: prove_VB ._.
+As_IN a_DT result_NN ,_, the_DT accuracy_NN rate_NN on_IN average_NN of_IN the_DT method_NN decreases_VBZ ,_, or_CC remains_VBZ the_DT same_JJ ._.
+In_IN other_JJ words_NNS ,_, there_EX are_VBP accuracy_NN limitations_NNS with_IN each_DT method_NN ._.
+In_IN our_PRP$ method_NN ,_, we_PRP choose_VBP whether_IN or_CC not_RB to_TO apply_VB SdA_NNP based_VBN on_IN the_DT similarity_NN of_IN features_NNS ._.
+Our_PRP$ method_NN can_MD not_RB be_VB applied_VBN in_IN the_DT case_NN for_IN pair_NN of_IN do_VBP -_: mains_NNS as_IN they_PRP are_VBP not_RB suitable_JJ for_IN SdA_NNP ._.
+In_IN our_PRP$ experiment_NN ,_, we_PRP have_VBP used_VBN three_CD domains_NNS :_: Yahoo_NNP !_.
+Answers_NNS -LRB-_-LRB- OC_NNP -RRB-_-RRB- ,_, Books_NNS -LRB-_-LRB- PB_NNP -RRB-_-RRB- ,_, and_CC newspa_NN -_: per_IN -LRB-_-LRB- PN_NNP -RRB-_-RRB- from_IN the_DT Balanced_NNP Corpus_NNP of_IN Contempo_NNP -_: rary_JJ Written_VBN Japanese_JJ -LRB-_-LRB- Maekawa_NNP ,_, 2007_CD -RRB-_-RRB- ,_, along_IN with_IN 16_CD selected_VBN ambiguous_JJ words_NNS ._.
+Domain_NN adaptation_NN has_VBZ the_DT following_VBG six_CD transitions_NNS :_: -LRB-_-LRB- 1_CD -RRB-_-RRB- PB_NN →_CD OC_NNP ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- OC_NNP →_CD PB_NNP ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- OC_NNP →_CD PN_NNP ,_, -LRB-_-LRB- 4_LS -RRB-_-RRB- PN_NNP →_CD OC_NNP ,_, -LRB-_-LRB- 5_CD -RRB-_-RRB- PB_NN →_CD PN_NNP and_CC -LRB-_-LRB- 6_CD -RRB-_-RRB- PN_SYM →_FW PB_FW ._.
+First_RB ,_, in_IN every_DT do_VBP -_: main_JJ adaptation_NN ,_, we_PRP have_VBP compared_VBN the_DT accuracy_NN of_IN the_DT basic_JJ feature_NN and_CC abstract_JJ feature_NN by_IN SdA_NNP using_VBG SVM_NNP ._.
+As_IN a_DT result_NN ,_, SdA_NNP have_VBP been_VBN effective_JJ in_IN half_NN of_IN the_DT case_NN of_IN domain_NN adaptations_NNS ._.
+Furthermore_RB ,_, we_PRP have_VBP explored_VBN situations_NNS when_WRB to_TO apply_VB SdA_NNP or_CC not_RB ._.
+Consequently_RB ,_, the_DT SdA_NNP with_IN similarity_NN of_IN features_NNS is_VBZ effective_JJ in_IN all_DT domain_NN adaptations_NNS ._.
+2_CD Domain_NNP Adaptation_NNP for_IN WSD_NNP Frequently_RB ,_, the_DT word_NN has_VBZ multiple_JJ senses_NNS ._.
+Word_NN Sense_NN Disambiguation_NNP -LRB-_-LRB- WSD_NNP -RRB-_-RRB- is_VBZ the_DT task_NN of_IN identi_NNS -_: fying_VBG a_DT sense_NN of_IN the_DT such_JJ word_NN in_IN a_DT sentence_NN ._.
+In_IN general_JJ ,_, supervised_JJ learning_VBG like_IN SVM_NNP can_MD be_VB used_VBN for_IN this_DT task_NN ,_, because_IN this_DT approach_NN shows_VBZ a_DT high_JJ accuracy_NN ._.
+However_RB ,_, in_IN these_DT methods_NNS ,_, training_NN and_CC test_NN data_NNS must_MD come_VB from_IN same_JJ domain_NN ._.
+In_IN the_DT case_NN of_IN WSD_NNP ,_, these_DT are_VBP often_RB obtained_VBN from_IN differ_VBP -_: ent_NN domains_NNS ._.
+For_IN example_NN ,_, to_TO learn_VB the_DT classifier_NN us_PRP -_: ing_VBG sentences_NNS from_IN books_NNS as_IN training_NN data_NNS ,_, and_CC then_RB classify_VBP the_DT word_NN in_IN the_DT sentence_NN from_IN newspaper_NN ._.
+In_IN this_DT case_NN ,_, it_PRP ca_MD n't_RB well_RB identify_VB the_DT test_NN data_NNS from_IN newspaper_NN -LRB-_-LRB- target_NN domain_NN -RRB-_-RRB- by_IN the_DT classifier_NN which_WDT is_VBZ learned_VBN by_IN books_NNS -LRB-_-LRB- source_NN domain_NN -RRB-_-RRB- ._.
+To_TO solve_VB this_DT problem_NN ,_, tuning_VBG the_DT classifier_NN that_WDT is_VBZ learned_VBN by_IN train_NN -_: ing_NN data_NNS from_IN source_NN domain_NN to_TO match_VB the_DT test_NN data_NNS from_IN target_NN domain_NN is_VBZ necessary_JJ ._.
+It_PRP is_VBZ called_VBN domain_NN adaptation_NN -LRB-_-LRB- Søgaard_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ considered_VBN that_IN this_DT problem_NN occurs_VBZ from_IN the_DT difference_NN between_IN distributions_NNS of_IN features_NNS in_IN train_NN -_: ing_NN and_CC test_NN data_NNS ._.
+Therefore_RB ,_, we_PRP attempt_VBP to_TO absorb_VB it_PRP by_IN SdA_NNP ._.
+3_CD Related_JJ Work_NN Inductive_JJ learning_NN is_VBZ used_VBN not_RB only_RB WSD_NNP but_CC also_RB many_JJ natural_JJ language_NN processing_NN tasks_NNS ,_, and_CC domain_NN adaptation_NN problem_NN will_MD occur_VB ._.
+There_EX are_VBP two_CD types_NNS of_IN methods_NNS for_IN this_DT problem_NN ._.
+One_CD is_VBZ a_DT supervised_JJ do_VBP -_: main_JJ adaptation_NN using_VBG labeled_VBN data_NNS in_IN the_DT target_NN do_VBP -_: main_JJ and_CC the_DT other_JJ is_VBZ an_DT unsupervised_JJ domain_NN adap_SYM -_: tation_NN that_WDT does_VBZ not_RB use_VB it_PRP ._.
+Typically_RB ,_, in_IN the_DT domain_NN adaptation_NN tasks_NNS ,_, supervised_JJ and_CC semi-supervised_JJ learning_NN show_VBP the_DT high_JJ accurate_JJ -LRB-_-LRB- Chapelle_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+However_RB ,_, supervised_JJ learning_NN are_VBP inappro_NN -_: priate_NN in_IN WSD_NNP because_IN they_PRP use_VBP labeled_VBN data_NNS of_IN tar_NN -_: get_VB domain_NN ,_, even_RB though_IN the_DT data_NNS of_IN target_NN domain_NN is_VBZ new_JJ data_NNS ._.
+Although_IN semi-supervised_JJ learning_NN re_SYM -_: quires_VBZ many_JJ data_NNS of_IN target_NN domain_NN ,_, the_DT data_NNS for_IN each_DT target_NN word_NN is_VBZ not_RB so_RB many_JJ in_IN WSD_NNP ._.
+Therefore_RB ,_, un_SYM -_: supervised_JJ learning_NN is_VBZ appropriate_JJ in_IN domain_NN adap_SYM -_: tation_NN for_IN WSD_NNP ._.
+SdA_NNP for_IN use_NN in_IN this_DT study_NN is_VBZ an_DT un_NN -_: supervised_JJ learning_VBG method_NN ,_, and_CC our_PRP$ method_NN can_MD be_VB classified_VBN into_IN unsupervised_JJ domain_NN adaptation_NN ._.
+As_IN research_NN on_IN unsupervised_JJ domain_NN adaptation_NN ,_, there_EX are_VBP structural_JJ correspondence_NN learning_NN -LRB-_-LRB- SCL_NNP -RRB-_-RRB- -LRB-_-LRB- Blitzer_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- and_CC learning_VBG under_IN covariate_JJ shift_NN -LRB-_-LRB- Sugiyama_NNP and_CC Kawanabe_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+In_IN SCL_NNP ,_, measure_VB the_DT mutual_JJ information_NN from_IN label_NN and_CC fea_NN -_: ture_NN value_NN ;_: features_VBZ the_DT value_NN is_VBZ large_JJ are_VBP elected_VBN to_TO Pivot_VB feature_NN ._.
+Features_NNS to_TO co-occur_JJ with_IN Pivot_NNP fea_SYM -_: ture_NN are_VBP used_VBN for_IN classification_NN ._.
+This_DT is_VBZ based_VBN on_IN the_DT idea_NN that_WDT Pivot_NNP features_NNS are_VBP different_JJ depending_VBG on_IN the_DT domain_NN ,_, in_IN contrast_NN ,_, feature_NN to_TO co-occur_NN with_IN Pivot_NNP feature_NN are_VBP effective_JJ in_IN classification_NN ._.
+Learning_NNP under_IN covariate_JJ shift_NN is_VBZ regarded_VBN as_IN weighted_JJ learn_VBP -_: ing_NN ,_, where_WRB sentence_NN x_LS is_VBZ weighted_VBN with_IN the_DT probabil_NN -_: ity_NN density_NN ratio_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+There_EX are_VBP many_JJ methods_NNS to_TO calculate_VB probability_NN density_NN ratio_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP adopt_VBP unconstrained_JJ least_JJS squares_NNS importance_NN fitting_JJ -LRB-_-LRB- uLSIF_NNP -RRB-_-RRB- -LRB-_-LRB- Kanamori_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- because_IN it_PRP shows_VBZ good_JJ performance_NN and_CC quick_JJ cal_NN -_: culation_NN time_NN ._.
+These_DT approaches_NNS depend_VBP on_IN the_DT combination_NN of_IN source_NN and_CC target_NN domain_NN ;_: there_EX is_VBZ also_RB case_NN that_WDT ac_SYM -_: curacy_NN is_VBZ going_VBG to_TO negative_JJ ._.
+As_IN a_DT result_NN ,_, accuracy_NN rate_NN has_VBZ been_VBN decreased_VBN ,_, or_CC dose_NN not_RB develop_VB on_IN av_SYM -_: erage_NN ._.
+4_LS Stacked_VBN Denoising_NNP Autoencoder_NNP SdA_NNP is_VBZ an_DT unsupervised_JJ learning_NN method_NN of_IN obtain_VB -_: ing_VBG the_DT abstract_JJ feature_NN of_IN input_NN data_NNS -LRB-_-LRB- basic_JJ feature_NN -RRB-_-RRB- by_IN using_VBG Neural_NNP Network_NNP ._.
+SdA_NNP is_VBZ composed_VBN of_IN mul_NN -_: tiple_NN Denoising_NNP Autoencoder_NNP -LRB-_-LRB- dA_NNP -RRB-_-RRB- ._.
+As_IN mentioned_VBN above_IN ,_, domain_NN adaptation_NN for_IN WSD_NNP has_VBZ a_DT problem_NN that_IN the_DT accuracy_NN is_VBZ lowered_VBN from_IN the_DT difference_NN be_VB -_: tween_NN distributions_NNS of_IN features_NNS in_IN training_NN and_CC test_NN data_NNS ._.
+The_DT abstract_JJ feature_NN obtained_VBN through_IN SdA_NNP can_MD avoid_VB the_DT problem_NN of_IN domain_NN adaptation_NN ._.
+4.1_CD Denoising_NNP Autoencoder_NNP The_NNP dA_NNP has_VBZ input_NN layer_NN ,_, hidden_VBN layer_NN and_CC output_NN layer_NN ,_, as_IN shown_VBN in_IN Figure_NN 1_CD ._.
+At_IN first_RB ,_, append_VBP stochas_SYM -_: tic_JJ noise_NN to_TO the_DT input_NN data_NNS and_CC transmit_VB to_TO the_DT input_NN layer_NN ._.
+Then_RB ,_, the_DT data_NNS on_IN the_DT input_NN layer_NN is_VBZ encoded_VBN and_CC transmitted_VBN to_TO the_DT hidden_JJ layer_NN ._.
+Similarly_RB ,_, data_NNS on_IN the_DT hidden_JJ layer_NN is_VBZ decoded_VBN and_CC transmitted_VBN to_TO the_DT output_NN layer_NN ._.
+In_IN this_DT model_NN ,_, to_TO learn_VB the_DT encoder_NN and_CC decoder_NN ,_, such_JJ as_IN error_NN of_IN input_NN data_NNS -LRB-_-LRB- without_IN noise_NN -RRB-_-RRB- and_CC output_NN layer_NN becomes_VBZ smaller_JJR ._.
+In_IN other_JJ words_NNS ,_, dA_NNP learns_VBZ the_DT model_NN ,_, such_JJ as_IN to_TO eliminate_VB the_DT noise_NN that_WDT was_VBD added_VBN at_IN first_RB ._.
+Number_NN of_IN nodes_NNS in_IN the_DT input_NN and_CC output_NN layer_NN are_VBP equal_JJ to_TO the_DT dimensions_NNS of_IN input_NN data_NNS ._.
+Typi_SYM -_: cally_RB ,_, number_NN of_IN nodes_NNS in_IN the_DT hidden_JJ layer_NN is_VBZ set_VBN to_TO be_VB smaller_JJR than_IN other_JJ layers_NNS ._.
+If_IN the_DT input_NN data_NNS x_LS =_SYM -LCB-_-LRB- x1_CD ,_, x2_CD ,_, ·_CD ·_CD ·_NN ,_, xN_NNP -RCB-_-RRB- and_CC input_NN layer_NN with_IN noise_NN x_SYM ̃_FW ,_, mapping_VBG from_IN the_DT input_NN layer_NN x_SYM ̃_FW to_TO the_DT hidden_JJ layer_NN y_NN ,_, and_CC from_IN the_DT hidden_JJ layer_NN y_NN to_TO the_DT output_NN layer_NN z_SYM are_VBP represented_VBN by_IN the_DT following_VBG formula_NN y_NN ,_, z._FW y_FW =_SYM σ_FW -LRB-_-LRB- W_NNP x_SYM ̃_FW +_FW b_NN -RRB-_-RRB- z_SYM =_SYM σ_FW -LRB-_-LRB- WTy_JJ +_NN b_NN ′_NN -RRB-_-RRB- where_WRB b_NN ,_, b_NN ′_NN ,_, W_NNP and_CC W_NNP T_NNP indicate_VBP bias_NN ,_, another_DT bias_NN ,_, the_DT weight_NN matrix_NN and_CC the_DT transposed_VBN matrix_NN of_IN W_NNP respectively_RB ._.
+The_DT σ_NN -LRB-_-LRB- ·_FW -RRB-_-RRB- indicates_VBZ sigmoid_JJ function_NN :_: σ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM 1_CD ._.
+1_CD +_CD e_SYM −_FW x_LS Finding_VBG the_DT W_NNP -LRB-_-LRB- or_CC WT_NNP -RRB-_-RRB- ,_, b_NN and_CC b_NN ′_NN ,_, such_JJ as_IN mean_JJ squared_VBD error_NN is_VBZ minimized_VBN using_VBG a_DT Stochastic_NNP Gra_NNP -_: dient_NN Descent_NNP -LRB-_-LRB- SGD_NNP -RRB-_-RRB- ._.
+Hidden_JJ layer_NN y_NN obtained_VBN in_IN this_DT process_NN is_VBZ the_DT abstract_JJ feature_NN of_IN the_DT input_NN data_NNS x_LS ,_, be_VB -_: cause_VB it_PRP can_MD be_VB restored_VBN the_DT input_NN data_NNS by_IN decoder_NN ;_: nevertheless_RB number_NN of_IN nodes_NNS is_VBZ less_RBR ._.
+4.2_CD Stacked_NNP Denoising_NNP Autoencoder_NNP SdA_NNP is_VBZ a_DT model_NN of_IN stacked_VBN multiple_JJ dA_NNP ,_, as_IN shown_VBN in_IN Figure_NN 2_CD ._.
+At_IN first_RB ,_, to_TO learn_VB using_VBG dA_NNP that_IN the_DT input_NN is_VBZ the_DT input_NN data_NNS -LRB-_-LRB- call_NN dA1_NN -RRB-_-RRB- ._.
+Then_RB ,_, to_TO learn_VB using_VBG dA_NNP that_IN the_DT input_NN is_VBZ hidden_VBN layer_NN of_IN dA1_NNP -LRB-_-LRB- call_JJ dA2_NN -RRB-_-RRB- ._.
+In_IN dA3_NNP ,_, the_DT input_NN is_VBZ hidden_VBN layer_NN of_IN dA2_NNP ;_: SdA_NNP stacks_NNS learning_VBG by_IN repeating_VBG this_DT process_NN ._.
+In_IN this_DT way_NN ,_, the_DT abstract_JJ feature_NN is_VBZ gradually_RB obtained_VBN from_IN the_DT input_NN data_NNS ._.
+Note_VB that_DT output_NN layers_NNS for_IN each_DT dA_NN are_VBP used_VBN only_RB to_TO calculate_VB the_DT mean_JJ squared_VBD error_NN ;_: mainly_RB ,_, hidden_VBN layers_NNS are_VBP used_VBN on_IN SdA_NNP ._.
+In_IN this_DT paper_NN ,_, connecting_VBG input_NN data_NNS and_CC the_DT ab_SYM -_: stract_NN feature_NN ,_, to_TO absorb_VB the_DT difference_NN in_IN distribu_NN -_: tions_NNS of_IN features_NNS between_IN training_NN and_CC test_NN data_NNS ._.
+Figure_NN 1_CD :_: Denoising_NNP Autoencoder_NNP Specifically_RB ,_, to_TO extract_VB nabst_SYM -_: dimensional_JJ abstract_JJ feature_NN xabst_NN from_IN n-dimensional_JJ input_NN data_NNS x_LS by_IN SdA_NNP ,_, and_CC then_RB ,_, x_LS and_CC xabst_NN are_VBP separately_RB normal_JJ -_: ized_VBN ._.
+We_PRP use_VBP the_DT data_NNS that_WDT x_LS and_CC xabst_NN are_VBP connected_VBN to_TO classification_NN by_IN SVM_NNP ._.
+5_CD Similarity_NN of_IN feature_NN In_IN chapter_NN 3_CD ,_, we_PRP introduced_VBD previous_JJ studies_NNS us_PRP -_: ing_VBG SCL_NNP or_CC uLSIF_NNP ,_, as_IN unsupervised_JJ domain_NN adapta_NN -_: tion_NN ._.
+These_DT approaches_NNS depend_VBP on_IN the_DT combination_NN of_IN source_NN and_CC target_NN domain_NN and_CC there_EX are_VBP also_RB cases_NNS that_IN accuracy_NN is_VBZ going_VBG to_TO negative_JJ ._.
+As_IN a_DT result_NN ,_, ac_SYM -_: curacy_NN rate_NN has_VBZ been_VBN decreased_VBN ,_, or_CC dose_NN not_RB develop_VB on_IN average_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT best_JJS method_NN for_IN do_VBP -_: main_JJ adaptation_NN for_IN WSD_NNP depends_VBZ on_IN the_DT combi_NNS -_: nation_NN of_IN source_NN and_CC target_NN domain_NN ._.
+Therefore_RB ,_, we_PRP choose_VBP whether_IN to_TO apply_VB SdA_NNP based_VBN on_IN the_DT combi_NNS -_: nation_NN of_IN source_NN domain_NN ,_, target_NN domain_NN and_CC a_DT target_NN word_NN ._.
+Configuring_VBG small_JJ number_NN of_IN nodes_NNS in_IN the_DT hidden_JJ layer_NN than_IN the_DT other_JJ layers_NNS ;_: SdA_NNP reduces_VBZ dimension_NN of_IN data_NNS ._.
+SdA_NNP is_VBZ expected_VBN that_IN to_TO project_VB distributions_NNS of_IN features_NNS from_IN source_NN and_CC target_NN domain_NN ._.
+If_IN both_DT training_NN and_CC test_NN data_NNS have_VBP little_JJ commonality_NN ,_, SdA_NNP requires_VBZ a_DT lot_NN of_IN data_NNS to_TO learn_VB a_DT model_NN ._.
+Typically_RB ,_, it_PRP is_VBZ not_RB possible_JJ to_TO learn_VB a_DT better_JJR model_NN ,_, since_IN training_NN and_CC test_NN data_NNS are_VBP less_RBR in_IN WSD_NNP ._.
+Therefore_RB ,_, to_TO calculate_VB similarity_NN of_IN feature_NN ,_, and_CC then_RB apply_VB the_DT SdA_NNP if_IN this_DT value_NN is_VBZ large_JJ ._.
+While_IN cosine_NN similarity_NN and_CC mutual_JJ information_NN are_VBP typical_JJ as_IN a_DT way_NN to_TO measure_VB the_DT similarity_NN ,_, we_PRP use_VBP simple_JJ approach_NN that_WDT calculate_VBP the_DT ratio_NN of_IN the_DT number_NN of_IN common_JJ dimensions_NNS to_TO all_DT dimensions_NNS ._.
+Specifically_RB ,_, to_TO determine_VB occurrence_NN vector_NN of_IN di_FW -_: mensions_NNS S_NNP and_CC T_NNP for_IN the_DT training_NN data_NNS XS_NN and_CC test_NN data_NNS XT_NNP ,_, and_CC then_RB to_TO calculate_VB the_DT similarity_NN Pf_NN by_IN following_VBG equations_NNS :_: Pf_NNP =_SYM T_NNP ·_NNP S_NNP dimension_NN of_IN training_NN data_NNS XS_NN and_CC test_NN data_NNS XT_NNP are_VBP dimS_NNP and_CC dimT_NNP ,_, respectively_RB ._.
+Where_WRB dimS_VBZ =_SYM dimT_NNP is_VBZ satisfied_VBN ;_: there_EX are_VBP represented_VBN as_IN n_NN ._.
+If_IN Pf_NN is_VBZ greater_JJR than_IN the_DT threshold_NN T_NNP ,_, it_PRP is_VBZ regarded_VBN that_IN train_NN -_: ing_NN and_CC test_NN data_NNS have_VBP some_DT commonality_NN ,_, and_CC then_RB apply_VB SdA_NNP ._.
+Figure_NN 2_CD :_: Stacked_VBN Denoising_NNP Autoencoder_NNP n_NNP Table_NNP 1_CD :_: Target_NNP words_NNS word_NN dictionary_NN #_# of_IN senses_NNS OC_NNP freq_NN ._.
+of_IN word_NN OC_NNP #_# of_IN senses_NNS PB_NNP freq_NN ._.
+of_IN word_NN PB_NNP #_# of_IN senses_NNS PN_NNP freq_NN ._.
+of_IN word_NN PN_NNP #_# of_IN senses_NNS iu_VBP -LRB-_-LRB- 言う_CD -RRB-_-RRB- 3_CD 666_CD 2_CD 1114_CD 2_CD 363_CD 2_CD ireru_NN -LRB-_-LRB- 入れる_FW -RRB-_-RRB- 3_CD 73_CD 2_CD 56_CD 3_CD 32_CD 2_CD kaku_NN -LRB-_-LRB- 書く_FW -RRB-_-RRB- 2_CD 99_CD 2_CD 62_CD 2_CD 27_CD 2_CD kiku_NN -LRB-_-LRB- 聞く_FW -RRB-_-RRB- 3_CD 124_CD 2_CD 123_CD 2_CD 52_CD 2_CD kodomo_NN -LRB-_-LRB- 子供_FW -RRB-_-RRB- 2_CD 77_CD 2_CD 93_CD 2_CD 29_CD 2_CD jikan_NN -LRB-_-LRB- 時間_FW -RRB-_-RRB- 4_CD 53_CD 2_CD 74_CD 2_CD 59_CD 2_CD jibun_NN -LRB-_-LRB- 自分_FW -RRB-_-RRB- 2_CD 128_CD 2_CD 308_CD 2_CD 71_CD 2_CD deru_NN -LRB-_-LRB- 出る_FW -RRB-_-RRB- 3_CD 131_CD 3_CD 152_CD 3_CD 89_CD 3_CD toru_NN -LRB-_-LRB- 取る_FW -RRB-_-RRB- 8_CD 61_CD 7_CD 81_CD 7_CD 43_CD 7_CD baai_NNS -LRB-_-LRB- 場合_CD -RRB-_-RRB- 2_CD 126_CD 2_CD 137_CD 2_CD 73_CD 2_CD hairu_NN -LRB-_-LRB- 入る_FW -RRB-_-RRB- 3_CD 68_CD 4_CD 118_CD 4_CD 65_CD 3_CD mae_NN -LRB-_-LRB- 前_FW -RRB-_-RRB- 3_CD 105_CD 3_CD 160_CD 2_CD 106_CD 4_CD miru_NN -LRB-_-LRB- 見る_FW -RRB-_-RRB- 6_CD 262_CD 5_CD 273_CD 6_CD 87_CD 3_CD motsu_NN -LRB-_-LRB- 持つ_FW -RRB-_-RRB- 4_CD 62_CD 4_CD 153_CD 3_CD 59_CD 3_CD yaru_NN -LRB-_-LRB- やる_FW -RRB-_-RRB- 5_CD 117_CD 3_CD 156_CD 4_CD 27_CD 2_CD yuku_NN -LRB-_-LRB- ゆく_FW -RRB-_-RRB- 2_CD 219_CD 2_CD 133_CD 2_CD 27_CD 2_CD average_JJ 3.44_CD 148.19_CD 2.94_CD 199.56_CD 3.00_CD 75.56_CD 2.69_CD 6_CD Experiment_NN 6.1_CD Data_NNP and_CC Methods_NNPS In_IN the_DT experiment_NN ,_, we_PRP compare_VBP the_DT effect_NN by_IN follow_VB -_: ing_NN methods_NNS :_: ・_CD baseline_NN :_: classify_VB the_DT basic_JJ feature_NN by_IN SVM_NNP ・_CD uLSIF_NNP ・_CD SCL_NNP ・_CD SdA_NNP ・_CD proposed_VBD method_NN :_: SdA_NNP using_VBG similarity_NN We_PRP use_VBP the_DT data_NNS from_IN the_DT Balanced_NNP Cor_NNP -_: pus_NN of_IN Contemporary_NNP Written_VBD Japanese_JJ -LRB-_-LRB- BCCWJ_NNP -LRB-_-LRB- Maekawa_NNP ,_, 2007_CD -RRB-_-RRB- -RRB-_-RRB- that_WDT has_VBZ word_NN sense_NN tags_NNS by_IN a_DT Japanese_JJ WSD_NNP SemEval-2_NN task_NN -LRB-_-LRB- Okumura_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Among_IN them_PRP ,_, we_PRP use_VBP three_CD domains_NNS as_IN dif_NN -_: ferent_JJ domains_NNS :_: Yahoo_NNP !_.
+Answers_NNS -LRB-_-LRB- OC_NNP -RRB-_-RRB- ,_, Books_NNS -LRB-_-LRB- PB_NNP -RRB-_-RRB- and_CC Newspaper_NNP -LRB-_-LRB- PN_NNP -RRB-_-RRB- ._.
+Table_NNP 1_CD indicates_VBZ information_NN of_IN the_DT target_NN word_NN ,_, the_DT number_NN of_IN senses_NNS registered_VBN in_IN the_DT dictionary_NN ,_, and_CC the_DT number_NN of_IN senses_NNS and_CC the_DT frequency_NN in_IN each_DT corpus_NN 1_CD ._.
+All_DT methods_NNS learn_VBP the_DT 1_CD The_DT word_NN ``_`` 入る_FW -LRB-_-LRB- hairu_NN -RRB-_-RRB- ''_'' has_VBZ three_CD senses_NNS in_IN the_DT dictionary_NN ,_, classifier_NN using_VBG the_DT traing_NN data_NNS from_IN source_NN domain_NN ;_: and_CC then_RB ,_, classify_VBP the_DT test_NN data_NNS from_IN target_NN domain_NN by_IN the_DT classifier_NN -LRB-_-LRB- as_IN represented_VBN by_IN source_NN →_CD tar_NN -_: get_VB -RRB-_-RRB- ._.
+There_EX are_VBP six_CD domain_NN adaptation_NN patterns_NNS :_: -LRB-_-LRB- 1_CD -RRB-_-RRB- PB_NN →_CD OC_NNP ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- OC_NNP →_CD PB_NNP ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- OC_NNP →_CD PN_NNP ,_, -LRB-_-LRB- 4_LS -RRB-_-RRB- PN_NNP →_CD OC_NNP ,_, -LRB-_-LRB- 5_CD -RRB-_-RRB- PB_NN →_CD PN_NNP and_CC -LRB-_-LRB- 6_CD -RRB-_-RRB- PN_SYM →_FW PB_FW ._.
+There_EX are_VBP six_CD domain_NN adaptations_NNS and_CC sixteen_CD target_NN words_NNS ;_: the_DT experiments_NNS are_VBP made_VBN 96_CD ways_NNS ._.
+We_PRP evaluated_VBD each_DT methods_NNS by_IN following_VBG ._.
+First_RB ,_, to_TO calculate_VB the_DT accuracy_NN rate_NN for_IN each_DT combination_NN of_IN source_NN do_VBP -_: main_JJ ,_, target_NN domain_NN and_CC target_NN word_NN ._.
+Then_RB ,_, to_TO cal_SYM -_: culate_VB the_DT average_NN for_IN each_DT domain_NN adaptation_NN ._.
+Sim_SYM -_: ilarly_RB ,_, to_TO calculate_VB average_NN of_IN 96_CD pairs_NNS ;_: they_PRP are_VBP ac_SYM -_: curacy_NN of_IN each_DT methods_NNS ._.
+In_IN the_DT proposed_VBN method_NN ,_, threshold_NN T_NNP of_IN similarity_NN is_VBZ equal_JJ to_TO 0.2_CD ;_: if_IN Pf_NNP >_CD 0.2_CD ,_, then_RB we_PRP choose_VBP to_TO apply_VB SdA_NNP ._.
+In_IN this_DT experiment_NN ,_, we_PRP use_VBP 8_CD kinds_NNS of_IN features_NNS for_IN a_DT sentence_NN ,_, that_WDT is_VBZ an_DT instance_NN ._.
+They_PRP are_VBP shown_VBN in_IN Table_NNP 2_CD ,_, where_WRB w_NN and_CC wi_NN represent_VBP target_NN word_NN and_CC the_DT i-th_JJ word_NN from_IN the_DT word_NN w_NN respectively_RB ._.
+but_CC there_EX are_VBP four_CD senses_NNS in_IN OC_NNP and_CC PB_NNP ._.
+This_DT is_VBZ because_IN our_PRP$ used_JJ sense_NN tagged_VBD corpus_NN accepts_VBZ new_JJ senses_NNS ._.
+Table_NNP 3_CD :_: Average_JJ accuracy_NN rate_NN -LRB-_-LRB- %_NN -RRB-_-RRB- Domain_NNP Adaptation_NNP baseline_NN uLSIF_NNP SCL_NNP SdA_NNP our_PRP$ method_NN OC_NNP →_NNP PB_NNP PB_NNP →_NNP OC_NNP OC_NNP →_NNP PN_NNP PN_NNP →_NNP OC_NNP PB_NNP →_NNP PN_NNP PN_NNP →_NNP PB_NNP 71.33_CD 70.10_CD 68.81_CD 69.09_CD 76.76_CD 74.55_CD 71.34_CD 70.45_CD 68.98_CD 69.05_CD 76.99_CD 74.50_CD 71.34_CD 70.18_CD 69.24_CD 68.94_CD 76.65_CD 73.47_CD 71.09_CD 71.01_CD 68.18_CD 67.49_CD 77.33_CD 75.37_CD 71.43_CD 70.93_CD 68.81_CD 69.24_CD 77.02_CD 74.59_CD average_JJ 71.77_CD 71.89_CD 71.64_CD 71.74_CD 72.00_CD Table_NNP 2_CD :_: feature_NN of_IN sentence_NN round_NN the_DT result_NN to_TO an_DT integer_NN ._.
+The_DT hidden_JJ layer_NN of_IN dA2_NN are_VBP connected_VBN to_TO the_DT ba_NN -_: sic_JJ feature_NN ,_, and_CC then_RB classified_JJ using_VBG SVM_NNP ._.
+Where_WRB basic_JJ and_CC abstract_JJ feature_NN are_VBP respectively_RB normal_JJ -_: ized_VBN before_IN connection_NN ._.
+We_PRP use_VBP libsvm3_CD as_IN classifi_NNS -_: cation_NN by_IN SVM_NNP ;_: kernel_NN function_NN is_VBZ linear_JJ kernel_NN that_WDT is_VBZ often_RB used_VBN in_IN natural_JJ language_NN processing_NN tasks_NNS ._.
+Similarly_RB ,_, baseline_NN also_RB uses_VBZ libsvm_NN with_IN linear_JJ ker_NN -_: nel_NN ._.
+6.3_CD Results_NNS Table_NNP 3_CD shows_VBZ the_DT result_NN of_IN our_PRP$ experiments_NNS ._.
+In_IN uLSIF_NNP ,_, accuracy_NN are_VBP improved_VBN in_IN four_CD domain_NN adaptations_NNS ,_, and_CC on_IN average_NN ,_, it_PRP 's_VBZ above_IN the_DT base_NN -_: line_NN ._.
+However_RB ,_, it_PRP was_VBD opposite_JJ effect_NN for_IN two_CD do_VBP -_: main_JJ adaptations_NNS ._.
+SCL_NNP and_CC SdA_NNP also_RB has_VBZ good_JJ and_CC bad_JJ results_NNS ._.
+Consequently_RB ,_, three_CD methods_NNS were_VBD not_RB much_RB different_JJ ._.
+Meanwhile_RB ,_, proposed_VBD method_NN showed_VBD high_JJ accuracy_NN in_IN five_CD domain_NN adaptations_NNS ;_: there_EX was_VBD no_DT bad_JJ result_NN in_IN all_DT domain_NN adaptations_NNS ._.
+As_IN a_DT result_NN ,_, our_PRP$ proposed_VBN method_NN shows_NNS best_JJS accu_SYM -_: racy_JJ among_IN all_DT methods_NNS ._.
+7_CD Discussions_NNPS In_IN each_DT domain_NN adaptation_NN ,_, method_NN that_WDT showed_VBD the_DT best_JJS accuracy_NN among_IN the_DT four_CD methods_NNS baseline_NN ,_, uL_SYM -_: SIF_NNP ,_, SCL_NNP and_CC SdA_NNP are_VBP shown_VBN in_IN Table_NNP 4_CD ._.
+The_DT best_JJS method_NN is_VBZ different_JJ depending_VBG on_IN the_DT domain_NN adap_SYM -_: tation_NN ._.
+Moreover_RB ,_, baseline_JJ showed_VBD the_DT best_JJS result_NN in_IN PN_NNP →_CD OC_NNP ._.
+This_DT results_NNS suggest_VBP effectiveness_NN of_IN se_FW -_: lecting_VBG the_DT method_NN by_IN any_DT way_NN ._.
+feature_NN content_NN -LRB-_-LRB- e0_FW -RRB-_-RRB- written_VBN of_IN w_NN -LRB-_-LRB- e1_FW -RRB-_-RRB- parse_NN of_IN w_NN -LRB-_-LRB- e2_FW -RRB-_-RRB- written_VBN of_IN w_NN −_CD 1_CD -LRB-_-LRB- e3_FW -RRB-_-RRB- parse_NN of_IN w_NN −_CD 1_CD -LRB-_-LRB- e4_FW -RRB-_-RRB- written_VBN of_IN w1_CD -LRB-_-LRB- e5_FW -RRB-_-RRB- parse_NN of_IN w1_CD -LRB-_-LRB- e6_FW -RRB-_-RRB- written_VBN of_IN independent_JJ word_NN between_IN w_NN −_NN 3_CD and_CC w3_CD -LRB-_-LRB- e7_FW -RRB-_-RRB- Number_NN from_IN classification_NN vocabulary_NN table_NN of_IN e6_CD -LRB-_-LRB- 4_CD and_CC 5-digit_JJ -RRB-_-RRB- 6.2_CD Parameters_NNS of_IN SdA_NNP We_PRP use_VBP Pylearn22_NNP for_IN learning_VBG the_DT model_NN of_IN SdA_NNP ._.
+The_DT number_NN of_IN repetitions_NNS of_IN dA_NNP is_VBZ twice_RB ._.
+In_IN dA1_NNP -LRB-_-LRB- Input_NNP is_VBZ input_NN data_NNS ._. -RRB-_-RRB-
+,_, when_WRB the_DT dimension_NN of_IN the_DT in_IN -_: put_VBN data_NNS is_VBZ N_NNP ,_, the_DT number_NN of_IN nodes_NNS of_IN hidden_JJ layer_NN is_VBZ 2/3_CD ×_CD N_NNP ._.
+In_IN dA2_NNP -LRB-_-LRB- Input_NNP is_VBZ hidden_VBN layer_NN of_IN dA1_NNP -RRB-_-RRB- ,_, the_DT number_NN of_IN nodes_NNS of_IN hidden_JJ layer_NN is_VBZ equal_JJ to_TO input_NN layer_NN 's_POS ,_, that_DT is_VBZ following_JJ equation_NN :_: DimOfInput_NNP =_SYM InputLayerOf_NNP dA1_NNP =_SYM 2_CD ×_CD HiddenLayerOf_NNP dA1_NNP 3_CD =_SYM 2_CD ×_CD InputLayerOf_NNP dA2_NNP 3_CD 2_CD =_SYM 3_CD ×_CD HiddenLayerOf_NNP dA2_NNP where_WRB as_RB stated_VBN above_IN ,_, the_DT number_NN of_IN nodes_NNS in_IN output_NN layer_NN are_VBP equal_JJ to_TO input_NN layer_NN 's_POS ._.
+On_IN this_DT calculation_NN ,_, 23_CD http://deeplearning.net/software/pylearn2/_CD http://www.csie.ntu.edu.tw/_NN ̃cjlin_NN /_SYM libsvm_FW /_FW Table_NNP 4_CD :_: Best_JJS method_NN for_IN each_DT domain_NN adaptation_NN is_VBZ worse_JJR on_IN PB_NNP →_CD OC_NNP than_IN the_DT case_NN of_IN T_NNP =_SYM 0.2_CD ._.
+About_IN these_DT results_NNS ,_, we_PRP consider_VBP the_DT influence_NN of_IN de_FW -_: cision_NN to_TO apply_VB the_DT SdA_NNP for_IN each_DT pair_NN of_IN word_NN and_CC domains_NNS ._.
+Besides_IN ,_, in_IN the_DT case_NN of_IN T_NNP =_SYM 0.18_CD ,_, two_CD do_VBP -_: main_JJ adaptation_NN have_VBP a_DT poor_JJ accuracy_NN as_IN compared_VBN to_TO baseline_NN ._.
+Nevertheless_RB ,_, the_DT method_NN which_WDT is_VBZ 0.18_CD shows_VBZ the_DT best_JJS results_NNS on_IN average_NN ._.
+For_IN this_DT reason_NN ,_, it_PRP is_VBZ necessary_JJ to_TO determine_VB the_DT appropriate_JJ threshold_NN T_NNP ._.
+In_IN approach_NN 2_CD ,_, if_IN the_DT similarity_NN of_IN feature_NN Pf_NN is_VBZ fewer_JJR than_IN the_DT threshold_NN T_NNP ,_, we_PRP modify_VBP parameter_NN of_IN SdA_NNP ._.
+Consequently_RB ,_, SdA_NNP will_MD get_VB the_DT feature_NN close_NN to_TO the_DT basic_JJ feature_NN ;_: the_DT result_NN is_VBZ close_JJ to_TO SdA_NNP ._.
+The_DT pa_NN -_: rameter_NN to_TO be_VB adjusted_VBN include_VBP the_DT number_NN of_IN nodes_NNS in_IN hidden_JJ layer_NN for_IN each_DT dA_NNP ,_, and_CC the_DT number_NN of_IN rep_NN -_: etitions_NNS of_IN dA_NNP ._.
+If_IN the_DT number_NN of_IN nodes_NNS in_IN the_DT hid_VBN -_: den_NN layer_NN is_VBZ increased_VBN ,_, there_EX is_VBZ no_DT difference_NN between_IN the_DT dimensions_NNS of_IN basic_JJ feature_NN and_CC abstract_JJ feature_NN ;_: SdA_NNP gets_VBZ abstract_JJ features_NNS similar_JJ to_TO basic_JJ feature_NN ._.
+If_IN ,_, however_RB ,_, the_DT number_NN of_IN nodes_NNS in_IN hidden_JJ layer_NN is_VBZ large_JJ ,_, learning_VBG requires_VBZ a_DT long_JJ time_NN ,_, because_IN the_DT bonds_NNS between_IN each_DT nodes_NNS are_VBP increased_VBN ._.
+Further_JJ -_: more_JJR ,_, learning_VBG data_NNS is_VBZ not_RB so_RB much_JJ in_IN WSD_NNP ,_, there_EX is_VBZ not_RB enough_JJ learning_NN ._.
+An_DT approach_NN of_IN increasing_VBG the_DT number_NN of_IN repetitions_NNS of_IN dA_NNP has_VBZ also_RB same_JJ problems_NNS ,_, because_IN the_DT first_JJ dA_NNP have_VBP to_TO set_VB the_DT large_JJ number_NN of_IN nodes_NNS ._.
+For_IN this_DT reason_NN ,_, if_IN we_PRP have_VBP enough_RB data_NNS and_CC times_NNS ,_, this_DT approach_NN is_VBZ effective_JJ ._.
+8_CD Conclusions_NNS In_IN this_DT paper_NN ,_, we_PRP have_VBP proposed_VBN an_DT unsupervised_JJ method_NN of_IN domain_NN adaptation_NN for_IN WSD_NNP using_VBG SdA_NNP ._.
+Specifically_RB ,_, the_DT basic_JJ features_NNS are_VBP converted_VBN to_TO ab_SYM -_: stract_NN features_NNS by_IN SdA_NNP ,_, and_CC then_RB ,_, these_DT are_VBP classified_VBN by_IN SVM_NNP ._.
+In_IN the_DT domain_NN adaptation_NN methods_NNS for_IN WSD_NNP ,_, the_DT most_RBS powerful_JJ method_NN is_VBZ different_JJ from_IN each_DT other_JJ depending_VBG on_IN the_DT pair_NN of_IN source_NN and_CC target_NN do_VBP -_: mains_NNS ;_: there_EX are_VBP also_RB accuracy_NN limitations_NNS within_IN each_DT method_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP have_VBP introduced_VBN a_DT similarity_NN of_IN the_DT features_NNS and_CC the_DT option_NN of_IN choosing_VBG whether_IN to_TO apply_VB SdA_NNP or_CC not_RB ._.
+In_IN our_PRP$ experiments_NNS ,_, we_PRP chose_VBD three_CD domains_NNS and_CC 16_CD selected_VBN ambiguous_JJ words_NNS ._.
+While_IN uLSIF_NNP ,_, SCL_NNP and_CC SdA_NNP have_VBP shown_VBN poor_JJ accuracy_NN in_IN some_DT case_NN of_IN domain_NN adaptation_NN ,_, our_PRP$ method_NN has_VBZ been_VBN a_DT better_JJR accuracy_NN in_IN all_DT situations_NNS of_IN domain_NN adaptation_NN and_CC Domain_NNP Adaptation_NNP Method_NNP OC_NNP →_NNP PB_NNP PB_NNP →_NNP OC_NNP OC_NNP →_NNP PN_NNP PN_NNP →_NNP OC_NNP PB_NNP →_NNP PN_NNP PN_NNP →_NNP PB_NNP uLSIF_NNP ,_, SCL_NNP SdA_NNP SCL_NNP baseline_NN SdA_NNP SdA_NNP In_IN this_DT study_NN ,_, we_PRP bring_VBP in_RP similarity_NN of_IN features_NNS ,_, and_CC choose_VB whether_IN to_TO apply_VB the_DT SdA_NNP depending_VBG on_IN the_DT combination_NN of_IN training_NN data_NNS ,_, test_NN data_NNS and_CC target_NN word_NN ._.
+As_IN a_DT results_NNS ,_, accuracy_NN has_VBZ improved_VBN in_IN five_CD domain_NN adaptations_NNS ,_, compared_VBN with_IN baseline_NN ._.
+In_IN the_DT other_JJ one_CD domain_NN adaptation_NN ,_, it_PRP shows_VBZ improvement_NN in_IN the_DT third_JJ decimal_NN place_NN ._.
+Our_PRP$ method_NN showed_VBD a_DT better_JJR result_NN than_IN the_DT other_JJ four_CD methods_NNS on_IN average_NN ._.
+However_RB ,_, our_PRP$ method_NN has_VBZ a_DT problem_NN to_TO be_VB solved_VBN ._.
+Proposed_VBN method_NN chooses_VBZ either_RB baseline_JJ or_CC SdA_NNP for_IN each_DT combination_NN of_IN source_NN domain_NN ,_, target_NN do_VBP -_: main_JJ and_CC target_NN word_NN ._.
+If_IN the_DT pair_NN is_VBZ improved_VBN by_IN SdA_NNP that_WDT does_VBZ not_RB use_VB similarityPf_NNP ,_, improvement_NN has_VBZ decreased_VBN in_IN our_PRP$ method_NN compared_VBN to_TO SdA_NNP ._.
+If_IN our_PRP$ method_NN rise_NN to_TO the_DT same_JJ level_NN as_IN SdA_NNP in_IN these_DT pairs_NNS ,_, it_PRP can_MD be_VB expected_VBN to_TO more_RBR improve_VB on_IN aver_NN -_: age_NN ._.
+The_DT following_VBG two_CD methods_NNS will_MD be_VB considered_VBN to_TO achieve_VB it_PRP ._.
+1_LS ._.
+Decreasing_VBG the_DT threshold_NN T_NNP ._.
+2_LS ._.
+If_IN Pf_NN is_VBZ less_JJR than_IN T_NNP ,_, to_TO modify_VB parameter_NN of_IN SdA_NNP ._.
+In_IN approach_NN 1_CD ,_, selectivity_NN of_IN SdA_NNP is_VBZ increased_VBN by_IN decreasing_VBG T_NNP ._.
+As_IN a_DT result_NN ,_, we_PRP expect_VBP that_IN proposed_VBN method_NN is_VBZ close_JJ to_TO the_DT accuracy_NN of_IN SdA_NNP ._.
+However_RB ,_, if_IN T_NNP is_VBZ extremely_RB low_JJ ,_, the_DT proposed_VBN method_NN will_MD show_VB the_DT same_JJ results_NNS as_IN SdA_NNP ._.
+In_IN the_DT previous_JJ exper_NN -_: iments_NNS ,_, the_DT T_NNP is_VBZ equal_JJ to_TO 0.2_CD ._.
+There_EX are_VBP experiments_NNS that_IN the_DT T_NNP is_VBZ lowered_VBN to_TO 0.18_CD ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 5_CD ._.
+Out_IN of_IN three_CD domain_NN adaptation_NN -LRB-_-LRB- PB_NNP →_CD OC_NNP ,_, PB_NNP →_CD PN_NNP and_CC PN_NNP →_CD PB_NNP -RRB-_-RRB- that_WDT is_VBZ impaired_VBN with_IN the_DT our_PRP$ method_NN compared_VBN to_TO SdA_NNP ,_, accuracy_NN has_VBZ im_SYM -_: proved_VBN in_IN two_CD domain_NN adaptation_NN -LRB-_-LRB- PB_NNP →_CD PN_NNP and_CC PN_NNP →_CD PB_NNP -RRB-_-RRB- by_IN lowering_VBG T_NNP ._.
+Moreover_RB ,_, it_PRP shows_VBZ bet_NN -_: ter_NN results_NNS on_IN PN_NNP →_NNP PB_NNP than_IN the_DT SdA_NNP ._.
+However_RB ,_, it_PRP Table_NNP 5_CD :_: Average_JJ accuracy_NN rate_NN on_IN additional_JJ experiment_NN -LRB-_-LRB- %_NN -RRB-_-RRB- Domain_NNP Adaptation_NNP baseline_NN SdA_NNP our_PRP$ method_NN -LRB-_-LRB- T_NNP =_SYM 0.2_CD -RRB-_-RRB- our_PRP$ method_NN -LRB-_-LRB- T_NNP =_SYM 0.18_CD -RRB-_-RRB- OC_NNP →_CD PB_NNP PB_NNP →_NNP OC_NNP OC_NNP →_NNP PN_NNP PN_NNP →_NNP OC_NNP PB_NNP →_NNP PN_NNP PN_NNP →_NNP PB_NNP 71.33_CD 70.10_CD 68.81_CD 69.09_CD 76.76_CD 74.55_CD 71.09_CD 71.01_CD 68.18_CD 67.49_CD 77.33_CD 75.37_CD 71.43_CD 70.93_CD 68.81_CD 69.24_CD 77.02_CD 74.59_CD 71.31_CD 70.66_CD 68.91_CD 68.85_CD 77.12_CD 76.02_CD average_JJ 71.77_CD 71.74_CD 72.00_CD 72.14_CD had_VBD a_DT better_JJR result_NN as_IN compared_VBN with_IN other_JJ methods_NNS ._.
+In_IN our_PRP$ future_JJ work_NN ,_, we_PRP plan_VBP to_TO examine_VB pair_NN of_IN do_VBP -_: mains_NNS where_WRB our_PRP$ method_NN has_VBZ not_RB performed_VBN well_RB as_IN compared_VBN with_IN SdA_NNP that_WDT dose_NN not_RB use_VB similarity_NN ._.
+References_NNS John_NNP Blitzer_NNP ,_, Ryan_NNP McDonald_NNP ,_, and_CC Fernando_NNP Pereira_NNP ._.
+2006_CD ._.
+Domain_NN Adaptation_NN with_IN Structural_NNP Correspon_NNP -_: dence_NN Learning_NNP ._.
+In_IN EMNLP-2006_NNP ,_, pages_NNS 120_CD --_: 128_CD ._.
+Olivier_NNP Chapelle_NNP ,_, Bernhard_NNP Scho_NNP ̈lkopf_NNP ,_, Alexander_NNP Zien_NNP ,_, et_FW al._FW 2006_CD ._.
+Semi-supervised_JJ learning_NN ,_, volume_NN 2_CD ._.
+MIT_NNP press_NN Cambridge_NNP ._.
+Takafumi_NNP Kanamori_NNP ,_, Shohei_NNP Hido_NNP ,_, and_CC Masashi_NNP Sugiyama_NNP ._.
+2009_CD ._.
+A_DT Least-Squares_NNP Approach_NNP to_TO Di_NNP -_: rect_NN Importance_NNP Estimation_NNP ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 10:1391_CD --_: 1445_CD ._.
+Kanako_NNP Komiya_NNP and_CC Manabu_NNP Okumura_NNP ._.
+2011_CD ._.
+Auto_NN -_: matic_JJ Determination_NN of_IN a_DT Domain_NNP Adaptation_NNP Method_NNP for_IN Word_NNP Sense_NN Disambiguation_NNP using_VBG Decision_NNP Tree_NNP Learning_NNP ._.
+In_IN IJCNLP-2011_NNP ,_, pages_NNS 1107_CD --_: 1115_CD ._.
+Kanako_NNP Komiya_NNP and_CC Manabu_NNP Okumura_NNP ._.
+2012_CD ._.
+Au_SYM -_: tomatic_JJ Domain_NNP Adaptation_NNP for_IN Word_NNP Sense_NN Disam_NNP -_: biguation_NN Based_VBN on_IN Comparison_NNP of_IN Multiple_NNP Classi_NNP -_: fiers_NNS ._.
+In_IN PACLIC-2012_NN ,_, pages_NNS 75_CD --_: 85_CD ._.
+Quoc_NNP Le_NNP ,_, Marc_NNP '_POS Aurelio_NNP Ranzato_NNP ,_, Rajat_NNP Monga_NNP ,_, Matthieu_NNP Devin_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP Corrado_NNP ,_, Jeff_NNP Dean_NNP ,_, and_CC An_DT -_: drew_VBD Ng_NNP ._.
+2012_CD ._.
+Building_NNP high-level_JJ features_NNS using_VBG large_JJ scale_NN unsupervised_JJ learning_NN ._.
+In_IN ICML-2012_NN ._.
+Kikuo_NNP Maekawa_NNP ._.
+2007_CD ._.
+Design_NN of_IN a_DT Balanced_JJ Corpus_NNP of_IN Contemporary_NNP Written_VBD Japanese_JJ ._.
+In_IN Symposium_NNP on_IN Large-Scale_NNP Knowledge_NNP Resources_NNP -LRB-_-LRB- LKR2007_NNP -RRB-_-RRB- ,_, pages_NNS 55_CD --_: 58_CD ._.
+Manabu_NNP Okumura_NNP ,_, Kiyoaki_NNP Shirai_NNP ,_, Kanako_NNP Komiya_NNP ,_, and_CC Hikaru_NNP Yokono_NNP ._.
+2010_CD ._.
+SemEval-2010_NNP Task_NNP :_: Japanese_JJ WSD_NNP ._.
+In_IN The_DT 5th_JJ International_NNP Workshop_NNP on_IN Semantic_NNP Evaluation_NNP ,_, pages_NNS 69_CD --_: 74_CD ._.
+Anders_NNP Søgaard_NNP ._.
+2013_CD ._.
+Semi-Supervised_NNP Learning_NNP and_CC Domain_NNP Adaptation_NNP in_IN Natural_NNP Language_NNP Processing_NNP ._.
+Morgan_NNP &_CC Claypool_NNP ._.
+Masashi_NNP Sugiyama_NNP and_CC Motoaki_NNP Kawanabe_NNP ._.
+2011_CD ._.
+Ma_NNP -_: chine_NN Learning_NNP in_IN Non-Stationary_NNP Environments_NNP :_: In_IN -_: troduction_NN to_TO Covariate_NNP Shift_NNP Adaptation_NNP ._.
+MIT_NNP Press_NNP ._.
+Pascal_NNP Vincent_NNP ,_, Hugo_NNP Larochelle_NNP ,_, Isabelle_NNP Lajoie_NNP ,_, Yoshua_NNP Bengio_NNP ,_, and_CC Pierre-Antoine_NNP Manzagol_NNP ._.
+2010_CD ._.
+Stacked_VBN Denoising_NNP Autoencoders_NNPS :_: Learning_NNP Useful_NNP Represen_NNP -_: tations_NNS in_IN a_DT Deep_NNP Network_NNP with_IN a_DT Local_JJ Denoising_NNP Cri_NNP -_: terion_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 11:3371_CD --_: 3408_CD ._.

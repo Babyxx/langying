@@ -1,0 +1,292 @@
+1_CD Abstract_NNP While_IN substantial_JJ studies_NNS have_VBP been_VBN achieved_VBN on_IN sentiment_NN analysis_NN to_TO date_NN ,_, it_PRP is_VBZ still_RB challenging_VBG to_TO explore_VB enough_JJ contextual_JJ information_NN or_CC specific_JJ cues_NNS for_IN polarity_NN classification_NN of_IN short_JJ text_NN like_IN online_JJ product_NN reviews_NNS ._.
+In_IN this_DT work_NN we_PRP explore_VBP review_NN clustering_NN and_CC opinion_NN paraphrasing_NN to_TO build_VB multiple_JJ cluster-based_JJ classifiers_NNS for_IN polarity_NN classification_NN of_IN Chinese_JJ product_NN reviews_NNS under_IN the_DT framework_NN of_IN support_NN vector_NN machines_NNS ._.
+We_PRP apply_VBP our_PRP$ approach_NN to_TO two_CD corpora_NN of_IN product_NN reviews_NNS in_IN car_NN and_CC mobilephone_NN domains_NNS ._.
+Our_PRP$ experimental_JJ results_NNS demonstrate_VBP that_IN opinion_NN clustering_NN and_CC paraphrasing_NN are_VBP of_IN great_JJ value_NN to_TO polarity_NN classification_NN ._.
+Introduction_NN classification_NN using_VBG a_DT single_JJ general_JJ classifier_NN ._.
+Furthermore_RB ,_, lacking_VBG large_JJ annotated_JJ corpora_NN is_VBZ still_RB a_DT fundamental_JJ issue_NN for_IN statistical_JJ sentiment_NN analysis_NN ._.
+To_TO address_VB the_DT above_JJ problems_NNS ,_, in_IN this_DT work_NN we_PRP explore_VBP review_NN clustering_NN and_CC opinion_NN paraphrasing_NN to_TO build_VB multiple_JJ cluster-based_JJ classifiers_NNS for_IN polarity_NN classification_NN of_IN Chinese_JJ product_NN reviews_NNS ._.
+To_TO this_DT end_NN ,_, we_PRP first_RB explore_VBP a_DT two-stage_JJ hierarchical_JJ clustering_VBG with_IN multilevel_JJ similarity_NN to_TO cluster_NN the_DT training_NN data_NNS into_IN a_DT set_NN of_IN opinion_NN clustering_NN and_CC then_RB building_VBG a_DT polarity_NN classifier_NN for_IN each_DT review_NN cluster_NN via_IN supported_VBN vector_NN machines_NNS -LRB-_-LRB- SVMs_NNS -RRB-_-RRB- ._.
+In_IN addition_NN ,_, we_PRP also_RB exploit_VBP paraphrase_NN generation_NN to_TO expand_VB product_NN reviews_NNS in_IN each_DT cluster_NN to_TO achieve_VB reliable_JJ training_NN for_IN the_DT corresponding_JJ polarity_NN classifier_NN ._.
+9_CD 8.5_CD 8_CD 7.5_CD 7_CD 6.5_CD all_DT screen_NN keybaord_NN battery_NN Figure_NN 1_CD ._.
+The_DT entropy_NN for_IN product_NN reviews_NNS in_IN mobilephone_NN domain_NN before_IN and_CC after_IN clustering_VBG ._.
+Unlike_IN most_JJS previous_JJ work_NN with_IN one_CD classifier_NN for_IN polarity_NN classification_NN ,_, our_PRP$ method_NN uses_VBZ multiple_JJ cluster-based_JJ classifiers_NNS to_TO perform_VB polarity_NN classification_NN ,_, in_IN which_WDT each_DT classifier_NN is_VBZ tailored_VBN for_IN a_DT specific_JJ group_NN of_IN product_NN reviews_NNS ._.
+At_IN this_DT point_NN ,_, our_PRP$ method_NN actually_RB provides_VBZ a_DT framework_NN for_IN attribute-based_JJ polarity_NN classification_NN and_CC thus_RB facilitate_VB a_DT feasible_JJ way_NN to_TO handle_VB more_JJR attribute-specific_JJ cues_NNS for_IN polarity_NN classification_NN ._.
+Therefore_RB ,_, we_PRP believe_VBP that_IN cluster-based_JJ classification_NN would_MD be_VB more_RBR precise_JJ in_IN theory_NN than_IN most_JJS previous_JJ polarity_NN Polarity_NNP Classification_NNP of_IN Short_NNP Product_NNP Reviews_NNP via_IN Multiple_NNP Cluster-based_JJ SVM_NNP Classifiers_NNPS Jiaying_NNP Song_NN ,_, Yu_NNP He_PRP ,_, Guohong_NNP Fu_NNP School_NNP of_IN Computer_NNP Science_NNP and_CC Technology_NNP ,_, Heilongjiang_NNP University_NNP Harbin_NNP 150080_CD ,_, China_NNP jy_song@outlook.com,_NNP heyucs@yahoo.com,_NNP ghfu@hlju.edu.cn_NNP With_IN the_DT rapid_JJ development_NN of_IN social_JJ networks_NNS over_IN the_DT past_JJ years_NNS ,_, sentiment_NN analysis_NN of_IN short_JJ social_JJ media_NNS texts_NNS has_VBZ been_VBN attracting_VBG an_DT ever-increasing_JJ amount_NN of_IN attention_NN from_IN the_DT natural_JJ language_NN processing_NN community_NN -LRB-_-LRB- Hu_NNP et_FW al._FW ,_, 2004_CD ;_: Fu_NNP et_FW al._FW ,_, 2014_CD ;_: Santos_NNP and_CC Gatti_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+While_IN substantial_JJ studies_NNS have_VBP been_VBN achieved_VBN on_IN sentiment_NN analysis_NN to_TO date_NN -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD ;_: Hu_NNP et_FW al._FW ,_, 2004_CD ;_: Wang_NNP and_CC Manning_NNP ,_, 2012_CD ;_: Kim_NNP et_FW al._FW ,_, 2013_CD ;_: Liu_NNP et_FW al._FW ,_, 2014_CD ;_: He_PRP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ,_, it_PRP is_VBZ still_RB challenging_VBG to_TO explore_VB enough_JJ contextual_JJ information_NN or_CC specific_JJ cues_NNS for_IN polarity_NN classification_NN of_IN short_JJ text_NN like_IN online_JJ product_NN reviews_NNS -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2014_CD ;_: Santos_NNP and_CC Gatti_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+On_IN the_DT one_CD hand_NN ,_, online_JJ product_NN reviews_NNS are_VBP short_JJ and_CC thus_RB contain_VBP a_DT limited_JJ amount_NN of_IN contextual_JJ information_NN for_IN sentiment_NN analysis_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, online_JJ product_NN reviews_VBZ actually_RB consist_VBP of_IN opinions_NNS about_IN a_DT special_JJ product_NN attributes_NNS ._.
+It_PRP is_VBZ thus_RB very_RB difficult_JJ to_TO capture_VB a_DT variety_NN of_IN attribute-specific_JJ cues_NNS in_IN different_JJ product_NN reviews_NNS for_IN polarity_NN classification_NN methods_NNS with_IN a_DT separate_JJ generic_JJ classifier_NN ._.
+This_DT hypothesis_NN can_MD be_VB further_JJ demonstrated_VBN by_IN Figure_NN 1_CD ,_, which_WDT presents_VBZ the_DT entropy_NN of_IN the_DT training_NN data_NNS in_IN mobilephone_NN domain_NN before_IN and_CC after_IN clustering_VBG ._.
+The_DT rests_VBZ of_IN the_DT paper_NN proceed_VB as_RB follows_VBZ ._.
+Section_NN 2_CD provides_VBZ a_DT brief_JJ review_NN of_IN the_DT literature_NN on_IN sentiment_NN classification_NN ._.
+Section_NN 3_CD describes_VBZ in_IN details_NNS the_DT proposed_VBN multiple_JJ cluster-based_JJ SVM_NNP classifiers_NNS for_IN polarity_NN classification_NN of_IN Chinese_JJ product_NN reviews_NNS ._.
+Section_NN 4_CD reports_NNS our_PRP$ experimental_JJ results_NNS on_IN two_CD sets_NNS of_IN product_NN reviews_NNS ._.
+Finally_RB ,_, section_NN 5_CD concludes_VBZ our_PRP$ work_NN and_CC discusses_VBZ some_DT possible_JJ directions_NNS for_IN future_JJ research_NN ._.
+2_CD Related_JJ Work_NN Polarity_NN classification_NN is_VBZ usually_RB formulated_VBN as_IN a_DT binary_JJ classification_NN problem_NN -LRB-_-LRB- Turney_NNP ,_, 2002_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+Most_JJS previous_JJ studies_NNS employ_VBP supervised_JJ machine_NN learning_VBG methods_NNS to_TO perform_VB polarity_NN classification_NN on_IN different_JJ linguistic_JJ levels_NNS such_JJ words_NNS ,_, phrases_NNS ,_, sentences_NNS and_CC documents_NNS ,_, including_VBG naïve_NNP Bayes_NNP model_NN ,_, support_NN vector_NN machines_NNS -LRB-_-LRB- SVMs_NNS -RRB-_-RRB- ,_, maximum_JJ entropy_NN models_NNS -LRB-_-LRB- MEMs_NNS -RRB-_-RRB- ,_, conditional_JJ random_JJ fields_NNS -LRB-_-LRB- CRFs_NNS -RRB-_-RRB- ,_, fuzzy_JJ sets_NNS ,_, and_CC so_RB forth_RB -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2008_CD ;_: Fu_NNP and_CC Wang_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+How_WRB to_TO explore_VB enough_JJ contextual_JJ information_NN or_CC specific_JJ cues_NNS is_VBZ one_CD important_JJ challenge_NN for_IN polarity_NN classification_NN of_IN online_JJ product_NN reviews_NNS -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2014_CD ;_: Santos_NNP and_CC Gatti_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+Actually_RB ,_, online_JJ product_NN reviews_NNS are_VBP short_JJ text_NN with_IN a_DT limited_JJ amount_NN of_IN contextual_JJ information_NN for_IN sentiment_NN analysis_NN ._.
+Furthermore_RB ,_, online_JJ product_NN reviews_VBZ actually_RB consist_VBP of_IN opinions_NNS about_IN a_DT special_JJ product_NN attributes_NNS ._.
+It_PRP is_VBZ thus_RB very_RB difficult_JJ to_TO capture_VB a_DT variety_NN of_IN attribute-specific_JJ cues_NNS in_IN different_JJ product_NN reviews_NNS for_IN polarity_NN classification_NN using_VBG a_DT single_JJ general_JJ classifier_NN ._.
+Lacking_VBG large_JJ manually-annotated_JJ corpora_NN is_VBZ one_CD of_IN the_DT major_JJ bottlenecks_NNS that_WDT supervised_VBD machine_NN learning_VBG methods_NNS must_MD face_VB ._.
+To_TO avoid_VB this_DT problem_NN ,_, some_DT recent_JJ studies_NNS exploit_VBP bootstrapping_NN or_CC unsupervised_JJ techniques_NNS -LRB-_-LRB- Turney_NNP ,_, 2002_CD ;_: Mihalcea_NNP et_FW al._FW ,_, 2007_CD ;_: Wilson_NNP et_FW al._FW ,_, 2009_CD ,_, Speriosu_NNP et_FW al._FW 2011_CD ,_, Mehrotra_NNP et_FW al._FW 2012_CD ;_: Volkova_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Unfortunately_RB ,_, unsupervised_JJ sentiment_NN classifiers_NNS usually_RB yield_VBP worse_JJR performance_NN compared_VBN to_TO the_DT supervised_JJ counterparts_NNS ._.
+Unlike_IN most_JJS existing_VBG studies_NNS ,_, in_IN this_DT study_NN we_PRP attempt_VBP to_TO build_VB multiple_JJ cluster-based_JJ classifiers_NNS for_IN polarity_NN classification_NN of_IN Chinese_JJ product_NN reviews_NNS by_IN exploring_VBG review_NN clustering_NN and_CC opinion_NN paraphrasing_NN ._.
+We_PRP believe_VBP that_IN our_PRP$ method_NN can_MD facilitate_VB a_DT feasible_JJ way_NN to_TO handle_VB more_JJR attribute-specific_JJ cues_NNS for_IN polarity_NN classification_NN of_IN short_JJ product_NN reviews_NNS on_IN the_DT web_NN ._.
+Furthermore_RB ,_, to_TO alleviate_VB the_DT problem_NN of_IN data_NNS sparseness_NN ,_, we_PRP further_RB exploit_VBP paraphrase_NN generation_NN to_TO expand_VB training_NN corpora_NN for_IN each_DT review_NN cluster_NN ._.
+As_IN such_JJ ,_, our_PRP$ current_JJ study_NN is_VBZ also_RB relevant_JJ to_TO paraphrase_VB recognition_NN and_CC generation_NN ._.
+Although_IN a_DT variety_NN of_IN methods_NNS ,_, from_IN dictionary-based_JJ methods_NNS to_TO data-driven_JJ methods_NNS -LRB-_-LRB- Madnani_NNP and_CC Dorr_NNP ,_, 2010_CD ;_: Zhao_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ,_, have_VBP been_VBN proposed_VBN for_IN paraphrasing_NN ,_, here_RB we_PRP do_VBP not_RB want_VB to_TO look_VB into_IN paraphrasing_VBG issues_NNS ._.
+Instead_RB ,_, here_RB we_PRP just_RB employ_VBP the_DT opinion_NN element_NN substitution_NN based_VBN opinion_NN paraphrase_NN generation_NN method_NN -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- to_TO achieve_VB enough_JJ data_NNS for_IN training_VBG the_DT proposed_VBN cluster-based_JJ polarity_NN classifiers_NNS ._.
+3_CD Our_PRP$ Method_NNP In_IN this_DT section_NN ,_, we_PRP develop_VBP cluster_NN based_VBN techniques_NNS to_TO explore_VB attribute-specific_JJ features_NNS for_IN polarity_NN classification_NN of_IN short_JJ product_NN reviews_NNS ._.
+3.1_CD Overview_NNP As_IN shown_VBN in_IN Figure_NN 2_CD ,_, our_PRP$ method_NN involves_VBZ two_CD major_JJ processes_NNS ,_, namely_RB the_DT SVM_NNP modeling_NN process_NN based_VBN on_IN review_NN clusters_NNS and_CC the_DT polarity_NN classification_NN process_NN with_IN the_DT cluster-based_JJ SVMclassifiers_NNS ._.
+Cluster-based_JJ SVM_NNP Modeling_NN ._.
+As_IN can_MD be_VB seen_VBN in_IN Figure_NN 2_CD ,_, we_PRP divide_VBP the_DT training_NN process_NN into_IN three_CD main_JJ steps_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- In_IN the_DT review_NN clustering_VBG step_NN ,_, we_PRP first_RB cluster_NN reviews_NNS in_IN the_DT training_NN corpus_VBZ into_IN a_DT set_NN of_IN clusters_NNS C_$ =_SYM -LCB-_-LRB- C1_CD ,_, C2_CD ,_, ..._: ,_, Cn_NNP -RCB-_-RRB- in_IN terms_NNS of_IN product_NN attributes_NNS ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- In_IN order_NN to_TO achieve_VB enough_JJ data_NNS for_IN reliable_JJ modeling_NN for_IN each_DT cluster_NN ,_, in_IN the_DT second_JJ step_NN we_PRP further_RBR expand_VB the_DT training_NN set_VBN for_IN each_DT cluster_NN Ci_NNP -LRB-_-LRB- 1_CD #_# i_FW #_# n_VBN -RRB-_-RRB- via_IN opinion_NN paraphrase_NN generation_NN and_CC thus_RB obtain_VB sets_NNS of_IN expanded_VBN training_NN data_NNS EC1_NN ,_, EC2_NNP ,_, ..._: ,_, ECn_NNP for_IN opinion_NN clusters_NNS C1_NNP ,_, C2_NNP ,_, ..._: ,_, Cn_NNP ,_, respectively_RB ;_: -LRB-_-LRB- 3_LS -RRB-_-RRB- We_PRP finally_RB employ_VBP SVMs_NNS to_TO build_VB a_DT classification_NN model_NN Mi_NNP for_IN each_DT cluster_NN CiÎC_NN from_IN the_DT relevant_JJ expanded_VBN training_NN data_NNS set_VBN ECi_NNP ._.
+It_PRP should_MD be_VB noted_VBN that_IN we_PRP have_VBP a_DT special_JJ cluster_NN Cx_NNP for_IN all_DT reviews_NNS that_WDT are_VBP out_IN of_IN any_DT cluster_NN in_IN C_NNP during_IN review_NN clustering_NN ._.
+For_IN convenient_JJ ,_, we_PRP refer_VBP to_TO Cx_VB as_IN miscellaneous_JJ cluster_NN and_CC the_DT relevant_JJ classification_NN model_NN -LRB-_-LRB- viz_NN ._.
+Mx_NNP -RRB-_-RRB- as_IN miscellaneous_JJ model_NN ._.
+Review_NNP clusters_NNS C1_NNP C2_NNP Cn_NNP Cx_NNP Expended_VBD review_NN clusters_NNS SVM_NNP models_NNS M1_NNP M2_NNP Mn_NNP Mx_NNP Input_NNP Preprocessing_NNP Cluster_NNP selection_NN Cluster-based_JJ classifiers_NNS Polarity_NN conflict_NN resolution_NN Output_NN Training_VBG corpus_NN Review_NNP clustering_VBG Paraphrase_NNP generation_NN EC1_NNP EC2_NNP ECn_NNP ECx_NNP SVM_NNP Modeling_VBG ..._: ..._: ..._: Figure_NN 2_CD ._.
+Overview_NNP of_IN the_DT cluster-based_JJ sentiment_NN polarity_NN classification_NN system_NN ._.
+Cluster-based_JJ polarity_NN classification_NN ._.
+Given_VBN a_DT input_NN product_NN review_NN or_CC opinionated_JJ sentence_NN ,_, we_PRP take_VBP four_CD steps_NNS to_TO determine_VB its_PRP$ polarity_NN category_NN :_: To_TO acquire_VB linguistic_JJ information_NN for_IN subsequent_JJ polarity_NN classification_NN ,_, in_IN the_DT preprocessing_VBG module_NN we_PRP apply_VBP the_DT morpheme-based_JJ lexical_JJ analyzer_NN -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- and_CC the_DT CRFs_NNS labeling_VBG technique_NN to_TO perform_VB lexical_JJ analysis_NN -LRB-_-LRB- viz_NN ._.
+word_NN segmentation_NN and_CC part-of-speech_NN tagging_NN -RRB-_-RRB- and_CC opinion_NN element_NN recognition_NN over_IN the_DT input_NN ,_, respectively_RB ._.
+Then_RB ,_, we_PRP determine_VBP what_WP clusters_NNS that_IN the_DT input_NN should_MD belong_VB to_TO in_IN terms_NNS of_IN the_DT product_NN attributes_VBZ it_PRP contains_VBZ ._.
+Thirdly_RB ,_, we_PRP employ_VBP the_DT relevant_JJ cluster-based_JJ SVM_NNP classifiers_NNS to_TO perform_VB polarity_NN classification_NN ._.
+However_RB ,_, this_DT step_NN may_MD yield_VB different_JJ polarity_NN classes_NNS for_IN the_DT input_NN with_IN multiple_JJ product_NN attributes_NNS ._.
+So_IN we_PRP finally_RB use_VBP a_DT polarity_NN conflict_NN resolution_NN module_NN to_TO choose_VB a_DT final_JJ polarity_NN for_IN the_DT input_NN via_IN a_DT rule-based_JJ voting_NN method_NN ._.
+3.2_CD Product_NNP Review_NNP Clustering_NNP We_PRP cluster_NN product_NN reviews_NNS in_IN the_DT training_NN data_NNS in_IN terms_NNS of_IN product_NN attributes_NNS they_PRP contain_VBP ._.
+So_IN the_DT key_NN to_TO this_DT task_NN is_VBZ how_WRB to_TO resolve_VB co-referred_JJ product_NN attributes_NNS and_CC implicit_JJ attributes_NNS in_IN product_NN reviews_NNS ._.
+To_TO approach_VB this_DT ,_, in_IN this_DT work_NN we_PRP employ_VBP a_DT two-stage_JJ hierarchically_RB clustering_VBG algorithm_NN with_IN multilevel_JJ similarity_NN ._.
+2.2.1_CD Similarity_NN for_IN explicit_JJ attribute_NN clustering_VBG In_IN order_NN to_TO handle_VB different_JJ levels_NNS of_IN connections_NNS between_IN explicit_JJ attributes_NNS in_IN real_JJ product_NN reviews_NNS ,_, we_PRP consider_VBP two_CD similarities_NNS ,_, namely_RB the_DT literal_JJ similarity_NN based_VBN on_IN Jaccard_NNP coefficient_NN ,_, the_DT word_NN embedding_VBG based_VBN semantic_JJ similarity_NN ._.
+Literal_JJ Similarity_NN ._.
+Literal_JJ similarity_NN is_VBZ used_VBN to_TO handle_VB the_DT literal_JJ linking_VBG between_IN co-referred_JJ product_NN attributes_NNS ._.
+Considering_VBG that_DT edit_VB distance_NN can_MD not_RB objectively_RB reflect_VB the_DT real_JJ similarity_NN for_IN some_DT co-referred_JJ feature_NN expressions_NNS like_IN 油耗_CD you-hao_JJ `_`` fuel_NN consumption_NN '_'' and_CC 耗油_CD hao-you_JJ `_`` fuel_NN consumption_NN '_'' ,_, we_PRP exploit_VBP Jaccard_NNP coefficient_NN in_IN Equation_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- to_TO calculate_VB the_DT literal_JJ similarity_NN of_IN two_CD attributes_NNS a1_JJ and_CC a2_JJ ._.
+|_JJ set_NN -LRB-_-LRB- a_DT -RRB-_-RRB- Çset_NNP -LRB-_-LRB- a_DT -RRB-_-RRB- |_SYM 1_CD 2_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- SL_NNP -LRB-_-LRB- a1_CD ,_, a2_CD -RRB-_-RRB- =_SYM Where_WRB ,_, set_VBN -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC set_VBN -LRB-_-LRB- a_DT -RRB-_-RRB- denote_VBP the_DT set_NN of_IN |_JJ set_NN -LRB-_-LRB- a1_CD -RRB-_-RRB- È_NN set_NN -LRB-_-LRB- a2_FW -RRB-_-RRB- |_SYM 12_CD characters_NNS within_IN a1_CD and_CC a2_CD ,_, respectively_RB ._.
+Semantic_JJ Similarity_NN ._.
+In_IN addition_NN literal_JJ similarity_NN ,_, we_PRP also_RB compute_VBP semantic_JJ similarity_NN for_IN some_DT co-referred_JJ attributes_NNS without_IN explicit_JJ literal_JJ connections_NNS ,_, such_JJ as_IN 像_CD 素_CD xiang-su_NN `_`` pixel_NN '_'' and_CC 分辨率_CD fen-bian-lv_JJ `_`` resolution_NN '_'' ._.
+In_IN order_NN to_TO avoid_VB data_NNS sparseness_NN ,_, we_PRP use_VBP word_NN embeddings_NNS -LRB-_-LRB- Mikolov_NNP ,_, et_FW al._FW ,_, 2013_CD -RRB-_-RRB- to_TO represent_VB the_DT semantics_NNS of_IN product_NN attributes_NNS ._.
+Given_VBN a_DT pair_NN of_IN product_NN attributes_NNS a1_CD and_CC a2_CD ,_, let_VB vec_FW -LRB-_-LRB- a1_CD -RRB-_-RRB- and_CC vec_FW -LRB-_-LRB- a2_CD -RRB-_-RRB- be_VB their_PRP$ respective_JJ word_NN embeddings_NNS ._.
+In_IN order_NN to_TO map_VB the_DT cosine_NN value_NN to_TO -LSB-_NNP 0_CD ,_, 1_CD -RSB-_NN ,_, then_RB their_PRP$ similarity_NN based_VBN on_IN word_NN embeddings_NNS ,_, denoted_VBN by_IN SS_NNP -LRB-_-LRB- a1_CD ,_, a2_CD -RRB-_-RRB- ,_, can_MD be_VB defined_VBN by_IN Equation_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- vec_FW -LRB-_-LRB- a_DT -RRB-_-RRB- ·_VBP vec_FW -LRB-_-LRB- a_DT -RRB-_-RRB- SC_NNP -LRB-_-LRB- a1_CD ,_, a2_CD -RRB-_-RRB- =_SYM 0.5_CD +0.5_CD ́_NN 1_CD 2_CD |_CD vec_NN -LRB-_-LRB- a1_CD -RRB-_-RRB- |_SYM ́_FW |_FW vec_FW -LRB-_-LRB- a2_CD -RRB-_-RRB- |_IN Some_DT complicated_VBN co-referred_JJ attributes_NNS may_MD have_VB both_DT literal_JJ and_CC semantic_JJ connections_NNS ._.
+To_TO handle_VB this_DT problem_NN ,_, we_PRP further_RB combine_VBP the_DT above_JJ two_CD similarity_NN via_IN linear_JJ interpolation_NN and_CC obtain_VB the_DT total_JJ similarity_NN of_IN a_DT given_VBN explicit_JJ attribute_NN pair_NN ,_, as_IN shown_VBN in_IN Equation_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+S_NNP -LRB-_-LRB- a_DT ,_, a_DT -RRB-_-RRB- =_SYM a_DT ́S_NNP -LRB-_-LRB- a_DT ,_, a_DT -RRB-_-RRB- +_NN -LRB-_-LRB- 1-a_JJ -RRB-_-RRB- ́S_NNP -LRB-_-LRB- a_DT ,_, a_DT -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- EA_NNP 1_CD 2_CD L_NNP 1_CD 2_CD S_NNP 1_CD 2_CD Where_WRB ,_, a_DT is_VBZ the_DT interpolation_NN coefficient_NN ._.
+2.2.2_CD Similarity_NN for_IN implicit_JJ attribute_NN clustering_VBG On_IN the_DT basis_NN of_IN the_DT hypothesis_NN that_IN co-referred_JJ attributes_NNS tend_VBP to_TO be_VB collocated_VBN with_IN similar_JJ evaluations_NNS ,_, we_PRP thus_RB exploit_VBP evaluation_NN similarity_NN to_TO cluster_NN reviews_NNS with_IN implicit_JJ attributes_NNS ._.
+In_IN particular_JJ ,_, we_PRP consider_VBP explanatory_JJ evaluations_NNS as_IN the_DT context_NN for_IN implicit_JJ attributes_NNS because_IN compared_VBN to_TO non-explanatory_JJ evaluations_NNS ,_, explanatory_JJ evaluations_NNS are_VBP feature-specific_JJ indicators_NNS for_IN product_NN attribute_NN clustering_NN -LRB-_-LRB- Kim_NNP et_FW al._FW ,_, 2013_CD ;_: He_PRP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ,_, as_IN illustrated_VBN by_IN Table_NNP 1_CD ._.
+To_TO extract_VB explanatory_JJ evaluations_NNS for_IN implicit_JJ attribute_NN clustering_NN ,_, we_PRP use_VBP the_DT explanatory_JJ segment_NN labeling_VBG technique_NN by_IN -LRB-_-LRB- He_PRP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Input_NN :_: A_DT set_NN of_IN product_NN reviews_NNS R_NNP =_SYM -LCB-_-LRB- r1_CD ,_, r2_CD ,_, ..._: ,_, rn_NN -RCB-_-RRB- Output_NN :_: A_DT set_NN of_IN review_NN clusters_NNS C_$ =_SYM -LCB-_-LRB- C1_CD ,_, C2_CD ,_, ..._: ,_, Ck_NNP -RCB-_-RRB- ._.
+1_LS ._.
+Initialization_NN :_: Separate_JJ R_NN into_IN two_CD groups_NNS ,_, namely_RB the_DT group_NN RE_VB with_IN explicit_JJ attributes_NNS and_CC the_DT group_NN RI_NNP with_IN implicit_JJ attributes_NNS ._.
+Stage_NN 1_CD :_: clustering_VBG reviews_NNS with_IN explicit_JJ attributes_NNS 2_CD ._.
+Let_VB each_DT review_NN riÎRE_NNP be_VB a_DT cluster_NN Ci_NNP -LRB-_-LRB- 1_CD #_# i_FW #_# |_CD RE_NNP |_NNP -RRB-_-RRB- ,_, and_CC addittoC_NNP ._.
+3_LS ._.
+For_IN CiÎC_NNP ,_, if_IN $_$ Cj_JJ that_WDT makes_VBZ ClusterSimE_NNP -LRB-_-LRB- Ci_NNP ,_, Cj_NNP -RRB-_-RRB- be_VB the_DT maximum_NN ,_, and_CC ClusterSimE_NNP -LRB-_-LRB- Ci_NNP ,_, Cj_NNP -RRB-_-RRB- >_SYM θ_FW ,_, 4_CD ._.
+then_RB merge_VBP clusters_NNS Ci_NNP and_CC Cj_NNP ,_, and_CC update_VBP C._NNP 5_CD ._.
+Repeat_NN 2-4_CD until_IN the_DT number_NN of_IN clusters_NNS in_IN C_NNP remains_VBZ unchanged_JJ ._.
+Stage_NN 2_CD :_: clustering_VBG reviews_NNS with_IN implicit_JJ attributes_NNS For_IN each_DT review_NN riÎRI_NNP if_IN $_$ CjÎC_JJ that_WDT makes_VBZ ClusterSimI_NNP -LRB-_-LRB- ri_FW ,_, Cj_NNP -RRB-_-RRB- be_VB the_DT maximum_NN ,_, then_RB add_VB ri_FW into_IN Cj_NNP ._.
+6_CD ._.
+7_CD ._.
+8_CD ._.
+9_CD ._.
+product_NN review_NN clustering_NN ._.
+3.3_CD Opinion_NN Paraphrase_NNP Generation_NNP As_IN we_PRP have_VBP mentioned_VBN above_IN ,_, the_DT original_JJ training_NN corpus_NN will_MD be_VB separated_VBN into_IN review_NN clusters_NNS during_IN review_NN clustering_NN ._.
+Each_DT review_NN cluster_NN contains_VBZ a_DT group_NN of_IN reviews_NNS about_IN a_DT specific_JJ product_NN attribute_NN and_CC are_VBP further_JJ used_VBN to_TO training_VBG the_DT specific_JJ classifier_NN for_IN the_DT corresponding_JJ cluster_NN ._.
+As_IN a_DT consequence_NN ,_, the_DT dataset_NN for_IN some_DT clusters_NNS may_MD be_VB too_RB small_JJ for_IN reliable_JJ training_NN ._.
+To_TO avoid_VB this_DT problem_NN ,_, we_PRP expand_VBP the_DT review_NN cluster_NN via_IN by_IN paraphrasing_VBG each_DT review_NN via_IN opinion_NN element_NN substitution_NN -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, which_WDT takes_VBZ the_DT following_VBG two_CD main_JJ steps_NNS to_TO generate_VB all_DT proper_JJ paraphrases_NNS for_IN a_DT given_VBN review_NN R._NNP Table_NNP 2_CD ._.
+An_DT example_NN of_IN equivalent_JJ attribute_NN -_: evaluation_NN pairs_NNS from_IN the_DT training_NN data_NNS ._.
+-LRB-_-LRB- 1_CD -RRB-_-RRB- Opinion_NN element_NN substitution_NN ._.
+We_PRP first_RB generate_VBP a_DT set_NN of_IN potential_JJ paraphrases_NNS for_IN R_NN by_IN substituting_VBG opinion_NN elements_NNS ,_, viz_NN ._.
+the_DT attribution_NN and_CC its_PRP$ evaluation_NN in_IN R_NN with_IN their_PRP$ equivalent_JJ counterparts_NNS extracted_VBN from_IN the_DT training_NN corpus_NN -LRB-_-LRB- as_IN shown_VBN in_IN Table_NNP 2_CD -RRB-_-RRB- ,_, and_CC then_RB store_VBP them_PRP with_IN Output_NN C_NNP as_IN the_DT review_NN clusters_NNS ._.
+Figure_NN 3_CD ._.
+The_DT two-stage_JJ algorithm_NN for_IN Chinese_JJ Definitions_NNS Examples_NNS A_DT non-explanatory_JJ evaluation_NN only_RB presents_VBZ the_DT sentiment_NN orientation_NN on_IN a_DT given_VBN target_NN without_IN any_DT explanations_NNS for_IN the_DT reasons_NNS of_IN the_DT sentiment_NN ._.
+An_DT explanatory_JJ evaluation_NN not_RB only_RB presents_VBZ the_DT sentiment_NN orientation_NN on_IN a_DT given_VBN target_NN but_CC also_RB explains_VBZ the_DT reasons_NNS of_IN the_DT sentiment_NN ._.
+这个手机的屏幕还_CD 不错_CD 。_CD `_`` The_DT screen_NN of_IN this_DT handphone_NN is_VBZ good_JJ ._. '_''
+这个手机的屏幕分_CD 辨率很高_CD 。_CD `_`` The_DT screen_NN resolution_NN of_IN this_DT handphone_NN is_VBZ very_RB high_JJ ._. '_''
+Table_NNP 1_CD ._.
+Explanatory_JJ vs._FW non-explanatory_JJ evaluations_NNS in_IN Chinese_JJ product_NN reviews_NNS ._.
+Let_VB e1_CD and_CC e2_CD be_VB the_DT respective_JJ explanatory_JJ evaluations_NNS for_IN two_CD implicit_JJ product_NN attributes_VBZ a1_CD and_CC a2_CD ,_, Set_NNP -LRB-_-LRB- e1_FW -RRB-_-RRB- and_CC Set_NNP -LRB-_-LRB- e2_FW -RRB-_-RRB- be_VB the_DT respective_JJ synsets_NNS of_IN the_DT explanatory_JJ keywords_NNS within_IN e1_CD and_CC e2_CD ,_, we_PRP can_MD then_RB compute_VB their_PRP$ evaluation_NN similarity_NN SIA_NNP with_IN Equation_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+SIA_NNP -LRB-_-LRB- a1_CD ,_, a2_CD -RRB-_-RRB- =_SYM |_CD Set_NNP -LRB-_-LRB- e1_FW -RRB-_-RRB- ÇSet_NNP -LRB-_-LRB- e2_FW -RRB-_-RRB- |_SYM /_FW |_FW Set_NNP -LRB-_-LRB- e1_FW -RRB-_-RRB- ÈSet_NNP -LRB-_-LRB- e2_FW -RRB-_-RRB- |_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- Here_RB ,_, we_PRP employ_VBP tf-itf_NN to_TO extract_VB the_DT explanatory_JJ keywords_NNS from_IN the_DT explanatory_JJ evaluations_NNS e1_CD and_CC e2_CD ,_, and_CC then_RB obtain_VB their_PRP$ respective_JJ synsets_NNS from_IN the_DT training_NN data_NNS for_IN word_NN embeddings_NNS via_IN semantic_JJ paraphrasing_NN -LRB-_-LRB- Bhagat_NNP and_CC Hovy_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+2.2.3_CD The_DT two-stage_JJ clustering_NN algorithm_NN In_IN this_DT work_NN we_PRP use_VBP a_DT two-stage_JJ hierarchical_JJ clustering_VBG algorithm_NN to_TO perform_VB review_NN clustering_NN ,_, as_IN shown_VBN in_IN Figure_NN 3_CD ._.
+Where_WRB ,_, ClusterSimE_NNP -LRB-_-LRB- Ci_NNP ,_, Cj_NNP -RRB-_-RRB- is_VBZ the_DT average_JJ similarity_NN between_IN each_DT pair_NN of_IN explicit_JJ attributes_NNS from_IN Ci_NNP and_CC Cj_NNP ,_, respectively_RB ,_, and_CC ClusterSimI_NNP -LRB-_-LRB- ri_FW ,_, Cj_NNP -RRB-_-RRB- is_VBZ the_DT average_JJ evaluation_NN similarity_NN between_IN the_DT evaluation_NN in_IN ri_NN and_CC the_DT evaluation_NN within_IN reviews_NNS from_IN Cj_NNP ._.
+Items_NNS Examples_NNS Attribute_NNP Attribute_NNP co-references_NNS Positive_JJ evaluations_NNS Negative_JJ evaluations_NNS 价格_VBP `_`` price_NN '_'' 价_FW |_FW 价格_FW |_FW 价钱_FW |_FW 价位_FW |_FW ..._: Low_NNP :_: 合适_FW |_FW 适中_FW |_FW 实惠_FW |_FW 优惠_FW |_FW 不高_FW |_FW 公道_FW |_FW 比较便宜_FW |_FW 有优势_FW |_FW 值_FW |_FW ..._: High_NNP :_: 高_FW |_FW 太高_FW |_FW 真高_FW |_FW 偏高_FW |_FW 有点高_FW |_FW 贵_FW |_FW 太_FW 贵_FW |_FW 偏贵_FW |_FW 有点贵_FW |_FW 不合理_FW |_FW 有点无语_FW |_FW ..._: word_NN lattice_NN ._.
+For_IN convenience_NN ,_, here_RB we_PRP refer_VBP this_DT word_NN lattice_NN as_IN paraphrase_NN word_NN lattice_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- n-best_JJ paraphrase_NN decoding_NN ._.
+The_DT generated_VBN paraphrase_NN word_NN lattice_NN actually_RB contains_VBZ all_DT potential_JJ paraphrases_NNS ,_, including_VBG both_DT proper_JJ and_CC improper_JJ paraphrases_NNS for_IN the_DT input_NN review_NN R._NNP To_TO exclude_VB the_DT improper_JJ paraphrase_NN candidates_NNS ,_, we_PRP further_RB employ_VBP bigram_NN language_NN models_NNS to_TO decode_VB n-best_JJ paths_NNS from_IN the_DT paraphrase_NN word_NN lattice_NN ,_, where_WRB each_DT path_NN forms_NNS a_DT probable_JJ paraphrase_NN for_IN R._NNP 3.4_CD Polarity_NNP Conflict_NNP Resolution_NNP Polarity_NNP conflict_NN will_MD arise_VB if_IN the_DT input_NN review_NN sentence_NN receives_VBZ multiple_JJ but_CC different_JJ polarity_NN classes_NNS after_IN polarity_NN classification_NN ._.
+The_DT reason_NN may_MD be_VB due_JJ to_TO the_DT fact_NN that_IN an_DT opinionated_JJ sentence_NN in_IN product_NN reviews_NNS may_MD have_VB more_JJR than_IN one_CD attribution_NN ._.
+In_IN this_DT case_NN ,_, the_DT system_NN will_MD assign_VB more_JJR than_IN one_CD cluster_NN to_TO the_DT input_NN during_IN cluster_NN selection_NN ,_, and_CC further_RB exploit_VB multiple_JJ different_JJ classifiers_NNS to_TO perform_VB polarity_NN classification_NN ._.
+As_IN a_DT consequence_NN ,_, an_DT input_NN opinionated_VBN sentence_NN may_MD get_VB different_JJ polarity_NN categories_NNS after_IN polarity_NN classification_NN ._.
+In_IN this_DT case_NN ,_, polarity_NN conflicts_NNS will_MD arise_VB ._.
+In_IN order_NN to_TO avoid_VB the_DT potential_JJ polarity_NN conflicts_NNS ,_, we_PRP further_RB employ_VBP a_DT simple_JJ rule-based_JJ voting_NN mechanism_NN ._.
+Given_VBN a_DT review_NN sentence_NN ,_, let_VB KPOS_NNP and_CC KNEG_NNP be_VB the_DT respective_JJ total_JJ number_NN of_IN positive_JJ classes_NNS and_CC negative_JJ classes_NNS produced_VBN by_IN the_DT system_NN ._.
+Thus_RB ,_, we_PRP can_MD determine_VB its_PRP$ final_JJ sentiment_NN polarity_NN using_VBG the_DT following_VBG three_CD rules_NNS ._.
+word_NN segmentation_NN ,_, part-of-speech_NN tags_NNS ,_, opinion_NN elements_NNS and_CC polarity_NN classes_NNS ._.
+We_PRP further_RBR separate_JJ them_PRP into_IN training_NN and_CC test_NN sets_NNS ,_, respectively_RB ._.
+Table_NNP 3_CD presents_VBZ the_DT basic_JJ statistics_NNS of_IN the_DT experimental_JJ datasets_NNS ._.
+Table_NNP 3_CD ._.
+Basic_JJ statistics_NNS of_IN the_DT experimental_JJ data_NNS ._.
+Sentiment_NN Lexicon_NN ._.
+We_PRP use_VBP a_DT sentiment_NN lexicon_NN in_IN our_PRP$ system_NN that_WDT contains_VBZ a_DT total_NN of_IN about_IN 18K_CD sentiment_NN words_NNS built_VBN from_IN the_DT CUHK_NNP and_CC NTU_NNP sentiment_NN lexica_NN 1_CD and_CC HowNet2_NNP ._.
+Evaluation_NN Metrics_NNS ._.
+We_PRP employ_VBP macro_NN average_JJ precision/recall/F-score_NN -LRB-_-LRB- denoted_VBN by_IN Pmacro_NNP ,_, Rmacro_NNP and_CC Fmacro_NNP ,_, respectively_RB -RRB-_-RRB- and_CC micro_NN average_JJ F-score_NN -LRB-_-LRB- denoted_VBN by_IN Fmicro_NNP -RRB-_-RRB- to_TO evaluate_VB polarity_NN classification_NN performance_NN ._.
+LibSVM_NNP &_CC Features_NNP ._.
+Considering_VBG the_DT focus_NN of_IN our_PRP$ current_JJ work_NN ,_, we_PRP employ_VBP the_DT LibSVM_NNP toolkit_NN -LRB-_-LRB- Chang_NNP and_CC Lin_NNP ,_, 2011_CD -RRB-_-RRB- with_IN a_DT linear_JJ kernel_NN and_CC the_DT traditional_JJ one-hot_JJ feature_NN representation_NN to_TO build_VB our_PRP$ system_NN ._.
+Word_NN embeddings_NNS learning_VBG ._.
+To_TO achieve_VB word_NN embeddings_NNS based_VBN semantic_JJ similarity_NN for_IN review_NN clustering_NN ,_, the_DT Google_NNP open_JJ source_NN tool3_CD ,_, viz_NN ._.
+word2vec_NNP ,_, is_VBZ used_VBN here_RB to_TO learn_VB word_NN embeddings_NNS from_IN two_CD larger_JJR corpora_NN of_IN car_NN reviews_NNS -LRB-_-LRB- about_IN 250K_CD reviews_NNS -RRB-_-RRB- and_CC mobilephone_NN reviews_NNS -LRB-_-LRB- about_IN 250K_CD reviews_NNS -RRB-_-RRB- ._.
+The_DT dimension_NN size_NN is_VBZ set_VBN to_TO 100_CD ._.
+4.2_CD Effects_NNPS of_IN Different_NNP Parameters_NNPS As_IN we_PRP have_VBP mentioned_VBN above_IN ,_, our_PRP$ clustering_VBG algorithm_NN involves_VBZ two_CD parameters_NNS ,_, viz_NN a_DT and_CC q_VB for_IN optimization_NN ._.
+Where_WRB ,_, a_DT determines_VBZ the_DT importance_NN of_IN the_DT two_CD similarity_NN ,_, namely_RB the_DT literal_JJ similarity_NN and_CC the_DT semantic_JJ similarity_NN ,_, while_IN q_NN determines_VBZ whether_IN the_DT clustering_NN criteria_NNS is_VBZ lenient_JJ or_CC strict_JJ ._.
+In_IN this_DT work_NN we_PRP employ_VBP the_DT grid_NN search_NN -LRB-_-LRB- Bergstra_NNP and_CC Bengio_NNP ,_, 2012_CD -RRB-_-RRB- to_TO perform_VB parameter_NN optimization_NN ._.
+Thus_RB ,_, we_PRP have_VBP a_DT =_SYM 0.8_CD andq_NN =_SYM 0.15_CD for_IN the_DT mobilephone_NN dataset_NN ,_, and_CC a_DT =_SYM 0.6_CD andq_NN =_SYM 0.3_CD for_IN the_DT car_NN domain_NN ._.
+1_CD http://www.datatang.com/data/43460_CD 2_CD http://www.keenage.com/_NN 3_CD http://code.google.com/p/word2vec/_CD Datasets_NNP Car_NNP Mobilephone_NNP Total_NNP Pos_NNP Neg_NNP Total_NNP Pos_NNP Neg_NNP Training_NNP Test_NNP 1424 712 712 1266_CD 633 633 714 454_CD 260 630 402 228_CD 4_CD ·_NN ·_CD ·_CD Rule_NNP 1_CD ._.
+if_IN KPOS_NNP >_CD KNEG_NNP ,_, then_RB the_DT final_JJ polarity_NN is_VBZ positive_JJ ._.
+Rule_NNP 2_CD ._.
+if_IN KPOS_NNP <_CD KNEG_NNP ,_, then_RB the_DT final_JJ polarity_NN is_VBZ negative_JJ ._.
+Rule_NNP 3_CD ._.
+if_IN KPOS_NNP =_SYM KNEG_NNP ,_, then_RB the_DT final_JJ polarity_NN is_VBZ the_DT same_JJ as_IN the_DT one_CD yielded_VBN by_IN the_DT miscellaneous_JJ classification_NN model_NN Mx_NNP ._.
+Experimental_JJ Results_NNS and_CC Analysis_NNP To_TO assess_VB our_PRP$ approach_NN ,_, we_PRP have_VBP conducted_VBN experiments_NNS over_IN two_CD corpora_NN of_IN product_NN reviews_NNS from_IN car_NN and_CC mobilephone_NN domains_NNS ,_, respectively_RB ._.
+This_DT section_NN reports_VBZ our_PRP$ experimental_JJ results_NNS ._.
+4.1_CD Experiment_NNP Setup_NNP Corpora_NNP ._.
+We_PRP use_VBP two_CD corpora_NNS of_IN product_NN reviews_NNS in_IN car_NN and_CC mobilephone_NN domains_NNS that_WDT are_VBP manually_RB annotated_VBN with_IN multiple_JJ levels_NNS of_IN linguistic_JJ and_CC sentiment_NN information_NN ,_, including_VBG qa_NN Mobilephone_NNP Car_NNP Pmacro_NNP Rmacro_NNP Fmacro_NNP Fmicro_NNP Pmacro_NNP Rmacro_NNP Fmacro_NNP Fmicro_NNP 0.15_CD 0.6_CD 0.7_CD 0.8_CD 0.9_CD 0.811_CD 0.818_CD 0.845_CD 0.846_CD 0.856_CD 0.874_CD 0.849_CD 0.859_CD 0.814_CD 0.828_CD 0.846_CD 0.859_CD 0.865_CD 0.871_CD 0.854_CD 0.864_CD 0.730_CD 0.749_CD 0.739_CD 0.782_CD 0.776_CD 0.779_CD 0.787_CD 0.781_CD 0.784_CD 0.790_CD 0.796_CD 0.793_CD 0.744_CD 0.800_CD 0.804_CD 0.809_CD 0.20_CD 0.6_CD 0.7_CD 0.8_CD 0.9_CD 0.830_CD 0.841_CD 0.851_CD 0.857_CD 0.840_CD 0.851_CD 0.836_CD 0.852_CD 0.835_CD 0.846_CD 0.854_CD 0.866_CD 0.846_CD 0.856_CD 0.844_CD 0.852_CD 0.770_CD 0.750_CD 0.760_CD 0.720_CD 0.739_CD 0.729_CD 0.797_CD 0.787_CD 0.792_CD 0.804_CD 0.810_CD 0.807_CD 0.785_CD 0.734_CD 0.812_CD 0.822_CD 0.25_CD 0.6_CD 0.7_CD 0.8_CD 0.9_CD 0.827_CD 0.841_CD 0.837_CD 0.854_CD 0.840_CD 0.852_CD 0.831_CD 0.850_CD 0.834_CD 0.843_CD 0.845_CD 0.853_CD 0.846_CD 0.856_CD 0.840_CD 0.847_CD 0.716_CD 0.733_CD 0.724_CD 0.802_CD 0.812_CD 0.807_CD 0.803_CD 0.815_CD 0.809_CD 0.787_CD 0.794_CD 0.790_CD 0.731_CD 0.820_CD 0.822_CD 0.806_CD 0.30_CD 0.6_CD 0.7_CD 0.8_CD 0.9_CD 0.830_CD 0.841_CD 0.843_CD 0.859_CD 0.836_CD 0.854_CD 0.839_CD 0.858_CD 0.835_CD 0.846_CD 0.851_CD 0.859_CD 0.845_CD 0.852_CD 0.848_CD 0.854_CD 0.827_CD 0.813_CD 0.820_CD 0.804_CD 0.814_CD 0.809_CD 0.797_CD 0.805_CD 0.801_CD 0.797_CD 0.803_CD 0.800_CD 0.838_CD 0.822_CD 0.816_CD 0.816_CD Table4.Effectsoftheclusteringparameters_NNS aandqonpolarityclassification_NN ._.
+To_TO verify_VB the_DT theoretical_JJ parameter_NN optimization_NN ,_, we_PRP conducted_VBD an_DT experiment_NN to_TO examine_VB the_DT effects_NNS of_IN a_DT and_CC q_VB on_IN polarity_NN classification_NN ._.
+The_DT results_NNS are_VBP listed_VBN in_IN Table_NNP 4_CD ._.
+As_IN can_MD be_VB seen_VBN from_IN Table_NNP 4_CD ,_, the_DT experimental_JJ results_NNS conform_VB to_TO the_DT theoretical_JJ optimization_NN ._.
+The_DT F-score_JJ reach_NN the_DT largest_JJS for_IN mobilephone_NN domain_NN when_WRB q_NN =_SYM 0.15_CD and_CC a_DT =_SYM 0.8_CD ,_, while_IN the_DT corresponding_JJ real_JJ best_JJS values_NNS of_IN q_NN and_CC a_DT are_VBP 0.3_CD and_CC 0.6_CD for_IN the_DT car_NN domain_NN ._.
+Furthermore_RB ,_, it_PRP is_VBZ also_RB observed_VBN that_IN larger_JJR value_NN of_IN q_NN and_CC smaller_JJR value_NN of_IN a_DT is_VBZ beneficial_JJ to_TO polarity_NN classification_NN for_IN mobilephone_NN domain_NN while_IN the_DT trend_NN is_VBZ reversed_VBN for_IN car_NN domain_NN ._.
+The_DT reason_NN may_MD be_VB that_IN mobilephone_NN products_NNS have_VBP less_JJR attributes_NNS than_IN car_NN products_NNS ,_, suggesting_VBG a_DT looser_JJR clustering_NN standard_NN for_IN mobilephone_NN domain_NN ._.
+Moreover_RB ,_, looser_JJR standard_NN will_MD result_VB in_IN less_JJR number_NN of_IN clusters_NNS after_IN review_NN clustering_NN ,_, and_CC in_IN this_DT case_NN literal_JJ similarity_NN will_MD contribute_VB more_JJR to_TO review_VB clustering_NN ._.
+That_DT is_VBZ why_WRB mobilephone_NN review_NN clustering_NN has_VBZ a_DT larger_JJR interpolation_NN coefficient_NN than_IN car_NN review_NN clustering_NN ._.
+In_IN addition_NN to_TO the_DT above_JJ two_CD clustering_NN parameters_NNS ,_, we_PRP have_VBP also_RB conducted_VBN an_DT experiment_NN to_TO examine_VB the_DT effect_NN of_IN the_DT number_NN of_IN generated_VBN paraphrases_NNS on_IN polarity_NN classification_NN ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Figure_NN 3_CD ._.
+Figure_NN 3_CD reveals_VBZ that_IN the_DT influence_NN of_IN paraphrase_NN generation_NN on_IN polarity_NN classification_NN is_VBZ changing_VBG with_IN the_DT number_NN of_IN generated_VBN paraphrases_NNS ._.
+When_WRB the_DT number_NN of_IN generated_VBN paraphrases_NNS is_VBZ less_JJR than_IN 10_CD ,_, the_DT F-score_NN for_IN polarity_NN classification_NN fluctuates_VBZ with_IN the_DT number_NN of_IN generated_VBN paraphrases_NNS ._.
+However_RB ,_, when_WRB the_DT number_NN exceeds_VBZ 100_CD ,_, the_DT F-score_NN will_MD consistently_RB rise_VB with_IN the_DT number_NN of_IN generated_VBN paraphrases_NNS ._.
+The_DT reason_NN might_MD be_VB due_JJ to_TO the_DT fact_NN that_IN the_DT noise_NN introduced_VBN by_IN paraphrase_NN generation_NN may_MD have_VB a_DT relatively_RB greater_JJR negative_JJ impact_NN on_IN polarity_NN classification_NN in_IN case_NN of_IN the_DT small_JJ size_NN of_IN paraphrase_NN generation_NN ._.
+Figure_NN 3_CD ._.
+Effects_NNPS of_IN the_DT number_NN of_IN generated_VBN paraphrases_NNS on_IN polarity_NN classification_NN ._.
+4.3_CD Experimental_JJ Results_NNS In_IN order_NN to_TO evaluate_VB the_DT effectiveness_NN of_IN the_DT cluster-based_JJ method_NN with_IN multi-classifiers_NNS from_IN the_DT expanded_VBN review_NN clusters_NNS -LRB-_-LRB- viz_NN ._.
+M_SVM_NNP +_NNP Para_NNP -RRB-_-RRB- ,_, our_PRP$ experiment_NN also_RB involves_VBZ three_CD baselines_NNS for_IN comparison_NN ,_, namely_RB the_DT traditional_JJ separate_JJ SVM_NNP classifier_NN from_IN the_DT original_JJ training_NN corpora_NN in_IN Table_NNP 1_CD -LRB-_-LRB- viz_NN ._.
+S-SVM_NNP -RRB-_-RRB- or_CC from_IN the_DT expanded_VBN original_JJ corpora_NN via_IN paraphrase_NN generation_NN -LRB-_-LRB- viz_NN ._.
+S_SVM_NNP +_NNP Para_NNP -RRB-_-RRB- ,_, the_DT cluster-based_JJ method_NN with_IN multiple_JJ SVM_NNP classifiers_NNS built_VBN from_IN the_DT review_NN clusters_NNS without_IN 1_CD 0.9_CD 0.8_CD 0.7_CD 0.6_CD 0.5_CD Fmi_NNP cro_NN -_: Mobil_NNP eph_FW one_CD Fm_NN icro_NN -_: Car_NN 2_CD 4_CD 6_CD 8_CD 10_CD 20 50 100 200_CD 300_CD paraphrasing_NN -LRB-_-LRB- viz_NN ._.
+M-SVM_NNP -RRB-_-RRB- ._.
+The_DT experimental_JJ results_NNS are_VBP listed_VBN in_IN Table_NNP 5_CD and_CC Table_NNP 6_CD ._.
+Table_NNP 5_CD ._.
+Results_NNS for_IN the_DT mobilephone_NN domain_NN data_NNS ._.
+Table_NNP 6_CD ._.
+Results_NNS for_IN the_DT car_NN domain_NN data_NNS ._.
+From_IN these_DT results_NNS ,_, we_PRP have_VBP several_JJ observations_NNS ._.
+First_RB ,_, the_DT cluster-based_JJ system_NN with_IN paraphrasing_VBG yields_NNS the_DT best_JJS performance_NN for_IN both_DT domains_NNS ,_, illustrating_VBG the_DT benefits_NNS of_IN opinion_NN clustering_NN and_CC paraphrasing_VBG to_TO polarity_NN classification_NN ._.
+Second_NNP ,_, we_PRP can_MD observe_VB that_IN the_DT performance_NN degrades_VBZ when_WRB applying_VBG the_DT clustering-based_JJ method_NN to_TO polarity_NN classification_NN without_IN paraphrase_NN generation_NN ._.
+The_DT reason_NN may_MD be_VB due_JJ to_TO the_DT fact_NN that_IN the_DT training_NN data_NNS become_VBP too_RB small_JJ for_IN some_DT clusters_NNS after_IN review_NN clustering_NN ._.
+Finally_RB ,_, using_VBG opinion_NN paraphrase_NN generation_NN results_NNS in_IN consistent_JJ increasing_VBG of_IN performance_NN for_IN the_DT two_CD datasets_NNS in_IN use_NN ,_, showing_VBG in_IN a_DT sense_NN opinion_NN paraphrasing_VBG facilitates_VBZ a_DT effective_JJ way_NN to_TO expand_VB training_NN corpora_NN for_IN sentiment_NN analysis_NN ._.
+5_CD Conclusions_NNS and_CC Future_NNP Work_NNP In_IN this_DT paper_NN we_PRP present_VBP a_DT new_JJ opinion_NN cluster_NN based_VBN framework_NN that_IN uses_VBZ multiple_JJ cluster-based_JJ SVM_NNP classifiers_NNS to_TO perform_VB polarity_NN classification_NN of_IN short_JJ product_NN reviews_NNS ._.
+The_DT main_JJ contributions_NNS of_IN this_DT paper_NN are_VBP :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- the_DT idea_NN of_IN jointly_RB using_VBG opinion_NN clusters_NNS and_CC paraphrases_NNS to_TO explore_VB richer_JJR contextual_JJ information_NN or_CC specific_JJ cues_NNS in_IN short_JJ text_NN for_IN sentiment_NN analysis_NN ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- the_DT demonstration_NN that_WDT opinion_NN clustering_NN and_CC paraphrasing_NN are_VBP of_IN great_JJ value_NN to_TO polarity_NN classification_NN of_IN short_JJ text_NN like_IN online_JJ product_NN reviews_NNS ._.
+For_IN future_JJ work_NN ,_, we_PRP intend_VBP to_TO exploit_VB a_DT more_RBR tailored_VBN method_NN to_TO achieve_VB high-quality_JJ opinion_NN clustering_NN and_CC paraphrase_NN generation_NN for_IN polarity_NN classification_NN ._.
+Furthermore_RB ,_, we_PRP also_RB plan_VBP to_TO extend_VB our_PRP$ current_JJ method_NN to_TO other_JJ feature_NN representations_NNS like_IN the_DT emerging_VBG distributed_VBN vector_NN representations_NNS or_CC apply_VB our_PRP$ system_NN to_TO other_JJ languages_NNS like_IN English_NNP ._.
+Acknowledgments_NNS This_DT study_NN was_VBD supported_VBN by_IN National_NNP Natural_NNP Science_NNP Foundation_NNP of_IN China_NNP under_IN Grant_NNP No._NN 61170148_CD and_CC the_DT Returned_NNP Scholar_NNP Foundation_NNP of_IN Heilongjiang_NNP Province_NNP ._.
+References_NNS Anthony_NNP Fader_NNP ,_, Luke_NNP Zettlemoyer_NNP ,_, and_CC Oren_NNP Etzioni_NNP ._.
+2013_CD ._.
+Paraphrase-driven_JJ learning_NN for_IN open_JJ question_NN answering_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 13_CD ,_, pages_NNS 1608-1618_CD ._.
+Bo_NNP Pang_NNP ,_, and_CC Lillian_NNP Lee_NNP ._.
+2008_CD ._.
+Opinion_NN mining_NN and_CC sentiment_NN analysis_NN ._.
+Foundations_NNS and_CC Trends_NNS in_IN Information_NNP Retrieval_NNP ,_, 2_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :_: 1-135_NNS ._.
+Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+:_: Sentiment_NN classification_NN using_VBG machine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP '_POS 02_CD ,_, pages_NNS 79-86_CD ._.
+Chih-Chung_NNP Chang_NNP ,_, and_CC Chih-Jen_NNP Lin_NNP ._.
+2011_CD ._.
+LIBSVM_NNP :_: A_NNP library_NN for_IN support_NN vector_NN machines_NNS ._.
+ACM_NNP Transactions_NNS on_IN Intelligent_NNP Systems_NNPS and_CC Technology_NNP ,_, 2_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- :_: 1-27_CD ._.
+Cícero_NNP Nogueira_NNP dos_VBZ Santos_NNP ,_, and_CC Maíra_NNP Gatti_NNP ._.
+2014_CD ._.
+Deep_JJ convolutional_JJ neural_NN networks_NNS for_IN sentiment_NN analysis_NN of_IN short_JJ texts_NNS ._.
+In_IN Proceedings_NNP of_IN COLING_NNP '_POS 14_CD ,_, pages_NNS 69-78_CD ._.
+Guohong_NNP Fu_NNP ,_, and_CC Xin_NNP Wang_NNP ._.
+2010_CD ._.
+Chinese_JJ sentence-level_NN sentiment_NN classification_NN based_VBN on_IN fuzzy_JJ sets_NNS ._.
+In_IN Proceedings_NNP of_IN COLING_NNP '_POS 10_CD ,_, pages_NNS 312-319_CD ._.
+Guohong_NNP Fu_NNP ,_, Chunyu_NNP Kit_NNP ,_, and_CC Jonathan_NNP J._NNP Webster_NNP ._.
+2008_CD ._.
+Chinese_JJ word_NN segmentation_NN as_IN morpheme-based_JJ lexical_JJ chunking_NN ._.
+Information_NNP Sciences_NNP ,_, 178_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- :_: 2282-2296_CD ._.
+Guohong_NNP Fu_NNP ,_, Yu_NNP He_PRP ,_, Jiaying_NNP Song_NN ,_, and_CC Chaoyue_NNP Wang_NNP ._.
+2014_CD ._.
+Improving_NN Chinese_JJ polarity_NN classification_NN via_IN opinion_NN paraphrasing_NN ._.
+In_IN Proceedings_NNP of_IN CLP_NNP '_POS 14_CD ,_, pages_NNS 35-42_CD ._.
+Hyun_NNP Duk_NNP Kim_NNP ,_, Malú_NNP G._NNP Castellanos_NNP ,_, Meichun_NNP Hsu_NNP ,_, ChengXiang_NNP Zhai_NNP ,_, Umeshwar_NNP Dayal_NNP ,_, and_CC Riddhiman_NNP Ghosh_NNP ._.
+2013_CD ._.
+Ranking_JJ explanatory_JJ sentences_NNS for_IN opinion_NN summarization_NN ._.
+In_IN Proceedings_NNP of_IN SIGIR_NNP '_POS 13_CD ,_, pages_NNS 1069-1072_CD James_NNP Bergstra_NNP ,_, and_CC Yoshua_NNP Bengio_NNP ._.
+2012_CD ._.
+Random_NNP search_NN for_IN hyper-parameter_NN optimization_NN ._.
+The_DT Journal_NNP of_IN Machinese_NNP Research_NNP ,_, 13_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 281-305_CD ._.
+Jeffrey_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2014_CD ._.
+Glove_NNP :_: Global_NNP vectors_NNS for_IN word_NN Methods_NNS Pmacro_NNP Rmacro_NNP Fmacro_NNP Fmicro_NNP S_SVM_NNP M_SVM_NNP S_SVMs_NNP +_VBD Para_NNP M_SVMs_NNP +_VBD Para_NNP 0.831_CD 0.855_CD 0.843_CD 0.840_CD 0.815_CD 0.828_CD 0.822_CD 0.832_CD 0.847_CD 0.870_CD 0.858_CD 0.859_CD 0.856_CD 0.874_CD 0.865_CD 0.871_CD Methods_NNPS Pmacro_NNP Rmacro_NNP Fmacro_NNP Fmicro_NNP S_SVM_NNP M_SVM_NNP S_SVMs_NNP +_VBD Para_NNP M_SVMs_NNP +_VBD Para_NNP 0.775_CD 0.764_CD 0.769_CD 0.781_CD 0.760_CD 0.748_CD 0.754_CD 0.779_CD 0.788_CD 0.791_CD 0.789_CD 0.804_CD 0.827_CD 0.813_CD 0.820_CD 0.838_CD representation_NN ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP '_POS 14_CD ,_, pages_NNS 1532-1543_CD ._.
+Kang_NNP Liu_NNP ,_, Liheng_NNP Xu_NNP ,_, and_CC Jun_NNP Zhao_NNP ._.
+2014_CD ._.
+Extracting_VBG opinion_NN targets_NNS and_CC opinion_NN words_NNS from_IN online_JJ reviews_NNS with_IN graph_NN co-ranking_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 14_CD ,_, pages_NNS 314-324_CD ._.
+Michael_NNP Heilman_NNP ,_, Noah_NNP A._NNP Smith_NNP ._.
+2010_CD ._.
+Tree_NN edit_NN models_NNS for_IN recognizing_VBG textual_JJ entailments_NNS ,_, paraphrases_VBZ ,_, and_CC answers_NNS to_TO questions_NNS ._.
+In_IN Proceedings_NNP of_IN NAACL_NNP '_POS 10_CD ,_, pages_NNS 1011-1019_CD ._.
+Michael_NNP Speriosu_NNP ,_, Nikita_NNP Sudan_NNP ,_, Sid_NNP Upadhyay_NNP ,_, and_CC Jason_NNP Baldridge_NNP ._.
+2011_CD ._.
+Twitter_NNP polarity_NN classification_NN with_IN label_NN propagation_NN over_IN lexical_JJ links_NNS and_CC the_DT follower_NN graph_NN ._.
+In_IN Proceedings_NNP of_IN the_DT First_NNP workshop_NN on_IN Unsupervised_JJ Learning_NNP in_IN NLP_NNP ,_, pages_NNS 53-63_CD ._.
+Mining_NNP Hu_NNP ,_, and_CC Bing_NNP Liu_NNP ._.
+2004_CD ._.
+Mining_NN and_CC summarizing_VBG customer_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN SIGKDD_NNP '_POS 04_CD ,_, pages_NNS 168-177_CD ._.
+Nitin_NNP Madnani_NNP ,_, and_CC Bonnie_NNP J._NNP Dorr_NNP ._.
+2010_CD ._.
+Generating_NNP phrasal_JJ and_CC sentential_JJ paraphrases_NNS :_: A_DT survey_NN of_IN data-driven_JJ methods_NNS ._.
+Computational_NNP Linguistics_NNP ,_, 36_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 342-387_CD ._.
+Peter_NNP D._NNP Turney_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN or_CC thumbs_NNS down_IN ?_.
+:_: Semantic_JJ orientation_NN applied_VBD to_TO unsupervised_JJ classification_NN of_IN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 02_CD ,_, pages_NNS 417-424_CD ._.
+Rada_NNP Mihalcea_NNP ,_, Carmen_NNP Banea_NNP ,_, Janyce_NNP Wiebe_NNP ._.
+2007_CD ._.
+Learning_NNP multilingual_JJ subjective_JJ language_NN via_IN cross-lingual_JJ projections_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 07_CD ,_, pages_NNS 976-983_CD ._.
+Rahul_NNP Bhagat_NNP ,_, and_CC Eduard_NNP Hovy_NNP ._.
+2013_CD ._.
+What_WP is_VBZ a_DT paraphrase_NN ?_.
+Computational_NNP Linguistics_NNP ,_, 39_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 463-472_CD ._.
+Rishabh_NNP Mehrotra_NNP ,_, Rushabh_NNP Agrawal_NNP ,_, and_CC Syed_NNP Aqueel_NNP Haider_NNP ._.
+2012_CD ._.
+Dictionary_NNP based_VBN sparse_JJ representation_NN for_IN domain_NN adaptation_NN ._.
+In_IN Proceedings_NNP of_IN CIKM_NNP '_POS 12_CD ,_, pages_NNS 2395-2398_CD ._.
+Shiqi_NNP Zhao_NNP ,_, Xiang_NNP Lan_NNP ,_, Ting_NNP Liu_NNP ,_, and_CC Sheng_NNP Li_NNP ._.
+2009_CD ._.
+Application-driven_JJ statistical_JJ paraphrase_NN generation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL-IJCNL_NNP '_POS 09_CD ,_, pages_NNS 834-842_CD ._.
+Sida_NNP Wang_NNP and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2012_CD ._.
+Baselines_NNS and_CC bigrams_NNS :_: Simple_NN ,_, good_JJ sentiment_NN and_CC topic_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 12_CD ,_, pages_NNS 90-94_CD ._.
+Svitlana_NNP Volkova_NNP ,_, Theresa_NNP Wilson_NNP ,_, David_NNP Yarowsky_NNP ._.
+2013_CD ._.
+Exploring_VBG sentiment_NN in_IN social_JJ media_NNS :_: Bootstrapping_VBG subjectivity_NN clues_NNS from_IN multilingual_JJ twitter_NN streams_NNS ._.
+In_IN Proceedings_NNP of_IN ACL_NNP '_POS 13_CD ,_, pages_NNS 505-510_CD ._.
+Tetsuji_NNP Nakagawa_NNP ,_, Kentaro_NNP Inui_NNP ,_, and_CC Sadao_NNP Kurohashi_NNP ._.
+2010_CD ._.
+Dependency_NN tree-based_JJ sentiment_NN classification_NN using_VBG CRFs_NNS with_IN hidden_JJ variables_NNS ._.
+In_IN Proceedings_NNP of_IN HLT-NAACL_NNP '_POS 10_CD ,_, pages_NNS 786-794_CD ._.
+Theresa_NNP Wilson_NNP ,_, Janyce_NNP Wiebe_NNP ,_, and_CC Paul_NNP Hoffmann_NNP ._.
+2009_CD ._.
+Recognizing_VBG contextual_JJ polarity_NN :_: An_DT exploration_NN of_IN features_NNS for_IN phrase-level_JJ sentiment_NN analysis_NN ._.
+Computational_NNP Linguistics_NNP ,_, 35_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :99_CD -433_CD Tomas_NNP Mikolov_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP Corrado_NNP ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013_CD ._.
+Efficient_JJ estimation_NN of_IN word_NN representations_NNS in_IN vector_NN space_NN ._.
+arXiv_JJ preprint_NN arXiv_NNP :1301.3781_CD ._.
+Yu_NNP He_PRP ,_, Da_NNP Pan_NNP ,_, and_CC Guohong_NNP Fu_NNP ._.
+2015_CD ._.
+Chinese_JJ explanatory_JJ segment_NN recognition_NN as_IN sequence_NN labeling_VBG ._.
+Communications_NNPS in_IN Computer_NNP and_CC Information_NNP Science_NNP ,_, 503_CD :_: 159-168_CD ._.

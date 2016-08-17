@@ -1,0 +1,210 @@
+Guan_NNP Yue_NNP Abstract_NNP Based_VBD on_IN a_DT large_JJ number_NN of_IN qualitative_JJ analysis_NN and_CC statistical_JJ analysis_NN towards_IN corpus_NN ,_, this_DT paper_NN explores_VBZ the_DT features_NNS ,_, the_DT meaning_NN and_CC the_DT syntactic_JJ function_NN of_IN the_DT construction_NN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ,_, as_RB well_RB as_IN the_DT part_NN of_IN speech_NN represented_VBN by_IN X_NNP and_CC its_PRP$ features_NNS ._.
+Moreover_RB ,_, it_PRP compares_VBZ this_DT construction_NN with_IN three_CD related_JJ constructions_NNS ,_, namely_RB ``_`` hen_NN X_NNP ''_'' ,_, ``_`` bi_FW X_NNP hai_FW -LRB-_-LRB- yao_FW -RRB-_-RRB- X_NNP ''_'' and_CC ``_`` X_NNP jiu_NN shi_FW X_NNP ''_'' ._.
+This_DT construction_NN highlights_VBZ a_DT member_NN because_IN it_PRP has_VBZ a_DT very_RB typical_JJ Song_NN Zuoyan_NNP School_NNP of_IN Chinese_NNP Language_NNP and_CC Literature_NNP Beijing_NNP Normal_NNP University_NNP Beijing_NNP 100875_CD meszy@163.com_JJ feature_NN of_IN the_DT category_NN X._NNP Compared_VBN with_IN the_DT related_JJ constructions_NNS ,_, ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' is_VBZ a_DT typical_JJ one_CD ,_, both_DT 2_CD Xs_NNS are_VBP referential_JJ and_CC the_DT descriptive_JJ feature_NN is_VBZ given_VBN by_IN the_DT construction_NN meaning_NN ._.
+1_CD Preface_NNP Construction_NNP Grammar_NNP was_VBD originally_RB raised_VBN for_IN explaining_VBG some_DT phrases_NNS ,_, especially_RB idioms_NNS ,_, whose_WP$ structure_NN was_VBD hard_JJ to_TO analyze_VB ._.
+Its_PRP$ methods_NNS showed_VBD great_JJ advantages_NNS ._.
+On_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' Construction_NNP Time_NNP away_RB construction_NN Twistin_NNP the_DT night_NN away_RB What_WP 's_VBZ X_NNP doing_VBG Y_NNP ?_.
+What_WP 's_VBZ that_IN fly_VBP doing_VBG in_IN my_PRP$ soap_NN ?_.
+Nominal_JJ Extraposition_JJ construction_NN It_PRP 's_VBZ amazing_JJ the_DT difference_NN !_.
+Mad_NNP Magazine_NNP Him_PRP ,_, a_DT doctor_NN ?!_NN N_NNP P_NNP N_NNP construction_NN House_NNP by_IN house_NN ;_: day_NN after_IN day_NN Stranded_VBN preposition_NN construction_NN Who_WP did_VBD he_PRP give_VB that_DT to_TO ?_.
+Table_NNP 1_CD Productive_JJ or_CC semi-productive_JJ constructions_NNS that_WDT are_VBP unusual_JJ cross-linguistically_JJ and_CC must_MD be_VB learned_VBN on_IN the_DT basis_NN of_IN the_DT input_NN -LRB-_-LRB- Goldberg_NNP :1995_CD -RRB-_-RRB- The_DT most_RBS influential_JJ definition_NN given_VBN by_IN Goldberg_NNP -LRB-_-LRB- 1995:4_CD -RRB-_-RRB- is_VBZ :_: C_NNP is_VBZ a_DT CONSTRUCTION_NNP iff_NN C_NNP is_VBZ a_DT form-meaning_JJ pair_NN <_CD Fi_NNP ,_, Si_NNP >_CD such_JJ that_IN some_DT aspects_NNS of_IN F_NN or_CC some_DT aspects_NNS of_IN S_NNP are_VBP not_RB strictly_RB predictable_JJ from_IN C_NNP 's_POS component_NN parts_NNS of_IN from_IN other_JJ previously_RB established_VBN constructions_NNS ._.
+This_DT definition_NN indicates_VBZ that_IN there_EX is_VBZ a_DT form-function_JJ pairing_NN relationship_NN with_IN a_DT construction_NN ,_, the_DT whole_JJ meaning_NN of_IN the_DT construction_NN is_VBZ much_RB more_JJR than_IN the_DT simple_JJ combination_NN of_IN the_DT meaning_NN of_IN its_PRP$ components_NNS ._.
+A_DT revise_VBP was_VBD made_VBN by_IN Goldberg_NNP in_IN 2006_CD in_IN which_WDT the_DT general_JJ nature_NN of_IN language_NN was_VBD added_VBN ,_, and_CC a_DT broader_JJR concept_NN was_VBD established_VBN ._.
+In_IN this_DT sense_NN ,_, a_DT construction_NN is_VBZ a_DT continuum_NN from_IN the_DT most_RBS specific_JJ one_CD to_TO the_DT most_RBS abstract_JJ one_CD ._.
+Morpheme_NNP ,_, words_NNS ,_, compound_NN words_NNS and_CC certain_JJ phrase_NN or_CC sentences_NNS belong_VBP to_TO the_DT former_JJ ,_, and_CC semifixed_JJ phrases_NNS and_CC greater_JJR units_NNS belong_VBP to_TO the_DT latter_JJ -LRB-_-LRB- Goldberg_NNP ,_, 2006_CD ;_: Croft_NNP ,_, 2001_CD ;_: Michaelis_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+The_DT development_NN of_IN the_DT theory_NN of_IN construction_NN is_VBZ employed_VBN in_IN the_DT analysis_NN of_IN a_DT large_JJ number_NN of_IN cases_NNS ._.
+In_IN recent_JJ years_NNS ,_, there_EX are_VBP many_JJ Chinese_JJ researches_VBZ -LRB-_-LRB- Zhang_NNP Juan_NNP ,_, 2013_CD -RRB-_-RRB- who_WP paid_VBD more_JJR attention_NN on_IN the_DT independent_JJ meaning_NN of_IN the_DT construction_NN itself_PRP ,_, while_IN the_DT phrase_NN structure_NN grammar_NN and_CC argument_NN role_NN theory_NN were_VBD hard_JJ to_TO explain_VB ._.
+Moreover_RB ,_, a_DT construction_NN shows_VBZ the_DT characteristics_NNS of_IN each_DT language_NN ,_, compared_VBN with_IN the_DT phrase_NN structure_NN grammar_NN which_WDT treats_VBZ all_PDT these_DT languages_NNS generally_RB as_IN a_DT whole_NN in_IN cross-linguistics_JJ research_NN ._.
+In_IN this_DT paper_NN ,_, the_DT construction_NN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ,_, which_WDT includes_VBZ a_DT localizer_NN ,_, expresses_VBZ more_JJR than_IN location_NN through_IN experiencing_VBG a_DT cognitive_JJ psychological_JJ metaphor_NN ._.
+According_VBG to_TO Deng_NNP Bin_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- et_FW al._FW ,_, noun_NN of_IN locality_NN is_VBZ explicit_JJ ,_, with_IN the_DT mechanism_NN of_IN metaphor_NN in_IN which_WDT human_JJ 's_POS awareness_NN and_CC reasoning_NN can_MD be_VB mapped_VBN on_IN one_CD abstract_JJ field_NN systematically_RB and_CC correspondingly_RB ,_, the_DT abstraction_NN meaning_NN based_VBN semantically_RB on_IN space_NN by_IN metaphor_NN ._.
+As_IN an_DT echo_VBP structure_NN in_IN co-occurrence_NN with_IN localizer_NN ,_, ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' is_VBZ embodied_VBN in_IN cognitive_JJ and_CC pragmatics_NNS mechanisms_NNS ._.
+This_DT structure_NN has_VBZ been_VBN studied_VBN by_IN Wang_NNP Jie_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, Zhu_NNP Jun_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC Fan_NNP Zhongyuan_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- ._.
+Wang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- focuses_VBZ on_IN the_DT pragmatics_NNS of_IN the_DT structure_NN and_CC structural_JJ properties_NNS of_IN two-way_JJ recursion_NN mechanism_NN ;_: Zhu_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- proposed_VBD that_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' is_VBZ a_DT construction_NN and_CC observed_VBD its_PRP$ different_JJ use_NN and_CC the_DT degree_NN of_IN constructionalization_NN from_IN the_DT view_NN of_IN interior_NN ;_: Fan_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- continued_VBD this_DT study_NN and_CC divided_VBN the_DT differences_NNS of_IN the_DT two_CD ``_`` X_NNP ''_'' s_VBZ into_IN two-layer_JJ and_CC multilayer_JJ ._.
+As_IN these_DT old_JJ studies_NNS had_VBD not_RB sufficient_JJ language_NN corpus_NN and_CC data_NN statistics_NNS ,_, this_DT paper_NN ,_, based_VBN on_IN data_NNS ,_, discuss_VB how_WRB ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' can_MD be_VB regarded_VBN as_IN a_DT construction_NN and_CC make_VB extensive_JJ comparisons_NNS among_IN relative_JJ structures_NNS ._.
+2_CD The_DT feature_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' __NN and_CC its_PRP$ grammatical_JJ function_NN 2.1_CD The_DT feature_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' __VB Xu_NNP Zhimo_NNP has_VBZ a_DT sentence_NN :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- 幻象消灭是人生里命定的悲剧_CD ;_: 青_SYM 年的幻灭_CD ,_, 更是悲剧中的悲剧_CD ,_, 夜一般的_CD 沉黑_CD ,_, 死一般的凶恶_CD 。_NN 1_CD It_PRP is_VBZ a_DT predeterminate_JJ tragedy_NN that_IN illusion_NN disappeared_VBD ;_: what_WP is_VBZ the_DT tragedy_NN of_IN tragedy_NN is_VBZ that_IN the_DT youth_NN 's_POS vanish_VBP seems_VBZ like_IN dark_JJ nights_NNS ,_, and_CC cruel_JJ death_NN ._.
+It_PRP is_VBZ a_DT predeterminate_JJ tragedy_NN that_IN illusion_NN disappeared_VBD ;_: what_WP 's_VBZ worse_JJR ,_, the_DT youth_NN 's_POS vanish_VBP seems_VBZ like_IN dark_JJ nights_NNS ,_, and_CC cruel_JJ death_NN ._.
+This_DT sentence_NN emphases_VBZ on_IN how_WRB tragic_JJ the_DT disillusion_NN of_IN youth_NN is_VBZ ,_, among_IN which_WDT ``_`` 悲剧_FW 中的悲剧_FW ''_'' can_MD be_VB the_DT abstraction_NN as_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ._.
+It_PRP conveys_VBZ semantically_RB the_DT meaning_NN of_IN ``_`` a_DT greater_JJR degree_NN ''_'' ,_, which_WDT ,_, rather_RB than_IN the_DT lexicon_NN itself_PRP ,_, comes_VBZ from_IN the_DT construction_NN ._.
+It_PRP is_VBZ obvious_JJ that_IN the_DT 1From_NNP Center_NNP for_IN Chinese_NNP Linguistics_NNP PKU_NNP -LRB-_-LRB- CCL_NNP -RRB-_-RRB- ._.
+overall_JJ meaning_NN is_VBZ not_RB simply_RB the_DT adduction_NN of_IN its_PRP$ components_NNS ,_, thus_RB we_PRP call_VBP ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' a_DT construction_NN ._.
+As_IN for_IN the_DT feature_NN of_IN the_DT construction_NN ,_, formally_RB the_DT first_JJ ``_`` X_NNP ''_'' and_CC the_DT localizer_NN limit_NN the_DT range_NN of_IN the_DT second_JJ one_CD as_IN an_DT attribute_NN ;_: in_IN one_CD case_NN the_DT two_CD nouns_NNS are_VBP different_JJ ,_, ``_`` X1zhong_NNP de_NNP X2_NNP ''_'' often_RB shows_VBZ an_DT abstract_JJ space_NN :_: -LRB-_-LRB- 2_LS -RRB-_-RRB- ..._: ._.
+她到了_CD 18_CD 岁成人的年龄_NN ,_, 并开_FW 始拥有她继承的船王的全部遗产_FW 。_FW 她成为_FW 世界上最富有的女孩_FW 。_FW 人称这又是一个_FW ``_`` 希腊悲剧中的仙女故事_NN ''_'' 。_CD When_WRB she_PRP was_VBD 18_CD ,_, she_PRP began_VBD to_TO possess_VB the_DT inheritance_NN got_VBD from_IN the_DT Ship_NNP King_NNP ._.
+She_PRP became_VBD one_CD of_IN the_DT most_RBS richest_JJS girls_NNS in_IN the_DT world_NN ._.
+It_PRP is_VBZ said_VBN to_TO be_VB a_DT fairy_NN maiden_NN story_NN of_IN Greek_JJ tragedy_NN ._.
+If_IN X2_NNP is_VBZ part_NN of_IN X1_NNP ,_, X1_NNP has_VBZ more_JJR morphemes_NNS to_TO be_VB modified_VBN ,_, it_PRP is_VBZ a_DT partly_RB co-occurrence_NN :_: -LRB-_-LRB- 3_LS -RRB-_-RRB- 乌龙_CD ,_, 一种黑颜色的龙_CD ,_, ``_`` 乌龙山_FW ''_'' ``_`` 乌龙潭_FW ''``_FW 乌龙岭_FW ''_'' 中的_FW ``_`` 乌龙_FW ''_'' 即为_IN 此义_CD 。_CD Wu_NNP Long_NNP is_VBZ a_DT kind_NN of_IN black_JJ dragon_NN ._.
+The_DT word_NN ``_`` WU_NNP Long_NNP ''_'' in_IN ``_`` Wu_NNP Long_NNP mountain_NN ''_'' ,_, ``_`` Wu_NNP Long_NNP pool_NN ''_'' and_CC ``_`` Wu_NNP Long_NNP hills_NNS ''_'' are_VBP both_DT of_IN the_DT same_JJ meaning_NN ._.
+In_IN the_DT two_CD cases_NNS above_IN ,_, both_DT X1_NNP limit_NN X2_NNP in_IN space_NN category_NN ._.
+When_WRB they_PRP are_VBP completely_RB overlapped_VBN ,_, it_PRP is_VBZ an_DT echo_VBP ``_`` X_NNP ''_'' ,_, like_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- 由于他一贯的稳健经营作风_CD ,_, 使其_CD 成为金融危机中唯一未受影响的亚洲巨_CD 富_NN ,_, 被称为_CD ``_`` 富翁中的富翁_NN ,_, 领袖中的领_CD 袖_NN ''_'' 。_FW Because_IN he_PRP is_VBZ always_RB prudent_JJ and_CC careful_JJ in_IN business_NN ,_, he_PRP is_VBZ the_DT only_JJ millionaire_NN of_IN Asia_NNP who_WP safely_RB passed_VBD through_IN the_DT financial_JJ crisis_NN and_CC went_VBD by_IN the_DT name_NN of_IN ``_`` the_DT rich_JJ person_NN in_IN the_DT rich_JJ ''_'' ,_, ``_`` the_DT leader_NN of_IN the_DT leaders_NNS ''_'' ._.
+Because_IN he_PRP is_VBZ always_RB prudent_JJ and_CC careful_JJ in_IN business_NN ,_, he_PRP is_VBZ the_DT only_JJ millionaire_NN of_IN Asia_NNP who_WP safely_RB passed_VBD through_IN the_DT financial_JJ crisis_NN and_CC famous_JJ of_IN rich_JJ and_CC charisma_NN ._.
+In_IN fact_NN ,_, despite_IN ``_`` X_NNP ''_'' can_MD be_VB presented_VBN as_IN formally_RB the_DT same_JJ ,_, it_PRP is_VBZ incorrect_JJ to_TO semantically_RB treat_VB them_PRP as_IN equal_JJ ._.
+They_PRP have_VBP a_DT different_JJ status_NN :_: the_DT first_JJ ``_`` X_NNP ''_'' appoints_VBZ to_TO the_DT assemblage_NN ,_, which_WDT underlies_VBZ the_DT category_NN ;_: the_DT second_JJ ``_`` X_NNP ''_'' is_VBZ one_CD typical_JJ member_NN of_IN the_DT assemblage_NN ,_, which_WDT is_VBZ actually_RB used_VBN to_TO highlight_VB the_DT descriptive_JJ semantic_JJ meaning_NN of_IN the_DT categorical_JJ feature_NN of_IN one_CD certain_JJ member_NN in_IN it_PRP by_IN comparison_NN ._.
+This_DT meaning_NN is_VBZ brought_VBN by_IN the_DT construction_NN ,_, thus_RB ``_`` 富翁中的富翁_FW ''_'' means_VBZ richer_JJR than_IN a_DT normal_JJ man_NN of_IN wealth_NN ._.
+2.2_CD The_DT grammar_NN function_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ``_`` X_NNP zhongde_NN X_NNP ''_'' often_RB serve_VBP as_IN object_NN ,_, subject_JJ and_CC attribute_NN ,_, but_CC is_VBZ especially_RB employed_VBN as_IN object_NN ._.
+According_VBG to_TO the_DT data_NN we_PRP found_VBD in_IN CCL_NNP ,_, there_EX are_VBP 310_CD items_NNS of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN ,_, among_IN which_WDT 87.68_CD %_NN serve_VBP as_IN object_NN ._.
+The_DT predicate_NN element_NN contained_VBD ``_`` Yes_UH ''_'' words_NNS ,_, including_VBG ``_`` 是_FW ''_'' ,_, ``_`` 为_FW ''_'' ,_, ``_`` 称为_FW ''_'' ,_, ``_`` 成了_FW ''_'' and_CC so_RB on_IN ._.
+The_DT main_JJ reason_NN is_VBZ that_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN implies_VBZ a_DT notable_JJ descriptive_JJ feature_NN ,_, which_WDT has_VBZ the_DT same_JJ function_NN of_IN analyzing_VBG the_DT description_NN meaning_NN of_IN nominal_JJ constituents_NNS as_IN the_DT assertion_NN ``_`` Yes_NNP +_NNP noun_NN ''_'' structure_NN -LRB-_-LRB- Shi_NNP Chunhong_NNP 2002_CD -RRB-_-RRB- :_: -LRB-_-LRB- 5_CD -RRB-_-RRB- 如今的叟候_CD ,_, 几乎像北京前门一带_CD ,_, 是伦敦闹市中的闹市_CD 。_CD Like_IN Qianmen_NNP in_IN Beijing_NNP ,_, today_NN 's_POS Soho_NNP in_IN London_NNP ,_, is_VBZ a_DT downtown_NN of_IN downtowns_NNS ._.
+Like_IN Qianmen_NNP in_IN Beijing_NNP ,_, today_NN 's_POS Soho_NNP in_IN London_NNP ,_, is_VBZ a_DT very_RB busy_JJ downtown_NN ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- 仅凭这一点_CD ,_, 王石便可说是男人中_CD 的男人_CD 。_CD Just_RB because_IN this_DT reason_NN ,_, Wang_NNP Shi_NNP is_VBZ said_VBN to_TO be_VB the_DT man_NN of_IN men_NNS ._.
+Just_RB because_IN this_DT reason_NN ,_, Wang_NNP Shi_NNP is_VBZ said_VBN to_TO be_VB of_IN masculinity_NN ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- 蜥蜴跳着_CD ,_, 不见了_CD 。_CD 头盖骨碎了_NN ,_, 化成了尘土中的尘土_CD 。_CD The_DT hopping_VBG lizard_NN disappeared_VBD and_CC its_PRP$ skull_NN is_VBZ broke_VBN into_IN the_DT dust_NN of_IN the_DT dust_NN ._.
+The_DT hopping_VBG lizard_NN disappeared_VBD and_CC its_PRP$ skull_NN is_VBZ broke_VBN into_IN fine_JJ powder_NN ._.
+Other_JJ example_NN is_VBZ being_VBG used_VBN as_IN normal_JJ object_NN :_: -LRB-_-LRB- 8_CD -RRB-_-RRB- 我们挑选这些精英中的精英_CD ,_, 将他_CD 们提升为旅行社跟消费者的一个渠道_CD 。_NN We_PRP chose_VBD these_DT elites_NNS of_IN elites_NNS and_CC developed_VBD them_PRP into_IN the_DT lines_NNS of_IN communication_NN between_IN travel_NN agency_NN and_CC costumers_NNS ._.
+We_PRP chose_VBD these_DT most_JJS talented_JJ and_CC capable_JJ people_NNS and_CC developed_VBD them_PRP into_IN the_DT lines_NNS of_IN communication_NN between_IN travel_NN agency_NN and_CC costumers_NNS ._.
+Subject_NNP and_CC Attribute_NNP are_VBP not_RB that_IN common_JJ ._.
+Subject_NNP :_: -LRB-_-LRB- 9_CD -RRB-_-RRB- 所以_CD ,_, 解决问题的根本中的根本就_CD 是_CD ,_, 严禁公务员在一张桌子上吃饭_CD 。_NN Thus_RB the_DT base_NN of_IN base_NN to_TO solve_VB this_DT problem_NN is_VBZ to_TO strictly_RB forbid_VB public_JJ servant_NN in_IN one_CD table_NN ._.
+Thus_RB the_DT most_RBS fundamental_JJ thing_NN to_TO solve_VB this_DT problem_NN is_VBZ to_TO strictly_RB forbid_VB public_JJ servant_NN in_IN one_CD table_NN ._.
+Attribute_VB is_VBZ used_VBN to_TO exert_VB both_DT limit_NN function_NN and_CC descriptive_JJ function_NN ,_, and_CC is_VBZ often_RB an_DT appositive_NN :_: -LRB-_-LRB- 10_CD -RRB-_-RRB- 让我们来看一下大师中的大师_SYM 、_SYM 细_SYM 密画的创始人的一幅画_CD 。_CD Let_NNP 's_POS enjoy_VB the_DT painting_NN of_IN the_DT master_NN of_IN masters_NNS ,_, the_DT originator_NN of_IN miniature_NN ._.
+Let_VB 's_POS enjoy_VB the_DT painting_NN of_IN the_DT big_JJ master_NN ,_, the_DT originator_NN of_IN miniature_NN ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- ``_`` 战士中的战士_FW ''_'' 之威名_CD ,_, 他们早_CD 已目睹耳闻_CD 。_NN They_PRP have_VBP already_RB known_VBN his_PRP$ name_NN of_IN the_DT fighter_NN of_IN fighters_NNS ._.
+They_PRP have_VBP already_RB known_VBN he_PRP is_VBZ brave_VBP ._.
+3_CD The_DT word_NN class_NN of_IN ``_`` X_NNP ''_'' and_CC its_PRP$ feature_NN 3.1_CD overview_NN According_VBG to_TO statistics_NNS ,_, 274_CD among_IN 310_CD are_VBP nominal_JJ ,_, with_IN the_DT proportion_NN of_IN 88.39_CD %_NN -LRB-_-LRB- Table_NNP 2_CD -RRB-_-RRB- :_: Table_NNP 2_CD The_DT word_NN class_NN of_IN ``_`` X_NNP ''_'' -LRB-_-LRB- token_JJ -RRB-_-RRB- The_DT number_NN 310_CD is_VBZ token_JJ ,_, if_IN we_PRP consider_VBP repetition_NN ,_, while_IN the_DT number_NN of_IN type_NN is_VBZ 206_CD -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- :_: Table_NNP 3_CD The_DT word_NN class_NN of_IN ``_`` X_NNP ''_'' -LRB-_-LRB- type_NN -RRB-_-RRB- In_IN the_DT table_NN ,_, we_PRP can_MD see_VB that_IN the_DT word_NN class_NN of_IN adjective_NN and_CC verb_NN score_NN very_RB low_JJ ,_, with_IN a_DT relevant_JJ use_NN of_IN ``_`` X_NNP ''_'' in_IN nouns_NNS ._.
+High_JJ frequency_NN of_IN possible_JJ ``_`` X_NNP ''_'' emerges_VBZ as_IN follows_VBZ :_: noun_NN Adjective_NNP verb_NN Amount_NNP 274_CD 33_CD 3_CD Percent_NN 88.39_CD %_NN 10.65_CD %_NN 0.97_CD %_NN noun_NN adjective_NN verb_NN amount_NN 200_CD 4_CD 2_CD percent_NN 97.08_CD %_NN 1.94_CD %_NN 0.97_CD %_NN X_NNP frq_NN X_NNP frq_NN 精品_NN 8_CD 名将_NN 2_CD 男人_CD 8_CD 魔术师_NN 2_CD 女人_CD 7_CD 内战_NN 2_CD 核心_CD 6_CD 偶然_NN 2_CD 焦点_CD 6_CD 亲信_NN 2_CD 奇迹_CD 6_CD 少数民族_NN 2_CD 悲剧_CD 5_CD 少数_NN 2_CD 大师_CD 5_CD 生命_NN 2_CD 战士_CD 5_CD 世界_NN 2_CD 关键_CD 4_CD 文化_NN 2_CD 热点_CD 4_CD 意外_NN 2_CD 肉_CD 4_CD 隐私_NN 2_CD 王牌_CD 4_CD 英雄_NN 2_CD 重点_CD 4_CD 智者_NN 2_CD 尘土_CD 3_CD 暗算_NN 2_CD 高手_CD 3_CD 不幸_NN 2_CD 根本_CD 3_CD 嫡系_NN 2_CD 故事_CD 3_CD 经典_NN 2_CD 基础_CD 3_CD 警察_NN 2_CD 秘密_CD 3_CD 例外_NN 2_CD 难题_CD 3_CD 雅歌_NN 2_CD 幸福_CD 2_CD 血_NN 2_CD 迷宫_CD 2_CD 劣质_NN 2_CD 文学_CD 2_CD 美人_NN 2_CD 先锋_CD 2_CD Double_RB Multi_SYM -_: Mono_SYM -_: amount_NN 275_CD 23_CD 12_CD percent_NN 88.71_CD %_NN 7.42_CD %_NN 3.87_CD %_NN Table_NNP 4_CD Word_NN frequency_NN of_IN ``_`` X_NNP ''_'' 3.2_CD ``_`` X_NNP ''_'' as_IN nominal_JJ constituents_NNS ``_`` X_NNP ''_'' s_PRP have_VBP their_PRP$ own_JJ feature_NN in_IN phonology_NN and_CC semantics_NNS ._.
+Firstly_RB ,_, ``_`` X_NNP ''_'' is_VBZ typically_RB disyllabic_JJ ._.
+It_PRP is_VBZ not_RB common_JJ to_TO find_VB ``_`` X_NNP ''_'' as_IN multisyllable_JJ or_CC monosyllable_NN ,_, but_CC we_PRP still_RB found_VBD some_DT :_: -LRB-_-LRB- 12_CD -RRB-_-RRB- 物理学也被认为是基础科学中的基_CD 础科学_CD 。_NN Physics_NNP is_VBZ regarded_VBN as_IN the_DT basic_JJ subject_NN of_IN basic_JJ subjects_NNS ._.
+Physics_NNP is_VBZ regarded_VBN as_IN a_DT very_RB fundamental_JJ subject_NN ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- 说贾珍是_SYM 红楼梦_SYM 里坏男人中的_CD 坏男人_CD ,_, 一点不为过_CD 。_CD Jia_NNP Zhen_NNP is_VBZ a_DT bad_JJ guy_NN of_IN bad_JJ guys_NNS ._.
+-LRB-_-LRB- 14_CD -RRB-_-RRB- 它简直是从天而降_CD ,_, 像梦中的梦_CD ,_, 令人模糊不清_CD ,_, 难以置信_CD 。_CD It_PRP just_RB came_VBD down_RB from_IN heaven_NN ,_, like_IN the_DT dream_NN in_IN dream_NN ._.
+The_DT following_JJ table_NN shows_VBZ the_DT frequency_NN of_IN different_JJ length_NN of_IN syllable_NN of_IN ``_`` X_NNP ''_'' :_: Table_NNP 5_CD the_DT frequency_NN of_IN ``_`` X_NNP ''_'' Semantically_NNP ,_, nominal_JJ constituents_NNS that_WDT want_VBP to_TO be_VB an_DT ``_`` X_NNP ''_'' are_VBP requested_VBN to_TO have_VB description_NN meaning_NN and_CC are_VBP often_RB both_DT a_DT noun_NN and_CC an_DT adjective_NN :_: -LRB-_-LRB- 15_CD -RRB-_-RRB- 科学从干旱沙漠之中找到了水资源_NN ,_, 这不是奇迹中的奇迹吗_CD ?_.
+It_PRP was_VBD a_DT miracle_NN of_IN miracle_NN to_TO find_VB water_NN in_IN desert_NN ._.
+``_`` 奇迹_FW ''_'' -LRB-_-LRB- miracle_NN -RRB-_-RRB- also_RB means_VBZ descriptively_RB ``_`` out_IN of_IN the_DT common_JJ ''_'' :_: 奇迹_CD 想象不到的不平凡的事情_CD 。_NN Thus_RB ,_, ``_`` 奇迹中的奇迹_NN ''_'' emphases_NNS from_IN non-trivial_JJ to_TO a_DT great_JJ degree_NN ._.
+In_IN cases_NNS like_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- ,_, ``_`` 梦_FW ''_'' -LRB-_-LRB- dream_NN -RRB-_-RRB- represent_VBP ``_`` unreal_JJ ''_'' ,_, ``_`` unbelievable_JJ ''_'' ,_, ``_`` void_NN ''_'' ,_, ``_`` 梦_FW 中_FW 的_FW 梦_FW ''_'' indicates_VBZ something_NN is_VBZ false_JJ or_CC fake_JJ ._.
+It_PRP should_MD be_VB noted_VBN that_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' has_VBZ the_DT similar_JJ limitation_NN of_IN ``_`` X_NNP ''_'' like_IN ``_`` hen_NN -LRB-_-LRB- 很_FW -RRB-_-RRB- +_JJ noun_NN ''_'' structure_NN ,_, they_PRP both_DT need_VBP to_TO manifest_JJ descriptive_JJ meaning_NN ._.
+Some_DT of_IN these_DT compounds_NNS have_VBP adjectival_JJ morpheme_JJ themselves_PRP ,_, e.g._FW ``_`` 精品_FW 、_FW 奇迹_FW 、_FW 悲剧_FW 、_FW 热_FW 点_FW ''_'' ;_: some_DT of_IN them_PRP can_MD be_VB modified_VBN by_IN ``_`` hen_NN ''_'' ,_, e.g._FW ``_`` 很男人_FW 、_FW 很悲剧_FW ''_'' ._.
+Unlike_IN ``_`` hen_NN +_NN noun_NN ''_'' in_IN which_WDT the_DT noun_NN is_VBZ not_RB referential_JJ but_CC used_VBN to_TO modify_VB and_CC describe_VB and_CC works_VBZ as_RB in_IN the_DT position_NN of_IN adjective_NN -LRB-_-LRB- Shi_NNP Chunhong_NNP ,_, 2001_CD ,_, 2002_CD -RRB-_-RRB- ,_, ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN has_VBZ a_DT referential_JJ noun_NN ,_, thus_RB words_NNS like_IN ``_`` 基础学科_FW ''_'' can_MD enter_VB into_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' but_CC not_RB into_IN ``_`` hen_NN +_NN noun_NN ''_'' ._.
+On_IN the_DT contrary_NN ,_, ``_`` 很中国_FW ''_'' is_VBZ correct_JJ ,_, ``_`` 中_FW 国中的中国_FW ''_'' is_VBZ hard_JJ to_TO be_VB found_VBN ,_, because_IN proper_JJ noun_NN directing_VBG some_DT individuals_NNS can_MD not_RB express_VB ``_`` category_NN ''_'' ._.
+One_CD correct_JJ case_NN is_VBZ ``_`` 雷锋中的雷锋_FW ''_'' ,_, in_IN which_WDT ``_`` 雷锋_FW ''_'' is_VBZ not_RB only_RB a_DT proper_JJ noun_NN ,_, but_CC also_RB a_DT group_NN of_IN people_NNS who_WP do_VBP good_JJ thing_NN for_IN nothing_NN like_IN Lei_NNP Feng_NNP ._.
+``_`` X_NNP ''_'' can_MD be_VB a_DT noun_NN referring_VBG to_TO jobs_NNS or_CC status_NN ,_, which_WDT manifests_VBZ one_CD typical_JJ member_NN of_IN the_DT group_NN :_: -LRB-_-LRB- 16_CD -RRB-_-RRB- 布雷_SYM ̇丹尼斯被称为_CD ``_`` 魔术师中的_NN 魔术师_NN ''_'' ,_, 在其魔术生涯中曾获许多国际_CD 比赛大奖_CD 。_NN Breay_NNP is_VBZ called_VBN the_DT magician_NN of_IN magicians_NNS ._.
+-LRB-_-LRB- 17_CD -RRB-_-RRB- 在帕尔斯素有_CD ''_'' 战士中的战士_CD ''_'' 之称_FW 的达龙又被异国的士兵们封了一个新的_FW 称号_FW 。_FW Daron_NNP knows_VBZ as_IN the_DT fighter_NN of_IN fighters_NNS in_IN Pals_NNS ._.
+In_IN the_DT two_CD cases_NNS above_IN ,_, Breay_NNP is_VBZ an_DT excellent_JJ magician_NN ,_, and_CC Daron_NNP is_VBZ an_DT excellent_JJ fighter_NN ,_, both_DT of_IN them_PRP are_VBP the_DT outstanding_JJ ones_NNS in_IN their_PRP$ field_NN ._.
+Also_RB ,_, nouns_NNS like_IN ``_`` 党员_FW 、_FW 干部_FW 、_FW 专家_FW 、_FW 作家_FW 、_FW 导演_FW 、_FW 警察_FW 、_FW 教师_FW 、_FW 博士_FW ''_'' often_RB tend_VBP to_TO be_VB seen_VBN as_IN higher_JJR level_NN in_IN society_NN ,_, they_PRP can_MD be_VB chosen_VBN as_IN an_DT ``_`` X_NNP ''_'' ,_, but_CC lower_JJR status_NN like_IN farmer_NN ,_, worker_NN or_CC student_NN can_MD not_RB enter_VB into_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN ,_, for_IN there_EX is_VBZ no_DT ``_`` remarkable_JJ ''_'' ,_, ``_`` crackajack_NN ''_'' or_CC ``_`` prominent_JJ ''_'' feature_NN in_IN these_DT words_NNS ._.
+So_IN we_PRP can_MD say_VB only_RB occupations_NNS that_WDT are_VBP perceived_VBN as_RB important_JJ and_CC have_VB a_DT relative_JJ higher_JJR social_JJ status_NN ,_, or_CC maybe_RB they_PRP are_VBP hard_JJ to_TO get_VB ,_, thus_RB need_VBP to_TO experience_VB a_DT rigorous_JJ assessment_NN ,_, for_IN this_DT reason_NN people_NNS look_VBP up_RB high_JJ of_IN those_DT people_NNS and_CC the_DT recursion_NN of_IN greatness_NN can_MD be_VB established_VBN ._.
+Pustejovsky_NNP -LRB-_-LRB- 2001_CD ,_, 2006_CD -RRB-_-RRB- called_VBD them_PRP ``_`` artifactual_JJ type_NN ''_'' -LRB-_-LRB- Song_NN Zuoyan_NNP ,_, 2015_CD -RRB-_-RRB- ,_, whose_WP$ function_NN meaning_NN is_VBZ dramatically_RB manifested_VBN after_IN being_VBG an_DT ``_`` X_NNP ''_'' ,_, e.g._FW ``_`` 魔术师中的魔术师_CD ''_'' ,_, highlights_VBZ the_DT magician_NN has_VBZ a_DT wonderful_JJ performing_VBG skills_NNS ._.
+3.3_CD Other_JJ word_NN class_NN of_IN ``_`` X_NNP ''_'' Adjective_NNP acts_VBZ as_IN ``_`` X_NNP ''_'' :_: -LRB-_-LRB- 18_CD -RRB-_-RRB- 如果不是偶然中的偶然_CD ,_, 幸运中的_CD 幸运_CD ,_, 这个受害人死几次也够了_CD 。_CD Thanks_NNS to_TO the_DT accident_NN of_IN accidents_NNS ,_, the_DT good_JJ fortune_NN of_IN good_JJ fortune_NN ,_, otherwise_RB the_DT victim_NN had_VBD already_RB died_VBN ._.
+Due_JJ to_TO an_DT extremely_RB good_JJ fortune_NN ,_, the_DT victim_NN did_VBD n't_RB die_VB ._.
+-LRB-_-LRB- 19_CD -RRB-_-RRB- 又把不要感情装扮得堂而皇之_CD ,_, 这_CD 便是矫情中的矫情_CD 。_NN Do_VBP n't_RB be_VB so_RB hypocritical_JJ in_IN sentiment_NN as_IN the_DT fake_NN of_IN the_DT fake_NN ._.
+Do_VBP n't_RB be_VB so_RB hypocritical_JJ and_CC so_RB fake_JJ in_IN sentiment_NN ._.
+-LRB-_-LRB- 20_CD -RRB-_-RRB- 嫦娥把这院里对她的排斥_CD ,_, 总想成_CD 是必然中的必然_CD 。_NN Chang_NNP O_NNP often_RB thought_VBD the_DT exclusion_NN as_IN a_DT must_MD of_IN the_DT must_MD ._.
+Chang_NNP O_NNP often_RB thought_VBD the_DT exclusion_NN as_IN something_NN that_WDT is_VBZ inevitable_JJ ._.
+-LRB-_-LRB- 21_CD -RRB-_-RRB- 解这道方程式关系我军科研的动向_CD ,_, 这可是绝密中的绝密啊_CD !_.
+Solving_VBG this_DT equation_NN ,_, which_WDT indicates_VBZ the_DT tendency_NN of_IN our_PRP$ army_NN ,_, is_VBZ the_DT secret_NN of_IN the_DT secret_NN ._.
+Solving_VBG this_DT equation_NN ,_, which_WDT indicates_VBZ the_DT tendency_NN of_IN our_PRP$ army_NN ,_, is_VBZ super-secret_JJ ._.
+``_`` A_DT zhong_FW de_FW A_DT ''_'' indicates_VBZ ``_`` very_RB A_DT ''_'' ,_, in_IN which_WDT the_DT adjective_NN was_VBD deprived_VBN of_IN the_DT referential_JJ feature_NN by_IN Zhu_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, but_CC we_PRP argue_VBP that_IN ``_`` X_NNP ''_'' is_VBZ apt_JJ to_TO nouns_NNS ,_, which_WDT explains_VBZ the_DT referential_JJ property_NN of_IN this_DT position_NN ,_, and_CC A_DT tends_VBZ to_TO be_VB nominal_JJ within_IN this_DT position_NN ``_`` ._.
+偶然中的偶然_CD ''_'' in_IN fact_NN refers_VBZ to_TO accidental_JJ events_NNS ._.
+If_IN a_DT word_NN is_VBZ both_DT a_DT noun_NN and_CC a_DT adjective_NN ,_, its_PRP$ noun_NN feature_NN is_VBZ expressed_VBN here_RB ,_, e.g._FW ``_`` 意外中的意外_FW ''_'' ._.
+Moreover_RB ,_, ``_`` zhong_NN ''_'' and_CC ``_`` de_FW ''_'' imply_VB that_IN ``_`` A_NNP ''_'' is_VBZ similar_JJ to_TO nouns_NNS ._.
+As_IN for_IN phonology_NN ,_, only_RB double_JJ syllable_JJ adjective_NN are_VBP correct_JJ ,_, monosyllable_NN can_MD only_RB appear_VB in_IN structure_NN like_IN ``_`` XzhongzhiX_NNP ''_'' ,_, e.g._FW ``_`` 难中之难_FW ''_'' ,_, or_CC fixed_VBN into_IN ``_`` 难中难_FW ''_'' ,_, and_CC used_VBN in_IN classical_JJ style_NN of_IN writing_VBG ._.
+``_`` X_NNP ''_'' is_VBZ a_DT verb_NN :_: -LRB-_-LRB- 22_CD -RRB-_-RRB- 木乃伊既然出现了_CD ,_, 卡特便进行一_CD 项极不平凡的作业_CD --_: --_: 可谓发掘中的发_CD 掘_NN ,_, ``_`` 掘_FW ''_'' 穿一层又一层的包布_CD 。_CD The_DT discovered_VBN mummy_NN request_NN Cart_NN to_TO conduct_VB an_DT unordinary_JJ task_NN of_IN ``_`` peeling_VBG the_DT mummy_NN ''_'' ,_, which_WDT can_MD be_VB called_VBN digging_NN in_IN digging_NN ._.
+The_DT discovered_VBN mummy_NN request_NN Cart_NN to_TO conduct_VB an_DT unordinary_JJ task_NN of_IN ``_`` peeling_VBG the_DT mummy_NN ''_'' ,_, which_WDT need_VBP to_TO do_VB a_DT lot_NN disinterment_NN ._.
+-LRB-_-LRB- 23_CD -RRB-_-RRB- 当然_CD ,_, 也可能是暗算中的暗算_CD ,_, 狡_CD 猾中的狡猾_CD 。_NN Of_IN course_NN it_PRP is_VBZ a_DT plot_NN in_IN plot_NN ,_, cunning_JJ and_CC cunning_JJ ._.
+Of_IN course_NN it_PRP is_VBZ very_RB secret_JJ and_CC cunning_JJ ._.
+-LRB-_-LRB- 24_CD -RRB-_-RRB- 只鼓吹形式革新_CD ,_, 这纯粹是扯淡中_CD 的扯淡_CD 。_NN Only_RB preaching_VBG revolution_NN formally_RB is_VBZ absolutely_RB talking_VBG the_DT nonsense_NN of_IN nonsense_NN ._.
+Only_RB preaching_VBG revolution_NN formally_RB is_VBZ absolutely_RB nonsense_JJ ._.
+Here_RB we_PRP get_VBP ``_`` 发掘_FW -LRB-_-LRB- dig-spare_JJ no_DT effort_NN ,_, deep_JJ -RRB-_-RRB- ''_'' ,_, ``_`` 暗算_FW -LRB-_-LRB- plot_NN in_IN secret-secret_NN -RRB-_-RRB- ''_'' and_CC ``_`` 扯_FW 淡_FW -LRB-_-LRB- nonsense-not_JJ useful_JJ -RRB-_-RRB- ''_'' both_DT of_IN which_WDT show_VBP strong_JJ descriptive_JJ meaning_NN ._.
+4_CD The_DT feature_NN of_IN construction_NN meaning_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN is_VBZ a_DT recursion_NN of_IN magnitude_NN expressed_VBN by_IN echo_VBP ,_, it_PRP embodies_VBZ metrizablility_NN ,_, uncertainty_NN and_CC subjectivity_NN ._.
+4.1_CD Metrizability_NNP In_IN most_JJS cases_NNS ,_, the_DT ``_`` X_NNP ''_'' in_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN is_VBZ a_DT descriptive_JJ noun_NN ,_, which_WDT has_VBZ the_DT feature_NN of_IN adjective_NN ._.
+So_IN we_PRP say_VBP they_PRP are_VBP provided_VBN with_IN metriablility_NN :_: -LRB-_-LRB- 25_CD -RRB-_-RRB- 手机销售中存在问题较多_CD ,_, 成为电_CD 信投诉热点中的热点_CD 。_CD Sales_NNS of_IN cell_NN phones_NNS has_VBZ many_JJ problems_NNS ,_, thus_RB become_VB the_DT hot_JJ spot_NN of_IN hot_JJ spots_NNS ._.
+Sales_NNS of_IN cell_NN phones_NNS has_VBZ many_JJ problems_NNS and_CC is_VBZ extremely_RB hot_JJ ._.
+-LRB-_-LRB- 26_CD -RRB-_-RRB- 与_CD ``_`` 穷人中的穷人_NN ''_'' 不同_NN ,_, 村基_CD 金小组向所有村民开放_CD 。_NN Unlikely_NNP ,_, the_DT foundation_NN of_IN the_DT village_NN was_VBD opened_VBN to_TO every_DT villager_NN instead_RB of_IN the_DT poorest_JJS of_IN the_DT poorest_JJS ._.
+Unlikely_RB ,_, the_DT foundation_NN of_IN the_DT village_NN was_VBD opened_VBN to_TO every_DT villager_NN instead_RB of_IN the_DT poorest_JJS in_IN the_DT village_NN ._.
+-LRB-_-LRB- 27_CD -RRB-_-RRB- 当年的中苏关系_CD ,_, 对于两国_CD ,_, 对于世_CD 界_CD ,_, 都是政治中的政治_CD ,_, 微妙而敏感_CD 。_CD Sino-Soviet_NNP relations_NNS in_IN those_DT years_NNS were_VBD the_DT polity_NN that_WDT exerts_VBZ a_DT tremendous_JJ influence_NN ,_, i.e._FW subtle_JJ and_CC sensitive_JJ with_IN regard_NN to_TO both_DT the_DT two_CD counties_NNS and_CC the_DT world_NN ._.
+Sino-Soviet_JJ relations_NNS in_IN those_DT years_NNS were_VBD polity_NN of_IN polity_NN ,_, i.e._FW subtle_JJ and_CC sensitive_JJ with_IN regard_NN to_TO both_DT the_DT two_CD counties_NNS and_CC the_DT world_NN ._.
+These_DT four_CD cases_NNS above_IN are_VBP different_JJ from_IN the_DT way_NN of_IN realizing_VBG the_DT metrizability_NN ._.
+-LRB-_-LRB- 25_CD -RRB-_-RRB- has_VBZ adjectival_JJ morpheme_NN ``_`` hot_JJ ''_'' ,_, as_IN for_IN how_WRB hot_JJ it_PRP is_VBZ ,_, it_PRP can_MD be_VB described_VBN as_IN a_DT continuum_NN ._.
+-LRB-_-LRB- 26_CD -RRB-_-RRB- talks_VBZ about_IN poor_JJ people_NNS :_: that_IN depends_VBZ on_IN how_WRB poor_JJ it_PRP is_VBZ ._.
+``_`` politics_NNS ''_'' has_VBZ property_NN description_NN as_IN a_DT whole_NN ,_, and_CC ``_`` 很热点_FW ,_, 很政_CD 治_NN ''_'' can_MD be_VB used_VBN ._.
+The_DT variant_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' change_VB a_DT little_JJ where_WRB the_DT second_JJ ``_`` X_NNP ''_'' can_MD have_VB a_DT prepositive_JJ modifier_NN ,_, e.g._FW ``_`` 英雄中的超级_FW 英雄_FW ''_'' ._.
+4.2_CD Uncertainty_NN When_WRB ``_`` X_NNP ''_'' is_VBZ an_DT adjective_NN or_CC has_VBZ adjectival_JJ morpheme_NN ,_, ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' has_VBZ a_DT clear_JJ and_CC core_JJ construction_NN meaning_NN ,_, e.g._FW ``_`` 偶然中的_FW 偶然_FW ''_'' 、_CD ``_`` 悲剧中的悲剧_NN ''_'' 、_CD ``_`` 胡扯中的胡扯_NN ''_'' ._.
+When_WRB ``_`` X_NNP ''_'' expresses_VBZ other_JJ nouns_NNS ,_, semantic_JJ dissemination_NN is_VBZ of_IN uncertainty_NN ._.
+For_IN example_NN ,_, ``_`` 女人中的女人_NN ''_'' display_NN a_DT woman_NN with_IN a_DT typical_JJ figure_NN ,_, but_CC what_WP exactly_RB a_DT typical_JJ woman_NN is_VBZ still_RB remains_VBZ uncertain_JJ unless_IN we_PRP obtain_VB the_DT context_NN in_IN discourse_NN :_: -LRB-_-LRB- 28_CD -RRB-_-RRB- 郑明明善良_SYM 、_SYM 聪慧_FW 、_FW 执著_FW 、_FW 柔中带_FW 刚_FW ,_, 是公认的女人中的女人_NN ,_, 女人中的魅_CD 力女人_CD 。_NN Zheng_NNP Mingming_NNP is_VBZ nice_JJ ,_, smart_JJ ,_, tough_JJ ,_, soft_JJ but_CC strong_JJ ,_, who_WP knowns_NNS as_IN ``_`` woman_NN in_IN women_NNS ''_'' ._.
+Zheng_NNP Mingming_NNP is_VBZ nice_JJ ,_, smart_JJ ,_, tough_JJ ,_, soft_JJ but_CC strong_JJ ,_, who_WP knowns_NNS as_IN a_DT typical_JJ woman_NN ._.
+-LRB-_-LRB- 29_CD -RRB-_-RRB- 拍完戏后_CD ,_, 她与性格刚烈的王姬成_CD 了非常好的朋友_CD ,_, 好得王姬开玩笑说_CD ,_, 晓_CD 频是女人中的女人_CD 。_NN After_IN acting_VBG ,_, Xiao_NNP Pin_NNP became_VBD a_DT good_JJ friend_NN to_TO Wang_NNP Ji_NNP ,_, who_WP has_VBZ a_DT strong_JJ personality_NN ._.
+Wang_NNP said_VBD Xiao_NNP Pin_NNP is_VBZ a_DT ``_`` woman_NN in_IN women_NNS ''_'' ._.
+After_IN acting_VBG ,_, Xiao_NNP Pin_NNP became_VBD a_DT good_JJ friend_NN to_TO Wang_NNP Ji_NNP ,_, who_WP has_VBZ a_DT strong_JJ personality_NN ._.
+Wang_NNP said_VBD Xiao_NNP Pin_NNP is_VBZ a_DT warm_JJ and_CC mild_JJ in_IN personality_NN ._.
+-LRB-_-LRB- 30_CD -RRB-_-RRB- 你别看她小_CD ,_, 那是穿了衣服_CD ,_, 而外_CD 表也故意装得那个样子_CD ,_, 等她跟你上了床_CD ,_, 你就会发现_CD ,_, 她不但是个女人_CD ,_, 而且是女_CD 人中的女人_CD 。_NN Although_IN she_PRP looks_VBZ slim_JJ in_IN normal_JJ times_NNS ,_, she_PRP is_VBZ a_DT ``_`` woman_NN in_IN women_NNS ''_'' when_WRB sleeping_VBG with_IN somebody_NN ._.
+Although_IN she_PRP looks_VBZ slim_JJ ,_, she_PRP is_VBZ quite_RB sexy_JJ ._.
+An_DT other_JJ example_NN is_VBZ -LRB-_-LRB- 31_CD -RRB-_-RRB- ,_, in_IN which_WDT we_PRP would_MD hardly_RB get_VB to_TO know_VB what_WP is_VBZ an_DT ``_`` industry_NN in_IN the_DT industry_NN ''_'' ,_, until_IN we_PRP know_VBP its_PRP$ origin_NN of_IN Liechtenstein_NNP 's_POS industry_NN export-oriented_JJ economic_JJ structure_NN ,_, and_CC it_PRP is_VBZ essential_JJ for_IN it_PRP to_TO develop_VB foreign_JJ enterprises_NNS ._.
+-LRB-_-LRB- 31_CD -RRB-_-RRB- 在列支敦士登还有工业中的工业_NN ,_, 也就是引进外国企业_CD 。_CD It_PRP is_VBZ an_DT industry_NN of_IN industry_NN in_IN Liechtenstein_NNP ,_, i.e._FW foreign_JJ enterprises_NNS ._.
+4.3_CD Subjectivity_NNP ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN often_RB represents_VBZ a_DT subjective_JJ evaluation_NN ,_, here_RB the_DT connotation_NN of_IN ``_`` X_NNP ''_'' bears_VBZ strong_JJ sense_NN of_IN social_JJ identity_NN :_: -LRB-_-LRB- 32_CD -RRB-_-RRB- 在楼盘销售员中_CD ,_, 高档公寓的售楼_CD 小姐是_CD ``_`` 贵族中的贵族_NN ''_'' 。_CD Those_DT who_WP sells_VBZ high-end_JJ flat_JJ are_VBP the_DT aristocrat_NN of_IN aristocrat_NN among_IN sales_NNS staffs_NNS ._.
+Those_DT who_WP sells_VBZ high-end_JJ flat_JJ are_VBP most_RBS noble_JJ and_CC proud_JJ among_IN sales_NNS staffs_NNS ._.
+-LRB-_-LRB- 32_CD -RRB-_-RRB- reflects_VBZ that_IN ``_`` aristocrat_NN ''_'' has_VBZ gained_VBN the_DT image_NN of_IN rich_JJ ,_, proud_JJ and_CC arrogant_JJ ,_, as_RB well_RB as_IN superfluous_JJ rules_NNS and_CC usages_NNS ,_, among_IN our_PRP$ community_NN ._.
+Likely_RB ,_, ``_`` 泥土中的泥土_FW ''_'' 、_CD ``_`` 英_FW 雄中的英雄_FW ''_'' also_RB have_VBP cultural_JJ and_CC social_JJ background_NN as_IN they_PRP enter_VBP into_IN this_DT language_NN construction_NN ._.
+5_CD Comparing_VBG with_IN relative_JJ structures_NNS Besides_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ,_, ``_`` hen_NN X_NNP -LRB-_-LRB- 很_CD X_NNP -RRB-_-RRB- ''``_SYM bi_FW X_NNP hai_FW yao_FW X_NNP -LRB-_-LRB- 比X还要X_NNP -RRB-_-RRB- ''``_CD X_NNP jiu_NN shi_FW X_NNP -LRB-_-LRB- X_NNP 就是_CD X_NNP -RRB-_-RRB- ''_'' are_VBP all_DT special_JJ structure_NN with_IN idiosyncrasy_NN that_WDT can_MD not_RB be_VB read_VBN from_IN its_PRP$ form_NN ._.
+Their_PRP$ similarity_NN is_VBZ ``_`` X_NNP ''_'' prefers_VBZ adjective-liked_JJ noun_NN whose_WP$ connotation_NN is_VBZ descriptive_JJ ._.
+They_PRP belong_VBP to_TO one_CD ``_`` construction_NN group_NN ''_'' ._.
+They_PRP share_VBP the_DT similar_JJ metrizablility_NN ,_, uncertainty_NN and_CC subjectivity_NN and_CC they_PRP are_VBP prone_JJ to_TO be_VB use_NN in_IN colloquialism_NN ._.
+They_PRP are_VBP different_JJ in_IN form_NN and_CC function_NN ._.
+``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ,_, ``_`` hen_NN X_NNP ''_'' ,_, ``_`` bi_FW X_NNP hai_FW yaoX_NNP ''_'' are_VBP involved_VBN in_IN category_NN match_NN ,_, ``_`` X_NNP jiu_NN shi_FW X_NNP ''_'' is_VBZ a_DT tautologous_JJ structure_NN which_WDT uses_VBZ echo_VBP to_TO activate_VB descriptive_JJ semantic_JJ feature_NN ._.
+The_DT ``_`` 女人就是软弱_NN ''_'' ._.
+second_JJ ``_`` X_NNP ''_'' can_MD replace_VB into_IN a_DT predicate_NN ,_, e.g._FW ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ``_`` hen_NN X_NNP ''_'' ``_`` bi_FW X_NNP hai_FW yao_FW X_NNP ''_'' ``_`` X_NNP jiu_NN shi_FW X_NNP ''_'' e.g._FW X_NNP =_SYM woman_NN 女人中的女人_CD 很女人_CD 比女人还要_CD 女人_NN 女人_CD 就是女人_CD Word_NN class_NN of_IN X_NNP X_NNP can_MD be_VB nouns_NNS ,_, adjectives_NNS and_CC verbs_NNS -LRB-_-LRB- rarely_RB -RRB-_-RRB- ,_, they_PRP are_VBP referencial_JJ ,_, and_CC the_DT proper_JJ noun_NN has_VBZ been_VBN generalized_VBN Can_MD be_VB proper_JJ nouns_NNS ,_, other_JJ nouns_NNS and_CC adjectives_NNS Can_MD be_VB proper_JJ noun_NN Function_NN of_IN X_NNP Both_CC are_VBP referential_JJ :_: first_JJ category_NN ,_, second_JJ individual_JJ Nominal_JJ changes_NNS to_TO descriptive_JJ First_NNP is_VBZ referential_JJ ,_, second_JJ is_VBZ descriptive_JJ First_NNP is_VBZ referential_JJ ,_, second_JJ is_VBZ descriptive_JJ Table_NNP 6_CD Comparison_NNP of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' ,_, ``_`` hen_NN X_NNP ''_'' ,_, ``_`` bi_FW X_NNP hai_FW yao_FW X_NNP ''_'' and_CC ``_`` X_NNP jiu_NN shi_FW X_NNP ''_'' 6_CD Conclusion_NN This_DT paper_NN discussed_VBD the_DT feature_NN and_CC function_NN of_IN ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' construction_NN by_IN analyzing_VBG corpus_NN and_CC statistics_NNS ,_, and_CC made_VBD a_DT comparison_NN with_IN ``_`` hen_NN X_NNP ''_'' ,_, ``_`` bi_FW X_NNP hai_FW yao_FW X_NNP ''_'' and_CC ``_`` X_NNP jiu_NN shi_FW X_NNP ''_'' ._.
+``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' is_VBZ mainly_RB used_VBN to_TO highlight_VB a_DT certain_JJ typical_JJ feature_NN of_IN individual_NN among_IN its_PRP$ assemblage_NN ._.
+It_PRP mainly_RB serves_VBZ as_IN object_NN to_TO ``_`` Yes_UH ''_'' word_NN ,_, sometimes_RB subject_JJ or_CC appositive_JJ attribute_NN ._.
+``_`` X_NNP ''_'' is_VBZ mostly_RB a_DT nominal_JJ constituent_NN with_IN strong_JJ descriptive_JJ meaning_NN ,_, nouns_NNS of_IN vocation_NN and_CC status_NN ,_, and_CC some_DT adjectives_NNS and_CC verbs_NNS can_MD also_RB enter_VB into_IN this_DT construction_NN ,_, while_IN double_JJ syllable_NN is_VBZ more_RBR common_JJ ._.
+Metrizablility_NNP ,_, uncertainty_NN andsubjectivity_NN are_VBP its_PRP$ main_JJ properties_NNS ._.
+Comparing_VBG with_IN other_JJ relative_JJ structures_NNS ,_, ``_`` X_NNP zhong_NNP de_IN X_NNP ''_'' is_VBZ more_RBR typical_JJ as_IN a_DT construction_NN ,_, and_CC its_PRP$ descriptive_JJ meaning_NN is_VBZ brought_VBN by_IN the_DT construction_NN itself_PRP ,_, not_RB by_IN the_DT referential_JJ ``_`` X_NNP ''_'' ._.
+Reference_NNP Goldberg_NNP ,_, A.E._NNP 1995_CD ._.
+Construction_NN :_: A_DT Grammar_NNP Approach_NNP to_TO Argument_NNP Structure_NNP ._.
+Chicago_NNP ,_, IL_NNP :_: The_NNP University_NNP of_IN Chicago_NNP Press_NNP ._.
+Goldberg_NNP ,_, A._NNP E._NNP 2006_CD ._.
+Construction_NN at_IN Work_NN :_: The_DT Nature_NN of_IN Generalization_NNP in_IN Language_NNP -LSB-_NNP M_NNP -RSB-_NNP ._.
+Oxford_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Goldberg_NNP ,_, A.E._NNP 2003_CD ._.
+Construction_NN :_: A_DT new_JJ theoretical_JJ approach_NN to_TO language_NN ._.
+外国语_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+Michaelis_NNP ,_, L_NNP A._NNP 2004_CD ._.
+Type_NN shifting_VBG in_IN construction_NN grammar_NN :_: An_DT integrated_VBN approach_NN to_TO aspectual_JJ coercion_NN ._.
+Cognitive_NNP Linguistic_NNP ._.
+Pustejovsky_NNP ,_, J._NNP 2001_CD ._.
+Type_NN construction_NN and_CC the_DT logic_NN of_IN concept_NN ._.
+In_IN Pierrette_NNP Bouillon_NNP and_CC Federica_NNP Busa_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, The_DT Language_NN of_IN Word_NNP Meaning_NNP ,_, 91_CD -123_CD ._.
+Cambridge_NNP University_NNP Press_NNP ._.
+Pustejovsky_NNP ,_, J._NNP 2006_CD ._.
+Type_NN theory_NN and_CC lexical_JJ decomposition.Journal_NNP of_IN Cognitive_NNP Science_NNP -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+樊中元_NN ._.
+``_`` X_NNP 中的_CD X_NNP ''_'' 格式句法语义分析_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+汉_SYM 语学习_SYM .2015_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+刘洪超_NNP ,_, 詹卫东_CD ._.
+``_`` A_DT +_SYM -_: +_NN X_NNP ,_, B_NNP +_SYM -_: +_FW Y_FW ''_'' 构式的分_CD 类及释义模板_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+中文信息学报_CD 2014_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+刘正光.构式语法研究_NNP -LSB-_NNP M_NNP -RSB-_NNP ._.
+上海_NN :_: 上海外语教育_CD 出版社_CD .2011_CD ._.
+刘正光_SYM 、_SYM 崔刚.非范畴化与_CD ``_`` 副词_FW +_FW 名词_FW ''_'' 结构_SYM -LSB-_NNP J_NNP -RSB-_NNP ._.
+外国语_CD 2005_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+陆俭明_NN ._.
+``_`` 构式语法理论_NN ''_'' 与汉语研究_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+中国_SYM 语文_SYM .2004_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+邱斌.汉语方位类词相关问题研究_NNP -LSB-_NNP M_NNP -RSB-_NNP ._.
+上海_NN :_: 学_CD 林出版社_CD .2008_CD ._.
+施春宏.名词的描述性语义特征与副名组合的_NNP 可能性_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+中国语文_CD .2001_CD ._.
+施春宏.试析名词的语义结构.世界汉语教学_NNP -LSB-_NNP J_NNP -RSB-_NNP .2002_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+石定栩.名词和名词性成分_NNP -LSB-_NNP M_NNP -RSB-_NNP ._.
+北京_NN :_: 北京大学_CD 出版社_CD .2011_CD ._.
+宋作艳.定中复合名词中的构式强迫_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+世界汉_CD 语教学_CD .2014_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+宋作艳.逻辑转喻_CD 、_CD 事件强迫与名词动用_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+语_SYM 言科学_SYM .2013_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+宋作艳.生成词库理论与汉语事件强迫现象研_NNP 究_CD -LSB-_NNP M_NNP -RSB-_NNP ._.
+北京_NN :_: 北京大学出版社_CD .2015_CD ._.
+王洁.表量级递推的_CD ``_`` N_NNP 中的_CD N_NNP ''_'' -LSB-_NNP J_NNP -RSB-_NNP ._.
+广西社会科_IN 学_CD .2007_CD ._.
+王寅.构式语法研究_CD -LRB-_-LRB- 上卷_NN -RRB-_-RRB- :_: 理论思索_CD -LSB-_NNP M_NNP -RSB-_NNP ._.
+上_SYM 海_NN :_: 上海外语教育出版社_CD .2010_CD ._.
+袁毓林.词类范畴的家族相似性_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+中国社会科_IN 学_CD .1995_CD ._.
+袁毓林_SYM 、_SYM 詹卫东_SYM 、_SYM 施春宏.汉语_CD ``_`` 词库-构式_NN ''_'' 互动的语法描写体系及其教学应用_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+语言_IN 教学与研究_CD .2014_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+詹卫东.论元结构与句式变换_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+中国语_SYM 文_SYM .2004_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+张伯江.词类活用的功能解释_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+中国语文_CD 1994_CD ._.
+张娟.国内构式语法研究十年_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+汉语学_SYM 习_SYM .2013_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+张敏.认知语言学与汉语名词短语_NNP -LSB-_NNP M_NNP -RSB-_NNP ._.
+北京_NN :_: 中_CD 国社会科学出版社_CD .1998_CD ._.
+张谊生.名词的语义基础及功能转化与副词修_NNP 饰名词_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+语言教学与研究_CD .1996_CD ._.
+朱军.汉语中_CD ``_`` N_NNP 中的_CD /_CD 之_CD N_NNP ''_'' 格式及其构式化_CD 研究_CD -LSB-_NNP J_NNP -RSB-_NNP ._.
+语言教学与研究_CD 2013_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.

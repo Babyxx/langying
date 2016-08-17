@@ -1,0 +1,170 @@
+Cross-lingual_JJ Pseudo_NNP Relevance_NNP Feedback_NNP Based_VBD on_IN Weak_NNP Relevant_NNP Topic_NNP Alignment_NNP Abstract_NNP In_IN this_DT paper_NN ,_, a_DT cross-lingual_JJ pseudo_NN relevance_NN feedback_NN -LRB-_-LRB- PRF_NNP -RRB-_-RRB- model_NN based_VBN on_IN weak_JJ relevant_JJ topic_NN alignment_NN -LRB-_-LRB- WRTA_NNP -RRB-_-RRB- is_VBZ proposed_VBN for_IN cross_NN language_NN query_NN expansion_NN on_IN unparallel_JJ web_NN pages_NNS ._.
+Topics_NNS in_IN different_JJ languages_NNS are_VBP aligned_VBN on_IN the_DT basis_NN of_IN translation_NN ._.
+Useful_JJ ex_FW -_: pansion_NN terms_NNS are_VBP extracted_VBN from_IN weak_JJ relevant_JJ topics_NNS according_VBG to_TO the_DT bilingual_JJ term_NN similarity_NN ._.
+Experiment_NN results_NNS on_IN web-derived_JJ unparalell_JJ data_NNS show_VBP the_DT contribution_NN of_IN the_DT WRTA-based_JJ PRF_NNP model_NN to_TO cross_VB language_NN information_NN re_SYM -_: trieval_NN ._.
+1_CD Introduction_NNP The_DT problem_NN of_IN word_NN mismatch_NN between_IN queries_NNS and_CC retrieved_VBN documents_NNS is_VBZ particularly_RB serious_JJ in_IN cross_JJ language_NN information_NN retrieval_NN -LRB-_-LRB- CLIR_NNP -RRB-_-RRB- ._.
+The_DT integration_NN of_IN query_NN expansion_NN techniques_NNS and_CC translation_NN knowledge_NN is_VBZ considered_VBN as_IN an_DT effective_JJ way_NN to_TO improve_VB the_DT CLIR_NNP performance_NN -LRB-_-LRB- Ballesteros_NNPS and_CC Croft_NNP ,_, 1998_CD ;_: Qu_NNP et_FW al._FW ,_, 2000_CD -RRB-_-RRB- ._.
+Pseudo_NN relevance_NN feedback_NN -LRB-_-LRB- PRF_NNP -RRB-_-RRB- is_VBZ one_CD of_IN the_DT useful_JJ query_NN optimizing_VBG technologies_NNS for_IN monolin_NN -_: gual_JJ retrieval_NN tasks_NNS -LRB-_-LRB- Rocchio_NNP ,_, 1971_CD ;_: Ruthven_NNP and_CC Lalmas_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+As_IN to_TO the_DT CLIR_NNP task_NN ,_, researchers_NNS laid_VBD more_JJR efforts_NNS on_IN establishing_VBG an_DT effective_JJ cross-lin_NN -_: gual_NN PRF_NNP mechanism_NN on_IN the_DT basis_NN of_IN the_DT relevance_NN and_CC complementary_JJ of_IN bilingual_JJ web_NN pages_NNS -LRB-_-LRB- Balles_NNP -_: teros_NNS and_CC Croft_NNP ,_, 1997_CD ;_: Lavrenko_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+One_CD of_IN the_DT key_JJ problems_NNS is_VBZ how_WRB to_TO choose_VB useful_JJ or_CC rel_SYM -_: evant_JJ bilingual_JJ expansion_NN terms_NNS ._.
+Typical_JJ cross-lingual_JJ PRF_NNP methods_NNS assume_VBP the_DT top_JJ retrieved_VBN documents_NNS are_VBP relevant_JJ and_CC perform_VB feedback_NN calculations_NNS on_IN the_DT whole_JJ pseudo-relevant_JJ document_NN level_NN ._.
+High-frequency_NN words_NNS are_VBP often_RB used_VBN for_IN expanding_VBG original_JJ queries_NNS ._.
+In_IN recent_JJ years_NNS ,_, topic_NN models_NNS were_VBD applied_VBN to_TO more_JJR and_CC more_JJR multilingual_JJ tasks_NNS -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2009_CD ;_: Vulic_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Ganguly_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- proposed_VBD an_DT im_NN -_: proved_VBD cross-lingual_JJ topical_JJ relevance_NN model_NN based_VBN on_IN the_DT latent_NN topics_NNS of_IN top_JJ ranked_VBD documents_NNS ._.
+Wang_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- proposed_VBD a_DT cross-lingual_JJ PRF_NNP model_NN based_VBN on_IN bilingual_JJ topics_NNS and_CC showed_VBD better_JJR results_NNS on_IN par_NN -_: allel_IN or_CC comparable_JJ corpus_NN ._.
+However_RB ,_, the_DT hypothe_NN -_: sis_NN of_IN common_JJ shared_VBN bilingual_JJ topics_NNS is_VBZ not_RB always_RB suitable_JJ for_IN unparallel_JJ documents_NNS ,_, since_IN they_PRP are_VBP of_IN -_: ten_CD poor_JJ in_IN content_JJ relevance_NN ._.
+In_IN most_JJS cases_NNS ,_, web_NN pages_NNS retrieved_VBN from_IN differ_VBP -_: ent_NN language_NN fields_NNS for_IN a_DT specific_JJ query_NN may_MD lack_VB of_IN parallelism_NN ._.
+There_EX may_MD be_VB some_DT common_JJ topics_NNS shared_VBN by_IN the_DT retrieved_VBN documents_NNS in_IN both_DT languages_NNS ,_, but_CC there_EX are_VBP also_RB some_DT specific_JJ topics_NNS for_IN source_NN language_NN retrieval_NN results_NNS or_CC target_NN language_NN re_SYM -_: trieval_JJ results_NNS respectively_RB ._.
+Only_RB the_DT former_JJ com_NN -_: mon_NN shared_VBN topics_NNS would_MD be_VB helpful_JJ to_TO cross-lingual_JJ PRF_NNP ._.
+In_IN this_DT paper_NN ,_, we_PRP assume_VBP that_IN retrieved_VBD results_NNS in_IN different_JJ languages_NNS have_VBP independent_JJ topical_JJ distri_NN -_: bution_NN ,_, but_CC there_EX may_MD be_VB some_DT overlapping_VBG topics_NNS that_WDT describe_VBP similar_JJ or_CC relevant_JJ content_NN ._.
+The_DT over_IN -_: lapping_VBG content_NN is_VBZ defined_VBN as_IN weak_JJ relevant_JJ topics_NNS ._.
+A_DT cross-lingual_JJ PRF_NNP model_NN based_VBN on_IN weak_JJ rele_NN -_: vant_NN topic_NN alignment_NN -LRB-_-LRB- WRTA_NNP -RRB-_-RRB- is_VBZ proposed_VBN for_IN mod_NN -_: eling_VBG the_DT weak_JJ correlation_NN between_IN unparallel_JJ documents_NNS ._.
+Relevant_JJ topics_NNS in_IN different_JJ languages_NNS are_VBP aligned_VBN based_VBN on_IN translation_NN equivalent_NN ._.
+Then_RB useful_JJ expansion_NN terms_NNS are_VBP extracted_VBN from_IN relevant_JJ topics_NNS according_VBG to_TO their_PRP$ bilingual_JJ similarity_NN ._.
+The_DT structure_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN fol_NN -_: lows_NNS :_: section_NN 2_CD introduces_VBZ the_DT structure_NN of_IN the_DT WTRA-based_JJ cross-lingual_JJ PRF_NNP model_NN ;_: section_NN 3_CD presents_VBZ the_DT comparison_NN experiment_NN of_IN different_JJ PRF_NN methods_NNS on_IN web-derived_JJ data_NNS ;_: the_DT final_JJ section_NN shows_VBZ our_PRP$ conclusion_NN ._.
+2_CD Method_NNP It_PRP is_VBZ assumed_VBN that_IN cross-lingual_JJ retrieval_NN results_NNS of_IN a_DT specific_JJ query_NN ,_, although_IN lack_NN of_IN parallelism_NN or_CC com_NN -_: parability_NN ,_, may_MD contain_VB some_DT relevant_JJ content_NN ._.
+Firstly_RB ,_, we_PRP perform_VBP monolingual_JJ topic_NN modeling_NN for_IN source_NN language_NN documents_NNS DS_NNP and_CC target_NN lan_NN -_: guage_NN documents_NNS DT_NNP respectively_RB ._.
+A_DT widely_RB used_VBN topic_NN modeling_NN method_NN is_VBZ the_DT Latent_NNP Dirichlet_NNP Allo_NNP -_: cation_NN -LRB-_-LRB- LDA_NNP -RRB-_-RRB- model_NN ,_, which_WDT is_VBZ proposed_VBN by_IN Blei_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+So_IN the_DT LDA_NNP model_NN is_VBZ employed_VBN to_TO generate_VB candidate_NN topic_NN sets_NNS ._.
+Secondly_RB ,_, topics_NNS in_IN different_JJ languages_NNS are_VBP aligned_VBN based_VBN on_IN translation_NN equiva_NN -_: lence_NN ._.
+Thirdly_RB ,_, useful_JJ expansion_NN terms_NNS in_IN aligned_VBN topics_NNS are_VBP selected_VBN on_IN the_DT basis_NN of_IN translation_NN as_RB well_RB as_IN web_NN co-occurrence_NN features_NNS ._.
+Figure_NN 1_CD shows_VBZ the_DT process_NN of_IN weak_JJ relevant_JJ topic_NN alignment_NN and_CC ex_FW -_: pansion_NN terms_NNS extraction_NN ._.
+Topic_NNP Modeling_NNP DT_NNP Ds_NNS Topic_NNP Modeling_NNP Candidate_NNP English_NNP Topics_NNPS Candidate_NNP Chinese_NNPS Topics_NNPS Bilingual_NNP Dictionary_NNP Aligned_NNP Topics_NNPS Web_NNP Relevant_NNP Expansion_NN Terms_NNS ZT_VBP Zs_NNP Figure_NNP ._.
+1_LS ._.
+Weak_JJ relevant_JJ topic_NN alignment_NN and_CC extraction_NN of_IN relevant_JJ expansion_NN terms_NNS n_VBP ZQS_NNP p_NN Q_NNP |_CD Z_NNP 0_CD z_SYM p_SYM qS_FW |_FW z_SYM 0_CD z_SYM SS_NNP S_NNP i_FW 1_CD iS_NNP S_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- n_JJ Z_NN QT_NNP p_VBD Q_NNP |_CD Z_NNP 0_CD z_SYM p_FW q_FW T_FW |_FW z_SYM 0_CD z_SYM TT_NNP T_NNP i_FW 1_CD iT_NNP T_NNP 2.1_CD Weak_NNP Relevant_NNP Topic_NNP Alignment_NNP For_IN a_DT specific_JJ query_NN and_CC its_PRP$ retrieved_VBN bilingual_JJ doc_NN -_: uments_NNS ,_, we_PRP use_VBP the_DT Gibbs_NNP sampling_NN method_NN for_IN LDA_NNP inference_NN -LRB-_-LRB- Han_NNP and_CC Stibor_NNP ,_, 2010_CD -RRB-_-RRB- and_CC generate_VB two_CD topic_NN sets_NNS in_IN different_JJ languages_NNS ._.
+We_PRP need_VBP some_DT clue_NN for_IN selecting_VBG candidate_NN top_NN -_: ics_FW from_IN the_DT two_CD topic_NN sets_NNS ._.
+Topics_NNS that_WDT have_VBP close_JJ relation_NN with_IN the_DT query_NN or_CC top-ranked_JJ documents_NNS are_VBP adopted_VBN as_IN our_PRP$ candidate_NN topics_NNS ._.
+Then_RB relevant_JJ bi_SYM -_: lingual_NN topic_NN pairs_NNS with_IN better_JJR translation_NN equiva_NN -_: lence_NN are_VBP collected_VBN as_IN the_DT aligned_VBN topics_NNS ._.
+1_LS ._.
+Collecting_VBG candidate_NN topics_NNS Query_NNP related_JJ candidate_NN topics_NNS :_: Topics_NNS including_VBG source_NN language_NN query_NN terms_NNS QS_VBP or_CC query_VBP translation_NN terms_NNS QT_VBP are_VBP assumed_VBN to_TO have_VB directly_RB correlation_NN with_IN users_NNS '_POS query_NN intention_NN ,_, namely_RB query_JJ related_JJ topics_NNS ZQ_NNP ,_, see_VBP formula_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+Alternative_NNP related_JJ candidate_NN topics_NNS :_: The_DT top_JJ M_NNP retrieved_VBD documents_NNS are_VBP supposed_VBN to_TO be_VB more_RBR rele_SYM -_: vant_NN with_IN users_NNS '_POS query_NN intention_NN ._.
+So_IN the_DT top_JJ k_NN topics_NNS with_IN higher_JJR probability_NN in_IN the_DT topic_NN distribution_NN z_SYM of_IN the_DT top_JJ M_NNP documents_NNS are_VBP adopted_VBN as_IN the_DT al_JJ -_: ternative_JJ related_JJ topics_NNS ZE_NNP ,_, see_VBP as_IN formula_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+Both_DT of_IN the_DT query_NN related_VBN topics_NNS ZQ_NNP and_CC the_DT alter_VB -_: native_JJ related_JJ topics_NNS ZE_NNP are_VBP collected_VBN as_IN the_DT candi_NNS -_: date_NN bilingual_JJ topic_NN set_VBN ZC_NNP ,_, see_VBP as_IN formula_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+Z_NNP ES_NNP k_NN a_DT r_NN g_NN m_VBD a_DT x_SYM θ_FW d_LS z_SYM d_LS D_NNP SM_NNP z_SYM -LRB-_-LRB- 3_LS -RRB-_-RRB- ZET_NNP k_NN argmaxθd_NN z_SYM d_LS D_NNP TM_NNP z_SYM -LRB-_-LRB- 4_LS -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- ZC_NNP ZQ_NNP ZE_NNP 2_CD ._.
+Topic_NN alignment_NN Candidate_NNP topics_NNS in_IN different_JJ languages_NNS are_VBP aligned_VBN according_VBG to_TO their_PRP$ translation_NN equivalence_NN based_VBN on_IN the_DT machine-readable_JJ dictionary_NN -LRB-_-LRB- MRD_NNP -RRB-_-RRB- ._.
+For_IN a_DT source_NN language_NN topic_NN zs_NNS and_CC a_DT target_NN lan_NN -_: guage_NN topic_NN zt_NN ,_, which_WDT contain_VBP Ns_NNS terms_NNS or_CC Nt_NN terms_NNS respectively_RB ,_, the_DT topical_JJ alignment_NN rate_NN is_VBZ computed_VBN as_IN formula_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+The_DT m_NN in_IN numerator_NN is_VBZ the_DT amount_NN of_IN terms_NNS in_IN the_DT source_NN language_NN topic_NN zs_NNS that_WDT have_VBP trans_NNS -_: lation_NN in_IN the_DT target_NN language_NN topic_NN zt_NN ,_, the_DT n_NN is_VBZ the_DT amount_NN of_IN terms_NNS in_IN target_NN language_NN topic_NN zt_NN that_WDT have_VBP translation_NN in_IN source_NN language_NN topic_NN zs_NNS ._.
+Figure_NN 3_CD shows_VBZ the_DT alignment_NN relationship_NN be_VB -_: tween_JJ candidate_NN bilingual_JJ topics_NNS of_IN the_DT query_NN ._.
+The_DT solid_JJ arrow_NN with_IN two_CD directions_NNS represents_VBZ a_DT mutual_JJ alignment_NN between_IN two_CD topics_NNS ,_, since_IN they_PRP vote_VBP each_DT other_JJ with_IN the_DT highest_JJS rate_NN ._.
+In_IN this_DT case_NN ,_, three_CD cou_NN -_: ples_NNS of_IN topics_NNS are_VBP aligned_VBN successfully_RB ._.
+2.2_CD Selecting_VBG Relevant_JJ Expansion_NN Terms_NNS Cao_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- analyzed_VBD the_DT potential_JJ influence_NN of_IN different_JJ terms_NNS to_TO the_DT performance_NN of_IN information_NN retrieval_NN tasks_NNS ,_, and_CC concluded_VBD that_IN useful_JJ terms_NNS for_IN query_NN expansion_NN in_IN pseudo_NN relevant_JJ documents_NNS only_RB account_VBP for_IN 18_CD %_NN in_IN high_JJ frequency_NN terms_NNS ._.
+Too_RB many_JJ expansion_NN terms_NNS may_MD reduce_VB the_DT efficiency_NN of_IN re_NN -_: trieval_JJ systems_NNS -LRB-_-LRB- White_NNP and_CC Marchionini_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+In_IN our_PRP$ work_NN ,_, terms_NNS from_IN candidate_NN topics_NNS are_VBP sorted_VBN into_IN three_CD categories_NNS ._.
+The_DT first_JJ category_NN con_NN -_: tains_NNS semantically_RB relevant_JJ terms_NNS that_WDT have_VBP transla_NN -_: tion_NN or_CC synonymy_NN with_IN original_JJ queries_NNS ._.
+Terms_NNS in_IN the_DT second_JJ category_NN have_VBP no_DT direct_JJ relationship_NN with_IN queries_NNS ,_, but_CC they_PRP are_VBP essential_JJ content_NN in_IN describing_VBG identical_JJ themes_NNS in_IN bilingual_JJ context_NN ._.
+The_DT last_JJ cate_NN -_: gory_JJ contains_VBZ irrelevant_JJ noisy_JJ terms_NNS that_WDT should_MD be_VB filtered_VBN out_RP ._.
+To_TO select_VB useful_JJ expansion_NN terms_NNS effectively_RB ,_, a_DT bilingual_JJ term_NN similarity_NN score_NN is_VBZ computed_VBN based_VBN on_IN web-derived_JJ data_NNS ._.
+For_IN each_DT pair_NN of_IN aligned_VBN topics_NNS ,_, a_DT source_NN language_NN term_NN and_CC a_DT target_NN language_NN term_NN are_VBP organized_VBN as_IN a_DT conjunctive_JJ query_NN ``_`` ws_FW +_FW wt_FW ''_'' for_IN the_DT real_JJ time_NN web_NN searching_VBG ._.
+In_IN the_DT real_JJ web_NN searching_VBG ,_, terms_NNS in_IN different_JJ languages_NNS often_RB co-occur_VBP in_IN the_DT ti_NNS -_: tle_NN ,_, snippet_NN or_CC URL_NNP of_IN a_DT retrieved_VBN multilingual_JJ webpage_NN ._.
+So_RB ,_, the_DT web_NN co-occurrence_NN of_IN each_DT pair_NN of_IN terms_NNS from_IN aligned_VBN topics_NNS would_MD be_VB counted_VBN ,_, see_VB formula_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- ._.
+The_DT binary_JJ function_NN in_IN formula_NN -LRB-_-LRB- 8_CD -RRB-_-RRB- rep_NN -_: resents_VBZ the_DT translation_NN relationship_NN between_IN the_DT term_NN ws_NNS and_CC wt_VB ._.
+The_DT bilingual_JJ similarity_NN score_NN of_IN the_DT term_NN pair_NN is_VBZ the_DT linear_JJ combination_NN of_IN web_NN co-occurrence_NN and_CC the_DT translation_NN feature_NN ,_, see_VBP as_IN formula_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- ._.
+The_DT parameter_NN is_VBZ the_DT weighting_NN coefficient_NN ._.
+In_IN each_DT target_NN language_NN topic_NN ,_, terms_NNS are_VBP ranked_VBN according_VBG to_TO the_DT similarity_NN score_NN with_IN the_DT source_NN lan_NN -_: guage_NN query_NN terms_NNS ,_, namely_RB Sim_NNP qis_FW ,_, wtj_NN ._.
+Terms_NNS with_IN similarity_NN score_NN lower_JJR than_IN the_DT threshold_NN will_MD f_SYM zs_FW ,_, zt_FW m_FW n_FW Ns_FW Nt_FW -LRB-_-LRB- 6_CD -RRB-_-RRB- 0.3_CD 0.25_CD 0.2_CD 0.15_CD 0.1_CD 0.05_CD 0_CD EN23_NNP EN25_NNP EN27_NNP EN67_NNP EN21_NNP CH40_NNP CH62_NNP CH74_NNP CH99_NNP CH86_NNP Figure_NNP ._.
+2_LS ._.
+The_DT alignment_NN rate_NN between_IN the_DT candidate_NN bi_SYM -_: lingual_NN topics_NNS of_IN ``_`` Information_NNP retrieval_NN ''_'' Figure_NN 2_CD shows_VBZ the_DT alignment_NN rate_NN between_IN can_MD -_: didate_JJ bilingual_JJ topics_NNS of_IN the_DT query_NN ``_`` Information_NNP re_SYM -_: trieval_NN ''_'' ._.
+The_DT bi-directional_JJ translation_NN process_NN can_MD be_VB regard_NN as_IN a_DT mutual_JJ multi-voting_JJ game_NN between_IN topics_NNS in_IN different_JJ languages_NNS ._.
+The_DT higher_JJR rate_NN im_SYM -_: plies_VBZ more_RBR latent_NN relevance_NN ._.
+ZS_NNP ZT_NNP EN21_NNP Figure_NNP ._.
+3_LS ._.
+The_DT alignment_NN of_IN Chinese-English_JJ candidate_NN topics_NNS of_IN the_DT query_NN ``_`` Information_NNP retrieval_NN ''_'' CH40_NNP CH62_NNP CH74_NNP CH86_NNP CH99_NNP EN23_NNP EN25_NNP EN27_NNP EN67_NNP fC_NNP wiS_NNP ,_, wjt_NN p_NN wiS_NNP ,_, wjt_NN #_# retrieval_NN recordsincluding_VBG wiS_NNP ,_, wjt_NN Nc_NNP #_# retrieval_NN records_NNS from_IN IR_NNP system_NN N_NNP -LRB-_-LRB- 7_CD -RRB-_-RRB- be_VB filtered_VBN out_RP ._.
+1_CD ,_, Tij_NNP ij_VBD St_NNP f_SYM wS_NNPS ,_, wt_VB Trans_NNP wS_NNP ,_, wt_VB S_NNP i_FW m_FW w_FW S_NNP ,_, w_NN t_SYM λ_FW f_LS w_FW S_NNP ,_, w_NN t_NN 1_CD λ_NN f_LS w_FW S_NNP ,_, w_NN t_NN ,_, other_JJ -LRB-_-LRB- 0_CD λ_SYM 1_LS -RRB-_-RRB- -LRB-_-LRB- 8_CD -RRB-_-RRB- -LRB-_-LRB- 9_CD -RRB-_-RRB- 0_CD ,_, ij_NN Tij_NNP Cij_NNP 2.3_CD Cross_NNP Language_NNP Pseudo_NNP Relevance_NNP Feed_NNP -_: back_RB Based_VBN on_IN WRTA_NNP Based_VBD on_IN the_DT above_JJ algorithm_NN ,_, relevant_JJ terms_NNS are_VBP obtained_VBN for_IN cross-lingual_JJ query_NN expansion_NN ._.
+Figure_NN 4_CD shows_VBZ the_DT CLIR_NNP process_NN with_IN WRTA-based_JJ PRF_NNP mechanism_NN ._.
+source_NN language_NN pages_NNS were_VBD crawled_VBN for_IN each_DT Chi_NNP -_: nese_NN query_NN ,_, since_IN most_JJS web_NN users_NNS pay_VB more_JJR attention_NN to_TO the_DT top-ranked_JJ results_NNS in_IN the_DT retrieval_NN list_NN ._.
+The_DT tar_NN -_: get_VB language_NN pages_NNS were_VBD retrieved_VBN via_IN Google_NNP 's_POS cross-lingual_JJ retrieval_NN ._.
+Totally_RB 1080_CD web_NN pages_NNS were_VBD collected_VBN ._.
+Then_RB 20_CD queries_NNS with_IN poor_JJ comparable_JJ retrieval_NN results_NNS were_VBD selected_VBN as_IN our_PRP$ test_NN set_NN ,_, totally_RB 400_CD web_NN pages_NNS ._.
+Other_JJ queries_NNS were_VBD saved_VBN as_IN our_PRP$ training_NN set_NN ,_, totally_RB 34_CD queries_NNS and_CC 680_CD web_NN pages_NNS ._.
+All_DT of_IN the_DT col_NN -_: lected_VBN web_NN pages_NNS were_VBD cleaned_VBN by_IN the_DT text_NN prepro_NN -_: cessing_VBG module_NN and_CC then_RB be_VB indexed_VBN by_IN Indri_NNP 5.2_CD ._.
+Since_IN the_DT typical_JJ assessment_NN criteria_NNS ,_, such_JJ as_IN pre_NN -_: cision_NN or_CC recall_NN ,_, shows_VBZ no_DT significant_JJ difference_NN on_IN the_DT relatively_RB small_JJ dataset_NN ,_, we_PRP take_VBP nDCG_JJ -LRB-_-LRB- Dis_SYM -_: counted_VBN Cumulative_NNP Gain_NNP -RRB-_-RRB- to_TO evaluate_VB the_DT ranking_JJ effect_NN of_IN retrieval_NN results_NNS ._.
+27_CD volunteers_NNS were_VBD invited_VBN to_TO judge_VB the_DT relevance_NN of_IN bilingual_JJ documents_NNS ._.
+3.2_CD Parameters_NNS All_PDT the_DT parameters_NNS were_VBD tuned_VBN on_IN the_DT basis_NN of_IN our_PRP$ training_NN set_NN ._.
+It_PRP was_VBD observed_VBN that_IN topics_NNS from_IN the_DT top_JJ 1_CD docu_NN -_: ment_NN as_RB well_RB as_IN the_DT query_NN related_VBN topic_NN ZQ_NNP contrib_NN -_: uted_VBD most_RBS to_TO the_DT best_JJS ranking_JJ results_NNS ._.
+So_IN the_DT parameters_NNS of_IN topic_NN alignment_NN were_VBD configured_VBN as_IN follows_VBZ ,_, the_DT alternative_JJ document_NN number_NN M_NNP =_SYM 1_CD ,_, the_DT alternative_JJ topic_NN number_NN k_NN =_SYM 2_CD ._.
+Each_DT query_NN has_VBZ 1.5_CD pair_NN of_IN weak_JJ relevant_JJ topics_NNS on_IN average_NN ._.
+The_DT filter_NN -_: ing_NN threshold_NN of_IN term_NN probability_NN in_IN each_DT topic_NN σ_NN =_SYM 0.005_CD ._.
+The_DT weighting_NN coefficient_NN of_IN the_DT bilingual_JJ term_NN similarity_NN score_NN was_VBD set_VBN as_IN λ_NN =_SYM 0.05_CD ,_, and_CC its_PRP$ threshold_NN for_IN filtering_VBG terms_NNS =_SYM 0.85_CD ._.
+The_DT hyper_JJ parameters_NNS of_IN the_DT LDA_NNP model_NN were_VBD optimized_VBN based_VBN on_IN the_DT training_NN set_NN ,_, as_IN follows_VBZ ,_, 0.1_CD ,_, s_VBZ 0.01_CD ,_, t_SYM 0.02_CD ._.
+The_DT number_NN of_IN training_NN iterations_NNS was_VBD 10000_CD ._.
+3.3_CD Comparative_NNP Experiments_NNS To_TO examine_VB the_DT feedback_NN effect_NN of_IN proposed_VBN method_NN ,_, we_PRP chose_VBD the_DT normal_JJ CLIR_NNP results_NNS without_IN PRF_NNP modulation_NN as_IN our_PRP$ baseline_NN ._.
+Source_NNP Language_NNP Query_NNP Source_NNP Language_NNP IR_NNP Source_NNP Language_NNP Retrieval_NNP Result_NN Query_NNP Translation_NN WRTA_NNP -_: based_VBN PRF_NNP Target_NNP Language_NNP Query_NNP Target_NNP Language_NNP IR_NNP Target_NNP Language_NNP Retrieval_NNP Result_NN only_RB if_IN w_NN ,_, w_NN are_VBP mutual_JJ translation_NN i_FW j_FW Figure_NN ._.
+4_LS ._.
+CLIR_NNP process_NN with_IN cross_JJ language_NN pseudo_NN rel_NN -_: evance_NN feedback_NN based_VBN on_IN WRTA_NNP ._.
+3_CD Experiments_NNS 3.1_CD Experimental_JJ setting_NN and_CC Data_NNP We_PRP perform_VBP cross-lingual_JJ PRF_NNP experiments_NNS on_IN a_DT self-constructed_JJ CLIR_NNP system_NN ,_, namely_RB CTP-CLIR_NNP system_NN -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+As_IN a_DT prototype_NN system_NN ,_, it_PRP contains_VBZ a_DT text_NN pre-processing_JJ module_NN ,_, a_DT query_NN translation_NN module_NN ,_, a_DT retrieval_NN model_NN -LRB-_-LRB- Indri_NNP 5.2_CD -RRB-_-RRB- and_CC the_DT pseudo_NN relevance_NN feedback_NN module_NN ,_, which_WDT inte_SYM -_: grated_VBN various_JJ PRF_NNP mechanisms_NNS ._.
+The_DT CTP-CLIR_NNP system_NN could_MD access_VB web_NN pages_NNS on_IN line_NN and_CC retrieve_VB local_JJ multilingual_JJ database_NN automatically_RB ._.
+A_DT Web-derived_JJ Chinese-English_JJ corpus_NN was_VBD col_SYM -_: lected_VBN to_TO simulate_VB the_DT real_JJ cross_NN language_NN web_NN search_NN task_NN ._.
+The_DT source_NN language_NN query_NN set_NN was_VBD se_FW -_: lected_VBN from_IN the_DT Chinese_JJ science_NN and_CC technology_NN concepts_NNS on_IN CNKI_NNP ._.
+Each_DT query_NN contains_VBZ 1_CD to_TO 3_CD word_NN tokens_NNS ,_, totally_RB 54_CD queries_NNS ._.
+The_DT target_NN language_NN que_NN -_: ries_NNS were_VBD the_DT English_NNP translation_NN of_IN the_DT Chinese_JJ que_NN -_: ries_NNS ,_, obtained_VBN from_IN the_DT query_NN translation_NN module_NN ._.
+The_DT bilingual_JJ retrieval_NN documents_NNS were_VBD collected_VBN from_IN Google_NNP 's_POS real_JJ time_NN retrieval_NN results_NNS ._.
+Top_JJ 10_CD Various_JJ PRF_NNP methods_NNS ,_, such_JJ as_IN VSM-based_JJ PRF_NNP framework_NN ,_, LDA-based_JJ PRF_NNP model_NN ,_, bilingual_JJ LDA-based_JJ PRF_NNP model_NN ,_, etc._FW ,_, are_VBP also_RB conducted_VBN be_VB -_: fore_NN or_CC after_IN the_DT query_NN translation_NN stage_NN of_IN CLIR_NNP ,_, namely_RB comparative_JJ experiments_NNS ._.
+3.4_CD Results_NNS Figure_NN 5_CD shows_VBZ the_DT CLIR_NNP results_NNS employing_VBG differ_VBP -_: ent_NN PRF_NNP methods_NNS on_IN unparallel_JJ documents_NNS ._.
+The_DT first_JJ column_NN is_VBZ the_DT result_NN of_IN CLIR_NNP without_IN PRF_NNP mechanism_NN ._.
+The_DT second_JJ to_TO the_DT forth_RB column_NN show_VBP the_DT results_NNS of_IN PRF_NNP based_VBN on_IN the_DT Vector_NNP Space_NNP Model_NNP -LRB-_-LRB- VSM_NNP -RRB-_-RRB- ,_, namely_RB pre-translation_JJ VSM-based_JJ PRF_NNP ,_, post-translation_JJ VSM-based_JJ PRF_NNP and_CC com_NN -_: bined_VBN VSM-based_JJ PRF_NNP ._.
+The_DT fifth_JJ to_TO the_DT seventh_JJ col_NN -_: umn_NN show_VBP the_DT results_NNS of_IN PRF_NNP based_VBN on_IN monolingual_JJ topic_NN model_NN ,_, namely_RB pre-translation_JJ LDA-based_JJ PRF_NNP ,_, post-translation_JJ LDA-based_JJ PRF_NNP and_CC com_NN -_: bined_VBN LDA-based_JJ PRF_NNP ._.
+The_DT eighth_JJ column_NN is_VBZ the_DT re_NN -_: sult_NN of_IN bilingual_JJ LDA-based_JJ PRF_NNP ,_, which_WDT performs_VBZ integrated_VBN feedback_NN on_IN the_DT basis_NN of_IN the_DT bilingual_JJ LDA_NNP model_NN ._.
+The_DT last_JJ column_NN shows_VBZ the_DT result_NN of_IN proposed_VBN WRTA-based_JJ cross-lingual_JJ PRF_NNP ._.
+4_CD Conclusion_NN This_DT paper_NN describes_VBZ a_DT way_NN to_TO discover_VB useful_JJ infor_NN -_: mation_NN from_IN unparallel_JJ retrieval_NN results_NNS for_IN cross_NN -_: lingual_NN pseudo_NN relevance_NN feedback_NN ._.
+A_DT cross_NN lan_NN -_: guage_NN PRF_NNP model_NN based_VBN on_IN weak-relevant_JJ topic_NN alignment_NN is_VBZ proposed_VBN ._.
+In_IN comparison_NN with_IN various_JJ PRF_NNP methods_NNS ,_, WRTA-based_JJ PRF_NNP model_NN showed_VBD better_JJR perfor_SYM -_: mance_NN and_CC robustness_NN in_IN the_DT CLIR_NNP task_NN on_IN less_JJR com_NN -_: parable_JJ documents_NNS ._.
+So_IN it_PRP is_VBZ proved_VBN to_TO be_VB more_RBR suitable_JJ for_IN web_NN oriented_VBN tasks_NNS ._.
+It_PRP is_VBZ worth_JJ noting_VBG that_IN the_DT effect_NN of_IN expansion_NN terms_NNS for_IN cross-lingual_JJ PRF_NNP is_VBZ very_RB complicated_VBN ._.
+The_DT quality_NN and_CC quantity_NN of_IN expansion_NN terms_NNS ,_, which_WDT are_VBP influenced_VBN by_IN the_DT quality_NN of_IN translation_NN as_RB well_RB as_IN feedback_NN documents_NNS ,_, should_MD be_VB controlled_VBN care_NN -_: fully_RB ._.
+Too_RB many_JJ expansion_NN terms_NNS may_MD drown_VB out_RP valuable_JJ information_NN ,_, so_IN the_DT quantity_NN of_IN expansion_NN terms_NNS is_VBZ reduced_VBN sharply_RB in_IN our_PRP$ work_NN ._.
+Noise_NN terms_NNS are_VBP removed_VBN from_IN candidate_NN expansion_NN terms_NNS effec_SYM -_: tively_RB ,_, so_RB that_IN useful_JJ terms_NNS may_MD achieve_VB positive_JJ feedback_NN performance_NN ._.
+As_IN to_TO the_DT further_JJ work_NN ,_, it_PRP will_MD be_VB necessary_JJ to_TO in_IN -_: troduce_NN more_RBR multilingual_JJ knowledge_NN resources_NNS into_IN the_DT cross-lingual_JJ PRF_NNP mechanism_NN ,_, such_JJ as_IN Wikipe_NNP -_: dia_NN ,_, multilingual_JJ ontology_NN ,_, as_RB well_RB as_IN semantic_JJ web_NN knowledge_NN ,_, etc._FW ._.
+Rich_NNP knowledge_NN resources_NNS will_MD be_VB a_DT helpful_JJ supplement_NN for_IN choosing_VBG relevant_JJ expansion_NN terms_NNS ,_, and_CC furthermore_RB ,_, improving_VBG the_DT performance_NN of_IN PRF_NNP model_NN in_IN CLIR_NNP tasks_NNS ._.
+However_RB ,_, the_DT PRF_NNP method_NN based_VBN on_IN bilingual_JJ LDA_NNP model_NN ,_, which_WDT used_VBD to_TO achieve_VB better_JJR perfor_SYM -_: mance_NN than_IN monolingual_JJ models_NNS on_IN parallel_JJ docu_NN -_: ments_NNS ,_, showed_VBD no_DT advantage_NN here_RB ,_, since_IN the_DT poor_JJ quality_NN of_IN the_DT unparallel_JJ feedback_NN documents_NNS lim_SYM -_: ited_VBD the_DT effectiveness_NN of_IN topical_JJ PRF_NNP methods_NNS ._.
+In_IN spite_NN of_IN the_DT interference_NN from_IN the_DT unparalleled_JJ documents_NNS ,_, the_DT WRTA-based_JJ PRF_NNP model_NN achieved_VBD the_DT highest_JJS improvement_NN for_IN CLIR_NNP ._.
+Expansion_NN terms_NNS from_IN aligned_VBN topics_NNS ,_, which_WDT were_VBD selected_VBN based_VBN on_IN the_DT translation_NN and_CC web_NN co-occurrence_NN fea_NN -_: tures_NNS ,_, showed_VBD clear_JJ relevance_NN with_IN original_JJ queries_NNS ._.
+On_IN one_CD hand_NN ,_, noisy_JJ terms_NNS were_VBD filtered_VBN out_RP effec_FW -_: tively_RB and_CC the_DT amount_NN of_IN expansion_NN terms_NNS was_VBD re_SYM -_: duced_VBN sharply_RB ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT remained_VBN expansion_NN terms_NNS showed_VBD positive_JJ impact_NN on_IN the_DT per_FW -_: formance_NN of_IN CLIR_NNP on_IN unparallel_JJ documents_NNS ._.
+0.98_CD 0.96_CD 0.94_CD 0.92_CD 0.9_CD 0.88_CD 0.86_CD 0.84_CD 0.82_CD 0.8_CD 0.78_CD Mean_NNP nDCG_NNP Figure_NNP ._.
+5_CD ._.
+Comparison_NN of_IN cross-lingual_JJ PRF_NNP based_VBN on_IN WRTA_NNP and_CC other_JJ PRF_NNP methods_NNS ._.
+It_PRP can_MD be_VB observed_VBN that_IN the_DT VSM-based_JJ PRF_NNP methods_NNS introduced_VBD too_RB much_JJ noise_NN ,_, since_IN the_DT feed_NN -_: back_RB calculation_NN was_VBD performed_VBN on_IN the_DT entire_JJ docu_NN -_: ment_NN level_NN ._.
+The_DT LDA-based_JJ PRF_NNP methods_NNS showed_VBD a_DT slightly_RB better_JJR performance_NN than_IN former_JJ methods_NNS ,_, verifying_VBG the_DT fact_NN that_IN a_DT fine-grained_JJ topic_NN may_MD in_IN -_: troduce_NN more_RBR relevant_JJ terms_NNS into_IN query_NN expansion_NN ._.
+WRTA_PRF_NNP Bi_Topic_PRF_NNP LDA_combPRF_NNP LDA_postPRF_NNP LDA_prePRF_NNP VSM_combPRF_NNP VSM_postPRF_NNP VSM_prePRF_NNP CLIR_no_PRF_NNP References_NNP Andrzejewski_NNP D_NNP ,_, Buttler_NNP D._NNP Latent_NNP topic_NN feedback_NN for_IN in_IN -_: formation_NN retrieval_NN -LSB-_NNP J_NNP -RSB-_NNP ._.
+Proceedings_NNP of_IN the_DT 17th_JJ Acm_NNP Sigkdd_NNP International_NNP Conference_NNP on_IN Knowledge_NNP Dis_NNP -_: covery_NN and_CC Data_NNP Mining_NNP San_NNP Diego_NNP Ca_JJ Usa_NNP August_NNP 21_CD 24_CD 2011_CD ,_, 2011_CD :_: 600-608_CD ._.
+Ballesteros_NNS L_NNP ,_, Croft_NNP W._NNP Statistical_NNP Methods_NNPS for_IN Cross_NNP -_: language_NN Information_NN Retrieval_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+1998_CD ._.
+Ballesteros_NNS L_NNP ,_, Croft_NNP W._NNP Phrasal_NNP translation_NN and_CC query_NN ex_FW -_: pansion_NN techniques_NNS for_IN cross-language_JJ information_NN re_SYM -_: trieval_JJ -LSB-_NNP J_NNP -RSB-_NNP ._.
+Proceedings_NNP of_IN the_DT 20th_JJ Annual_JJ International_NNP Acm_NNP Sigir_NNP Conference_NNP on_IN Research_NNP and_CC Development_NNP in_IN Information_NNP Retrieval_NNP ,_, 1997_CD ,_, 31_CD -LRB-_-LRB- SI_NNP -RRB-_-RRB- :_: 84-91_CD ._.
+Blei_NNP D_NNP M_NNP ,_, Ng_NNP A_NNP Y_NNP ,_, Jordan_NNP M_NNP I._NNP Latent_NNP dirichlet_NN allocation_NN -LSB-_NNP J_NNP -RSB-_NNP ._.
+The_DT Journal_NNP of_IN machine_NN learning_VBG research_NN ,_, 2003_CD ,_, 3_CD :_: 993-1022_CD ._.
+Cao_NNP G_NNP ,_, Nie_NNP J_NNP Y_NNP ,_, Gao_NNP J_NNP ,_, et_FW al._FW ._.
+Selecting_VBG good_JJ expansion_NN terms_NNS for_IN pseudo-relevance_NN feedback_NN -LSB-_NNP C_NNP -RSB-_NNP /_CD /_CD Proceedings_NNP of_IN the_DT 31st_JJ annual_JJ international_JJ ACM_NNP SIGIR_NNP confer_VBP -_: ence_NN on_IN Research_NNP and_CC development_NN in_IN information_NN re_SYM -_: trieval_NN ._.
+ACM_NNP ,_, 2008_CD :_: 243-250_CD ._.
+Ganguly_NNP Debasis_NNP and_CC Leveling_NNP Johannes_NNP and_CC Jones_NNP Gareth_NNP J_NNP F_NN Cross-lingual_JJ topical_JJ relevance_NN models_NNS -LSB-_NNP C_NNP -RSB-_NNP ._.
+24th_JJ International_NNP Conference_NNP on_IN Computational_NNP Lin_NNP -_: guistics_NNS ,_, 2012_CD ._.
+Han_NNP X_NNP ,_, Stibor_NNP T._NNP Efficient_NNP Collapsed_NNP Gibbs_NNP Sampling_NNP for_IN Latent_NNP Dirichlet_NNP Allocation_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+Jmlr_NNP ,_, 2010_CD ._.
+Http://www.cnki.net/_NNP J._NNP J._NNP Rocchio_NNP ._.
+Relevance_NN feedback_NN in_IN information_NN re_SYM -_: trieval_NN ._.
+-LSB-_JJ J_NNP -RSB-_NNP ._.
+In_IN the_DT SMART_NNP Retrieval_NNP System_NNP :_: Experi_NNP -_: ments_NNS in_IN Automatic_NNP Document_NNP Processing_NNP ,_, 1971:313_CD -_: 323_CD Lavrenko_NNP V_NNP ,_, Choquette_NNP M_NNP ,_, Croft_NNP W._NNP Cross-lingual_JJ rele_NN -_: vance_NN models_NNS -LSB-_NNP J_NNP -RSB-_NNP ._.
+Proceedings_NNP of_IN the_DT 25th_JJ Annual_JJ In_IN -_: ternational_JJ Acm_NNP Sigir_NNP Conference_NNP on_IN Research_NNP and_CC Development_NNP in_IN Information_NNP Retrieval_NNP ,_, 2002_CD ._.
+Orengo_NNP V_NNP ,_, Huyck_NNP C._NNP Relevance_NNP feedback_NN and_CC cross-lan_JJ -_: guage_NN information_NN retrieval_NN -LSB-_NNP J_NNP -RSB-_NNP ._.
+Information_NN Pro-_JJ cessing_NN and_CC Management_NN an_DT International_NNP Journal_NNP ,_, 2006_CD ,_, 42_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: 1203-1217_CD ._.
+Qu_NNP Y_NNP ,_, Eilerman_NNP A_NNP ,_, Jin_NNP H_NNP ._.
+The_DT Effect_NN of_IN Pseudo_NNP Rele_NNP -_: vance_NN Feedback_NNP on_IN MT-Based_JJ CLIR_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+Riao_NNP 2000_CD Content_NNP Based_VBD Multi_NNP Media_NNP Information_NNP Access_NNP Csais_NNP ,_, 2000_CD ._.
+Ruthven_NNP I_PRP ,_, Lalmas_NNP M_NNP ._.
+A_DT survey_NN on_IN the_DT use_NN of_IN relevance_NN feedback_NN for_IN information_NN access_NN systems_NNS -LSB-_NNP J_NNP -RSB-_NNP ._.
+The_DT Knowledge_NNP Engineering_NNP Review_NNP ,_, 2003_CD ._.
+Vulic_NNP I_PRP ,_, De_NNP Smet_NNP W_NNP ,_, Moens_NNP M._NNP Cross-language_JJ infor_NN -_: mation_NN retrieval_NN models_NNS based_VBN on_IN latent_NN topic_NN models_NNS trained_VBN with_IN document-aligned_JJ comparable_JJ corpora_NN -LSB-_NNP J_NNP -RSB-_NNP ._.
+Information_NNP Retrieval_NNP ,_, 2013_CD ._.
+Wang_NNP A_NNP ,_, Li_NNP Y_NNP ,_, Wei_NNP W._NNP Cross_NNP language_NN information_NN re_SYM -_: trieval_JJ based_VBN on_IN LDA_NNP -LSB-_NNP J_NNP -RSB-_NNP ._.
+Intelligent_JJ Computing_NNP and_CC Intelligent_NNP Systems_NNPS ._.
+ICIS_NNP 2009_CD ._.
+Wang_NNP Xu-wen_NNP ,_, Wang_NNP Xiao-jie_NNP ,_, Sun_NNP Yue-ping_JJ ,_, Cross-lin_JJ -_: gual_JJ pseudo_NN relevance_NN feedback_NN based_VBN on_IN bilingual_JJ topics_NNS ,_, Journal_NNP of_IN Beijing_NNP University_NNP of_IN Posts_NNPS and_CC Tel_NNP -_: ecommunications_NNS ,_, Volume_NN :_: 36_CD ;_: Issue_NNP 4_CD ;_: -LRB-_-LRB- JA_NNP -RRB-_-RRB- Pages_NNP :_: 81-84_CD ,_, August_NNP 2013_CD ._.
+Wang_NNP X_NNP ,_, Zhang_NNP Q_NNP ,_, Wang_NNP X_NNP ,_, et_FW al._FW ._.
+LDA_NNP based_VBN PSEUDO_NNP relevance_NN feedback_NN for_IN cross_NN language_NN information_NN re_SYM -_: trieval_JJ -LSB-_NNP C_NNP -RSB-_NNP /_CD /_CD Cloud_NNP Computing_NNP and_CC Intelligent_NNP Systems_NNP -LRB-_-LRB- CCIS_NNP -RRB-_-RRB- ,_, 2012_CD IEEE_NNP 2nd_CD International_NNP Conference_NNP on_IN -_: IEEE_NNP ,_, 2012:1511_CD -1516_CD ._.
+Wang_NNP X_NNP ,_, Wang_NNP X_NNP ,_, Zhang_NNP Q_NNP ._.
+A_DT Web-Based_JJ CLIR_NNP System_NNP with_IN Cross-Lingual_NNP Topical_NNP Pseudo_NNP Relevance_NNP Feed_NNP -_: back_RB -LSB-_JJ J_NNP -RSB-_NNP ._.
+Lecture_NN Notes_NNS in_IN Computer_NNP Science_NNP ,_, Volume_NN 8138_CD LNCS_NNP ,_, 2013_CD ._.
+White_NNP ,_, R.W._NNP ,_, &_CC Marchionini_NNP ,_, G._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Examining_VBG the_DT effectiveness_NN of_IN real-time_JJ query_NN expansion_NN ._.
+Infor_NNP -_: mation_NN Processing_NNP &_CC Management_NNP ,_, 43_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 685_CD --_: 704_CD ._.

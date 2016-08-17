@@ -1,0 +1,251 @@
+1_CD Abstract_NNP Sentence_NNP similarity_NN computing_NN has_VBZ been_VBN widely_RB used_VBN in_IN automatic_JJ summarization_NN ,_, question-answer_NN -LRB-_-LRB- QA_NNP -RRB-_-RRB- system_NN ,_, machine_NN translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- and_CC so_RB on_IN ._.
+This_DT paper_NN proposes_VBZ a_DT hybrid_JJ pragmatic_JJ sentence_NN similarity_NN computing_VBG method_NN integrating_VBG morphologic_JJ features_NNS ,_, syntactic_NN features_NNS and_CC semantic_JJ features_NNS ._.
+We_PRP construct_VBP a_DT Chinese_JJ Paraphrase_NNP Corpus_NNP to_TO do_VB evaluation_NN experiments_NNS of_IN our_PRP$ proposed_VBN method_NN and_CC comparison_NN with_IN baseline_NN systems_NNS ._.
+Experimental_JJ results_NNS show_VBP that_IN our_PRP$ method_NN can_MD effectively_RB improve_VB the_DT precision_NN and_CC recall_NN of_IN sentences_NNS similarity_NN ._.
+Introduction_NN based_VBN models_NNS to_TO improve_VB the_DT estimates_NNS of_IN existing_VBG language_NN models_NNS ._.
+Lv_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- and_CC Li_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- offer_VBP a_DT sentence_NN similarity_NN calculation_NN method_NN which_WDT consists_VBZ of_IN morphological_JJ similarity_NN and_CC word_NN order_NN similarity_NN ._.
+Yang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- offers_VBZ a_DT vector_NN space_NN model_NN using_VBG TF-IDF_NN features_NNS ._.
+These_DT methods_NNS are_VBP usually_RB based_VBN on_IN surface_NN morphological_JJ information_NN of_IN each_DT word_NN of_IN sentences_NNS ,_, only_RB considers_VBZ the_DT characteristic_NN of_IN words_NNS ._.
+Liu_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- present_RB a_DT novel_NN method_NN to_TO measure_VB similarity_NN between_IN sentences_NNS by_IN analyzing_VBG parts_NNS of_IN speech_NN and_CC using_VBG Dynamic_NNP Time_NNP Warping_NNP -LRB-_-LRB- DTW_NNP -RRB-_-RRB- technique_NN ._.
+However_RB ,_, sentence_NN similarity_NN calculation_NN using_VBG information_NN of_IN similar_JJ vocabulary_NN is_VBZ different_JJ from_IN semantics_NNS ._.
+It_PRP ca_MD n't_RB be_VB handled_VBN appropriately_RB ._.
+The_DT second_JJ category_NN is_VBZ developed_VBN by_IN many_JJ researchers_NNS and_CC it_PRP quantifies_VBZ similarity_NN relationships_NNS based_VBN on_IN information_NN in_IN the_DT manually_RB crafted_VBN thesaurus_NN ,_, for_IN instance_NN ,_, WordNet_NNP and_CC HowNet_NNP ,_, etc._FW ._.
+Richardson_NNP et_FW al._FW -LRB-_-LRB- 1994_CD -RRB-_-RRB- propose_VBP the_DT use_NN of_IN WordNet_NNP as_IN a_DT knowledge_NN base_NN in_IN an_DT information_NN retrieval_NN task_NN ._.
+The_DT application_NN areas_NNS range_VBP from_IN information_NN filtering_VBG and_CC document_NN retrieval_NN to_TO multimedia_NNS retrieval_NN and_CC data_NNS sharing_NN in_IN large_JJ scale_NN distributed_VBN database_NN systems_NNS ._.
+Li_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Liu_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- calculate_VBP similarity_NN and_CC correlation_NN between_IN words_NNS based_VBN on_IN Chinese_JJ Thesaurus_NN -_: Tongyici_NNP Cilin_NNP and_CC HowNet_NNP ,_, and_CC then_RB calculate_VBP the_DT correlation_NN between_IN sentences_NNS ._.
+Kong_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- calculates_VBZ the_DT similarity_NN between_IN sentences_NNS based_VBN on_IN HowNet_NNP ._.
+Though_IN methods_NNS of_IN this_DT category_NN compensates_VBZ for_IN the_DT defects_NNS of_IN similarity_NN computing_NN methods_NNS based_VBN on_IN characteristics_NNS of_IN words_NNS to_TO a_DT certain_JJ extent_NN ,_, it_PRP ignores_VBZ the_DT deep_JJ syntactic_NN structure_NN of_IN a_DT sentence_NN ._.
+Simultaneously_RB ,_, the_DT accuracy_NN of_IN similarity_NN calculation_NN depends_VBZ on_IN the_DT completeness_NN of_IN the_DT semantic_JJ dictionary_NN ._.
+Therefore_RB ,_, this_DT method_NN has_VBZ certain_JJ limitation_NN ._.
+Moreover_RB ,_, a_DT basic_JJ idea_NN of_IN sentence_NN similarity_NN is_VBZ usually_RB defined_VBN as_IN a_DT combination_NN of_IN semantic_JJ similarity_NN and_CC word_NN order_NN similarity_NN or_CC others_NNS ._.
+The_DT third_JJ category_NN is_VBZ based_VBN on_IN semantic_JJ dependency_NN structure_NN ._.
+Achananuparp_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- proposes_VBZ a_DT hybrid_JJ question_NN similarity_NN approach_NN that_WDT combines_VBZ semantic_JJ ,_, syntactic_JJ and_CC question_NN type_NN A_DT Hybrid_NNP Pragmatic_NNP Sentence_NNP Similarity_NNP Computing_NNP Method_NNP Sentence_NNP similarity_NN computing_NN is_VBZ a_DT core_NN research_NN point_NN in_IN natural_JJ language_NN processing_NN ,_, which_WDT is_VBZ a_DT measure_NN method_NN of_IN similarity_NN between_IN sentences_NNS ._.
+Sentence_NN similarity_NN measures_NNS play_VBP an_DT increasingly_RB important_JJ role_NN in_IN text_NN related_VBN research_NN and_CC applications_NNS in_IN areas_NNS such_JJ as_IN text_NN classification_NN ,_, information_NN retrieval_NN ,_, machine_NN translation_NN ,_, automatic_JJ summarization_NN and_CC automatic_JJ question_NN answering_VBG system_NN ,_, etc._FW ._.
+These_DT applications_NNS show_VBP that_IN the_DT computation_NN of_IN sentence_NN similarity_NN has_VBZ become_VBN a_DT generic_JJ component_NN for_IN each_DT research_NN project_NN involved_VBN in_IN knowledge_NN representation_NN and_CC discovery_NN ._.
+The_DT sentence_NN similarity_NN computing_VBG method_NN generally_RB consists_VBZ of_IN four_CD levels_NNS :_: surface_NN morphological_JJ similarity_NN ,_, syntactic_NN similarity_NN ,_, semantic_JJ similarity_NN and_CC pragmatic_JJ similarity_NN ,_, in_IN which_WDT the_DT pragmatic_JJ similarity_NN is_VBZ the_DT most_RBS important_JJ approach_NN and_CC it_PRP is_VBZ quite_RB difficult_JJ to_TO realize_VB at_IN present_JJ ._.
+Meanwhile_RB ,_, the_DT traditional_JJ methods_NNS can_MD be_VB roughly_RB divided_VBN into_IN three_CD categories_NNS :_: The_DT first_JJ category_NN is_VBZ based_VBN on_IN the_DT characteristics_NNS of_IN words_NNS ._.
+In_IN many_JJ Information_NN Retrieval_NNP systems_NNS ,_, the_DT word_NN co-occurrence_NN methods_NNS are_VBP often_RB used_VBN as_IN the_DT ``_`` bag_NN of_IN words_NNS ''_'' method_NN ._.
+Dagan_NNP et_FW al._FW -LRB-_-LRB- 1999_CD -RRB-_-RRB- proposes_VBZ a_DT general_JJ method_NN for_IN using_VBG similarity_NN similarity_NN ._.
+Semantic_JJ and_CC syntactic_JJ information_NN is_VBZ measured_VBN by_IN taking_VBG into_IN account_NN word_NN similarity_NN ,_, word_NN ordering_VBG and_CC parts_NNS of_IN speech_NN information_NN ._.
+Li_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- calculates_VBZ sentence_NN similarity_NN by_IN combining_VBG semantic_JJ information_NN and_CC syntactic_NN dependency_NN structure_NN information_NN ._.
+Mao_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- adopts_VBZ the_DT method_NN of_IN semantic_JJ extension_NN to_TO calculate_VB similarity_NN between_IN sentences_NNS ._.
+These_DT previous_JJ methods_NNS can_MD remedy_VB the_DT sentence_NN structure_NN defect_NN of_IN others_NNS methods_NNS based_VBN on_IN surface_NN morphological_JJ information_NN and_CC semantic_JJ dictionary_NN ._.
+In_IN recent_JJ years_NNS ,_, many_JJ research_NN results_NNS show_VBP that_IN similarity_NN computing_NN of_IN sentence_NN integrating_VBG multi_NNS -_: features_NNS of_IN a_DT variety_NN of_IN characteristics_NNS of_IN a_DT sentence_NN ,_, which_WDT is_VBZ better_JJR than_IN that_DT based_VBN on_IN the_DT calculation_NN method_NN of_IN a_DT single_JJ feature_NN ._.
+Zhao_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- propose_VBP a_DT method_NN using_VBG multi-features_NNS of_IN the_DT weighted_JJ value_NN of_IN keywords_NNS feature_VBP ,_, semantic_JJ distance_NN and_CC syntactic_NN dependency_NN structure_NN pairs_NNS to_TO calculate_VB sentence_NN similarity_NN ._.
+Liu_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- propose_VBP an_DT approach_NN integrating_VBG an_DT improved_VBN edit_NN distance_NN algorithm_NN and_CC dependency_NN grammar_NN ._.
+Wu_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- offer_VBP a_DT method_NN according_VBG to_TO a_DT combination_NN of_IN the_DT Hierarchical_NNP Networks_NNP of_IN Concepts_NNS -LRB-_-LRB- HNC_NNP -RRB-_-RRB- theory_NN and_CC dependency_NN grammar_NN ._.
+Xiao_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- combine_VBP neural_JJ network_NN and_CC combined_VBN semantics_NNS ._.
+Each_DT singular_JJ type_NN of_IN the_DT overall_JJ sentence_NN similarity_NN calculation_NN methods_NNS still_RB keeps_VBZ some_DT space_NN to_TO be_VB improved_VBN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT hybrid_JJ pragmatic_JJ sentence_NN similarity_NN calculation_NN method_NN integrating_VBG the_DT characteristics_NNS of_IN morphological_JJ words_NNS ,_, semantic_JJ thesaurus_NN and_CC syntactical_JJ dependency_NN structural_JJ information_NN ._.
+The_DT morphological_JJ similarity_NN calculation_NN adopts_VBZ keyword_NN features_NNS with_IN deleting_VBG stop_NN noun_NN list_NN ._.
+The_DT semantic_JJ similarity_NN calculation_NN is_VBZ carried_VBN out_RP using_VBG HowNet_NNP ._.
+The_DT syntactic_NN similarity_NN calculation_NN employs_VBZ dependency_NN structural_JJ features_NNS which_WDT is_VBZ not_RB only_RB include_VBP the_DT calculation_NN of_IN the_DT similarity_NN of_IN effective_JJ collocation_NN pairs_NNS of_IN keywords_NNS ,_, but_CC also_RB the_DT similarity_NN between_IN non-keywords_NNS ,_, as_IN a_DT result_NN ,_, it_PRP ensures_VBZ the_DT comprehensiveness_NN and_CC reliability_NN of_IN syntactic_NN similarity_NN calculation_NN method_NN ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN our_PRP$ method_NN can_MD ensure_VB the_DT balance_NN between_IN recall_NN and_CC accuracy_NN ,_, and_CC provide_VB effective_JJ and_CC stable_JJ results_NNS ._.
+The_DT remainder_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: the_DT proposed_VBN approach_NN is_VBZ introduced_VBN in_IN Section_NN 2_CD ._.
+The_DT experimental_JJ results_NNS and_CC associate_JJ analysis_NN are_VBP given_VBN in_IN Section_NN 3_CD ._.
+Finally_RB ,_, conclusions_NNS are_VBP drawn_VBN in_IN Section_NN 4_CD ._.
+2_CD Proposed_NNP Method_NNP In_IN this_DT section_NN ,_, we_PRP introduce_VBP several_JJ approaches_NNS of_IN the_DT different_JJ level_NN of_IN sentence_NN similarity_NN between_IN a_DT pair_NN of_IN sentences_NNS with_IN different_JJ features_NNS ._.
+These_DT are_VBP intended_VBN as_IN several_JJ samples_NNS of_IN each_DT methodology_NN that_WDT might_MD be_VB considered_VBN for_IN our_PRP$ proposed_VBN method_NN ._.
+The_DT outline_NN of_IN our_PRP$ proposed_VBN method_NN is_VBZ shown_VBN in_IN Figure_NN 1_CD ._.
+We_PRP adopt_VBP morphologic_JJ features_NNS ,_, syntactic_NN features_NNS and_CC semantic_JJ features_NNS to_TO realize_VB the_DT processing_NN of_IN sentence_NN similarity_NN calculation_NN ._.
+With_IN the_DT integration_NN processing_NN ,_, sentence_NN similarity_NN calculation_NN can_MD be_VB optimized_VBN using_VBG different_JJ machine_NN learning_VBG approaches_NNS ._.
+In_IN the_DT following_JJ sections_NNS ,_, we_PRP will_MD give_VB detailed_JJ report_NN of_IN each_DT processing_NN respectively_RB ._.
+Morphologic_NNP Features_VBZ Syntactic_NNP Features_NNP Semantic_NNP Features_VBZ Integration_NNP Processing_NNP Similarity_NNP Output_NN 2.1_CD Thesaurus_NNP Figure_NNP 1_CD ._.
+Outline_NNP Morphologic_NNP Features_VBZ based_VBN Method_NNP Most_JJS of_IN technical_JJ calculation_NN of_IN sentence_NN similarity_NN calculate_VBP a_DT score_NN S_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- between_IN a_DT query_NN sentence_NN S_NNP and_CC a_DT candidate_NN sentence_NN S_NNP ,_, intended_VBD 12_CD to_TO seize_VB numerically_RB the_DT extent_NN to_TO which_WDT they_PRP convey_VBP the_DT same_JJ information_NN ._.
+The_DT objective_NN is_VBZ to_TO be_VB able_JJ to_TO calculate_VB S_NNP -LRB-_-LRB- S_NNP 1_CD ,_, S2_CD -RRB-_-RRB- for_IN each_DT sentence_NN of_IN a_DT certain_JJ collection_NN and_CC know_VB that_DT when_WRB the_DT score_NN S_NNP is_VBZ maximized_VBN ,_, the_DT sentence_NN S2_NN has_VBZ a_DT high_JJ degree_NN of_IN similarity_NN to_TO the_DT query_NN sentence_NN S_NNP 1_CD ._.
+There_EX are_VBP many_JJ measures_NNS of_IN traditional_JJ sentence_NN similarity_NN calculation_NN method_NN using_VBG morphologic_JJ features_NNS ._.
+For_IN instance_NN ,_, Word_NN overlap_VBP measures_NNS ,_, TF_SYM -_: IDF_NNP measures_NNS ,_, Relative-frequency_NN measures_NNS and_CC N-gram_JJ model_NN measures_NNS ,_, etc._FW ._.
+The_DT morphologic_JJ features_NNS are_VBP usually_RB adopted_VBN to_TO do_VB calculation_NN using_VBG keyword_NN of_IN sentence_NN ,_, word_NN order_NN ,_, part-of-speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- or_CC N-grams_NNS ._.
+In_IN order_NN to_TO re-weight_VB the_DT count_NN features_NNS ,_, one_CD of_IN the_DT simplistic_JJ approaches_NNS is_VBZ very_RB common_JJ to_TO use_VB the_DT TF-IDF_NNP transform_VB ._.
+TF_NNP means_VBZ term-frequency_NN while_IN TF-IDF_NNP means_VBZ term-frequency_JJ times_NNS inverse_JJ document-frequency_NN ._.
+In_IN this_DT stage_NN ,_, we_PRP just_RB adopt_VB keyword_NN and_CC POS_NNP as_IN features_NNS to_TO calculate_VB the_DT morphologic_JJ sentence_NN similarity_NN ._.
+We_PRP delete_VBP each_DT word_NN of_IN stop_NN list_NN ,_, and_CC then_RB to_TO use_VB the_DT vector_NN space_NN model_NN -LRB-_-LRB- VSM_NNP -RRB-_-RRB- to_TO calculate_VB cosine_NN similarity_NN between_IN two_CD sentences_NNS ._.
+We_PRP will_MD try_VB to_TO improve_VB the_DT algorithm_NN with_IN other_JJ methods_NNS in_IN the_DT future_JJ work_NN ._.
+Here_RB ,_, given_VBN two_CD sentencesS1_NNP andS2_NNP ,_, remove_VB stop_VB words_NNS and_CC get_VB valid_JJ words_NNS of_IN the_DT two_CD sentences_NNS to_TO form_VB vector_NN spaceV_NNP -LCB-_-LRB- X1_NNP ,_, X2_NNP ,_, ..._: ,_, Xn_NNP -RCB-_-RRB- ,_, in_IN which_WDT repeated_VBD words_NNS are_VBP merged_VBN ._.
+Then_RB ,_, to_TO calculate_VB the_DT frequency_NN or_CC probability_NN of_IN each_DT word_NN of_IN the_DT vector_NN space_NN ._.
+The_DT function_NN of_IN morphologic_JJ similarity_NN calculation_NN is_VBZ shown_VBN in_IN Formula_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: semantic_JJ similarity_NN calculation_NN method_NN based_VBN on_IN the_DT multilayer_JJ structure_NN of_IN HowNet_NNP and_CC multiple_JJ modified_VBN relation_NN of_IN sememe_NN ._.
+On_IN the_DT one_CD hand_NN ,_, we_PRP refer_VBP to_TO the_DT method_NN of_IN Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+And_CC on_IN the_DT other_JJ hand_NN ,_, we_PRP combine_VBP with_IN part_NN of_IN speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- to_TO enhance_VB the_DT accuracy_NN of_IN similarity_NN calculation_NN ._.
+Figure_NN 1_CD ._.
+Concept_NN description_NN of_IN ``_`` tap_VB ''_'' Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS method_NN considers_VBZ not_RB only_RB the_DT hyponymic_JJ relations_NNS of_IN sememe_NN ,_, but_CC the_DT multiple_JJ modified_VBN relation_NN of_IN sememe_NN ._.
+The_DT method_NN treats_VBZ child_NN nodes_NNS with_IN the_DT same_JJ description_NN relationship_NN that_WDT under_IN the_DT same_JJ node_NN as_IN the_DT same_JJ collection_NN ._.
+Based_VBN on_IN the_DT modality_NN of_IN the_DT concept_NN structure_NN tree_NN ,_, shown_VBN in_IN Figure_NN 1_CD ,_, the_DT similarity_NN computation_NN method_NN of_IN the_DT i-th_JJ relationship_NN of_IN node_NN a_DT and_CC node_JJ b_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- V_NNP V_NNP ii_FW nn_FW -LRB-_-LRB- 1_LS -RRB-_-RRB- n_JJ word_NN 1_CD 2_CD 1_CD 2_CD i_FW 1_CD 2_CD Where_WRB ,_, S_NNP 1_CD V_NNP and_CC V_NNP denote_VBP the_DT vector_NN space_NN of_IN each_DT sentence_NN ._.
+i_FW 1_CD i_FW 1_CD 2_CD i_FW i_FW and_CC S2_NNP mean_VBP a_DT pair_NN of_IN sentences_NNS ,_, 12_CD The_DT frequency_NN of_IN a_DT word_NN X_NNP i_FW in_IN sentence_NN expressed_VBN as_IN i_FW ,_, and_CC i_FW in_IN sentence_NN S2_NN ._.
+2.2_CD Semantic_JJ Features_NNS based_VBN Method_NNP S_NNP 1_CD is_VBZ Frequently-used_JJ semantic_JJ dictionary_NN incorporates_VBZ HowNet_NNP ,_, WordNet_NNP ,_, Tongyici_NNP Cilin_NNP ,_, etc._FW ._.
+HowNet_NNP is_VBZ a_DT knowledge_NN database_NN that_WDT describes_VBZ concepts_NNS of_IN English_NNP and_CC Chinese_NNP words_NNS ._.
+It_PRP reveals_VBZ relationship_NN between_IN concepts_NNS and_CC their_PRP$ attributes_NNS ._.
+WordNet_NNP is_VBZ an_DT English_JJ lexical_JJ semantic_JJ web_NN that_WDT expresses_VBZ relationship_NN of_IN synonyms_NNS ._.
+Tongyici_NNP Cilin_NNP is_VBZ a_DT Chinese_JJ Thesaurus_NN of_IN synonyms_NNS ._.
+In_IN this_DT stage_NN ,_, we_PRP use_VBP HowNet_NNP as_IN the_DT semantic_JJ dictionary_NN ._.
+Among_IN the_DT existed_VBN methods_NNS ,_, the_DT method_NN based_VBN on_IN the_DT structure_NN of_IN HowNet_NNP sememe_VBP tree_NN to_TO compute_VB semantic_JJ similarity_NN is_VBZ extensively_RB adopted_VBN ._.
+Liu_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- utilize_VB the_DT distance_NN of_IN sememe_NN in_IN the_DT sememe_NN structure_NN tree_NN to_TO compute_VB semantic_JJ similarity_NN ._.
+Jiang_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- take_VBP into_IN account_NN the_DT depth_NN of_IN sememe_NN in_IN the_DT sememe_NN structure_NN tree_NN ._.
+Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- put_VBD forward_RB a_DT rela_i_NN 1_CD 2_CD s_PRP 1_CD 2_CD 1_CD 1_CD N_NNP Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- 2_CD N_NNP Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP ,_, depth_NN -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- s_PRP ,_, node_VBP 1_CD 2_CD i_FW 1_CD Where_WRB ,_, N_NNP means_VBZ N_NNP different_JJ kinds_NNS of_IN relationships_NNS in_IN the_DT sememe_NN tree_NN ,_, depth_NN is_VBZ the_DT setting_VBG detail_NN level_NN parameter_NN ,_, Sims_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP ,_, depth_NN -RRB-_-RRB- denotes_VBZ the_DT similarity_NN based_VBN on_IN sememe_NN structure_NN and_CC multiple_JJ modified_VBN relation_NN ._.
+Similarity_NN computation_NN method_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP ,_, depth_NN -RRB-_-RRB- s12_CD StructSim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- ,_, if_IN depth_NN 0_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- 12_CD Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP ,_, depth_NN 1_CD -RRB-_-RRB- Modify_VB -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- ,_, if_IN depth_NN 0_CD depth_NN s12_CD modify_VBP 12_CD Where_WRB ,_, StructSim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- represents_VBZ the_DT structure_NN 12_CD similarity_NN between_IN sememe_NN ,_, Modify_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- denotes_VBZ multiple_JJ modified_VBN relation_NN similarity_NN between_IN sememe_NN ,_, and_CC Modify_NNP -LRB-_-LRB- *_SYM -RRB-_-RRB- Sims_NNP ,_, node_NN -LRB-_-LRB- S1_CD ,_, S2_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- :_: words_NNS with_IN multiple_JJ POS_NNP respectively_RB ,_, and_CC calculate_VBP the_DT max_NN value_NN of_IN their_PRP$ similarity_NN ._.
+w_NN and_CC v_NN denote_VBP number_NN of_IN words_NNS with_IN multiple_JJ POS_NNP in_IN sentence_NN S1_CD and_CC S2_CD respectively_RB ._.
+SimG_NNP __CD E_NNP -LRB-_-LRB- *_SYM -RRB-_-RRB- represents_VBZ the_DT POS_NNP similarity_NN of_IN two_CD sentences_NNS ._.
+It_PRP means_VBZ converting_VBG the_DT word_NN similarity_NN to_TO the_DT property_NN describe_VBP similarity_NN of_IN a_DT certain_JJ part_NN of_IN speech_NN of_IN words_NNS ._.
+According_VBG to_TO these_DT methods_NNS ,_, to_TO calculate_VB the_DT similarity_NN using_VBG HowNet_NNP concept_NN multilayer_JJ structure_NN and_CC multiple_JJ modified_VBN relation_NN of_IN sememe_NN of_IN each_DT word_NN in_IN the_DT pair_NN of_IN sentences_NNS ._.
+And_CC then_RB detecting_VBG whether_IN there_EX are_VBP words_NNS contain_VBP more_JJR than_IN one_CD POS_NNP and_CC computing_VBG similarity_NN on_IN the_DT level_NN of_IN POS_NNP ._.
+The_DT similarity_NN computation_NN method_NN based_VBN on_IN semantic_JJ dictionary_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- :_: Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- Hownet_NNP 1_CD 2_CD struct_NN 1_CD 2_CD G_E_NNP 1_CD 2_CD Where_WRB ,_, Simstruct_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- represents_VBZ sentence_NN similarity_NN based_VBN on_IN HowNet_NNP concept_NN multilayer_JJ structure_NN and_CC multiple_JJ modified_VBN relation_NN of_IN sememe_NN ._.
+With_IN the_DT sememe_NN similarity_NN of_IN the_DT node_NN ,_, we_PRP can_MD compute_VB the_DT concept_NN similarity_NN of_IN the_DT root_NN node_NN bottom-up_JJ ,_, and_CC then_RB compute_VB word_NN similarity_NN with_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: Sim_NNP -LRB-_-LRB- W_NNP ,_, W_NNP -RRB-_-RRB- max_FW Sim_FW -LRB-_-LRB- C_NNP ,_, C_NNP -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- w_SYM 1_CD 2_CD i_FW 1_CD ._. ._.
+n_NN ,_, j_NN 1_CD ._. ._.
+m_NN c_NN 1i_NNS 2_CD j_NN Where_WRB ,_, C1i_JJ denotes_NNS the_DT i-th_JJ concept_NN of_IN word_NN W1_CD ,_, C2j_NNP denotes_VBZ the_DT j-th_JJ concept_NN of_IN word_NN W2_CD ,_, and_CC Simc_NNP -LRB-_-LRB- *_SYM -RRB-_-RRB- represents_VBZ computing_VBG the_DT similarity_NN of_IN two_CD concepts_NNS ._.
+With_IN word_NN similarity_NN Sim_NNP -LRB-_-LRB- W_NNP ,_, W_NNP -RRB-_-RRB- of_IN all_DT w_FW 1i_FW 2j_FW words_NNS in_IN two_CD sentences_NNS ,_, we_PRP can_MD obtain_VB similarity_NN Sim_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- of_IN two_CD sentences_NNS by_IN weighted_JJ sum_NN of_IN word_NN similarity_NN ._.
+According_VBG to_TO the_DT method_NN of_IN Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, it_PRP does_VBZ not_RB take_VB full_JJ advantage_NN of_IN part_NN of_IN speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- in_IN the_DT HowNet_NNP ,_, which_WDT may_MD create_VB ambiguity_NN when_WRB selecting_VBG words_NNS with_IN multiple_JJ part_NN of_IN speech_NN ._.
+For_IN instance_NN ,_, word_NN ``_`` culture_NN ''_'' has_VBZ lots_NNS of_IN part_NN of_IN speech_NN in_IN Chinese_NNP ._.
+Its_PRP$ sememe_JJ properties_NNS in_IN HowNet_NNP is_VBZ shown_VBN in_IN Table_NNP 1_CD ._.
+Table_NNP 1_CD :_: Sememe_NNP property_NN of_IN word_NN ``_`` culture_NN ''_'' Consider_VB the_DT following_VBG two_CD sentences_NNS in_IN Chinese_JJ :_: S1_NN :_: 中国是一个拥有多民族的国家_CD 。_NN -LRB-_-LRB- S_NNP 1_CD :_: China_NNP is_VBZ a_DT multi-ethnic_JJ country_NN ._. -RRB-_-RRB-
+S2_NN :_: 我们不能摒弃我国的传统文化_CD 。_CD -LRB-_-LRB- S2_NN :_: We_PRP can_MD not_RB abandon_VB the_DT traditional_JJ culture_NN of_IN our_PRP$ country_NN ._. -RRB-_-RRB-
+When_WRB computing_VBG the_DT semantic_JJ similarity_NN of_IN ``_`` 中_FW 国_FW -LRB-_-LRB- China_NNP -RRB-_-RRB- ''_'' and_CC ``_`` 文化_FW -LRB-_-LRB- culture_NN -RRB-_-RRB- ''_'' ,_, the_DT similarity_NN is_VBZ 0.77_CD according_VBG to_TO method_NN of_IN -LRB-_-LRB- Qun_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ due_JJ to_TO the_DT same_JJ property_NN of_IN -LCB-_-LRB- Avalue_NNP |_SYM 属_SYM 性_SYM 值_CD ,_, Attachment_NNP |_VBD 归属_CD -RCB-_-RRB- and_CC the_DT neglect_NN of_IN part_NN of_IN speech_NN in_IN a_DT specific_JJ context_NN ._.
+This_DT results_NNS in_IN the_DT deviation_NN of_IN the_DT result_NN from_IN our_PRP$ common_JJ cognitive_NN ._.
+In_IN this_DT stage_NN ,_, we_PRP adopt_VBP multiple_JJ POS_NNP as_IN features_NNS aim_VBP to_TO progress_VB the_DT performance_NN of_IN our_PRP$ method_NN ._.
+We_PRP do_VBP sentence_NN segmentation_NN processing_NN with_IN word_NN multiple_JJ POS_NNP ,_, and_CC then_RB do_VBP syntax_NN analysis_NN to_TO w_VB ,_, v_FW 1i_FW 2j_FW obtain_VB sentence_NN dependency_NN structure_NN with_IN POS_NNP ._.
+The_DT similarity_NN computation_NN formula_NN is_VBZ shown_VBN in_IN SimG_E_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- Where_WRB ,_, P1i_NNP and_CC P2j_NNP mean_VBP the_DT property_NN of_IN two_CD i_FW 1_CD ,_, j_NN 1_CD maxSim_NNP -LRB-_-LRB- P_NNP ,_, P_NNP -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- Part_NN of_IN Speech_NNP Property_NNP adj_FW n_FW n_FW Avalue_FW |_FW 属性值_FW ,_, Attachment_NNP |_VBD 归属_CD ,_, Literature_NNP |_VBD 文_CD Knowledge_NN |_SYM 知识_FW Mental_NNP |_SYM 精神_FW denotes_FW sentence_NN similarity_NN of_IN sentence_NN contains_VBZ words_NNS with_IN multiple_JJ part_NN of_IN SimG_E_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- speech_NN ._.
+and_CC are_VBP parameters_NNS ,_, and_CC 1_CD ,_, which_WDT can_MD be_VB optimized_VBN by_IN greedy_JJ algorithm_NN ._.
+It_PRP is_VBZ the_DT sum_NN of_IN semantic_JJ similarity_NN by_IN Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 's_POS method_NN ._.
+2.3_CD Syntactic_NNP Features_VBZ based_VBN Method_NNP Sentence_NNP similarity_NN calculation_NN of_IN traditional_JJ dependency_NN structure_NN based_VBN method_NN are_VBP usually_RB computed_VBN by_IN the_DT similarity_NN degree_NN between_IN effective_JJ match_NN pairs_NNS of_IN dependency_NN structure_NN from_IN dependency_NN trees_NNS ._.
+The_DT so-called_JJ effective_JJ match_NN pairs_NNS is_VBZ composed_VBN of_IN the_DT core_NN verb_NN and_CC words_NNS directly_RB depends_VBZ on_IN it_PRP ._.
+Zhao_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- propose_VBP a_DT method_NN to_TO calculate_VB sentence_NN similarity_NN using_VBG weight_NN value_NN of_IN effective_JJ match_NN pairs_NNS ._.
+Liu_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- use_NN edit_VB distance_NN as_IN an_DT auxiliary_JJ of_IN semantic_JJ dependency_NN ._.
+Wu_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- not_RB only_RB consider_VB the_DT effective_JJ match_NN pairs_NNS ,_, but_CC use_VBP secondary_JJ notional_JJ words_NNS and_CC function_NN words_NNS as_IN reference_NN standard_NN of_IN semantic_JJ similarity_NN ._.
+In_IN this_DT stage_NN ,_, we_PRP propose_VBP a_DT semantic_JJ dependency_NN similarity_NN method_NN that_WDT combine_VBP immediate_JJ constituent_JJ set_NN of_IN head_NN and_CC non-immediate_JJ constitute_VBP set_VBN ._.
+The_DT immediate_JJ constituent_JJ set_NN of_IN head_NN is_VBZ a_DT collection_NN of_IN core_NN word_NN -LRB-_-LRB- verb_NN -RRB-_-RRB- in_IN the_DT dependency_NN tree_NN and_CC its_PRP$ directly_RB connected_VBN nouns_NNS ,_, adjectives_NNS and_CC adverbs_NNS ._.
+The_DT non-immediate_JJ constituent_JJ set_NN is_VBZ a_DT word_NN set_VBD that_IN aside_RB from_IN immediate_JJ constituent_JJ set_NN of_IN head_NN ._.
+We_PRP employ_VBP the_DT syntactic_NN analysis_NN tool_NN of_IN Stanford_NNP University_NNP -LRB-_-LRB- the_DT Stanford_NNP Parser_NNP -RRB-_-RRB- to_TO analyze_VB the_DT syntax_NN of_IN the_DT sentence_NN ._.
+For_IN example_NN ,_, the_DT dependency_NN tree_NN of_IN Chinese_JJ sentence_NN ''_'' 教授举办一场学术报告_NN -LRB-_-LRB- Professor_NNP holds_VBZ an_DT academic_JJ report_NN ._. -RRB-_-RRB- ''_''
+is_VBZ shown_VBN in_IN Figure_NN 2_CD ._.
+Figure_NN 2_CD :_: Dependency_NN tree_NN of_IN example_NN sentence_NN As_IN shown_VBN in_IN Figure_NN 2_CD ,_, the_DT root_NN node_NN of_IN the_DT dependency_NN tree_NN is_VBZ ''_'' 举办_NN -LRB-_-LRB- holds_VBZ -RRB-_-RRB- ''_'' the_DT subjective_JJ of_IN ''_'' 教授_NN -LRB-_-LRB- Professor_NNP -RRB-_-RRB- ''_'' and_CC the_DT objective_NN of_IN ''_'' 报告_NN -LRB-_-LRB- report_NN -RRB-_-RRB- ''_'' are_VBP directly_RB connected_VBN with_IN the_DT root_NN node_NN ._.
+It_PRP constitutes_VBZ of_IN the_DT skeleton_NN of_IN the_DT sentence_NN ._.
+Although_IN we_PRP can_MD rely_VB on_IN the_DT key_JJ words_NNS of_IN a_DT sentence_NN to_TO understand_VB the_DT general_JJ meaning_NN of_IN a_DT sentence_NN ,_, the_DT remaining_VBG words_NNS also_RB affect_VBP the_DT whole_JJ meaning_NN more_RBR or_CC less_RBR ._.
+Some_DT sentences_NNS only_RB consist_VBP of_IN immediate_JJ constituent_JJ words_NNS ,_, such_JJ as_IN the_DT Chinese_JJ sentence_NN ''_'' 牛_SYM 吃_SYM 草_SYM 。_FW -LRB-_-LRB- Cows_NNS eat_VBP grass_NN ._. -RRB-_-RRB- ''_''
+,_, which_WDT does_VBZ not_RB contain_VB non-immediate_JJ constitute_VBP words_NNS ._.
+We_PRP consider_VBP two_CD sets_NNS --_: keyword_JJ set_NN and_CC non-keyword_JJ set_NN ._.
+In_IN this_DT paper_NN ,_, keyword_NN set_NN is_VBZ represented_VBN by_IN N_NNP and_CC non-keyword_JJ set_NN is_VBZ represented_VBN by_IN E_NNP ._.
+The_DT similarity_NN computation_NN method_NN based_VBN on_IN semantic_JJ dependency_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- :_: Simsemantic_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- mSim_NNP -LRB-_-LRB- N_NNP ,_, N_NNP -RRB-_-RRB- nSim_NNP -LRB-_-LRB- E_NNP ,_, E_NNP -RRB-_-RRB- ,_, if_IN E_NN 0_CD 12_CD 12_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- Sim_NNP -LRB-_-LRB- N1_NNP ,_, N2_NNP -RRB-_-RRB- ,_, if_IN E_NN 0_CD Where_WRB ,_, Simsemantic_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- represents_VBZ semantic_JJ similarity_NN of_IN two_CD sentences_NNS ,_, Sim_NNP -LRB-_-LRB- N1_NNP ,_, N2_NNP -RRB-_-RRB- denotes_VBZ semantic_JJ similarity_NN of_IN keyword_JJ set_NN and_CC Sim_NNP -LRB-_-LRB- E1_NNP ,_, E2_NNP -RRB-_-RRB- denotes_VBZ semantic_JJ similarity_NN of_IN non_NN -_: keyword_NN set_NN ._.
+Parameters_NNS satisfy_VBP 0_CD n_JJ m_NN 1_CD and_CC m_FW n_FW 1_CD ._.
+With_IN regard_NN to_TO semantic_JJ similarity_NN of_IN keyword_JJ set_NN ,_, we_PRP refer_VBP to_TO Wu_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- 's_POS method_NN which_WDT is_VBZ shown_VBN in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- :_: 1_CD p_NN Sim_NNP -LRB-_-LRB- N1_NNP ,_, N2_NNP -RRB-_-RRB- Sim_NNP -LRB-_-LRB- h_NN ,_, h_NN -RRB-_-RRB- -LRB-_-LRB- 8_CD -RRB-_-RRB- p_SYM 1i2i_FW i_FW 1_CD p_NN count_NN -LRB-_-LRB- H1_CD H2_NNP H1_NNP H2_NNP -RRB-_-RRB- Where_WRB ,_, species_NNS number_NN of_IN different_JJ grammatical_JJ functions_NNS denotes_NNS of_IN keyword_NN set_VBN in_IN two_CD sentences_NNS ._.
+h_NN and_CC h_NN represent_VBP keywords_NNS with_IN the_DT same_JJ grammatical_JJ function_NN ._.
+On_IN account_NN of_IN the_DT number_NN of_IN keywords_NNS in_IN the_DT two_CD sentences_NNS do_VBP not_RB always_RB equal_JJ ,_, when_WRB h_NN or_CC h_NN setSim_NN -LRB-_-LRB- h_NN ,_, h_NN -RRB-_-RRB- -LRB-_-LRB- isavery_FW 1i_FW 2i_FW 1i_FW 2i_FW small_JJ positive_JJ number_NN -RRB-_-RRB- ._.
+For_IN the_DT similarity_NN computation_NN of_IN keyword_JJ set_NN ,_, we_PRP adopt_VBP the_DT idea_NN similar_JJ to_TO bipartite_VB graph_NN to_TO calculate_VB similarity_NN of_IN all_DT non-keywords_NNS in_IN the_DT sentence_NN ._.
+The_DT similarity_NN of_IN non-keyword_JJ sets_NNS E1_CD and_CC E2_CD are_VBP obtained_VBN from_IN the_DT average_JJ similarity_NN of_IN all_PDT the_DT keywords_NNS ._.
+Computation_NNP method_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 9_CD -RRB-_-RRB- :_: Sim_NNP -LRB-_-LRB- a_DT ,_, a_DT -RRB-_-RRB- 1i_FW 2j_FW Sim_FW -LRB-_-LRB- E_NNP ,_, E_NNP -RRB-_-RRB- i_FW ,_, j_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- 1_CD 2_CD max_NN -LRB-_-LRB- p_FW ,_, q_VB -RRB-_-RRB- Where_WRB ,_, a_DT and_CC a_DT represent_VBP words_NNS in_IN non_NN -_: 1i_SYM 2j_CD keyword_NN set_VBN E1_CD and_CC E2_CD respectively_RB ._.
+p_NN and_CC q_NN are_VBP the_DT number_NN of_IN words_NNS in_IN E1_NNP and_CC E2_NNP ._.
+2.4_CD Integration_NNP Processing_NNP As_IN mentioned_VBN above_IN ,_, we_PRP propose_VBP a_DT hybrid_JJ pragmatic_JJ sentence_NN similarity_NN computing_VBG method_NN ._.
+We_PRP use_VBP Linear_JJ interpolation_NN to_TO do_VB integration_NN processing_NN to_TO combine_VB the_DT sentence_NN similarity_NN of_IN using_VBG morphologic_JJ features_NNS ,_, syntactic_NN features_NNS and_CC semantic_JJ features_NNS ._.
+The_DT formula_NN of_IN sentence_NN similarity_NN calculation_NN is_VBZ shown_VBN as_IN :_: Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- 12_CD a_DT Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- b_NN Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- c_NN Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- -LRB-_-LRB- 10_CD -RRB-_-RRB- word_NN 1_CD 2_CD Hownet_NNP 1_CD 2_CD semantic_JJ 1_CD 2_CD Where_WRB ,_, a_DT ,_, b_NN and_CC c_NN are_VBP parameters_NNS and_CC satisfy_VB a_DT +_JJ b_NN +_NN c_NN =_SYM 1_CD The_DT greedy_JJ algorithm_NN can_MD be_VB used_VBN to_TO to_TO optimize_VB these_DT parameters_NNS according_VBG to_TO the_DT preliminary_JJ experiments.For_NNP each_DT similarity_NN of_IN Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- ,_, Sim_NNP -LRB-_-LRB- S_NNP ,_, S_NNP -RRB-_-RRB- and_CC word_NN 1_CD 2_CD Hownet_NNP 1_CD 2_CD 1i_NNS 2i_JJ Simsemantic_NNP -LRB-_-LRB- S1_NNP ,_, S2_NNP -RRB-_-RRB- ,_, it_PRP must_MD be_VB normalized_VBN ensure_VB each_DT value_NN within_IN the_DT interval_NN -LSB-_NNP 0,1_CD -RSB-_NNP ._.
+to_TO the_DT recall_NN performance_NN ._.
+Nevertheless_RB ,_, precision_NN and_CC recall_NN maintain_VBP the_DT relationship_NN of_IN constrained_VBN ._.
+Once_RB guaranteed_VBN the_DT precision_NN ,_, high_JJ recall_NN rate_NN can_MD not_RB be_VB guaranteed_VBN ._.
+For_IN this_DT reason_NN ,_, the_DT F_NN -_: measure_NN is_VBZ introduced_VBN to_TO reflect_VB the_DT comprehensive_JJ performance_NN of_IN precision_NN and_CC recall_NN rate_NN ._.
+Considering_VBG precision_NN and_CC recall_NN rate_NN are_VBP equally_RB important_JJ ,_, parameter_NN in_IN the_DT formula_NN values_VBZ 1_CD ._.
+3.3_CD Results_NNS and_CC Analysis_NNP We_PRP use_VBP greedy_JJ algorithm_NN to_TO optimize_VB the_DT three_CD features_NNS in_IN sentence_NN similarity_NN equation_NN of_IN multiple_JJ feature_NN combination_NN of_IN the_DT linear_JJ interpolation_NN according_VBG preliminary_JJ experiments_NNS ._.
+We_PRP get_VBP the_DT optimal_JJ value_NN 0.13_CD ,_, 0.42_CD ,_, 0.45_CD ._.
+We_PRP evaluate_VBP seven_CD kinds_NNS of_IN method_NN ,_, including_VBG traditional_JJ TF-IDF_NNP ,_, traditional_JJ method_NN based_VBN on_IN HowNet_NNP ,_, method_NN based_VBN on_IN semantic_JJ dependency_NN information_NN ,_, method_NN based_VBN on_IN edit_NN distance_NN and_CC dependency_NN grammar_NN -LRB-_-LRB- EDIT_NNP &_CC DEPEND_NNP -RRB-_-RRB- ,_, 3_CD 3.1_CD Experiment_NN and_CC Analysis_NNP Data_NNP set_VBD In_IN the_DT English_JJ sentence_NN similarity_NN computing_NN ,_, we_PRP often_RB employ_VBP Microsoft_NNP Research_NNP Paraphrase_NNP Corpus_NNP -LRB-_-LRB- MSR_NNP -RRB-_-RRB- as_IN the_DT basic_JJ corpus_NN ._.
+However_RB ,_, there_EX is_VBZ no_DT standard_JJ one_CD in_IN Chinese_JJ sentence_NN similarity_NN computation_NN ._.
+Consequently_RB ,_, manual_JJ annotation_NN is_VBZ needed_VBN to_TO process_VB corpus_NN ._.
+We_PRP imitate_VBP the_DT MSR_NNP mode_NN building_VBG a_DT small_JJ Chinese_JJ Paraphrase_NNP Corpus_NNP ._.
+Based_VBN on_IN the_DT background_NN of_IN question-answer_NN -LRB-_-LRB- QA_NNP -RRB-_-RRB- system_NN ,_, we_PRP collect_VBP different_JJ types_NNS of_IN interrogative_JJ sentences_NNS on_IN Baidu_NNP Knows_NNP for_IN the_DT recent_JJ one_CD month_NN ._.
+We_PRP judge_VBP artificially_RB whether_IN the_DT semantics_NNS of_IN each_DT sentence_NN in_IN the_DT data_NN set_NN are_VBP equivalent_JJ ._.
+We_PRP stipulate_VBP that_IN 1_CD indicates_VBZ two_CD sentences_NNS are_VBP similar_JJ ,_, while_IN 0_CD indicates_VBZ not_RB ._.
+The_DT introduction_NN of_IN Chinese_JJ Paraphrase_NNP Corpus_NNP is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+Table_NNP 2_CD :_: Introduction_NN of_IN Chinese_JJ Paraphrase_NNP Corpus_NNP 3.2_CD Evaluation_NN We_PRP employ_VBP three_CD evaluation_NN index_NN of_IN sentence_NN similarity_NN :_: precision_NN ,_, recall_NN and_CC F-measure_NN ._.
+The_DT definition_NN of_IN the_DT three_CD evaluation_NN index_NN refered_VBD to_TO Liu_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- is_VBZ demonstrated_VBN as_IN follows_VBZ :_: precision_NN -LRB-_-LRB- TP_NNP -RRB-_-RRB- -LRB-_-LRB- TP_NNP FP_NNP -RRB-_-RRB- -LRB-_-LRB- 11_CD -RRB-_-RRB- recall_NN -LRB-_-LRB- TP_NNP -RRB-_-RRB- -LRB-_-LRB- TP_NNP FN_NNP -RRB-_-RRB- -LRB-_-LRB- 12_CD -RRB-_-RRB- F_NN measure_NN -LRB-_-LRB- -LRB-_-LRB- 1_CD -RRB-_-RRB- precision_NN recall_NN -RRB-_-RRB- -LRB-_-LRB- precision_NN recall_NN -RRB-_-RRB- -LRB-_-LRB- 13_CD -RRB-_-RRB- Where_WRB ,_, TP_NNP is_VBZ the_DT number_NN of_IN sentences_NNS that_WDT forecast_VBP as_IN similar_JJ and_CC actually_RB similar_JJ ._.
+FP_NNP is_VBZ the_DT number_NN of_IN sentences_NNS that_WDT forecast_VBP as_IN similar_JJ but_CC actually_RB not_RB ._.
+FN_NNP is_VBZ the_DT number_NN of_IN sentences_NNS that_WDT forecast_VBP as_IN dissimilar_JJ while_IN actually_RB similar_JJ ._.
+Precision_NN is_VBZ the_DT ratio_NN of_IN sentence_NN number_NN of_IN forecast_NN as_IN similar_JJ and_CC the_DT total_JJ sentence_NN number_NN ._.
+It_PRP evaluates_VBZ the_DT precision_NN of_IN algorithm_NN ._.
+Recall_VB is_VBZ the_DT ratio_NN of_IN sentence_NN number_NN of_IN forecast_NN as_IN similar_JJ and_CC sentence_NN number_NN of_IN actually_RB similar_JJ ._.
+It_PRP evaluates_VBZ compositive_JJ method_NN based_VBN HowNet_NNP -LRB-_-LRB- HOWNET_C_NNP -RRB-_-RRB- ,_, method_NN -LRB-_-LRB- HYBRID1_CD -RRB-_-RRB- and_CC our_PRP$ method_NN ._.
+Compositive_JJ method_NN based_VBN on_IN HowNet_NNP means_VBZ to_TO replace_VB the_DT part_NN of_IN semantic_JJ similarity_NN algorithm_NN based_VBN on_IN semantic_JJ dictionary_NN of_IN our_PRP$ method_NN with_IN the_DT classic_JJ semantic_JJ similarity_NN calculation_NN method_NN of_IN Liu_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ,_, and_CC then_RB calculate_VBP the_DT compositive_JJ sentence_NN similarity_NN ._.
+While_IN ,_, Hybrid1_NNP method_NN is_VBZ the_DT method_NN of_IN Zhao_NNP et_NNP al_NNP ,_, -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ a_DT similar_JJ method_NN to_TO ours_JJ and_CC we_PRP consider_VBP it_PRP as_IN a_DT baseline_NN ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 3_CD ._.
+on_IN Hybrid1_NNP Type_NNP Data_NNP set_VBD Traini_NNP Test_NNP ng_JJ set_NN set_VBN Totally_RB Semantically_RB Equivalent_NNP Semantically_NNP not_RB Equivalent_NNP 3000_CD 1925_CD 1075_CD 2807 193 1503 422_CD 730_CD 345_CD Algorithm_NNP Precision_NNP Recall_VB F_NN -_: measure_NN TF-IDF_NN HOWNET_NNP SEMANTIC_NNP EDIT_NNP &_CC DEPEND_NNP Hybrid1_NNP HOWNET_NNP __NN C_NNP OUR_NNP METHOD_NNP 65.23_CD 80.21_CD 70.10_CD 90.76_CD 71.25_CD 87.35_CD 80.12_CD 91.32_CD 81.03_CD 91.85_CD 81.06_CD 92.15_CD 83.02_CD 93.56_CD 71.95_CD 79.10_CD 78.48_CD 85.35_CD 86.10_CD 86.25_CD 87.98_CD Table_NNP 3_CD :_: Experiment_NNP Results_NNS Intuitively_RB ,_, for_IN contrasting_VBG the_DT effect_NN of_IN these_DT algorithms_NNS ,_, the_DT histogram_NN of_IN precision_NN ,_, recall_NN and_CC F-measure_NN of_IN each_DT method_NN are_VBP shown_VBN in_IN Figure_NN 3_CD ._.
+Figure_NN 3_CD :_: Algorithm_NNP effectiveness_NN comparison_NN As_IN shown_VBN in_IN Table_NNP 3_CD and_CC Figure_NNP 3_CD ,_, We_PRP can_MD find_VB that_DT TF_NNP IDF_NNP method_NN is_VBZ not_RB good_JJ because_IN it_PRP just_RB uses_VBZ surface_NN morphologic_NN features_NNS ,_, while_IN ignores_VBZ syntactic_NN and_CC semantic_JJ information_NN ._.
+The_DT precision_NN and_CC recall_NN of_IN HOWNET_NNP and_CC SEMANTIC_NNP are_VBP better_JJR than_IN TF_NNP IDF_NNP method_NN ._.
+It_PRP shows_VBZ that_IN semantic_JJ and_CC structure_NN features_NNS can_MD effectively_RB improve_VB the_DT performance_NN ._. ._.
+The_DT method_NN of_IN EDIT_NNP &_CC DEPEND_NNP provides_VBZ better_JJR effectiveness_NN ,_, as_IN it_PRP combines_VBZ the_DT edit_NN distance_NN and_CC dependency_NN grammar_NN ._.
+Compared_VBN with_IN baseline_NN methods_NNS ,_, It_PRP shows_VBZ that_IN our_PRP$ method_NN can_MD get_VB the_DT best_JJS accuracy_NN ._.
+with_IN precision_NN and_CC recall_NN ._.
+The_DT F-measure_NN of_IN our_PRP$ proposed_VBN method_NN is_VBZ 87.76_CD %_NN ,_, It_PRP shows_VBZ that_IN our_PRP$ method_NN can_MD get_VB the_DT Feasibility_NN ._.
+4_CD Conclusions_NNS and_CC Future_NNP Work_NNP In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT hybrid_JJ pragmatic_JJ sentence_NN similarity_NN calculation_NN method_NN integrating_VBG the_DT characteristics_NNS of_IN morphological_JJ words_NNS ,_, semantic_JJ thesaurus_NN and_CC syntactical_JJ dependency_NN structural_JJ information_NN ._.
+Moreover_RB ,_, This_DT paper_NN summarizes_VBZ the_DT methods_NNS of_IN sentence_NN similarity_NN calculation_NN of_IN domestic_JJ and_CC abroad_RB ._.
+We_PRP sum_VBP up_RP three_CD kinds_NNS of_IN traditional_JJ similarity_NN calculation_NN methods_NNS and_CC analyze_VB the_DT limitations_NNS of_IN the_DT algorithm_NN performance_NN ._.
+We_PRP construct_VBP a_DT Chinese_JJ Paraphrase_NNP Corpus_NNP to_TO do_VB experiments_NNS ._.
+The_DT experimtental_JJ results_NNS show_VBP that_IN our_PRP$ method_NN can_MD improve_VB the_DT performance_NN of_IN sentence_NN similarity_NN calculation_NN ._.
+In_IN our_PRP$ future_JJ work_NN ,_, we_PRP will_MD try_VB to_TO challenge_VB how_WRB to_TO resolve_VB the_DT problem_NN of_IN domain_NN adaptation_NN ._.
+and_CC the_DT actual_JJ application_NN in_IN short_JJ text_NN ._.
+References_NNS Achananuparp_NNP P_NNP ,_, Hu_NNP X_NNP ,_, Zhou_NNP X_NNP ,_, et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Utilizing_VBG sentence_NN similarity_NN and_CC question_NN type_NN similarity_NN to_TO response_NN to_TO similar_JJ questions_NNS in_IN knowledge-sharing_JJ community_NN ._.
+Proceedings_NNP of_IN QAWeb_NNP 2008_CD Workshop_NNP ._.
+Dagan_NNP I_PRP ,_, Lee_NNP L_NNP ,_, and_CC Pereira_NNP FCN_NNP ._.
+-LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+Similarity_NN -_: Based_VBN Models_NNS of_IN Word_NN Cooccurrence_NNP Probabilities_NNPS ._.
+Machine_NN Learning_NNP ,_, 34_CD -LRB-_-LRB- 1-3_JJ -RRB-_-RRB- :34_CD ._.
+Fei_NNP ,_, H._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Chinese_JJ short_JJ sentence_NN similarity_NN calculation_NN based_VBN on_IN tree-structure_NN corpus_NN ._.
+Computer_NNP Applications_NNS &_CC Software_NNP ,_, 30_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, 18-8_CD ._.
+Jiang_NNP ,_, M._NNP ,_, Xiao_NNP S._NNP ,_, &_CC Wang_NNP W._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+An_DT Improved_JJ Word_NN Semantic_NNP Computation_NNP Based_VBD on_IN HowNet_NNP ._.
+of_IN Chinese_JJ information_NN ,_, 22_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :84_CD -89_CD ._.
+Similarity_NN Journal_NNP Kong_NNP ,_, S._NNP ,_, &_CC Wang_NNP ,_, Y._NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Research_NNP of_IN Text_NNP Topic_NNP Sentence_NNP Extraction_NNP Algorithm_NNP Based_VBD on_IN Sentence_NNP Similarity_NNP Research_NNP ._.
+Journal_NNP of_IN the_DT China_NNP Society_NNP for_IN Scientific_NNP and_CC Technical_NNP Information_NNP ,_, 30_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+Lewis_NNP W_NNP D._NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Measuring_VBG conceptual_JJ distance_NN using_VBG WordNet_NNP :_: the_DT design_NN of_IN a_DT metric_JJ for_IN measuring_VBG semantic_JJ similarity_NN ._.
+Coyote_NNP Papers_NNP ,_, 12_CD ._.
+Li_NNP ,_, B._NNP ,_, Liu_NNP ,_, T._NNP ,_, &_CC Qin_NNP ,_, B._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Chinese_JJ Sentence_NN Similarity_NN Calculation_NN Based_VBN on_IN Semantic_NNP Dependency_NNP ._.
+Application_NNP Research_NNP of_IN Computers_NNPS ,_, -LRB-_-LRB- 12_CD -RRB-_-RRB- :15_CD -17_CD ._.
+Li_NNP ,_, M._NNP Q._NNP ,_, Li_NNP ,_, J._NNP Z._NNP ,_, &_CC Wang_NNP ,_, Z._NNP Y._NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Semantic_NNP Analysis_NNP and_CC Structured_NNP Language_NNP Models_NNPS ._.
+Journal_NNP of_IN Software_NNP ,_, 16_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- :_: 1523-1524_CD ._.
+Li_NNP ,_, R._NNP ,_, Wang_NNP ,_, Z._NNP ,_, Li_NNP ,_, S._NNP ,_, Liang_NNP ,_, J._NNP ,_, &_CC Baker_NNP ,_, C._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Chinese_JJ sentence_NN similarity_NN computing_NN based_VBN on_IN frame_NN semantic_JJ parsing_NN ._.
+Journal_NNP of_IN Computer_NNP Research_NNP &_CC Development_NNP ,_, 50_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, 1728-1736_CD ._.
+Li_NNP ,_, S._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Research_NNP of_IN relevancy_NN between_IN sentences_NNS based_VBN on_IN semantic_JJ computation_NN ._.
+Computer_NNP Engineering_NNP &_CC Applications_NNS ,_, 38_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, 75-78_CD ._.
+Liu_NNP ,_, B._NNP ,_, Lin_NNP ,_, H._NNP ,_, &_CC Zhao_NNP ,_, J._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- Chinese_JJ Sentence_NN Similarity_NN Computing_NNP Based_VBD on_IN Improved_JJ Edit_NNP -_: distance_NN and_CC Dependency_NNP Grammar_NNP ._.
+Computer_NNP Application_NNP and_CC Software_NNP ,_, 25_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- :_: 33-34_CD ._.
+Liu_NNP ,_, H._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Ontology_NNP Based_VBD Sentence_NNP Similarity_NNP Measurement_NNP ._.
+Computer_NNP Science_NNP ,_, 40_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 251-256_CD ._.
+Liu_NNP ,_, J._NNP ,_, Xu_NNP ,_, J._NNP ,_, &_CC Zhang_NNP ,_, Y._NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Semantic_JJ similarity_NN calculation_NN method_NN Based_VBN on_IN hownet_NN concept_NN of_IN multilayer_JJ structure_NN and_CC the_DT original_JJ complex_JJ modified_VBN relation_NN ._.
+Liu_NNP ,_, Q._NNP ,_, Li_NNP ,_, S._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Lexical_NNP Semantic_NNP Similarity_NNP Calculation_NNP Based_VBD on_IN HowNet_NNP ._.
+Liu_NNP ,_, X._NNP ,_, Zhou_NNP Y._NNP and_CC Zheng_NNP ._.
+R._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Sentence_NN similarity_NN based_VBN on_IN dynamic_JJ time_NN warping_NN ._.
+In_IN Semantic_JJ Computing_NNP ,_, ICSC2007_NNP ._.
+International_NNP Conference_NNP on_IN ,_, pp._IN 250-256_CD ._.
+Lv_NNP ,_, X._NNP Q._NNP ,_, Ren_NNP ,_, F._NNP L._NNP ,_, &_CC Huang_NNP Z._NNP D._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Sentence_NN Similarity_NN Model_NNP and_CC the_DT Most_JJS Similar_JJ Sentence_NNP Search_NNP Algorithm_NNP ._.
+Journal_NNP of_IN Northeastern_NNP University_NNP ,_, 24_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :531_CD -534_CD ._.
+Mao_NNP ,_, Y._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Chinese_JJ Information_NN Retrieval_NNP System_NNP Design_NNP and_CC Implementation_NNP Based_VBD on_IN the_DT Semantic_NNP Extension_NNP ._.
+University_NNP of_IN Electronic_NNP Science_NNP and_CC Technology_NNP of_IN China_NNP ._.
+Richardson_NNP ,_, Ray_NNP ,_, A._NN Smeaton_NNP ,_, and_CC John_NNP Murphy_NNP ._.
+Using_VBG WordNet_NNP as_IN a_DT knowledge_NN base_NN for_IN measuring_VBG semantic_JJ similarity_NN between_IN words_NNS ._.
+-LRB-_-LRB- 1994_CD -RRB-_-RRB- :_: 09_CD ._.
+Rui_NNP ,_, W._NNP ,_, &_CC Neumann_NNP ,_, G._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Recognizing_VBG Textual_NNP Entailment_NNP Using_VBG Sentence_NNP Similarity_NNP Based_VBD On_IN Dependency_NNP Tree_NNP Skeletons_NNP ._.
+RTE_NNP '07_CD Proceedings_NNP of_IN the_DT ACL-PASCAL_NNP Workshop_NNP on_IN Textual_NNP Entailment_NNP and_CC Paraphrasing_NNP -LRB-_-LRB- pp._FW 36_CD --_: 41_CD -RRB-_-RRB- ._.
+Wu_NNP ,_, Z._NNP ,_, Wang_NNP ,_, Y._NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+New_NNP Measure_NN of_IN Sentences_NNS similarity_NN Based_VBN on_IN Hierarchical_NNP Network_NNP of_IN Concepts_NNPS Theory_NNP and_CC Dependency_NNP Parsing_NNP ._.
+Computer_NNP Engineering_NNP and_CC Applications_NNS ,_, 50_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 97_CD -_: 102_CD ._.
+Xiao_NNP ,_, H._NNP ,_, Fu_NNP ,_, L._NNP ,_, and_CC Ji_NNP ,_, D._NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Neutral_NNP Language_NNP Model_NNP and_CC Semantic_NNP Compositionality_NNP Model_NNP in_IN Semantic_NNP Similarity_NNP ._.
+Computer_NNP Engineering_NNP and_CC Applications_NNS ._.
+Yang_NNP ,_, Q._NNP Q._NNP ,_, &_CC Dong_NNP ,_, X._NNP U._NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Study_NN of_IN english_JJ sentence_NN similarity_NN conputing_NN in_IN tf-idf_JJ method_NN ._.
+Computer_NNP Knowledge_NNP &_CC Technology_NNP ._.
+Yin_NNP ,_, Y._NNP ,_, &_CC Zhang_NNP ,_, D._NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Sentence_NN similarity_NN computing_NN based_VBN on_IN relation_NN vector_NN model_NN ._.
+Computer_NNP Engineering_NNP &_CC Applications_NNS ._.
+Zhao_NNP ,_, Y._NNP ,_, Qin_NNP ,_, B._NNP ,_, &_CC Liu_NNP ,_, T._NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Sentence_NN Similarity_NN Computing_NNP Based_VBD on_IN Multi-Features_NNP Fusion_NNP

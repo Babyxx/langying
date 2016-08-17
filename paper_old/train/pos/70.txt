@@ -1,0 +1,318 @@
+1_CD A_DT Multifactorial_JJ Analysis_NN of_IN English_NNP Particle_NNP Movement_NNP in_IN Korean_JJ EFL_NNP Learners_NNPS '_POS Writings_NNPS Abstract_NNP in_IN -LRB-_-LRB- 1b_JJ -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, -LRB-_-LRB- 1b_CD -RRB-_-RRB- has_VBZ an_DT order_NN of_IN `_`` verb_FW +_FW DO_FW +_FW particle_NN '_'' ._.
+There_EX have_VBP been_VBN a_DT lot_NN of_IN theoretical_JJ studies_NNS to_TO investigate_VB what_WP linguistic_JJ factors_NNS determine_VBP the_DT choice_NN of_IN the_DT alternation_NN ,_, in_IN traditional_JJ grammar_NN and_CC generative_JJ grammar_NN ._.
+Nowadays_RB ,_, as_IN computer_NN technology_NN and_CC statistics_NNS develop_VBP ,_, there_EX have_VBP been_VBN a_DT few_JJ studies_NNS to_TO explain_VB these_DT syntactic_JJ phenomena_NNS with_IN corpus_JJ data_NNS ._.
+Gries_NNS -LRB-_-LRB- 1999_CD ,_, 2001_CD ,_, 2003_CD -RRB-_-RRB- adopted_VBD a_DT multifactorial_JJ analysis_NN to_TO examine_VB the_DT Particle_NNP Movement_NNP in_IN the_DT native_JJ speakers_NNS '_POS writings_NNS ._.
+These_DT studies_NNS proposed_VBD several_JJ linguistics_NNS factors_NNS and_CC it_PRP was_VBD demonstrated_VBN that_IN these_DT factors_NNS and_CC their_PRP$ interactions_NNS significantly_RB influenced_VBD the_DT choice_NN of_IN the_DT constructions_NNS This_DT paper_NN also_RB adopted_VBD a_DT multifactorial_JJ analysis_NN to_TO examine_VB the_DT Particle_NNP Movements_NNPS in_IN Korean_JJ EFL_NNP learners_NNS '_POS writings_NNS ._.
+The_DT Korean_JJ part_NN of_IN TOEFL11_CD corpus_NN was_VBD used_VBN ,_, and_CC all_PDT the_DT relevant_JJ sentences_NNS were_VBD extracted_VBN using_VBG the_DT C7_NNP tag_NN information_NN ._.
+The_DT relevant_JJ factors_NNS were_VBD encoded_VBN to_TO these_DT sentences_NNS ,_, and_CC each_DT factor_NN was_VBD statistically_RB analyzed_VBN with_IN R._NNP Through_IN the_DT analysis_NN ,_, it_PRP was_VBD demonstrated_VBN that_IN Korean_JJ EFL_NNP learners_NNS employed_VBD a_DT different_JJ strategy_NN in_IN Particle_NNP Movement_NNP and_CC that_IN only_RB some_DT factors_NNS were_VBD used_VBN for_IN the_DT selection_NN of_IN alternation_NN ._.
+This_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN Section_NN 2_CD ,_, previous_JJ studies_NNS are_VBP reviewed_VBN with_IN focused_VBN on_IN corpus-based_JJ approaches_NNS ._.
+Section_NN 3_CD enumerates_VBZ research_NN methods_NNS ,_, and_CC Section_NN 4_CD contains_VBZ analyses_NNS results_NNS ._.
+Section_NN 5_CD is_VBZ for_IN discussions_NNS ,_, and_CC Section_NNP 6_CD summarizes_VBZ this_DT paper_NN ._.
+This_DT paper_NN Movement_NNP in_IN Korean_JJ EFL_NNP learners_NNS '_POS writings_NNS ._.
+Gries_NNS -LRB-_-LRB- 1999_CD ,_, 2001_CD ,_, 2003_CD -RRB-_-RRB- adopted_VBD a_DT multifactorial_JJ analysis_NN to_TO examine_VB Particle_NNP Movement_NNP of_IN native_JJ speakers_NNS ._.
+Several_JJ linguistics_NNS factors_NNS were_VBD proposed_VBN in_IN the_DT studies_NNS ,_, and_CC it_PRP was_VBD demonstrated_VBN that_IN these_DT factors_NNS influenced_VBD the_DT choice_NN of_IN the_DT constructions_NNS ._.
+This_DT paper_NN also_RB employed_VBD a_DT multifactorial_JJ analysis_NN to_TO examine_VB Particle_NNP Movement_NNP in_IN Korean_JJ EFL_NNP learners_NNS '_POS writings_NNS ._.
+The_DT analysis_NN results_NNS illustrated_VBD that_IN the_DT Korean_JJ EFL_NNP learners_NNS were_VBD slightly_RB different_JJ from_IN native_JJ speakers_NNS in_IN that_DT only_RB some_DT factors_NNS were_VBD used_VBN for_IN the_DT selection_NN of_IN constructions_NNS ._.
+Introduction_NN investigated_VBD Particle_NNP Linguistic_NNP alternation_NN is_VBZ one_CD of_IN the_DT interesting_JJ areas_NNS in_IN the_DT linguistic_JJ investigations_NNS ._.
+Particle_NN Movement_NNP is_VBZ one_CD of_IN the_DT syntactic_JJ alternations_NNS ._.
+It_PRP refers_VBZ to_TO the_DT phenomenon_NN where_WRB a_DT particle_NN goes_VBZ behind_IN the_DT direct_JJ object_NN -LRB-_-LRB- DO_NNP -RRB-_-RRB- in_IN the_DT phrasal_JJ verb_NN constructions_NNS ._.
+Let_VB 's_POS see_VB the_DT following_VBG example_NN -LRB-_-LRB- Gries_NNS ,_, 1999:1_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_CD -RRB-_-RRB- a._IN John_NNP picked_VBD up_RP the_DT book_NN ._.
+b._FW John_NNP picked_VBD the_DT book_NN up_RP ._.
+In_IN -LRB-_-LRB- 1a_FW -RRB-_-RRB- ,_, the_DT order_NN is_VBZ `_`` verb_FW +_FW particle_NN +_CD DO_NNP '_POS ._.
+However_RB ,_, the_DT particle_NN is_VBZ separated_VBN from_IN the_DT verb_NN Chungnam_NNP Nat_NNP '_POS l_NN University_NNP 99_CD Daehak-ro_NN ,_, Yuseong-gu_JJ Daejeon_NNP 305-764_CD ,_, Korea_NNP 2_CD Previous_JJ Studies_NNP 2.1_CD On_IN Particle_NNP Movement_NNP There_EX have_VBP been_VBN several_JJ studies_NNS on_IN English_NNP Particle_NNP Movement_NNP in_IN various_JJ linguistic_JJ fields_NNS :_: traditional_JJ grammar_NN -LRB-_-LRB- Sweet_NNP ,_, 1892_CD ;_: Jespersen_NNP ,_, 1928_CD ;_: Kruisinga_NNP and_CC Erades_NNP ,_, 1953_CD -RRB-_-RRB- ,_, Chomskyan_NNP transformational-generative_JJ grammar_NN -LRB-_-LRB- Fraser_NNP ,_, 1974_CD ,_, 1976_CD ;_: Den_NNP Dikken_NNP ,_, 1992_CD ,_, 1995_CD ;_: Rohrbacher_NNP ,_, 1994_CD -RRB-_-RRB- ,_, cognitive_JJ grammar_NN -LRB-_-LRB- Yeagle_NNP ,_, 1983_CD -RRB-_-RRB- ,_, discourse-functional_JJ approaches_NNS -LRB-_-LRB- Chen_NNP ,_, 1986_CD -RRB-_-RRB- ,_, psycholinguistically-oriented_JJ approaches_NNS -LRB-_-LRB- Hawkins_NNP ,_, 1994_CD -RRB-_-RRB- ,_, and_CC so_RB on_IN ._.
+Gries_NNS -LRB-_-LRB- 1999:33_CD -RRB-_-RRB- closely_RB investigated_VBD the_DT claims_NNS in_IN previous_JJ studies_NNS and_CC summarized_VBD them_PRP as_IN follows_VBZ ._.
+DO_NNP is_VBZ definite_JJ -LRB-_-LRB- such_JJ as_IN the_DT -RRB-_-RRB- ,_, native_JJ speakers_NNS prefer_VBP construction1_CD rather_RB than_IN construction0_CD ._.
+Table_NNP 1_CD contains_VBZ all_PDT the_DT related_JJ factors_NNS which_WDT cover_VBP most_JJS of_IN linguistic_JJ fields_NNS :_: phonology_NN ,_, syntax_NN ,_, semantics_NNS ,_, pragmatics_NNS ,_, and_CC discourse_NN analysis_NN ._.
+2.2_CD Corpus-based_JJ Studies_NNPS Although_IN it_PRP is_VBZ fact_NN that_IN previous_JJ studies_NNS contributed_VBD to_TO find_VB out_RP linguistic_JJ factors_NNS influenced_VBD the_DT choice_NN of_IN alternation_NN ,_, their_PRP$ data_NNS exclusively_RB relied_VBP on_IN native_JJ speakers_NNS '_POS intuition_NN ._.
+Gries_NNS -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- pointed_VBD out_RP this_DT problem_NN and_CC performed_VBD an_DT analysis_NN based_VBN on_IN the_DT corpus_NN data_NNS ._.
+Gries_NNS -LRB-_-LRB- 2001:36_CD -37_CD -RRB-_-RRB- pointed_VBD out_RP three_CD problems_NNS of_IN these_DT previous_JJ approaches_NNS ._.
+First_RB ,_, most_RBS variables_NNS were_VBD based_VBN on_IN introspective_JJ analysis_NN and_CC non-authentic_JJ example_NN sentences_NNS ._.
+This_DT problem_NN is_VBZ due_JJ to_TO the_DT fact_NN that_IN previous_JJ studies_NNS exclusively_RB relied_VBP on_IN the_DT native_JJ speakers_NNS '_POS intuition_NN -LRB-_-LRB- viz_NN ._.
+acceptability_NN judgments_NNS -RRB-_-RRB- ._.
+The_DT problems_NNS of_IN this_DT type_NN of_IN test_NN are_VBP -LRB-_-LRB- i_FW -RRB-_-RRB- that_IN they_PRP do_VBP not_RB necessarily_RB constitute_VB objective_NN ,_, reliable_JJ ,_, and_CC valid_JJ data_NNS ,_, -LRB-_-LRB- ii_FW -RRB-_-RRB- that_IN it_PRP is_VBZ questionable_JJ that_IN an_DT analysis_NN based_VBN on_IN these_DT data_NNS can_MD in_IN fact_NN produce_VBP representative_JJ results_NNS ,_, and_CC -LRB-_-LRB- iii_FW -RRB-_-RRB- that_IN it_PRP is_VBZ possible_JJ to_TO evaluate_VB sentences_NNS produced_VBN artificially_RB ,_, out_IN of_IN context_NN ._.
+Second_NNP ,_, most_JJS previous_JJ analyses_NNS only_RB performed_VBD the_DT monofactorial_JJ analyses_NNS ,_, where_WRB only_RB one_CD variable_NN has_VBZ an_DT effect_NN on_IN the_DT alternation_NN in_IN isolation_NN ._.
+The_DT problem_NN of_IN monofactorial_JJ analysis_NN is_VBZ that_IN the_DT examples_NNS do_VBP not_RB warrant_VB the_DT claim_NN that_IN the_DT preference_NN for_IN one_CD construction_NN over_IN the_DT other_JJ need_NN not_RB be_VB related_VBN the_DT relevant_JJ factor_NN exclusively_RB ._.
+Instead_RB ,_, the_DT tendency_NN might_MD come_VB from_IN other_JJ factors_NNS ._.
+Therefore_RB ,_, given_VBN that_IN factors_NNS are_VBP encoded_VBN in_IN the_DT determination_NN of_IN the_DT constructions_NNS ,_, it_PRP is_VBZ difficult_JJ to_TO solely_RB rely_VB on_IN monofactorial_JJ analyses_NNS to_TO describe_VB particle_NN movement_NN adequately_RB ._.
+Third_NNP ,_, there_EX have_VBP been_VBN only_RB a_DT few_JJ analyses_NNS aiming_VBG at_IN subsuming_VBG all_PDT the_DT variables_NNS under_IN a_DT common_JJ basis_NN and_CC there_EX has_VBZ been_VBN no_DT analysis_NN has_VBZ aimed_VBN at_IN predicting_VBG particle_NN placement_NN in_IN natural_JJ discourse_NN situations_NNS ._.
+In_IN order_NN to_TO solve_VB this_DT problem_NN ,_, Gries_NNP -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- employed_VBN a_DT multifactorial_JJ analysis_NN ,_, where_WRB all_PDT the_DT factors_NNS in_IN Table_NNP 1_CD were_VBD taken_VBN into_IN consideration_NN simultaneously_RB ._.
+These_DT studies_NNS used_VBD a_DT Generalized_NNP Linear_NNP Model_NNP -LRB-_-LRB- GLM_NNP -RRB-_-RRB- and_CC statistically_RB analyzed_VBD how_WRB each_DT factor_NN played_VBD a_DT role_NN in_IN the_DT choice_NN of_IN construction_NN ._.
+They_PRP also_RB took_VBD a_DT linear_JJ discriminant_JJ analysis_NN -LRB-_-LRB- LDA_NNP -RRB-_-RRB- and_CC a_DT classification_NN and_CC regression_NN tree_NN -LRB-_-LRB- CART_NNP -RRB-_-RRB- and_CC calculated_VBN the_DT importance_NN of_IN each_DT factor_NN as_IN follows_VBZ -LRB-_-LRB- Gries_NNS ,_, 2001:48_CD -RRB-_-RRB- ._.
+Table_NNP 1_CD ._.
+Variables_NNS That_WDT Govern_VBP the_DT Alternation_NNP Here_RB ,_, construction0_JJ refers_VBZ to_TO the_DT sentences_NNS with_IN the_DT order_NN of_IN `_`` verb_NN +_NN particle_NN +_CD DO_NNP '_POS as_IN in_IN -LRB-_-LRB- 1a_FW -RRB-_-RRB- ,_, while_IN construction1_CD refers_VBZ to_TO the_DT sentences_NNS with_IN the_DT order_NN of_IN `_`` verb_FW +_FW DO_FW +_FW particle_NN '_'' as_IN in_IN -LRB-_-LRB- 1b_JJ -RRB-_-RRB- ._.
+This_DT table_NN enumerated_VBD 18_CD different_JJ linguistic_JJ factors_NNS and_CC demonstrated_VBD that_IN several_JJ different_JJ types_NNS of_IN factors_NNS ,_, not_RB a_DT single_JJ factor_NN ,_, actually_RB influenced_VBD the_DT choice_NN of_IN the_DT constructions_NNS ._.
+Let_VB 's_POS see_VB how_WRB these_DT factors_NNS can_MD be_VB related_VBN with_IN the_DT alternation_NN of_IN Particle_NNP Movement_NNP ._.
+For_IN example_NN ,_, LENGTHW_NNP -LRB-_-LRB- the_DT first_JJ factor_NN in_IN Table_NNP 1_CD -RRB-_-RRB- refer_VBP to_TO the_DT length_NN of_IN DO_NNP in_IN words_NNS ._.
+If_IN the_DT DO_NNP is_VBZ long_RB ,_, native_JJ speakers_NNS tend_VBP to_TO choose_VB construction0_CD rather_RB than_IN construction1_CD ._.
+If_IN the_DT DO_NNP is_VBZ short_JJ ,_, the_DT native_JJ speakers_NNS prefer_VBP construction1_CD to_TO construction0_CD ._.
+The_DT factor_NN DET_NNP ,_, the_DT fifth_JJ factor_NN ,_, refers_VBZ to_TO the_DT determiner_NN of_IN the_DT DO_NNP ._.
+If_IN the_DT determiner_NN of_IN DO_NNP is_VBZ indefinite_JJ -LRB-_-LRB- such_JJ as_IN a_DT or_CC an_DT -RRB-_-RRB- ,_, native_JJ speakers_NNS tend_VBP to_TO choose_VB construction0_CD rather_RB than_IN construction1_CD ._.
+If_IN the_DT determiner_NN of_IN Figure_NN 1_CD ._.
+Importance_NN of_IN Predictors_NNP for_IN CART_NNP b_NN ._.
+If_IN Korean_JJ EFL_NNP learners_NNS show_VBP a_DT different_JJ tendency_NN from_IN the_DT native_JJ speakers_NNS ,_, two_CD groups_NNS may_MD employ_VB different_JJ factors_NNS or_CC a_DT different_JJ combinations_NNS of_IN factors_NNS in_IN their_PRP$ writings_NNS which_WDT decide_VBP the_DT choice_NN of_IN constructions_NNS ._.
+In_IN order_NN to_TO answer_VB these_DT questions_NNS ,_, the_DT following_JJ investigations_NNS were_VBD conducted_VBN ._.
+3.2_CD Corpus_NNP This_DT study_NN employed_VBN two_CD types_NNS of_IN data_NNS ._.
+The_DT first_JJ one_NN was_VBD the_DT TOEFL11_NNP corpus_NN for_IN the_DT EFL_NNP learners_NNS -LRB-_-LRB- LDC_NNP Catalo_NNP No._NN :_: LDC2014T06_NNP -RRB-_-RRB- ,_, and_CC the_DT second_JJ one_NN was_VBD the_DT data_NNS in_IN Gries_NNP -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- for_IN the_DT native_JJ speakers_NNS -LRB-_-LRB- as_IN reference_NN data_NNS set_VBN -RRB-_-RRB- ._.
+The_DT second_JJ data_NNS were_VBD not_RB the_DT actual_JJ data_NNS but_CC the_DT analysis_NN results_NNS in_IN Gries_NNP -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- ._.
+The_DT TOEFL11_NNP corpus_NN was_VBD released_VBN by_IN the_DT English_NNP Testing_NNP Service_NNP -LRB-_-LRB- ETS_NNP -RRB-_-RRB- in_IN 2014_CD ._.
+The_DT corpus_NN consists_VBZ of_IN essays_NNS written_VBN during_IN the_DT TOEFL_NNP iBT_NNP ®_VBD tests_NNS in_IN 2006-2007_CD -LRB-_-LRB- Blanchard_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+It_PRP contains_VBZ 1,100_CD essays_NNS per_IN each_DT of_IN the_DT 11_CD native_JJ languages_NNS ,_, totaling_VBG 12,100_CD essays_NNS ._.
+All_DT of_IN the_DT essays_NNS were_VBD taken_VBN from_IN the_DT TOEFL_NNP independent_JJ task_NN ,_, where_WRB test-takers_NNS were_VBD asked_VBN to_TO write_VB an_DT essay_NN in_IN response_NN to_TO a_DT brief_JJ writing_NN topic_NN ._.
+The_DT essays_NNS were_VBD sampled_VBN as_IN evenly_RB as_IN possible_JJ from_IN eight_CD different_JJ topics_NNS ._.
+The_DT corpus_NN also_RB provides_VBZ the_DT score_NN levels_NNS -LRB-_-LRB- Low/Medium/High_NNP -RRB-_-RRB- for_IN each_DT essay_NN ._.
+There_EX are_VBP other_JJ kinds_NNS of_IN corpora_NN which_WDT can_MD be_VB used_VBN for_IN examining_VBG the_DT use_NN of_IN EFL_NNP learners_NNS ._.
+The_DT International_NNP Corpus_NNP of_IN Learner_NNP English_NNP -LRB-_-LRB- ICLE_NNP ;_: Granger_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- is_VBZ one_CD example_NN ._.
+Although_IN the_DT ICLE_NNP is_VBZ a_DT good_JJ resource_NN to_TO explore_VB linguistic_JJ properties_NNS of_IN EFL_NNP learners_NNS '_POS use_NN of_IN English_NNP ,_, there_EX are_VBP several_JJ reasons_NNS for_IN choosing_VBG the_DT TOEFL11_NNP instead_RB of_IN the_DT ICLE_NNP ._.
+First_RB ,_, the_DT TOEFL11_NNP corpus_NN includes_VBZ essays_NNS written_VBN by_IN Korean_JJ EFL_NNP learners_NNS ,_, while_IN the_DT ICLE_NNP does_VBZ not_RB .1_CD Second_JJ ,_, each_DT essay_NN in_IN the_DT TOEFL11_NNP corpus_NN contains_VBZ information_NN on_IN score_NN levels_NNS ._.
+The_DT score_NN levels_NNS were_VBD calculated_VBN first_RB by_IN combining_VBG the_DT individual_JJ 5-point-scale_JJ scores_NNS given_VBN by_IN the_DT human_JJ raters_NNS and_CC then_RB by_IN collapsing_VBG this_DT 1_CD The_DT ICLE_NNP corpus_NN contains_VBZ 16_CD components_NNS -LRB-_-LRB- Bulgarian_JJ ,_, Chinese_JJ ,_, Czech_JJ ,_, Dutch_JJ ,_, Finnish_JJ ,_, French_JJ ,_, German_JJ ,_, Italian_JJ ,_, Japanese_JJ ,_, Norwegian_JJ ,_, Polish_JJ ,_, Russian_JJ ,_, Spanish_JJ ,_, Swedish_JJ ,_, Tswana_NNP ,_, and_CC Turkish_JJ -RRB-_-RRB- but_CC the_DT TOEFL11_NNP includes_VBZ 11_CD L1s_NNS -LRB-_-LRB- French_JJ ,_, Italian_JJ ,_, Spanish_JJ ,_, German_JJ ,_, Hindi_NNP ,_, Japanese_NNP ,_, Korean_NNP ,_, Turkish_JJ ,_, Chinese_JJ ,_, Arabic_NNP ,_, and_CC Telugu_NNP -RRB-_-RRB- ._.
+As_IN this_DT figure_NN indicates_VBZ ,_, not_RB all_PDT the_DT linguistic_JJ factors_NNS play_VBP roles_NNS in_IN the_DT choice_NN of_IN alternation_NN ._.
+In_IN addition_NN ,_, some_DT factors_NNS are_VBP more_RBR important_JJ ,_, and_CC others_NNS are_VBP less_RBR important_JJ ._.
+Gries_NNS -LRB-_-LRB- 2001_CD -RRB-_-RRB- and_CC Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- were_VBD essentially_RB different_JJ from_IN the_DT previous_JJ approaches_NNS ,_, since_IN -LRB-_-LRB- i_FW -RRB-_-RRB- these_DT studies_NNS made_VBN use_NN of_IN corpus_NN data_NNS -LRB-_-LRB- naturally_RB occurring_VBG data_NNS -RRB-_-RRB- and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- they_PRP statistically_RB analyzed_VBD the_DT collected_VBN data_NNS ._.
+3_CD 3.1_CD Research_NNP Method_NNP Questions_NNPS and_CC Hypothesis_NNPS Although_IN there_EX have_VBP been_VBN a_DT lot_NN of_IN studies_NNS on_IN Particle_NNP Movement_NNP in_IN native_JJ speakers_NNS ,_, there_EX are_VBP few_JJ studies_NNS on_IN the_DT phenomena_NNS of_IN the_DT EFL_NNP learners_NNS ._.
+This_DT study_NN investigated_VBD the_DT Particle_NNP Movement_NNP of_IN Korean_JJ EFL_NNP learners_NNS ._.
+Through_IN the_DT analysis_NN ,_, this_DT paper_NN wants_VBZ to_TO answer_VB the_DT following_JJ research_NN questions_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- a._FW Do_VBP Korean_JJ EFL_NNP learners_NNS show_VBP the_DT same_JJ or_CC similar_JJ tendency_NN in_IN Particle_NNP Movement_NNP in_IN their_PRP$ writings_NNS ?_.
+b_NN ._.
+If_IN Korean_JJ EFL_NNP learners_NNS employ_VBP different_JJ factors_NNS ,_, which_WDT factors_NNS were_VBD employed_VBN in_IN their_PRP$ choice_NN of_IN alternation_NN ?_.
+c.Does_NNS the_DT ratio_NN of_IN these_DT two_CD constructions_NNS -LRB-_-LRB- construction0_CD vs._FW construction1_FW -RRB-_-RRB- change_NN as_IN the_DT level_NN of_IN proficiency_NN goes_VBZ up_RP ?_.
+For_IN these_DT research_NN questions_NNS ,_, the_DT following_VBG hypothesis_NN was_VBD made_VBN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- a.If_JJ Korean_JJ EFL_NNP learners_NNS show_VBP the_DT same_JJ or_CC similar_JJ tendency_NN that_WDT native_JJ speakers_NNS demonstrate_VBP in_IN their_PRP$ writings_NNS ,_, two_CD groups_NNS of_IN people_NNS may_MD employ_VB similar_JJ factors_NNS or_CC a_DT similar_JJ set_NN of_IN factors_NNS in_IN their_PRP$ writings_NNS that_WDT influence_VBP the_DT choice_NN of_IN constructions_NNS ._.
+combined_VBN score_NN into_IN 3_CD levels_NNS -LRB-_-LRB- Low/Medium/High_NNP -RRB-_-RRB- ._.
+The_DT 5-point-scale_JJ human_JJ scores_NNS were_VBD determined_VBN by_IN the_DT defined_VBN criteria_NNS ._.
+Third_NNP ,_, the_DT number_NN of_IN essays_NNS that_IN the_DT former_JJ corpus_NN contains_VBZ is_VBZ bigger_JJR than_IN that_DT of_IN the_DT latter_JJ ._.
+The_DT ICLE_NNP includes_VBZ 380_CD essays_NNS per_IN L1_NNP -LRB-_-LRB- =_SYM 6,085_CD /_CD 16_CD -RRB-_-RRB- ,_, while_IN the_DT TOEFL11_NNP has_VBZ 1,100_CD essays_NNS per_IN L1_NN ._.
+Thus_RB ,_, the_DT TOEFL_NNP 11_CD contains_VBZ about_IN three_CD times_NNS as_IN many_JJ essays_NNS as_IN the_DT ICLE_NNP ._.
+Fourth_JJ ,_, one_CD of_IN the_DT biggest_JJS problems_NNS of_IN the_DT ICLE_NNP is_VBZ that_IN essay_NN topics_NNS are_VBP not_RB evenly_RB distributed_VBN across_IN the_DT 16_CD L1s_NNS ._.
+The_DT language_NN usage_NN is_VBZ heavily_RB driven_VBN by_IN a_DT given_VBN essay_NN topic_NN ._.
+This_DT implies_VBZ that_IN some_DT of_IN the_DT ICLE_NNP data_NNS may_MD be_VB conflated_VBN by_IN the_DT uneven_JJ distribution_NN of_IN essay_NN topics_NNS across_IN the_DT 16_CD L1s_NNS ._.
+It_PRP is_VBZ important_JJ to_TO investigate_VB the_DT linguistic_JJ properties_NNS of_IN EFL_NNP learners_NNS in_IN an_DT evenly_RB distributed_VBN corpus_NN ._.
+Finally_RB ,_, because_IN of_IN the_DT differences_NNS in_IN the_DT essay_NN tasks_NNS administered_VBN and_CC responses_NNS collected_VBN ,_, there_EX were_VBD differences_NNS not_RB only_RB in_IN character_NN encodings_NNS but_CC also_RB corpus_VBZ annotations_NNS across_IN L1s_NNS ._.
+These_DT differences_NNS make_VBP it_PRP difficult_JJ for_IN the_DT findings_NNS of_IN one_CD L1_CD to_TO be_VB generalized_VBN to_TO other_JJ contexts_NNS ._.
+3.3_CD Procedure_NNP The_NNP analysis_NN in_IN this_DT paper_NN proceeded_VBD as_IN follows_VBZ ._.
+First_RB ,_, all_PDT the_DT writing_VBG samples_NNS of_IN Korean_JJ EFL_NNP learners_NNS were_VBD extracted_VBN from_IN the_DT TOEFL_NNP 11_CD corpus_NN ._.
+A_DT total_NN of_IN 328,384_CD word_NN tokens_NNS were_VBD included_VBN in_IN the_DT extracted_VBN corpus_NN ._.
+Second_NNP ,_, the_DT writing_VBG samples_NNS were_VBD classified_VBN into_IN three_CD levels_NNS ._.
+Through_IN the_DT classification_NN ,_, each_DT level_NN had_VBD the_DT following_JJ corpus_NN size_NN -LRB-_-LRB- word_NN token_JJ -RRB-_-RRB- :_: 95,066_CD -LRB-_-LRB- High_NNP -RRB-_-RRB- ,_, 202,531_CD -LRB-_-LRB- Medium_NN -RRB-_-RRB- ,_, and_CC 30,787_CD -LRB-_-LRB- Low_NNP -RRB-_-RRB- ._.
+Third_NNP ,_, each_DT text_NN was_VBD POS_NNP tagged_VBN with_IN the_DT C7_NNP CLAWS_NNP taggers_VBZ .2_CD Fourth_JJ ,_, all_PDT the_DT sentences_NNS with_IN particles_NNS were_VBD extracted_VBN using_VBG NLPTools_NNS -LRB-_-LRB- Lee_NNP ,_, 2007_CD -RRB-_-RRB- .3_CD Fifth_NNP ,_, all_PDT the_DT relevant_JJ factors_NNS were_VBD encoded_VBN to_TO each_DT sentence_NN ._.
+This_DT paper_NN adopted_VBN 8_CD factors_NNS and_CC they_PRP are_VBP enumerated_VBN in_IN Table_NNP 2_CD ._.
+Among_IN these_DT ,_, the_DT first_JJ factor_NN was_VBD newly_RB introduced_VBN in_IN this_DT analysis_NN and_CC the_DT others_NNS came_VBD from_IN Table_NNP 1_CD ._.
+2_CD You_PRP can_MD easily_RB use_VB Free_NNP CLAWS_NNP WWW_NNP tagger_NN in_IN http://ucrel.lancs.ac.uk/claws/trial.html_NN ._.
+For_IN details_NNS of_IN C7_NNP tag_NN sets_NNS ,_, see_VBP Jurafsky_NNP and_CC Martin_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+3_CD In_IN the_DT C7_NNP tag_NN sets_NNS ,_, particles_NNS have_VBP a_DT tag_NN RP_NNP ._.
+The_DT reason_NN why_WRB NLPTools_NNP was_VBD used_VBN here_RB is_VBZ that_IN the_DT software_NN had_VBD a_DT function_NN which_WDT could_MD extract_VB the_DT whole_JJ sentences_NNS with_IN the_DT given_VBN tag_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- i.e._FW ,_, *_SYM __CD RP_NNP -RRB-_-RRB- ._.
+Finally_RB ,_, allthedatawerestatisticallyanalyzed_JJ using_VBG R._NNP V_NNP ariable_JJ Explanation_NN LEVEL_NNP Level_NNP of_IN proficiency_NN COMPLEXITY_NNP Complexity_NNP of_IN Direct_NNP Object_NNP ANIMACY_NNP Animacy_NNP of_IN Direct_NNP Object_NNP DEFINITENESS_NNP Definiteness_NNPS of_IN Direct_NNP Object_NNP PRONOMINALITY_NNP Pronominality_NNP of_IN Direct_NNP Object_NNP IDIOMACITY_NNP Idiomacity_NNP of_IN Direct_NNP Object_NNP CONCRTENESS_NNP Concreteness_NN of_IN Direct_NNP Object_NNP LENGTH_NNP Length_NNP of_IN Direct_NNP Object_NNP in_IN Words_NNPS 4_CD 4.1_CD Table_NNP 2_CD ._.
+Variables_NNS Used_VBN in_IN the_DT Analysis_NNP Analysis_NNP Results_NNS Descriptive_JJ Statistics_NNPS After_IN all_PDT the_DT sentences_NNS with_IN the_DT particles_NNS were_VBD extracted_VBN ,_, the_DT sentences_NNS were_VBD classified_VBN into_IN two_CD groups_NNS ,_, based_VBN on_IN the_DT transitive_JJ vs._NN intransitive_JJ use_NN of_IN phrasal_JJ verbs_NNS ._.
+This_DT process_NN was_VBD necessary_JJ since_IN the_DT Particle_NNP Movement_NNP occurred_VBD in_IN the_DT transitive_JJ use_NN of_IN phrasal_JJ verb_NN constructions_NNS ._.
+The_DT following_VBG graph_NN illustrates_VBZ the_DT ratio_NN of_IN each_DT group_NN -LRB-_-LRB- intransitive_JJ vs._NN transitive_JJ -RRB-_-RRB- of_IN phrasal_JJ verb_NN constructions_NNS in_IN Korean_JJ speakers_NNS '_POS writings_NNS ._.
+Figure_NN 2_CD ._.
+Intransitive_NNP vs._FW Transitive_NNP Here_RB ,_, the_DT lower_JJR part_NN corresponds_VBZ to_TO the_DT intransitive_JJ uses_NNS and_CC the_DT upper_JJ part_NN to_TO the_DT transitive_JJ uses_NNS ._.
+As_IN this_DT graph_NN illustrated_VBD ,_, Korean_JJ EFL_NNP learners_NNS preferred_VBN intransitive_JJ uses_NNS of_IN phrasal_JJ verbs_NNS rather_RB than_IN the_DT transitive_JJ uses_NNS ._.
+Note_VB that_DT nearly_RB 50_CD %_NN -_: 70_CD %_NN of_IN sentences_NNS were_VBD intransitive_JJ uses_NNS of_IN phrasal_JJ verbs_NNS ._.
+This_DT tendency_NN appeared_VBD in_IN all_DT the_DT levels_NNS of_IN proficiency_NN ,_, though_IN the_DT proportion_NN of_IN intransitive_JJ uses_NNS of_IN phrasal_JJ verbs_NNS decreased_VBD as_IN the_DT level_NN of_IN proficiency_NN went_VBD up_RB ._.
+However_RB ,_, the_DT proportion_NN of_IN the_DT Medium_NN level_NN was_VBD indistinguishable_JJ from_IN that_DT of_IN the_DT High_JJ level_NN ._.
+Then_RB ,_, among_IN the_DT sentences_NNS with_IN phrasal_JJ verbs_NNS ,_, all_PDT the_DT constructions_NNS which_WDT had_VBD transitive_JJ uses_NNS were_VBD extracted_VBN ,_, and_CC the_DT ratios_NNS of_IN two_CD constructions_NNS were_VBD calculated_VBN ._.
+Figure_NN 3_CD illustrated_VBD the_DT analysis_NN results_NNS ._.
+Then_RB ,_, a_DT model_NN selection_NN process_NN was_VBD performed_VBN ._.
+According_VBG to_TO Gries_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, there_EX are_VBP two_CD types_NNS of_IN model_NN selection_NN parameters_NNS ._.
+One_CD is_VBZ based_VBN on_IN the_DT direction_NN of_IN the_DT analysis_NN and_CC the_DT other_JJ is_VBZ the_DT criterion_NN determining_VBG whether_IN or_CC not_RB a_DT predictor_NN gets_VBZ to_TO be_VB in_IN the_DT model_NN ._.
+On_IN the_DT direction_NN of_IN the_DT analysis_NN ,_, most_JJS analyses_NNS have_VBP adopted_VBN a_DT backward_RB selection_NN ,_, and_CC this_DT paper_NN also_RB took_VBD this_DT method_NN ._.
+There_EX are_VBP two_CD types_NNS of_IN approaches_NNS to_TO the_DT selection_NN of_IN relevant_JJ models_NNS :_: significance-based_JJ approaches_NNS and_CC criterion_NN -_: based_VBN approaches_NNS ._.
+This_DT paper_NN took_VBD a_DT significance-based_JJ approach_NN ._.
+That_DT is_VBZ ,_, the_DT analysis_NN would_MD start_VB from_IN the_DT maximally_RB saturated_VBN model_NN ,_, and_CC continued_VBD to_TO remove_VB predictors_NNS -LRB-_-LRB- backward_RB -RRB-_-RRB- until_IN the_DT analysis_NN reached_VBD the_DT statistically_RB significant_JJ differences_NNS in_IN the_DT p-value_JJ -LRB-_-LRB- significant_JJ -_: based_VBN -RRB-_-RRB- ._.
+Since_IN this_DT paper_NN adopted_VBD a_DT backward_RB selection_NN ,_, the_DT first_JJ thing_NN is_VBZ to_TO make_VB a_DT saturated_VBN model_NN ._.
+The_DT following_VBG model_NN is_VBZ a_DT saturated_VBN model_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- Saturated_NNP Model_NNP CONSTRUCTION_NNP ~_NN LEVEL_NNP *_SYM COMPLEXITY_NNP *_SYM ANIMACY_NNP *_SYM DEFINITENESS_NNPS *_SYM PRONOMINALITY_NNP *_SYM IDIOMACITY_NNP *_SYM CONCRETENESS_NNPS *_SYM LENGTH_NNP Note_VB that_IN all_PDT the_DT interactions_NNS were_VBD included_VBN in_IN this_DT model_NN ._.
+Now_RB that_IN a_DT saturated_VBN model_NN was_VBD obtained_VBN ,_, the_DT statistical_JJ analysis_NN started_VBD from_IN the_DT model_NN ._.
+A_DT new_JJ model_NN was_VBD made_VBN by_IN deleting_VBG one_CD interaction_NN or_CC one_CD factor_NN from_IN the_DT saturated_VBN model_NN ._.
+Then_RB ,_, it_PRP was_VBD checked_VBN whether_IN this_DT new_JJ model_NN is_VBZ significantly_RB different_JJ from_IN the_DT previous_JJ model_NN ._.
+If_IN p_JJ <_CD .05_CD ,_, it_PRP means_VBZ that_IN two_CD models_NNS were_VBD significantly_RB different_JJ and_CC that_IN the_DT deleted_VBN factor_NN or_CC interaction_NN MUST_NNP NOT_NNP be_VB deleted_VBN from_IN the_DT model_NN ._.
+If_IN .05_CD <_CD p_NN ,_, it_PRP means_VBZ that_IN two_CD models_NNS were_VBD not_RB significantly_RB different_JJ and_CC that_IN the_DT deleted_VBN factor_NN or_CC interaction_NN can_MD be_VB deleted_VBN safely_RB without_IN distorting_VBG the_DT explanatory_JJ power_NN of_IN the_DT model_NN ._.
+The_DT selection_NN procedures_NNS were_VBD continued_VBN until_IN no_DT redundant_JJ factor_NN or_CC interaction_NN remained_VBD in_IN the_DT model_NN ._.
+Through_IN this_DT process_NN ,_, the_DT final_JJ model_NN was_VBD obtained_VBN ._.
+In_IN the_DT final_JJ model_NN ,_, there_EX were_VBD lots_NNS of_IN interactions_NNS among_IN the_DT factors_NNS ._.
+Since_IN it_PRP is_VBZ impossible_JJ and_CC unreasonable_JJ to_TO examine_VB all_PDT the_DT factors_NNS and_CC their_PRP$ interactions_NNS ,_, this_DT paper_NN examines_VBZ only_RB the_DT effects_NNS of_IN major_JJ factors_NNS ._.
+The_DT following_VBG table_NN contains_VBZ the_DT statistical_JJ values_NNS for_IN each_DT factor_NN ._.
+Figure_NN 3_CD ._.
+construction0_CD vs._FW construction1_FW As_IN this_DT graph_NN shows_VBZ ,_, the_DT ratio_NN of_IN two_CD constructions_NNS differ_VBP as_IN the_DT level_NN goes_VBZ up_RB ._.
+The_DT Korean_JJ EFL_NNP learners_NNS in_IN the_DT Low_NNP level_NN used_VBD only_RB construction0_CD ._.
+In_IN the_DT Medium_NN level_NN ,_, the_DT proportion_NN of_IN construction0_JJ decreased_VBN and_CC the_DT Korean_JJ EFL_NNP learners_NNS began_VBD to_TO use_VB construction1_CD ._.
+In_IN the_DT High_JJ level_NN ,_, the_DT proportion_NN of_IN construction0_CD decreased_VBD more_RBR ,_, the_DT proportion_NN of_IN construction1_CD increased_VBD more_RBR ._.
+Overall_RB ,_, the_DT Korean_JJ EFL_NNP learners_NNS preferred_VBN construction0_CD to_TO construction1_CD ._.
+4.2_CD Inferential_NNP Statistics_NNPS From_IN the_DT data_NNS described_VBN in_IN Figure_NN 2_CD ,_, the_DT sentences_NNS with_IN transitive_JJ uses_NNS of_IN phrasal_JJ verbs_NNS were_VBD extracted_VBN ,_, since_IN those_DT sentences_NNS could_MD be_VB classified_VBN into_IN one_CD of_IN the_DT two_CD constructions_NNS -LRB-_-LRB- either_CC construction0_CD or_CC construction1_CD -RRB-_-RRB- ._.
+Then_RB ,_, a_DT GLM_NNP was_VBD applied_VBN to_TO the_DT data_NNS ,_, as_IN in_IN Gries_NNP -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- ._.
+This_DT model_NN was_VBD chosen_VBN through_IN the_DT following_JJ steps_NNS ._.
+First_RB ,_, since_IN we_PRP had_VBD 8_CD factors_NNS ,_, a_DT -LRB-_-LRB- Multiple_JJ -RRB-_-RRB- Linear_NNP Regression_NNP analysis_NN is_VBZ adopted_VBN -LRB-_-LRB- a_DT multi_NNS -_: factorial_JJ analysis_NN ;_: Gries_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+Second_NNP ,_, since_IN the_DT dependent_JJ variable_JJ CONSTRUCTION_NNP was_VBD binomial_JJ ,_, a_DT Generalized_NNP Linear_NNP Regression_NNP Model_NNP had_VBD to_TO be_VB used_VBN with_IN logistic_JJ regression_NN ._.
+The_DT initial_JJ model_NN was_VBD constructed_VBN as_IN follows_VBZ ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- Initial_JJ Model_NNP -LRB-_-LRB- Unsaturated_NNP -RRB-_-RRB- CONSTRUCTION_NNP ~_SYM LEVEL+COMPLEXITY_NNP +_SYM ANIMACY+DEFINITENESS+PRONOMINALITY_NNP +_SYM IDIOMACITY+CONCRETENESS+LENGTH_NNP This_DT is_VBZ the_DT initial_JJ model_NN ,_, where_WRB no_DT interaction_NN was_VBD included_VBN ._.
+Estimate_NNP sd_NN z_SYM p_FW -LRB-_-LRB- Intercept_NNP -RRB-_-RRB- 0.702_CD 0.611_CD 1.150_CD .250_CD LEVEL1_NNP 0.086_CD 0.149_CD 0.576_CD .565_CD LEVEL2_NNP -0.213_CD 0.228_CD -0.936_CD .349_CD COMPLEXITY1_NNP 1.757_CD 0.520_CD 3.376_CD <_NN .001_CD ANIMACY1_NNP -1.090_CD 0.114_CD -9.578_CD <_NN .001_CD DEFINITENESS1_NNP 0.194_CD 0.102_CD 1.896_CD .058_CD PRONOMINALITY1_NNP -0.542_CD 0.639_CD -0.849_CD .396_CD IDIOMACITY1_NNP 0.132_CD 0.087_CD 1.508_CD .132_CD CONCRTENESS1_NNP 1.127_CD 0.439_CD 2.265_CD .010_CD LENGTH_NNP 0.268_CD 0.088_CD 3.062_CD .002_CD Table_NNP 3_CD ._.
+Analysis_NN Results_NNS As_IN this_DT model_NN shows_VBZ ,_, only_RB 4_CD factors_NNS -LRB-_-LRB- COMPLEXITY_NNP ,_, ANIMACY_NNP ,_, CONCRETENESS_NNP ,_, and_CC LENGTH_NNP -RRB-_-RRB- among_IN the_DT 8_CD factors_NNS were_VBD statistically_RB significant_JJ ._.
+An_DT interesting_JJ fact_NN is_VBZ that_IN the_DT factor_NN LEVEL_NNP was_VBD not_RB statistically_RB significant_JJ ._.
+Though_IN there_EX were_VBD some_DT differences_NNS among_IN the_DT level_NN of_IN proficiency_NN -LRB-_-LRB- Figure_NN 3_CD -RRB-_-RRB- ,_, this_DT factor_NN LEVEL_NNP was_VBD not_RB statistically_RB significant_JJ as_IN its_PRP$ p-vale_JJ indicates_VBZ -LRB-_-LRB- p_JJ =_SYM .565_CD and_CC p_VB =_SYM .349_CD -RRB-_-RRB- ._.
+4.3_CD Analysis_NN with_IN Effect_NN Plots_NNS Since_IN the_DT final_JJ model_NN was_VBD obtained_VBN ,_, it_PRP is_VBZ possible_JJ to_TO statistically_RB analyze_VB each_DT factor_NN and_CC interactions_NNS with_IN effect_NN plots_NNS ._.
+Among_IN the_DT 8_CD factors_NNS included_VBN in_IN the_DT statistical_JJ analysis_NN ,_, only_RB 4_CD main_JJ factors_NNS were_VBD statistically_RB significant_JJ ._.
+In_IN this_DT section_NN ,_, only_RB those_DT 4_CD factors_NNS were_VBD closely_RB examined_VBN ._.
+The_DT first_JJ factor_NN is_VBZ COMPLEXITY_NNP ,_, which_WDT indicates_VBZ whether_IN the_DT form_NN of_IN DO_NNP is_VBZ simple_JJ or_CC complex_JJ ._.
+Figure_NN 4_CD is_VBZ the_DT effect_NN plot_NN for_IN this_DT factor_NN ._.
+Figure_NN 4_CD ._.
+Effect_NN Plot_NN for_IN COMPLEXITY_NNP Compared_VBD this_DT result_NN with_IN that_DT of_IN Gries_NNP -LRB-_-LRB- 2003:194_CD -RRB-_-RRB- ._.
+Figure_NN 5_CD ._.
+COMPLEX_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- COMPLEXITY_NNP in_IN this_DT paper_NN corresponds_VBZ to_TO COMPLEX_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+As_IN Figure_NN 5_CD demonstrates_VBZ ,_, the_DT construction0_NN had_VBD higher_JJR frequencies_NNS than_IN the_DT construction1_CD when_WRB the_DT DO_NNP was_VBD complex_JJ ._.
+However_RB ,_, the_DT construction1_CD had_VBD higher_JJR frequencies_NNS than_IN the_DT constructiono_NN when_WRB the_DT DO_NNP was_VBD simple_JJ ._.
+This_DT tendency_NN was_VBD also_RB observed_VBN in_IN Figure_NN 4_CD ._.
+When_WRB the_DT DO_NNP was_VBD complex_JJ ,_, the_DT proportion_NN of_IN construction0_NN was_VBD greater_JJR than_IN the_DT value_NN of_IN construction1_CD ,_, and_CC its_PRP$ value_NN was_VBD greater_JJR than_IN 0.5_CD ._.
+On_IN the_DT other_JJ hand_NN ,_, when_WRB the_DT DO_NNP was_VBD simple_JJ ,_, the_DT proportion_NN of_IN construction1_CD was_VBD much_RB greater_JJR than_IN the_DT value_NN of_IN construction0_CD ,_, and_CC its_PRP$ value_NN was_VBD less_JJR than_IN 0.5_CD ._.
+Accordingly_RB ,_, these_DT two_CD graphs_NNS demonstrate_VBP that_IN native_JJ speakers_NNS and_CC Korean_JJ EFL_NNP learners_NNS show_VBP a_DT similar_JJ tendency_NN ._.
+Since_IN two_CD graphs_NNS -LRB-_-LRB- Figure_NN 4_CD and_CC Figure_NNP 5_CD -RRB-_-RRB- are_VBP different_JJ ,_, it_PRP may_MD be_VB unreasonable_JJ to_TO compare_VB the_DT values_NNS of_IN two_CD graphs_NNS ._.
+However_RB ,_, since_IN the_DT goal_NN of_IN comparison_NN is_VBZ to_TO check_VB whether_IN the_DT tendencies_NNS that_IN the_DT Korean_JJ EFL_NNP learners_NNS exhibit_NN -LRB-_-LRB- not_RB the_DT exact_JJ values_NNS -RRB-_-RRB- are_VBP similar_JJ to_TO those_DT of_IN native_JJ speakers_NNS ,_, it_PRP is_VBZ possible_JJ to_TO use_VB the_DT analysis_NN results_NNS in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- in_IN the_DT comparison_NN The_DT second_JJ factor_NN to_TO be_VB mentioned_VBN is_VBZ ANIMACY_NNP ,_, which_WDT indicates_VBZ whether_IN DO_NNP was_VBD an_DT animate_NN or_CC an_DT inanimate_JJ entity_NN ._.
+Figure_NN 6_CD is_VBZ the_DT effect_NN plot_NN for_IN this_DT factor_NN Figure_NN 6_CD ._.
+Effect_NN Plot_NN for_IN ANIMACY_NNP The_DT y_NN values_NNS in_IN this_DT graph_NN represent_VBP the_DT ratio_NN of_IN `_`` Particle_NNP +_NNP DO_NNP '_POS ._.
+That_DT is_VBZ ,_, the_DT y_NN values_NNS in_IN this_DT plot_NN represent_VBP the_DT ratio_NN of_IN construction0_NN ._.
+Accordingly_RB ,_, as_IN the_DT y_JJ value_NN increases_NNS ,_, the_DT ratio_NN of_IN construction0_JJ increases_NNS ._.
+It_PRP means_VBZ that_IN the_DT Korean_JJ EFL_NNP learners_NNS preferred_VBN to_TO use_VB construction0_CD ,_, rather_RB than_IN the_DT ratio_NN of_IN construction1_NN ._.
+It_PRP also_RB implies_VBZ that_IN as_IN the_DT y_JJ value_NN increases_NNS ,_, the_DT ratio_NN of_IN construction1_CD decreases_VBZ ._.
+Now_RB ,_, let_VB 's_POS compare_VB this_DT result_NN with_IN that_DT of_IN Gries_NNP -LRB-_-LRB- 2003:197_CD -RRB-_-RRB- ._.
+Figure_NN 7_CD ._.
+ANIMACY_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ANIMACY_NNP in_IN this_DT paper_NN corresponds_VBZ to_TO ANIMACY_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+The_DT y_NN values_NNS in_IN this_DT graph_NN refer_VBP to_TO the_DT frequencies_NNS of_IN each_DT construction_NN -LRB-_-LRB- construction0_CD and_CC construction1_CD -RRB-_-RRB- when_WRB DO_NNP has_VBZ the_DT corresponding_JJ value_NN for_IN the_DT given_VBN factor_NN ._.
+As_IN Figure_NN 7_CD demonstrates_VBZ ,_, though_IN inanimate_JJ DOs_NNS were_VBD prevailed_VBN in_IN both_DT constructions_NNS ,_, the_DT construction1_NN has_VBZ higher_JJR frequencies_NNS than_IN the_DT construction0_CD when_WRB the_DT DO_NNP referred_VBD to_TO an_DT animate_NN entity_NN ._.
+However_RB ,_, the_DT construction0_NN has_VBZ higher_JJR frequencies_NNS than_IN the_DT construction1_CD when_WRB the_DT DO_NNP had_VBD an_DT inanimate_JJ entity_NN ._.
+This_DT tendency_NN was_VBD also_RB observed_VBN in_IN Figure_NN 6_CD ._.
+When_WRB DO_NNP was_VBD inanimate_JJ ,_, the_DT proportion_NN of_IN `_`` Particle_NNP +_NNP DO_NNP '_POS -LRB-_-LRB- construction0_CD -RRB-_-RRB- was_VBD greater_JJR than_IN the_DT value_NN of_IN `_`` DO_NNP +_NNP Particle_NNP '_POS -LRB-_-LRB- construction1_CD -RRB-_-RRB- ,_, and_CC its_PRP$ value_NN was_VBD greater_JJR than_IN 0.5_CD ._.
+On_IN the_DT other_JJ hand_NN ,_, when_WRB DO_NNP was_VBD an_DT animate_NN entity_NN ,_, the_DT proportion_NN of_IN `_`` DO_NNP +_NNP Particle_NNP '_POS -LRB-_-LRB- construction1_CD -RRB-_-RRB- was_VBD greater_JJR than_IN the_DT value_NN of_IN `_`` Particle_NNP +_NNP DO_NNP '_POS -LRB-_-LRB- construction0_CD -RRB-_-RRB- ,_, and_CC its_PRP$ value_NN was_VBD less_JJR than_IN 0.5_CD ._.
+Accordingly_RB ,_, these_DT two_CD graphs_NNS demonstrate_VBP the_DT tendency_NN that_IN both_DT native_JJ speakers_NNS and_CC Korean_JJ EFL_NNP learners_NNS preferred_VBN to_TO use_VB construction0_CD as_IN DO_NNP took_VBD an_DT inanimate_JJ entity_NN ._.
+The_DT third_JJ factor_NN is_VBZ CONCRETENESS_NNP ,_, which_WDT indicates_VBZ whether_IN DO_NNP refers_VBZ to_TO an_DT abstract_JJ entity_NN or_CC a_DT concrete_JJ entity_NN ._.
+Figure_NN 8_CD is_VBZ the_DT effect_NN plot_NN for_IN this_DT factor_NN ._.
+Figure_NN 8_CD ._.
+Effect_NN Plot_NN for_IN CONCRETENESS_NNP Compared_VBD this_DT result_NN with_IN that_DT of_IN Gries_NNP -LRB-_-LRB- 2003:197_CD -RRB-_-RRB- ._.
+Figure_NN 9_CD ._.
+CONCRETE_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- CONCRETENESS_NNS in_IN this_DT paper_NN corresponds_VBZ to_TO CONCRETE_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+As_IN Figure_NN 9_CD demonstrates_VBZ ,_, the_DT construction1_NN has_VBZ higher_JJR frequencies_NNS than_IN the_DT construction0_CD when_WRB the_DT DO_NNP had_VBD a_DT concrete_JJ entity_NN ._.
+However_RB ,_, the_DT construction0_NN has_VBZ higher_JJR frequencies_NNS than_IN the_DT construction1_CD when_WRB the_DT DO_NNP had_VBD an_DT abstract_JJ entity_NN ._.
+This_DT tendency_NN was_VBD also_RB observed_VBN in_IN Figure_NN 8_CD ._.
+When_WRB DO_NNP had_VBD an_DT abstract_JJ entity_NN ,_, the_DT proportion_NN of_IN construction0_NN was_VBD greater_JJR than_IN the_DT value_NN of_IN construction1_CD ,_, and_CC its_PRP$ value_NN was_VBD greater_JJR than_IN 0.5_CD ._.
+On_IN the_DT other_JJ hand_NN ,_, when_WRB DO_NNP was_VBD a_DT concrete_JJ entity_NN ,_, the_DT proportion_NN of_IN construction1_CD was_VBD much_RB greater_JJR than_IN the_DT value_NN of_IN construction0_CD ,_, and_CC its_PRP$ value_NN was_VBD less_JJR than_IN 0.5_CD ._.
+Accordingly_RB ,_, these_DT two_CD graphs_NNS demonstrate_VBP the_DT tendency_NN that_WDT native_JJ speakers_NNS and_CC Korean_JJ EFL_NNP learners_NNS demonstrate_VBP an_DT identical_JJ tendency_NN ._.
+The_DT last_JJ factor_NN to_TO be_VB mentioned_VBN is_VBZ LENGTH_NNP ,_, the_DT length_NN of_IN DO_NNP in_IN words_NNS ._.
+Figure_NN 10_CD is_VBZ the_DT effect_NN plot_NN for_IN this_DT factor_NN ._.
+Compared_VBN this_DT result_NN with_IN that_DT of_IN Gries_NNP -LRB-_-LRB- 2003:194_CD -RRB-_-RRB- ._.
+LENGTH_NNP in_IN this_DT paper_NN corresponds_VBZ to_TO LENTHW_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Figure_NN 10_CD ._.
+Effect_NN Plot_NN for_IN LENGTH_NNP Figure_NNP 11_CD ._.
+LENGTHW_NNP in_IN Gries_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- As_IN Figure_NN 11_CD demonstrates_VBZ ,_, as_IN DO_NNP becomes_VBZ longer_RBR ,_, the_DT construction0_NN has_VBZ higher_JJR frequencies_NNS ,_, while_IN the_DT construction1_NN has_VBZ lower_JJR frequencies_NNS ._.
+This_DT tendency_NN was_VBD also_RB observed_VBN in_IN Figure_NN 10_CD ._.
+As_IN DO_NNP becomes_VBZ longer_RBR ,_, the_DT ratio_NN of_IN the_DT order_NN construction0_NN increases_NNS ._.
+This_DT fact_NN implies_VBZ that_IN the_DT other_JJ order_NN construction1_NN decreases_VBZ ._.
+Though_IN two_CD graphs_NNS were_VBD slightly_RB different_JJ ,_, both_DT graphs_NNS demonstrates_VBZ the_DT tendency_NN that_IN both_DT native_JJ speakers_NNS and_CC Korean_JJ EFL_NNP learners_NNS preferred_VBN to_TO use_VB construction0_CD as_IN DO_NNP became_VBD longer_RBR ._.
+Particle_NN Movement_NNP in_IN native_JJ speakers_NNS ,_, only_RB 4_CD factors_NNS were_VBD statistically_RB significant_JJ in_IN Korean_JJ EFL_NNP learners_NNS writings_NNS ._.
+Therefore_RB ,_, the_DT answer_NN to_TO the_DT question_NN -LRB-_-LRB- 2a_FW -RRB-_-RRB- will_MD be_VB `_`` No_DT '_'' ,_, and_CC the_DT answer_NN to_TO the_DT question_NN -LRB-_-LRB- 2b_JJ -RRB-_-RRB- will_MD be_VB COMPLEXITY_NNP ,_, ANIMACY_NNP ,_, CONCRETENESS_NNP ,_, and_CC LENGTH_NNP -LRB-_-LRB- 4_CD factors_NNS -RRB-_-RRB- ._.
+As_IN for_IN the_DT question_NN -LRB-_-LRB- 2c_JJ -RRB-_-RRB- ,_, there_EX were_VBD some_DT differences_NNS in_IN the_DT ratio_NN of_IN these_DT two_CD constructions_NNS as_IN the_DT level_NN of_IN proficiency_NN goes_VBZ up_RB ._.
+However_RB ,_, the_DT differences_NNS were_VBD not_RB statistically_RB significant_JJ ._.
+Since_IN Figure_NN 1_CD and_CC Table_NNP 3_CD demonstrated_VBD that_IN Korean_JJ EFL_NNP learners_NNS showed_VBD different_JJ tendency_NN in_IN the_DT Particle_NNP Movement_NNP in_IN their_PRP$ writings_NNS compared_VBN with_IN native_JJ speakers_NNS ,_, the_DT hypothesis_NN in_IN -LRB-_-LRB- 3a_FW -RRB-_-RRB- can_MD not_RB be_VB maintained_VBN ._.
+Instead_RB ,_, the_DT hypothesis_NN in_IN -LRB-_-LRB- 3b_JJ -RRB-_-RRB- can_MD be_VB supported_VBN ,_, since_IN a_DT different_JJ set_NN of_IN factors_NNS had_VBD influenced_VBN Particle_NNP Movement_NNP in_IN the_DT Korean_JJ EFL_NNP learners_NNS '_POS writings_NNS ._.
+6_CD Conclusion_NN This_DT paper_NN adopted_VBD a_DT multifactorial_JJ analysis_NN as_IN in_IN Gries_NNP -LRB-_-LRB- 2001_CD ,_, 2003_CD -RRB-_-RRB- to_TO examine_VB Particle_NNP Movement_NNP in_IN Korean_JJ EFL_NNP learners_NNS '_POS writings_NNS ._.
+The_DT Korean_JJ part_NN of_IN TOEFL11_CD corpus_NN was_VBD used_VBN ,_, and_CC all_PDT the_DT relevant_JJ sentences_NNS were_VBD extracted_VBN using_VBG the_DT tag_NN information_NN ._.
+The_DT eight_CD relevant_JJ factors_NNS were_VBD encoded_VBN to_TO these_DT sentences_NNS ,_, and_CC each_DT factor_NN and_CC their_PRP$ interactions_NNS were_VBD statistically_RB analyzed_VBN with_IN R._NNP Through_IN the_DT analysis_NN ,_, it_PRP was_VBD demonstrated_VBN that_IN Korean_JJ EFL_NNP learners_NNS employed_VBD a_DT different_JJ strategy_NN in_IN the_DT Particle_NNP Movement_NNP and_CC that_IN only_RB some_DT factors_NNS were_VBD used_VBN for_IN the_DT selection_NN of_IN constructions_NNS ._.
+Unlike_IN native_JJ speakers_NNS ,_, 4_CD linguistic_JJ factors_NNS were_VBD statistically_RB significant_JJ in_IN Korean_JJ EFL_NNP learners_NNS '_POS writing_VBG samples_NNS -LRB-_-LRB- ANIMACY_NNP ,_, PRONOMINALITY_NNP ,_, CONCRETENESS_NNP ,_, and_CC LENGTH_NNP -RRB-_-RRB- ._.
+It_PRP was_VBD also_RB observed_VBN that_IN there_EX were_VBD some_DT differences_NNS in_IN the_DT ratio_NN of_IN these_DT two_CD constructions_NNS -LRB-_-LRB- construction0_CD vs._FW construction1_FW -RRB-_-RRB- as_IN the_DT level_NN of_IN proficiency_NN went_VBD up_RB ._.
+However_RB ,_, the_DT differences_NNS were_VBD not_RB statistically_RB significant_JJ ._.
+However_RB ,_, we_PRP do_VBP NOT_RB say_VB that_IN these_DT differences_NNS between_IN the_DT native_JJ speakers_NNS and_CC the_DT Korean_JJ EFL_NNP learners_NNS come_VBP from_IN only_RB the_DT L1_NNP transfer_NN effects_NNS ._.
+Another_DT kind_NN of_IN complicated_JJ statistical_JJ analysis_NN -LRB-_-LRB- such_JJ as_IN another_DT regression_NN analysis_NN with_IN the_DT native_JJ data_NNS and/or_CC the_DT analysis_NN in_IN Gries_NNP and_CC Deshors_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- -RRB-_-RRB- is_VBZ necessary_JJ to_TO examine_VB if_IN the_DT L1_NNP -LRB-_-LRB- here_RB ,_, Korean_JJ -RRB-_-RRB- really_RB influenced_VBN these_DT factors_NNS and_CC how_WRB much_RB the_DT L1_NNP transfer_NN effects_NNS are_VBP involved_VBN in_IN these_DT factors_NNS ._.
+5_CD Discussions_NNPS In_IN Table_NNP 1_CD ,_, several_JJ factors_NNS were_VBD proposed_VBN which_WDT influenced_VBD the_DT alternations_NNS of_IN Particle_NNP Movement_NNP ._.
+Among_IN them_PRP ,_, 7_CD factors_NNS were_VBD chosen_VBN for_IN the_DT study_NN in_IN this_DT paper_NN :_: COMPLEX_NNP ,_, ANIMACY_NNP ,_, DET_NNP ,_, TYPE_NNP ,_, IDIOM_NNP ,_, CONCRETE_NNP ,_, and_CC LENTHW_NNP ._.
+These_DT factors_NNS were_VBD encoded_VBN as_IN follows_VBZ :_: COMPLEXITY_NNP ,_, ANIMACY_NNP ,_, DEFINITENESS_NNP ,_, PRONOMINALITY_NNP ,_, IDIOMACITY_NNP ,_, CONCRETENESS_NNP ,_, and_CC LENGTH_NNP ._.
+To_TO these_DT 7_CD factors_NNS ,_, one_CD more_JJR factor_NN LEVEL_NNP was_VBD added_VBN ._.
+The_DT comparison_NN of_IN Figure_NN 1_CD and_CC Table_NNP 3_CD demonstrated_VBD that_IN the_DT uses_NNS of_IN alternation_NN of_IN Particle_NNP Movement_NNP in_IN Korean_JJ EFL_NNP learners_NNS were_VBD different_JJ from_IN those_DT of_IN native_JJ speakers_NNS ._.
+Among_IN the_DT 8_CD factors_NNS which_WDT influenced_VBD alternation_NN of_IN References_NNP Daniel_NNP Blanchard_NNP ,_, Joel_NNP Tetreault_NNP ,_, Derrick_NNP Higgins_NNP ,_, Aoife_NNP Cahill_NNP ,_, and_CC Martin_NNP Chodorow_NNP ._.
+2013_CD ._.
+TOEFL11_CD :_: A_DT corpus_NN of_IN non-native_JJ English_NNP ._.
+ETS_NNP RR_NNP --_: 13-24_CD ._.
+Prinston_NNP ,_, NJ_NNP :_: Educational_NNP Testing_NNP Service_NNP ._.
+Ping_VBG Chen_NNP ._.
+1986_CD ._.
+Discourse_NN and_CC Particle_NNP Movement_NNP in_IN English_NNP ._.
+Studies_NNS in_IN Language_NN 10:79_CD -95_CD ._.
+Marcel_NNP Den_NNP Dikken_NNP ._.
+1995_CD ._.
+Particles_NNPS :_: On_IN the_DT Syntax_NNP of_IN Verb-Particle_NNP ,_, Triadic_NNP ,_, and_CC Causative_NNP Constructions_NNP ._.
+Oxford_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Marcel_NNP Den_NNP Kikken_NNP ._.
+1992_CD ._.
+Particles_NNP ._.
+Holland_NNP Institute_NNP of_IN Linguistics_NNP Dissertations_NNPS ._.
+The_DT Hague_NNP :_: Holland_NNP Academic_NNP Graphics_NNP ._.
+Bruce_NNP Fraser_NNP ._.
+1974_CD ._.
+The_DT Phrasal_NNP Verb_NNP in_IN English_NNP ,_, by_IN Dwight_NNP Bolinger_NNP ._.
+Language_NN ,_, 50:568_CD -575_CD ._.
+Bruce_NNP Fraser_NNP ._.
+1976_CD ._.
+The_DT Verb-Particle_NNP Combination_NNP in_IN English_NNP ._.
+New_NNP York_NNP :_: Academic_NNP Press_NNP ._.
+Sylviane_NNP Granger_NNP ,_, Estelle_NNP Dagneaux_NNP ,_, and_CC Fanny_NNP Meynier_NNP ._.
+2009_CD ._.
+The_DT international_JJ corpus_NN of_IN learner_NN English_NNP :_: Handbook_NNP and_CC CD-ROM_NN -LRB-_-LRB- version_NN 2_CD -RRB-_-RRB- ._.
+Louvain-la-Neuve_NNP ,_, Belgium_NNP :_: Presses_VBZ Universitaires_NNP de_FW Lowvain_NNP ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS ._.
+1999_CD ._.
+Particle_NN movement_NN :_: A_DT Cognitive_JJ and_CC Functional_JJ Approach_NNP ,_, Cognitive_NNP Linguistics_NNP ,_, 10_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :105_CD -145_CD ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS ._.
+2001_CD ._.
+A_DT Multifactorial_JJ Analysis_NN of_IN Syntactic_NNP Variation_NNP :_: Particle_NNP Movement_NNP Revisited_NNP ._.
+Journal_NNP of_IN Quantitative_NNP Linguistics_NNP ,_, 8_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :33_CD -50_CD ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS ._.
+2003_CD ._.
+Multifactorial_JJ Analysis_NN in_IN Corpus_NNP Linguistics_NNPS :_: A_DT Study_NN of_IN Particle_NNP Movement_NNP ._.
+London_NNP :_: Continumm_NNP ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS ._.
+2013_CD ._.
+Statistics_NNS for_IN Linguistics_NNS with_IN R_NN :_: A_DT Practical_NNP Introduction_NNP ._.
+Berlin_NNP :_: Guyter_NNP ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS and_CC Sandra_NNP Deshors_NNP ._.
+2015_CD ._.
+EFL_NNP and/vs_NNS ._.
+ESL_NNP ?_.
+A_DT Multi-level_JJ Regression_NNP Modeling_NNP Perspective_NNP on_IN Bridging_VBG the_DT Paradigm_NNP Gap_NNP ._.
+International_NNP Journal_NNP of_IN Learner_NNP Corpus_NNP Research_NNP 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 130_CD --_: 159_CD ._.
+John_NNP Hawkins_NNP ._.
+1994_CD ._.
+A_DT Performance_NNP Theory_NNP of_IN Order_NNP and_CC Constituency_NNP ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Otto_NNP Jespersen_NNP ._.
+1928_CD ._.
+A_DT Modern_NNP English_NNP Grammar_NNP on_IN Historical_NNP Principles_NNPS ._.
+London_NNP :_: George_NNP Allen_NNP and_CC Unwin_NNP Ltd._NNP ._.
+Jurafsky_NNP ,_, Daniel_NNP and_CC James_NNP Martin_NNP ._.
+2009_CD ._.
+Speech_NN and_CC Language_NN Processing_NNP :_: An_DT Introduction_NN to_TO Natural_JJ Language_NN Processing_NNP ,_, Computational_NNP Linguistics_NNPS and_CC Speech_NNP Recognition_NNP ._.
+Upper_NNP Saddle_NNP Hill_NNP ,_, NJ_NNP :_: Prentice_NNP Hall_NNP ._.
+Etsko_NNP Kruisinga_NNP and_CC Patrick_NNP Erades_NNP ._.
+1953_CD ._.
+An_DT English_NNP Grammar_NNP ._.
+Vol_NNP ._.
+I._NN Groningen_NNP :_: P._NNP Noordhoff_NNP ._.
+Yong-hun_JJ Lee_NNP ._.
+2007_CD ._.
+Corpus_NNP Analysis_NNP Using_VBG NLPTools_NNS and_CC Their_PRP$ Applications_NNS :_: Applications_NNS to_TO Linguistic_NNP Research_NNP ,_, English_NNP Education_NNP ,_, and_CC Textbook_NNP Evaluation_NNP ._.
+Seoul_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Bernhard_NNP Rohrbacher_NNP ._.
+1994_CD ._.
+English_NNP Main_NNP Verbs_NNS Move_VBP Never_RB ._.
+The_DT Penn_NNP Review_NNP of_IN Linguistics_NNPS ,_, 18:145_CD -159_CD ._.
+Henry_NNP Sweet_NNP ._.
+1892_CD ._.
+A_DT New_NNP English_NNP Grammar_NNP ._.
+Oxford_NNP :_: Clarendon_NNP Press_NNP ._.
+Rosemary_NNP Yeagle_NNP ._.
+1983_CD ._.
+The_DT Syntax_NNP and_CC Semantics_NNP of_IN English_NNP Verb-Particle_NNP Constructions_NNP with_IN off_RB :_: A_DT Space_NNP Grammar_NNP Analysis_NNP ._.
+Unpublished_JJ M.A._NNP Thesis_NNP ,_, Southern_NNP Illinois_NNP University_NNP at_IN Carbondale_NNP ._.

@@ -1,0 +1,439 @@
+Asymmetries_NNS in_IN Scrambling_VBG and_CC Distinctness_NNP of_IN Copies_NNPS Abstract_NNP This_DT paper_NN is_VBZ an_DT investigation_NN of_IN LF-copies_JJ created_VBN by_IN scrambling_VBG in_IN the_DT context_NN of_IN FNQ-constructions_NNS ._.
+It_PRP demonstrates_VBZ that_IN movement_NN leaves_VBZ a_DT copy_NN at_IN LF_NNP only_RB when_WRB it_PRP targets_VBZ a_DT position_NN within_IN the_DT next_JJ search_NN space_NN ;_: it_PRP does_VBZ not_RB leave_VB an_DT LF_NNP copy_NN if_IN move_NN -_: ment_NN takes_VBZ place_NN too_RB close_RB within_IN a_DT single_JJ domain_NN of_IN search_NN space_NN ._.
+By_IN characterizing_VBG this_DT in_IN terms_NNS of_IN ``_`` Distinctness_NN of_IN Copies_NNS ,_, ''_'' this_DT paper_NN provides_VBZ a_DT prin_NN -_: cipled_JJ account_NN to_TO all_DT structural_JJ variations_NNS that_WDT have_VBP posed_VBN substantial_JJ problems_NNS in_IN previous_JJ approaches_NNS ._.
+1_CD Introduction_NNP It_PRP has_VBZ been_VBN widely_RB noted_VBD that_IN the_DT extraction_NN of_IN different_JJ arguments_NNS can_MD be_VB subject_JJ to_TO different_JJ restrictions_NNS ._.
+One_CD such_JJ case_NN involves_VBZ the_DT distribution_NN of_IN floating_VBG numeral_NN quantifiers_NNS -LRB-_-LRB- FNQs_NNS -RRB-_-RRB- in_IN Japanese_JJ and_CC Korean_JJ .1_CD In_IN these_DT languages_NNS ,_, extraction_NN of_IN objects_NNS licenses_NNS an_DT associated_VBN FNQ_NNP ,_, while_IN that_DT of_IN subjects_NNS does_VBZ not_RB -LRB-_-LRB- Kuroda_NNP ,_, 1980_CD ;_: Sai_NNP -_: to_TO ,_, 1985_CD ;_: Ko_NNP ,_, 2007_CD ;_: Miyagawa_NNP and_CC Arikawa_NNP ,_, 2007_CD ;_: Miyagawa_NNP 2013_CD ;_: J._NNP Kim_NNP ,_, 2013_CD ,_, among_IN many_JJ others_NNS -RRB-_-RRB- ._.
+Although_IN this_DT understanding_NN about_IN the_DT subject-object_JJ asymmetry_NN is_VBZ well-established_JJ in_IN the_DT literature_NN ,_, it_PRP is_VBZ not_RB always_RB easy_JJ to_TO reach_VB a_DT conclusion_NN about_IN the_DT grammatical_JJ -_: ity_NN of_IN the_DT sentences_NNS that_WDT contain_VBP subject_JJ FNQs_NNS ._.
+We_PRP also_RB find_VBP that_IN the_DT Locality_NNP approach_NN -LRB-_-LRB- Saito_NNP ,_, 1985_CD ;_: Miyagawa_NNP ,_, 1989_CD ;_: 2010_CD ;_: Miyagawa_NNP and_CC Arikawa_NNP ,_, 2007_CD ,_, etc._FW -RRB-_-RRB- ,_, the_DT most_RBS compelling_JJ account_NN for_IN this_DT exciting_JJ but_CC bewilder_SYM -_: ing_NN phenomenon_NN ,_, is_VBZ not_RB entirely_RB acceptable_JJ because_IN of_IN its_PRP$ shortcomings_NNS in_IN terms_NNS of_IN either_DT empirical_JJ coverage_NN or_CC the_DT explanatory_JJ power_NN essential_JJ for_IN theories_NNS in_IN modern_JJ lin_NN -_: 1_CD Sportiche_NNP 's_POS -LRB-_-LRB- 1988_CD -RRB-_-RRB- proposal_NN for_IN a_DT theory_NN of_IN floating_VBG quantifiers_NNS relies_VBZ on_IN two_CD independently_RB motivated_JJ assumptions_NNS :_: -LRB-_-LRB- i_FW -RRB-_-RRB- a_DT quantifi_NN -_: er_NN and_CC its_PRP$ associate_JJ NP_NNP are_VBP generated_VBN under_IN a_DT single_JJ constituent_NN ,_, and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- the_DT NP_NNP moves_VBZ up_RP for_IN a_DT number_NN of_IN reasons_NNS while_IN stranding_VBG the_DT quantifier_NN in_IN its_PRP$ base-generated_JJ position_NN ._.
+I_PRP hold_VBP these_DT assump_SYM -_: tions_NNS throughout_IN this_DT paper_NN ._.
+guistic_JJ research_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP lay_VBD down_RP two_CD minimalist_JJ assumptions_NNS and_CC demonstrate_VB that_DT simply_RB by_IN combining_VBG these_DT ,_, all_PDT the_DT lingering_VBG problems_NNS germane_JJ to_TO the_DT previous_JJ approaches_NNS -LRB-_-LRB- including_VBG the_DT Locality_NNP -RRB-_-RRB- can_MD be_VB eliminated_VBN ._.
+Additionally_RB ,_, a_DT variety_NN of_IN puzzles_NNS that_WDT arise_VBP in_IN scrambling_VBG contexts_NNS all_DT fall_VBP out_RP nicely_RB ._.
+The_DT two_CD hypotheses_NNS include_VBP Chomsky_NNP 's_POS -LRB-_-LRB- 2000_CD ;_: 2001_CD ;_: 2008_CD -RRB-_-RRB- PIC_NNP -LRB-_-LRB- Phase_NN Impenetrability_NNP Condi_NNP -_: tion_NN -RRB-_-RRB- and_CC a_DT novel_NN proposal_NN of_IN DC_NNP -LRB-_-LRB- Distinctness_NNP of_IN Copies_NNPS -RRB-_-RRB- ,_, which_WDT is_VBZ an_DT elaboration_NN on_IN Richards_NNP 's_POS -LRB-_-LRB- 2000_CD ;_: 2010_CD -RRB-_-RRB- prin_SYM -_: ciple_NN of_IN Distinctness_NNP ._.
+Insofar_RB as_IN the_DT current_JJ analysis_NN is_VBZ sustained_VBN ,_, it_PRP will_MD then_RB supply_VB empirical_JJ evidence_NN in_IN sup_NN -_: port_NN of_IN these_DT theoretical_JJ assumptions_NNS in_IN the_DT minimalist_JJ program_NN ,_, while_IN further_JJ clarifying_VBG some_DT residual_JJ problems_NNS ._.
+The_DT structure_NN of_IN the_DT paper_NN is_VBZ as_IN follows_VBZ ._.
+In_IN section_NN 2_CD ,_, while_IN reviewing_VBG the_DT Locality_NNP approach_NN to_TO FNQs_NNS ,_, we_PRP tease_VBP out_RP an_DT important_JJ fact_NN that_IN structural_JJ variations_NNS of_IN FNQ_NNP -_: constructions_NNS are_VBP contingent_JJ on_IN the_DT availability_NN of_IN LF_NNP copies_NNS created_VBN by_IN scrambling_VBG ._.
+In_IN section_NN 3_CD we_PRP lay_VBD down_RP our_PRP$ proposals_NNS ,_, and_CC in_IN section_NN 4_CD we_PRP demonstrate_VBP that_IN the_DT DC_NNP ,_, in_IN conjunction_NN with_IN the_DT PIC_NNP ,_, provide_VBP a_DT principled_JJ and_CC unitary_JJ account_NN to_TO all_PDT the_DT structural_JJ variations_NNS that_WDT have_VBP posed_VBN substantial_JJ problems_NNS in_IN previous_JJ approaches_NNS ._.
+Section_NN 5_CD is_VBZ a_DT conclusion_NN of_IN the_DT paper_NN ,_, with_IN a_DT discussion_NN of_IN some_DT predictions_NNS that_WDT follow_VBP from_IN the_DT current_JJ analysis_NN ._.
+2_CD Locality_NN and_CC Problems_NNP Since_IN it_PRP was_VBD first_JJ observed_VBN by_IN Haig_NNP -LRB-_-LRB- 1980_CD -RRB-_-RRB- and_CC Kuroda_NNP -LRB-_-LRB- 1980_CD -RRB-_-RRB- ,_, the_DT subject-object_JJ asymmetry_NN of_IN FNQs_NNS ,_, shown_VBN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- in_IN Japanese_NNP ,_, has_VBZ been_VBN described_VBN by_IN the_DT term_NN ``_`` Locali_NNP -_: ty_NN ,_, ''_'' defined_VBN in_IN terms_NNS of_IN mutual_JJ c-command_NN between_IN an_DT NP_NNP -LRB-_-LRB- or_CC an_DT NP_NNP trace_VBP -RRB-_-RRB- and_CC its_PRP$ associated_VBN numeral_NN quantifi_NNS -_: er_SYM .2_CD 2_CD Locality_NN :_: a_DT ._.
+The_DT NQ_NNP and_CC its_PRP$ associated_VBN NP_NNP observe_VB strict_JJ locality_NN -LRB-_-LRB- Saito_NNP ,_, 1985_CD -RRB-_-RRB- ._.
+b_NN ._.
+The_DT NQ_NNP or_CC its_PRP$ trace_VB and_CC the_DT NP_NNP or_CC its_PRP$ trace_VBP must_MD mutually_RB c-command_JJ each_DT other_JJ -LRB-_-LRB- Miyagawa_NNP ,_, 1989_CD -RRB-_-RRB- ._.
+Gwangrak_NNP Son_NNP English_NNP Language_NNP and_CC Literature_NNP Kyungpook_NNP National_NNP University_NNP Daegu_NNP ,_, South_NNP Korea_NNP 702-701_CD gson@knu.ac.kr_NN -LRB-_-LRB- 1_CD -RRB-_-RRB- a._IN *_SYM Gakusei-ga_NN sake-o_JJ san-nin_NN nonda_NN ._.
+student-Nom_JJ sake-Acc_JJ 3-CLsubj_NN drank_VBD `_`` Three_CD students_NNS drank_VBD sake_NN ._. '_''
+b._SYM Sake-o_JJ gakusei-ga_NN san-bon_NN nonda_NN ._.
+Sake-Accstudent-Nom3-CLobj_JJ drank_NN `_`` Students_NNS drank_VBD three_CD bottles_NNS of_IN sake_NN ._. '_''
+In_IN the_DT era_NN of_IN Government_NNP and_CC Binding_NNP ,_, it_PRP was_VBD assumed_VBN that_IN a_DT subject_NN can_MD not_RB scramble_VB ,_, as_IN indicated_VBN by_IN Saito_NNP 's_POS -LRB-_-LRB- 1985_CD -RRB-_-RRB- ``_`` ban_NN on_IN subject_JJ scrambling_VBG ,_, ''_'' and_CC is_VBZ merged_VBN di_FW -_: rectly_RB in_IN its_PRP$ surface_NN position_NN ._.
+Since_IN the_DT subject_NN does_VBZ not_RB involve_VB movement_NN ,_, it_PRP has_VBZ no_DT vP-internal_JJ trace_VBP ,_, resulting_VBG in_IN violation_NN of_IN the_DT Locality_NN requirement_NN in_IN sentence_NN -LRB-_-LRB- 1a_FW -RRB-_-RRB- ._.
+In_IN contrast_NN ,_, an_DT object_NN is_VBZ assumed_VBN to_TO scramble_VB freely_RB and_CC leaves_VBZ a_DT trace_VBP ._.
+Consequently_RB ,_, the_DT trace_VB and_CC its_PRP$ associated_VBN NQ_NNP in_IN VP_NNP satisfy_VBP the_DT required_JJ constraint_NN ,_, leading_VBG to_TO the_DT grammaticality_NN of_IN sentence_NN -LRB-_-LRB- 1b_FW -RRB-_-RRB- ._.
+In_IN this_DT view_NN ,_, the_DT subject_JJ -_: object_NN asymmetry_NN of_IN FNQs_NNS in_IN scrambling_VBG contexts_NNS comes_VBZ as_IN a_DT consequence_NN of_IN the_DT trace_VBP visibility_NN in_IN a_DT position_NN next_IN to_TO the_DT NQs_NNP ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- below_IN depicts_VBZ this_DT account_NN under_IN the_DT Lo_NNP -_: cality_NN approach_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- a._IN *_SYM Gakusei-ga_NN sake-o_JJ -LSB-_NNP NO_UH TRACE_VBP san-nin_JJ -RSB-_NNP nonda_NN ._.
+b._SYM Sake-o_JJ gakusei-ga_NN -LSB-_NNP TRACE_NNP san-bon_JJ -RSB-_NNP nonda_NN ._.
+As_IN a_DT reader_NN might_MD already_RB have_VB observed_VBN ,_, this_DT account_NN can_MD hardly_RB hold_VB in_IN its_PRP$ original_JJ form_NN in_IN the_DT minimalist_JJ pro-_JJ gram_NN ,_, one_CD major_JJ finding_NN of_IN which_WDT is_VBZ that_IN the_DT subject_NN is_VBZ derived_VBN from_IN its_PRP$ vP-internal_JJ position_NN -LRB-_-LRB- Kitagawa_NNP ,_, 1986_CD ;_: Sportiche_NNP ,_, 1988_CD ;_: Kuroda_NNP ,_, 1988_CD ;_: Koopman_NNP and_CC Sportiche_NNP ,_, 1991_CD ,_, etc._FW -RRB-_-RRB- ._.
+Under_IN the_DT so-called_JJ VP-Internal_JJ Subject_NNP Hy_NNP -_: pothesis_NN -LRB-_-LRB- VPISH_NNP -RRB-_-RRB- ,_, -LRB-_-LRB- 2a_JJ -RRB-_-RRB- could_MD have_VB the_DT following_JJ struc_NN -_: ture_NN ,_, in_IN which_WDT the_DT subject_NN has_VBZ scrambled_VBN over_IN the_DT preposed_JJ object_NN from_IN its_PRP$ lower_JJR base_NN position_NN -LRB-_-LRB- Bobalik_NNP ,_, 2003:115_CD ,_, see_VB also_RB Bošković_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Gakusei-ga_JJ sake-o_JJ -LSB-_NN vP_NN tsubj_IN san-nin_JJ -LSB-_NNP VP_NNP tobj_NN nonda_NN -RSB-_NNP -RSB-_NNP This_DT structure_NN ,_, once_RB its_PRP$ validity_NN is_VBZ proven_VBN ,_, will_MD significant_JJ -_: ly_RB weaken_VBP the_DT Locality_NNP approach_NN since_IN it_PRP obliterates_VBZ the_DT disparate_JJ patterns_NNS of_IN the_DT traces_NNS between_IN subject_JJ and_CC ob_SYM -_: ject_NN ._.
+However_RB ,_, one_PRP might_MD argue_VB ,_, in_IN full_JJ compliance_NN with_IN Saito_NNP 's_POS original_JJ intuition_NN of_IN the_DT ``_`` ban_NN on_IN subject_JJ scram_NN -_: bling_NN ,_, ''_'' that_IN the_DT ``_`` double-scrambling_JJ structure_NN ''_'' -LRB-_-LRB- 3_LS -RRB-_-RRB- is_VBZ less_RBR economic_JJ than_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- since_IN it_PRP contains_VBZ more_JJR movement_NN steps_NNS to_TO arrive_VB at_IN the_DT same_JJ word_NN order_NN ._.
+Therefore_RB ,_, from_IN the_DT economy_NN perspective_NN ,_, the_DT Locality_NNP account_NN still_RB holds_VBZ that_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- is_VBZ an_DT optimal_JJ structure_NN and_CC that_IN there_EX is_VBZ no_DT li_SYM -_: censing_NN trace_VBP for_IN the_DT stranded_VBN subject_JJ NQ_NNP ._.
+If_IN we_PRP strictly_RB adhere_VBP to_TO this_DT view_NN ,_, the_DT prediction_NN is_VBZ clear_JJ :_: there_EX should_MD be_VB no_DT stranded_VBN quantifier_NN associated_VBN with_IN the_DT subject_NN ._.
+Unfortunately_RB ,_, however_RB ,_, this_DT prediction_NN is_VBZ too_RB general_JJ ,_, since_IN in_IN the_DT literature_NN we_PRP find_VBP a_DT number_NN of_IN counter_NN -_: examples_NNS where_WRB subject_JJ NQs_NNS occur_VBP precisely_RB in_IN this_DT structural_JJ format_NN ,_, yet_RB maintain_VBP grammatical_JJ integrity_NN ._.
+3_CD See_VB Kuno_NNP ,_, 1973_CD ;_: Ishii_NNP ,_, 1998_CD ;_: Takami_NNP ,_, 1998_CD ;_: Gunji_NNP and_CC Hasida_NNP ,_, 1998_CD ;_: Kuno_NNP and_CC Takami_NNP ,_, 2003_CD ;_: Nishigauchi_NNP and_CC Ishii_NNP ,_, 2003_CD ;_: Yoshimoto_NNP et_FW al._FW ,_, 2006_CD ;_: Miyagawa_NNP and_CC Ari_NNP -_: kawa_NN ,_, 2007_CD ;_: Miyagawa_NNP 2010_CD ;_: 2013_CD for_IN Japanese_JJ exam_NN -_: ples_NNS illustrating_VBG this_DT fact_NN ;_: see_VB also_RB Lee_NNP ,_, 2003_CD ;_: S._NNP Kim_NNP ,_, 2004_CD ;_: Moon_NNP ,_, 2007_CD ;_: Y._NNP Kim_NNP ,_, 2008_CD ;_: J._NNP Kim_NNP ,_, 2013_CD ,_, and_CC Son_NNP ,_, 2015_CD for_IN the_DT same_JJ fact_NN in_IN Korean_JJ ._.
+A_DT further_JJ complication_NN arises_VBZ with_IN the_DT Locality_NNP analy_NN -_: sis_NN ._.
+Miyagawa_NNP -LRB-_-LRB- 2001_CD ;_: 2003_CD ;_: 2005_CD -RRB-_-RRB- has_VBZ argued_VBN that_IN Japa_NNP -_: nese_NN does_VBZ exhibit_VB EPP_NNP effects_NNS ,_, and_CC a_DT scope_NN contrast_NN as_IN described_VBN below_IN comes_VBZ as_IN a_DT consequence_NN of_IN EPP_NNP -_: movement_NN by_IN either_CC the_DT subject_JJ or_CC the_DT object_NN to_TO a_DT position_NN higher_JJR than_IN negation_NN ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- a._FW Zen_NNP '_POS in-ga_JJ sono_NN tesuto-o_JJ uke-nakat-ta_NN ._.
+all-Nom_JJ that_IN test-Acc_JJ take-Neg-Past_JJ `_`` All_DT did_VBD not_RB take_VB that_DT test_NN ._. '_''
+*_SYM not_RB >_CD all_DT ,_, all_DT >_CD not_RB b._VB Sono_NNP tesuto-o_JJ zen_NN '_'' in-ga_JJ t_NN uke-nakat-ta_NN that_WDT test-Acc_JJ all-Nom_JJ take-Neg-Past_JJ `_`` That_DT test_NN ,_, all_DT did_VBD not_RB take_VB ._. '_''
+not_RB >_CD all_DT ,_, -LRB-_-LRB- all_DT >_CD not_RB -RRB-_-RRB- On_IN Miyagawa_NNP 's_POS account_NN ,_, T_NNP bears_VBZ a_DT strong_JJ EPP-feature_NNP in_IN Japanese_NNP ,_, and_CC hence_RB it_PRP requires_VBZ movement_NN of_IN some_DT NP_NNP to_TO -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP in_IN overt_JJ syntax_NN ;_: in_IN -LRB-_-LRB- 4a_FW -RRB-_-RRB- ,_, the_DT Spec_NNP of_IN TP_NNP is_VBZ oc_SYM -_: 3_CD The_DT examples_NNS of_IN -LRB-_-LRB- i_FW -RRB-_-RRB- and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- below_IN are_VBP representative_NN of_IN the_DT nonstandard_JJ paradigms_NNS -LRB-_-LRB- i.e._FW exceptions_NNS to_TO standard_JJ paradigms_NNS -RRB-_-RRB- in_IN Japanese_JJ and_CC Korean_JJ ,_, respectively_RB ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- a._FW ?_.
+Gakusei-ga_JJ sake-o_JJ -LSB-_NNP PAUSE_NNP -RSB-_NNP san-nin_JJ nonda_NN ._.
+students-Nom_JJ sake-Acc_JJ ``_`` Three_CD students_NNS drank_VBD beer_NN ._. ''_''
+b._SYM Gakusei-ga_NN watasi-no_NN hon-o_JJ 3-CLsubj_JJ drank_NN -LRB-_-LRB- M&A_NNP :651_CD -RRB-_-RRB- futa-ri-sika_FW kaw-ana_FW -_: student-Nom_JJ my-Gen_JJ book-Acc_JJ 2-CLsubj-only_JJ buy-Neg_JJ -_: katta_NN ._.
+Past_JJ ``_`` Only_RB two_CD students_NNS bought_VBD my_PRP$ book_NN ._. ''_''
+-LRB-_-LRB- Takami_NNP ,_, 1998:92_CD -RRB-_-RRB- -LRB-_-LRB- ii_FW -RRB-_-RRB- a._FW Marathon_NNP juja-deul-i_JJ kyeolseungjeum-ul_NN Marathon_NNP runner-PL-Nom_NNP finishing_VBG line-Loc_JJ taseos-myeong_NN thongkwahaessta_NN ._.
+5-CLsubj_JJ pass-Pst_JJ ``_`` Five_CD marathon_NN runners_NNS have_VBP passed_VBN the_DT finishing_VBG line_NN ._. ''_''
+b._SYM Haksaeng-tul-i_JJ sukje-lul_NN jikeumkkaji_NNS student-PL-Nom_JJ homework-Acc_NNP so_RB far_RB se-myeong_JJ jechulhaesseo_NN 3-CLsubj_NNP submitted_VBD ``_`` Three_CD students_NNS submitted_VBN homework_NN so_RB far_RB ._. ''_''
+-LRB-_-LRB- Son_NNP ,_, 2015_CD :_: 232-239_CD -RRB-_-RRB- cupied_VBN by_IN the_DT subject_NN ,_, while_IN in_IN -LRB-_-LRB- 4b_JJ -RRB-_-RRB- it_PRP may_MD be_VB occupied_VBN by_IN either_CC the_DT subject_JJ or_CC the_DT scrambled_VBN object_NN ._.
+Crucially_RB ,_, in_IN -LRB-_-LRB- 4b_JJ -RRB-_-RRB- ,_, the_DT subject_NN can_MD remain_VB in-situ_JJ in_IN the_DT specifier_NN posi_SYM -_: tion_NN of_IN vP_NNP ,_, where_WRB it_PRP may_MD be_VB interpreted_VBN within_IN the_DT scope_NN of_IN negation_NN ._.
+If_IN the_DT subject_NN could_MD be_VB externally_RB merged_VBN in_IN -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP as_IN in_IN -LRB-_-LRB- 4b_JJ -RRB-_-RRB- ,_, and_CC if_IN we_PRP imagine_VBP that_IN the_DT higher_JJR subject_NN in_IN -LRB-_-LRB- 4a_FW -RRB-_-RRB- is_VBZ indeed_RB the_DT one_CD derived_VBN from_IN the_DT lower_JJR vP-internal_JJ position_NN through_IN scrambling_VBG -LRB-_-LRB- in_IN compliance_NN with_IN the_DT VPISH_NNP -RRB-_-RRB- ,4_CD the_DT double-scrambling_JJ structure_NN of_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- can_MD not_RB simply_RB be_VB banished_VBN by_IN economy_NN ,_, because_IN the_DT movement_NN operation_NN of_IN the_DT subject_NN is_VBZ a_DT bona_NN fide_RB fact_NN ._.
+This_DT consideration_NN ,_, then_RB ,_, brings_VBZ us_PRP back_RB to_TO the_DT initial_JJ quest_NN regarding_VBG the_DT subject-object_JJ asymmetry_NN in_IN -LRB-_-LRB- 1_CD -RRB-_-RRB- since_IN in_IN this_DT view_NN both_DT NPs_NNS are_VBP permitted_VBN to_TO scramble_VB to_TO TP_NNP and_CC leave_VB traces_NNS alike_RB ._.
+This_DT state_NN of_IN affairs_NNS seems_VBZ to_TO indicate_VB that_IN the_DT Locality_NNP account_NN is_VBZ now_RB obsolete_JJ ._.
+Alternatively_RB ,_, it_PRP could_MD mean_VB that_IN both_DT structures_NNS -LRB-_-LRB- 2a_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- coexist_VBP in_IN Japanese_JJ and_CC Ko_NNP -_: rean_JJ grammar_NN ,_, in_IN a_DT way_NN suggested_VBN by_IN Miyagawa_NNP and_CC Arikawa_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- -LRB-_-LRB- see_VB also_RB Miyagawa_NNP ,_, 2010_CD -RRB-_-RRB- ,_, so_RB each_DT may_MD represent_VB the_DT standard_JJ versus_CC nonstandard_JJ case_NN -LRB-_-LRB- i.e._FW ex_FW -_: ceptions_NNS to_TO the_DT standard_JJ paradigm_NN -RRB-_-RRB- of_IN the_DT FNQ_NNP -_: constructions_NNS ._.
+Although_IN Miyagawa_NNP and_CC Arikawa_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- -LRB-_-LRB- M&A_NNP ,_, hereafter_NN -RRB-_-RRB- have_VBP merely_RB suggested_VBN this_DT -LRB-_-LRB- based_VBN on_IN phonological_JJ experiments_NNS -RRB-_-RRB- ,_, we_PRP will_MD show_VB that_IN they_PRP are_VBP indeed_RB correct_JJ ._.
+We_PRP will_MD support_VB them_PRP by_IN providing_VBG a_DT syntactic_NN ground_NN concerning_VBG the_DT varying_VBG structures_NNS of_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- for_IN subject_JJ scrambling_VBG and_CC -LRB-_-LRB- 2b_JJ -RRB-_-RRB- for_IN object_NN scrambling_VBG ._.
+More_RBR specifically_RB ,_, we_PRP claim_VBP that_IN a_DT subject_JJ undergoes_NNS scrambling_VBG by_IN either_DT -LRB-_-LRB- 2a_JJ -RRB-_-RRB- or_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, yielding_VBG a_DT dispar_NN -_: ate_VBD LF_NNP structure_NN ._.
+The_DT subject_JJ lacks_VBZ an_DT LF_NNP trace_VBP -LRB-_-LRB- or_CC copy_NN ,_, in_IN minimalist_JJ terms_NNS -RRB-_-RRB- in_IN the_DT former_JJ ,_, but_CC leaves_VBZ it_PRP in_IN the_DT latter_JJ derivation_NN ._.
+The_DT object_NN ,_, on_IN the_DT other_JJ hand_NN ,_, always_RB leaves_VBZ an_DT LF_NNP trace_VBP after_IN scrambling_VBG ,_, as_IN illustrated_VBN by_IN -LRB-_-LRB- 2b_JJ -RRB-_-RRB- ._.
+We_PRP claim_VBP that_IN these_DT varia_NN -_: 4_CD Based_VBN on_IN such_JJ examples_NNS as_IN the_DT following_NN ,_, Ko_NNP -LRB-_-LRB- 2007:5_CD -RRB-_-RRB- claims_VBZ that_IN subject_JJ scrambling_VBG is_VBZ indeed_RB possible_JJ in_IN Korean_JJ ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- a._IN John-ii_JJ -LSB-_NNP CP_NNP na-nun_JJ -LSB-_NNP CP_NNP ti_FW Mary-lul_NNP mannassta-ko_JJ -RSB-_NNP sayngkakhanta_NN -RSB-_NNP -RSB-_NNP J-Nom_NNP I-Top_NNP M-ACC_NNP met-C_NNP think_VBP `_`` John_NNP ,_, I_PRP think_VBP that_IN t_NN met_VBD Mary_NNP ._. '_''
+b._FW Haksayng-tul-ii_FW pwunmyenghi_FW ti_FW sey-myeng_NN maykcwu-lul_NN student-PL-Nom_JJ evidently_RB 3-CLsubj_JJ beer-Acc_JJ masiessta_NN drank_VBD `_`` Evidently_RB ,_, three_CD students_NNS drank_VBD beer_NN ._. '_''
+In_IN -LRB-_-LRB- ia_FW -RRB-_-RRB- above_RB ,_, an_DT embedded_VBN subject_NN has_VBZ scrambled_VBN over_IN a_DT matrix_NN subject_NN ,_, and_CC in_IN -LRB-_-LRB- ib_NN -RRB-_-RRB- it_PRP is_VBZ even_RB separated_VBN from_IN its_PRP$ NQ_NNP by_IN a_DT sentential_JJ adverb_NN ._.
+See_VB Kurata_NNP ,_, 1991_CD ;_: Lee_NNP ,_, 1993_CD and_CC Sohn_NNP ,_, 1995_CD for_IN more_JJR examples_NNS of_IN this_DT sort_NN in_IN Korean_JJ and_CC Japanese_JJ ._.
+tions_NNS of_IN LF_NNP copies_NNS follow_VBP from_IN two_CD minimalist_JJ as_IN -_: sumptions_NNS that_IN we_PRP lay_VBD down_RP in_IN section_NN 3_CD ._.
+3_CD Proposals_NNS An_DT important_JJ development_NN of_IN the_DT past_JJ decade_NN is_VBZ the_DT hypothesis_NN that_WDT syntactic_JJ operations_NNS are_VBP not_RB option_NN -_: al_IN but_CC triggered_VBD -LRB-_-LRB- i.e._FW the_DT Last_JJ Resort_NNP principle_NN -RRB-_-RRB- ._.
+The_DT most_RBS influential_JJ work_NN along_IN this_DT line_NN is_VBZ Chomsky_NNP 's_POS -LRB-_-LRB- 1993_CD ,_, et_FW seq._FW -RRB-_-RRB- proposal_NN that_IN uninterpretable_JJ fea_NN -_: tures_NNS play_VBP a_DT central_JJ role_NN in_IN the_DT triggering_VBG process_NN under_IN the_DT Phase_NN Impenetrability_NNP Condition_NNP -LRB-_-LRB- PIC_NNP -RRB-_-RRB- ._.
+In_IN this_DT system_NN ,_, only_RB phase_NN heads_NNS -LRB-_-LRB- C_NNP and_CC transitive_JJ v_NN *_SYM -RRB-_-RRB- bear_NN uninterpretable_JJ features_NNS ,_, and_CC consequently_RB ,_, phase-internal_JJ elements_NNS are_VBP forced_VBN to_TO move_VB only_RB through_IN phase_NN edges_NNS ._.
+The_DT phase_NN heads_NNS also_RB mark_VBP points_NNS in_IN the_DT derivation_NN at_IN which_WDT the_DT complements_VBZ of_IN the_DT phase_NN heads_NNS are_VBP transmitted_VBN from_IN narrow_JJ syntax_NN to_TO the_DT interfaces_NNS ,_, PF_NNP and_CC LF_NNP ._.
+Once_RB the_DT se_FW -_: lected_VBN structure_NN undergoes_VBZ Transfer_NNP to_TO the_DT interface_NN components_NNS ,_, its_PRP$ phonological_JJ and_CC semantic_JJ infor_NN -_: mation_NN is_VBZ no_RB longer_RB accessible_JJ for_IN further_JJ opera_NN -_: tions_NNS ._.
+Chomsky_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- formulation_NN of_IN the_DT PIC_NNP is_VBZ given_VBN in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- ;_: the_DT resultant_JJ patterns_NNS of_IN search_NN spaces_NNS are_VBP depicted_VBN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- Phase_NN Impenetrability_NNP Condition_NNP -LRB-_-LRB- Chomsky_NNP ,_, 2000:108_CD -RRB-_-RRB- In_IN phase_NN α_NN with_IN head_NN H_NNP ,_, the_DT domain_NN of_IN H_NNP is_VBZ not_RB accessible_JJ to_TO operations_NNS outside_IN α_NN ;_: only_RB H_NNP and_CC its_PRP$ edges_NNS are_VBP accessible_JJ to_TO such_JJ operations_NNS ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- Search_NN spaces_NNS of_IN phase_NN heads_NNS CP_NNP C_NNP '_POS C_NNP TP_NNP Search_NNP space_NN available_JJ to_TO C_NNP T_NNP '_POS S_NNP v_SYM *_SYM P_NNP v_SYM *_SYM '_'' VP_NNP v_NNP *_SYM Search_NN space_NN available_JJ to_TO v_VB V_NNP As_IN shown_VBN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, the_DT search_NN space_NN of_IN the_DT phase_NN head_NN v_SYM *_SYM is_VBZ VP_NNP that_IN contains_VBZ V_NNP and_CC the_DT object_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT higher_JJR phase_NN C_NNP has_VBZ Spec-T_JJ ,_, T_NNP ,_, Spec-v_NNP *_SYM ,_, and_CC v_SYM *_SYM in_IN its_PRP$ search_NN space_NN ,_, to_TO the_DT exclu_NN -_: sion_NN of_IN VP_NNP ._.
+Since_IN the_DT PIC_NNP in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- imposes_VBZ VP_SYM -_: Transfer_NN as_RB soon_RB as_IN v_NN *_SYM P_NN is_VBZ complete_JJ ,_, the_DT probe_NN C_NNP can_MD not_RB look_VB inside_IN VP_NNP ._.
+In_IN other_JJ words_NNS ,_, the_DT VP_NNP and_CC Obj_NNP any_DT elements_NNS contained_VBD therein_RB are_VBP no_RB longer_RB ac_SYM -_: cessible_NN to_TO the_DT phase_NN head_NN C_NNP -LRB-_-LRB- and_CC the_DT head_NN T_NNP ,_, which_WDT becomes_VBZ a_DT probe_NN due_JJ to_TO C_NNP -RRB-_-RRB- ._.
+The_DT search_NN spaces_NNS sketched_VBD in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- will_MD have_VB a_DT direct_JJ impact_NN on_IN the_DT distribution_NN of_IN FNQs_NNS in_IN Japanese_JJ and_CC Korean_JJ ,_, as_RB will_MD become_VB clear_JJ shortly_RB ._.
+Along_IN with_IN this_DT ,_, based_VBN on_IN Richards_NNP 's_POS -LRB-_-LRB- 2000_CD ;_: 2010_CD -RRB-_-RRB- principle_NN of_IN Distinctness_NNP ,_, we_PRP elaborate_VBP an_DT -_: other_JJ constraint_NN that_WDT holds_VBZ presumably_RB in_IN narrow_JJ syntax_NN ,_, i.e._FW before_IN a_DT derivation_NN reaches_VBZ PF_SYM -_: and_CC LF_SYM -_: interfaces_NNS ._.
+On_IN PF_NNP side_NN ,_, there_EX is_VBZ a_DT general_JJ tendency_NN to_TO reduce_VB or_CC eliminate_VB phonological_JJ ``_`` redundancy_NN ''_'' within_IN a_DT certain_JJ minimal_JJ domain_NN ,_, similar_JJ to_TO the_DT effects_NNS of_IN the_DT OCP_NNP in_IN phonology_NN ._.
+Analogous_JJ phe_NN -_: nomena_NN are_VBP also_RB found_VBN in_IN narrow_JJ syntax_NN ,_, among_IN which_WDT Richards_NNP 's_POS principle_NN of_IN Distinctness_NN on_IN line_NN -_: arization_NN is_VBZ particularly_RB instructive_JJ to_TO us_PRP in_IN its_PRP$ scope_NN and_CC effects_NNS ._.
+5_CD The_DT Distinctness_NN principle_NN states_VBZ that_IN two_CD nodes_NNS that_WDT are_VBP too_RB similar_JJ ,_, e.g._FW ,_, of_IN the_DT same_JJ category_NN ,_, can_MD not_RB be_VB in_IN the_DT same_JJ phase_NN domain_NN ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- Distinctness_NNPS Principle_NNP -LRB-_-LRB- Richards_NNP ,_, 2010_CD -RRB-_-RRB- If_IN a_DT linearization_NN statement_NN <_SYM α_FW ,_, α_SYM >_FW is_VBZ generated_VBN ,_, the_DT derivation_NN crashes_NNS ._.
+Although_IN Richards_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- principle_NN of_IN this_DT only_JJ makes_VBZ use_NN of_IN node_JJ labels_NNS and_CC does_VBZ not_RB refer_VB to_TO par_NN -_: ticular_JJ information_NN of_IN lexical_JJ items_NNS on_IN terminals_NNS ,_, we_PRP may_MD further_RBR assume_VB that_DT linear_JJ ordering_VBG is_VBZ in_IN -_: deed_NN sensitive_JJ to_TO the_DT phonetic_JJ forms_NNS on_IN terminals_NNS ,_, not_RB just_RB to_TO their_PRP$ categorical_JJ nodes_NNS ._.
+One_CD compelling_JJ piece_NN of_IN evidence_NN for_IN this_DT direction_NN comes_VBZ from_IN Grohmann_NNP 's_POS -LRB-_-LRB- 2003_CD -RRB-_-RRB- Condition_NN on_IN Domain_NNP Exclu_NNP -_: sivity_NN -LRB-_-LRB- CDE_NNP -RRB-_-RRB- in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, which_WDT uses_VBZ phonetic_JJ infor_NN -_: mation_NN of_IN the_DT syntactic_JJ objects_NNS on_IN terminals_NNS ,_, while_IN taking_VBG precisely_RB the_DT same_JJ effect_NN as_IN Distinctness_NN ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- Condition_NN on_IN Domain_NNP Exclusivity_NNP -LRB-_-LRB- Grohmann_NNP ,_, 2003:272_CD -RRB-_-RRB- An_DT object_NN O_NNP in_IN a_DT phrase_NN marker_NN must_MD have_VB an_DT exclusive_JJ occurrence_NN in_IN each_DT Prolific_NNP Domain_NNP ΠΔ_NNP ,_, unless_IN duplicity_NN yields_NNS a_DT drastic_JJ effect_NN on_IN the_DT output_NN ;_: that_DT is_VBZ ,_, a_DT different_JJ realization_NN of_IN O_NNP in_IN that_DT ΠΔ_NNP at_IN PF_NNP ._.
+5_CD For_IN more_JJR work_NN on_IN ``_`` syntactic_JJ OCP_NNP ,_, ''_'' see_VB Mohnan_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- ,_, Yip_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ,_, Anttila_NNP and_CC Fong_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, Erlewine_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, and_CC the_DT references_NNS cited_VBD therein_RB ._.
+The_DT CDE_NNP in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- permits_VBZ only_RB one_CD instance_NN of_IN the_DT same_JJ phonetic_JJ expression_NN in_IN a_DT particular_JJ syntactic_NN domain_NN ,_, namely_RB ,_, Prolific_NNP Domain_NNP -LRB-_-LRB- PD_NNP -RRB-_-RRB- in_IN his_PRP$ terms_NNS ,_, to_TO the_DT effect_NN that_IN there_EX would_MD be_VB no_RB two_CD copies_NNS of_IN phonetically_RB identical_JJ form_NN within_IN a_DT PD_NNP ._.
+This_DT ex_FW -_: plains_NNS why_WRB such_PDT an_DT example_NN as_IN -LRB-_-LRB- 9a_NN -RRB-_-RRB- below_IN ,_, in_IN dis_SYM -_: tinction_NN from_IN -LRB-_-LRB- 9c_JJ -RRB-_-RRB- ,_, is_VBZ ungrammatical_JJ ._.
+For_IN convergence_NN ,_, one_CD instance_NN of_IN the_DT copies_NNS -LRB-_-LRB- i.e._FW the_DT lower_JJR one_NN -RRB-_-RRB- must_MD be_VB spelled_VBN out_RP in_IN a_DT distinct_JJ phonet_NN -_: ic_JJ form_NN ,_, as_IN in_IN -LRB-_-LRB- 9c_JJ -RRB-_-RRB- ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- a._IN *_SYM John_NNP likes_VBZ John_NNP ._.
+b._SYM -LSB-_NNP vP_NNP John_NNP v_JJ -LSB-_NNP VP_NNP likes_VBZ John_NNP -RSB-_NNP -RSB-_NNP c._VBD John_NNP likes_VBZ himself_PRP ._.
+-LRB-_-LRB- Grohmann_NNP ,_, 2003:275_CD -RRB-_-RRB- Importantly_RB ,_, note_NN at_IN this_DT point_NN that_WDT Grohmann_NNP 's_POS CDE_NNP is_VBZ reducible_JJ to_TO Distinctness_NN once_IN we_PRP make_VBP the_DT latter_JJ applicable_JJ to_TO the_DT set_NN of_IN phonetically_RB identical_JJ copies_NNS in_IN the_DT course_NN of_IN syntactic_JJ computations_NNS ._.
+In_IN this_DT view_NN ,_, multiple_JJ occurrences_NNS of_IN the_DT same_JJ pho_NN -_: netic_JJ form_NN can_MD not_RB be_VB linearized_VBN in_IN syntax_NN because_IN doing_VBG so_RB creates_VBZ an_DT indistinguishable_JJ set_NN within_IN a_DT relevant_JJ domain_NN ._.
+Following_VBG this_DT line_NN of_IN reasoning_NN and_CC taking_VBG Chomsky_NNP 's_POS search_NN spaces_NNS in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- to_TO be_VB the_DT relevant_JJ domain_NN where_WRB Distinctness_NNP applies_VBZ ,_, we_PRP propose_VBP the_DT following_VBG generalization_NN ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- Distinctness_NN of_IN Copies_NNS -LRB-_-LRB- DC_NNP -RRB-_-RRB- Identical_JJ copies_NNS can_MD not_RB appear_VB within_IN a_DT search_NN space_NN -LRB-_-LRB- defined_VBN under_IN the_DT PIC_NNP -RRB-_-RRB- ._.
+The_DT essence_NN of_IN the_DT Distinctness_NN of_IN Copies_NNS -LRB-_-LRB- DC_NNP -RRB-_-RRB- is_VBZ to_TO ban_VB phonetically_RB identical_JJ copies_NNS from_IN occurring_VBG within_IN a_DT single_JJ search_NN space_NN ._.
+In_IN Grohmann_NNP 's_POS sys_SYM -_: tem_NN ,_, this_DT condition_NN is_VBZ met_VBN by_IN the_DT operation_NN of_IN Copy_VBP Spell-Out_NNP -LRB-_-LRB- within_IN a_DT PD_NNP -RRB-_-RRB- ,_, i.e._FW ,_, by_IN spelling_VBG out_RP a_DT lower_JJR copy_NN in_IN a_DT distinct_JJ phonetic_JJ form_NN ._.
+However_RB ,_, crucially_RB ,_, there_EX is_VBZ another_DT way_NN of_IN satisfying_VBG this_DT condition_NN :_: By_IN simply_RB ``_`` deleting_VBG ''_'' one_CD party_NN of_IN the_DT two-membered_JJ chain_NN ._.
+We_PRP contend_VBP that_IN this_DT is_VBZ ex_FW -_: actly_RB what_WP happens_VBZ in_IN the_DT course_NN of_IN syntactic_JJ deri_NNS -_: vations_NNS involving_VBG subject_JJ -_: and_CC object_VB scrambling_VBG in_IN the_DT context_NN of_IN FNQ-constructions_NNS ._.
+When_WRB move_NN -_: ment_NN takes_VBZ place_NN within_IN a_DT search_NN space_NN ,_, a_DT copy_NN in_IN the_DT tail_NN as_IN is_VBZ usual_JJ in_IN the_DT process_NN of_IN copy-deletion_NN -LRB-_-LRB- Nunes_NNP ,_, 2001_CD -RRB-_-RRB- is_VBZ wiped_VBN out_RP in_IN deference_NN to_TO the_DT DC_NNP ._.
+We_PRP call_VBP this_DT operation_NN in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- Copy_VBP Elimina_NNP -_: tion_NN ._.
+Similar_JJ to_TO Grohmann_NNP 's_POS Copy_VBP Spell-Out_NNP ,_, this_DT operation_NN is_VBZ a_DT Last_JJ Resort_NNP strategy_NN to_TO fulfill_VB the_DT re_NN -_: quirement_NN imposed_VBN by_IN the_DT DC_NNP ,_, by_IN turning_VBG a_DT two_CD -_: membered_JJ chain_NN into_IN a_DT single-membered_JJ chain_NN ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- Copy_VBP Elimination_NNP If_IN a_DT movement_NN chain_NN <_SYM α_FW ,_, α_SYM >_FW is_VBZ created_VBN within_IN a_DT search_NN space_NN ,_, eliminate_VB the_DT lower_JJR copy_NN ._.
+Since_IN we_PRP assume_VBP that_IN the_DT Copy_VBP Elimination_NNP in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- holds_VBZ in_IN narrow_JJ syntax_NN before_IN a_DT derivation_NN reaches_VBZ the_DT PF_NNP -_: and_CC LF-interfaces_NNP ,_, as_RB is_VBZ in_IN Rich_NNP -_: ards_NNS 's_POS Distinctness_NN and_CC Grohmann_NNP 's_POS CDE_NNP ,_, the_DT con_NN -_: sequence_NN of_IN the_DT operation_NN is_VBZ formidable_JJ ,_, especially_RB in_IN its_PRP$ effects_NNS on_IN LF_NNP .6_CD The_DT subsequent_JJ section_NN is_VBZ a_DT demonstration_NN of_IN how_WRB the_DT proposed_VBN principle_NN of_IN the_DT DC_NNP ,_, in_IN conjunction_NN with_IN Chomsky_NNP 's_POS PIC_NNP ,_, correctly_RB predicts_VBZ the_DT bewildering_JJ patterns_NNS of_IN the_DT copies_NNS not_RB -_: ed_VBN in_IN section_NN 2_CD ;_: the_DT subject-object_JJ asymmetry_NN in_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- versus_CC -LRB-_-LRB- 2b_JJ -RRB-_-RRB- ,_, and_CC the_DT standard-nonstandard_JJ var_NN -_: iations_NNS of_IN subject_JJ scrambling_VBG in_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- versus_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+4_LS Analyses_NNPS By_IN adhering_VBG to_TO the_DT essence_NN of_IN the_DT Locality_NNP ap_SYM -_: proach_NN ,_, we_PRP assume_VBP in_IN this_DT article_NN that_IN an_DT NQ_NNP must_MD be_VB in_IN a_DT strict_JJ local_JJ relation_NN with_IN its_PRP$ host_NN NP_NNP for_IN in_IN -_: terpretation_NN ._.
+However_RB ,_, deviating_VBG from_IN major_JJ works_NNS in_IN this_DT approach_NN -LRB-_-LRB- Saito_NNP ,_, 1989_CD ;_: Miyagawa_NNP ,_, 1989_CD ;_: 2001_CD ;_: 2013_CD and_CC M&A_NNP -RRB-_-RRB- ,_, we_PRP adopt_VBP the_DT minimalist_JJ assumption_NN of_IN the_DT VPISH_NNP -LRB-_-LRB- Kitagawa_NNP ,_, 1986_CD ;_: Spor_NNP -_: tiche_NN ,_, 1988_CD ;_: Kuroda_NNP ,_, 1988_CD ;_: Koopman_NNP and_CC Spor_NNP -_: tiche_NN ,_, 1991_CD ,_, etc._FW -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, a_DT subject_NN is_VBZ externally_RB merged_VBN in_IN the_DT Spec_NNP of_IN vP_NNP regardless_RB of_IN the_DT standard_NN and_CC nonstandard_JJ variations_NNS of_IN subject_JJ scrambling_VBG ._.
+This_DT implies_VBZ that_IN M&A_NNP 's_POS -LRB-_-LRB- 2a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, which_WDT rep_NN -_: resent_VBP the_DT structure_NN of_IN the_DT standard_NN and_CC nonstand_NN -_: ard_NN paradigms_NNS ,_, respectively_RB ,_, are_VBP indistinctive_JJ as_IN the_DT subject_NN is_VBZ commonly_RB originated_VBN from_IN the_DT vP_NNP -_: internal_JJ position_NN ._.
+They_PRP share_VBP an_DT identical_JJ structure_NN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- Gakusei-ga_JJ sake-o_JJ -LSB-_NN vP_NN tsubj_IN san-nin_JJ -LSB-_NNP VP_NNP tobj_NN nonda_NN -RSB-_NNP -RSB-_NNP Given_VBN the_DT common_JJ structure_NN of_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- for_IN both_DT paradigms_NNS ,_, the_DT judgmental_JJ variations_NNS between_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- now_RB turn_VB out_RP to_TO be_VB contingent_JJ on_IN the_DT avail_NN -_: 6_CD Since_IN Richards_NNP 's_POS -LRB-_-LRB- 2010_CD -RRB-_-RRB- Distinctness_NNPS is_VBZ sensitive_JJ to_TO the_DT distribution_NN of_IN strong_JJ phase_NN boundaries_NNS ,_, it_PRP is_VBZ obviously_RB not_RB a_DT pure_JJ PF-operation_NN ._.
+In_IN the_DT same_JJ vein_NN ,_, since_IN Grohmann_NNP 's_POS -LRB-_-LRB- 2003_CD -RRB-_-RRB- CDE_NNP makes_VBZ use_NN of_IN Prolific_JJ Do_VBP -_: mains_NNS within_IN the_DT sphere_NN of_IN narrow_JJ syntax_NN ,_, it_PRP also_RB can_MD not_RB be_VB viewed_VBN purely_RB as_IN a_DT PF-operation_NN ._. ._.
+ability_NN of_IN the_DT subject_JJ traces_NNS in-situ_NN ._.
+That_DT is_VBZ ,_, if_IN the_DT subject_JJ trace_VBP in_IN the_DT -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP is_VBZ somehow_RB made_VBN ``_`` invisible_JJ ''_'' and_CC hence_RB the_DT structure_NN looks_VBZ like_IN the_DT standard_JJ paradigm_NN of_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- ,_, the_DT stranded_VBN subject_JJ NQ_NNP will_MD be_VB left_VBN uninterpretable_JJ since_IN no_DT licensing_NN DP_NNP is_VBZ available_JJ next_IN to_TO it_PRP ._.
+On_IN the_DT other_JJ hand_NN ,_, if_IN the_DT in-situ_NN subject_NN is_VBZ ``_`` visible_JJ ''_'' and_CC available_JJ for_IN interpretation_NN of_IN the_DT adjoining_JJ NQsubj_NNP ,_, the_DT sentence_NN improves_VBZ its_PRP$ grammaticality_NN ._.
+7_CD This_DT constitutes_VBZ a_DT nonstandard_JJ case_NN of_IN subject_JJ scrambling_VBG ,_, as_IN depicted_VBN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+On_IN this_DT reasoning_NN ,_, an_DT emerging_VBG question_NN is_VBZ how_WRB to_TO ex_FW -_: plain_RB the_DT availability_NN of_IN the_DT traces_NNS that_WDT have_VBP a_DT direct_JJ impact_NN on_IN the_DT interpretability_NN of_IN the_DT FNQs_NNS ._.
+Chom_SYM -_: sky_NN 's_POS PIC_NNP and_CC our_PRP$ novel_NN proposal_NN of_IN the_DT DC_NNP pro-_JJ vide_NN an_DT adequate_JJ answer_NN to_TO this_DT question_NN ._.
+First_RB ,_, consider_VB -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, a_DT structure_NN of_IN the_DT standard_JJ paradigm_NN built_VBN on_IN this_DT view_NN ._.
+-LSB-_NN From_IN now_RB on_IN ,_, we_PRP use_VBP ``_`` copy_NN ''_'' in_IN place_NN of_IN ``_`` trace_VBP ''_'' in_IN favor_NN of_IN minimalist_JJ terms_NNS ._. -RSB-_NN
+-LRB-_-LRB- 13_CD -RRB-_-RRB- -LSB-_NNP TP_NNP Subj_NNP Obj_NNP -LSB-_NNP vP_NNP -LSB-_NNP Subj_NNP NQS_NNP -RSB-_NNP -LSB-_NNP VP_NNP Obj_NNP V_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP In_IN the_DT above_JJ ,_, the_DT subject_JJ raises_VBZ from_IN its_PRP$ -_: position_NN in_IN -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP to_TO -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP ,_, driven_VBN by_IN the_DT EPP_NNP -_: feature_NN on_IN T_NNP -LRB-_-LRB- Miyagawa_NNP ,_, 2001_CD ;_: 2003_CD ;_: 2005_CD -RRB-_-RRB- ._.
+Cru_NNP -_: cially_RB ,_, the_DT two_CD copies_NNS of_IN the_DT movement_NN chain_NN ,_, <_CD Spec-T_NNP ,_, Spec-v_NNP >_CD ,_, are_VBP both_DT contained_VBN in_IN the_DT search_NN space_NN of_IN C_NNP that_WDT covers_VBZ Spec-T_NNP ,_, T_NNP ,_, Spec-v_NNP ,_, and_CC v_NN -LRB-_-LRB- see_VB -LRB-_-LRB- 6_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+Since_IN this_DT chain_NN does_VBZ not_RB comply_VB to_TO the_DT principle_NN of_IN the_DT DC_NNP in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- ,_, the_DT lower_JJR copy_NN in_IN -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP undergoes_VBZ Copy_VB Elimination_NNP ._.
+The_DT stranded_VBN subject_JJ NQ_NNP then_RB fails_VBZ to_TO meet_VB the_DT Locality_NN requirement_NN at_IN LF_NNP ,_, causing_VBG a_DT problem_NN with_IN its_PRP$ in_IN -_: terpretation_NN ._.
+Although_IN the_DT standard_JJ derivation_NN -LRB-_-LRB- 13_CD -RRB-_-RRB- crashes_NNS for_IN the_DT aforementioned_JJ reason_NN ,_, there_EX is_VBZ an_DT alterna_NN -_: tive_JJ way_NN of_IN deriving_VBG the_DT surface_NN word_NN order_NN of_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ._.
+If_IN we_PRP take_VBP Chomskian_JJ style_NN A_DT '_'' -_: movement_NN that_IN raises_VBZ an_DT in-situ_NN subject_NN to_TO -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP in_IN one_CD fell_VBD swoop_NN ,_, as_IN depicted_VBN in_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- below_IN -LRB-_-LRB- Chomsky_NNP ,_, 2001_CD ;_: 2008_CD ;_: see_VB also_RB Pesetsky_NNP and_CC Torrego_NNP ,_, 2001_CD and_CC Erlewine_NNP ,_, 2013_CD -RRB-_-RRB- ,_, an_DT interesting_JJ result_NN emerges_VBZ .8_CD 7_CD Nonstandard_JJ examples_NNS are_VBP less_JJR than_IN perfect_JJ in_IN general_JJ ._.
+They_PRP become_VBP fully_RB acceptable_JJ only_RB with_IN the_DT help_NN of_IN a_DT peculiar_JJ sort_NN of_IN prosody_NN around_IN the_DT sentence_NN ._.
+See_VB M&A_NNP and_CC Son_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- ,_, which_WDT independently_RB contend_VBP that_IN these_DT peculiar_JJ prosodies_NNS are_VBP what_WP accounts_NNS for_IN the_DT degradedness_NN of_IN the_DT nonstandard_JJ cases_NNS ._.
+8_CD Pesetsky_NNP and_CC Torrego_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- have_VBP claimed_VBN that_IN the_DT subject_NN may_MD check_VB the_DT EPP_NNP on_IN C_NNP via_IN a_DT direct_JJ movement_NN to_TO -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP ._.
+On_IN the_DT other_JJ hand_NN ,_, Erlewine_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, based_VBN on_IN the_DT Agent_NNP Focus_NNP -LRB-_-LRB- 14_CD -RRB-_-RRB- -LSB-_NNP CP_NNP Subj_NNP Obj_NNP -LSB-_NNP vP_NNP -LSB-_NNP Subj_NNP NQS_NNP -RSB-_NNP -LSB-_NNP VP_NNP Obj_NNP V_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP In_IN the_DT A_NNP '_POS -_: movement_NN configuration_NN above_IN ,_, the_DT dis_SYM -_: placement_NN chain_NN of_IN the_DT subject_NN ,_, <_CD Spec-C_NN ,_, Spec-v_JJ >_NN ,_, obeys_VBZ the_DT DC_NNP as_IN the_DT copy_NN in_IN the_DT head_NN stays_VBZ outside_IN the_DT search_NN space_NN of_IN C_NNP ._.
+As_IN a_DT result_NN ,_, the_DT in-situ_JJ sub_NN -_: ject_NN copy_NN passes_VBZ down_RP to_TO the_DT interfaces_NNS and_CC sup_NN -_: ports_NNS its_PRP$ adjoining_JJ NQ_NNP at_IN LF_NNP .9_CD This_DT explains_VBZ how_WRB an_DT otherwise_RB ungrammatical_JJ sentence_NN is_VBZ rendered_VBN ``_`` saved_VBN ''_'' through_IN the_DT nonstandard_JJ derivations_NNS of_IN subject_JJ scrambling_VBG ._.
+Let_VB us_PRP now_RB proceed_VBP to_TO see_VB how_WRB the_DT current_JJ pro-_JJ posal_JJ successfully_RB captures_VBZ the_DT conventional_JJ sub_NN -_: ject-object_NN asymmetry_NN in_IN scrambling_VBG ._.
+Recall_VB that_IN an_DT object_NN NQ_NNP can_MD be_VB freely_RB separated_VBN from_IN its_PRP$ asso_NN -_: ciated_VBN NP_NNP by_IN a_DT subject_JJ or_CC any_DT other_JJ elements_NNS in_IN a_DT sentence_NN ._.
+This_DT is_VBZ in_IN contrast_NN with_IN the_DT pattern_NN of_IN a_DT subject_JJ NQ_NNP that_IN only_RB allows_VBZ such_JJ separation_NN op_SYM -_: tionally_RB ,_, resulting_VBG in_IN varying_VBG judgments_NNS as_IN we_PRP have_VBP seen_VBN ._.
+From_IN the_DT perspective_NN developed_VBN in_IN this_DT article_NN ,_, the_DT source_NN for_IN this_DT asymmetry_NN is_VBZ surprisingly_RB sim_SYM -_: ple_NN ._.
+Consider_VB the_DT following_VBG example_NN of_IN object_NN scrambling_VBG ,_, repeated_VBN from_IN -LRB-_-LRB- 1b_JJ -RRB-_-RRB- ,_, with_IN its_PRP$ derivation_NN in_IN -LRB-_-LRB- 15b_JJ -RRB-_-RRB- ._.
+-LRB-_-LRB- 15_CD -RRB-_-RRB- a._IN Sake-o_NNP gakusei-ga_JJ san-bon_NN nonda_NN ._.
+Sake-Acc_NNP student-Nom_NNP 3-CLobj_NNP drank_VBD `_`` Students_NNS drank_VBD three_CD bottles_NNS of_IN sake_NN ._. '_''
+b._SYM -LSB-_NNP TP_NNP Obj_NNP -LSB-_NNP vP_NNP Obj_NNP -LSB-_NNP vP_NNP Subj_NNP -LSB-_NNP VP_NNP -LSB-_NNP Obj_NNP NQobj_NNP -RSB-_NNP V_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP As_IN depicted_VBN in_IN -LRB-_-LRB- 15b_JJ -RRB-_-RRB- ,_, the_DT object_NN raises_VBZ to_TO -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP in_IN a_DT successive_JJ cyclic_JJ fashion_NN ;_: it_PRP first_JJ moves_NNS to_TO the_DT outer_JJ edge_NN of_IN vP_NNP and_CC further_JJ scrambles_NNS to_TO the_DT Spec_NNP of_IN TP_NNP for_IN the_DT purpose_NN of_IN the_DT EPP_NNP ._.
+Of_IN these_DT ,_, the_DT first_JJ step_NN of_IN displacement_NN ,_, <_CD Spec-v_NNP ,_, Complement_NNP of_IN V_NNP >_CD ,_, satisfies_VBZ the_DT DC_NNP as_IN the_DT copy_NN in_IN the_DT position_NN of_IN tail_NN is_VBZ the_DT only_JJ expression_NN of_IN the_DT object_NN in_IN the_DT search_NN space_NN of_IN v_NN *_SYM ,_, namely_RB ,_, VP_NNP -LRB-_-LRB- see_VBP -LRB-_-LRB- 6_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+Consequently_RB ,_, the_DT in-situ_JJ copy_NN transfers_NNS and_CC becomes_VBZ visible_JJ at_IN LF_NNP ,_, licensing_VBG its_PRP$ adjoining_JJ NQ_NNP at_IN the_DT interpreta_NN -_: phenomenon_NN in_IN the_DT language_NN of_IN Kaqchickel_NNP ,_, argues_VBZ that_IN the_DT EPP_NNP is_VBZ not_RB required_VBN in_IN this_DT language_NN ._.
+As_IN such_JJ ,_, the_DT subject_NN is_VBZ allowed_VBN to_TO move_VB to_TO -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP without_IN stopping_VBG over_RP in_IN the_DT specifier_NN position_NN of_IN TP_NNP ._.
+9_CD A_DT warning_NN is_VBZ in_IN order_NN here_RB ._.
+Although_IN the_DT subject_JJ chain_NN in_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- is_VBZ consistent_JJ with_IN the_DT DC_NNP and_CC leaves_VBZ an_DT interpretable_JJ copy_NN at_IN LF_NNP ,_, it_PRP does_VBZ not_RB necessarily_RB mean_VB that_IN the_DT copy_NN is_VBZ visible_JJ at_IN PF_NNP ._.
+This_DT is_VBZ because_IN the_DT PF-interface_NNP has_VBZ an_DT independent_JJ pro-_JJ cess_NN of_IN copy-deletion_NN ,_, in_IN a_DT way_NN suggested_VBN by_IN Nunes_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- and_CC Corver_NNP and_CC Nunes_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+tional_JJ level_NN ._.
+Note_VB that_IN the_DT second_JJ step_NN of_IN movement_NN ,_, which_WDT has_VBZ the_DT head_NN in_IN the_DT -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP and_CC the_DT tail_NN in_IN the_DT -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP ,_, contravenes_VBZ with_IN the_DT DC_NNP in_IN the_DT search_NN space_NN of_IN C._NNP However_RB ,_, the_DT concomitant_JJ dele_NN -_: tion_NN operation_NN in_IN the_DT tail_NN exerts_VBZ no_DT impact_NN on_IN the_DT interpretability_NN of_IN the_DT object_NN NQ_NNP since_IN it_PRP has_VBZ al_SYM -_: ready_JJ undergone_VBN Transfer_NNP and_CC becomes_VBZ interpreta_NN -_: ble_NN by_IN the_DT help_NN of_IN the_DT string-adjacent_JJ object_NN copy_NN in-situ_NN ._.
+The_DT possible_JJ separation_NN of_IN the_DT object_NN NQ_NNP from_IN its_PRP$ host_NN NP_NNP is_VBZ thus_RB accounted_VBN for_IN ._.
+In_IN fact_NN ,_, since_IN the_DT object_NN merges_VBZ with_IN V_NNP and_CC un_SYM -_: dergoes_NNS Transfer_VBP independently_RB of_IN its_PRP$ higher_JJR copy_NN upon_IN VP-Transfer_NNP ,_, it_PRP is_VBZ invariably_RB predicted_VBN to_TO be_VB visible_JJ at_IN LF_NNP ._.
+As_IN Abels_NNS -LRB-_-LRB- 2003_CD -RRB-_-RRB- has_VBZ correctly_RB stated_VBN by_IN his_PRP$ Anti-Locality_NNP ,_, VP-internal_JJ movement_NN ,_, e.g._FW from_IN the_DT complement_VBP position_NN to_TO the_DT specifier_NN posi_SYM -_: tion_NN of_IN VP_NNP ,_, is_VBZ prevented_VBN ._.
+As_IN such_JJ ,_, whether_IN it_PRP moves_VBZ to_TO -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP or_CC -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP via_IN A_DT -_: or_CC A_DT '_'' -_: movement_NN ,_, it_PRP always_RB leaves_VBZ an_DT interpretable_JJ copy_NN at_IN LF_NNP ._.
+This_DT is_VBZ in_IN contrast_NN with_IN the_DT subject_NN ,_, the_DT chain_NN link_NN of_IN which_WDT may_MD or_CC may_MD not_RB leave_VB an_DT LF_NNP copy_NN ;_: it_PRP leaves_VBZ a_DT copy_NN if_IN it_PRP targets_VBZ an_DT A-position_NN in_IN -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP ,_, but_CC not_RB if_IN it_PRP moves_VBZ directly_RB to_TO -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP via_IN topicalizaton_NN ._.
+This_DT provides_VBZ a_DT source_NN of_IN the_DT asymmetry_NN between_IN the_DT subject_NN and_CC object_NN with_IN regard_NN to_TO the_DT interpretabil_NN -_: ity_NN of_IN the_DT FNQs_NNS associated_VBN with_IN them_PRP ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP have_VBP seen_VBN that_IN the_DT operation_NN of_IN the_DT DC_NNP is_VBZ quintessential_JJ in_IN determining_VBG the_DT availa_NN -_: bility_NN of_IN the_DT copies_NNS at_IN LF_NNP in_IN a_DT lower_JJR position_NN of_IN a_DT two-membered_JJ chain_NN ._.
+Subject_JJ scrambling_VBG from_IN -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP to_TO -LSB-_NNP Spec_NNP ,_, TP_NNP -RSB-_NNP lacks_VBZ an_DT interpretable_JJ copy_NN in_IN the_DT tail_NN position_NN ,_, while_IN the_DT same_JJ movement_NN to_TO -LSB-_NNP Spec_NNP ,_, CP_NNP -RSB-_NNP does_VBZ leave_VB such_PDT a_DT copy_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT object_NN always_RB leaves_VBZ a_DT copy_NN at_IN LF_NNP after_IN scrambling_VBG ._.
+These_DT variations_NNS turn_VBP out_RP to_TO be_VB a_DT result_NN of_IN interactive_JJ operations_NNS of_IN the_DT DC_NNP with_IN the_DT PIC_NNP ._.
+Since_IN the_DT DC_NNP demands_VBZ an_DT exclusive_JJ copy_NN of_IN the_DT same_JJ expression_NN in_IN a_DT search_NN space_NN of_IN the_DT PIC_NNP ,_, movement_NN leaves_VBZ a_DT copy_NN at_IN LF_NNP only_RB when_WRB it_PRP targets_VBZ a_DT position_NN within_IN the_DT next_JJ search_NN space_NN ;_: it_PRP does_VBZ not_RB leave_VB an_DT LF_NNP copy_NN if_IN movement_NN takes_VBZ place_NN too_RB close_RB within_IN a_DT single_JJ domain_NN of_IN search_NN space_NN ._.
+We_PRP may_MD refer_VB to_TO this_DT dependency_NN as_IN the_DT ``_`` Semantic_JJ Copy_VBP Effect_NN ._. ''_''
+-LRB-_-LRB- 16_CD -RRB-_-RRB- The_DT Semantic_JJ Copy_VBP Effect_NN Movement_NNP leaves_VBZ a_DT copy_NN at_IN LF_NNP for_IN semantic_JJ interpretations_NNS only_RB when_WRB it_PRP targets_VBZ a_DT position_NN within_IN the_DT next_JJ search_NN space_NN -LRB-_-LRB- although_IN the_DT copy_NN may_MD be_VB deleted_VBN on_IN the_DT PF_NNP side_NN -RRB-_-RRB- ._.
+Overall_RB ,_, the_DT current_JJ analysis_NN makes_VBZ the_DT follow_VBP -_: ing_VBG predictions_NNS :_: -LRB-_-LRB- 17_CD -RRB-_-RRB- Predictions_NNS :_: A._NN A_NNP -_: chain_NN of_IN the_DT subject_NN ,_, <_CD Spec-T_NNP ,_, Spec-v_NNP >_CD ,_, lacks_VBZ a_DT copy_NN in-situ_NN at_IN LF_NNP .10_CD B._NNP A_NNP '_POS -_: chain_NN of_IN the_DT subject_NN ,_, <_CD Spec-C_NN ,_, Spec-v_JJ >_NN ,_, leaves_VBZ a_DT copy_NN in-situ_NN at_IN LF_NNP C_NNP ._.
+The_DT object_NN always_RB leaves_VBZ a_DT copy_NN at_IN LF_NNP ,_, whether_IN it_PRP undergoes_VBZ A_DT -_: or_CC A_DT '_'' -_: movement_NN ._.
+D_NNP ._.
+An_DT unaccusative/passive_JJ subject_NN will_MD pattern_NN like_IN the_DT object_NN and_CC leave_VB a_DT copy_NN in_IN -_: situ_NN ,_, while_IN an_DT unergative_JJ subject_NN may_MD or_CC may_MD not_RB leave_VB a_DT copy_NN at_IN LF_NNP .11_CD E_NNP ._.
+An_DT A_NNP '_POS -_: moved_VBD subject_JJ -LRB-_-LRB- i.e._FW nonstandard_JJ paradigms_NNS -RRB-_-RRB- will_MD have_VB a_DT topic_NN interpreta_NN tion_NN .12_CD 10_CD This_DT prediction_NN has_VBZ a_DT direct_JJ bearing_NN on_IN Chomsky_NNP 's_POS -LRB-_-LRB- 1995_CD -RRB-_-RRB- claim_NN of_IN ``_`` No_NNP A-movement_NNP traces_NNS -LRB-_-LRB- or_CC copies_NNS -RRB-_-RRB- ._. ''_''
+This_DT article_NN shows_VBZ that_IN Chomsky_NNP does_VBZ not_RB provide_VB the_DT whole_JJ picture_NN ._.
+It_PRP is_VBZ not_RB that_IN the_DT copies_NNS never_RB exist_VBP -_: ed_VBN ,_, but_CC that_DT previously_RB manifesting_VBG copies_NNS were_VBD deleted_VBN by_IN the_DT opera_NN -_: tion_NN of_IN Copy_VBP Elimination_NNP ._.
+The_DT proposal_NN of_IN the_DT DC_NNP explains_VBZ why_WRB in_IN the_DT case_NN of_IN objects_NNS with_IN A-movement_NN ,_, copies_NNS still_RB remain_VBP at_IN LF_NNP ,_, as_IN stated_VBN in_IN -LRB-_-LRB- 17C_CD -RRB-_-RRB- ._.
+Further_JJ investigation_NN is_VBZ needed_VBN to_TO see_VB if_IN this_DT remains_VBZ consistent_JJ in_IN other_JJ languages_NNS ._.
+11_CD The_DT following_VBG examples_NNS demonstrate_VBP that_IN this_DT prediction_NN holds_VBZ true_JJ in_IN Korean_JJ -LRB-_-LRB- data_NNS adapted_VBD from_IN Ko_NNP ,_, 2007:68_CD -RRB-_-RRB- ._.
+See_VB Miyagawa_NNP ,_, 1989_CD ;_: Mihara_NNP ,_, 1998_CD ;_: Kuno_NNP and_CC Takami_NNP ,_, 2003_CD ;_: M&A_NNP ;_: S._NNP Kim_NNP ,_, 2004_CD ;_: and_CC J._NNP Kim_NNP ,_, 2013_CD for_IN more_JJR examples_NNS of_IN this_DT kind_NN in_IN Korean_JJ and_CC Japanese_JJ ._.
+Some_DT of_IN these_DT predictions_NNS have_VBP been_VBN proved_VBN empir_SYM -_: ically_RB in_IN natural_JJ languages_NNS ;_: some_DT others_NNS remain_VBP yet_RB unexplored_JJ ._.
+Although_IN we_PRP have_VBP drawn_VBN these_DT predic_JJ -_: tions_NNS through_IN the_DT study_NN of_IN scrambling_VBG phenomenon_NN in_IN the_DT context_NN of_IN FNQ-constructions_NNS in_IN Japanese_JJ and_CC Korean_JJ ,_, we_PRP wish_VBP to_TO see_VB their_PRP$ validity_NN in_IN other_JJ domains_NNS of_IN movement_NN and_CC in_IN other_JJ languages_NNS as_RB well_RB ._.
+With_IN much_JJ anticipation_NN for_IN research_NN towards_IN this_DT direction_NN ,_, we_PRP conclude_VBP this_DT paper_NN ._.
+References_NNS Abels_NNS ,_, Klaus_NNP ._.
+2003_CD ._.
+Successive_NNP Cyclicity_NNP ,_, Anti-locality_NN ,_, and_CC Adposition_NNP Stranding_NNP ._.
+Doctoral_JJ dissertation_NN ._.
+University_NNP of_IN Connecticut_NNP ._.
+Anttila_NNP ,_, Arto_NNP ,_, and_CC Vivienne_NNP Fong_NNP ._.
+2001_CD ._.
+The_DT Partitive_NNP Constraint_NNP in_IN Optimality_NNP Theory_NNP ._.
+Journal_NNP of_IN Seman_NNP -_: tics_NNS ,_, 17:281_CD -314_CD ._.
+Bobaljik_NNP ,_, Jonathan_NNP David_NNP ._.
+2003_CD ._.
+Floating_VBG Quantifiers_NNS :_: HandlewithCare.InThesecondGLOT_NNP Interna_NNP -_: tional_JJ state-of-the-article_JJ book_NN ,_, ed_VBN ._.
+Lisa_NNP Cheng_NNP and_CC Rint_NNP Sybesma_NNP ,_, 107-148_CD ._.
+Berlin_NNP :_: Mouton_NNP de_IN Gruyter_NNP ._.
+Bošković_NNP ,_, Želko_NNP ._.
+2004_CD ._.
+Be_VB Careful_JJ Where_WRB You_PRP Float_VBP Your_PRP$ Quantifiers_NNS ._.
+Natural_JJ Language_NN and_CC Linguistic_NNP Theory_NNP ,_, 22_CD :_: 681-741_CD ._.
+Chomsky_NNP ,_, Noam_NNP ._.
+1993_CD ._.
+A_DT Minimalist_NNP Program_NNP for_IN Lin_NNP -_: guistic_JJ Theory_NNP ._.
+In_IN The_DT View_NNP from_IN Building_NNP 20_CD :_: Essay_NNP in_IN Linguistics_NNP in_IN Honor_NNP of_IN Sylvain_NNP Bromberger_NNP ,_, ed_VBD ._.
+Ken_NNP Haleand_NNP Samuel_NNP J._NNP Keyser_NNP ._.
+Cambridge_NNP :_: MIT_NNP Press_NNP ._.
+Chomsky_NNP ,_, Noam_NNP ._.
+1995_CD ._.
+Categories_NNS and_CC Transformations_NNS ._.
+In_IN The_DT Mininmalist_NNP Program_NNP ,_, 219-394_CD ._.
+Cambridge_NNP ,_, MA_NNP :_: MIT_NNP Press_NNP ._.
+Chomsky_NNP ,_, Noam_NNP ._.
+2000_CD ._.
+Minimalist_JJ Inquiries_NNS :_: The_DT Framework_NN ._.
+In_IN Step_NN by_IN step_NN :_: Essays_NNS on_IN Minimalist_NNP Syntax_NNP in_IN Honor_NNP of_IN Howard_NNP Lasnik_NNP ,_, ed_VBD ._.
+R._NNP Martin_NNP ,_, D._NNP Michaels_NNP ,_, and_CC J._NNP Uriagereka_NNP ,_, 89-155_CD ._.
+Cambridge_NNP ,_, MA_NNP ,_, MIT_NNP Press_NNP ._.
+Chomsky_NNP ,_, Noam_NNP ._.
+2001_CD ._.
+Derivation_NN by_IN Phase_NN ._.
+In_IN Ken_NNP Hale_NNP :_: A_NNP Life_NNP in_IN Language_NNP ,_, 1-52_CD ._.
+ed_VBN ._.
+Michael_NNP Kenstowicz_NNP ._.
+Cambridge_NNP :_: MIT_NNP Press_NNP ._.
+Chomsky_NNP ,_, Noam_NNP ._.
+2008_CD ._.
+On_IN Phases_NNS ._.
+In_IN Foundational_JJ issues_NNS in_IN Linguistic_NNP Theory_NNP ,_, 133-166_CD ._.
+ed_VBN ._.
+Freiden_NNP Robert_NNP ,_, Carlos_NNP P._NNP Ostero_NNP and_CC Maria_NNP Luisa_NNP Zubizarreta_NNP ._.
+Cambridge_NNP ,_, Mass._NNP :_: MIT_NNP Press_NNP ._.
+Corver_NNP ,_, Nobert_NNP and_CC Jairo_NNP Nunes_NNP ._.
+2007_CD ._.
+The_DT Copy_VBP Theo_SYM -_: ry_NN of_IN Movement_NNP ._.
+John_NNP Benjamins_NNP Publishing_NNP Compa_NNP -_: ny_NN ._.
+Erlewine_NNP ,_, Michael_NNP Yoshitaka_NNP ._.
+2013_CD ._.
+Anti-locality_NN and_CC Kaqchikel_NNP Agent_NNP Focus_NNP ._.
+To_TO appear_VB in_IN Proceedings_NNP of_IN or_CC background-focus_NN ._.
+I_PRP would_MD like_VB to_TO refer_VB the_DT reader_NN to_TO these_DT works_NNS for_IN examples_NNS and_CC detailed_JJ arguments_NNS ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- a.Koyangi-kapyeong-ulosey-mali_JJ juk-ess-ta_NN cat-Nom_NN disease-by_JJ 3-CLanimal_JJ die-Past-Dec_JJ `_`` Three_CD cats_NNS died_VBD from_IN diseases_NNS ._. '_''
+-LRB-_-LRB- unaccusative_JJ -RRB-_-RRB- b._SYM Eoje_NNP ,_, catongcha-ka_NN koyhan-eykey_NN two-tay_JJ pusu-eoji-ess_NN -_: yesterday_NN ,_, car-Nom_JJ robber-Dat_NN 2-CLcar_NN break-Pass_NN -_: ta_NN -LRB-_-LRB- passive_NN -RRB-_-RRB- Past-Dec_NNP `_`` Yesterday_NN ,_, two_CD cars_NNS were_VBD broken_VBN into_IN by_IN a_DT robber_NN ._. '_''
+c._NN ?_.
+*_SYM Haksayng-tul-i_JJ caki-tul_JJ ton-ulo_JJ two-myeong_JJ cenhwaha_NN -_: student-PL-Nom_JJ self-PL_JJ money-by_JJ 2-CL_JJ telephone_NN -_: yess-ta_JJ -LRB-_-LRB- unergative_JJ -RRB-_-RRB- Past-Dec_NNP `_`` Two_CD students_NNS telephoned_VBN with_IN their_PRP$ own_JJ money_NN ._. '_''
+On_IN the_DT other_JJ hand_NN ,_, for_IN the_DT external_JJ merge_VBP position_NN of_IN the_DT unaccusa_NN -_: tive/passive_JJ subject_JJ -LRB-_-LRB- i.e._FW a_DT complement_VBP position_NN of_IN V_NNP -RRB-_-RRB- ,_, in_IN distinction_NN from_IN that_DT of_IN the_DT unergative_JJ subject_NN ,_, see_VBP Perlmutter_NNP ,_, 1978_CD ;_: Belletti_NNP and_CC Rizzi_NNP ,_, 1981_CD ;_: Burzio_NNP ,_, 1986_CD ;_: Miyagawa_NNP ,_, 1989_CD ;_: Hale_NNP and_CC Keyser_NNP ,_, 1993_CD ,_, and_CC Chomsky_NNP ,_, 1995_CD ._.
+12_CD Lee_NNP -LRB-_-LRB- 2003_CD ;_: 2006_CD -RRB-_-RRB- ,_, S._NNP Kim_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ,_, J._NNP Kim_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC Son_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- have_VBP independently_RB claimed_VBN that_IN the_DT so-called_JJ non_NN -_: standard_JJ examples_NNS are_VBP motivated_VBN by_IN the_DT information_NN structure_NN ,_, and_CC carry_VB a_DT discourse/pragmatic_JJ meaning_NN of_IN a_DT topic-comment_NN the_DT 31st_CD West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguis_NNP -_: tics_NNS ,_, 31_CD ._.
+Cascadilla_NNP Press_NNP ._.
+Grohmann_NNP ,_, Kleanthes_NNP K._NNP 2003_CD ._.
+Successive_NNP Cyclicity_NNP under_IN -LRB-_-LRB- Anti-_JJ -RRB-_-RRB- local_JJ Considerations_NNS ._.
+Syntax_NNP ,_, 6_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :260_SYM -_: 312_CD ._.
+Gunji_NNP ,_, Takao_NNP and_CC Koiti_NNP Hasida_NNP ._.
+1998_CD ._.
+Masurement_NNP and_CC quantification_NN ._.
+In_IN Topics_NNPS in_IN constraint-based_JJ gram_NN -_: mar_NN of_IN Japanese_JJ ,_, ed_VBN ._.
+Takao_NNP Gunji_NNP and_CC Koiti_NNP Hasida_NNP ,_, 39-79_CD ._.
+Dordrecht_NNP :_: Kluwer_NNP ._.
+Haig_NNP ,_, John_NNP ._.
+1980_CD ._.
+Some_DT Observations_NNS on_IN Quantifier_NNP Floating_VBG in_IN Japanese_JJ ._.
+Linguistics_NNP ,_, 18:1065_CD -1083_CD ._.
+Ishii_NNP ,_, Yasuo_NNP ._.
+1998_CD ._.
+Floating_VBG Quantifiers_NNS in_IN Japanese_JJ :_: NP_NNP quantifiers_NNS ,_, VP_NNP quantifiers_NNS ,_, or_CC both_DT ?_.
+Researching_VBG and_CC Verifying_VBG on_IN Advanced_NNP Theory_NNP of_IN Human_NNP Language_NNP ,_, 149-171_CD ._.
+Graduate_NNP School_NNP of_IN Language_NNP Sciences_NNPS Kanda_NNP University_NNP of_IN International_NNP Studies_NNPS ,_, Japan_NNP ._.
+Kim_NNP ,_, Jong-Bok_NNP ._.
+2013_CD ._.
+Floated_VBN Numeral_NNP Classifiers_NNPS in_IN Korean_JJ :_: A_DT Non-Derivational_JJ ,_, Functional_JJ Account_NNP Floating_VBG Quantifiers_NNS ._.
+Lingua_NNP ,_, 133:189_CD -212_CD ._.
+Kim_NNP ,_, Soo-Yeon_NNP ._.
+2004_CD ._.
+Constraints_NNS on_IN Distributional_NNP Patterns_NNPS of_IN Floating_VBG Quantifiers_NNS ._.
+In_IN Eoneuhak_NNP -LSB-_NNP The_NNP Linguistic_NNP Association_NNP of_IN Korean_NNP Journal_NNP -RSB-_NNP ,_, 38:43_CD -66_CD ._.
+Kim_NNP ,_, Yong-Ha_NNP ._.
+2008_CD ._.
+Against_IN Cyclic_NNP Linearization_NNP :_: Scrambling_VBG and_CC Numeral_NNP Quantifiers_NNPS in_IN Korean_NNP ._.
+In_IN Language_NNP Research_NNP ,_, 44_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :241_CD -274_CD ._.
+Kitagawa_NNP ,_, Yoshihisa_NNP ._.
+1986_CD ._.
+Subjects_NNS in_IN English_NNP and_CC Japanese_NNP ._.
+Doctoral_JJ dissertation_NN ._.
+University_NNP of_IN Mas_NNP -_: sachusetts_NNS ._.
+Ko_NNP ,_, Heejeong_NNP ._.
+2007_CD ._.
+Asymmetries_NNS in_IN Scrambling_VBG and_CC Cyclic_NNP Linearization_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 38_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 49-83_CD ._.
+Koopman_NNP ,_, Hilda_NNP and_CC Dominique_NNP Sportiche_NNP ._.
+1991_CD ._.
+The_DT Position_NN of_IN Subjects_NNS ._.
+Lingua_NNP ,_, 85_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 211-58_CD ._.
+Kuno_NNP ,_, Susumu_NNP ._.
+1973_CD ._.
+The_DT Structure_NN of_IN the_DT Japanese_JJ Language_NN ._.
+Cambridge_NNP ,_, Mass._NNP :_: MIT_NNP Press_NNP ._.
+Kuno_NNP ,_, Susumu_NNP ,_, and_CC K._NNP Takami_NNP ._.
+2003_CD ._.
+Remarks_NNS on_IN Uu_NNP -_: accusativity_NN and_CC Unergativity_NNP in_IN Japanese_NNP and_CC Korean_NNP ._.
+In_IN Japanese/Korean_JJ Linguistics_NNPS ,_, 12:280_CD -294_CD ._.
+ed_VBN ._.
+William_NNP McClure_NNP ._.
+Stanford_NNP ._.
+Calif._NNP :_: CSLI_NNP ._.
+Kurata_NNP ,_, Kiyoshi_NNP ._.
+1991_CD ._.
+The_DT Syntax_NNP of_IN Dependent_NNP Ele_NNP -_: ments_NNS ._.
+Doctoral_JJ dissertation_NN ._.
+University_NNP of_IN Massa_NNP -_: chusetts_NNS ,_, Amherst_NNP ._.
+Kuroda_NNP ,_, Sige_NNP Yuki_NNP ._.
+1980_CD ._.
+Bunkoozoo-no_JJ Hikahu_NNP ._.
+In_IN Nitieigo_NNP Hikakukooza_NNP :_: Bunpoo_NNP ,_, ed_VBD ._.
+T._NNP Kunihiro_NNP ._.
+To_TO -_: kyo_NN ,_, Takkushan_NNP ._.
+Kuroda_NNP ,_, Sige_NNP Yuki_NNP ._.
+1988_CD ._.
+Whether_IN We_PRP Agree_VBP or_CC Not_RB :_: A_DT comparative_JJ syntax_NN of_IN English_NNP and_CC Japanese_NNP ._.
+Linguis_SYM -_: tic_JJ Investigations_NNS ,_, 12:1_CD -47_CD ._.
+Lee_NNP ,_, Chungmin_NNP ,_, 2003_CD ,_, Contrastive_NNP Topic_NNP and/or_CC Con_NN -_: trastive_NN Focus_NN ._.
+In_IN Japanese/Korean_JJ Linguistics_NNPS ,_, 12:382_CD -420_CD ._.
+ed_VBN ._.
+William_NNP McClure_NNP ._.
+Elsevier_NNP ._.
+Lee_NNP ,_, Chungmin_NNP ,_, 2006_CD ._.
+Contrastive_NNP Topic/Focus_NNP and_CC Polarity_NNP in_IN Discourse_NNP ._.
+In_IN Where_WRB Semantics_NNP Meets_VBZ Pragmatics_NNPS ,_, ed_VBN ._.
+K._NNP von_NNP Heusinger_NNP K_NNP ,_, Turner_NNP ,_, 382_CD -_: 420_CD ._.
+Elsevier_NNP ._.
+Lee_NNP ,_, Young-Suk_NNP ._.
+1993_CD ._.
+Scrambling_VBG as_IN Case-driven_JJ Ob_SYM -_: ligatory_JJ Movement_NNP ._.
+Doctoral_JJ Dissertation_NNP ._.
+University_NNP of_IN Pennsylvania_NNP ,_, Philadelphia_NNP ,_, Penn._NNP ._.
+Mihara_NNP ,_, Ken-ichi_NNP ._.
+1998_CD ._.
+Nihongo-no_NN Toogo_NNP Koozoo_NNP -LSB-_NNP Syntactic_NNP structures_NNS in_IN Japanese_JJ -RSB-_NN ._.
+Tokyo_NNP :_: Syoa_SYM -_: kusya_NN ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+1989_CD ._.
+Structure_NN and_CC case-marking_NN in_IN Japanese_JJ ._.
+New_NNP York_NNP :_: Academic_NNP Press_NNP ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+2001_CD ._.
+The_DT EPP_NNP ,_, Scrambling_NNP ,_, and_CC Wh-in_NNP Situ_NNP ._.
+Chapter_NN 9_CD ._.
+In_IN Michael_NNP Kenstowicz_NNP ._.
+ed_VBN ._.
+by_IN Ken_NNP Hale_NNP ._.
+The_DT MIT_NNP Press_NNP ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+2003_CD ._.
+A-movement_NNP Scrambling_NNP and_CC Options_NNPS Without_IN Optionality_NNP ._.
+Word_NN order_NN and_CC Scrambling_VBG ,_, ed_VBN ._.
+S._NNP Karimi_NNP ,_, 177-200_CD ._.
+Oxford_NNP :_: Black_NNP -_: well_RB ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+2005_CD ._.
+EPP_NNP and_CC semantically_RB vacu_SYM -_: ous_JJ scrambling_VBG ._.
+The_DT Free_NNP Word_NNP order_NN Phenomenon_NNP ,_, ed_VBD ._.
+J._NNP Sabel_NNP and_CC M._NNP Saito_NNP ,_, 181-220_CD ._.
+Berlin_NNP :_: Mouton_NNP de_IN Gruyter_NNP ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+2010_CD ._.
+Why_WRB Agree_NNP ?_.
+Why_WRB Move_VBP ?_.
+Linguistic_NNP Monograph_NNP Fifty-Four_NNP ._.
+The_DT MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, Massachusetts_NNP ._.
+Miyagawa_NNP ,_, Shigeru_NNP ._.
+2013_CD ._.
+Telicity_NNP ,_, Stranded_NNP Numeral_NNP Quantifiers_NNPS ,_, and_CC Quantifier_NNP Scope_NNP ._.
+Chapter_NN 2_CD ._.
+Ms._NNP MIT_NNP ._.
+Miyagawa_NNP ,_, Shigeru_NNP and_CC Koji_NNP Arikwa_NNP ._.
+2007_CD ._.
+Locality_NN in_IN Syntax_NNP and_CC Floating_VBG Numeral_NNP Quantifiers_NNPS ._.
+Linguistic_NNP Inquiry_NNP ,_, 38_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 645-670_CD ._.
+Mohnan_NNP ,_, Tara_NNP .1994_CD ,_, Case_NNP OCP_NNP :_: A_NNP Constraint_NNP on_IN Word_NNP Order_NNP in_IN Hindi_NNP ._.
+In_IN Theoretical_JJ Perspectives_NNS on_IN Word_NNP Order_NNP in_IN South_NNP Asian_NNP languages_NNS ,_, ed_VBN ._.
+Miriam_NNP Butt_NNP ,_, Tracy_NNP Holloway_NNP King_NNP ,_, and_CC Gillian_NNP Ramchand_NNP ,_, 185_CD -_: 216_CD ._.
+Stanford_NNP ,_, CA_NNP :_: CSLI_NNP ._.
+Moon_NNP ,_, Gui-Sun_NNP ._.
+2007_CD ._.
+Scrambling_VBG and_CC PIC_NNP :_: Against_IN Cyclic_JJ Linearization_NN ._.
+Studies_NNS in_IN Generative_NNP Grammar_NNP ,_, 17_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :233_CD -252_CD ._.
+Nishigauchi_NNP ,_, Taisuke_NNP and_CC Yasuo_NNP Ishii_NNP ._.
+2003_CD ._.
+Eigo_NNP Kara_NNP Nihongo_NNP o_VBD Miru_NNP -LSB-_NNP Looking_VBG at_IN Japanese_JJ from_IN English_NNP -RSB-_NNP ._.
+Tokyo_NNP :_: Kenkyusha_NNP ._.
+Nunes_NNP ,_, Jairo_NNP ._.
+2001_CD ._.
+Sideward_NNP Movement_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 32:303_CD -344_CD ._.
+Pesetsky_NNP ,_, David_NNP and_CC Esther_NNP Torrego_NNP ._.
+2001_CD ._.
+T-to-C_NNP Movement_NNP :_: Causes_NNS and_CC Consequences_NNS ._.
+In_IN Ken_NNP Hale_NNP :_: A_NNP life_NN in_IN language_NN ,_, ed_VBN ._.
+Michael_NNP Kenstowicz_NNP ._.
+Cam_SYM -_: bridge_NN ,_, Mass._NNP :_: MIT_NNP Press_NNP ._.
+Richards_NNP ,_, Norvin_NNP ._.
+2000_CD ._.
+Uttering_VBG Trees_NNP ._.
+Linguistic_NNP In_IN -_: quiry_JJ Monograph_NN 56_CD ._.
+The_DT MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, Massachusetts_NNP ._.
+MIT_NNP ._.
+Richards_NNP ,_, Norvin_NNP ._.
+2010_CD ._.
+-LRB-_-LRB- Revised_VBN -RRB-_-RRB- Uttering_VBG Trees_NNP ._.
+MIT_NNP Press_NNP ._.
+Saito_NNP ,_, Mamoru_NNP ._.
+1985_CD ._.
+Some_DT Asymmetries_NNS in_IN Japanese_JJ and_CC Their_PRP$ Theoretical_JJ Implications_NNS ._.
+Doctoral_JJ disser_NN -_: tation_NN ._.
+MIT_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Sohn_NNP ,_, Keun_NNP Won_NNP ._.
+1995_CD ._.
+Negative_JJ polarity_NN items_NNS ,_, scope_NN and_CC economy_NN ._.
+Doctoral_JJ dissertation_NN ._.
+University_NNP of_IN Connecticut_NNP ,_, Storrs_NNP ._.
+Son_NNP ,_, Gwangrak_NNP ._.
+2015_CD ._.
+The_DT Nonstandard_NNP Paradigm_NNP of_IN FNQ-Constructions_NNS as_IN Topic_NNP Movement_NNP ._.
+Linguistic_NNP Research_NNP ,_, 32_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :225_CD -252_CD ._.
+Sportiche_NNP ,_, Dominique_NNP ._.
+1988_CD ._.
+A_DT Theory_NNP of_IN Floating_VBG Quantifiers_NNS and_CC Its_PRP$ Corollaries_NNS for_IN Constituent_NNP Struc_NNP -_: ture_NN ._.
+Linguistic_NNP Inquiry_NNP ,_, 19_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :25_CD -449_CD ._.
+Takami_NNP ,_, Ken-ich_NNP ._.
+1998_CD ._.
+Nihongo_NNP no_DT Suuryousi_NNP Yuuri_NNP Nituite_NNP -LSB-_NNP On_IN Quantifier_NNP Float_NNP in_IN Japanese_NNP -RSB-_NNP ._.
+Gekkan_NNP Gengo_NNP 27_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 86-95_CD ._.
+Tokyo_NNP :_: Taishukan_NNP ._.
+Yip_NNP ,_, Moira_NNP ._.
+2002_CD ._.
+Tone_NN ._.
+Cambridge_NNP University_NNP Press_NNP ._.
+Yoshimoto_NNP ,_, Kei_NNP ,_, Masahiro_NNP Kobayashi_NNP ,_, Jiroaki_NNP Nakamu_NNP -_: ra_NN and_CC Yoshiki_NNP Mori_NNP ._.
+2006_CD ._.
+Processing_NNP of_IN Infor_NNP -_: mation_NN Structure_NN and_CC Floating_VBG Quantifiers_NNS in_IN Japanese_JJ ._.
+In_IN New_NNP Frontiers_NNP in_IN Artificial_NNP Intelligence_NNP ._.
+ed_VBN ._.
+Takahi_NNP Washio_NNP ,_, Akito_NNP Sakurai_NNP ,_, Katsuto_NNP Nakajima_NNP ,_, Hideaki_NNP Takeda_NNP ,_, Satoshi_NNP Tojo_NNP ,_, and_CC Makoto_NNP Yokoo_NNP ,_, 103-110_CD ._.
+Springer_NNP ._.

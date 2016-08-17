@@ -1,0 +1,306 @@
+Identification_NN of_IN Sympathy_NNP in_IN Free_NNP Conversation_NNP Abstract_NNP Dialog_NNP systems_NNS are_VBP generally_RB categorized_VBN into_IN two_CD types_NNS :_: task_NN oriented_VBN and_CC non_VB task_NN oriented_VBN systems_NNS ._.
+Recently_RB ,_, the_DT study_NN of_IN non_NN task_NN ori_SYM -_: ented_JJ dialog_NN systems_NNS or_CC chat_VB systems_NNS becomes_VBZ more_RBR important_JJ since_IN robotic_JJ pets_NNS or_CC nursing_NN care_NN robots_NNS are_VBP paid_VBN much_JJ attention_NN in_IN our_PRP$ daily_JJ life_NN ._.
+In_IN this_DT paper_NN ,_, as_IN a_DT fundamental_JJ tech_NN -_: nique_NN in_IN a_DT chat_VBP system_NN ,_, we_PRP propose_VBP a_DT method_NN to_TO identify_VB if_IN a_DT speaker_NN displays_NNS sympathy_NN in_IN his/her_NN utterance_NN ._.
+Our_PRP$ method_NN is_VBZ based_VBN on_IN su_SYM -_: pervised_JJ machine_NN learning_NN ._.
+New_NNP features_NNS are_VBP proposed_VBN to_TO train_VB a_DT classifier_NN for_IN identifying_VBG the_DT sympathy_NN in_IN user_NN 's_POS utterance_NN ._.
+Results_NNS of_IN our_PRP$ experiments_NNS show_VBP that_IN the_DT proposed_VBN features_NNS improve_VBP the_DT F-measure_NN by_IN 3-4_CD %_NN over_IN a_DT base_NN -_: line_NN ._.
+1_CD Introduction_NNP Dialog_NNP systems_NNS could_MD be_VB broadly_RB divided_VBN into_IN two_CD categories_NNS ._.
+One_CD is_VBZ a_DT task_NN oriented_VBN dialog_NN system_NN ._.
+It_PRP focuses_VBZ on_IN a_DT specific_JJ task_NN such_JJ as_IN guidance_NN on_IN sight_NN -_: seeing_VBG ,_, hotel_NN reservation_NN or_CC promotion_NN of_IN products_NNS ,_, and_CC communicates_VBZ with_IN a_DT user_NN to_TO achieve_VB a_DT goal_NN of_IN the_DT task_NN ._.
+The_DT other_JJ is_VBZ a_DT non_JJ task_NN oriented_VBN dialog_NN sys_SYM -_: tem_NN or_CC chat_VB system_NN ._.
+It_PRP does_VBZ not_RB suppose_VB any_DT spe_NN -_: cific_JJ tasks_NNS but_CC can_MD handle_VB a_DT wide_JJ variety_NN of_IN topics_NNS to_TO freely_RB chat_VB with_IN the_DT user_NN ._.
+Most_JJS of_IN the_DT past_JJ re_SYM -_: searches_NNS focus_VB on_IN task_NN oriented_VBN dialog_NN systems_NNS ._.
+In_IN recent_JJ years_NNS ,_, however_RB ,_, non_JJ task_NN oriented_VBN dialog_NN sys_SYM -_: tems_NNS become_VBP more_RBR important_JJ since_IN robotic_JJ pets_NNS or_CC nursing_NN care_NN robots_NNS are_VBP paid_VBN much_JJ attention_NN -LRB-_-LRB- Libin_NNP and_CC Libin_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+One_CD of_IN important_JJ characteristics_NNS in_IN free_JJ conver_NN -_: sation_NN is_VBZ sympathy_NN of_IN a_DT speaker_NN for_IN the_DT topics_NNS in_IN the_DT conversation_NN -LRB-_-LRB- Anderson_NNP and_CC Keltner_NNP ,_, 2002_CD ;_: Hi_SYM -_: gashinaka_FW et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT topics_NNS in_IN free_JJ conver_NN -_: sation_NN are_VBP not_RB fixed_VBN but_CC could_MD be_VB changed_VBN by_IN the_DT speakers_NNS at_IN any_DT time_NN ._.
+To_TO make_VB the_DT conversation_NN nat_SYM -_: ural_NN and_CC smooth_JJ ,_, however_RB ,_, a_DT non_JJ task_NN oriented_VBN dia_NN -_: log_VB system_NN can_MD not_RB arbitrarily_RB change_VB the_DT topics_NNS ._.
+It_PRP is_VBZ uncomfortable_JJ for_IN the_DT user_NN if_IN the_DT system_NN would_MD suddenly_RB change_VB the_DT topic_NN when_WRB the_DT user_NN wants_VBZ to_TO continue_VB to_TO talk_VB on_IN the_DT current_JJ topic_NN ,_, or_CC if_IN the_DT sys_NNS -_: tem_NN would_MD keep_VB the_DT same_JJ topic_NN when_WRB the_DT user_NN is_VBZ bored_VBN and_CC does_VBZ not_RB want_VB to_TO talk_VB on_IN the_DT topic_NN any_DT more_JJR ._.
+If_IN the_DT system_NN fails_VBZ to_TO shift_VB the_DT topic_NN at_IN ap_SYM -_: propriate_NN time_NN ,_, the_DT user_NN may_MD break_VB the_DT conversation_NN ._.
+The_DT sympathy_NN of_IN the_DT user_NN is_VBZ one_CD of_IN the_DT useful_JJ clues_NNS to_TO guess_VB good_JJ timing_NN for_IN changing_VBG the_DT topic_NN ._.
+If_IN the_DT user_NN shows_VBZ the_DT sympathy_NN for_IN the_DT current_JJ topic_NN ,_, the_DT sys_NNS -_: tem_NN should_MD continue_VB the_DT conversation_NN with_IN the_DT same_JJ topic_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, if_IN the_DT user_NN does_VBZ not_RB display_VB the_DT sympathy_NN ,_, the_DT system_NN should_MD provide_VB other_JJ top_JJ -_: ics_FW ._.
+Therefore_RB ,_, it_PRP is_VBZ essential_JJ for_IN the_DT chat_VBP system_NN to_TO guess_VB the_DT sympathy_NN of_IN the_DT user_NN ._.
+This_DT paper_NN proposes_VBZ a_DT method_NN to_TO automatically_RB judge_VB whether_IN the_DT user_NN displays_NNS the_DT sympathy_NN in_IN his/her_NN utterance_NN as_IN a_DT fundamental_JJ technique_NN in_IN a_DT non_JJ task_NN oriented_VBN dialog_NN system_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP define_VBP `_`` sympathetic_JJ utterance_NN '_'' as_IN the_DT utterance_NN where_WRB the_DT speaker_NN expresses_VBZ the_DT sympathy_NN or_CC ap_SYM -_: proval_NN especially_RB when_WRB he/she_NN replies_VBZ to_TO subjective_JJ utterance_NN of_IN the_DT other_JJ participant_NN ._.
+Note_VB that_IN the_DT utter_JJ -_: ance_NN just_RB showing_VBG agreement_NN is_VBZ not_RB defined_VBN as_IN sym_NN -_: pathetic_JJ ._.
+Various_JJ kinds_NNS of_IN clues_NNS could_MD be_VB applicable_JJ for_IN identification_NN of_IN the_DT sympathy_NN ,_, such_JJ as_IN facial_JJ ex_FW -_: pressions_NNS ,_, gesture_NN or_CC the_DT contents_NNS of_IN the_DT utterance_NN ._.
+Since_IN we_PRP focus_VBP on_IN a_DT text_NN based_VBN chat_VBP system_NN ,_, our_PRP$ method_NN only_RB considers_VBZ the_DT content_NN and_CC detects_VBZ the_DT user_NN 's_POS sympathy_NN in_IN a_DT transcript_NN of_IN the_DT utterance_NN ._.
+In_IN addition_NN to_TO ordinary_JJ n-gram_NN features_NNS ,_, new_JJ features_NNS for_IN the_DT sympathy_NN identification_NN are_VBP introduced_VBN ._.
+The_DT effectiveness_NN of_IN our_PRP$ proposed_VBN features_NNS will_MD be_VB proved_VBN via_IN empirical_JJ evaluation_NN ._.
+The_DT remaining_VBG parts_NNS of_IN this_DT paper_NN are_VBP organized_VBN as_IN follows_VBZ ._.
+Section_NN 2_CD discusses_VBZ related_JJ work_NN for_IN the_DT sympathy_NN identification_NN ._.
+Section_NN 3_CD presents_VBZ our_PRP$ pro-_JJ posed_VBD method_NN ._.
+Section_NN 4_CD reports_NNS results_NNS of_IN evalua_NN -_: tion_NN experiments_NNS ._.
+Finally_RB ,_, Section_NNP 5_CD concludes_VBZ the_DT paper_NN ._.
+2_CD Related_JJ work_NN A_DT considerable_JJ number_NN of_IN studies_NNS have_VBP been_VBN made_VBN on_IN an_DT automatic_JJ tagging_NN of_IN utterance_NN in_IN a_DT dialog_NN cor_NN -_: pus_NN ._.
+That_DT is_VBZ ,_, each_DT utterance_NN in_IN the_DT dialog_NN is_VBZ auto_NN -_: matically_RB annotated_VBN with_IN some_DT useful_JJ information_NN such_JJ as_IN dialog_NN acts_NNS ._.
+Hereafter_NNP we_PRP call_VBP it_PRP `_`` dialog_NN tag_NN '_'' ._.
+Supervised_VBN machine_NN learning_NN is_VBZ often_RB used_VBN for_IN auto_NN -_: matic_JJ identification_NN of_IN dialog_NN tags_NNS ._.
+Since_IN the_DT sym_NN -_: pathy_NN of_IN the_DT speaker_NN is_VBZ also_RB regarded_VBN as_IN a_DT kind_NN of_IN dialog_NN tags_NNS ,_, we_PRP introduce_VBP several_JJ related_JJ work_NN au_SYM -_: tomatically_RB classifying_VBG utterance_NN into_IN dialog_NN tags_NNS in_IN -_: cluding_VBG the_DT sympathy1_CD ._.
+Xioa_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- proposed_VBD a_DT method_NN to_TO esti_VB -_: mate_NN the_DT sympathy_NN speech_NN using_VBG the_DT language_NN model_NN learning_VBG tool_NN SRILM_NNP -LRB-_-LRB- Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+In_IN their_PRP$ method_NN ,_, n-gram_NN of_IN words_NNS were_VBD used_VBN as_IN the_DT features_NNS to_TO classify_VB if_IN the_DT utterance_NN indicated_VBD the_DT sympathy_NN of_IN the_DT speaker_NN ._.
+They_PRP reported_VBD that_IN bi-gram_NN was_VBD the_DT most_RBS effective_JJ feature_NN and_CC the_DT accuracy_NN of_IN the_DT sym_NN -_: pathy_NN identification_NN was_VBD around_RB 60_CD %_NN ._.
+A_DT set_NN of_IN 29_CD dialog_NN acts_NNS including_VBG `_`` empathy_NN '_'' was_VBD proposed_VBN toward_IN an_DT open-ended_JJ dialog_NN system_NN -LRB-_-LRB- Mi_SYM -_: nami_FW et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+They_PRP performed_VBD the_DT automatic_JJ recognition_NN of_IN them_PRP using_VBG a_DT weighted_JJ finite-state_JJ transducer_NN with_IN the_DT words_NNS in_IN the_DT utterance_NN ._.
+Sekino_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- tried_VBD to_TO identify_VB the_DT dia_NN -_: log_VB acts_NNS using_VBG Conditional_JJ Random_NNP Fields_NNPS -LRB-_-LRB- CRF_NNP -RRB-_-RRB- ._.
+SWBD-DAMSL_NNP tag_NN set_NN -LRB-_-LRB- Jurafsky_NNP et_FW al._FW ,_, 1997_CD -RRB-_-RRB- were_VBD used_VBN as_IN a_DT set_NN of_IN dialog_NN acts_NNS ._.
+Note_VB that_IN the_DT tag_NN `_`` sym_SYM -_: pathy_NN '_'' is_VBZ included_VBN in_IN SWBD-DAMSL_NNP ._.
+The_DT features_NNS used_VBN for_IN training_NN CRF_NNP were_VBD the_DT tag_NN of_IN the_DT previous_JJ utterance_NN ,_, the_DT number_NN of_IN content_JJ words_NNS in_IN the_DT utter_JJ -_: ance_NN ,_, the_DT length_NN of_IN the_DT utterance_NN and_CC so_RB on_IN ._.
+To_TO identify_VB the_DT dialog_NN acts_NNS of_IN the_DT sentences_NNS in_IN microblogging_NN ,_, semantic_JJ category_NN patterns_NNS were_VBD in_IN -_: troduced_VBN as_IN the_DT feature_NN of_IN Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- classifier_NN -LRB-_-LRB- Meguro_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+The_DT words_NNS in_IN the_DT utterance_NN were_VBD converted_VBN into_IN their_PRP$ semantic_JJ categories_NNS -LRB-_-LRB- or_CC abstract_JJ concepts_NNS -RRB-_-RRB- using_VBG a_DT thesaurus_NN ,_, then_RB n-gram_NN of_IN not_RB words_NNS but_CC semantic_JJ categories_NNS is_VBZ used_VBN as_IN the_DT feature_NN ._.
+Results_NNS of_IN this_DT study_NN showed_VBD that_IN n-gram_NN of_IN the_DT semantic_JJ categories_NNS was_VBD more_RBR ef_SYM -_: fective_NN than_IN word_NN n-gram_NN ._.
+This_DT study_NN also_RB applies_VBZ supervised_JJ learning_VBG for_IN au_SYM -_: tomatic_JJ identification_NN of_IN the_DT sympathy_NN ._.
+Especially_RB ,_, we_PRP investigate_VBP what_WP are_VBP the_DT useful_JJ features_NNS to_TO infer_VB the_DT sympathy_NN in_IN the_DT utterance_NN ._.
+Therefore_RB ,_, we_PRP fo_SYM -_: cus_NN on_IN identification_NN of_IN the_DT sympathy_NN only_RB ,_, although_IN many_JJ previous_JJ work_NN handled_VBD the_DT sympathy_NN as_IN one_CD of_IN the_DT dialog_NN acts_VBZ ._.
+Several_JJ studies_NNS reported_VBD that_IN charac_NN -_: teristics_NNS of_IN the_DT sympathy_NN could_MD be_VB found_VBN in_IN an_DT ex_FW -_: pression_NN at_IN the_DT end_NN of_IN the_DT utterance_NN -LRB-_-LRB- Itoh_NNP and_CC Na_NNP -_: gata_NN ,_, 2007_CD ;_: Huifang_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+In_IN addition_NN ,_, there_EX might_MD be_VB more_RBR linguistic_JJ features_NNS indicating_VBG the_DT sympathy_NN of_IN the_DT speaker_NN ._.
+The_DT main_JJ contribution_NN of_IN the_DT pa_NN -_: per_IN is_VBZ that_IN new_JJ features_NNS for_IN the_DT sympathy_NN identifica_NN -_: tion_NN are_VBP proposed_VBN through_IN manual_NN analysis_NN of_IN a_DT free_JJ conversation_NN corpus_NN ._.
+Furthermore_RB ,_, the_DT effectiveness_NN of_IN these_DT features_NNS is_VBZ empirically_RB evaluated_VBN by_IN experi_NNS -_: ments_NNS ._.
+Note_VB that_IN the_DT target_NN language_NN in_IN this_DT study_NN is_VBZ Japanese_JJ ._.
+3_LS Proposed_VBN method_NN Our_PRP$ system_NN accepts_VBZ a_DT text_NN of_IN utterance_NN in_IN free_JJ conver_NN -_: sation_NN as_IN an_DT input_NN ,_, then_RB guesses_NNS whether_IN it_PRP indicates_VBZ the_DT speaker_NN 's_POS sympathy_NN ._.
+Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- -LRB-_-LRB- Chih-Chung_NNP and_CC Chih-Jen_NNP ,_, 2001_CD -RRB-_-RRB- is_VBZ applied_VBN to_TO train_VB a_DT binary_JJ classifier_NN to_TO judge_VB if_IN the_DT given_VBN utter_JJ -_: ance_NN is_VBZ sympathetic_JJ 2_CD ._.
+3.1_CD Feature_NNP We_PRP design_VBP the_DT following_VBG 9_CD features_NNS for_IN sympathy_NN identification_NN ._.
+Note_VB that_IN all_DT features_NNS are_VBP binary_JJ ,_, that_DT is_VBZ ,_, the_DT weight_NN in_IN the_DT feature_NN vector_NN is_VBZ 1_CD if_IN it_PRP is_VBZ present_JJ in_IN the_DT utterance_NN ,_, 0_CD otherwise_RB ._.
+Fng_NNP :_: Word_NN n-gram_NN 2_CD Memory-based_JJ learning_NN -LRB-_-LRB- TiMBL_NNP -RRB-_-RRB- -LRB-_-LRB- Daelemanset_NNP al._NNP ,_, 2010_CD -RRB-_-RRB- is_VBZ also_RB applied_VBN in_IN our_PRP$ preliminary_JJ experiment_NN ,_, but_CC SVM_NNP slightly_RB outperformed_VBD TiMBL_NNP ._.
+1_CD ance_NN ,_, some_DT of_IN the_DT related_JJ papers_NNS are_VBP written_VBN in_IN Japanese_JJ ._.
+Since_IN we_PRP focus_VBP on_IN the_DT methods_NNS that_WDT handle_VBP Japanese_JJ utter_JJ -_: The_DT word_NN n-gram_NN -LRB-_-LRB- n_FW =_SYM 1,2,3_CD -RRB-_-RRB- is_VBZ used_VBN as_IN the_DT fea_NN -_: ture_NN ,_, since_IN it_PRP represents_VBZ the_DT content_NN of_IN the_DT utter_JJ -_: ance_NN ._.
+This_DT is_VBZ the_DT basic_JJ feature_NN widely_RB used_VBN for_IN identification_NN of_IN the_DT dialog_NN tags_NNS in_IN the_DT previous_JJ work_NN ._.
+Since_IN the_DT content_NN of_IN the_DT previous_JJ utter_JJ -_: ance_NN is_VBZ also_RB important_JJ ,_, we_PRP use_VBP the_DT word_NN n-gram_NN of_IN both_DT the_DT current_JJ and_CC previous_JJ utterance_NN ._.
+Flen_NNP :_: Length_NNP of_IN utterance_NN Since_IN the_DT sympathetic_JJ utterance_NN tends_VBZ to_TO be_VB short_JJ ,_, the_DT length_NN of_IN the_DT utterance_NN -LRB-_-LRB- the_DT number_NN of_IN characters_NNS -RRB-_-RRB- is_VBZ considered_VBN ._.
+In_IN the_DT simple_JJ ap_NN -_: proach_NN ,_, the_DT length_NN feature_NN is_VBZ defined_VBN according_VBG to_TO intervals_NNS ,_, such_JJ as_IN `_`` 1_CD ∼_CD 5_CD '_'' ,_, `_`` 6_CD ∼_CD 10_CD '_'' and_CC `_`` more_JJR than_IN 10_CD '_'' ._.
+However_RB ,_, it_PRP is_VBZ rather_RB difficult_JJ to_TO deter_VB -_: mine_NN the_DT optimum_JJ intervals_NNS ._.
+In_IN this_DT study_NN ,_, the_DT length_NN features_NNS are_VBP defined_VBN as_IN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- We_PRP introduce_VBP a_DT feature_NN indicating_VBG if_IN the_DT same_JJ word_NN appears_VBZ in_IN the_DT current_JJ and_CC previous_JJ utter_JJ -_: ance_NN ._.
+Frw2_NNS :_: Repetition_NN of_IN word_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- Repetition_NN of_IN the_DT words_NNS does_VBZ not_RB always_RB indi_SYM -_: cates_VBZ the_DT sympathy_NN ._.
+Let_VB us_PRP consider_VB the_DT follow_VB -_: ing_NN example_NN ._.
+A_DT :_: 海草類_FW /_FW 嫌い_FW /_FW な_FW /_FW の_FW /_FW ?_.
+-LRB-_-LRB- seaweed_VBN -RRB-_-RRB- -LRB-_-LRB- dislike_NN -RRB-_-RRB- -LRB-_-LRB- Do_VBP you_PRP dislike_VBP seaweed_NN ?_. -RRB-_-RRB-
+B_NNP :_: そう_FW /_FW て_FW /_FW も_FW /_FW ない_FW /_FW よ_FW /_FW 、_FW /_FW 海草_FW -LRB-_-LRB- so_RB -RRB-_-RRB- -LRB-_-LRB- not_RB -RRB-_-RRB- -LRB-_-LRB- seaweed_VBN -RRB-_-RRB- -LRB-_-LRB- Not_RB so_RB much_RB ,_, seaweed_NN ._. -RRB-_-RRB-
+The_DT speaker_NN B_NNP repeats_VBZ the_DT word_NN `_`` 海草_FW -LRB-_-LRB- sea_NN -_: weed_NN -RRB-_-RRB- '_'' ,_, but_CC his/her_JJR utterance_NN does_VBZ not_RB show_VB the_DT sympathy_NN ._.
+This_DT feature_NN is_VBZ similar_JJ to_TO Frw1_NNP ,_, but_CC more_RBR strictly_RB checks_NNS the_DT presence_NN of_IN repetition_NN of_IN the_DT content_JJ words_NNS ._.
+The_DT feature_NN Frw2_NN is_VBZ activated_VBN if_IN either_DT condition_NN below_IN is_VBZ fulfilled_VBN :_: •_CD The_DT last_JJ predicative_JJ word_NN in_IN the_DT previous_JJ utterance_NN is_VBZ also_RB found_VBN in_IN the_DT current_JJ ut_NN -_: terance_NN ._.
+•_NNP There_EX is_VBZ only_RB one_CD content_NN word_NN in_IN the_DT cur_NN -_: rent_VB utterance_NN and_CC it_PRP also_RB appears_VBZ in_IN the_DT previous_JJ utterance_NN ._.
+Frc1_NNS :_: Repetition_NN of_IN semantic_JJ class_NN -LRB-_-LRB- 1_CD -RRB-_-RRB- Repetition_NN of_IN not_RB words_NNS but_CC semantic_JJ classes_NNS is_VBZ considered_VBN in_IN this_DT feature_NN ._.
+In_IN the_DT following_VBG ex_FW -_: ample_JJ ,_, no_DT content_JJ word_NN is_VBZ overlapped_VBN in_IN two_CD ut_SYM -_: terance_NN ,_, but_CC the_DT speaker_NN B_NNP express_JJ his/her_NN sym_NN -_: pathy_NN by_IN saying_VBG `_`` 楽しかっ_FW -LRB-_-LRB- fun_NN -RRB-_-RRB- '_'' whose_WP$ mean_NN -_: ing_NN is_VBZ similar_JJ to_TO `_`` 面白かっ_VB -LRB-_-LRB- interesting_JJ -RRB-_-RRB- '_'' in_IN the_DT speaker_NN A_DT 's_POS utterance_NN ._.
+A_DT :_: あの_FW /_FW 映画_FW /_FW は_FW /_FW 面白かっ_FW /_FW た_FW -LRB-_-LRB- that_IN -RRB-_-RRB- -LRB-_-LRB- movie_NN -RRB-_-RRB- -LRB-_-LRB- interesting_JJ -RRB-_-RRB- -LRB-_-LRB- That_DT movie_NN was_VBD interesting_JJ ._. -RRB-_-RRB-
+B_NNP :_: 楽しかっ_FW /_FW た_FW /_FW ね_FW -LRB-_-LRB- fun_NN -RRB-_-RRB- -LRB-_-LRB- It_PRP was_VBD fun_NN ._. -RRB-_-RRB-
+This_DT feature_NN is_VBZ activated_VBN if_IN the_DT same_JJ seman_NN -_: tic_JJ class_NN appears_VBZ in_IN both_DT current_JJ and_CC previous_JJ utterance_NN ._.
+A_DT Japanese_JJ thesaurus_NN `_`` Bunruigoi_NNP -_: hyo_NN '_'' -LRB-_-LRB- National_NNP Institute_NNP for_IN Japanese_JJ Language_NN -LRB-_-LRB- i_FW -RRB-_-RRB- flen_NN :_: iflu_NN isin_NN -LSB-_NNP i_FW −_FW 2_CD ,_, i_FW +2_FW -RSB-_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- -LRB-_-LRB- long_JJ -RRB-_-RRB- flen_NN :_: iflu_FW ≥_FW 20_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, where_WRB lu_NN stands_VBZ for_IN the_DT length_NN of_IN the_DT utterance_NN ._.
+We_PRP use_VBP 17_CD length_NN features_NNS f_LS -LRB-_-LRB- i_FW -RRB-_-RRB- -LRB-_-LRB- 3_CD ≤_CD i_FW ≤_FW 19_CD -RRB-_-RRB- as_IN len_NN well_RB as_IN an_DT extra_JJ feature_NN f_LS -LRB-_-LRB- long_RB -RRB-_-RRB- indicating_VBG the_DT len_NN utterance_NN is_VBZ long_RB ._.
+This_DT approach_NN enables_VBZ us_PRP to_TO incorporate_VB the_DT information_NN of_IN the_DT length_NN of_IN ut_NN -_: terance_NN into_IN SVM_NNP more_RBR flexibly_RB ._.
+Ftu_NNP :_: Turn_NN taking_VBG In_IN our_PRP$ conversation_NN corpus_NN ,_, the_DT speakers_NNS may_MD give_VB two_CD or_CC more_JJR utterance_NN in_IN one_CD turn_NN ._.
+This_DT feature_NN indicates_VBZ the_DT presence_NN of_IN turn_NN taking_VBG ,_, i.e._FW whether_IN the_DT speaker_NN of_IN the_DT current_JJ and_CC pre_SYM -_: vious_JJ utterance_NN is_VBZ the_DT same_JJ ._.
+Frw1_NNS :_: Repetition_NN of_IN word_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT speakers_NNS often_RB show_VBP their_PRP$ sympathy_NN by_IN re_SYM -_: peating_VBG a_DT word_NN in_IN a_DT previous_JJ utterance_NN of_IN the_DT other_JJ ._.
+For_IN example_NN ,_, in_IN the_DT simple_JJ conversation_NN below_IN 3_CD ,_, the_DT speaker_NN B_NNP repeats_VBZ the_DT word_NN `_`` 傑作_FW -LRB-_-LRB- fine_JJ work_NN -RRB-_-RRB- '_'' to_TO agree_VB with_IN A_DT 's_POS comment_NN ._.
+A_DT :_: あの_FW /_FW 映画_FW /_FW は_FW /_FW 傑作_FW /_FW た_FW -LRB-_-LRB- that_IN -RRB-_-RRB- -LRB-_-LRB- movie_NN -RRB-_-RRB- -LRB-_-LRB- fine_JJ work_NN -RRB-_-RRB- -LRB-_-LRB- be_VB -RRB-_-RRB- -LRB-_-LRB- That_DT movie_NN is_VBZ a_DT fine_JJ work_NN ._. -RRB-_-RRB-
+B_NNP :_: 傑作_FW /_FW た_FW /_FW ね_FW -LRB-_-LRB- fine_JJ work_NN -RRB-_-RRB- -LRB-_-LRB- be_VB -RRB-_-RRB- -LRB-_-LRB- It_PRP is_VBZ a_DT fine_JJ work_NN ._. -RRB-_-RRB-
+3_CD Note_NN that_WDT `_`` /_FW '_'' stands_VBZ for_IN the_DT word_NN segmentation_NN ,_, and_CC a_DT word_NN or_CC a_DT sentence_NN in_IN parentheses_NNS is_VBZ an_DT English_JJ translation_NN ._.
+The_DT words_NNS without_IN translations_NNS are_VBP function_NN words_NNS that_WDT have_VBP no_DT meaning_NN ._.
+and_CC Linguistics_NNP ,_, 2004_CD -RRB-_-RRB- is_VBZ used_VBN to_TO obtain_VB the_DT se_FW -_: mantic_JJ classes_NNS of_IN the_DT words_NNS ._.
+If_IN one_CD word_NN has_VBZ two_CD or_CC more_JJR semantic_JJ classes_NNS in_IN the_DT thesaurus_NN ,_, all_DT of_IN them_PRP are_VBP used_VBN to_TO check_VB repetition_NN in_IN two_CD utterance_NN ._.
+That_DT is_VBZ ,_, we_PRP build_VBP the_DT lists_NNS of_IN all_DT pos_SYM -_: sible_NN semantic_JJ classes_NNS of_IN all_DT content_JJ words_NNS in_IN the_DT current_JJ and_CC previous_JJ utterance_NN ,_, and_CC check_VB if_IN there_EX is_VBZ an_DT overlap_VBP between_IN them_PRP ._.
+Frc2_NNS :_: Repetition_NN of_IN semantic_JJ class_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- Similar_JJ to_TO Frw2_NNP ,_, repetition_NN of_IN the_DT semantic_JJ classes_NNS are_VBP strictly_RB checked_VBN as_IN follows_VBZ :_: •_CD The_DT semantic_JJ class_NN of_IN the_DT last_JJ predica_NN -_: tive_JJ word_NN in_IN the_DT previous_JJ utterance_NN is_VBZ also_RB found_VBN in_IN the_DT current_JJ utterance_NN ._.
+•_NNP There_EX is_VBZ only_RB one_CD content_NN word_NN in_IN the_DT cur_NN -_: rent_VB utterance_NN and_CC its_PRP$ semantic_JJ class_NN also_RB appears_VBZ in_IN the_DT previous_JJ utterance_NN ._.
+Fda_NNP :_: Dialog_NNP act_NN Dialog_NNP act_NN is_VBZ also_RB a_DT useful_JJ feature_NN to_TO identify_VB the_DT sympathy_NN ._.
+When_WRB we_PRP hear_VBP the_DT other_JJ 's_POS asser_NN -_: tion_NN or_CC opinion_NN ,_, we_PRP sometimes_RB show_VBP our_PRP$ sym_NN -_: pathy_NN with_IN it_PRP ._.
+However_RB ,_, we_PRP seldom_RB express_VBP the_DT sympathy_NN for_IN a_DT simple_JJ yes-no_JJ question_NN ._.
+In_IN this_DT study_NN ,_, we_PRP define_VBP a_DT set_NN of_IN dialog_NN acts_NNS in_IN free_JJ con_NN -_: versation_NN as_IN in_IN Figure_NN 1_CD ._.
+Figure_NN 1_CD :_: Dialog_NNP act_NN We_PRP manually_RB annotate_VBP the_DT conversation_NN corpus_NN with_IN the_DT dialog_NN acts_VBZ and_CC use_VB them_PRP as_IN the_DT fea_NN -_: tures_NNS ._.
+In_IN future_NN ,_, the_DT dialog_NN acts_VBZ should_MD be_VB auto_NN -_: matically_RB identified_VBN to_TO derive_VB this_DT feature_NN ._.
+Fend_VB :_: End_NN of_IN sentence_NN The_DT speakers_NNS often_RB show_VBP their_PRP$ sympathy_NN in_IN an_DT expression_NN at_IN the_DT end_NN of_IN their_PRP$ utterance_NN ._.
+For_IN example_NN ,_, in_IN Japanese_JJ ,_, ``_`` た_FW -LSB-_FW da_NN -RSB-_NNP /_CD ね_CD -LSB-_NNP ne_NN -RSB-_NN ''_'' or_CC ``_`` よ_FW -LSB-_FW yo_FW -RSB-_FW /_FW ね_FW -LSB-_FW ne_FW -RSB-_NN ''_'' 4_CD at_IN the_DT end_NN of_IN the_DT sentence_NN strongly_RB indicates_VBZ the_DT sympathetic_JJ mood_NN of_IN the_DT 4_CD Parentheses_NNP show_NN pronunciation_NN of_IN each_DT word_NN ._.
+`_`` /_FW '_'' stands_VBZ for_IN word_NN segmentation_NN ._.
+Note_VB that_IN these_DT words_NNS are_VBP particles_NNS and_CC have_VBP no_DT meaning_NN ._.
+speaker_NN ._.
+Based_VBN on_IN the_DT above_JJ observation_NN ,_, the_DT expression_NN at_IN the_DT end_NN is_VBZ introduced_VBN as_IN the_DT fea_NN -_: ture_NN ._.
+In_IN this_DT paper_NN ,_, it_PRP is_VBZ represented_VBN by_IN a_DT se_FW -_: quence_NN of_IN function_NN words_NNS at_IN the_DT end_NN of_IN each_DT sentence_NN in_IN the_DT utterance_NN ._.
+3.2_CD Combination_NN features_NNS In_IN the_DT preliminary_JJ experiment_NN ,_, we_PRP investigated_VBD sev_SYM -_: eral_JJ types_NNS of_IN kernels_NNS of_IN the_DT SVM_NNP classifier_NN :_: linear_JJ kernel_NN ,_, polynomial_JJ kernel_NN ,_, radial_JJ basis_NN function_NN and_CC so_RB on_IN 5_CD ._.
+We_PRP found_VBD that_IN the_DT kernels_NNS except_IN for_IN the_DT linear_JJ kernel_NN performed_VBD very_RB poorly_RB on_IN our_PRP$ data_NN set_NN ._.
+Therefore_RB ,_, we_PRP chose_VBD the_DT linear_JJ kernel_NN ._.
+However_RB ,_, the_DT individual_NN features_NNS are_VBP regarded_VBN as_IN independent_JJ each_DT other_JJ in_IN the_DT SVM_NNP with_IN the_DT liner_NN kernel_NN ,_, although_IN the_DT dependency_NN between_IN the_DT features_NNS should_MD be_VB consid_VBN -_: ered_VBN ._.
+To_TO tackle_VB this_DT problem_NN ,_, we_PRP introduce_VBP a_DT feature_NN composed_VBN by_IN combination_NN of_IN the_DT existing_VBG features_NNS ._.
+When_WRB a_DT feature_NN set_VBN F_NN =_SYM -LCB-_-LRB- ..._: fi_FW ..._: -RCB-_-RRB- is_VBZ derived_VBN from_IN one_CD utterance_NN ,_, where_WRB fi_FW is_VBZ one_CD of_IN the_DT features_NNS de_IN -_: scribed_VBN in_IN Subsection_NNP 3.1_CD ,_, all_DT possible_JJ pairs_NNS of_IN fea_NN -_: tures_VBZ -LSB-_NNP fi_FW ,_, fj_SYM -RSB-_NNP -LRB-_-LRB- i_FW ̸_FW =_SYM j_VBN -RRB-_-RRB- are_VBP also_RB added_VBN to_TO the_DT feature_NN set_NN ._.
+Hereafter_NNP ,_, -LSB-_NNP fi_FW ,_, fj_SYM -RSB-_NNP is_VBZ referred_VBN to_TO as_IN a_DT combination_NN feature_NN ._.
+The_DT combination_NN features_VBZ enable_VB the_DT clas_NNS -_: sifier_NN to_TO consider_VB the_DT dependency_NN between_IN two_CD fea_SYM -_: tures_NNS ._.
+Since_IN the_DT number_NN of_IN this_DT feature_NN are_VBP increased_VBN combinatorially_RB ,_, feature_NN selection_NN is_VBZ applied_VBN as_IN de_FW -_: scribed_VBN in_IN the_DT next_JJ subsection_NN ._.
+3.3_CD Feature_NN selection_NN A_DT simple_JJ feature_NN selection_NN procedure_NN is_VBZ introduced_VBN ._.
+We_PRP apply_VBP the_DT feature_NN selection_NN only_RB for_IN the_DT word_NN n-gram_JJ feature_NN -LRB-_-LRB- Fng_NNP -RRB-_-RRB- and_CC the_DT combination_NN feature_NN ,_, since_IN the_DT numbers_NNS of_IN these_DT features_NNS are_VBP extremely_RB high_JJ ._.
+The_DT correlation_NN between_IN a_DT sympathy_NN class_NN and_CC a_DT feature_NN fi_FW is_VBZ measured_VBN by_IN χ2_JJ value_NN ._.
+The_DT features_NNS are_VBP discarded_VBN when_WRB χ2_JJ value_NN is_VBZ less_JJR than_IN a_DT threshold_NN ._.
+We_PRP denote_VBP the_DT threshold_NN of_IN χ2_JJ value_NN for_IN the_DT n-gram_NN and_CC combination_NN feature_NN as_IN Tng_NNP and_CC Tcomb_NNP ,_, respectively_RB ._.
+In_IN the_DT experiment_NN in_IN Section_NN 4_CD ,_, these_DT thresholds_NNS will_MD be_VB optimized_VBN with_IN a_DT development_NN data_NNS ._.
+3.4_CD Filtering_NN of_IN negative_JJ samples_NNS In_IN supervised_JJ machine_NN learning_NN ,_, it_PRP is_VBZ inappropriate_JJ that_IN the_DT numbers_NNS of_IN positive_JJ and_CC negative_JJ samples_NNS in_IN 5_CD self-disclosure_NN ,_, question_NN -LRB-_-LRB- yes-no_JJ -RRB-_-RRB- ,_, question_NN -LRB-_-LRB- what_WP -RRB-_-RRB- ,_, response_NN -LRB-_-LRB- yes-no_JJ -RRB-_-RRB- ,_, response_NN -LRB-_-LRB- declarative_JJ -RRB-_-RRB- ,_, backchannel_NN ,_, filler_NN ,_, confirmation_NN ,_, request_NN We_PRP used_VBD LIBSVM_NNP -LRB-_-LRB- Chih-Chung_NNP and_CC Chih-Jen_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+the_DT training_NN data_NNS are_VBP extremely_RB imbalanced_JJ ,_, since_IN the_DT trained_JJ classifier_NN may_MD display_VB strong_JJ bias_NN for_IN the_DT ma_FW -_: jority_NN class_NN ._.
+In_IN general_JJ ,_, however_RB ,_, the_DT sympathetic_JJ ut_NN -_: terance_NN does_VBZ not_RB frequently_RB appear_VBP in_IN free_JJ conversa_NN -_: tion_NN ._.
+Actually_RB ,_, the_DT ratio_NN of_IN the_DT sympathetic_JJ utterance_NN is_VBZ 1.1_CD %_NN in_IN our_PRP$ conversation_NN corpus_VBZ as_RB will_MD be_VB shown_VBN in_IN Table_NNP 1_CD ._.
+To_TO tackle_VB this_DT problem_NN ,_, a_DT filtering_VBG pro-_JJ cess_NN to_TO remove_VB the_DT negative_JJ samples_NNS is_VBZ introduced_VBN to_TO correct_VB imbalance_NN of_IN the_DT training_NN data_NNS ._.
+The_DT basic_JJ idea_NN of_IN our_PRP$ filtering_VBG method_NN is_VBZ that_IN we_PRP try_VBP to_TO remove_VB redundant_JJ negative_JJ samples_NNS ._.
+Here_RB `_`` re_SYM -_: dundant_NN '_'' sample_NN stands_VBZ for_IN a_DT sample_NN that_WDT is_VBZ similar_JJ to_TO other_JJ samples_NNS in_IN the_DT training_NN data_NNS ._.
+Similar_JJ neg_NN -_: ative_JJ samples_NNS might_MD be_VB redundant_JJ and_CC could_MD be_VB re_SYM -_: moved_VBN from_IN the_DT training_NN data_NNS without_IN any_DT significant_JJ loss_NN of_IN the_DT classification_NN performance_NN ._.
+The_DT similar_JJ -_: ity_NN between_IN two_CD samples_NNS -LRB-_-LRB- utterance_NN -RRB-_-RRB- is_VBZ measured_VBN by_IN cosine_NN similarity_NN of_IN the_DT vector_NN consisting_VBG of_IN the_DT word_NN n-gram_JJ feature_NN only_RB ._.
+It_PRP is_VBZ time_NN consuming_NN to_TO calculate_VB the_DT similarity_NN be_VB -_: tween_NN all_DT possible_JJ pairs_NNS of_IN the_DT utterance_NN in_IN the_DT train_NN -_: ing_NN data_NNS ._.
+Instead_RB ,_, we_PRP reduce_VBP the_DT computational_JJ cost_NN by_IN constructing_VBG clusters_NNS of_IN the_DT utterance_NN as_IN the_DT pre_NN -_: possessing_VBG ._.
+First_RB ,_, the_DT clusters_NNS are_VBP constructed_VBN from_IN the_DT set_NN of_IN the_DT negative_JJ samples_NNS ._.
+A_DT fast_JJ clustering_NN algorithm_NN `_`` Repeated_VBN Bisections_NNS '_POS is_VBZ used_VBN ,_, where_WRB the_DT number_NN of_IN the_DT cluster_NN is_VBZ set_VBN to_TO 10006_CD ._.
+For_IN each_DT cluster_NN ,_, the_DT redundant_JJ negative_JJ samples_NNS are_VBP detected_VBN by_IN Algorithm_NNP 1_CD ._.
+Given_VBN a_DT set_NN of_IN utter_JJ -_: ance_NN in_IN a_DT cluster_NN U_NNP ,_, the_DT algorithm_NN divides_VBZ the_DT utter_JJ -_: ance_NN into_IN a_DT set_NN of_IN non-redundant_JJ utterance_NN Uk_NNP to_TO be_VB kept_VBN and_CC redundant_JJ utterance_NN Ud_NNP to_TO be_VB deleted_VBN ._.
+For_IN each_DT utterance_NN ui_NN ,_, if_IN the_DT similarity_NN between_IN ui_NN and_CC the_DT rest_NN of_IN the_DT utterance_NN uj_NN is_VBZ greater_JJR than_IN the_DT thresh_NN -_: old_JJ Sfil_NNP ,_, uj_NN is_VBZ added_VBN to_TO the_DT set_VBN Ud_NNP ._.
+Then_RB ui_FW is_VBZ added_VBN to_TO Uk_NNP ._.
+Intuitively_RB ,_, if_IN several_JJ similar_JJ utterance_NN are_VBP found_VBN ,_, only_RB the_DT first_JJ appeared_VBD one_CD is_VBZ remained_VBN in_IN the_DT training_NN data_NNS ._.
+Note_VB that_IN the_DT threshold_NN Sfil_NNP controls_VBZ the_DT number_NN of_IN the_DT removed_VBN negative_JJ samples_NNS ._.
+It_PRP is_VBZ optimized_VBN on_IN a_DT development_NN data_NNS ._.
+4_CD Evaluation_NN This_DT section_NN reports_VBZ experiments_NNS to_TO evaluate_VB our_PRP$ pro-_JJ posed_VBD method_NN ._.
+In_IN this_DT experiment_NN ,_, the_DT systems_NNS are_VBP evaluated_VBN and_CC compared_VBN by_IN the_DT precision_NN ,_, recall_NN and_CC 6_CD We_PRP used_VBD the_DT clustering_NN tool_NN CLUTO_NNP ._.
+http://glaros_NNS ._.
+dtc.umn.edu/gkhome/views/cluto_NNP Input_NNP :_: U_NNP =_SYM -LCB-_-LRB- u1_CD ,_, u2_CD ,_, ·_CD ·_CD ·_NN ,_, un_NN -RCB-_-RRB- Output_NN :_: Uk_NNP ,_, Ud_NNP Uk_NNP ←_VBD ∅_CD ,_, Ud_NNP ←_CD ∅_NN for_IN i_FW ←_FW 1_CD to_TO n_VB do_VB if_IN ui_FW ∈_FW Ud_FW then_RB next_JJ end_NN for_IN j_NN ←_CD i_FW +_FW 1_CD to_TO n_VB do_VB sim_VB ←_CD cos_NNS -LRB-_-LRB- ui_FW ,_, uj_NN -RRB-_-RRB- if_IN sim_NN ≥_CD Sfil_NNP then_RB Ud_VBD ←_CD Ud_NNP ∪_CD -LCB-_-LRB- uj_NN -RCB-_-RRB- end_NN end_NN Uk_NNP ←_CD Uk_NNP ∪_CD -LCB-_-LRB- ui_NN -RCB-_-RRB- end_NN Algorithm_NNP 1_CD :_: Search_NNP for_IN redundant_JJ negative_JJ sam_NN -_: ples_NNS F-measure_NN of_IN the_DT identification_NN of_IN sympathetic_JJ utter_JJ -_: ance_NN ._.
+4.1_CD Data_NNP Meidai_NNP conversation_NN corpus_NN 7_CD is_VBZ used_VBN to_TO train_VB and_CC evaluate_VB our_PRP$ proposed_VBN method_NN ._.
+It_PRP is_VBZ a_DT collection_NN of_IN transcription_NN of_IN actual_JJ conversation_NN or_CC chat_VB in_IN Japanese_JJ ._.
+Two_CD to_TO four_CD participants_NNS joined_VBD free_JJ con_NN -_: versation_NN ._.
+Dialogs_NNS where_WRB the_DT number_NN of_IN the_DT partic_NN -_: ipants_NNS is_VBZ two_CD are_VBP chosen_VBN from_IN the_DT corpus_NN ,_, then_RB each_DT utterance_NN is_VBZ manually_RB annotated_VBN with_IN `_`` sympathy_NN tag_NN '_'' indicating_VBG whether_IN it_PRP expresses_VBZ the_DT sympathy_NN of_IN the_DT speaker_NN or_CC not8_JJ ._.
+We_PRP randomly_RB divide_VBP the_DT conversation_NN corpus_VBZ into_IN three_CD sets_NNS :_: 80_CD %_NN training_NN ,_, 10_CD %_NN development_NN and_CC 10_CD %_NN test_NN set_VBN ._.
+Table_NNP 1_CD shows_VBZ the_DT number_NN of_IN the_DT dialogs_NNS ,_, sympathetic_JJ utterance_NN -LRB-_-LRB- sym_NN -RRB-_-RRB- and_CC non-sympathetic_JJ utterance_NN -LRB-_-LRB- non-sym_JJ -RRB-_-RRB- in_IN each_DT data_NNS ._.
+The_DT ratio_NN of_IN the_DT positive_JJ and_CC negative_JJ samples_NNS stands_VBZ at_IN 1_CD to_TO 86_CD ,_, that_DT is_VBZ ,_, the_DT number_NN of_IN sympathetic_JJ utterance_NN is_VBZ much_JJ fewer_JJR than_IN non-sympathetic_JJ ._.
+A_DT balanced_JJ data_NNS in_IN -_: 7_CD https://dbms.ninjal.ac.jp/nuc/index.php_NN ?_.
+mode_NN =_SYM viewnuc_FW 8_CD Each_DT dialog_NN in_IN the_DT corpus_NN is_VBZ annotated_VBN by_IN one_CD person_NN ._.
+To_TO measure_VB inter-annotator_JJ agreement_NN ,_, another_DT annotator_NN put_VBD sym_SYM -_: pathy_NN tags_NNS to_TO only_RB three_CD dialogs_NNS ._.
+Cohen_NNP 's_POS kappa_NN was_VBD 0.27_CD ._.
+It_PRP indicates_VBZ the_DT difficulty_NN of_IN the_DT sympathy_NN identification_NN task_NN ._.
+In_IN future_NN ,_, the_DT definition_NN of_IN sympathetic_JJ utterance_NN should_MD be_VB more_RBR clarified_VBN to_TO make_VB a_DT better_JJR annotation_NN guideline_NN for_IN consistent_JJ an_DT -_: notation_NN ._.
+Table_NNP 1_CD :_: Statistics_NNS in_IN the_DT conversation_NN corpus_NN on_IN the_DT test_NN data_NNS ,_, while_IN Table_NNP 3_CD shows_VBZ the_DT results_NNS on_IN the_DT balanced_JJ test_NN data_NNS ._.
+In_IN these_DT tables_NNS ,_, the_DT fil_NN -_: tering_NN of_IN the_DT negative_JJ samples_NNS is_VBZ not_RB applied_VBN ._.
+Our_PRP$ proposed_VBN method_NN outperformed_VBD the_DT baseline_NN on_IN the_DT whole_NN ,_, although_IN the_DT precision_NN was_VBD comparable_JJ on_IN the_DT balanced_JJ data_NNS ._.
+In_IN the_DT imbalanced_JJ test_NN data_NNS ,_, the_DT F-measure_NN was_VBD not_RB so_RB high_JJ ._.
+This_DT is_VBZ because_IN the_DT sym_NN -_: pathetic_JJ utterance_NN does_VBZ not_RB frequently_RB appear_VBP in_IN the_DT conversation_NN corpus_NN ._.
+Since_IN the_DT participants_NNS of_IN some_DT dialogs_NNS were_VBD strangers_NNS ,_, they_PRP might_MD hesitate_VB to_TO ex_FW -_: press_VB their_PRP$ sympathy_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, in_IN the_DT bal_NN -_: anced_JJ test_NN data_NNS ,_, the_DT results_NNS were_VBD reasonably_RB high_JJ ._.
+If_IN our_PRP$ method_NN is_VBZ applied_VBN for_IN the_DT conversation_NN between_IN close_JJ friends_NNS where_WRB they_PRP frequently_RB show_VBP their_PRP$ sym_NN -_: pathy_NN ,_, it_PRP will_MD achieve_VB better_JJR performance_NN than_IN the_DT re_NN -_: sults_NNS in_IN Table_NNP 2_CD ._.
+data_NNS dialog_NN training_NN 77_CD development_NN 10_CD test_NN 10_CD sym_NN non-sym_JJ 861_CD 73378_CD 103_CD 8882_CD 99_CD 8598_CD cluding_VBG the_DT same_JJ number_NN of_IN the_DT positive_JJ and_CC nega_JJ -_: tive_JJ samples_NNS is_VBZ also_RB used_VBN for_IN evaluation_NN ._.
+It_PRP is_VBZ made_VBN by_IN keeping_VBG all_DT positive_JJ samples_NNS and_CC randomly_RB choos_NNS -_: ing_VBG the_DT equal_JJ number_NN of_IN the_DT negative_JJ samples_NNS in_IN the_DT training_NN ,_, development_NN and_CC test_NN data_NNS ._.
+We_PRP repeat_VBP to_TO construct_VB the_DT balanced_JJ data_NNS five_CD times_NNS ,_, and_CC evaluate_VB the_DT systems_NNS in_IN these_DT five_CD data_NNS sets_NNS ._.
+Note_VB that_IN the_DT re_NN -_: sults_NNS on_IN the_DT balanced_JJ data_NNS shown_VBN below_IN are_VBP the_DT aver_NN -_: age_NN precision_NN ,_, recall_NN and_CC F-measure_NN of_IN five_CD trials_NNS ._.
+4.2_CD Results_NNS and_CC discussion_NN 4.2.1_CD Parameter_NNP optimization_NN First_NNP ,_, the_DT parameter_NN Tng_NNP for_IN selection_NN of_IN n-gram_JJ feature_NN was_VBD optimized_VBN on_IN the_DT development_NN data_NNS ._.
+Fig_SYM -_: ure_NN 2_CD shows_VBZ a_DT change_NN in_IN precision_NN -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, recall_VBP -LRB-_-LRB- R_NN -RRB-_-RRB- and_CC F-measure_NN -LRB-_-LRB- F_NN -RRB-_-RRB- on_IN the_DT development_NN data_NNS ._.
+We_PRP chose_VBD Tng_NNP =_SYM 0.9_CD as_IN the_DT best_JJS parameter_NN where_WRB the_DT precision_NN ,_, recall_NN and_CC F-measure_NN were_VBD the_DT highest_JJS ._.
+In_IN this_DT case_NN ,_, 4378_CD features_NNS ,_, which_WDT are_VBP 1_CD %_NN of_IN all_DT n-gram_JJ features_NNS ,_, were_VBD selected_VBN ._.
+Figure_NN 2_CD :_: Optimization_NN of_IN Tng_NNP Another_DT parameters_NNS Tcomb_NNP and_CC Sfil_NNP were_VBD also_RB op_SYM -_: timized_VBN ._.
+The_DT details_NNS will_MD be_VB reported_VBN later_RB ._.
+4.2.2_CD Results_NNS We_PRP define_VBP the_DT baseline_NN as_IN the_DT classifier_NN with_IN the_DT word_NN n-gram_JJ feature_NN only_RB ._.
+Table_NNP 2_CD reveals_VBZ the_DT per_FW -_: formance_NN of_IN the_DT baseline_NN and_CC our_PRP$ proposed_VBN method_NN Table_NNP 2_CD :_: Results_NNS on_IN the_DT imbalanced_JJ test_NN data_NNS PRF_NNP Baseline_NNP -LRB-_-LRB- Fng_NNP -RRB-_-RRB- Proposed_VBN method_NN 0.28_CD Table_NNP 3_CD :_: Results_NNS on_IN the_DT balanced_JJ test_NN data_NNS PRF_NNP Baseline_NNP -LRB-_-LRB- Fng_NNP -RRB-_-RRB- Proposed_VBN method_NN 0.81_CD 0.76_CD 0.80_CD Effectiveness_NN of_IN features_NNS 0.23_CD 0.11_CD 0.15_CD 0.13_CD 0.18_CD 0.80_CD 0.73_CD 0.76_CD 4.2.3_CD Next_JJ ,_, to_TO investigate_VB the_DT effectiveness_NN of_IN our_PRP$ pro-_JJ posed_VBD features_NNS ,_, the_DT models_NNS with_IN several_JJ feature_NN sets_NNS are_VBP compared_VBN ._.
+We_PRP train_VBP the_DT classifiers_NNS with_IN the_DT ba_NN -_: sic_JJ word_NN n-gram_JJ feature_NN and_CC one_CD of_IN the_DT other_JJ fea_NN -_: tures_NNS -LRB-_-LRB- denoted_VBN as_IN Fng_NNP +_CD F_NN ∗_NN -RRB-_-RRB- ,_, and_CC compared_VBN it_PRP with_IN the_DT baseline_NN model_NN -LRB-_-LRB- Fng_NNP -RRB-_-RRB- ._.
+We_PRP also_RB compare_VBP the_DT clas_NNS -_: sifier_NN with_IN all_DT features_NNS -LRB-_-LRB- denoted_VBN as_IN FALL_NN -RRB-_-RRB- ._.
+Table_NNP 4_CD and_CC 5_CD show_VBP the_DT results_NNS on_IN the_DT imbalanced_JJ and_CC bal_SYM -_: anced_JJ test_NN data_NNS ._.
+Note_VB that_IN the_DT combination_NN features_NNS are_VBP not_RB used_VBN in_IN this_DT experiment_NN ._.
+On_IN the_DT imbalanced_JJ test_NN data_NNS ,_, adding_VBG the_DT feature_NN Flen_NNP ,_, Frc2_NNP ,_, Fda_NNP and_CC Fend_NNP caused_VBD a_DT decline_NN of_IN the_DT F_NN -_: measure_NN ._.
+Furthermore_RB ,_, the_DT classifier_NN using_VBG all_DT fea_SYM -_: tures_NNS were_VBD comparable_JJ with_IN the_DT baseline_NN ._.
+However_RB ,_, on_IN the_DT balanced_JJ data_NNS ,_, almost_RB all_DT types_NNS of_IN the_DT features_NNS contributed_VBD to_TO gain_VB the_DT F-measure_NN ._.
+In_IN addition_NN ,_, pre_SYM -_: cision_NN ,_, recall_NN and_CC F-measure_NN of_IN FALL_NN were_VBD better_JJR than_IN the_DT baseline_NN ._.
+From_IN the_DT results_NNS in_IN Table_NNP 4_CD and_CC 5_CD ,_, turn_VB taking_VBG -LRB-_-LRB- Ftu_NNP -RRB-_-RRB- Table_NNP 4_CD :_: Effectiveness_NN of_IN the_DT features_NNS on_IN the_DT imbalanced_JJ test_NN data_NNS Table_NNP 6_CD and_CC 7_CD compare_VBP the_DT classifiers_NNS with_IN and_CC without_IN the_DT combination_NN feature_NN in_IN the_DT imbalanced_JJ and_CC balanced_JJ test_NN data_NNS ,_, respectively_RB ._.
+In_IN Table_NNP 6_CD ,_, the_DT combination_NN feature_NN improves_VBZ both_DT precision_NN and_CC re_SYM -_: call_NN in_IN FALL_NN feature_NN set_VBN ._.
+While_IN ,_, combination_NN of_IN the_DT n-gram_JJ features_NNS increases_VBZ the_DT precision_NN but_CC de_IN -_: creases_NNS recall_VBP and_CC F-measure_VBP ._.
+Therefore_RB ,_, the_DT combi_NNS -_: nation_NN of_IN our_PRP$ proposed_VBN features_NNS worked_VBD well_RB ,_, but_CC the_DT combination_NN of_IN n-gram_JJ not_RB ._.
+In_IN the_DT balanced_JJ test_NN data_NNS -LRB-_-LRB- Table_NNP 7_CD -RRB-_-RRB- ,_, the_DT models_NNS with_IN and_CC without_IN the_DT combination_NN feature_NN are_VBP com_NN -_: parable_NN ._.
+Comparing_VBG Fng_NNP +_CD COMB_NNP and_CC FALL+COMB_NNP in_IN Table_NNP 6_CD ,_, incorporation_NN of_IN the_DT proposed_VBN features_NNS im_SYM -_: proved_VBD the_DT F-measure_NN with_IN a_DT loss_NN of_IN the_DT precision_NN ._.
+In_IN the_DT same_JJ comparison_NN in_IN Table_NNP 7_CD ,_, all_DT three_CD crite_NN -_: ria_NN were_VBD improved_VBN by_IN using_VBG the_DT proposed_VBN features_NNS ._.
+Therefore_RB ,_, it_PRP can_MD be_VB concluded_VBN that_IN our_PRP$ proposed_VBN fea_NN -_: tures_NNS are_VBP effective_JJ for_IN identification_NN of_IN the_DT sympathy_NN ,_, especially_RB when_WRB the_DT dependency_NN between_IN two_CD fea_NN -_: tures_NNS is_VBZ considered_VBN ._.
+Table_NNP 6_CD :_: Evaluation_NN of_IN the_DT combination_NN feature_NN on_IN the_DT im_NN -_: balanced_JJ test_NN data_NNS Feature_NN set_VBN Fng_NNP 0.23_CD 0.11_CD 0.15_CD P_NNP R_NNP F_NN Fng_NNP +_VBD Flen_NNP Fng_NNP +_NNP Ftu_NNP Fng_NNP +_SYM Frw1_SYM Fng_FW +_FW Frw2_FW Fng_FW +_FW Frc1_FW Fng_FW +_FW Frc2_FW Fng_FW +_FW Fda_NNP Fng_NNP +_VBD Fend_NNP FALL_NN 0.24_CD 0.18_CD 0.08_CD 0.11_CD 0.25_CD 0.12_CD 0.16_CD 0.25_CD 0.11_CD 0.15_CD 0.26_CD 0.11_CD 0.15_CD 0.23_CD 0.11_CD 0.15_CD 0.21_CD 0.10_CD 0.14_CD 0.19_CD 0.08_CD 0.11_CD 0.19_CD 0.10_CD 0.13_CD 0.11_CD 0.15_CD Table_NNP 5_CD :_: Effectiveness_NN of_IN the_DT features_NNS on_IN the_DT balanced_JJ test_NN data_NNS Feature_NN set_VBN P_NNP R_NNP F_NN 0.80_CD 0.73_CD 0.76_CD 0.81_CD 0.73_CD 0.77_CD 0.81_CD 0.75_CD 0.78_CD 0.81_CD 0.73_CD 0.77_CD 0.81_CD 0.73_CD 0.77_CD 0.81_CD 0.72_CD 0.76_CD 0.81_CD 0.73_CD 0.77_CD 0.81_CD 0.73_CD 0.77_CD 0.74_CD 0.78_CD 0.77_CD 0.80_CD and_CC repetition_NN of_IN word_NN -LRB-_-LRB- Frw1_JJ and_CC Frw2_JJ -RRB-_-RRB- seem_VBP the_DT most_RBS effective_JJ features_NNS ._.
+Since_IN the_DT increase_NN or_CC de_IN -_: crease_NN caused_VBN by_IN adding_VBG one_CD feature_NN is_VBZ inconsistent_JJ for_IN several_JJ features_NNS on_IN the_DT imbalanced_JJ and_CC balanced_JJ data_NNS ,_, however_RB ,_, the_DT effectiveness_NN of_IN them_PRP are_VBP rather_RB unclear_JJ ._.
+4.2.4_CD Effectiveness_NN of_IN combination_NN feature_NN In_IN this_DT subsection_NN ,_, we_PRP evaluate_VBP the_DT combination_NN feature_NN ._.
+Two_CD sets_NNS of_IN the_DT features_NNS are_VBP investigated_VBN :_: the_DT word_NN n-gram_JJ feature_NN Fng_NNP and_CC all_DT proposed_VBN features_NNS FALL_NN ._.
+For_IN each_DT feature_NN set_NN ,_, the_DT combination_NN features_NNS are_VBP added_VBN to_TO the_DT feature_NN vector_NN of_IN the_DT utterance_NN ._.
+Recall_VB that_IN we_PRP introduce_VBP feature_NN selection_NN for_IN the_DT combination_NN feature_NN ._.
+The_DT parameter_NN Tcomb_NNP was_VBD op_SYM -_: timized_VBN on_IN the_DT development_NN data_NNS ._.
+Tcomb_NNP was_VBD set_VBN as_IN 140_CD for_IN both_DT feature_NN sets_VBZ Fng_NNP and_CC Fall_NN on_IN the_DT imbal_NN -_: anced_VBN data_NNS ._.
+While_IN ,_, it_PRP was_VBD set_VBN as_IN 280_CD and_CC 260_CD for_IN Fng_NNP and_CC Fall_NN on_IN the_DT balanced_JJ data_NNS ,_, respectively_RB ._.
+Fng_NNP Fng_NNP +_VBD Flen_NNP Fng_NNP +_NNP Ftu_NNP Fng_NNP +_SYM Frw1_SYM Fng_FW +_FW Frw2_FW Fng_FW +_FW Frc1_FW Fng_FW +_FW Frc2_FW Fng_FW +_FW Fda_NNP Fng_NNP +_VBD Fend_NNP 0.82_CD FALL_NN 0.83_CD Feature_NNP Set_NNP P_NNP Fng_NNP 0.23_CD Fng_NNP +_CD COMB_NNP 0.31_CD FALL_NN 0.24_CD FALL+COMB_NNP 0.28_CD R_NN F_NN 0.11_CD 0.15_CD 0.09_CD 0.14_CD 0.11_CD 0.15_CD 0.13_CD 0.18_CD Table_NNP 7_CD :_: Evaluation_NN of_IN the_DT combination_NN feature_NN on_IN the_DT bal_NN -_: anced_JJ test_NN data_NNS Feature_NNP Set_NNP P_NNP Fng_NNP 0.80_CD Fng_NNP +_CD COMB_NNP 0.80_CD FALL_NN 0.83_CD FALL+COMB_NNP 0.81_CD R_NN F_NN 0.73_CD 0.76_CD 0.73_CD 0.77_CD 0.77_CD 0.80_CD 0.76_CD 0.80_CD 4.2.5_CD Evaluation_NN of_IN filtering_VBG of_IN negative_JJ samples_NNS The_DT method_NN of_IN negative_JJ sample_NN filtering_VBG was_VBD eval_JJ -_: uated_JJ using_VBG the_DT imbalanced_JJ data_NN set_NN ._.
+First_RB ,_, the_DT pa_NN -_: rameter_NN Sfil_NNP was_VBD optimized_VBN as_IN 0.5_CD that_WDT achieved_VBD the_DT highest_JJS F-measure_NN on_IN the_DT development_NN data_NNS ._.
+Three_CD methods_NNS are_VBP compared_VBN in_IN this_DT experiment_NN :_: a_DT model_NN without_IN the_DT negative_JJ sample_NN filtering_VBG -LRB-_-LRB- w/o_FW Filtering_VBG -RRB-_-RRB- ,_, a_DT model_NN with_IN the_DT filtering_VBG by_IN our_PRP$ proposed_VBN method_NN -LRB-_-LRB- Proposed_NNP Filtering_NNP -RRB-_-RRB- and_CC a_DT model_NN where_WRB the_DT negative_JJ samples_NNS are_VBP randomly_RB removed_VBN -LRB-_-LRB- Random_NNP Filtering_NNP -RRB-_-RRB- ._.
+In_IN Proposed_NNP Filtering_NNP ,_, 25,174_CD negative_JJ samples_NNS were_VBD removed_VBN from_IN the_DT training_NN data_NNS ._.
+In_IN Random_NNP Filtering_NNP ,_, the_DT same_JJ number_NN of_IN the_DT negative_JJ samples_NNS were_VBD randomly_RB removed_VBN ._.
+We_PRP repeated_VBD the_DT training_NN of_IN the_DT classifier_NN with_IN random_JJ filtering_VBG five_CD times_NNS and_CC compared_VBN the_DT average_NN with_IN the_DT other_JJ meth_NN -_: ods_NNS ._.
+Table_NNP 8_CD :_: Evaluation_NN of_IN filtering_VBG methods_NNS PRF_NNP Random_NNP Filtering_NNP Table_NNP 8_CD reveals_VBZ the_DT results_NNS of_IN three_CD methods_NNS ._.
+By_IN the_DT filtering_VBG ,_, the_DT recall_NN was_VBD improved_VBN ,_, while_IN the_DT pre_NN -_: cision_NN declined_VBD ._.
+It_PRP is_VBZ natural_JJ because_IN the_DT classifier_NN tends_VBZ to_TO judge_VB the_DT utterance_NN as_IN sympathetic_JJ -LRB-_-LRB- posi_SYM -_: tive_JJ -RRB-_-RRB- when_WRB the_DT number_NN of_IN the_DT negative_JJ samples_NNS in_IN the_DT training_NN data_NN is_VBZ reduced_VBN ._.
+Since_IN F-measure_NN was_VBD im_SYM -_: proved_VBD ,_, the_DT filtering_VBG of_IN the_DT negative_JJ samples_NNS seems_VBZ to_TO contribute_VB toward_IN improvement_NN of_IN the_DT performance_NN ._.
+However_RB ,_, our_PRP$ proposed_VBN filtering_VBG method_NN was_VBD worse_JJR than_IN the_DT random_JJ sampling_NN ._.
+It_PRP is_VBZ still_RB uncertain_JJ why_WRB the_DT idea_NN to_TO remove_VB the_DT redundant_JJ negative_JJ samples_NNS is_VBZ inappropriate_JJ in_IN this_DT task_NN ._.
+In_IN future_NN ,_, we_PRP will_MD in_IN -_: vestigate_VB the_DT reason_NN and_CC refine_VB the_DT algorithm_NN of_IN the_DT negative_JJ sample_NN filtering_VBG ._.
+4.3_CD Error_NNP Analysis_NNP We_PRP have_VBP conducted_VBN an_DT error_NN analysis_NN to_TO find_VB major_JJ causes_NNS of_IN the_DT errors_NNS ._.
+First_RB ,_, we_PRP found_VBD many_JJ false_JJ positives_NNS -LRB-_-LRB- the_DT sympathetic_JJ utterance_NN is_VBZ wrongly_RB clas_SYM -_: sified_VBN as_IN non-sympathetic_JJ -RRB-_-RRB- and_CC false_JJ negatives_NNS -LRB-_-LRB- the_DT non-sympathetic_JJ utterance_NN is_VBZ wrongly_RB classified_VBN as_IN sympathetic_JJ -RRB-_-RRB- when_WRB the_DT previous_JJ utterance_NN was_VBD long_RB ._.
+In_IN such_JJ cases_NNS ,_, the_DT previous_JJ utterance_NN consisted_VBD of_IN many_JJ sentences_NNS ,_, but_CC only_RB one_CD sentence_NN was_VBD usually_RB related_VBN to_TO the_DT current_JJ utterance_NN ._.
+Although_IN many_JJ fea_NN -_: tures_NNS were_VBD derived_VBN from_IN the_DT previous_JJ utterance_NN ,_, the_DT most_JJS of_IN them_PRP were_VBD irrelevant_JJ ._.
+Such_JJ noisy_JJ features_NNS might_MD cause_VB the_DT classification_NN error_NN ._.
+To_TO overcome_VB this_DT problem_NN ,_, the_DT coherence_NN between_IN the_DT current_JJ and_CC previous_JJ utterance_NN should_MD be_VB considered_VBN ._.
+In_IN other_JJ words_NNS ,_, it_PRP is_VBZ required_VBN to_TO introduce_VB a_DT method_NN to_TO choose_VB only_RB the_DT sentence_NN relevant_JJ to_TO the_DT current_JJ utterance_NN from_IN long_JJ previous_JJ utterance_NN ._.
+Many_JJ errors_NNS were_VBD also_RB found_VBN when_WRB both_CC the_DT cur_NN -_: rent_NN and_CC previous_JJ utterance_NN were_VBD too_RB short_JJ ._.
+We_PRP guessed_VBD that_IN the_DT classification_NN errors_NNS were_VBD caused_VBN by_IN the_DT lack_NN of_IN the_DT features_NNS ._.
+Due_JJ to_TO the_DT feature_NN selection_NN ,_, even_RB the_DT word_NN n-gram_JJ feature_NN was_VBD sometimes_RB not_RB ex_FW -_: tracted_VBN from_IN short_JJ utterance_NN ._.
+One_CD of_IN the_DT solutions_NNS is_VBZ to_TO apply_VB feature_NN selection_NN only_RB for_IN bi-gram_NN and_CC tri_SYM -_: gram_NN while_IN remaining_VBG all_DT uni-gram_NN features_NNS ,_, in_IN order_NN to_TO prevent_VB from_IN extracting_VBG no_DT n-gram_NN feature_NN ._.
+We_PRP also_RB found_VBD that_IN several_JJ false_JJ negatives_NNS were_VBD caused_VBN by_IN the_DT feature_NN Fend_NNP ._.
+Some_DT of_IN the_DT expressions_NNS at_IN the_DT end_NN of_IN the_DT sentence_NN indicate_VBP the_DT speaker_NN 's_POS sym_NN -_: pathy_NN ,_, but_CC not_RB always_RB ._.
+Let_VB us_PRP suppose_VB such_PDT an_DT ex_FW -_: pression_NN appeared_VBD in_IN non-sympathetic_JJ utterance_NN and_CC the_DT lengths_NNS of_IN both_DT current_JJ and_CC previous_JJ utterance_NN were_VBD short_JJ ._.
+In_IN such_JJ cases_NNS ,_, since_IN only_RB a_DT few_JJ fea_NN -_: tures_NNS were_VBD extracted_VBN ,_, the_DT end_NN of_IN the_DT sentence_NN feature_NN strongly_RB worked_VBD to_TO classify_VB the_DT utterance_NN as_IN the_DT sym_NN -_: pathetic_JJ ._.
+The_DT way_NN to_TO incorporate_VB the_DT end_NN expression_NN into_IN the_DT classifier_NN should_MD be_VB refined_VBN ._.
+5_CD Conclusion_NN This_DT paper_NN proposed_VBD a_DT method_NN to_TO identify_VB the_DT sym_NN -_: pathetic_JJ utterance_NN in_IN the_DT free_JJ conversation_NN ._.
+The_DT main_JJ contribution_NN of_IN the_DT paper_NN is_VBZ to_TO propose_VB novel_NN features_NNS for_IN sympathy_NN identification_NN ._.
+Results_NNS of_IN the_DT experi_NNS -_: ments_NNS indicate_VBP that_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- the_DT proposed_VBN features_NNS are_VBP ef_SYM -_: fective_NN ,_, especially_RB when_WRB the_DT pairs_NNS of_IN these_DT features_NNS are_VBP considered_VBN as_IN the_DT additional_JJ features_NNS ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- among_IN the_DT proposed_VBN features_NNS ,_, turn_VB taking_VBG and_CC repetition_NN of_IN the_DT content_JJ words_NNS show_VBP strong_JJ correlation_NN with_IN the_DT sympathetic_JJ utterance_NN ,_, and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- the_DT filtering_VBG of_IN nega_NN -_: tive_JJ samples_NNS is_VBZ important_JJ to_TO improve_VB the_DT F-measure_NN ._.
+F-measure_NN of_IN the_DT proposed_VBN method_NN was_VBD still_RB low_JJ in_IN the_DT extremely_RB imbalanced_JJ positive_JJ and_CC negative_JJ sample_NN data_NNS ._.
+We_PRP proposed_VBD the_DT filtering_VBG method_NN to_TO remove_VB the_DT redundant_JJ negative_JJ samples_NNS ,_, but_CC it_PRP was_VBD worse_JJR than_IN the_DT random_JJ filtering_VBG ._.
+However_RB ,_, since_IN the_DT results_NNS on_IN the_DT balanced_JJ data_NNS were_VBD promising_JJ ,_, we_PRP be_VB -_: lieve_NN that_IN the_DT filtering_VBG of_IN negative_JJ samples_NNS is_VBZ a_DT right_JJ way_NN to_TO improve_VB the_DT performance_NN ._.
+In_IN future_NN ,_, we_PRP will_MD continue_VB to_TO explore_VB a_DT better_JJR way_NN of_IN negative_JJ sample_NN filtering_VBG ._.
+w/o_NNP Filtering_NNP Proposed_NNP Filtering_NNP 0.23_CD 0.16_CD 0.19_CD 0.28_CD 0.13_CD 0.18_CD 0.25_CD 0.18_CD 0.22_CD References_NNP Alexander_NNP V._NNP Libin_NNP and_CC Elena_NNP V._NNP Libin_NNP 2004_CD ._.
+Person_NN -_: Robot_NNP Interactions_NNPS From_IN the_DT Robopsychologists_NNP '_POS Point_NNP of_IN View_NNP :_: The_DT Robotic_NNP Psychology_NNP and_CC Robotherapy_NNP Approach_NNP ._.
+Proceedings_NNP of_IN the_DT IEEE_NNP 92_CD ,_, pp._SYM 1789_CD --_: 1803_CD ._.
+Ryuichiro_NNP Higashinaka_NNP ,_, Kohji_NNP Dohsaka_NNP and_CC Hideki_NNP Isozaki_NNP ._.
+2008_CD ._.
+Effects_NNPS of_IN self-disclosure_NN and_CC empa_NN -_: thy_NN in_IN human-computer_JJ dialogue_NN ._.
+Spoken_NNP Language_NNP Technology_NNP Workshop_NNP ,_, pp._NNP 109_CD --_: 112_CD ._.
+Anderson_NNP ,_, C._NNP and_CC Keltner_NNP ,_, D._NNP 2002_CD ._.
+The_DT role_NN of_IN empa_NN -_: thy_NN in_IN the_DT formation_NN and_CC maintenance_NN of_IN social_JJ bonds_NNS ._.
+Behavioral_JJ and_CC Brain_NNP Sciences_NNPS 25_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, pp._FW 21_CD --_: 22_CD ._.
+Bo_NNP Xiao_NNP ,_, Dogan_NNP Can_MD ,_, Panayiotis_NNP G._NNP Georgiou_NNP ,_, David_NNP Atkins_NNP and_CC Shrikanth_NNP S._NNP Narayanan_NNP ._.
+2012_CD ._.
+Analyzing_VBG the_DT Language_NN of_IN Therapist_NNP Empathy_NNP in_IN Motivational_NNP Interview_NNP based_VBN Psychotherapy_NNP ._.
+Proceedings_NNP of_IN Asia_NNP -_: Pacific_NNP Signal_NNP and_CC Information_NNP Processing_NNP Association_NNP Annual_JJ Summit_NN and_CC Conference_NN ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+SRILM_NNP --_: An_DT Extensible_JJ Lan_NN -_: guage_NN Modeling_NNP Toolkit_NNP ._.
+Proceedings_NNP of_IN International_NNP Conference_NNP on_IN Spoken_NNP Language_NNP Processing_NNP 2_CD ,_, pp._SYM 901_CD --_: 904_CD ._.
+Yasuhiro_NNP Minami_NNP ,_, Ryuichiro_NNP Higashinaka_NNP ,_, Kohji_NNP Dohsaka_NNP ,_, Toyomi_NNP Meguro_NNP ,_, Akira_NNP Mori_NNP and_CC Eisaku_NNP Maeda_NNP ._.
+2012_CD ._.
+POMDP_NNP Dialogue_NNP Control_NNP Based_VBD on_IN Predictive_NNP Action_NNP Probability_NNP Obtained_NNP from_IN Dialogue_NNP Act_NNP Trigram_NNP Sequence_NNP -LRB-_-LRB- in_IN Japanese_JJ -RRB-_-RRB- ._.
+The_DT Transac_NNP -_: tions_NNS of_IN the_DT Institute_NNP of_IN Electronics_NNP ,_, Information_NNP and_CC Communication_NNP Engineers_NNS A_DT ,_, Vol_NNP ._.
+95_CD ,_, No._NN 1_CD ,_, pp._NN 2_CD --_: 15_CD ._.
+Takahiro_NNP Sekino_NNP ,_, Masashi_NNP Inoue_NNP ._.
+2010_CD ._.
+Tagging_VBG Ex_SYM -_: tended_VBD Conversation_NNP Tag_NNP to_TO Utterance_NNP -LRB-_-LRB- in_IN Japanese_JJ -RRB-_-RRB- ._.
+Tohoku-Section_NNP Convention_NNP of_IN Information_NNP Process_NNP -_: ing_NN Society_NNP of_IN Japan_NNP ,_, 10-6-B3-2_NNP ._.
+D._NNP Jurafsky_NNP ,_, E._NNP Shriberg_NNP ,_, D._NNP Biasca_NNP ._.
+1997_CD ._.
+Switchboard_NN SWBD-DAMSL_NN Shallow-Discourse-Function_NNP Anno_NNP -_: tation_NN Coders_NNP Manual_NNP Draft_NNP 13_CD ,_, University_NNP of_IN Col_NNP -_: orado_NN ,_, Institute_NNP of_IN Cognitive_NNP Science_NNP ,_, Tech_NNP ._.
+Rep_NNP ,_, pp._NNP 97-102_CD ._.
+Toyomi_NNP Meguro_NNP ,_, Ryuichiro_NNP Higashinaka_NNP ,_, Hiroaki_NNP Sugiyama_NNP ,_, Yasuhiro_NNP Minami_NNP 2013_CD ._.
+Dialogue_NN act_NN tagging_VBG for_IN microblog_NN utterances_NNS using_VBG semantic_JJ category_NN patterns_NNS -LRB-_-LRB- in_IN Japanese_JJ -RRB-_-RRB- ._.
+IPSJ_NNP SIG_NNP Technical_NNP Report_NNP ,_, Vol_NNP ._.
+2013-SLP-98_NNP ,_, No._NN 1_CD ,_, pp._NN 1_CD --_: 6_CD ._.
+Huifang_NNP Zhang_NNP ._.
+2009_CD ._.
+The_DT Semantic_NNP Type_NNP and_CC Ex_NNP -_: pression_NN Function_NN of_IN YONE_NNP in_IN Natural_NNP Dialogue_NNP -LRB-_-LRB- in_IN Japanese_JJ -RRB-_-RRB- ._.
+TSUKUBA_NNP WORKING_NNP PAPERS_NNS IN_IN LIN_NNP -_: GUISTICS_NNP ,_, No._NN 2_CD ,_, pp._SYM 17_CD --_: 32_CD ._.
+Masako_NNP Itoh_NNP and_CC Ryota_NNP Nagata_NNP ._.
+2009_CD ._.
+Rhetorical_NNP Func_NNP -_: tion_NN of_IN a_DT Sentence-Final_NNP Particle_NNP for_IN Constructing_VBG In_IN -_: teraction_NN in_IN Discourse_NNP -LRB-_-LRB- in_IN Japanese_JJ -RRB-_-RRB- ._.
+Cognitive_JJ stud_NN -_: ies_NNS :_: bulletin_NN of_IN the_DT Japanese_JJ Cognitive_NNP Science_NNP Soci_NNP -_: ety_NN ,_, Vol_NNP ._.
+14_CD ,_, No._NN 3_CD ,_, pp._SYM 282_CD --_: 291_CD ._.
+Chang_NNP ,_, Chih-Chung_NNP and_CC Lin_NNP ,_, Chih-Jen_NNP ._.
+C.-C_NN ._.
+Chang_NNP and_CC C.-J_NNP ._.
+Lin_NNP ._.
+2001_CD ._.
+LIBSVM_NNP :_: A_NNP library_NN for_IN support_NN vector_NN machines_NNS ._.
+Software_NNP available_JJ at_IN http://www.csie.ntu.edu.tw/_JJ ̃cjlin_NN /_NN libsvm_NN ._.
+Daelemans_NNP ,_, W._NNP ,_, Zavrel_NNP ,_, J._NNP ,_, Van_NNP der_NNP Sloot_NNP ,_, K._NNP ,_, and_CC Van_NNP den_NN Bosch_NNP ,_, A._NN 2010_CD ._.
+TiMBL_NNP :_: Tilburg_NNP Memory_NN Based_VBD Learner_NNP ,_, version_NN 6.3_CD ,_, Reference_NNP Guide_NNP ._.
+Technical_NNP Re_NNP -_: port_JJ ILK_NNP 03-10_CD ,_, Tilburg_NNP University_NNP ,_, ILK_NNP ._.
+National_NNP Institute_NNP for_IN Japanese_JJ Language_NN and_CC Linguistics_NNP ._.
+2004_CD ._.
+Bunruigoihyo_NNP ._.
+Dainippon_NNP tosho_NN ._.

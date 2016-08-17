@@ -1,0 +1,330 @@
+Acquiring_VBG distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS by_IN using_VBG word2vec_CD Abstract_JJ We_PRP propose_VBP three_CD methods_NNS for_IN obtaining_VBG dis_SYM -_: tributed_JJ representations_NNS for_IN verb-object_JJ pairs_NNS in_IN predicated_VBN argument_NN structures_NNS by_IN using_VBG word2vec_CD ._.
+Word2vec_JJ is_VBZ a_DT method_NN for_IN acquir_NN -_: ing_NN distributed_VBN representations_NNS for_IN a_DT word_NN by_IN retrieving_VBG a_DT weight_NN matrix_NN in_IN neural_JJ networks_NNS ._.
+First_RB ,_, we_PRP analyze_VBP a_DT large_JJ amount_NN of_IN text_NN with_IN an_DT HPSG_NNP parser_NN ;_: then_RB ,_, we_PRP obtain_VBP distributed_VBN representations_NNS for_IN the_DT verb-object_JJ pairs_NNS by_IN learning_VBG neural_JJ networks_NNS from_IN the_DT analyzed_VBN text_NN ._.
+We_PRP evaluated_VBD our_PRP$ methods_NNS by_IN measur_NN -_: ing_VBG the_DT MRR_NNP score_NN for_IN verb-object_JJ pairs_NNS and_CC the_DT Spearman_NNP 's_POS rank_NN correlation_NN coefficient_NN for_IN verb-object_JJ pairs_NNS in_IN experiments_NNS ._.
+1_CD Introduction_NNP Natural_NNP language_NN processing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- based_VBN on_IN cor_NN -_: pora_NN has_VBZ become_VBN more_RBR common_JJ thanks_NNS to_TO the_DT im_NN -_: proving_VBG performance_NN of_IN computers_NNS and_CC development_NN of_IN various_JJ corpora_NN ._.
+In_IN corpus-based_JJ NLP_NNP ,_, word_NN rep_NN -_: resentations_NNS and_CC language_NN statistics_NNS are_VBP automati_JJ -_: cally_RB extracted_VBN from_IN large_JJ amounts_NNS of_IN text_NN in_IN order_NN to_TO learn_VB models_NNS for_IN specific_JJ NLP_NNP tasks_NNS ._.
+Complex_JJ representations_NNS of_IN words_NNS or_CC phrases_NNS can_MD be_VB expected_VBN to_TO yield_VB a_DT precise_JJ model_NN ,_, but_CC the_DT data_NNS sparseness_NN problem_NN makes_VBZ it_PRP difficult_JJ to_TO learn_VB good_JJ models_NNS with_IN them_PRP ;_: complex_JJ representations_NNS tend_VBP not_RB to_TO appear_VB or_CC appear_VB only_RB a_DT few_JJ times_NNS in_IN large_JJ corpora_NN ._.
+For_IN ex_FW -_: ample_JJ ,_, the_DT models_NNS of_IN statistical_JJ machine_NN translation_NN are_VBP learned_VBN from_IN various_JJ statistical_JJ information_NN in_IN monolingual_JJ corpora_NN or_CC bilingual_JJ corpora_NN ._.
+However_RB ,_, low-frequency_JJ word_NN representations_NNS are_VBP not_RB learned_VBN well_RB ,_, and_CC consequently_RB ,_, they_PRP are_VBP processed_VBN as_IN un_NN -_: known_VBN words_NNS ,_, which_WDT causes_VBZ mistranslations_NNS ._.
+It_PRP is_VBZ necessary_JJ not_RB only_RB to_TO process_NN NLP_NNP tasks_NNS by_IN match_NN -_: ing_NN surface_NN forms_NNS but_CC to_TO generalize_VB the_DT language_NN rep_NN -_: resentations_NNS into_IN semantic_JJ representations_NNS ._.
+Many_JJ approaches_NNS represent_VBP words_NNS with_IN vector_NN space_NN models_NNS so_IN that_IN texts_NNS can_MD be_VB analyzed_VBN us_PRP -_: ing_VBG semantic_JJ representations_NNS for_IN individual_JJ words_NNS or_CC multi-word_JJ expressions_NNS ._.
+These_DT methods_NNS can_MD be_VB clas_SYM -_: sified_VBN into_IN two_CD approaches_NNS :_: the_DT word_NN occurrence_NN ap_SYM -_: proach_NN and_CC the_DT word_NN co-occurrence_NN approach_NN ._.
+The_DT word_NN occurrence_NN approach_NN includes_VBZ Latent_NNP Seman_NNP -_: tic_JJ Analysis_NNP -LRB-_-LRB- LSA_NNP -RRB-_-RRB- -LRB-_-LRB- Landauer_NNP and_CC Dumais_NNP ,_, 1997_CD -RRB-_-RRB- ,_, Probabilistic_NNP LSA_NNP -LRB-_-LRB- PLSA_NNP -RRB-_-RRB- -LRB-_-LRB- Hofman_NNP ,_, 1999_CD -RRB-_-RRB- and_CC La_NNP -_: tent_NN Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ,_, which_WDT acquire_VBP word_NN representations_NNS from_IN the_DT dis_FW -_: tributions_NNS of_IN word_NN frequencies_NNS in_IN individual_JJ docu_NN -_: ments_NNS -LRB-_-LRB- a_DT word-document_NN matrix_NN -RRB-_-RRB- ._.
+Recently_RB ,_, many_JJ researchers_NNS have_VBP taken_VBN an_DT interest_NN in_IN the_DT word_NN co_SYM -_: occurrence_NN approach_NN ,_, including_VBG distributional_JJ rep_NN -_: resentations_NNS and_CC neural_JJ network_NN language_NN models_NNS -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013b_CD ;_: Mnih_NNP and_CC Kavukcuoglu_NNP ,_, 2013_CD ;_: Pennington_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT word_NN co-occurrence_NN approach_NN uses_VBZ statistics_NNS of_IN the_DT context_NN around_IN a_DT word_NN ._.
+For_IN example_NN ,_, the_DT dis_SYM -_: tributional_JJ representations_NNS for_IN a_DT word_NN are_VBP defined_VBN as_IN a_DT vector_NN that_WDT represents_VBZ a_DT distribution_NN of_IN words_NNS -LRB-_-LRB- word_NN frequencies_NNS -RRB-_-RRB- in_IN a_DT fixed-size_JJ window_NN around_IN the_DT word_NN ._.
+The_DT neural_JJ network_NN language_NN models_NNS ,_, in_IN -_: cluding_VBG word2vec_CD -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- ,_, GloVe_NNP -LRB-_-LRB- Pennington_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC vector_NN Log-Bilinear_NNP Language_NNP model_NN -LRB-_-LRB- vLBL_NNP -RRB-_-RRB- -LRB-_-LRB- Mnih_NNP and_CC Kavukcuoglu_NNP ,_, 2013_CD -RRB-_-RRB- ,_, generate_VB distributed_VBN rep_NN -_: resentations_NNS ,_, which_WDT are_VBP dense_JJ and_CC low-dimensional_JJ vectors_NNS representing_VBG word_NN meanings_NNS ,_, by_IN learning_VBG a_DT neural_JJ network_NN that_WDT solves_VBZ a_DT pseudo-task_NN of_IN predict_VBP -_: ing_VBG a_DT word_NN given_VBN its_PRP$ surrounding_VBG words_NNS ._.
+Word2vec_JJ is_VBZ preferred_VBN in_IN NLP_NNP because_IN it_PRP learns_VBZ distributed_VBN rep_NN -_: resentations_NNS very_RB efficiently_RB ._.
+Neural_JJ network_NN lan_NN -_: guage_NN models_NNS have_VBP semantic_JJ compositionality_NN for_IN word-word_JJ relations_NNS by_IN calculating_VBG vector_NN represen_NN -_: tations_NNS ;_: e.g._FW ,_, `_`` king_NN '_'' -_: `_`` man_NN '_'' +_CD `_`` woman_NN '_'' is_VBZ close_RB to_TO `_`` queen_NN ._. '_''
+However_RB ,_, they_PRP acquire_VBP the_DT distributed_VBN rep_NN -_: resentations_NNS for_IN a_DT word_NN ,_, not_RB phrase_NN structures_NNS such_JJ as_IN verb_NN and_CC object_NN pairs_NNS ._.
+It_PRP is_VBZ necessary_JJ to_TO obtain_VB rep_NN -_: resentations_NNS for_IN phrases_NNS or_CC sentences_NNS to_TO be_VB used_VBN as_IN natural_JJ language_NN representations_NNS ._.
+We_PRP devised_VBD three_CD methods_NNS for_IN acquiring_VBG dis_SYM -_: tributed_JJ representations_NNS for_IN verb-object_JJ pairs_NNS by_IN us_PRP -_: ing_VBG word2vec_CD ._.
+We_PRP experimentally_RB verified_VBD that_IN the_DT distributed_VBN representations_NNS of_IN different_JJ verb_NN and_CC ob_SYM -_: ject_NN pairs_NNS have_VBP the_DT same_JJ meaning_NN ._.
+We_PRP focused_VBD on_IN verb-object_JJ pairs_NNS consisting_VBG of_IN verbs_NNS whose_WP$ mean_NN -_: ing_NN is_VBZ vague_JJ ,_, such_JJ as_IN light-verbs_NNS ,_, e.g._FW ,_, the_DT `_`` do_VB '_'' and_CC `_`` dishes_NNS '_POS pair_NN in_IN ``_`` do_VBP dishes_NNS ''_'' ._.
+The_DT following_VBG two_CD sen_SYM -_: tences_NNS are_VBP examples_NNS that_WDT have_VBP similar_JJ meanings_NNS but_CC whose_WP$ phrase_NN structures_NNS are_VBP different_JJ ._.
+1_LS ._.
+I_PRP wash_VBP the_DT dishes_NNS ._.
+2_LS ._.
+I_PRP do_VBP the_DT dishes_NNS ._.
+The_DT representations_NNS for_IN the_DT verb-object_JJ pairs_NNS in_IN the_DT first_JJ sentence_NN is_VBZ ``_`` wash_VB -LRB-_-LRB- dishes_NNS -RRB-_-RRB- ,_, ''_'' and_CC those_DT for_IN the_DT second_JJ sentence_NN is_VBZ ``_`` do_VBP -LRB-_-LRB- dishes_NNS -RRB-_-RRB- ''_'' with_IN the_DT light_JJ verb_NN `_`` do_VB '_'' ._.
+Despite_IN the_DT difference_NN between_IN the_DT rep_NN -_: resentations_NNS of_IN these_DT sentences_NNS ,_, they_PRP have_VBP the_DT same_JJ meaning_NN ``_`` I_PRP wash_VBP the_DT dishes_NNS ._. ''_''
+As_IN such_JJ ,_, there_EX are_VBP various_JJ sentences_NNS that_WDT have_VBP the_DT same_JJ meaning_NN ,_, but_CC different_JJ representations_NNS ._.
+We_PRP examined_VBD the_DT perfor_NN -_: mance_NN of_IN each_DT method_NN by_IN measuring_VBG the_DT distance_NN between_IN distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS -LRB-_-LRB- `_`` do_VB '_'' and_CC `_`` dishes_NNS '_POS pair_NN -RRB-_-RRB- and_CC those_DT for_IN the_DT cor_NN -_: responding_VBG basic_JJ verb_NN -LRB-_-LRB- `_`` wash_NN '_'' -RRB-_-RRB- or_CC predicated_VBN argu_SYM -_: ment_NN structures_NNS -LRB-_-LRB- ``_`` wash_NN -LRB-_-LRB- dishes_NNS -RRB-_-RRB- ''_'' -RRB-_-RRB- ._.
+We_PRP also_RB experi_VB -_: mentally_RB compared_VBN the_DT previous_JJ methods_NNS and_CC ours_JJ on_IN the_DT same_JJ data_NN set_NN used_VBN in_IN -LRB-_-LRB- Mitchell_NNP and_CC Lapata_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+2_CD Related_JJ work_NN There_EX are_VBP many_JJ methods_NNS for_IN acquiring_VBG word_NN repre_NN -_: sentations_NNS in_IN vector_NN space_NN models_NNS ._.
+These_DT methods_NNS can_MD be_VB classified_VBN into_IN two_CD approaches_NNS :_: the_DT word_NN oc_SYM -_: currence_NN approach_NN and_CC the_DT word_NN co-occurrence_NN ap_SYM -_: proach_NN ._.
+The_DT word_NN occurrence_NN approach_NN ,_, including_VBG Latent_NNP Semantic_NNP Analysis_NNP -LRB-_-LRB- LSA_NNP -RRB-_-RRB- -LRB-_-LRB- Landauer_NNP and_CC Dumais_NNP ,_, 1997_CD -RRB-_-RRB- ,_, Probabilistic_NNP LSA_NNP -LRB-_-LRB- PLSA_NNP -RRB-_-RRB- -LRB-_-LRB- Hofman_NNP ,_, 1999_CD -RRB-_-RRB- and_CC Latent_NNP Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ,_, presupposes_VBZ that_IN distributions_NNS of_IN word_NN fre_NN -_: quencies_NNS for_IN each_DT document_NN -LRB-_-LRB- a_DT word-document_NN ma_SYM -_: trix_NN -RRB-_-RRB- are_VBP given_VBN as_IN input_NN ._.
+In_IN the_DT word_NN frequency_NN approach_NN ,_, word_NN representations_NNS are_VBP learned_VBN by_IN ap_SYM -_: plying_VBG singular_JJ value_NN decomposition_NN to_TO the_DT word_NN -_: document_NN matrix_NN in_IN LSA_NNP ,_, or_CC learning_VBG probabilities_NNS for_IN hidden_JJ variables_NNS in_IN PLSA_NNP or_CC LDA_NNP ._.
+However_RB ,_, in_IN the_DT word_NN frequency_NN approach_NN ,_, the_DT word_NN frequencies_NNS for_IN a_DT document_NN are_VBP given_VBN as_IN a_DT bag_NN of_IN words_NNS -LRB-_-LRB- BoW_NN -RRB-_-RRB- ,_, and_CC consequently_RB ,_, the_DT information_NN on_IN the_DT word_NN order_NN or_CC phrase_NN structure_NN is_VBZ not_RB considered_VBN in_IN these_DT models_NNS ._.
+The_DT co-occurrence_JJ frequency_NN approach_NN ,_, includ_NN -_: ing_VBG distributional_JJ representations_NNS and_CC neural_JJ net_NN -_: work_NN language_NN models_NNS ,_, uses_VBZ statistics_NNS of_IN the_DT con_NN -_: text_NN around_IN a_DT word_NN ._.
+The_DT distributional_JJ represen_NN -_: tations_NNS for_IN a_DT word_NN w_NN are_VBP defined_VBN as_IN a_DT vector_NN that_WDT represents_VBZ the_DT distribution_NN of_IN words_NNS -LRB-_-LRB- word_NN frequen_NN -_: cies_NNS -RRB-_-RRB- in_IN a_DT fixed-size_JJ window_NN around_IN word_NN w_NN ,_, or_CC the_DT distribution_NN of_IN dependencies_NNS of_IN word_NN w_NN ,_, following_VBG the_DT distributional_JJ hypothesis_NN -LRB-_-LRB- Firth_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+Alter_VB -_: natively_RB ,_, neural_JJ network_NN language_NN models_NNS ,_, includ_NN -_: ing_NN word2vec_NNS -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- ,_, GloVe_NNP -LRB-_-LRB- Pennington_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC the_DT vector_NN Log-Bilinear_NNP Language_NNP model_NN -LRB-_-LRB- vLBL_NNP -RRB-_-RRB- -LRB-_-LRB- Mnih_NNP and_CC Kavukcuoglu_NNP ,_, 2013_CD -RRB-_-RRB- ,_, generate_VB dense_JJ and_CC low_JJ -_: dimensional_JJ vectors_NNS that_WDT represent_VBP word_NN meanings_NNS by_IN learning_VBG a_DT neural_JJ network_NN that_WDT solves_VBZ a_DT pseudo_NN -_: task_NN in_IN which_WDT the_DT neural_JJ network_NN predicts_VBZ a_DT word_NN given_VBN surrounding_VBG words_NNS ._.
+After_IN the_DT training_NN of_IN the_DT neural_JJ network_NN on_IN a_DT large_JJ corpus_NN ,_, the_DT word_NN vec_NN -_: tor_NN for_IN w_NN is_VBZ acquired_VBN by_IN retrieving_VBG the_DT weights_NNS be_VB -_: tween_NN w_NN and_CC the_DT hidden_JJ variables_NNS in_IN the_DT neural_JJ network_NN -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Collobert_NNP and_CC We_PRP -_: ston_NN ,_, 2008_CD -RRB-_-RRB- ._.
+Word2vec_JJ is_VBZ preferred_VBN in_IN NLP_NNP because_IN it_PRP learns_VBZ distributed_VBN representations_NNS very_RB efficiently_RB ._.
+The_DT conventional_JJ methods_NNS for_IN neural_JJ network_NN lan_NN -_: guage_NN models_NNS take_VBP several_JJ weeks_NNS to_TO learn_VB their_PRP$ mod_NN -_: els_NNS on_IN tens_NNS of_IN millions_NNS sentences_NNS in_IN Wikipedia_NNP -LRB-_-LRB- Col_NNP -_: lobert_NN et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ likely_JJ possible_JJ for_IN word2vec_CD to_TO reduce_VB the_DT calculation_NN time_NN dramatically_RB ._.
+How_WRB -_: ever_RB ,_, these_DT models_NNS basically_RB learn_VBP word-to-word_JJ re_SYM -_: lations_NNS ,_, not_RB phrase_NN or_CC sentence_NN structures_NNS ._.
+When_WRB we_PRP make_VBP distributed_VBN representations_NNS for_IN phrases_NNS or_CC sentences_NNS ,_, it_PRP is_VBZ necessary_JJ to_TO generate_VB con_NN -_: v_NN -LRB-_-LRB- He_PRP runs_VBZ the_DT company_NN -RRB-_-RRB- v_NN -LRB-_-LRB- runs_VBZ the_DT company_NN -RRB-_-RRB- v_NN -LRB-_-LRB- the_DT company_NN -RRB-_-RRB- v_NN -LRB-_-LRB- He_PRP -RRB-_-RRB- v_FW -LRB-_-LRB- runs_NNS -RRB-_-RRB- v_VBP -LRB-_-LRB- the_DT -RRB-_-RRB- v_FW -LRB-_-LRB- company_NN -RRB-_-RRB- stitutive_JJ distributed_VBN representations_NNS for_IN phrases_NNS or_CC sentences_NNS based_VBN on_IN the_DT principle_NN of_IN compositional_JJ -_: ity_NN ._.
+Mitchell_NNP and_CC Lapata_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- and_CC Mitchell_NNP and_CC Lapata_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- proposed_VBD the_DT add_VB model_NN ,_, which_WDT gener_SYM -_: ates_NNS distributed_VBN representations_NNS for_IN phrase_NN structures_NNS ,_, whereas_IN Goller_NNP and_CC Ku_NNP ̈chler_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- ,_, Socher_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- and_CC Tsubaki_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- proposed_VBN Recursive_NNP Neural_NNP Network_NNP -LRB-_-LRB- RNN_NNP -RRB-_-RRB- models_NNS for_IN phrase_NN struc_NN -_: tures_NNS ._.
+Recently_RB ,_, new_JJ models_NNS based_VBN on_IN tensor_NN factor_NN -_: ization_NN have_VBP been_VBN proposed_VBN -LRB-_-LRB- Baroni_NNP and_CC Zamparelli_NNP ,_, 2010_CD ;_: Grefenstette_NNP and_CC Sadrzadeh_NNP ,_, 2011_CD ;_: Kartsaklis_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT add_VBP model_NN is_VBZ a_DT method_NN to_TO generate_VB distributed_VBN representations_NNS for_IN phrase_NN structures_NNS or_CC multi-word_JJ expressions_NNS by_IN adding_VBG distributed_VBN representations_NNS for_IN each_DT word_NN that_WDT constitutes_VBZ the_DT phrase_NN structure_NN ._.
+However_RB ,_, the_DT word_NN order_NN and_CC syntactic_NN relations_NNS are_VBP lost_VBN as_IN a_DT result_NN of_IN the_DT adding_VBG in_IN the_DT model_NN ._.
+For_IN ex_FW -_: ample_JJ ,_, suppose_VB that_IN we_PRP have_VBP the_DT distributed_VBN repre_NN -_: sentations_NNS for_IN a_DT verb_NN ,_, a_DT subject_JJ and_CC an_DT object_NN ._.
+The_DT result_NN of_IN adding_VBG the_DT distributed_VBN representations_NNS is_VBZ the_DT same_JJ if_IN we_PRP change_VBP the_DT order_NN of_IN the_DT subject_JJ and_CC the_DT object_NN ._.
+For_IN example_NN ,_, consider_VB the_DT distributed_VBN repre_NN -_: sentations_NNS for_IN the_DT following_VBG two_CD sentences_NNS ._.
+•_CD The_DT girl_NN gave_VBD a_DT present_JJ ._.
+•_CD A_DT present_JJ gave_VBD the_DT girl_NN ._.
+The_DT distributed_VBN representations_NNS for_IN these_DT sentences_NNS are_VBP as_IN follows_VBZ ._.
+v_NN -LRB-_-LRB- the_DT -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- girl_NN -RRB-_-RRB- +_NN v_NN -LRB-_-LRB- gave_VBD -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- a_DT -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- present_JJ -RRB-_-RRB- =_SYM v_FW -LRB-_-LRB- a_DT -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- present_JJ -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- gave_VBD -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- the_DT -RRB-_-RRB- +_FW v_FW -LRB-_-LRB- girl_NN -RRB-_-RRB- where_WRB v_NN -LRB-_-LRB- w_FW -RRB-_-RRB- is_VBZ the_DT distributed_VBN representations_NNS for_IN word_NN w_NN ._.
+It_PRP is_VBZ necessary_JJ for_IN the_DT models_NNS to_TO be_VB sen_SYM -_: sitive_NN to_TO the_DT word_NN order_NN to_TO make_VB a_DT difference_NN be_VB -_: tween_NN these_DT sentences_NNS ._.
+To_TO solve_VB these_DT problems_NNS ,_, various_JJ approaches_NNS have_VBP been_VBN proposed_VBN ._.
+For_IN exam_NN -_: ple_NN ,_, a_DT method_NN that_WDT adds_VBZ weights_NNS to_TO verbal_JJ vectors_NNS ap_SYM -_: pearing_NN ahead_RB or_CC one_CD that_WDT assigns_VBZ word-order_NN num_NN -_: bers_NNS to_TO n-grams_NNS was_VBD proposed_VBN ._.
+RNNM_NNP can_MD acquire_VB distributed_VBN representations_NNS for_IN one_CD sentence_NN using_VBG RNN_NNP and_CC a_DT given_VBN syntactic_NN tree_NN -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2011_CD ;_: Socher_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+RNNM_NNP makes_VBZ use_NN of_IN syntactic_JJ trees_NNS of_IN sentences_NNS ,_, as_IN shown_VBN in_IN Figure_NN 1_CD ._.
+It_PRP calculates_VBZ a_DT distributed_VBN representation_NN for_IN the_DT parent_NN node_NN from_IN Figure_NN 1_CD :_: RNNM_NNP structure_NN with_IN syntax_NN tree_NN the_DT distributed_VBN representations_NNS for_IN the_DT child_NN nodes_VBZ in_IN the_DT syntactic_JJ trees_NNS ._.
+However_RB ,_, it_PRP uses_VBZ only_RB the_DT skeletal_JJ structures_NNS of_IN the_DT syntactic_JJ trees_NNS ;_: category_NN and_CC sub_NN -_: ject_NN information_NN in_IN the_DT syntactic_JJ trees_NNS are_VBP not_RB used_VBN ._.
+Hashimoto_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- proposed_VBD a_DT new_JJ method_NN that_WDT acquires_VBZ distributed_VBN representations_NNS for_IN one_CD sentence_NN with_IN information_NN on_IN words_NNS and_CC phrase_NN structures_NNS by_IN using_VBG the_DT parse_NN trees_NNS generated_VBN by_IN an_DT HPSG_NNP parser_NN called_VBD Enju_NNP ._.
+Tensor_NNP factorization_NN is_VBZ a_DT method_NN that_WDT represents_VBZ word_NN meaning_NN with_IN not_RB only_RB vectors_NNS but_CC also_RB ma_SYM -_: trices_NNS ._.
+For_IN example_NN ,_, a_DT concept_NN `_`` car_NN '_'' has_VBZ many_JJ attributes_NNS such_JJ as_IN information_NN about_IN color_NN ,_, shape_NN ,_, and_CC functions_NNS ._.
+It_PRP seems_VBZ to_TO be_VB difficult_JJ to_TO represent_VB phrases_NNS or_CC sentences_NNS with_IN a_DT fixed-size_JJ vector_NN because_IN many_JJ concepts_NNS can_MD appear_VB in_IN a_DT sentence_NN and_CC each_DT concept_NN has_VBZ its_PRP$ own_JJ attributes_NNS ._.
+Baroni_NNP and_CC Zampar_NNP -_: elli_NNS -LRB-_-LRB- 2010_CD -RRB-_-RRB- tried_VBD to_TO represent_VB attribute_NN information_NN of_IN each_DT word_NN as_IN a_DT product_NN of_IN a_DT matrix_NN and_CC a_DT vector_NN ._.
+Grefenstette_NNP and_CC Sadrzadeh_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- followed_VBD this_DT ap_SYM -_: proach_NN and_CC proposed_VBD new_JJ method_NN that_WDT obtains_VBZ the_DT representations_NNS of_IN verb_NN meaning_NN as_IN tensors_NNS ._.
+Kart_SYM -_: saklis_FW et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- proposed_VBD a_DT method_NN that_WDT calculates_VBZ representations_NNS for_IN sentences_NNS or_CC phrases_NNS containing_VBG a_DT subject_NN ,_, a_DT verb_NN and_CC an_DT object_NN ,_, based_VBN on_IN Grefenstette_NNP and_CC Sadrzadeh_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- 's_POS method_NN ._.
+Recently_RB ,_, three_CD di_FW -_: mensional_JJ tensors_NNS have_VBP been_VBN used_VBN for_IN representing_VBG the_DT relations_NNS of_IN a_DT subject_NN ,_, a_DT verb_NN and_CC an_DT object_NN -LRB-_-LRB- de_FW Cruys_FW ,_, 2009_CD ;_: de_FW Cruys_FW et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+3_CD Word2vec_JJ Word2vec_JJ -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013a_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- is_VBZ the_DT method_NN to_TO obtain_VB distributed_VBN represen_SYM -_: tations_NNS for_IN a_DT word_NN by_IN using_VBG neural_JJ networks_NNS with_IN one_CD hidden_JJ layer_NN ._.
+It_PRP learns_VBZ neural_JJ network_NN models_NNS INPUT_NNP HIDDEN_NNP W_NNP -LRB-_-LRB- t-2_JJ -RRB-_-RRB- W_NNP -LRB-_-LRB- t-1_JJ -RRB-_-RRB- SUM_NNP W_NNP -LRB-_-LRB- t_SYM +1_CD -RRB-_-RRB- OUTPUT_NN W_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- and_CC 1-of-k_JJ vectors_NNS for_IN the_DT surrounding_VBG words_NNS wt_VB −_CD k_NN ,_, ..._: ,_, wt_VB −_CD 1_CD ,_, wt_VB +1_CD ,_, ..._: ,_, wk_NN are_VBP output_NN ._.
+4_LS Proposed_VBN methods_NNS This_DT section_NN explains_VBZ the_DT proposed_VBN methods_NNS to_TO ob_SYM -_: tain_VB the_DT distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS by_IN using_VBG word2vec_CD ._.
+First_RB ,_, we_PRP explain_VBP the_DT base_NN -_: line_NN for_IN comparison_NN of_IN the_DT proposed_VBN methods_NNS ._.
+Then_RB ,_, we_PRP describe_VBP the_DT proposed_VBN methods_NNS ._.
+4.1_CD Baseline_NN method_NN The_DT baseline_NN method_NN is_VBZ the_DT add_VB model_NN using_VBG word2vec_CD ._.
+Word2vec_JJ is_VBZ first_JJ trained_VBN with_IN a_DT large_JJ amount_NN of_IN text_NN ;_: then_RB ,_, distributed_VBN represen_SYM -_: tations_NNS for_IN each_DT word_NN are_VBP obtained_VBN ._.
+For_IN exam_NN -_: ple_NN ,_, the_DT vector_NN for_IN ``_`` read_VB ''_'' is_VBZ obtained_VBN as_IN ``_`` read_VB =_SYM -LRB-_-LRB- 1.016257_CD ,_, -1.567719_CD ,_, -1.891073_CD ,_, ..._: ,0.578905_CD ,_, 1.430178_CD ,_, 1.616185_CD -RRB-_-RRB- ''_'' ._.
+Distributed_VBN representations_NNS for_IN a_DT verb-object_JJ pair_NN are_VBP obtained_VBN by_IN adding_VBG the_DT vec_NN -_: tor_NN for_IN the_DT verb_NN and_CC the_DT vector_NN for_IN the_DT object_NN ._.
+4.2_CD Method_NN 1_CD The_DT CBOW_NNP model_NN of_IN word2vec_CD is_VBZ learned_VBN in_IN a_DT pseudo-task_NN that_WDT predicts_VBZ a_DT word_NN from_IN surrounding_VBG words_NNS in_IN the_DT text_NN ._.
+Thus_RB ,_, we_PRP expect_VBP that_DT distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS can_MD be_VB acquired_VBN when_WRB the_DT object_NN is_VBZ put_VBN near_IN the_DT verb_NN ._.
+A_DT large_JJ amount_NN of_IN training_NN text_NN is_VBZ parsed_VBN by_IN Enju_NNP ,_, and_CC new_JJ training_NN text_NN data_NNS is_VBZ generated_VBN by_IN inserting_VBG the_DT object_NN just_RB af_SYM -_: ter_NN the_DT verb_NN for_IN all_DT verb-object_JJ pairs_NNS appearing_VBG in_IN the_DT corpus_NN as_IN follows_VBZ ._.
+-LRB-_-LRB- original_JJ -RRB-_-RRB- I_PRP did_VBD many_JJ large_JJ white_JJ and_CC blue_JJ round_NN dishes_NNS ._.
+-LRB-_-LRB- modified_VBN -RRB-_-RRB- I_PRP do_VBP dish_VB many_JJ large_JJ white_JJ and_CC blue_JJ round_NN dish_NN ._.
+Enju_NNP -LRB-_-LRB- Miyao_NNP et_FW al._FW ,_, 2005_CD ;_: Miyao_NNP and_CC Tsujii_NNP ,_, 2005_CD ;_: Ninomiya_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- is_VBZ a_DT parser_NN that_WDT performs_VBZ high_JJ -_: speed_NN and_CC high-precision_NN parsing_NN and_CC generates_VBZ syn_SYM -_: tactic_NN structures_NNS based_VBN on_IN HPSG_NNP theory_NN -LRB-_-LRB- Pollard_NNP and_CC Sag_NNP ,_, 1994_CD -RRB-_-RRB- ,_, a_DT sophisticated_JJ grammar_NN theory_NN in_IN lin_NN -_: guistics_NNS ._.
+In_IN addition_NN ,_, Enju_NNP can_MD generate_VB predicate_NN argument_NN structures_NNS ._.
+The_DT Stanford_NNP Parser_NNP -LRB-_-LRB- de_FW Marn_NNP -_: effe_NN et_FW al._FW ,_, 2006_CD ;_: Chen_NNP and_CC D.Manning_NNP ,_, 2014_CD -RRB-_-RRB- is_VBZ of_IN -_: ten_CD used_VBN ,_, but_CC it_PRP can_MD analyze_VB only_RB syntactic_JJ structures_NNS ._.
+Therefore_RB ,_, we_PRP used_VBD Enju_NNP ,_, which_WDT can_MD parse_VB syntac_NN -_: tic_JJ structures_NNS and_CC predicate_VB argument_NN structures_NNS ._.
+In_IN W_NNP -LRB-_-LRB- t_SYM +2_CD -RRB-_-RRB- INPUT_NNP Figure_NNP 2_CD :_: CBOW_NNP HIDDEN_NNP OUTPUT_NNP W_NNP -LRB-_-LRB- t-2_JJ -RRB-_-RRB- W_NNP -LRB-_-LRB- t-1_JJ -RRB-_-RRB- W_NNP -LRB-_-LRB- t_SYM +1_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- t_SYM +2_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- from_IN large_JJ texts_NNS by_IN solving_VBG a_DT pseudo-task_NN to_TO predict_VB a_DT word_NN from_IN surrounding_VBG words_NNS in_IN the_DT text_NN ._.
+The_DT word_NN weights_NNS between_IN the_DT input_NN layer_NN and_CC hidden_JJ layer_NN are_VBP extracted_VBN from_IN the_DT network_NN and_CC become_VB the_DT distributed_VBN representation_NN for_IN the_DT words_NNS ._.
+Mikolov_NNP et_FW al._FW proposed_VBN two_CD types_NNS of_IN network_NN for_IN word2vec_CD ,_, the_DT Continuous_NNP Bag-of-words_NNPS -LRB-_-LRB- CBOW_NNP -RRB-_-RRB- model_NN and_CC the_DT Skip-gram_NN model_NN ._.
+3.1_CD CBOW_NNP model_NN Figure_NN 2_CD shows_VBZ the_DT CBOW_NNP model_NN 's_POS network_NN struc_NN -_: ture_NN ._.
+The_DT CBOW_NNP model_NN is_VBZ a_DT neural_JJ network_NN with_IN one_CD hidden_JJ layer_NN ,_, where_WRB the_DT input_NN is_VBZ surrounding_VBG words_NNS wt_VB −_CD k_NN ,_, ..._: ,_, wt_VB −_CD 1_CD ,_, wt_VB +1_CD ,_, ..._: ,_, wk_NN ,_, and_CC the_DT out_RP -_: put_VB is_VBZ wt_VB ._.
+The_DT input_NN layer_NN and_CC output_NN layer_NN are_VBP com_NN -_: posed_VBN of_IN nodes_NNS ,_, each_DT of_IN which_WDT corresponds_VBZ to_TO a_DT word_NN in_IN a_DT dictionary_NN ;_: i.e._FW ,_, input_NN and_CC output_NN vectors_NNS for_IN a_DT word_NN are_VBP expressed_VBN in_IN a_DT 1-of-k_JJ representation_NN ._.
+The_DT node_JJ values_NNS in_IN the_DT hidden_JJ layer_NN are_VBP calculated_VBN as_IN the_DT sum_NN of_IN the_DT weight_NN vectors_NNS of_IN the_DT surrounding_VBG words_NNS wt_VB −_CD k_NN ,_, ..._: ,_, wt_VB −_CD 1_CD ,_, wt_VB +1_CD ,_, ..._: ,_, wk_NN ._.
+3.2_CD Skip-gram_NN model_NN Figure_NN 3_CD shows_VBZ the_DT Skip-gram_NN model_NN 's_POS network_NN structure_NN ._.
+The_DT Skip-gram_NN model_NN is_VBZ a_DT neural_JJ network_NN with_IN one_CD hidden_JJ layer_NN in_IN which_WDT a_DT 1_LS -_: of-k_JJ vector_NN for_IN word_NN wt_NN is_VBZ given_VBN as_IN an_DT input_NN Figure_NN 3_CD :_: Skip-gram_NN Method_NN 1_CD ,_, word2vec_CD is_VBZ trained_VBN from_IN the_DT new_JJ text_NN data_NNS generated_VBN by_IN using_VBG Enju_NNP 's_POS results_NNS to_TO augment_VB objects_NNS near_IN verbs_NNS in_IN the_DT text_NN ._.
+Then_RB ,_, distributed_VBN rep_NN -_: resentations_NNS for_IN verb-object_JJ pairs_NNS are_VBP generated_VBN by_IN adding_VBG the_DT distributed_VBN representations_NNS for_IN the_DT verb_NN and_CC the_DT distributed_VBN representations_NNS for_IN the_DT object_NN ._.
+4.3_CD Method_NN 2_CD We_PRP expect_VBP that_DT distributed_VBN representations_NNS for_IN verb_NN -_: object_NN pairs_NNS can_MD be_VB obtained_VBN by_IN training_NN word2vec_CD with_IN text_NN in_IN which_WDT each_DT verb_NN is_VBZ concatenated_VBN with_IN its_PRP$ object_NN for_IN all_DT verb-object_JJ pairs_NNS ._.
+For_IN each_DT verb_NN v_NN and_CC object_NN o_NN pair_NN ,_, v_NN is_VBZ replaced_VBN with_IN v_NN :_: o_NN ,_, where_WRB v_NN and_CC o_NN are_VBP concatenated_VBN into_IN a_DT single_JJ word_NN using_VBG Enju_NNP 's_POS result_NN ._.
+The_DT following_NN shows_VBZ an_DT example_NN of_IN Method_NN 2_CD ._.
+-LRB-_-LRB- original_JJ -RRB-_-RRB- I_PRP did_VBD many_JJ large_JJ white_JJ and_CC blue_JJ round_NN dishes_NNS ._.
+-LRB-_-LRB- modified_VBN -RRB-_-RRB- I_PRP do_VBP :_: dish_VB many_JJ large_JJ white_JJ and_CC blue_JJ round_NN dish_NN ._.
+Word2vec_JJ is_VBZ learned_VBN using_VBG the_DT new_JJ generated_VBN text_NN ,_, and_CC distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS are_VBP acquired_VBN ._.
+4.4_CD Method_NN 3_CD The_DT Skip-gram_NN model_NN is_VBZ learned_VBN by_IN solving_VBG a_DT pseudo-task_NN in_IN which_WDT a_DT word_NN in_IN the_DT text_NN is_VBZ given_VBN as_IN input_NN ,_, and_CC the_DT neural_JJ network_NN predicts_VBZ each_DT sur_NN -_: rounding_VBG word_NN ._.
+It_PRP is_VBZ likely_JJ that_IN distributed_VBN repre_NN -_: sentations_NNS for_IN verb-object_JJ pairs_NNS can_MD be_VB acquired_VBN by_IN providing_VBG the_DT verb_NN and_CC its_PRP$ object_NN to_TO the_DT neural_JJ net_NN -_: works_VBZ at_IN the_DT same_JJ time_NN when_WRB the_DT input_NN word_NN is_VBZ a_DT verb_NN ._.
+We_PRP performed_VBD the_DT learning_NN in_IN Method_NN 3_CD by_IN us_PRP -_: ing_VBG a_DT new_JJ Skip-gram_NN model_NN wherein_IN the_DT verb-object_JJ pair_NN is_VBZ input_NN to_TO the_DT neural_JJ networks_NNS when_WRB one_CD of_IN the_DT input_NN words_NNS is_VBZ a_DT verb_NN ._.
+Figure_NN 4_CD shows_VBZ the_DT neural_JJ network_NN model_NN for_IN Method_NN 3_CD ._.
+The_DT model_NN is_VBZ trained_VBN from_IN a_DT large_JJ amount_NN of_IN text_NN ,_, and_CC distributed_VBN representations_NNS for_IN words_NNS are_VBP generated_VBN ._.
+Then_RB ,_, the_DT distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS are_VBP acquired_VBN by_IN summing_VBG the_DT distributed_VBN representations_NNS for_IN the_DT verb_NN and_CC the_DT dis_SYM -_: tributed_JJ representations_NNS for_IN the_DT object_NN in_IN the_DT same_JJ way_NN as_IN Method_NN 1_CD ._.
+INPUT_NN W_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Verb_NN O_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Object_NNP HIDDEN_NNP SUM_NNP OUTPUT_NNP W_NNP -LRB-_-LRB- t-2_JJ -RRB-_-RRB- W_NNP -LRB-_-LRB- t-1_JJ -RRB-_-RRB- W_NNP -LRB-_-LRB- t_SYM +1_CD -RRB-_-RRB- W_NNP -LRB-_-LRB- t_SYM +2_CD -RRB-_-RRB- 5_CD Figure_NN 4_CD :_: New_NNP Skip-gram_NNP model_NN Experiments_NNS and_CC evaluations_NNS We_PRP performed_VBD two_CD experiments_NNS to_TO evaluate_VB the_DT per_FW -_: formance_NN of_IN Methods_NNPS 1_CD ,_, 2_CD ,_, 3_CD ,_, and_CC the_DT baseline_NN method_NN ._.
+We_PRP used_VBD word2vec_CD in_IN the_DT experiments_NNS for_IN Methods_NNS 1_CD ,_, 2_CD ,_, and_CC the_DT baseline_NN with_IN the_DT CBOW_NNP model_NN option_NN -LRB-_-LRB- -_: cbow_NN 1_CD -RRB-_-RRB- and_CC a_DT modified_VBN word2vec_NN for_IN Method_NN 3_CD based_VBN on_IN the_DT Skip-gram_NN model_NN ._.
+In_IN all_DT methods_NNS ,_, the_DT maximum_NN window_NN size_NN was_VBD 8_CD words_NNS -LRB-_-LRB- -_: window_NN 8_CD -RRB-_-RRB- ,_, the_DT sample_NN number_NN for_IN negative_JJ sam_NN -_: pling_NN was_VBD 25_CD -LRB-_-LRB- -_: negative_JJ 25_CD -RRB-_-RRB- ,_, and_CC we_PRP did_VBD not_RB use_VB hier_SYM -_: archical_JJ softmax_NN -LRB-_-LRB- -_: hs_SYM 0_CD -RRB-_-RRB- ._.
+The_DT number_NN of_IN nodes_NNS in_IN the_DT hidden_JJ layer_NN was_VBD 200_CD ;_: i.e._FW ,_, the_DT number_NN of_IN dimensions_NNS for_IN the_DT distributed_VBN representations_NNS was_VBD 200_CD ._.
+5.1_CD Experiment_NN on_IN light_JJ verb-object_JJ pairs_NNS We_PRP performed_VBD an_DT experiment_NN on_IN pairs_NNS of_IN a_DT light_JJ verb_NN and_CC an_DT object_NN ._.
+The_DT training_NN corpus_VBZ consisted_VBN of_IN the_DT English_NNP Gigaword_NNP 4th_JJ edition_NN -LRB-_-LRB- LDC2009T13_NNP ,_, nyt_NN eng_NN ,_, 199412_CD -_: 199908_CD -RRB-_-RRB- ,_, Corpus_NNP of_IN Contempo_NNP -_: rary_JJ American_JJ English_NNP -LRB-_-LRB- COCA_NNP -RRB-_-RRB- ,_, and_CC Corpus_NNP of_IN His_PRP$ -_: torical_JJ American_JJ English_NNP -LRB-_-LRB- COHA_NNP -RRB-_-RRB- ._.
+The_DT size_NN of_IN the_DT training_NN corpus_NN was_VBD about_RB 200_CD million_CD words_NNS ._.
+We_PRP developed_VBD a_DT data_NN set_NN that_WDT consists_VBZ of_IN 17_CD triples_NNS of_IN a_DT light_JJ verb_NN ,_, an_DT object_NN ,_, and_CC a_DT basic_JJ verb_NN ._.
+The_DT basic_JJ verb_NN is_VBZ one_CD that_WDT almost_RB has_VBZ the_DT same_JJ mean_NN -_: ing_NN as_IN the_DT corresponding_JJ light-verb_NN and_CC object_NN pair_NN ._.
+Table_NNP 1_CD shows_NNS examples_NNS of_IN the_DT data_NN set_NN ._.
+The_DT pairs_NNS were_VBD selected_VBN from_IN ``_`` Eigo_NNP Kihon_NNP Doushi_NNP Katsuyou_NNP Jiten_NNP -LRB-_-LRB- The_DT dictionary_NN of_IN basic_JJ conjugate_JJ verbs_NNS in_IN En_NNP -_: glish_NN -RRB-_-RRB- ''_'' -LRB-_-LRB- Watanabe_NNP ,_, 1998_CD -RRB-_-RRB- and_CC a_DT web_NN site1_NN ._.
+The_DT basic_JJ verbs_NNS were_VBD selected_VBN from_IN ``_`` Eigo_NNP Kihon_NNP Doushi_NNP Jiten_NNP -LRB-_-LRB- The_DT dictionary_NN of_IN basic_JJ verbs_NNS in_IN English_NNP -RRB-_-RRB- ''_'' -LRB-_-LRB- Konishi_NNP ,_, 1980_CD -RRB-_-RRB- ._.
+We_PRP evaluated_VBD each_DT method_NN by_IN measuring_VBG the_DT 1_CD web_NN page_NN -LRB-_-LRB- http://english-leaders.com/hot-three-verbs/_JJ ,_, 1/20/2015_CD reference_NN -RRB-_-RRB- Table_NNP 1_CD :_: Examples_NNS of_IN distributed_VBN representations_NNS for_IN light_JJ verb-object_JJ pairs_NNS Table_NNP 2_CD :_: Results_NNS for_IN light_JJ verb-object_JJ pairs_NNS -LRB-_-LRB- Average_JJ of_IN MRR_NNP -RRB-_-RRB- which_WDT we_PRP used_VBD 1890_CD verb_NN and_CC object_NN pairs_NNS ._.
+The_DT semantic_JJ similarity_NN scores_NNS in_IN the_DT data_NN set_NN are_VBP given_VBN manually_RB and_CC range_NN between_IN 1_CD -LRB-_-LRB- low_JJ similarity_NN -RRB-_-RRB- to_TO 7_CD -LRB-_-LRB- high_JJ similarity_NN -RRB-_-RRB- ._.
+There_EX are_VBP three_CD types_NNS of_IN combi_NNS -_: nations_NNS for_IN pair1_CD and_CC pair2_CD in_IN the_DT data_NNS :_: adjective_JJ +_JJ noun_NN ,_, noun_NN +_NN noun_NN ,_, and_CC verb_NN +_NN object_NN ._.
+For_IN ex_FW -_: ample_JJ ,_, the_DT similarity_NN score_NN for_IN ``_`` vast_JJ amount_NN ''_'' and_CC ``_`` large_JJ quantity_NN ''_'' is_VBZ 7_CD ,_, and_CC the_DT similarity_NN score_NN for_IN ``_`` hear_VB word_NN ''_'' and_CC ``_`` remember_VBP name_NN ''_'' is_VBZ 1_CD ._.
+We_PRP cal_SYM -_: culated_VBN Spearman_NNP 's_POS rank_NN correlation_NN coefficient_NN on_IN the_DT ``_`` verb_NN +_NN object_NN ''_'' part_NN of_IN this_DT data_NN set_NN ._.
+The_DT sim_NN -_: ilarity_NN scores_NNS for_IN verb-object_JJ pair_NN pair1_CD and_CC pair2_CD were_VBD calculated_VBN using_VBG the_DT cosine_NN similarity_NN between_IN the_DT vector_NN for_IN pair1_CD and_CC the_DT vector_NN for_IN pair2_NN ._.
+If_IN a_DT system_NN achieved_VBD a_DT higher_JJR correlation_NN coefficient_NN ,_, this_DT means_VBZ that_IN its_PRP$ judgment_NN was_VBD similar_JJ to_TO that_DT of_IN humans_NNS ._.
+6_CD Results_NNS 6.1_CD Results_NNS for_IN light_JJ verb-object_JJ pairs_NNS Table_NNP 2_CD shows_VBZ the_DT average_JJ MRR_NNP score_NN for_IN each_DT method_NN ._.
+Method_NN 2_CD achieved_VBD the_DT best_JJS result_NN ._.
+We_PRP con_VBP -_: sider_NN that_IN training_NN with_IN the_DT text_NN in_IN which_WDT verb-object_JJ pairs_NNS were_VBD replaced_VBN with_IN a_DT single_JJ expression_NN had_VBD a_DT good_JJ effect_NN on_IN word2vec_CD ._.
+Method_NN 1_CD and_CC Method_NNP 3_NNP 's_POS similarities_NNS were_VBD also_RB higher_JJR than_IN those_DT of_IN the_DT base_NN -_: line_NN method_NN ._.
+Therefore_RB ,_, it_PRP can_MD be_VB considered_VBN that_IN distributed_VBN representations_NNS for_IN verb-object_JJ pairs_NNS that_WDT were_VBD sensitive_JJ to_TO verb-object_JJ relations_NNS were_VBD acquired_VBN by_IN improving_VBG the_DT training_NN data_NNS ._.
+However_RB ,_, Method_NN 1_CD achieved_VBD a_DT higher_JJR MRR_NNP than_IN that_DT of_IN Method_NN 3_CD ._.
+We_PRP consider_VBP that_IN this_DT is_VBZ because_IN Method_NN 3_CD learned_VBD the_DT model_NN from_IN heterogeneous_JJ structures_NNS ;_: i.e._FW ,_, the_DT hid_VBN -_: den_NN layer_NN in_IN the_DT neural_JJ networks_NNS received_VBD different_JJ signals_NNS depending_VBG on_IN whether_IN the_DT input_NN was_VBD a_DT verb_NN or_CC not_RB ._.
+Table_NNP 3_CD shows_VBZ the_DT details_NNS of_IN the_DT experimental_JJ re_NN -_: sults_NNS ._.
+From_IN the_DT table_NN ,_, we_PRP can_MD see_VB that_DT Method_NN 1_CD outperforms_VBZ Method_NN 2_CD in_IN many_JJ cases_NNS ,_, although_IN the_DT average_JJ MRR_NNP of_IN Method_NNP 2_CD is_VBZ greater_JJR than_IN that_DT of_IN Method_NN 1_CD ._.
+We_PRP think_VBP that_IN this_DT is_VBZ because_IN Method_NNP baseline_NN Method_NN 1_CD Method_NN 2_CD Method_NN 3_CD 0.27_CD 0.35_CD 0.37_CD 0.31_CD verb-object_JJ pairs_NNS basic_JJ verbs_NNS examples_NNS do-dish_JJ wash_NN I_PRP do_VBP the_DT dishes_NNS ._.
+do-cleaning_JJ clean_JJ I_PRP 'll_MD do_VB the_DT cleaning_NN ._.
+do-nail_JJ put_NN ,_, paint_NN ,_, dress_NN We_PRP do_VBP our_PRP$ hair_NN ,_, and_CC then_RB we_PRP do_VBP our_PRP$ nails_NNS ._.
+do-laundry_JJ wash_NN I_PRP 'm_VBP doing_VBG the_DT laundry_NN ._.
+have-lunch_JJ eat_VBP Let_VB 's_POS have_VB lunch_NN ._.
+have-tea_NN drink_NN Let_VB 's_POS have_VB some_DT tea_NN ._.
+have-word_JJ tell_VBP ,_, talk_VBP ,_, speak_VBP I_PRP 'd_MD like_VB to_TO have_VB a_DT word_NN with_IN you_PRP ._.
+make-call_JJ call_NN I_PRP always_RB get_VBP nervous_JJ whenever_WRB I_PRP make_VBP a_DT call_NN ._.
+make-bed_JJ clean_JJ ,_, put_VBD ,_, set_VBN I_PRP make_VBP the_DT bed_NN ._.
+hold-door_JJ open_JJ Hold_VBP the_DT door_NN ._.
+hold-tongue_JJ shut_VBN Hold_VB your_PRP$ tongue_NN !_.
+give-hand_JJ help_NN Give_VB me_PRP a_DT hand_NN with_IN this_DT box_NN ._.
+give-party_JJ hold_NN ,_, have_VBP ,_, throw_VBP She_PRP is_VBZ giving_VBG a_DT party_NN this_DT evening_NN ._.
+give-news_NNS report_VBP ,_, present_JJ ,_, announce_VB I_PRP will_MD probably_RB be_VB able_JJ to_TO give_VB you_PRP good_JJ news_NN ._.
+finish-coffee_JJ drink_NN He_PRP finished_VBD his_PRP$ coffee_NN ._.
+read-shakespeare_JJ read_NN I_PRP read_VBD Shakespeare_NNP ._.
+enjoy-movie_JJ watch_NN ,_, see_VBP Did_VBN you_PRP enjoy_VBP the_DT movie_NN ?_.
+mean_JJ reciprocal_JJ rank_NN -LRB-_-LRB- MRR_NNP -RRB-_-RRB- score_NN for_IN each_DT verb_NN -_: object_NN pair_NN in_IN the_DT data_NN set_NN ,_, supposing_VBG that_IN the_DT corre_NN -_: sponding_VBG basic_JJ verb_NN is_VBZ the_DT true_JJ answer_NN for_IN the_DT pair_NN ._.
+Given_VBN a_DT verb-object_JJ pair_NN ,_, we_PRP calculated_VBD its_PRP$ MRR_NNP score_NN as_IN follows_VBZ ._.
+First_RB ,_, we_PRP calculated_VBD the_DT cosine_NN dis_SYM -_: tance_NN between_IN the_DT verb-object_JJ pair_NN and_CC all_DT basic_JJ verb_NN candidates_NNS in_IN the_DT dictionary_NN ._.
+Then_RB ,_, we_PRP ranked_VBD the_DT basic_JJ verbs_NNS in_IN accordance_NN with_IN the_DT cosine_NN measure_NN ._.
+The_DT candidates_NNS of_IN the_DT basic_JJ verbs_NNS were_VBD 385_CD words_NNS in_IN the_DT basic_JJ verb_NN dictionary_NNS -LRB-_-LRB- Konishi_NNP ,_, 1980_CD -RRB-_-RRB- ._.
+5.2_CD Comparison_NN with_IN conventional_JJ methods_NNS We_PRP also_RB conducted_VBD experiments_NNS with_IN the_DT data_NNS set2_NN provided_VBN by_IN Mitchell_NNP and_CC Lapata_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+This_DT set_NN consists_VBZ of_IN triples_NNS -LRB-_-LRB- pair1_CD ,_, pair2_CD ,_, similarity_NN -RRB-_-RRB- ,_, from_IN 2_CD http://homepages.inf.ed.ac.uk/s0453356/share_CD Table_NNP 3_CD :_: Details_NNS of_IN the_DT experiment_NN Table_NNP 4_CD :_: Results_NNS for_IN verb-object_JJ pairs_NNS in_IN Mitchell_NNP and_CC La_NNP -_: pata_NN 's_POS data_NN set_NN -LRB-_-LRB- Spearman_NNP 's_POS rank_NN correlation_NN coefficient_NN -RRB-_-RRB- VO_RB baseline_JJ Method_NN 1_CD Method_NN 2_CD Method_NN 3_CD do-dish_JJ 0.03_CD 0.08_CD 1_CD 0.07_CD do-cleaning_JJ 0.05_CD 0.14_CD 0.25_CD 0.33_CD do-nail_NN 0.02_CD 0.02_CD 0.38_CD 0.06_CD do-laundry_JJ 0.17_CD 0.07_CD 0.09_CD 0.14_CD have-lunch_NN 1_CD 1_CD 0.2_CD 0.33_CD have-tea_NN 0.5_CD 1_CD 1_CD 0.5_CD have-word_NN 0.12_CD 0.07_CD 0.05_CD 0.12_CD make-call_NN 1_CD 1_CD 1_CD 1_CD make-bed_JJ 0.02_CD 0.04_CD 0.03_CD 0.05_CD hold-door_JJ 0.02_CD 0.5_CD 0.2_CD 0.5_CD hold-tongue_JJ 0.01_CD 0.01_CD 0.005_CD 0.01_CD give-hand_JJ 0.03_CD 0.13_CD 0.05_CD 0.05_CD give-party_NN 0.05_CD 0.07_CD 0.01_CD 0.19_CD give-news_NNS 0.02_CD 0.12_CD 0.01_CD 0.06_CD finish-coffee_NN 0.5_CD 0.5_CD 1_CD 0.5_CD read_NN -_: shakespeare_NN 1_CD 1_CD 1_CD 1_CD enjoy-movie_NN 0.11_CD 0.13_CD 0.02_CD 0.38_CD Method_NNP Option_NN Score_NN Base-line_JJ CBOW_NNP ,_, -_: size_NN 50_CD 0.323_CD Method1_NNP CBOW_NNP ,_, -_: size_NN 50_CD 0.329_CD Method2_NNP CBOW_NNP ,_, -_: size_NN 50_CD 0.233_CD Base-line_JJ Skip-gram_NN ,_, -_: size_NN 50_CD 0.308_CD Method1_NNP Skip-gram_NN ,_, -_: size_NN 50_CD 0.305_CD Method2_NNP Skip-gram_NN ,_, -_: size_NN 50_CD 0.173_CD Method_NN 3_CD Skip-gram_NN ,_, -_: size50_CD 0.272_CD Base-line_JJ CBOW_NNP ,_, -_: size_NN 200_CD 0.321_CD Method1_NNP CBOW_NNP ,_, -_: size_NN 200_CD 0.328_CD Method2_NNP CBOW_NNP ,_, -_: size_NN 200_CD 0.201_CD Base-line_JJ Skip-gram_NN ,_, -_: size_NN 200_CD 0.308_CD Method1_NNP Skip-gram_NN ,_, -_: size_NN 200_CD 0.292_CD Method2_NNP Skip-gram_NN ,_, -_: size_NN 200_CD 0.171_CD Method_NN 3_CD Skip-gram_NN ,_, -_: size200_CD 0.275_CD 2_CD achieved_VBN similarity_NN 1_CD in_IN some_DT cases_NNS ,_, and_CC this_DT in_IN -_: creased_VBD the_DT average_JJ MRR_NNP ._.
+6.2_CD Comparison_NN with_IN conventional_JJ method_NN Table_NNP 4_CD shows_VBZ the_DT results_NNS of_IN Methods_NNS 1_CD ,_, 2_CD ,_, and_CC 3_CD and_CC the_DT baseline_NN method_NN using_VBG Skip-gram_NN and_CC CBOW_NN with_IN Mitchell_NNP and_CC Lapata_NNP 's_POS data_NN set_NN ._.
+Method_NN 1_CD us_PRP -_: ing_VBG CBOW_NNP and_CC size_NN 50_CD achieved_VBD the_DT best_JJS result_NN ._.
+The_DT reason_NN is_VBZ the_DT process_NN of_IN learning_VBG ._.
+The_DT CBOW_NNP model_NN predicts_VBZ a_DT word_NN by_IN adding_VBG the_DT vectors_NNS of_IN surrounding_VBG words_NNS ._.
+Therefore_RB ,_, Method_NN 1_CD with_IN the_DT CBOW_NNP model_NN predicts_VBZ a_DT word_NN from_IN the_DT sum_NN of_IN the_DT vectors_NNS for_IN a_DT verb_NN and_CC its_PRP$ object_NN ._.
+Consequently_RB ,_, representations_NNS for_IN verb-object_JJ pairs_NNS are_VBP consistent_JJ in_IN the_DT learning_NN and_CC generating_VBG processes_NNS ._.
+Table_NNP 5_CD shows_VBZ the_DT comparison_NN with_IN other_JJ meth_NN -_: ods_NNS ._.
+BL_NNP ,_, HB_NNP ,_, KS_NNP ,_, and_CC K_NNP denote_VBP the_DT results_NNS of_IN the_DT methods_NNS of_IN Blacoe_NNP and_CC Lapata_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, Hermann_NNP and_CC Blunsom_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, Kartsaklis_NNP and_CC Sadrzadeh_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, and_CC Kartsaklis_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Kartsaklis_NNP and_CC Sadrzadeh_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBD the_DT ukWaC_NNP corpus_NN -LRB-_-LRB- Baroni_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ,_, and_CC the_DT other_JJ methods_NNS used_VBD the_DT British_NNP National_NNP Corpus_NNP -LRB-_-LRB- BNC_NNP -RRB-_-RRB- ._.
+Word2vec_JJ is_VBZ the_DT result_NN of_IN Hashimoto_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+They_PRP used_VBD the_DT POS-tagged_JJ BNC_NNP and_CC trained_JJ 50-dimensional_JJ word_NN vectors_NNS with_IN the_DT Skip-gram_NN model_NN ._.
+We_PRP believe_VBP that_IN our_PRP$ methods_NNS can_MD be_VB improved_VBN by_IN using_VBG POS-tagged_JJ texts_NNS ._.
+Table_NNP 5_CD :_: Comparison_NN with_IN other_JJ methods_NNS Method_NNP Score_NN Method_NN 1_CD with_IN CBOW_NNP 0.329_CD BL_NNP w_NNP /_NNP BNC_NNP 0.35_CD HB_NNP w_SYM /_FW BNC_FW 0.34_FW KS_FW w_FW /_FW ukWaC_FW 0.45_CD K_NNP w/BNC_NNP 0.41_CD Word2vec_JJ 0.42_CD 7_CD Conclusion_NN and_CC future_JJ work_NN This_DT paper_NN proposed_VBN methods_NNS for_IN obtaining_VBG dis_SYM -_: tributed_JJ representations_NNS for_IN verb-object_JJ pairs_NNS by_IN us_PRP -_: ing_VBG word2vec_CD ._.
+We_PRP experimentally_RB evaluated_VBD them_PRP in_IN comparison_NN with_IN the_DT baseline_NN add_VB method_NN in_IN terms_NNS of_IN mean_JJ reciprocal_JJ rank_NN and_CC Spearman_NNP 's_POS rank_NN correla_NN -_: tion_NN ._.
+Method_NN 2_CD ,_, which_WDT concatenates_VBZ verbs_NNS with_IN their_PRP$ objects_NNS in_IN the_DT text_NN ,_, achieved_VBD the_DT best_JJS MRR_NN score_NN in_IN the_DT experiment_NN on_IN light_JJ verb-object_JJ pairs_NNS ._.
+Method_NN 1_CD ,_, which_WDT puts_VBZ objects_NNS nearby_RB verbs_NNS ,_, achieved_VBD the_DT best_JJS correlation_NN coefficient_NN in_IN the_DT experiment_NN on_IN Mitchell_NNP and_CC Lapata_NNP 's_POS data_NN set_NN ._.
+We_PRP consider_VBP that_IN the_DT training_NN text_NN data_NNS in_IN these_DT experiments_NNS was_VBD too_RB small_JJ ._.
+It_PRP is_VBZ necessary_JJ to_TO use_VB a_DT large_JJ amount_NN of_IN data_NNS to_TO verify_VB which_WDT method_NN is_VBZ best_RB for_IN obtaining_VBG dis_SYM -_: tributed_JJ representations_NNS of_IN verb-object_JJ pairs_NNS ._.
+Us_NNP -_: ing_VBG a_DT large_JJ amount_NN of_IN data_NNS and_CC making_VBG comparisons_NNS with_IN RNNM_NNP and_CC tensor_NN factorization_NN are_VBP left_VBN as_IN fu_SYM -_: ture_NN work_NN ._.
+Acknowledgments_NNS This_DT work_NN was_VBD supported_VBN by_IN JSPS_NNP KAKENHI_NNP Grant-in-Aid_NNP for_IN Scientific_NNP Research_NNP -LRB-_-LRB- B_NNP -RRB-_-RRB- Grant_NNP Number_NNP 25280084_CD ._.
+References_NNS Marco_NNP Baroni_NNP and_CC Roberto_NNP Zamparelli_NNP ._.
+2010_CD ._.
+Nouns_NNS are_VBP vectors_NNS ,_, adjectives_NNS are_VBP matrices_NNS :_: Representing_VBG adjective-noun_JJ constructions_NNS in_IN semantic_JJ space_NN ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_NNP Meth_NNP -_: ods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP 2010_CD -RRB-_-RRB- ,_, pages_NNS 1183_CD --_: 1193_CD ._.
+Marco_NNP Baroni_NNP ,_, Silvia_NNP Bernardini_NNP ,_, Adriano_NNP Ferraresi_NNP ,_, and_CC Eros_NNP Zanchetta_NNP ._.
+2009_CD ._.
+The_DT wacky_JJ wide_JJ web_NN :_: A_DT collection_NN of_IN very_RB large_JJ linguistically_RB processed_VBN web_NN -_: crawled_VBD corpora_NN ._.
+proceedings_NNS of_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP Conference_NNP -LRB-_-LRB- LREC_NNP 2009_CD -RRB-_-RRB- ,_, pages_NNS 209_CD --_: 226_CD ._.
+Yoshua_NNP Bengio_NNP ,_, Rejean_NNP Ducharme_NNP ,_, Pascal_NNP Vincent_NNP ,_, and_CC Christian_NNP Jauvin_NNP ._.
+2003_CD ._.
+A_DT neural_JJ probabilistic_JJ lan_NN -_: guage_NN model_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 3:1137_CD --_: 1155_CD ._.
+William_NNP Blacoe_NNP and_CC Mirella_NNP Lapata_NNP ._.
+2012_CD ._.
+A_DT com_NN -_: parison_NN of_IN vector-based_JJ representations_NNS for_IN semantic_JJ composition_NN ._.
+In_IN proceedings_NNS of_IN the_DT Joint_NNP Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Process_NNP -_: ing_NN and_CC Computational_NNP Natural_NNP Language_NNP Learning_NNP ,_, pages_NNS 546_CD --_: 556_CD ._.
+David_NNP M._NNP Blei_NNP ,_, Andrew_NNP Y._NNP Ng_NNP ,_, and_CC Michael_NNP I._NNP Jordan_NNP ._.
+2003_CD ._.
+Latent_NN dirichlet_NN allocation_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, pages_NNS 993_CD --_: 1022_CD ._.
+Danqi_NNP Chen_NNP and_CC Christopher_NNP D.Manning_NNP ._.
+2014_CD ._.
+A_DT fast_JJ and_CC accurate_JJ dependency_NN parser_NN using_VBG neural_JJ net_NN -_: works_NNS ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2014_CD -RRB-_-RRB- ,_, pages_NNS 740_CD --_: 750_CD ._.
+Ronan_NNP Collobert_NNP and_CC Jason_NNP Weston_NNP ._.
+2008_CD ._.
+A_DT unified_VBN ar_SYM -_: chitecture_NN for_IN natural_JJ language_NN proccesing_NN :_: Deep_JJ neu_NN -_: ral_NN networks_NNS with_IN multitask_JJ learning_NN ._.
+In_IN proceedings_NNS of_IN the_DT International_NNP Conference_NNP on_IN Machine_NN Learning_NNP -LRB-_-LRB- ICML_NNP 2008_CD -RRB-_-RRB- ,_, pages_NNS 160_CD --_: 167_CD ._.
+Ronan_NNP Collobert_NNP ,_, Jason_NNP Weston_NNP ,_, Leon_NNP Bottou_NNP ,_, Michael_NNP karlen_NNP ,_, Koray_NNP Kavukcuoglu_NNP ,_, and_CC Pavel_NNP Kuksa_NNP ._.
+2011_CD ._.
+Natural_JJ language_NN processing_NN -LRB-_-LRB- almost_RB -RRB-_-RRB- from_IN scratch_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, pages_NNS 2493_CD --_: 2537_CD ._.
+Tim_NNP Van_NNP de_IN Cruys_NNP ,_, Thierry_NNP Poibeau_NNP ,_, and_CC Anna_NNP Korho_NNP -_: nen_NN ._.
+2013_CD ._.
+A_DT tensor-based_JJ factorization_NN model_NN of_IN se_FW -_: mantic_JJ compositionality_NN ._.
+In_IN proceedings_NNS of_IN the_DT Con_NN -_: ference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- NAACL_NNP 2013_CD -RRB-_-RRB- :_: Human_NNP Language_NNP Technologies_NNPS ,_, pages_NNS 1142_CD --_: 1151_CD ._.
+Tim_NNP Van_NNP de_IN Cruys_NNP ._.
+2009_CD ._.
+A_DT non-negative_JJ tensor_NN factor_NN -_: ization_NN model_NN for_IN selectional_JJ preference_NN induction_NN ._.
+In_IN proceedings_NNS of_IN the_DT Workshop_NNP on_IN Geometrical_NNP Models_NNPS of_IN Natural_NNP Language_NNP Semantics_NNP ,_, pages_NNS 83_CD --_: 90_CD ._.
+Marie-Catherine_NNP de_NNP Marneffe_NNP ,_, Bill_NNP MacCartney_NNP ,_, and_CC Christopher_NNP D.Manning_NNP ._.
+2006_CD ._.
+Generating_NNP typed_VBD de_IN -_: pendency_NN parses_VBZ from_IN phrase_NN structure_NN parses_VBZ ._.
+In_IN pro-_JJ ceedings_NNS of_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP Con_NN -_: ference_NN -LRB-_-LRB- LREC_NNP 2006_CD -RRB-_-RRB- ,_, pages_NNS 449_CD --_: 454_CD ._.
+John_NNP R._NNP Firth_NNP ._.
+1957_CD ._.
+A_DT synopsis_NN of_IN linguistic_JJ theory_NN 1930-55_CD ._.
+Studies_NNS in_IN Linguistic_NNP Analysis_NNP ,_, pages_NNS 1_CD --_: 32_CD ._.
+Christoph_NNP Goller_NNP and_CC Andreas_NNP Ku_NNP ̈chler_NN ._.
+1996_CD ._.
+Learning_NNP task-dependent_JJ distributed_VBN representations_NNS by_IN back_RB -_: propagation_NN through_IN structure_NN ._.
+International_NNP Confer_NNP -_: enece_NN on_IN Neural_NNP Networks_NNP ._.
+Edward_NNP Grefenstette_NNP and_CC Mehrnoosh_NNP Sadrzadeh_NNP ._.
+2011_CD ._.
+Experimental_JJ support_NN for_IN a_DT categorical_JJ compositional_JJ distributional_JJ model_NN of_IN meaning_NN ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_NNP Methods_NNPS in_IN Natural_NNP Lan_NNP -_: guage_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2011_CD -RRB-_-RRB- ,_, pages_NNS 1394_CD --_: 1404_CD ._.
+Kazuma_NNP Hashimoto_NNP ,_, Pontus_NNP Stenetorp_NNP ,_, Makoto_NNP Miwa_NNP ,_, and_CC Yoshimasa_NNP Tsuruoka_NNP ._.
+2014_CD ._.
+Jointly_RB learning_VBG word_NN representations_NNS and_CC composition_NN functions_NNS using_VBG predicate-argument_JJ structures_NNS ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_NNP Methods_NNPS in_IN Natural_NNP Lan_NNP -_: guage_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2014_CD -RRB-_-RRB- ,_, pages_NNS 1544_CD --_: 1555_CD ._.
+Karl_NNP Moritz_NNP Hermann_NNP and_CC Philip_NNP Blunsom_NNP ._.
+2013_CD ._.
+The_DT role_NN of_IN syntax_NN in_IN vector_NN space_NN models_NNS of_IN compositional_JJ semantics_NNS ._.
+In_IN Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 894_CD --_: 904_CD ._.
+Thomas_NNP Hofman_NNP ._.
+1999_CD ._.
+Probablistic_NNP latent_NN semantic_JJ analysis_NN ._.
+In_IN Uncertainity_NNP in_IN Artificial_NNP Intelligence_NNP ._.
+Dimitri_NNP Kartsaklis_NNP and_CC Mehrnoosh_NNP Sadrzadeh_NNP ._.
+2013_CD ._.
+Prior_RB disambiguation_NN of_IN word_NN tensors_NNS for_IN constructing_VBG sentence_NN vectors_NNS ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN process_NN -_: ing_NN -LRB-_-LRB- EMNLP_NNP 2013_CD -RRB-_-RRB- ,_, pages_NNS 1590_CD --_: 1601_CD ._.
+Dimitri_NNP Kartsaklis_NNP ,_, Mehrnoosh_NNP Sadrzadeh_NNP ,_, and_CC Stephen_NNP Pulman_NNP ._.
+2012_CD ._.
+A_DT unified_JJ sentence_NN space_NN for_IN cate_NN -_: gorical_JJ distributional-compositional_JJ semantics_NNS :_: The_DT -_: ory_NN and_CC experiments_NNS ._.
+In_IN proceedings_NNS of_IN the_DT Interna_NNP -_: tional_JJ Conference_NN on_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- Col_NNP -_: ing_NN 2012_CD -RRB-_-RRB- ,_, pages_NNS 549_CD --_: 558_CD ._.
+Dimitri_NNP Kartsaklis_NNP ,_, Mehrnoosh_NNP Sadrzadeh_NNP ,_, and_CC Stephen_NNP Pulman_NNP ._.
+2013_CD ._.
+Separating_VBG disambiguation_NN from_IN composition_NN in_IN distributional_JJ semantics_NNS ._.
+In_IN proceed_VB -_: ings_NNS of_IN the_DT Conference_NN on_IN Natural_JJ Language_NN Learning_NNP -LRB-_-LRB- CoNLL_NNP 2013_CD -RRB-_-RRB- ,_, pages_NNS 114_CD --_: 123_CD ._.
+Tomohichi_NNP Konishi_NNP ._.
+1980_CD ._.
+Eigo_NNP Kihon_NNP Doushi_NNP Jiten_NNP -LRB-_-LRB- The_DT dictionary_NN of_IN basic_JJ verbs_NNS in_IN English_NNP -RRB-_-RRB- ._.
+Kenkyusha_NNP pub_NN -_: lication_NN ._.
+Thomas_NNP K._NNP Landauer_NNP and_CC Susan_NNP T._NNP Dumais_NNP ._.
+1997_CD ._.
+A_DT so_RB -_: lution_NN to_TO plato_NN 's_POS problem_NN :_: The_DT latent_NN semantic_JJ analysis_NN theory_NN of_IN the_DT acquisition_NN ,_, induction_NN ,_, and_CC representation_NN of_IN knowledge_NN ._.
+Psychological_JJ Review_NNP ,_, 104_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :211_CD --_: 240_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP Corrado_NNP ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013a_NNS ._.
+Efficient_JJ estimation_NN of_IN word_NN represen_NN -_: tations_NNS in_IN vector_NN space_NN ._.
+In_IN proceedings_NNS of_IN workshop_NN at_IN the_DT International_NNP Conference_NNP on_IN Learning_NNP Representa_NNP -_: tions_NNS -LRB-_-LRB- ICLR_NNP 2013_CD -RRB-_-RRB- ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP S_NNP Cor_NNP -_: rado_NN ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013b_JJ ._.
+Distributed_VBN represen_NN -_: tations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ composition_NN -_: ality_NN ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS 26_CD ,_, pages_NNS 3111_CD --_: 3119_CD ._.
+Jeff_NNP Mitchell_NNP and_CC Mirella_NNP Lapata_NNP ._.
+2008_CD ._.
+Vector-based_JJ models_NNS of_IN semantic_JJ composition_NN ._.
+In_IN proceedings_NNS of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP 2008_CD -RRB-_-RRB- ,_, pages_NNS 236_CD --_: 244_CD ._.
+Jeff_NNP Mitchell_NNP and_CC Mirella_NNP Lapata_NNP ._.
+2010_CD ._.
+Composition_NN in_IN distributional_JJ models_NNS of_IN semantics_NNS ._.
+Cognitive_JJ sen_NN -_: tence_NN ,_, 34_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :1388_CD --_: 1439_CD ._.
+Yusuke_NNP Miyao_NNP and_CC Jun_NNP '_POS ichi_JJ Tsujii_NNP ._.
+2005_CD ._.
+Probabilistic_NNP disambiguation_NN models_NNS for_IN wide-coverage_JJ hpsg_NN pars_NNS -_: ing_NN ._.
+In_IN proceedings_NNS of_IN the_DT Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNP -LRB-_-LRB- ACL_NNP 2005_CD -RRB-_-RRB- ,_, pages_NNS 83_CD --_: 90_CD ._.
+Yusuke_NNP Miyao_NNP ,_, Takashi_NNP Ninomiya_NNP ,_, and_CC Jun_NN '_'' ichi_FW Tsu_SYM -_: jii_FW ,_, 2005_CD ._.
+Keh-Yih_NNP Su_NNP ,_, Jun_NNP '_POS ichi_JJ Tsujii_NNP ,_, Jong-Hyeok_NNP Lee_NNP and_CC Oi_NNP Yee_NNP Kwong_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Natural_JJ Language_NN Processing_NNP -_: IJCNLP_NNP 2004_CD LNAI_NNP 3248_CD ,_, chapter_NN Corpus-oriented_JJ Grammar_NNP Development_NNP for_IN Acquir_NNP -_: ing_VBG a_DT Head-driven_JJ Phrase_NNP Structure_NNP Grammar_NNP from_IN the_DT Penn_NNP Treebank_NNP ,_, pages_NNS 684_CD --_: 693_CD ._.
+Springer-Verlag_NNP ._.
+Andriy_NNP Mnih_NNP and_CC Koray_NNP Kavukcuoglu_NNP ._.
+2013_CD ._.
+Learning_NNP word_NN embeddings_NNS efficiently_RB with_IN noise-contrastive_JJ es_NNS -_: timation_NN ._.
+In_IN Conference_NN on_IN Neural_NNP Information_NNP Pro-_NNP cessing_VBG System_NNP 2013_CD ,_, pages_NNS 2265_CD --_: 2273_CD ._.
+Takashi_NNP Ninomiya_NNP ,_, Takuya_NNP Matsuzaki_NNP ,_, Yoshimasa_NNP Tsu_NNP -_: ruoka_FW ,_, Yusuke_NNP Miyao_NNP ,_, and_CC Jun_NN '_'' ichi_FW Tsujii_FW ._.
+2006_CD ._.
+Ex_SYM -_: tremely_RB lexicalized_VBN models_NNS for_IN accurate_JJ and_CC fast_JJ hpsg_NN parsing_NN ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2006_CD -RRB-_-RRB- ._.
+Jeffery_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2014_CD ._.
+Glove_NNP :_: Global_NNP vectors_NNS for_IN word_NN rep_NN -_: resentation_NN ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2014_CD -RRB-_-RRB- ,_, pages_NNS 1532_CD --_: 1543_CD ._.
+Carl_NNP Pollard_NNP and_CC Ivan_NNP A._NNP Sag_NNP ._.
+1994_CD ._.
+Head-driven_JJ phrase_NN structure_NN grammar_NN ._.
+University_NNP of_IN Chicago_NNP Press_NNP ._.
+Richard_NNP Socher_NNP ,_, Eric_NNP H._NNP Huang_NNP ,_, Jeffrey_NNP Pennin_NNP ,_, Christ_NNP -_: pher_NN D._NNP Manning_NNP ,_, and_CC Andrew_NNP Y._NNP Ng_NNP ._.
+2011_CD ._.
+Dy_SYM -_: namic_NN pooling_VBG and_CC unfolding_VBG recursive_JJ autoencorders_NNS for_IN paraphrase_NN detection_NN ._.
+In_IN Advances_NNS in_IN Neural_NNP Infor_NNP -_: mation_NN Processing_NNP Systems_NNP 24_CD ,_, pages_NNS 801_CD --_: 809_CD ._.
+Richard_NNP Socher_NNP ,_, Brody_NNP Huval_NNP ,_, Christpher_NNP D._NNP Manning_NNP ,_, and_CC Andrew_NNP Y._NNP Ng_NNP ._.
+2012_CD ._.
+Semantic_JJ compositionality_NN through_IN recursive_JJ matrix-vector_JJ spaces_NNS ._.
+In_IN proceed_VB -_: ings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN processing_NN -LRB-_-LRB- EMNLP_NNP 2012_CD -RRB-_-RRB- ,_, pages_NNS 1201_CD --_: 1211_CD ._.
+Masashi_NNP Tsubaki_NNP ,_, Kevin_NNP Duh_NNP ,_, Masashi_NNP Shimbo_NNP ,_, and_CC Yuji_NNP Matsumoto_NNP ._.
+2013_CD ._.
+Modeling_NN and_CC learning_VBG semantic_JJ co-compositionality_NN through_IN prototype_NN projections_NNS and_CC neural_JJ netoworks_NNS ._.
+In_IN proceedings_NNS of_IN the_DT Conference_NN on_IN the_DT Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP process_NN -_: ing_NN -LRB-_-LRB- EMNLP_NNP 2013_CD -RRB-_-RRB- ,_, pages_NNS 130_CD --_: 140_CD ._.
+Miyoko_NNP Watanabe_NNP ._.
+1998_CD ._.
+Eigo_NNP Kihon_NNP Doushi_NNP Katsuyou_NNP Jiten_NNP -LRB-_-LRB- The_DT dictionary_NN of_IN basic_JJ conjugate_JJ verbs_NNS in_IN En_NNP -_: glish_NN -RRB-_-RRB- ._.
+Nagumo_NNP phoenix_NN publication_NN ._.

@@ -1,0 +1,355 @@
+How_WRB Does_VBZ Hong_NNP Kong_NNP Sign_NNP Language_NNP -LRB-_-LRB- HKSL_NNP -RRB-_-RRB- Express_NNP Spatial_NNP Concepts_NNPS 1_CD Abstract_NNP Spatial_NNP concepts_NNS are_VBP widely_RB exist_VBP in_IN our_PRP$ daily_JJ life_NN ._.
+There_EX are_VBP different_JJ ways_NNS of_IN expressing_VBG spatial_JJ concepts_NNS in_IN natural_JJ languages_NNS ,_, ranging_VBG from_IN the_DT use_NN of_IN a_DT whole_JJ sentence_NN to_TO specific_JJ linguistic_JJ phenomena_NNS :_: local_JJ cases_NNS ,_, adopositions_NNS ,_, spatial_JJ nominal_NN ._.
+In_IN contrast_NN ,_, signed_VBD languages_NNS tend_VB to_TO encode_VB spatial_JJ concepts_NNS via_IN classifier_NN constructions_NNS -LRB-_-LRB- Emmorey_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+Learning_NNP to_TO represent_VB and_CC reason_NN about_IN space_NN is_VBZ crucial_JJ to_TO our_PRP$ cognitive_JJ development_NN ._.
+This_DT paper_NN aims_VBZ to_TO illustrate_VB how_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS both_DT by_IN deaf_JJ adults_NNS and_CC deaf_JJ children_NNS ._.
+Two_CD adults_NNS ,_, two_CD deaf_JJ children_NNS of_IN deaf_JJ parents_NNS -LRB-_-LRB- DD_NNP -RRB-_-RRB- and_CC four_CD deaf_JJ children_NNS of_IN hearing_VBG parents_NNS -LRB-_-LRB- DH_NNP -RRB-_-RRB- were_VBD participated_VBN in_IN my_PRP$ experiment_NN of_IN retelling_VBG picture_NN book_NN ``_`` Frog_NNP ,_, where_WRB are_VBP you_PRP ?_. ''_''
+in_IN HKSL_NNP ._.
+The_DT results_NNS show_VBP that_IN different_JJ group_NN of_IN signers_NNS show_VBP different_JJ performance_NN both_DT on_IN static_JJ and_CC dynamic_JJ situation_NN ._.
+The_DT main_JJ strategy_NN is_VBZ using_VBG classifier_JJR constructions_NNS ,_, however_RB ,_, DD_NNP prefer_VBP to_TO use_VB CL_NNP constructions_NNS of_IN two_CD hands_NNS instead_RB of_IN using_VBG body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ ;_: some_DT DH_NNP choose_VB to_TO use_VB spatial_JJ nominal_JJ such_JJ as_IN INSIDE_IN to_TO express_VB spatial_JJ concepts_NNS ._.
+Besides_IN ,_, adult_NN 's_POS signing_NN are_VBP much_RB more_RBR iconic_JJ and_CC complex_JJ than_IN both_DT DD_NNP and_CC DH_NNP in_IN expressing_VBG spatial_JJ concepts_NNS ._.
+Introduction_NN express_JJ spatial_JJ concepts_NNS via_IN specific_JJ linguistic_JJ items_NNS -LRB-_-LRB- such_JJ as_IN in_IN ,_, on_IN ,_, next_IN to_TO ..._: -RRB-_-RRB- ._.
+But_CC some_DT spatial_JJ concepts_NNS are_VBP more_RBR often_RB expressed_VBN in_IN natural_JJ languages_NNS ._.
+Specifically_RB ,_, natural_JJ languages_NNS tend_VBP to_TO express_VB spatial_JJ concepts_NNS like_IN location_NN and_CC motion_NN of_IN referents_NNS ._.
+There_EX are_VBP different_JJ ways_NNS of_IN expressing_VBG spatial_JJ concepts_NNS in_IN natural_JJ languages_NNS ,_, ranging_VBG from_IN the_DT use_NN of_IN a_DT whole_JJ sentence_NN to_TO specific_JJ linguistic_JJ phenomena_NNS :_: local_JJ cases_NNS ,_, adopositions_NNS ,_, spatial_JJ nominal_NN -LRB-_-LRB- See_VB Section_NN 2_CD for_IN details_NNS -RRB-_-RRB- ._.
+In_IN contrast_NN ,_, signed_VBD languages_NNS tend_VB to_TO encode_VB spatial_JJ concepts_NNS via_IN signing_VBG space_NN and_CC complex_JJ predicates_NNS ,_, often_RB referred_VBD to_TO as_IN classifier_NN constructions_NNS -LRB-_-LRB- Emmorey_NNP 2003_CD -RRB-_-RRB- ._.
+In_IN these_DT constructions_NNS ,_, a_DT handshape_NN morpheme_NN represents_VBZ an_DT object_NN of_IN a_DT specific_JJ type_NN ,_, and_CC the_DT location_NN and_CC movement_NN of_IN the_DT hands_NNS in_IN signing_VBG space_NN iconically_RB depict_VB spatial_JJ relations_NNS and_CC object_VB motion_NN ._.
+Learning_NNP to_TO represent_VB and_CC reason_NN about_IN space_NN is_VBZ crucial_JJ to_TO our_PRP$ cognitive_JJ development_NN ._.
+A_DT recent_JJ research_NN -LRB-_-LRB- Genter_NNP et_NNP al_IN 2013_CD -RRB-_-RRB- find_VBP that_IN some_DT deaf_JJ children_NNS using_VBG homesigns_NNS do_VBP not_RB have_VB gestures_NNS to_TO convey_VB spatial_JJ concepts_NNS which_WDT lead_VBP to_TO their_PRP$ poor_JJ performance_NN on_IN a_DT spatial_JJ mapping_NN task_NN ._.
+The_DT results_NNS prove_VBP the_DT absence_NN of_IN spatial_JJ language_NN thus_RB went_VBD hand-in-hand_RB with_IN poor_JJ performance_NN on_IN the_DT spatial_JJ cognitive_JJ task_NN ._.
+Their_PRP$ research_NN reminds_VBZ us_PRP the_DT importance_NN of_IN spatial_JJ language_NN in_IN HKSL_NNP and_CC deaf_JJ children_NNS 's_POS cognition_NN ._.
+Thus_RB this_DT paper_NN aims_VBZ to_TO illustrate_VB how_WRB HKSL_NNP express_VB spatial_JJ concepts_NNS both_DT by_IN deaf_JJ adults_NNS and_CC deaf_JJ children_NNS ._.
+Zhang_NNP Xiaoqian_NNP Fudan_NNP University_NNP /_CD 220_CD Handan_NNP Rd._NNP ,_, Yangpu_NNP District_NNP ,_, Shanghai_NNP Spatial_NNP concepts_NNS are_VBP one_CD of_IN the_DT elements_NNS of_IN spatial_JJ thinking_NN ._.
+When_WRB spatial_JJ thinking_NN occurs_VBZ ,_, spatial_JJ concepts_NNS support_VBP spatial_JJ representations_NNS and_CC spatial_JJ reasoning_NN by_IN functioning_VBG as_IN a_DT framework_NN for_IN identifying_VBG ,_, describing_VBG and_CC analyzing_VBG various_JJ spatial_JJ events_NNS and_CC objects_NNS ._.
+-LRB-_-LRB- Golledge_NNP et_NNP al_IN 2007_CD -RRB-_-RRB- For_IN example_NN ,_, size_NN and_CC shape_NN of_IN an_DT object_NN ,_, the_DT relative_JJ relation_NN of_IN two_CD referents_NNS ,_, the_DT motion_NN events_NNS of_IN an_DT object_NN and_CC so_RB forth_RB ._.
+Natural_JJ languages_NNS may_MD 2_CD 2.1_CD Literature_NN review_NN Spatial_NNP concepts_NNS amanda.zxq@qq.com_NNP Natural_NNP languages_NNS express_VBP spatial_JJ concepts_NNS via_IN specific_JJ linguistic_JJ items_NNS ._.
+But_CC some_DT spatial_JJ concepts_NNS are_VBP more_RBR often_RB expressed_VBN in_IN natural_JJ languages_NNS ._.
+Specifically_RB ,_, natural_JJ languages_NNS tend_VBP to_TO express_VB spatial_JJ concepts_NNS like_IN location_NN and_CC motion_NN of_IN referents_NNS ._.
+For_IN example_NN ,_, how_WRB would_MD you_PRP describe_VB the_DT following_VBG three_CD pictures_NNS in_IN Figure_NN 1_CD ._.
+vary_VBP a_DT lot_NN on_IN thinking_VBG about_IN space_NN ,_, for_IN example_NN ,_, spatial_JJ categorization_NN ._.
+English_NNP speakers_NNS use_VBP in_IN to_TO denote_VB the_DT relationships_NNS of_IN ``_`` an_DT football_NN IN_IN a_DT box_NN ''_'' but_CC use_VB on_IN to_TO refer_VB to_TO relationship_NN of_IN ``_`` an_DT notebook_NN ON_IN a_DT table_NN ''_'' or_CC ``_`` a_DT clock_NN ON_IN the_DT wall_NN ''_'' ._.
+In_IN contrast_NN ,_, other_JJ languages_NNS show_VBP very_RB different_JJ groupings_NNS of_IN the_DT same_JJ physical_JJ spatial_JJ relationships_NNS :_: Spanish_JJ uses_NNS EN_IN for_IN all_DT spatial_JJ relations_NNS while_IN Dutch_JJ uses_NNS three_CD separate_JJ prepositions_NNS -LRB-_-LRB- OP_NNP ,_, AAN_NNP ,_, IN_IN -RRB-_-RRB- -LRB-_-LRB- Bowerman_NNP ,1996_CD -RRB-_-RRB- ._.
+By_IN investigating_VBG the_DT relationship_NN between_IN language_NN and_CC spatial_JJ concepts_NNS ,_, previous_JJ studies_NNS can_MD be_VB organized_VBN along_IN a_DT continuum_NN ,_, with_IN one_CD end_NN anchored_VBN by_IN researchers_NNS focusing_VBG on_IN the_DT hypothesis_NN that_IN no_DT language_NN influence_NN in_IN the_DT structure_NN of_IN spatial_JJ concepts_NNS -LRB-_-LRB- Papafragou_NNP ,_, Massey_NNP ,_, &_CC Gleitman_NNP ,_, 2002_CD ,_, 2006_CD -RRB-_-RRB- and_CC the_DT other_JJ end_NN anchored_VBN by_IN researchers_NNS who_WP believe_VBP it_PRP is_VBZ language_NN creates_VBZ the_DT difference_NN of_IN how_WRB people_NNS view_VBP space_NN -LRB-_-LRB- Malt_NNP ,_, Sloman_NNP ,_, &_CC Gennari_NNP ,_, 2001_CD ,_, 2003_CD -RRB-_-RRB- ._.
+Toward_IN the_DT middle_NN of_IN the_DT continuum_NN is_VBZ research_NN that_IN examines_VBZ the_DT interface_NN ._.
+Typically_RB ,_, focus_VB on_IN that_DT language_NN may_MD have_VB an_DT impact_NN on_IN how_WRB people_NNS structure_NN spatial_JJ concepts_NNS ,_, however_RB ,_, other_JJ factors_NNS such_JJ as_IN culture_NN and_CC environment_NN should_MD also_RB be_VB taken_VBN into_IN consideration_NN ._.
+In_IN sum_NN ,_, no_DT consensus_NN is_VBZ reached_VBN in_IN the_DT previous_JJ studies_NNS ._.
+We_PRP still_RB do_VBP n't_RB know_VB to_TO what_WP degree_NN language_NN may_MD be_VB involved_VBN in_IN the_DT structure_NN of_IN spatial_JJ concepts_NNS ._.
+However_RB ,_, sign_NN language_NN is_VBZ considered_VBN as_IN a_DT visual_JJ and_CC iconic_JJ language_NN ,_, do_VBP people_NNS use_VBP sign_NN language_NN structure_NN spatial_JJ concepts_NNS different_JJ from_IN people_NNS who_WP use_VBP spoken_VBN language_NN ?_.
+The_DT following_JJ section_NN focuses_VBZ on_IN how_WRB sign_NN language_NN expresses_VBZ spatial_JJ concepts_NNS in_IN the_DT previous_JJ studies_NNS ._.
+2.3_CD Sign_NN language_NN and_CC spatial_JJ concepts_NNS Signed_VBN languages_NNS differ_VBP from_IN spoken_VBN language_NN in_IN the_DT modalities_NNS ._.
+The_DT interesting_JJ part_NN of_IN signed_VBN languages_NNS is_VBZ that_IN they_PRP use_VBP a_DT lot_NN of_IN the_DT physical_JJ space_NN in_IN expressing_VBG grammatical_JJ information_NN ,_, hence_RB known_VBN as_IN spatial_JJ language_NN ._.
+The_DT actual_JJ space_NN where_WRB the_DT articulations_NNS of_IN signs_NNS take_VBP place_NN is_VBZ called_VBN ``_`` signing_NN space_NN ''_'' or_CC ``_`` sign_NN space_NN ''_'' ,_, and_CC generally_RB it_PRP is_VBZ considered_VBN to_TO be_VB constrained_VBN to_TO the_DT horizontal_JJ and_CC the_DT frontal_JJ plane_NN in_IN front_NN of_IN the_DT signer_NN 's_POS torso_NN ._.
+Sign_NN language_NN convey_VBP spatial_JJ information_NN using_VBG so-called_JJ classifier_NN constructions_NNS in_IN which_WDT spatial_JJ relations_NNS are_VBP expressed_VBN by_IN where_WRB the_DT hands_NNS are_VBP placed_VBN in_IN the_DT signing_NN space_NN or_CC in_IN the_DT relationship_NN to_TO the_DT body_NN -LRB-_-LRB- e.g._FW Supalla_FW 1982_CD ;_: Engberg_NNP -_: Pedersen_NNP Picture_NNP 1_CD Figure_NN 1_CD ._.
+Basic_JJ spatial_JJ concepts_NNS in_IN spoken_VBN languages_NNS We_PRP make_VBP sentences_NNS like_IN ``_`` There_EX is_VBZ a_DT rabbit_NN in_IN the_DT cage_NN ._. ''_''
+``_`` The_DT rabbit_NN 's_POS head_NN is_VBZ struck_VBN in_IN the_DT jar_NN ._. ''_''
+``_`` An_DT eagle_NN is_VBZ chasing_VBG after_IN the_DT rabbit_NN ._. ''_''
+From_IN these_DT sentences_NNS ,_, we_PRP can_MD easily_RB get_VB some_DT basic_JJ spatial_JJ concepts_NNS such_JJ as_IN ``_`` in_IN ''_'' ,_, ``_`` be_VB struck_VBN at_IN ''_'' ,_, ``_`` chasing_VBG after_RB ''_'' ._.
+However_RB ,_, we_PRP also_RB have_VBP some_DT other_JJ spatial_JJ concepts_NNS from_IN the_DT above_JJ pictures_NNS ._.
+For_IN example_NN ,_, we_PRP could_MD see_VB the_DT size_NN and_CC shape_NN of_IN the_DT cage_NN in_IN picture_NN 1_CD ;_: To_TO what_WP extent_NN the_DT rabbit_NN 's_POS head_NN struck_VBD at_IN the_DT jar_NN ,_, loosely_RB or_CC tightly_RB in_IN picture_NN 2_CD ;_: What_WP is_VBZ the_DT distance_NN between_IN eagle_NN and_CC the_DT rabbit_NN ,_, very_RB close_RB or_CC quite_RB far_RB away_RB in_IN picture_NN 3_CD ._.
+Spatial_JJ concepts_NNS may_MD include_VB more_RBR aspects_NNS than_IN we_PRP thought_VBD ._.
+The_DT reason_NN why_WRB we_PRP overlook_VBP them_PRP is_VBZ we_PRP normally_RB do_VBP n't_RB express_VB them_PRP in_IN natural_JJ languages_NNS ._.
+It_PRP becomes_VBZ very_RB strange_JJ in_IN English_NNP if_IN we_PRP say_VBP ``_`` There_EX is_VBZ a_DT rabbit_NN in_IN a_DT three-inch_JJ high_JJ ,_, two-inch_JJ wide_JJ cage_NN ._. ''_''
+or_CC ``_`` Eagle_NNP is_VBZ chasing_VBG the_DT rabbit_NN in_IN a_DT distance_NN of_IN one_CD meter_NN ._. ''_''
+In_IN English_NNP ,_, we_PRP seems_VBZ to_TO pay_VB more_JJR attention_NN on_IN the_DT relative_JJ relationship_NN between_IN the_DT entities_NNS or_CC the_DT motion_NN events_NNS happened_VBD ._.
+It_PRP is_VBZ quite_RB natural_JJ that_IN we_PRP overlook_VBP the_DT size_NN and_CC shape_NN of_IN the_DT object_NN ,_, the_DT degree_NN of_IN tightness_NN ,_, the_DT real_JJ distance_NN between_IN the_DT objects_NNS ,_, and_CC so_RB forth_RB ._.
+2.2_CD Natural_JJ languages_NNS and_CC Spatial_JJ concepts_NNS There_EX is_VBZ a_DT prevalent_JJ misunderstanding_NN which_WDT stem_VBP from_IN the_DT study_NN of_IN European_JJ languages_NNS and_CC can_MD be_VB found_VBN in_IN many_JJ handbooks_NNS ,_, spatial_JJ concepts_NNS are_VBP encoded_VBN primarily_RB in_IN one_CD word_NN class_NN ,_, e.g._FW prepositions_NNS or_CC postpositions_NNS ._.
+In_IN fact_NN ,_, we_PRP have_VBP the_DT following_VBG kinds_NNS of_IN form-class_JJ involved_VBN in_IN the_DT coding_NN of_IN spatial_JJ concepts_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Local_JJ cases_NNS ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- Adpositions_NNPS ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- Spatial_JJ nominals_NNS ._.
+most_JJS languages_NNS use_VBP a_DT combination_NN of_IN these_DT strategies_NNS ,_, for_IN example_NN by_IN applying_VBG case_NN to_TO adpositions_NNS ,_, or_CC adpositions_NNS to_TO spatial_JJ nominals_NNS ,_, or_CC case_NN to_TO spatial_JJ nominals_NNS ._.
+Despite_IN grammatical_JJ differences_NNS ,_, previous_JJ researchers_NNS also_RB find_VBP that_DT different_JJ languages_NNS can_MD picture_VB 2_CD picture_NN 3_CD 1993_CD -RRB-_-RRB- ._.
+In_IN these_DT constructions_NNS ,_, a_DT handshape_NN morpheme_NN represents_VBZ an_DT object_NN of_IN a_DT specific_JJ type_NN -LRB-_-LRB- e.g._FW ,_, long_RB and_CC thin_RB ;_: vehicle_NN -RRB-_-RRB- ,_, and_CC the_DT location_NN and_CC movement_NN of_IN the_DT hands_NNS in_IN signing_VBG space_NN iconically_RB depict_VB spatial_JJ relations_NNS and_CC object_VB motion_NN ._.
+Most_JJS researchers_NNS who_WP study_VBP classifier_JJR constructions_NNS in_IN expressing_VBG spatial_JJ concepts_NNS focus_VB on_IN signers_NNS '_POS potential_NN for_IN iconically_RB encoding_VBG spatial_JJ information_NN related_VBN to_TO referent_VB location_NN and_CC orientation_NN ._.
+For_IN example_NN ,_, Talmy_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- assumes_VBZ a_DT high_JJ degree_NN of_IN iconicity_NN ,_, and_CC emphasizes_VBZ the_DT ability_NN to_TO make_VB very_RB fine_JJ and_CC nuanced_JJ spatial_JJ distinctions_NNS in_IN the_DT visual-spatial_JJ modality_NN ,_, as_IN compared_VBN to_TO the_DT more_RBR restricted_JJ spatial_JJ schemas_NNS available_JJ to_TO spoken_VBN languages_NNS ._.
+Liddell_NNP -LRB-_-LRB- 1980_CD -RRB-_-RRB- ,_, on_IN the_DT other_JJ hand_NN ,_, notes_VBZ that_IN hand_NN orientation_NN in_IN a_DT classifier_NN predicate_NN can_MD be_VB ``_`` neutral_JJ ''_'' in_IN the_DT sense_NN of_IN indicating_VBG only_RB the_DT nature_NN of_IN the_DT spatial_JJ relationship_NN -LRB-_-LRB- e.g._FW ._.
+The_DT cat_NN is_VBZ on_IN the_DT fence_NN -RRB-_-RRB- ,_, without_IN specifying_VBG the_DT cat_NN 's_POS particular_JJ orientation_NN in_IN relation_NN to_TO the_DT fence_NN ._.
+Encoding_VBG the_DT ground_NN object_NN before_IN the_DT figure_NN object_NN is_VBZ another_DT point_NN stated_VBD widely_RB in_IN the_DT literature_NN that_WDT mentions_VBZ classifier_NN constructions_NNS in_IN spatial_JJ description_NN -LRB-_-LRB- e.g._FW Liddell_NNP 1980_CD ;_: Supalla_NNP 1990_CD for_IN ASL_NNP ;_: Engberg_NNP -_: Pedersen_NNP 1993_CD ,_, 1994_CD for_IN DSL_NNP ;-RRB-_NNP Previous_JJ studies_NNS gave_VBD us_PRP a_DT generally_RB view_VBP about_IN how_WRB spatial_JJ concepts_NNS are_VBP expressed_VBN in_IN sign_NN languages_NNS ._.
+However_RB ,_, my_PRP$ research_NN aims_VBZ to_TO discuss_VB more_JJR details_NNS about_IN it_PRP ._.
+For_IN example_NN ,_, how_WRB static_JJ situation_NN -LRB-_-LRB- in_IN ,_, on_IN ,_, at_IN -RRB-_-RRB- and_CC dynamic_JJ situation_NN -LRB-_-LRB- downward_RB ,_, upward_RB ,_, outward_JJ motions_NNS ..._: -RRB-_-RRB- are_VBP expressed_VBN through_IN signing_VBG space_NN ._.
+Is_VBZ it_PRP true_JJ that_IN using_VBG classifier_JJR constructions_NNS is_VBZ the_DT only_JJ way_NN ?_.
+2.4_CD Research_NNP questions_NNS Learning_NNP to_TO represent_VB and_CC reason_NN about_IN space_NN is_VBZ crucial_JJ to_TO children_NNS 's_POS cognitive_JJ development_NN ._.
+A_DT recent_JJ research_NN -LRB-_-LRB- Dedre_NNP Genter_NNP et_NNP al_NNP ,_, 2013_CD -RRB-_-RRB- find_VBP that_IN some_DT deaf_JJ children_NNS using_VBG homesigns_NNS do_VBP not_RB have_VB gestures_NNS to_TO convey_VB spatial_JJ concepts_NNS which_WDT lead_VBP to_TO their_PRP$ poor_JJ performance_NN on_IN a_DT spatial_JJ mapping_NN task_NN ._.
+The_DT results_NNS prove_VBP the_DT absence_NN of_IN spatial_JJ language_NN thus_RB went_VBD hand-in-hand_RB with_IN poor_JJ performance_NN on_IN the_DT spatial_JJ cognitive_JJ task_NN ._.
+Their_PRP$ research_NN reminds_VBZ me_PRP the_DT importance_NN of_IN spatial_JJ language_NN in_IN HKSL_NNP and_CC deaf_JJ children_NNS 's_POS cognition_NN ._.
+Thus_RB my_PRP$ paper_NN aims_VBZ to_TO illustrate_VB how_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS from_IN a_DT grammatical_JJ perspective_NN and_CC discuss_VB if_IN HKSL_NNP narratives_NNS can_MD show_VB some_DT evidence_NN in_IN thinking_VBG about_IN the_DT relation_NN between_IN language_NN and_CC spatial_JJ cognition_NN ._.
+In_IN particular_JJ ,_, I_PRP will_MD address_VB the_DT following_JJ research_NN questions_NNS ._.
+1_LS ._.
+How_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS ,_, that_DT is_VBZ how_WRB does_VBZ it_PRP use_VB signing_NN space_NN to_TO describe_VB spatial_JJ concepts_NNS ?_.
+2_LS ._.
+Is_VBZ there_EX any_DT uniqueness_NN of_IN sign_NN language_NN in_IN expressing_VBG spatial_JJ concepts_NNS ?_.
+For_IN example_NN ,_, can_MD sign_VB language_NN express_VB any_DT spatial_JJ concepts_NNS which_WDT are_VBP not_RB usually_RB seen_VBN in_IN spoken_VBN language_NN ?_.
+3_LS ._.
+Sign_NN language_NN is_VBZ considered_VBN as_IN a_DT visual_JJ and_CC iconic_JJ language_NN ,_, previous_JJ studies_NNS find_VBP that_IN spatial_JJ concepts_NNS can_MD be_VB expressed_VBN very_RB iconically_RB ._.
+However_RB ,_, is_VBZ it_PRP easy_JJ for_IN children_NNS to_TO express_VB them_PRP as_RB well_RB as_IN adults_NNS do_VBP ?_.
+3_CD Method_NN Six_CD deaf_JJ children_NNS -LRB-_-LRB- 2_CD females_NNS and_CC 4_CD males_NNS -RRB-_-RRB- ,_, ranging_VBG from_IN 11_CD ;_: 4_CD to_TO 14_CD ;_: 2_LS -LRB-_-LRB- mean_VB =_SYM 12.3_CD years_NNS ,_, SD_NNP =_SYM 1_CD year_NN -RRB-_-RRB- ,_, participated_VBD in_IN this_DT study_NN ._.
+All_PDT the_DT deaf_JJ children_NNS were_VBD congenitally_RB or_CC prelingually_RB deaf_JJ ._.
+Two_CD children_NNS were_VBD severely_RB deaf_JJ -LRB-_-LRB- 71_CD -_: 90_CD db_NN -RRB-_-RRB- ;_: the_DT left_VBN four_CD children_NNS were_VBD profoundly_RB deaf_JJ -LRB-_-LRB- 91_CD db_NN +_NN -RRB-_-RRB- ._.
+Two_CD had_VBD cochlear_NN implants_NNS ;_: Three_CD had_VBD hearing_NN aids_NNS ;_: one_CD had_VBD one_CD ear_NN with_IN hearing_NN aid_NN and_CC the_DT other_JJ ear_NN with_IN cochlear_NN implant_VBP ._.
+Two_CD of_IN the_DT six_CD children_NNS are_VBP native_JJ signers_NNS of_IN HKSL_NNP ._.
+They_PRP are_VBP all_DT bimodal_JJ bilinguals_NNS exposed_VBN to_TO HKSL_NNP and_CC Cantonese_NNP ._.
+Two_CD adults_NNS -LRB-_-LRB- one_CD male_NN and_CC one_CD female_NN ;_: both_DT at_IN their_PRP$ 30s_NNS -RRB-_-RRB- who_WP worked_VBD at_IN the_DT center_NN for_IN sign_NN linguistics_NNS and_CC deaf_JJ studies_NNS also_RB participated_VBD in_IN the_DT study_NN ._.
+They_PRP were_VBD both_DT graduated_VBD from_IN the_DT Hong_NNP Kong_NNP School_NNP for_IN Deaf_NNP and_CC native_JJ signers_NNS of_IN HKSL_NNP ._.
+They_PRP were_VBD chosen_VBN as_IN the_DT control_NN group_NN to_TO compare_VB with_IN the_DT group_NN of_IN deaf_JJ children_NNS ._.
+The_DT material_NN of_IN the_DT study_NN is_VBZ a_DT wordless_JJ picture_NN book_NN ``_`` Frog_NNP ,_, Where_WRB Are_VBP You_PRP ?_. ''_''
+-LRB-_-LRB- Mayer_NNP ,_, 1969_CD -RRB-_-RRB- ._.
+I_PRP choose_VBP it_PRP as_IN my_PRP$ research_NN material_NN because_IN of_IN the_DT abundant_JJ spatial_JJ concepts_NNS involved_VBN in_IN this_DT short_JJ story_NN ._.
+The_DT narrative_NN was_VBD recorded_VBN on_IN two_CD video_JJ cameras_NNS ._.
+One_CD is_VBZ positioned_VBN directly_RB to_TO record_VB the_DT child_NN ;_: another_DT is_VBZ positioned_VBN to_TO record_VB the_DT lateral_JJ view_NN ._.
+Two_CD testers_NNS participated_VBD in_IN the_DT narrative_NN recording_NN ,_, tester_NN A_DT gave_VBD some_DT instructions_NNS to_TO deaf_JJ child_NN while_IN tester_NN B_NN was_VBD responsible_JJ for_IN recording_VBG with_IN cameras_NNS ._.
+Both_DT deaf_JJ children_NNS and_CC deaf_JJ adults_NNS were_VBD told_VBN to_TO read_VB the_DT picture_NN book_NN very_RB carefully_RB and_CC try_VB their_PRP$ best_JJS to_TO memorize_VB the_DT contents_NNS of_IN the_DT story_NN ._.
+Once_RB they_PRP start_VBP retelling_VBG the_DT story_NN in_IN HKSL_NNP ,_, the_DT picture_NN book_NN was_VBD not_RB present.Trained_VBN deaf_JJ and_CC hearing_NN signers_NNS transcribed_VBD the_DT signed_VBN narratives_NNS and_CC checked_VBN by_IN the_DT native_JJ signer_NN of_IN HKSL_NNP ._.
+4_CD Results_NNS In_IN procedure_NN of_IN data_NNS coding_NN ,_, we_PRP listed_VBD 24_CD spatial_JJ relation_NN contained_VBD utterances_NNS that_IN signers_NNS may_MD mention_VB in_IN their_PRP$ signing_NN narratives_NNS ._.
+Among_IN these_DT 24_CD utterances_NNS ,_, 10_CD are_VBP related_VBN to_TO static_JJ station_NN -LRB-_-LRB- on_IN ,_, in_IN ,_, next_IN to_TO ..._: -RRB-_-RRB- while_IN 14_CD are_VBP dealing_VBG with_IN dynamic_JJ situation_NN -LRB-_-LRB- downward_RB ,_, upward_RB ,_, outward_JJ motions_NNS ..._: -RRB-_-RRB- ._.
+The_DT result_NN showed_VBD that_IN adults_NNS had_VBD a_DT tendency_NN to_TO describe_VB more_JJR spatial_JJ related_VBN informations_NNS -LRB-_-LRB- mean_VB =_SYM 18_CD ,_, 75_CD %_NN of_IN the_DT overall_JJ spatial_JJ relation_NN contained_VBD utterances_NNS -RRB-_-RRB- than_IN children_NNS -LRB-_-LRB- mean_VB =_SYM 10_CD ,_, 41.7_CD %_NN of_IN the_DT overall_JJ spatial_JJ relation_NN contained_VBD utterances_NNS -RRB-_-RRB- ._.
+In_IN the_DT following_JJ parts_NNS ,_, I_PRP will_MD give_VB a_DT description_NN on_IN how_WRB adults_NNS and_CC children_NNS describe_VBP spatial_JJ concepts_NNS for_IN both_DT static_JJ and_CC dynamic_JJ situation_NN ._.
+4.1_CD The_DT adult_NN forms_NNS In_IN order_NN to_TO discuss_VB the_DT standard_JJ form_NN of_IN how_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS and_CC contrast_NN the_DT child_NN form_NN with_IN the_DT adult_NN target_NN ,_, we_PRP first_RB describe_VBP two_CD adults_NNS frog_NN story_NN narratives_NNS ,_, concentrating_VBG on_IN the_DT signers_NNS '_POS different_JJ strategies_NNS of_IN encoding_VBG spatial_JJ concepts_NNS for_IN both_DT static_JJ and_CC dynamic_JJ situation_NN ._.
+Static_JJ situation_NN :_: Spatial_JJ relation_NN in_IN static_JJ situation_NN includes_VBZ on_IN ,_, in_IN ,_, next_IN to_TO and_CC behind_IN in_IN this_DT narrative_NN material_NN ._.
+Among_IN them_PRP the_DT first_JJ two_CD concepts_NNS mentioned_VBN by_IN both_DT adults_NNS while_IN next_JJ to_TO only_RB by_IN A1_NNP ._.
+behind_RB was_VBD not_RB mentioned_VBN in_IN adults_NNS '_POS data_NNS ._.
+Most_JJS of_IN spatial_JJ concepts_NNS are_VBP expressed_VBN by_IN classifier_NN constructions_NNS of_IN two_CD hands_NNS ,_, body_NN as_IN part_NN of_IN classifier_NN predicates_NNS are_VBP also_RB found_VBN in_IN adults_NNS '_POS narrative_JJ data_NNS ._.
+These_DT two_CD strategies_NNS will_MD be_VB discussed_VBN in_IN the_DT following_VBG paragraphs_NNS ._.
+Strategy_NN 1_CD :_: Classifier_NNP constructions_NNS of_IN two_CD hands_NNS ._.
+Sign_NN language_NN tends_VBZ to_TO convey_VB spatial_JJ information_NN using_VBG classifier_JJR constructions_NNS -LRB-_-LRB- e.g._FW Supalla_FW 1982_CD ;_: Engberg_NNP -_: Pedersen_NNP 1993_CD -RRB-_-RRB- ._.
+In_IN these_DT constructions_NNS ,_, a_DT handshape_NN morpheme_NN represents_VBZ an_DT object_NN of_IN a_DT specific_JJ type_NN -LRB-_-LRB- e.g._FW ,_, long_RB and_CC thin_RB ;_: vehicle_NN -RRB-_-RRB- ,_, and_CC the_DT location_NN and_CC movement_NN of_IN the_DT hands_NNS in_IN signing_VBG space_NN iconically_RB depict_VB spatial_JJ relations_NNS and_CC object_VB motion_NN ._.
+Let_VB me_PRP illustrate_VB this_DT observation_NN with_IN HKSL_NNP adult_NN data_NNS ._.
+Spatial_JJ concept_NN on_IN is_VBZ contained_VBN in_IN six_CD utterances_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT boy_NN and_CC the_DT dog_NN sleep_NN on_IN bed_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT dog_NN stands_VBZ on_IN the_DT windowsill_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- The_DT boy_NN stands_VBZ on_IN the_DT rock_NN ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- The_DT boy_NN lies_VBZ on_IN deer_NN 's_POS head_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- A_DT frog_NN sits_VBZ on_IN boy_NN 's_POS hand_NN ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- Frogs_NNS in_IN a_DT line_NN on_IN tree_NN trunk_NN ._.
+Figure_NN in_IN all_DT six_CD utterances_NNS are_VBP animate_JJ beings_NNS thus_RB signers_NNS choose_VBP to_TO use_VB Y_NNP handshape_NN for_IN semantic_JJ classifier_NN ._.
+Size_NN and_CC shape_NN classifiers_NNS for_IN bed_NN ,_, windowsill_NN ,_, rock_NN ,_, trunk_NN and_CC sematic_JJ classifiers_NNS for_IN boy_NN and_CC deer_NN are_VBP used_VBN to_TO refer_VB to_TO Ground_NNP ._.
+Dominant_JJ hand_NN is_VBZ usually_RB responsible_JJ for_IN Figure_NN while_IN non-dominant_JJ hand_NN for_IN Ground_NN ._.
+The_DT relation_NN between_IN two_CD hands_NNS is_VBZ one_CD on_IN the_DT top_NN of_IN another_DT with_IN a_DT contact_NN ._.
+Figure_NN 2_CD is_VBZ an_DT example_NN for_IN ``_`` The_DT boy_NN lies_VBZ on_IN deer_NN 's_POS head_NN ._. ''_''
+The_DT orientation_NN of_IN classifier_NN handshape_NN also_RB conveys_VBZ meaning_NN in_IN this_DT example_NN ._.
+The_DT different_JJ orientation_NN of_IN two_CD hands_NNS represents_VBZ for_IN a_DT deer_NN stands_VBZ and_CC a_DT boy_NN lies_VBZ ._.
+Figure_NN 2_CD ._.
+Illustration_NN of_IN spatial_JJ concept_NN on_IN in_IN ``_`` The_DT boy_NN lies_VBZ on_IN deer_NN 's_POS head_NN ._. ''_''
+Spatial_JJ concept_NN in_IN only_JJ discussed_VBN by_IN one_CD utterance_NN ``_`` The_DT frog_NN is_VBZ in_IN the_DT jar_NN ''_'' ._.
+However_RB ,_, all_DT participants_NNS have_VBP mentioned_VBN this_DT concept_NN ._.
+Signers_NNS first_RB introduce_VBP Figure_NN -LRB-_-LRB- frog_NN -RRB-_-RRB- and_CC Ground_NN -LRB-_-LRB- jar_NN -RRB-_-RRB- ,_, then_RB non-dominant_JJ hand_NN with_IN a_DT C_NNP handshape_NN for_IN jar_NN keep_VBP static_JJ while_IN dominant_JJ hand_NN with_IN bend_VB B_NNP handshape_NN for_IN frog_NN move_NN downward_RB ._.
+Two_CD hands_NNS are_VBP holding_VBG close_RB to_TO each_DT other_JJ without_IN contact_NN ._.
+Figure_NN 3_CD is_VBZ the_DT illustration_NN of_IN the_DT whole_JJ utterance_NN ._.
+JAR_NNP FROG_NNP Figure_NNP 3_CD ._.
+Illustration_NN of_IN spatial_JJ concept_NN in_IN in_IN ``_`` The_DT frog_NN DOG_NNP is_VBZ in_IN the_DT jar_NN ._. ''_''
+BOY_NN ``_`` The_DT boy_NN and_CC dog_NN sit_VBP next_JJ to_TO each_DT other_JJ ._. ''_''
+Figure_NN 4_CD ._.
+Illustration_NN of_IN spatial_JJ concept_NN next_IN to_TO in_IN ``_`` The_DT boy_NN and_CC dog_NN sit_VBP next_JJ to_TO each_DT other_JJ ._. ''_''
+Spatial_JJ concept_NN next_IN to_TO discussed_VBN in_IN the_DT utterance_NN ``_`` The_DT boy_NN and_CC the_DT dog_NN sit_VBP next_JJ to_TO each_DT other_JJ ._. ''_''
+only_RB by_IN one_CD signer_NN ._.
+He_PRP first_RB introduced_VBD two_CD referents_NNS FROG_NNP IN_IN JAR_NNP boy_NN and_CC dog_NN ,_, then_RB next_IN to_TO is_VBZ expressed_VBN by_IN putting_VBG two_CD hands_NNS with_IN classifier_NN handshape_NN for_IN entities_NNS side_NN by_IN side_NN with_IN a_DT short_JJ distance_NN as_IN in_IN Figure_NN 4_CD ._.
+Strategy_NN 2_CD :_: Body_NN as_IN part_NN of_IN the_DT classifier_NN predicates_VBZ ._.
+When_WRB Figure_NN or_CC Ground_NN refers_VBZ to_TO animate_VB beings_NNS ,_, signers_NNS may_MD choose_VB to_TO use_VB his_PRP$ or_CC her_PRP$ own_JJ body_NN as_IN one_CD of_IN the_DT components_NNS of_IN the_DT classifier_NN predicates_VBZ ._.
+We_PRP have_VBP discussed_VBN that_IN spatial_JJ concept_NN on_IN in_IN the_DT utterance_NN ``_`` The_DT boy_NN lies_VBZ on_IN deer_NN 's_POS head_NN ._. ''_''
+can_MD be_VB expressed_VBN by_IN classifier_NN construction_NN of_IN two_CD hands_NNS ._.
+In_IN this_DT utterance_NN ,_, Ground_NNP refers_VBZ to_TO deer_NN 's_POS head_NN ._.
+If_IN signer_NN involves_VBZ his_PRP$ or_CC her_PRP$ own_JJ body_NN ,_, then_RB a_DT Y_NN handshape_NN for_IN boy_NN will_MD locate_VB directly_RB on_IN signer_NN 's_POS head_NN ._.
+Here_RB signer_NN shifts_NNS her_PRP$ role_NN to_TO a_DT deer_NN ,_, and_CC regards_VBZ her_PRP$ head_NN as_IN deer_NN 's_POS head_NN as_IN in_IN Figure_NN 5_CD ._.
+DEER_NNP some_DT animate_VBP being_VBG lies_NNS on_IN deer_NN 's_POS head_NN BOY_NNP Figure_NNP 5_CD ._.
+Illustration_NN of_IN body_NN involvement_NN in_IN ``_`` The_DT boy_NN lies_VBZ on_IN deer_NN 's_POS head_NN ._. ''_''
+Above_IN all_DT we_PRP can_MD get_VB the_DT conclusion_NN that_WDT spatial_JJ concepts_NNS in_IN static_JJ situations_NNS are_VBP expressed_VBN by_IN where_WRB the_DT hands_NNS are_VBP placed_VBN in_IN the_DT signing_NN space_NN or_CC in_IN the_DT relationship_NN to_TO the_DT body_NN ._.
+In_IN the_DT following_JJ section_NN ,_, a_DT description_NN of_IN how_WRB dynamic_JJ spatial_JJ concepts_NNS are_VBP expressed_VBN in_IN HKSL_NNP will_MD be_VB made_VBN on_IN the_DT diversity_NN of_IN a_DT fall_NN -LRB-_-LRB- downward_JJ motion_NN -RRB-_-RRB- ,_, a_DT rise_NN -LRB-_-LRB- upward_JJ motion_NN -RRB-_-RRB- ,_, an_DT emergence_NN -LRB-_-LRB- outward_JJ motion_NN -RRB-_-RRB- and_CC a_DT chase_NN -LRB-_-LRB- running_VBG after_IN -RRB-_-RRB- ._.
+Dynamic_NNP situation_NN :_: Fourteen_CD utterances_NNS are_VBP dealing_VBG with_IN dynamic_JJ situation_NN -LRB-_-LRB- downward_RB ,_, upward_RB ,_, outward_JJ motions_NNS ..._: -RRB-_-RRB- ._.
+As_IN we_PRP already_RB have_VBP the_DT knowledge_NN spatial_JJ concepts_NNS are_VBP iconically_RB expressed_VBN by_IN where_WRB the_DT hands_NNS are_VBP placed_VBN in_IN the_DT signing_NN space_NN or_CC in_IN the_DT relationship_NN to_TO the_DT body_NN ._.
+It_PRP becomes_VBZ obvious_JJ that_IN dynamic_JJ situation_NN will_MD largely_RB depends_VBZ on_IN the_DT location_NN and_CC movement_NN of_IN two_CD hands_NNS in_IN signing_VBG space_NN ._.
+For_IN example_NN ,_, if_IN we_PRP want_VBP to_TO express_VB ``_`` The_DT boy_NN falls_VBZ down_RP from_IN the_DT tree_NN ._. ''_''
+,_, we_PRP use_VBP non-dominant_JJ hand_NN with_IN a_DT tree_NN classifier_NN and_CC dominant_JJ hand_NN with_IN a_DT Y_NNP handshape_NN for_IN boy_NN ._.
+The_DT location_NN is_VBZ at_IN the_DT higher_JJR neutral_JJ space_NN ,_, then_RB non-dominant_JJ hand_NN keep_VB static_JJ while_IN dominant_JJ hand_NN with_IN a_DT downward_JJ movement_NN to_TO the_DT lower_JJR neutral_JJ space_NN ._.
+As_IN spatial_JJ concepts_NNS in_IN dynamic_JJ situation_NN mainly_RB depend_VB on_IN the_DT movement_NN ,_, thus_RB all_DT falls_VBZ ,_, rises_NNS are_VBP expected_VBN to_TO be_VB largely_RB the_DT same_JJ ._.
+However_RB ,_, my_PRP$ research_NN data_NNS gives_VBZ some_DT opposite_JJ view_NN and_CC I_PRP take_VBP spatial_JJ concept_NN fall_NN as_IN example_NN to_TO explain_VB the_DT diversity_NN of_IN its_PRP$ expressions_NNS ._.
+In_IN the_DT picture_NN Frog_NNP ,_, Where_WRB Are_VBP You_PRP ?_.
+There_EX are_VBP six_CD fall_NN episodes_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT fall_NN of_IN a_DT dog_NN from_IN a_DT window_NN sill_NN to_TO the_DT ground_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT fall_NN of_IN a_DT beehive_NN from_IN a_DT tree_NN to_TO the_DT ground_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- A_DT boy_NN 's_POS fall_NN from_IN a_DT tree_NN to_TO the_DT ground_NN ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- The_DT boy_NN 's_POS fall_NN from_IN the_DT top_NN of_IN a_DT rock_NN onto_IN a_DT deer_NN 's_POS head_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- The_DT boy_NN 's_POS fall_NN from_IN the_DT deer_NN 's_POS head_NN into_IN a_DT pond_NN ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- The_DT fall_NN of_IN the_DT dog_NN from_IN a_DT cliff_NN into_IN the_DT pond_NN ._.
+In_IN English_NNP ,_, all_PDT these_DT six_CD falls_VBZ are_VBP described_VBN using_VBG a_DT phrase_NN ``_`` from_IN one_CD place_NN to_TO another_DT ''_'' ._.
+Sometimes_RB we_PRP can_MD also_RB omit_VB the_DT starting_VBG and_CC ending_VBG points_NNS ._.
+The_DT limitation_NN is_VBZ we_PRP can_MD not_RB see_VB more_JJR details_NNS of_IN a_DT fall_NN ,_, this_DT limation_NN is_VBZ well_RB solved_VBN in_IN sign_NN language_NN ._.
+Horizontal_JJ fall_NN versus_CC vertical_JJ fall_NN ._.
+Among_IN these_DT six_CD falls_VBZ ,_, episode_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- is_VBZ different_JJ from_IN others_NNS as_IN it_PRP is_VBZ a_DT horizontal_JJ fall_NN -LRB-_-LRB- see_VB Appendix_NNP 1_CD ,_, picture_NN 14_CD and_CC 15_CD -RRB-_-RRB- while_IN others_NNS are_VBP vertical_JJ falls_VBZ ._.
+We_PRP can_MD not_RB distinguish_VB them_PRP in_IN spoken_VBN language_NN but_CC signers_NNS make_VBP a_DT big_JJ contrast_NN of_IN these_DT two_CD types_NNS of_IN falls_VBZ ._.
+As_IN illustrated_VBN in_IN Figure_NN 6_CD ,_, horizontal_JJ fall_NN is_VBZ expressed_VBN by_IN a_DT rightward_JJ movement_NN horizontally_RB while_IN vertical_JJ fall_NN is_VBZ conveyed_VBN through_IN a_DT downward_JJ movement_NN vertically_RB ._.
+Horizontal_JJ fall_NN ``_`` The_DT boy_NN falls_VBZ from_IN the_DT rock_NN to_TO deer_NN 's_POS head_NN ._. ''_''
+Vertical_JJ fall_NN ``_`` The_DT boy_NN falls_VBZ from_IN tree_NN branch_NN ._. ''_''
+Figure_NN 6_CD ._.
+Illustration_NN of_IN difference_NN between_IN horizontal_JJ fall_NN and_CC vertical_JJ fall_NN ._.
+Path_NN of_IN a_DT fall_NN :_: fall_NN from_IN the_DT deer_NN 's_POS head_NN versus_CC fall_NN from_IN a_DT cliff_NN ._.
+Another_DT difference_NN between_IN spoken_VBN narratives_NNS and_CC our_PRP$ signing_NN data_NN is_VBZ that_IN sign_NN language_NN can_MD express_VB two_CD falls_VBZ simultaneously_RB ._.
+For_IN example_NN in_IN fall_NN episode_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, spoken_VBN language_NN use_NN two_CD clauses_NNS ``_`` The_DT boy_NN falls_VBZ from_IN the_DT deer_NN 's_POS head_NN into_IN a_DT pond_NN ._. ''_''
+and_CC ``_`` The_DT dog_NN falls_VBZ from_IN a_DT cliff_NN into_IN the_DT pond_NN ._. ''_''
+to_TO complete_VB the_DT meaning_NN while_IN sign_NN language_NN can_MD express_VB them_PRP simultaneously_RB with_IN one_CD hand_NN represents_VBZ for_IN a_DT dog_NN 's_POS fall_NN and_CC the_DT other_JJ hand_NN stands_VBZ for_IN the_DT boy_NN 's_POS fall_NN ._.
+The_DT boy_NN 's_POS fall_NN is_VBZ from_IN the_DT head_NN of_IN the_DT deer_NN while_IN the_DT dog_NN 's_POS fall_NN is_VBZ from_IN the_DT ground_NN ._.
+Thus_RB the_DT starting_VBG point_NN of_IN the_DT boy_NN is_VBZ higher_JJR than_IN the_DT dog_NN as_IN presented_VBN in_IN Figure_NN 7_CD ._.
+Sign_NN languages_NNS can_MD express_VB the_DT path_NN of_IN a_DT fall_NN very_RB iconically_RB ,_, other_JJ examples_NNS can_MD be_VB found_VBN such_JJ as_IN the_DT path_NN of_IN boy_NN 's_POS fall_NN from_IN tree_NN to_TO the_DT ground_NN is_VBZ longer_RBR than_IN the_DT path_NN of_IN falling_VBG from_IN rock_NN to_TO deer_NN 's_POS head_NN ._.
+Figure_NN 7_CD ._.
+Illustration_NN of_IN simultaneous_JJ use_NN of_IN two_CD hands_NNS to_TO stand_VB for_IN two_CD falls_VBZ ._.
+Fall_NN from_IN versus_CC fall_VB to_TO ._.
+In_IN English_NNP ,_, sometimes_RB we_PRP omit_VB one_CD of_IN the_DT starting_VBG and_CC ending_VBG points_NNS which_WDT is_VBZ also_RB the_DT same_JJ in_IN signing_VBG narratives_NNS ._.
+How_WRB do_VBP signers_NNS distinguish_VBP ``_`` fall_NN from_IN ''_'' and_CC ``_`` fall_NN to_TO ''_'' ?_.
+``_`` Fall_NN from_IN ''_'' usually_RB starts_VBZ with_IN two_CD hands_NNS both_DT at_IN the_DT higher_JJR neutral_JJ space_NN ,_, non-dominant_JJ hand_NN for_IN Ground_NN keep_VBP static_JJ while_IN dominant_JJ hand_NN for_IN figure_NN with_IN a_DT curved_JJ movement_NN to_TO the_DT bottom_JJ right_NN -LRB-_-LRB- or_CC left_VBN -RRB-_-RRB- ._.
+A_DT direct_JJ downward_JJ movement_NN is_VBZ also_RB accepted_VBN but_CC not_RB as_IN common_JJ as_IN a_DT curved_JJ movement_NN ._.
+``_`` Fall_NN to_TO ''_'' usually_RB starts_VBZ with_IN non-dominant_JJ hand_NN for_IN Ground_NN at_IN the_DT lower_JJR neutral_JJ space_NN while_IN dominant_JJ hand_NN for_IN Figure_NN moves_NNS from_IN up_RB right_JJ -LRB-_-LRB- or_CC left_VBN -RRB-_-RRB- to_TO the_DT same_JJ place_NN with_IN non-dominant_JJ hand_NN ._.
+A_DT direct_JJ downward_JJ movement_NN is_VBZ also_RB accepted_VBN similar_JJ to_TO what_WP we_PRP have_VBP observed_VBN in_IN ``_`` Fall_NN from_IN ''_'' ._.
+Examples_NNS of_IN fall_NN from_IN and_CC fall_VB to_TO are_VBP illustrated_VBN in_IN Figure_NN 8_CD ._.
+Fall_NN to_TO :_: The_DT dog_NN falls_VBZ with_IN a_DT jar_NN on_IN his_PRP$ head_NN to_TO the_DT ground_NN ._.
+Fall_NN from_IN :_: The_DT dog_NN fall_NN from_IN the_DT windowsill_NN ._.
+Figure_NN 8_CD ._.
+Illustration_NN of_IN difference_NN between_IN fall_NN from_IN and_CC fall_VB to_TO ._.
+Besides_IN the_DT above_JJ complexities_NNS of_IN a_DT fall_NN in_IN HKSL_NNP ,_, other_JJ elements_NNS are_VBP also_RB found_VBN ,_, for_IN example_NN ,_, some_DT signers_NNS will_MD mouthing_VB the_DT sound_NN ``_`` bang_NN ''_'' of_IN things_NNS falling_VBG down_IN onto_IN the_DT ground_NN ._.
+Others_NNS may_MD also_RB involve_VB their_PRP$ own_JJ body_NN into_IN signing_NN when_WRB Figure_NN or_CC Ground_NN refers_VBZ to_TO an_DT animate_NN being_VBG ._.
+It_PRP is_VBZ far_RB more_RBR complex_JJ and_CC iconic_JJ than_IN we_PRP thought_VBD to_TO describe_VB a_DT spatial_JJ concept_NN fall_NN in_IN HKSL_NNP ._.
+Similar_JJ to_TO fall_VB ,_, other_JJ spatial_JJ concepts_NNS in_IN dynamic_JJ situation_NN also_RB have_VBP some_DT variations_NNS from_IN a_DT citation_NN form_NN ,_, I_PRP will_MD not_RB list_VB them_PRP one_CD by_IN one_CD as_IN their_PRP$ using_VBG is_VBZ more_RBR or_CC less_RBR the_DT same_JJ with_IN fall_NN ._.
+In_IN this_DT section_NN ,_, we_PRP have_VBP discussed_VBN about_IN how_WRB do_VBP spatial_JJ concepts_NNS expressed_VBN by_IN adults_NNS in_IN both_DT static_JJ and_CC dynamic_JJ situation_NN ,_, the_DT main_JJ strategy_NN is_VBZ using_VBG classifier_JJR constructions_NNS ._.
+In_IN the_DT following_JJ section_NN ,_, I_PRP will_MD talk_VB about_IN the_DT child_NN form_NN of_IN expressing_VBG spatial_JJ concepts_NNS and_CC then_RB a_DT comparison_NN on_IN the_DT different_JJ performance_NN between_IN children_NNS and_CC adults_NNS will_MD be_VB made_VBN ._.
+4.2_CD The_DT child_NN forms_NNS From_IN previous_JJ discussion_NN ,_, we_PRP know_VBP that_IN considering_VBG the_DT quantity_NN of_IN spatial_JJ concepts_NNS contained_VBN in_IN signing_VBG narratives_NNS ,_, mean_NN of_IN adults_NNS is_VBZ almost_RB twice_RB of_IN children_NNS ._.
+It_PRP seems_VBZ that_DT children_NNS are_VBP not_RB good_JJ at_IN expressing_VBG spatial_JJ concepts_NNS as_IN adults_NNS do_VBP ._.
+However_RB ,_, it_PRP becomes_VBZ easy_JJ to_TO understand_VB the_DT quantity_NN contrast_NN if_IN length_NN of_IN signing_NN is_VBZ also_RB counted_VBN as_IN a_DT factor_NN ._.
+Mean_JJ length_NN of_IN adults_NNS '_POS signing_NN is_VBZ 4_CD minutes_NNS 35_CD seconds_NNS while_IN children_NNS 's_POS signing_NN is_VBZ only_RB half_NN of_IN adults_NNS '_POS -LRB-_-LRB- 2_CD minutes_NNS and_CC 15_CD seconds_NNS -RRB-_-RRB- ._.
+This_DT result_NN shows_VBZ that_IN the_DT overall_JJ narrative_NN skills_NNS of_IN children_NNS is_VBZ lower_JJR than_IN adults_NNS which_WDT is_VBZ true_JJ in_IN reality_NN ._.
+The_DT following_VBG paragraphs_NNS will_MD focus_VB on_IN two_CD groups_NNS of_IN deaf_JJ children_NNS -LRB-_-LRB- DD_NNP and_CC DH_NNP -RRB-_-RRB- in_IN encoding_VBG spatial_JJ concepts_NNS ._.
+Deaf_JJ children_NNS of_IN deaf_JJ parents_NNS -LRB-_-LRB- DD_NNP -RRB-_-RRB- :_: Two_CD participants_NNS were_VBD born_VBN with_IN deaf_JJ parents_NNS and_CC were_VBD native_JJ signers_NNS of_IN HKSL_NNP ._.
+Both_DT of_IN them_PRP have_VBP been_VBN exposed_VBN to_TO HKSL_NNP for_IN more_JJR than_IN ten_CD years_NNS ._.
+They_PRP could_MD produce_VB target-like_JJ CL_NNP constructions_NNS as_IN adults_NNS did_VBD ._.
+In_IN Static_JJ situation_NN ,_, DD_NNP first_RB introduce_VBP the_DT Figure_NN and_CC the_DT Ground_NN ,_, then_RB followed_VBN by_IN using_VBG classifier_JJR constructions_NNS of_IN two_CD hands_NNS to_TO indicate_VB the_DT relative_JJ relation_NN between_IN two_CD referents_NNS and_CC express_VB spatial_JJ concepts_NNS ._.
+Their_PRP$ performance_NN is_VBZ same_JJ to_TO the_DT adult_NN form_NN ._.
+The_DT following_VBG Figure_NN 9_CD is_VBZ an_DT example_NN of_IN the_DT DD_NNP form_NN expressing_VBG spatial_JJ concept_NN in_IN in_IN the_DT utterance_NN ``_`` There_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._. ''_''
+FROG_NNP JAR_NNP FROG_NNP IN_IN JAR_NNP Figure_NNP 9_CD ._.
+Illustration_NN of_IN the_DT DD_NNP form_NN of_IN expressing_VBG spatial_JJ concept_NN in_IN in_IN the_DT utterance_NN ``_`` There_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._. ''_''
+A_DT contrast_NN between_IN the_DT adult_NN form_NN and_CC DD_NNP form_NN in_IN expressing_VBG spatial_JJ concepts_NNS in_IN static_JJ situation_NN is_VBZ that_IN deaf_JJ children_NNS of_IN deaf_JJ parents_NNS are_VBP less_RBR likely_JJ to_TO use_VB body_NN as_IN part_NN of_IN classifier_NN predicates_NNS ._.
+In_IN the_DT overall_JJ six_CD spatial_JJ concepts_NNS contained_VBD utterances_NNS of_IN static_JJ situation_NN they_PRP have_VBP expressed_VBN ,_, none_NN of_IN the_DT utterances_NNS using_VBG body_NN as_IN part_NN of_IN classifier_NN predicates_NNS ._.
+Spatial_JJ concepts_NNS in_IN dynamic_JJ situations_NNS largely_RB depend_VBP on_IN the_DT location_NN and_CC movement_NN of_IN two_CD hands_NNS in_IN signing_VBG space_NN ._.
+In_IN the_DT previous_JJ discussion_NN ,_, we_PRP pointed_VBD out_RP that_IN a_DT spatial_JJ concept_NN fall_NN could_MD be_VB very_RB complex_JJ and_CC iconic_JJ in_IN adults_NNS '_POS signing_NN ._.
+In_IN contrast_NN ,_, even_RB DD_NNP with_IN more_JJR than_IN ten_CD years_NNS of_IN exposure_NN of_IN HKSL_NNP could_MD not_RB produce_VB as_IN adults_NNS '_POS do_VBP ._.
+First_NNP of_IN all_DT ,_, they_PRP could_MD not_RB distinguish_VB a_DT horizontal_JJ fall_NN from_IN a_DT vertical_JJ fall_NN ._.
+As_IN we_PRP have_VBP discussed_VBN in_IN the_DT previous_JJ section_NN ,_, adults_NNS could_MD distinguish_VB a_DT horizontal_JJ fall_NN from_IN a_DT vertical_JJ fall_NN by_IN iconically_RB changing_VBG the_DT direction_NN of_IN movement_NN ._.
+Horizontal_JJ fall_NN is_VBZ expressed_VBN by_IN a_DT rightward_JJ movement_NN horizontally_RB while_IN vertical_JJ fall_NN is_VBZ conveyed_VBN through_IN a_DT downward_JJ movement_NN vertically_RB ._.
+DD_NNP do_VBP not_RB have_VB this_DT kind_NN of_IN awareness_NN ,_, they_PRP express_VBP most_RBS falls_VBZ by_IN using_VBG a_DT downward_JJ movement_NN ._.
+The_DT second_JJ difference_NN is_VBZ the_DT path_NN of_IN a_DT fall_NN could_MD be_VB very_RB detailed_JJ and_CC iconic_JJ in_IN the_DT adult_NN form_NN while_IN not_RB that_DT obvious_JJ in_IN the_DT DD_NNP form_NN ._.
+In_IN the_DT dynamic_JJ situation_NN describing_VBG simultaneity_NN of_IN two_CD falls_VBZ :_: ``_`` The_DT boy_NN falls_VBZ from_IN the_DT deer_NN 's_POS head_NN into_IN a_DT pond_NN ._. ''_''
+and_CC ``_`` The_DT dog_NN falls_VBZ from_IN a_DT cliff_NN into_IN the_DT pond_NN ._. ''_''
+The_DT adult_NN form_NN is_VBZ using_VBG two_CD hands_NNS simultaneously_RB with_IN one_CD hand_NN represents_VBZ for_IN a_DT dog_NN 's_POS fall_NN and_CC the_DT other_JJ hand_NN stands_VBZ for_IN the_DT boy_NN 's_POS fall_NN ._.
+As_IN the_DT boy_NN 's_POS fall_NN is_VBZ from_IN the_DT head_NN of_IN the_DT deer_NN while_IN the_DT dog_NN 's_POS fall_NN is_VBZ from_IN the_DT ground_NN ._.
+The_DT starting_VBG point_NN of_IN the_DT boy_NN is_VBZ higher_JJR than_IN the_DT dog_NN ._.
+In_IN contrast_NN ,_, both_DT two_CD DD_NNP ignored_VBD the_DT simultaneity_NN of_IN two_CD falls_VBZ ,_, they_PRP introduced_VBD the_DT two_CD falls_VBZ separately_RB with_IN two_CD independent_JJ clauses_NNS ._.
+Besides_IN ,_, the_DT different_JJ starting_VBG point_NN of_IN two_CD falls_VBZ are_VBP also_RB ignored_VBN by_IN DD_NNP as_IN presented_VBN in_IN Figure_NN 10_CD ._.
+MALE_JJ DOG_NNP Figure_NNP 10_CD ._.
+Illustration_NN of_IN the_DT DD_NNP form_NN in_IN expressing_VBG two_CD falls_VBZ Deaf_JJ children_NNS of_IN hearing_VBG parents_NNS -LRB-_-LRB- DH_NNP -RRB-_-RRB- :_: Four_CD participants_NNS are_VBP deaf_JJ children_NNS of_IN hearing_VBG parents_NNS ,_, two_CD of_IN them_PRP were_VBD born_VBN in_IN HK_NNP and_CC the_DT other_JJ two_CD were_VBD born_VBN in_IN mainland_NN and_CC moved_VBD to_TO HK_NNP at_IN their_PRP$ age_NN of_IN two_CD ._.
+They_PRP all_DT have_VBP been_VBN exposed_VBN to_TO HKSL_NNP for_IN more_JJR than_IN seven_CD years_NNS ._.
+In_IN static_JJ situation_NN ,_, very_RB similar_JJ to_TO the_DT adult_NN form_NN ,_, children_NNS also_RB use_VBP classifier_JJR constructions_NNS as_IN the_DT most_RBS common_JJ strategy_NN to_TO express_VB spatial_JJ concepts_NNS ._.
+Besides_IN in_IN ,_, on_IN ,_, next_IN to_TO ,_, spatial_JJ concept_NN behind_IN which_WDT does_VBZ not_RB appear_VB in_IN adults_NNS '_POS and_CC DD_NNP 's_POS signing_NN is_VBZ also_RB found_VBN in_IN the_DT DH_NNP data_NNS ._.
+Behind_IN is_VBZ discussed_VBN in_IN the_DT utterance_NN ``_`` The_DT deer_NN is_VBZ behind_IN the_DT rock_NN ._. ''_''
+She_PRP first_RB introduced_VBD the_DT referent_JJ deer_NN then_RB behind_IN is_VBZ expressed_VBN by_IN the_DT classifier_NN handshape_NN for_IN rock_NN far_RB away_RB from_IN the_DT body_NN and_CC the_DT classifier_NN for_IN deer_NN close_NN to_TO the_DT body_NN ,_, two_CD hands_NNS are_VBP in_IN a_DT horizontal_JJ line_NN as_IN in_IN Figure_NN 11_CD ._.
+DEER_NNP DEER_NNP BEHIND_IN ROCK_NNP Figure_NNP 11_CD ._.
+Illustration_NN of_IN spatial_JJ concept_NN behind_IN in_IN ``_`` The_DT deer_NN is_VBZ behind_IN the_DT rock_NN ._. ''_''
+The_DT DH_NNP form_NN is_VBZ a_DT little_RB different_JJ from_IN the_DT adult_NN form_NN and_CC DD_NNP form_NN as_IN adults_NNS and_CC DD_NNP will_MD FALLS_VBZ FALLS_VBZ introduce_VB both_DT Figure_NN and_CC Ground_NN first_RB and_CC followed_VBN by_IN the_DT relative_JJ relation_NN of_IN the_DT two_CD objects_NNS ._.
+However_RB ,_, DH_NNP may_MD omit_VB Ground_NN or_CC change_VB the_DT order_NN of_IN classifier_NN constructions_NNS and_CC referents_NNS ._.
+In_IN the_DT above_JJ Figure_NN 4.11_CD ,_, when_WRB she_PRP express_VB the_DT spatial_JJ concept_NN behind_IN ,_, she_PRP only_RB introduce_VBP the_DT Figure_NN deer_NN and_CC followed_VBN by_IN the_DT a_DT classifier_NN construction_NN meaning_VBG the_DT deer_NN is_VBZ behind_IN something_NN ._.
+According_VBG to_TO the_DT whole_JJ narrative_NN ,_, we_PRP can_MD infer_VB the_DT object_NN is_VBZ rock_NN ._.
+Another_DT example_NN is_VBZ in_IN the_DT utterance_NN ``_`` The_DT boy_NN falls_VBZ down_RP from_IN the_DT deer_NN 's_POS head_NN ._. ''_''
+,_, some_DT children_NNS may_MD first_RB express_VB something_NN is_VBZ falling_VBG down_RB and_CC then_RB describe_VBP the_DT referent_NN is_VBZ a_DT boy_NN ._.
+When_WRB Figure_NN or_CC Ground_NN refers_VBZ to_TO animate_VB beings_NNS ,_, adults_NNS may_MD choose_VB to_TO use_VB his_PRP$ or_CC her_PRP$ own_JJ body_NN as_IN one_CD of_IN the_DT components_NNS of_IN the_DT classifier_NN predicates_VBZ which_WDT has_VBZ not_RB been_VBN found_VBN in_IN the_DT DD_NNP data_NNS ._.
+DH_NNP also_RB use_VBP the_DT same_JJ strategy_NN with_IN adults_NNS ._.
+In_IN the_DT utterance_NN ``_`` The_DT dog_NN 's_POS head_NN stuck_VBD at_IN the_DT mouth_NN of_IN the_DT jar_NN ''_'' ._.
+The_DT dog_NN 's_POS head_NN is_VBZ considered_VBN as_IN Figure_NN while_IN jar_NN is_VBZ the_DT Ground_NN ._.
+If_IN body_NN is_VBZ involved_VBN ,_, signer_NN will_MD take_VB his_PRP$ or_CC her_PRP$ own_JJ head_NN as_IN dog_NN 's_POS head_NN and_CC using_VBG two_CD hands_NNS as_IN classifier_NN for_IN jar_NN ._.
+Two_CD hands_NNS are_VBP held_VBN at_IN the_DT height_NN of_IN head_NN to_TO imply_VB that_DT dog_NN 's_POS head_NN stuck_VBD at_IN the_DT mouth_NN of_IN the_DT jar_NN as_IN presented_VBN in_IN Figure_NN 12_CD ._.
+Figure_NN 12_CD ._.
+Illustration_NN of_IN body_NN involvement_NN in_IN ``_`` The_DT dog_NN 's_POS head_NN stuck_VBD at_IN the_DT mouth_NN of_IN the_DT jar_NN ''_'' Different_JJ from_IN adults_NNS and_CC DD_NNP ,_, DH_NNP may_MD use_VB spatial_JJ nominals_NNS to_TO indicate_VB spatial_JJ concepts_NNS ._.
+Children_NNS tend_VBP to_TO use_VB 1_CD handshape_NN and_CC an_DT inward_JJ movement_NN to_TO indicate_VB the_DT meaning_NN ``_`` inside_JJ ''_'' ._.
+For_IN example_NN the_DT utterance_NN ``_`` The_DT frog_NN is_VBZ in_IN the_DT jar_NN ._. ''_''
+in_IN Figure_NN 13_CD ,_, the_DT word_NN order_NN of_IN the_DT signing_NN is_VBZ :_: JAR_NNP IX_CD INSIDE_NNP HAVE_NNP FROG_NNP ONE_CD which_WDT is_VBZ similar_JJ to_TO Chinese_JJ syntax_NN ._.
+The_DT standard_JJ form_NN for_IN expressing_VBG this_DT utterance_NN in_IN Chinese_NNP is_VBZ as_IN followed_VBN :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- 瓶子_FW 裏面_FW 有_FW 一_FW 只_FW 青蛙_FW 。_FW Bottle_NN inside_IN have_VBP one_CD classifier_JJR frog_NN ``_`` There_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._. ''_''
+Instead_RB of_IN using_VBG the_DT relative_JJ relations_NNS of_IN two_CD hands_NNS ,_, he_PRP uses_VBZ a_DT spatial_JJ nominal_JJ INSIDE_IN to_TO express_VB the_DT spatial_JJ concept_NN in_IN ._.
+This_DT strategy_NN is_VBZ also_RB accepted_VBN in_IN HKSL_NNP ,_, however_RB ,_, adults_NNS prefer_VBP to_TO use_VB classifier_JJR constructions_NNS instead_RB of_IN spatial_JJ nominals_NNS ._.
+This_DT contrast_NN may_MD due_RB to_TO complexity_NN of_IN using_VBG classifier_JJR constructions_NNS ,_, as_IN we_PRP know_VBP that_IN classifier_JJR constructions_NNS are_VBP the_DT hardest_JJS part_NN in_IN learning_VBG sign_NN language_NN as_RB each_DT morpheme_NN in_IN the_DT classifier_NN construction_NN conveys_VBZ meaning_NN ,_, children_NNS may_MD prefer_VB a_DT easier_JJR way_NN to_TO express_VB their_PRP$ thoughts_NNS thus_RB they_PRP prefer_VBP to_TO use_VB a_DT spatial_JJ nominal_JJ INSIDE_IN to_TO indicate_VB the_DT relation_NN between_IN the_DT frog_NN and_CC the_DT jar_NN ._.
+Use_NN of_IN spatial_JJ nominal_NN is_VBZ usually_RB found_VBN in_IN expressing_VBG spatial_JJ concept_NN in_IN but_CC rarely_RB in_IN other_JJ situations_NNS ._.
+JAR_NNP IX_CD HA_NNP VE_NNP Figure_NNP 13_CD ._.
+Illustration_NN of_IN using_VBG spatial_JJ nominal_NN in_IN ``_`` There_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._. ''_''
+The_DT DH_NNP form_NN is_VBZ quite_RB similar_JJ to_TO the_DT DD_NNP form_NN in_IN dynamic_JJ situation_NN ._.
+Their_PRP$ signings_NNS of_IN expressing_VBG spatial_JJ concepts_NNS are_VBP also_RB not_RB as_IN iconic_JJ and_CC detailed_JJ as_IN adults_NNS '_POS did_VBD ._.
+4.3_CD Comparison_NNP :_: adult_NN ,_, DD_NNP &_CC DH_NNP From_IN the_DT above_JJ discussion_NN ,_, we_PRP know_VBP that_IN there_EX are_VBP some_DT similarities_NNS and_CC differences_NNS between_IN three_CD groups_NNS :_: adult_NN ,_, DD_NNP and_CC DH_NNP -LRB-_-LRB- see_VBP Table_NNP 1_CD for_IN details_NNS -RRB-_-RRB- ._.
+In_IN static_JJ situation_NN ,_, adults_NNS use_VBP two_CD ways_NNS to_TO express_VB spatial_JJ concepts_NNS :_: CL_NNP constructions_NNS of_IN two_CD hands_NNS and_CC body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ ;_: DD_NNP only_RB use_VBP one_CD way_NN that_WDT is_VBZ CL_NNP constructions_NNS of_IN two_CD hands_NNS ;_: DH_NNP have_VBP more_JJR options_NNS in_IN expressing_VBG spatial_JJ concepts_NNS including_VBG :_: CL_NNP constructions_NNS of_IN two_CD hands_NNS ,_, body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ and_CC use_NN of_IN spatial_JJ nominals_NNS ._.
+In_IN dynamic_JJ situation_NN ,_, spatial_JJ concepts_NNS largely_RB depend_VBP on_IN the_DT location_NN and_CC movement_NN of_IN two_CD hands_NNS in_IN signing_VBG space_NN ._.
+However_RB ,_, the_DT iconic_JJ and_CC complex_JJ degree_NN of_IN the_DT adult_NN form_NN is_VBZ much_RB higher_JJR than_IN DD_NNP and_CC DH_NNP ._.
+Adults_NNS can_MD easily_RB divided_VBN a_DT spatial_JJ concept_NN fall_NN into_IN horizontal_JJ fall_NN and_CC vertical_JJ fall_NN as_RB well_RB as_IN distinguish_NN the_DT path_NN of_IN a_DT fall_NN from_IN higher_JJR starting_VBG point_NN from_IN lower_JJR starting_VBG point_NN ._.
+INSIDE_IN FROG_NNP Adults_NNS Static_JJ situation_NN CL_NNP constructions_NNS of_IN two_CD hands_NNS Body_NNP as_IN part_NN of_IN CL_NNP predicates_VBZ Dynamic_NNP situation_NN Iconic_NNP and_CC complex_JJ degree_NN is_VBZ high_JJ Iconic_NNP and_CC complex_JJ degree_NN is_VBZ lower_JJR than_IN the_DT adult_NN form_NN Iconic_NNP and_CC complex_JJ degree_NN is_VBZ lower_JJR than_IN the_DT adult_NN form_NN adults_NNS ,_, DD_NNP &_CC DH_NNP of_IN shape_NN of_IN the_DT hole_NN is_VBZ circular_JJ and_CC then_RB describe_VBP the_DT size_NN of_IN it_PRP is_VBZ big_JJ ._.
+-LRB-_-LRB- see_VB Figure_NN 14_CD -RRB-_-RRB- DD_NNP CL_NNP constructions_NNS of_IN two_CD hands_NNS DH_NNP CL_NNP constructions_NNS of_IN two_CD hands_NNS Body_NNP as_IN part_NN of_IN CL_NNP predicates_VBZ Use_NN of_IN spatial_JJ nominals_NNS Table_NNP 1_CD ._.
+A_DT comparison_NN on_IN expressing_VBG spatial_JJ concepts_NNS Discussion_NNP circular_JJ +_NN CL_sass_NNP :_: hole_NN Figure_NN 14_CD ._.
+Illustration_NN of_IN size_NN and_CC shape_NN related_VBN spatial_JJ concepts_NNS in_IN ``_`` There_EX is_VBZ a_DT hole_NN on_IN the_DT ground_NN ._. ''_''
+Another_DT example_NN is_VBZ when_WRB child_NN try_VBP to_TO describe_VB there_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._.
+Speakers_NNS will_MD focus_VB on_IN the_DT relative_JJ relation_NN between_IN the_DT jar_NN and_CC the_DT frog_NN ._.
+But_CC signers_NNS will_MD try_VB to_TO describe_VB the_DT jar_NN very_RB clearly_RB ._.
+He_PRP will_MD first_RB introduce_VB the_DT shape_NN of_IN the_DT jar_NN to_TO us_PRP ._.
+Generally_RB speaking_NN ,_, it_PRP is_VBZ a_DT circular_JJ jar_NN ,_, but_CC more_RBR like_IN a_DT vase_NN shape_NN if_IN we_PRP describe_VBP it_PRP further_RBR ._.
+-LRB-_-LRB- see_VB Figure_NN 15_CD -RRB-_-RRB- circular_JJ +_NN CL_sass_NNP :_: jar_NN shape_NN +_SYM CL_sass_NNPS :_: vase_NN Figure_NN 15_CD ._.
+Illustration_NN of_IN size_NN and_CC shape_NN related_VBN spatial_JJ concepts_NNS in_IN ``_`` There_EX is_VBZ a_DT frog_NN in_IN the_DT jar_NN ._. ''_''
+In_IN the_DT above_JJ examples_NNS ,_, signers_NNS not_RB only_RB use_VB size_NN and_CC shape_NN classifier_NN to_TO express_VB an_DT object_NN ,_, but_CC also_RB they_PRP try_VBP to_TO further_JJ describe_VBP the_DT size_NN and_CC shape_NN of_IN an_DT object_NN ._.
+This_DT phenomenon_NN gives_VBZ us_PRP the_DT impression_NN that_IN deaf_JJ children_NNS using_VBG sign_NN language_NN tend_VBP to_TO describe_VB more_JJR spatial_JJ concepts_NNS related_VBN to_TO size_NN and_CC shape_NN than_IN natural_JJ language_NN did_VBD -LRB-_-LRB- at_IN least_JJS English_JJ ,_, Cantonese_JJ and_CC mandarin_JJ -RRB-_-RRB- ._.
+As_IN we_PRP have_VBP discussed_VBN in_IN the_DT literature_NN part_NN ,_, the_DT relationship_NN between_IN language_NN and_CC spatial_JJ concepts_NNS is_VBZ quite_RB an_DT controversial_JJ topic_NN in_IN previous_JJ studies_NNS ._.
+However_RB ,_, our_PRP$ signing_NN data_NN shows_VBZ that_IN signing_NN participants_NNS show_VBP a_DT tendency_NN of_IN expressing_VBG more_JJR size_NN and_CC shape_NN concepts_NNS ._.
+This_DT gives_VBZ us_PRP a_DT new_JJ way_NN of_IN thinking_VBG the_DT relation_NN between_IN language_NN and_CC spatial_JJ concepts_NNS ._.
+If_IN 5_CD in_IN static_JJ and_CC dynamic_JJ situation_NN ._.
+Back_RB to_TO the_DT research_NN questions_NNS we_PRP pointed_VBD out_RP in_IN the_DT literature_NN review_NN :_: How_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS ?_.
+Is_VBZ there_EX any_DT uniqueness_NN of_IN sign_NN language_NN in_IN expressing_VBG spatial_JJ concepts_NNS ?_.
+Is_VBZ it_PRP easy_JJ for_IN children_NNS to_TO express_VB them_PRP as_RB well_RB as_IN adults_NNS do_VBP ?_.
+The_DT results_NNS show_VBP that_IN different_JJ group_NN of_IN signers_NNS show_VBP different_JJ performance_NN both_DT on_IN static_JJ and_CC dynamic_JJ situation_NN ._.
+The_DT main_JJ strategy_NN is_VBZ using_VBG classifier_JJR constructions_NNS ,_, however_RB ,_, DD_NNP prefer_VBP to_TO use_VB CL_NNP constructions_NNS of_IN two_CD hands_NNS instead_RB of_IN using_VBG body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ ;_: some_DT DH_NNP choose_VB to_TO use_VB spatial_JJ nominal_JJ such_JJ as_IN INSIDE_IN to_TO express_VB spatial_JJ concepts_NNS ._.
+Considering_VBG the_DT degree_NN of_IN iconicity_NN ,_, adult_NN 's_POS signing_NN are_VBP much_RB more_RBR detailed_JJ and_CC complex_JJ than_IN both_DT DD_NNP and_CC DH_NNP in_IN expressing_VBG spatial_JJ concepts_NNS ._.
+Besides_IN thinking_VBG about_IN how_WRB does_VBZ HKSL_NNP express_JJ spatial_JJ concepts_NNS from_IN a_DT grammatical_JJ perspective_NN ,_, we_PRP could_MD also_RB rethinking_VBG about_IN the_DT relationship_NN between_IN spatial_JJ concepts_NNS and_CC spatial_JJ language_NN form_NN a_DT cognitive_JJ perspective.Whenever_NNP signers_NNS describe_VBP an_DT object_NN ,_, a_DT size_NN and_CC shape_NN classifier_NN is_VBZ used_VBN to_TO specify_VB the_DT object_NN ._.
+However_RB ,_, the_DT high_JJ frequency_NN of_IN using_VBG size_NN and_CC shape_NN classifier_NN may_MD lead_VB to_TO the_DT result_NN that_IN signers_NNS using_VBG sign_NN language_NN will_MD pay_VB more_JJR attention_NN on_IN the_DT size_NN and_CC shape_NN of_IN an_DT object_NN ._.
+For_IN example_NN ,_, in_IN the_DT utterance_NN ``_`` There_EX is_VBZ a_DT hole_NN on_IN the_DT ground_NN ._. ''_''
+In_IN Cantonese_JJ and_CC mandarin_JJ ,_, we_PRP seldom_RB specify_VB the_DT details_NNS of_IN the_DT hole_NN ._.
+In_IN contrast_NN ,_, signers_NNS will_MD use_VB C_NNP handshape_NN to_TO indicate_VB that_IN the_DT big_JJ +_NN CL_sass_NNP :_: hole_NN people_NNS use_VBP sign_NN language_NN and_CC spoken_VBN language_NN show_VBP a_DT different_JJ performance_NN on_IN expressing_VBG spatial_JJ concepts_NNS ,_, then_RB the_DT importance_NN of_IN language_NN in_IN relation_NN to_TO spatial_JJ concepts_NNS can_MD not_RB be_VB ignored_VBN ._.
+The_DT result_NN supports_VBZ that_IN the_DT language_NN we_PRP use_VBP may_MD influence_VB how_WRB we_PRP think_VBP about_IN spatial_JJ concepts_NNS ._.
+6_CD Conclusion_NNP Based_VBN on_IN previous_JJ studies_NNS ,_, spatial_JJ concepts_NNS are_VBP largely_RB expressed_VBN via_IN a_DT complex_JJ predicates_NNS called_VBN classifier_JJR predicates_NNS in_IN signed_VBN languages_NNS -LRB-_-LRB- Emmorey_NNP 2003_CD -RRB-_-RRB- ._.
+This_DT paper_NN aims_VBZ to_TO discuss_VB more_JJR details_NNS about_IN it_PRP ._.
+For_IN example_NN ,_, how_WRB static_JJ situation_NN -LRB-_-LRB- in_IN ,_, on_IN ,_, at_IN -RRB-_-RRB- and_CC dynamic_JJ situation_NN -LRB-_-LRB- downward_RB ,_, upward_RB ,_, outward_JJ motions_NNS ..._: -RRB-_-RRB- are_VBP expressed_VBN through_IN signing_VBG space_NN ._.
+Through_IN the_DT above_JJ discussion_NN ,_, we_PRP got_VBD the_DT conclusion_NN that_IN in_IN static_JJ situation_NN ,_, adults_NNS use_VBP two_CD ways_NNS to_TO express_VB spatial_JJ concepts_NNS :_: CL_NNP constructions_NNS of_IN two_CD hands_NNS and_CC body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ ;_: DD_NNP only_RB use_VBP one_CD way_NN that_WDT is_VBZ CL_NNP constructions_NNS of_IN two_CD hands_NNS ;_: DH_NNP have_VBP more_JJR options_NNS in_IN expressing_VBG spatial_JJ concepts_NNS including_VBG :_: CL_NNP constructions_NNS of_IN two_CD hands_NNS ,_, body_NN as_IN part_NN of_IN CL_NNP predicates_VBZ and_CC use_NN of_IN spatial_JJ nominals_NNS ._.
+In_IN dynamic_JJ situation_NN ,_, spatial_JJ concepts_NNS largely_RB depend_VBP on_IN the_DT location_NN and_CC movement_NN of_IN two_CD hands_NNS in_IN signing_VBG space_NN ._.
+However_RB ,_, the_DT iconic_JJ and_CC complex_JJ degree_NN of_IN the_DT adult_NN form_NN is_VBZ much_RB higher_JJR than_IN both_DT DD_NNP and_CC DH_NNP ._.
+Our_PRP$ signing_NN data_NNS also_RB shows_VBZ that_IN signing_NN participants_NNS have_VBP a_DT tendency_NN of_IN expressing_VBG more_JJR size_NN and_CC shape_NN spatial_JJ concepts_NNS ._.
+This_DT gives_VBZ us_PRP a_DT new_JJ way_NN of_IN thinking_VBG the_DT relation_NN between_IN language_NN and_CC spatial_JJ concepts_NNS ._.
+If_IN people_NNS use_VBP sign_NN language_NN and_CC spoken_VBN language_NN show_VBP a_DT different_JJ performance_NN on_IN expressing_VBG spatial_JJ concepts_NNS ,_, then_RB the_DT importance_NN of_IN language_NN in_IN relation_NN to_TO spatial_JJ concepts_NNS can_MD not_RB be_VB ignored_VBN ._.
+The_DT result_NN supports_VBZ that_IN the_DT language_NN we_PRP use_VBP may_MD influence_VB how_WRB we_PRP think_VBP about_IN spatial_JJ concepts_NNS ._.
+References_NNS Bowerman_NNP ,_, M._NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- ._.
+Learning_NNP how_WRB to_TO structure_VB space_NN for_IN language_NN :_: A_DT crosslinguistic_JJ perspective_NN ._.
+In_IN P._NNP Bloom_NNP ,_, M._NNP Peterson_NNP ,_, L._NNP Nadel_NNP ,_, &_CC M._NNP Garrett_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Language_NN and_CC space_NN -LRB-_-LRB- pp._FW 385-436_CD -RRB-_-RRB- ._.
+Cambridge_NNP ,_, MA_NNP :_: MIT_NNP Press_NNP ._.
+Dedre_NNP Genter_NNP ,_, Asli_NNP Özyürek_NNP ,_, ÖgeGürcanli_NNP ,_, &_CC Susan_NNP Goldin-Meadow_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Spatial_JJ language_NN facilitates_VBZ spatial_JJ cognition_NN :_: Evidence_NN from_IN children_NNS who_WP lack_VBP language_NN input_NN ._.
+Cognition_NNP ,_, 127_CD ,_, 318_CD --_: 330_CD Emmorey_NNP ,_, K._NNP &_CC M._NNP Herzig_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+``_`` Categorical_JJ versus_CC gradient_NN properties_NNS of_IN classifier_NN constructions_NNS in_IN ASL_NNP ._. ''_''
+InK_NN ._.
+Emmorey_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Perspectives_NNS on_IN classifier_NN constructions_NNS in_IN signed_VBN languages_NNS ._.
+Mahwah_NNP ,_, NJ_NNP :_: Lawrence_NNP Erlbaum_NNP Associates_NNPS ._.
+Levinson_NNP ,_, S._NNP C._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Space_NNP in_IN language_NN and_CC cognition_NN :_: Explorations_NNS in_IN cognitive_JJ diversity_NN ._.
+Cambridge_NNP ,_, UK_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Liddell_NNP ,_, Scott_NNP ._.
+1990_CD ._.
+Four_CD Functions_NNS of_IN a_DT Locus_NNP :_: Reexamining_VBG the_DT Structure_NN of_IN Space_NNP in_IN ASL_NNP ._.
+In_IN C._NNP Lucas_NNP ,_, ed_VBD ._.
+Sign_NN Language_NNP Research_NNP :_: Theoretical_NNP Issues_NNP ,_, 176-198_CD ._.
+Washington_NNP D.C._NNP :_: Gallaudet_NNP University_NNP Press_NNP Liddell_NNP ,_, Scott_NNP .1995_CD ._.
+Real_RB ,_, Surrogate_NNP and_CC Token_NNP Space_NNP :_: Grammatical_NNP Consequences_NNP in_IN ASL_NNP ._.
+In_IN Emmorey_NNP ,_, Karen_NNP &_CC Reilly_NNP ,_, Judy_NNP ._.
+S._NNP eds_NNS ._.
+Language_NN ,_, Gesture_NN ,_, and_CC Space_NNP ,_, 19-41_CD ._.
+Hillsdale_NNP ,_, NJ_NNP :_: Lawrence_NNP Erlbaum_NNP Associates_NNPS Malt_NNP ,_, B._NNP C._NNP ,_, Sloman_NNP ,_, S._NNP A._NNP ,_, &_CC Gennari_NNP ,_, S._NNP P._NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Universality_NNP and_CC language_NN specificity_NN in_IN object_NN naming_NN ._.
+Journal_NNP of_IN Memory_NN and_CC Language_NN ,_, 49_CD ,_, 20-42_CD ._.
+Malt_NNP ,_, B._NNP C._NNP ,_, Sloman_NNP ,_, S._NNP A._NNP ,_, &_CC Gennari_NNP ,_, S._NNP P._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Speaking_VBG versus_CC thinking_VBG about_IN objects_NNS and_CC actions_NNS ._.
+In_IN D._NNP Gentner_NNP &_CC S._NNP Goldin-Meadow_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Language_NN in_IN mind_NN :_: advances_NNS in_IN the_DT study_NN of_IN language_NN and_CC thought_NN -LRB-_-LRB- pp._FW 81_CD -_: 111_CD -RRB-_-RRB- ._.
+Cambridge_NNP ,_, MA_NNP :_: The_DT MIT_NNP Press_NNP ._.
+Papafragou_NNP ,_, A._NN ,_, Massey_NNP ,_, C._NNP ,_, &_CC Gleitman_NNP ,_, L._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Shake_NNP ,_, rattle_VBP ,_, `_`` n_NN '_'' roll_NN :_: the_DT representation_NN of_IN motion_NN in_IN language_NN and_CC cognition_NN ._.
+Cognition_NNP ,_, 84_CD ,_, 189-219_CD ._.
+Papafragou_NNP ,_, A._NN ,_, Massey_NNP ,_, C._NNP ,_, &_CC Gleitman_NNP ,_, L._NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- ._.
+When_WRB English_NNP proposes_VBZ what_WP Greek_JJ presupposes_NNS :_: The_DT cross-linguistic_JJ encoding_NN of_IN motion_NN events_NNS ._.
+Cognition_NNP ,_, 98_CD ,_, B75-87_NNP ._.

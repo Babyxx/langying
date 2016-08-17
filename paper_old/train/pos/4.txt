@@ -1,0 +1,322 @@
+A_DT Classifier-based_JJ Preordering_NNP Approach_NNP for_IN English-Vietnamese_NNP Statistical_NNP Machine_NNP Translation_NN Abstract_NNP Reordering_NNP is_VBZ of_IN essential_JJ importance_NN problem_NN for_IN phrase_NN based_VBN statistical_JJ machine_NN translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP an_DT approach_NN to_TO automatically_RB learn_VB reordering_NN rules_NNS as_IN pre_NN -_: processing_VBG step_NN based_VBN on_IN a_DT dependency_NN parser_NN in_IN phrase-based_JJ statistical_JJ machine_NN transla_NN -_: tion_NN for_IN English_NNP to_TO Vietnamese_NNP ._.
+Inspired_VBN from_IN -LRB-_-LRB- Lerner_NNP and_CC Petrov_NNP ,_, 2013_CD -RRB-_-RRB- using_VBG classifier_NN -_: based_VBN preordering_VBG approach_NN ,_, we_PRP used_VBD depen_SYM -_: dency_NN parsing_NN and_CC rules_NNS extracting_VBG from_IN train_NN -_: ing_VBG the_DT features-rich_JJ discriminative_JJ classifiers_NNS for_IN reordering_NN source-side_JJ sentences_NNS ._.
+We_PRP eval_SYM -_: uated_JJ our_PRP$ approach_NN on_IN English-Vietnamese_NNP machine_NN translation_NN tasks_NNS ,_, and_CC show_VBP that_IN it_PRP out_RP -_: perform_VB the_DT baseline_NN phrase-based_JJ SMT_NNP sys_SYM -_: tem_NN ._.
+1_CD Introduction_NNP Phrase-based_JJ statistical_JJ machine_NN translation_NN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD ;_: Och_NNP and_CC Ney_NNP ,_, 2004_CD -RRB-_-RRB- is_VBZ the_DT state-of-the_JJ -_: art_NN of_IN SMT_NNP because_IN of_IN its_PRP$ power_NN in_IN modelling_VBG short_JJ reordering_NN and_CC local_JJ context_NN ._.
+However_RB ,_, with_IN phrase_NN -_: based_VBN SMT_NNP ,_, long_JJ distance_NN reordering_NN is_VBZ still_RB prob_SYM -_: lematic_NN ._.
+The_DT reordering_NN problem_NN -LRB-_-LRB- global_JJ reordering_NN -RRB-_-RRB- is_VBZ one_CD of_IN the_DT major_JJ problems_NNS ._.
+In_IN recent_JJ years_NNS ,_, many_JJ reordering_NN methods_NNS have_VBP been_VBN proposed_VBN to_TO tackle_VB the_DT long_JJ distance_NN reordering_NN problem_NN ._.
+Many_JJ solutions_NNS to_TO the_DT reordering_NN problem_NN have_VBP been_VBN proposed_VBN ,_, e.g_IN syntax-based_JJ model_NN -LRB-_-LRB- Chiang_NNP ,_, 2005_CD -RRB-_-RRB- ,_, lexcicalized_VBN reordering_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2004_CD -RRB-_-RRB- ,_, tree-to-string_JJ methods_NNS -LRB-_-LRB- Zhang_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+Chiang_NNP -LRB-_-LRB- Chiang_NNP ,_, 2005_CD -RRB-_-RRB- shows_VBZ significant_JJ improvement_NN by_IN keeping_VBG the_DT strengths_NNS of_IN phrases_NNS ,_, while_IN incorporat_NN -_: ing_NN syntax_NN into_IN SMT_NNP ._.
+Some_DT approaches_NNS have_VBP been_VBN applied_VBN at_IN the_DT word-level_NN -LRB-_-LRB- Collins_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+They_PRP are_VBP particularly_RB useful_JJ for_IN language_NN with_IN rich_JJ mor_NN -_: phology_NN ,_, for_IN reducing_VBG data_NNS sparseness_NN ._.
+Other_JJ kinds_NNS of_IN syntax_NN reordering_NN methods_NNS require_VBP parser_NN trees_NNS ,_, such_JJ as_IN the_DT work_NN in_IN -LRB-_-LRB- Quirk_NNP et_FW al._FW ,_, 2005_CD ;_: Collins_NNP et_FW al._FW ,_, 2005_CD ;_: Huang_NNP and_CC Mi_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT parsed_VBN tree_NN is_VBZ more_RBR powerful_JJ in_IN capturing_VBG the_DT sentence_NN structure_NN ._.
+However_RB ,_, it_PRP is_VBZ expensive_JJ to_TO create_VB tree_NN structure_NN ,_, and_CC building_VBG a_DT good_JJ quality_NN parser_NN is_VBZ also_RB a_DT hard_JJ task_NN ._.
+All_PDT the_DT above_JJ approaches_NNS require_VBP much_JJ decoding_NN time_NN ,_, which_WDT is_VBZ expensive_JJ ._.
+The_DT approach_NN we_PRP are_VBP interested_JJ in_IN here_RB is_VBZ to_TO bal_SYM -_: ance_NN the_DT quality_NN of_IN translation_NN with_IN decoding_VBG time_NN ._.
+Reordering_NN approaches_NNS as_IN a_DT preprocessing_JJ step_NN -LRB-_-LRB- Xia_NNP and_CC McCord_NNP ,_, 2004_CD ;_: Xu_NNP et_FW al._FW ,_, 2009_CD ;_: Genzel_NNP ,_, 2010_CD ;_: Lerner_NNP and_CC Petrov_NNP ,_, 2013_CD -RRB-_-RRB- is_VBZ very_RB effective_JJ -LRB-_-LRB- improve_VB -_: ment_NN significant_JJ over_IN state_NN of-the-art_JJ phrase-based_JJ and_CC hierarchical_JJ machine_NN translation_NN systems_NNS and_CC separately_RB quality_NN evaluation_NN of_IN reordering_NN models_NNS -RRB-_-RRB- ._.
+Inspiring_JJ this_DT preprocessing_NN approach_NN ,_, we_PRP have_VBP proposed_VBN a_DT combine_VBP approach_NN which_WDT preserves_VBZ the_DT strength_NN of_IN phrase-based_JJ SMT_NNP in_IN local_JJ reordering_NN and_CC decoding_NN time_NN as_RB well_RB as_IN the_DT strength_NN of_IN inte_NN -_: grating_VBG syntax_NN in_IN reordering_NN ._.
+Firstly_RB ,_, we_PRP use_VBP depen_SYM -_: dency_NN parsing_NN for_IN preprocessing_VBG with_IN training_NN and_CC testing_NN ._.
+Second_NNP ,_, we_PRP use_VBP the_DT features_NNS discriminative_JJ classifiers_NNS from_IN data_NNS training_NN to_TO extract_VB rules_NNS which_WDT are_VBP learnt_JJ automatically_RB from_IN parallel_JJ corpus_NN to_TO the_DT dependency_NN tree_NN ._.
+Beside_IN these_DT rules_NNS ,_, we_PRP can_MD use_VB ex_FW -_: tracted_NN features_NNS in_IN source-side_NN that_IN directly_RB predict_VBP the_DT target-side_JJ word_NN order_NN to_TO be_VB applied_VBN as_IN a_DT pre_NN -_: processing_VBG step_NN in_IN phrase-based_JJ machine_NN translation_NN ._.
+The_DT experiment_NN results_NNS from_IN English-Vietnamese_JJ pair_NN showed_VBD that_IN our_PRP$ approach_NN achieves_VBZ significant_JJ improvements_NNS over_IN MOSES_NNP which_WDT is_VBZ the_DT state-of-the_JJ art_NN phrase_NN based_VBN system_NN ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ structured_VBN as_IN follows_VBZ ._.
+Sec_SYM -_: tion_NN 2_CD reviews_VBZ the_DT related_JJ works_NNS ._.
+Section_NN 3_CD briefly_NN introduces_VBZ classifier-based_JJ Preordering_NNP for_IN Phrase_NNP -_: based_VBN SMT_NNP ._.
+Section_NN 4_CD describes_VBZ and_CC discusses_VBZ the_DT experimental_JJ results_NNS ._.
+And_CC ,_, conclusions_NNS are_VBP given_VBN in_IN Section_NN 5_CD ._.
+2_CD Related_VBN works_NNS The_DT difference_NN of_IN the_DT word_NN order_NN between_IN source_NN and_CC target_NN languages_NNS is_VBZ major_JJ problems_NNS in_IN phrase-based_JJ statistical_JJ machine_NN translation_NN ._.
+Preordering_VBG -LRB-_-LRB- reordering-as-preprocessing_JJ -RRB-_-RRB- is_VBZ ap_SYM -_: proach_NN for_IN tacking_VBG the_DT problem_NN ,_, which_WDT modifies_VBZ the_DT word_NN order_NN of_IN an_DT input_NN sentence_NN in_IN a_DT source_NN language_NN to_TO have_VB the_DT word_NN order_NN in_IN a_DT target_NN language_NN -LRB-_-LRB- Firgure_NNP 1_CD -RRB-_-RRB- ._.
+Figure_NN 1_CD :_: A_DT example_NN of_IN preordering_VBG for_IN English_NNP -_: Vietnamese_JJ translation_NN ._.
+Many_JJ preordering_VBG methods_NNS using_VBG syntactic_JJ infor_NN -_: mation_NN have_VBP been_VBN proposed_VBN to_TO solve_VB the_DT reordering_NN problem_NN ._.
+-LRB-_-LRB- Collins_NNP et_FW al._FW ,_, 2005_CD ;_: Xu_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- pre_SYM -_: sented_VBD a_DT preordering_VBG method_NN which_WDT use_VBP manually_RB created_VBN rules_NNS on_IN parse_NN trees_NNS and_CC linguistic_JJ knowl_NN -_: edge_NN for_IN a_DT language_NN pair_NN is_VBZ necessary_JJ to_TO create_VB such_JJ rules_NNS ._.
+Other_JJ preodering_NN methods_NNS using_VBG automatically_RB create_VB reodering_VBG rules_NNS or_CC utilize_VB statistical_JJ classifier_NN have_VBP been_VBN studied_VBN -LRB-_-LRB- Xia_NNP and_CC McCord_NNP ,_, 2004_CD ;_: Li_NNP et_FW al._FW ,_, 2007_CD ;_: Yang_NNP et_FW al._FW ,_, 2012_CD ;_: Lerner_NNP and_CC Petrov_NNP ,_, 2013_CD ;_: Jehl_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- -LRB-_-LRB- Collins_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- developed_VBD a_DT clause_NN detection_NN and_CC used_VBD some_DT handwritten_JJ rules_NNS to_TO reorder_VB words_NNS in_IN the_DT clause_NN ._.
+Partly_RB ,_, -LRB-_-LRB- Xia_NNP and_CC McCord_NNP ,_, 2004_CD ;_: Habash_NNP ,_, 2007_CD -RRB-_-RRB- built_VBD an_DT automatic_JJ extracted_VBN syntactic_NN rules_NNS ._.
+-LRB-_-LRB- Xu_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- described_VBD method_NN using_VBG depen_SYM -_: dency_NN parse_VB tree_NN and_CC a_DT flexible_JJ rule_NN to_TO perform_VB the_DT reordering_NN of_IN subject_JJ ,_, object_NN ,_, etc._FW ._. ._.
+These_DT rules_NNS were_VBD written_VBN by_IN hand_NN ,_, but_CC -LRB-_-LRB- Xu_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- showed_VBD that_IN an_DT automatic_JJ rule_NN learner_NN can_MD be_VB used_VBN ._.
+-LRB-_-LRB- Genzel_NNP ,_, 2010_CD ;_: Lerner_NNP and_CC Petrov_NNP ,_, 2013_CD -RRB-_-RRB- de_FW -_: scribed_VBD method_NN using_VBG discriminative_JJ classifiers_NNS to_TO directly_RB predict_VB the_DT final_JJ word_NN order_NN ._.
+-LRB-_-LRB- Jehl_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- present_RB a_DT simple_JJ preordering_NN approach_NN for_IN ma_SYM -_: chine_NN translation_NN based_VBN on_IN a_DT feature-rich_JJ logistic_JJ re_NN -_: gression_NN model_NN to_TO predict_VB whether_IN two_CD children_NNS of_IN the_DT same_JJ node_NN in_IN the_DT source-side_JJ parse_NN tree_NN should_MD be_VB swapped_VBN or_CC not_RB ._.
+-LRB-_-LRB- Jingsheng_NNP Cai_NNP ,_, 2014_CD -RRB-_-RRB- introduces_VBZ a_DT novel_NN pre-ordering_NN approach_NN based_VBN on_IN dependency_NN parsing_NN for_IN Chinese-English_JJ SMT_NNP ._.
+-LRB-_-LRB- Hoshino_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- proposed_VBD a_DT simple_JJ procedure_NN to_TO train_VB a_DT dis_NN -_: criminative_JJ preordering_NN model_NN ._.
+The_DT main_JJ idea_NN is_VBZ to_TO obtain_VB oracle_NN labels_NNS for_IN each_DT node_NN by_IN maximizing_VBG Kendall_NNP 's_POS τ_NN of_IN word_NN alignments_NNS ._.
+-LRB-_-LRB- Nakagawa_NNP ,_, 2015_CD -RRB-_-RRB- present_RB an_DT efficient_JJ incremental_JJ top_NN down_IN parsing_NN method_NN for_IN preordering_VBG based_VBN on_IN Bracketing_NNP Trans_NNP -_: duction_NN Grammar_NN ._.
+Compared_VBN with_IN theses_NNS approaches_NNS ,_, our_PRP$ work_NN has_VBZ a_DT few_JJ differences_NNS ._.
+Firstly_RB ,_, we_PRP aim_VBP to_TO develop_VB the_DT phrase-based_JJ translation_NN model_NN to_TO translate_VB from_IN En_SYM -_: glish_NN to_TO Vietnamese_NNP ._.
+Secondly_RB ,_, we_PRP extracted_VBD a_DT set_VBN rules_NNS from_IN English-Vietnamese_JJ parallel_JJ corpus_NN by_IN using_VBG SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- in_IN Weka_NNP tools_NNS -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- with_IN lexical_JJ and_CC syn_NN -_: tactic_NN features_NNS ._.
+Thirdly_RB ,_, we_PRP use_VBP the_DT automatic_JJ rules_NNS that_WDT directly_RB predict_VBP target-side_JJ word_NN as_IN a_DT preprocess_NN -_: ing_NN step_NN in_IN phrase-based_JJ machine_NN translation_NN ._.
+As_IN the_DT same_JJ with_IN -LRB-_-LRB- Xia_NNP and_CC McCord_NNP ,_, 2004_CD ;_: Habash_NNP ,_, 2007_CD -RRB-_-RRB- ,_, we_PRP also_RB apply_VBP preprocessing_VBG in_IN both_DT training_NN and_CC de_IN -_: coding_NN time_NN ._.
+3_CD 3.1_CD Classifier-based_JJ Preordering_NNP for_IN Phrase-based_JJ SMT_NNP Phrase-based_JJ SMT_NNP In_IN this_DT section_NN ,_, we_PRP will_MD describe_VB the_DT phrase-based_JJ SMT_NNP system_NN which_WDT was_VBD used_VBN for_IN the_DT experiments_NNS ._.
+Phrase-based_JJ SMT_NNP ,_, as_IN described_VBN by_IN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- translates_VBZ a_DT source_NN sentence_NN into_IN a_DT target_NN sen_NN -_: tence_NN by_IN decomposing_VBG the_DT source_NN sentence_NN into_IN a_DT se_FW -_: quence_NN of_IN source_NN phrases_NNS ,_, which_WDT can_MD be_VB any_DT contigu_NN -_: ous_JJ sequences_NNS of_IN words_NNS -LRB-_-LRB- or_CC tokens_NNS treated_VBN as_IN words_NNS -RRB-_-RRB- in_IN the_DT source_NN sentence_NN ._.
+For_IN each_DT source_NN phrase_NN ,_, a_DT target_NN phrase_NN translation_NN is_VBZ selected_VBN ,_, and_CC the_DT target_NN phrases_NNS are_VBP arranged_VBN in_IN some_DT order_NN to_TO produce_VB the_DT target_NN sentence_NN ._.
+A_DT set_NN of_IN possible_JJ translation_NN candi_NNS -_: dates_NNS created_VBN in_IN this_DT way_NN is_VBZ scored_VBN according_VBG to_TO a_DT weighted_JJ linear_JJ combination_NN of_IN feature_NN values_NNS ,_, and_CC the_DT highest_JJS scoring_NN translation_NN candidate_NN is_VBZ selected_VBN as_IN the_DT translation_NN of_IN the_DT source_NN sentence_NN ._.
+Symboli_NNP -_: cally_RB ,_, -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- used_VBD the_DT following_VBG distortion_NN model_NN -LRB-_-LRB- reordering_NN model_NN -RRB-_-RRB- ,_, which_WDT simply_RB penalizes_VBZ nonmonotonic_JJ phrase_NN alignment_NN based_VBN on_IN the_DT word_NN distance_NN of_IN successively_RB translated_VBN source_NN phrases_NNS with_IN an_DT appropriate_JJ value_NN for_IN the_DT parameter_NN α_NN :_: d_LS -LRB-_-LRB- ai_VBP −_SYM bi_FW −_FW 1_LS -RRB-_-RRB- =_SYM α_FW |_FW ai_VBP −_SYM bi_FW −_FW 1_CD −_CD 1_CD |_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 3.2_CD Classifier-based_JJ Preordering_NNP In_IN this_DT section_NN ,_, we_PRP describe_VBP the_DT learning_VBG a_DT model_NN that_WDT can_MD transform_VB the_DT word_NN order_NN of_IN an_DT input_NN sentence_NN to_TO an_DT order_NN that_WDT is_VBZ natural_JJ in_IN the_DT target_NN language_NN ._.
+En_SYM -_: glish_NN is_VBZ used_VBN as_IN source_NN language_NN ,_, while_IN Vietnamese_NNP is_VBZ used_VBN as_IN target_NN language_NN in_IN our_PRP$ discussion_NN about_IN the_DT word_NN orders_NNS ._.
+For_IN example_NN ,_, when_WRB translating_VBG the_DT English_JJ sen_NN -_: tence_NN :_: I_PRP 'm_VBP looking_VBG at_IN a_DT new_JJ jewelry_NN site_NN ._.
+to_TO Vietnamese_NNP ,_, we_PRP would_MD like_VB to_TO reorder_VB it_PRP as_IN :_: I_PRP 'm_VBP looking_VBG at_IN a_DT site_NN new_JJ jewelry_NN ._.
+And_CC then_RB ,_, this_DT model_NN be_VB used_VBN in_IN combination_NN with_IN translation_NN model_NN ._.
+We_PRP use_VBP the_DT dependency_NN grammars_NNS and_CC the_DT dif_NN -_: ferences_NNS of_IN word_NN order_NN between_IN English_NNP and_CC Viet_NNP -_: namese_NN to_TO create_VB the_DT set_NN of_IN the_DT reordering_NN rules_NNS ._.
+We_PRP part-of-speech_VBP -LRB-_-LRB- POS_NNP -RRB-_-RRB- tag_NN and_CC parse_VB the_DT input_NN sen_NN -_: tence_NN ,_, producing_VBG the_DT POS_NNP tags_NNS and_CC head-modifier_JJ dependencies_NNS shown_VBN in_IN Figure_NN 2_CD ._.
+Traversing_VBG the_DT de_FW -_: pendency_NN tree_NN starting_VBG at_IN the_DT root_NN to_TO reordering_NN ._.
+We_PRP determine_VBP the_DT order_NN of_IN the_DT head_NN and_CC its_PRP$ children_NNS -LRB-_-LRB- in_IN -_: dependently_RB of_IN other_JJ decisions_NNS -RRB-_-RRB- for_IN each_DT head_NN word_NN and_CC continue_VB the_DT traversal_NN recursively_RB in_IN that_DT order_NN ._.
+In_IN the_DT above_JJ example_NN ,_, we_PRP need_VBP to_TO decide_VB on_IN the_DT or_CC -_: der_NN of_IN the_DT head_NN ``_`` looking_VBG ''_'' and_CC the_DT children_NNS ``_`` I_PRP ''_'' ,_, ''_'' 'm_VBP ''_'' ,_, and_CC ``_`` site_NN ._. ''_'' ._.
+The_DT words_NNS in_IN sentence_NN are_VBP reordered_VBN by_IN new_JJ sequence_NN learned_VBD from_IN training_NN data_NNS using_VBG multi_NNS -_: classifier_NN model_NN ._.
+We_PRP use_VBP SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- that_WDT supports_VBZ multi-class_JJ prediction_NN ._.
+The_DT class_NN labels_NNS are_VBP corresspond_JJ to_TO reordering_NN se_FW -_: quence_NN ,_, so_IN it_PRP is_VBZ enable_VB to_TO select_VB the_DT best_JJS one_NN from_IN many_JJ possible_JJ sequences_NNS ._.
+3.2.1_CD Features_NNS The_DT features_NNS are_VBP extracted_VBN based_VBN on_IN dependency_NN tree_NN includes_VBZ POS_NNP tag_NN and_CC alignment_NN information_NN ._.
+We_PRP traverse_VBP the_DT tree_NN from_IN the_DT top_NN ,_, in_IN each_DT family_NN we_PRP create_VBP features_NNS with_IN such_JJ information_NN :_: n_SYM tˆ_FW =_SYM argmax_IN λifj_NN -LRB-_-LRB- s_PRP ,_, t_NN ,_, a_DT -RRB-_-RRB- t_NN ,_, a_DT -LRB-_-LRB- 1_LS -RRB-_-RRB- i_FW =_SYM 1_CD when_WRB s_PRP is_VBZ the_DT input_NN sentence_NN ,_, t_NN is_VBZ a_DT possible_JJ output_NN sentence_NN ,_, and_CC a_DT is_VBZ a_DT phrasal_JJ alignment_NN that_WDT specifies_VBZ how_WRB t_NN is_VBZ constructed_VBN from_IN s_PRP ,_, and_CC tˆis_VBZ the_DT selected_VBN out_RP -_: put_JJ sentence_NN ._.
+The_DT weights_NNS λi_FW associated_VBN with_IN each_DT feature_NN fi_FW are_VBP tuned_VBN to_TO maximize_VB the_DT quality_NN of_IN the_DT translation_NN hypothesis_NN selected_VBN by_IN the_DT decoding_VBG pro-_JJ cedure_NN that_WDT computes_VBZ the_DT argmax_NN ._.
+The_DT log-linear_JJ model_NN is_VBZ a_DT natural_JJ framework_NN to_TO integrate_VB many_JJ fea_NN -_: tures_NNS ._.
+The_DT baseline_NN system_NN uses_VBZ the_DT following_VBG fea_NN -_: tures_NNS :_: •_VB the_DT probability_NN of_IN each_DT source_NN phrase_NN in_IN the_DT hy_NN -_: pothesis_NN given_VBN the_DT corresponding_JJ target_NN phrase_NN ._.
+•_IN the_DT probability_NN of_IN each_DT target_NN phrase_NN in_IN the_DT hypothesis_NN given_VBN the_DT corresponding_JJ source_NN phrase_NN ._.
+•_SYM thelexicalscoreforeachtargetphrasegiventhe_NN corresponding_JJ source_NN phrase_NN ._.
+•_IN the_DT lexical_JJ score_NN for_IN each_DT source_NN phrase_NN given_VBN the_DT corresponding_JJ target_NN phrase_NN ._.
+•_IN the_DT target_NN language_NN model_NN probability_NN for_IN the_DT se_FW -_: quence_NN of_IN target_NN phrase_NN in_IN the_DT hypothesis_NN ._.
+•_IN the_DT word_NN and_CC phrase_NN penalty_NN score_NN ,_, which_WDT allow_VBP to_TO ensure_VB that_IN the_DT translation_NN does_VBZ not_RB get_VB too_RB long_JJ or_CC too_RB short_JJ ._.
+•_IN the_DT distortion_NN model_NN allows_VBZ for_IN reordering_NN of_IN the_DT source_NN sentence_NN ._.
+The_DT probabilities_NNS of_IN source_NN phrase_NN given_VBN target_NN phrases_NNS ,_, and_CC target_NN phrases_NNS given_VBN source_NN phrases_NNS ,_, are_VBP estimated_VBN from_IN the_DT bilingual_JJ corpus_NN ._.
+•_CD The_DT head_NN 's_POS POS_NNP tag_NN ,_, •_CD The_DT first_JJ child_NN 's_POS POS_NNP tag_NN ,_, the_DT first_JJ child_NN 's_POS syn_NN -_: tactic_NN label_NN ._.
+•_CD The_DT second_JJ child_NN 's_POS POS_NNP tag_NN ,_, the_DT second_JJ child_NN 's_POS syntactic_NN label_NN ._.
+•_CD The_DT third_JJ child_NN 's_POS POS_NNP tag_NN ,_, the_DT third_JJ child_NN 's_POS syn_NN -_: tactic_NN label_NN ._.
+•_CD The_DT fourth_JJ child_NN 's_POS POS_NNP tag_NN ,_, the_DT fourth_JJ child_NN 's_POS syntactic_NN label_NN ._.
+•_CD The_DT sequence_NN of_IN head_NN and_CC its_PRP$ children_NNS in_IN source_NN alignment_NN •_CD The_DT sequence_NN of_IN head_NN and_CC its_PRP$ children_NNS in_IN target_NN alignment_NN ._.
+It_PRP is_VBZ class_NN label_NN for_IN SVM_NNP classifier_NN model_NN ._.
+Feature_NNP Description_NNP T_NNP The_NNP head_NN 's_POS POS_NNP tag_NN 1T_CD The_DT first_JJ child_NN 's_POS POS_NNP tag_NN 1L_CD The_DT first_JJ child_NN 's_POS syntactic_NN label_NN 2T_NNP The_NNP second_JJ child_NN 's_POS POS_NNP tag_NN 2L_CD The_DT second_JJ child_NN 's_POS syntactic_NN label_NN 3T_NNP The_NNP third_JJ child_NN 's_POS POS_NNP tag_NN 3L_NNP The_NNP third_JJ child_NN 's_POS syntactic_NN label_NN 4T_NNP The_NNP fourth_JJ child_NN 's_POS POS_NNP tag_NN 4L_CD The_DT fourth_JJ child_NN 's_POS syntactic_NN label_NN O1_NNP The_NNP sequence_NN of_IN head_NN and_CC its_PRP$ children_NNS in_IN source_NN alignment_NN O2_NNP The_NNP sequence_NN of_IN head_NN and_CC its_PRP$ children_NNS in_IN target_NN alignment_NN ._.
+Table_NNP 1_CD :_: Set_NNP of_IN features_NNS used_VBN in_IN training_NN data_NNS from_IN corpus_NN English-Vietnamese_NNP multi-class_JJ prediction_NN and_CC can_MD therefore_RB be_VB used_VBN to_TO select_VB one_CD out_IN of_IN many_JJ possible_JJ permutations_NNS ._.
+The_DT learning_VBG algorithm_NN produces_VBZ a_DT sparse_JJ set_NN of_IN features_NNS ._.
+In_IN our_PRP$ experiments_NNS the_DT our_PRP$ models_NNS have_VBP typically_RB only_RB a_DT few_JJ 50K_NNP non-zero_JJ feature_NN weights_NNS English_JJ -_: Vietnamese_JJ language_NN pairs_NNS ._.
+When_WRB extracting_VBG the_DT features_NNS ,_, every_DT word_NN can_MD be_VB represented_VBN by_IN its_PRP$ word_NN identity_NN ,_, its_PRP$ POS-tags_JJ from_IN the_DT treebank_NN ,_, syntactic_JJ label_NN ._.
+We_PRP also_RB include_VBP pairs_NNS of_IN these_DT features_NNS ,_, resulting_VBG in_IN potentially_RB bilexical_JJ features_NNS ._.
+3.2.2_CD Training_NNP Data_NNP for_IN Preordering_NNP In_IN this_DT section_NN ,_, we_PRP describe_VBP a_DT method_NN to_TO build_VB training_NN data_NNS for_IN a_DT pair_NN English_NNP to_TO Vietnamese_NNP ._.
+Our_PRP$ purpose_NN is_VBZ to_TO reconstruct_VB the_DT word_NN order_NN of_IN input_NN sentence_NN to_TO an_DT order_NN that_WDT is_VBZ arranged_VBN as_IN Vietnamese_JJ words_NNS order_NN ._.
+For_IN example_NN with_IN the_DT English_JJ sentence_NN in_IN Figure_NN 2_CD :_: I_PRP 'm_VBP looking_VBG at_IN a_DT new_JJ jewelry_NN site_NN ._.
+is_VBZ transformed_VBN into_IN Vietnamese_JJ order_NN :_: I_PRP 'm_VBP looking_VBG at_IN a_DT site_NN new_JJ jewelry_NN ._.
+For_IN this_DT approach_NN ,_, we_PRP first_RB do_VBP preprocessing_VBG to_TO en_IN -_: code_NN some_DT special_JJ words_NNS and_CC parser_VB the_DT sentences_NNS to_TO dependency_NN tree_NN using_VBG Stanford_NNP Parser_NNP -LRB-_-LRB- de_FW Marn_NNP -_: effe_NN and_CC D.Manning_NNP ,_, 2006_CD ;_: Cer_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Then_RB ,_, we_PRP use_VBP target_NN to_TO source_NN alignment_NN and_CC dependency_NN tree_NN to_TO generate_VB features_NNS ._.
+We_PRP add_VBP source_NN ,_, target_NN align_NN -_: ment_NN ,_, POS_NNP tag_NN ,_, syntactic_JJ label_NN of_IN word_NN to_TO each_DT node_NN in_IN the_DT dependency_NN tree_NN ._.
+For_IN each_DT family_NN in_IN the_DT tree_NN ,_, we_PRP generate_VBP a_DT training_NN instance_NN if_IN it_PRP has_VBZ less_JJR than_IN and_CC Figure_NN 2_CD :_: A_DT example_NN with_IN POS_NNP tags_NNS and_CC dependency_NN parser_NN ._.
+The_DT feature_NN is_VBZ built_VBN for_IN ``_`` site_NN ,_, a_DT ,_, new_JJ ,_, jewelry_NN ''_'' fam_SYM -_: ily_RB in_IN Figure_NN 2_CD :_: NN_NNP ,_, DT_NNP ,_, det_NN ,_, JJ_NNP ,_, amod_NN ,_, NN_NNP ,_, nn_NN ,_, 1230_CD ,_, 1023_CD We_PRP limited_JJ ourself_NN by_IN procesing_VBG families_NNS that_WDT have_VBP less_JJR than_IN five_CD children_NNS based_VBN on_IN counting_VBG total_JJ fam_NN -_: ilies_NNS in_IN each_DT group_NN :_: 1_CD head_NN and_CC 1_CD child_NN ,_, 1_CD head_NN and_CC 2_CD children_NNS ,_, 1_CD head_NN and_CC 3_CD children_NNS ,_, 1_CD head_NN and_CC 4_CD chil_NN -_: dren_NN ..._: We_PRP found_VBD out_RP that_IN the_DT most_RBS common_JJ families_NNS appear_VBP -LRB-_-LRB- 80_CD %_NN -RRB-_-RRB- in_IN our_PRP$ training_NN sentences_NNS is_VBZ less_JJR than_IN and_CC equal_JJ four_CD children_NNS ._.
+We_PRP train_VBP a_DT separate_JJ classifier_NN for_IN each_DT number_NN of_IN possible_JJ children_NNS ._.
+In_IN hence_RB ,_, the_DT classifiers_NNS learn_VBP to_TO trade_VB off_RP between_IN a_DT rich_JJ set_NN of_IN overlapping_VBG features_NNS ._.
+List_NN of_IN features_NNS is_VBZ given_VBN in_IN table_NN 1_CD ._.
+We_PRP use_VBP SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- in_IN the_DT WEKA_NNP tools_NNS -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- that_WDT supports_VBZ multi-class_JJ prediction_NN ._.
+Since_IN it_PRP naturally_RB supports_VBZ Algorithm_NNP 1_CD Extract_JJ rules_NNS input_NN :_: dependency_NN trees_NNS of_IN source_NN sentences_NNS and_CC alignment_NN pairs_NNS ;_: output_NN :_: set_NN of_IN automaticaly_JJ rules_NNS ;_: for_IN each_DT family_NN in_IN dependency_NN trees_NNS of_IN subset_NN and_CC alignment_NN pairs_NNS of_IN sentences_NNS do_VBP generate_VB feature_NN -LRB-_-LRB- pattern_NN +_NN order_NN -RRB-_-RRB- ;_: end_NN for_IN Build_NNP model_NN from_IN set_NN of_IN features_NNS ;_: for_IN each_DT family_NN in_IN dependency_NN trees_NNS in_IN the_DT rest_NN of_IN the_DT sentences_NNS do_VBP generate_VB pattern_NN for_IN prediction_NN ;_: get_VB predicted_VBN order_NN from_IN model_NN ;_: add_VB -LRB-_-LRB- pattern_NN ,_, order_NN -RRB-_-RRB- as_IN new_JJ rule_NN in_IN set_NN of_IN rules_NNS ;_: end_NN for_IN Algorithm_NNP 2_CD Apply_NNP rule_NN input_NN :_: source-side_JJ dependency_NN trees_NNS ,_, set_NN of_IN rules_NNS ;_: output_NN :_: set_NN of_IN new_JJ sentences_NNS ;_: for_IN each_DT dependency_NN tree_NN do_VBP for_IN each_DT family_NN in_IN tree_NN do_VBP generate_VB pattern_NN get_VB order_NN from_IN set_NN of_IN rules_NNS based_VBN on_IN pattern_NN apply_VB transform_VB end_NN for_IN Build_VB new_JJ sentence_NN ;_: end_NN for_IN equal_JJ four_CD children_NNS ._.
+In_IN case_NN ,_, a_DT family_NN has_VBZ more_JJR than_IN and_CC equal_JJ five_CD children_NNS ,_, we_PRP discard_VBP this_DT family_NN but_CC still_RB keep_VB traversing_VBG at_IN each_DT child_NN ._.
+Each_DT rule_NN consists_VBZ of_IN :_: pattern_NN and_CC order_NN ._.
+For_IN ev_SYM -_: ery_NN node_NN in_IN the_DT dependency_NN tree_NN ,_, from_IN the_DT top-down_JJ ,_, we_PRP find_VBP the_DT node_NN matching_VBG against_IN the_DT pattern_NN ,_, and_CC if_IN a_DT match_NN is_VBZ found_VBN ,_, the_DT associated_VBN order_NN applies_VBZ ._.
+We_PRP arrange_VBP the_DT words_NNS in_IN the_DT English_JJ sentence_NN ,_, which_WDT is_VBZ covered_VBN by_IN the_DT matching_VBG node_NN ,_, like_IN Vietnamese_JJ words_NNS order_NN ._.
+And_CC then_RB ,_, we_PRP do_VBP the_DT same_JJ for_IN each_DT chil_NN -_: dren_NN of_IN this_DT node_NN ._.
+If_IN any_DT rule_NN is_VBZ applied_VBN ,_, we_PRP use_VBP the_DT order_NN of_IN original_JJ sentence_NN ._.
+These_DT rules_NNS are_VBP learnt_JJ au_SYM -_: tomatically_RB from_IN bilingual_JJ corpora_NN ._.
+The_DT our_PRP$ algorithm_NN 's_POS outline_NN is_VBZ given_VBN as_IN Alg_NNP ._.
+1_CD and_CC Alg_NNP ._.
+2_CD Algorithm_NNP 1_CD extracts_VBZ automatically_RB rules_NNS with_IN in_IN -_: put_VB including_VBG dependency_NN trees_NNS of_IN source_NN sentences_NNS and_CC alignment_NN pairs_NNS ._.
+Algorithm_NNP 2_CD proceeds_NNS by_IN considering_VBG all_DT rules_NNS af_SYM -_: ter_NN finish_NN Algorithm_NNP 1_CD and_CC source-side_JJ dependency_NN trees_NNS to_TO build_VB new_JJ sentence_NN ._.
+3.2.3_CD Classification_NNP Model_NNP The_NNP reordering_NN decisions_NNS are_VBP made_VBN by_IN multi-class_JJ classifiers_NNS -LRB-_-LRB- corespond_JJ with_IN number_NN of_IN permutation_NN :_: 2_CD ,_, 6_CD ,_, 24_CD ,_, 120_CD -RRB-_-RRB- where_WRB class_NN labels_NNS correspond_VBP to_TO per_IN -_: mutation_NN sequences_NNS ._.
+We_PRP train_VBP a_DT separate_JJ classifier_NN for_IN each_DT number_NN of_IN possible_JJ children_NNS ._.
+Crucially_RB ,_, we_PRP do_VBP not_RB learn_VB explicit_JJ tree_NN transformations_NNS rules_NNS ,_, but_CC let_VB the_DT classifiers_NNS learn_VBP to_TO trade_VB off_RP between_IN a_DT rich_JJ set_NN of_IN overlapping_VBG features_NNS ._.
+To_TO build_VB a_DT classification_NN model_NN ,_, we_PRP use_VBP SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- in_IN the_DT WEKA_NNP tools_NNS -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT result_NN follows_VBZ are_VBP obtained_VBN using_VBG 10_CD folds-cross_JJ vali_NNS -_: dation_NN ._.
+We_PRP apply_VBP them_PRP in_IN a_DT dependency_NN tree_NN recursively_RB starting_VBG from_IN the_DT root_NN node_NN ._.
+If_IN the_DT POS-tags_NNP of_IN a_DT node_NN matches_VBZ the_DT left-hand-side_NN of_IN a_DT rule_NN ,_, the_DT rule_NN is_VBZ ap_SYM -_: plied_VBD and_CC the_DT order_NN of_IN the_DT sentence_NN is_VBZ changed_VBN ._.
+We_PRP go_VBP through_IN all_DT children_NNS of_IN the_DT node_NN and_CC matching_VBG rules_NNS for_IN them_PRP from_IN the_DT set_NN of_IN automatically_RB rules_NNS ._.
+Table_NNP 2_CD gives_VBZ examples_NNS of_IN original_JJ and_CC pre_SYM -_: processed_VBN phrase_NN in_IN English_NNP ._.
+The_DT first_JJ line_NN is_VBZ the_DT original_JJ English_NNP :_: ''_'' I_PRP 'm_VBP looking_VBG at_IN a_DT new_JJ jew_NN -_: elry_NN site_NN ._. ''_''
+,_, and_CC the_DT target_NN Vietnamese_JJ reordering_NN ''_'' Tôi_FW đang_FW xem_FW một_FW trang_FW web_NN mới_FW về_FW nữ_FW __FW trang_FW ._. ''_'' ._.
+This_DT sentences_NNS is_VBZ arranged_VBN as_IN the_DT Vietnamese_JJ order_NN ._.
+Vietnamese_JJ sentences_NNS is_VBZ the_DT output_NN of_IN our_PRP$ method_NN ._.
+As_IN you_PRP can_MD see_VB ,_, after_IN reordering_NN ,_, original_JJ English_JJ line_NN have_VBP the_DT same_JJ word_NN order_NN :_: ''_'' I_PRP 'm_VBP looking_VBG at_IN a_DT site_NN new_JJ jewelry_NN ._. ''_''
+in_IN Figure_NNP 1_CD ._.
+4_CD Experiment_NN In_IN this_DT section_NN ,_, we_PRP present_VBP our_PRP$ experiments_NNS to_TO trans_NNS -_: late_RB from_IN English_NNP to_TO Vietnamese_NNS in_IN a_DT statistical_JJ ma_NN -_: chine_NN translation_NN system_NN ._.
+In_IN hence_RB ,_, the_DT language_NN pairs_NNS chosen_VBN is_VBZ English-Vietnamese_NNP ._.
+We_PRP used_VBD Stan_NNP -_: ford_NN Parser_NNP -LRB-_-LRB- Cer_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- to_TO parse_VB source_NN sen_NN -_: tence_NN -LRB-_-LRB- English_JJ sentences_NNS -RRB-_-RRB- ._.
+We_PRP used_VBD dependency_NN pars_NNS -_: ing_NN and_CC rules_NNS extracting_VBG from_IN training_VBG the_DT features_NNS -_: rich_JJ discriminative_JJ classifiers_NNS for_IN reordering_NN source_NN -_: side_NN sentences_NNS ._.
+The_DT rules_NNS are_VBP extracted_VBN automatically_RB by_IN learnt_NN in_IN English-Vietnamese_NNP parallel_JJ corpus_NN and_CC Order_NN 1,0,2,3_CD 2,1,0,3_CD 2,1,0_CD Pattern_NNP NN_NNP ,_, DT_NNP ,_, det_NN ,_, JJ_NNP ,_, amod_NN ,_, NN_NNP ,_, nn_NN NNS_NNP ,_, JJ_NNP ,_, amod_NN ,_, CC_NNP ,_, cc_NN ,_, NNS_NNP ,_, con_JJ NNP_NNP ,_, NNP_NNP ,_, nn_NN ,_, NNP_NNP ,_, nn_NNP Example_NNP I_PRP 'm_VBP looking_VBG at_IN a_DT new_JJ jewelry_NN site_NN ._.
+→_IN I_PRP 'm_VBP looking_VBG at_IN a_DT site_NN new_JJ jewelry_NN ._.
+it_PRP faced_VBD a_DT blank_JJ wall_NN ._.
+→_IN it_PRP faced_VBD a_DT wall_NN blank_NN ._.
+it_PRP 's_VBZ a_DT social_JJ phenomenon_NN ._.
+→_IN it_PRP 's_VBZ a_DT phenomenon_NN social_JJ ._.
+Table_NNP 2_CD :_: Examples_NNS of_IN rules_NNS and_CC reorder_VB source_NN sentences_NNS Number_NNP children_NNS of_IN head_NN Number_NN 1_CD 79142_CD 2_CD 40822_CD 3_CD 26008_CD 4_CD 15990_CD 5_CD 7442_CD 6_CD 2728_CD 7_CD 942_CD 8_CD 307_CD 9_CD 83_CD Table_NNP 3_CD :_: Statistical_NNP number_NN of_IN family_NN on_IN the_DT dependency_NN parser_NN of_IN English_NNP examples_NNS ._.
+Final_JJ ,_, they_PRP used_VBD to_TO reorder_VB source_NN sentences_NNS ._.
+We_PRP evalu_SYM -_: ated_VBD our_PRP$ approach_NN on_IN English-Vietnamese_NNP machine_NN translation_NN tasks_NNS with_IN three_CD system_NN in_IN table_NN 5_CD ,_, and_CC show_VBP that_IN it_PRP can_MD outperform_VB the_DT baseline_NN phrase_NN -_: based_VBN SMT_NNP system_NN ._.
+We_PRP give_VBP some_DT definitions_NNS of_IN our_PRP$ experiments_NNS :_: •_CD Baseline_NN :_: use_VB the_DT baseline_NN phrase-based_JJ SMT_NNP system_NN using_VBG distance-based_JJ default_NN reordering_NN model_NN in_IN Moses_NNP toolkit_NN ._.
+•_NNP Manual_NNP Rules_NNPS :_: the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG manual_JJ rules_NNS 1_CD ._.
+•_SYM AutoRules_NNPS :_: thephrase-basedSMTsystemsap_JJ -_: plying_VBG automatically_RB rules_NNS ._.
+4.1_CD Implementation_NNP •_CD We_PRP used_VBD Stanford_NNP Parser_NNP -LRB-_-LRB- de_FW Marneffe_NNP and_CC D.Manning_NNP ,_, 2006_CD ;_: Cer_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- to_TO parse_VB source_NN sentence_NN and_CC apply_VB to_TO preprocessing_VBG source_NN sentences_NNS -LRB-_-LRB- English_JJ sentences_NNS -RRB-_-RRB- ._.
+•_CD We_PRP used_VBD classifier-based_JJ preordering_NN by_IN us_PRP -_: ing_VBG SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- 1Improving_VBG English-Vietnamese_NNP Statistical_NNP Machine_NNP Trans_NNP -_: lation_NN Using_VBG Preprocessing_NNP Dependency_NNP Syntactic_NNP ,_, introduced_VBN in_IN -LRB-_-LRB- Tran_JJ et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+This_DT system_NN use_NN manual_JJ rules_NNS ._.
+•_IN •_CD 4.2_CD Description_NNP Family_NNP has_VBZ 1_CD children_NNS Family_NNP has_VBZ 2_CD children_NNS Family_NNP has_VBZ 3_CD children_NNS Family_NNP has_VBZ 4_CD children_NNS Family_NNP has_VBZ 5_CD children_NNS Family_NNP has_VBZ 6_CD children_NNS Family_NNP has_VBZ 7_CD children_NNS Family_NNP has_VBZ 8_CD children_NNS Family_NNP has_VBZ 9_CD children_NNS corpus_VBP English-Vietnamese_NNP in_IN Weka_NNP tools_NNS -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- for_IN train_NN -_: ing_VBG the_DT features-rich_JJ discriminative_JJ classifiers_NNS to_TO extract_VB automatically_RB rules_NNS from_IN English_NNP -_: Vietnamese_JJ parallel_JJ corpus_NN ._.
+These_DT automaticly_JJ rules_NNS applied_VBN for_IN reordering_NN words_NNS in_IN English_JJ sentences_NNS according_VBG to_TO Vietnamese_JJ word_NN order_NN ._.
+We_PRP implemented_VBD preprocessing_VBG step_NN during_IN both_DT training_NN and_CC decoding_NN time_NN ._.
+Using_VBG the_DT SMT_NNP Moses_NNP decoder_NN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- for_IN decoding_NN ._.
+Data_NNP set_NN and_CC Experimental_JJ Setup_NN For_IN evaluation_NN ,_, we_PRP used_VBD an_DT English-Vietnamese_JJ cor_NN -_: pus_NN -LRB-_-LRB- Nguyen_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, including_VBG about_IN 54642_CD pairs_NNS for_IN training_NN ,_, 500_CD pairs_NNS for_IN testing_NN and_CC 200_CD pairs_NNS for_IN development_NN test_NN set_VBN ._.
+Table_NNP 4_CD gives_VBZ more_RBR statistical_JJ information_NN about_IN our_PRP$ corpora_NN ._.
+We_PRP con_VBP -_: ducted_VBD some_DT experiments_NNS with_IN SMT_NNP Moses_NNP Decoder_NNP -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- and_CC SRILM_NNP -LRB-_-LRB- Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+We_PRP trained_VBD a_DT trigram_NN language_NN model_NN using_VBG inter_NN -_: polate_NN and_CC kndiscount_NN smoothing_NN with_IN 89M_NNP Viet_NNP -_: namese_NN mono_NN corpus_NN ._.
+Before_IN extracting_VBG phrase_NN ta_SYM -_: ble_NN ,_, we_PRP use_VBP GIZA_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- to_TO build_VB Corpus_NNP Sentence_NNP pairs_NNS Training_VBG Set_NNP Development_NNP Set_NNP Test_NNP Set_NNP General_NNP 55341_CD 54642_CD 200_CD 499_CD English_NNP Vietnamese_NNP Training_NNP Sentences_NNS 54620_CD Average_JJ Length_NNP 11.2_CD 10.6_CD Word_NN 614578_CD 580754_CD Vocabulary_NNP 23804_CD 24097_CD Development_NNP Sentences_NNS 200_CD Average_JJ Length_NNP 11.1_CD 10.7_CD Word_NN 2221_CD 2141_CD Vocabulary_NNP 825_CD 831_CD Test_NN Sentences_NNS 499_CD Average_JJ Length_NNP 11.2_CD 10.5_CD Word_NN 5620_CD 6240_CD Vocabulary_NNP 1844_CD 1851_CD Table_NNP 4_CD :_: Corpus_NNP Statistical_NNP Table_NNP 5_CD :_: Our_PRP$ experimental_JJ systems_NNS on_IN English-Vietnamese_NNP parallel_JJ corpus_NN Name_NN Description_NNP Baseline_NNP Manual_NNP Rules_NNP Auto_NNP Rules_NNPS Phrase-based_JJ system_NN Phrase-based_JJ system_NN with_IN corpus_NN which_WDT is_VBZ preprocessed_JJ using_VBG manual_JJ rules_NNS Phrase-based_JJ system_NN with_IN corpus_NN which_WDT is_VBZ preprocessed_JJ using_VBG automatically_RB learning_VBG rules_NNS word_NN alignment_NN with_IN grow-diag-final-and_JJ algorithm_NN ._.
+Besides_IN using_VBG preprocessing_NN ,_, we_PRP also_RB used_VBD default_NN reordering_NN model_NN in_IN Moses_NNP Decoder_NNP :_: using_VBG word_NN -_: based_VBN extraction_NN -LRB-_-LRB- wbe_NN -RRB-_-RRB- ,_, splitting_NN type_NN of_IN reordering_NN orientation_NN to_TO three_CD class_NN -LRB-_-LRB- monotone_NN ,_, swap_NN and_CC dis_SYM -_: continuous_JJ --_: msd_NN -RRB-_-RRB- ,_, combining_VBG backward_RB and_CC for_IN -_: ward_NN direction_NN -LRB-_-LRB- bidirectional_JJ -RRB-_-RRB- and_CC modeling_NN base_NN on_IN both_DT source_NN and_CC target_NN language_NN -LRB-_-LRB- fe_FW -RRB-_-RRB- -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+To_TO contrast_NN ,_, we_PRP try_VBP preprocessing_VBG the_DT source_NN sentence_NN with_IN some_DT handwritten_JJ rules_NNS and_CC automati_NNS -_: cally_JJ rules_NNS ,_, which_WDT is_VBZ described_VBN in_IN 3.2.1_CD ._.
+4.3_CD BLEU_NNP score_NN The_DT result_NN of_IN our_PRP$ experiments_NNS in_IN table_NN 6_CD showed_VBD our_PRP$ applying_VBG transformation_NN rule_NN to_TO process_VB the_DT source_NN sentences_NNS ._.
+in_IN this_DT method_NN ,_, we_PRP can_MD find_VB out_RP various_JJ phrases_NNS in_IN the_DT translation_NN model_NN ._.
+So_IN that_DT ,_, they_PRP enable_VBP us_PRP to_TO have_VB more_JJR options_NNS for_IN decoder_NN to_TO generate_VB the_DT best_JJS translation_NN ._.
+Table_NNP 7_CD describes_VBZ the_DT BLEU_NNP score_NN -LRB-_-LRB- Papineni_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- of_IN our_PRP$ experiments_NNS ._.
+As_IN we_PRP can_MD see_VB ,_, by_IN applying_VBG preprocess_NN in_IN both_DT training_NN and_CC decoding_NN ,_, the_DT BLEU_NNP score_NN of_IN our_PRP$ best_JJS system_NN increase_NN by_IN 0.42_CD point_NN ``_`` Baseline_NNP +_NNP AR_NNP ''_'' system_NN -RRB-_-RRB- over_IN ``_`` Baseline_NNP sys_SYM -_: tem_NN ''_'' ._.
+Improvement_NNP over_IN 0.42_CD BLEU_NNP point_NN is_VBZ valu_SYM -_: able_JJ because_IN baseline_NN system_NN is_VBZ the_DT strong_JJ phrase_NN based_VBN SMT_NNP -LRB-_-LRB- integrating_VBG lexicalized_VBN reordering_NN mod_NN -_: els_NNS -RRB-_-RRB- ._.
+We_PRP also_RB carried_VBD out_IN the_DT experiments_NNS with_IN manual_JJ rules_NNS -LRB-_-LRB- Tran_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Using_VBG automatically_RB rules_NNS help_VBP the_DT phrased_JJ translation_NN model_NN generate_VB some_DT best_JJS translation_NN ._.
+Besides_IN ,_, the_DT result_NN proved_VBD that_IN the_DT effect_NN of_IN applying_VBG transformation_NN rule_NN on_IN the_DT depen_NN -_: dency_NN tree_NN when_WRB the_DT BLEU_NNP score_NN is_VBZ higher_JJR than_IN base_NN -_: line_NN systems_NNS ._.
+Because_IN ,_, the_DT cover_NN of_IN manual_JJ rules_NNS is_VBZ better_JJR than_IN automatically_RB rules_NNS on_IN corpus_NN ._.
+We_PRP can_MD extract_VB more_JJR and_CC better_JJR phrase_NN tables_NNS ._.
+However_RB ,_, in_IN our_PRP$ experimental_JJ ,_, we_PRP need_VBP conduct_NN with_IN larger_JJR cor_SYM -_: pus_NN and_CC quality_NN of_IN corpus_NN better_JJR to_TO extract_VB automati_NNS -_: cally_JJ rules_NNS which_WDT can_MD cover_VB many_JJ linguistic_JJ reorder_NN -_: ing_NN phenomena_NNS on_IN corpus_NN ._.
+Finally_RB ,_, the_DT BLEU_NNP score_NN of_IN using_VBG monotone_NN decoder_NN increase_NN by_IN 0.42_CD when_WRB we_PRP use_VBP classifier-based_JJ preprocessing_NN for_IN English_NNP -_: Vietnamses_NNP parallel_JJ corpus_NN ._.
+As_IN ,_, the_DT default_NN reorder_NN -_: ing_NN model_NN in_IN baseline_NN system_NN is_VBZ lower_JJR than_IN in_IN this_DT experiment2_NN ._.
+4.4_CD Analysis_NNP According_VBG to_TO typical_JJ differences_NNS of_IN word_NN order_NN be_VB -_: tween_NN English_NNP and_CC Vietnamese_NNP ,_, we_PRP have_VBP created_VBN a_DT set_NN of_IN automatically_RB rules_NNS for_IN reordering_NN words_NNS in_IN English_JJ sentence_NN according_VBG to_TO Vietnamese_JJ word_NN or_CC -_: der_NN and_CC types_NNS of_IN rules_NNS including_VBG noun_NN phrase_NN ,_, adjec_FW -_: tival_JJ and_CC adverbial_JJ phrase_NN ,_, preposition_NN ._.
+Table_NNP 3_CD gives_VBZ statistical_JJ families_NNS have_VBP larger_JJR or_CC equal_JJ 4_CD children_NNS in_IN our_PRP$ corpus_NN ._.
+Number_NN of_IN children_NNS in_IN every_DT family_NN has_VBZ limited_VBN 4_CD children_NNS in_IN our_PRP$ approach_NN ._.
+So_RB in_IN target_NN lan_NN -_: guage_NN -LRB-_-LRB- Vietnamese_JJ -RRB-_-RRB- ,_, number_NN of_IN child_NN in_IN every_DT family_NN is_VBZ common_JJ ._.
+We_PRP compared_VBD result_NN experiment_NN between_IN the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG manual_JJ rules_NNS with_IN the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG auto_NN -_: matically_JJ rules_NNS ._.
+Because_IN the_DT manual_JJ rules_NNS have_VBP good_JJ quality_NN -LRB-_-LRB- Xia_NNP and_CC McCord_NNP ,_, 2004_CD ;_: Habash_NNP ,_, 2007_CD -RRB-_-RRB- ,_, the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG manual_JJ rules_NNS is_VBZ better_JJR than_IN the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG automatically_RB rules_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP believe_VBP that_IN the_DT quality_NN of_IN the_DT phrase-based_JJ SMT_NNP systems_NNS applying_VBG automatically_RB rules_NNS will_MD better_RB when_WRB we_PRP have_VBP a_DT better_JJR corpus_NN ._.
+Beside_IN ,_, the_DT quality_NN of_IN phrase-based_JJ SMT_NNP can_MD be_VB improved_VBN if_IN we_PRP combine_VBP automatically_RB learned_VBN rules_NNS with_IN manual_JJ rules_NNS ._.
+5_CD Conclusion_NN In_IN this_DT study_NN ,_, a_DT preprocessing_VBG approach_NN based_VBN on_IN a_DT dependency_NN parser_NN is_VBZ presented_VBN ._.
+We_PRP used_VBD classifier_NN -_: based_VBN preordering_NN by_IN using_VBG SVM_NNP classification_NN model_NN -LRB-_-LRB- Wang_NNP ,_, 2005_CD -RRB-_-RRB- in_IN Weka_NNP tools_NNS -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- for_IN training_VBG the_DT features-rich_JJ discriminative_JJ classi_NNS -_: fiers_NNS to_TO extract_VB automatically_RB rules_NNS from_IN English_NNP -_: Vietnamese_JJ parallel_JJ corpus_NN and_CC apply_VB these_DT rules_NNS for_IN reordering_NN words_NNS in_IN English_JJ sentence_NN according_VBG to_TO Vietnamese_JJ word_NN order_NN ._.
+We_PRP evaluated_VBD our_PRP$ approach_NN on_IN English_NNP -_: Vietnamese_JJ machine_NN translation_NN tasks_NNS ._.
+The_DT ex_FW -_: periment_NN results_NNS showed_VBD that_IN our_PRP$ approach_NN achieved_VBD statistically_RB improvements_NNS in_IN BLEU_NNP scores_NNS over_IN a_DT state-of-the-art_JJ phrase-based_JJ baseline_NN system_NN ._.
+Improvement_NNP over_IN 0.42_CD BLEU_NNP point_NN is_VBZ valuable_JJ 2The_JJ reordering_NN model_NN in_IN the_DT monotone_NN decoder_NN is_VBZ distance_NN based_VBN ,_, introduced_VBN in_IN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+This_DT model_NN is_VBZ a_DT de_FW -_: fault_NN reordering_NN model_NN in_IN Moses_NNP Decoder_NNP -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- Name_NN Baseline_NNP Manual_NNP Rules_NNP Auto_NNP Rules_NNP Size_NN of_IN phrase-table_JJ 1152216_CD 1231365_CD 1213401_CD Table_NNP 6_CD :_: Size_NN of_IN phrase_NN tables_NNS System_NNP Baseline_NNP Manual_NNP Rules_NNP Auto_NNP Rules_NNPS BLEU_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- 36.97_CD 37.71_CD 37.26_CD Table_NNP 7_CD :_: Translation_NN performance_NN for_IN the_DT English_NNP -_: Vietnamese_JJ task_NN because_IN baseline_NN system_NN is_VBZ the_DT strong_JJ phrase-based_JJ SMT_NNP ._.
+Our_PRP$ rules_NNS are_VBP automatically_RB which_WDT learnt_VBP from_IN cor_SYM -_: pus_NN and_CC can_MD cover_VB many_JJ linguistic_JJ reordering_NN phe_NN -_: nomena_NN ._.
+We_PRP believe_VBP that_IN such_JJ reordering_NN rules_NNS ben_SYM -_: efit_NN English-Vietnamese_NNP pair_NN languages_NNS ._.
+In_IN the_DT future_NN ,_, we_PRP plan_VBP to_TO investigate_VB along_IN this_DT di_FW -_: rection_NN and_CC extend_VB the_DT rules_NNS to_TO languages_NNS other_JJ ._.
+We_PRP believe_VBP that_IN this_DT is_VBZ the_DT important_JJ step_NN in_IN trying_VBG im_SYM -_: proving_VBG SMT_NNP systems_NNS and_CC that_IN might_MD lead_VB to_TO a_DT wider_JJR adoption_NN of_IN them_PRP ._.
+We_PRP would_MD like_VB to_TO evaluate_VB our_PRP$ method_NN with_IN tree_NN with_IN higher_JJR and_CC deeper_JJR syntactic_NN structure_NN and_CC larger_JJR size_NN of_IN corpus_NN ._.
+We_PRP attempt_VBP to_TO create_VB more_RBR efficient_JJ preordering_VBG rules_NNS by_IN exploiting_VBG the_DT rich_JJ information_NN in_IN depen_NN -_: dency_NN structures_NNS ._.
+References_NNS Daniel_NNP Cer_NNP ,_, Marie-Catherine_NNP de_IN Marneffe_NNP ,_, Daniel_NNP Juraf_NNP -_: sky_NN ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2010_CD ._.
+Parsing_VBG to_TO stanford_VB dependencies_NNS :_: Trade-offs_NNS between_IN speed_NN and_CC accuracy_NN ._.
+In_IN 7th_JJ International_NNP Conference_NNP on_IN Lan_NNP -_: guage_NN Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC_NNP 2010_CD -RRB-_-RRB- ._.
+David_NNP Chiang_NNP ._.
+2005_CD ._.
+A_DT hierarchical_JJ phrase-based_JJ model_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 05_CD -RRB-_-RRB- ,_, pages_NNS 263_CD --_: 270_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+M._NNP Collins_NNP ,_, P._NNP Koehn_NNP ,_, and_CC I._NN Kucerová_NNP ._.
+2005_CD ._.
+Clause_NN re_SYM -_: structuring_VBG for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proc_NNP ._.
+ACL_SYM 2005_CD ,_, pages_NNS 531_CD --_: 540_CD ._.
+Ann_NNP Arbor_NNP ,_, USA_NNP ._.
+Bill_NNP MacCartney_NNP de_IN Marneffe_NNP and_CC Christopher_NNP D.Manning_NNP ._.
+2006_CD ._.
+Generating_NNP typed_VBD depen_SYM -_: dency_NN parses_VBZ from_IN phrase_NN structure_NN parses_VBZ ._.
+In_IN In_IN the_DT Proceeding_NNP of_IN the_DT 5th_JJ International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+Dmitriy_NNP Genzel_NNP ._.
+2010_CD ._.
+Automatically_RB learning_VBG source_NN -_: side_NN reordering_NN rules_NNS for_IN large_JJ scale_NN machine_NN transla_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 23rd_JJ International_NNP Con_NN -_: ference_NN on_IN Computational_NNP Linguistics_NNP ,_, COLING_NNP '_POS 10_CD ,_, pages_NNS 376_CD --_: 384_CD ,_, Stroudsburg_NNP ,_, PA_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+N._NNP Habash_NNP ._.
+2007_CD ._.
+Syntactic_JJ preprocessing_NN for_IN statisti_NNS -_: cal_JJ machine_NN translation_NN ._.
+Proceedings_NNP of_IN the_DT 11th_JJ MT_NNP Summit_NNP ._.
+Mark_NNP Hall_NNP ,_, Eibe_NNP Frank_NNP ,_, Geoffrey_NNP Holmes_NNP ,_, Bernhard_NNP Pfahringer_NNP ,_, Peter_NNP Reutemann_NNP ,_, and_CC Ian_NNP H._NNP Witten_NNP ._.
+2009_CD ._.
+The_DT weka_NN data_NNS mining_NN software_NN :_: An_DT update_VBP ._.
+SIGKDD_NNP Explor_NNP ._.
+Newsl._NNP ,_, 11_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :10_CD --_: 18_CD ,_, November_NNP ._.
+Sho_NNP Hoshino_NNP ,_, Yusuke_NNP Miyao_NNP ,_, Katsuhito_NNP Sudoh_NNP ,_, Kat_NNP -_: suhiko_NN Hayashi_NNP ,_, and_CC Masaaki_NNP Nagata_NNP ._.
+2015_CD ._.
+Discrimi_NNP -_: native_JJ preordering_NN meets_VBZ kendall_NN 's_POS τ_NN maximization_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 53rd_CD Annual_JJ Meeting_VBG of_IN the_DT Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNPS and_CC the_DT 7th_JJ Inter_NNP -_: national_JJ Joint_NNP Conference_NN on_IN Natural_JJ Language_NN Pro-_JJ cessing_NN -LRB-_-LRB- Volume_NN 2_CD :_: Short_JJ Papers_NNP -RRB-_-RRB- ,_, pages_NNS 139_CD --_: 144_CD ,_, Bei_NNP -_: jing_NN ,_, China_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Liang_NNP Huang_NNP and_CC Haitao_NNP Mi_NNP ._.
+2010_CD ._.
+Efficient_JJ incremental_JJ decoding_NN for_IN tree-to-string_JJ translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2010_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 273_CD --_: 283_CD ,_, Cambridge_NNP ,_, MA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Laura_NNP Jehl_NNP ,_, Adrià_NNP de_IN Gispert_NNP ,_, Mark_NNP Hopkins_NNP ,_, and_CC Bill_NNP Byrne_NNP ._.
+2014_CD ._.
+Source-side_JJ preordering_VBG for_IN transla_NN -_: tion_NN using_VBG logistic_JJ regression_NN and_CC depth-first_JJ branch_NN -_: and-bound_JJ search_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 14th_JJ Confer_NNP -_: ence_NN of_IN the_DT European_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 239_CD --_: 248_CD ,_, Gothen_NNP -_: burg_NN ,_, Sweden_NNP ,_, April_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Eiichiro_NNP Sumita_NNP Yujie_NNP Zhang_NNP Jingsheng_NNP Cai_NNP ,_, Masao_NNP Utiyama_NNP ._.
+2014_CD ._.
+Dependency-based_JJ pre_NN -_: ordering_VBG for_IN chinese-english_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Philipp_NNP Koehn_NNP ,_, Franz_NNP Josef_NNP Och_NNP ,_, and_CC Daniel_NNP Marcu_NNP ._.
+2003_CD ._.
+Statistical_NNP phrase-based_JJ translation_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN HLT-NAACL_NNP 2003_CD ,_, pages_NNS 127_CD --_: 133_CD ._.
+Edmonton_NNP ,_, Canada_NNP ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Richard_NNP Zens_NNP ,_, Chris_NNP Dyer_NNP ,_, Ondrej_NNP Bojar_NNP ,_, Alexandra_NNP Constantin_NNP ,_, and_CC Evan_NNP Herbst_NNP ._.
+2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP ,_, Demonstration_NNP Session_NN ._.
+Uri_NNP Lerner_NNP and_CC Slav_NNP Petrov_NNP ._.
+2013_CD ._.
+Source-side_JJ classifier_NN preordering_VBG for_IN machine_NN translation_NN ._.
+In_IN EMNLP_NNP ,_, pages_NNS 513_CD --_: 523_CD ._.
+Chi-Ho_JJ Li_NNP ,_, Minghui_NNP Li_NNP ,_, Dongdong_NNP Zhang_NNP ,_, Mu_NNP Li_NNP ,_, Ming_NNP Zhou_NNP ,_, and_CC Yi_NNP Guan_NNP ._.
+2007_CD ._.
+A_DT probabilistic_JJ approach_NN to_TO syntax-based_JJ reordering_NN for_IN statistical_JJ machine_NN trans_NNS -_: lation_NN ._.
+In_IN ANNUAL_NNP MEETING-ASSOCIATION_NNP FOR_IN COMPUTATIONAL_NNP LINGUISTICS_NNP ,_, volume_NN 45_CD ,_, page_NN 720_CD ._.
+Tetsuji_NNP Nakagawa_NNP ._.
+2015_CD ._.
+Efficient_JJ top-down_JJ btg_NN parsing_NN for_IN machine_NN translation_NN preordering_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 53rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS and_CC the_DT 7th_NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- Volume_NN 1_CD :_: Long_NNP Papers_NNP -RRB-_-RRB- ,_, pages_NNS 208_CD --_: 218_CD ,_, Beijing_NNP ,_, China_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Thai_NNP Phuong_NNP Nguyen_NNP ,_, Akira_NNP Shimazu_NNP ,_, Tu_NNP Bao_NNP Ho_NNP ,_, Minh_NNP Le_NNP Nguyen_NNP ,_, and_CC Vinh_NNP Van_NNP Nguyen_NNP ._.
+2008_CD ._.
+A_DT tree-to-string_JJ phrase-based_JJ model_NN for_IN statistical_JJ ma_NN -_: chine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Twelfth_NNP Con_NN -_: ference_NN on_IN Computational_NNP Natural_NNP Language_NNP Learning_NNP -LRB-_-LRB- CoNLL_NNP 2008_CD -RRB-_-RRB- ,_, pages_NNS 143_CD --_: 150_CD ,_, Manchester_NNP ,_, England_NNP ,_, August_NNP ._.
+Coling_NNP 2008_CD Organizing_NNP Committee_NNP ._.
+Franz_NNP J._NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT systematic_JJ comparison_NN of_IN various_JJ statistical_JJ alignment_NN models_NNS ._.
+Computational_NNP Linguistics_NNP ,_, 29_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :19_CD --_: 51_CD ._.
+Franz_NNP J._NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2004_CD ._.
+The_DT alignment_NN template_NN approach_NN to_TO statistical_JJ machine_NN translation_NN ._.
+Computational_NNP Linguistics_NNP ,_, 30_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :417_CD --_: 449_CD ._.
+K._NNP Papineni_NNP ,_, S._NNP Roukos_NNP ,_, T._NNP Ward_NNP ,_, and_CC W._NNP J._NNP Zhu_NNP ._.
+2002_CD ._.
+2002_CD ._.
+Bleu_NNP :_: a_DT method_NN for_IN automatic_JJ evaluation_NN of_IN ma_FW -_: chine_NN translation_NN ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 40th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP -RRB-_-RRB- ,_, pages_NNS 311_CD --_: 318_CD ._.
+Philadelphia_NNP ,_, PA_NNP ,_, July_NNP ._.
+Chris_NNP Quirk_NNP ,_, Arul_NNP Menezes_NNP ,_, and_CC Colin_NNP Cherry_NNP ._.
+2005_CD ._.
+Dependency_NN treelet_NN translation_NN :_: Syntactically_RB informed_VBN phrasal_JJ smt_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP 2005_CD ,_, pages_NNS 271_CD --_: 279_CD ._.
+Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, USA_NNP ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+Srilm_NNP -_: an_DT extensible_JJ lan_NN -_: guage_NN modeling_NN toolkit_NN ._.
+In_IN Proceedings_NNP of_IN Interna_NNP -_: tional_JJ Conference_NN on_IN Spoken_NNP Language_NNP Processing_NNP ,_, volume_NN 29_CD ,_, pages_NNS 901_CD --_: 904_CD ._.
+Viet_NNP Hong_NNP Tran_NNP ,_, Vinh_NNP Van_NNP Nguyen_NNP ,_, and_CC Minh_NNP Le_NNP Nguyen_NNP ._.
+2015_CD ._.
+Improving_NN english-vietnamese_JJ statistical_JJ ma_NN -_: chine_NN translation_NN using_VBG preprocessing_VBG dependency_NN syn_NN -_: tactic_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2015_CD Conference_NN of_IN the_DT Pacific_NNP Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- Pa_NNP -_: cling_VB 2015_CD -RRB-_-RRB- ,_, pages_NNS 115_CD --_: 121_CD -LRB-_-LRB- pdf_NN -RRB-_-RRB- ._.
+Lipo_NNP Wang_NNP ._.
+2005_CD ._.
+Support_NN Vector_NNP Machines_NNPS :_: theory_NN and_CC applications_NNS ,_, volume_NN 177_CD ._.
+Springer_NNP Science_NNP &_CC Busi_NNP -_: ness_NN Media_NNP ._.
+Fei_NNP Xia_NNP and_CC Michael_NNP McCord_NNP ._.
+2004_CD ._.
+Improving_NN a_DT statis_NN -_: tical_JJ mt_JJ system_NN with_IN automatically_RB learned_VBN rewrite_VBP pat_SYM -_: terns_NNS ._.
+In_IN Proceedings_NNP of_IN Coling_NNP 2004_CD ,_, pages_NNS 508_CD --_: 514_CD ,_, Geneva_NNP ,_, Switzerland_NNP ,_, Aug_NNP 23_CD --_: Aug_NNP 27_CD ._.
+COLING_NNP ._.
+Peng_NNP Xu_NNP ,_, Jaeho_NNP Kang_NNP ,_, Michael_NNP Ringgaard_NNP ,_, and_CC Franz_NNP Och_NNP ._.
+2009_CD ._.
+Using_VBG a_DT dependency_NN parser_NN to_TO improve_VB smt_NN for_IN subject-object-verb_JJ languages_NNS ._.
+In_IN Proceedings_NNP of_IN Human_NNP Language_NNP Technologies_NNPS :_: The_DT 2009_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 245_CD --_: 253_CD ,_, Boulder_NNP ,_, Colorado_NNP ,_, June_NNP ._.
+Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS ._.
+Nan_NNP Yang_NNP ,_, Mu_NNP Li_NNP ,_, Dongdong_NNP Zhang_NNP ,_, and_CC Nenghai_NNP Yu_NNP ._.
+2012_CD ._.
+A_DT ranking-based_JJ approach_NN to_TO word_NN reordering_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS :_: Long_NNP Papers-Volume_NNP 1_CD ,_, pages_NNS 912_CD --_: 920_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Yuqi_NNP Zhang_NNP ,_, Richard_NNP Zens_NNP ,_, and_CC Hermann_NNP Ney_NNP ._.
+2007_CD ._.
+Chunk-level_JJ reordering_NN of_IN source_NN language_NN sentences_NNS with_IN automatically_RB learned_VBN rules_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN SSST_NNP ,_, NAACL-HLT_NNP 2007_CD /_CD AMTA_NNP Workshop_NNP on_IN Syntax_NNP and_CC Structure_NNP in_IN Statistical_NNP Translation_NN ,_, pages_NNS 1_CD --_: 8_CD ._.

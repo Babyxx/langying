@@ -1,0 +1,334 @@
+Not_RB Voice_NNP but_CC Case_NNP Identity_NNP in_IN VP_NNP Ellipsis_NNP of_IN English_NNP Abstract_NNP This_DT paper_NN develops_VBZ a_DT Case/case-theoretic_JJ acco_NN unt_NN for_IN what_WP Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- calls_VBZ voice_NN mism_NN atch_NN in_IN ellipsis_NN constructions_NNS of_IN English_NNP ._.
+Merch_NNP ant_NN -LRB-_-LRB- ibid_JJ ._. -RRB-_-RRB-
+reports_NNS that_IN VP_NNP ellipsis_VBZ as_IN an_DT elision_NN o_NN f_LS smaller_JJR size_NN VP_NNP allows_VBZ voice_NN mismatch_NN ,_, but_CC Ps_NNP eudogapping_NN and_CC Sluicing_VBG as_IN an_DT elision_NN of_IN bigge_NN r_NN size_NN vP/TP_NNP do_VBP not_RB ._.
+However_RB ,_, Tanaka_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ar_RB gues_NNS against_IN Merchant_NN 's_POS dichotomy_NN in_IN voice_NN mis_FW match_NN between_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN ,_, reporting_VBG that_IN voice_NN mismatch_NN in_IN both_DT types_NNS of_IN e_SYM llipsis_FW is_VBZ permissible_JJ or_CC not_RB while_IN interacting_VBG wi_FW th_FW what_WP Kehler_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- calls_VBZ discourse_NN coherence_NN relations_NNS between_IN ellipsis_NN and_CC antecedent_NN clause_NN s._NN Departing_VBG from_IN Kehler_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- insight_NN ,_, we_PRP s_VBZ uggest_JJ that_IN vP_NNP undergoes_VBZ ellipsis_NN in_IN a_DT resemblan_JJ ce_NN discourse_NN relation_NN ,_, but_CC VP_NNP does_VBZ so_RB in_IN a_DT cause_NN /_NN effect_NN discourse_NN relation_NN ._.
+Given_VBN the_DT asymmetry_NN i_FW n_FW the_DT size_NN of_IN ellipsis_NN in_IN tandem_NN with_IN discourse_NN re_NN lations_NNS ,_, we_PRP argue_VBP that_IN since_IN Accusative_NNP as_RB well_RB as_IN Nominative_JJ Case_NN is_VBZ checked_VBN outside_IN VP_NNP ,_, the_DT VP_NNP to_TO be_VB elided_VBN can_MD meet_VB the_DT identity_NN condition_NN on_IN ellipsis_NN with_IN its_PRP$ antecedent_NN VP_NNP as_IN the_DT object_NN element_NN in_IN the_DT former_JJ and_CC the_DT subject_JJ one_CD in_IN the_DT latter_JJ or_CC vice_NN versus_CC have_VBP not_RB been_VBN Case-checke_JJ d_LS yet_RB ,_, thus_RB being_VBG identical_JJ in_IN terms_NNS of_IN Case-feat_NN ure_NN at_IN the_DT point_NN of_IN derivation_NN building_VBG a_DT VP_NNP ._.
+1_CD Introduction_NNP According_VBG to_TO Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- ,_, VP_NNP ellipsis_VBZ -LRB-_-LRB- VPE_NNP -RRB-_-RRB- in_IN English_NNP allows_VBZ mismatch_NN between_IN the_DT voice_NN of_IN an_DT elided_JJ constituent_NN and_CC that_IN of_IN its_PRP$ antecedent_NN ,_, whereas_IN Sluicing_NNP and_CC Pseudogapping_NNP do_VBP not_RB ._.
+This_DT Sunjoo_NNP Choi_NNP Department_NNP of_IN English_NNP College_NNP of_IN Humanities_NNP Dongguk_NNP University_NNP Seoul_NNP ,_, Korea_NNP Sunjoo3008@gmail.com_NNP holds_VBZ for_IN either_DT direction_NN of_IN voice_NN alternation_NN between_IN an_DT elided_JJ constituent_NN and_CC its_PRP$ antecedent_NN ._.
+This_DT is_VBZ illustrated_VBN in_IN -LRB-_-LRB- 1_CD -RRB-_-RRB- through_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- -LRB-_-LRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, taken_VBN from_IN Merchant_NN -LRB-_-LRB- 2008_CD :_: 169-170_CD -RRB-_-RRB- ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, taken_VBN from_IN Merchant_NN -LRB-_-LRB- 2013_CD :_: 81_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- Active_JJ antecedent_NN ,_, passive_JJ ellipsis_NNS -LRB-_-LRB- VPE_NNP -RRB-_-RRB- a_DT ._.
+The_DT janitor_NN must_MD <remove the trash1>_VB whenever_WRB it_PRP is_VBZ apparent_JJ that_IN -LSB-_NNP it_PRP -RSB-_NN 1_CD should_MD be_VB -LSB-_JJ VP_NN removed_VBD t1_CD -RSB-_NNP ._.
+Passive_JJ antecedent_NN ,_, active_JJ ellipsis_NNS -LRB-_-LRB- VPE_NNP -RRB-_-RRB- b._SYM -LSB-_NNP The_DT system_NN -RSB-_NN 1_CD can_MD be_VB <used t1>_JJ by_IN anyone_NN who_WP wants_VBZ to_TO -LSB-_NNP VP_NNP use_NN it1_CD -RSB-_NNP ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Sluicing_VBG -LRB-_-LRB- TPE_NNP -RRB-_-RRB- *_SYM <Joe was murdered t>_NNP ,_, but_CC we_PRP do_VBP n't_RB know_VB -LSB-_NNP who_WP -RSB-_VBP 1_CD -LSB-_JJ TP_NNP t1_CD murdered_VBN Joe_NNP -RSB-_NNP ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Pseudogapping_VBG *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS did_VBD bring_VB lilies_NNS ._.
+This_DT paper_NN examines_VBZ the_DT very_RB issue_NN of_IN voice_NN mismatch_NN in_IN the_DT above_JJ three_CD types_NNS of_IN ellipsis_NN in_IN English_NNP ._.
+The_DT next_JJ section_NN reviews_VBZ Merchant_NN 's_POS -LRB-_-LRB- 2007_CD ,_, 2008_CD -RRB-_-RRB- analysis_NN of_IN voice_NN mismatch_NN in_IN ellipsis_NN by_IN postulating_VBG the_DT functional_JJ category_NN of_IN Voice_NNP in_IN the_DT syntactic_NN structure_NN of_IN a_DT clause_NN ,_, and_CC the_DT subsequent_JJ rebuttal_NN of_IN Merchant_NN 's_POS analysis_NN by_IN Tanaka_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Departing_VBG from_IN the_DT empirical_JJ generalization_NN made_VBN by_IN Tanaka_NNP ,_, section_NN 3_CD proposes_VBZ a_DT not_RB Voice_NNP -_: but_CC Case/case-theoretic_JJ account_NN for_IN apparent_JJ voice_NN mismatch_NN in_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN ._.
+Section_NN 4_CD investigates_VBZ argument_NN structure_NN mismatch_NN and_CC its_PRP$ interaction_NN with_IN Pseudogapping_NNP ._.
+Section_NN 5_CD explores_VBZ a_DT Case/case_NNP -_: theoretic_JJ account_NN for_IN voice_NN mismatch_NN in_IN Sluicing_VBG ._.
+Section_NN 6_CD wraps_VBZ up_RP with_IN a_DT conclusion_NN ._.
+2_CD No_DT asymmetry_NN in_IN voice_NN match_NN between_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NNP Consider_VB the_DT examples_NNS in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+It_PRP seems_VBZ clear_JJ that_IN voice_NN mismatch_NN is_VBZ disallowed_VBN only_RB in_IN some_DT of_IN elliptical_JJ structures_NNS like_IN VP_NNP ellipsis_NN ,_, Pseudogapping_NNP and_CC Sluicing_NNP ._.
+Unlike_IN in_IN the_DT ellipsis_NN structure_NN of_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, voice_NN mismatch_NN is_VBZ permissible_JJ in_IN the_DT non-elliptical_JJ structure_NN of_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS did_VBD bring_VB roses_NNS ,_, too_RB ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS brought_VBD roses_NNS ,_, too_RB ._.
+Merchant_NN 's_POS -LRB-_-LRB- 2008_CD -RRB-_-RRB- explanation_NN for_IN the_DT contrast_NN in_IN voice_NN mismatch_NN between_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- hinges_VBZ on_IN the_DT following_VBG assumptions_NNS :_: -LRB-_-LRB- 6_CD -RRB-_-RRB- Syntactic_JJ isomorphism_NN is_VBZ required_VBN for_IN ellipsis_NN ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- The_DT v_NN head_NN hosts_VBZ the_DT feature_NN -LSB-_NNP voi_FW -LRB-_-LRB- ce_NN -RRB-_-RRB- -RSB-_NN responsible_JJ for_IN active_JJ versus_CC passive_JJ voice_NN ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- VP_NN ellipsis_NN deletes_VBZ a_DT VP_NNP ,_, but_CC Pseudogapping_NNP deletes_VBZ a_DT vP_NN ._.
+Like_IN most_JJS previous_JJ studies_NNS on_IN ellipsis_NN ,_, Merchant_NN first_JJ takes_VBZ ellipsis_NN to_TO be_VB subject_JJ to_TO a_DT syntactic_NN identity_NN condition_NN demanding_VBG that_IN an_DT elided_JJ constituent_NN be_VB identical_JJ syntactically_RB to_TO its_PRP$ antecedent_NN ._.
+Given_VBN syntactic_JJ isomorphism_NN for_IN ellipsis_NN ,_, the_DT uneven_JJ distribution_NN in_IN voice_NN mismatch_NN between_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- follows_VBZ from_IN the_DT two_CD specific_JJ components_NNS in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 8_CD -RRB-_-RRB- ._.
+Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- argues_VBZ that_IN Pseudogapping_VBG elides_VBZ a_DT vP_NN rather_RB than_IN a_DT VP_NNP ._.
+The_DT elided_JJ constituent_NN in_IN Pseudogapping_NNP then_RB includes_VBZ the_DT little_JJ v_NN that_WDT has_VBZ the_DT value_NN of_IN the_DT feature_NN -LSB-_NNP voi_FW -RSB-_NNP determined_VBD either_CC as_IN active_JJ or_CC passive_JJ ._.
+When_WRB the_DT ellipsis_NN and_CC the_DT antecedent_NN clauses_NNS are_VBP not_RB identical_JJ in_IN voice_NN ,_, Pseudogapping_NNP wo_MD n't_RB meet_VB identity_NN in_IN ellipsis_NN ,_, hence_RB being_VBG ruled_VBD out_RP ._.
+In_IN VPE_NNP ,_, however_RB ,_, the_DT little_JJ v_NN hosting_VBG the_DT feature_NN -LSB-_NNP voi_FW -RSB-_NNP is_VBZ not_RB included_VBN in_IN the_DT VPE_NNP site_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT head_NN v_NN is_VBZ external_JJ to_TO the_DT VPE_NNP site_NN ._.
+Thus_RB ,_, voice_NN mismatch_NN does_VBZ not_RB matter_VB for_IN VP_NNP ellipsis_NN ,_, not_RB being_VBG able_JJ to_TO exert_VB its_PRP$ effects_NNS on_IN identity_NN in_IN ellipsis_NN ._.
+Though_IN Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- provides_VBZ an_DT effective_JJ account_NN for_IN the_DT distributional_JJ generalization_NN in_IN voice_NN mismatch_NN between_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN ,_, his_PRP$ account_NN confronts_VBZ several_JJ problems_NNS ._.
+The_DT first_JJ problem_NN concerns_NNS the_DT size_NN of_IN ellipsis_NN for_IN Pseudogapping_NNP ._.
+The_DT previous_JJ works_NNS on_IN Pseudogapping_VBG such_JJ as_IN Jayaseelan_NNP -LRB-_-LRB- 1990_CD -RRB-_-RRB- ,_, Lansnik_NNP -LRB-_-LRB- 1999_CD :_: chap_NN 3_LS -RRB-_-RRB- ,_, Levin_NNP -LRB-_-LRB- 1978_CD -RRB-_-RRB- ,_, and_CC Takahashi_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- argue_VBP that_IN Pseudogapping_NNP is_VBZ an_DT operation_NN of_IN VP_NNP ellipsis_VBZ rather_RB than_IN vP_JJ ellipsis_NN ,_, as_IN typical_JJ examples_NNS of_IN Pseudogapping_NNP in_IN -LRB-_-LRB- 9_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 10_CD -RRB-_-RRB- show_NN ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS did_VBD bring_VB lilies_NNS ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- *_SYM Some_DT brought_VBD roses_NNS ,_, and_CC lilies_NNS were_VBD brought_VBN by_IN others_NNS ._.
+Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- in_IN fact_NN brings_VBZ forth_RB the_DT examples_NNS in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 12_CD -RRB-_-RRB- to_TO support_VB his_PRP$ thesis_NN that_IN Pseudogapping_NNP applies_VBZ to_TO a_DT larger_JJR category_NN than_IN VP_NNP ellipsis_NN ._.
+The_DT judgements_NNS reported_VBD in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 12_CD -RRB-_-RRB- are_VBP Merchant_NN 's_POS ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- Many_JJ of_IN them_PRP have_VBP turned_VBN in_RP their_PRP$ assignment_NN already_RB ,_, but_CC they_PRP have_VBP n't_RB yet_RB all_DT ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- Many_JJ of_IN them_PRP have_VBP turned_VBN in_RP their_PRP$ assignment_NN already_RB ,_, but_CC they_PRP have_VBP n't_RB yet_RB -LRB-_-LRB- *_SYM all_PDT -RRB-_-RRB- their_PRP$ paper_NN -LRB-_-LRB- *_SYM all_PDT -RRB-_-RRB- ._.
+Merchant_NN assumes_VBZ with_IN Sportiche_NNP -LRB-_-LRB- 1988_CD -RRB-_-RRB- that_IN a_DT floating_VBG quantifier_NN like_IN all_DT can_MD be_VB dropped_VBN off_RP in_IN the_DT specifier_NN position_NN of_IN any_DT functional_JJ category_NN it_PRP has_VBZ moved_VBN through_RB ._.
+All_DT in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- presumably_RB moves_VBZ through_IN -LSB-_NNP spec_NN ,_, vP_NNP -RSB-_NNP ._.
+Since_IN the_DT constituent_JJ elided_VBN in_IN VP_NNP ellipsis_NN ,_, by_IN assumption_NN ,_, is_VBZ smaller_JJR than_IN vP_NN and_CC all_DT is_VBZ external_JJ to_TO ellipsis_VB site_NN ,_, the_DT sentence_NN in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- is_VBZ received_VBN as_IN acceptable_JJ ._.
+By_IN contrast_NN ,_, the_DT sentence_NN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- involving_VBG Pseudogapping_NNP ,_, according_VBG to_TO Merchant_NN ,_, is_VBZ ruled_VBN out_RP because_IN Pseudogapping_NNP elides_VBZ a_DT vP_NN that_WDT includes_VBZ the_DT position_NN all_DT moves_NNS through_IN ;_: thus_RB ,_, the_DT floating_VBG quantifier_NN all_DT should_MD have_VB been_VBN included_VBN in_IN the_DT portion_NN elided_VBN by_IN Pseudogapping_NNP ._.
+Tanaka_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, however_RB ,_, consulted_VBD three_CD native_JJ speakers_NNS to_TO verify_VB the_DT acceptability_NN of_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 14_CD -RRB-_-RRB- ,_, which_WDT are_VBP identical_JJ to_TO -LRB-_-LRB- 11_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, but_CC except_IN for_IN one_CD modification_NN by_IN placing_VBG the_DT aspectual_JJ adverb_NN yet_RB not_RB before_IN but_CC after_IN the_DT floating_VBG quantifier_NN all_DT :_: -LRB-_-LRB- 13_CD -RRB-_-RRB- Many_JJ of_IN them_PRP have_VBP turned_VBN in_RP their_PRP$ assignment_NN already_RB ,_, but_CC they_PRP have_VBP n't_RB all_DT yet_RB ._.
+-LRB-_-LRB- 14_CD -RRB-_-RRB- ?_.
+Many_JJ of_IN them_PRP have_VBP turned_VBN in_RP their_PRP$ assignment_NN already_RB ,_, but_CC they_PRP have_VBP n't_RB all_DT yet_RB their_PRP$ paper_NN None_NN of_IN the_DT native_JJ speakers_NNS that_WDT Tanaka_NNP consulted_VBD ruled_VBN out_IN these_DT two_CD sentences_NNS ._.
+Tanaka_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- takes_VBZ the_DT acceptability_NN of_IN these_DT examples_NNS to_TO indicate_VB that_IN both_DT VP_NNP ellipsis_NN and_CC Pseudogapping_NN may_MD delete_VB a_DT VP_NNP ._.
+It_PRP may_MD also_RB be_VB the_DT case_NN that_IN all_DT in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 14_CD -RRB-_-RRB- occupies_VBZ a_DT position_NN outside_IN a_DT vP_NN ,_, in_IN which_WDT case_NN the_DT entire_JJ vP_NN can_MD be_VB deleted_VBN -LRB-_-LRB- See_VB Tanaka_NNP -LRB-_-LRB- 2011_CD :_: 473_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+Second_NNP ,_, Merchant_NN -LRB-_-LRB- 2008_CD :_: 170_CD -RRB-_-RRB- notes_VBZ that_IN such_JJ Pseudogapping_JJ examples_NNS with_IN voice_NN mismatch_NN as_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- -_: -LRB-_-LRB- 16_CD -RRB-_-RRB- are_VBP unacceptable_JJ ._.
+-LRB-_-LRB- 15_CD -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS did_VBD bring_VB lilies_NNS ._.
+-LRB-_-LRB- 16_CD -RRB-_-RRB- *_SYM Some_DT brought_VBD roses_NNS ,_, and_CC lilies_NNS were_VBD brought_VBN by_IN others_NNS ._.
+Importantly_RB ,_, however_RB ,_, Tanaka_NNP -LRB-_-LRB- 2011_CD :_: 475_CD -RRB-_-RRB- reports_VBZ that_IN their_PRP$ VP_NNP ellipsis_VBZ counterparts_NNS in_IN -LRB-_-LRB- 17_CD -RRB-_-RRB- -_: -LRB-_-LRB- 18_CD -RRB-_-RRB- are_VBP also_RB unacceptable_JJ :_: -LRB-_-LRB- 17_CD -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT boys_NNS ,_, and_CC some_DT girls_NNS did_VBD bring_VB roses_NNS ,_, too_RB ._.
+-LRB-_-LRB- 18_CD -RRB-_-RRB- *_SYM Some_DT brought_VBD roses_NNS ,_, and_CC lilies_NNS were_VBD brought_VBN by_IN some_DT ,_, too_RB ._.
+Since_IN ungrammatical_JJ Pseudogapping_NNP examples_NNS remain_VBP to_TO be_VB ungrammatical_JJ even_RB under_IN VP_NNP ellipsis_NN ,_, it_PRP may_MD safely_RB be_VB concluded_VBN that_IN there_EX is_VBZ no_DT asymmetry_NN between_IN the_DT two_CD constructions_NNS in_IN terms_NNS of_IN the_DT size_NN of_IN ellipsis_NN ._.
+Tanaka_NNP -LRB-_-LRB- 2011_CD :_: 476_CD -RRB-_-RRB- also_RB notes_VBZ that_IN the_DT opposite_JJ situation_NN also_RB holds_VBZ :_: If_IN voice_NN mismatch_NN in_IN VP_NNP ellipsis_NN is_VBZ acceptable_JJ in_IN a_DT certain_JJ structure_NN ,_, that_IN in_IN Pseudogapping_NNP is_VBZ so_RB ,_, too_RB ._.
+The_DT following_VBG pair_NN of_IN examples_NNS shows_VBZ that_IN Pseudogapping_VBG behaves_VBZ in_IN a_DT parallel_JJ fashion_NN to_TO VP_NNP ellipsis_VBZ in_IN terms_NNS of_IN voice_NN mismatch_NN ._.
+Unlike_IN the_DT preceding_VBG two_CD sets_NNS of_IN Pseudogapping_NNP and_CC VP_NNP ellipsis_VBZ examples_NNS ,_, however_RB ,_, both_DT -LRB-_-LRB- 19_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 20_CD -RRB-_-RRB- are_VBP acceptable_JJ ._.
+-LRB-_-LRB- 19_CD -RRB-_-RRB- This_DT problem_NN was_VBD to_TO have_VB been_VBN looked_VBN into_IN ,_, but_CC obviously_RB nobody_NN did_VBD look_VB into_IN this_DT problem_NN ._.
+-LRB-_-LRB- 20_CD -RRB-_-RRB- ?_.
+My_PRP$ problem_NN will_MD be_VB looked_VBN into_IN by_IN Tom_NNP ,_, but_CC he_PRP wo_MD n't_RB look_VB into_IN yours_NNS ._.
+The_DT additional_JJ pairs_NNS in_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- -_: -LRB-_-LRB- 22_CD -RRB-_-RRB- ,_, which_WDT are_VBP taken_VBN from_IN Tanaka_NNP -LRB-_-LRB- 2011_CD :_: 476_CD -RRB-_-RRB- ,_, do_VBP not_RB display_VB asymmetry_NN in_IN voice_NN mismatch_NN between_IN Pseudogapping_NNP and_CC VP_NNP ellipsis_VBZ :_: -LRB-_-LRB- 21_CD -RRB-_-RRB- Actually_RB ,_, I_PRP have_VBP implemented_VBN a_DT computer_NN system_NN with_IN a_DT manager_NN ,_, but_CC it_PRP does_VBZ n't_RB have_VB to_TO be_VB implemented_VBN with_IN a_DT manager_NN ._.
+-LRB-_-LRB- 22_CD -RRB-_-RRB- ?_.
+Actually_RB ,_, I_PRP have_VBP implemented_VBN a_DT computer_NN system_NN with_IN a_DT manager_NN ,_, but_CC it_PRP should_MD have_VB been_VBN implemented_VBN by_IN a_DT computer_NN technician_NN ._.
+Third_NNP ,_, the_DT additional_JJ rebuttal_NN of_IN Merchant_NN 's_POS -LRB-_-LRB- 2008_CD -RRB-_-RRB- analysis_NN comes_VBZ from_IN the_DT experimental_JJ work_NN by_IN SanPietro_NNP et_FW al._FW -LRB-_-LRB- 2012_CD :_: 309_CD -RRB-_-RRB- ,_, who_WP uses_VBZ the_DT following_VBG set_NN of_IN examples_NNS :_: -LRB-_-LRB- 23_CD -RRB-_-RRB- Jean_NNP was_VBD trying_VBG to_TO sell_VB her_PRP$ car_NN ._.
+I_PRP know_VBP that_IN someone_NN bought_VBD it_PRP ,_, a._JJ and_CC Lisa_NNP knows_VBZ who_WP ._.
+-LRB-_-LRB- big_JJ ,_, resemblance_NN ,_, matched_VBN -RRB-_-RRB- b._NN and_CC Lisa_NNP knows_VBZ by_IN who_WP ._.
+-LRB-_-LRB- big_JJ ,_, resemblance_NN ,_, mismatched_VBN -RRB-_-RRB- c._FW because_IN she_PRP told_VBD me_PRP who_WP ._.
+-LRB-_-LRB- big_JJ ,_, cause/effect_NN ,_, matched_VBN -RRB-_-RRB- d._FW because_IN she_PRP told_VBD me_PRP by_IN who_WP ._.
+-LRB-_-LRB- big_JJ ,_, cause/effect_NN ,_, mismatched_VBN -RRB-_-RRB- e._FW and_CC Lisa_NNP also_RB knows_VBZ that_IN someone_NN did_VBD ._.
+-LRB-_-LRB- small_JJ ,_, resemblance_NN ,_, matched_VBN -RRB-_-RRB- f._NN and_CC Lisa_NNP also_RB knows_VBZ that_IN it_PRP was_VBD ._.
+-LRB-_-LRB- small_JJ ,_, resemblance_NN ,_, mismatched_VBN -RRB-_-RRB- g._FW because_IN she_PRP told_VBD me_PRP that_IN someone_NN did_VBD ._.
+-LRB-_-LRB- small_JJ ,_, cause/effect_NN ,_, matched_VBN -RRB-_-RRB- h._FW because_IN she_PRP told_VBD me_PRP that_IN it_PRP was_VBD ._.
+-LRB-_-LRB- small_JJ ,_, cause/effect_NN ,_, mismatched_VBN -RRB-_-RRB- The_DT results_NNS of_IN the_DT experiment_NN -LRB-_-LRB- cited_VBN from_IN SanPietro_NNP et_FW al._FW -LRB-_-LRB- 2012_CD :_: 310_CD -RRB-_-RRB- -RRB-_-RRB- are_VBP :_: first_RB ,_, the_DT interaction_NN between_IN ellipsis_NN size_NN -LRB-_-LRB- small_JJ VP_NNP vs._FW big_JJ TP_NNP -RRB-_-RRB- and_CC discourse_NN relations_NNS -LRB-_-LRB- resemblance_NN vs._IN cause/effect_JJ relations_NNS ,_, which_WDT we_PRP will_MD turn_VB to_TO shortly_RB in_IN the_DT next_JJ section_NN -RRB-_-RRB- shows_VBZ that_IN in_IN the_DT small_JJ elliptical_JJ conditions_NNS only_RB ,_, cause/effect_JJ conditions_NNS -LRB-_-LRB- conditions_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- and_CC -LRB-_-LRB- h_NN -RRB-_-RRB- of_IN -LRB-_-LRB- 23_CD -RRB-_-RRB- ;_: mean_VB rating_NN of_IN 4.94_CD out_IN of_IN the_DT highest_JJS score_NN 7_CD -RRB-_-RRB- were_VBD rated_VBN higher_JJR than_IN resemblance_NN conditions_NNS -LRB-_-LRB- conditions_NNS -LRB-_-LRB- e_LS -RRB-_-RRB- and_CC -LRB-_-LRB- f_LS -RRB-_-RRB- above_IN ;_: mean_VB rating_NN of_IN 4.32_CD -RRB-_-RRB- ._.
+Second_NNP ,_, most_JJS critically_RB ,_, pairwise_NN comparisons_NNS show_VBP a_DT significant_JJ difference_NN -LRB-_-LRB- p_SYM <_SYM .001_CD -RRB-_-RRB- between_IN the_DT mismatched_VBN cause/effect_NN condition_NN -LRB-_-LRB- condition_NN -LRB-_-LRB- h_NN -RRB-_-RRB- above_IN ;_: mean_VB rating_NN of_IN 4.42_CD -RRB-_-RRB- and_CC the_DT mismatched_JJ resemblance_NN condition_NN -LRB-_-LRB- condition_NN -LRB-_-LRB- f_LS -RRB-_-RRB- above_IN ;_: mean_VB rating_NN of_IN 3.69_CD -RRB-_-RRB- ,_, but_CC only_RB in_IN the_DT VP_NNP ellipsis_NN conditions_NNS ._.
+No_DT effect_NN of_IN coherence_NN -LRB-_-LRB- i.e._FW ,_, discourse_NN relation_NN -RRB-_-RRB- is_VBZ found_VBN in_IN the_DT big_JJ elliptical_JJ conditions_NNS -LRB-_-LRB- conditions_NNS -LRB-_-LRB- a-d_JJ -RRB-_-RRB- above_IN -RRB-_-RRB- ._.
+These_DT results_NNS of_IN the_DT experiment_NN show_NN that_IN voice_NN mismatch_NN in_IN VP_NNP ellipsis_NN is_VBZ not_RB always_RB permissible_JJ ,_, unlike_IN what_WP Merchant_NN -LRB-_-LRB- 2008_CD -RRB-_-RRB- argues_VBZ ._.
+Instead_RB ,_, discourse_NN relations_NNS are_VBP a_DT determining_VBG factor_NN in_IN ruling_NN in_IN or_CC out_IN voice_NN mismatch_NN in_IN VP_NNP ellipsis_NN ._.
+The_DT conclusion_NN drawn_VBN from_IN the_DT review_NN of_IN Merchant_NN -LRB-_-LRB- 2007_CD ,_, 2008_CD -RRB-_-RRB- and_CC Tanaka_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- is_VBZ that_IN the_DT former_JJ analysis_NN based_VBN on_IN the_DT different_JJ sizes_NNS of_IN ellipsis_NN for_IN VP_NNP ellipsis_NN and_CC Pseudogapping_NN over_IN -_: generates_VBZ and_CC under-generates_VBZ ._.
+It_PRP over-predicts_VBZ that_IN all_PDT the_DT examples_NNS involving_VBG voice_NN mismatch_NN in_IN VP_NNP are_VBP acceptable_JJ ,_, and_CC at_IN the_DT same_JJ time_NN it_PRP can_MD not_RB predict_VB that_IN some_DT of_IN those_DT involving_VBG voice_NN mismatch_NN in_IN VP_NNP ellipsis_NNS are_VBP unacceptable_JJ ._.
+In_IN the_DT next_JJ section_NN ,_, building_VBG on_IN Kehler_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- insight_NN into_IN discourse_NN relations_NNS between_IN ellipsis_NN and_CC antecedent_NN clauses_NNS ,_, we_PRP argue_VBP that_IN sizes_NNS of_IN ellipsis_NN for_IN both_DT VP_NNP ellipsis_NN and_CC Pseudogapping_NN interact_VBP with_IN such_JJ discourse_NN relations_NNS ._.
+3_CD Towards_IN an_DT analysis_NN Kehler_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- argues_VBZ that_IN sentences/clauses_NNS in_IN a_DT discourse_NN are_VBP linked_VBN together_RB by_IN -LRB-_-LRB- discourse_NN -RRB-_-RRB- coherence_NN relations_NNS ._.
+Coherence_NN refers_VBZ to_TO the_DT ways_NNS in_IN which_WDT the_DT hearer_NN attempts_VBZ to_TO link_VB together_RB the_DT sentences/clauses_NNS that_WDT form_VBP a_DT discourse_NN -LRB-_-LRB- Kehler_NNP -LRB-_-LRB- 2000_CD :_: 539_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+For_IN example_NN ,_, in_IN a_DT discourse_NN ,_, the_DT hearer_NN does_VBZ not_RB interpret_VB the_DT two_CD sentences_NNS in_IN -LRB-_-LRB- 24a_JJ -RRB-_-RRB- to_TO be_VB unrelated_JJ ,_, but_CC he/she_NNP infers_VBZ that_IN Mary_NNP is_VBZ upset_VBN at_IN Bill_NNP because_IN Bill_NNP forgot_VBD her_PRP$ birthday_NN ._.
+Because_IN it_PRP is_VBZ more_RBR difficult_JJ to_TO infer_VB how_WRB the_DT two_CD sentences_NNS in_IN -LRB-_-LRB- 24b_JJ -RRB-_-RRB- could_MD be_VB linked_VBN together_RB ,_, the_DT discourse_NN is_VBZ less_RBR coherent_JJ ._.
+-LRB-_-LRB- 24_CD -RRB-_-RRB- a._IN Mary_NNP is_VBZ upset_VBN with_IN Bill_NNP ._.
+Bill_NNP forgot_VBD her_PRP$ birthday_NN ._.
+b._NNP Mary_NNP is_VBZ upset_VBN with_IN Bill_NNP ._.
+#Jupiter_NNP has_VBZ 63_CD moons_NNS ._.
+Kehler_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- discusses_VBZ two_CD types_NNS of_IN coherence_NN relations_NNS relevant_JJ to_TO ellipsis_NNS :_: resemblance_NN and_CC cause/effect_NN ._.
+When_WRB a_DT resemblance_NN relation_NN holds_VBZ ,_, the_DT entities_NNS or_CC properties_NNS in_IN the_DT elided_JJ material_NN are_VBP interpreted_VBN as_IN in_IN some_DT way_NN parallel_NN to_TO those_DT in_IN its_PRP$ antecedent_NN ._.
+For_IN example_NN ,_, in_IN -LRB-_-LRB- 25_CD -RRB-_-RRB- ,_, John_NNP and_CC Bill_NNP are_VBP the_DT entities_NNS ,_, and_CC they_PRP are_VBP parallel_JJ in_IN that_IN they_PRP both_DT went_VBD to_TO the_DT store_NN ._.
+-LRB-_-LRB- 25_CD -RRB-_-RRB- John_NNP went_VBD to_TO the_DT store_NN because_IN Bill_NNP did_VBD <go to the store>_NN ._.
+There_EX is_VBZ a_DT class_NN of_IN connectives_NNS and_CC adverbs_NNS which_WDT serve_VBP as_IN markers_NNS for_IN the_DT resemblance_NN coherence_NN relation_NN ,_, including_VBG and_CC ,_, also_RB ,_, as_RB well_RB ,_, too_RB ,_, likewise_RB ,_, etc._FW ._.
+When_WRB a_DT cause/effect_NN relation_NN holds_VBZ ,_, by_IN contrast_NN ,_, the_DT proposition_NN expressed_VBN by_IN the_DT elided_JJ material_NN has_VBZ some_DT sort_NN of_IN causal_JJ relationship_NN to_TO the_DT proposition_NN in_IN the_DT antecedent_NN ._.
+For_IN example_NN ,_, in_IN -LRB-_-LRB- 26_CD -RRB-_-RRB- ,_, the_DT fact_NN that_IN Bill_NNP went_VBD to_TO the_DT store_NN is_VBZ the_DT cause_NN for_IN John_NNP to_TO do_VB so_RB ._.
+-LRB-_-LRB- 26_CD -RRB-_-RRB- John_NNP went_VBD to_TO the_DT store_NN because_IN Bill_NNP did_VBD <go to the store>_NN ._.
+As_IN with_IN the_DT resemblance_NN relations_NNS ,_, certain_JJ adverbs_NNS and_CC connectives_NNS regularly_RB occur_VBP in_IN cause/effect_JJ sentences_NNS which_WDT can_MD serve_VB as_IN markers_NNS of_IN this_DT coherence_NN relation_NN ,_, including_VBG but_CC ,_, even_RB though_IN ,_, because_IN ,_, as_IN a_DT result_NN ,_, therefore_RB ,_, so_RB ,_, consequently_RB ,_, etc._FW ._.
+Kehler_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- argues_VBZ that_IN when_WRB there_EX is_VBZ a_DT voice_NN mismatch_NN in_IN ellipsis_NN ,_, sentences_NNS where_WRB there_EX is_VBZ a_DT cause/effect_JJ relation_NN between_IN antecedent_NN and_CC ellipsis_NN sites_NNS are_VBP licit_JJ ,_, while_IN sentences_NNS where_WRB there_EX is_VBZ a_DT resemblance_NN relation_NN are_VBP illicit_JJ ._.
+The_DT contrast_NN can_MD be_VB found_VBN in_IN -LRB-_-LRB- 27a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 27b_JJ -RRB-_-RRB- below_IN ,_, where_WRB the_DT acceptable_JJ -LRB-_-LRB- 27a_JJ -RRB-_-RRB- contains_VBZ a_DT cause/effect_JJ relation_NN ,_, and_CC the_DT unacceptable_JJ -LRB-_-LRB- 27b_JJ -RRB-_-RRB- contains_VBZ a_DT resemblance_NN relation_NN ._.
+-LRB-_-LRB- 27_CD -RRB-_-RRB- a_DT ._.
+In_IN March_NNP ,_, four_CD fireworks_NNS manufacturers_NNS asked_VBD that_IN the_DT decision_NN be_VB reversed_VBN ,_, and_CC on_IN Monday_NNP ,_, the_DT ICC_NNP did_VBD <reverse the decision>_NN ._.
+-LRB-_-LRB- Dalrymple_NNP et_FW al._FW 1991_CD -RRB-_-RRB- b._SYM *_SYM This_DT problem_NN was_VBD looked_VBN into_IN by_IN John_NNP ,_, and_CC Bob_NNP did_VBD <look into the problem>_NNP ,_, too_RB ._.
+-LRB-_-LRB- Kehler_NNP 2000_CD :_: 551_CD ,_, example_NN 34_CD -RRB-_-RRB- Kehler_NNP -LRB-_-LRB- 2000_CD :_: 543-46_CD -RRB-_-RRB- ascribes_NNS this_DT contrast_NN to_TO the_DT fact_NN that_IN cause/effect_JJ relations_NNS require_VBP only_RB semantic_JJ identity_NN ,_, which_WDT tolerates_VBZ voice_NN mismatch_NN ,_, while_IN resemblance_NN relations_NNS require_VBP syntactic_JJ identity_NN in_IN addition_NN to_TO semantic_JJ identity_NN ._.
+We_PRP depart_VBP from_IN Kehler_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- ,_, suggesting_VBG that_IN a_DT cause/effect_JJ relation_NN as_RB well_RB as_IN a_DT resemblance_NN relation_NN requires_VBZ syntactic_JJ identity_NN in_IN ellipsis_NN ,_, but_CC that_IN they_PRP are_VBP distinguished_VBN in_IN terms_NNS of_IN the_DT category_NN that_WDT undergoes_VBZ ellipsis_NN ._.
+In_IN particular_JJ ,_, when_WRB a_DT resemblance_NN relation_NN holds_VBZ ,_, the_DT bigger_JJR category_NN vP_NN is_VBZ a_DT target_NN of_IN ellipsis_NN ._.
+By_IN contrast_NN ,_, when_WRB a_DT cause_NN -_: effect_NN relation_NN holds_VBZ ,_, the_DT smaller_JJR category_NN VP_NNP can_MD be_VB elided_VBN ,_, as_IN schematized_VBN below_IN :_: -LRB-_-LRB- 28_CD -RRB-_-RRB- a._FW vP_FW ellipsis_FW in_IN ``_`` parallel_JJ resemblance_NN -LRB-_-LRB- or_CC contrast_NN -RRB-_-RRB- relations_NNS ''_'' -LSB-_NNP TP_NNP <_NNP vP_NNP -LSB-_NNP VP_NNP -RSB-_NNP >_CD -RSB-_NNP ..._: -LSB-_NNP TP_NNP -LSB-_NNP vP_NNP -LSB-_NNP VP_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP b._NN VP_NNP ellipsis_VBZ in_IN ``_`` non-parallel_JJ cause-effect_JJ relations_NNS ''_'' -LSB-_NNP TP_NNP -LSB-_NNP vP_NNP <VP >_NNP -RSB-_NNP -RSB-_NNP ..._: -LSB-_NNP TP_NNP -LSB-_NNP vP_NNP -LSB-_NNP VP_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP The_NNP difference_NN between_IN the_DT two_CD types_NNS of_IN relations_NNS in_IN terms_NNS of_IN the_DT category_NN of_IN ellipsis_NN is_VBZ justified_VBN on_IN the_DT basis_NN of_IN the_DT following_VBG reasoning_NN ._.
+First_RB ,_, a_DT parallel_JJ resemblance_NN relation_NN relates_VBZ two_CD clauses/sentences_NNS ;_: the_DT ellipsis_NN clause_NN and_CC its_PRP$ antecedent_NN clause_NN ._.
+The_DT proposition_NN of_IN the_DT former_JJ clause_NN holds_VBZ true_JJ ,_, in_IN a_DT parallel_JJ fashion_NN as_IN that_DT of_IN the_DT latter_JJ clause_NN does_VBZ ._.
+Now_RB the_DT wisdom_NN we_PRP has_VBZ about_IN the_DT syntax_NN of_IN a_DT clause_NN is_VBZ that_IN a_DT small_JJ clause_NN vP_NNP ,_, as_IN a_DT proxy_NN of_IN a_DT full_JJ clause_NN CP/TP_NNP ,_, may_MD have_VB a_DT parallel_JJ relation_NN with_IN another_DT small_JJ clause_NN vP_NN ._.
+This_DT is_VBZ exactly_RB what_WP happens_VBZ in_IN the_DT case_NN of_IN vP_NN ellipsis_NN when_WRB a_DT resemblance_NN relation_NN holds_VBZ ._.
+The_DT ellipsis_NN of_IN a_DT vP_NN is_VBZ the_DT only_JJ option_NN to_TO respect_VB the_DT full_JJ clause-to_JJ -_: small_JJ clause_NN correspondence_NN in_IN the_DT case_NN of_IN a_DT resemblance_NN relation_NN between_IN the_DT ellipsis_NN and_CC the_DT corresponding_JJ antecedent_NN clauses_NNS ._.
+When_WRB a_DT cause/effect_NN relation_NN holds_VBZ ,_, it_PRP also_RB relates_VBZ two_CD clauses_NNS ._.
+However_RB ,_, the_DT two_CD clauses_NNS involved_VBN are_VBP non-parallel_JJ ._.
+Thus_RB ,_, no_DT full_JJ clause-to-small_JJ clause_NN correspondence_NN is_VBZ called_VBN for_IN ._.
+Since_IN the_DT two_CD clauses_NNS involved_VBN are_VBP non-parallel_JJ ,_, one_CD clause_NN may_MD relate_VB not_RB to_TO another_DT clause_NN but_CC to_TO a_DT constituent_NN inside_IN it_PRP ._.
+In_IN other_JJ words_NNS ,_, it_PRP is_VBZ possible_JJ that_IN one_CD clause_NN may_MD ,_, for_IN example_NN ,_, modify_VBP the_DT constituent_NN inside_IN another_DT clause_NN ._.
+This_DT is_VBZ the_DT reason_NN that_WDT VP_NNP ellipsis_VBZ instead_RB of_IN vP_NN ellipsis_NN is_VBZ permissible_JJ when_WRB a_DT cause/effect_NN relation_NN holds_VBZ ,_, even_RB though_IN two_CD clauses_NNS are_VBP related_VBN ._.
+The_DT cause/effect_NN ,_, non-parallel_JJ relation_NN gets_VBZ away_RB with_IN not_RB respecting_VBG the_DT full_JJ clause-to-small_JJ clause_NN correspondence_NN ._.
+Given_VBN the_DT asymmetry_NN between_IN resemblance_NN and_CC cause/effect_JJ relations_NNS in_IN terms_NNS of_IN the_DT size_NN of_IN ellipsis_NN ,_, we_PRP are_VBP now_RB in_IN a_DT position_NN to_TO account_VB for_IN their_PRP$ contrast_NN in_IN voice_NN mismatch_NN when_WRB a_DT verbal_JJ domain_NN -LRB-_-LRB- VP_NNP or_CC vP_NNP -RRB-_-RRB- undergoes_VBZ ellipsis_NN ._.
+The_DT ideas_NNS we_PRP rely_VBP on_IN are_VBP summarized_VBN below_IN :_: -LRB-_-LRB- 29_CD -RRB-_-RRB- Identity_NN condition_NN on_IN VP_NNP or_CC vP_NNP ellipsis_VBZ :_: a._IN Case/case_NNP mismatch_NN -LRB-_-LRB- between_IN the_DT copy_NN of_IN the_DT survivor/remnant_NN and_CC its_PRP$ correlate_JJ -RRB-_-RRB- is_VBZ not_RB allowed_VBN for_IN ellipsis_NNS -LRB-_-LRB- as_IN part_NN of_IN syntactic_NN isomorphism_NN in_IN ellipsis_NN -RRB-_-RRB- ._.
+b._NNP Nominative_NNP and_CC Accusative_NNP Case_NNP are_VBP checked_VBN outside_IN VP_NNP ,_, whereas_IN inherent_JJ case_NN is_VBZ checked_VBN inside_IN VP_NNP ._.
+c._FW vP_FW undergoes_FW `_`` VP_NNP ellipsis_VBZ '_'' in_IN a_DT resemblance_NN relation_NN ._.
+The_DT key_JJ ingredient_NN we_PRP rely_VBP on_IN in_IN this_DT analysis_NN is_VBZ Case/case_NNP -LRB-_-LRB- mis_FW -RRB-_-RRB- match_NN in_IN ellipsis_NN ._.
+Simply_RB stated_VBN ,_, Case/case_NNP mismatch_NN is_VBZ not_RB allowed_VBN between_IN a_DT survivor/remnant_JJ and_CC its_PRP$ antecedent_NN constituent_NN -LRB-_-LRB- or_CC correlate_VB -RRB-_-RRB- ._.
+This_DT means_VBZ that_IN in_IN the_DT following_VBG structure_NN one_CD argument_NN element_NN A_DT inside_IN the_DT ellipsis_NN constituent_NN and_CC its_PRP$ correlate_JJ A_DT '_'' inside_IN the_DT antecedent_NN constituent_NN are_VBP required_VBN to_TO be_VB identical_JJ in_IN terms_NNS of_IN Case/case_NNP feature_NN ._.
+-LRB-_-LRB- 30_CD -RRB-_-RRB- ._. ._.
+-LSB-_JJ antecedent_NN constituent_NN A_DT '_'' -RSB-_NNP ..._: -LSB-_NNP ellipsis_VBZ constituent_JJ A_DT -RSB-_NNP Now_RB a_DT question_NN is_VBZ what_WP happens_VBZ when_WRB A_DT and_CC A_DT '_'' are_VBP base-generated_JJ inside_IN the_DT ellipsis_NN and_CC antecedent_NN constituents_NNS ,_, but_CC they_PRP participate_VBP in_IN Case-checking_JJ relation_NN outside_IN them_PRP ._.
+We_PRP suppose_VBP that_IN this_DT situation_NN holds_VBZ exactly_RB in_IN such_JJ examples_NNS as_IN -LRB-_-LRB- 19_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 20_CD -RRB-_-RRB- ,_, repeated_VBN below_IN -LRB-_-LRB- 31_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 32_CD -RRB-_-RRB- :_: -LRB-_-LRB- 31_CD -RRB-_-RRB- ?_.
+My_PRP$ problem_NN will_MD be_VB looked_VBN into_IN by_IN Tom_NNP ,_, but_CC he_PRP wo_MD n't_RB look_VB into_IN yours_NNS ._.
+PG_NNP -LRB-_-LRB- 32_CD -RRB-_-RRB- This_DT problem_NN was_VBD to_TO have_VB been_VBN looked_VBN into_IN ,_, but_CC obviously_RB nobody_NN did_VBD look_VB into_IN this_DT problem_NN ._.
+VPE_NNP As_IN stated_VBN in_IN -LRB-_-LRB- 29b_JJ -RRB-_-RRB- ,_, in_IN English_NNP either_CC Nominative_NNP or_CC Accusative_NNP Case_NNP is_VBZ checked_VBN outside_IN VP_NNP -LRB-_-LRB- cf._NNP Chomsky_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+Thus_RB ,_, if_IN in_IN -LRB-_-LRB- 31_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 32_CD -RRB-_-RRB- the_DT ellipsis_NN clause_NN has_VBZ a_DT cause/effect_JJ relation_NN with_IN its_PRP$ antecedent_NN clause_NN and_CC what_WP is_VBZ elided_VBN is_VBZ VP_NNP -LRB-_-LRB- as_IN stated_VBN in_IN -LRB-_-LRB- 29c_JJ -RRB-_-RRB- -RRB-_-RRB- ,_, the_DT apparent_JJ Case_NN mismatch_NN between_IN the_DT object_NN element_NN in_IN the_DT ellipsis_NN clause_NN and_CC its_PRP$ correlate_JJ subject_JJ element_NN in_IN the_DT antecedent_NN clause_NN is_VBZ not_RB harmful_JJ at_IN all_DT ._.
+This_DT is_VBZ because_RB at_IN the_DT point_NN of_IN derivation_NN where_WRB VP_NNP is_VBZ elided_VBN ,_, the_DT former_JJ and_CC the_DT latter_JJ have_VBP not_RB yet_RB have_VB its_PRP$ Case_NNP feature_NN valued_VBN ,_, thus_RB being_VBG not_RB distinct_JJ in_IN form_NN ._.
+Now_RB ,_, we_PRP turn_VBP to_TO the_DT examples_NNS of_IN Pseudogapping_NNP and_CC VP_NNP ellipsis_VBZ in_IN a_DT resemblance_NN relation_NN ._.
+-LRB-_-LRB- 15_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 17_CD -RRB-_-RRB- ,_, repeated_VBN below_IN as_IN -LRB-_-LRB- 33_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 34_CD -RRB-_-RRB- ,_, represent_VBP those_DT examples_NNS :_: -LRB-_-LRB- 33_CD -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT ,_, and_CC others_NNS did_VBD bring_VB lilies_NNS ._.
+PG_NNP -LRB-_-LRB- 34_CD -RRB-_-RRB- *_SYM Roses_NNPS were_VBD brought_VBN by_IN some_DT boys_NNS ,_, and_CC some_DT girls_NNS did_VBD bring_VB roses_NNS ,_, too_RB ._.
+VPE_NNP As_IN argued_VBN above_IN ,_, both_DT Pseudogapping_NNP and_CC VP_NNP ellipsis_VBZ in_IN a_DT resemblance_NN relation_NN involve_VBP an_DT elision_NN of_IN vP_NN rather_RB than_IN VP_NNP ._.
+Since_IN vP_NN is_VBZ a_DT domain_NN where_WRB Accusative_NNP Case_NNP is_VBZ checked_VBN ,_, the_DT object_NN in_IN the_DT ellipsis_NN clause_NN is_VBZ bound_VBN to_TO relate_VB to_TO its_PRP$ correlate_JJ object_NN in_IN the_DT antecedent_NN clause_NN ._.
+The_DT unacceptability_NN of_IN -LRB-_-LRB- 33_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 34_CD -RRB-_-RRB- follows_VBZ from_IN the_DT fact_NN that_IN in_IN the_DT examples_NNS ,_, the_DT object_NN element_NN in_IN the_DT ellipsis_NN clause_NN which_WDT is_VBZ Case-checked_JJ in_IN Spec_NNP of_IN vP_NNP relates_VBZ to_TO its_PRP$ correlate_NN in_IN the_DT antecedent_NN clause_NN ,_, which_WDT is_VBZ the_DT subject_JJ element_NN that_WDT can_MD not_RB be_VB Case_NN -_: checked_VBN in_IN Spec_NNP of_IN vP_NNP ._.
+Therefore_RB ,_, there_EX is_VBZ bound_VBN to_TO arise_VB a_DT Case_NN mismatch_NN in_IN both_DT Pseudogapping_NNP and_CC VP_NNP ellipsis_VBZ in_IN a_DT resemblance_NN relation_NN that_WDT holds_VBZ for_IN -LRB-_-LRB- 33_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 34_CD -RRB-_-RRB- ._.
+In_IN other_JJ words_NNS ,_, voice_NN mismatch_NN for_IN vP_NN ellipsis_NN in_IN a_DT resemblance_NN relation_NN is_VBZ not_RB permissible_JJ ,_, because_IN it_PRP always_RB invites_VBZ Case_NNP mismatch_NN between_IN an_DT object_NN element_NN and_CC its_PRP$ corresponding_JJ subject_NN or_CC vice_NN versus_CC ,_, ultimately_RB infringing_VBG on_IN the_DT syntactic_NN isomorphism_NN on_IN ellipsis_NN ._.
+We_PRP now_RB turn_VBP to_TO the_DT examples_NNS where_WRB a_DT VP_NNP -_: internal_JJ element_NN is_VBZ assigned_VBN not_RB structural_JJ Case_NN but_CC inherent_JJ case_NN ._.
+-LRB-_-LRB- 35_CD -RRB-_-RRB- a._IN *_SYM She_PRP embroiders_VBZ peace_NN signs_NNS on_IN jackets_NNS more_RBR often_RB than_IN she_PRP does_VBZ <embroider jackets>_VB with_IN swastikas_NNS ._.
+b._NN ?_.
+She_PRP embroiders_VBZ peace_NN signs_NNS on_IN jackets_NNS more_RBR often_RB than_IN she_PRP does_VBZ <embroider peace signs on>_JJ shirt_NN sleeves_NNS ._.
+-LRB-_-LRB- 36_CD -RRB-_-RRB- a._IN *_SYM He_PRP 'd_MD give_VB Yale_NNP money_NN more_RBR readily_RB than_IN he_PRP would_MD <give money>_VB to_TO charity_NN ._.
+b._NN ?_.
+He_PRP 'd_MD give_VB money_NN more_RBR readily_RB to_TO Yale_NNP than_IN he_PRP would_MD <give money to>_VB charity_NN ._.
+-LRB-_-LRB- 37_CD -RRB-_-RRB- a._IN *_SYM Abby_NNP flirted_VBD more_RBR often_RB in_IN general_JJ than_IN Beth_NNP did_VBD <flirt with>_NNP Max_NNP ._.
+b._NN ?_.
+Abby_NNP flirted_VBD with_IN Ben_NNP more_RBR often_RB than_IN she_PRP did_VBD <flirt with>_NNP Ryan_NNP ._.
+Note_VB that_DT unlike_IN structural_JJ Accusative_NNP Case_NNP that_WDT is_VBZ checked_VBN outside_IN VP_NNP but_CC inside_IN vP_NNP ,_, inherent_JJ case_NN is_VBZ presumably_RB determined_VBN by_IN a_DT verbal_JJ head_NN inside_IN VP_NNP and_CC realized_VBN with_IN an_DT appropriate_JJ preposition_NN ._.
+All_PDT the_DT examples_NNS in_IN -LRB-_-LRB- 35_CD -RRB-_-RRB- -_: -LRB-_-LRB- 37_CD -RRB-_-RRB- involve_VBP Pseudogapping_NN because_IN we_PRP can_MD not_RB test_VB out_RP case_NN forms_NNS of_IN VP-internal_JJ argument_NN elements_NNS inside_IN the_DT portion_NN elided_VBN by_IN VP_NNP ellipsis_NN ._.
+The_DT -LRB-_-LRB- b_NN -RRB-_-RRB- -_: examples_NNS of_IN -LRB-_-LRB- 35_CD -RRB-_-RRB- -_: -LRB-_-LRB- 37_CD -RRB-_-RRB- are_VBP a_DT little_JJ bit_NN degraded_JJ -LRB-_-LRB- we_PRP conjecture_NN that_IN ,_, as_IN noted_VBN by_IN Levin_NNP -LRB-_-LRB- 1979/1986_CD -RRB-_-RRB- and_CC Lasnik_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, the_DT degradedness_NN of_IN these_DT examples_NNS are_VBP due_JJ to_TO the_DT general_JJ degradedness_NN of_IN Pseudogapping_NNP -RRB-_-RRB- ,_, but_CC they_PRP are_VBP still_RB acceptable_JJ ._.
+This_DT is_VBZ because_IN in_IN these_DT examples_NNS ,_, the_DT VP_NNP in_IN the_DT ellipsis_NN clause_NN is_VBZ identical_JJ to_TO that_DT in_IN the_DT antecedent_NN clause_NN in_IN terms_NNS of_IN inherent_JJ case_NN realization_NN of_IN the_DT argument_NN elements_NNS inside_IN them_PRP ._.
+Unlike_IN these_DT -LRB-_-LRB- b_NN -RRB-_-RRB- -_: examples_NNS of_IN -LRB-_-LRB- 35_CD -RRB-_-RRB- -_: -LRB-_-LRB- 37_CD -RRB-_-RRB- ,_, however_RB ,_, their_PRP$ -LRB-_-LRB- a_DT -RRB-_-RRB- -_: examples_NNS are_VBP ruled_VBN out_RP owing_VBG to_TO case_NN mismatch_NN between_IN a_DT VP-internal_JJ argument_NN element_NN in_IN the_DT ellipsis_NN clause_NN and_CC its_PRP$ correlate_NN in_IN the_DT antecedent_NN clause_NN ._.
+For_IN example_NN ,_, in_IN -LRB-_-LRB- 35a_JJ -RRB-_-RRB- neither_CC jackets_NNS nor_CC with_IN swastikas_NNS inside_IN the_DT VP_NNP of_IN the_DT ellipsis_NN clause_NN matches_VBZ with_IN on_IN jackets_NNS and_CC signs_NNS in_IN terms_NNS of_IN case/Case_NNP feature_NN ,_, thereby_RB inviting_VBG a_DT violation_NN of_IN the_DT syntactic_NN isomorphism_NN on_IN ellipsis_NN ._.
+In_IN leaving_VBG this_DT section_NN ,_, let_VB us_PRP note_VB that_IN Takita_NNP -LRB-_-LRB- 2015_CD :_: 14_CD -RRB-_-RRB- proposed_VBD the_DT revised_VBN Case_NN condition_NN on_IN ellipsis_NN ,_, which_WDT states_VBZ that_IN a_DT DP_NNP must_MD be_VB Case_NN -_: licensed_VBN in_IN the_DT ellipsis_NN site_NN by_IN a_DT head_NN identical_JJ to_TO the_DT corresponding_JJ head_NN that_WDT Case-licenses_VBZ the_DT correlating_VBG DP_NNP in_IN the_DT antecedent_NN ._.
+Simply_RB speaking_NN ,_, Takita_NNP -LRB-_-LRB- ibid_JJ ._. -RRB-_-RRB-
+argues_VBZ that_IN a_DT Case-licensing_JJ head_NN rather_RB than_IN the_DT Case/case_NNP form_NN of_IN a_DT DP_NNP determined_VBN by_IN it_PRP is_VBZ critical_JJ in_IN meeting_VBG the_DT syntactic_NN isomorphism_NN on_IN ellipsis_NN ._.
+Takita_NNP 's_POS analysis_NN works_VBZ fine_NN for_IN -LRB-_-LRB- 37b_JJ -RRB-_-RRB- ._.
+Since_IN in_IN -LRB-_-LRB- 37b_JJ -RRB-_-RRB- the_DT same_JJ verb_NN flirt_VBP Case-licenses_NNS Ryan_NNP and_CC its_PRP$ correlate_JJ Ben_NNP with_IN the_DT realization_NN of_IN the_DT preposition_NN with_IN ,_, it_PRP meets_VBZ the_DT revised_VBN Case_NN condition_NN on_IN ellipsis_NN ._.
+To_TO rule_VB out_RP -LRB-_-LRB- 37a_FW -RRB-_-RRB- ,_, however_RB ,_, Takita_NNP has_VBZ to_TO say_VB that_IN the_DT verb_NN flirt_NN in_IN the_DT ellipsis_NN clause_NN is_VBZ different_JJ from_IN the_DT verb_NN flirt_NN in_IN the_DT antecedent_NN clause_NN ._.
+Unlike_IN Takita_NNP 's_POS analysis_NN ,_, we_PRP have_VBP argued_VBN that_IN the_DT Case/case_NNP form_NN of_IN a_DT DP_NNP matters_NNS for_IN ellipsis_NN ._.
+4_CD Consequences_NNS If_IN causative_JJ and_CC unaccusatives_NNS also_RB differ_VBP in_IN their_PRP$ v_NN -LRB-_-LRB- cf._FW Chomsky_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- -RRB-_-RRB- ,_, it_PRP is_VBZ surprising_JJ that_IN the_DT following_VBG examples_NNS are_VBP always_RB unacceptable_JJ where_WRB VP_NNP ellipsis_VBZ applies_VBZ to_TO the_DT causative-unaccusative_JJ alternating_VBG verbs_NNS in_IN an_DT antecedent_NN and_CC ellipsis_NN pair_NN :_: -LRB-_-LRB- 38_CD -RRB-_-RRB- Causative-Unaccusative_JJ Alternations_NNS :_: a_DT ._.
+This_DT can_MD freeze_VB ._.
+*_SYM Please_UH do_VB ._.
+-LRB-_-LRB- Johnson_NNP 2004_CD :_: 7_CD -RRB-_-RRB- b._SYM *_SYM Bill_NNP melted_VBD the_DT copper_NN vase_NN ,_, and_CC the_DT magnesium_NN vase_NN did_VBD ,_, too_RB ._.
+-LRB-_-LRB- Sag_NNP 1976_CD :_: 160_CD -RRB-_-RRB- c._SYM *_SYM Maria_NNP still_RB tried_VBD to_TO break_VB the_DT vase_NN even_RB though_IN it_PRP would_MD n't_RB ._.
+-LRB-_-LRB- Houser_NNP et_FW al._FW 2007_CD -RRB-_-RRB- -LRB-_-LRB- 39_CD -RRB-_-RRB- a_DT ._.
+This_DT can_MD freeze_VB ._.
+Please_VB freeze_VB this_DT ._.
+b._IN Bill_NNP melted_VBD the_DT copper_NN vase_NN ,_, and_CC the_DT magnesium_NN vase_NN melted_VBN ,_, too_RB ._.
+c._NNP Maria_NNP still_RB tried_VBD to_TO break_VB the_DT vase_NN even_RB though_IN it_PRP would_MD n't_RB break_VB ._.
+Note_VB that_DT -LRB-_-LRB- 38b_CD -RRB-_-RRB- involves_VBZ a_DT resemblance_NN relation_NN ,_, but_CC -LRB-_-LRB- 38a_FW -RRB-_-RRB- and_CC -LRB-_-LRB- 38c_JJ -RRB-_-RRB- involve_VBP a_DT cause/effect_JJ relation_NN ._.
+The_DT prediction_NN is_VBZ that_IN if_IN the_DT subject_JJ element_NN in_IN -LRB-_-LRB- 38_CD -RRB-_-RRB- derived_VBN from_IN an_DT object_NN position_NN ,_, just_RB like_IN subject_JJ elements_NNS of_IN passives_NNS ,_, and_CC if_IN the_DT VP_NNP of_IN -LRB-_-LRB- 38c_JJ -RRB-_-RRB- in_IN a_DT cause-effect_JJ relation_NN underwent_VBD ellipsis_NN ,_, -LRB-_-LRB- 38c_JJ -RRB-_-RRB- would_MD be_VB acceptable_JJ ,_, contrary_JJ to_TO fact_NN ._.
+Transitive-middle_JJ alternating_VBG verbs_NNS behave_VBP in_IN a_DT parallel_JJ fashion_NN as_IN causative-unaccusative_JJ alternating_VBG verbs_NNS ._.
+The_DT following_VBG two_CD sets_NNS of_IN examples_NNS show_VBP transitive/middle_JJ alternations_NNS ._.
+-LRB-_-LRB- 40_CD -RRB-_-RRB- Transitive-Middle_NNP Alternations_NNPS :_: a_DT ._.
+They_PRP market_NN ethanol_NN well_RB in_IN the_DT Midwest_NNP ._.
+b_NN ._.
+They_PRP sell_VBP Hyundais_NNPS in_IN Greece_NNP ._.
+c._NN Studios_NNP generally_RB release_VBP action_NN films_NNS in_IN the_DT summer_NN ._.
+-LRB-_-LRB- 41_CD -RRB-_-RRB- a._FW Ethanol_NN markets_NNS well_RB in_IN the_DT Midwest_NNP ._.
+b._NNP Hyundais_NNPS do_VBP n't_RB sell_VB in_IN Greece_NNP ._.
+c_NN ._.
+This_DT kind_NN of_IN movie_NN generally_RB releases_VBZ in_IN the_DT summer_NN ._.
+No_DT such_JJ alternations_NNS are_VBP found_VBN between_IN antecedent_NN and_CC ellipsis_NN pairs_NNS ,_, as_IN follows_VBZ :_: -LRB-_-LRB- 42_CD -RRB-_-RRB- a._IN *_SYM They_PRP market_NN ethanol_NN well_RB in_IN the_DT Midwest_NNP ,_, but_CC regular_JJ gas_NN does_VBZ n't_RB ._.
+b._SYM *_SYM They_PRP sell_VBP Hyundais_NNPS in_IN Greece_NNP because_IN Hondas_NNPS do_VBP n't_RB ._.
+c._SYM *_SYM Studios_NNPS generally_RB release_VBP action_NN films_NNS in_IN the_DT summer_NN ,_, and_CC big-name_JJ comedies_NNS generally_RB do_VBP as_RB well_RB ._.
+-LRB-_-LRB- 43_CD -RRB-_-RRB- a._IN *_SYM Ethanol_NN markets_NNS well_RB in_IN the_DT Midwest_NNP ,_, though_IN they_PRP do_VBP n't_RB in_IN the_DT South_NNP ._.
+b._SYM *_SYM Hyundais_NNPS do_VBP n't_RB sell_VB in_IN Greece_NNP because_IN dealers_NNS do_VBP n't_RB ._.
+c._SYM *_SYM This_DT kind_NN of_IN movie_NN generally_RB releases_VBZ in_IN the_DT summer_NN ,_, though_IN a_DT studio_NN might_MD in_IN the_DT winter_NN if_IN it_PRP 's_VBZ Christmas-themed_JJ ._.
+Why_WRB is_VBZ there_EX a_DT contrast_NN between_IN passives_NNS ,_, on_IN the_DT one_CD hand_NN ,_, and_CC unaccusatives_NNS and_CC middles_NNS ,_, on_IN the_DT other_JJ hand_NN ?_.
+We_PRP saw_VBD that_IN passive-active_JJ alternation_NN -LRB-_-LRB- i.e._FW ,_, voice_NN mismatch_NN -RRB-_-RRB- in_IN the_DT antecedent_NN and_CC ellipsis_NN pair_NN is_VBZ permissible_JJ in_IN a_DT cause/effect_JJ relation_NN ._.
+However_RB ,_, neither_DT causative-unaccusative_JJ nor_CC transitive-middle_JJ alternation_NN in_IN the_DT antecedent_NN and_CC ellipsis_NN pair_NN is_VBZ allowed_VBN ._.
+We_PRP suggest_VBP on_IN the_DT basis_NN of_IN the_DT following_VBG do_VBP so_RB replacement_NN that_IN in_IN English_NNP ,_, passives_NNS involve_VBP syntactic_JJ movement_NN ,_, but_CC neither_DT unaccusatives_NNS nor_CC middles_NNS do_VBP so_RB ._.
+-LRB-_-LRB- 44_CD -RRB-_-RRB- Passive_JJ :_: a._IN *_SYM This_DT cat_NN was_VBD adopted_VBN ,_, but_CC that_IN one_CD was_VBD not_RB done_VBN so_RB ._.
+-LRB-_-LRB- from_IN Thompson_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- -RRB-_-RRB- b._SYM *_SYM The_DT vase_NN was_VBD broken_VBN by_IN the_DT children_NNS ,_, and_CC the_DT jar_NN was_VBD done_VBN so_RB ,_, too_RB ._.
+-LRB-_-LRB- from_IN Houser_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- -RRB-_-RRB- -LRB-_-LRB- 45_CD -RRB-_-RRB- Unaccusative_JJ and_CC Middle_NN :_: a._CD %_NN John_NNP told_VBD Steve_NNP to_TO hang_VB the_DT horseshoe_NN over_IN the_DT door_NN ,_, and_CC it_PRP does_VBZ so_RB now_RB ._.
+b._CD %_NN I_PRP was_VBD told_VBN that_IN this_DT new_JJ peanut_NN butter_NN spreads_NNS very_RB easily_RB ,_, and_CC I_PRP am_VBP very_RB excited_VBN to_TO do_VB so_RB ._.
+-LRB-_-LRB- -LRB-_-LRB- 12a-d_JJ -RRB-_-RRB- from_IN Thompson_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- -RRB-_-RRB- c._CD %_NN Mary_NNP claimed_VBD that_IN I_PRP closed_VBD the_DT door_NN ,_, but_CC it_PRP actually_RB did_VBD so_RB on_IN its_PRP$ own_JJ ._.
+-LRB-_-LRB- from_IN Thompson_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- -RRB-_-RRB- The_DT contrast_NN between_IN -LRB-_-LRB- 44_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 45_CD -RRB-_-RRB- can_MD be_VB accounted_VBN for_IN by_IN the_DT assumption_NN that_IN the_DT VP_NNP -_: replacing_VBG anaphor_NN so_RB -LRB-_-LRB- while_IN the_DT light_JJ verb_NN do_VBP of_IN do_VBP so_RB occupies_VBZ the_DT little_JJ v_NN position_NN -LRB-_-LRB- cf._FW Stroik_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, among_IN others_NNS -RRB-_-RRB- can_MD not_RB replace_VB a_DT VP_NNP that_WDT contains_VBZ a_DT gap_NN left_VBD behind_RP by_IN A_DT or_CC A_DT '_'' -_: movement_NN ._.
+This_DT account_NN implies_VBZ that_IN passive_JJ verbs_NNS are_VBP potentially_RB transitive_JJ verbs_NNS ,_, thus_RB being_VBG able_JJ to_TO meet_VB the_DT identity_NN condition_NN on_IN ellipsis_NN with_IN transitive_JJ verbs_NNS ._.
+However_RB ,_, unaccusative_JJ and_CC middle_JJ verbs_NNS are_VBP in_IN fact_NN intransitive_JJ verbs_NNS ,_, thus_RB not_RB being_VBG able_JJ to_TO meet_VB the_DT identity_NN condition_NN on_IN ellipsis_NN with_IN causative_JJ or_CC transitive_JJ verbs_NNS ._.
+This_DT is_VBZ how_WRB we_PRP account_VBP for_IN the_DT unacceptability_NN of_IN -LRB-_-LRB- 38_CD -RRB-_-RRB- ,_, -LRB-_-LRB- 42_CD -RRB-_-RRB- ,_, and_CC -LRB-_-LRB- 43_CD -RRB-_-RRB- ._.
+All_PDT these_DT examples_NNS are_VBP ruled_VBN out_RP independently_RB of_IN Case/case_NNP mismatch_NN but_CC because_IN of_IN verb-type_JJ mismatch_NN between_IN intransitive_JJ and_CC causative/transitive_JJ verbs_NNS ._.
+There_EX is_VBZ an_DT additional_JJ alternation_NN between_IN an_DT implicit_JJ argument-taking_JJ verb_NN and_CC its_PRP$ passive_JJ variant_NN in_IN an_DT antecedent_NN and_CC ellipsis_NN pair_NN ._.
+This_DT mismatch_NN is_VBZ not_RB allowed_VBN ,_, as_IN follows_VBZ :_: -LRB-_-LRB- 46_CD -RRB-_-RRB- a._IN *_SYM I_PRP heard_VBD John_NNP ate_VBD in_IN the_DT cafeteria_NN ._.
+But_CC I_PRP do_VBP n't_RB know_VB what_WP was_VBD -LSB-_JJ eaten_VBN by_IN John_NNP in_IN the_DT cafeteria_NN -RSB-_NNP ._.
+b._SYM *_SYM I_PRP watched_VBD John_NNP win_VBP in_IN the_DT last_JJ Olympics_NNPS ._.
+But_CC I_PRP do_VBP n't_RB know_VB which_WDT medal_NN was_VBD -LSB-_JJ won_VBN by_IN John_NNP in_IN the_DT last_JJ Olympics_NNPS -RSB-_NNP ._.
+c._SYM *_SYM I_PRP saw_VBD John_NNP read_VBD in_IN the_DT library_NN ._.
+But_CC I_PRP do_VBP n't_RB know_VB what_WP book_NN was_VBD -LSB-_JJ read_VBN by_IN John_NNP in_IN the_DT library_NN -RSB-_NNP ._.
+However_RB ,_, their_PRP$ Sluicing_VBG counterparts_NNS are_VBP acceptable_JJ ,_, as_IN in_IN -LRB-_-LRB- 47_CD -RRB-_-RRB- :_: -LRB-_-LRB- 47_CD -RRB-_-RRB- a._IN I_PRP heard_VBD John_NNP ate_VBD in_IN the_DT cafeteria_NN ._.
+But_CC I_PRP do_VBP n't_RB know_VB what_WP ._.
+b._IN I_PRP watched_VBD John_NNP win_VBP in_IN the_DT last_JJ Olympics_NNPS ._.
+But_CC I_PRP do_VBP n't_RB know_VB which_WDT medal_NN ._.
+c._IN I_PRP saw_VBD John_NNP read_VBD in_IN the_DT library_NN ._.
+But_CC I_PRP do_VBP n't_RB know_VB what_WP book_NN ._.
+We_PRP assume_VBP that_IN the_DT implicit_JJ argument_NN selected_VBN by_IN verbs_NNS such_JJ as_IN eat_VB ,_, win_VB ,_, and_CC read_VB implicitly_RB carries_VBZ Accusative-like_JJ inherent_JJ case_NN ._.
+This_DT inherent_JJ case_NN is_VBZ lexically_RB assigned_VBN by_IN such_JJ verbs_NNS to_TO the_DT implicit_JJ argument_NN in-situ_NN within_IN VP_NNP without_IN moving_VBG to_TO -LSB-_NNP Spec_NNP ,_, vP_NNP -RSB-_NNP ._.
+This_DT assumption_NN accounts_NNS for_IN the_DT contrast_NN in_IN acceptability_NN between_IN -LRB-_-LRB- 46_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 47_CD -RRB-_-RRB- ._.
+In_IN -LRB-_-LRB- 46_CD -RRB-_-RRB- ,_, the_DT lexical-case-carrying_JJ implicit_JJ argument_NN within_IN the_DT VP_NNP of_IN the_DT antecedent_NN clause_NN can_MD not_RB meet_VB a_DT Case/case_NNP match_NN with_IN the_DT complement_VBP of_IN the_DT passive_JJ verb_NN within_IN that_DT of_IN the_DT ellipsis_NN clause_NN ._.
+In_IN -LRB-_-LRB- 47_CD -RRB-_-RRB- ,_, by_IN contrast_NN ,_, the_DT wh_SYM -_: survivor/remnant_NN in_IN the_DT ellipsis_NN clause_NN and_CC its_PRP$ correlate_JJ implicit_JJ argument_NN in_IN the_DT antecedent_NN clause_NN are_VBP understood_VBN to_TO carry_VB the_DT same_JJ feature_NN of_IN Case/case_NNP ,_, meeting_NN syntactic_NN isomorphism_NN on_IN ellipsis_NN ._.
+6_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP first_RB started_VBD with_IN reviewing_VBG Merchant_NN 's_POS -LRB-_-LRB- 2008_CD -RRB-_-RRB- analysis_NN of_IN voice_NN mismatch_NN in_IN ellipsis_NN constructions_NNS and_CC Tanaka_NNP 's_POS -LRB-_-LRB- 2011_CD -RRB-_-RRB- reply_NN to_TO this_DT analysis_NN ._.
+We_PRP took_VBD Tanaka_NNP 's_POS rebuttal_NN of_IN Merchant_NN 's_POS dichotomy_NN in_IN voice_NN mismatch_NN between_IN VP_NNP and_CC Pseudogapping_NNP to_TO be_VB valid_JJ ._.
+Departing_VBG from_IN Kehler_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- insight_NN that_IN the_DT distinction_NN between_IN resemblance_NN vs._FW cause/effect_FW discourse_NN coherence_NN relations_NNS rather_RB than_IN between_IN VP_NNP and_CC Pseudogapping_NNP come_VBP into_IN place_NN in_IN apparent_JJ voice_NN mismatch_NN ,_, we_PRP argued_VBD that_IN VP_NNP undergoes_VBZ ellipsis_NN in_IN a_DT resemblance_NN relation_NN ,_, whereas_IN vP_NN does_VBZ so_RB in_IN a_DT cause/effect_JJ relation_NN ._.
+Given_VBN the_DT different_JJ sizes_NNS of_IN ellipsis_NN interacting_VBG with_IN discourse_NN relations_NNS ,_, we_PRP went_VBD further_RB to_TO argue_VB that_IN apparent_JJ voice_NN mismatch_NN in_IN VP_NNP ellipsis_NN is_VBZ attributed_VBN to_TO the_DT fact_NN that_IN structural_JJ Accusative_NNP Case_NNP is_VBZ checked_VBN not_RB within_IN the_DT VP_NNP domain_NN that_WDT undergoes_VBZ ellipsis_NN ._.
+Thus_RB ,_, the_DT object_NN element_NN in_IN the_DT ellipsis_NN clause_NN and_CC the_DT subject_JJ element_NN in_IN the_DT antecedent_NN clause_NN ,_, or_CC vice_NN versus_CC ,_, count_NN as_IN identical_JJ within_IN a_DT VP_NNP in_IN terms_NNS of_IN Case_NNP feature_NN ,_, meeting_VBG the_DT identity_NN condition_NN on_IN ellipsis_NN ._.
+Unlike_IN structural_JJ Case_NN ,_, however_RB ,_, a_DT difference_NN in_IN case_NN feature_NN or_CC argument_NN structure_NN -LRB-_-LRB- or_CC verb_NN type_NN -RRB-_-RRB- within_IN a_DT VP_NNP always_RB invites_VBZ a_DT violation_NN of_IN identity_NN in_IN ellipsis_NN ._.
+In_IN addition_NN ,_, Case/case_NNP mismatch_NN in_IN the_DT case_NN of_IN an_DT elision_NN of_IN a_DT larger_JJR constituent_NN such_JJ as_IN TP_NNP under_IN Sluicing_VBG was_VBD shown_VBN to_TO induce_VB fatal_JJ effects_NNS on_IN the_DT acceptability_NN of_IN sentences_NNS involving_VBG such_JJ a_DT type_NN of_IN ellipsis_NN ._.
+Acknowledgement_NN We_PRP are_VBP grateful_JJ to_TO the_DT three_CD anonymous_JJ reviewers_NNS for_IN their_PRP$ comments_NNS and_CC suggestions_NNS on_IN the_DT earlier_JJR version_NN of_IN the_DT paper_NN ._.
+All_PDT the_DT remaining_JJ errors_NNS are_VBP ,_, of_IN course_NN ,_, ours_JJ ._.
+This_DT work_NN was_VBD supported_VBN by_IN the_DT National_NNP Research_NNP Foundation_NNP of_IN Korea_NNP Grant_NNP funded_VBN by_IN the_DT Korean_JJ Government_NN -LRB-_-LRB- NRF-2013S1A5A2A03044783_NN -RRB-_-RRB- ._.
+References_NNS Chomsky_NNP ,_, Noam_NNP ._.
+1995_CD ._.
+The_DT Minimalist_NNP Program_NNP ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Dalrymple_NNP ,_, Marry_NNP ,_, Stuart_NNP M._NNP Shieber_NNP ,_, and_CC Fernando_NNP CN_NNP Pereira_NNP ._.
+1991_CD ._.
+Ellipsis_NNP and_CC Higher-order_NNP Unification_NNP ._.
+Linguistics_NNPS and_CC Philosophy_NNP ,_, 14_CD ,_, 399-452_CD ._.
+Houser_NNP ,_, Michael_NNP J_NNP ,_, Line_NNP Mikkelsen_NNP ,_, and_CC Maziar_NNP Toosarvandani_NNP ._.
+2007_CD ._.
+Verb_NNP Phrase_NNP Pronominalization_NNP in_IN Danish_JJ :_: Deep_JJ or_CC Surface_NNP Anaphora_NNP ?_.
+Ms._NNP ,_, University_NNP of_IN California_NNP ,_, Berkeley_NNP ._.
+Houser_NNP ,_, Michael_NNP J._NNP 2010_CD ._.
+On_IN the_DT Anaphoric_NNP Status_NNP of_IN Do_NNP So_RB ._.
+URL_NNP http://linguistics_NNS ._.
+berkeley.edu/~mhouser/Papers/do_so_status.pdf_NNP ._.
+Jayaseelan_NNP ,_, Karattuparambil_NNP A._NN 1990_CD ._.
+Incomplete_JJ VP_NNP Deletion_NNP and_CC Gapping_NNP ._.
+Linguistic_NNP Analysis_NNP ,_, 20_CD ,_, 64_CD -_: 81_CD ._.
+Johnson_NNP ,_, Kyle_NNP ._.
+2004_CD ._.
+How_WRB to_TO Be_VB Quiet_JJ ._.
+In_IN Papers_NNP from_IN the_DT Annual_JJ Meeting_VBG of_IN the_DT Chicago_NNP Linguistic_NNP Society_NNP ,_, 40_CD ,_, 1-20_CD ._.
+Chicago_NNP Linguistic_NNP Society_NNP ._.
+Kehler_NNP ,_, Andrew_NNP ._.
+2000_CD ._.
+Coherence_NN and_CC the_DT Resolution_NN of_IN Ellipsis_NNP ,_, Linguistics_NNP and_CC Philosophy_NNP 23_CD ,_, 533-575_CD ._.
+Kehler_NNP ,_, Andrew_NNP ._.
+2002_CD ._.
+Coherence_NN ,_, Reference_NNP ,_, and_CC the_DT Theory_NNP of_IN Grammar_NNP ._.
+CSLI_NNP Publications_NNP ,_, Stanford_NNP ._.
+Lasnik_NNP ,_, Howard_NNP ._.
+1995_CD ._.
+A_DT Note_NN on_IN Pseudogapping_NNP ._.
+MIT_NNP working_VBG papers_NNS in_IN linguistics_NNS ,_, 27_CD ,_, 143-163_CD ._.
+Lasnik_NNP ,_, Howard_NNP ._.
+1999_CD ._.
+Minimalist_JJ Analysis_NN ._.
+Blackwell_NNP ,_, Oxford_NNP ._.
+Levin_NNP ,_, Nancy_NNP ._.
+1978_CD ._.
+Some_DT Identity-of-sense_JJ Deletions_NNPS Puzzle_NNP Me_PRP ._.
+Do_VBP They_PRP You_PRP ?_. ._.
+In_IN Papers_NNP from_IN the_DT Regional_NNP Meeting_VBG of_IN the_DT Chicago_NNP Linguistic_NNP Society_NNP ,_, 14_CD ,_, 229-240_CD ._.
+Chicago_NNP ,_, Ill._NNP ._.
+Levin_NNP ,_, Nancy_NNP ._.
+1979/1986_CD ._.
+Main_NNP Verb_NNP Ellipsis_NNP in_IN Spoken_NNP English_NNP -LRB-_-LRB- Doctoral_JJ dissertation_NN ,_, Ohio_NNP State_NNP University_NNP ,_, Columbus_NNP ._.
+-LSB-_NNP Published_VBN in_IN 1986_CD by_IN Garland_NNP ,_, New_NNP York_NNP -RSB-_NNP -RRB-_-RRB- ._.
+Merchant_NN ,_, Jason_NNP ._.
+2007_CD ._.
+Voice_NNP and_CC Ellipsis_NNP ._.
+Ms._NNP ,_, University_NNP of_IN Chicago_NNP ,_, Chicago_NNP ._.
+Merchant_NN ,_, Jason_NNP ._.
+2008_CD ._.
+An_DT Asymmetry_NN in_IN Voice_NNP Mismatches_NNPS in_IN VP-ellipsis_NNP and_CC Pseudogapping_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 39_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 169-179_CD ._.
+Merchant_NN ,_, Jason_NNP ._.
+2013_CD ._.
+Voice_NNP and_CC Ellipsis_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 44_CD ,_, 77-108_CD ._.
+Sag_NNP ,_, Ivan_NNP ._.
+1976_CD ._.
+Deletion_NN and_CC Logical_JJ Form_NN ._.
+Doctoral_JJ dissertation_NN ,_, MIT_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+SanPietro_NNP ,_, Steve_NNP ,_, Jason_NNP Merchant_NN ,_, and_CC Ming_NNP Xiang_NNP ._.
+2012_CD ._.
+Accounting_NN for_IN Voice_NNP Mismatch_NNP in_IN Ellipsis_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 30th_JJ West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNP ,_, ed_VBD ._.
+by_IN Nathan_NNP Arnett_NNP and_CC Ryan_NNP Bennett_NNP ,_, 303-312_CD ._.
+Sportiche_NNP ,_, Dminique_NNP ._.
+1988_CD ._.
+A_DT Theory_NNP of_IN Floating_VBG Quantifiers_NNS and_CC its_PRP$ Corollaries_NNS for_IN Constituent_NNP Structure_NNP ._.
+Linguistic_JJ inquiry_NN ,_, 19_CD ,_, 425-451_CD ._.
+Stroik_NNP ,_, Thomas_NNP ._.
+2001_CD ._.
+On_IN the_DT Light_NN Verb_NNP Hypothesis_NNP ._.
+Linguistic_NNP Inquiry_NNP 32_CD ,_, 362-369_CD ._.
+Takahashi_NNP ,_, Shoichi_NNP ._.
+2004_CD ._.
+Pseudogapping_VBG and_CC Cyclic_NNP Linearization_NNP ._.
+In_IN Proceedings_NNP of_IN NELS_NNP ,_, 34_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 571_CD -_: 586_CD ._.
+Takita_NNP ,_, Kensuke_NNP ._.
+2015_CD ._.
+Strengthening_VBG the_DT Role_NN of_IN Case_NN in_IN Ellipsis_NNP ._.
+Ms._NNP ,_, Mie_NNP University_NNP ._.
+Tanaka_NNP ,_, Hidekazu_NNP ._.
+2011_CD ._.
+Voice_NNP Mismatch_NNP and_CC Syntactic_NNP Identity_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 42_CD ,_, 470-490_CD ._.
+Thompson_NNP ,_, Anie_NNP ._.
+2012_CD ._.
+Categorizing_VBG Surface_NNP Proforms_NNP in_IN the_DT Typology_NNP of_IN Anaphora_NNP ._.
+A_DT talk_NN given_VBN at_IN Ellipsis_NNP 2012_CD ,_, Universidade_NNP de_IN Vigo_NNP ._.

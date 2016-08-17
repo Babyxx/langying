@@ -1,0 +1,272 @@
+Abstract_JJ There_EX is_VBZ a_DT striking_JJ lack_NN of_IN studies_NNS in_IN linguistics_NNS tackling_VBG the_DT intricate_JJ relationship_NN between_IN sarcasm_NN and_CC irony_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, corpora_NN are_VBP used_VBN with_IN gradual_JJ frequency_NN to_TO investigate_VB these_DT concepts_NNS with_IN special_JJ emphasis_NN on_IN their_PRP$ implicit_JJ uses_NNS ._.
+The_DT underlying_VBG assumption_NN in_IN the_DT present_JJ study_NN is_VBZ that_IN investigating_VBG the_DT explicit_JJ uses_NNS is_VBZ a_DT more_RBR unbiased_JJ and_CC expedient_JJ way_NN of_IN revealing_VBG potential_JJ differences_NNS between_IN the_DT two_CD ._.
+Conversely_RB ,_, the_DT present_JJ article_NN details_NNS a_DT systematic_JJ corpus-based_JJ comparison_NN of_IN sarcasm_NN vs_NNS irony_NN ,_, sarcastic_JJ vs_NNS ironic_JJ ,_, and_CC sarcastically_RB vs_NNS ironically_RB focusing_VBG on_IN their_PRP$ collocational_JJ behavior_NN ._.
+Differences_NNS between_IN the_DT two_CD terms_NNS are_VBP outstanding_JJ with_IN respect_NN to_TO verb_NN ,_, adjective_NN ,_, and_CC adverb_NN collocations_NNS ,_, polarity_NN issues_NNS ,_, and_CC as_IN regards_VBZ the_DT identity_NN of_IN the_DT referent_NN ._.
+1_CD Introduction_NNP Venturing_VBG out_RP into_IN the_DT territory_NN of_IN sarcasm_NN and_CC irony_NN is_VBZ a_DT challenging_JJ pursuit_NN :_: boundaries_NNS become_VBP blurry_JJ ,_, cues_NNS are_VBP scarce_JJ ,_, and_CC the_DT question_NN what_WDT exactly_RB constitutes_VBZ sarcasm_NN and_CC irony_NN seems_VBZ to_TO be_VB an_DT ever-recurring_JJ problem_NN without_IN any_DT solid_JJ starting_VBG point_NN ._.
+A_DT relatively_RB extensive_JJ literature_NN exists_VBZ on_IN irony_NN approaches_NNS from_IN a_DT linguistic_JJ viewpoint_NN -LRB-_-LRB- e.g._FW Sperber_NNP and_CC Wilson_NNP ,_, 1981_CD ;_: Kreuz_NNP and_CC Glucksberg_NNP ,_, 1989_CD ;_: Attardo_NNP ,_, 2000_CD ;_: Utsumi_NNP ,_, 2000_CD ;_: Partington_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT same_JJ can_MD not_RB be_VB claimed_VBN about_IN sarcasm_NN per_IN se_FW ._.
+Sarcasm_NNP and_CC irony_NN seem_VBP to_TO go_VB hand_NN in_IN hand_NN and_CC seem_VBP to_TO be_VB invariably_RB treated_VBN together_RB without_IN any_DT justification_NN for_IN them_PRP doing_VBG so_RB ._.
+A_DT general_JJ overview_NN of_IN the_DT literature_NN makes_VBZ it_PRP apparent_JJ that_IN :_: i_FW -RRB-_-RRB- sarcasm_NN and_CC Second_JJ Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN irony_NN are_VBP considered_VBN interchangeable_JJ ,_, synonymous_JJ terms_NNS ,_, and_CC ii_FW -RRB-_-RRB- irony_NN is_VBZ believed_VBN to_TO comprise_VB all_DT instances_NNS of_IN sarcasm_NN thus_RB an_DT account_NN of_IN irony_NN necessarily_RB includes_VBZ that_IN of_IN sarcasm_NN ._.
+The_DT hypothesis_NN proposed_VBN in_IN this_DT study_NN is_VBZ that_IN sarcasm_NN and_CC irony_NN are_VBP in_IN fact_NN different_JJ concepts_NNS and_CC the_DT differences_NNS come_VBP to_TO light_VB through_IN corpus-based_JJ research_NN focusing_VBG on_IN the_DT explicit_JJ uses_NNS of_IN these_DT terms_NNS ._.
+The_DT study_NN was_VBD carried_VBN out_RP on_IN scripted_VBN data_NNS bearing_NN in_IN mind_NN that_IN irony_NN could_MD refer_VB to_TO other_JJ than_IN verbal_JJ instances_NNS -LRB-_-LRB- e.g._FW situational_JJ irony_NN -RRB-_-RRB- ,_, whereas_IN sarcasm_NN could_MD not_RB ._.
+Thus_RB ,_, an_DT analysis_NN of_IN the_DT explicit_JJ uses_NNS of_IN these_DT terms_NNS and_CC their_PRP$ lemmas_NNS would_MD inevitably_RB reveal_VB certain_JJ distinguishing_VBG characteristics_NNS ._.
+Emphasis_NN was_VBD lain_VBN on_IN the_DT collocational_JJ behavior_NN of_IN 3_CD word_NN pairs_NNS -LRB-_-LRB- sarcasm_NN -_: irony_NN ,_, sarcastic-ironic_JJ ,_, and_CC sarcastically-ironically_JJ -RRB-_-RRB- ,_, and_CC the_DT goal_NN was_VBD to_TO describe_VB what_WP was_VBD exclusive_JJ to_TO the_DT individual_JJ words_NNS ._.
+After_IN a_DT brief_JJ introduction_NN of_IN the_DT relevant_JJ literature_NN ,_, section_NN 3_CD will_MD describe_VB the_DT methodological_JJ framework_NN ,_, hypothesis_NN ,_, and_CC the_DT data_NNS that_WDT were_VBD utilized_VBN ._.
+Section_NN 4_CD and_CC its_PRP$ subsections_NNS are_VBP entirely_RB devoted_VBN to_TO the_DT analysis_NN of_IN the_DT data_NNS and_CC the_DT discussion_NN of_IN the_DT findings_NNS ._.
+Section_NN 5_CD concludes_VBZ the_DT article_NN summarizing_VBG the_DT main_JJ points_NNS and_CC suggesting_VBG further_JJ possibilities_NNS for_IN research_NN ._.
+2_CD Related_JJ Work_NN Despite_IN being_VBG obviously_RB related_VBN to_TO each_DT other_JJ ,_, sarcasm_NN and_CC irony_NN are_VBP not_RB taken_VBN to_TO be_VB synonymous_JJ terms_NNS in_IN this_DT study_NN ._.
+Already_RB their_PRP$ etymology_NN sets_VBZ them_PRP apart_RB :_: eironeia_NN means_VBZ dissimulation_NN ,_, assumed_VBD ignorance_NN ,_, whereas_IN sarkasmos_NNS literally_RB means_VBZ ``_`` to_TO strip_VB off_RP the_DT flesh_NN ''_'' -LRB-_-LRB- Online_NNP Etymology_NNP Dictionary_NNP ,_, Explicitly_RB about_IN sarcasm_NN and_CC irony_NN :_: A_DT corpus-based_JJ investigation_NN 2001_CD -RRB-_-RRB- ._.
+The_DT evident_JJ dissimilarity_NN has_VBZ gradually_RB become_VBN less_RBR and_CC less_RBR evident_JJ until_IN we_PRP arrive_VBP to_TO contemporary_JJ research_NN where_WRB it_PRP seems_VBZ to_TO be_VB a_DT rather_RB ambitious_JJ goal_NN to_TO actually_RB enumerate_VB the_DT distinguishing_NN features_NNS ._.
+A_DT limited_JJ number_NN of_IN articles_NNS are_VBP dedicated_VBN to_TO the_DT scientific_JJ teasing_NN apart_RB of_IN the_DT two_CD concepts_NNS -LRB-_-LRB- Kreuz_NNP and_CC Glucksberg_NNP ,_, 1989_CD ;_: Littman_NNP and_CC Mey_NNP ,_, 1993_CD ;_: Lee_NNP and_CC Katz_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Kreuz_NNP and_CC Glucksberg_NNP -LRB-_-LRB- 1989_CD -RRB-_-RRB- draw_NN on_IN Sperber_NNP and_CC Wilson_NNP 's_POS -LRB-_-LRB- 1981_CD -RRB-_-RRB- influential_JJ irony_NN theory_NN and_CC their_PRP$ primary_JJ goal_NN is_VBZ to_TO differentiate_VB between_IN implicit_JJ and_CC explicit_JJ antecedent_NN events_NNS that_WDT trigger_VBP sarcasm_NN ._.
+However_RB ,_, the_DT reason_NN why_WRB they_PRP choose_VBP the_DT term_NN sarcasm_NN in_IN their_PRP$ article_NN to_TO argue_VB against_IN a_DT theory_NN -LRB-_-LRB- i.e._FW Sperber_NNP &_CC Wilson_NNP 's_POS echoic_JJ mention_NN theory_NN of_IN irony_NN -RRB-_-RRB- that_WDT apparently_RB does_VBZ not_RB consider_VB sarcasm_NN is_VBZ not_RB elaborated_VBN on_IN ._.
+Littman_NNP &_CC Mey_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- point_NN out_IN what_WP is_VBZ an_DT unarguable_JJ fact_NN that_IN whereas_IN irony_NN does_VBZ not_RB only_RB manifest_JJ itself_PRP in_IN the_DT spoken_VBN realm_NN but_CC we_PRP talk_VBP about_IN ironic_JJ situations_NNS -LRB-_-LRB- e.g._FW how_WRB ironic_JJ is_VBZ it_PRP that_IN ..._: -RRB-_-RRB- ,_, the_DT same_JJ is_VBZ not_RB true_JJ for_IN sarcasm_NN which_WDT only_RB exists_VBZ in_IN the_DT verbal_JJ realm_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT phrase_NN how_WRB sarcastic_JJ is_VBZ it_PRP that_IN ..._: would_MD be_VB infelicitous_JJ ._.
+Lee_NNP &_CC Katz_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- assert_VBP that_IN the_DT difference_NN lies_VBZ in_IN the_DT identity_NN of_IN the_DT victim_NN which_WDT in_IN the_DT case_NN of_IN sarcasm_NN is_VBZ a_DT specific_JJ person_NN ,_, whereas_IN in_IN the_DT case_NN of_IN irony_NN is_VBZ numerous_JJ people_NNS ._.
+Without_IN invalidating_VBG their_PRP$ claim_NN ,_, the_DT present_JJ study_NN will_MD show_VB how_WRB their_PRP$ conclusion_NN can_MD be_VB extended_VBN to_TO non_VB -_: human_JJ referents_NNS too_RB in_IN the_DT case_NN of_IN irony_NN ._.
+There_EX exist_VBP other_JJ studies_NNS concentrating_VBG on_IN a_DT certain_JJ aspect_NN of_IN sarcasm_NN ,_, such_JJ as_IN emotions_NNS related_VBN to_TO it_PRP -LRB-_-LRB- Leggitt_NNP &_CC Gibbs_NNP ,_, 2000_CD ;_: Rockwell_NNP ,_, 2005_CD -RRB-_-RRB- ,_, its_PRP$ discourse_NN goals_NNS -LRB-_-LRB- Kreuz_NNP ,_, 2000_CD -RRB-_-RRB- ,_, or_CC its_PRP$ acquisition_NN -LRB-_-LRB- Creusere_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+None_NN the_DT less_RBR ,_, there_EX is_VBZ a_DT striking_JJ scarcity_NN of_IN corpus_NN linguistic-based_JJ research_NN ,_, Partington_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- being_VBG one_CD of_IN the_DT few_JJ exceptions_NNS with_IN his_PRP$ corpus_NN -_: based_VBN study_NN focusing_VBG ,_, however_RB ,_, exclusively_RB on_IN irony_NN ._.
+Sarcasm_NNP ,_, and_CC ,_, by_IN extension_NN ,_, the_DT discrepancies_NNS between_IN sarcasm_NN and_CC irony_NN ,_, seem_VBP to_TO be_VB a_DT woefully_RB neglected_VBN field_NN of_IN study_NN ._.
+3_CD Methodology_NNP 3.1_CD Framework_NNP and_CC hypothesis_NN There_EX is_VBZ an_DT evident_JJ research_NN gap_NN ._.
+Most_JJS of_IN the_DT abovementioned_JJ studies_NNS heroically_RB attempt_VBP to_TO tackle_VB a_DT highly_RB pragmatic_JJ issue_NN from_IN various_JJ angles_NNS ;_: however_RB ,_, have_VBP routinely_RB failed_VBN to_TO address_VB the_DT problem_NN concerning_VBG the_DT relationship_NN of_IN sarcasm_NN with_IN irony_NN -LRB-_-LRB- with_IN the_DT exception_NN of_IN a_DT few_JJ studies_NNS -RRB-_-RRB- ._.
+Corpus_NNP linguistics_NNS offers_VBZ a_DT fairly_RB straightforward_JJ and_CC much_RB more_RBR unbiased_JJ way_NN to_TO get_VB to_TO the_DT bottom_NN of_IN the_DT ``_`` irony-sarcasm_JJ dilemma_NN ._. ''_''
+A_DT corpus_NN study_NN allows_VBZ the_DT researcher_NN to_TO efficiently_RB search_VB for_IN explicit_JJ uses_NNS of_IN sarcasm_NN and_CC irony_NN and_CC allows_VBZ the_DT data_NNS to_TO speak_VB for_IN itself_PRP without_IN devising_VBG a_DT theory_NN beforehand_RB ._.
+The_DT goal_NN is_VBZ to_TO shed_VB light_NN on_IN the_DT distinguishing_NN features_NNS of_IN explicit_JJ sarcasm_NN and_CC irony_NN and_CC provide_VB ground_NN for_IN their_PRP$ being_VBG treated_VBN in_IN their_PRP$ own_JJ right_NN in_IN the_DT literature_NN ._.
+The_DT hypothesis_NN is_VBZ that_IN these_DT differences_NNS would_MD manifest_JJ in_IN the_DT collocational_JJ behavior_NN of_IN these_DT terms_NNS ._.
+The_DT underlying_VBG idea_NN ,_, according_VBG to_TO which_WDT irony_NN allows_VBZ for_IN variety_NN -LRB-_-LRB- e.g._FW situational_JJ irony_NN ,_, dramatic_JJ irony_NN ,_, etc._FW -RRB-_-RRB- ,_, while_IN sarcasm_NN does_VBZ not_RB was_VBD considered_VBN throughout_IN ._.
+3.2_CD Data_NNP The_NNP text_NN collection_NN employed_VBN for_IN this_DT research_NN was_VBD a_DT 135-million_JJ word_NN soap_NN opera_NN corpus_VBZ downloaded_VBN from_IN the_DT TVMegaSiteInc_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ;_: a_DT website_NN dedicated_VBN to_TO providing_VBG transcripts_NNS of_IN American_JJ daily_JJ soap_NN operas_NNS by_IN volunteers_NNS ._.
+The_DT advantages_NNS of_IN using_VBG soap_NN opera_NN transcripts_NNS are_VBP numerous_JJ :_: Soap_NNP operas_NNS are_VBP popular_JJ ,_, their_PRP$ language_NN is_VBZ well_RB -_: understood_VBN ,_, they_PRP build_VBP on_IN everyday_JJ communicative_JJ situations_NNS and_CC personal_JJ interaction_NN ,_, and_CC characters_NNS are_VBP modeled_VBN after_IN real_JJ people_NNS and_CC are_VBP thus_RB similarly_RB coherent_JJ and_CC rounded_VBD ._.
+Moreover_RB ,_, the_DT number_NN of_IN occurrences_NNS for_IN each_DT query_NN made_VBD it_PRP possible_JJ to_TO quantify_VB the_DT data_NNS but_CC at_IN the_DT same_JJ time_NN provide_VB a_DT qualitative_JJ analysis_NN as_RB well_RB ._.
+4_CD Analysis_NN and_CC discussion_NN The_DT corpus_NN search_NN involved_VBN six_CD words_NNS :_: irony_NN ,_, ironic_JJ ,_, ironically_RB ,_, sarcasm_NN ,_, sarcastic_JJ ,_, and_CC sarcastically_RB ._.
+A_DT summary_NN of_IN the_DT keywords_NNS with_IN the_DT total_JJ number_NN of_IN tokens_NNS is_VBZ shown_VBN in_IN Table_NNP 1_CD ._.
+The_DT results_NNS were_VBD compared_VBN between_IN word_NN pairs_NNS -LRB-_-LRB- sarcasm_NN vs_VBZ irony_NN ,_, sarcastic_JJ vs_NNS ironic_JJ ,_, and_CC sarcastically_RB vs_NNS ironically_RB -RRB-_-RRB- ._.
+Detailed_JJ analysis_NN is_VBZ given_VBN in_IN separate_JJ subsections_NNS ._.
+keyword_NN sarcasm_NN irony_NN sarcastic_JJ ironic_JJ sarcastically_RB ironically_RB total_JJ 309_CD 498_CD 247_CD 938_CD 191_CD 82_CD sarcasm_NN has_VBZ more_RBR obvious_JJ negative_JJ connotations_NNS -LRB-_-LRB- stinging_JJ ,_, cutting_VBG ,_, bitter_JJ -RRB-_-RRB- ;_: whereas_IN in_IN the_DT case_NN of_IN irony_NN ,_, negativity_NN is_VBZ not_RB obvious_JJ from_IN its_PRP$ etymology_NN that_IN emphasizes_VBZ pretense_NN and_CC contradiction_NN -LRB-_-LRB- Online_NNP Etymology_NNP Dictionary_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+Table_NNP 2_CD lists_NNS the_DT adjective_NN collocations_NNS and_CC also_RB shows_VBZ in_IN parentheses_NNS how_WRB many_JJ times_NNS a_DT given_VBN adjective_NN collocated_VBN with_IN the_DT word_NN if_IN it_PRP is_VBZ more_JJR than_IN one_CD ._.
+Adjectives_NNS are_VBP categorized_VBN according_VBG to_TO their_PRP$ polarity_NN -LRB-_-LRB- Pol_NNP -RRB-_-RRB- :_: Negative_JJ -LRB-_-LRB- Neg_NNP -RRB-_-RRB- ,_, positive_JJ -LRB-_-LRB- Pos_NNS -RRB-_-RRB- ,_, neutral_JJ -LRB-_-LRB- Neu_NNP -RRB-_-RRB- ,_, and_CC negative-positive_JJ -LRB-_-LRB- Neg-pos_JJ -RRB-_-RRB- ._.
+Bednarek_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- draws_VBZ attention_NN to_TO the_DT fact_NN that_IN the_DT polarity_NN of_IN a_DT word_NN is_VBZ not_RB always_RB evident_JJ ._.
+In_IN ambiguous_JJ cases_NNS ,_, the_DT corpus_NN itself_PRP served_VBD as_IN the_DT ``_`` adjudicator_NN ''_'' displaying_VBG all_DT collocations_NNS with_IN the_DT keyword_NN in_IN question_NN ,_, thus_RB allowing_VBG an_DT overview_NN of_IN its_PRP$ tendency_NN towards_IN the_DT negative_JJ or_CC positive_JJ ._.
+Table_NNP 1_CD :_: Keywords_NNS and_CC token_JJ number_NN 4.1_CD Sarcasm_NNP versus_CC irony_NN The_DT nouns_NNS sarcasm_NN and_CC irony_NN yielded_VBD 309_CD and_CC 498_CD tokens_NNS ,_, respectively_RB ._.
+The_DT focus_NN was_VBD on_IN what_WP adjectives_NNS and_CC verbs_NNS appeared_VBD in_IN the_DT surrounding_VBG of_IN the_DT core_NN word_NN ._.
+Sarcasm_NNP is_VBZ generally_RB thought_VBN of_IN as_IN the_DT more_JJR insulting_JJ of_IN the_DT two_CD notions_NNS ,_, for_IN which_WDT verification_NN was_VBD sought_VBN in_IN the_DT specific_JJ adjectives_NNS collocating_VBG with_IN it_PRP ._.
+Adjectives_NNS appearing_VBG in_IN positions_NNS 1L_NNP and_CC 2L_NNP were_VBD recorded_VBN ._.
+It_PRP was_VBD necessary_JJ to_TO consider_VB the_DT second_JJ word_NN on_IN the_DT left_NN -LRB-_-LRB- 2L_CD -RRB-_-RRB- too_RB in_IN order_NN to_TO be_VB able_JJ to_TO include_VB modified_VBN adjectives_NNS -LRB-_-LRB- e.g._FW thinly_RB veiled_VBN sarcasm_NN -RRB-_-RRB- and_CC when_WRB there_EX were_VBD two_CD adjectives_NNS -LRB-_-LRB- e.g._FW nifty_JJ ,_, little_JJ irony_NN -RRB-_-RRB- ._.
+The_DT two_CD expectations_NNS were_VBD as_IN follows_VBZ :_: i_FW -RRB-_-RRB- sarcasm_NN would_MD ,_, in_IN general_JJ ,_, enter_VBP into_IN fewer_JJR adjective_NN collocations_NNS compared_VBN to_TO irony_NN ;_: and_CC ii_FW -RRB-_-RRB- when_WRB sarcasm_NN does_VBZ collocate_VB with_IN adjectives_NNS ,_, it_PRP collocates_VBZ more_RBR with_IN negative_JJ adjectives_NNS compared_VBN to_TO irony_NN ._.
+These_DT expectations_NNS were_VBD indeed_RB met_VBN -LRB-_-LRB- see_VB Table_NNP 2_CD -RRB-_-RRB- ._.
+A_DT possible_JJ explanation_NN could_MD be_VB the_DT restrictiveness_NN of_IN sarcasm_NN and_CC the_DT permissiveness_NN of_IN irony_NN as_RB well_RB as_IN what_WP we_PRP know_VBP about_IN their_PRP$ etymology_NN -LRB-_-LRB- see_VB section_NN 2_LS -RRB-_-RRB- ._.
+As_IN has_VBZ been_VBN mentioned_VBN earlier_RBR ,_, there_EX are_VBP forms_NNS of_IN irony_NN not_RB related_VBN to_TO language_NN ,_, such_JJ as_IN situational_JJ irony_NN -LRB-_-LRB- Lucariello_NNP ,_, 1994_CD -RRB-_-RRB- and_CC dramatic_JJ irony_NN -LRB-_-LRB- Muecke_NNP ,_, 1970_CD -RRB-_-RRB- ._.
+A_DT search_NN for_IN the_DT word_NN irony_NN would_MD inevitably_RB reveal_VB the_DT explicit_JJ uses_NNS ,_, that_DT is_VBZ forms_NNS that_WDT imply_VBP other_JJ than_IN verbal_JJ irony_NN ._.
+The_DT adjective_NN collocating_VBG with_IN irony_NN may_MD possibly_RB reveal_VB what_WP kind_NN of_IN irony_NN we_PRP are_VBP dealing_VBG with_IN -LRB-_-LRB- examples_NNS from_IN the_DT corpus_NN include_VBP cosmic_JJ irony_NN ,_, tragic_JJ irony_NN ,_, and_CC poetic_JJ irony_NN -RRB-_-RRB- ._.
+Since_IN there_EX is_VBZ a_DT much_JJ wider_JJR range_NN of_IN possibilities_NNS to_TO talk_VB about_IN irony_NN than_IN sarcasm_NN ,_, the_DT occurrence_NN of_IN a_DT much_JJ wider_JJR range_NN of_IN adjectives_NNS is_VBZ justified_JJ ._.
+In_IN contrast_NN ,_, sarcasm_NN only_RB exists_VBZ in_IN the_DT verbal_JJ realm_NN ;_: therefore_RB ,_, a_DT search_NN would_MD have_VB to_TO refer_VB to_TO usage_NN necessarily_RB related_VBN to_TO language_NN -LRB-_-LRB- examples_NNS from_IN the_DT corpus_NN include_VBP biting_VBG sarcasm_NN ,_, bitter_JJ sarcasm_NN ,_, and_CC judgmental_JJ sarcasm_NN -RRB-_-RRB- ._.
+In_IN terms_NNS of_IN their_PRP$ etymology_NN ,_, Table_NNP 2_CD :_: Adjective_NNP collocations_NNS Adjective_NNP collocations_NNS Pol_NNP Sarcasm_NNP T_NNP ok_JJ en_IN s_PRP Irony_NNP T_NNP ok_JJ en_IN s_PRP Neg_NNP biting_VBG ,_, rude_JJ ,_, bitter_JJ ,_, cheap_JJ ,_, judgmen_JJ tal_NN ,_, thinly_RB veiled_VBD 6_CD cruel_JJ -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, cruelest_JJS ,_, horrible_JJ -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, terrible_JJ ,_, awful_JJ ,_, thudding_JJ ,_, twisted_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, nasty_JJ spiteful_JJ ,_, malicious_JJ ,_, stupefying_JJ ,_, humorless_JJ ,_, sick_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, plain_JJ old_JJ ,_, crazy_JJ ,_, heavy_JJ ,_, sad_JJ -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, tragic_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- 17_CD Pos_SYM -_: -_: delightful_JJ ,_, delicious_JJ -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, glorious_JJ ,_, lovely_JJ ,_, lovely_JJ little_RB ,_, nifty_JJ little_RB ,_, nice_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, perfect_JJ ,_, beautiful_JJ incredible_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, crowning_JJ ,_, grand_JJ ,_, great_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, greatest_JJS poetic_JJ ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 15_CD Neu_NNP -_: -_: real_JJ -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, final_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, huge_JJ ,_, obvious_JJ ,_, ultimate_JJ -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, unexpected_JJ ,_, cosmic_JJ 7_CD Neg_SYM -_: pos_SYM -_: -_: supreme_NN sucky_JJ 1_CD 6_CD 40_CD off_IN *_SYM ,_, go_VB easy_JJ on_IN *_SYM ,_, hold_VB back_RP *_SYM ,_, get_VB rid_VB of_IN *_SYM ,_, lose_VB *_SYM ,_, spare_JJ *_SYM ,_, resort_NN to_TO ,_, revert_VB ,_, spew_VB ,_, use_VB ,_, read_VB ,_, discuss_VB ,_, employ_VB ,_, listen_VB to_TO mention_VB ,_, escape_VB *_SYM stative_JJ verbs_NNS verbs_NNS of_IN perception_NN and_CC cognition_NN appreciate_VBP ,_, recognize_VBP ,_, like_IN ,_, do_VBP n't_RB appreciate_VB ,_, detect_VB ,_, detest_VB ,_, hate_VB ,_, sense_NN ,_, know_VB ,_, deserve_VB appreciate_VB ,_, enjoy_VB ,_, love_VB ,_, adore_VBP ,_, like_IN ,_, recognize_VB ,_, savor_VB ,_, hate_VB ,_, forget_VB *_SYM ,_, see_VB *_SYM ,_, consider_VB ,_, understand_VB ,_, remember_VB *_SYM ,_, be_VB well_RB aware_JJ of_IN *_SYM ,_, believe_VBP *_SYM ,_, get_VB ,_, note_VB *_SYM ,_, notice_VB *_SYM ,_, smell_NN *_SYM relational_JJ verbs_NNS hide_VBP behind_RB ,_, drip_NN with_IN ,_, laced_VBN with_IN ,_, covered_VBN with_IN drip_NN with_IN ,_, filled_VBN with_IN Table_NNP 2_CD clearly_RB demonstrates_VBZ the_DT validity_NN of_IN the_DT first_JJ expectation_NN -LRB-_-LRB- sarcasm_NN would_MD ,_, in_IN general_JJ ,_, enter_VBP into_IN fewer_JJR adjective_NN collocations_NNS compared_VBN to_TO irony_NN -RRB-_-RRB- ._.
+The_DT construction_NN adj_NN +_JJ sarcasm_NN appeared_VBD merely_RB 6_CD times_NNS in_IN the_DT corpus_NN which_WDT is_VBZ 85_CD %_NN less_JJR than_IN the_DT construction_NN adj_NN +_NN irony_NN ._.
+In_IN light_NN of_IN the_DT data_NNS ,_, the_DT second_JJ expectation_NN -LRB-_-LRB- when_WRB sarcasm_NN does_VBZ collocate_VB with_IN adjectives_NNS ,_, it_PRP collocates_VBZ more_RBR with_IN negative_JJ adjectives_NNS compared_VBN to_TO irony_NN -RRB-_-RRB- turns_VBZ out_RP to_TO be_VB an_DT understatement_NN ;_: not_RB only_RB does_VBZ sarcasm_NN collocate_NN more_RBR with_IN negative_JJ adjectives_NNS than_IN irony_NN ,_, but_CC ,_, in_IN fact_NN ,_, it_PRP only_RB collocates_VBZ with_IN negative_JJ adjectives_NNS ._.
+The_DT lack_NN of_IN both_DT positive_JJ and_CC neutral_JJ adjective_NN collocations_NNS could_MD ,_, in_IN theory_NN ,_, be_VB explained_VBN by_IN the_DT differing_VBG number_NN of_IN tokens_NNS in_IN the_DT corpus_NN ;_: however_RB ,_, intuitively_RB the_DT difference_NN does_VBZ not_RB seem_VB big_JJ enough_RB for_IN this_DT discrepancy_NN ._.
+It_PRP is_VBZ more_RBR plausible_JJ that_IN sarcasm_NN is_VBZ a_DT much_RB more_RBR content_JJ laden_JJ word_NN than_IN irony_NN which_WDT obviates_VBZ its_PRP$ ``_`` taking_VBG ''_'' a_DT range_NN of_IN different_JJ adjectives_NNS ._.
+In_IN the_DT same_JJ spirit_NN ,_, irony_NN seems_VBZ not_RB to_TO carry_VB this_DT unambiguous_JJ import_NN and_CC can_MD accommodate_VB a_DT fairly_RB wide_JJ range_NN of_IN adjectives_NNS ._.
+This_DT is_VBZ also_RB indicative_JJ of_IN the_DT polarity_NN of_IN the_DT words_NNS ;_: namely_RB that_IN whereas_IN sarcasm_NN connotes_VBZ negativity_NN -LRB-_-LRB- being_VBG faithful_NN to_TO its_PRP$ original_JJ sense_NN -RRB-_-RRB- ,_, irony_NN per_IN se_FW is_VBZ a_DT neutral_JJ term_NN acquiring_VBG a_DT specific_JJ meaning_NN and_CC polarity_NN only_RB when_WRB attached_VBN to_TO a_DT particular_JJ adjective_NN ._.
+Note_VB that_IN even_RB then_RB it_PRP can_MD maintain_VB its_PRP$ neutral_JJ sense_NN -LRB-_-LRB- e.g._FW real_JJ irony_NN ,_, ultimate_JJ irony_NN ,_, etc._FW -RRB-_-RRB- ._.
+Verbs_NNS appearing_VBG in_IN the_DT core_NN words_NNS '_POS neighborhood_NN in_IN the_DT range_NN of_IN 1L-4L_NN were_VBD considered_VBN too_RB ._.
+It_PRP was_VBD deemed_VBN necessary_JJ to_TO provide_VB this_DT range_NN so_RB that_IN phrasal_JJ verbs_NNS followed_VBN by_IN a_DT preposition_NN could_MD also_RB be_VB included_VBN -LRB-_-LRB- e.g._FW get_VB rid_VB of_IN the_DT sarcasm_NN -RRB-_-RRB- ._.
+Table_NNP 3_CD summarizes_VBZ the_DT findings_NNS providing_VBG the_DT verb_NN collocations_NNS with_IN information_NN on_IN their_PRP$ type_NN based_VBN on_IN Quirk_NNP et_FW al._FW -LRB-_-LRB- 1985_CD -RRB-_-RRB- ._.
+Overlapping_VBG verb_NN uses_NNS are_VBP boldfaced_JJ ._.
+*_SYM they_PRP take_VBP the_DT article_NN the_DT ._.
+Table_NNP 3_CD :_: Verb_NN collocations_NNS Notable_JJ observations_NNS are_VBP the_DT following_NN :_: Among_IN activity_NN verbs_NNS that_WDT collocate_VBP with_IN sarcasm_NN there_EX is_VBZ a_DT prevalence_NN of_IN imperative_JJ forms_NNS with_IN synonymous_JJ meanings_NNS to_TO which_WDT ,_, in_IN the_DT irony_NN column_NN ,_, only_RB one_CD verb_NN corresponds_NNS -LRB-_-LRB- i.e._FW lose_VBP -RRB-_-RRB- ._.
+The_DT same_JJ set_NN of_IN imperative_JJ forms_NNS in_IN the_DT sarcasm_NN column_NN is_VBZ responsible_JJ for_IN the_DT dominance_NN of_IN negative_JJ polarity_NN which_WDT once_RB again_RB is_VBZ not_RB present_JJ with_IN irony_NN ._.
+No_DT imperative_JJ form_NN actually_RB encourages_VBZ the_DT other_JJ person_NN to_TO employ_VB sarcasm_NN or_CC irony_NN instead_RB they_PRP actively_RB discourage_VBP it_PRP by_IN giving_VBG order_NN to_TO stop_VB -LRB-_-LRB- e.g._FW Verb_NN collocations_NNS Verb_NNP type_NN Sarcasm_NNP Irony_NNP dynamic_JJ verbs_NNS activity_NN verbs_NNS save_VBP *_SYM ,_, can_MD *_SYM ,_, cut_VBD *_SYM ,_, cut_VBD off_RP *_SYM ,_, stop_VB *_SYM ,_, skip_VB *_SYM ,_, turn_VB down_RP *_SYM ,_, drop_VB *_SYM ,_, kill_VBP *_SYM ,_, lay_VBD lose_VB *_SYM ,_, comment_NN on_IN ,_, talk_VB about_IN ,_, teach_VB ,_, laugh_NN at_IN ,_, state_NN ,_, go_VB for_IN *_SYM ,_, Noun_NN collocations_NNS sarcastic_JJ ironic_JJ animat_NN e_LS inanimate_JJ animat_NN e_LS inanimate_JJ little_JJ bug_NN ,_, know_VBP -_: it-all_NN ,_, harpy_JJ cousin_NN ,_, brother_NN ,_, older_JJR brother_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- one_CD ,_, self_NN little_JJ digs_NNS ,_, words_NNS ,_, comments_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, comment_NN ,_, commentary_NN ,_, remarks_NNS -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, remark_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, comeback_NN ,_, reference_NN slow_JJ clap_NN of_IN approval_NN ,_, applause_NN ,_, congratulations_NNS ,_, tone_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, chuckle_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, chuckling_VBG ,_, laugh_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, laughter_NN true_JJ colors_NNS ,_, sense_NN of_IN humor_NN ,_, wit_NN snide_JJ act_NN ,_, way_NN ,_, ways_NNS ,_, bad-girl_JJ -_: act_NN -_: statement_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, advice_NN ,_, commentary_NN ,_, prose_NN flavor_NN ,_, sense_NN ,_, touch_NN applause_NN twist_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, twists_NNS of_IN fate_NN ,_, circumstance_NN ,_, justice_NN ,_, demise_NN ,_, tragedy_NN ,_, symmetry_NN time_NN ,_, place_NN ,_, name_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, part_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, thing_NN -LRB-_-LRB- 20_CD -RRB-_-RRB- wit_NN ,_, humor_NN way_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- country_NN western_JJ songs_NNS ,_, hair_NN dryers_NNS ,_, jelly_RB bracelets_NNS save_VBP ,_, cut_VBD off_RP ,_, lose_VB ,_, etc._FW -RRB-_-RRB- ._.
+The_DT overarching_JJ use_NN of_IN metaphorical_JJ imperative_JJ forms_NNS is_VBZ striking_JJ and_CC awaits_VBZ future_JJ study_NN ._.
+Collocations_NNS with_IN irony_NN mostly_RB have_VBP to_TO do_VB with_IN speaking_NN -LRB-_-LRB- e.g._FW mention_NN ,_, comment_NN on_IN ,_, state_NN ,_, etc._FW -RRB-_-RRB- ._.
+At_IN the_DT same_JJ time_NN ,_, both_DT irony_NN and_CC sarcasm_NN can_MD both_DT be_VB enjoyed_VBN and_CC disliked_VBN as_IN the_DT box_NN of_IN verbs_NNS of_IN perception_NN and_CC cognition_NN shows_NNS ._.
+Interestingly_RB ,_, the_DT same_JJ box_NN contains_VBZ verbs_NNS that_IN ,_, upon_IN checking_VBG the_DT context_NN ,_, turn_VB out_RP to_TO be_VB in_IN 1st_CD person_NN singular_JJ ,_, whereas_IN this_DT exclusivity_NN is_VBZ not_RB characteristic_JJ of_IN the_DT other_JJ categories_NNS ._.
+Conversely_RB ,_, our_PRP$ sentiments_NNS about_IN sarcasm_NN and_CC irony_NN and_CC how_WRB we_PRP experience_VBP them_PRP tend_VB to_TO be_VB self-oriented_JJ ._.
+Furthermore_RB ,_, verbs_NNS with_IN sarcasm_NN have_VBP more_JJR to_TO do_VB with_IN emotions_NNS ;_: whereas_IN verbs_NNS with_IN irony_NN ,_, even_RB though_IN having_VBG overlaps_NNS with_IN sarcasm_NN ,_, are_VBP of_IN a_DT wider_JJR range_NN -LRB-_-LRB- e.g._FW consider_VB ,_, believe_VB ,_, get_VB ,_, etc._FW -RRB-_-RRB- ._.
+Overall_RB ,_, based_VBN on_IN the_DT verb_NN distribution_NN ,_, sarcasm_NN seems_VBZ to_TO be_VB the_DT less_RBR favorable_JJ notion_NN ._.
+4.2_CD Sarcastic_JJ versus_CC ironic_JJ The_DT adjectives_NNS sarcastic_JJ and_CC ironic_JJ yielded_VBD 247_CD and_CC 938_CD tokens_NNS ,_, respectively_RB ._.
+One_CD token_JJ was_VBD removed_VBN from_IN the_DT ironic_JJ category_NN due_JJ to_TO it_PRP being_VBG a_DT fragment_NN the_DT meaning_NN of_IN which_WDT could_MD not_RB be_VB deciphered_VBN ._.
+Consequently_RB ,_, the_DT token_JJ number_NN changed_VBD to_TO 937_CD ._.
+Firstly_RB ,_, the_DT noun_NN collocations_NNS were_VBD scrutinized_VBN ._.
+The_DT occurrences_NNS are_VBP collected_VBN in_IN Table_NNP 4_CD where_WRB they_PRP are_VBP divided_VBN into_IN animate_NN and_CC inanimate_JJ nouns_NNS ._.
+Numbers_NNS in_IN parentheses_NNS show_VBP how_WRB many_JJ times_NNS the_DT collocation_NN occurred_VBD if_IN it_PRP is_VBZ more_JJR than_IN one_CD ._.
+Overlapping_VBG items_NNS have_VBP been_VBN boldfaced_VBN ._.
+Classification_NN within_IN the_DT boxes_NNS -LRB-_-LRB- separated_VBN by_IN a_DT blank_JJ space_NN -RRB-_-RRB- was_VBD done_VBN according_VBG to_TO semantic_JJ subsets_NNS ,_, in_IN an_DT admittedly_RB flexible_JJ way_NN ._.
+Bednarek_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- points_VBZ out_RP the_DT arbitrariness_NN involved_VBN in_IN assigning_VBG labels_NNS to_TO disparate_JJ semantic_JJ categories_NNS ._.
+For_IN this_DT reason_NN ,_, labelling_VBG was_VBD omitted_VBN altogether_RB in_IN Table_NNP 4_CD and_CC was_VBD handled_VBN flexibly_RB in_IN Table_NNP 5_CD ._.
+General_NNP comments_NNS on_IN Table_NNP 4_CD will_MD ,_, however_RB ,_, make_VBP use_NN of_IN certain_JJ common_JJ headings_NNS for_IN the_DT sake_NN of_IN clarity_NN ._.
+Table_NNP 4_CD :_: Noun_NN collocations_NNS A_DT rather_RB conspicuous_JJ lack_NN of_IN animate_NN nouns_NNS is_VBZ noticeable_JJ in_IN the_DT ironic_JJ column_NN ,_, although_IN it_PRP is_VBZ feasible_JJ to_TO designate_VB humans_NNS as_IN ironic_JJ ._.
+This_DT lack_NN might_MD simply_RB be_VB accidental_JJ ,_, especially_RB because_IN a_DT closer_RBR analysis_NN of_IN the_DT corpus_NN reveals_VBZ that_IN ironic_JJ can_MD indeed_RB be_VB used_VBN as_IN a_DT human_JJ depicter_NN ,_, exemplified_VBN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- where_WRB the_DT relevant_JJ parts_NNS are_VBP boldfaced_JJ ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- Maybe_RB I_PRP was_VBD just_RB giving_VBG vent_VB to_TO all_PDT the_DT horrible_JJ things_NNS that_IN people_NNS have_VBP been_VBN saying_VBG about_IN me_PRP and_CC I_PRP was_VBD being_VBG ironic_JJ ._.
+The_DT occurrence_NN of_IN sarcastic_JJ with_IN animate_JJ nouns_NNS tells_VBZ us_PRP the_DT following_NN :_: i_FW -RRB-_-RRB- being_VBG sarcastic_JJ is_VBZ a_DT human_JJ property_NN -LRB-_-LRB- even_RB though_IN the_DT metaphorical_JJ uses_NNS ,_, such_JJ as_IN little_JJ bug_NN might_MD suggest_VB differently_RB at_IN first_JJ sight_NN -RRB-_-RRB- ,_, ii_FW -RRB-_-RRB- its_PRP$ semantic_JJ preference_NN extends_VBZ to_TO family_NN relations_NNS apart_RB from_IN general_JJ references_NNS to_TO a_DT person_NN ,_, iii_FW -RRB-_-RRB- and_CC it_PRP works_VBZ with_IN metaphorical_JJ designations_NNS of_IN a_DT person_NN ._.
+With_IN regard_NN to_TO the_DT inanimate_JJ columns_NNS ,_, a_DT comparison_NN is_VBZ possible_JJ between_IN noun_NN collocations_NNS with_IN sarcastic_JJ and_CC ironic_JJ ._.
+Both_DT sarcastic_JJ and_CC ironic_JJ appear_VBP adjacent_JJ to_TO language-related_JJ words_NNS -LRB-_-LRB- e.g._FW comment_NN ,_, reference_NN ,_, prose_NN ,_, advice_NN ,_, etc._FW -RRB-_-RRB- ._.
+The_DT prevalence_NN of_IN paralinguistic_JJ signals_NNS -LRB-_-LRB- e.g._FW slow_JJ clap_NN of_IN approval_NN ,_, chuckle_NN ,_, tone_NN ,_, etc._FW -RRB-_-RRB- with_IN sarcastic_JJ is_VBZ worth_JJ mentioning_VBG ._.
+Collocations_NNS with_IN ironic_JJ referring_VBG to_TO aspects_NNS of_IN life_NN -LRB-_-LRB- e.g._FW twists_NNS of_IN fate_NN ,_, circumstance_NN ,_, etc._FW -RRB-_-RRB- can_MD not_RB be_VB found_VBN with_IN sarcastic_JJ ._.
+Personality_NN traits_NNS -LRB-_-LRB- e.g._FW sense_NN of_IN humor_NN -RRB-_-RRB- and_CC deeds_NNS -LRB-_-LRB- e.g._FW snide_FW act_NN -RRB-_-RRB- may_MD be_VB sarcastic_JJ ,_, whereas_IN abstract_JJ concepts_NNS -LRB-_-LRB- e.g._FW time_NN -RRB-_-RRB- along_IN with_IN objects_NNS -LRB-_-LRB- e.g._FW jelly_FW bracelets_NNS -RRB-_-RRB- may_MD be_VB ironic_JJ ._.
+Nouns_NNS in_IN the_DT sarcastic_JJ column_NN promote_VB categorization_NN in_IN a_DT more_RBR straightforward_JJ manner_NN than_IN nouns_NNS in_IN the_DT ironic_JJ column_NN due_JJ to_TO the_DT more_RBR clear-cut_JJ semantic_JJ subsets_NNS ._.
+Table_NNP 5_CD illustrates_VBZ a_DT different_JJ angle_NN where_WRB classification_NN is_VBZ done_VBN based_VBN on_IN the_DT identity_NN of_IN the_DT referent_NN whether_IN it_PRP is_VBZ human_JJ -LRB-_-LRB- H_NNP -RRB-_-RRB- or_CC non-human_JJ -LRB-_-LRB- NH_NNP -RRB-_-RRB- ,_, regardless_RB of_IN collocational_JJ behavior_NN ._.
+The_DT non-human_JJ category_NN for_IN sarcastic_JJ is_VBZ further_JJ narrowed_VBN down_RP into_IN linguistic_JJ -LRB-_-LRB- L_NNP -RRB-_-RRB- -LRB-_-LRB- comment_NN ,_, remark_NN ,_, etc._FW -RRB-_-RRB- ,_, paralinguistic_JJ -LRB-_-LRB- P_NNP -RRB-_-RRB- -LRB-_-LRB- laughter_NN ,_, applause_NN ,_, etc._FW -RRB-_-RRB- ,_, and_CC other_JJ instances_NNS -LRB-_-LRB- O_NNP -RRB-_-RRB- -LRB-_-LRB- personality_NN trait_NN ,_, deed_NN ,_, etc._FW -RRB-_-RRB- ;_: and_CC for_IN ironic_JJ ,_, life_NN -LRB-_-LRB- LIFE_NNP -RRB-_-RRB- -LRB-_-LRB- situation_NN ,_, turn_NN of_IN events_NNS ,_, etc._FW -RRB-_-RRB- ,_, linguistic_JJ -LRB-_-LRB- L_NNP -RRB-_-RRB- ,_, paralinguistic_JJ -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, and_CC other_JJ instances_NNS -LRB-_-LRB- O_NNP -RRB-_-RRB- -LRB-_-LRB- object_NN ,_, concept_NN ,_, etc._FW -RRB-_-RRB- ._.
+Here_RB ,_, linguistic_JJ implies_VBZ anything_NN uttered_VBD via_IN words_NNS ,_, whereas_IN paralinguistic_JJ implies_VBZ anything_NN conveyed_JJ via_IN other_JJ means_NNS than_IN words_NNS which_WDT can_MD range_VB from_IN body_NN language_NN and_CC facial_JJ gestures_NNS to_TO tone_NN and_CC pitch_NN ._.
+Identity_NN of_IN referent_NN sarcastic_JJ ironic_JJ H_NNP NH_NNP H_NNP NH_NNP L_NNP P_NNP O_NNP LIFE_NNP L_NNP P_NNP O_NNP T_NNP o_NN t_VBD a_DT l_NN 18_CD 29_CD 21_CD 9_CD 7_CD 884_CD 33_CD 1_CD 1_CD 247_CD 937_CD Table_NNP 5_CD :_: Identity_NN of_IN referent_NN There_EX are_VBP some_DT remarkable_JJ differences_NNS between_IN the_DT numbers_NNS ._.
+It_PRP is_VBZ immediately_RB noticeable_JJ that_IN the_DT referent_NN of_IN ironic_JJ can_MD indeed_RB be_VB a_DT human_JJ even_RB though_IN no_DT noun_NN collocation_NN was_VBD found_VBN in_IN the_DT corpus_NN to_TO support_VB this_DT ._.
+Nevertheless_RB ,_, it_PRP is_VBZ more_RBR frequent_JJ to_TO refer_VB to_TO a_DT human_JJ as_IN being_VBG sarcastic_JJ ._.
+A_DT further_JJ remark_NN on_IN intentionality_NN is_VBZ worthwhile_JJ ._.
+As_IN far_RB as_IN pragmatics_NNS is_VBZ concerned_VBN ,_, there_EX is_VBZ an_DT underlying_VBG assumption_NN that_IN sarcasm_NN differs_VBZ from_IN irony_NN in_IN terms_NNS of_IN the_DT former_JJ being_VBG possible_JJ only_RB by_IN intention_NN -LRB-_-LRB- Camp_NNP ,_, 2012_CD ;_: Sanders_NNP ,_, 2013_CD -RRB-_-RRB- ,_, whereas_IN the_DT latter_JJ happening_VBG unintentionally_RB from_IN time_NN to_TO time_NN ._.
+Evidence_NN for_IN unintentionality_NN would_MD manifest_JJ if_IN someone_NN other_JJ than_IN the_DT speaker_NN would_MD question_VB if_IN the_DT speaker_NN was_VBD being_VBG ironic_JJ ,_, for_IN instance_NN ._.
+The_DT corpus_JJ results_NNS do_VBP not_RB display_VB examples_NNS of_IN this_DT sort_NN ;_: instead_RB human_JJ referents_NNS are_VBP ironic_JJ in_IN an_DT either_RB self_NN -_: proclaimed_JJ fashion_NN ,_, such_JJ as_IN in_IN example_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, or_CC they_PRP are_VBP declared_VBN thus_RB by_IN someone_NN else_RB as_IN shown_VBN in_IN example_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- where_WRB the_DT relevant_JJ parts_NNS are_VBP boldfaced_JJ ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- A_DT :_: And_CC wanting_VBG to_TO do_VB this_DT for_IN the_DT money_NN --_: heavens_NNS ._.
+That_DT 's_VBZ the_DT furthest_JJS thing_NN from_IN my_PRP$ mind_NN ._.
+B_NNP :_: I_PRP 'll_MD bet_VB you_PRP were_VBD just_RB being_VBG ironic_JJ again_RB ._.
+The_DT most_RBS striking_JJ difference_NN is_VBZ doubtless_JJ the_DT inclusion_NN of_IN a_DT separate_JJ category_NN in_IN the_DT non-human_JJ ironic_JJ column_NN ,_, namely_RB that_IN of_IN life_NN ._.
+It_PRP is_VBZ a_DT deliberately_RB vague_JJ term_NN that_WDT comprises_VBZ all_DT kinds_NNS of_IN expressions_NNS that_WDT relate_VBP to_TO some_DT aspect_NN of_IN this_DT abstract_JJ concept_NN ._.
+Once_RB again_RB we_PRP see_VBP how_WRB only_RB ironic_JJ may_MD be_VB used_VBN in_IN reference_NN to_TO life_NN but_CC not_RB sarcastic_JJ ._.
+Furthermore_RB ,_, ironic_JJ seems_VBZ to_TO be_VB predominantly_RB used_VBN in_IN life-related_JJ phrases_NNS and_CC significantly_RB less_RBR in_IN linguistic_JJ ,_, paralinguistic_JJ ,_, and_CC other_JJ types_NNS ._.
+In_IN sum_NN ,_, it_PRP can_MD be_VB said_VBD that_IN sarcastic_JJ tends_VBZ to_TO be_VB associated_VBN with_IN the_DT description_NN of_IN people_NNS ,_, whereas_IN ironic_JJ is_VBZ reserved_VBN for_IN the_DT description_NN of_IN aspects_NNS of_IN life_NN ._.
+Finally_RB ,_, Table_NNP 6_CD gives_VBZ an_DT overview_NN of_IN the_DT adverbs_NNS collocating_VBG with_IN sarcastic_JJ and_CC ironic_JJ divided_VBN into_IN types_NNS of_IN adverbs_NNS ._.
+Numbers_NNS in_IN parentheses_NNS show_VBP how_WRB many_JJ times_NNS the_DT collocation_NN occurred_VBD if_IN it_PRP is_VBZ more_JJR than_IN one_CD ._.
+Overlapping_VBG adverb_NN uses_NNS are_VBP boldfaced_JJ ._.
+meaning_VBG that_DT scaling_VBG upwards_NNS from_IN an_DT assumed_JJ norm_NN -LRB-_-LRB- Quirk_NNP et_FW al._FW ,_, 1985_CD -RRB-_-RRB- is_VBZ more_RBR common_JJ ,_, and_CC it_PRP is_VBZ more_RBR common_JJ with_IN ironic_JJ ._.
+4.3_CD Sarcastically_RB versus_CC ironically_RB The_DT adverbs_NNS sarcastically_RB and_CC ironically_RB yielded_VBD 191_CD and_CC 82_CD tokens_NNS ,_, respectively_RB ._.
+In_IN the_DT case_NN of_IN ironically_RB ,_, 3_CD tokens_NNS were_VBD duplicates_NNS and_CC were_VBD thus_RB discarded_VBN ._.
+As_IN a_DT result_NN ,_, the_DT token_JJ number_NN changed_VBD to_TO 79_CD ._.
+Examples_NNS in_IN Table_NNP 7_CD were_VBD grouped_VBN according_VBG to_TO their_PRP$ being_VBG representative_NN of_IN linguistic_JJ -LRB-_-LRB- L_NNP -RRB-_-RRB- or_CC paralinguistic_JJ -LRB-_-LRB- P_NNP -RRB-_-RRB- usage_NN ._.
+Linguistic_JJ use_NN was_VBD further_JJ divided_VBN into_IN groups_NNS where_WRB the_DT adverb_NN referred_VBD to_TO the_DT utterance_NN -LRB-_-LRB- U_NNP -RRB-_-RRB- or_CC to_TO a_DT situation_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- ._.
+The_DT word_NN situation_NN is_VBZ meant_VBN in_IN a_DT general_JJ sense_NN ;_: synonyms_NNS would_MD include_VB turn_NN of_IN event_NN and_CC happening_VBG ._.
+Striking_VBG differences_NNS are_VBP observable_JJ between_IN the_DT behavior_NN of_IN sarcastically_RB and_CC ironically_RB in_IN both_DT linguistic_JJ as_RB well_RB as_IN paralinguistic_JJ terms_NNS ._.
+Adverb_NNP collocations_NNS type_NN of_IN adverb_NN sarcastic_JJ ironic_JJ amplifier_NN very_RB -LRB-_-LRB- 3_LS -RRB-_-RRB- unbelievably_RB ,_, sadly_RB ,_, cruelly_RB ,_, incredibly_RB ,_, certainly_RB ,_, particularly_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, wonderfully_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, perfectly_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, eerily_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, totally_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, very_RB -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, really_RB -LRB-_-LRB- 13_CD -RRB-_-RRB- downtoner_NN pretty_RB pretty_RB -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, quite_RB -LRB-_-LRB- 3_LS -RRB-_-RRB- Adverbial_JJ behavior_NN sarcastically_RB ironically_RB L_NNP P_NNP L_NNP P_NNP U_NNP S_NNP 187_CD U_NNP S_NNP 1_CD T_NNP o_NN t_VBD a_DT l_NN 4_CD 0_CD 2_CD 76_CD 191_CD 79_CD Table_NNP 6_CD :_: Adverb_NNP collocations_NNS What_WP stands_VBZ out_RP clearly_RB is_VBZ the_DT prevalence_NN of_IN the_DT adv_NN +_NN ironic_JJ construction_NN ._.
+The_DT content_JJ laden_JJ nature_NN of_IN sarcasm_NN has_VBZ been_VBN touched_VBN upon_IN before_IN -LRB-_-LRB- see_VB section_NN 4.1_CD -RRB-_-RRB- ,_, and_CC it_PRP seems_VBZ to_TO be_VB confirmed_VBN in_IN its_PRP$ adverbial_JJ form_NN as_RB well_RB ._.
+Referring_VBG to_TO -LRB-_-LRB- usually_RB -RRB-_-RRB- someone_NN as_IN sarcastic_JJ is_VBZ apparently_RB sufficient_JJ to_TO convey_VB the_DT speaker_NN 's_POS attitude_NN ;_: whereas_IN the_DT equivocality_NN of_IN irony_NN warrants_NNS the_DT use_NN of_IN a_DT much_JJ wider_JJR range_NN of_IN adverbs_NNS ._.
+Amplifiers_NNS are_VBP in_IN a_DT more_RBR privileged_JJ position_NN compared_VBN to_TO downtoners_NNS ,_, Table_NNP 7_CD :_: Adverbial_JJ behavior_NN What_WP can_MD be_VB asserted_VBN in_IN general_JJ based_VBN on_IN these_DT numbers_NNS is_VBZ that_IN neither_DT adverb_NN is_VBZ particularly_RB prominent_JJ in_IN referring_VBG to_TO the_DT utterance_NN even_RB though_IN it_PRP is_VBZ possible_JJ to_TO do_VB so_RB ,_, which_WDT apparently_RB happens_VBZ in_IN cases_NNS where_WRB the_DT irony_NN or_CC sarcasm_NN has_VBZ not_RB been_VBN recognized_VBN or_CC there_EX is_VBZ a_DT chance_NN their_PRP$ not_RB being_VBG recognized_VBN by_IN the_DT listener_NN ;_: therefore_RB ,_, the_DT speaker_NN feels_VBZ the_DT need_NN to_TO let_VB them_PRP know_VB how_WRB they_PRP meant_VBD what_WP they_PRP said_VBD ._.
+Examples_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 4_LS -RRB-_-RRB- are_VBP representative_NN of_IN these_DT cases_NNS ._.
+Relevant_JJ parts_NNS are_VBP boldfaced_JJ ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- A_DT :_: Oh_UH ,_, boy_NN ,_, am_VBP I_PRP going_VBG to_TO have_VB fun_NN with_IN this_DT one_CD ._.
+B_NNP :_: What_WP do_VBP you_PRP mean_VB ,_, fun_NN ?_.
+A_DT :_: I_PRP just_RB --_: I_PRP meant_VBD it_PRP sarcastically_RB ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- Well_UH ,_, I_PRP guess_VBP I_PRP did_VBD n't_RB describe_VB him_PRP too_RB accurately_RB --_: she_PRP said_VBD ironically_RB ._.
+As_IN for_IN depicting_VBG a_DT situation_NN ,_, ironically_RB seems_VBZ to_TO be_VB the_DT only_JJ available_JJ option_NN ._.
+Sarcastically_RB is_VBZ not_RB used_VBN even_RB once_RB ,_, which_WDT is_VBZ suggestive_JJ of_IN the_DT fact_NN that_IN perhaps_RB it_PRP is_VBZ not_RB an_DT adequate_JJ word_NN for_IN describing_VBG a_DT situation_NN ._.
+This_DT tendency_NN would_MD very_RB much_RB fall_VB in_IN line_NN with_IN what_WP previous_JJ research_NN holds_VBZ about_IN irony_NN and_CC sarcasm_NN ._.
+Namely_RB ,_, that_IN whereas_IN irony_NN may_MD work_VB both_DT verbally_RB and_CC in_IN describing_VBG situations_NNS ,_, sarcasm_NN is_VBZ confined_VBN to_TO the_DT verbal_JJ realm_NN ,_, be_VB it_PRP linguistic_JJ or_CC paralinguistic_JJ in_IN nature_NN ._.
+Example_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- shows_VBZ how_WRB ironically_RB is_VBZ normally_RB used_VBN to_TO describe_VB an_DT event_NN ._.
+It_PRP is_VBZ easy_JJ to_TO see_VB that_DT substituting_VBG sarcastically_RB here_RB would_MD result_VB in_IN infelicity_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- But_CC then_RB ,_, ironically_RB ,_, um_NN ..._: when_WRB you_PRP 're_VBP about_IN to_TO lose_VB someone_NN you_PRP really_RB love_VBP ..._: you_PRP realize_VBP how_WRB precious_JJ they_PRP are_VBP to_TO you_PRP ._.
+At_IN last_JJ ,_, in_IN terms_NNS of_IN paralinguistic_JJ signals_NNS ,_, sarcastically_RB well_RB outnumbers_VBZ ironically_RB ;_: however_RB ,_, the_DT one_CD instance_NN in_IN which_WDT ironically_RB can_MD also_RB be_VB used_VBN indicates_VBZ that_IN it_PRP is_VBZ not_RB impossible_JJ for_IN the_DT latter_JJ to_TO be_VB used_VBN in_IN such_JJ context_NN ._.
+Example_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- shows_VBZ the_DT one_CD instance_NN of_IN such_JJ use_NN in_IN the_DT corpus_NN with_IN relevant_JJ parts_NNS boldfaced_VBD .1_CD In_IN contrast_NN ,_, the_DT ironic_JJ tone_NN does_VBZ not_RB manifest_JJ in_IN the_DT corpus_NN which_WDT mirrors_VBZ what_WP some_DT previous_JJ studies_NNS say_VBP about_IN the_DT non-existence_NN of_IN it_PRP -LRB-_-LRB- e.g._FW Attardo_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+This_DT implies_VBZ that_IN one_CD significant_JJ distinguishing_VBG factor_NN between_IN irony_NN and_CC sarcasm_NN is_VBZ that_IN only_RB the_DT latter_JJ has_VBZ a_DT concomitant_JJ tone_NN ._.
+Choosing_VBG to_TO convey_VB a_DT message_NN sarcastically_RB is_VBZ a_DT personal_JJ choice_NN which_WDT also_RB entails_VBZ harsh_JJ criticism_NN towards_IN someone_NN -LRB-_-LRB- invariably_RB a_DT human_JJ -RRB-_-RRB- and_CC thus_RB has_VBZ to_TO be_VB necessarily_RB closely_RB associated_VBN with_IN the_DT person_NN ``_`` performing_VBG the_DT sarcastic_JJ act_NN ''_'' ,_, whereas_IN ironically_RB as_IN a_DT depicter_NN of_IN a_DT situation_NN seems_VBZ to_TO highlight_VB some_DT universal_JJ phenomenon_NN that_WDT would_MD arguably_RB be_VB perceived_VBN similarly_RB by_IN all_DT human_JJ beings_NNS ._.
+Not_RB to_TO mention_VB the_DT fact_NN that_IN recognizing_VBG irony_NN in_IN a_DT situation_NN may_MD not_RB imply_VB a_DT critical_JJ attitude_NN towards_IN the_DT situation_NN itself_PRP ._.
+5_CD Conclusion_NNP The_DT focus_NN in_IN this_DT article_NN was_VBD on_IN the_DT collocational_JJ characteristics_NNS of_IN explicit_JJ sarcasm_NN and_CC irony_NN and_CC its_PRP$ variants_NNS ._.
+The_DT two_CD terms_NNS are_VBP closely-related_VBN ;_: however_RB ,_, are_VBP not_RB synonymous_JJ which_WDT idea_NN is_VBZ in_IN contrast_NN with_IN how_WRB the_DT literature_NN usually_RB treats_VBZ them_PRP ._.
+It_PRP was_VBD hypothesized_VBN that_IN explicit_JJ uses_NNS of_IN sarcasm_NN and_CC irony_NN -LRB-_-LRB- and_CC their_PRP$ lemmas_NNS -RRB-_-RRB- would_MD shed_VB light_NN on_IN their_PRP$ distinguishing_NN features_NNS ._.
+Certain_JJ findings_NNS support_VBP previous_JJ literature_NN ,_, while_IN others_NNS add_VBP new_JJ information_NN ._.
+The_DT overall_JJ conclusion_NN is_VBZ that_IN irony_NN and_CC its_PRP$ lemmas_NNS as_RB well_RB as_IN sarcasm_NN and_CC its_PRP$ lemmas_NNS ,_, respectively_RB ,_, represent_VBP similar_JJ behavior_NN in_IN the_DT corpus_NN ._.
+The_DT most_RBS important_JJ observations_NNS are_VBP the_DT following_NN :_: i_FW -RRB-_-RRB- sarcasm_NN is_VBZ a_DT more_RBR content_JJ laden_JJ concept_NN with_IN a_DT default_NN negative_JJ polarity_NN which_WDT obviates_VBZ its_PRP$ taking_VBG a_DT wide_JJ range_NN of_IN adjectives_NNS ,_, while_IN irony_NN is_VBZ a_DT more_RBR neutral_JJ term_NN and_CC thus_RB needs_VBZ an_DT adjective_NN to_TO determine_VB its_PRP$ polarity_NN ,_, ii_FW -RRB-_-RRB- sarcastic_JJ attracts_VBZ verbs_NNS in_IN the_DT imperative_JJ mood_NN ,_, iii_FW -RRB-_-RRB- the_DT sentiments_NNS and_CC emotions_NNS for_IN both_DT irony_NN and_CC sarcasm_NN are_VBP self-oriented_JJ ,_, iv_NN -RRB-_-RRB- the_DT ironic_JJ +_NN animate_VBP N_NNP construction_NN does_VBZ not_RB occur_VB ,_, v_VB -RRB-_-RRB- ironic_JJ has_VBZ a_DT tendency_NN to_TO refer_VB to_TO aspects_NNS of_IN life_NN ,_, while_IN sarcastic_JJ has_VBZ a_DT tendency_NN to_TO refer_VB to_TO paralinguistic_JJ signals_NNS and_CC people_NNS ,_, and_CC vi_FW -RRB-_-RRB- ironically_RB is_VBZ used_VBN to_TO depict_VB situations_NNS ,_, while_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- I_PRP thought_VBD you_PRP were_VBD trying_VBG to_TO protect_VB me_PRP ._.
+Not_RB some_DT filthy_JJ affair_NN ._.
+-LSB-_NNP Laughs_VBZ ironically_RB -RSB-_JJ ._.
+There_EX is_VBZ mention_NN of_IN a_DT certain_JJ sarcastic_JJ tone_NN in_IN the_DT literature_NN -LRB-_-LRB- Haiman_NNP ,_, 1997_CD ;_: Creusere_NNP ,_, 1999_CD ;_: Woodland_NNP and_CC Voyer_NNP ,_, 2011_CD -RRB-_-RRB- ,_, which_WDT is_VBZ supported_VBN by_IN the_DT corpus_NN examples_NNS the_DT majority_NN of_IN which_WDT do_VBP indeed_RB refer_VBP to_TO tone_NN ._.
+Example_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- demonstrates_VBZ this_DT tendency_NN with_IN the_DT relevant_JJ part_NN boldfaced_JJ ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- -LSB-_NNP Sarcastically_NNP -RSB-_NNP You_PRP 're_VBP real_JJ concerned_JJ about_IN your_PRP$ mom_NN ,_, huh_VB ?_.
+1_CD It_PRP is_VBZ noteworthy_JJ that_IN the_DT example_NN may_MD not_RB be_VB the_DT most_RBS accurate_JJ use_NN of_IN ironically_RB modifying_VBG laugh_NN ._.
+sarcastically_RB is_VBZ used_VBN to_TO refer_VB to_TO paralinguistic_JJ signals_NNS ,_, especially_RB one_CD 's_POS tone_NN ._.
+The_DT explicit_JJ manifestations_NNS of_IN sarcasm_NN and_CC irony_NN indicate_VBP that_IN the_DT former_JJ is_VBZ being_VBG more_RBR human-oriented_JJ ,_, while_IN the_DT latter_NN is_VBZ more_RBR situation-oriented_JJ ._.
+These_DT findings_NNS carry_VBP promise_NN for_IN further_JJ research_NN ._.
+Acknowledgments_NNS Do_VBP not_RB number_NN the_DT acknowledgment_NN section_NN ._.
+Do_VBP not_RB include_VB this_DT section_NN when_WRB submitting_VBG your_PRP$ paper_NN for_IN review_NN ._.
+References_NNS Salvatore_NNP Attardo_NNP ._.
+2000_CD ._.
+Irony_NN as_IN inappropriateness_NN ,_, Journal_NNP of_IN Pragmatics_NNPS ,_, 32_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :793_SYM -_: 826_CD ._.
+Salvatore_NNP Attardo_NNP ,_, Jodi_NNP Eisterhold_NNP ,_, Jennifer_NNP Hay_NNP ,_, and_CC Isabella_NNP Poggi_NNP ._.
+2003_CD ._.
+Multimodal_JJ markers_NNS of_IN irony_NN and_CC sarcasm_NN ,_, Humor_NNP 16_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :243_CD --_: 260_CD ._.
+Katharina_NNP Barbe_NNP ._.
+1993_CD ._.
+``_`` Is_VBZ n't_RB it_PRP ironic_JJ that_IN ..._: ''_'' :_: Explicit_JJ irony_NN markers_NNS ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 20_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :579_CD -590_CD ._.
+Monika_NNP Bednarek_NNP ._.
+2008_CD ._.
+Semantic_JJ preference_NN and_CC semantic_JJ prosody_NN re-examined_VBD ._.
+Corpus_NNP Linguistics_NNPS and_CC Linguistic_NNP Theory_NNP ,_, 4_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :119_CD -139_CD ._.
+Elizabeth_NNP Camp_NNP ._.
+2012_CD ._.
+Sarcasm_NNP ,_, Pretense_NNP ,_, and_CC the_DT Semantics/Pragmatics_NNP Distinction_NNP ._.
+Noûs_NNP ,_, 46_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :587_CD --_: 634_CD ._.
+Marlena_NNP A._NNP Creusere_NNP ._.
+2000_CD ._.
+A_DT Developmental_JJ Test_NN of_IN Theoretical_JJ Perspectives_NNS on_IN the_DT Understanding_NN of_IN Verbal_NNP Irony_NNP :_: Children_NNP 's_POS Recognition_NN of_IN Allusion_NNP and_CC Pragmatic_NNP Insincerity_NNP ._.
+Metaphor_NN and_CC Symbol_NN ,_, 15_CD -LRB-_-LRB- 1_LS -_: 2_LS -RRB-_-RRB- :29_CD -45_CD ._.
+John_NNP Haiman_NNP ._.
+1998_CD ._.
+Talk_NN is_VBZ Cheap_JJ ._.
+Sarcasm_NNP ,_, Alienation_NNP ,_, and_CC the_DT Evolution_NN of_IN Language_NN ._.
+Oxford_NNP University_NNP Press_NNP ,_, New_NNP York_NNP ._.
+Irony_NN ._.
+2001_CD ._.
+Online_NNP Etymology_NNP Dictionary_NNP ._.
+http://www.etymonline.com/index.php?term=irony_NN ._.
+Accessed_VBN 2015-08-01_JJ -RRB-_-RRB- ._.
+Robert_NNP J._NNP Kreuz_NNP and_CC Sam_NNP Glucksberg_NNP ._.
+1989_CD ._.
+How_WRB to_TO Be_VB Sarcastic_JJ :_: The_DT Reminder_NNP Theory_NNP of_IN Verbal_NNP Irony_NNP ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, 118_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :374_CD -386_CD ._.
+Robert_NNP J._NNP Kreuz_NNP ._.
+2000_CD ._.
+The_DT Production_NN and_CC Processing_NNP of_IN Verbal_NNP Irony_NNP ._.
+Metaphor_NN and_CC Symbol_NN ,_, 15_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :99_SYM -_: 107_CD ._.
+Christopher_NNP J._NNP Lee_NNP and_CC Albert_NNP N._NNP Katz_NNP ._.
+1998_CD ._.
+The_DT Differential_NNP Role_NNP of_IN Ridicule_NNP in_IN Sarcasm_NNP and_CC Irony_NNP ._.
+Metaphor_NN and_CC Symbol_NN ,_, 13_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD -15_CD ._.
+John_NNP S._NNP Leggitt_NNP and_CC Raymond_NNP W._NNP Gibbs_NNP ._.
+2000_CD ._.
+Emotional_JJ Reactions_NNS to_TO Verbal_NNP Irony_NNP ._.
+Discourse_NN Processes_NNS ,_, 29_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD -24_CD ._.
+David_NNP C._NNP Littman_NNP and_CC Jacob_NNP L._NNP Mey_NNP ._.
+1991_CD ._.
+The_DT nature_NN of_IN irony_NN :_: Toward_IN a_DT computational_JJ model_NN of_IN irony_NN ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 15_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :131_CD -151_CD ._.
+Joan_NNP Lucariello_NNP ._.
+1994_CD ._.
+Situational_JJ irony_NN :_: A_DT concept_NN of_IN events_NNS gone_VBN awry_RB ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, 123_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :129_CD -145_CD ._.
+Douglas_NNP C._NNP Muecke_NNP ._.
+-LRB-_-LRB- 1970_CD -RRB-_-RRB- ._.
+Irony_NN ._.
+Methuen_NNP Publishing_NNP Ltd_NNP ,_, London_NNP ,_, UK_NNP ._.
+Alan_NNP Partington_NNP ._.
+2007_CD ._.
+Irony_NN and_CC reversal_NN of_IN evaluation_NN ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 39_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- :1547_CD -1569_CD ._.
+Randolph_NNP Quirk_NNP ,_, Sidney_NNP Greenbaum_NNP ,_, Geoffrey_NNP Leech_NNP ,_, and_CC Jan_NNP Svartvik_NNP ._.
+1985_CD ._.
+A_DT Comprehensive_NNP Grammar_NNP of_IN the_DT English_NNP Language_NN ._.
+Longman_NNP ,_, New_NNP York_NNP ._.
+Patricia_NNP Rockwell_NNP ._.
+2005_CD ._.
+Sarcasm_NNP on_IN television_NN talk_NN shows_NNS :_: Determining_VBG speaker_NN intent_NN through_IN verbal_JJ and_CC nonverbal_JJ cues_NNS ._.
+In_IN Anita_NNP V._NNP Clark_NNP ,_, editor_NN ,_, Psychology_NNP of_IN Moods_NNPS ._.
+Nova_NNP Science_NNP Publishers_NNPS ,_, New_NNP York_NNP ,_, pages_NNS 109-122_CD ._.
+Robert_NNP E._NNP Sanders_NNP ._.
+2013_CD ._.
+The_DT duality_NN of_IN speaker_NN meaning_NN :_: What_WP makes_VBZ self-repair_NN ,_, insincerity_NN ,_, and_CC sarcasm_NN possible_JJ ._.
+Journal_NNP of_IN Pragmatics_NNPS 48_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :112_SYM -_: 122_CD ._.
+Sarcasm_NNP ._.
+2001_CD ._.
+Online_NNP Etymology_NNP Dictionary_NNP ._.
+http://www.etymonline.com/index.php?allowed_in_f_JJ rame_NN =_SYM 0_CD &_CC search_NN =_SYM sarcasm_NN &_CC searchmode_NN =_SYM none_NN ._.
+-LRB-_-LRB- accessed_VBN 2015-08-01_CD -RRB-_-RRB- ._.
+Dan_NNP Sperber_NNP and_CC Deidre_NNP Wilson_NNP ._.
+1981_CD ._.
+Irony_NN and_CC the_DT Use-Mention_NNP Distinction_NNP ._.
+In_IN Peter_NNP Cole_NNP ,_, editor_NN ,_, Radical_NNP Pragmatics_NNPS ._.
+Academic_NNP Press_NNP ,_, New_NNP York_NNP ,_, pages_NNS 295-318_CD ._.
+TVMegaSiteInc_NNP ._.
+2003_CD ._.
+http://tvmegasite.net/day/transcripts.shtml_NN ._.
+-LRB-_-LRB- accessed_VBN 2015-08-01_CD -RRB-_-RRB- ._.
+Akira_NNP Utsumi_NNP ._.
+2000_CD ._.
+Verbal_JJ irony_NN as_IN implicit_JJ display_NN of_IN ironic_JJ environment_NN :_: Distinguishing_VBG ironic_JJ utterances_NNS from_IN nonirony_JJ ,_, Journal_NNP of_IN Pragmatics_NNPS ,_, 32_CD -LRB-_-LRB- 12_CD -RRB-_-RRB- :1777_SYM -_: 1806_CD ._.
+Jennifer_NNP Woodland_NNP and_CC Daniel_NNP Voyer_NNP ._.
+2011_CD ._.
+Context_NN and_CC Intonation_NN in_IN the_DT Perception_NN of_IN Sarcasm_NNP ,_, Metaphor_NNP and_CC Symbol_NNP ,_, 26_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :227_CD --_: 239_CD ._.
+relevant_JJ

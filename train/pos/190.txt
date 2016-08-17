@@ -1,0 +1,447 @@
+Finding_VBG the_DT Origin_NN of_IN a_DT Translated_VBN Historical_NNP Document_NNP Abstract_NNP Gospels_NNPS are_VBP one_CD type_NN of_IN translated_VBN histori_NN -_: cal_NN document_NN ._.
+There_EX are_VBP many_JJ versions_NNS of_IN the_DT same_JJ Gospel_NN that_WDT have_VBP been_VBN translated_VBN from_IN the_DT original_JJ ,_, or_CC from_IN another_DT Gospel_NNP that_WDT has_VBZ already_RB been_VBN translated_VBN into_IN a_DT dif_NN -_: ferent_JJ language_NN ._.
+Nowadays_RB ,_, it_PRP is_VBZ difficult_JJ to_TO determine_VB the_DT language_NN of_IN the_DT original_JJ Gospel_NNP from_IN where_WRB these_DT Gospels_NNS were_VBD translated_VBN ._.
+In_IN this_DT paper_NN we_PRP use_VBP a_DT super_JJ -_: vised_VBN machine_NN learning_VBG technique_NN to_TO deter_VB -_: mine_NN the_DT origin_NN of_IN a_DT version_NN of_IN the_DT Geor_NNP -_: gian_JJ Gospel_NNP ._.
+1_CD Introduction_NNP Translation_NN is_VBZ a_DT process_NN of_IN rewriting_VBG an_DT original_JJ text_NN in_IN a_DT different_JJ language_NN -LRB-_-LRB- Lefevere_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ one_CD of_IN the_DT oldest_JJS text_NN manipulation_NN related_VBN pro-_JJ cesses_NNS ._.
+Gospels_NNS are_VBP historical_JJ documents_NNS that_WDT were_VBD translated_VBN centuries_NNS ago_RB ._.
+There_EX are_VBP many_JJ ver_SYM -_: sions_NNS of_IN the_DT same_JJ Gospel_NNP ,_, translated_VBN from_IN the_DT orig_NN -_: inal_JJ ,_, or_CC from_IN another_DT Gospel_NNP that_WDT had_VBD already_RB been_VBN translated_VBN into_IN a_DT different_JJ language_NN ._.
+Nowadays_RB ,_, it_PRP is_VBZ unclear_JJ what_WP was_VBD the_DT language_NN of_IN the_DT original_JJ Gospel_NNP from_IN where_WRB these_DT were_VBD translated_VBN ._.
+Histori_NNP -_: ans_NNS and_CC linguists_NNS are_VBP uncertain_JJ as_IN to_TO the_DT origin_NN of_IN such_JJ historical_JJ documents_NNS ._.
+The_DT Georgian_JJ Gospels_NNPS are_VBP translated_VBN from_IN Armenian_JJ or_CC Greek_JJ Gospels_NNS -LRB-_-LRB- Lang_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+There_EX are_VBP about_IN 300_CD manuscripts_NNS of_IN the_DT four_CD Gospels_NNPS in_IN Georgian_JJ that_WDT are_VBP translated_VBN from_IN different_JJ languages_NNS -LRB-_-LRB- Kharanauli_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+Lin_NNP -_: guists_NNS are_VBP able_JJ to_TO narrow_VB down_RP potential_JJ origins_NNS by_IN looking_VBG at_IN different_JJ linguistic_JJ properties_NNS ,_, but_CC skep_SYM -_: tical_JJ to_TO choose_VB a_DT single_JJ origin_NN ._.
+We_PRP have_VBP three_CD such_JJ Gospels_NNPS in_IN Georgian_JJ ,_, Armenian_JJ and_CC Greek_JJ ,_, where_WRB linguists_NNS believe_VBP that_IN Armenian_JJ or_CC Greek_JJ are_VBP the_DT potential_JJ origin_NN ._.
+In_IN this_DT paper_NN we_PRP use_VBP a_DT supervised_JJ machine_NN learning_VBG technique_NN to_TO find_VB out_RP the_DT correct_JJ origin_NN of_IN a_DT version_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+One_CD of_IN the_DT challenges_NNS of_IN dealing_VBG with_IN historical_JJ data_NNS is_VBZ the_DT requirement_NN of_IN specific_JJ knowledge_NN of_IN Natia_NNP Dundia_NNP Department_NNP of_IN Modern_NNP Languages_NNP Goethe_NNP University_NNP Frankfurt_NNP ,_, Germany_NNP dunduanatia@gmail.com_NNP languages_NNS that_WDT are_VBP not_RB spoken_VBN at_IN present_JJ day_NN ._.
+If_IN the_DT language_NN is_VBZ currently_RB spoken_VBN ,_, it_PRP is_VBZ likely_JJ that_IN many_JJ properties_NNS have_VBP changed_VBN due_JJ to_TO language_NN evolu_NN -_: tion_NN ._.
+Due_JJ to_TO this_DT issue_NN ,_, the_DT available_JJ historical_JJ data_NN set_NN is_VBZ very_RB small_JJ in_IN size_NN ,_, which_WDT proves_VBZ a_DT challenge_NN for_IN machine_NN learning_VBG algorithms_NNS ._.
+From_IN the_DT early_JJ stage_NN of_IN translation_NN studies_NNS research_NN ,_, translation_NN scholars_NNS proposed_VBD different_JJ kinds_NNS of_IN properties_NNS of_IN source_NN text_NN and_CC translated_VBN text_NN ._.
+Recently_RB ,_, scholars_NNS in_IN this_DT area_NN identified_VBD sev_SYM -_: eral_JJ properties_NNS of_IN the_DT translation_NN process_NN with_IN the_DT aid_NN of_IN corpora_NN -LRB-_-LRB- Baker_NNP ,_, 1993_CD ;_: Baker_NNP ,_, 1996_CD ;_: Olohan_NNP ,_, 2001_CD ;_: Laviosa_NNP ,_, 2002_CD ;_: Hansen_NNP ,_, 2003_CD ;_: Pym_NNP ,_, 2005_CD ;_: Toury_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+These_DT properties_NNS are_VBP subsumed_VBN un_SYM -_: der_FW four_CD keywords_NNS :_: explicitation_NN ,_, simplification_NN ,_, normalization_NN ,_, levelling_VBG out_RP and_CC interference_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP texts_NNS from_IN modern_JJ lan_NN -_: guage_NN to_TO train_VB a_DT Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- that_WDT can_MD be_VB used_VBN to_TO identify_VB the_DT original_JJ source_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+The_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Section_NN 2_CD in_IN -_: troduced_VBD the_DT historical_JJ documents_NNS that_IN we_PRP are_VBP deal_NN -_: ing_VBG with_IN here_RB ,_, Section_NNP 3_CD discusses_VBZ related_JJ work_NN ,_, followed_VBN by_IN a_DT discussion_NN of_IN the_DT nature_NN of_IN a_DT trans_NNS -_: lated_VBN text_NN in_IN Section_NN 4_CD ._.
+The_DT methodology_NN is_VBZ de_IN -_: scribed_VBN in_IN Section_NN 5_CD ._.
+The_DT corpus_NN of_IN modern_JJ lan_NN -_: guages_NNS is_VBZ described_VBN briefly_NN in_IN Section_NN 6_CD followed_VBN by_IN a_DT discussion_NN of_IN different_JJ features_NNS we_PRP used_VBD in_IN this_DT paper_NN in_IN Section_NN 7_CD ._.
+The_DT experiment_NN and_CC evaluation_NN in_IN Section_NN 8_CD and_CC finally_RB ,_, we_PRP present_VBP conclusions_NNS in_IN Section_NN 9_CD ._.
+2_CD The_DT historical_JJ documents_NNS Gospels_NNS are_VBP among_IN the_DT very_RB first_JJ documents_NNS that_WDT were_VBD translated_VBN into_IN Georgian_JJ language_NN follow_VBP -_: ing_VBG the_DT invention_NN of_IN the_DT Georgian_JJ alphabet_NN -LRB-_-LRB- Lang_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+The_DT history_NN begins_VBZ with_IN the_DT palimpsest_NN manuscripts_NNS from_IN the_DT fifth_JJ or_CC sixth_JJ centuries_NNS and_CC ends_VBZ with_IN the_DT manuscripts_NNS from_IN the_DT eighteenth_JJ century_NN ._.
+There_EX are_VBP many_JJ open_JJ debates_NNS on_IN the_DT ta_NN -_: ble_NN about_IN the_DT origin_NN of_IN the_DT Georgian_JJ translation_NN of_IN Language_NN Sentences_NNS Average_JJ Sentence_NNP Length_NNP Average_NNP Word_NNP Length_NNP 4.71_CD %_NN 4.00_CD %_NN 4.24_CD %_NN menian_JJ version_NN -LRB-_-LRB- Lang_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+The_DT Gospels_NNPS that_WDT were_VBD translated_VBN in_IN the_DT late_JJ ninth_JJ century_NN show_NN signs_NNS of_IN revision_NN by_IN reference_NN to_TO the_DT Greek_JJ Gospels_NNPS ._.
+Corpus-based_JJ translation_NN studies_NNS is_VBZ a_DT recent_JJ field_NN of_IN research_NN with_IN a_DT growing_VBG interest_NN within_IN the_DT field_NN of_IN computational_JJ linguistics_NNS ._.
+Baroni_NNP and_CC Bernar_NNP -_: dini_NNS -LRB-_-LRB- 2006_CD -RRB-_-RRB- started_VBD corpus-based_JJ translation_NN stud_NN -_: ies_NNS empirically_RB ,_, where_WRB they_PRP work_VBP on_IN a_DT corpus_NN of_IN geo-political_JJ journal_NN articles_NNS ._.
+A_DT SVM_NNP was_VBD used_VBN to_TO distinguish_VB original_JJ and_CC translated_VBN Italian_JJ text_NN us_PRP -_: ing_VBG n-gram_JJ based_VBN features_NNS ._.
+According_VBG to_TO their_PRP$ re_SYM -_: sults_NNS ,_, word_NN bigrams_NNS play_VBP an_DT important_JJ role_NN in_IN the_DT classification_NN task_NN ._.
+Van_NNP Halteren_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- uses_VBZ the_DT Europarl_NNP corpus_NN for_IN the_DT first_JJ time_NN to_TO identify_VB the_DT source_NN language_NN of_IN text_NN for_IN which_WDT the_DT source_NN language_NN marker_NN was_VBD missing_VBG ._.
+In_IN their_PRP$ experiments_NNS ,_, the_DT support_NN vector_NN regression_NN was_VBD the_DT best_JJS performing_VBG method_NN ._.
+Pastor_NN et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- and_CC Ilisei_NNP et_FW al._FW -LRB-_-LRB- 2009_CD ;_: 2010_CD -RRB-_-RRB- perform_VBP classification_NN of_IN Spanish_JJ original_JJ and_CC translated_VBN text_NN ._.
+The_DT focus_NN of_IN their_PRP$ works_NNS is_VBZ to_TO investigate_VB the_DT simplification_NN relation_NN that_WDT was_VBD pro-_JJ posed_VBN by_IN -LRB-_-LRB- Baker_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+In_IN total_JJ ,_, 21_CD quantitative_JJ features_NNS -LRB-_-LRB- e.g._FW a_DT number_NN of_IN different_JJ POS_NN ,_, Average_JJ Sentence_NNP Length_NNP -LRB-_-LRB- ASL_NNP -RRB-_-RRB- ,_, the_DT parse-tree_NN depth_NN etc._FW -RRB-_-RRB- were_VBD used_VBN where_WRB ,_, nine_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- of_IN them_PRP are_VBP able_JJ to_TO grasp_VB the_DT simplification_NN translation_NN property_NN ._.
+Koppel_NNP and_CC Ordan_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- have_VBP built_VBN a_DT clas_NNS -_: sifier_NN that_WDT can_MD identify_VB the_DT correct_JJ source_NN of_IN the_DT translated_VBN text_NN -LRB-_-LRB- given_VBN different_JJ possible_JJ source_NN lan_NN -_: guages_NNS -RRB-_-RRB- ._.
+They_PRP have_VBP built_VBN another_DT classifier_NN ,_, which_WDT can_MD identify_VB source_NN text_NN and_CC translated_VBN text_NN ._.
+How_WRB -_: ever_RB ,_, the_DT limitation_NN of_IN this_DT study_NN is_VBZ that_IN they_PRP only_RB used_VBD a_DT corpus_NN of_IN English_NNP original_JJ text_NN and_CC English_JJ text_NN translated_VBN from_IN various_JJ European_JJ languages_NNS ._.
+A_DT list_NN of_IN 300_CD function_NN words_NNS -LRB-_-LRB- Pennebaker_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- was_VBD used_VBN as_IN feature_NN vector_NN for_IN these_DT classifi_NNS -_: cations_NNS ._.
+Popescu_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- uses_VBZ string_NN kernels_NNS -LRB-_-LRB- Lodhi_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- to_TO study_VB translation_NN properties_NNS ._.
+A_DT clas_SYM -_: sifier_NN was_VBD built_VBN to_TO classify_VB English_JJ original_JJ texts_NNS and_CC English_JJ translated_VBN texts_NNS from_IN French_JJ and_CC Ger_NNP -_: man_NN books_NNS that_WDT were_VBD written_VBN in_IN the_DT nineteenth_JJ cen_NN -_: tury_NN ._.
+The_DT p-spectrum_JJ normalized_JJ kernel_NN was_VBD used_VBN for_IN the_DT experiment_NN ._.
+The_DT system_NN performs_VBZ poorly_RB when_WRB the_DT source_NN language_NN of_IN the_DT training_NN corpus_NN is_VBZ different_JJ from_IN the_DT one_CD of_IN the_DT test_NN corpus_NN ._.
+Islam_NNP and_CC Hoenen_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBD a_DT source_NN and_CC translated_VBN texts_NNS of_IN six_CD European_JJ languages_NNS in_IN order_NN to_TO classify_VB translated_VBN texts_NNS according_VBG to_TO source_NN lan_NN -_: Georgian_JJ Armenian_JJ Greek_JJ 3738_CD 18.96_CD %_NN 3738_CD 19.15_CD %_NN 3738_CD 20.40_CD %_NN Table_NNP 1_CD :_: Historical_JJ corpus_NN statistics_NNS the_DT holy_JJ script_NN ._.
+According_VBG to_TO Blake_NNP -LRB-_-LRB- 1932_CD -RRB-_-RRB- ,_, many_JJ translations_NNS were_VBD made_VBN from_IN the_DT Gospels_NNPS of_IN Syrian_JJ and_CC Armenian_JJ ._.
+However_RB ,_, recent_JJ studies_NNS show_VBP two_CD more_JJR sources_NNS from_IN where_WRB the_DT holy_JJ scripture_NN were_VBD translated_VBN into_IN Georgian_JJ ._.
+The_DT first_JJ one_CD is_VBZ the_DT Palestinian_NN and_CC other_JJ one_CD is_VBZ the_DT Antiochian/Constantinopolian_NNP -LRB-_-LRB- Kharanauli_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+The_DT precise_JJ date_NN of_IN these_DT translations_NNS are_VBP un_SYM -_: known_VBN ,_, but_CC the_DT earliest_JJS translations_NNS of_IN the_DT Geor_NNP -_: gian_JJ Bible_NNP are_VBP presented_VBN in_IN the_DT lower_JJR script_NN of_IN palimpsests_NNS ,_, the_DT so-called_JJ Xanmeti_NNP fragments_NNS ._.
+Xanmeti_NNP is_VBZ a_DT term_NN already_RB used_VBN by_IN the_DT famous_JJ Georgian_JJ monk_NN ,_, religious_JJ writer_NN and_CC translator_NN George_NNP the_DT Athonite1_NNP ._.
+He_PRP denotes_VBZ the_DT text_NN where_WRB the_DT x-prefix_NN is_VBZ employed_VBN to_TO mark_VB the_DT second_JJ sub_NN -_: ject_NN and_CC the_DT third_JJ object_NN persons_NNS in_IN the_DT Georgian_JJ verb_NN ._.
+This_DT prefix_NN has_VBZ not_RB occurred_VBN in_IN the_DT inscrip_NN -_: tions_NNS since_IN the_DT seventh_JJ Century_NNP ._.
+Based_VBN on_IN philo_NN -_: logical_JJ data_NNS ,_, these_DT fragments_NNS are_VBP dated_VBN from_IN fifth_JJ to_TO seventh_JJ centuries_NNS ._.
+Codicological_JJ study_NN of_IN the_DT folio_NN size_NN reveals_VBZ that_IN they_PRP are_VBP fragments_NNS of_IN quite_RB large_JJ codices_NNS ,_, and_CC it_PRP can_MD be_VB assumed_VBN that_IN these_DT codices_NNS included_VBD several_JJ books_NNS of_IN the_DT Bible_NNP ._.
+Currently_RB ,_, there_EX are_VBP about_IN 300_CD manuscripts_NNS of_IN the_DT four_CD Gospels_NNPS in_IN Georgian_JJ -LRB-_-LRB- Kharanauli_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+Among_IN these_DT ,_, about_IN 40_CD codices_NNS include_VBP text_NN ver_SYM -_: sion_NN of_IN Georgian_JJ Gospels_NNPS ._.
+The_DT Gospel_NNP considered_VBN for_IN this_DT study_NN is_VBZ believed_VBN to_TO be_VB translated_VBN from_IN Ar_SYM -_: menian_NN or_CC Greek_JJ ._.
+These_DT Gospels_NNPS are_VBP digitized_VBN and_CC aligned_VBN manually_RB ._.
+The_DT aligned_VBN corpus_NN of_IN the_DT Geor_NNP -_: gian_JJ Gospel_NNP manuscripts_NNS present_VBP the_DT texts_NNS in_IN their_PRP$ original_JJ form_NN side_NN by_IN side_NN ,_, which_WDT means_VBZ that_IN a_DT -RRB-_-RRB- nothing_NN is_VBZ corrected_VBN ,_, not_RB even_RB the_DT mistakes_NNS pre_SYM -_: sumably_RB made_VBN by_IN copyists_NNS ;_: and_CC b_NN -RRB-_-RRB- abbreviations_NNS remain_VBP discernible_JJ as_IN they_PRP are_VBP ,_, with_IN the_DT abbrevi_NN -_: ated_VBN letters_NNS being_VBG indicated_VBN in_IN brackets_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT statistics_NNS of_IN the_DT Gospels_NNPS ._.
+3_LS Related_VBN work_NN There_EX is_VBZ no_DT work_NN found_VBD that_DT is_VBZ exactly_RB relevant_JJ to_TO the_DT problem_NN we_PRP are_VBP dealing_VBG here_RB ._.
+Lang_NNP -LRB-_-LRB- 1957_CD -RRB-_-RRB- studied_VBN Georgian_JJ Gospels_NNPS and_CC their_PRP$ origins_NNS ._.
+The_DT first_JJ Georgian_JJ Gospels_NNPS were_VBD translated_VBN from_IN an_DT Ar_NN -_: 1Wikipage_NNP :_: http://en.wikipedia.org/wiki/George_NNP the_DT Athonite_NNP guages_NNS ._.
+As_IN features_NNS ,_, they_PRP have_VBP used_VBN the_DT hundred_CD most_RBS frequent_JJ words_NNS ._.
+It_PRP is_VBZ important_JJ to_TO consider_VB the_DT properties_NNS of_IN language_NN family_NN when_WRB dealing_VBG with_IN source_NN and_CC translated_VBN texts_NNS -LRB-_-LRB- Islam_NNP and_CC Hoe_VBP -_: nen_NN ,_, 2013_CD -RRB-_-RRB- ._.
+Features_NNS used_VBN by_IN Koppel_NNP and_CC Ordan_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- and_CC Islam_NNP and_CC Hoenen_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- are_VBP language_NN dependent_JJ ._.
+As_IN we_PRP use_VBP texts_NNS from_IN twenty-one_CD European_JJ lan_NN -_: guages_NNS to_TO build_VB the_DT training_NN model_NN ,_, we_PRP only_RB use_VBP features_NNS that_WDT are_VBP language_NN and_CC linguistic_NN tools_NNS inde_JJ -_: pendent_NN ._.
+It_PRP is_VBZ also_RB important_JJ to_TO consider_VB different_JJ properties_NNS of_IN translated_VBN and_CC source_NN texts_NNS proposed_VBN by_IN translation_NN scholars_NNS ._.
+4_CD Translation_NN properties_NNS Recently_RB ,_, translation_NN scholars_NNS proposed_VBD different_JJ translation_NN properties_NNS using_VBG monolingual_JJ or_CC com_NN -_: parable_NN corpus_NN ._.
+These_DT properties_NNS are_VBP described_VBN in_IN the_DT following_VBG subsections_NNS ._.
+4.1_CD Explicitation_NNP Translators_NNPS are_VBP biased_VBN to_TO make_VB translations_NNS more_RBR explicit_JJ in_IN order_NN to_TO resolve_VB ambiguities_NNS that_WDT might_MD be_VB inherited_VBN in_IN the_DT translated_VBN text_NN ._.
+Vinay_NNP and_CC Dar_NNP -_: belnet_NN -LRB-_-LRB- 1958_CD -RRB-_-RRB- used_VBD the_DT term_NN explicitation_NN as_IN ``_`` a_DT process_NN of_IN introducing_VBG information_NN into_IN the_DT tar_NN -_: get_VB language_NN which_WDT is_VBZ present_JJ only_RB implicitly_RB in_IN the_DT source_NN language_NN ,_, but_CC which_WDT can_MD be_VB derived_VBN from_IN the_DT context_NN or_CC situation_NN ''_'' -LRB-_-LRB- Vinay_NNP and_CC Darbel_NNP -_: net_NN ,_, 1995_CD ;_: Pym_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+However_RB ,_, Blum-Kulka_NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- first_RB claimed_VBD explicitation_NN as_IN a_DT translation_NN universal_JJ where_WRB she_PRP studied_VBD translated_VBN French_JJ texts_NNS from_IN English_JJ by_IN professional_JJ and_CC non-professional_JJ translators_NNS ._.
+Seguinot_NNP -LRB-_-LRB- 1988_CD -RRB-_-RRB- provides_VBZ an_DT empiri_NN -_: cal_NN study_NN using_VBG two_CD translated_VBN texts_NNS from_IN French_JJ to_TO English_NNP ._.
+There_EX is_VBZ a_DT greater_JJR level_NN of_IN explicit_JJ -_: ness_NN in_IN the_DT translated_VBN texts_NNS as_IN linking_VBG words_NNS and_CC conversion_NN of_IN subordinate_JJ clauses_NNS into_IN coordinate_VBP clauses_NNS ._.
+4.2_CD Simplification_NN The_DT simplification_NN translation_NN property_NN shows_VBZ the_DT tendency_NN of_IN a_DT translator_NN to_TO simplify_VB a_DT text_NN in_IN or_CC -_: der_NN to_TO improve_VB the_DT readability_NN of_IN a_DT translated_VBN text_NN ._.
+Blum-Kulka_NNP and_CC Levenston_NNP -LRB-_-LRB- 1978_CD -RRB-_-RRB- mention_VB the_DT term_NN simplification_NN as_IN part_NN of_IN the_DT lexical_JJ simplifica_NN -_: tion_NN using_VBG a_DT small_JJ data_NN set_NN of_IN English_NNP and_CC Hebrew_NNP translations_NNS ._.
+According_VBG to_TO them_PRP ,_, translators_NNS use_VBP techniques_NNS such_JJ as_IN avoidance_NN and_CC approximation_NN in_IN the_DT translation_NN process_NN to_TO make_VB a_DT translated_VBN text_NN simpler_JJR for_IN the_DT target_NN readers_NNS ._.
+Later_RB ,_, Baker_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- also_RB observed_VBD this_DT tendency_NN in_IN the_DT translated_VBN texts_NNS ._.
+To_TO make_VB a_DT translated_VBN text_NN simpler_JJR ,_, the_DT transla_NN -_: tor_NN often_RB breaks_VBZ up_RP complex_JJ sentences_NNS into_IN two_CD or_CC more_JJR sentences_NNS ._.
+This_DT tendency_NN can_MD be_VB found_VBN in_IN the_DT ASL_NNP ._.
+That_DT is_VBZ ,_, the_DT ASL_NNP in_IN a_DT translated_VBN text_NN will_MD be_VB shorter_JJR than_IN a_DT source_NN text_NN ._.
+4.3_CD Normalization_NNP The_DT normalization_NN property_NN shows_VBZ a_DT translator_NN 's_POS effort_NN to_TO meet_VB the_DT normative_JJ criteria_NNS of_IN the_DT target_NN language_NN ._.
+It_PRP is_VBZ a_DT translator_NN 's_POS tendency_NN to_TO conform_VB to_TO patterns_NNS and_CC practices_NNS that_WDT are_VBP typical_JJ of_IN the_DT tar_NN -_: get_VB language_NN ,_, even_RB to_TO exaggerate_VB their_PRP$ use_NN ._.
+This_DT property_NN can_MD be_VB observed_VBN in_IN a_DT translated_VBN text_NN that_IN contains_VBZ very_RB little_JJ trace_VBP of_IN the_DT source_NN language_NN ._.
+However_RB ,_, the_DT opposite_JJ scenario_NN can_MD be_VB seen_VBN as_RB well_RB ,_, where_WRB the_DT translation_NN is_VBZ influenced_VBN by_IN the_DT source_NN language_NN ._.
+In_IN that_DT case_NN normalization_NN will_MD be_VB weakened_VBN ._.
+The_DT influence_NN of_IN English_NNP can_MD be_VB visible_JJ in_IN many_JJ software_NN manuals_NNS that_WDT are_VBP trans_NNS -_: lated_VBN from_IN English_NNP ._.
+Hansen_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- stated_VBD that_IN this_DT contrary_JJ tendency_NN also_RB can_MD be_VB seen_VBN in_IN interpreting_VBG ,_, where_WRB the_DT interpreter_NN tries_VBZ to_TO finish_VB an_DT unfinished_JJ sentence_NN and_CC to_TO render_VB an_DT ungrammatical_JJ structure_NN into_IN something_NN grammatical_JJ ._.
+4.4_CD Levelling_VBG out_RP Baker_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- refers_VBZ to_TO levelling_VBG out_RP as_IN ``_`` the_DT ten_CD -_: dency_NN of_IN translated_VBN text_NN to_TO gravitate_VB towards_IN the_DT center_NN of_IN a_DT continuum_NN ''_'' ._.
+That_DT is_VBZ also_RB known_VBN as_IN convergence_NN -LRB-_-LRB- Laviosa_NNP ,_, 2002_CD -RRB-_-RRB- ,_, where_WRB she_PRP stated_VBD that_IN a_DT ``_`` relatively_RB higher_JJR level_NN of_IN homogeneity_NN of_IN translated_VBN texts_NNS with_IN regard_NN to_TO their_PRP$ own_JJ scores_NNS on_IN given_VBN measures_NNS of_IN universal_JJ features_NNS ''_'' such_JJ as_IN lexical_JJ density_NN or_CC sentence_NN length_NN ,_, in_IN contrast_NN to_TO source_NN texts_NNS ._.
+If_IN we_PRP have_VBP a_DT sub-corpus_NN of_IN translated_VBN texts_NNS from_IN different_JJ languages_NNS to_TO the_DT same_JJ lan_NN -_: guage_NN ,_, and_CC have_VBP source_NN texts_NNS in_IN the_DT same_JJ language_NN ,_, then_RB translated_VBN texts_NNS from_IN different_JJ languages_NNS will_MD be_VB similar_JJ in_IN terms_NNS of_IN lexical_JJ density_NN ,_, TTR_NNP ,_, and_CC ASL_NNP ;_: but_CC will_MD be_VB different_JJ than_IN the_DT source_NN texts_NNS ._.
+More_RBR specifically_RB ,_, translated_VBN texts_NNS from_IN different_JJ languages_NNS will_MD be_VB alike_RB but_CC will_MD be_VB different_JJ than_IN the_DT source_NN texts_NNS ._.
+4.5_CD Interference_NNP Toury_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- has_VBZ a_DT different_JJ theory_NN that_WDT is_VBZ different_JJ from_IN the_DT translation_NN properties_NNS described_VBN above_IN ._.
+He_PRP stated_VBD that_IN ``_`` in_IN translation_NN ,_, phenomena_NNS pertain_SYM -_: ing_NN to_TO the_DT make-up_NN of_IN the_DT source_NN text_NN tend_VBP to_TO be_VB transferred_VBN to_TO the_DT target_NN text_NN ,_, ''_'' That_DT is_VBZ ,_, some_DT in_IN -_: terference_NN effects_NNS will_MD be_VB observable_JJ in_IN translated_VBN texts_NNS that_WDT are_VBP carried_VBN from_IN source_NN texts_NNS ._.
+These_DT ef_SYM -_: fects_NNS will_MD be_VB in_IN the_DT form_NN of_IN negative_JJ transfer_NN or_CC in_IN the_DT form_NN of_IN positive_JJ transfer_NN ._.
+As_IN an_DT example_NN ,_, spe_NN -_: cific_JJ properties_NNS of_IN the_DT English_NNP language_NN are_VBP visible_JJ in_IN user_NN manuals_NNS that_WDT have_VBP been_VBN translated_VBN to_TO other_JJ languages_NNS from_IN English_NNP -LRB-_-LRB- for_IN instance_NN ,_, word_NN order_NN -RRB-_-RRB- -LRB-_-LRB- Lzwaini_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+We_PRP can_MD summarize_VB this_DT transla_NN -_: tion_NN properties_NNS in_IN a_DT way_NN that_IN a_DT translated_VBN text_NN from_IN different_JJ source_NN languages_NNS will_MD be_VB sufficiently_RB dif_SYM -_: ferent_NN from_IN each_DT other_JJ ._.
+5_CD Methodology_NNP The_NNP above_IN section_NN describes_VBZ the_DT properties_NNS of_IN translation_NN ._.
+Based_VBN on_IN these_DT properties_NNS ,_, a_DT translated_VBN text_NN is_VBZ different_JJ than_IN the_DT corresponding_JJ source_NN text_NN ._.
+Properties_NNP proposed_VBN by_IN translation_NN scholars_NNS ,_, focus_NN on_IN texts_NNS and_CC the_DT translation_NN process_NN ._.
+Our_PRP$ assump_NN -_: tion_NN is_VBZ that_IN even_RB though_IN historical_JJ texts_NNS were_VBD trans_NNS -_: lated_VBD many_JJ hundreds_NNS of_IN years_NNS ago_RB ,_, there_EX are_VBP some_DT properties_NNS that_WDT are_VBP common_JJ to_TO modern_JJ texts_NNS and_CC the_DT recent_JJ translation_NN process_NN ._.
+We_PRP model_VBP the_DT task_NN as_IN a_DT classification_NN task_NN where_WRB we_PRP use_VBP a_DT SVM_NNP implementation_NN to_TO find_VB the_DT correct_JJ origin_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+Linguists_NNS believe_VBP that_IN the_DT Georgian_JJ Gospel_NN is_VBZ a_DT translated_VBN document_NN ._.
+They_PRP narrowed_VBD down_RP potential_JJ origins_NNS by_IN looking_VBG at_IN different_JJ linguistic_JJ properties_NNS compared_VBN to_TO the_DT Greek_JJ and_CC Armenian_JJ Gospel_NN ._.
+Before_IN finding_VBG the_DT source_NN of_IN the_DT Georgian_JJ Gospel_NNP ,_, it_PRP is_VBZ necessary_JJ to_TO check_VB that_IN the_DT Gospel_NNP itself_PRP is_VBZ a_DT translated_VBN docu_NN -_: ment_NN ._.
+If_IN the_DT gospel_NN is_VBZ classified_VBN as_IN a_DT translated_VBN doc_NN -_: ument_NN then_RB we_PRP can_MD move_VB further_RBR to_TO find_VB the_DT source_NN ._.
+The_DT gospel_NN that_WDT has_VBZ properties_NNS of_IN an_DT original_JJ doc_NN -_: ument_NN will_MD be_VB the_DT closest_JJS candidate_NN for_IN the_DT origin_NN Georgian_JJ gospel_NN ._.
+In_IN order_NN to_TO build_VB a_DT training_NN model_NN ,_, we_PRP use_VBP mod_SYM -_: ern_NN texts_NNS from_IN different_JJ European_JJ languages_NNS ._.
+We_PRP have_VBP compiled_VBN a_DT suitable_JJ corpus_NN for_IN this_DT task_NN from_IN the_DT Europarl_NNP corpus_NN -LRB-_-LRB- Koehn_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+This_DT task_NN re_SYM -_: quires_VBZ features_NNS that_WDT are_VBP language_NN independent_JJ and_CC do_VB not_RB require_VB any_DT linguistic_JJ pre-processing_NN ._.
+So_RB ,_, we_PRP have_VBP explored_VBN different_JJ features_NNS that_WDT are_VBP quan_SYM -_: titative_JJ indicators_NNS of_IN translation_NN properties_NNS men_NNS -_: tioned_VBN above_IN ._.
+Finally_RB ,_, we_PRP have_VBP collected_VBN a_DT list_NN of_IN useful_JJ features_NNS that_WDT are_VBP listed_VBN in_IN Section_NN 7_CD ._.
+We_PRP use_VBP standard_JJ classification_NN accuracy_NN and_CC F-Score_NN in_IN order_NN to_TO measure_VB usefulness_NN of_IN a_DT feature_NN ._.
+At_IN the_DT beginning_VBG the_DT feature_NN list_NN contains_VBZ only_RB ASL_NNP ._.
+We_PRP have_VBP added_VBN a_DT new_JJ feature_NN in_IN the_DT list_NN if_IN and_CC only_RB if_IN the_DT classification_NN accuracy_NN and_CC F-Score_NN improve_VB by_IN adding_VBG the_DT feature_NN with_IN existing_VBG feature_NN set_NN ._.
+The_DT feature_NN collection_NN process_NN will_MD be_VB continued_VBN until_IN the_DT classifier_NN achieves_VBZ a_DT reasonable_JJ accuracy_NN F_NN -_: Score_NN ._.
+Figure_NN 1_CD shows_VBZ the_DT approach_NN we_PRP follow_VBP in_IN this_DT paper_NN ._.
+Finally_RB ,_, the_DT whole_JJ corpus_NN of_IN mod_NN -_: ern_NN texts_NNS will_MD be_VB considered_VBN for_IN building_VBG the_DT final_JJ training_NN model_NN ._.
+The_DT final_JJ training_NN model_NN and_CC the_DT collected_VBN fea_NN -_: ture_NN set_NN will_MD be_VB used_VBN in_IN order_NN to_TO find_VB the_DT origin_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+We_PRP prepare_VBP the_DT Gospels_NNPS data_NNS into_IN two_CD sets_NNS similarly_RB as_IN the_DT training_NN data_NNS ._.
+The_DT first_JJ set_NN of_IN data_NNS will_MD contain_VB texts_NNS from_IN Armenian_JJ and_CC Georgian_JJ Gospels_NNPS and_CC the_DT other_JJ one_CD will_MD con_VB -_: tain_NN texts_NNS from_IN Greek_JJ and_CC Georgian_JJ Gospels_NNPS ._.
+6_CD Corpus_NNP of_IN modern_JJ texts_NNS The_DT area_NN of_IN translation_NN studies_NNS lack_VBP corpora_NN by_IN which_WDT scholars_NNS can_MD validate_VB their_PRP$ theoretical_JJ claims_NNS ,_, for_IN example_NN ,_, regarding_VBG the_DT scope_NN of_IN char_NN -_: acteristics_NNS of_IN the_DT translation_NN properties_NNS ._.
+This_DT scope_NN is_VBZ obviously_RB affected_VBN by_IN the_DT membership_NN of_IN the_DT source_NN and_CC target_NN languages_NNS to_TO language_NN families_NNS ._.
+Though_IN the_DT exploration_NN of_IN universally_RB valid_JJ char_NN -_: acteristics_NNS of_IN translations_NNS is_VBZ an_DT important_JJ topic_NN ,_, there_EX are_VBP not_RB many_JJ resources_NNS for_IN testing_NN corre_NN -_: sponding_VBG hypotheses_NNS ._.
+There_EX are_VBP many_JJ parallel_NN and_CC multilingual_JJ cor_NN -_: pora_NN available_JJ nowadays_RB ._.
+Most_JJS of_IN them_PRP are_VBP not_RB useful_JJ for_IN translation_NN studies_NNS immediately_RB as_IN they_PRP require_VBP customization_NN ._.
+Islam_NNP and_CC Mehler_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- provide_VBP a_DT customized_VBN resource_NN in_IN which_WDT the_DT lan_NN -_: guages_NNS of_IN all_DT source_NN texts_NNS and_CC their_PRP$ translations_NNS are_VBP annotated_JJ sufficiently_RB ._.
+The_DT resource_NN they_PRP pro-_JJ vide_NN is_VBZ a_DT customized_VBN version_NN of_IN the_DT well-known_JJ Europarl_NNP corpus_NN -LRB-_-LRB- Koehn_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+A_DT central_JJ feature_NN of_IN this_DT corpus_NN is_VBZ that_IN it_PRP provides_VBZ information_NN on_IN sentence-related_JJ alignments_NNS that_WDT can_MD be_VB explored_VBN for_IN finding_VBG characteristics_NNS of_IN the_DT translation_NN rela_NN -_: tion_NN ._.
+The_DT language_NN annotation_NN in_IN the_DT Europarl_NNP corpus_NN is_VBZ not_RB reliable_JJ because_IN of_IN erroneous_JJ annotations_NNS introduced_VBN by_IN translators_NNS ._.
+There_EX are_VBP many_JJ cases_NNS where_WRB one_CD speaker_NN has_VBZ multiple_JJ speeches_NNS in_IN differ_VBP -_: ent_NN languages_NNS that_WDT cause_VBP problems_NNS for_IN identifying_VBG the_DT speaker_NN 's_POS native_JJ language_NN ._.
+In_IN order_NN to_TO resolve_VB this_DT issue_NN we_PRP have_VBP collected_VBN the_DT name_NN of_IN the_DT member_NN of_IN the_DT European_JJ parlia_NN -_: ment_NN and_CC their_PRP$ native_JJ language_NN manually_RB ._.
+We_PRP col_SYM -_: lected_JJ names_NNS from_IN the_DT current_JJ members_NNS list_NN page_NN 2_CD of_IN the_DT European_JJ parliament_NN ._.
+Names_NNS of_IN for_IN -_: mer_NN members_NNS are_VBP collected_VBN from_IN the_DT correspond_VB -_: 2_CD http://www.europarl.europa.eu/meps/en/full-list.html_NN Europarl_NNP training_NN data_NNS Europarl_NN test_NN data_NNS feature_VBP vector_NN representation_NN Feature_NNP list_NN Gospels_NNPS SVM_NNP Evaluation_NN if_IN accuracy_NN improves_VBZ Traning_VBG model_NN Source_NN language_NN name_NN Figure_NN 1_CD :_: Machine_NN learning_VBG approach_NN ing_NN Wikipedia_NNP pages_NNS ._.
+The_DT official_JJ language_NN of_IN the_DT country_NN of_IN each_DT member_NN is_VBZ assigned_VBN as_IN the_DT native_JJ language_NN of_IN a_DT speaker_NN ._.
+Members_NNS from_IN Belgium_NNP and_CC Luxembourg_NNP are_VBP not_RB considered_VBN as_IN we_PRP are_VBP not_RB sure_JJ about_IN the_DT language_NN spoken_VBN by_IN members_NNS from_IN these_DT countries_NNS in_IN the_DT European_JJ parliament_NN ._.
+Each_DT member_NN from_IN Finland_NNP is_VBZ assigned_VBN to_TO the_DT Finnish_JJ language_NN ._.
+Finally_RB ,_, the_DT list_NN contains_VBZ 2_CD ,_, 125_CD mem_NN -_: ber_NN names_NNS and_CC their_PRP$ native_JJ language_NN ._.
+This_DT list_NN is_VBZ used_VBN to_TO extract_VB source_NN and_CC translated_VBN texts_NNS from_IN the_DT Europarl_NNP corpus_NN ._.
+The_DT corpus_NN contains_VBZ 2_CD ,_, 646_CD ,_, 765_CD parallel_JJ sentences_NNS from_IN 412_CD language_NN pairs_NNS of_IN 21_CD European_JJ languages_NNS ._.
+We_PRP believe_VBP that_IN such_PDT a_DT cor_NN -_: pus_NN is_VBZ an_DT ideal_JJ resource_NN for_IN the_DT problem_NN we_PRP are_VBP addressing_VBG in_IN this_DT paper_NN ._.
+7_CD Features_NNS As_IN the_DT training_NN corpus_NN contains_VBZ texts_NNS from_IN twenty_CD -_: one_CD European_JJ languages_NNS ,_, we_PRP only_RB experiment_NN with_IN lexical_JJ and_CC information-theoretic_JJ features_NNS ._.
+Pastor_NN et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- used_VBN various_JJ lexical_JJ ,_, syntactic_JJ and_CC discourse_NN related_VBN features_NNS ._.
+Also_RB ,_, Ilisei_NNP et_FW al._FW -LRB-_-LRB- 2009_CD ;_: 2010_CD -RRB-_-RRB- used_VBD similar_JJ type_NN of_IN features_NNS ._.
+The_DT following_VBG sub_NN sections_NNS describe_VBP features_NNS that_WDT are_VBP finally_RB se_FW -_: lected_VBN for_IN the_DT feature_NN list_NN ._.
+7.1_CD Lexical_JJ features_NNS Different_JJ lexical_NN features_NNS are_VBP being_VBG used_VBN from_IN the_DT beginning_NN of_IN corpus_NN based_VBN translation_NN studies_NNS ._.
+These_DT features_NNS are_VBP popular_JJ for_IN other_JJ NLP_NNP applica_NN -_: tions_NNS such_JJ as_IN text_NN readability_NN classification_NN ._.
+The_DT reason_NN behind_IN the_DT popularity_NN is_VBZ that_IN these_DT are_VBP lan_SYM -_: guage_NN independent_JJ and_CC do_VB not_RB require_VB any_DT linguis_SYM -_: tic_JJ pre-processing_NN ._.
+to_TO find_VB the_DT source_NN of_IN the_DT Georgian_JJ Gospel_NNP The_DT ASL_NNP is_VBZ a_DT quantitative_JJ measure_NN of_IN syntac_NN -_: tic_JJ complexity_NN ._.
+Generally_RB ,_, the_DT syntax_NN of_IN a_DT longer_RBR sentence_NN is_VBZ more_RBR complex_JJ than_IN that_DT of_IN a_DT shorter_JJR sentence_NN ._.
+A_DT translator_NN tries_VBZ to_TO make_VB a_DT translation_NN explicit_JJ and_CC also_RB simple_JJ ._.
+Translated_VBN texts_NNS might_MD become_VB longer_RBR due_JJ to_TO the_DT explicitation_NN ._.
+How_WRB -_: ever_RB ,_, opposite_NN can_MD happen_VB when_WRB a_DT translator_NN tries_VBZ to_TO make_VB a_DT translation_NN simpler_JJR ._.
+Table_NNP 2_CD shows_NNS be_VB -_: havior_NN of_IN some_DT features_NNS in_IN source_NN and_CC translated_VBN texts_NNS of_IN four_CD European_JJ languages_NNS ._.
+Translations_NNS of_IN German_JJ ,_, French_JJ and_CC Dutch_JJ are_VBP more_RBR explicit_JJ than_IN Spanish_JJ ._.
+The_DT Average_JJ Word_NN Length_NNP -LRB-_-LRB- AWL_NNP -RRB-_-RRB- is_VBZ an_DT -_: other_JJ useful_JJ lexical_JJ feature_NN ._.
+Most_JJS of_IN the_DT cases_NNS ,_, the_DT AWL_NNP in_IN translated_VBN texts_NNS is_VBZ longer_JJR than_IN source_NN texts_NNS ._.
+It_PRP would_MD be_VB interesting_JJ to_TO see_VB the_DT behavior_NN of_IN AWL_NNP in_IN source_NN and_CC translated_VBN texts_NNS of_IN an_DT agglutinative_JJ language_NN ._.
+The_DT Average_JJ number_NN of_IN complex_JJ words_NNS feature_VBP is_VBZ related_VBN to_TO the_DT AWL_NNP ._.
+A_DT translated_VBN text_NN will_MD be_VB difficult_JJ for_IN readers_NNS if_IN it_PRP contains_VBZ more_RBR complex_JJ words_NNS ._.
+The_DT average_JJ length_NN of_IN English_NNP written_VBN words_NNS is_VBZ 5.5_CD -LRB-_-LRB- Na_NN ́das_NNS ,_, 1984_CD -RRB-_-RRB- letters_NNS ._.
+We_PRP define_VBP a_DT complex_JJ word_NN as_IN any_DT word_NN that_WDT contains_VBZ 10_CD or_CC more_JJR letters_NNS ._.
+The_DT Type_NNP Token_NNP Ratio_NNP -LRB-_-LRB- TTR_NNP -RRB-_-RRB- ,_, which_WDT indicates_VBZ the_DT lexical_JJ density_NN of_IN text_NN ,_, has_VBZ been_VBN considered_VBN as_IN useful_JJ features_NNS by_IN Pastor_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- and_CC Also_RB ,_, Ilisei_NNP et_FW al._FW -LRB-_-LRB- 2009_CD ;_: 2010_CD -RRB-_-RRB- ._.
+Low_NNP lexical_JJ densities_NNS involve_VBP a_DT great_JJ deal_NN of_IN repetition_NN with_IN the_DT same_JJ words_NNS occurring_VBG again_RB and_CC again_RB ._.
+Conversely_RB ,_, high_JJ lexical_JJ density_NN shows_VBZ the_DT diverseness_NN of_IN a_DT text_NN ._.
+A_DT diverse_JJ text_NN is_VBZ supposed_VBN to_TO be_VB difficult_JJ for_IN read_NN -_: ers_NNS ,_, generally_RB children_NNS -LRB-_-LRB- Temnikova_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+There_EX are_VBP many_JJ different_JJ version_NN of_IN TTR_NNP formulas_NNS avail_NN -_: ASL_NNP AWL_NNP Source_NNP Translation_NN Source_NN Translation_NN 26.07_CD 29.34_CD 33.86_CD 34.46_CD 35.99_CD 32.56_CD 25.43_CD 31.13_CD 5.52_CD 5.64_CD 4.65_CD 4.68_CD 4.66_CD 4.74_CD 4.88_CD 5.08_CD Entropy_NNP Source_NNP Translation_NN German_JJ 9.95_CD 9.58_CD French_JJ 9.43_CD 9.12_CD Spanish_JJ 9.08_CD 9.02_CD Dutch_JJ 9.30_CD 8.99_CD Table_NNP 2_CD :_: Observation_NN of_IN different_JJ features_NNS able_JJ ._.
+Carrol_NNP -LRB-_-LRB- 1964_CD -RRB-_-RRB- proposed_VBD a_DT variation_NN of_IN TTR_NNP in_IN order_NN to_TO reduce_VB the_DT sample_NN size_NN effect_NN ._.
+Another_DT version_NN of_IN TTR_NNP is_VBZ called_VBN Bilogarithmic_NNP TTR_NNP -LRB-_-LRB- Her_PRP$ -_: dan_NN ,_, 1964_CD -RRB-_-RRB- ._.
+Kohler_NNP and_CC Galle_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- also_RB defined_VBD a_DT version_NN TTR_NNP -LRB-_-LRB- see_VB :_: 1_LS -RRB-_-RRB- that_WDT consider_VBP position_NN of_IN the_DT text_NN ._.
+In_IN the_DT Equation_NN 1_CD x_LS refers_VBZ to_TO position_VB in_IN the_DT text_NN ,_, tx_NN =_SYM number_NN of_IN types_NNS up_IN to_TO position_VB x_LS ,_, T_NNP =_SYM number_NN of_IN types_NNS in_IN the_DT text_NN and_CC N_NNP refers_VBZ to_TO the_DT number_NN of_IN tokes_NNS in_IN the_DT whole_JJ text_NN ._.
+We_PRP also_RB used_VBD another_DT version_NN of_IN TTR_NNP that_WDT focuses_VBZ on_IN document_NN level_NN TTR_NNP T_NNP as_RB well_RB as_IN sentence_NN level_NN TTR_NNP t_NN -LRB-_-LRB- Is_VBZ -_: Nn_NNP lam_NN and_CC Mehler_NNP ,_, 2013_CD ;_: Islam_NNP ,_, 2014_CD ;_: Islam_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Lower_JJR TTR_NNP in_IN sentence_NN level_NN also_RB shows_VBZ the_DT repetition_NN of_IN the_DT text_NN ._.
+7.2.1_CD Entropy_NNP based_VBN features_NNS The_DT most_RBS efficient_JJ way_NN to_TO send_VB information_NN through_IN a_DT noisy_JJ channel_NN is_VBZ at_IN a_DT constant_JJ rate_NN -LRB-_-LRB- Gen_SYM -_: zel_NN and_CC Charniak_NNP ,_, 2002_CD ;_: Genzel_NNP and_CC Charniak_NNP ,_, 2003_CD ;_: ?_. -RRB-_-RRB- ._.
+This_DT rule_NN must_MD be_VB retained_VBN in_IN any_DT kind_NN of_IN communication_NN to_TO make_VB it_PRP efficient_JJ ._.
+Any_DT text_NN as_IN a_DT medium_NN of_IN communication_NN should_MD satisfy_VB this_DT principle_NN ._.
+Genzel_NNP and_CC Charniak_NNP -LRB-_-LRB- 2002_CD ;_: 2003_CD -RRB-_-RRB- show_VBP that_IN the_DT entropy_JJ rate_NN is_VBZ constant_JJ in_IN texts_NNS ._.
+That_DT is_VBZ ,_, for_IN example_NN ,_, each_DT sentence_NN of_IN a_DT text_NN conveys_VBZ roughly_RB the_DT same_JJ amount_NN of_IN information_NN ._.
+In_IN or_CC -_: der_NN to_TO utilize_VB this_DT information-theoretic_JJ notion_NN ,_, we_PRP start_VBP from_IN random_JJ variables_NNS and_CC consider_VB their_PRP$ en_IN -_: tropy_JJ as_IN indicators_NNS of_IN readability_NN ._.
+Shannon_NNP -LRB-_-LRB- 1948_CD -RRB-_-RRB- introduced_VBN entropy_NN as_IN a_DT mea_NN -_: sure_JJ of_IN information_NN ._.
+Entropy_NNP ,_, the_DT amount_NN of_IN infor_NN -_: mation_NN in_IN a_DT random_JJ variable_JJ ,_, can_MD be_VB thought_VBN of_IN as_IN the_DT average_JJ length_NN of_IN the_DT message_NN needed_VBN to_TO have_VB an_DT outcome_NN on_IN that_DT variable_JJ ._.
+The_DT entropy_NN of_IN a_DT ran_VBD -_: dom_NN variable_JJ X_NNP is_VBZ defined_VBN as_IN n_NN H_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- =_SYM −_FW p_FW -LRB-_-LRB- xi_FW -RRB-_-RRB- log_VBP p_NN -LRB-_-LRB- xi_FW -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- i_FW =_SYM 1_CD •_CD Ko_NNP ̈hler_NN --_: Gale_NNP method_NN TTRx_NNP =_SYM N_NNP tx_FW +_FW T_FW −_FW xT_FW N_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- •_CD Root_NN TTR_NNP •_CD Corrected_NNP TTR_NNP T_NNP √_VBD •_CD Bilogarithmic_NNP TTR_NNP √_CD N_NNP T_NNP •_CD TTR_NNP deviation_NN 2N_NNP log_VB T_NNP log_VB N_NNP n_VB T_NNP ti_NNS The_DT more_JJR the_DT outcome_NN of_IN X_NNP converges_VBZ towards_IN a_DT uniform_JJ distribution_NN ,_, the_DT higher_JJR H_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- ._.
+Our_PRP$ hy_SYM -_: pothesis_NN is_VBZ that_IN the_DT higher_JJR the_DT entropy_NN ,_, the_DT less_JJR readable_JJ the_DT text_NN along_IN the_DT feature_NN represented_VBN by_IN X._NNP Table_NNP 2_CD shows_NNS that_IN translated_VBN texts_NNS have_VBP lower_JJR entropy_NN than_IN source_NN texts_NNS ._.
+This_DT is_VBZ because_IN trans_NNS -_: lators_NNS try_VBP to_TO improve_VB the_DT readability_NN of_IN translated_VBN texts_NNS ._.
+In_IN our_PRP$ experiment_NN ,_, we_PRP consider_VBP the_DT follow_VBP -_: ing_VBG random_JJ variables_NNS :_: word_NN probability_NN ,_, charac_NN -_: ter_NN probability_NN ,_, word_NN length_NN probability_NN and_CC word_NN frequency_NN probability_NN -LRB-_-LRB- or_CC frequency_NN spectrum_NN ,_, re_SYM -_: spectively_NN -RRB-_-RRB- ._.
+Note_VB that_IN there_EX is_VBZ a_DT correlation_NN be_VB -_: tween_IN the_DT probability_NN distribution_NN of_IN words_NNS and_CC the_DT corresponding_JJ distribution_NN of_IN word_NN frequen_NN -_: cies_NNS ._.
+As_IN we_PRP use_VBP SVM_NNP for_IN classification_NN ,_, these_DT cor_SYM -_: relations_NNS are_VBP taken_VBN into_IN consideration_NN ._.
+7.3_CD Information_NN Transmission-based_JJ Features_NNS There_EX is_VBZ a_DT relation_NN among_IN text_NN difficulty_NN ,_, sentence_NN length_NN ,_, and_CC word_NN length_NN ._.
+The_DT usefulness_NN of_IN similar_JJ N_NNP −_CD n_NN 7.2_CD Information-theoretic_JJ features_NNS i_FW =_SYM 0_CD i_FW Information_NN theory_NN measures_VBZ the_DT statistical_JJ signifi_NN -_: cance_NN of_IN how_WRB documents_NNS vary_VBP with_IN different_JJ types_NNS of_IN probability_NN distributions_NNS ._.
+That_DT is_VBZ ,_, it_PRP determines_VBZ how_WRB much_JJ information_NN can_MD be_VB encoded_VBN from_IN a_DT doc_NN -_: ument_NN using_VBG a_DT certain_JJ type_NN of_IN probability_NN distribu_NN -_: tion_NN ._.
+The_DT use_NN of_IN information_NN as_IN a_DT statistical_JJ mea_NN -_: sure_JJ of_IN significance_NN is_VBZ an_DT extension_NN of_IN this_DT pro-_JJ cess_NN ._.
+Information_NN theory_NN allows_VBZ us_PRP to_TO use_VB condi_SYM -_: tional_JJ probabilities_NNS ._.
+It_PRP should_MD be_VB noted_VBN that_IN these_DT features_NNS are_VBP being_VBG used_VBN for_IN the_DT first_JJ time_NN on_IN this_DT kind_NN of_IN problem_NN ._.
+lexical_JJ features_NNS such_JJ as_IN sentence_NN length_NN or_CC number_NN of_IN difficult_JJ words_NNS in_IN a_DT sentence_NN is_VBZ shown_VBN in_IN section_NN 7.1_CD ._.
+Generally_RB ,_, a_DT longer_JJR sentence_NN contains_VBZ more_RBR entities_NNS that_WDT influence_VBP the_DT difficulty_NN level_NN ._.
+Similar_JJ things_NNS happen_VB with_IN longer_JJR words_NNS ._.
+But_CC ,_, a_DT sentence_NN becomes_VBZ more_RBR difficult_JJ if_IN it_PRP is_VBZ longer_RBR and_CC contains_VBZ more_RBR long_JJ words_NNS ._.
+These_DT kinds_NNS of_IN properties_NNS can_MD be_VB defined_VBN by_IN joint_JJ and_CC conditional_JJ probabilities_NNS ._.
+In_IN the_DT field_NN of_IN information_NN theory_NN ,_, joint_JJ proba_NN -_: bility_NN measures_VBZ the_DT likelihood_NN of_IN two_CD events_NNS oc_SYM -_: curring_VBG together_RB ._.
+That_DT is_VBZ ,_, two_CD random_JJ variables_NNS X_NNP and_CC Y_NNP will_MD be_VB defined_VBN in_IN the_DT probability_NN space_NN ._.
+The_DT conditional_JJ probability_NN gives_VBZ the_DT probability_NN that_IN the_DT event_NN will_MD occur_VB given_VBN the_DT knowledge_NN that_WDT another_DT event_NN has_VBZ already_RB occurred_VBN ._.
+By_IN consider_VB -_: ing_VBG the_DT joint_JJ probability_NN and_CC two_CD random_JJ variables_NNS X_NNP and_CC Y_NNP ,_, Shannon_NNP 's_POS joint_JJ entropy_NN can_MD be_VB defined_VBN as_IN :_: 8.1_CD Experiment_NN with_IN modern_JJ corpus_NN The_DT training_NN corpus_NN contains_VBZ 2,646,765_CD parallel_JJ sentences_NNS from_IN 412_CD language_NN pairs_NNS of_IN 21_CD Euro_NNP -_: pean_NN languages_NNS ._.
+We_PRP have_VBP divided_VBN the_DT corpus_NN into_IN 26_CD ,_, 467_CD chunks_NNS ._.
+More_RBR specifically_RB ,_, 26_CD ,_, 467_CD chunks_NNS were_VBD source_NN texts_NNS and_CC the_DT same_JJ number_NN of_IN chunks_NNS were_VBD translations_NNS ._.
+It_PRP should_MD be_VB noted_VBN that_IN a_DT hun_NN -_: dred_VBN sets_NNS of_IN data_NNS were_VBD randomly_RB generated_VBN where_WRB 80_CD %_NN of_IN the_DT corpus_NN is_VBZ used_VBN for_IN training_NN and_CC the_DT re_NN -_: maining_VBG 20_CD %_NN is_VBZ used_VBN for_IN evaluation_NN ._.
+Later_RB ,_, when_WRB we_PRP get_VBP reasonable_JJ classification_NN accuracy_NN and_CC F_NN -_: Score_NN ,_, the_DT whole_JJ corpus_NN will_MD be_VB used_VBN to_TO build_VB the_DT final_JJ training_NN model_NN ._.
+The_DT weighted_JJ average_NN of_IN Ac_NNP -_: curacy_NN and_CC F-score_NN is_VBZ computed_VBN by_IN considering_VBG all_DT sets_NNS of_IN data_NNS ._.
+Note_VB that_IN we_PRP have_VBP used_VBN the_DT SMO_NNP -LRB-_-LRB- Platt_NNP ,_, 1998_CD ;_: Keerthi_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- classifier_JJR model_NN in_IN WEKA_NNP -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- together_RB with_IN the_DT Pearson_NNP VII_NNP function-based_JJ universal_JJ kernel_NN PUK_NNP -LRB-_-LRB- U_NNP ̈stu_NNP ̈netal._NNP ,2006_CD -RRB-_-RRB- ._.
+As_IN we_PRP showed_VBD in_IN Figure_NN 1_CD ,_, our_PRP$ goal_NN was_VBD to_TO build_VB a_DT model_NN using_VBG texts_NNS from_IN modern_JJ European_JJ lan_NN -_: guages_NNS and_CC later_JJ use_NN that_IN model_NN to_TO identify_VB the_DT source_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+The_DT challenge_NN was_VBD to_TO find_VB features_NNS that_WDT are_VBP language_NN independent_JJ and_CC improve_VB the_DT classification_NN accuracy_NN ._.
+A_DT feature_NN will_MD be_VB in_IN the_DT feature_NN list_NN if_IN and_CC only_RB if_IN the_DT classification_NN accuracy_NN improves_VBZ by_IN adding_VBG the_DT feature_NN ._.
+Many_JJ different_JJ features_NNS were_VBD considered_VBN ,_, but_CC only_RB use_NN -_: ful_NN features_NNS are_VBP listed_VBN in_IN Table_NNP 3_CD and_CC described_VBN in_IN Section_NN 7_CD ._.
+Additionally_RB ,_, either_DT measure_NN Accuracy_NNP andF-scorehastobeaboveaverage_NNP ._.
+Individu_NNP -_: ally_NN all_DT features_NNS perform_VBP reasonably_RB well_RB ._.
+How_WRB -_: ever_RB ,_, information-theoretic_JJ features_NNS perform_VBP bet_NN -_: ter_NN than_IN lexical_JJ features_NNS ._.
+Table_NNP 3_CD shows_NNS evalua_SYM -_: tion_NN of_IN selected_VBN features_NNS ._.
+Surprisingly_RB word_NN fre_SYM -_: quency_NN entropy_NN is_VBZ the_DT best_JJS performing_VBG individual_JJ feature_NN ._.
+Altogether_RB these_DT features_NNS achieve_VBP 86.62_CD %_NN of_IN F-Score_NN ._.
+8.2_CD Experiment_NN with_IN target_NN corpus_NN In_IN order_NN to_TO experiment_NN with_IN the_DT target_NN corpus_NN ,_, we_PRP prepare_VBP them_PRP similarly_RB to_TO the_DT training_NN chunks_NNS ._.
+Each_DT Gospel_NNP was_VBD divided_VBN into_IN 37_CD chunks_NNS ._.
+Each_DT chunk_NN contains_VBZ 100_CD verses_NNS ._.
+Then_RB ,_, these_DT data_NNS are_VBP divided_VBN into_IN two_CD sets_NNS ._.
+The_DT first_JJ set_NN contains_VBZ chunks_NNS from_IN Armenian_JJ and_CC Georgian_JJ ._.
+The_DT other_JJ contains_VBZ chunks_NNS from_IN Greek_JJ and_CC Georgian_JJ ._.
+As_IN we_PRP stated_VBD earlier_RBR ,_, the_DT first_JJ task_NN is_VBZ to_TO iden_VB -_: tify_JJ chunks_NNS of_IN the_DT Georgian_JJ Gospel_NN are_VBP transla_NN -_: tions_NNS ._.
+Table_NNP 4_CD shows_VBZ the_DT confusion_NN matrix_NN of_IN the_DT first_JJ set_NN ._.
+In_IN this_DT matrix_NN 36_CD out_IN of_IN 37_CD chunks_NNS of_IN H_NNP -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- =_SYM −_SYM <_FW x_LS ,_, y_SYM >_SYM ∈_CD XxY_NNP p_NN -LRB-_-LRB- xi_FW ,_, yi_FW -RRB-_-RRB- logp_NN -LRB-_-LRB- xi_FW ,_, yi_FW -RRB-_-RRB- -LRB-_-LRB- 7_CD -RRB-_-RRB- Two_CD conditional_JJ entropies_NNS can_MD be_VB defined_VBN as_IN :_: H_NNP -LRB-_-LRB- X_NNP |_CD Y_NNP -RRB-_-RRB- =_SYM −_FW P_FW -LRB-_-LRB- yi_FW -RRB-_-RRB- p_NN -LRB-_-LRB- xi_FW |_FW yi_FW -RRB-_-RRB- log_VBP p_NN -LRB-_-LRB- xi_FW |_FW yi_FW -RRB-_-RRB- y_SYM ∈_FW Y_FW x_SYM ∈_FW X_NNP -LRB-_-LRB- 8_CD -RRB-_-RRB- H_NNP -LRB-_-LRB- Y_NNP |_CD X_NNP -RRB-_-RRB- =_SYM −_FW P_FW -LRB-_-LRB- xi_FW -RRB-_-RRB- p_NN -LRB-_-LRB- yi_FW |_FW xi_FW -RRB-_-RRB- logp_NN -LRB-_-LRB- yi_FW |_FW xi_FW -RRB-_-RRB- x_SYM ∈_FW X_NNP y_SYM ∈_FW Y_FW -LRB-_-LRB- 9_CD -RRB-_-RRB- From_IN the_DT equation_NN 6_CD ,_, 7_CD ,_, 8_CD and_CC 9_CD ,_, it_PRP can_MD be_VB shown_VBN that_DT :_: Ts_NNS -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- =_SYM H_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- +_VBP H_NNP -LRB-_-LRB- Y_NNP -RRB-_-RRB- −_CD H_NNP -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- -LRB-_-LRB- 10_CD -RRB-_-RRB- The_DT function_NN is_VBZ called_VBN Information_NNP transmis_SYM -_: sion_NN ,_, and_CC it_PRP measures_VBZ the_DT strength_NN of_IN the_DT relation_NN -_: ship_NN between_IN elements_NNS of_IN random_JJ variables_NNS X_NNP and_CC Y_NNP ._.
+Details_NNS about_IN this_DT notion_NN can_MD be_VB found_VBN in_IN -LRB-_-LRB- Klir_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+The_DT sentence_NN length_NN and_CC word_NN length_NN prob_SYM -_: ability_NN shows_VBZ the_DT relation_NN between_IN sentence_NN length_NN and_CC word_NN length_NN and_CC sentence_NN length_NN and_CC difficult_JJ word_NN probability_NN shows_VBZ the_DT relation_NN between_IN sen_NN -_: tence_NN length_NN and_CC the_DT number_NN of_IN difficult_JJ words_NNS ._.
+8_CD Experiment_NN The_DT experiments_NNS and_CC evaluations_NNS are_VBP explained_VBN in_IN the_DT following_VBG subsections_NNS ._.
+Feature_NN Accuracy_NNP F-Score_NNP ASL_NNP TTR_NNP per_IN document_NN TTR_NNP per_IN sentence_NN Average_JJ complex_JJ word_NN per_IN document_NN Average_JJ complex_JJ word_NN per_IN sentence_NN AWL_NNP Ko_NNP ̈hler_NN --_: Gale_NNP TTR_NNP Root_NN TTR_NNP Corrected_NNP TTR_NNP Bi-logarithmic_JJ TTR_NNP TTR_NNP deviation_NN Word_NN entropy_JJ Word_NN frequency_NN entropy_NN Word_NN length_NN entropy_JJ Character_NN entropy_NN Character_NNP frequency_NN entropy_NN Information_NN transmission_NN of_IN sentence_NN length_NN and_CC word_NN length_NN probability_NN Information_NN transmission_NN of_IN sentence_NN length_NN and_CC complex_JJ word_NN probability_NN All_DT features_NNS 54.01_CD %_NN 59.83_CD %_NN 58.93_CD %_NN 52.61_CD %_NN 52.52_CD %_NN 56.15_CD %_NN 59.58_CD %_NN 62.67_CD %_NN 62.61_CD %_NN 62.23_CD %_NN 60.54_CD %_NN 62.02_CD %_NN 63.36_CD %_NN 53.81_CD %_NN 57.78_CD %_NN 57.93_CD %_NN 52.93_CD %_NN 54.41_CD %_NN 86.63_CD %_NN 53.29_CD %_NN 59.18_CD %_NN 57.42_CD %_NN 45.74_CD %_NN 45.83_CD %_NN 49.43_CD %_NN 58.89_CD %_NN 62.67_CD %_NN 62.61_CD %_NN 62.08_CD %_NN 60.00_CD %_NN 61.92_CD %_NN 63.39_CD %_NN 50.94_CD %_NN 56.58_CD %_NN 57.28_CD %_NN 50.26_CD %_NN 53.86_CD %_NN 86.62_CD %_NN Table_NNP 3_CD :_: Evaluation_NN of_IN lexical_JJ features_NNS in_IN source_NN and_CC translation_NN identification_NN Armenian_JJ Georgian_JJ Source_NN Translation_NN 0_CD 37_CD 1_CD 36_CD 9_CD Conclusion_NN It_PRP is_VBZ important_JJ to_TO identify_VB a_DT document_NN as_IN origi_NNS -_: nal_NN or_CC translated_VBN from_IN another_DT language_NN ._.
+Such_JJ a_DT tool_NN is_VBZ very_RB useful_JJ for_IN many_JJ NLP_NNP applications_NNS ._.
+Different_JJ linguistic_NN features_NNS are_VBP being_VBG explored_VBN in_IN recent_JJ days_NNS for_IN many_JJ different_JJ NLP_NNP applica_NN -_: tions_NNS ._.
+However_RB ,_, only_RB simple_JJ lexical_JJ and_CC classi_NNS -_: cal_JJ information-theoretic_JJ features_NNS are_VBP adequate_JJ to_TO build_VB a_DT classifier_NN which_WDT is_VBZ able_JJ to_TO identify_VB an_DT origi_NN -_: nal_NN or_CC a_DT translated_VBN document_NN ._.
+It_PRP will_MD be_VB challenging_VBG to_TO explore_VB linguistic_JJ features_NNS for_IN such_JJ applications_NNS that_WDT deal_VBP with_IN multilingual_JJ data_NNS ._.
+There_EX are_VBP many_JJ versions_NNS of_IN the_DT Georgian_JJ Gospels_NNPS that_WDT are_VBP translated_VBN from_IN different_JJ lan_NN -_: guages_NNS ._.
+Linguists_NNS are_VBP able_JJ to_TO narrow_VB down_RP poten_NN -_: tial_JJ origins_NNS by_IN looking_VBG at_IN different_JJ linguistic_JJ prop_VBP -_: erties_NNS ,_, but_CC skeptical_JJ to_TO decide_VB the_DT single_JJ origin_NN ._.
+We_PRP have_VBP three_CD such_JJ Gospels_NNPS in_IN Georgian_JJ ,_, Armenian_JJ and_CC Greek_JJ ,_, where_WRB linguists_NNS believe_VBP that_IN Armenian_JJ or_CC Greek_JJ are_VBP the_DT potential_JJ origin_NN ._.
+For_IN this_DT paper_NN ,_, we_PRP have_VBP built_VBN a_DT source_NN and_CC translation_NN classifier_NN using_VBG modern_JJ texts_NNS ._.
+The_DT classifier_NN is_VBZ able_JJ to_TO iden_VB -_: tify_JJ translated_VBN documents_NNS that_WDT have_VBP been_VBN translated_VBN hundreds_NNS of_IN years_NNS ago_RB ._.
+Based_VBN on_IN our_PRP$ experimental_JJ evaluation_NN ,_, the_DT Greek_JJ Gospel_NN is_VBZ the_DT source_NN of_IN the_DT version_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+10_CD Acknowledgments_NNP We_PRP would_MD like_VB to_TO thank_VB Prof._NNP Dr._NNP Alexander_NNP Mehler_NNP ,_, Prof._NNP Dr._NNP David_NNP Scheffer_NNP and_CC Armin_NNP Hoe_VBP -_: nen_NN ._.
+We_PRP also_RB like_VBP to_TO thank_VB the_DT anonymous_JJ re_NN -_: viewers_NNS for_IN their_PRP$ helpful_JJ comments_NNS ._.
+This_DT work_NN was_VBD performed_VBN when_WRB both_DT authors_NNS were_VBD part_NN of_IN the_DT LOEWE_NNP Digital-Humanities_NNPS project_NN at_IN Goethe_NNP -_: University_NNP Frankfurt_NNP ._.
+Travel_NN was_VBD funded_VBN by_IN MassineScheffer_NNP &_CC Company_NNP GmbH_NNP ._.
+Table_NNP 4_CD :_: Confusion_NN matrix_NN of_IN Armenian_JJ --_: Georgian_JJ Gospels_NNPS Greek_JJ Georgian_JJ Source_NN Translation_NN 20_CD 17_CD 1_CD 36_CD Table_NNP 5_CD :_: Confusion_NN matrix_NN of_IN Greek_JJ --_: Georgian_JJ Gospels_NNPS the_DT Georgian_JJ Gospel_NN identified_VBN as_IN translated_VBN text_NN ._.
+So_RB ,_, experimental_JJ results_NNS show_VBP that_IN the_DT Georgian_JJ Gospel_NN is_VBZ a_DT translated_VBN document_NN ._.
+Table_NNP 5_CD shows_VBZ the_DT same_JJ result_NN ._.
+All_DT of_IN the_DT Armenian_JJ chunks_NNS are_VBP identified_VBN as_IN translated_VBN documents_NNS ._.
+However_RB ,_, 20_CD out_IN of_IN 37_CD chunks_NNS of_IN the_DT Greek_JJ Gospel_NN are_VBP identi_NNS -_: fied_VBN as_IN source_NN ._.
+Therefore_RB ,_, these_DT two_CD confusion_NN ma_SYM -_: trices_NNS show_VBP that_IN Greek_JJ is_VBZ most_RBS likely_JJ the_DT source_NN of_IN the_DT Georgian_JJ Gospel_NN ._.
+It_PRP becomes_VBZ clearer_JJR when_WRB we_PRP have_VBP a_DT look_NN on_IN Table_NNP 6_CD ._.
+Here_RB Armenian_JJ and_CC Greek_JJ chunks_NNS are_VBP labeled_VBN as_IN source_NN and_CC Georgian_JJ chunks_NNS are_VBP labeled_VBN as_IN translation_NN ._.
+The_DT accuracy_NN and_CC F_NN -_: Score_NN of_IN the_DT Armenian_JJ --_: Georgian_JJ pair_NN is_VBZ below_IN the_DT baseline_NN 50_CD %_NN ._.
+But_CC the_DT accuracy_NN and_CC F-Score_NN of_IN the_DT Greek_JJ --_: Georgian_JJ pair_NN is_VBZ above_IN 75_CD %_NN ._.
+So_RB ,_, our_PRP$ experimental_JJ results_NNS suggest_VBP that_IN the_DT Greek_JJ Gospel_NN is_VBZ the_DT source_NN of_IN the_DT version_NN of_IN Georgian_JJ Gospel_NNP ._.
+Source-translation_JJ Armenian_JJ --_: Georgian_JJ Greek_JJ --_: Georgian_JJ Accuracy_NNP F-Score_NNP 48.64_CD %_NN 32.73_CD %_NN 75.67_CD %_NN 74.48_CD %_NN Table_NNP 6_CD :_: Classification_NN results_NNS of_IN Gospels_NNP References_NNP Mona_NNP Baker_NNP ._.
+1993_CD ._.
+Corpus_NNP linguistics_NNS and_CC translation_NN studies_NNS -_: implications_NNS and_CC applications_NNS ._.
+In_IN Mona_NNP Baker_NNP ,_, Gill_NNP Francis_NNP ,_, and_CC Elena_NNP Tognini-Bonelli_NNP ,_, ed_SYM -_: itors_NNS ,_, Text_NN and_CC Technology_NN ._.
+In_IN Honour_NNP of_IN John_NNP Sin_NNP -_: clair_NN ,_, pages_NNS 233_CD --_: 354_CD ._.
+John_NNP Benjamins_NNP ._.
+Mona_NNP Baker_NNP ._.
+1996_CD ._.
+Corpus-based_JJ translation_NN studies_NNS :_: The_DT challenges_NNS that_WDT lie_VBP ahead_RB ._.
+In_IN LSP_NNP and_CC Trans_NNP -_: lation_NN :_: Studies_NNP in_IN Language_NNP Engineering_NNP in_IN Hon_NNP -_: our_PRP$ of_IN Juan_NNP C._NNP Sager_NNP ,_, pages_NNS 175_CD --_: 186_CD ._.
+Amsterdam_NNP &_CC Philadelphia_NNP :_: John_NNP Benjamins_NNP ._.
+Marco_NNP Baroni_NNP and_CC Silvia_NNP Bernardini_NNP ._.
+2006_CD ._.
+A_DT new_JJ ap_NN -_: proach_NN to_TO the_DT study_NN of_IN translationese_NN :_: Machinelearn_NNP -_: ing_VBG the_DT difference_NN between_IN original_JJ and_CC translated_VBN text_NN ._.
+Literary_NNP and_CC Linguistic_NNP Computing_NNP ,_, 21_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :259_CD --_: 274_CD ._.
+Robert_NNP Pierpont_NNP Blake_NNP ._.
+1932_CD ._.
+Khanmeti_NNP palimpsest_NN fragments_NNS of_IN the_DT Old_NNP Georgian_JJ version_NN of_IN Jeremiah_NNP ._.
+Cambridge_NNP Univ_NNP Press_NNP ._.
+Shoshana_NNP Blum_NNP and_CC Eddie_NNP A_NNP Levenston_NNP ._.
+1978_CD ._.
+Uni_SYM -_: versals_NNS of_IN lexical_JJ simplification_NN ._.
+Language_NN learning_NN ,_, 28_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :399_CD --_: 415_CD ._.
+Shoshana_NNP Blum-Kulka_NNP ._.
+1986_CD ._.
+Shifts_NNS of_IN cohesion_NN and_CC coherence_NN in_IN translation_NN ._.
+Interlingual_NNP and_CC intercul_NN -_: tural_JJ communication_NN :_: Discourse_NN and_CC cognition_NN in_IN translation_NN and_CC second_JJ language_NN acquisition_NN studies_NNS ,_, pages_NNS 17_CD --_: 35_CD ._.
+John_NNP Bissell_NNP Carroll_NNP ._.
+1964_CD ._.
+Language_NN and_CC thought_NN ._.
+Prentice-Hall_NNP Englewood_NNP Cliffs_NNPS ,_, NJ_NNP ._.
+Dimitry_NNP Genzel_NNP and_CC Eugene_NNP Charniak_NNP ._.
+2002_CD ._.
+Entropy_NNP rate_NN constancy_NN in_IN text_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40st_CD Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS -LRB-_-LRB- ACL_SYM 2002_CD -RRB-_-RRB- ._.
+Dimitry_NNP Genzel_NNP and_CC Eugene_NNP Charniak_NNP ._.
+2003_CD ._.
+Variation_NN of_IN entropy_NN and_CC parse_VB trees_NNS of_IN sentences_NNS as_IN a_DT function_NN of_IN the_DT sentence_NN number_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ._.
+Mark_NNP Hall_NNP ,_, Eibe_NNP Frank_NNP ,_, Geoffrey_NNP Holmes_NNP ,_, Bernhard_NNP Pfahringer_NNP ,_, Peter_NNP Reutemann_NNP ,_, and_CC Ian_NNP H._NNP Witten_NNP ._.
+2009_CD ._.
+The_DT WEKA_NNP data_NNS mining_NN software_NN :_: an_DT update_VBP ._.
+ACM_NNP SIGKDD_NNP Explorations_NNPS ,_, 11_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :10_CD --_: 18_CD ._.
+Silvia_NNP Hansen_NNP ._.
+2003_CD ._.
+The_DT Nature_NN of_IN Translated_VBN Text_NN :_: An_DT Interdisciplinary_NNP Methodology_NNP for_IN the_DT Investiga_NNP -_: tion_NN of_IN the_DT Specific_JJ Properties_NNP of_IN Translations_NNPS ._.
+Ph.D._NNP thesis_NN ,_, University_NNP of_IN Saarland_NNP ._.
+Gustav_NNP Herdan_NNP ._.
+1964_CD ._.
+Quantitative_JJ linguistics_NNS ._.
+But_CC -_: terworths_NNS ._.
+Iustina_NNP Ilisei_NNP ,_, Diana_NNP Inkpen_NNP ,_, Gloria_NNP Corpas_NNP Pastor_NNP ,_, and_CC Ruslan_NNP Mitkov_NNP ._.
+2009_CD ._.
+Towards_IN simplification_NN :_: A_DT supervised_JJ learning_NN approach_NN ._.
+In_IN Proceedings_NNP of_IN Machine_NNP Translation_NN 25_CD Years_NNS On_IN ,_, London_NNP ,_, United_NNP Kingdom_NNP ,_, November_NNP 21-22_CD ._.
+Iustina_NNP Ilisei_NNP ,_, Diana_NNP Inkpen_NNP ,_, Gloria_NNP Corpas_NNP Pastor_NNP ,_, and_CC Ruslan_NNP Mitkov_NNP ,_, 2010_CD ._.
+Identification_NN of_IN transla_NN -_: tionese_NN :_: A_DT machine_NN learning_VBG approach_NN ,_, pages_NNS 503_CD --_: 511_CD ._.
+Springer_NNP ._.
+Zahurul_NNP Islam_NNP and_CC Armin_NNP Hoenen_NNP ._.
+2013_CD ._.
+Source_NN and_CC translation_NN classification_NN using_VBG most_RBS frequent_JJ words_NNS ._.
+In_IN 6th_JJ International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- IJCNLP_NNP -RRB-_-RRB- ._.
+Zahurul_NNP Islam_NNP and_CC Alexander_NNP Mehler_NNP ._.
+tomization_NN of_IN the_DT europarl_NN corpus_NN for_IN translation_NN studies_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC_NNP -RRB-_-RRB- ._.
+Zahurul_NNP Islam_NNP and_CC Alexander_NNP Mehler_NNP ._.
+tomatic_JJ readability_NN classification_NN of_IN crowd-sourced_JJ data_NNS based_VBN on_IN linguistic_JJ and_CC information-theoretic_JJ features_NNS ._.
+In_IN 14th_JJ International_NNP Conference_NNP on_IN Intel_NNP -_: ligent_NN Text_NN Processing_NNP and_CC Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Md._NNP ._.
+Zahurul_NNP Islam_NNP ,_, Md._NNP ._.
+Rashedur_NNP Rahman_NNP ,_, and_CC Alexander_NNP Mehler_NNP ._.
+2014_CD ._.
+Readability_NN classification_NN of_IN bangla_NN texts_NNS ._.
+In_IN 15th_JJ International_NNP Conference_NNP on_IN Intelligent_NNP Text_NNP Processing_NNP and_CC Computational_NNP Lin_NNP -_: guistics_NNS -LRB-_-LRB- cicLing_VBG -RRB-_-RRB- ,_, Kathmandu_NNP ,_, Nepal_NNP ._.
+Zahurul_NNP Islam_NNP ._.
+2014_CD ._.
+Multilingual_JJ text_NN classification_NN using_VBG information_NN theoretic_JJ features_NNS ._.
+PhD_NNP Thesis_NNP ,_, Goethe_NNP University_NNP Frankfurt_NNP ._.
+S.S._NNP Keerthi_NNP ,_, S._NNP K._NNP Shevade_NNP ,_, C._NNP Bhattacharyya_NNP ,_, and_CC K._NNP R._NNP K._NNP Murthy_NNP ._.
+2001_CD ._.
+Improvements_NNP to_TO Platt_NNP 's_POS SMO_NNP algorithm_NN for_IN SVM_NNP classifier_NN design_NN ._.
+Neural_NNP Computation_NNP ,_, 13_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :637_CD --_: 649_CD ._.
+Anna_NNP Kharanauli_NNP ,_, 2000_CD ._.
+Einfhrung_NNP in_IN die_NN georgische_NN Psalterbersetzung_NNP ,_, pages_NNS 248_CD --_: 308_CD ._.
+Vandenhoeck_NNP &_CC Ruprecht_NNP ._.
+George_NNP Jiri_NNP Klir_NNP ._.
+2005_CD ._.
+Uncertainty_NN and_CC Information_NN ._.
+Wiley-Interscience_NNP ._.
+Philipp_NNP Koehn_NNP ._.
+2005_CD ._.
+Europarl_NNP :_: A_DT parallel_JJ corpus_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN MT_NNP Summit_NNP ._.
+Reinhard_NNP Ko_NNP ̈hler_NN and_CC Matthias_NNP Galle_NNP ._.
+1993_CD ._.
+Dy_SYM -_: namic_NN aspects_NNS of_IN text_NN characteristics_NNS ._.
+Quantitative_JJ text_NN analysis_NN ,_, pages_NNS 46_CD --_: 53_CD ._.
+Moshe_NNP Koppel_NNP and_CC Noam_NNP Ordan_NNP ._.
+2011_CD ._.
+Translationese_NNP and_CC its_PRP$ dialects_NNS ._.
+In_IN 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP -RRB-_-RRB- ._.
+David_NNP Marshall_NNP Lang_NNP ._.
+1957_CD ._.
+Recent_JJ work_NN on_IN the_DT geor_NN -_: gian_JJ new_JJ testament_NN ._.
+Bulletin_NNP of_IN the_DT School_NNP of_IN Orien_NNP -_: tal_NN and_CC African_JJ Studies_NNS ,_, 19_CD -LRB-_-LRB- 01_CD -RRB-_-RRB- :82_CD --_: 93_CD ._.
+Sara_NNP Laviosa_NNP ._.
+2002_CD ._.
+Corpus-based_JJ translation_NN stud_NN -_: ies_NNS ._.
+Theory_NNP ,_, findings_NNS ,_, applications_NNS ._.
+Amsterdam/New_NNP York_NNP :_: Rodopi_NNP ._.
+Andre_NNP ́_NNP Lefevere_NNP ._.
+2002_CD ._.
+Translation/history/culture_NNP :_: A_NNP sourcebook_NN ._.
+Routledge_NNP ._.
+2012_CD ._.
+Cus_SYM -_: 2013_CD ._.
+Au_SYM -_: Huma_NNP Lodhi_NNP ,_, Craig_NNP Saunders_NNP ,_, John_NNP Shawe-Taylor_NNP ,_, Nello_NNP Cristianini_NNP ,_, and_CC Chris_NNP Watkins_NNP ._.
+2002_CD ._.
+Text_NN classification_NN using_VBG string_NN kernels_NNS ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 2:419_CD --_: 444_CD ._.
+Sattar_NNP Lzwaini_NNP ._.
+2003_CD ._.
+Building_NNP specialised_VBD corpora_NN for_IN translation_NN studies_NNS ._.
+In_IN Workshop_NNP on_IN Multilin_NNP -_: gual_JJ Corpora_NNP :_: Linguistic_NNP Requirements_NNPS and_CC Tech_NNP -_: nical_JJ Perspectives_NNS ,_, Corpus_NNP Linguistics_NNPS ._.
+A._NN Na_NNP ́das_FW ._.
+1984_CD ._.
+Estimation_NN of_IN probabilities_NNS in_IN the_DT lan_NN -_: guage_NN model_NN of_IN the_DT ibm_NN speech_NN recognition_NN system_NN ._.
+IEEE_NNP Transactions_NNS on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, 32_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :859_CD --_: 861_CD ._.
+Maeve_NNP Olohan_NNP ._.
+2001_CD ._.
+Spelling_VBG out_RP the_DT optionals_NNS in_IN translation_NN :_: a_DT corpus_NN study_NN ._.
+In_IN Corpus_NNP Linguistics_NNPS 2001_CD conference_NN ._.
+UCREL_NNP Technical_NNP Paper_NNP number_NN 13_CD ._.
+Special_JJ issue_NN ._.
+Gloria_NNP Corpas_NNP Pastor_NNP ,_, Ruslan_NNP Mitkov_NNP ,_, Naveed_NNP Afzal_NNP ,_, and_CC Viktor_NNP Pekar_NNP ._.
+2008_CD ._.
+Translation_NN universals_NNS :_: do_VB they_PRP exist_VBP ?_.
+a_DT corpus-based_JJ NLP_NNP study_NN of_IN con_NN -_: vergence_NN and_CC simplification_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Eighth_NNP Conference_NN of_IN the_DT Association_NNP for_IN Machine_NNP Translation_NN in_IN the_DT Americas_NNP -LRB-_-LRB- AMTA-08_NNP -RRB-_-RRB- ._.
+Jams_NNS W._NNP Pennebaker_NNP ,_, Martha_NNP E._NNP Francis_NNP ,_, and_CC Roger_NNP J._NNP Booth_NNP ._.
+2001_CD ._.
+Linguistic_NNP Inquiry_NNP and_CC Word_NNP Count_NNP -LRB-_-LRB- LIWC_NNP -RRB-_-RRB- :_: LIWC2001_NNP Manual_NNP ._.
+Erlbaum_NNP Publishers_NNPS ._.
+John_NNP C._NNP Platt_NNP ._.
+1998_CD ._.
+Fast_RB training_NN of_IN support_NN vec_NN -_: tor_NN machines_NNS using_VBG sequential_JJ minimal_JJ optimization_NN ._.
+MIT_NNP Press_NNP ._.
+Marius_NNP Popescu_NNP ._.
+2011_CD ._.
+Studying_VBG translationese_NN at_IN the_DT character_NN level_NN ._.
+In_IN Recent_JJ Advances_NNS in_IN Natural_JJ Lan_SYM -_: guage_NN Processing_NNP ._.
+Anthony_NNP Pym_NNP ._.
+2005_CD ._.
+Explaining_VBG explicitation_NN ._.
+In_IN New_NNP Trends_NNPS in_IN Translation_NN Studies_NNS ._.
+In_IN Honour_NNP of_IN Kinga_NNP Klaudy_NNP ,_, pages_NNS 29_CD --_: 34_CD ._.
+Akadmia_NNP Kiad_NNP ._.
+Candace_NNP Se_NNP ́guinot_NN ._.
+1988_CD ._.
+Pragmatics_NNS and_CC the_DT explic_NN -_: itation_NN hypothesis_NN ._.
+TTR_NNP :_: traduction_NN ,_, terminologie_NN ,_, re_VB ́daction_NN ,_, 1_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :106_CD --_: 113_CD ._.
+Claude_NNP Elwood_NNP Shannon_NNP ._.
+1948_CD ._.
+A_DT mathematical_JJ the_DT -_: ory_NN of_IN communication_NN ._.
+The_DT Bell_NNP System_NNP Technical_NNP Journal_NNP ,_, 27_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :379_CD --_: 423_CD ._.
+Irina_NNP Temnikova_NNP ._.
+2012_CD ._.
+Text_NN Complexity_NNP and_CC Text_NNP Sim_NNP -_: plification_NN in_IN the_DT Crisis_NNP Management_NNP Domain_NNP ._.
+Ph.D._NNP thesis_NN ,_, University_NNP of_IN Wolverhampton_NNP ._.
+Gideon_NNP Toury_NNP ._.
+1995_CD ._.
+Descriptive_JJ Translation_NN Studies_NNS and_CC Beyond_NNP ._.
+John_NNP Benjamins_NNP ,_, Amster_NNP -_: dam/Philadelphia_NNP ._.
+B.U_NNP ̈stu_NNP ̈n_NN ,_, W.J.Melssen_NNP ,_, andL.M.C.Buydens_NNP .2006_CD ._.
+Facilitating_VBG the_DT application_NN of_IN support_NN vector_NN regres_VBZ -_: sion_NN by_IN using_VBG a_DT universal_JJ Pearson_NNP VII_NNP function_NN based_VBN kernel_NN ._.
+Chemometrics_NNPS and_CC Intelligent_NNP Laboratory_NNP Systems_NNP ,_, 81_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :29_CD --_: 40_CD ._.
+Hans_NNP Van_NNP Halteren_NNP ._.
+2008_CD ._.
+Source_NNP language_NN markers_NNS in_IN europarl_NN translations_NNS ._.
+In_IN International_NNP Conference_NNP inComputational_NNP Linguistics_NNP -LRB-_-LRB- COLING_NNP -RRB-_-RRB- ,_, pages_NNS 937_CD --_: 944_CD ._.
+Jean-Paul_NNP Vinay_NNP and_CC Jean_NNP Darbelnet_NNP ._.
+1958_CD ._.
+Stylistique_NNP compare_VB ́e_FW de_FW langlais_FW et_FW du_NNP franc_NN ̧ais_NNS ._.
+Jean-Paul_NNP Vinay_NNP and_CC Jean_NNP Louis_NNP Darbelnet_NNP ._.
+1995_CD ._.
+Comparative_JJ stylistics_NNS of_IN French_JJ and_CC English_JJ :_: a_DT methodology_NN for_IN translation_NN ,_, volume_NN 11_CD ._.
+John_NNP Ben_NNP -_: jamins_NNS ._.

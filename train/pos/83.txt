@@ -1,0 +1,354 @@
+High-order_JJR Graph-based_JJ Neural_NNP Dependency_NNP Parsing_NNP Abstract_NNP In_IN this_DT work_NN ,_, we_PRP present_VBP a_DT novel_JJ way_NN of_IN using_VBG neural_JJ network_NN for_IN graph-based_JJ dependency_NN parsing_NN ,_, which_WDT fits_VBZ the_DT neural_JJ network_NN into_IN a_DT simple_JJ probabilistic_JJ model_NN and_CC can_MD be_VB further_JJ -_: more_JJR generalized_VBN to_TO high-order_JJ parsing_NN ._.
+In_IN -_: stead_NN of_IN the_DT sparse_JJ features_NNS used_VBN in_IN traditional_JJ methods_NNS ,_, we_PRP utilize_VBP distributed_VBN dense_JJ feature_NN representations_NNS for_IN neural_JJ network_NN ,_, which_WDT give_VBP better_JJR feature_NN representations_NNS ._.
+The_DT proposed_VBN parsers_NNS are_VBP evaluated_VBN on_IN English_NNP and_CC Chinese_NNP Penn_NNP Treebanks_NNPS ._.
+Compared_VBN to_TO existing_VBG work_NN ,_, our_PRP$ parsers_NNS give_VBP competitive_JJ performance_NN with_IN much_RB more_RBR efficient_JJ inference_NN ._.
+1_CD Introduction_NNP There_EX have_VBP been_VBN two_CD classes_NNS of_IN typical_JJ approaches_NNS for_IN dependency_NN parsing_NN :_: transition-based_JJ parsing_NN and_CC graph-based_JJ parsing_NN ._.
+The_DT former_JJ parses_VBZ sen_SYM -_: tences_NNS by_IN making_VBG a_DT series_NN of_IN shift-reduce_NN decisions_NNS -LRB-_-LRB- Yamada_NNP and_CC Matsumoto_NNP ,_, 2003_CD ;_: Nivre_NNP ,_, 2003_CD -RRB-_-RRB- ,_, while_IN the_DT latter_JJ searches_NNS for_IN a_DT tree_NN through_IN graph_NN algo_NN -_: rithms_NNS by_IN decomposing_VBG trees_NNS into_IN factors_NNS ._.
+This_DT paper_NN will_MD focus_VB on_IN graph-based_JJ methods_NNS ,_, which_WDT are_VBP based_VBN on_IN dynamic_JJ programming_NN strategies_NNS -LRB-_-LRB- Eisner_NNP ,_, 1996_CD ;_: McDonald_NNP et_FW al._FW ,_, 2005_CD ;_: McDonald_NNP and_CC Pereira_NNP ,_, 2006_CD -RRB-_-RRB- ._.
+In_IN this_DT recent_JJ decade_NN ,_, extensions_NNS have_VBP been_VBN made_VBN to_TO use_VB high-order_JJ factors_NNS -LRB-_-LRB- Carreras_NNP ,_, 2007_CD ;_: Koo_NNP and_CC Collins_NNP ,_, 2010_CD -RRB-_-RRB- in_IN graph_NN models_NNS and_CC the_DT high_JJ -_: est_NN one_CD considers_VBZ fourth-order_NN -LRB-_-LRB- Ma_NNP and_CC Zhao_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+However_RB ,_, all_DT those_DT methods_NNS usually_RB use_VBP sparse_JJ indi_SYM -_: cator_NN features_NNS as_IN inputs_NNS and_CC linear_JJ models_NNS to_TO get_VB the_DT scores_NNS for_IN later_JJ inference_NN process_NN ._.
+They_PRP are_VBP easy_JJ to_TO ∗_VB Correspondence_NN author_NN ._.
+suffer_VBP from_IN the_DT problem_NN of_IN sparsity_NN ,_, and_CC linear_JJ mod_NN -_: els_NNS can_MD be_VB insufficient_JJ to_TO effectively_RB integrate_VB all_PDT the_DT sparse_JJ features_NNS in_IN spite_NN of_IN various_JJ rich_JJ context_NN that_WDT can_MD be_VB potentially_RB exploited_VBN ._.
+Distributed_VBN representations_NNS and_CC neural_JJ network_NN provide_VB a_DT way_NN to_TO alleviate_VB such_PDT a_DT drawback_NN -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Collobert_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Instead_RB of_IN high_JJ -_: dimensional_JJ sparse_JJ indicator_NN feature_NN vectors_NNS ,_, dis_SYM -_: tributed_JJ representations_NNS use_VBP low-dimensional_JJ dense_JJ vectors_NNS -LRB-_-LRB- also_RB known_VBN as_IN embeddings_NNS -RRB-_-RRB- to_TO represent_VB the_DT features_NNS ,_, and_CC then_RB they_PRP are_VBP usually_RB used_VBN in_IN a_DT neu_NN -_: ral_NN network_NN ._.
+For_IN example_NN ,_, in_IN the_DT traditional_JJ meth_NN -_: ods_NNS ,_, a_DT word_NN is_VBZ usually_RB expressed_VBN by_IN a_DT one-hot_JJ vector_NN ;_: while_IN distributed_VBN representations_NNS use_VBP a_DT dense_JJ vector_NN ._.
+By_IN appropriate_JJ representation_NN learning_NN -LRB-_-LRB- usually_RB by_IN back-propagations_NNS in_IN neural_JJ network_NN -RRB-_-RRB- ,_, these_DT embed_VBN -_: dings_NNS can_MD replace_VB traditional_JJ sparse_JJ features_NNS and_CC per_IN -_: form_NN quite_RB well_RB together_RB with_IN neural_JJ network_NN ._.
+In_IN recent_JJ years_NNS ,_, using_VBG distributed_VBN representations_NNS and_CC neural_JJ network_NN has_VBZ gradually_RB gained_VBN popularity_NN in_IN natural_JJ language_NN processing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- since_IN the_DT pio_NN -_: neer_NN work_NN of_IN -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+Several_JJ neural_JJ network_NN language_NN models_NNS have_VBP reported_VBN exciting_JJ re_SYM -_: sults_NNS for_IN the_DT tasks_NNS of_IN machine_NN translation_NN and_CC speech_NN recognition_NN -LRB-_-LRB- Schwenk_NNP ,_, 2007_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2010_CD ;_: Wang_NNP et_FW al._FW ,_, 2013_CD ;_: Wang_NNP et_FW al._FW ,_, 2014_CD ;_: Wang_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Many_JJ other_JJ tasks_NNS of_IN NLP_NNP have_VBP also_RB been_VBN re_SYM -_: considered_VBN using_VBG neural_JJ network_NN ,_, the_DT SENNA_NNP sys_SYM -_: tem1_CD -LRB-_-LRB- Collobert_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- solved_VBD the_DT tasks_NNS of_IN part_NN -_: of-speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- tagging_NN ,_, chunking_NN ,_, named_VBN entity_NN recognition_NN and_CC semantic_JJ role_NN labeling_VBG ._.
+In_IN this_DT work_NN ,_, we_PRP utilize_VBP neural_JJ network_NN for_IN first_JJ -_: order_NN ,_, second-order_NN and_CC third-order_JJR graph-based_JJ de_IN -_: 1http_CD :_: /_SYM /_SYM ronan.collobert.com/senna/_NN pendency_NN parsing_NN ,_, with_IN the_DT help_NN of_IN the_DT existing_VBG graph-based_JJ parsing_NN algorithms_NNS ._.
+For_IN high-order_NN parsing_NN ,_, it_PRP is_VBZ performed_VBN after_IN the_DT first-order_JJ parser_NN prunes_NNS unlikely_JJ parts_NNS of_IN the_DT parsing_NN tree_NN ._.
+We_PRP use_VBP neural_JJ network_NN to_TO learn_VB dense_JJ representations_NNS for_IN word_NN ,_, POS_NNP and_CC distance_NN information_NN ,_, and_CC predict_VB how_WRB likely_JJ the_DT dependency_NN relationships_NNS are_VBP for_IN a_DT sub-tree_JJ factor_NN in_IN the_DT dependency_NN tree_NN ._.
+For_IN unlabeled_JJ projective_JJ dependency_NN parsing_NN ,_, we_PRP have_VBP put_VBN a_DT free_JJ distribution_NN of_IN our_PRP$ implementation_NN on_IN the_DT Internet2_NNP ._.
+The_DT remainder_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN fol_NN -_: lows_NNS :_: Section_NN 2_CD discusses_VBZ related_JJ work_NN ,_, Section_NN 3_CD gives_VBZ the_DT background_NN for_IN graph-based_JJ dependency_NN parsing_NN ,_, Section_NN 4_CD describes_VBZ our_PRP$ neural_JJ network_NN model_NN and_CC how_WRB we_PRP utilize_VBP it_PRP with_IN graph-based_JJ pars_NNS -_: ing_NN and_CC Section_NN 5_CD presents_VBZ our_PRP$ experiments_NNS ,_, results_NNS and_CC some_DT discussions_NNS ._.
+We_PRP summarize_VBP this_DT paper_NN in_IN Section_NN 6_CD ._.
+2_CD Related_JJ Work_NN There_EX has_VBZ been_VBN a_DT few_JJ of_IN attempts_NNS to_TO parse_VB with_IN neural_JJ network_NN ._.
+For_IN dependency_NN parsing_NN ,_, -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- uses_VBZ neural_JJ network_NN for_IN greedy_JJ transition-based_JJ dependency_NN parsing_NN ._.
+We_PRP explore_VBP graph-based_JJ methods_NNS in_IN this_DT work_NN ,_, which_WDT might_MD be_VB difficultly_RB utilized_VBN with_IN neural_JJ network_NN ._.
+-LRB-_-LRB- Le_NNP and_CC Zuidema_NNP ,_, 2014_CD -RRB-_-RRB- implements_VBZ a_DT generative_JJ depen_NN -_: dency_NN model_NN with_IN a_DT recursive_JJ neural_JJ network_NN ,_, but_CC the_DT model_NN is_VBZ used_VBN for_IN re-ranking_JJ which_WDT needs_VBZ k-best_JJ candidates_NNS ._.
+For_IN constituency_NN parsing_NN ,_, -LRB-_-LRB- Collobert_NNP ,_, 2011_CD -RRB-_-RRB- uses_VBZ a_DT convolutional_JJ neural_JJ network_NN and_CC solves_VBZ the_DT prob_NN -_: lem_NN with_IN a_DT hierarchical_JJ tagging_VBG process_NN ._.
+-LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- use_NN recur_SYM -_: sive_JJ neural_JJ network_NN to_TO model_VB phrase-based_JJ parse_NN trees_NNS ,_, but_CC their_PRP$ methods_NNS might_MD be_VB unlikely_JJ general_JJ -_: ized_VBN to_TO dependency_NN parsing_NN because_IN a_DT dependency_NN parse_VB tree_NN has_VBZ no_DT non-terminal_JJ nodes_NNS while_IN con_NN -_: stituency_NN parse_NN trees_NNS are_VBP derived_VBN from_IN the_DT phrases_NNS structure_NN ._.
+Semi-supervised_JJ methods_NNS usually_RB incorporate_VBP word_NN representations_NNS as_IN the_DT embeddings_NNS for_IN words_NNS in_IN the_DT projection_NN layer_NN in_IN neural_JJ network_NN ;_: they_PRP usually_RB make_VBP use_NN of_IN lots_NNS of_IN unlabeled_JJ data_NNS to_TO find_VB the_DT pat_NN -_: terns_NNS in_IN natural_JJ languages_NNS ._.
+If_IN we_PRP utilize_VBP pre-trained_JJ word_NN vectors_NNS -LRB-_-LRB- see_VB in_IN Section_NN 5.1_CD -RRB-_-RRB- ,_, our_PRP$ models_NNS can_MD be_VB 2_CD https://github.com/zzsfornlp/nngdparser_JJ Figure_NN 1_CD :_: An_DT example_NN dependency_NN tree_NN ._.
+regarded_VBN as_IN semi-supervised_JJ to_TO some_DT extent_NN ._.
+-LRB-_-LRB- Koo_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- uses_VBZ Brown_JJ clustering_VBG algorithm_NN to_TO ob_SYM -_: tain_NN word_NN representations_NNS ,_, but_CC then_RB transforms_VBZ them_PRP into_IN sparse_JJ features_NNS as_IN additional_JJ features_NNS and_CC again_RB uses_VBZ the_DT traditional_JJ methods_NNS ;_: while_IN in_IN neural_JJ net_NN -_: work_NN models_NNS including_VBG this_DT work_NN ,_, the_DT embeddings_NNS directly_RB replace_VB sparse_JJ features_NNS for_IN inputs_NNS ._.
+3_CD 3.1_CD Graph-based_JJ Dependency_NNP Parsing_NNP Background_NN of_IN Dependency_NNP Parsing_NNP Syntax_NNP information_NN is_VBZ important_JJ for_IN many_JJ other_JJ tasks_NNS -LRB-_-LRB- Zhang_NNP and_CC Zhao_NNP ,_, 2013_CD ;_: Chen_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+As_IN a_DT classic_JJ syntactic_NN problem_NN ,_, dependency_NN pars_NNS -_: ing_VBG aims_NNS to_TO predict_VB a_DT dependency_NN tree_NN ,_, which_WDT di_FW -_: rectly_NN represents_VBZ head-modifier_JJR relationships_NNS be_VB -_: tween_JJ words_NNS in_IN a_DT sentence_NN ._.
+Figure_NN 1_CD shows_VBZ a_DT de_FW -_: pendency_NN tree_NN ,_, in_IN which_WDT all_PDT the_DT links_NNS connect_VBP head_NN -_: modifier_NN pairs_NNS ._.
+By_IN enforcing_VBG that_IN all_PDT the_DT nodes_NNS must_MD have_VB one_CD and_CC only_RB one_CD parent_NN and_CC the_DT result_NN -_: ing_NN graphs_NNS should_MD be_VB acyclic_JJ and_CC connected_JJ ,_, we_PRP can_MD get_VB a_DT directed_VBN dependency_NN tree_NN for_IN a_DT sentence_NN -LRB-_-LRB- we_PRP usually_RB add_VBP a_DT dummy_NN node_VBD ⟨_CD root_NN ⟩_NN for_IN the_DT sentence_NN as_IN the_DT highest_JJS level_NN node_NN -RRB-_-RRB- ._.
+Labels_NNS or_CC dependency_NN category_NN can_MD also_RB be_VB de_IN -_: fined_VBN for_IN the_DT links_NNS in_IN the_DT dependency_NN tree_NN ,_, however_RB ,_, this_DT work_NN will_MD focus_VB on_IN unlabeled_JJ dependency_NN pars_NNS -_: ing_NN ,_, because_IN once_RB the_DT parsing_NN tree_NN has_VBZ been_VBN built_VBN ,_, la_NNP -_: beling_NN can_MD be_VB very_RB effectively_RB performed_VBN ._.
+Most_JJS de_FW -_: pendency_NN trees_NNS for_IN most_JJS treebanks_NNS follow_VBP a_DT useful_JJ constrain_VB that_DT is_VBZ called_VBN projectiveness_NN ,_, i.e._FW ,_, no_DT cross_NN links_NNS exist_VBP in_IN the_DT tree_NN ._.
+In_IN treebanks_NNS for_IN major_JJ lan_NN -_: guages_NNS such_JJ as_IN English_NNP ,_, nearly_RB all_DT sentences_NNS are_VBP pro-_JJ jective_NN ._.
+Therefore_RB this_DT work_NN also_RB considers_VBZ projec_NN -_: tive_JJ dependency_NN parsing_NN only_RB ._.
+3.2_CD Graph-based_JJ Methods_NNS and_CC their_PRP$ Decompositions_NNP In_IN graph-based_JJ methods_NNS ,_, dependency_NN trees_NNS are_VBP de_IN -_: composed_VBN into_IN specific_JJ factors_NNS that_WDT do_VBP not_RB influence_VB with_IN each_DT other_JJ ._.
+Each_DT factor_NN ,_, usually_RB represented_VBN by_IN a_DT sub-tree_NN ,_, is_VBZ given_VBN a_DT score_NN individually_RB based_VBN on_IN its_PRP$ Figure_NN 2_CD :_: The_DT decompositions_NNS of_IN factors_NNS ._.
+features_NNS ._.
+The_DT score_NN for_IN a_DT whole_JJ dependency_NN tree_NN T_NNP is_VBZ the_DT summation_NN of_IN the_DT scores_NNS of_IN all_PDT the_DT factors_NNS :_: parsers_NNS also_RB take_VBP these_DT algorithms_NNS as_IN backbones_NNS and_CC use_VB them_PRP for_IN inference_NN ._.
+In_IN the_DT traditional_JJ methods_NNS ,_, scores_NNS are_VBP usually_RB ob_SYM -_: tained_VBN directly_RB from_IN a_DT linear_JJ model_NN ._.
+In_IN the_DT learn_VBP -_: ing_VBG phase_NN ,_, parameter_NN estimation_NN methods_NNS for_IN struc_NN -_: tured_VBN linear_JJ models_NNS may_MD adopt_VB averaged_VBD perceptron_NN -LRB-_-LRB- Collins_NNP ,_, 2002_CD ;_: Collins_NNP and_CC Roark_NNP ,_, 2004_CD -RRB-_-RRB- and_CC max_SYM -_: margin_NN methods_NNS -LRB-_-LRB- Taskar_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+Still_RB using_VBG all_PDT the_DT existing_VBG parsing_NN algorithms_NNS ,_, this_DT work_NN focuses_VBZ on_IN improving_VBG scoring_VBG for_IN the_DT factors_NNS ._.
+In_IN detail_NN ,_, our_PRP$ work_NN uses_VBZ neural_JJ network_NN to_TO deter_VB -_: mine_NN the_DT scores_NNS ._.
+Nevertheless_RB the_DT traditional_JJ meth_NN -_: ods_NNS might_MD be_VB difficultly_RB extended_VBN to_TO neural_JJ network_NN because_IN of_IN the_DT non-linearity_NN ._.
+Therefore_RB ,_, we_PRP do_VBP not_RB directly_RB obtain_VB scores_NNS from_IN neural_JJ network_NN ._.
+Instead_RB we_PRP utilize_VBP a_DT probabilistic_JJ model_NN and_CC obtain_VB scores_NNS by_IN some_DT transformations_NNS ,_, and_CC then_RB use_VB these_DT exist_VBP -_: ing_NN parsing_NN algorithms_NNS for_IN inference_NN ._.
+Scoretree_NNP -LRB-_-LRB- T_NNP -RRB-_-RRB- =_SYM p_SYM ∈_FW f_LS actors_NNS -LRB-_-LRB- T_NNP -RRB-_-RRB- Scorefactor_NNP -LRB-_-LRB- p_NN -RRB-_-RRB- According_VBG to_TO the_DT sub-tree_JJ size_NN of_IN the_DT factors_NNS ,_, we_PRP can_MD define_VB the_DT order_NN of_IN the_DT graph_NN model_NN ,_, some_DT of_IN the_DT decomposition_NN methods_NNS are_VBP shown_VBN in_IN Figure_NN 2_CD ._.
+As_IN the_DT simplest_JJS case_NN ,_, the_DT first-order_JJ model_NN just_RB con_RB -_: siders_NNS sub-tree_JJ factor_NN of_IN single_JJ edge_NN and_CC its_PRP$ score_NN is_VBZ obtained_VBN by_IN adding_VBG all_PDT the_DT scores_NNS of_IN the_DT edges_NNS ._.
+For_IN second-order_JJ models_NNS ,_, another_DT node_NN is_VBZ added_VBN into_IN the_DT factor_NN ,_, which_WDT can_MD be_VB either_RB sibling_VBG or_CC grandpar_NN -_: ent_NN ._.
+For_IN third-order_JJR models_NNS ,_, the_DT simplest_JJS form_NN is_VBZ the_DT grand-sibling_JJ decomposition_NN ,_, which_WDT adds_VBZ both_DT sibling_VBG and_CC grandparent_NN nodes_NNS ._.
+Existing_VBG work_NN also_RB applied_VBD various_JJ decompositions_NNS ,_, such_JJ as_IN third-order_JJR tri-sibling_JJ -LRB-_-LRB- Koo_NNP and_CC Collins_NNP ,_, 2010_CD -RRB-_-RRB- which_WDT considers_VBZ two_CD siblings_NNS of_IN the_DT modifier_NN and_CC fourth-order_NN grand_JJ -_: tri-sibling_JJ -LRB-_-LRB- Ma_NNP and_CC Zhao_NNP ,_, 2012_CD -RRB-_-RRB- which_WDT adds_VBZ a_DT grand_JJ -_: parent_NN node_NN on_IN tri-siblings_NNS ._.
+For_IN the_DT sake_NN of_IN simplicity_NN and_CC the_DT convenient_JJ use_NN of_IN neural_JJ network_NN ,_, we_PRP only_RB consider_VBP four_CD models_NNS dis_SYM -_: cussed_VBN above_IN -LRB-_-LRB- the_DT sub-tree_NN patterns_NNS of_IN their_PRP$ factors_NNS are_VBP also_RB shown_VBN in_IN Figure_NN 2_CD -RRB-_-RRB- ._.
+The_DT notations_NNS for_IN the_DT four_CD models_NNS are_VBP defined_VBN as_IN follows_VBZ :_: •_SYM o1_CD ,_, first-order_JJ model_NN •_CD o2sib_CD ,_, second-order_JJ model_NN with_IN sibling_VBG nodes_NNS •_SYM o2g_CD ,_, second-order_JJ model_NN with_IN grandparent_NN nodes_VBZ •_CD o3g_CD ,_, third-order_JJR model_NN with_IN both_DT sibling_VBG and_CC grand_JJ -_: parent_NN nodes_VBZ 3.3_CD Parsing_NNP Algorithms_NNPS Graph-based_JJ methods_NNS usually_RB need_VBP to_TO use_VB dynamic_JJ programming_NN based_VBN parsing_NN algorithms_NNS ,_, which_WDT make_VBP use_NN of_IN the_DT scores_NNS of_IN sub-trees_NNS for_IN larger_JJR sub-trees_NNS in_IN a_DT bottom-up_JJ way_NN ._.
+These_DT algorithms_NNS solve_VB the_DT inference_NN problem_NN ,_, that_WDT is_VBZ ,_, how_WRB to_TO get_VB an_DT optimal_JJ tree_NN given_VBN the_DT scores_NNS for_IN the_DT parts_NNS ._.
+Our_PRP$ proposed_VBN 4_CD 4.1_CD Neural_NNP Network_NNP Parsers_NNP The_NNP Probabilistic_NNP Model_NNP For_IN graph-based_JJ dependency_NN parsing_NN ,_, it_PRP is_VBZ not_RB straightforward_JJ to_TO extend_VB the_DT linear_JJ models_NNS to_TO the_DT more_RBR powerful_JJ nonlinear_JJ neural_JJ network_NN ,_, because_IN we_PRP need_VBP to_TO figure_VB out_RP the_DT scores_NNS for_IN the_DT factors_NNS of_IN the_DT tree_NN ,_, which_WDT are_VBP not_RB specified_VBN in_IN the_DT original_JJ tree_NN -_: bank_NN ._.
+That_DT is_VBZ ,_, we_PRP only_RB know_VBP which_WDT factors_NNS are_VBP in_IN the_DT correct_JJ parsing_NN tree_NN ,_, but_CC there_EX are_VBP no_DT natural_JJ ways_NNS to_TO indicate_VB how_WRB they_PRP are_VBP scored_VBN ;_: the_DT only_JJ intuition_NN is_VBZ to_TO give_VB high_JJ scores_NNS to_TO the_DT right_JJ factors_NNS and_CC low_JJ scores_NNS to_TO the_DT wrong_JJ ones_NNS ._.
+In_IN this_DT work_NN ,_, a_DT simple_JJ probabilistic_JJ model_NN is_VBZ adopted_VBN for_IN the_DT neural_JJ network_NN parsers_NNS ._.
+It_PRP is_VBZ one_CD of_IN Eisner_NNP 's_POS models_NNS -LRB-_-LRB- Eisner_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+Precisely_RB ,_, Eisner_NNP 's_POS model_NN A_NN is_VBZ chosen_VBN and_CC slightly_RB modified_VBN for_IN scor_NN -_: ing_NN ._.
+The_DT model_NN describes_VBZ bi-gram_JJ lexical_JJ affinities_NNS ,_, and_CC it_PRP gives_VBZ each_DT possible_JJ link_NN an_DT affinity_NN probability_NN ._.
+The_DT final_JJ probability_NN of_IN drawing_VBG a_DT parsing_NN tree_NN for_IN a_DT sentence_NN is_VBZ the_DT product_NN of_IN all_PDT the_DT affinity_NN probabili_NNS -_: ties_NNS ._.
+The_DT original_JJ model_NN also_RB considers_VBZ probabilities_NNS of_IN words_NNS and_CC tags_NNS and_CC its_PRP$ formula_NN is_VBZ given_VBN as_IN follows_VBZ :_: P_NNP r_NN -LRB-_-LRB- words_NNS ,_, tags_NNS ,_, links_NNS -RRB-_-RRB- =_SYM P_NNP r_NN -LRB-_-LRB- words_NNS ,_, tags_NNS -RRB-_-RRB- ·_VBP P_NNP r_NN -LRB-_-LRB- links_NNS present_JJ or_CC not_RB |_JJ words_NNS ,_, tags_NNS -RRB-_-RRB- ≈_VBP Pr_NN -LRB-_-LRB- words_NNS ,_, tags_NNS -RRB-_-RRB- ·_VBP Pr_NN -LRB-_-LRB- Lhm_FW |_FW tword_FW -LRB-_-LRB- h_NN -RRB-_-RRB- ,_, tword_NN -LRB-_-LRB- m_FW -RRB-_-RRB- -RRB-_-RRB- 1_CD ≤_CD h_NN ,_, m_SYM ≤_FW n_FW Unlike_IN the_DT original_JJ model_NN ,_, we_PRP determine_VBP only_RB the_DT probability_NN for_IN the_DT parsing_NN tree_NN -LRB-_-LRB- the_DT existence_NN of_IN the_DT links_NNS -RRB-_-RRB- :_: Using_VBG single-headed_JJ constraint_NN again_RB ,_, for_IN all_PDT the_DT factors_NNS with_IN the_DT same_JJ node_NN as_IN the_DT children_NNS ,_, only_RB one_CD can_MD exist_VB in_IN a_DT legal_JJ parsing_NN tree_NN ._.
+The_DT similar_JJ trans_NNS -_: formations_NNS can_MD be_VB performed_VBN and_CC then_RB again_RB we_PRP will_MD take_VB the_DT transformed_VBN scores_NNS as_IN inputs_NNS to_TO the_DT corre_NN -_: sponding_VBG parsing_NN algorithms_NNS ._.
+We_PRP describe_VBP the_DT high-order_JJ extension_NN by_IN taking_VBG the_DT o2g_CD model_NN as_IN an_DT example_NN and_CC other_JJ models_NNS can_MD be_VB handled_VBN in_IN a_DT similar_JJ way_NN ._.
+We_PRP will_MD use_VB the_DT simi_NN -_: lar_NN notations_NNS :_: Lghm_NNP is_VBZ the_DT binary_JJ variable_NN that_WDT indi_SYM -_: cates_VBZ the_DT factor_NN with_IN node_JJ g_NN as_IN grandparent_NN ,_, node_JJ h_NN as_IN head_NN and_CC node_NN m_NN as_IN modifier_NN exists_VBZ in_IN the_DT parse_NN tree_NN ._.
+We_PRP continuously_RB use_VBP H_NNP as_IN the_DT parent_NN of_IN m_NN and_CC G_NNP as_IN its_PRP$ grandparent_NN so_IN that_IN LGHm_NNP is_VBZ 1_CD -LRB-_-LRB- representing_VBG an_DT existing_VBG factor_NN -RRB-_-RRB- in_IN the_DT parser_NN tree_NN ._.
+The_DT logarithmic_JJ probability_NN can_MD be_VB given_VBN by_IN the_DT following_JJ equation_NN :_: log_VB -LRB-_-LRB- Pr_NN -LRB-_-LRB- T_NNP |_CD S_NNP -RRB-_-RRB- -RRB-_-RRB- =_SYM Pr_NNP -LRB-_-LRB- Lghm_NNP |_CD context_NN -LRB-_-LRB- g_NN ,_, h_NN ,_, m_NN -RRB-_-RRB- -RRB-_-RRB- g_NN ,_, h_NN ,_, m_FW P_FW r_NN -LRB-_-LRB- T_NNP |_CD S_NNP -RRB-_-RRB- =_SYM 0_CD ≤_CD h_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- 0_CD <_CD m_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- P_NNP r_NN -LRB-_-LRB- Lhm_FW |_FW context_NN -LRB-_-LRB- h_NN ,_, m_NN -RRB-_-RRB- -RRB-_-RRB- Here_RB Lhm_NNP is_VBZ a_DT binary_JJ variable_JJ with_IN Bernoulli_NNP distri_SYM -_: bution_NN which_WDT means_VBZ whether_IN node_NN h_NN is_VBZ the_DT head_NN of_IN node_JJ m_NN and_CC context_NN -LRB-_-LRB- h_NN ,_, m_NN -RRB-_-RRB- means_VBZ the_DT context_NN of_IN the_DT two_CD nodes_NNS which_WDT includes_VBZ words_NNS ,_, POS_NNP tags_NNS and_CC dis_SYM -_: tance_NN ._.
+When_WRB looking_VBG for_IN the_DT best_JJS tree_NN ,_, we_PRP simply_RB find_VB the_DT tree_NN with_IN highest_JJS probability_NN -LRB-_-LRB- we_PRP use_VBP logarithmic_JJ form_NN for_IN more_RBR convenient_JJ computations_NNS -RRB-_-RRB- ._.
+Consider_VB -_: ing_VBG the_DT single-headed_JJ constrain_VB for_IN dependency_NN tree_NN construction_NN ,_, if_IN we_PRP assign_VBP 1_CD to_TO LHm_NNP ,_, which_WDT makes_VBZ H_NNP the_DT parent_NN of_IN m_NN ,_, we_PRP must_MD assign_VB 0_CD to_TO all_DT other_JJ Lhm_NNP ,_, h_NN means_VBZ all_PDT the_DT nodes_NNS that_WDT are_VBP not_RB equal_JJ to_TO H_NNP ._.
+The_DT logarithmic_JJ probability_NN can_MD be_VB rewritten_VBN as_IN follows_VBZ :_: log_VB Pr_NNP -LRB-_-LRB- LGHm_NNP =_SYM 1_LS -RRB-_-RRB- log_VB Pr_NNP -LRB-_-LRB- Lghm_NNP =_SYM 0_CD -RRB-_-RRB- log_VBP -LRB-_-LRB- Pr_NN -LRB-_-LRB- T_NNP |_CD S_NNP -RRB-_-RRB- -RRB-_-RRB- =_SYM +_CD =_SYM 0_CD <_CD m_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- log_VBP Pr_NNP -LRB-_-LRB- LHm_NNP =_SYM 1_LS -RRB-_-RRB- +_SYM 0_CD <_CD m_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- h_VBP ,_, g_VBP 0_CD ≤_CD h_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- h̸_FW =_SYM H_NNP ,_, h̸_NN =_SYM m_FW Here_RB H_NNP represents_VBZ the_DT real_JJ parent_NN node_NN of_IN node_JJ m_NN ._.
+The_DT formula_NN is_VBZ in_IN the_DT form_NN of_IN summation_NN of_IN the_DT fac_NN -_: tor_NN scores_NNS ,_, which_WDT are_VBP defined_VBN as_IN :_: Score_NN -LRB-_-LRB- H_NNP ,_, m_NN -RRB-_-RRB- =_SYM log_VB P_NNP r_NN -LRB-_-LRB- LHm_FW =_SYM 1_LS -RRB-_-RRB- 4.3_CD +_NN 0_CD ≤_CD h_NN ≤_NN length_NN -LRB-_-LRB- S_NNP -RRB-_-RRB- h̸_FW =_SYM H_NNP ,_, h̸_NN =_SYM m_FW log_VB Pr_NNP -LRB-_-LRB- Lhm_NNP =_SYM 0_CD -RRB-_-RRB- Now_RB we_PRP adopt_VB feed-forward_JJ neural_JJ network_NN to_TO learn_VB and_CC compute_VB the_DT probability_NN for_IN a_DT factor_NN ._.
+The_DT inputs_NNS for_IN the_DT network_NN are_VBP features_NNS for_IN a_DT factor_NN such_JJ as_IN word_NN forms_NNS ,_, POS_NNP tags_NNS and_CC distance_NN ,_, and_CC the_DT output_NN will_MD be_VB the_DT probability_NN that_IN the_DT factor_NN exists_VBZ in_IN the_DT parse_NN tree_NN ._.
+Figure_NN 3_CD shows_VBZ the_DT structure_NN of_IN our_PRP$ neural_JJ network_NN for_IN the_DT o2g_CD model_NN ,_, the_DT networks_NNS for_IN other_JJ models_NNS will_MD be_VB similar_JJ ._.
+For_IN the_DT architecture_NN of_IN the_DT neural_JJ network_NN ,_, as_IN usual_JJ ,_, the_DT first_JJ layer_NN is_VBZ the_DT projection_NN layer_NN or_CC the_DT em_NN -_: bedding_NN layer_NN ,_, which_WDT performs_VBZ the_DT concatenation_NN for_IN the_DT embeddings_NNS ._.
+All_DT features_NNS are_VBP treated_VBN equally_RB and_CC mapped_VBD to_TO embeddings_NNS of_IN the_DT same_JJ dimension_NN ._.
+So_RB ,_, the_DT embedding_NN or_CC projection_NN matrix_NN E_NNP ∈_CD Rd_NN ×_CD N_NNP in_IN -_: cludes_NNS the_DT embeddings_NNS for_IN features_NNS ,_, where_WRB d_LS is_VBZ the_DT dimension_NN for_IN the_DT embedding_NN ,_, N_NNP is_VBZ total_JJ number_NN of_IN possible_JJ features_NNS ._.
+For_IN the_DT rest_NN of_IN the_DT network_NN ,_, it_PRP can_MD be_VB viewed_VBN as_IN a_DT fully-connected_JJ feed-forward_JJ neural_JJ network_NN with_IN two_CD hidden_JJ layers_NNS and_CC a_DT probabilistic_JJ output_NN layer_NN -LRB-_-LRB- we_PRP use_VBP a_DT two-way_JJ softmax_JJ output_NN unit_NN to_TO compute_VB After_IN defining_VBG the_DT score_NN of_IN each_DT dependency_NN fac_SYM -_: tor_NN ,_, we_PRP can_MD apply_VB the_DT scores_NNS to_TO the_DT existing_VBG parsing_NN algorithms_NNS -LRB-_-LRB- Eisner_NNP ,_, 1996_CD ;_: McDonald_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+4.2_CD High-Order_NNP Parsing_NNP We_PRP now_RB generalize_VBP the_DT model_NN to_TO high-order_NN parsing_NN ._.
+In_IN the_DT first-order_JJ model_NN ,_, we_PRP define_VBP probabilities_NNS for_IN the_DT head-modifier_JJ pair_NN ,_, which_WDT is_VBZ the_DT factor_NN for_IN first_JJ -_: order_NN parsing_NN ._.
+Naturally_RB ,_, we_PRP can_MD define_VB probabilities_NNS for_IN high-order_JJ factors_NNS ._.
+The_DT probability_NN of_IN a_DT parse_NN tree_NN is_VBZ the_DT product_NN of_IN all_DT its_PRP$ factors_NNS -LRB-_-LRB- either_CC existing_VBG ones_NNS or_CC wrong_JJ ones_NNS -RRB-_-RRB- ,_, the_DT probability_NN for_IN one_CD factor_NN is_VBZ again_RB a_DT binary_JJ value_NN which_WDT means_VBZ whether_IN the_DT factor_NN exists_VBZ in_IN the_DT dependency_NN tree_NN ._.
+log_VB Pr_NNP -LRB-_-LRB- Lhm_NNP =_SYM 0_CD -RRB-_-RRB- h̸_FW =_SYM H_NNP ,_, g̸_NN =_SYM G_NNP h̸_FW =_SYM m_FW ,_, g̸_FW =_SYM m_FW Neural_NNP Network_NNP Model_NNP Figure_NNP 3_CD :_: The_DT structure_NN of_IN neural_JJ network_NN for_IN o2g_CD model_NN for_IN an_DT example_NN input_NN factor_NN ``_`` cake_NN →_NN on_IN →_NN table_NN ''_'' ._.
+Here_RB we_PRP only_RB demonstrate_VBP the_DT case_NN of_IN a_DT three-word_JJ window_NN ._.
+Features_NNS for_IN the_DT head_NN node_NN :_: wh_SYM −_SYM 1_CD ,_, wh_VBP ,_, wh_VBP +1_CD ;_: th_JJ −_NN 1_CD ,_, th_JJ ,_, th_JJ +1_CD ;_: dg_NN ,_, h_VBP Features_NNS for_IN the_DT modifier_NN node_NN :_: wm_NN −_NN 1_CD ,_, wm_NN ,_, wm_NN +1_CD ;_: tm_SYM −_SYM 1_CD ,_, tm_NN ,_, tm_NN +1_CD ;_: dh_NN ,_, m_NN Features_NNS for_IN the_DT grandparent_NN node_NN :_: wg_NN −_NN 1_CD ,_, wg_NN ,_, wg_NN +1_CD ;_: tg_SYM −_SYM 1_CD ,_, tg_NN ,_, tg_IN +1_CD the_DT probability_NN -RRB-_-RRB- ._.
+For_IN the_DT hidden_JJ layers_NNS ,_, we_PRP use_VBP hy_SYM -_: perbolic_JJ tangent_NN as_IN activation_NN function_NN ._.
+The_DT training_NN objective_NN is_VBZ to_TO maximize_VB the_DT log_VB -_: arithmic_JJ probability_NN of_IN parse_NN trees_NNS with_IN an_DT L2_NN -_: regularization_NN term_NN to_TO avoid_VB over-fitting_JJ ,_, which_WDT equals_VBZ to_TO minimizing_VBG the_DT cross-entropy_JJ loss_NN with_IN L2_SYM -_: regularization_NN :_: L_NNP -LRB-_-LRB- θ_FW -RRB-_-RRB- =_SYM −_CD log_VBP P_NNP r_NN -LRB-_-LRB- T_NNP |_CD S_NNP -RRB-_-RRB- +_SYM λ_FW ·_FW ∥_FW θ_FW ∥_FW 2_CD Table_NNP 1_CD :_: Features_NNS for_IN the_DT o2g_CD model_NN -LRB-_-LRB- with_IN three-word_JJ windows_NNS -RRB-_-RRB- ._.
+w_NN :_: words_NNS ,_, t_NN :_: POS_NNP tags_NNS ,_, d_LS :_: distance_NN ._.
++1_CD and_CC -1_CD means_NNS neighboring_VBG indexes_NNS ._.
+the_DT features_NNS in_IN Table_NNP 1_CD when_WRB considering_VBG three-word_JJ window_NN ,_, there_EX will_MD be_VB three_CD word_NN forms_NNS and_CC three_CD tags_NNS for_IN each_DT node_NN ,_, h_NN and_CC m_NN both_DT have_VBP one_CD distance_NN feature_NN while_IN g_NN does_VBZ not_RB have_VB one_CD because_IN its_PRP$ parent_NN is_VBZ unknown_JJ at_IN this_DT time_NN ._.
+In_IN fact_NN ,_, larger-sized_JJ context_NN can_MD be_VB included_VBN and_CC a_DT seven-word_JJ window_NN is_VBZ actu_SYM -_: ally_NN considered_VBN for_IN later_JJ experiments_NNS ._.
+4.5_CD Integrating_VBG Lower-order_NN Models_NNS for_IN Higher-order_JJR Parsing_NNP Following_VBG standard_JJ practice_NN for_IN high-order_JJ models_NNS -LRB-_-LRB- McDonald_NNP and_CC Pereira_NNP ,_, 2006_CD ;_: Carreras_NNP ,_, 2007_CD ;_: Koo_NNP and_CC Collins_NNP ,_, 2010_CD -RRB-_-RRB- ,_, we_PRP integrate_VBP the_DT lower-order_NN scores_NNS into_IN the_DT higher_JJR order_NN parsing_NN for_IN better_JJR perfor_NN -_: mance_NN ._.
+For_IN o2sib_CD and_CC o2g_CD models_NNS in_IN this_DT work_NN ,_, we_PRP integrate_VBP the_DT scores_NNS computed_VBN from_IN the_DT first-order_JJ model_NN into_IN second_JJ order_NN factors_NNS ._.
+And_CC for_IN o3g_JJ model_NN ,_, two_CD lower-order_JJ scores_NNS are_VBP integrated_VBN ._.
+Specifically_RB ,_, the_DT score_NN for_IN the_DT factor_NN -LRB-_-LRB- g_NN ,_, h_NN ,_, s_VBZ ,_, m_NN -RRB-_-RRB- will_MD include_VB the_DT lower-order_NN scores_NNS of_IN o1_CD and_CC o2sib_CD in_IN addition_NN to_TO the_DT third-order_JJR score_NN o3gScore_NN -LRB-_-LRB- g_NN ,_, h_NN ,_, s_VBZ ,_, m_NN -RRB-_-RRB- from_IN o3g_CD model_NN ._.
+The_DT integration_NN of_IN the_DT scores_NNS can_MD be_VB shown_VBN by_IN the_DT following_JJ equation_NN :_: S_NNP 2_CD Here_RB θ_JJ means_NNS parameters_NNS of_IN the_DT neural_JJ network_NN and_CC λ_NN is_VBZ the_DT hyper-parameter_NN for_IN weight_NN decay_NN ._.
+We_PRP ini_SYM -_: tialize_VB all_PDT the_DT weights_NNS with_IN random_JJ values_NNS and_CC use_VB mini-batch_JJ stochastic_JJ gradient_NN descent_NN for_IN training_NN ._.
+4.4_CD Feature_NNP Sets_VBZ We_PRP utilize_VB three_CD kinds_NNS of_IN features_NNS :_: •_CD Word_NN forms_NNS -LRB-_-LRB- inside_IN a_DT specified_VBN sized_VBN window_NN -RRB-_-RRB- •_FW POS_FW tags_NNS -LRB-_-LRB- for_IN each_DT word_NN -RRB-_-RRB- •_CD Distance_NNP -LRB-_-LRB- to_TO the_DT node_NN 's_POS parent_NN in_IN the_DT factor_NN -RRB-_-RRB- Using_VBG embeddings_NNS and_CC neural_JJ network_NN ,_, we_PRP only_RB need_VBP to_TO provide_VB unigram_NN features_NNS ,_, which_WDT will_MD be_VB mapped_VBN to_TO embeddings_NNS in_IN the_DT neural_JJ network_NN ._.
+The_DT connections_NNS between_IN features_NNS will_MD be_VB exploited_VBN by_IN the_DT non-linear_JJ computations_NNS of_IN the_DT neural_JJ network_NN ._.
+Those_DT three_CD kinds_NNS of_IN features_NNS are_VBP treated_VBN in_IN the_DT same_JJ way_NN as_IN strings_NNS in_IN the_DT vocabulary_NN ,_, and_CC special_JJ prefix_NN strings_NNS are_VBP added_VBN to_TO POS_NNP and_CC distance_NN fea_NN -_: tures_NNS to_TO differ_VB them_PRP from_IN word_NN features_NNS -LRB-_-LRB- ``_`` POS_NNP ''_'' and_CC ``_`` distance_NN ''_'' respectively_RB -RRB-_-RRB- ._.
+Again_RB ,_, take_VB the_DT situation_NN for_IN o2g_CD model_NN as_IN an_DT ex_FW -_: ample_JJ ,_, there_EX are_VBP three_CD nodes_NNS in_IN a_DT factor_NN :_: g_VB for_IN grand_JJ -_: parent_NN ,_, h_NN for_IN head_NN and_CC m_NN for_IN modifier_NN ._.
+We_PRP show_VBP #Number_NNP of_IN sentences_NNS Score_NN -LRB-_-LRB- g_NN ,_, h_NN ,_, s_VBZ ,_, m_NN -RRB-_-RRB- =_SYM o1Score_CD -LRB-_-LRB- h_NN ,_, m_NN -RRB-_-RRB- +_SYM o2sibScore_NNS -LRB-_-LRB- h_NN ,_, s_VBZ ,_, m_NN -RRB-_-RRB- +_SYM o3gScore_CD -LRB-_-LRB- g_NN ,_, h_NN ,_, s_VBZ ,_, m_NN -RRB-_-RRB- Corpus_NNP PTB_NNP CTB_NNP Train_NN 39832_CD 16091_CD Dev_NNP Test_NNP 1700 2416 803 1910_CD #Number_NNP of_IN tokens_NNS Corpus_NNP Train_NNP More_RBR importantly_RB ,_, we_PRP may_MD let_VB the_DT first-order_JJ model_NN to_TO serve_VB as_IN an_DT edge-filter_NN for_IN high-order_JJ pars_NNS -_: ing_NN ._.
+This_DT type_NN of_IN pruning_NN has_VBZ been_VBN used_VBN by_IN many_JJ graph-based_JJ models_NNS -LRB-_-LRB- Koo_NNP and_CC Collins_NNP ,_, 2010_CD ;_: Rush_NNP and_CC Petrov_NNP ,_, 2012_CD -RRB-_-RRB- to_TO avoid_VB too_RB expensive_JJ operations_NNS in_IN high-order_NN parsing_NN ._.
+For_IN our_PRP$ model_NN ,_, we_PRP utilize_VBP our_PRP$ own_JJ first-order_JJ neural_JJ network_NN model_NN which_WDT will_MD produce_VB the_DT probabilities_NNS for_IN all_PDT the_DT edges_NNS in_IN the_DT graph_NN ._.
+We_PRP simply_RB set_VBD a_DT pruning_NN threshold_NN so_IN that_IN all_DT edges_NNS whose_WP$ probabilities_NNS are_VBP under_IN the_DT thresh_NN -_: old_JJ will_MD be_VB discarded_VBN for_IN high-order_NN parsing_NN ._.
+4.6_CD Efficient_NNP Neural_NNP Network_NNP Computation_NNP This_DT subsection_NN introduces_VBZ two_CD techniques_NNS to_TO speed_VB up_RP neural_JJ network_NN computation_NN ._.
+Efficient_JJ computation_NN strategies_NNS have_VBP been_VBN ex_FW -_: plored_VBN extensively_RB for_IN neural_JJ network_NN language_NN models_NNS -LRB-_-LRB- Morin_NNP and_CC Bengio_NNP ,_, 2005_CD ;_: Mnih_NNP and_CC Hinton_NNP ,_, 2008_CD ;_: Vaswani_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+These_DT models_NNS consider_VBP speeding_VBG up_RP the_DT output_NN softmax_NN layer_NN which_WDT contains_VBZ thousands_NNS of_IN neurons_NNS ._.
+However_RB ,_, it_PRP is_VBZ not_RB the_DT case_NN for_IN our_PRP$ neural_JJ network_NN as_IN the_DT output_NN layer_NN of_IN our_PRP$ net_NN -_: work_NN only_RB has_VBZ two_CD neurons_NNS ._.
+Main_NNP computation_JJ cost_NN in_IN our_PRP$ network_NN is_VBZ from_IN the_DT first_JJ hidden_JJ layer_NN ,_, which_WDT needs_VBZ matrix_NN multiplications_NNS and_CC the_DT hyperbolic_JJ tan_NN -_: gent_NN activation_NN calculations_NNS for_IN the_DT hidden_JJ neurons_NNS ._.
+Similar_JJ to_TO some_DT previous_JJ work_NN -LRB-_-LRB- Devlin_NNP et_FW al._FW ,_, 2014_CD ;_: Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- ,_, we_PRP apply_VBP the_DT pre_NN -_: calculation_NN strategy_NN to_TO speed_VB up_RP the_DT most_RBS concerned_JJ computation_NN ._.
+This_DT can_MD be_VB implemented_VBN as_IN calculat_NN -_: ing_VBG a_DT lookup_NN table_NN for_IN the_DT first_JJ hidden_JJ layer_NN -LRB-_-LRB- val_SYM -_: ues_NNS before_IN computing_VBG activation_NN function_NN -RRB-_-RRB- ,_, which_WDT can_MD replace_VB the_DT operations_NNS of_IN the_DT looking-up_NN for_IN em_SYM -_: bedding_NN layer_NN and_CC the_DT matrix_NN multiplication_NN for_IN sec_NN -_: ond_NN layer_NN -LRB-_-LRB- first_JJ hidden_JJ layer_NN after_IN -RRB-_-RRB- ._.
+With_IN the_DT pre_NN -_: calculation_NN table_NN ,_, we_PRP only_RB need_VBP to_TO look_VB up_RP the_DT corre_NN -_: sponding_VBG matrix_NN multiplication_NN results_NNS for_IN each_DT posi_FW -_: tion_NN 's_POS input_NN and_CC add_VB them_PRP together_RB to_TO get_VB the_DT values_NNS for_IN the_DT first_JJ hidden_JJ layer_NN ._.
+Another_DT technique_NN is_VBZ to_TO pre-calculate_VB a_DT hyperbolic_JJ tangent_NN table_NN ,_, which_WDT will_MD replace_VB the_DT computation_NN for_IN Dev_NNP Test_NNP PTB_NNP 950348_CD 40121_CD 56702_CD CTB_NNP 437990_CD 20454_CD 50315_CD Table_NNP 2_CD :_: Statistics_NNS for_IN the_DT data_NNS sets_NNS for_IN dependency_NN pars_NNS -_: ing_NN ._.
+the_DT activation_NN function_NN with_IN a_DT table_NN looking-up_JJ pro-_JJ cess_NN ._.
+5_CD Experiments_NNS and_CC Discussions_NNS The_DT proposed_VBN parsers_NNS are_VBP evaluated_VBN on_IN English_NNP Penn_NNP Treebank_NNP -LRB-_-LRB- PTB3_NNP .0_CD -RRB-_-RRB- and_CC Chinese_JJ Penn_NNP Tree_NNP -_: bank_NN -LRB-_-LRB- CTB7_NNP .0_CD -RRB-_-RRB- ._.
+For_IN all_PDT the_DT results_NNS ,_, we_PRP report_VBP unla_NN -_: beled_VBN attachment_NN scores_NNS -LRB-_-LRB- UAS_NNP -RRB-_-RRB- excluding_VBG punctua_NN -_: tions3_CD as_IN in_IN previous_JJ work_NN -LRB-_-LRB- Koo_NNP and_CC Collins_NNP ,_, 2010_CD ;_: Zhang_NNP and_CC Clark_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+In_IN Table_NNP 2_CD ,_, we_PRP show_VBP statis_SYM -_: tics_NNS of_IN both_DT treebanks_NNS ._.
+For_IN English_NNP ,_, we_PRP follow_VBP the_DT splitting_NN conventions_NNS ,_, using_VBG sections_NNS 2-21_CD for_IN training_NN ,_, 22_CD for_IN developing_VBG and_CC 23_CD for_IN test_NN ._.
+We_PRP patch_NN the_DT Treebank_NNP using_VBG Vadas_NNP '_POS NP_NNP bracketing4_NNS -LRB-_-LRB- Vadas_NNP and_CC Curran_NNP ,_, 2007_CD -RRB-_-RRB- and_CC use_VB the_DT LTH_NNP Converter5_NNS -LRB-_-LRB- Johansson_NNP and_CC Nugues_NNP ,_, 2007_CD -RRB-_-RRB- to_TO get_VB the_DT dependency_NN treebank_NN ._.
+We_PRP use_VBP Stanford_NNP POS_NNP tagger_NN -LRB-_-LRB- Toutanova_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- to_TO get_VB predicted_VBN POS_NNP tags_NNS for_IN development_NN and_CC test_NN sets_NNS ,_, and_CC the_DT ac_SYM -_: curacies_NNS for_IN their_PRP$ tags_NNS are_VBP 97.2_CD %_NN and_CC 97.4_CD %_NN ,_, respec_FW -_: tively_RB ._.
+For_IN Chinese_JJ ,_, we_PRP follow_VBP the_DT convention_NN described_VBN in_IN -LRB-_-LRB- Zhang_NNP and_CC Clark_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT dependencies_NNS are_VBP converted_VBN with_IN Penn2Malt_NNP tool6_CD ._.
+As_IN in_IN previous_JJ work_NN ,_, we_PRP use_VBP gold_JJ segmentation_NN and_CC POS_NNP tags_NNS ._.
+For_IN both_DT treebanks_NNS ,_, all_PDT the_DT graph-based_JJ parsers_NNS run_VBP on_IN the_DT same_JJ machine_NN with_IN Intel_NNP Xeon_NNP 3.47_CD GHz_NNP CPU_NNP using_VBG single_JJ core_NN ._.
+5.1_CD Different_NNP Embedding_NNP Initializations_NNP We_PRP initialize_VBP the_DT embedding_VBG matrix_NN -LRB-_-LRB- only_RB the_DT parts_NNS for_IN the_DT embeddings_NNS of_IN words_NNS -RRB-_-RRB- with_IN some_DT trained_JJ 3Punctuations_NNS are_VBP the_DT tokens_NNS whose_WP$ gold_NN POS_NNP tag_NN is_VBZ one_CD of_IN -LCB-_-LRB- ``''_NN :_: ,_, ._. -RCB-_-RRB-
+forPTBandPU_NNP forCTB_NNP ._.
+4_CD http://sydney.edu.au/engineering/it/∼dvadas1_CD 5http_NNS :_: /_SYM /_SYM nlp.cs.lth.se_SYM /_SYM software/treebank_JJ converter_NN 6http_NNS :_: /_SYM /_SYM stp.lingfil.uu.se_SYM /_SYM nivre/research/Penn2Malt_NNP ._.
+html_NN Source_NN --_: Collobert_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- Pennington_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- Mikolov_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- Wt_VB Wd_JJ 0.47_CD 1.41_CD 0.13_CD 0.58_CD 0.02_CD 0.13_CD Initialize_NNP random_JJ SENNA7_NNP GloVe8_NNP word2vec9_CD UAS_NNP 91.79_CD 91.75_CD 91.73_CD 91.81_CD Threshold_NNP #inst_NNP -LRB-_-LRB- M_NNP -RRB-_-RRB- Time_NNP -LRB-_-LRB- min_NN ._. -RRB-_-RRB-
+Acc_NNP ._.
+0.01_CD 315_CD 29_CD 0.001_CD 764_CD 65_CD 0.0001_CD 2591_CD 220_CD Table_NNP 4_CD :_: Effects_NNPS of_IN pruning_NN methods_NNS with_IN different_JJ thresh_NN -_: olds_NNS -LRB-_-LRB- on_IN English_JJ dev_NN set_VBN with_IN the_DT o2sib_JJ model_NN -RRB-_-RRB- ._.
+5.3_CD Main_NNP Results_NNS As_IN for_IN detailed_JJ neural_JJ network_NN setting_NN ,_, we_PRP use_VBP em_SYM -_: beddings_NNS of_IN 50_CD dimensions_NNS ,_, and_CC the_DT size_NN of_IN the_DT two_CD hidden_JJ layers_NNS are_VBP 200_CD and_CC 40_CD ,_, respectively_RB ._.
+We_PRP ini_SYM -_: tialize_VB the_DT learning_NN rate_NN as_IN 0.1_CD ._.
+After_IN each_DT iteration_NN ,_, the_DT parser_NN is_VBZ tested_VBN on_IN the_DT development_NN set_NN and_CC if_IN the_DT accuracy_NN decreases_VBZ ,_, the_DT learning_NN rate_NN will_MD be_VB halved_VBN ._.
+We_PRP train_VBP the_DT models_NNS for_IN 10_CD iterations_NNS and_CC select_VB the_DT ones_NNS that_WDT perform_VBP best_JJS on_IN the_DT development_NN set_NN ._.
+For_IN the_DT inputs_NNS ,_, we_PRP consider_VBP a_DT seven-word_JJ win_VBP -_: dow_NN ._.
+Notice_NNP that_IN only_RB with_IN distributed_VBN represen_NN -_: tations_NNS ,_, can_MD we_PRP incorporate_VB such_JJ very-long-context_JJ features_NNS ._.
+We_PRP ignore_VBP the_DT words_NNS that_WDT occur_VBP less_JJR than_IN 3_CD times_NNS in_IN the_DT training_NN treebank_NN and_CC use_VB a_DT default_NN token_JJ to_TO represent_VB unknown_JJ words_NNS ._.
+Our_PRP$ evaluations_NNS will_MD follow_VB the_DT setting_NN in_IN -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- ,_, which_WDT reported_VBD results_NNS of_IN the_DT transition-based_JJ neural_JJ network_NN parser_NN ._.
+For_IN graph_NN -_: based_VBN parsers_NNS ,_, in_IN order_NN to_TO get_VB exact_JJ comparisons_NNS be_VB -_: tween_JJ traditional_JJ methods_NNS and_CC neural_JJ network_NN meth_NN -_: ods_NNS ,_, we_PRP run_VBP the_DT traditional_JJ graph-based_JJ parsers_NNS un_SYM -_: der_NN the_DT same_JJ executing_VBG environment_NN as_IN our_PRP$ parsers_NNS ._.
+In_IN detail_NN ,_, MSTParser10_NNP for_IN o1_CD and_CC o2sib_CD models_NNS and_CC MaxParser11_NNP -LRB-_-LRB- Ma_NNP and_CC Zhao_NNP ,_, 2012_CD -RRB-_-RRB- for_IN o2g_CD and_CC o3g_CD models_NNS are_VBP respectively_RB used_VBN for_IN comparison_NN ._.
+Notice_NNP that_IN in_IN recent_JJ years_NNS ,_, there_EX have_VBP been_VBN plenty_RB of_IN graph_NN -_: based_VBN parsers_NNS which_WDT utilize_VBP various_JJ techniques_NNS and_CC obtain_VB state-of-art_JJ results_NNS -LRB-_-LRB- Rush_NN and_CC Petrov_NNP ,_, 2012_CD ;_: Zhang_NNP and_CC McDonald_NNP ,_, 2012_CD -RRB-_-RRB- ,_, however_RB ,_, they_PRP will_MD not_RB be_VB included_VBN in_IN the_DT comparisons_NNS for_IN the_DT reason_NN that_IN we_PRP only_RB concern_NN about_IN basic_JJ graph-based_JJ parsing_NN al_SYM -_: gorithms_NNS ._.
+We_PRP report_VBP three_CD accuracy_NN metrics_NNS ,_, UAS_NNP ,_, Root_NN -LRB-_-LRB- percentage_NN of_IN the_DT root_NN words_NNS correctly_RB identified_VBN -RRB-_-RRB- ,_, CM_NNP -LRB-_-LRB- complete_JJ rate_NN ,_, percentage_NN of_IN sentences_NNS for_IN which_WDT the_DT whole_JJ tree_NN is_VBZ correct_JJ -RRB-_-RRB- and_CC Speed_NN -LRB-_-LRB- num_SYM -_: ber_NN of_IN sentences_NNS per_IN second_JJ -RRB-_-RRB- ._.
+For_IN Chinese_JJ ,_, the_DT UAS_NNP 10_CD http://sourceforge.net/projects/mstparser/_NN 11http_NNS :_: /_SYM /_SYM sourceforge.net/projects/maxparser/_NN ,_, this_DT is_VBZ a_DT C++_NNP implementation_NN for_IN several_JJ high-order_JJ graph-based_JJ parsers_NNS 92.41_CD 92.47_CD 92.43_CD Table_NNP 3_CD :_: Accuracies_NNS for_IN different_JJ initializations_NNS ,_, with_IN first-order_JJ models_NNS on_IN dev_NN set_NN ._.
+word_NN embeddings_NNS or_CC word_NN vectors_NNS as_IN shown_VBN in_IN Table_NNP 3_CD ._.
+Compared_VBN to_TO the_DT random_JJ initialization_NN method_NN ,_, using_VBG pre-trained_JJ embeddings_NNS does_VBZ not_RB bring_VB too_RB sig_SYM -_: nificant_JJ improvements_NNS ._.
+We_PRP contribute_VBP this_DT mostly_RB to_TO already_RB large_JJ enough_JJ training_NN set_NN ._.
+In_IN fact_NN ,_, the_DT num_NN -_: ber_NN of_IN the_DT training_NN samples_NNS fed_VBN to_TO the_DT network_NN is_VBZ over_IN 20_CD million_CD ._.
+Another_DT possible_JJ reason_NN is_VBZ that_IN the_DT em_NN -_: bedding_NN initialization_NN only_RB works_VBZ for_IN word_NN form_NN fea_NN -_: tures_NNS and_CC other_JJ features_NNS such_JJ as_IN POS_NNP tags_NNS and_CC dis_SYM -_: tance_NN will_MD have_VB to_TO be_VB initialized_VBN with_IN random_JJ val_NN -_: ues_NNS ._.
+Those_DT two_CD types_NNS of_IN initializations_NNS existing_VBG in_IN the_DT same_JJ space_NN may_MD cause_VB possible_JJ inconsistence_NN ._.
+Based_VBN on_IN the_DT above_JJ empirical_JJ results_NNS and_CC compari_NNS -_: son_NN ,_, we_PRP will_MD only_RB use_VB random_JJ initialization_NN for_IN our_PRP$ parsers_NNS ._.
+5.2_CD Pruning_NN For_IN high-order_JJ models_NNS ,_, their_PRP$ full_JJ training_NN can_MD be_VB computationally_RB expensive_JJ or_CC even_RB impossible_JJ ,_, so_IN we_PRP must_MD prune_VB unlikely_JJ dependencies_NNS as_IN we_PRP stated_VBD before_RB in_IN Section_NN 4.5_CD ._.
+We_PRP use_VBP a_DT simple_JJ strategy_NN by_IN setting_VBG a_DT fixed_VBN probability_NN threshold_NN and_CC the_DT results_NNS of_IN different_JJ thresholds_NNS are_VBP shown_VBN in_IN Table_NNP 4_CD ._.
+In_IN this_DT table_NN ,_, the_DT notations_NNS are_VBP defined_VBN as_IN the_DT following_NN :_: •_CD Wt_NNP =_SYM %_NN edges_VBZ wrongly_RB pruned_VBN in_IN training_NN set_VBN •_CD Wd_NNP =_SYM %_NN edges_VBZ wrongly_RB pruned_VBN in_IN dev_NN set_VBN •_CD #inst_JJ =_SYM number_NN of_IN instances_NNS for_IN one_CD iteration_NN •_CD Time_NNP =_SYM time_NN for_IN one_CD iteration_NN •_CD Acc_NNP ._.
+=_SYM UAS_NNPS on_IN dev_NN set_VBN With_IN a_DT large_JJ threshold_NN ,_, we_PRP might_MD prune_VB some_DT cor_NN -_: rect_NN dependencies_NNS ,_, but_CC if_IN the_DT threshold_NN is_VBZ set_VBN smaller_JJR ,_, more_RBR incorrect_JJ dependencies_NNS will_MD remain_VB and_CC the_DT training_NN will_MD be_VB more_RBR expensive_JJ ._.
+Even_RB though_IN those_DT wrongly_RB pruned_VBN dependencies_NNS are_VBP allowed_VBN ,_, their_PRP$ scores_NNS are_VBP also_RB too_RB low_JJ to_TO influence_VB the_DT inference_NN ._.
+A_DT threshold_NN of_IN 0.001_CD is_VBZ finally_RB chosen_VBN for_IN other_JJ ex_FW -_: periments_NNS in_IN this_DT work_NN ._.
+UAS_NNS Root_NN CM_NNP 91.77_CD 92.35_CD 92.18_CD 92.52_CD 96.61_CD 96.40_CD 96.85_CD 96.81_CD 35.89_CD 39.86_CD 38.45_CD 41.10_CD 91.31_CD 91.99_CD 92.12_CD 92.60_CD 95.12_CD 95.90_CD 96.03_CD 96.31_CD 36.67_CD 39.74_CD 40.11_CD 42.63_CD 92.0_CD --_: --_: Parser_NNP Speed_NN o1-nn_JJ 150_CD o2sib-nn_JJ 109_CD o2g-nn_JJ 89_CD o3g-nn_JJ 38_CD o1-M_JJ st_NN 18_CD o2sib-M_NNP st_NNP 14_CD o2g-M_JJ ax_NN 2_CD o3g-M_JJ ax_NN 0.3_CD transition_NN 1013_CD Table_NNP 5_CD :_: Results_NNS on_IN PTB_NNP ,_, the_DT English_NNP treebank_NN ._.
+ing_VBG training_NN ,_, we_PRP specify_VBP a_DT factor_NN as_IN a_DT positive_JJ sample_NN only_RB if_IN all_PDT the_DT dependencies_NNS in_IN it_PRP are_VBP correct_JJ because_IN we_PRP only_RB do_VBP a_DT binary_JJ classification_NN ._.
+This_DT might_MD be_VB the_DT limitation_NN for_IN our_PRP$ high-order_NN model_NN and_CC might_MD ex_FW -_: plain_RB the_DT reason_NN why_WRB some_DT of_IN our_PRP$ high-order_NN parsers_NNS do_VBP not_RB surpass_VB traditional_JJ ones_NNS in_IN accuracy_NN ,_, we_PRP might_MD need_VB more_JJR appropriate_JJ object_NN functions_NNS to_TO improve_VB its_PRP$ learning_NN ._.
+Compared_VBN to_TO the_DT features_NNS of_IN traditional_JJ methods_NNS ,_, the_DT only_JJ information_NN beyond_IN the_DT proposed_VBN feature_NN set_NN is_VBZ the_DT words_NNS that_WDT fall_VBP out_IN of_IN the_DT windows_NNS between_IN the_DT nodes_NNS in_IN the_DT factor_NN -LRB-_-LRB- previously_RB called_VBN in-between_JJ features_NNS -RRB-_-RRB- because_RB so_RB far_RB we_PRP only_RB use_VBP fixed-size_JJ inputs_NNS for_IN the_DT feed-forward_JJ neural_JJ network_NN ._.
+Extra_JJ opera_NN -_: tions_NNS for_IN embedding_VBG vectors_NNS -LRB-_-LRB- like_IN adding_VBG embedding_VBG vectors_NNS -RRB-_-RRB- and_CC other_JJ forms_NNS of_IN neural_JJ networks_NNS -LRB-_-LRB- such_JJ as_IN convolutional_JJ neural_JJ network_NN which_WDT can_MD consider_VB the_DT context_NN of_IN a_DT whole_JJ sentence_NN -RRB-_-RRB- might_MD be_VB explored_VBN in_IN the_DT future_NN ._.
+6_CD Conclusions_NNS In_IN this_DT paper_NN ,_, we_PRP show_VBP a_DT way_NN to_TO use_VB neural_JJ network_NN for_IN graph-based_JJ dependency_NN parsing_NN and_CC the_DT method_NN is_VBZ also_RB suitable_JJ for_IN high-order_NN parsing_NN ._.
+We_PRP show_VBP that_IN using_VBG distributed_VBN representations_NNS for_IN neural_JJ net_NN -_: work_NN to_TO replace_VB traditional_JJ sparse_JJ features_NNS in_IN tradi_NN -_: tional_JJ graph_NN models_NNS can_MD be_VB suitable_JJ for_IN dependency_NN parsing_NN ,_, even_RB though_IN only_RB using_VBG a_DT feed-forward_JJ net_NN -_: work_NN ._.
+From_IN the_DT evaluation_NN results_NNS and_CC comparison_NN with_IN existing_VBG models_NNS ,_, we_PRP show_VBP that_IN the_DT proposed_VBN parsers_NNS get_VBP good_JJ results_NNS with_IN quite_RB efficient_JJ infer_NN -_: ence_NN even_RB though_IN graph-based_JJ models_NNS usually_RB need_VBP at_IN least_JJS cubic-time_JJ for_IN inference_NN ._.
+Acknowledgments_NNP We_PRP appreciate_VBP the_DT anonymous_JJ reviewers_NNS for_IN valuable_JJ comments_NNS and_CC suggestions_NNS on_IN our_PRP$ paper_NN ._.
+Hai_NNP Zhao_NNP was_VBD partially_RB supported_VBN by_IN the_DT National_NNP Natural_NNP Sci_NNP -_: ence_NN Foundation_NNP of_IN China_NNP -LRB-_-LRB- No._NN 60903119_CD ,_, No._NN 61170114_CD ,_, and_CC No._NN 61272248_CD -RRB-_-RRB- ,_, the_DT National_NNP Basic_NNP Research_NNP Program_NNP of_IN China_NNP -LRB-_-LRB- No._NN 2013CB329401_CD -RRB-_-RRB- ,_, the_DT Science_NN and_CC Technology_NNP Commission_NNP of_IN Shang_NNP -_: hai_FW Municipality_NNP -LRB-_-LRB- No._NN 13511500200_CD -RRB-_-RRB- ,_, the_DT European_NNP Union_NNP Seventh_NNP Framework_NNP Program_NNP -LRB-_-LRB- No._NN 247619_CD -RRB-_-RRB- ,_, the_DT Cai_NNP Yuanpei_NNP Program_NNP -LRB-_-LRB- CSC_NNP fund_NN 201304490199_CD and_CC 201304490171_CD -RRB-_-RRB- ,_, and_CC the_DT art_NN and_CC science_NN inter_NN -_: discipline_NN funds_NNS of_IN Shanghai_NNP Jiao_NNP Tong_NNP University_NNP ._.
+UAS_NNS Root_NN CM_NNP 83.59_CD 86.00_CD 84.13_CD 86.01_CD 76.86_CD 77.59_CD 77.75_CD 78.06_CD 26.60_CD 31.94_CD 27.59_CD 31.88_CD 83.31_CD 85.34_CD 84.96_CD 86.41_CD 71.57_CD 75.60_CD 76.32_CD 78.22_CD 27.49_CD 32.98_CD 31.94_CD 34.82_CD 83.9_CD --_: --_: Parser_NNP o1-nn_JJ 112_CD o2sib-nn_JJ o2g-nn_JJ o3g-nn_JJ 11_CD o1-M_NN st_NN 9_CD o2sib-M_NN st_NN 8_CD o2g-M_NN ax_NN 1_CD o3g-M_JJ ax_NN 0.1_CD transition_NN 936_CD Table_NNP 6_CD :_: Results_NNS on_IN CTB_NNP ,_, the_DT Chinese_JJ treebank_NN ._.
+and_CC CM_NNP both_DT consider_VBP root_NN words_NNS ._.
+Tables_NNS 5_CD and_CC 6_CD show_VBP the_DT results_NNS for_IN PTB_NNP and_CC CTB_NNP ._.
+As_IN for_IN name_NN suffix_NN in_IN the_DT tables_NNS ,_, nn_NN means_VBZ our_PRP$ neu_NN -_: ral_NN network_NN graph-based_JJ parsers_NNS ,_, Mst_NNP means_VBZ Mst_NNP -_: Parser_NNP ,_, M_NNP ax_NN means_VBZ MaxParser_NNP ,_, transition_NN means_VBZ the_DT transition-based_JJ neural_JJ network_NN parser_NN -LRB-_-LRB- Chen_NNP and_CC Manning_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+From_IN the_DT results_NNS ,_, we_PRP can_MD see_VB that_IN our_PRP$ parsers_NNS can_MD get_VB similar_JJ or_CC even_RB better_JJR results_NNS compared_VBN to_TO the_DT traditional_JJ graph-based_JJ models_NNS of_IN the_DT correspond_VB -_: ing_NN orders_NNS ._.
+In_IN addition_NN ,_, our_PRP$ speed_NN is_VBZ faster_RBR -LRB-_-LRB- notice_NN that_IN even_RB our_PRP$ o3g_CD parser_NN is_VBZ faster_RBR than_IN the_DT tradi_NN -_: tional_JJ first-order_JJ graph-based_JJ parser_NN -RRB-_-RRB- ._.
+Compared_VBN to_TO the_DT transition-based_JJ neural_JJ network_NN parser_NN ,_, although_IN our_PRP$ parsers_NNS are_VBP not_RB that_DT fast_JJ -LRB-_-LRB- transition-based_JJ parsers_NNS usually_RB have_VBP O_NNP -LRB-_-LRB- n_VBN -RRB-_-RRB- time_NN complexity_NN -RRB-_-RRB- ,_, they_PRP give_VBP better_JJR performance_NN in_IN accuracies_NNS ._.
+5.4_CD Discussions_NNPS We_PRP find_VBP that_DT integrating_VBG lower-order_NN models_NNS into_IN high-order_JJ parsing_NN leads_VBZ to_TO better_JJR results_NNS ._.
+Although_IN the_DT high-order_NN factors_NNS already_RB include_VBP the_DT lower_JJR -_: order_NN parts_NNS ,_, it_PRP might_MD be_VB hard_JJ for_IN the_DT neural_JJ network_NN to_TO decide_VB whether_IN the_DT whole_JJ factor_NN is_VBZ correct_JJ ._.
+Dur_SYM -_: Speed_NN 70_CD 49_CD References_NNP Yoshua_NNP Bengio_NNP ,_, Re_NNP ́jean_JJ Ducharme_NNP ,_, Pascal_NNP Vincent_NNP ,_, and_CC Christian_NNP Janvin_NNP ._.
+2003_CD ._.
+A_DT neural_JJ probabilistic_JJ lan_NN -_: guage_NN model_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP -LRB-_-LRB- JMLR_NNP -RRB-_-RRB- ,_, 3:1137_CD --_: 1155_CD ,_, March_NNP ._.
+Xavier_NNP Carreras_NNP ._.
+2007_CD ._.
+Experiments_NNS with_IN a_DT higher-order_JJ projective_JJ dependency_NN parser_NN ._.
+In_IN Proceedings_NNP of_IN the_DT CoNLL_NNP Shared_NNP Task_NNP Session_NN of_IN EMNLP-CoNLL_NNP 2007_CD ,_, pages_NNS 957_CD --_: 961_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, June_NNP ._.
+Asso_SYM -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Danqi_NNP Chen_NNP and_CC Christopher_NNP Manning_NNP ._.
+2014_CD ._.
+A_DT fast_JJ and_CC accurate_JJ dependency_NN parser_NN using_VBG neural_JJ networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 740_CD --_: 750_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Changge_NNP Chen_NNP ,_, Peilu_NNP Wang_NNP ,_, and_CC Hai_NNP Zhao_NNP ._.
+2015_CD ._.
+Shal_NNP -_: low_JJ discourse_NN parsing_NN using_VBG constituent_NN parsing_NN tree_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Nineteenth_NNP Conference_NN on_IN Com_NNP -_: putational_JJ Natural_JJ Language_NN Learning_NNP -_: Shared_VBD Task_NNP ,_, pages_NNS 37_CD --_: 41_CD ,_, Beijing_NNP ,_, China_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Michael_NNP Collins_NNP and_CC Brian_NNP Roark_NNP ._.
+2004_CD ._.
+Incremental_JJ parsing_VBG with_IN the_DT perceptron_NN algorithm_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 42nd_NNP Meeting_VBG of_IN the_DT Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 04_CD -RRB-_-RRB- ,_, Main_NNP Volume_NN ,_, pages_NNS 111_CD --_: 118_CD ,_, Barcelona_NNP ,_, Spain_NNP ,_, July_NNP ._.
+Michael_NNP Collins_NNP ._.
+2002_CD ._.
+Discriminative_JJ training_NN meth_NN -_: ods_NNS for_IN hidden_JJ markov_NN models_NNS :_: Theory_NNP and_CC experi_SYM -_: ments_NNS with_IN perceptron_NN algorithms_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2002_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 1_CD --_: 8_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, July_NNP ._.
+Ronan_NNP Collobert_NNP ,_, Jason_NNP Weston_NNP ,_, Le_NNP ́on_NNP Bottou_NNP ,_, Michael_NNP Karlen_NNP ,_, Koray_NNP Kavukcuoglu_NNP ,_, and_CC Pavel_NNP Kuksa_NNP ._.
+2011_CD ._.
+Natural_JJ language_NN processing_NN -LRB-_-LRB- almost_RB -RRB-_-RRB- from_IN scratch_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP -LRB-_-LRB- JMLR_NNP -RRB-_-RRB- ,_, 12:2493_CD --_: 2537_CD ,_, August_NNP ._.
+Ronan_NNP Collobert_NNP ._.
+2011_CD ._.
+Deep_JJ learning_NN for_IN efficient_JJ dis_SYM -_: criminative_JJ parsing_NN ._.
+In_IN AISTATS_NNP ._.
+Jacob_NNP Devlin_NNP ,_, Rabih_NNP Zbib_NNP ,_, Zhongqiang_NNP Huang_NNP ,_, Thomas_NNP Lamar_NNP ,_, Richard_NNP Schwartz_NNP ,_, and_CC John_NNP Makhoul_NNP ._.
+2014_CD ._.
+Fast_NNP and_CC robust_JJ neural_JJ network_NN joint_JJ models_NNS for_IN sta_NN -_: tistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP -LRB-_-LRB- Volume_NN 1_CD :_: Long_NNP Papers_NNP -RRB-_-RRB- ,_, pages_NNS 1370_CD --_: 1380_CD ,_, Baltimore_NNP ,_, Maryland_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Jason_NNP M._NNP Eisner_NNP ._.
+1996_CD ._.
+Three_CD new_JJ probabilistic_JJ models_NNS for_IN dependency_NN parsing_NN :_: An_DT exploration_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 16th_JJ International_NNP Conference_NNP on_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, pages_NNS 340_CD --_: 345_CD ,_, Copenhagen_NNP ,_, Au_NNP -_: gust_NN ._.
+Richard_NNP Johansson_NNP and_CC Pierre_NNP Nugues_NNP ._.
+2007_CD ._.
+Extended_JJ constituent-to-dependency_NN conversion_NN for_IN english_JJ ._.
+In_IN Proceedings_NNP of_IN NODALIDA_NNP 2007_CD ._.
+Terry_NNP Koo_NNP and_CC Michael_NNP Collins_NNP ._.
+2010_CD ._.
+Efficient_JJ third_JJ -_: order_NN dependency_NN parsers_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 48th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1_CD --_: 11_CD ,_, Uppsala_NNP ,_, Sweden_NNP ,_, July_NNP ._.
+Asso_SYM -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Terry_NNP Koo_NNP ,_, Xavier_NNP Carreras_NNP ,_, and_CC Michael_NNP Collins_NNP ._.
+2008_CD ._.
+Simple_NN semi-supervised_JJ dependency_NN parsing_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN ACL-08_NN :_: HLT_NNP ,_, pages_NNS 595_CD --_: 603_CD ,_, Columbus_NNP ,_, Ohio_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Phong_NNP Le_NNP and_CC Willem_NNP Zuidema_NNP ._.
+2014_CD ._.
+The_DT inside_NN -_: outside_IN recursive_JJ neural_JJ network_NN model_NN for_IN depen_NN -_: dency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Process_NNP -_: ing_NN -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 729_CD --_: 739_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Xuezhe_NNP Ma_NNP and_CC Hai_NNP Zhao_NNP ._.
+2012_CD ._.
+Fourth-order_JJR depen_SYM -_: dency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN COLING_NNP 2012_CD :_: Posters_NNS ,_, pages_NNS 785_CD --_: 796_CD ,_, Mumbai_NNP ,_, India_NNP ,_, December_NNP ._.
+The_DT COLING_NNP 2012_CD Organizing_NNP Committee_NNP ._.
+Ryan_NNP McDonald_NNP and_CC Fernando_NNP Pereira_NNP ._.
+2006_CD ._.
+On_IN -_: line_NN learning_NN of_IN approximate_JJ dependency_NN parsing_NN al_SYM -_: gorithms_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 11th_JJ Conference_NN of_IN the_DT European_JJ Chapter_NN of_IN the_DT ACL_NNP -LRB-_-LRB- EACL_NNP 2006_CD -RRB-_-RRB- ,_, pages_NNS 81_CD --_: 88_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Ryan_NNP McDonald_NNP ,_, Koby_NNP Crammer_NNP ,_, and_CC Fernando_NNP Pereira_NNP ._.
+2005_CD ._.
+Online_NNP large-margin_JJ training_NN of_IN dependency_NN parsers_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 05_CD -RRB-_-RRB- ,_, pages_NNS 91_CD --_: 98_CD ,_, Ann_NNP Arbor_NNP ,_, Michigan_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Tomas_NNP Mikolov_NNP ,_, Martin_NNP Karafia_NNP ́t_NN ,_, Lukas_NNP Burget_NNP ,_, Jan_NNP Cer_NNP -_: nocky_JJ `_`` ,_, and_CC Sanjeev_NNP Khudanpur_NNP ._.
+2010_CD ._.
+Recurrent_JJ neu_NN -_: ral_NN network_NN based_VBN language_NN model_NN ._.
+In_IN Proceedings_NNP of_IN INTERSPEECH-2010_NNP ,_, pages_NNS 1045_CD --_: 1048_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP S_NNP Cor_NNP -_: rado_NN ,_, and_CC Jeff_NNP Dean_NNP ._.
+2013_CD ._.
+Distributed_VBN representa_NN -_: tions_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ compositionality_NN ._.
+In_IN NIPS_NNP ._.
+Andriy_NNP Mnih_NNP and_CC Geoffrey_NNP Hinton_NNP ._.
+2008_CD ._.
+A_DT scalable_JJ hierarchical_JJ distributed_VBN language_NN model_NN ._.
+In_IN NIPS_NNP ._.
+Frederic_NNP Morin_NNP and_CC Yoshua_NNP Bengio_NNP ._.
+2005_CD ._.
+Hierarchical_JJ probabilistic_JJ neural_JJ network_NN language_NN model_NN ._.
+In_IN AIS_NNP -_: TATS05_NNP ,_, pages_NNS 246_CD --_: 252_CD ._.
+Joakim_NNP Nivre_NNP ._.
+2003_CD ._.
+An_DT efficient_JJ algorithm_NN for_IN pro-_JJ jective_JJ dependency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ International_NNP Workshop_NNP on_IN Parsing_NNP Technologies_NNP -LRB-_-LRB- IWPT_NNP -RRB-_-RRB- ,_, pages_NNS 149_CD --_: 160_CD ,_, April_NNP ._.
+Jeffrey_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+2014_CD ._.
+Glove_NNP :_: Global_NNP vectors_NNS for_IN word_NN rep_NN -_: resentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Process_NNP -_: ing_NN -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 1532_CD --_: 1543_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, Octo_NNP -_: ber_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Alexander_NNP Rush_NNP and_CC Slav_NNP Petrov_NNP ._.
+2012_CD ._.
+Vine_NNP pruning_NN for_IN efficient_JJ multi-pass_JJ dependency_NN parsing_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 2012_CD Conference_NN of_IN the_DT North_NNP Ameri_NNP -_: can_MD Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS :_: Human_NNP Language_NNP Technologies_NNPS ,_, pages_NNS 498_CD --_: 507_CD ,_, Montre_NNP ́al_NNP ,_, Canada_NNP ,_, June_NNP ._.
+Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNPS ._.
+Holger_NNP Schwenk_NNP ._.
+2007_CD ._.
+Continuous_JJ space_NN language_NN models_NNS ._.
+Computer_NNP Speech_NNP and_CC Language_NNP ,_, 21_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :492_CD --_: 518_CD ._.
+Richard_NNP Socher_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, and_CC Andrew_NNP Y._NNP Ng_NNP ._.
+2010_CD ._.
+Learning_NNP continuous_JJ phrase_NN representa_NN -_: tions_NNS and_CC syntactic_NN parsing_NN with_IN recursive_JJ neural_JJ net_NN -_: works_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT NIPS-2010_NNP Deep_NNP Learn_NNP -_: ing_NN and_CC Unsupervised_NNP Feature_NNP Learning_NNP Workshop_NNP ._.
+Richard_NNP Socher_NNP ,_, John_NNP Bauer_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, and_CC Ng_NNP Andrew_NNP Y._NNP 2013_CD ._.
+Parsing_VBG with_IN compositional_JJ vector_NN grammars_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 51st_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS -LRB-_-LRB- Volume_NN 1_CD :_: Long_NNP Papers_NNP -RRB-_-RRB- ,_, pages_NNS 455_CD --_: 465_CD ,_, Sofia_NNP ,_, Bulgaria_NNP ,_, August_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Ben_NNP Taskar_NNP ,_, Dan_NNP Klein_NNP ,_, Mike_NNP Collins_NNP ,_, Daphne_NNP Koller_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+2004_CD ._.
+Max-margin_NN parsing_NN ._.
+In_IN Dekang_NNP Lin_NNP and_CC Dekai_NNP Wu_NNP ,_, editors_NNS ,_, Proceedings_NNP of_IN EMNLP_NNP 2004_CD ,_, pages_NNS 1_CD --_: 8_CD ,_, Barcelona_NNP ,_, Spain_NNP ,_, July_NNP ._.
+As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Kristina_NNP Toutanova_NNP ,_, Dan_NNP Klein_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, and_CC Yoram_NNP Singer_NNP ._.
+2003_CD ._.
+Feature-rich_JJ part-of-speech_NN tagging_VBG with_IN a_DT cyclic_JJ dependency_NN network_NN ._.
+In_IN PRO-_JJ CEEDINGS_NNS OF_IN HLT-NAACL_NNP ,_, pages_NNS 252_CD --_: 259_CD ._.
+David_NNP Vadas_NNP and_CC James_NNP Curran_NNP ._.
+2007_CD ._.
+Adding_VBG noun_NN phrase_NN structure_NN to_TO the_DT penn_NN treebank_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 45th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP of_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 240_CD --_: 247_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Ashish_NNP Vaswani_NNP ,_, Yinggong_NNP Zhao_NNP ,_, Victoria_NNP Fossum_NNP ,_, and_CC David_NNP Chiang_NNP ._.
+2013_CD ._.
+Decoding_VBG with_IN large-scale_JJ neu_NN -_: ral_NN language_NN models_NNS improves_VBZ translation_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN EMNLP-2013_NN ,_, pages_NNS 1387_CD --_: 1392_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNPS ._.
+Rui_NNP Wang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Isao_NNP Goto_NNP ,_, Eiichro_NNP Sumita_NNP ,_, Hai_NNP Zhao_NNP ,_, and_CC Bao-Liang_NNP Lu_NNP ._.
+2013_CD ._.
+Converting_VBG continuous-space_JJ language_NN models_NNS into_IN n-gram_JJ lan_NN -_: guage_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 845_CD --_: 850_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao-Liang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2014_CD ._.
+Neural_JJ network_NN based_VBN bilin_NN -_: gual_JJ language_NN model_NN growing_VBG for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Process_NNP -_: ing_NN -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 189_CD --_: 195_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao-Liang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2015_CD ._.
+Bilingual_JJ continuous-space_JJ language_NN model_NN growing_VBG for_IN statistical_JJ machine_NN trans_NNS -_: lation_NN ._.
+IEEE/ACM_NNP Transactions_NNS on_IN Audio_NNP ,_, Speech_NNP ,_, and_CC Languange_NNP Processing_NNP ,_, 23:1209_CD --_: 1220_CD ._.
+Hiroyasu_NNP Yamada_NNP and_CC Yuji_NNP Matsumoto_NNP ._.
+2003_CD ._.
+Statisti_NNP -_: cal_JJ dependency_NN analysis_NN with_IN support_NN vector_NN machines_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ International_NNP Workshop_NNP on_IN Parsing_NNP Technologies_NNP -LRB-_-LRB- IWPT_NNP -RRB-_-RRB- ,_, pages_NNS 195_CD --_: 206_CD ,_, April_NNP ._.
+Yue_NNP Zhang_NNP and_CC Stephen_NNP Clark_NNP ._.
+2008_CD ._.
+A_DT tale_NN of_IN two_CD parsers_NNS :_: Investigating_VBG and_CC combining_VBG graph-based_JJ and_CC transition-based_JJ dependency_NN parsing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2008_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Nat_NNP -_: ural_JJ Language_NN Processing_NNP ,_, pages_NNS 562_CD --_: 571_CD ,_, Honolulu_NNP ,_, Hawaii_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Hao_NNP Zhang_NNP and_CC Ryan_NNP McDonald_NNP ._.
+2012_CD ._.
+General_NNP -_: ized_VBD higher-order_JJ dependency_NN parsing_VBG with_IN cube_NN prun_NN -_: ing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD Joint_NNP Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Process_NNP -_: ing_NN and_CC Computational_NNP Natural_NNP Language_NNP Learning_NNP ,_, pages_NNS 320_CD --_: 331_CD ,_, Jeju_NNP Island_NNP ,_, Korea_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Jingyi_NNP Zhang_NNP and_CC Hai_NNP Zhao_NNP ._.
+2013_CD ._.
+Improving_NN func_SYM -_: tion_NN word_NN alignment_NN with_IN frequency_NN and_CC syntactic_NN in_IN -_: formation_NN ._.
+In_IN IJCAI-2013_NN ,_, pages_NNS 2211_CD --_: 2217_CD ,_, Beijing_NNP ,_, China_NNP ,_, August_NNP ._.

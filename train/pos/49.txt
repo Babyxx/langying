@@ -1,0 +1,341 @@
+Understanding_NN Infants_NNS '_POS Language_NNP Development_NNP in_IN Relation_NNP to_TO Levels_NNP of_IN Consciousness_NN :_: An_DT Approach_NNP in_IN Building_NNP up_IN an_DT Agent-based_JJ Model_NNP Abstract_NNP Language_NN development_NN in_IN infants_NNS is_VBZ a_DT dynamic_JJ process_NN that_WDT involves_VBZ the_DT emergence_NN and_CC increase_NN of_IN consciousness_NN ,_, with_IN which_WDT built-in_JJ learning_NN mechanisms_NNS make_VBP infants_NNS '_POS imitation_NN and_CC interaction_NN with_IN their_PRP$ surroundings_NNS become_VBP socially_RB meaningful_JJ ._.
+Taking_VBG Gao_NNP &_CC Holland_NNP 's_POS -LRB-_-LRB- 2008_CD ,_, 2013_CD -RRB-_-RRB- statements_NNS of_IN levels_NNS of_IN consciousness_NN for_IN language_NN development_NN as_IN the_DT theoretical_JJ guideline_NN ,_, this_DT study_NN proposes_VBZ a_DT rule-based_JJ ,_, signal-processing_NN agent-based_JJ model_NN to_TO explore_VB the_DT dynamics_NNS of_IN language_NN development_NN in_IN early_JJ infants_NNS ._.
+In_IN this_DT model_NN ,_, we_PRP assume_VBP that_IN an_DT infant_NN 's_POS rule-based_JJ learning_NN behaviors_NNS can_MD be_VB featured_VBN by_IN different_JJ levels_NNS of_IN consciousness_NN and_CC that_IN its_PRP$ adaptation_NN processes_NNS can_MD be_VB explained_VBN in_IN relation_NN to_TO levels_NNS of_IN consciousness_NN ._.
+In_IN this_DT paper_NN we_PRP will_MD discuss_VB properties_NNS of_IN consciousness_NN at_IN different_JJ levels_NNS and_CC identify_VB the_DT influencing_VBG factors_NNS for_IN reaching_VBG them_PRP ._.
+Our_PRP$ ultimate_JJ goal_NN in_IN building_VBG up_RP the_DT model_NN is_VBZ to_TO understand_VB the_DT processes_NNS of_IN language_NN development_NN with_IN an_DT approach_NN that_WDT can_MD better_RB reflect_VB reality_NN ._.
+1_CD Introduction_NNP Understanding_NNP how_WRB language_NN is_VBZ acquired_VBN by_IN infants_NNS has_VBZ remained_VBN to_TO be_VB a_DT challenging_JJ task_NN ._.
+Previous_JJ attempts_NNS ,_, such_JJ as_IN the_DT behavioral_JJ approach_NN -LRB-_-LRB- e.g._FW Skinner_NNP ,_, 1957_CD ;_: Roediger_NNP ,_, 2004_CD ;_: Ramscar_NNP &_CC Yarlett_NNP ,_, 2007_CD -RRB-_-RRB- ,_, relational_JJ frame_NN theory_NN -LRB-_-LRB- e.g._FW Hayes_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ,_, nativist_JJ theories_NNS -LRB-_-LRB- Chomsky_NNP ,_, 1967_CD ,_, 1975_CD -RRB-_-RRB- ,_, social_JJ interactionist_JJ theories_NNS -LRB-_-LRB- Bruner_NNP ,_, 1983_CD ;_: Can_MD Guo_NNP Bilingual_NNP Development_NNP Lab_NNP ,_, School_NNP of_IN Humanities_NNP and_CC Social_NNP Sciences_NNPS ,_, Nanyang_NNP Technological_NNP University_NNP Singapore_NNP kfcankf@gmail.com_NNP Carpenter_NNP et_FW al._FW ,_, 1998_CD ;_: Tomasello_NNP ,_, 2003_CD -RRB-_-RRB- ,_, etc._FW all_DT have_VBP achieved_VBN remarkable_JJ results_NNS that_WDT have_VBP shed_VBN light_NN on_IN future_JJ directions_NNS in_IN research_NN in_IN child_NN language_NN acquisition_NN ._.
+More_RBR recent_JJ views_NNS emphasize_VBP that_IN child_NN language_NN emerges_VBZ through_IN imitation_NN and_CC social_JJ interaction_NN with_IN the_DT support_NN of_IN built-in_JJ learning_NN mechanisms_NNS -LRB-_-LRB- Tomasello_NNP &_CC Bates_NNP ,_, 2001_CD ;_: Tomasello_NNP ,_, 2003_CD ;_: Snow_NNP ,_, 1999_CD ;_: MacWhinney_NNP ,_, 2004_CD ;_: Bates_NNP &_CC Goodman_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, emergentist_NN theories_NNS ,_, represented_VBN by_IN MacWhinney_NNP 's_POS competition_NN model_NN -LRB-_-LRB- 1986_CD -RRB-_-RRB- ,_, argue_VBP that_IN language_NN acquisition_NN emerges_VBZ from_IN the_DT interaction_NN of_IN biological_JJ pressures_NNS and_CC the_DT environment_NN through_IN a_DT cognitive_JJ process_NN ._.
+These_DT theories_NNS emphasize_VBP that_IN nature_NN and_CC nurture_VB need_NN to_TO be_VB jointly_RB involved_VBN to_TO trigger_VB the_DT language_NN learning_VBG process_NN ._.
+In_IN psychology_NN ,_, Jean_NNP Piaget_NNP 's_POS experimental_JJ studies_NNS on_IN cognitive_JJ development_NN revealed_VBD stage_NN -_: development_NN in_IN children_NNS ._.
+Children_NNP 's_POS speech_NN was_VBD discussed_VBN in_IN terms_NNS of_IN thought_NN and_CC reasoning_NN -LRB-_-LRB- Piaget_NNP ,_, 1926_CD -RRB-_-RRB- ._.
+Following_VBG Piaget_NNP ,_, psychologists_NNS and_CC linguists_NNS -LRB-_-LRB- e.g._FW Bowerman_NNP ,_, 1990_CD ,_, 2004_CD ;_: Bates_NNP ,_, 1975_CD ,_, 1999_CD ;_: Bates_NNP &_CC Goodman_NNP ,_, 1997_CD ,_, 1999_CD ;_: Mandler_NNP ,_, 2004_CD ,_, 1998_CD -RRB-_-RRB- made_VBN data-based_JJ assumptions_NNS that_IN there_EX could_MD be_VB many_JJ learning_VBG processes_NNS involved_VBN in_IN language_NN acquisition_NN ._.
+Evolutionarily_RB ,_, some_DT wired-in_JJ help_NN supplied_VBN by_IN a_DT long_JJ evolutionary_JJ history_NN is_VBZ assumed_VBN to_TO exist_VB in_IN supporting_VBG this_DT task_NN ._.
+For_IN example_NN ,_, infants_NNS can_MD imitate_VB facial_JJ gestures_NNS between_IN 12_CD and_CC 21_CD days_NNS of_IN age_NN ,_, an_DT age_NN much_RB earlier_JJR than_IN predicted_VBN by_IN stage_NN development_NN theory_NN -LRB-_-LRB- e.g._FW Piaget_NNP -RRB-_-RRB- ._.
+Such_JJ imitation_NN implies_VBZ that_IN human_JJ neonates_NNS equate_VBP their_PRP$ own_JJ behaviors_NNS with_IN gestures_NNS they_PRP see_VBP others_NNS perform_VB -LRB-_-LRB- Gopnik_NNP &_CC Meltzoff_NNP ,_, 1997_CD ;_: Meltzoff_NNP &_CC Borton_NNP ,_, 1979_CD ;_: Meltzoff_NNP &_CC Moore_NNP ,_, 1977_CD -RRB-_-RRB- ._.
+But_CC how_WRB does_VBZ the_DT newborn_JJ go_NN on_IN from_IN there_EX to_TO make_VB sense_NN of_IN the_DT torrent_NN of_IN novel_NN input_NN ?_.
+In_IN particular_JJ ,_, how_WRB does_VBZ the_DT newborn_JJ travel_NN the_DT long_JJ distance_NN from_IN very_RB limited_JJ initial_JJ abilities_NNS to_TO full_JJ language_NN acquisition_NN ?_.
+Although_IN we_PRP have_VBP large_JJ collections_NNS of_IN relevant_JJ data_NNS ,_, we_PRP have_VBP little_JJ theory_NN of_IN the_DT dynamics_NNS of_IN this_DT process_NN ._.
+These_DT questions_NNS remain_VBP to_TO be_VB answered_VBN -LRB-_-LRB- Gao_NNP &_CC Holland_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Our_PRP$ objective_NN of_IN this_DT study_NN is_VBZ to_TO apply_VB the_DT agent_NN -_: based_VBN model_NN -LRB-_-LRB- Holland_NNP ,_, 1995_CD -RRB-_-RRB- to_TO explore_VB language_NN development_NN in_IN early_JJ infants_NNS ._.
+Our_PRP$ approach_NN has_VBZ substantial_JJ differences_NNS from_IN the_DT previous_JJ attempts_NNS ._.
+We_PRP will_MD take_VB Gao_NNP &_CC Holland_NNP 's_POS -LRB-_-LRB- 2008_CD ,_, 2013_CD -RRB-_-RRB- statements_NNS of_IN levels_NNS of_IN consciousness_NN -LRB-_-LRB- LoC_NNP -RRB-_-RRB- for_IN language_NN development_NN as_IN the_DT theoretical_JJ guideline_NN to_TO build_VB up_RP a_DT model_NN that_WDT can_MD reveal_VB the_DT dynamics_NNS of_IN language_NN development_NN in_IN early_JJ infants_NNS ._.
+By_IN incorporate_VB development_NN observations_NNS into_IN a_DT theoretical_JJ framework_NN ,_, we_PRP will_MD illustrate_VB the_DT mechanisms_NNS underlying_VBG LoC_NNP transitions_NNS and_CC introduce_VB an_DT interdisciplinary_JJ approach_NN to_TO new_JJ experiments_NNS ._.
+2_CD Level_NNP of_IN Consciousness_NN Consciousness_NN is_VBZ often_RB implicitly_RB discussed_VBN as_IN thought_VBN expressed_VBN in_IN language_NN -LRB-_-LRB- Carruthers_NNP ,_, 1996_CD ,_, 2000_CD -RRB-_-RRB- ._.
+Even_RB further_RB back_RB ,_, in_IN Plato_NNP 's_POS time_NN ,_, there_EX was_VBD a_DT general_JJ agreement_NN that_WDT one_PRP can_MD only_RB speak_VB of_IN what_WP one_CD is_VBZ consciously_RB aware_JJ of_IN ._.
+Therefore_RB ,_, it_PRP is_VBZ reasonable_JJ to_TO view_VB infant_JJ language_NN acquisition_NN process_NN from_IN the_DT perspective_NN of_IN consciousness_NN ._.
+However_RB ,_, linguistic_JJ theories_NNS rarely_RB touch_VBP upon_IN consciousness_NN ._.
+Personal_NNP Construct_NNP theory_NN -LRB-_-LRB- Kelly_NNP ,_, 1955/1991_CD -RRB-_-RRB- defines_VBZ human_JJ consciousness_NN as_IN undergoing_VBG both_DT conscious_JJ and_CC unconscious_JJ processes_NNS ._.
+It_PRP postulates_VBZ that_IN human_JJ cognition_NN starts_VBZ from_IN unconscious_JJ processes_NNS ,_, or_CC ``_`` low_JJ levels_NNS of_IN cognitive_JJ awareness_NN ''_'' ._.
+According_VBG to_TO Zelazo_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ,_, children_NNS 's_POS development_NN of_IN consciousness_NN undergoes_VBZ several_JJ dissociable_JJ levels_NNS before_IN they_PRP reach_VBP full_JJ cognitive_JJ capability_NN ._.
+His_PRP$ Viewing_VBG developmental_JJ and_CC information-processing_NN as_IN the_DT key_NN features_NNS ,_, Zelazo_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- developed_VBD a_DT hierarchically_RB arranged_VBN LoCs_NNP and_CC provided_VBD a_DT metric_JJ for_IN measuring_VBG the_DT level_NN at_IN which_WDT consciousness_NN is_VBZ operating_VBG in_IN specific_JJ situations_NNS ._.
+This_DT is_VBZ very_RB different_JJ from_IN models_NNS that_WDT are_VBP mainly_RB based_VBN on_IN adult_NN data_NNS that_WDT distinguish_VBP between_IN consciousness_NN and_CC a_DT meta-level_NN of_IN consciousness_NN -LRB-_-LRB- e.g._FW ,_, Moscovitch_NNP ,_, 1989_CD ;_: Schacter_NNP ,_, 1989_CD ;_: Schooler_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+Based_VBN on_IN Zelazo_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- and_CC Zelazo_NNP et_NNP al_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- '_'' work_NN on_IN the_DT development_NN of_IN consciousness_NN in_IN children_NNS ,_, Gao_NNP &_CC Holland_NNP -LRB-_-LRB- 2008_CD ,_, 2013_CD -RRB-_-RRB- assumed_VBD that_IN language_NN development_NN in_IN a_DT newborn_JJ depends_VBZ upon_IN expanding_VBG consciousness_NN and_CC that_IN levels_NNS of_IN consciousness_NN can_MD also_RB be_VB identified_VBN ._.
+Following_VBG Gao_NNP &_CC Holland_NNP ,_, we_PRP attempt_VBP to_TO examine_VB mechanisms_NNS -LRB-_-LRB- behavioral_JJ traits_NNS -RRB-_-RRB- that_WDT generate_VBP the_DT behaviors_NNS at_IN different_JJ levels_NNS of_IN consciousness_NN and_CC their_PRP$ relations_NNS to_TO well-known_JJ transitions_NNS as_IN the_DT newborn_JJ develops_VBZ ._.
+In_IN our_PRP$ model_NN ,_, infant_NN 's_POS behavior_NN is_VBZ regarded_VBN not_RB only_RB simply_RB as_IN the_DT output_NN of_IN the_DT interaction_NN between_IN the_DT infant_NN and_CC its_PRP$ surroundings_NNS ,_, but_CC also_RB as_IN the_DT product_NN of_IN infant_NN 's_POS understanding_NN which_WDT is_VBZ confined_VBN to_TO age_NN -_: related_JJ levels_NNS of_IN consciousness_NN ._.
+In_IN this_DT paper_NN ,_, our_PRP$ focus_NN is_VBZ on_IN the_DT preverbal_JJ period_NN -LRB-_-LRB- 0-12_CD months_NNS -RRB-_-RRB- ._.
+Although_IN children_NNS during_IN this_DT period_NN can_MD not_RB express_VB themselves_PRP by_IN formal_JJ language_NN that_IN we_PRP can_MD fully_RB understand_VB ,_, they_PRP are_VBP obviously_RB able_JJ to_TO show_VB their_PRP$ understanding_NN and_CC desires_NNS by_IN non-verbal_JJ means_NNS together_RB with_IN simple_JJ but_CC repeated_VBD trials_NNS of_IN articulation_NN of_IN pre-linguistic_JJ sounds_NNS ._.
+To_TO take_VB a_DT detailed_JJ look_NN at_IN these_DT features_NNS ,_, we_PRP follow_VBP Gao_NNP &_CC Holland_NNP 's_POS -LRB-_-LRB- 2008_CD ,_, 2013_CD -RRB-_-RRB- definitions_NNS of_IN the_DT ``_`` level_NN of_IN consciousness_NN ''_'' and_CC make_VB further_JJ divisions_NNS of_IN these_DT levels_NNS into_IN more_JJR detailed_JJ sub-stages_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT ``_`` level_NN of_IN consciousness_NN ''_'' sub-stages_NNS and_CC their_PRP$ corresponding_JJ features_NNS in_IN language_NN development_NN during_IN a_DT child_NN 's_POS first_JJ year_NN of_IN life_NN ._.
+Level_NNP of_IN Consciousnes_NNP s_VBZ LoC_NNP Stage_NNP Features_VBZ relating_VBG to_TO age_NN LoC_NN 0_CD Unconscious_NNP Stage_NNP 0_CD Reflective_NNP Reflexive_NNP crying_VBG 0_CD ;_: Throaty_NNP noises_VBZ 0_CD LoC_NN 1_CD Minimal_JJ consciousness_NN Stage_NNP 1.1_CD Intentionality_NNP Sound_NNP localization_NN 0_CD ;_: Distinguish_NNP consonant_JJ 1_CD ;_: Distinguish_NNP vowel_NN 3_CD Stage_NNP 1.2_CD Voluntary_NNP Action_NNP Voluntary_NNP crying_VBG 2_CD ;_: Coos_NNP &_CC laugh_NN 2_CD Stage_NNP 1.3_CD Repeated_NNP Action_NNP Babbling_NNP &_CC vocal_JJ play_NN 4_CD ;_: Canonical_NNP babbling_VBG 6_CD ;_: LoC_NNP 2_CD Recursive_JJ consciousness_NN Stage_NNP 2.1_CD Differential_NNP Labels_NNP Respond_NNP to_TO name_VB 5_CD ;_: Respond_VB to_TO ``_`` No_UH ''_'' 6_CD ;_: Native_JJ preference_NN 7_CD ;_: Segment_NNP speech_NN 7_CD ;_: Stage_NNP 2.2_CD Patterned_VBN speech_NN 10_CD ;_: Aware_NNP of_IN Relationships_NNPS Adept_NNP to_TO speech_NN perception_NN 11_CD Stage_NNP 2.3_CD Functional_NNP Reactions_NNPS First_NNP words_NNS 12_CD Table_NNP 1_CD :_: The_DT ``_`` Level_NNP of_IN Consciousness_NN ''_'' Stages_NNS and_CC main_JJ language_NN development_NN features_NNS within_IN a_DT child_NN 's_POS first_JJ year_NN of_IN life_NN From_IN birth_NN to_TO the_DT end_NN of_IN the_DT first_JJ year_NN ,_, an_DT infant_NN goes_VBZ through_IN three_CD levels_NNS of_IN consciousness_NN -LRB-_-LRB- See_VB Table_NNP 1_CD -RRB-_-RRB- ._.
+The_DT first_JJ level_NN of_IN consciousness_NN development_NN is_VBZ LoC_JJ 0_CD --_: Unconscious_JJ ,_, at_IN which_WDT babies_NNS can_MD only_RB respond_VB to_TO stimuli_NNS unconsciously_RB ,_, without_IN awareness_NN of_IN even_RB their_PRP$ own_JJ actions_NNS ._.
+The_DT main_JJ character_NN of_IN infant_NN 's_POS behaviours_NNS at_IN this_DT stage_NN is_VBZ reflective_JJ ._.
+Take_VB ``_`` throaty_JJ noises_NNS ''_'' for_IN example_NN ,_, they_PRP are_VBP the_DT earliest_JJS vocalizations_NNS produced_VBN by_IN infants_NNS ,_, such_JJ as_IN breathing_NN ,_, coughing_VBG ,_, burping_VBG ,_, sucking_VBG or_CC sneezing_VBG ._.
+Babies_NNS make_VBP these_DT sounds_NNS involuntarily_RB ._.
+They_PRP are_VBP mainly_RB physiological_JJ reactions_NNS that_WDT are_VBP partly_RB characters_NNS of_IN a_DT living_NN being_VBG in_IN general_JJ ._.
+LoC_NN 1_CD starts_NNS with_IN the_DT feature_NN of_IN growth_NN that_WDT is_VBZ labeled_VBN as_IN the_DT ``_`` Intentionality_NN stage_NN ''_'' ,_, which_WDT is_VBZ the_DT first_JJ stage_NN -LRB-_-LRB- stage_NN 1.1_CD -RRB-_-RRB- of_IN LoC_NN 2_CD ._.
+At_IN this_DT stage_NN ,_, babies_NNS begin_VBP to_TO respond_VB to_TO environmental_JJ stimulations_NNS ._.
+As_IN the_DT examples_NNS shown_VBN in_IN Table_NNP 1_CD ,_, infants_NNS are_VBP gradually_RB aware_JJ of_IN what_WP they_PRP hear_VBP ,_, where_WRB the_DT sounds_NNS come_VBP from_IN -LRB-_-LRB- sound_JJ localization_NN -RRB-_-RRB- and_CC what_WP are_VBP the_DT differences_NNS between_IN them_PRP -LRB-_-LRB- consonant_JJ and_CC vowel_NN distinctions_NNS -RRB-_-RRB- ._.
+``_`` Voluntary_JJ action_NN stage_NN ''_'' is_VBZ the_DT second_JJ stage_NN ,_, at_IN which_WDT infants_NNS initiate_VBP to_TO direct_VB their_PRP$ actions_NNS according_VBG to_TO their_PRP$ desire_NN ._.
+Therefore_RB ,_, the_DT crying_VBG -LRB-_-LRB- voluntary_JJ crying_VBG -RRB-_-RRB- and_CC cooing_VBG sound_NN -LRB-_-LRB- coos_NN &_CC laugh_NN -RRB-_-RRB- at_IN this_DT stage_NN may_MD be_VB more_RBR related_VBN to_TO infants_NNS '_POS desires_NNS and_CC emotions_NNS ._.
+That_DT is_VBZ ,_, they_PRP start_VBP to_TO use_VB their_PRP$ abilities_NNS as_IN communication_NN tools_NNS to_TO communicate_VB with_IN their_PRP$ caregivers_NNS ._.
+At_IN the_DT third_JJ stage_NN --_: ``_`` Repeated_VBN action_NN stage_NN ''_'' ,_, babies_NNS begin_VBP to_TO show_VB their_PRP$ preference_NN of_IN repetition_NN ._.
+This_DT is_VBZ seen_VBN as_IN the_DT fact_NN that_IN upon_IN their_PRP$ responses_NNS to_TO their_PRP$ caregivers_NNS the_DT feedback_NN that_WDT babies_NNS receive_VBP from_IN the_DT caregivers_NNS generates_VBZ pleasure_NN ._.
+This_DT is_VBZ possibly_RB why_WRB we_PRP see_VBP 4-month-old_JJ babies_NNS play_VBP with_IN vocalizations_NNS -LRB-_-LRB- babbling_NN &_CC vocal_JJ play_NN -RRB-_-RRB- and_CC produce_VBP repetitive_JJ syllables_NNS ._.
+However_RB ,_, all_PDT the_DT actions_NNS under_IN LoC_NNP 1_CD are_VBP restricted_VBN to_TO present_VB intero_NN -_: and_CC exteroreceptor_NN stimulation_NN -LRB-_-LRB- Now_RB -RRB-_-RRB- ,_, which_WDT are_VBP only_RB triggered_VBN by_IN present_JJ stimuli_NNS ._.
+When_WRB babies_NNS start_VBP to_TO be_VB able_JJ to_TO relate_VB certain_JJ signals_NNS to_TO a_DT certain_JJ kind_NN of_IN meanings_NNS ,_, they_PRP arrive_VBP at_IN LoC_NNP 2_CD --_: ``_`` Recursive_JJ consciousness_NN ''_'' ._.
+At_IN the_DT ``_`` Differential_NNP Labels_NNP ''_'' stage_NN they_PRP are_VBP able_JJ to_TO maintain_VB the_DT previous_JJ consciousness_NN level_NN and_CC recall_VBP what_WP they_PRP have_VBP acquired_VBN before_RB ._.
+A_DT typical_JJ observation_NN is_VBZ a_DT baby_NN 's_POS reaction_NN when_WRB she_PRP hears_VBZ a_DT certain_JJ syllable_JJ or_CC a_DT voice_NN pattern_NN ._.
+For_IN example_NN ,_, when_WRB a_DT 5-month_JJ -_: old_JJ baby_NN hears_VBZ someone_NN calls_VBZ her_PRP$ name_NN ,_, which_WDT she_PRP must_MD have_VB heard_VBN for_IN many_JJ times_NNS before_RB ,_, she_PRP will_MD look_VB toward_IN the_DT sound_JJ source_NN -LRB-_-LRB- response_NN to_TO name_VB -RRB-_-RRB- ,_, though_IN she_PRP does_VBZ not_RB know_VB yet_RB that_IN it_PRP is_VBZ her_PRP$ name_NN ._.
+When_WRB a_DT baby_NN begins_VBZ to_TO be_VB aware_JJ of_IN relationships_NNS ,_, she_PRP is_VBZ at_IN stage_NN 2.2_CD ._.
+A_DT 10-month-old_JJ infant_NN 's_POS use_NN of_IN protowords_NNS -LRB-_-LRB- patterned_VBN speech_NN -RRB-_-RRB- and_CC an_DT 11-month-old_JJ infant_NN 's_POS understanding_NN of_IN others_NNS '_POS expressions_NNS -LRB-_-LRB- adept_JJ at_IN speech_NN perception_NN -RRB-_-RRB- are_VBP typical_JJ developmental_JJ features_NNS at_IN this_DT stage_NN ._.
+When_WRB a_DT baby_NN is_VBZ around_IN 1_CD year_NN old_JJ ,_, she_PRP can_MD use_VB words_NNS comparatively_RB accurately_RB alike_RB adults_NNS -LRB-_-LRB- first_JJ words_NNS -RRB-_-RRB- ._.
+This_DT is_VBZ the_DT feature_NN named_VBN as_IN ``_`` Functional_JJ Reactions_NNS ''_'' shown_VBN at_IN stage_NN 2.3_CD ,_, the_DT last_JJ stage_NN of_IN LoC_NNP 2_CD ._.
+3_CD Agent-based_JJ Model_NNP of_IN LoC_NNP The_NNP theoretical_JJ framework_NN of_IN agent-based_JJ model_NN -LRB-_-LRB- ABM_NNP -RRB-_-RRB- proposed_VBN by_IN Holland_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- creates_VBZ a_DT flexible_JJ abstraction_NN of_IN the_DT real_JJ world_NN and_CC provides_VBZ an_DT approach_NN in_IN the_DT general_JJ study_NN of_IN complex_JJ adaptive_JJ systems_NNS -LRB-_-LRB- cas_FW -RRB-_-RRB- ._.
+ABMs_NNS consist_VBP of_IN basic_JJ computer_NN algorithm_NN units_NNS ,_, so-called_JJ agents_NNS ,_, which_WDT are_VBP the_DT central_JJ modeling_NN focus_NN points_NNS ._.
+Agents_NNS are_VBP modular_JJ or_CC self-contained_JJ ._.
+An_DT agent_NN is_VBZ an_DT identifiable_JJ ,_, discrete_JJ individual_NN with_IN a_DT set_NN of_IN characteristics_NNS or_CC attributes_NNS ,_, behaviors_NNS ,_, and_CC decision-making_JJ capability_NN ._.
+Figure_NN 1_CD shows_VBZ the_DT structure_NN of_IN an_DT individual_JJ agent_NN in_IN our_PRP$ model_NN ._.
+We_PRP name_VBP it_PRP ``_`` baby-agent_JJ ''_'' ._.
+First_RB ,_, we_PRP will_MD give_VB our_PRP$ modeling_NN assumptions_NNS with_IN the_DT four_CD typical_JJ elements_NNS of_IN ABMs_NNS :_: environment_NN ,_, interactions_NNS ,_, behavior_NN rules_NNS ,_, and_CC adaptation_NN ._.
+Then_RB ,_, in_IN the_DT next_JJ section_NN ,_, we_PRP will_MD describe_VB the_DT model_NN in_IN detail_NN ._.
+Figure_NN 1_CD :_: The_DT structure_NN of_IN an_DT individual_JJ baby-agent_JJ interacting_VBG with_IN its_PRP$ environment_NN confined_VBN to_TO its_PRP$ LoC_NNP ._.
+a_DT -RRB-_-RRB- Environment_NNP For_IN a_DT newborn_JJ ,_, all_PDT the_DT things_NNS including_VBG its_PRP$ own_JJ body_NN are_VBP unfamiliar_JJ ._.
+Trevarthen_NNP and_CC Aitken_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- distinguished_VBD three_CD type_NN of_IN engagement_NN of_IN a_DT human_JJ subject_NN with_IN his_PRP$ body_NN and_CC the_DT outside_JJ world_NN :_: in_IN his_PRP$ own_JJ body_NN ,_, to_TO objects_NNS ,_, and_CC to_TO other_JJ persons_NNS ._.
+These_DT three_CD aspects_NNS comprise_VBP a_DT baby-agent_NN 's_POS personal_JJ growth_NN environment_NN within_IN which_WDT a_DT baby-agent_JJ experiences_NNS three_CD dimensional_JJ consciousness_NN developments_NNS ._.
+The_DT consequent_JJ accumulated_VBN consciousness_NN forms_NNS a_DT baby-agent_NN 's_POS thought_NN of_IN the_DT world_NN and_CC serves_VBZ as_IN fodder_NN that_IN muses_NNS for_IN language_NN expression_NN ._.
+b_NN -RRB-_-RRB- Interactions_NNPS Baby-agents_NNPS continuously_RB interact_VBP with_IN their_PRP$ environment_NN as_RB well_RB as_IN with_IN other_JJ agents_NNS ._.
+A_DT baby_NN -_: agent_NN is_VBZ situated_VBN ,_, or_CC situationally_RB dependent_JJ ,_, in_IN the_DT sense_NN that_IN its_PRP$ behavior_NN is_VBZ based_VBN on_IN the_DT current_JJ state_NN of_IN its_PRP$ interactions_NNS with_IN other_JJ agents_NNS and_CC with_IN its_PRP$ environment_NN ._.
+``_`` Other_JJ agents_NNS ''_'' is_VBZ a_DT special_JJ part_NN of_IN the_DT baby_NN -_: agents_NNS '_POS environment_NN ._.
+Along_IN with_IN the_DT increase_NN of_IN LoC_NNP ,_, the_DT interaction_NN and_CC relationship_NN between_IN a_DT baby-agent_JJ and_CC other_JJ agents_NNS will_MD be_VB greatly_RB changed_VBN ._.
+For_IN a_DT baby-agent_JJ with_IN the_DT lowest_JJS LoC_NN ,_, it_PRP has_VBZ no_DT distinctive_JJ features_NNS from_IN other_JJ agents_NNS within_IN the_DT entire_JJ environment_NN ._.
+It_PRP can_MD only_RB receive_VB and_CC respond_VB to_TO signals_NNS ,_, with_IN no_DT awareness_NN of_IN their_PRP$ existence_NN and_CC attributes_NNS ._.
+However_RB ,_, a_DT baby-agent_JJ with_IN a_DT higher_JJR LoC_NN can_MD realize_VB that_IN some_DT agents_NNS or_CC signals_NNS are_VBP special_JJ for_IN it_PRP ._.
+As_IN a_DT result_NN ,_, it_PRP will_MD become_VB conscious_JJ of_IN other_JJ agents_NNS '_POS identities_NNS as_RB well_RB as_IN its_PRP$ personal_JJ connections_NNS with_IN them_PRP ,_, and_CC thus_RB begins_VBZ to_TO build_VB up_RP new_JJ protocols_NNS or_CC mechanisms_NNS that_WDT channel_VBP its_PRP$ interactions_NNS with_IN other_JJ agents_NNS ._.
+c_NN -RRB-_-RRB- Behavior_NN rules_NNS During_IN the_DT interaction_NN and_CC building_VBG up_RP the_DT relationship_NN ,_, a_DT baby-agent_NN is_VBZ autonomous_JJ and_CC self_NN -_: directed_VBN ._.
+It_PRP can_MD function_VB independently_RB in_IN its_PRP$ environment_NN and_CC in_IN its_PRP$ interactions_NNS with_IN other_JJ agents_NNS ._.
+It_PRP seems_VBZ as_IN if_IN its_PRP$ individual_JJ behavior_NN processes_NNS are_VBP controlled_VBN by_IN a_DT combination_NN of_IN heuristic_JJ and_CC stochastic_JJ rules_NNS ._.
+In_IN our_PRP$ model_NN ,_, we_PRP define_VBP the_DT behavior_NN rules_NNS by_IN a_DT set_NN of_IN IF/THEN_NNP rules_NNS that_WDT respond_VBP to_TO external_JJ and_CC internal_JJ signals_NNS ._.
+A_DT baby-agent_JJ interacts_NNS with_IN its_PRP$ environment_NN and_CC other_JJ agents_NNS through_IN an_DT exchange_NN of_IN the_DT signals_NNS ._.
+It_PRP should_MD be_VB noted_VBN that_IN ,_, baby-agent_NN 's_POS behavior_NN rules_NNS can_MD not_RB be_VB separated_VBN from_IN its_PRP$ underlying_JJ level_NN of_IN consciousness_NN ._.
+Providing_VBG the_DT same_JJ scenario_NN ,_, baby_NN -_: agents_NNS at_IN different_JJ levels_NNS of_IN consciousness_NN are_VBP expected_VBN to_TO show_VB different_JJ behavior_NN rules_NNS ._.
+The_DT term_NN ``_`` level_NN ''_'' immediately_RB suggests_VBZ a_DT progression_NN from_IN one_CD level_NN to_TO another_DT and_CC a_DT type_NN of_IN corresponding_JJ dynamics_NNS ._.
+The_DT adaptation_NN is_VBZ the_DT power_NN that_WDT makes_VBZ these_DT progressions_NNS happens_VBZ ._.
+d_LS -RRB-_-RRB- Adaptation_NNP Being_VBG adaptive_JJ is_VBZ the_DT most_RBS important_JJ character_NN of_IN the_DT agents_NNS ._.
+That_DT is_VBZ ,_, the_DT agents_NNS in_IN the_DT model_NN can_MD learn_VB from_IN their_PRP$ environment_NN and_CC dynamically_RB change_VB their_PRP$ behaviors_NNS in_IN response_NN to_TO their_PRP$ experience_NN ._.
+Casti_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- argues_VBZ that_IN agents_NNS should_MD contain_VB both_DT base_NN -_: level_NN rules_NNS for_IN behavior_NN as_RB well_RB as_IN a_DT higher-level_JJ set_NN of_IN ``_`` rules_NNS to_TO change_VB the_DT rules_NNS ._. ''_''
+The_DT base-level_JJ rules_NNS provide_VBP responses_NNS to_TO the_DT environment_NN ,_, while_IN the_DT ``_`` rules_NNS to_TO change_VB the_DT rules_NNS ''_'' provide_VBP adaptation_NN ._.
+A_DT baby-agent_NN has_VBZ the_DT ability_NN to_TO learn_VB and_CC adapt_VB its_PRP$ behaviors_NNS based_VBN on_IN its_PRP$ experience_NN ,_, which_WDT requires_VBZ not_RB only_RB memory_NN ,_, but_CC also_RB feedback_NN and_CC recirculation_NN ._.
+Suitable_JJ feedback_NN is_VBZ very_RB important_JJ in_IN the_DT adaptation_NN process_NN ,_, which_WDT points_VBZ out_RP the_DT right_JJ direction_NN for_IN the_DT cultivation_NN of_IN a_DT new_JJ behavior_NN pattern_NN ._.
+The_DT behavior_NN principle_NN of_IN the_DT baby-agents_NNS with_IN the_DT lowest_JJS level_NN of_IN consciousness_NN is_VBZ quite_RB simple_JJ ._.
+If_IN a_DT certain_JJ behavior_NN pattern_NN can_MD make_VB them_PRP feel_VB happy_JJ directly_RB ,_, they_PRP will_MD persevere_VB in_IN it_PRP and_CC vice_NN versa_RB ._.
+This_DT is_VBZ the_DT basis_NN of_IN the_DT discovery_NN of_IN new_JJ rules_NNS and_CC the_DT modification_NN of_IN extant_JJ rules_NNS ._.
+However_RB ,_, as_IN they_PRP reach_VBP a_DT higher_JJR level_NN of_IN consciousness_NN ,_, they_PRP may_MD consider_VB more_RBR about_IN the_DT rules_NNS ._.
+Therefore_RB ,_, for_IN different_JJ levels_NNS of_IN consciousness_NN ,_, we_PRP may_MD have_VB different_JJ behavior_NN principles_NNS according_VBG to_TO the_DT characters_NNS of_IN each_DT level_NN ._.
+In_IN addition_NN ,_, the_DT kinds_NNS of_IN signals_NNS processed_VBN determine_VB the_DT level_NN of_IN performance_NN under_IN a_DT certain_JJ rule_NN ,_, and_CC thus_RB certain_JJ kinds_NNS of_IN rule_NN conditions_NNS can_MD be_VB typically_RB associated_VBN with_IN the_DT LoC_NNP involved_VBD ._.
+4_CD Model_NNP Description_NNP 4.1_CD IF/THEN_NNP rules_NNS and_CC feature_NN database_NN In_IN our_PRP$ model_NN ,_, we_PRP will_MD use_VB rule-based_JJ ,_, signal_NN -_: processing_VBG agents_NNS -LRB-_-LRB- Holland_NNP et_FW al._FW ,_, 1986_CD -RRB-_-RRB- ,_, with_IN rules_NNS of_IN the_DT form_NN IF_IN -LRB-_-LRB- signal_NN x_LS is_VBZ present_JJ -RRB-_-RRB- THEN_RB -LRB-_-LRB- send_VB signal_NN y_NN -RRB-_-RRB- ._.
+Signals_NNS x_LS and_CC y_NN could_MD be_VB utterances_NNS ,_, gestures_NNS ,_, or_CC visual_JJ input_NN ._.
+In_IN the_DT following_VBG examples_NNS ,_, T_NNP -LRB-_-LRB- ``_`` teacher_NN ''_'' ,_, e.g._VB the_DT mother_NN -RRB-_-RRB- stands_VBZ for_IN a_DT competent_JJ adult_NN that_WDT regularly_RB interacts_VBZ with_IN the_DT infant_NN L_NNP -LRB-_-LRB- ``_`` learner_NN ''_'' -RRB-_-RRB- ._.
+For_IN example_NN ,_, a_DT simple_JJ rule_NN for_IN L_NNP might_MD be_VB ,_, IF_IN -LRB-_-LRB- T_NN lifts_VBZ a_DT milk_NN bottle_NN -RRB-_-RRB- THEN_RB -LRB-_-LRB- L_NNP says_VBZ ``_`` milk_NN ''_'' -RRB-_-RRB- ._.
+Signals_NNS can_MD also_RB serve_VB to_TO coordinate_VB internal_JJ process_NN ,_, in_IN which_WDT case_NN they_PRP have_VBP no_DT intrinsic_JJ meaning_NN ,_, serving_VBG much_RB like_IN the_DT un-interpreted_JJ bit_NN strings_NNS that_WDT coordinate_VBP instructions_NNS in_IN a_DT computer_NN program_NN ._.
+Each_DT agent_NN has_VBZ many_JJ rules_NNS and_CC ,_, indeed_RB ,_, many_JJ rules_NNS can_MD be_VB active_JJ simultaneously_RB -LRB-_-LRB- Gao_NNP &_CC Holland_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+This_DT simultaneous_JJ activity_NN is_VBZ roughly_RB the_DT counterpart_NN of_IN the_DT simultaneous_JJ firing_NN of_IN assemblies_NNS of_IN neurons_NNS in_IN the_DT central_JJ nervous_JJ system_NN -LRB-_-LRB- Hebb_NNP ,_, 1949_CD -RRB-_-RRB- ._.
+By_IN collecting_VBG data_NNS from_IN literatures_NNS in_IN the_DT fields_NNS of_IN linguistics_NNS ,_, cognitive_JJ science_NN ,_, neuroscience_NN ,_, and_CC psychology_NN ,_, we_PRP have_VBP built_VBN up_RP an_DT age-related_JJ development_NN feature_NN database_NN ._.
+Beside_IN the_DT features_NNS of_IN language_NN development_NN ,_, we_PRP have_VBP identified_VBN other_JJ features_NNS ._.
+We_PRP believe_VBP that_IN language_NN acquisition_NN is_VBZ a_DT complex_JJ process_NN ._.
+Supports_VBZ from_IN various_JJ capabilities_NNS '_POS development_NN are_VBP needed_VBN -LRB-_-LRB- Gesell_NNP ,_, 1928_CD -RRB-_-RRB- ._.
+The_DT features_NNS arranged_VBN in_IN different_JJ categories_NNS reflect_VBP the_DT multiple_JJ dimensions_NNS of_IN their_PRP$ interactions_NNS while_IN the_DT capacities_NNS of_IN the_DT baby-agent_NN are_VBP being_VBG developed_VBN ._.
+Figure_NN 2_CD shows_NNS main_JJ development_NN features_NNS of_IN the_DT infants_NNS '_POS first_JJ year_NN of_IN life_NN and_CC their_PRP$ associations_NNS with_IN each_DT other_JJ ._.
+Figure_NN 2_CD :_: An_DT illustration_NN of_IN some_DT developmental_JJ features_NNS and_CC their_PRP$ associations_NNS during_IN infants_NNS '_POS first_JJ year_NN of_IN life_NN To_TO focus_VB on_IN the_DT growth_NN of_IN the_DT baby-agent_NN ,_, our_PRP$ model_NN pays_VBZ more_JJR attention_NN to_TO children_NNS 's_POS behavior_NN transitions_NNS by_IN applying_VBG IF/THEN_NNP rules_NNS referring_VBG to_TO the_DT development_NN feature_NN database_NN ._.
+Based_VBN on_IN the_DT development_NN features_NNS ,_, we_PRP are_VBP able_JJ to_TO determine_VB a_DT set_NN of_IN IF/THEN_NNP rules_NNS ._.
+The_DT following_VBG are_VBP some_DT examples_NNS :_: -LSB-_NNP In_IN the_DT rules_NNS that_WDT follow_VBP ,_, <action>_JJ denotes_NNS an_DT overt_JJ action_NN caused_VBN by_IN a_DT particular_JJ signal_NN ._. -RSB-_NN
+Typical_JJ rule_NN at_IN LoC_NNP 0_CD -LSB-_NNP Unconscious_JJ activities_NNS -RSB-_NNP ._.
+At_IN LoC_NN 0_CD ,_, baby_NN just_RB has_VBZ inherited_VBN -LRB-_-LRB- `_`` wired_VBN in_IN '_'' -RRB-_-RRB- cognitive_JJ abilities_NNS ._.
+Stage_NN 0_CD -LSB-_NNP Reflective_NNP --_: action_NN without_IN awareness_NN -RSB-_NNP :_: IF_IN -LRB-_-LRB- T_NN makes_VBZ a_DT tongue_NN protrusion_NN -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L imitates the tongue protrusion >_NNP -RRB-_-RRB- Typical_JJ rule_NN at_IN LoC_NNP 1_CD -LSB-_NNP Minimal_JJ consciousness_NN -RSB-_NNP ._.
+At_IN LoC_NN 1_CD ,_, baby_NN gradually_RB shows_VBZ innate_JJ reinforcement_NN of_IN repeatable_JJ activities_NNS ._.
+Stage_NN 1.1_CD -LSB-_NNP Intentionality_NNP --_: begin_VB to_TO have_VB some_DT consciousness_NN to_TO environmental_JJ stimulations_NNS -RSB-_NNP :_: IF_IN -LRB-_-LRB- T_NN makes_VBZ a_DT sound_NN -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L turns his head towards the sound>_NNP -RRB-_-RRB- Stage_NNP 1.2_CD -LSB-_NNP Voluntary_JJ action_NN --_: direct_JJ actions_NNS according_VBG to_TO one_CD 's_POS willing_JJ -RSB-_NNP :_: IF_IN -LRB-_-LRB- L_NNP wants_VBZ to_TO be_VB hugged_VBN by_IN caregiver_NN -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L cries voluntarily>_NNP -RRB-_-RRB- Stage_NNP 1.3_CD -LSB-_NNP Repeated_VBN action_NN --_: action_NN repetitively_RB and_CC feel_VB happy_JJ when_WRB doing_VBG it_PRP -RSB-_NN :_: IF_IN -LRB-_-LRB- a_DT hand_NN is_VBZ in_IN a_DT vision_NN cone_VBN -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L waves his hand repetitively >_NNP -RRB-_-RRB- Typical_JJ rule_NN at_IN LoC_NNP 2_CD -LSB-_NNP Recursive_JJ consciousness_NN -RSB-_NNP ._.
+At_IN LoC_NN 2_CD ,_, baby_NN begins_VBZ to_TO awareness_NN of_IN the_DT connections_NNS between_IN object_NN and_CC its_PRP$ label_NN ._.
+Stage_NN 2.1_CD -LSB-_NNP Differential_NNP labels_NNS --_: begin_VB to_TO aware_JJ that_IN some_DT signals_NNS have_VBP special_JJ means_NNS -RSB-_NNP :_: IF_IN -LRB-_-LRB- T_NNP calls_VBZ L_NNP 's_POS name_NN -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L pays attention to T>_NNP -RRB-_-RRB- Stage_NNP 2.2_CD -LSB-_NNP Aware_NNP of_IN relationships_NNS --_: be_VB conscious_JJ of_IN the_DT links_NNS between_IN signals_NNS and_CC objects_NNS -RSB-_NNP :_: IF_IN -LRB-_-LRB- T_NNP say_VBP ``_`` milk_NN ''_'' -RRB-_-RRB- THEN_RB -LRB-_-LRB- <L looks to the milk bottle>_NNP -RRB-_-RRB- Stage_NNP 2.3_CD -LSB-_NNP Action_NNP functionally_RB --_: be_VB able_JJ to_TO use_VB related_JJ signals_NNS to_TO indicate_VB some_DT objects_NNS -RSB-_NNP :_: IF_IN -LRB-_-LRB- a_DT milk_NN bottle_NN is_VBZ present_JJ -RRB-_-RRB- THEN_RB -LRB-_-LRB- <_CD L_NNP utters_NNS ``_`` milk_NN ''_'' >_NN -RRB-_-RRB- 4.2_CD Learning_NNP Processes_NNPS and_CC Meta-Rules_NNP for_IN Learning_NNP According_VBG to_TO Gao_NNP &_CC Holland_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, to_TO learn_VB in_IN this_DT rule-based_JJ context_NN ,_, the_DT agent_NN must_MD have_VB the_DT ability_NN to_TO modify_VB its_PRP$ signal-processing_NN rules_NNS ._.
+Such_JJ rule_NN -_: modifying_VBG ,_, learning_VBG abilities_NNS are_VBP innate_JJ capacities_NNS supplied_VBN by_IN evolution_NN ._.
+Learning_NNP abilities_NNS can_MD also_RB be_VB expressed_VBN as_IN rules_NNS ,_, functioning_VBG in_IN a_DT similar_JJ way_NN as_IN Hebb_NNP 's_POS -LRB-_-LRB- 1949_CD -RRB-_-RRB- learning_NN rule_NN in_IN neuro-psychology_NN ._.
+Therefore_RB ,_, these_DT meta-rules_NNS for_IN learning_VBG are_VBP clearly_RB distinguished_VBN from_IN the_DT signal-processing_NN rules_NNS ._.
+In_IN agent-based_JJ models_NNS ,_, the_DT meta-rules_NNS are_VBP unchanging_JJ and_CC common_JJ to_TO all_DT agents_NNS ._.
+Our_PRP$ agent-based_JJ models_NNS described_VBN here_RB are_VBP based_VBN on_IN meta-rules_NNS that_WDT are_VBP demonstrably_RB available_JJ to_TO pre-primates_NNS ._.
+There_EX are_VBP two_CD general_JJ learning_NN tasks_NNS that_IN a_DT baby-agent_JJ must_MD be_VB able_JJ to_TO carry_VB out_RP :_: a_DT -RRB-_-RRB- Credit-assignment_JJ As_IN an_DT agent_NN interacts_VBZ with_IN other_JJ agents_NNS within_IN a_DT certain_JJ environment_NN ,_, it_PRP must_MD be_VB aware_JJ of_IN the_DT existence_NN of_IN rules_NNS and_CC also_RB able_JJ to_TO decide_VB which_WDT of_IN the_DT rules_NNS are_VBP helpful_JJ and_CC which_WDT are_VBP detrimental_JJ ._.
+A_DT mature_JJ agent_NN must_MD even_RB be_VB able_JJ to_TO determine_VB which_WDT early-acting_NN ,_, stage-setting_JJ rules_NNS make_VBP possible_JJ later_RB beneficial_JJ outcomes_NNS ._.
+-LRB-_-LRB- As_IN an_DT example_NN given_VBN by_IN Holland_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ,_, consider_VB the_DT sacrifice_NN of_IN a_DT piece_NN in_IN a_DT game_NN like_IN checkers_NNS in_IN order_NN to_TO make_VB a_DT triple_JJ jump_NN later_RB ._. -RRB-_-RRB-
+The_DT credit-assignment_NN learning_VBG process_NN assigns_VBZ strengths_NNS to_TO the_DT rules_NNS ._.
+A_DT rule_NN 's_POS strength_NN reflects_VBZ its_PRP$ usefulness_NN to_TO the_DT system_NN ,_, useful_JJ rules_NNS having_VBG high_JJ strengths_NNS ._.
+Rules_NNS then_RB compete_VBP to_TO control_VB the_DT agent_NN ._.
+The_DT stronger_JJR rules_NNS have_VBP a_DT better_JJR chance_NN of_IN winning_VBG the_DT competition_NN ._.
+In_IN effect_NN ,_, the_DT rules_NNS in_IN this_DT system_NN are_VBP treated_VBN as_IN hypotheses_NNS to_TO be_VB progressively_RB confirmed_VBN or_CC disconfirmed_VBN ._.
+-LRB-_-LRB- See_VB Holland_NNP ,_, 1998_CD ,_, chapter_NN 4_CD -RRB-_-RRB- ._.
+Obviously_RB ,_, during_IN the_DT credit-assignment_NN procedure_NN ,_, recirculation_NN and_CC feedback_NN are_VBP indispensable_JJ ._.
+The_DT random_JJ variation_NN and_CC imitation_NN provide_VBP a_DT random_JJ sampling_NN that_WDT helps_VBZ uncover_VB the_DT most_RBS primitive_JJ behavior_NN rules_NNS ._.
+When_WRB a_DT behavior_NN rule_NN is_VBZ repeatedly_RB associated_VBN with_IN rewarding_JJ feedback_NN ,_, such_JJ as_IN food_NN or_CC a_DT mother_NN 's_POS smile_NN ,_, it_PRP becomes_VBZ a_DT sampled_VBN regularity_NN that_WDT is_VBZ associated_VBN with_IN valuable_JJ experience_NN ._.
+From_IN the_DT sampling_NN point_NN of_IN view_NN ,_, the_DT behavior_NN rule_NN 's_POS reliability_NN is_VBZ continually_RB tested_VBN under_IN the_DT credit_NN assignment_NN procedure_NN ._.
+b_NN -RRB-_-RRB- Rule_NNP discovery_NN Once_RB rules_NNS have_VBP been_VBN rated_VBN by_IN credit-assignment_NN ,_, it_PRP makes_VBZ sense_NN to_TO replace_VB rules_NNS that_WDT have_VBP little_JJ or_CC no_DT strength_NN by_IN generating_VBG new_JJ rules_NNS -LRB-_-LRB- hypotheses_NNS -RRB-_-RRB- ._.
+Random_NNP generation_NN of_IN new_JJ rules_NNS is_VBZ not_RB an_DT option_NN here_RB ;_: that_WDT would_MD be_VB like_IN trying_VBG to_TO improve_VB a_DT computer_NN program_NN by_IN inserting_VBG random_JJ instructions_NNS ._.
+Instead_RB ,_, newly_RB generated_VBD rules_NNS must_MD somehow_RB be_VB plausible_JJ hypotheses_NNS in_IN terms_NNS of_IN experience_NN already_RB accumulated_VBN ._.
+-LRB-_-LRB- See_VB Holland_NNP ,_, 1995_CD ,_, chapter_NN 2_CD -RRB-_-RRB- ._.
+For_IN the_DT baby-agent_JJ with_IN a_DT higher_JJR level_NN of_IN consciousness_NN ,_, random_JJ variation_NN of_IN rules_NNS from_IN the_DT very_JJ beginning_NN is_VBZ not_RB the_DT best_JJS way_NN to_TO get_VB the_DT beneficial_JJ behavior_NN rules_NNS ._.
+A_DT mature_JJ baby-agent_NN may_MD have_VB the_DT abilities_NNS to_TO discover_VB new_JJ rules_NNS by_IN combining_VBG building_NN blocks_NNS -LRB-_-LRB- Holland_NNP ,_, 1995_CD ,_, chapter_NN 1_CD ff_NN -RRB-_-RRB- which_WDT are_VBP extracted_VBN from_IN rules_NNS already_RB established_VBN ._.
+An_DT important_JJ advantage_NN of_IN building_NN blocks_NNS is_VBZ that_IN they_PRP occur_VBP as_IN repeated_VBN patterns_NNS in_IN the_DT ever-changing_JJ torrent_NN of_IN sensory_JJ input_NN ,_, which_WDT provide_VBP repeatable_JJ experiences_NNS in_IN a_DT perpetually_RB novel_JJ environment_NN ._.
+4.3_CD Building_NN blocks_NNS According_VBG to_TO Holland_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ,_, building_VBG blocks_NNS -LRB-_-LRB- generators_NNS in_IN mathematics_NN -RRB-_-RRB- have_VBP a_DT familiar_JJ role_NN in_IN the_DT sciences_NNS ,_, best_JJS exemplified_VBN by_IN the_DT building_NN block_NN hierarchy_NN of_IN the_DT physical_JJ sciences_NNS --_: the_DT quark_NN /_NN nucleon_NN /_NN atom_IN /_CD molecule_NN /_NN membrane_NN /_NN ..._: hierarchy_NN ._.
+Selected_VBN combinations_NNS of_IN building_NN blocks_NNS at_IN one_CD level_NN form_NN the_DT building_NN blocks_NNS of_IN the_DT next_JJ level_NN ._.
+For_IN a_DT spoken_VBN language_NN there_EX is_VBZ a_DT similar_JJ phoneme_NN /_CD word_NN /_CD sentence_NN hierarchy_NN ._.
+A_DT grammar_NN specifies_VBZ the_DT laws_NNS that_WDT determine_VBP how_WRB words_NNS can_MD be_VB combined_VBN to_TO yield_VB sentences_NNS ._.
+Actually_RB ,_, in_IN viewing_VBG the_DT levels_NNS of_IN consciousness_NN ,_, we_PRP find_VBP a_DT similar_JJ hierarchy_NN ._.
+Higher_JJR levels_NNS of_IN consciousness_NN in_IN the_DT LoC_NNP theory_NN are_VBP brought_VBN about_RB by_IN the_DT iterative_JJ reprocessing_NN of_IN the_DT contents_NNS of_IN lower_JJR levels_NNS of_IN consciousness_NN ._.
+-LRB-_-LRB- Zelazo_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- After_IN a_DT period_NN of_IN development_NN process_NN ,_, a_DT baby_NN -_: agent_NN has_VBZ acquired_VBN a_DT certain_JJ number_NN of_IN behavior_NN rules_NNS ,_, which_WDT can_MD be_VB seen_VBN as_IN the_DT building_NN blocks_NNS for_IN discovering_VBG new_JJ rules_NNS ._.
+Plausible_JJ new_JJ conditions_NNS and_CC rules_NNS can_MD be_VB generated_VBN by_IN recombining_VBG these_DT building_NN blocks_NNS that_WDT already_RB confirmed_VBD ._.
+A_DT confirmed_VBN building_NN block_NN becomes_VBZ a_DT plausible_JJ hypothesis_NN when_WRB combined_VBN with_IN other_JJ similarly_RB distilled_JJ building_NN blocks_NNS ._.
+The_DT procedure_NN is_VBZ much_RB like_IN the_DT crossbreeding_NN of_IN good_JJ plants_NNS -LRB-_-LRB- or_CC animals_NNS -RRB-_-RRB- to_TO get_VB better_JJR plants_NNS ._.
+There_EX is_VBZ a_DT substantial_JJ literature_NN ,_, centering_VBG on_IN genetic_JJ algorithms_NNS -LRB-_-LRB- Holland_NNP ,_, 1995_CD -RRB-_-RRB- ,_, that_WDT discuss_VBP the_DT production_NN of_IN new_JJ rules_NNS in_IN agent_NN -_: based_VBN models_NNS via_IN the_DT crossing_VBG of_IN extant_JJ rules_NNS ._.
+There_EX is_VBZ not_RB space_NN here_RB to_TO discuss_VB genetic_JJ algorithms_NNS in_IN detail_NN ,_, but_CC it_PRP is_VBZ a_DT well-established_JJ procedure_NN ._.
+The_DT building_NN blocks_NNS amount_NN to_TO hypotheses_NNS at_IN different_JJ levels_NNS of_IN precision_NN ,_, with_IN the_DT rules_NNS being_VBG confirmed_VBN -LRB-_-LRB- or_CC disconfirmed_VBN -RRB-_-RRB- as_IN the_DT agent_NN gains_VBZ experience_NN ._.
+These_DT different_JJ levels_NNS of_IN precision_NN may_MD be_VB related_VBN to_TO the_DT levels_NNS of_IN consciousness_NN ._.
+According_VBG to_TO Gao_NNP &_CC Holland_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, the_DT meta_NN -_: rules_NNS for_IN credit_NN assignment_NN and_CC rule_NN discovery_NN allow_VBP the_DT neonate_NN to_TO achieve_VB a_DT gradual_JJ increase_NN in_IN control_NN ,_, corresponding_JJ to_TO increasing_VBG LoC_NNP ._.
+The_DT process_NN begins_VBZ with_IN the_DT acquisition_NN of_IN repeatable_JJ sound_NN and_CC gestures_NNS ._.
+Sounds_VBZ and_CC gestures_NNS reinforced_VBN by_IN T_NNP become_VBP the_DT building_NN blocks_NNS that_WDT can_MD be_VB used_VBN when_WRB the_DT baby-agent_NN is_VBZ mature_JJ ._.
+For_IN example_NN ,_, producing_VBG various_JJ combinations_NNS of_IN utterances_NNS at_IN LoC_NNP 1_CD can_MD be_VB simply_RB a_DT kind_NN of_IN play_NN ,_, while_IN they_PRP are_VBP the_DT necessary_JJ building_NN block_NN to_TO form_VB meaningful_JJ utterances_NNS at_IN LoC_NNP 2_CD ._.
+Connecting_VBG optional_JJ utterances_NNS with_IN specific_JJ meanings_NNS greatly_RB reduce_VB behavior_NN 's_POS ambiguity_NN ._.
+In_IN mathematical_JJ terms_NNS we_PRP refine_VBP a_DT broad_JJ equivalence_NN class_NN into_IN a_DT set_NN of_IN smaller_JJR ,_, more_RBR informative_JJ sub_NN -_: classes_NNS ._.
+In_IN this_DT way_NN ,_, selected_VBN combinations_NNS of_IN building_NN blocks_NNS at_IN one_CD LoC_NNP become_VB the_DT building_NN blocks_NNS for_IN the_DT next_JJ level_NN ._.
+Building_NN blocks_NNS offer_VBP combinatoric_JJ possibilities_NNS :_: a_DT large_JJ variety_NN of_IN useful_JJ or_CC meaningful_JJ structures_NNS can_MD be_VB constructed_VBN from_IN a_DT small_JJ number_NN of_IN building_NN blocks_NNS ._.
+Moving_VBG up_RP the_DT LoC_NNP hierarchy_NN thus_RB becomes_VBZ a_DT much_RB more_RBR efficient_JJ process_NN than_IN trying_VBG to_TO ``_`` establish_VB ''_'' a_DT monolithic_JJ rule_NN for_IN each_DT possibility_NN at_IN the_DT highest_JJS LoC_NN ._.
+4.4_CD A_DT Baby-agent_NN 's_POS consciousness_NN properties_NNS By_IN now_RB ,_, almost_RB every_DT part_NN of_IN the_DT agent-based_JJ model_NN has_VBZ been_VBN introduced_VBN ,_, and_CC we_PRP come_VBP to_TO the_DT final_JJ topic_NN of_IN this_DT section_NN --_: the_DT properties_NNS of_IN consciousness_NN ._.
+Actually_RB ,_, there_EX are_VBP three_CD concepts_NNS of_IN consciousness_NN involved_VBN in_IN our_PRP$ model_NN :_: the_DT level_NN of_IN consciousness_NN ,_, the_DT consciousness_NN capabilities_NNS ,_, and_CC consciousness_NN status_NN ._.
+The_DT level_NN of_IN consciousness_NN and_CC its_PRP$ impact_NN on_IN a_DT baby-agent_NN 's_POS behavior_NN rules_NNS have_VBP already_RB been_VBN emphasized_VBN ._.
+However_RB ,_, consciousness_NN development_NN is_VBZ a_DT continuous_JJ process_NN ,_, and_CC the_DT increase_NN in_IN LoC_NNP is_VBZ a_DT quantum_NN leap_NN from_IN the_DT accumulation_NN of_IN drip_NN growth_NN ._.
+Therefore_RB ,_, before_IN determining_VBG at_IN which_WDT level_NN of_IN consciousness_NN a_DT baby-agent_NN is_VBZ situated_VBN ,_, we_PRP must_MD know_VB the_DT factors_NNS that_WDT influence_VBP the_DT development_NN of_IN a_DT baby_NN 's_POS consciousness_NN capability_NN ._.
+As_IN an_DT example_NN ,_, we_PRP focus_VBP on_IN illustrating_VBG two_CD main_JJ factors_NNS :_: time_NN and_CC training_NN ._.
+Hereby_NNP ,_, we_PRP give_VBP the_DT measurement_NN of_IN consciousness_NN capability_NN as_IN follows_VBZ :_: Consciousnesst_NNP f_LS -LRB-_-LRB- t_NN -RRB-_-RRB- h_NN -LRB-_-LRB- N_NNP -RRB-_-RRB- Where_WRB ,_, Consciousnesst_NNP is_VBZ the_DT measurement_NN of_IN a_DT baby_NN 's_POS consciousness_NN capability_NN at_IN time_NN t_NN when_WRB a_DT baby-agent_NN has_VBZ been_VBN consciously_RB trained_VBN for_IN N_NNP times_NNS ;_: f_LS -LRB-_-LRB- t_VBN -RRB-_-RRB- and_CC h_NN -LRB-_-LRB- N_NNP -RRB-_-RRB- are_VBP the_DT consciousness_NN increments_NNS gained_VBD from_IN the_DT time_NN factor_NN and_CC the_DT training_NN factor_NN separately_RB ._.
+There_EX is_VBZ no_DT doubt_NN that_IN the_DT increase_NN of_IN consciousness_NN needs_NNS time_NN ._.
+Ever_RB since_IN a_DT baby_NN was_VBD born_VBN ,_, the_DT internal_JJ and_CC external_JJ environments_NNS provide_VBP it_PRP abundant_JJ stimulations_NNS ,_, which_WDT promote_VBP the_DT increase_NN of_IN its_PRP$ consciousness_NN naturally_RB ._.
+For_IN convenience_NN ,_, we_PRP regard_VBP the_DT natural_JJ increase_NN rate_NN -LRB-_-LRB- rate_NN -RRB-_-RRB- of_IN consciousness_NN in_IN our_PRP$ model_NN as_IN being_VBG constant_JJ ,_, and_CC thus_RB the_DT consciousness_NN increment_NN gained_VBD from_IN the_DT time_NN factor_NN can_MD be_VB defined_VBN as_IN follows_VBZ :_: f_LS -LRB-_-LRB- t_VBN -RRB-_-RRB- rate_NN t_NN As_IN for_IN the_DT training_NN factor_NN ,_, it_PRP should_MD be_VB much_RB more_RBR complex_JJ ._.
+By_IN denoting_VBG as_IN the_DT consciousness_NN increment_NN of_IN the_DT i-th_JJ training_NN ,_, the_DT consciousness_NN increment_NN gained_VBD from_IN the_DT training_NN factor_NN can_MD be_VB expressed_VBN as_IN follows_VBZ :_: N_NNP h_NN -LRB-_-LRB- N_NNP -RRB-_-RRB- -LRB-_-LRB- feedbacki_NNS ,_, statusi_NNS -RRB-_-RRB- i_FW 1_CD Where_WRB ,_, i_FW stands_VBZ for_IN the_DT i-th_JJ training_NN ;_: N_NNP is_VBZ the_DT total_JJ training_NN times_NNS by_IN time_NN t_NN ;_: feedbacki_NNS and_CC statusi_NNS respectively_RB indicate_VBP the_DT feedback_NN that_IN the_DT baby_NN -_: agent_NN receives_VBZ and_CC the_DT consciousness_NN status_NN that_WDT baby-agent_JJ is_VBZ situated_VBN in_IN the_DT i-th_JJ training_NN ._.
+The_DT impact_NN of_IN the_DT feedback_NN on_IN the_DT learning_VBG process_NN has_VBZ been_VBN described_VBN ._.
+We_PRP now_RB come_VBP to_TO take_VB a_DT look_NN at_IN the_DT consciousness_NN status_NN ._.
+It_PRP should_MD be_VB noted_VBN that_IN ,_, for_IN a_DT baby-agent_JJ whose_WP$ consciousness_NN capability_NN can_MD reach_VB LoC_NNP 3_CD ,_, it_PRP does_VBZ n't_RB mean_VB that_IN it_PRP remains_VBZ situated_VBN at_IN LoC_NNP 3_CD ._.
+Actually_RB ,_, it_PRP will_MD normally_RB stay_VB at_IN a_DT lower_JJR level_NN of_IN consciousness_NN ,_, and_CC will_MD elevate_VB its_PRP$ own_JJ consciousness_NN status_NN to_TO deal_VB with_IN specific_JJ requirement_NN when_WRB needed_VBN ._.
+Just_RB as_IN we_PRP will_MD achieve_VB different_JJ scores_NNS if_IN we_PRP bear_VBP different_JJ attitudes_NNS in_IN exams_NNS ,_, a_DT baby-agent_JJ with_IN a_DT different_JJ consciousness_NN status_NN will_MD have_VB different_JJ amount_NN of_IN consciousness_NN increase_NN as_RB well_RB ._.
+Given_VBN different_JJ parameters_NNS ,_, we_PRP can_MD model_VB various_JJ development_NN paths_NNS of_IN baby-agents_NNS ._.
+By_IN calibrating_VBG age-related_JJ development_NN features_NNS according_VBG to_TO the_DT consciousness_NN capabilities_NNS '_POS increased_VBN integrally_RB in_IN a_DT baby-agent_NN ,_, we_PRP can_MD determine_VB the_DT consciousness_NN condition_NN of_IN each_DT behavior_NN rule_NN ._.
+This_DT kind_NN of_IN treatment_NN makes_VBZ sense_NN ._.
+Gao_NNP &_CC Holland_NNP 's_POS -LRB-_-LRB- 2013_CD -RRB-_-RRB- framework_NN makes_VBZ it_PRP possible_JJ to_TO observe_VB an_DT infant_NN 's_POS language_NN development_NN in_IN relation_NN to_TO the_DT increase_NN of_IN levels_NNS of_IN consciousness_NN in_IN specific_JJ situations_NNS ._.
+In_IN principle_NN ,_, this_DT approach_NN takes_VBZ the_DT development_NN of_IN language_NN as_RB well_RB as_IN the_DT growth_NN of_IN consciousness_NN capabilities_NNS in_IN an_DT infant_NN as_IN being_VBG supported_VBN by_IN diversified_JJ factors_NNS in_IN reasonable_JJ environments_NNS ._.
+5_CD Summary_NNP This_DT study_NN proposes_VBZ a_DT rule-based_JJ ,_, signal-processing_NN agent-based_JJ model_NN to_TO reveal_VB the_DT dynamics_NNS of_IN language_NN development_NN in_IN early_JJ infants_NNS ._.
+This_DT model_NN shows_VBZ how_WRB a_DT newborn_JJ discovers_VBZ behavior_NN rules_NNS and_CC improves_VBZ its_PRP$ autonomy_NN ._.
+With_IN the_DT establishment_NN of_IN such_PDT a_DT model_NN ,_, we_PRP are_VBP able_JJ to_TO explore_VB the_DT mechanisms_NNS that_WDT support_VBP language_NN development_NN and_CC understand_VB how_WRB language_NN is_VBZ acquired_VBN ,_, used_VBN ,_, and_CC changes_NNS over_IN time_NN ._.
+By_IN building_VBG up_RP the_DT model_NN ,_, we_PRP are_VBP able_JJ to_TO see_VB that_IN the_DT influence_NN of_IN consciousness_NN on_IN language_NN development_NN is_VBZ manifold_NN ._.
+During_IN the_DT learning_VBG processes_NNS ,_, it_PRP is_VBZ very_RB important_JJ to_TO identify_VB a_DT role_NN for_IN interaction_NN ,_, without_IN which_WDT it_PRP will_MD be_VB impossible_JJ for_IN infants_NNS to_TO develop_VB a_DT sense_NN of_IN learning_VBG ._.
+However_RB ,_, the_DT impact_NN of_IN interaction_NN on_IN language_NN development_NN is_VBZ limited_VBN by_IN levels_NNS of_IN consciousness_NN ._.
+Infants_NNS can_MD not_RB acquire_VB the_DT contents_NNS beyond_IN the_DT limit_NN of_IN LoC_NNP at_IN a_DT given_VBN age_NN ._.
+That_DT is_VBZ ,_, when_WRB consciousness_NN does_VBZ not_RB exist_VB or_CC does_VBZ not_RB reach_VB a_DT certain_JJ level_NN ,_, a_DT learning_VBG process_NN can_MD not_RB be_VB activated_VBN in_IN an_DT infant_NN ._.
+In_IN addition_NN ,_, different_JJ learning_VBG procedures_NNS occur_VBP at_IN different_JJ levels_NNS of_IN consciousness_NN ._.
+What_WP infants_NNS acquire_VB at_IN a_DT lower_JJR LoC_NNP will_MD become_VB the_DT building_NN blocks_NNS for_IN a_DT higher_JJR LoC_NNP ,_, which_WDT is_VBZ the_DT reason_NN why_WRB an_DT infant_NN at_IN a_DT higher_JJR LoC_NN can_MD acquire_VB more_JJR complex_JJ rules_NNS for_IN learning_VBG more_RBR quickly_RB ._.
+What_WP is_VBZ presented_VBN in_IN this_DT paper_NN is_VBZ only_RB the_DT description_NN of_IN a_DT step_NN toward_IN building_VBG up_RP experimentally_RB executable_JJ versions_NNS of_IN models_NNS ._.
+The_DT present_JJ model_NN setting_VBG described_VBN is_VBZ seemingly_RB simple_JJ ._.
+In_IN the_DT future_JJ work_NN ,_, such_JJ models_NNS will_MD be_VB further_JJ established_VBN to_TO allow_VB multiple_JJ agents_NNS to_TO interact_VB with_IN each_DT other_JJ at_IN different_JJ levels_NNS of_IN consciousness_NN ,_, suggesting_VBG that_IN each_DT agent_NN will_MD develop_VB its_PRP$ own_JJ idiolect_NN and_CC that_IN the_DT agents_NNS that_WDT interact_VBP regularly_RB with_IN each_DT other_JJ will_MD have_VB many_JJ common_JJ constructions_NNS in_IN their_PRP$ idiolects_NNS ._.
+Acknowledgements_NNS :_: Academic_NNP Research_NNP Fund_NNP -LRB-_-LRB- AcRF_NNP -RRB-_-RRB- Tier_JJR 1_CD Complexity_NNP Seed_NN Funding_NNP awarded_VBD to_TO Helena_NNP Gao_NNP by_IN the_DT Ministry_NNP of_IN Education_NNP of_IN Singapore_NNP and_CC Nanyang_NNP Technological_NNP University_NNP ,_, Singapore_NNP ._.
+Experiment_NN trials_NNS conducted_VBN by_IN Can_MD Guo_NNP ._.
+Reference_NNP Bates_NNP ,_, E._NNP -LRB-_-LRB- 1975_CD -RRB-_-RRB- ._.
+Peer_JJR relations_NNS and_CC the_DT acquisition_NN of_IN language_NN ._.
+Friendship_NN and_CC peer_VB relations_NNS ,_, 259-292_CD ._.
+Bates_NNP ,_, E._NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+Nativism_NNP versus_CC development_NN :_: comments_NNS on_IN Baillargeon_NNP and_CC Smith_NNP ,_, MA_NNP ,_, USA_NNP :_: Wiley-Blackwell_NNP ._.
+Bates_NNP ,_, E._NNP ,_, &_CC Goodman_NNP ,_, J._NNP C._NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ._.
+On_IN the_DT inseparability_NN of_IN grammar_NN and_CC the_DT lexicon_NN :_: Evidence_NN from_IN acquisition_NN ,_, aphasia_NN and_CC real-time_JJ processing_NN ._.
+Language_NN and_CC cognitive_JJ Processes_NNS ,_, 12_CD -LRB-_-LRB- 5-6_CD -RRB-_-RRB- ,_, 507-584_CD ._.
+Bates_NNP ,_, E._NNP ,_, &_CC Goodman_NNP ,_, J._NNP C._NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+On_IN the_DT emergence_NN of_IN grammar_NN from_IN the_DT lexicon_NN ._.
+The_DT emergence_NN of_IN language_NN ,_, 29_CD ._.
+Bruner_NNP ,_, J._NNP -LRB-_-LRB- 1983_CD -RRB-_-RRB- ._.
+Child_NN 's_POS talk_NN :_: Learning_NNP to_TO use_VB language_NN ._.
+Oxford_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Bowerman_NNP ,_, M._NNP -LRB-_-LRB- 1990_CD -RRB-_-RRB- ._.
+Mapping_VBG thematic_JJ roles_NNS onto_IN syntactic_JJ functions_NNS :_: Are_VBP children_NNS helped_VBN by_IN innate_JJ linking_VBG rules_NNS ?_.
+Linguistics_NNP ,_, 28_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, 1253-1290_CD ._.
+Bowerman_NNP ,_, M._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+From_IN universal_JJ to_TO language_NN -_: specific_NN in_IN early_JJ grammatical_JJ development_NN -LSB-_NNP Reprint_NNP -RSB-_NNP The_NNP child_NN language_NN reader_NN -LRB-_-LRB- pp._FW 131-146_CD -RRB-_-RRB- :_: Routledge_NNP ._.
+Carpenter_NNP ,_, M._NNP ,_, Nagell_NNP ,_, K._NNP ,_, Tomasello_NNP ,_, M._NNP ,_, Butterworth_NNP ,_, G._NNP ,_, &_CC Moore_NNP ,_, C._NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ._.
+Social_NNP cognition_NN ,_, joint_JJ attention_NN ,_, and_CC communicative_JJ competence_NN from_IN 9_CD to_TO 15_CD months_NNS of_IN age_NN ._.
+Monographs_NNS of_IN the_DT Society_NNP for_IN Research_NNP in_IN Child_NNP Development_NNP ,_, 63_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, i_FW +_FW iii_FW +_FW v-vi_FW +1_SYM -_: 174_CD ._.
+Carruthers_NNP ,_, P._NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- ._.
+Language_NN ,_, Thought_NNP ,_, and_CC Consciousness_NN :_: An_DT Essay_NN in_IN Philosophical_NNP Psychology_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Carruthers_NNP ,_, P._NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- ._.
+Phenomenal_JJ Consciousness_NN :_: A_DT Naturalistic_JJ Theory_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Casti_NNP ,_, J._NNP L._NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ._.
+Would-be_JJ worlds_NNS :_: How_WRB simulation_NN is_VBZ changing_VBG the_DT frontiers_NNS of_IN science_NN ._.
+New_NNP York_NNP ,_, NY_NNP :_: John_NNP Wiley_NNP and_CC Sons_NNPS ._.
+Chomsky_NNP ,_, N._NNP -LRB-_-LRB- 1967_CD -RRB-_-RRB- ._.
+Review_NNP of_IN Skinner_NNP 's_POS Verbal_NNP Behavior_NNP ._.
+In_IN L._NNP A._NNP Jakobovits_NNP &_CC M._NNP S._NNP Miron_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Readings_NNS in_IN the_DT Psychology_NNP of_IN Language_NNP :_: Prentice_NNP -_: Hall_NNP ._.
+Chomsky_NNP ,_, N._NNP -LRB-_-LRB- 1975_CD -RRB-_-RRB- ._.
+The_DT logical_JJ structure_NN of_IN linguistic_JJ theory_NN ._.
+Gao_NNP ,_, H._NNP H._NNP ,_, &_CC Holland_NNP ,_, J._NNP H._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Agent-based_JJ Models_NNS of_IN Levels_NNP of_IN Consciousness_NN ._.
+SFI_NNP Working_NNP Papers_NNP ._.
+doi_FW :_: SFI-WP_NNP 08-12-048_CD ._.
+Santa_NNP Fe_NNP Institute_NNP ._.
+U.S._NNP A._NN Gao_NNP ,_, H._NNP H._NNP ,_, &_CC Holland_NNP ,_, J._NNP H._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+The_DT Language_NN Niche_NN ._.
+Eastward_NNP Flows_VBZ the_DT Great_NNP River_NNP :_: Festschrift_NNP in_IN Honor_NNP of_IN Professor_NNP William_NNP SY_NNP ._.
+WANG_NNP on_IN his_PRP$ 80th_JJ Birthday_NN ,_, 141_CD ._.
+Gesell_NNP ,_, A._NN -LRB-_-LRB- 1928_CD -RRB-_-RRB- ._.
+Infancy_NN and_CC human_JJ growth_NN ._.
+New_NNP York_NNP :_: The_DT Macmillan_NNP Company_NN ._.
+Gopnik_NNP ,_, A._NN ,_, &_CC Meltzoff_NNP ,_, A._NN N._NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ._.
+Words_NNS ,_, thoughts_NNS ,_, and_CC theories_NNS -LRB-_-LRB- Vol_NNP ._.
+1_LS -RRB-_-RRB- :_: Mit_NNP Press_NNP Cambridge_NNP ,_, MA_NNP ._.
+Hayes_NNP ,_, S._NNP C._NNP ,_, Barnes-Holmes_NNP ,_, D._NNP ,_, &_CC Roche_NNP ,_, B._NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Relational_JJ frame_NN theory_NN :_: A_DT post-Skinnerian_JJ account_NN of_IN human_JJ language_NN and_CC cognition_NN :_: Springer_NNP Science_NNP &_CC Business_NNP Media_NNP ._.
+Hebb_NNP ,_, D._NNP O._NNP -LRB-_-LRB- 1949_CD -RRB-_-RRB- ._.
+The_DT organization_NN of_IN behavior_NN :_: A_DT neuropsychological_JJ approach_NN :_: John_NNP Wiley_NNP &_CC Sons_NNP ._.
+Holland_NNP ,_, J._NNP H._NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+Hidden_NNP Order_NNP :_: How_WRB Adaptation_NNP Builds_VBZ Complexity_NNP :_: Perseus_NNP Books_NNPS ._.
+Holland_NNP ,_, J._NNP H._NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ._.
+Emergence_NN :_: From_IN chaos_NN to_TO order_NN ._.
+Redwood_NNP City_NNP ,_, California_NNP :_: AddisonWesley_NNP ._.
+Holland_NNP ,_, J._NNP H._NNP ,_, Holyoak_NNP ,_, K._NNP J._NNP ,_, Nisbett_NNP ,_, R._NNP E._NNP ,_, &_CC Thagard_NNP ,_, P._NNP R._NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- ._.
+Induction_NNP :_: Processes_NNS of_IN inference_NN ,_, learning_VBG ,_, and_CC discovery_NN ._.
+Cambridge_NNP ,_, MA_NNP :_: Bradford_NNP Books_NNPS /_VBP MIT_NNP Press_NNP ._.
+Kelly_NNP ,_, G._NNP A._NNP -LRB-_-LRB- 1955/1991_CD -RRB-_-RRB- ._.
+The_DT psychology_NN of_IN personal_JJ constructs_NNS ._.
+Volume_NN 1_CD :_: A_DT theory_NN of_IN personality_NN ._.
+New_NNP York_NNP ,_, US_NNP :_: Norton_NNP ._.
+2nd_JJ printing_NN :_: 1991_CD ,_, London_NNP ,_, New_NNP York_NNP :_: Routledge_NNP ._.
+MacWhinney_NNP ,_, B._NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- ._.
+Toward_IN a_DT psycholinguistically_JJ plausible_JJ parser_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT Eastern_NNP States_NNPS Conference_NNP on_IN Linguistics_NNP -LRB-_-LRB- ESCOL_NNP 1986_CD -RRB-_-RRB- ,_, Columbus_NNP ,_, OH_NNP ._.
+MacWhinney_NNP ,_, B._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+A_DT multiple_JJ process_NN solution_NN to_TO the_DT logical_JJ problem_NN of_IN language_NN acquisition_NN ._.
+J_NNP Child_NNP Lang_NNP ,_, 31_CD -LRB-_-LRB- 04_CD -RRB-_-RRB- ,_, 883-914_CD ._.
+Mandler_NNP ,_, J._NNP M._NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ._.
+Babies_NNS think_VBP before_IN they_PRP speak_VBP ._.
+Human_NNP Development_NNP ,_, 41_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 116-126_CD ._.
+Mandler_NNP ,_, J._NNP M._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT foundations_NNS of_IN mind_NN :_: Origins_NNS of_IN conceptual_JJ thought_NN :_: Oxford_NNP University_NNP Press_NNP ._.
+Meltzoff_NNP ,_, A._NN N._NNP ,_, &_CC Borton_NNP ,_, R._NNP W._NNP -LRB-_-LRB- 1979_CD -RRB-_-RRB- ._.
+Intermodal_NNP matching_VBG by_IN human_JJ neonates_NNS ._.
+Meltzoff_NNP ,_, A._NN N._NNP ,_, &_CC Moore_NNP ,_, M._NNP K._NNP -LRB-_-LRB- 1977_CD -RRB-_-RRB- ._.
+Imitation_NN of_IN facial_JJ and_CC manual_JJ gestures_NNS by_IN human_JJ neonates_NNS ._.
+Science_NN ,_, 198_CD -LRB-_-LRB- 4312_CD -RRB-_-RRB- ,_, 75-78_CD ._.
+Moscovitch_NNP ,_, M._NNP -LRB-_-LRB- 1989_CD -RRB-_-RRB- ._.
+Confabulation_NN and_CC the_DT Frontal_NNP Systems_NNPS :_: Strategic_NNP versus_CC Associative_NNP retrieval_NN in_IN Neuropsychological_NNP Theories_NNPS of_IN Memory_NN ._.
+Varieties_NNS of_IN Memory_NN and_CC Consciousness_NN :_: Essays_NNS in_IN Honour_NNP of_IN Endel_NNP Tulving_NNP ,_, 133_CD ._.
+Piaget_NNP ,_, J._NNP -LRB-_-LRB- 1926_CD -RRB-_-RRB- ._.
+The_DT Language_NN and_CC Thought_NNP of_IN the_DT Child_NNP ._.
+London_NNP :_: Routledge_NNP &_CC Kegan_NNP Paul_NNP ._.
+Piaget_NNP ,_, J._NNP -LRB-_-LRB- 1959_CD -RRB-_-RRB- ._.
+The_DT Language_NN and_CC Thought_NNP of_IN the_DT Child_NNP ._.
+London_NNP :_: Routledge_NNP &_CC Kegan_NNP Paul_NNP ._.
+Piaget_NNP ,_, J._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+The_DT construction_NN of_IN reality_NN in_IN the_DT child_NN -LRB-_-LRB- Vol_NNP ._.
+82_CD -RRB-_-RRB- :_: Routledge_NNP ._.
+Ramscar_NNP ,_, M._NNP ,_, &_CC Yarlett_NNP ,_, D._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Linguistic_NNP Self_NNP -_: Correction_NN in_IN the_DT Absence_NN of_IN Feedback_NNP :_: A_NNP New_NNP Approach_NNP to_TO the_DT Logical_JJ Problem_NNP of_IN Language_NNP Acquisition_NNP ._.
+Cogn_NNP Sci_NNP ,_, 31_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, 927-960_CD ._.
+Roediger_NNP ,_, R._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+What_WP happened_VBD to_TO behaviorism_NN ._.
+APS_NNP Observer_NNP ._.
+Schacter_NNP ,_, D._NNP L._NNP -LRB-_-LRB- 1989_CD -RRB-_-RRB- ._.
+On_IN the_DT relation_NN between_IN memory_NN and_CC consciousness_NN :_: Dissociable_JJ interactions_NNS and_CC conscious_JJ experience_NN ._.
+In_IN H._NNP L._NNP I._NNP Roediger_NNP &_CC F._NNP I._NNP M._NNP Craik_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Varieties_NNS of_IN Memory_NN and_CC Consciousness_NN ._.
+Schooler_NNP ,_, J._NNP W._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Re-representing_JJ consciousness_NN :_: Dissociations_NNS between_IN experience_NN and_CC meta_NN -_: consciousness_NN ._.
+Trends_NNS in_IN cognitive_JJ sciences_NNS ,_, 6_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, 339-344_CD ._.
+Skinner_NNP ,_, B._NNP F._NNP -LRB-_-LRB- 1957_CD -RRB-_-RRB- ._.
+Verbal_JJ Behavior_NN ._.
+Acton_NNP ,_, MA_NNP :_: Copley_NNP Publishing_NNP Group_NNP ._.
+Snow_NNP ,_, C._NNP E._NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+Social_NNP perspectives_NNS on_IN the_DT emergence_NN of_IN language_NN ._.
+The_DT emergence_NN of_IN language_NN ,_, 257-276_CD ._.
+Tomasello_NNP ,_, M._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Constructing_VBG a_DT language_NN :_: A_DT usage_NN -_: based_VBN theory_NN of_IN language_NN acquisition_NN ._.
+Tomasello_NNP ,_, M._NNP ,_, &_CC Bates_NNP ,_, E._NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Language_NN development_NN :_: The_DT essential_JJ readings_NNS ,_, Blackwell_NNP ._.
+Trevarthen_NNP ,_, C._NNP ,_, &_CC Aitken_NNP ,_, K._NNP J._NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Infant_NN intersubjectivity_NN :_: Research_NNP ,_, theory_NN ,_, and_CC clinical_JJ applications_NNS ._.
+Journal_NNP of_IN Child_NNP Psychology_NNP and_CC Psychiatry_NNP ,_, 42_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 3-48_CD ._.
+Zelazo_NNP ,_, P._NNP D._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT development_NN of_IN conscious_JJ control_NN in_IN childhood_NN ._.
+Trends_NNS in_IN cognitive_JJ sciences_NNS ,_, 8_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 12-17_CD ._.
+Zelazo_NNP ,_, P._NNP D._NNP ,_, Gao_NNP ,_, H._NNP H._NNP ,_, &_CC Todd_NNP ,_, R._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+The_DT Development_NNP of_IN Consciousness_NN ._.
+In_IN P._NNP D._NNP Zelazo_NNP ,_, M._NNP Moscovitch_NNP ,_, &_CC E._NNP Thompson_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, The_DT Cambridge_NNP Handbook_NNP of_IN Consciousness_NN -LRB-_-LRB- pp._FW 405-432_CD -RRB-_-RRB- ._.

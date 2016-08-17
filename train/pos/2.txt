@@ -1,0 +1,381 @@
+1_CD Abstract_NNP Japanese_NNP is_VBZ prescriptively_RB said_VBD to_TO be_VB verb-final_JJ ,_, but_CC it_PRP exhibits_VBZ postposing_VBG in_IN colloquial_JJ register_NN ,_, where_WRB an_DT element_NN is_VBZ placed_VBN after_IN a_DT verb_NN ._.
+Based_VBN on_IN narrative_NN data_NNS ,_, we_PRP show_VBP that_IN the_DT syntactic_NN type_NN of_IN postposed_JJ element_NN is_VBZ quite_RB diverse_JJ and_CC that_IN ,_, contrary_JJ to_TO the_DT prevalent_JJ ,_, opposing_VBG view_NN ,_, Japanese_JJ postposing_NN is_VBZ not_RB restricted_VBN to_TO a_DT matrix_NN clause_NN ._.
+These_DT issues_NNS are_VBP addressed_VBN in_IN Dynamic_NNP Syntax_NNP ,_, with_IN the_DT outcome_NN of_IN developing_VBG some_DT formal_JJ aspects_NNS of_IN the_DT framework_NN ._.
+Introduction1_NNP We_PRP provide_VBP narrative_JJ data_NNS to_TO set_VB out_RP an_DT empirical_JJ ground_NN of_IN a_DT grammatical_JJ study_NN of_IN postposing_VBG :_: o_VB It_PRP seems_VBZ postposing_VBG may_MD occur_VB at_IN an_DT embedded_VBN level_NN ,_, contrary_JJ to_TO the_DT prevalent_JJ ,_, opposing_VBG view_NN ._.
+o_NN A_DT wider_JJR variety_NN of_IN syntactic_JJ element_NN may_MD be_VB postposed_VBN than_IN has_VBZ been_VBN held_VBN in_IN the_DT literature_NN ._.
+These_DT syntactic_JJ flexibilities_NNS pose_VBP a_DT challenge_NN for_IN grammar_NN modelling_NN ,_, and_CC we_PRP propose_VBP a_DT solution_NN in_IN Dynamic_NNP Syntax_NNP -LRB-_-LRB- DS_NNP -RRB-_-RRB- -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+DS_NNP has_VBZ been_VBN employed_VBN for_IN postposing_VBG in_IN several_JJ languages_NNS -LRB-_-LRB- Section_NN 4_CD -RRB-_-RRB- ;_: still_RB ,_, no_DT analysis_NN has_VBZ been_VBN developed_VBN for_IN Japanese_JJ presumably_RB because_IN it_PRP allows_VBZ a_DT wider_JJR range_NN of_IN items_NNS to_TO be_VB postposed_VBN ._.
+The_DT application_NN to_TO Japanese_JJ advances_NNS formal_JJ aspects_NNS of_IN the_DT theory_NN and_CC broadens_VBZ empirical_JJ coverage_NN ._.
+2_CD Narrative_NNP Data_NNP Several_JJ works_NNS have_VBP extracted_VBN postposing_VBG data_NNS from_IN spontaneous_JJ resources_NNS -LRB-_-LRB- Nomura_NNP 2008_CD -RRB-_-RRB- ,_, but_CC they_PRP tend_VBP to_TO avoid_VB the_DT syntactic_NN facets_NNS of_IN postposing_VBG ._.
+In_IN this_DT section_NN ,_, we_PRP shed_VBD light_NN on_IN grammatical_JJ aspects_NNS of_IN the_DT phenomenon_NN based_VBN on_IN narrative_NN data_NNS ._.
+Firstly_RB ,_, since_IN Kuno_NNP -LRB-_-LRB- 1978_CD -RRB-_-RRB- ,_, it_PRP has_VBZ been_VBN held_VBN that_IN Japanese_JJ postposing_NN is_VBZ restricted_VBN to_TO a_DT matrix_NN level_NN -LRB-_-LRB- ``_`` root-phenomenon_NN ''_'' -RRB-_-RRB- ._.
+Whitman_NNP -LRB-_-LRB- 2000_CD :_: 465_CD -RRB-_-RRB- offers_VBZ data_NNS suggesting_VBG otherwise_RB ._.
+Our_PRP$ narrative_JJ data_NNS like_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- may_MD also_RB suggest_VB that_IN Japanese_JJ postposing_NN is_VBZ not_RB a_DT root-phenomenon_NN ,_, although_IN it_PRP is_VBZ possible_JJ that_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- is_VBZ a_DT case_NN of_IN indirect_JJ speech_NN ._.
+A_DT Dynamic_NNP Syntax_NNP Modelling_NNP of_IN Postposing_NNP in_IN Japanese_NNP Narratives_NNPS Tohru_NNP Seraku_NNP Dept._NNP of_IN Japanese_NNP Interpretation_NNP and_CC Translation_NN Hankuk_NNP University_NNP of_IN Foreign_NNP Studies_NNP Japanese_NNP is_VBZ prescriptively_RB verb-final_JJ as_IN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- a_DT ,_, but_CC elements_NNS may_MD be_VB placed_VBN after_IN a_DT verb_NN in_IN colloquial_JJ register_NN ._.
+In_IN -LRB-_-LRB- 1_CD -RRB-_-RRB- b_NN ,_, sushi-o_JJ appears_VBZ after_IN tabe_NN `_`` eat_VB ._. '_''
+-LRB-_-LRB- 1_CD -RRB-_-RRB- a._IN Ken-ga_JJ sushi-o_JJ tabe-ta-yo_NN K-NOM_NNP sushi-ACC_NNP eat-PAST-FP_NNP `_`` Ken_NNP ate_VBD sushi_NN ._. '_''
+b._IN Ken-ga_JJ Δ_NNP K-NOM_NNP tabe-ta-yo_NN ,_, sushi-o_JJ eat-PAST-FP_JJ sushi-ACC_NN seraku@hufs.ac.kr_NN The_DT postposed_JJ item_NN sushi-o_NN is_VBZ underlined_VBN in_IN -LRB-_-LRB- 1_CD -RRB-_-RRB- b_NN ,_, and_CC the_DT gap_NN is_VBZ notated_VBN as_IN Δ_NNP without_IN any_DT theoretical_JJ implications_NNS ._.
+Finally_RB ,_, yo_NN is_VBZ a_DT final_JJ particle_NN -LRB-_-LRB- FP_NNP -RRB-_-RRB- that_WDT appears_VBZ in_IN colloquial_JJ register_NN ._.
+Japanese_JJ postposing_NN has_VBZ been_VBN explored_VBN in_IN formal_JJ syntax_NN -LRB-_-LRB- Takano_NNP 2014_CD ,_, Takita_NNP 2014_CD -RRB-_-RRB- as_RB well_RB as_IN in_IN dialogue/discourse_NN studies_NNS -LRB-_-LRB- Nomura_NNP 2008_CD ,_, Ono_NNP 2006_CD -RRB-_-RRB- ._.
+Except_IN for_IN Fujii_NNP -LRB-_-LRB- 1995_CD :_: 169_CD -RRB-_-RRB- ,_, grammatical_JJ properties_NNS of_IN Japanese_JJ postposing_NN have_VBP not_RB been_VBN examined_VBN based_VBN on_IN naturally-occurring_JJ materials_NNS ._.
+1_CD This_DT work_NN was_VBD supported_VBN by_IN Hankuk_NNP University_NNP of_IN Foreign_NNP Studies_NNP Research_NNP Fund_NNP of_IN 2015_CD ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- -LSB-_JJ yappari_NNS Δ_NNP -LSB-_NNP as.expected_VBD wakatten-na_JJ kono-hito_JJ -RSB-_NN -_: to_TO know-FP_NNP this-person_NN -RSB-_NNP -_: COMP_NNP watashi-wa_JJ omou_NN I-TOP_NN think_VBP `_`` I_PRP think_VBP this_DT person_NN knows_VBZ the_DT thing_NN ._. '_''
+-LRB-_-LRB- adapted_VBN from_IN -LCB-_-LRB- kirishima_NN ,_, p._NN 74_CD -RCB-_-RRB- -RRB-_-RRB- The_DT postposed_JJ element_NN kono-hito_JJ `_`` this_DT person_NN '_'' is_VBZ a_DT subject_NN of_IN the_DT embedded_VBN verb_NN wakaru_NN `_`` know_VB '_'' -LRB-_-LRB- <_SYM wakatten_VBN -RRB-_-RRB- ._.
+Together_RB with_IN Whitman_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- data_NN ,_, it_PRP is_VBZ then_RB assumed_VBN that_IN Japanese_JJ postposing_NN is_VBZ not_RB a_DT root-phenomenon_NN ._.
+Second_NNP ,_, a_DT range_NN of_IN syntactic_JJ elements_NNS may_MD be_VB at_IN a_DT postposed_JJ position_NN ._.
+Fujii_NNP -LRB-_-LRB- 1995_CD :_: 169_CD -RRB-_-RRB- reports_VBZ that_IN in_IN spontaneous_JJ speech_NN ,_, a_DT postposed_JJ element_NN may_MD be_VB :_: NPs_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, PPs_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, AdvPs_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, connectives_NNS -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, and_CC noun-modifiers_NNS -LRB-_-LRB- see_VB -LRB-_-LRB- 9_CD -RRB-_-RRB- -_: -LRB-_-LRB- 11_CD -RRB-_-RRB- below_IN -RRB-_-RRB- ._.
+In_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, the_DT adverb_NN yorinimoyotte_NN `_`` of_IN all_DT things_NNS ,_, '_'' the_DT PP_NNP ore-kara_NN `_`` from_IN me_PRP ,_, '_'' and_CC the_DT PP_NNP Nozomi-ni_NNP `_`` to_TO Nozomi_NNP '_POS are_VBP postposed_VBN ._.
+As_IN for_IN the_DT postposing_NN of_IN a_DT noun-modifier_NN ,_, Kuno_NNP -LRB-_-LRB- 1978_CD -RRB-_-RRB- notes_VBZ that_IN it_PRP is_VBZ a_DT unique_JJ feature_NN of_IN Japanese_JJ postposing_NN ._.
+In_IN -LRB-_-LRB- 9_CD -RRB-_-RRB- -_: -LRB-_-LRB- 10_CD -RRB-_-RRB- ,_, the_DT relative_JJ clause_NN and_CC the_DT genitive_NN are_VBP postposed_VBN ,_, respectively_RB -LRB-_-LRB- adapted_VBN from_IN Kuno_NNP -LRB-_-LRB- 1978_CD :_: 75_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+In_IN our_PRP$ data_NNS -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, the_DT coordinated_VBN adjectives_NNS are_VBP postposed_VBN ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- nanika_FW Δ_FW daikenkyuu-o_FW nasatta_FW -_: something_NN great.resarch_SYM -_: ACC_NNP do.POL_NNP -_: nodesu-ka_JJ -LSB-_JJ gaikoku-de_NN nasarete-nai_JJ -RSB-_NNP POL_NNP -_: Q_NNP -LSB-_NNP foreign.country-in_JJ done-NEG_NNP -RSB-_NNP `_`` Have_VBP you_PRP done_VBN any_DT great_JJ research_NN which_WDT has_VBZ not_RB been_VBN conducted_VBN in_IN foreign_JJ countries_NNS ?_. '_''
+-LRB-_-LRB- 10_CD -RRB-_-RRB- kimi_FW Δ-imouto-to_JJ kekkon-shitekurenaika_NN you_PRP -LRB-_-LRB- 3_LS -RRB-_-RRB- mainichi-noyouni_JJ Δ_NNP everyday-like_JJ yonjukkai-de_NN 40th.floor-at_JJ oaishitemasu-yo_NN meet.POL-FP_NNP `_`` We_PRP meet_VBP almost_RB everyday_JJ at_IN the_DT 40th_JJ floor_NN ._. '_''
+-LCB-_-LRB- mikeneko_NN ,_, p._NN 119_CD -RCB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- tsumasaki-ga_JJ Δ_NNP itai_NNP sukoshi-dake_JJ toe-NOM_NNP ach_NN little-only_JJ `_`` My_PRP$ toe_NN is_VBZ aching_VBG a_DT little_JJ ._. '_''
+-LCB-_-LRB- kirishima_NN ,_, p._NN 55_CD -RCB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- Δ_NNP `_`` kekkoudesu_NN '_'' jya-nai-ndatte_JJ dakara_NN `_`` ok_NN '_'' COP-NEG-FP_NNP as.I.said_NNP `_`` As_IN I_PRP said_VBD ,_, it_PRP 's_VBZ not_RB `_`` ok_VB '_'' ._. '_''
+-LCB-_-LRB- roll_NN ,_, p._NN 71_CD -RCB-_-RRB- To_TO this_DT Fujii_NNP 's_POS list_NN we_PRP add_VBP :_: the_DT Adv_NNP clause_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- and_CC the_DT complement_VBP clause_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- Δ_SYM daijyoubu-desu_SYM -LSB-_NNP hitori-jya-nai_JJ -RSB-_NNP -_: kara_NN all.right-COP_NNP -LSB-_NNP alone-COP-NEG_NNP -RSB-_NNP -_: because_IN `_`` It_PRP 's_VBZ all_RB right_RB as_IN I_PRP 'm_VBP not_RB alone_RB ._. '_''
+-LCB-_-LRB- roll_NN ,_, p._NN 101_CD -RCB-_-RRB- sister-with_JJ marriage-do_NN ._.
+please_VB `_`` Can_MD you_PRP please_VB marry_VB my_PRP$ sister_NN ?_. '_''
+-LRB-_-LRB- 11_CD -RRB-_-RRB- Δ_SYM futari-no-himitsu-ga_JJ fueta_NN two.person-GEN-secret-NOM_NNP increased_VBD sasayakana_NNS demo_NN kanbina_NN tiny_JJ but_CC sweet_JJ `_`` We_PRP 've_VBP had_VBD another_DT tiny_JJ but_CC sweet_JJ secret_NN of_IN us_PRP ._. '_''
+-LRB-_-LRB- adapted_VBN from_IN -LCB-_-LRB- Tokyo_NNP ,_, p._NN 69_CD -RCB-_-RRB- -RRB-_-RRB- The_DT issue_NN of_IN noun-modifiers_NNS ,_, though_IN it_PRP is_VBZ a_DT unique_JJ property_NN of_IN Japanese_JJ postposing_NN ,_, has_VBZ been_VBN largely_RB neglected_VBN except_IN for_IN a_DT few_JJ works_NNS -LRB-_-LRB- Takano_NNP 2014_CD -RRB-_-RRB- .2_CD In_IN sum_NN ,_, Japanese_JJ postposing_NN is_VBZ flexible_JJ in_IN that_IN it_PRP is_VBZ not_RB restricted_VBN to_TO a_DT root_NN clause_NN and_CC that_IN it_PRP allows_VBZ a_DT wide_JJ array_NN of_IN syntactic_JJ items_NNS to_TO be_VB postposed_VBN ._.
+3_CD Dynamic_NNP Syntax_NNP -LRB-_-LRB- DS_NNP -RRB-_-RRB- DS_NNP models_NNS knowledge_NN of_IN language_NN as_IN a_DT reflection_NN of_IN language_NN use_NN -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD ,_, Kempson_NNP et_FW al._FW 2001_CD -RRB-_-RRB- ,_, with_IN the_DT two_CD fundamental_JJ assumptions_NNS :_: o_VB Structure_NN building_NN proceeds_NNS as_IN a_DT string_NN is_VBZ parsed_VBN word-by-word_JJ .3_CD 2_CD Takano_NNP -LRB-_-LRB- 2014_CD :_: 150_CD -RRB-_-RRB- claims_VBZ that_IN ,_, when_WRB there_EX are_VBP multiple_JJ postposed_JJ items_NNS ,_, a_DT noun-modifier_NN can_MD not_RB co-occur_VB with_IN the_DT other_JJ types_NNS of_IN syntactic_JJ element_NN ._.
+This_DT generalisation_NN ,_, however_RB ,_, is_VBZ challenged_VBN by_IN a_DT spontaneous_JJ example_NN of_IN Fujii_NNP -LRB-_-LRB- 1995_CD :_: 171_CD -RRB-_-RRB- ._.
+3_CD See_VB Purver_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- for_IN the_DT DS_NNP modelling_NN of_IN production_NN ._.
+boku-no_JJ I-GEN_NNP -LRB-_-LRB- 7_CD -RRB-_-RRB- tomodachi-kara_NN Δ_NNP friend-from_NN kii-ta-mon_NN hear-PAST-FP_NNP Mei-to-Satsuki-wa_NNP mou_NNP kono-yo-ni_NNS M-and-S-TOP_NNP already_RB this-world-in_JJ inai-nda-to_JJ absent-FP-COMP_JJ `_`` I_PRP heard_VBD Mei_NNP and_CC Satsuki_NNP were_VBD not_RB in_IN this_DT world_NN any_DT longer_JJR ._. '_''
+-LRB-_-LRB- adapted_VBN from_IN -LCB-_-LRB- kirishima_NN ,_, p._NN 100_CD -RCB-_-RRB- -RRB-_-RRB- Our_PRP$ narrative_NN data_NNS also_RB confirm_VBP the_DT existence_NN of_IN ``_`` multiple_JJ postposing_NN ''_'' -LRB-_-LRB- Abe_NNP 1999_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- Δ_SYM Δ_SYM Δ_SYM fuman-toka_FW aru-wake-nee-daro_NN complaint-like_JJ exist-reason-NEG-FP_JJ yorinimoyotte_NN ore-kara_NN Nozomi-ni_JJ of.all.things_NNS I-from_JJ N-to_JJ `_`` Of_IN all_DT things_NNS ,_, it_PRP 's_VBZ never_RB the_DT case_NN that_IN I_PRP have_VBP a_DT complaint_NN for_IN Nozomi_NNP ._. '_''
+-LCB-_-LRB- yuunou_NN ,_, p._NN 172_CD -RCB-_-RRB- o_NN A_DT DS_NNP structure_NN is_VBZ semantic_JJ ;_: a_DT string_NN is_VBZ mapped_VBN onto_IN a_DT semantic_JJ tree_NN without_IN any_DT separate_JJ level_NN of_IN syntactic_JJ representation_NN ._.
+3.1_CD The_DT Basic_JJ Formalism_NNP The_DT DS_NNP structure_NN is_VBZ semantic_JJ ,_, represented_VBN in_IN a_DT tree_NN -_: format_NN ._.
+For_IN instance_NN ,_, -LRB-_-LRB- 12_CD -RRB-_-RRB- is_VBZ mapped_VBN onto_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- Ken-ga_JJ hashi-tta_JJ K-NOM_NNP run-PAST_NNP `_`` Ken_NNP ran_VBD ._. '_''
+-LRB-_-LRB- 13_CD -RRB-_-RRB- Parsing_VBG the_DT string_NN -LRB-_-LRB- 12_CD -RRB-_-RRB- -LRB-_-LRB- ignoring_VBG tense_JJ -RRB-_-RRB- Fo_NNP -LRB-_-LRB- hashi_NNS '_POS -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- hashi_NNS '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- Each_DT non-terminal_JJ node_NN is_VBZ binary-branched_JJ ,_, with_IN the_DT left_VBN daughter_NN being_VBG an_DT argument_NN node_NN and_CC the_DT right_JJ daughter_NN being_VBG a_DT functor_NN node_NN ._.
+Each_DT node_NN is_VBZ decorated_VBN with_IN various_JJ types_NNS of_IN statement_NN ._.
+o_SYM Fo_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- :_: Fo_NN is_VBZ a_DT ``_`` formula_NN ''_'' predicate_VB that_DT takes_VBZ a_DT content_NN X_NNP as_IN argument_NN ._.
+Fo_NN -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- declares_VBZ that_IN the_DT content_JJ denoted_VBN at_IN this_DT node_NN is_VBZ Ken_NNP '_POS ._.
+o_NN Ty_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- :_: Ty_NNP is_VBZ a_DT ``_`` type_NN ''_'' predicate_VB that_DT takes_VBZ a_DT type_NN X_NNP as_IN argument_NN ._.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- declares_VBZ that_IN the_DT content_JJ denoted_VBN at_IN this_DT node_NN is_VBZ of_IN type_NN e_LS ._.
+The_DT top_JJ node_NN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- is_VBZ also_RB annotated_VBN with_IN ♢_CD ,_, a_DT pointer_NN ._.
+This_DT highlights_VBZ a_DT node_NN under_IN development_NN ._.
+More_RBR decorations_NNS on_IN a_DT node_NN are_VBP illustrated_VBN if_IN we_PRP see_VBP a_DT ``_`` partial_JJ ''_'' tree_NN ._.
+For_IN instance_NN ,_, if_IN Ken-ga_JJ alone_RB is_VBZ parsed_VBN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, the_DT corresponding_JJ tree_NN is_VBZ -LRB-_-LRB- 14_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 14_CD -RRB-_-RRB- Parsing_VBG Ken-ga_NN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- The_DT parse_NN of_IN Ken-ga_NN creates_VBZ a_DT subject_JJ node_NN ._.
+-LRB-_-LRB- The_DT term_NN ``_`` subject_JJ ''_'' is_VBZ used_VBN for_IN presentation_NN purposes_NNS ._. -RRB-_-RRB- ?_.
+is_VBZ used_VBN to_TO form_VB a_DT requirement_NN ._.
+For_IN instance_NN ,_, ?_.
+T_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- in_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- requires_VBZ that_IN Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- will_MD hold_VB at_IN this_DT node_NN ._.
+Let_VB us_PRP turn_VB to_TO the_DT structure-building_JJ process_NN ._.
+The_DT initial_JJ state_NN of_IN DS_NNP tree-update_NN is_VBZ -LRB-_-LRB- 15_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 15_CD -RRB-_-RRB- AXIOM_NNP -LRB-_-LRB- =_SYM the_DT initial_JJ state_NN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW The_DT initial_JJ state_NN is_VBZ progressively_RB updated_VBN by_IN two_CD types_NNS of_IN action_NN :_: ``_`` general_JJ ''_'' and_CC ``_`` lexical_JJ ''_'' actions_NNS ._.
+General_NNP actions_NNS are_VBP not_RB lexically_RB triggered_VBN and_CC are_VBP optional_JJ -LRB-_-LRB- as_RB long_RB as_IN an_DT execution_NN condition_NN holds_VBZ -RRB-_-RRB- ._.
+LOCAL_JJ *_SYM ADJUNCTION_NNP posits_VBZ a_DT structurally-unfixed_JJ node_NN ._.
+In_IN the_DT left-hand_JJ tree_NN of_IN -LRB-_-LRB- 16_CD -RRB-_-RRB- ,_, the_DT unfixed_JJ node_NN -LRB-_-LRB- shown_VBN by_IN a_DT dashed_VBN line_NN -RRB-_-RRB- may_MD be_VB a_DT subject_JJ node_NN ,_, an_DT object_NN node_NN ,_, etc._FW ,_, at_IN a_DT later_JJ stage_NN ._.
+-LRB-_-LRB- 16_CD -RRB-_-RRB- LOCAL_JJ *_SYM ADJUNCTION_NNP ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW ⇒_FW Parsing_NNP Ken_NNP ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Lexical_JJ actions_NNS are_VBP those_DT encoded_VBN in_IN each_DT lexical_JJ item_NN ._.
+Ken_NNP encodes_VBZ the_DT action_NN to_TO decorate_VB a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN with_IN Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- and_CC Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, as_IN in_IN the_DT right-hand_JJ tree_NN -LRB-_-LRB- 16_CD -RRB-_-RRB- ._.
+The_DT nominative_JJ case_NN marker_NN ga_NN encodes_VBZ the_DT action_NN to_TO resolve_VB an_DT unfixed_JJ node_NN as_IN a_DT subject_JJ node_NN ,_, as_IN in_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- A_DT solid_JJ line_NN visually_RB shows_VBZ that_IN a_DT structural_JJ uncertainty_NN has_VBZ been_VBN fixed_VBN ._. -RRB-_-RRB-
+As_IN another_DT example_NN of_IN lexical_JJ action_NN ,_, the_DT parse_NN of_IN hashi_NNS `_`` run_VBP '_'' provides_VBZ a_DT predicate_NN node_NN with_IN the_DT Fo-statement_NN involving_VBG the_DT content_JJ hashi_NN '_'' and_CC the_DT Ty-statement_NN involving_VBG the_DT type_NN e_SYM →_FW t._FW -LRB-_-LRB- 17_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ hashi-tta_NN -LRB-_-LRB- ignoring_VBG tense_JJ -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- hashi_NNS '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- ,_, ♢_FW What_WP remains_VBZ to_TO be_VB done_VBN in_IN -LRB-_-LRB- 17_CD -RRB-_-RRB- is_VBZ to_TO conduct_VB functional_JJ application_NN and_CC type_NN deduction_NN ._.
+This_DT is_VBZ formulated_VBN as_IN the_DT general_JJ action_NN of_IN ELIMINATION_NNP ,_, which_WDT engenders_VBZ the_DT final_JJ state_NN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+The_DT tree_NN -LRB-_-LRB- 13_CD -RRB-_-RRB- is_VBZ ``_`` well-formed_JJ ''_'' in_IN the_DT sense_NN that_WDT requirements_NNS like_IN ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- are_VBP not_RB in_IN place_NN any_DT more_JJR ._.
+A_DT string_NN is_VBZ ``_`` grammatical_JJ ''_'' iff_NN there_RB exists_VBZ a_DT parse_NN -_: route_NN that_IN leads_VBZ to_TO a_DT well-formed_JJ tree_NN ._.
+3.2_CD The_DT LINK_NNP Machinery_NNP The_NNP formalism_NN is_VBZ enriched_VBN with_IN LINK_NNP ,_, a_DT formal_JJ pairing_NN of_IN two_CD distinct_JJ trees_NNS ._.
+Consider_VB -LRB-_-LRB- 18_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 18_CD -RRB-_-RRB- -LSB-_JJ -LSB-_NN Ken-ga_NN tabe-ta_JJ -RSB-_NNP sushi_NN -RSB-_NNP -_: ga_NN oishii_NN -LSB-_NNP -LSB-_NNP K-NOM_NNP eat-PAST_NNP -RSB-_NNP sushi_NN -RSB-_NNP -_: NOM_NNP tasty_JJ `_`` Sushi_NN which_WDT Ken_NNP ate_VBD is_VBZ tasty_JJ ._. '_''
+The_DT parse_NN of_IN the_DT relative_JJ clause_NN Ken-ga_JJ tabe-ta_JJ projects_NNS a_DT propositional_JJ structure_NN where_WRB an_DT object_NN Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW node_FW is_VBZ decorated_VBN with_IN a_DT variable_JJ x_LS -LRB-_-LRB- representing_VBG a_DT gap_NN -RRB-_-RRB- ._.
+This_DT propositional_JJ tree_NN is_VBZ associated_VBN with_IN an_DT emergent_NN tree_NN by_IN being_VBG LINKed_VBN to_TO a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN ._.
+-LRB-_-LRB- A_DT LINK_NN relation_NN is_VBZ expressed_VBN as_IN a_DT curved_JJ arrow_NN ._. -RRB-_-RRB-
+postposed_JJ element_NN is_VBZ then_RB parsed_VBN at_IN this_DT LINKed_VBN ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN ._.
+But_CC this_DT LINK-strategy_NN can_MD not_RB be_VB applied_VBN to_TO the_DT postposed_JJ item_NN sushi-o_NN in_IN -LRB-_-LRB- 20_CD -RRB-_-RRB- as_IN the_DT parse_NN of_IN a_DT case_NN marker_NN at_IN a_DT LINKed_VBN node_NN aborts_VBZ a_DT tree-update_NN ._.
+-LRB-_-LRB- The_DT case_NN marker_NN -_: o_NN may_MD be_VB dropped_VBN -LRB-_-LRB- Tanaka_NNP &_CC Kizu_NNP 2007_CD -RRB-_-RRB- ,_, in_IN which_WDT case_NN the_DT LINK_NNP -_: strategy_NN is_VBZ available_JJ -LRB-_-LRB- Seraku_NNP &_CC Ohtani_NNP fthc_NN ._. -RRB-_-RRB- ._. -RRB-_-RRB-
+A_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN can_MD also_RB be_VB introduced_VBN by_IN LOCAL_NNP *_SYM ADJUNCTION_NNP -LRB-_-LRB- Section_NNP 3.1_CD -RRB-_-RRB- ._.
+This_DT action_NN ,_, however_RB ,_, can_MD not_RB be_VB run_VBN here_RB because_IN it_PRP is_VBZ allowed_VBN to_TO be_VB run_VBN only_RB if_IN a_DT root_NN node_NN is_VBZ decorated_VBN with_IN ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+This_DT restriction_NN is_VBZ indeed_RB essential_JJ for_IN ensuring_VBG verb-finality_NN of_IN non-colloquial_JJ register_NN of_IN Japanese_JJ ._.
+On_IN the_DT other_JJ hand_NN ,_, postposing_VBG is_VBZ attested_VBN colloquially_RB ._.
+In_IN order_NN to_TO solve_VB this_DT ambivalence_NN ,_, we_PRP propose_VBP to_TO extend_VB the_DT formalism_NN with_IN -LRB-_-LRB- 22_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 22_CD -RRB-_-RRB- Proposal_NN :_: LOCAL_NNP *_SYM ADJUNCTION_NNP is_VBZ subject_JJ to_TO the_DT ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: restriction_NN in_IN usual_JJ register_NN ._.
+But_CC this_DT restriction_NN is_VBZ relaxed_VBN in_IN colloquial_JJ register_NN ._.
+The_DT intuitive_JJ idea_NN behind_IN is_VBZ that_IN some_DT grammatical_JJ rules_NNS are_VBP ``_`` not_RB observed_VBN ''_'' in_IN casual_JJ register_NN ,_, though_IN it_PRP may_MD be_VB prescriptively_RB regarded_VBN as_IN the_DT ``_`` wrong_JJ use_NN of_IN language_NN ._. ''_''
+Once_RB LOCAL_JJ *_SYM ADJUNCTION_NNP is_VBZ allowed_VBN to_TO fire_VB at_IN a_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ,_, it_PRP may_MD induce_VB an_DT unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN for_IN the_DT postposed_JJ item_NN sushi_NN ._.
+-LRB-_-LRB- 23_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ tabe-ta-yo_NN ,_, sushi_NN Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -LRB-_-LRB- 19_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ tabe-ta_JJ Fo_NN -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW The_DT current_JJ node_NN is_VBZ decorated_VBN by_IN the_DT parse_NN of_IN the_DT head_NN noun_NN sushi_NN in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- ._.
+This_DT node_NN will_MD be_VB part_NN of_IN the_DT propositional_JJ structure_NN for_IN the_DT matrix_NN clause_NN ._.
+4_CD The_DT DS_NNP Account_NNP The_NNP DS_NNP framework_NN is_VBZ used_VBN to_TO model_VB postposing_VBG in_IN several_JJ languages_NNS :_: English_NNP -LRB-_-LRB- Cann_NNP et_FW al._FW 2004_CD -RRB-_-RRB- ,_, Greek_JJ -LRB-_-LRB- Chatzikyriakidis_NNP 2011_CD ,_, Gregoromichelaki_NNP 2013_CD -RRB-_-RRB- ,_, and_CC Mandarin_NNP -LRB-_-LRB- Wu_NNP 2005_CD -RRB-_-RRB- ._.
+These_DT studies_NNS are_VBP primarily_RB concerned_VBN with_IN NP_NNP postposing_NN ,_, but_CC our_PRP$ data_NNS confirm_VBP that_IN a_DT wider_JJR range_NN of_IN syntactic_JJ items_NNS may_MD be_VB postposed_VBN in_IN Japanese_JJ ._.
+In_IN this_DT section_NN ,_, we_PRP propose_VBP a_DT DS_NNP account_NN of_IN Japanese_JJ postposing_NN by_IN advancing_VBG formal_JJ aspects_NNS of_IN the_DT framework_NN ._.
+For_IN brevity_NN ,_, the_DT analysis_NN is_VBZ based_VBN on_IN artificial_JJ examples_NNS which_WDT preserve_VBP the_DT essence_NN of_IN the_DT narrative_NN data_NNS ._.
+4.1_CD The_DT Baseline_NNP Let_VB us_PRP start_VB with_IN the_DT basic_JJ example_NN -LRB-_-LRB- 20_CD -RRB-_-RRB- ,_, where_WRB the_DT postposed_JJ item_NN is_VBZ the_DT NP_NNP sushi-o_NN ._.
+-LRB-_-LRB- 20_CD -RRB-_-RRB- Ken-ga_JJ Δ_NNP tabe-ta-yo_NN ,_, sushi-o_JJ K-NOM_NNP eat-PAST-FP_NNP sushi-ACC_NNP `_`` Ken_NNP ate_VBD sushi_NN ._. '_''
+The_DT parse_NN of_IN the_DT preceding_VBG clause_NN Ken-ga_JJ tabe-ta_NN -_: yo_NN gives_VBZ rise_NN to_TO -LRB-_-LRB- 21_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- The_DT gap_NN is_VBZ notated_VBN with_IN x._NN -RRB-_-RRB- -LRB-_-LRB- 21_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ tabe-ta-yo_NN Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- Fo_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- -RRB-_-RRB- To_TO parse_VB the_DT postposed_JJ element_NN sushi-o_NN ,_, a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN must_MD be_VB present_JJ ._.
+In_IN the_DT previous_JJ DS_NNP studies_NNS on_IN postposing_NN -LRB-_-LRB- Cann_NNP et_FW al._FW 2004_CD ,_, Chatzikyriakidis_NNP 2011_CD ,_, Gregoromichelaki_NNP 2013_CD ,_, Wu_NNP 2005_CD -RRB-_-RRB- ,_, a_DT LINK_NN relation_NN is_VBZ launched_VBN to_TO introduce_VB a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN ._.
+A_DT Fo_NN -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- Fo_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- -RRB-_-RRB- The_DT unfixed_JJ node_NN is_VBZ resolved_VBN as_IN an_DT object_NN node_NN by_IN the_DT parse_NN of_IN the_DT accusative_JJ case_NN marker_NN o_NN ._.
+Since_IN the_DT two_CD nodes_NNS collapse_NN ,_, the_DT node_JJ description_NN is_VBZ updated_VBN ,_, with_IN the_DT variable_JJ being_VBG saturated_VBN as_IN sushi_NN '_'' ._.
+After_IN ELIMINATION_NNP is_VBZ run_VBN ,_, the_DT final_JJ state_NN -LRB-_-LRB- 24_CD -RRB-_-RRB- emerges_VBZ ._.
+-LRB-_-LRB- 24_CD -RRB-_-RRB- ELIMINATION_NNP -LRB-_-LRB- twice_RB -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- Fo_NNP -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- -RRB-_-RRB- The_DT above_IN analysis_NN readily_RB solves_VBZ our_PRP$ first_JJ set_NN of_IN the_DT data_NNS on_IN the_DT syntactic_NN flexibility_NN of_IN postposing_VBG ._.
+That_DT is_VBZ ,_, postposing_VBG may_MD take_VB place_NN at_IN an_DT embedded_VBN level_NN ._.
+With_IN the_DT proposal_NN -LRB-_-LRB- 22_CD -RRB-_-RRB- ,_, the_DT general_JJ action_NN of_IN LOCAL_NNP *_SYM ADJUNCTION_NNP can_MD be_VB run_VBN at_IN any_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN of_IN any_DT subordinate_JJ structure_NN ._.
+Another_DT advantage_NN of_IN the_DT analysis_NN is_VBZ that_IN it_PRP deals_VBZ with_IN multiple_JJ postposing_NN straightforwardly_RB ._.
+-LRB-_-LRB- 25_CD -RRB-_-RRB- Δ_SYM Δ_SYM tabe-ta-yo_NN ,_, Ken-ga_JJ sushi-o_JJ eat-PAST-FP_NN K-NOM_NNP sushi-ACC_NNP `_`` Ken_NNP ate_VBD sushi_NN ._. '_''
+In_IN DS_NNP ,_, only_RB a_DT single_JJ unfixed_JJ node_NN can_MD be_VB present_JJ at_IN a_DT time_NN due_JJ to_TO the_DT tree_NN logic_NN -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+This_DT constraint_NN is_VBZ met_VBN in_IN our_PRP$ account_NN ._.
+In_IN -LRB-_-LRB- 25_CD -RRB-_-RRB- ,_, an_DT unfixed_JJ node_NN is_VBZ introduced_VBN for_IN Ken_NNP ,_, but_CC it_PRP is_VBZ immediately_RB resolved_VBN as_IN a_DT subject_JJ node_NN by_IN the_DT parse_NN of_IN the_DT nominative_JJ case_NN marker_NN ga_NN as_IN in_IN -LRB-_-LRB- 26_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 26_CD -RRB-_-RRB- Parsing_VBG tabe-ta-yo_NN ,_, Ken-ga_JJ Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- y_NN -RRB-_-RRB- -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- y_NN -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- Fo_NN -LRB-_-LRB- y_FW -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_SYM →_FW -LRB-_-LRB- e_SYM →_FW t_FW -RRB-_-RRB- -RRB-_-RRB- As_IN no_DT unfixed_JJ node_NN remains_VBZ in_IN the_DT tree_NN ,_, the_DT parser_NN can_MD safely_RB posit_VB an_DT unfixed_JJ node_NN ,_, this_DT time_NN for_IN the_DT second_JJ postposed_JJ item_NN sushi_NN ._.
+In_IN this_DT tree-update_NN ,_, there_EX is_VBZ only_RB a_DT single_JJ unfixed_JJ node_NN at_IN a_DT time_NN ._.
+Thus_RB ,_, the_DT parse_NN of_IN the_DT multiple_JJ postposed_JJ items_NNS is_VBZ licit_JJ ._.
+It_PRP also_RB follows_VBZ from_IN the_DT analysis_NN that_IN the_DT order_NN of_IN the_DT postposed_JJ items_NNS may_MD be_VB swapped_VBN :_: -LRB-_-LRB- 27_CD -RRB-_-RRB- Δ_SYM Δ_SYM tabe-ta-yo_NN ,_, sushi-o_JJ Ken-ga_NN -LRB-_-LRB- 28_CD -RRB-_-RRB- Two_CD LINK_NN relations_NNS -LRB-_-LRB- schematic_JJ display_NN -RRB-_-RRB- Fo_NN -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- y_NN -RRB-_-RRB- -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW This_DT tree_NN appears_VBZ to_TO have_VB two_CD LINKed_VBN nodes_NNS ,_, but_CC these_DT nodes_NNS collapse_NN ._.
+The_DT collapsed_JJ single_JJ node_NN is_VBZ decorated_VBN with_IN distinct_JJ statements_NNS :_: Fo_NN -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- and_CC Fo_NNP -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- ._.
+This_DT leads_VBZ to_TO inconsistency_NN ._.
+By_IN contrast_NN ,_, our_PRP$ underspecification-based_JJ strategy_NN is_VBZ extendable_JJ to_TO multiple_JJ postposing_VBG straightforwardly_RB ._.
+4.2_CD Noun-Modifiers_NNP This_DT section_NN explicates_VBZ how_WRB a_DT noun-modifier_NN can_MD be_VB postposed_VBN in_IN Japanese_JJ -LRB-_-LRB- but_CC not_RB other_JJ languages_NNS -RRB-_-RRB- ._.
+To_TO this_DT end_NN ,_, two_CD formal_JJ ingredients_NNS are_VBP introduced_VBN ._.
+First_RB ,_, in_IN addition_NN to_TO the_DT Fo_NNP and_CC Ty_NNP predicates_VBZ ,_, we_PRP introduce_VBP the_DT Tn_NNP predicate_NN -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- :_: o_VB Tn_NNP -LRB-_-LRB- X_NNP -RRB-_-RRB- :_: Tn_NN is_VBZ a_DT ``_`` tree-node_NN ''_'' predicate_VB that_DT takes_VBZ a_DT numeral_NN X_NNP assigned_VBN to_TO the_DT node_NN as_IN argument_NN ._.
+Each_DT node_NN in_IN a_DT tree_NN is_VBZ assigned_VBN a_DT unique_JJ numerical_JJ value_NN to_TO designate_VB a_DT node_JJ position_NN ._.
+The_DT root_NN node_NN is_VBZ assigned_VBN ``_`` 0_CD ._. ''_''
+If_IN a_DT mother_NN is_VBZ assigned_VBN ``_`` α_FW ,_, ''_'' the_DT left_NN -_: daughter_NN ``_`` α_FW 0_CD ''_'' and_CC the_DT right-daughter_JJ ``_`` α_FW 1_CD ._. ''_''
+This_DT numerical_JJ value_NN is_VBZ taken_VBN as_IN an_DT argument_NN for_IN Tn_NNP ._.
+-LRB-_-LRB- 29_CD -RRB-_-RRB- Illustration_NN of_IN Tn-statements_NNS Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Tn_NN -LRB-_-LRB- 00_CD -RRB-_-RRB- Ty_NNP -LRB-_-LRB- 010_CD -RRB-_-RRB- Tn_NN -LRB-_-LRB- 01_CD -RRB-_-RRB- Tn_NN -LRB-_-LRB- 011_CD -RRB-_-RRB- eat-PAST-FP_JJ `_`` Ken_NNP ate_VBD sushi_NN ._. '_''
+sushi-ACC_JJ K-NOM_NNP Second_NNP ,_, there_EX is_VBZ a_DT variant_NN of_IN the_DT general_JJ action_NN LOCAL_NNP *_SYM ADJUNCTION_NNP -LRB-_-LRB- LA_NNP -RRB-_-RRB- ,_, called_VBN GENERALISED_NNP ADJUNCTION_NNP -LRB-_-LRB- GA_NNP -RRB-_-RRB- ._.
+Whilst_NNP LA_NNP induces_VBZ an_DT unfixed_JJ node_NN that_WDT must_MD be_VB resolved_VBN in_IN a_DT local_JJ structure_NN ,_, GA_NNP induces_VBZ an_DT unfixed_JJ node_NN which_WDT could_MD be_VB resolved_VBN anywhere_RB -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+This_DT globally_RB unfixed_JJ node_NN is_VBZ visually_RB shown_VBN by_IN a_DT dotted_JJ line_NN in_IN -LRB-_-LRB- 30_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 30_CD -RRB-_-RRB- GENERALISED_NNP ADJUNCTION_NNP ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW In_IN -LRB-_-LRB- 30_CD -RRB-_-RRB- ,_, an_DT unfixed_JJ node_NN is_VBZ decorated_VBN with_IN ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, but_CC the_DT action_NN can_MD introduce_VB a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN as_RB well_RB ._.
+In_IN the_DT tree-update_NN for_IN -LRB-_-LRB- 27_CD -RRB-_-RRB- ,_, too_RB ,_, there_EX is_VBZ a_DT single_JJ unfixed_JJ node_NN at_IN a_DT time_NN :_: the_DT unfixed_JJ node_NN for_IN the_DT first_JJ postposed_JJ item_NN sushi_NN has_VBZ been_VBN resolved_VBN by_IN the_DT parse_NN of_IN the_DT accusative_JJ marker_NN o_NN before_IN an_DT unfixed_JJ node_NN is_VBZ posited_VBN for_IN the_DT second_JJ item_NN Ken_NNP ._.
+It_PRP is_VBZ not_RB clear_JJ whether_IN a_DT LINK-based_JJ strategy_NN in_IN the_DT past_JJ DS_NNP works_VBZ deals_NNS with_IN multiple_JJ postposing_NN ._.
+This_DT is_VBZ because_IN multiple_JJ LINK_NN relations_NNS launched_VBN from_IN the_DT same_JJ node_NN collapse_NN and_CC inconsistency_NN of_IN descriptions_NNS occurs_VBZ ._.
+For_IN instance_NN ,_, consider_VB -LRB-_-LRB- 28_CD -RRB-_-RRB- ._.
+Further_RB ,_, we_PRP propose_VBP ,_, as_IN with_IN -LRB-_-LRB- 22_CD -RRB-_-RRB- ,_, that_IN GA_NNP can_MD fire_VB at_IN a_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN in_IN colloquial_JJ register_NN ._.
+Based_VBN on_IN these_DT additional_JJ mechanisms_NNS ,_, we_PRP shall_MD examine_VB -LRB-_-LRB- i_FW -RRB-_-RRB- the_DT relative_JJ clause_NN ,_, -LRB-_-LRB- ii_FW -RRB-_-RRB- the_DT adjective_NN ,_, and_CC -LRB-_-LRB- iii_FW -RRB-_-RRB- the_DT genitive_NN in_IN turn_NN ._.
+Relative_JJ Clause_NN ._.
+Consider_VB example_NN -LRB-_-LRB- 31_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 31_CD -RRB-_-RRB- Ken-ga_JJ Δ_NNP sushi-o_NN tabe-ta-yo_NN ,_, K-NOM_NNP sushi-ACC_NNP eat-PAST-FP_NNP -LSB-_NNP Mari-ga_NNP tsuku-tta_JJ -RSB-_NNP -LSB-_NNP M-NOM_NNP make-PAST_NNP -RSB-_NNP `_`` Ken_NNP ate_VBD sushi_NN which_WDT Mari_NNP made_VBD ._. '_''
+After_IN the_DT preceding_VBG clause_NN is_VBZ parsed_VBN ,_, GENERALISED_NNP ADJUNCTION_NNP introduces_VBZ a_DT globally_RB unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ,_, where_WRB the_DT relative_JJ clause_NN is_VBZ parsed_VBN ._.
+-LRB-_-LRB- 32_CD -RRB-_-RRB- Parsing_VBG the_DT string_NN -LRB-_-LRB- 31_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tsuku_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW The_DT parser_NN runs_VBZ the_DT general_JJ action_NN of_IN introducing_VBG a_DT LINK_NN relation_NN for_IN relatives_NNS -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 33_CD -RRB-_-RRB- Launching_VBG a_DT LINK_NN relation_NN Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tsuku_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- ,_, ♢_FW U_NNP in_IN Tn_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- is_VBZ a_DT metavariable_JJ ,_, a_DT place-holder_NN which_WDT is_VBZ in_IN need_NN of_IN saturation_NN ._.
+If_IN the_DT parser_NN identifies_VBZ the_DT address_NN of_IN the_DT LINKed_VBN node_NN with_IN that_DT of_IN the_DT node_NN for_IN sushi_NN ,_, Tn_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- is_VBZ then_RB updated_VBN into_IN Tn_NNP -LRB-_-LRB- 010_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- This_DT is_VBZ the_DT ``_`` tree-node_JJ identification_NN ''_'' in_IN Seraku_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._. -RRB-_-RRB-
+Ty-statements_NNS are_VBP omitted_VBN for_IN brevity_NN in_IN -LRB-_-LRB- 34_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 34_CD -RRB-_-RRB- Tree-node_JJ identification_NN Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- ♢_SYM Fo_NNP -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 00_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 01_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- α_FW -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 010_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 011_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tsuku_NN '_'' -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- Here_RB ,_, α_NN is_VBZ a_DT term_NN denoting_VBG sushi_NN which_WDT Mari_NNP made_VBD ._.
+-LRB-_-LRB- Formally_RB ,_, α_NN is_VBZ represented_VBN in_IN the_DT epsilon_NN calculus_NN ._. -RRB-_-RRB-
+Due_JJ to_TO the_DT node-identification_JJ process_NN ,_, the_DT node_NN for_IN the_DT relative_JJ clause_NN has_VBZ now_RB been_VBN resolved_VBN as_IN a_DT node_NN which_WDT is_VBZ LINKed_VBN to_TO the_DT Tn_NNP -LRB-_-LRB- 010_CD -RRB-_-RRB- -_: node_NN ._.
+In_IN the_DT analysis_NN above_IN ,_, the_DT relative_JJ clause_NN modifies_VBZ sushi_NN ._.
+It_PRP is_VBZ also_RB formally_RB allowed_VBN to_TO modify_VB Ken_NNP but_CC this_DT modification_NN is_VBZ blocked_VBN on_IN semantic_JJ grounds_NNS ._.
+-LRB-_-LRB- This_DT remark_NN applies_VBZ to_TO the_DT analysis_NN of_IN adjectives_NNS and_CC genitives_NNS to_TO be_VB presented_VBN below_IN ._. -RRB-_-RRB-
+Adjective_NNP ._.
+Consider_VB example_NN -LRB-_-LRB- 35_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 35_CD -RRB-_-RRB- Ken-ga_JJ Δ_NNP sushi-o_NN tabe-ta-yo_NN ,_, oishii_NN K-NOM_NNP sushi-ACC_NNP eat-PAST-FP_NNP tasty_JJ `_`` Ken_NNP ate_VBD tasty_JJ sushi_NN ._. '_''
+A_DT DS_NNP account_NN of_IN adjectives_NNS is_VBZ underway_NN -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD -RRB-_-RRB- ._.
+Setting_VBG aside_RB non-predicative_JJ adjectives_NNS ,_, we_PRP assume_VBP that_IN the_DT ``_`` predicative_NN ''_'' adjective_NN oishii_NNS `_`` tasty_JJ '_'' constitutes_VBZ a_DT relative_JJ clause_NN ._.
+Then_RB ,_, the_DT tree_NN -_: update_VB is_VBZ essentially_RB the_DT same_JJ as_IN that_DT detailed_VBN for_IN the_DT relative_JJ clause_NN example_NN in_IN -LRB-_-LRB- 32_CD -RRB-_-RRB- -_: -LRB-_-LRB- 34_CD -RRB-_-RRB- ._.
+Genitive_NNP ._.
+In_IN DS_NNP ,_, genitives_NNS have_VBP not_RB been_VBN seriously_RB investigated_VBD either_RB ._.
+Consider_VB -LRB-_-LRB- 36_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 36_CD -RRB-_-RRB- Ken-ga_JJ Δ-sushi-o_JJ tabe-ta-yo_NN ,_, Mari-no_JJ K-NOM_NNP sushi-ACC_NNP eat-PAST-FP_NNP M-GEN_NNP `_`` Ken_NNP ate_VBD Mari_NNP 's_POS sushi_NN ._. '_''
+The_DT parse_NN of_IN the_DT preceding_VBG clause_NN gives_VBZ rise_NN to_TO a_DT propositional_JJ tree_NN ._.
+GENERALISED_NNP ADJUNCTION_NNP is_VBZ run_VBN to_TO introduce_VB an_DT unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN for_IN Mari_NNP ._.
+-LRB-_-LRB- 37_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ sushi-o_JJ tabe-ta-yo_NN ,_, Mari_NNP Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, ♢_FW Here_RB ,_, we_PRP propose_VBP that_IN the_DT genitive_JJ no_DT encodes_VBZ the_DT action_NN to_TO launch_VB a_DT LINK_NN relation_NN ,_, as_IN in_IN -LRB-_-LRB- 38_CD -RRB-_-RRB- .4_CD -LRB-_-LRB- 38_CD -RRB-_-RRB- Proposal_NN :_: Parsing_VBG the_DT genitive_JJ no_DT Fo_NN -LRB-_-LRB- α_FW -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- UR_NNP -LRB-_-LRB- α_FW ,_, U_NNP -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- V_NNP -RRB-_-RRB- ,_, ♢_FW Two_CD remarks_NNS are_VBP in_IN order_NN ._.
+First_RB ,_, the_DT LINKed_VBN node_NN is_VBZ inhibited_VBN by_IN a_DT metavariable_JJ U_NNP ._.
+This_DT is_VBZ because_IN no_DT may_MD stand_VB alone_RB ,_, as_IN in_IN -LRB-_-LRB- 39_CD -RRB-_-RRB- ._.
+In_IN such_JJ cases_NNS ,_, U_NNP is_VBZ 4_CD See_VB Seraku_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- for_IN the_DT DS_NNP analysis_NN of_IN other_JJ kinds_NNS of_IN no_DT ._.
+contextually_RB saturated_VBN ._.
+If_IN no_DT is_VBZ followed_VBN by_IN a_DT noun_NN ,_, U_NNP is_VBZ updated_VBN into_IN the_DT content_NN of_IN the_DT noun_NN ._.
+-LRB-_-LRB- 39_CD -RRB-_-RRB- Mari-no_JJ M-GEN_NNP `_`` Mari_NNP 's_POS '_'' Second_NNP ,_, R_NNP -LRB-_-LRB- α_FW ,_, U_NNP -RRB-_-RRB- is_VBZ a_DT ``_`` presupposition_NN ''_'' for_IN U_NNP ,_, and_CC it_PRP declares_VBZ that_IN α_NN is_VBZ in_IN relation_NN R_NN to_TO U_NNP ._.
+This_DT is_VBZ also_RB important_JJ as_IN the_DT relation_NN described_VBN by_IN the_DT genitive_JJ no_DT is_VBZ vastly_RB context-dependent_JJ -LRB-_-LRB- Nishiyama_NNP 2003_CD -RRB-_-RRB- ,_, as_IN in_IN -LRB-_-LRB- 40_CD -RRB-_-RRB- ._.
+R_NN is_VBZ saturated_VBN as_IN a_DT salient_JJ relation_NN ._.
+-LRB-_-LRB- 40_CD -RRB-_-RRB- Mari-no-hon_JJ M-GEN-book_NNP `_`` Mari_NNP 's_POS book_NN '_'' -LRB-_-LRB- =_SYM `_`` a_DT book_NN which_WDT Mari_NNP bought_VBD ,_, '_'' `_`` a_DT book_NN which_WDT Mari_NNP loves_VBZ ,_, '_'' etc._FW -RRB-_-RRB- With_IN the_DT proposal_NN -LRB-_-LRB- 38_CD -RRB-_-RRB- ,_, the_DT genitive_JJ no_DT is_VBZ parsed_VBN at_IN the_DT tree_NN -LRB-_-LRB- 37_CD -RRB-_-RRB- ,_, which_WDT outputs_VBZ -LRB-_-LRB- 41_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- R_NN is_VBZ simply_RB taken_VBN as_IN POS_NNP -LRB-_-LRB- session_NN -RRB-_-RRB- in_IN the_DT present_JJ context_NN ._. -RRB-_-RRB-
+-LRB-_-LRB- 41_CD -RRB-_-RRB- Parsing_VBG Ken-ga_JJ sushi-o_JJ tabe-ta-yo_NN ,_, Mari-no_JJ Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- UPOS_NNP -LRB-_-LRB- Mari_NNP '_POS ,_, U_NNP -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- V_NNP -RRB-_-RRB- ,_, ♢_FW The_DT parser_NN then_RB identifies_VBZ the_DT current_JJ node_NN with_IN the_DT node_NN for_IN sushi_NN by_IN saturating_VBG V_NNP in_IN Tn_NNP -LRB-_-LRB- V_NNP -RRB-_-RRB- as_IN 010_CD ._.
+This_DT process_NN also_RB saturates_VBZ U_NNP in_IN Fo_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- as_IN sushi_NN '_'' ._.
+-LRB-_-LRB- 42_CD -RRB-_-RRB- Tree-node_JJ identification_NN Fo_NNP -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 0_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 00_CD -RRB-_-RRB- Fo_NN -LRB-_-LRB- tabe_NN '_'' -LRB-_-LRB- sushi_NN '_'' -RRB-_-RRB- -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 01_CD -RRB-_-RRB- In_IN this_DT case_NN ,_, every_DT time_NN no_DT is_VBZ parsed_VBN ,_, it_PRP induces_VBZ a_DT LINK_NN relation_NN ._.
+The_DT LINKed_VBN node_NN posited_VBN by_IN the_DT final_JJ no_DT is_VBZ identified_VBN with_IN the_DT node_NN for_IN sushi_NN ._.
+Secondly_RB ,_, due_JJ to_TO the_DT use_NN of_IN a_DT metavariable_JJ in_IN a_DT Fo-statement_NN ,_, -LRB-_-LRB- 44_CD -RRB-_-RRB- is_VBZ predicted_VBN to_TO be_VB ambiguous_JJ ._.
+-LRB-_-LRB- 44_CD -RRB-_-RRB- musuko-ga_JJ ka-tta-yo_NN ,_, Ken-no_JJ son-NOM_JJ buy-PAST-FP_NNP K-GEN_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- e.g._FW ,_, `_`` Ken_NNP 's_POS son_NN bought_VBD something_NN ._. '_''
+-LRB-_-LRB- ii_FW -RRB-_-RRB- e.g._FW ,_, `_`` My_PRP$ son_NN bought_VBD Ken_NNP 's_POS book_NN ._. '_''
+If_IN the_DT LINKed_VBN node_NN introduced_VBN by_IN no_DT is_VBZ identified_VBN with_IN the_DT node_NN for_IN musuko_NN `_`` son_NN ,_, '_'' U_NNP in_IN Fo_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- at_IN the_DT LINKed_VBN node_NN is_VBZ saturated_VBN as_IN musuko_NN '_'' ,_, which_WDT yields_VBZ the_DT reading_NN -LRB-_-LRB- i_FW -RRB-_-RRB- ._.
+If_IN the_DT LINKed_VBN node_NN is_VBZ identified_VBN with_IN the_DT internal-argument_NN node_NN for_IN ka_FW `_`` buy_VB ,_, '_'' U_NNP in_IN Fo_NNP -LRB-_-LRB- U_NNP -RRB-_-RRB- is_VBZ pragmatically_RB saturated_VBN as_IN a_DT content_NN that_WDT denotes_VBZ a_DT contextually-salient_JJ entity_NN such_JJ as_IN a_DT book_NN ._.
+This_DT gives_VBZ rise_NN to_TO the_DT reading_NN -LRB-_-LRB- ii_FW -RRB-_-RRB- ._.
+So_RB far_RB ,_, the_DT DS_NNP modelling_NN of_IN the_DT postposing_NN of_IN a_DT noun-modifier_NN has_VBZ been_VBN articulated_VBN ._.
+The_DT heart_NN of_IN the_DT analysis_NN is_VBZ GENERALISED_NNP ADJUNCTION_NNP ._.
+In_IN DS_NNP ,_, this_DT action_NN was_VBD formulated_VBN for_IN Japanese_JJ relatives_NNS -LRB-_-LRB- Cann_NNP et_FW al._FW 2005_CD :_: Ch_NNP .6_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ speculated_VBN that_IN the_DT availability_NN of_IN this_DT action_NN is_VBZ a_DT necessary_JJ -LRB-_-LRB- if_IN not_RB a_DT sufficient_JJ -RRB-_-RRB- condition_NN on_IN the_DT postposing_NN of_IN a_DT noun_NN -_: modifier_NN ._.
+This_DT accounts_VBZ for_IN why_WRB such_JJ postposing_NN is_VBZ impossible_JJ in_IN ,_, say_VB ,_, English_NNP where_WRB we_PRP assume_VBP that_IN the_DT action_NN is_VBZ unavailable_JJ ._.
+It_PRP needs_VBZ to_TO be_VB worked_VBN out_RP what_WP other_JJ conditions_NNS may_MD be_VB ,_, so_RB that_IN the_DT account_NN is_VBZ extendable_JJ to_TO other_JJ languages_NNS ._.
+4.3_CD Other_JJ Syntactic_NNP Elements_NNP Our_PRP$ account_NN applies_VBZ to_TO the_DT other_JJ syntactic_JJ elements_NNS -LRB-_-LRB- though_IN the_DT analysis_NN of_IN connectives_NNS requires_VBZ some_DT stipulation_NN -RRB-_-RRB- ,_, as_IN briefly_NN mentioned_VBN below_IN ._.
+PP/AdvP_NNP ._.
+PPs_NNS and_CC AdvPs_NNS are_VBP adjuncts_NNS -LRB-_-LRB- excluding_VBG PPs_NNP in_IN ditransitive_JJ verbs_NNS -RRB-_-RRB- ._.
+In_IN DS_NNP ,_, Marten_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- hypothesises_NNS that_IN these_DT adjuncts_NNS are_VBP of_IN type_NN e_LS ._.
+We_PRP could_MD apply_VB Marten_NNP 's_POS analysis_NN to_TO the_DT PP_NNP data_NNS -LRB-_-LRB- 45_CD -RRB-_-RRB- ._.
+Fo_NN -LRB-_-LRB- sushi'POS_NNS -LRB-_-LRB- Mari_NNP '_POS ,_, sushi_NN '_'' -RRB-_-RRB- -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 010_CD -RRB-_-RRB- ,_, ♢_FW Fo_FW -LRB-_-LRB- Mari_NNP '_POS -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Fo_NNP -LRB-_-LRB- tabe_NN '_'' -RRB-_-RRB- ,_, Tn_NNP -LRB-_-LRB- 011_CD -RRB-_-RRB- -LRB-_-LRB- 45_CD -RRB-_-RRB- Ken-ga_JJ Δ_NNP hashi-tta-yo_NN kouen-de_NN Our_PRP$ account_NN makes_VBZ further_JJ predictions_NNS ._.
+Firstly_RB ,_, a_DT K-NOM_NNP run-PAST-FP_NNP park-in_NN genitive_JJ phrase_NN may_MD be_VB multiplied_VBN ,_, as_IN in_IN -LRB-_-LRB- 43_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 43_CD -RRB-_-RRB- Ken-ga_JJ Δ-sushi-o_JJ tabe-ta-yo_NN ,_, K-NOM_NNP sushi-ACC_NNP eat-PAST-FP_NNP Mari-no-tomodachi-no-kareshi-no_NNP M-GEN-friend-GEN-boyfriend-GEN_NNP `_`` Ken_NNP ate_VBD Mari_NNP 's_POS friend_NN 's_POS boyfriend_NN 's_POS sushi_NN ._. '_''
+`_`` Ken_NNP ran_VBD in_IN a_DT park_NN ._. '_''
+After_IN the_DT parse_NN of_IN the_DT preceding_VBG clause_NN engenders_VBZ a_DT propositional_JJ tree_NN ,_, LOCAL_NNP *_SYM ADJUNCTION_NNP creates_VBZ an_DT unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN ._.
+This_DT node_NN is_VBZ decorated_VBN by_IN the_DT parse_NN of_IN kouen_NN `_`` park_NN '_'' and_CC resolved_VBN by_IN the_DT parse_NN of_IN the_DT postposition_NN de_IN `_`` in_IN ._. '_''
+The_DT same_JJ analysis_NN extends_VBZ to_TO AdvP_NNP ._.
+In_IN this_DT case_NN ,_, we_PRP need_VBP to_TO assume_VB that_IN an_DT adverb_NN itself_PRP encodes_VBZ the_DT action_NN to_TO resolve_VB an_DT unfixed_JJ node_NN because_IN an_DT AdvP_NN does_VBZ not_RB involve_VB a_DT postposition_NN ._.
+Marten_NNP 's_POS analysis_NN ,_, however_RB ,_, blurs_VBZ the_DT distinction_NN between_IN arguments_NNS and_CC adjuncts_NNS ._.
+If_IN one_CD would_MD like_VB to_TO maintain_VB the_DT distinction_NN ,_, we_PRP could_MD make_VB use_NN of_IN Davidson_NNP 's_POS -LRB-_-LRB- 1967_CD -RRB-_-RRB- analysis_NN of_IN adjuncts_NNS by_IN utilising_VBG a_DT situation_NN term_NN -LRB-_-LRB- Gregoromichelaki_NNP 2006_CD -RRB-_-RRB- ._.
+Adv_NNP Clause_NN ._.
+For_IN an_DT Adv_NNP clause_NN ,_, a_DT LINK_NN relation_NN starts_VBZ from_IN a_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN to_TO a_DT ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ,_, as_IN in_IN -LRB-_-LRB- 47_CD -RRB-_-RRB- for_IN the_DT example_NN -LRB-_-LRB- 46_CD -RRB-_-RRB- ._.
+The_DT postposed_JJ Adv_NNP clause_NN will_MD then_RB be_VB parsed_VBN at_IN the_DT LINKed_VBN ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ._.
+-LRB-_-LRB- Kuno_NNP 1978_CD :_: 74_CD -RRB-_-RRB- ._.
+An_DT unfixed_JJ node_NN introduced_VBN by_IN *_SYM ADJUNCTION_NNP can_MD be_VB fixed_VBN at_IN any_DT embedding_VBG level_NN -LRB-_-LRB- but_CC not_RB across_IN a_DT LINK_NN relation_NN -RRB-_-RRB- ._.
+In_IN the_DT case_NN of_IN the_DT long-distance_NN postposing_NN of_IN an_DT NP_NNP ,_, the_DT parser_NN first_RB executes_VBZ *_SYM ADJUNCTION_NNP to_TO introduce_VB a_DT non-locally_JJ unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN and_CC LOCAL_NNP *_SYM ADJUNCTION_NNP to_TO introduce_VB a_DT locally_RB unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN under_IN the_DT unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ._.
+See_VB Seraku_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- for_IN details_NNS of_IN the_DT successive_JJ applications_NNS of_IN these_DT actions_NNS ._.
+Yet_RB ,_, there_EX is_VBZ a_DT problem_NN ._.
+Since_IN general_JJ actions_NNS are_VBP optional_JJ ,_, GENERALISED_NNP ADJUNCTION_NNP can_MD be_VB used_VBN to_TO parse_VB a_DT postposed_JJ complement_VBP clause_NN ._.
+This_DT is_VBZ problematic_JJ because_IN an_DT unfixed_JJ node_NN introduced_VBN by_IN this_DT action_NN can_MD be_VB fixed_VBN anywhere_RB -LRB-_-LRB- even_RB across_IN a_DT LINK_NN relation_NN ,_, DS_NNP equivalence_NN of_IN an_DT ``_`` island_NN ''_'' -RRB-_-RRB- ._.
+We_PRP then_RB tentatively_RB stipulate_VB that_IN the_DT complementiser_NN to_TO encodes_VBZ the_DT action_NN to_TO abort_VB a_DT tree-update_NN if_IN the_DT unfixed_JJ node_NN is_VBZ hung_VBN from_IN a_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ._.
+Connective_NN ._.
+Discourse_NN connectives_NNS are_VBP generally_RB taken_VBN to_TO contribute_VB to_TO a_DT non-truth-conditional_JJ level_NN of_IN meaning_NN ,_, one_CD theoretical_JJ conception_NN of_IN which_WDT is_VBZ ``_`` higher_JJR explicature_NN ,_, ''_'' a_DT dimension_NN of_IN meaning_NN that_IN represents_VBZ a_DT speech-act_NN ,_, a_DT propositional_JJ attitude_NN ,_, etc._FW -LRB-_-LRB- Blakemore_NNP 2002_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, -LRB-_-LRB- 49_CD -RRB-_-RRB- remains_VBZ the_DT same_JJ truth-conditionally_NN when_WRB dakara_NN is_VBZ taken_VBN out_RP ._.
+Rather_RB ,_, dakara_NN encode_VB some_DT non-truth-conditional_JJ content_NN roughly_RB glossed_VBN as_IN `_`` as_IN I_PRP said_VBD ._. '_''
+-LRB-_-LRB- 49_CD -RRB-_-RRB- Δ_NNP `_`` kekkoudesu_NN '_'' jya-nai-ndatte_JJ dakara_NN `_`` ok_NN '_'' COP-NEG-FP_NNP as.I.said_NNP `_`` As_IN I_PRP said_VBD ,_, it_PRP 's_VBZ not_RB `_`` ok_VB '_'' ._. '_''
+-LCB-_-LRB- roll_NN ,_, p._NN 71_CD -RCB-_-RRB- Purver_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- represent_VBP this_DT ``_`` higher-level_JJ ''_'' meaning_NN on_IN top_NN of_IN the_DT usual_JJ DS_NNP tree_NN ._.
+We_PRP assume_VBP that_IN dakara_NN encodes_VBZ the_DT action_NN to_TO place_VB a_DT content_JJ decoration_NN relating_VBG to_TO a_DT propositional_JJ attitude_NN at_IN the_DT ``_`` higher-level_JJ ''_'' representation_NN ._.
+5_CD Conclusion_NN This_DT article_NN has_VBZ provided_VBN narrative_JJ data_NNS ,_, revealing_VBG the_DT syntactic_NN flexibilities_NNS of_IN Japanese_JJ postposing_NN ._.
+The_DT postposing_NN of_IN a_DT noun-modifier_NN especially_RB sets_VBZ a_DT challenge_NN for_IN grammar_NN analysis_NN ._.
+We_PRP have_VBP offered_VBN a_DT DS_NNP solution_NN with_IN the_DT consequence_NN of_IN advancing_VBG the_DT formalism_NN and_CC broadening_VBG empirical_JJ coverage_NN ._.
+Acknowledgments_NNS I_PRP thank_VBP Akira_NNP Ohtani_NNP and_CC the_DT anonymous_JJ PACLIC_NNP reviewers_NNS for_IN their_PRP$ helpful_JJ comments_NNS on_IN the_DT earlier_JJR versions_NNS of_IN the_DT present_JJ article_NN ._.
+-LRB-_-LRB- 46_CD -RRB-_-RRB- Δ_SYM Ken-ga_JJ waratta-yo_NN K-NOM_NNP smiled-FP_NNP -LSB-_NNP Mari-ga_NNP kita_NNP -RSB-_NNP -_: toki_SYM -LSB-_NNP M-NOM_NNP came_VBD -RSB-_NNP -_: when_WRB `_`` When_WRB Mari_NNP came_VBD ,_, Ken_NNP smiled_VBD ._. '_''
+-LRB-_-LRB- 47_CD -RRB-_-RRB- Launching_VBG a_DT LINK_NN relation_NN Fo_NNP -LRB-_-LRB- wara_NN '_'' -LRB-_-LRB- Ken_NNP '_POS -RRB-_-RRB- -RRB-_-RRB- ,_, Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ,_, ♢_FW Comp_NNP Clause_NN ._.
+A_DT complement_VBP clause_NN is_VBZ of_IN type_NN t_NN ,_, and_CC can_MD not_RB be_VB modelled_VBN by_IN LOCAL_NNP *_SYM ADJUNCTION_NNP ,_, which_WDT creates_VBZ a_DT ?_.
+Ty_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- -_: node_NN ._.
+DS_NNP defines_VBZ a_DT variant_NN of_IN this_DT action_NN :_: *_SYM ADJUNCTION_NNP ,_, which_WDT introduces_VBZ a_DT ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ._.
+Cann_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- assume_VB that_IN this_DT action_NN can_MD not_RB fire_VB at_IN a_DT Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ;_: we_PRP stipulate_VBP that_IN in_IN colloquial_JJ register_NN ,_, this_DT restriction_NN is_VBZ relaxed_VBN -LRB-_-LRB- cf._FW ,_, -LRB-_-LRB- 22_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+A_DT complement_VBP clause_NN is_VBZ processed_VBN under_IN the_DT unfixed_JJ ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN ,_, and_CC this_DT node_NN is_VBZ resolved_VBN by_IN the_DT parse_NN of_IN a_DT complementiser_NN ._.
+For_IN instance_NN ,_, the_DT underlined_VBD part_NN in_IN -LRB-_-LRB- 48_CD -RRB-_-RRB- is_VBZ parsed_VBN at_IN a_DT ?_.
+Ty_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -_: node_NN introduced_VBN by_IN *_SYM ADJUNCTION_NNP ._.
+The_DT node_NN is_VBZ resolved_VBN as_IN the_DT object_NN node_NN in_IN the_DT main_JJ tree_NN by_IN the_DT parse_NN of_IN the_DT complementiser_NN to_TO ._.
+-LRB-_-LRB- 48_CD -RRB-_-RRB- tomodachi-kara_NN Δ_NNP kii-ta-mon_NN friend-from_NN hear-PAST-FP_NNP Mei-to-Satsuki-wa_NNP mou_NNP kono-yo-ni_NNS M-and-S-TOP_JJ inai-nda-to_NN already_RB this-world-in_JJ absent-FP-COMP_JJ `_`` I_PRP heard_VBD Mei_NNP and_CC Satsuki_NNP were_VBD not_RB in_IN this_DT world_NN any_DT longer_JJR ._. '_''
+-LRB-_-LRB- adapted_VBN from_IN -LCB-_-LRB- kirishima_NN ,_, p._NN 100_CD -RCB-_-RRB- -RRB-_-RRB- A_DT bonus_NN of_IN this_DT analysis_NN is_VBZ that_IN it_PRP explains_VBZ why_WRB postposing_VBG exhibits_NNS a_DT ``_`` long-distance_JJ dependency_NN ''_'' References_NNPS Abe_NNP ,_, J._NNP 1999_CD ._.
+On_IN directionality_NN of_IN movement_NN ._.
+Ms._NNP ,_, Nagoya_NNP University_NNP ._.
+Blakemore_NNP ,_, D._NNP 2002_CD ._.
+Relevance_NN and_CC Linguistic_NNP Meaning_NNP ._.
+Cambridge_NNP University_NNP Press_NNP ,_, Cambridge_NNP ._.
+Cann_NNP ,_, R._NNP ,_, Kempson_NNP ,_, R._NNP ,_, and_CC Marten_NNP ,_, L._NNP 2005_CD ._.
+The_DT Dynamics_NNPS of_IN Language_NN ._.
+Elsevier_NNP ,_, Oxford_NNP ._.
+Cann_NNP ,_, R._NNP ,_, Kempson_NNP ,_, R._NNP ,_, Marten_NNP ,_, L._NNP ,_, Otsuka_NNP ,_, M._NNP ,_, and_CC Swinburne_NNP ,_, D._NNP 2004_CD ._.
+On_IN the_DT left_NN and_CC on_IN the_DT right_NN ._.
+In_IN Adger_NNP ,_, D._NNP et_NNP al._NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Peripheries_NNS ,_, pp._VBP 19-47_CD ._.
+Kluwer_NNP ,_, Dordrecht_NNP ._.
+Chatzikyriakidis_NNP ,_, S._NNP 2011_CD ._.
+Right_RB dislocations_NNS in_IN Greek_JJ ._.
+Ms._NNP ,_, CNRS_NNP ._.
+Davidson_NNP ,_, D._NNP 1967_CD ._.
+The_DT logical_JJ form_NN of_IN action_NN sentences_NNS ._.
+In_IN Rescher_NNP ,_, N._NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+The_DT Logic_NNP of_IN Decision_NNP and_CC Action_NNP ,_, pp._NNP 81-95_CD ._.
+University_NNP of_IN Pittsburg_NNP Press_NNP ,_, Pittsburg_NNP ._.
+Fujii_NNP ,_, Y._NNP 1995_CD ._.
+Nihongo-no-gojyun-no_JJ gyakuten-nitsuite_NN ._.
+-LRB-_-LRB- On_IN the_DT reversed_JJ word_NN orders_NNS in_IN Japanese_JJ -RRB-_-RRB- In_IN Takami_NNP ,_, K._NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+Nichieigo-no_JJ Uhou_NNP Teni_NNP Koubun_NNP ,_, pp._NNP 167-98_CD ._.
+Hituzi_NNP Publishing_NNP ,_, Tokyo_NNP ._.
+Gregoromichelaki_NNP ,_, E._NNP 2006_CD ._.
+Conditionals_NNS in_IN Dynamic_NNP Syntax_NNP ._.
+PhD_NNP thesis_NN ,_, King_NNP 's_POS College_NNP London_NNP ._.
+Gregoromichelaki_NNP ,_, E._NNP 2013_CD ._.
+A_DT dynamic_JJ perspective_NN on_IN left-right_JJ asymmetries_NNS ._.
+In_IN Webelhuth_NNP ,_, G._NNP et_FW al._FW -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Rightward_JJ Movement_NNP in_IN a_DT Comparative_NNP Perspective_NNP ,_, pp._NNP 321-68_CD ._.
+John_NNP Benjamins_NNP ,_, Amsterdam_NNP ._.
+Kempson_NNP ,_, R._NNP ,_, Meyer-Viol_NNP ,_, W._NNP ,_, and_CC Gabbay_NNP ,_, D._NNP 2001_CD ._.
+Dynamic_NNP Syntax_NNP ._.
+Blackwell_NNP ,_, Oxford_NNP ._.
+Kuno_NNP ,_, S._NNP 1978_CD ._.
+Danwa-no_JJ Bunpou_NNP ._.
+-LRB-_-LRB- Grammar_NN of_IN Discourse_NNP -RRB-_-RRB- Taishukan_NNP ,_, Tokyo_NNP ._.
+Marten_NNP ,_, L._NNP 2002_CD ._.
+At_IN the_DT Syntax-Pragmatics_NNPS Interface_NNP ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Nishiyama_NNP ,_, Y._NNP 2003_CD ._.
+Nihongo_NNP Meishiku-no_NNP Imiron-to_NNP -_: Goyouron_NNP ._.
+-LRB-_-LRB- The_DT Semantics_NNS and_CC Pragmatics_NNS of_IN Noun_NNP Phrases_NNP in_IN Japanese_NNP -RRB-_-RRB- Hituzi_NNP Publishing_NNP ,_, Tokyo_NNP ._.
+Nomura_NNP ,_, J._NNP 2008_CD ._.
+Japanese_JJ Postposing_NN ._.
+PhD_NNP thesis_NN ,_, University_NNP of_IN Hawaii_NNP ._.
+Ono_NNP ,_, T._NNP 2006_CD ._.
+Postpredicate-elements_NNS in_IN Japanese_JJ conversation_NN ._.
+In_IN Vance_NNP ,_, T._NNP &_CC Jones_NNP ,_, K._NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Japanese/Korean_JJ Linguistics_NNPS 14_CD ,_, pp._SYM 381-91_CD ._.
+Stanford_NNP :_: CSLI_NNP Publications_NNP ._.
+Purver_NNP ,_, M._NNP ,_, Gregoromichelaki_NNP ,_, E._NNP ,_, Meyer-Viol_NNP ,_, W._NNP ,_, and_CC Cann_NNP ,_, R._NNP 2010_CD ._.
+Splitting_VBG the_DT `_`` I_PRP 's_VBZ and_CC crossing_VBG the_DT `_`` you_PRP 's_VBZ ._.
+In_IN Łupkowski_NNP ,_, P._NNP &_CC Purver_NNP ,_, M._NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Aspects_NNS of_IN Semantics_NNS and_CC Pragmatics_NNS of_IN Dialogue_NNP ,_, pp._NNP 43-50_CD ._.
+Polish_NNP Society_NNP for_IN Cognitive_NNP Science_NNP ,_, Poznań_NNP Purver_NNP ,_, M._NNP ,_, Hough_NNP ,_, J._NNP ,_, and_CC Gregoromichelaki_NNP ,_, E._NNP 2014_CD ._.
+Dialogue_NN and_CC compound_NN contributions_NNS ._.
+In_IN Stent_NNP ,_, A._NNP &_CC Bangalore_NNP ,_, S._NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Natural_JJ Language_NN Generation_NNP in_IN Interactive_NNP Systems_NNP ,_, pp._NNP 63-92_CD ._.
+Cambridge_NNP University_NNP Press_NNP ,_, Cambridge_NNP ._.
+Seraku_NNP ,_, T._NNP 2013_CD ._.
+Clefts_NNS ,_, Relatives_NNS ,_, and_CC Language_NNP Dynamics_NNP ._.
+DPhil_NNP thesis_NN ,_, University_NNP of_IN Oxford_NNP ._.
+Seraku_NNP ,_, T._NNP &_CC Ohtani_NNP ,_, A._NNP fthc_NNP ._.
+The_DT wh-licensing_NN in_IN Japanese_JJ right_JJ dislocations_NNS ._.
+Paper_NN to_TO be_VB presented_VBN at_IN Colloque_NNP de_IN Syntaxe_NNP et_NNP Sémantique_NNP à_NNP Paris_NNP 2015_CD ._.
+Université_NNP Paris_NNP Diderot_NNP ,_, France_NNP Takano_NNP ,_, Y._NNP 2014_CD ._.
+A_DT comparative_JJ approach_NN to_TO Japanese_JJ postposing_NN ._.
+In_IN Saito_NNP ,_, M._NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+Japanese_JJ Syntax_NN in_IN Comparative_NNP Perspective_NNP ,_, pp._NNP 139-80_CD ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Takita_NNP ,_, K._NNP 2014_CD ._.
+Pseudo-right_JJ dislocation_NN ,_, the_DT bare-topic_JJ construction_NN ,_, and_CC hanging_VBG topic_NN constructions_NNS ._.
+Lingua_NNP 140_CD :_: 137-57_CD ._.
+Tanaka_NNP ,_, H._NNP &_CC Kizu_NNP ,_, M._NNP 2007_CD ._.
+Island_NNP insensitive_JJ constructions_NNS in_IN Japanese_JJ ._.
+York_NNP Papers_NNP in_IN Linguistics_NNP 2_CD :_: 219-34_CD ._.
+Whitman_NNP ,_, J._NNP 2000_CD ._.
+Right_RB dislocation_NN in_IN English_NNP and_CC Japanese_NNP ._.
+In_IN Takami_NNP ,_, K._NNP et_FW al._FW -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Syntactic_NNP and_CC Functional_NNP Explorations_NNPS in_IN Honor_NNP of_IN Susumu_NNP Kuno_NNP ,_, pp._NNP 445-70_CD ._.
+Kuroshio_NNP Publishers_NNPS ,_, Tokyo_NNP ._.
+Wu_NNP ,_, Y._NNP 2005_CD ._.
+The_DT Dynamic_NNP Syntax_NNP of_IN Left_VBN and_CC Right_RB Dislocation_NN ._.
+PhD_NNP thesis_NN ,_, University_NNP of_IN Edinburgh_NNP ._.
+Appendix_NNP :_: Citation_NNP Information_NNP -LCB-_-LRB- kirishima_NN -RCB-_-RRB- -LSB-_NNP ISBN_NNP :_: 978-4-08-74681705_CD -RSB-_NNP Asai_NNP ,_, Ryo_NNP ._.
+Kirishima_NNP Bukatsu_NNP Yamerutteyo_NNP Tokyo_NNP :_: Shueisha_NNP Publishing_NNP ._.
+-LRB-_-LRB- 2012_CD -RRB-_-RRB- -LCB-_-LRB- mikeneko_NN -RCB-_-RRB- -LSB-_NNP ISBN_NNP :_: 978-4-334-76865-2_CD -RSB-_NNP Akagawa_NNP ,_, Jiro_NNP ._.
+Mikeneko_NNP Homuzu-no_NNP Yumekikou_NNP Tokyo_NNP :_: Kobunsha_NNP ._.
+-LRB-_-LRB- 2015_CD -RRB-_-RRB- -LCB-_-LRB- roll_NN -RCB-_-RRB- -LSB-_NNP ISBN_NNP :_: 978-4-04-389804-6_CD -RSB-_NNP Arikawa_NNP ,_, Hiro_NNP ._.
+`_`` Roll_NNP Out_IN '_'' in_IN Kujira-no_NNP Kare_NNP ._.
+Tokyo_NNP :_: Kadokawa_NNP Shoten_NNP Publishing_NNP ._.
+-LRB-_-LRB- 2010_CD -RRB-_-RRB- -LCB-_-LRB- tokyo_NN -RCB-_-RRB- -LSB-_NNP ISBN_NNP :_: 4-10-133921-X_NNP -RSB-_NNP Ekuni_NNP ,_, Kaori_NNP ._.
+Tokyo_NNP Tower_NNP Tokyo_NNP :_: Shinchosha_NNP Publishing_NNP ._.
+-LRB-_-LRB- 2006_CD -RRB-_-RRB- -LCB-_-LRB- yunou_NN -RCB-_-RRB- -LSB-_NNP ISBN_NNP :_: 978-4-04-389804-6_CD -RSB-_NNP Arikawa_NNP ,_, Hiro_NNP ._.
+`_`` Yunouna_NNP Kanojo_NNP '_'' in_IN Kujira-no_NNP Kare_NNP ._.
+Tokyo_NNP :_: Kadokawa_NNP Shoten_NNP Publishing_NNP ._.
+-LRB-_-LRB- 2010_CD -RRB-_-RRB-

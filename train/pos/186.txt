@@ -1,0 +1,318 @@
+Where_WRB Morphological_NNP Complexity_NNP Matters_NNS Abstract_JJ It_PRP has_VBZ been_VBN long_RB observed_VBD that_IN Latinate_NNP verbs_NNS in_IN English_NNP can_MD not_RB appear_VB in_IN verb-particle_JJ constructions_NNS ,_, resultative_JJ constructions_NNS ,_, and_CC double_JJ object_NN constructions_NNS ._.
+Recent_JJ research_NN has_VBZ revealed_VBN that_IN ,_, despite_IN persistent_JJ counterexamples_NNS ,_, the_DT hypothesis_NN invoking_VBG the_DT morphological_JJ complexity_NN of_IN verbs_NNS is_VBZ the_DT most_RBS promising_JJ in_IN dealing_VBG with_IN the_DT Latinate/native_JJ asymmetry_NN -LRB-_-LRB- Coppock_NNP ,_, 2009_CD ;_: Harley_NNP ,_, 2008_CD ;_: Punske_NNP 2012_CD ,_, 2013_CD -RRB-_-RRB- ._.
+This_DT paper_NN aims_VBZ to_TO show_VB two_CD more_JJR cases_NNS of_IN the_DT asymmetry_NN in_IN favor_NN of_IN the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+Moreover_RB ,_, in_IN an_DT attempt_NN to_TO refine_VB the_DT hypothesis_NN ,_, an_DT analysis_NN will_MD be_VB provided_VBN within_IN Distributed_VBN Morphology_NNP -LRB-_-LRB- Halle_NNP and_CC Marantz_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+Specifically_RB ,_, it_PRP argues_VBZ that_IN the_DT asymmetry_NN can_MD be_VB reduced_VBN to_TO the_DT selectional_JJ properties_NNS of_IN the_DT acategorial_JJ roots_NNS involved_VBN ._.
+Some_DT roots_NNS are_VBP obligatorily_RB specified_VBN for_IN a_DT particular_JJ morpheme_NN and_CC combine_VBP with_IN it_PRP to_TO form_VB a_DT complex_JJ root_NN ,_, while_IN others_NNS are_VBP not_RB necessarily_RB specified_VBN as_IN such_JJ and_CC they_PRP can_MD either_RB stand_VB alone_RB as_IN a_DT simple_JJ root_NN or_CC form_VB a_DT complex_JJ root_NN ._.
+1_LS ._.
+Introduction_NNP It_PRP has_VBZ been_VBN long_RB observed_VBD that_IN Latinate_NNP verbs_NNS in_IN English_NNP are_VBP typically_RB bad_JJ with_IN verb-particle_JJ constructions_NNS -LRB-_-LRB- e.g._FW ,_, Whorf_NNP ,_, 1956_CD ;_: Di_NNP Sciullo_NNP and_CC Williams_NNP ,_, 1987_CD ;_: Harley_NNP ,_, 2008_CD -RRB-_-RRB- ,_, resultative_JJ constructions_NNS -LRB-_-LRB- Harley_NNP ,_, 2008_CD -RRB-_-RRB- ,_, and_CC double_JJ object_NN constructions_NNS -LRB-_-LRB- Pinker_NNP ,_, 1989_CD ;_: Pesetsky_NNP ,_, 1995_CD ;_: Harley_NNP ,_, 2008_CD -RRB-_-RRB- ,_, which_WDT are_VBP commonly_RB found_VBN in_IN Germanic_JJ languages_NNS and_CC considered_VBN to_TO be_VB a_DT family_NN of_IN constructions_NNS -LRB-_-LRB- Snyder_NNP ,_, 1995_CD ;_: Stromswold_NNP and_CC Snyder_NNP ,_, 1995_CD ;_: Snyder_NNP and_CC Stromswold_NNP ,_, 1997_CD -RRB-_-RRB- ._.
+V_NNP arious_JJ hypotheses_NNS have_VBP been_VBN proposed_VBN to_TO derive_VB the_DT asymmetry_NN observed_VBD between_IN Latinate_NNP and_CC native_JJ verbs_NNS in_IN those_DT constructions_NNS ._.
+Notable_JJ among_IN them_PRP are_VBP the_DT prosodic_JJ weight_NN hypothesis_NN ,_, which_WDT takes_VBZ the_DT prosodic_JJ weight_NN of_IN verbs_NNS as_IN a_DT crucial_JJ factor_NN -LRB-_-LRB- Grimshaw_NNP ,_, 2005_CD ;_: Anttila_NNP ,_, 2007_CD -RRB-_-RRB- ,_, the_DT two-lexicon_JJ hypothesis_NN ,_, which_WDT makes_VBZ recourse_NN to_TO two_CD different_JJ lexical_JJ classes_NNS ,_, Latinate_NNP and_CC native_JJ -LRB-_-LRB- Grimshaw_NNP ,_, 2005_CD -RRB-_-RRB- ,_, 1_CD and_CC the_DT morphological_JJ complexity_NN hypothesis_NN ,_, which_WDT invokes_VBZ the_DT morphological_JJ complexity_NN of_IN verbs_NNS -LRB-_-LRB- Pinker_NNP ,_, 1989_CD ;_: Harley_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+2_CD While_IN there_EX are_VBP persistent_JJ counterexamples_NNS ,_, the_DT morphological_JJ complexity_NN hypothesis_NN ,_, as_IN it_PRP stands_VBZ ,_, is_VBZ the_DT most_RBS promising_JJ hypothesis_NN in_IN dealing_VBG with_IN the_DT Latinate/native_JJ asymmetry_NN ,_, as_IN convincingly_RB demonstrated_VBN in_IN a_DT series_NN of_IN psycholinguistic_JJ experiments_NNS on_IN ditransitivity_NN by_IN Coppock_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, assuming_VBG that_IN the_DT morphological_JJ complexity_NN hypothesis_NN is_VBZ on_IN the_DT right_JJ track_NN ,_, I_PRP will_MD attempt_VB to_TO further_JJ increase_NN the_DT plausibility_NN of_IN the_DT hypothesis_NN ._.
+Specifically_RB ,_, I_PRP will_MD show_VB that_IN the_DT Latinate/native_JJ asymmetry_NN can_MD be_VB observed_VBN in_IN two_CD more_JJR empirical_JJ domains_NNS ,_, along_IN with_IN the_DT constructions_NNS mentioned_VBN above_IN :_: exocentric_JJ V-N_NNP compounds_NNS and_CC non-compositional_JJ verb_NN phrase_NN idioms_NNS ._.
+Moreover_RB ,_, an_DT analysis_NN will_MD be_VB presented_VBN within_IN the_DT framework_NN of_IN Distributed_VBN Morphology_NNP -LRB-_-LRB- henceforth_NN ,_, DM_NNP ;_: Halle_NNP and_CC Marantz_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+Specifically_RB ,_, I_PRP will_MD argue_VB that_IN the_DT difference_NN between_IN Latinate_NNP and_CC native_JJ verbs_NNS can_MD be_VB reduced_VBN 1_CD Grimshaw_NNP uses_VBZ the_DT terms_NNS Romance_NN and_CC Germanic_NNP for_IN Latinate_NNP and_CC native_JJ ,_, respectively_RB ._.
+2_CD Coppock_NNP 's_POS -LRB-_-LRB- 2009_CD -RRB-_-RRB- classification_NN of_IN the_DT hypotheses_NNS is_VBZ adopted_VBN ._.
+to_TO the_DT selectional_JJ properties_NNS of_IN the_DT acategorial_JJ roots_NNS involved_VBN :_: some_DT roots_NNS are_VBP obligatorily_RB specified_VBN for_IN a_DT particular_JJ morpheme_NN and_CC form_VB a_DT complex_JJ root_NN ,_, while_IN others_NNS are_VBP not_RB necessarily_RB specified_VBN as_IN such_JJ and_CC they_PRP can_MD stand_VB alone_RB as_IN a_DT simple_JJ root_NN or_CC form_VB a_DT complex_JJ root_NN ,_, depending_VBG on_IN the_DT specification_NN ._.
+The_DT organization_NN of_IN the_DT paper_NN is_VBZ as_IN follows_VBZ :_: In_IN the_DT next_JJ section_NN ,_, I_PRP will_MD briefly_RB review_VB the_DT observed_JJ asymmetry_NN between_IN Latinate_NNP and_CC native_JJ verbs_NNS in_IN English_NNP ._.
+In_IN section_NN 3_CD ,_, I_PRP will_MD demonstrate_VB that_IN the_DT same_JJ asymmetry_NN can_MD be_VB observed_VBN in_IN two_CD more_JJR empirical_JJ domains_NNS ,_, exocentric_JJ V-N_NNP compounds_NNS and_CC non-compositional_JJ verb_NN phrase_NN idioms_NNS ._.
+Moreover_RB ,_, an_DT analysis_NN will_MD be_VB provided_VBN to_TO account_VB for_IN the_DT Latinate/native_JJ asymmetry_NN in_IN terms_NNS of_IN the_DT selectional_JJ properties_NNS of_IN the_DT roots_NNS involved_VBN ._.
+Section_NN 4_CD is_VBZ a_DT summary_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Mary_NNP showed_VBD off_IN her_PRP$ painting_NN to_TO John_NNP ._.
+vP_NN ei_FW v_FW SC_FW show_NN ei_FW DP_NNP PP_NNP 6_CD ei_FW her_PRP$ painting_NN P_NNP PP_NNP off_IN 5_CD to_TO John_NNP 2_CD ._.
+2.1_CD The_DT Latinate/Native_NNP Asymmetry_NNP Verb_NNP Particle_NNP Constructions_NNP For_IN Harley_NNP ,_, the_DT two_CD kinds_NNS of_IN verbs_NNS are_VBP structurally_RB the_DT same_JJ ,_, with_IN the_DT assumption_NN that_IN a_DT Latinate_NNP prefix_NN ,_, ex_FW -_: in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, and_CC a_DT particle_NN ,_, off_RB in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, are_VBP the_DT same_JJ ,_, with_IN the_DT only_JJ difference_NN being_VBG that_IN the_DT former_JJ incorporates_VBZ into_IN the_DT verb_NN ,_, and_CC the_DT restriction_NN on_IN Latinate_JJ verbs_NNS can_MD be_VB explained_VBN in_IN terms_NNS of_IN structural_JJ competition_NN :_: the_DT particle_NN and_CC the_DT prefix_NN can_MD not_RB co-occur_VB because_IN they_PRP occupy_VBP the_DT same_JJ structural_JJ position_NN ._.
+Thus_RB ,_, in_IN one_CD sense_NN ,_, this_DT analysis_NN directly_RB implements_VBZ Cowie_NNP and_CC Mackin_NNP 's_POS -LRB-_-LRB- 1979_CD -RRB-_-RRB- pre-theoretical_JJ intuition_NN that_WDT particle_NN verbs_NNS and_CC Latinate_NNP affixed_VBD verbs_NNS are_VBP on_IN a_DT par_NN ._.
+Straightforward_JJ as_IN it_PRP may_MD be_VB ,_, there_EX are_VBP a_DT number_NN of_IN Latinate_NNP verbs_NNS which_WDT run_VBP counter_RB to_TO the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+Consider_VB -LRB-_-LRB- 4_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 5_CD -RRB-_-RRB- .4_CD As_IN mentioned_VBN above_IN ,_, Latinate_NNP verbs_NNS can_MD not_RB form_VB a_DT verb-particle_JJ combination_NN in_IN general_JJ ,_, as_IN shown_VBN by_IN the_DT following_VBG examples_NNS ,_, taken_VBN from_IN Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+*_SYM compose/arrange_NN it_PRP up_RP *_SYM consume_VBP it_PRP up_RP *_SYM complete_VB it_PRP up_RP *_SYM discard_VB it_PRP out_RP *_SYM exhibit_NN it_PRP off_RP -LRB-_-LRB- 1_LS -RRB-_-RRB- a._FW b._FW eat_VB it_PRP up_RP v_SYM -_: hibit_NN SC_NNP -LRB-_-LRB- Small_JJ Clause_NN -RRB-_-RRB- ei_FW DP_NNP PP_NNP 6_CD ei_FW The_DT verbs_NNS in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- are_VBP instrumental_JJ denominal_JJ verbs_NNS and_CC they_PRP may_MD well_RB receive_VB a_DT different_JJ analysis_NN from_IN the_DT one_CD in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+Specifically_RB ,_, while_IN they_PRP are_VBP 4_CD It_PRP should_MD be_VB made_VBN clear_JJ that_IN monomorphemic_JJ Latinate_NNP verbs_NNS can_MD form_VB -LRB-_-LRB- idiomatic_JJ -RRB-_-RRB- verb-particle_JJ combinations_NNS ,_, as_IN in_IN -LRB-_-LRB- i_FW -RRB-_-RRB- ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- a._FW seize_VB up_RP b._NN serve_VBP it_PRP up_RP ,_, serve_VBP it_PRP out_RP c._FW figure_NN it_PRP out_RP This_DT clearly_RB shows_VBZ that_IN morphological_JJ complexity_NN matters_NNS ,_, not_RB the_DT etymological_JJ origin_NN ._.
+write_VB it_PRP up_RP c._NN finish_NN it_PRP up_RP d._NN throw_VB it_PRP out_RP e._FW show_VBP it_PRP off_RP -LRB-_-LRB- 4_LS -RRB-_-RRB- a._FW b._FW partition_NN it_PRP off_RP The_DT robust_JJ contrast_NN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- strongly_RB suggests_VBZ that_IN Latinate_NNP and_CC native_JJ verbs_NNS are_VBP significantly_RB different_JJ at_IN some_DT level_NN ._.
+To_TO account_VB for_IN their_PRP$ difference_NN ,_, Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- proposes_VBZ the_DT following_VBG structures_NNS for_IN Latinate_JJ verbs_NNS and_CC particle_NN verbs_NNS ,_, respectively_RB :3_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- Mary_NNP exhibited_VBD her_PRP$ painting_NN to_TO John_NNP ._.
+vP_NN ei_FW c._FW telegraphback/in_FW d._FW telephonearound/back/in_FW /_FW over_IN -LRB-_-LRB- Shimada_NNP ,_, 1985_CD -RRB-_-RRB- centrifuge_NN it_PRP out_RP -LRB-_-LRB- 5_CD -RRB-_-RRB- a._FW b._FW collectitup_FW divide_VBP it_PRP up_RP c._FW conductthemaway_FW d._FW enticethemaway_FW e._FW separatethemout_FW her_PRP$ painting_NN P_NNP PP_NNP ex_FW -_: 5_CD to_TO John_NNP 3_CD Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- assumes_VBZ that_IN acategorial_JJ roots_NNS ,_, e.g_NN ,_, √_SYM -_: hibit_NN and_CC √_CD show_NN ,_, are_VBP inserted_VBN into_IN v_NN -LRB-_-LRB- Manner_NNP Incorporation_NNP -RRB-_-RRB- ._.
+morphological_JJ complex_NN ,_, denominal_JJ verbs_NNS are_VBP immune_JJ to_TO stress_VB assignment_NN in_IN the_DT verbal_JJ domain_NN and_CC retain_VB their_PRP$ nominal_JJ stress_NN pattern_NN ,_, which_WDT suggests_VBZ that_IN they_PRP are_VBP not_RB in_IN the_DT domain_NN where_WRB their_PRP$ morphological_JJ complexity_NN matters_NNS .5_CD On_IN the_DT other_JJ hand_NN ,_, it_PRP appears_VBZ the_DT verbs_NNS in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- do_VBP run_VB counter_RB to_TO the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+Although_IN I_PRP do_VBP not_RB have_VB a_DT satisfactory_JJ answer_NN at_IN present_JJ as_IN to_TO how_WRB to_TO accommodate_VB them_PRP under_IN the_DT hypothesis_NN ,_, one_CD thing_NN worth_JJ pointing_VBG out_RP is_VBZ that_IN the_DT combinations_NNS in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- -LRB-_-LRB- and_CC those_DT in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- -RRB-_-RRB- do_VBP not_RB have_VB idiomatic_JJ interpretations_NNS ,_, which_WDT are_VBP typically_RB observed_VBN with_IN verb-particle_JJ combinations_NNS ,_, and_CC the_DT particles_NNS involved_VBN retain_VBP their_PRP$ meaning_NN ,_, either_CC directional_JJ or_CC aspectual_JJ -LRB-_-LRB- Jackendoff_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+In_IN an_DT attempt_NN to_TO make_VB -LRB-_-LRB- 5_CD -RRB-_-RRB- make_VBP look_NN less_RBR strange_JJ ,_, I_PRP propose_VBP that_IN ,_, in_IN addition_NN to_TO -LRB-_-LRB- 2_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, the_DT following_VBG structure_NN is_VBZ also_RB possible_JJ for_IN Latinate_JJ verbs_NNS and_CC particle_NN verbs_NNS .6,7_CD thereby_RB opening_VBG up_RP the_DT possibility_NN for_IN accounting_NN for_IN the_DT combinations_NNS in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+Independent_JJ support_NN for_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- as_IN a_DT possible_JJ structure_NN for_IN particle_NN verbs_NNS comes_VBZ from_IN nominalized_VBN verb-particles_NNS ,_, or_CC exocentric_JJ V-P_NN compounds_NNS ,_, as_IN in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- below_IN ._.
+It_PRP is_VBZ highly_RB unlikely_JJ to_TO derive_VB them_PRP by_IN syntactic_NN incorporation_NN ,_, which_WDT is_VBZ assumed_VBN in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- -LRB-_-LRB- Farrell_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- ..._: Moreover_RB ,_, within_IN DM_NNP ,_, it_PRP is_VBZ assumed_VBN that_IN acategorial_JJ roots_NNS have_VBP their_PRP$ categorical_JJ status_NN determined_VBN by_IN category-defining_NN functional_JJ heads_NNS such_JJ as_IN v_NN ,_, a_DT and_CC n_VBN -LRB-_-LRB- Marantz_NNP ,_, 2001_CD -RRB-_-RRB- ,_, and_CC the_DT nouns_NNS in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- are_VBP analyzed_VBN to_TO have_VB the_DT following_VBG structure_NN ,_, parallel_NN to_TO their_PRP$ verbal_JJ counterparts_NNS ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- n_SYM ei_FW e_SYM ei_FW v_FW v_FW √_FW ROOT+PART_FW n_FW √_FW ROOT+PART_NNP ei_FW √_FW ROOT_NN PART_NN ei_FW √_FW ROOT_NN PART_NN The_DT structure_NN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, where_WRB a_DT root_NN and_CC a_DT -LRB-_-LRB- prefixal_JJ -RRB-_-RRB- particle_NN forms_NNS a_DT complex_JJ predicate_NN ,8_CD has_VBZ its_PRP$ basis_NN on_IN the_DT consensus_NN in_IN the_DT literature_NN that_WDT verb-particle_JJ combinations_NNS are_VBP associated_VBN with_IN two_CD different_JJ configurations_NNS ,_, which_WDT are_VBP reflected_VBN in_IN their_PRP$ interpretations_NNS -LRB-_-LRB- Wurmbrand_NNP ,_, 2000_CD ;_: Basilico_NNP ,_, 2008_CD ,_, among_IN others_NNS -RRB-_-RRB- ._.
+Specifically_RB ,_, the_DT compositional_JJ interpretation_NN and_CC the_DT idiomatic/non-compositional_JJ interpretation_NN are_VBP associated_VBN with_IN the_DT structure_NN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC the_DT Germanic_JJ version_NN of_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, respectively_RB ._.
+Thus_RB ,_, I_PRP extend_VBP this_DT distinction_NN into_IN Latinate_JJ verbs_NNS by_IN assuming_VBG they_PRP can_MD be_VB associated_VBN with_IN the_DT structures_NNS in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+This_DT assumption_NN makes_VBZ it_PRP possible_JJ to_TO have_VB two_CD particles_NNS ,_, one_CD idiomatic_JJ and_CC the_DT other_JJ compositional_JJ in_IN the_DT verbal_JJ domain_NN ,_, 5_CD See_VB Kiparsky_NNP -LRB-_-LRB- 1982_CD ,_, 1997_CD -RRB-_-RRB- and_CC Arad_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+6_CD I_PRP remain_VBP agnostic_JJ about_IN Harley_NNP 's_POS treatment_NN of_IN Manner_NNP Incorporation_NNP ,_, simply_RB treating_VBG category-defining_NN functional_JJ heads_NNS and_CC acategorial_JJ roots_NNS as_IN separate_JJ terminal_NN nodes_NNS ._.
+7_CD I_PRP assume_VBP ,_, following_VBG Zhang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- and_CC Basilico_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ,_, that_IN a_DT root_NN can_MD be_VB complex_JJ before_IN the_DT categorizing_VBG head_NN is_VBZ merged_VBN ._.
+8_CD The_DT PART_NNP head_NN gets_VBZ realized_VBN as_IN a_DT prefix_NN after_IN syntax_NN ._.
+According_VBG to_TO Marantz_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, those_DT category_NN -_: defining_VBG heads_NNS fix_VB the_DT edge_NN of_IN a_DT cyclic_JJ domain_NN whereby_WRB the_DT interpretation_NN of_IN the_DT root_NN in_IN the_DT context_NN of_IN the_DT categorizing_VBG functional_JJ head_NN is_VBZ negotiated_VBN ,_, using_VBG the_DT encyclopedic_JJ knowledge_NN ._.
+This_DT view_NN of_IN interpretation_NN is_VBZ quite_RB congenial_JJ to_TO the_DT proposal_NN in_IN the_DT verb-particle_JJ literature_NN that_WDT idiomatic_JJ verb-particle_JJ combinations_NNS involve_VBP a_DT complex_JJ head_NN structure_NN ,_, as_IN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+We_PRP will_MD turn_VB to_TO this_DT point_NN below_IN ._.
+2.2_CD Resultative_NNP Constructions_NNP The_NNP Latinate/native_NNP asymmetry_NN can_MD also_RB be_VB observed_VBN in_IN the_DT case_NN of_IN resultative_JJ constructions_NNS ._.
+Consider_VB the_DT following_VBG examples_NNS from_IN Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- a._FW b._FW c._FW d._FW e._FW a_DT drop_NN off_RP a_DT show_NN off_RP a_DT break_NN up_RP a_DT hold_NN up_RP a_DT set_VBN back_RP -LRB-_-LRB- 9_CD -RRB-_-RRB- a._FW b._FW squeeze_NN it_PRP empty_JJ c._NN stab_NN it_PRP dead_JJ d._NN eat_VBP yourself_PRP sick_JJ e._NN freeze_NN solid_JJ *_SYM inflate_VB it_PRP full_JJ *_SYM compress_VBZ it_PRP empty_JJ *_SYM impale_VB it_PRP dead_JJ *_SYM devour_VB yourself_PRP sick_JJ *_SYM congeal_VBP solid_JJ fill_NN it_PRP full_JJ By_IN assuming_VBG the_DT structure_NN as_IN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, with_IN a_DT resultative_JJ predicate_NN as_IN the_DT predicate_NN of_IN a_DT small_JJ clause_NN in_IN place_NN of_IN a_DT particle_NN ,_, Harley_NNP successfully_RB accounts_VBZ for_IN the_DT asymmetry_NN in_IN terms_NNS of_IN structural_JJ competition_NN ._.
+It_PRP is_VBZ worth_JJ mentioning_VBG in_IN this_DT connection_NN that_IN some_DT resultatives_NNS can_MD behave_VB more_JJR like_IN verb_NN -_: particles_NNS in_IN that_IN a_DT native_JJ verb_NN and_CC a_DT resultative_JJ adjective_NN form_NN a_DT complex_JJ predicate_NN ,_, without_IN the_DT help_NN of_IN Heavy_NNP NP_NNP Shift_NNP ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- .9_CD In_IN such_JJ cases_NNS ,_, it_PRP is_VBZ appropriate_JJ to_TO treat_VB them_PRP as_IN involving_VBG the_DT structure_NN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- a._IN John_NNP cuts_NNS open_VBP the_DT melon_NN ._.
+b_NN ._.
+The_DT activists_NNS set_VBN free_JJ the_DT lab_NN rats_NNS ._.
+c._SYM Johnwipedcleanthetable_NNP ._.
+There_EX are_VBP a_DT number_NN of_IN attested_JJ counterexamples_NNS to_TO the_DT asymmetry_NN ._.
+A_DT partial_JJ list_NN of_IN Latinate_NNP verbs_NNS entering_VBG into_IN the_DT double_JJ object_NN construction_NN is_VBZ given_VBN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, taken_VBN from_IN Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+I_PRP have_VBP nothing_NN insightful_JJ to_TO say_VB about_IN these_DT verbs_NNS at_IN present_JJ ,_, only_RB hoping_VBG to_TO accommodate_VB them_PRP under_IN the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+2.3_CD Double_RB Object_NNP Constructions_NNP So_RB far_RB ,_, we_PRP have_VBP considered_VBN the_DT observations_NNS made_VBN in_IN the_DT literature_NN pertaining_VBG to_TO the_DT Latinate/native_JJ asymmetry_NN ._.
+In_IN the_DT three_CD cases_NNS we_PRP saw_VBD ,_, the_DT asymmetry_NN is_VBZ attributed_VBN to_TO the_DT difference_NN in_IN the_DT structure_NN of_IN the_DT root_NN domain_NN between_IN Latinate_NNP and_CC native_JJ verbs_NNS ._.
+By_IN and_CC large_JJ ,_, Latinate_JJ verbs_NNS involve_VBP complex_JJ roots_NNS ,_, while_IN native_JJ verbs_NNS simple_JJ roots_NNS ._.
+This_DT difference_NN is_VBZ ultimately_RB reduced_VBN to_TO the_DT selectional_JJ properties_NNS of_IN Latinate_JJ roots_NNS ._.
+Specifically_RB ,_, the_DT type_NN of_IN selection_NN that_WDT is_VBZ relevant_JJ is_VBZ l_NN -LRB-_-LRB- exical_JJ -RRB-_-RRB- -_: selection_NN ,_, i.e._FW ,_, selection_NN for_IN particular_JJ lexical_JJ items_NNS -LRB-_-LRB- Pesetsky_NNP ,_, 1995_CD ;_: Everaert_NNP ,_, 2010_CD -RRB-_-RRB- .10_CD Thus_RB ,_, particular_JJ Latinate_JJ roots_NNS are_VBP obligatorily_RB specified_VBN for_IN a_DT set_NN of_IN particular_JJ morphemes_NNS and_CC combine_VBP with_IN them_PRP to_TO form_VB complex_JJ roots_NNS ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- b_NN ;_: native_JJ roots_NNS can_MD also_RB be_VB specified_VBN as_IN such_JJ ,_, as_IN in_IN the_DT case_NN of_IN idiomatic_JJ verb-particle_JJ constructions_NNS ,_, but_CC they_PRP can_MD be_VB unspecified_JJ and_CC stand_VB alone_RB as_IN a_DT simple_JJ root_NN ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- a_DT ,_, as_RB well_RB ._.
+These_DT roots_NNS undergo_VBP categorization_NN by_IN v_NN ,_, also_RB shown_VBN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- a._FW w_FW /_FW simple_JJ root_NN b._FW w_FW /_FW complex_JJ root_NN vv_NN ru_NN ru_NN Pesetsky_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- made_VBD the_DT observation_NN that_WDT Latinate_NNP verbs_NNS are_VBP awkward_JJ with_IN double_JJ objects_NNS ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- :_: -LRB-_-LRB- 11_CD -RRB-_-RRB- a._IN SusiegaveOxfamsomecannedfood_NNP ._.
+a_DT '_'' ._.
+Susie_NNP gave_VBD some_DT canned_VBN food_NN to_TO Oxfam_NNP ._.
+b._SYM *_SYM Susie_NNP donated_VBD Oxfam_NNP some_DT canned_VBN food_NN ._.
+b_NN '_'' ._.
+Susie_NNP donated_VBD some_DT canned_VBN food_NN to_TO Oxfam_NNP ._.
+c._SYM BillsentSuehisregards_NNPS ._.
+c_NN '_'' ._.
+Bill_NNP sent_VBD his_PRP$ regards_VBZ to_TO Sue_VB ._.
+d._SYM *_SYM Bill_NNP conveyed_VBD Sue_VB his_PRP$ regards_VBZ ._.
+d'_NN ._.
+Bill_NNP conveyed_VBD his_PRP$ regards_VBZ to_TO Sue_VB ._.
+e._FW Maryshowedthecommitteeherfindings_NNPS ._.
+e_LS '_'' ._.
+Mary_NNP showed_VBD her_PRP$ findings_NNS to_TO the_DT committee_NN ._.
+f._SYM *_SYM Mary_NNP displayed_VBD the_DT committee_NN her_PRP$ findings_NNS ._.
+f_LS '_'' ._.
+Mary_NNP displayed_VBD her_PRP$ findings_NNS to_TO the_DT committee_NN ._.
+g._SYM TomtoldBenthestory_NNP ._.
+g_VBG '_'' ._.
+Tom_NNP told_VBD the_DT story_NN to_TO Ben_NNP ._.
+h._SYM *_SYM Tom_NNP recounted_VBD Ben_NNP the_DT story_NN ._.
+h_NN '_'' ._.
+Tom_NNP recounted_VBD the_DT story_NN to_TO Ben_NNP ._.
+-LRB-_-LRB- Pesetsky_NNP ,_, 1995_CD :_: 128ff_NNS ._. -RRB-_-RRB-
+As_IN is_VBZ the_DT case_NN with_IN verb-particles_NNS and_CC resultatives_NNS ,_, Harley_NNP accounts_NNS for_IN the_DT asymmetry_NN in_IN terms_NNS of_IN structural_JJ competition_NN by_IN assuming_VBG that_IN low_JJ Appl_NNP -LRB-_-LRB- icative_JJ -RRB-_-RRB- P_NNP -LRB-_-LRB- Pylkkänen_NNP ,_, 2008_CD -RRB-_-RRB- is_VBZ involved_VBN in_IN place_NN of_IN SC_NNP in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+9_CD The_DT examples_NNS are_VBP from_IN Neeleman_NNP -LRB-_-LRB- 1992_CD -RRB-_-RRB- ,_, Svenonius_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- ,_, and_CC Williams_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ,_, respectively_RB ._.
+v_SYM √_FW ROOT_FW v_FW √_FW ROOT+X_FW ru_FW √_FW ROOT_NN X_NNP l-selection_NN -LRB-_-LRB- 12_CD -RRB-_-RRB- 3_LS ._.
+allot_IN ,_, assign_VB ,_, bequeath_NN ,_, concede_VBP ,_, extend_VBP ,_, reduce_VB ,_, etc._FW ._.
+More_RBR on_IN the_DT Asymmetry_NNP Once_IN we_PRP accept_VBP the_DT structures_NNS in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, we_PRP can_MD immediately_RB explain_VB the_DT fact_NN that_IN Latinate_NNP verbs_NNS are_VBP 10_CD L-selection_JJ is_VBZ defined_VBN in_IN Everaert_NNP -LRB-_-LRB- 2010:94_CD -RRB-_-RRB- as_IN follows_VBZ :_: -LRB-_-LRB- i_FW -RRB-_-RRB- a._FW b._FW L-selection_NN involves_VBZ the_DT selection_NN by_IN one_CD terminal_NN element_NN of_IN another_DT terminal_NN element_NN where_WRB the_DT projection_NN of_IN is_VBZ in_IN the_DT syntactic_JJ domain_NN of_IN ._.
+The_DT syntactic_JJ domain_NN of_IN head_NN is_VBZ the_DT set_NN of_IN nodes_NNS contained_VBN in_IN Max_NNP -LRB-_-LRB- -RRB-_-RRB- that_WDT are_VBP distinct_JJ from_IN and_CC do_VB not_RB contain_VB ._.
+more_JJR restricted_VBN in_IN distribution_NN than_IN native_JJ verbs_NNS ._.
+Thus_RB ,_, simple_JJ roots_NNS ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- a_DT ,_, can_MD combine_VB with_IN some_DT morpheme_NN to_TO form_VB a_DT complex_JJ root_NN ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- b_NN ,_, but_CC the_DT latter_NN can_MD not_RB form_VB a_DT -LRB-_-LRB- more_JJR -RRB-_-RRB- complex_JJ root_NN because_IN they_PRP are_VBP already_RB complex_JJ .11_CD In_IN this_DT sense_NN ,_, the_DT structure_NN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- b_NN reflects_VBZ the_DT view_NN that_IN verb-particle_JJ combinations_NNS and_CC prefixed_VBD Latinate_NNP verbs_NNS are_VBP on_IN a_DT par_NN ._.
+This_DT said_VBD ,_, we_PRP will_MD see_VB in_IN this_DT section_NN two_CD more_JJR cases_NNS of_IN the_DT Latinate/native_JJ asymmetry_NN and_CC that_IN the_DT above_JJ difference_NN in_IN structure_NN plays_VBZ a_DT crucial_JJ role_NN in_IN deriving_VBG the_DT asymmetry_NN ._.
+3.1_CD Exocentric_NNP V-N_NNP Compounds_NNP Recall_VBP that_IN in_IN section_NN 2.1_CD ,_, we_PRP discussed_VBD exocentric_JJ V-P_NNP compounds_NNS and_CC that_IN they_PRP are_VBP associated_VBN with_IN idiosyncratic_JJ interpretations_NNS ._.
+In_IN what_WP follows_VBZ ,_, I_PRP will_MD argue_VB that_IN essentially_RB the_DT same_JJ analysis_NN applies_VBZ to_TO exocentric_JJ V-N_NNP compounds_NNS ,_, with_IN twists_NNS on_IN the_DT interpretation_NN ._.
+First_RB ,_, let_VB us_PRP see_VB the_DT relevant_JJ data_NNS ._.
+Consider_VB -LRB-_-LRB- 14_CD -RRB-_-RRB- ._.
+compound_NN is_VBZ a_DT nominalization_NN with_IN a_DT complex_JJ root_NN ,_, as_IN in_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- :_: -LRB-_-LRB- 15_CD -RRB-_-RRB- nP_SYM ei_FW -LRB-_-LRB- 14_CD -RRB-_-RRB- a._FW b._FW c._FW d._FW e._FW f._FW breakwater_NN cutthroat_JJ killjoy_NN kiss-ass_NN turnkey_NN scarecrow_NN *_SYM disintegrate-water_NN *_SYM incise-throat_NN *_SYM eliminate-joy_NN *_SYM osculate-ass_NN *_SYM rotate-key_NN *_SYM intimidate-crow_NN This_DT straightforwardly_RB explains_VBZ why_WRB Latinate_NNP verbs_NNS can_MD not_RB form_VB V-N_NNP compounds_NNS :_: a_DT root_NN naming_VBG an_DT event_NN must_MD be_VB a_DT simple_JJ root_NN ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- a_DT ,_, not_RB a_DT complex_JJ one_CD ,_, as_RB in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- b._FW Given_VBN the_DT observation_NN that_IN the_DT N_NNP of_IN a_DT V-N_JJ compound_NN is_VBZ construed_VBN as_IN the_DT object_NN of_IN the_DT V_NNP ,_, one_CD might_MD wonder_VB how_WRB the_DT interpretation_NN can_MD be_VB derived_VBN from_IN the_DT structure_NN in_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- ._.
+I_PRP claim_VBP the_DT observed_JJ interpretation_NN is_VBZ not_RB obtained_VBN from_IN the_DT rigid_JJ argument_NN structure_NN of_IN the_DT V_NNP ,_, but_CC through_IN negotiation_NN with_IN the_DT encyclopedic_JJ knowledge_NN relating_VBG to_TO the_DT event_NN root_NN involved_VBN at_IN the_DT conceptual_JJ interface_NN -LRB-_-LRB- Marantz_NNP ,_, 2001_CD ;_: Barker_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Moreover_RB ,_, it_PRP has_VBZ also_RB been_VBN observed_VBN the_DT compound_NN noun_NN itself_PRP is_VBZ construed_VBN as_IN agentive_JJ or_CC instrumental_JJ ,_, denoting_VBG a_DT human_JJ ,_, an_DT animal_NN or_CC a_DT thing_NN ._.
+I_PRP assume_VBP that_IN the_DT nominalizing_JJ head_NN involved_VBN in_IN the_DT compound_NN denotes_VBZ an_DT entity_NN which_WDT is_VBZ construed_VBN as_IN participating_VBG in_IN an_DT event_NN of_IN the_DT type_NN related_VBN to_TO the_DT episodic_JJ content_NN of_IN the_DT complex_JJ root_NN ._.
+Given_VBN this_DT ,_, since_IN the_DT complex_JJ root_NN involved_VBN roughly_RB corresponds_VBZ to_TO an_DT event_NN which_WDT involves_VBZ a_DT proto_NN -_: patient_NN ,_, the_DT denotation_NN of_IN the_DT compound_NN noun_NN can_MD only_RB be_VB construed_VBN as_IN participating_VBG in_IN the_DT event_NN as_IN a_DT proto-agent_JJ ,_, i.e._FW ,_, as_IN agentive_JJ or_CC instrumental_JJ ._.
+Thus_RB ,_, we_PRP can_MD provide_VB an_DT explanation_NN for_IN the_DT interpretation_NN of_IN V-N_NNP compounds_NNS without_IN making_VBG recourse_NN to_TO the_DT argument_NN structure_NN of_IN the_DT V._NNP Although_IN our_PRP$ primary_JJ focus_NN is_VBZ on_IN English_NNP in_IN this_DT paper_NN ,_, what_WP we_PRP have_VBP argued_VBN for_IN in_IN the_DT case_NN of_IN exocentric_JJ V-N_NNP compounds_NNS seems_VBZ to_TO hold_VB in_IN other_JJ languages_NNS as_RB well_RB ._.
+For_IN instance_NN ,_, in_IN French_NNP ,_, a_DT complex_JJ root_NN can_MD not_RB appear_VB as_IN the_DT V_NNP part_NN of_IN a_DT V-N_JJ compound_NN ._.
+Consider_VB the_DT following_VBG :15_CD While_IN it_PRP is_VBZ impossible_JJ to_TO argue_VB for_IN the_DT absence_NN of_IN something_NN ,_, the_DT examples_NNS in_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- give_VBP you_PRP the_DT feel_NN that_WDT Latinate_NNP verbs_NNS can_MD not_RB form_VB V-N_NNP compounds_NNS ._.
+Thus_RB ,_, I_PRP claim_VBP that_IN the_DT gap_NN is_VBZ not_RB accidental_JJ and_CC Latinate_JJ verbs_NNS are_VBP systematically_RB ruled_VBN out_RP as_IN the_DT V_NNP part_NN of_IN a_DT V-N_JJ compound_NN .12_CD Moreover_RB ,_, given_VBN the_DT assumption_NN on_IN categorization_NN in_IN DM_NNP ,_, I_PRP argue_VBP that_IN V-N_NNP compounds_NNS do_VBP not_RB involve_VB categorized_VBN morphemes_NNS ,_, -LSB-_NNP v_VBD √_CD ROOT_NN -RSB-_NN or_CC -LSB-_JJ n_NN √_CD ROOT_NN -RSB-_NN ,_, but_CC a_DT root_NN naming_VBG an_DT event_NN and_CC another_DT root_NN naming_VBG an_DT entity_NN .13,14_CD Viewed_VBN this_DT way_NN ,_, an_DT exocentric_JJ V-N_NNP 11_CD No_DT recursive_JJ property_NN is_VBZ observed_VBN in_IN this_DT domain_NN ._.
+This_DT indicates_VBZ that_IN the_DT root_NN domain_NN is_VBZ relevant_JJ to_TO the_DT phenomena_NNS ._.
+12_CD Here_RB ,_, terms_NNS such_JJ as_IN ``_`` V_NNP ''_'' and_CC ``_`` N_NNP ''_'' are_VBP used_VBN as_IN descriptive_JJ cover_NN terms_NNS ,_, not_RB theoretical_JJ entities_NNS ._.
+13_CD I_PRP follow_VBP Harley_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- and_CC Anagnostopoulou_NNP and_CC Samioti_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- that_WDT roots_NNS can_MD be_VB classified_VBN into_IN three_CD ontological_JJ types_NNS :_: events_NNS ,_, states_NNS ,_, and_CC entities_NNS ._.
+14_CD It_PRP is_VBZ possible_JJ to_TO assume_VB that_IN the_DT nominal_NN in_IN a_DT compound_NN is_VBZ categorized_VBN as_IN a_DT noun_NN by_IN n_NN ,_, if_IN one_CD adopts_VBZ a_DT layered_JJ structure_NN for_IN nominal_JJ complex_JJ DP_NNP hypothesis_NN where_WRB DP_NNP contains_VBZ Num_NNP -LRB-_-LRB- ber_FW -RRB-_-RRB- P_NNP ,_, which_WDT contains_VBZ NP_NNP ,_, here_RB nP_NNP ._.
+-LRB-_-LRB- 16_CD -RRB-_-RRB- a._IN grille-pain_JJ grill-bread_JJ `_`` toaster_NN '_'' b._FW ouvre-boi_FW ̂te_FW open-can_FW `_`` can_MD opener_NN '_'' n_SYM √_FW EVENT_NNP +_CD √_CD ENTITY_NNP ei_FW √_FW EVENT_NNP √_CD ENTITY_NNP 15_CD The_DT glosses_NNS are_VBP simplified_VBN in_IN such_JJ a_DT way_NN that_IN theme_NN vowels_NNS ,_, which_WDT are_VBP at_IN the_DT end_NN of_IN the_DT verb_NN stem_NN ,_, are_VBP treated_VBN as_IN part_NN of_IN the_DT verb_NN stem_NN ._.
+c._FW e._FW -LRB-_-LRB- 17_CD -RRB-_-RRB- a._FW b._FW tourne.vis_FW turn.screw_FW `_`` screwdriver_NN '_'' gratte-papier_JJR f._SYM scratch-paper_JJR `_`` pen_NN pusher_NN '_'' remue-menage_JJ move-housework_NN `_`` commotion_NN ,_, bustle_NN '_'' reveille-matin_JJ wake.up-morning_NN `_`` alarm_NN clock_NN '_'' leche-vitrine_JJ e._FW lick-window_FW f._FW `_`` window_NN shopping_NN '_'' g._FW coupe-gorge_FW h._FW cut-throat_JJ spillthebeans_NNS pull_VBP strings_NNS break_VB the_DT ice_NN kick_VBP the_DT habit_NN Although_IN the_DT examples_NNS in_IN -LRB-_-LRB- 17_CD -RRB-_-RRB- run_VBP counter_RB to_TO the_DT generalization_NN and_CC need_VB to_TO be_VB accommodated_VBN in_IN some_DT way_NN or_CC other_JJ under_IN the_DT morphological_JJ complexity_NN hypothesis_NN ,_, it_PRP largely_RB holds_VBZ true_JJ in_IN French_JJ as_RB well_RB that_IN a_DT complex_JJ root_NN can_MD not_RB appear_VB as_IN the_DT V_NNP part_NN of_IN a_DT V-N_JJ compound_NN ._.
+The_DT evidence_NN from_IN exocentric_JJ V-N_NNP compounds_NNS is_VBZ significant_JJ in_IN that_IN they_PRP are_VBP not_RB particular_JJ to_TO Germanic_JJ languages_NNS ,_, unlike_IN the_DT cases_NNS we_PRP have_VBP seen_VBN so_RB far_RB ,_, i.e._FW ,_, resultatives_NNS ,_, verb-particles_NNS ,_, and_CC double_JJ object_NN constructions_NNS ,_, clearly_RB showing_VBG that_IN the_DT asymmetry_NN can_MD be_VB observed_VBN with_IN non-Germanic_JJ languages_NNS as_RB well_RB ._.
+Thus_RB ,_, although_IN we_PRP have_VBP referred_VBN to_TO the_DT observed_JJ asymmetry_NN as_IN the_DT Latinate/native_JJ asymmetry_NN ,_, it_PRP is_VBZ ultimately_RB not_RB about_IN the_DT vocabulary_NN type_NN or_CC etymological_JJ origin_NN ,_, but_CC rather_RB about_IN the_DT complexity_NN of_IN the_DT verb/event_JJ root_NN involved_VBN ,_, as_IN depicted_VBN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- above_IN ._.
+but_CC the_DT idioms_NNS -LRB-_-LRB- 19_CD -RRB-_-RRB- a._FW b._FW c._FW d._FW e._FW f._FW g._FW following_VBG examples_NNS can_MD be_VB considered_VBN to_TO be_VB in_IN terms_NNS of_IN conventionality_NN ._.
+deliver_VB the_DT goods_NNS connect_VB the_DT dots_NNS contemplate_VBP one_CD 's_POS navel_NN deserve_VBP a_DT medal_NN -LRB-_-LRB- for_IN doing_VBG -RRB-_-RRB- reinvent_VB the_DT wheel_NN recharge_VB your_PRP$ batteries_NNS promise_VBP someone_NN the_DT moon_NN 3.2_CD The_DT Latinate/native_JJ asymmetry_NN involves_VBZ verb_NN phrase_NN idioms_NNS -LRB-_-LRB- henceforth_NN ,_, VP_NNP idioms_NNS -RRB-_-RRB- ._.
+It_PRP goes_VBZ without_IN saying_VBG that_IN English_NNP has_VBZ countless_JJ VP_NNP idioms_NNS ,_, but_CC ,_, when_WRB you_PRP examine_VBP them_PRP more_RBR closely_RB ,_, you_PRP notice_VBP that_IN you_PRP seldom_RB find_VBP idioms_NNS based_VBN on_IN Latinate_JJ verbs_NNS ._.
+This_DT may_MD sound_VB trivial_JJ due_JJ to_TO the_DT fact_NN that_IN many_JJ idioms_NNS involve_VBP verb-particle_JJ combinations_NNS ,_, which_WDT are_VBP mostly_RB incompatible_JJ with_IN Latinate_JJ verbs_NNS ,_, as_IN we_PRP have_VBP seen_VBN above_IN ._.
+Yet_CC the_DT observation_NN holds_VBZ in_IN other_JJ cases_NNS which_WDT involve_VBP a_DT verb_NN and_CC its_PRP$ object_NN as_RB well_RB ._.
+First_RB ,_, consider_VB -LRB-_-LRB- 18_CD -RRB-_-RRB- :_: -LRB-_-LRB- 18_CD -RRB-_-RRB- a._FW kick_VBP the_DT bucket_NN b._NN bitethedust_NN c._NN carry_VBP the_DT can_MD d._VB jump_VB the_DT shark_NN However_RB ,_, these_DT examples_NNS are_VBP highly_RB compositional_JJ ,_, and_CC the_DT literal_JJ meanings_NNS of_IN the_DT parts_NNS of_IN these_DT idioms_NNS play_VBP an_DT important_JJ role_NN in_IN interpretation_NN in_IN that_IN they_PRP are_VBP mapped_VBN to_TO the_DT idiomatic_JJ meanings_NNS ._.
+To_TO put_VB it_PRP differently_RB ,_, in_IN -LRB-_-LRB- 19_CD -RRB-_-RRB- ,_, the_DT idiomatic_JJ meanings_NNS can_MD not_RB be_VB obtained_VBN without_IN accessing_VBG the_DT literal_JJ or_CC original_JJ meanings_NNS ._.
+Thus_RB ,_, the_DT asymmetry_NN in_IN VP_NNP idioms_NNS can_MD be_VB stated_VBN as_IN follows_VBZ :_: idioms_NNS with_IN native_JJ verbs_NNS can_MD be_VB compositional_JJ or_CC non-compositional_JJ ,_, while_IN those_DT with_IN Latinate_JJ verbs_NNS can_MD only_RB be_VB compositional_JJ ._.
+Since_IN there_EX are_VBP not_RB so_RB many_JJ non-compositional_JJ VP_NNP idioms_NNS to_TO begin_VB with_IN ,_, the_DT gap_NN may_MD be_VB accidental_JJ ._.
+Yet_RB a_DT paucity_NN of_IN compositional_JJ idioms_NNS is_VBZ also_RB a_DT telling_VBG piece_NN of_IN evidence_NN that_IN shows_VBZ that_IN Latinate_NNP verbs_NNS adhere_VBP to_TO their_PRP$ literal_JJ meanings_NNS ,_, which_WDT are_VBP in_IN some_DT sense_NN idiomatic_JJ to_TO being_VBG with_IN ._.
+This_DT asymmetry_NN can_MD also_RB be_VB captured_VBN in_IN terms_NNS of_IN the_DT structural_JJ difference_NN between_IN simple_JJ and_CC complex_JJ roots_NNS in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+In_IN fact_NN ,_, a_DT coherent_JJ picture_NN can_MD be_VB drawn_VBN of_IN the_DT incompatibility_NN of_IN non_NN -_: compositional_JJ VP_NNP idioms_NNS with_IN Latinate_JJ verbs_NNS by_IN invoking_VBG the_DT l-selectional_JJ properties_NNS of_IN the_DT Verb_NNP Phrase_NNP Idioms_NNPS other_JJ hitherto_NN unnoticed_JJ case_NN of_IN d._FW `_`` dangerous_JJ back_NN ally_NN '_'' The_DT native_JJ verb_NN idioms_NNS in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- can_MD be_VB classified_VBN into_IN two_CD classes_NNS :_: non-compositional_JJ idioms_NNS ,_, as_IN in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- a_DT --_: -LRB-_-LRB- 18_CD -RRB-_-RRB- d_LS ,_, and_CC compositional_JJ idioms_NNS ,_, as_IN in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- e_LS --_: -LRB-_-LRB- 18_CD -RRB-_-RRB- h._FW Compositional_JJ idioms_NNS are_VBP said_VBN to_TO have_VB meanings_NNS distributed_VBN among_IN their_PRP$ parts_NNS and_CC the_DT correspondences_NNS between_IN literal_JJ and_CC idiomatic_JJ meanings_NNS can_MD be_VB made_VBN ,_, while_IN no_DT such_JJ correspondences_NNS hold_VBP in_IN non-compositional_JJ idioms_NNS and_CC the_DT idiomatic_JJ expression_NN as_IN a_DT whole_NN is_VBZ associated_VBN with_IN a_DT particular_JJ idiosyncratic_JJ meaning_NN -LRB-_-LRB- Nunberg_NNP et_FW al._FW ,_, 1994_CD -RRB-_-RRB- ._.
+VP_NNP idioms_NNS with_IN Latinate_JJ verbs_NNS are_VBP hard_JJ to_TO find_VB ,_, morphemes_NNS involved_VBN ._.
+Specifically_RB ,_, contemporary_JJ accounts_NNS of_IN idioms_NNS hold_VBP that_IN the_DT structural_JJ constraints_NNS on_IN idioms_NNS can_MD be_VB reduced_VBN to_TO the_DT l_NN -_: selectional_JJ properties_NNS of_IN particular_JJ morphemes_NNS -LRB-_-LRB- O’Grady_NNP ,_, 1998_CD ;_: Everaert_NNP ,_, 2010_CD ,_, Bruening_NNP ,_, 2010_CD -RRB-_-RRB- ,_, and_CC also_RB that_IN a_DT chain_NN of_IN selectional_JJ relations_NNS ,_, which_WDT are_VBP structurally_RB established_VBN by_IN means_NNS of_IN head-to_JJ -_: head_NN relations_NNS ,_, provides_VBZ the_DT basis_NN for_IN special_JJ ,_, idiomatic_JJ meaning_NN -LRB-_-LRB- O’Grady_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Thus_RB ,_, an_DT idiom_NN like_IN kick_NN the_DT bucket_NN under_IN the_DT current_JJ assumptions_NNS has_VBZ the_DT following_VBG chain_NN of_IN relations_NNS ,_, as_IN given_VBN in_IN -LRB-_-LRB- 20_CD -RRB-_-RRB- c_NN ,_, based_VBN on_IN the_DT structure_NN in_IN -LRB-_-LRB- 20_CD -RRB-_-RRB- b._FW Note_VB that_IN the_DT compositional_JJ idioms_NNS as_IN in_IN -LRB-_-LRB- 19_CD -RRB-_-RRB- have_VBP the_DT original_JJ meanings_NNS ,_, read_VBD off_RP from_IN the_DT structure_NN in_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- ,_, mapped_VBD into_IN their_PRP$ idiomatic_JJ meanings_NNS in_IN the_DT context_NN of_IN some_DT other_JJ particular_JJ morphemes_NNS ._.
+VP_NNP idioms_NNS are_VBP not_RB particular_JJ to_TO Germanic_JJ languages_NNS ._.
+Once_RB again_RB ,_, examples_NNS from_IN French_JJ are_VBP given_VBN in_IN -LRB-_-LRB- 22_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 23_CD -RRB-_-RRB- below_IN ._.
+Note_VB that_IN the_DT examples_NNS in_IN -LRB-_-LRB- 23_CD -RRB-_-RRB- do_VBP not_RB run_VB counter_RB to_TO the_DT morphological_JJ complexity_NN hypothesis_NN ,_, as_RB long_RB as_IN they_PRP are_VBP compositional_JJ idioms_NNS ._.
+-LRB-_-LRB- 20_CD -RRB-_-RRB- a._FW b._FW c._FW i._FW ii_FW ._.
+iii_FW ._.
+iv_NN ._.
+kick_NN the_DT bucket_NN vP_NN ei_FW b._FW griller_FW un_FW feu_FW rouge_FW grill_FW a_DT fire_NN red_JJ `_`` run_VB a_DT red_JJ light_NN '_'' c._FW lever_FW le_FW coude_FW raise_VB the_DT elbow_NN `_`` enjoy_VB a_DT drink_NN '_'' v_SYM √_SYM kickP_NNP ei_FW √_FW kick_NN nP_NNP ei_FW D_NNP ei_FW the_DT n_NN v_SYM →_SYM √_CD kick_NN √_CD kick_NN →_FW n_FW n_FW →_FW √_FW bucket_FW n_FW →_FW D_NNP -LRB-_-LRB- the_DT -RRB-_-RRB- √_CD bucket_NN -LRB-_-LRB- 23_CD -RRB-_-RRB- a._SYM promettre_FW la_FW lune_FW promise_VBP the_DT moon_NN `_`` promise_VBP the_DT moon_NN '_'' Turning_VBG to_TO Latinate_NNP verbs_NNS with_IN complex_JJ roots_NNS ,_, as_IN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- b_NN ,_, repeated_VBN here_RB as_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- ,_, we_PRP can_MD see_VB why_WRB Latinate_JJ verbs_NNS do_VBP not_RB form_VB non-compositional_JJ idioms_NNS :_: they_PRP are_VBP idioms_NNS in_IN their_PRP$ own_JJ right_NN ,_, with_IN no_DT further_JJ material_NN involved_VBN ._.
+Specifically_RB ,_, an_DT event_NN root_NN l-selects_NNS a_DT particular_JJ prefix_NN ,_, represented_VBN as_IN PART_NNP in_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- ,_, which_WDT l-selects_VBZ nothing_NN ._.
+As_IN we_PRP have_VBP seen_VBN above_IN ,_, the_DT complex_JJ root_NN ,_, or_CC a_DT chain_NN of_IN l_NN -_: selection_NN in_IN this_DT case_NN ,_, is_VBZ negotiated_VBN in_IN the_DT context_NN of_IN v_NN by_IN using_VBG the_DT encyclopedic_JJ knowledge_NN in_IN order_NN to_TO derive_VB special_JJ meaning_NN ._.
+This_DT analysis_NN can_MD be_VB regarded_VBN as_IN a_DT contemporary_JJ rendition_NN of_IN Katz_NNP and_CC Postal_NNP 's_POS -LRB-_-LRB- 1963_CD -RRB-_-RRB- intuition_NN pertaining_VBG to_TO what_WP they_PRP call_VBP lexical_JJ idioms_NNS ._.
+b._NN retourner_NN sa_NN veste_NN return_NN one_NN 's_POS jacket_NN `_`` become_VB a_DT turncoat_NN '_'' 4_LS ._.
+Summary_NNP Drawing_NNP heavily_RB on_IN Harley_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ,_, we_PRP have_VBP attempted_VBN in_IN this_DT paper_NN to_TO further_JJ increase_NN the_DT plausibility_NN of_IN the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+Specifically_RB ,_, I_PRP have_VBP shown_VBN that_IN exocentric_JJ V-N_NNP compounds_NNS and_CC non-compositional_JJ VP_NNP idioms_NNS display_VBP the_DT Latinate/native_JJ asymmetry_NN and_CC accounted_VBD for_IN the_DT asymmetry_NN in_IN terms_NNS of_IN the_DT structural_JJ difference_NN between_IN simple_JJ and_CC complex_JJ roots_NNS ,_, as_IN given_VBN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+I_PRP have_VBP also_RB argued_VBN that_IN the_DT difference_NN in_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- should_MD be_VB ultimately_RB attributed_VBN to_TO the_DT l-selectional_JJ properties_NNS of_IN the_DT roots_NNS involved_VBN ._.
+Specifically_RB ,_, although_IN some_DT roots_NNS are_VBP specified_VBN for_IN particular_JJ morphemes_NNS and_CC form_NN complex_JJ roots_NNS ,_, others_NNS have_VBP no_DT intrinsic_JJ l-selectional_JJ properties_NNS and_CC hence_RB stand_VBP alone_RB as_RB simple_JJ roots_NNS ._.
+Such_JJ simple_JJ roots_NNS are_VBP commonly_RB found_VBN in_IN English_NNP and_CC other_JJ Germanic_JJ languages_NNS ,_, and_CC they_PRP can_MD enter_VB into_IN complex_JJ predicate_NN formations_NNS such_JJ as_IN resultatives_NNS ,_, verb-particles_NNS ,_, and_CC double_JJ object_NN constructions_NNS ._.
+Moreover_RB ,_, as_IN we_PRP have_VBP shown_VBN above_IN ,_, simple_JJ roots_NNS -LRB-_-LRB- 21_CD -RRB-_-RRB- ..._: r_LS v_FW ru_FW v_FW √_FW ROOT+PART_FW ru_FW √_FW ROOT_NN PART_NN l-selection_NN -LRB-_-LRB- 22_CD -RRB-_-RRB- a._FW casser_FW sa_FW pipe_NN break_NN one_NN 's_POS pipe_NN `_`` kick_VB the_DT bucket_NN ,_, die_VB '_'' can_MD form_VB exocentric_JJ V-N_NNP compounds_NNS and_CC non_SYM -_: compositional_JJ VP_NNP idioms_NNS ,_, both_DT of_IN which_WDT can_MD be_VB in_IN a_DT way_NN regarded_VBN as_IN ``_`` complex_JJ root_NN formation_NN ._. ''_''
+On_IN the_DT other_JJ hand_NN ,_, roots_NNS with_IN their_PRP$ intrinsic_JJ l_NN -_: selectional_JJ properties_NNS obligatorily_RB form_VBP complex_JJ roots_NNS by_IN combining_VBG with_IN particular_JJ morphemes_NNS ,_, e.g._FW ,_, prefixes_NNS in_IN Romance_NN languages_NNS ._.
+Such_JJ roots_NNS ,_, as_IN they_PRP can_MD be_VB complex_JJ only_RB in_IN the_DT specified_VBN ways_NNS ,_, can_MD not_RB enter_VB into_IN the_DT aforementioned_JJ formations_NNS freely_RB ._.
+As_IN we_PRP have_VBP seen_VBN above_IN ,_, there_EX are_VBP a_DT number_NN of_IN attested_JJ counterexamples_NNS to_TO the_DT morphological_JJ complexity_NN hypothesis_NN ._.
+Hopefully_RB ,_, further_JJ inquiry_NN into_IN such_JJ examples_NNS will_MD lead_VB to_TO refinement_NN --_: rather_RB than_IN confutation_NN --_: of_IN the_DT hypothesis_NN ._.
+Acknowledgments_NNS I_PRP am_VBP grateful_JJ to_TO Chigusa_NNP Morita_NNP and_CC the_DT three_CD anonymous_JJ reviewers_NNS for_IN invaluable_JJ comments_NNS and_CC suggestions_NNS on_IN an_DT earlier_JJR version_NN of_IN this_DT paper_NN ._.
+I_PRP am_VBP solely_RB responsible_JJ for_IN the_DT inadequacies_NNS that_WDT remain_VBP ._.
+References_NNS Anagnostopoulou_NNP ,_, Elena_NNP and_CC Yota_NNP Samioti_NNP ._.
+2014_CD ._.
+Domains_NNS within_IN Words_NNS and_CC Their_PRP$ Meanings_NNS :_: A_DT Case_NN Study_NN ._.
+In_IN A._NN Alexiadou_NNP ,_, H._NNP Borer_NNP and_CC F._NNP Schäfer_NNP ,_, eds._FW ,_, The_DT Syntax_NNP of_IN Roots_NNPS and_CC the_DT Roots_NNS of_IN Syntax_NNP ,_, pp._NNP 81_CD -_: 111_CD ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Anttila_NNP ,_, Arto_NNP ._.
+2008_CD ._.
+Phonological_NNP Constraints_NNPS on_IN Constituent_NNP Ordering_NNP ._.
+In_IN C.B._NNP Chang_NNP and_CC H.J._NNP Haynie_NNP ,_, eds._FW ,_, Proceedings_NNP of_IN the_DT 26th_JJ West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNP ,_, pp.51-59_JJ ._.
+Cascadilla_NNP Proceedings_NNP Project_NNP ,_, Somerville_NNP ,_, MA_NNP ._.
+Arad_NNP ,_, Maya_NNP ._.
+2005_CD ._.
+Roots_NNS and_CC Patterns_NNS :_: Hebrew_JJ Morpho-syntax_NN ._.
+Springer_NNP ,_, Dordrecht_NNP ._.
+Barker_NNP ,_, Chris_NNP ._.
+1998_CD ._.
+Episodic_JJ -_: ee_NN in_IN English_NNP :_: A_NNP Thematic_NNP Role_NNP Constraint_NNP on_IN New_NNP Word_NNP Formation_NNP ._.
+Language_NN ,_, 74_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :695_CD -727_CD ._.
+Basilico_NNP ,_, David_NNP ._.
+2008_CD ._.
+Particle_NN Verbs_NNS and_CC Benefactive_NNP Double_RB Objects_NNPS in_IN English_NNP :_: High_NNP and_CC Low_NNP Attachments_NNP ._.
+Natural_JJ Language_NN and_CC Linguistic_NNP Theory_NNP ,_, 26_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :731_CD -773_CD ._.
+Bruening_NNP ,_, Benjamin_NNP ._.
+2010_CD ._.
+Ditransitive_NNP Asymmetries_NNPS and_CC a_DT Theory_NNP of_IN Idiom_NNP Formation_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 41_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :519_CD -562_CD ._.
+Coppock_NNP ,_, Elizabeth_NNP ._.
+2009_CD ._.
+The_DT Logical_JJ and_CC Empirical_JJ Foundations_NNS of_IN Baker_NNP 's_POS Paradox_NNP ._.
+Ph.D._NNP ._.
+Thesis_NN ,_, Stanford_NNP University_NNP ._.
+Cowie_NNP ,_, Anthony_NNP P._NNP and_CC Ronald_NNP Mackin_NNP ._.
+1979_CD ._.
+Oxford_NNP Dictionary_NNP of_IN Current_NNP Idiomatic_NNP English_NNP ,_, Volume_NN 1_CD :_: Verbs_NNS with_IN Prepositions_NNS and_CC Particles_NNP ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Di_NNP Sciullo_NNP ,_, Anna_NNP Maria_NNP ,_, and_CC Edwin_NNP Williams_NNP ._.
+1987_CD ._.
+On_IN the_DT Definition_NN of_IN Word_NN ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Everaert_NNP ,_, Martin_NNP ._.
+2010_CD ._.
+The_DT Lexical_NNP Encoding_NNP of_IN Idioms_NNPS ._.
+In_IN M._NNP Rapapport_NNP Hovav_NNP ,_, E._NNP Doron_NNP ,_, and_CC I._NN Sichel_NNP ,_, eds._NNP ,_, Lexical_NNP Semantics_NNP ,_, Syntax_NNP ,_, and_CC Event_NNP Structure_NNP ,_, pp.76-98_JJ ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Farrell_NNP ,_, Patrick_NNP ._.
+2005_CD English_JJ Verb-Preposition_NNP Constructions_NNP :_: Constituency_NN and_CC Order_NN ._.
+Language_NN 81_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :96_CD -137_CD ._.
+Grimshaw_NNP ,_, Jane_NNP ._.
+2005_CD ._.
+Words_NNS and_CC Structure_NN ._.
+CSLI_NNP Publications_NNP ,_, Stanford_NNP ,_, CA_NNP Harley_NNP ,_, Heidi_NNP ._.
+2005_CD ._.
+How_WRB Do_VBP Verbs_NNS Take_VB Their_PRP$ Names_NNS ?_.
+Denominal_JJ Verbs_NNS ,_, Manner_NNP Incorporation_NNP and_CC the_DT Ontology_NNP of_IN Roots_NNP in_IN English_NNP ._.
+In_IN N._NNP Erteschik-Shir_NNP and_CC T._NNP Rapoport_NNP ,_, eds._FW ,_, The_DT Syntax_NNP of_IN Aspect_NNP ,_, pp._NNP 42_CD -_: 62_CD ._.
+Oxford_NNP University_NNP Press_NNP ,_, Oxford_NNP ._.
+Harley_NNP ,_, Heidi_NNP ._.
+2008_CD ._.
+The_DT Bipartite_NNP Structure_NNP of_IN Verbs_NNPS Cross-linguistically_NNP ,_, Or_CC ,_, Why_WRB Mary_NNP Ca_MD n't_RB Exhibit_NN John_NNP Her_PRP$ Paintings_NNS ._.
+In_IN T._NNP Cristófaro_NNP Silva_NNP and_CC H._NNP Mello_NNP ,_, eds._FW ,_, Conferências_NNS do_VBP V_NNP Congresso_NNP Internacional_NNP da_NN Associação_NNP Brasileira_NNP de_IN Lingüística_NNP ,_, pp.45-84_JJ ._.
+ABRALIN_NNP and_CC FALE/UFMG_NNP ,_, Belo_NNP Horizonte_NNP ,_, Brazil_NNP ._.
+Halle_NNP ,_, Morris_NNP and_CC Alec_NNP Marantz_NNP ._.
+1993_CD ._.
+Distributed_VBN Morphology_NNP and_CC the_DT Pieces_NNP of_IN Inflection_NNP ._.
+In_IN K._NNP Hale_NNP and_CC S.J._NNP Keyser_NNP ,_, eds._FW ,_, The_DT View_NNP from_IN Building_NNP 20_CD ,_, pp.111-176_JJ ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Jackendoff_NNP ,_, Ray_NNP ._.
+2002_CD ._.
+English_NNP Particle_NNP Constructions_NNP ,_, the_DT Lexicon_NNP ,_, and_CC the_DT Autonomy_NNP of_IN Syntax_NNP ._.
+In_IN N._NNP Dehé_NNP ,_, R._NNP Jackendoff_NNP ,_, A._NN McIntyre_NNP ,_, and_CC S._NNP Urban_NNP ,_, eds._FW ,_, Verb-Particle_NNP Explorations_NNPS ,_, pp.67-94_JJ ._.
+Mouton_NNP de_NNP Gruyter_NNP ,_, Berlin/New_NNP York_NNP ._.
+Katz_NNP ,_, Jerrold_NNP J._NNP and_CC Paul_NNP M._NNP Postal_NNP ._.
+1963_CD ._.
+Semantic_NNP Interpretation_NNP of_IN Idioms_NNPS and_CC Sentences_NNS Containing_VBG Them_NNP ._.
+Quarterly_JJ Progress_NNP Report_NNP of_IN the_DT Research_NNP Laboratory_NNP of_IN Electronics_NNP ,_, 70_CD ,_, pp.275-282_JJ ._.
+MIT_NNP ._.
+Kiparsky_NNP ,_, Paul_NNP ._.
+1982_CD ._.
+Word_NN Formation_NN and_CC the_DT Lexicon_NNP ._.
+In_IN F._NNP Ingeman_NNP ,_, ed._FW ,_, Proceedings_NNP of_IN the_DT Mid-America_NNP Linguistics_NNP Conference_NNP ,_, pp.3-29_JJ ._.
+University_NNP of_IN Kansas_NNP ._.
+Kiparsky_NNP ,_, Paul_NNP ._.
+1997_CD ._.
+Remarks_NNS on_IN Denominal_JJ Verbs_NNS ._.
+In_IN A._NN Alsina_NNP ,_, J._NNP Bresnan_NNP and_CC P._NNP Sells_NNP ,_, eds._FW ,_, Argument_NNP Structure_NNP ,_, pp.473-499_JJ ._.
+CSLI_NNP Publications_NNP ,_, Stanford_NNP ._.
+Marantz_NNP ,_, Alec_NNP ._.
+2001_CD ._.
+Words_NNS ._.
+Paper_NNP presented_VBD at_IN the_DT 20th_JJ West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNP ,_, University_NNP of_IN Southern_NNP California_NNP ,_, 23-25_CD ,_, February_NNP ._.
+Neeleman_NNP ,_, Ad_NNP ._.
+1992_CD ._.
+Complex_JJ Predicates_NNS ._.
+Ph.D._NNP ._.
+Thesis_NN ,_, Utrecht_NNP University_NNP ._.
+Nunberg_NNP ,_, Geoffrey_NNP ,_, Ivan_NNP A._NNP Sag_NNP ,_, and_CC Thomas_NNP Wasow_NNP ._.
+1994_CD ._.
+Idioms_NNS ._.
+Language_NN ,_, 70_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :491_CD -538_CD ._.
+O’Grady_NNP ,_, William_NNP ._.
+1998_CD ._.
+The_DT Syntax_NNP of_IN Idioms_NNPS ._.
+Natural_JJ Language_NN and_CC Linguistic_NNP Theory_NNP ,_, 16_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :279_CD -312_CD ._.
+Pesetsky_NNP ,_, David_NNP ._.
+1995_CD ._.
+Zero_NNP Syntax_NNP ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Pinker_NNP ,_, Stephen_NNP ._.
+1989_CD ._.
+Learnability_NNP and_CC Cognition_NNP :_: The_NNP Acquisition_NNP of_IN Argument_NNP Structure_NNP ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Punske_NNP ,_, Jeffrey_NNP ._.
+2012_CD ._.
+Aspects_NNS of_IN the_DT Internal_NNP Structure_NNP of_IN Nominalization_NNP :_: Roots_NNS ,_, Morphology_NNP and_CC Derivation_NNP ._.
+Ph.D._NNP ._.
+Thesis_NN ,_, University_NNP of_IN Arizona_NNP ._.
+Punske_NNP ,_, Jeffrey_NNP ._.
+2013_CD ._.
+Three_CD Forms_NNS of_IN English_NNP Verb_NNP Particle_NNP Constructions_NNP ._.
+Lingua_NNP 135:155_CD -170_CD ._.
+Pylkkänen_NNP ,_, Liina_NNP ._.
+2008_CD ._.
+Introducing_VBG Arguments_NNS ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Shimada_NNP ,_, Hiroshi_NNP ._.
+1985_CD ._.
+Kudoosi_NNP -LRB-_-LRB- Phrasal_NNP Verbs_NNP -RRB-_-RRB- ._.
+Taishukan_NNP ,_, Tokyo_NNP ._.
+Snyder_NNP ,_, William_NNP ._.
+1995_CD ._.
+A_DT Neo-Davidsonian_NNP Approach_NNP to_TO Resultatives_NNP ,_, Particles_NNP ,_, and_CC Datives_NNP ._.
+In_IN J._NNP Beckman_NNP ,_, ed._FW ,_, Proceedings_NNP of_IN NELS_NNP 25_CD ,_, pp.457-472_JJ ._.
+GLSA_NNP ,_, Amherst_NNP ,_, MA_NNP ._.
+Snyder_NNP ,_, William_NNP ,_, and_CC Karin_NNP Stromswold_NNP ._.
+1997_CD ._.
+The_DT Structure_NNP and_CC Acquisition_NNP of_IN English_NNP Dative_NNP Constructions_NNP ._.
+Linguistic_NNP Inquiry_NNP ,_, 28_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :281_CD -317_CD ._.
+Stromswold_NNP ,_, Karin_NNP ,_, and_CC William_NNP Snyder_NNP ._.
+1995_CD ._.
+Acquisition_NNP of_IN Datives_NNP ,_, Particles_NNP ,_, and_CC Related_NNP Constructions_NNP :_: Evidence_NN for_IN a_DT Parametric_NNP Account_NNP ._.
+In_IN D._NNP MacLaughlin_NNP ,_, and_CC S._NNP McEwen_NNP ,_, eds._FW ,_, Proceedings_NNP of_IN the_DT 19th_JJ Annual_JJ Boston_NNP University_NNP Conference_NNP on_IN Language_NNP Development_NNP ,_, pp.621-628_JJ ._.
+Cascadilla_NNP Press_NNP ,_, Somerville_NNP ,_, MA_NNP ._.
+Svenonius_NNP ,_, Peter_NNP ._.
+1994_CD ._.
+Dependent_JJ Nexus_NN ._.
+Ph.D._NNP ._.
+Thesis_NN ,_, University_NNP of_IN California_NNP ,_, Santa_NNP Cruz_NNP ._.
+Whorf_NNP ,_, Benjamin_NNP ._.
+1956_CD ._.
+Language_NN ,_, Thought_NNP ,_, and_CC Reality_NN ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ._.
+Wurmbrand_NNP ,_, Susi_NNP ._.
+2000_CD ._.
+The_DT Structure_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- of_IN Particle_NNP Verbs_NNP ._.
+Ms._NNP McGill_NNP University_NNP ,_, Montréal_NNP ._.
+Zhang_NNP ,_, Niina_NNP Ning_NNP ._.
+2007_CD ._.
+Root_NN Merger_NN in_IN Chinese_JJ Compounds_NNS ._.
+Studia_NNP Linguistica_NNP ,_, 61_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :170_CD -184_CD ._.

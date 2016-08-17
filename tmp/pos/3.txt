@@ -1,0 +1,271 @@
+Abstract_JJ Chinese-Spanish_JJ translation_NN is_VBZ particularly_RB complicated_VBN because_IN of_IN the_DT extensive_JJ grammatical_JJ ,_, syntactic_JJ and_CC discursive_JJ differences_NNS between_IN the_DT two_CD languages_NNS ._.
+This_DT study_NN proposes_VBZ to_TO contrast_VB the_DT discourse_NN produced_VBN in_IN parallel_JJ texts_NNS in_IN these_DT languages_NNS in_IN order_NN to_TO find_VB how_WRB the_DT discursive_JJ information_NN is_VBZ formally_RB expressed_VBN in_IN both_DT of_IN them_PRP ._.
+Following_VBG a_DT new_JJ created_VBN qualitative_JJ method_NN by_IN Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- ,_, types_NNS of_IN agreement_NN and_CC sources_NNS of_IN disagreement_NN haven_NN been_VBN established_VBN between_IN this_DT language_NN pair_NN ._.
+Introduction_NNP Second_NNP Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN field_NN ,_, although_IN discourse_NN information_NN is_VBZ crucial_JJ for_IN many_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Zhou_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+In_IN particular_JJ ,_, the_DT relation_NN between_IN MT_NNP and_CC discourse_NN analysis_NN has_VBZ only_RB recently_RB begun_VBN and_CC works_VBZ addressing_VBG this_DT topic_NN remain_VBP limited_JJ ._.
+A_DT shortcoming_NN of_IN the_DT existing_VBG systems_NNS is_VBZ that_IN discourse_NN level_NN is_VBZ not_RB considered_VBN in_IN the_DT translation_NN and_CC the_DT discourse_NN elements_NNS affect_VBP translation_NN quality_NN -LRB-_-LRB- Mayor_NNP et_FW al._FW ,_, 2009_CD ;_: Wilks_NNP 2009_CD -RRB-_-RRB- ._.
+Notwithstanding_IN ,_, some_DT recent_JJ researches_VBZ indicate_VBP that_IN discourse_NN structure_NN improves_VBZ MT_NNP evaluation_NN ._.
+Fomicheva_NNP ,_, da_NN Cunha_NNP and_CC Sierra_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- use_VBP a_DT Spanish-English_JJ corpus_NN to_TO evaluate_VB two_CD MT_NNP systems_NNS via_IN the_DT discourse_NN strategies_NNS in_IN order_NN to_TO prove_VB that_IN these_DT two_CD MT_NNP systems_NNS maintain_VBP a_DT basic_JJ discourse_NN structure_NN of_IN the_DT translated_VBN language_NN ._.
+Guzmán_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- compare_VBP the_DT output_NN of_IN MT_NNP and_CC a_DT human_JJ reference_NN to_TO show_VB the_DT improvement_NN of_IN MT_NNP at_IN discourse_NN level_NN ._.
+The_DT studies_NNS that_WDT use_VBP Rhetorical_NNP Structure_NNP Theory_NNP -LRB-_-LRB- RST_NNP -RRB-_-RRB- by_IN Mann_NNP and_CC Thompson_NNP -LRB-_-LRB- 1988_CD -RRB-_-RRB- as_IN theoretical_JJ framework_NN are_VBP a_DT contribution_NN to_TO discourse_NN analysis_NN research_NN ._.
+RST_NNP is_VBZ a_DT linguistically_RB useful_JJ theory_NN for_IN describing_VBG natural_JJ texts_NNS and_CC their_PRP$ hierarchic_JJ structure_NN ._.
+Rhetorical_JJ relations_NNS are_VBP recursive_JJ in_IN RST_NNP and_CC are_VBP defined_VBN to_TO hold_VB between_IN two_CD non-overlapping_JJ text_NN spans_NNS ._.
+Marcu_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- calls_VBZ these_DT spans_NNS Elementary_NNP Discourse_NNP Units_NNS -LRB-_-LRB- EDUs_NNS -RRB-_-RRB- ._.
+These_DT EDUs_NNS can_MD be_VB Nuclei_NNP or_CC Satellites_NNS -LRB-_-LRB- Satellites_NNS offer_VBP additional_JJ information_NN about_IN Nuclei_NNP -RRB-_-RRB- ._.
+The_DT relations_NNS can_MD be_VB Nucleus-Satellite_JJ -LRB-_-LRB- e.g._FW Cause_FW ,_, Result_NN ,_, Concession_NNP ,_, Antithesis_NNP -RRB-_-RRB- or_CC Multinuclear_NNP -LRB-_-LRB- e.g._FW List_NN ,_, Contrast_NNP ,_, Joint_NNP -RRB-_-RRB- ._.
+RST_NNP is_VBZ adequate_JJ for_IN our_PRP$ study_NN because_IN of_IN the_DT following_VBG reasons_NNS :_: Exploration_NN of_IN discourse_NN differences_NNS and_CC similarities_NNS between_IN Chinese_JJ and_CC Spanish_JJ :_: a_DT corpus_NN based_VBN study_NN with_IN a_DT qualitative_JJ method_NN When_WRB there_EX is_VBZ a_DT greater_JJR distance_NN between_IN a_DT pair_NN of_IN language_NN ,_, there_EX will_MD be_VB more_RBR differences_NNS in_IN their_PRP$ syntax_NN and_CC discourse_NN structure_NN ._.
+Therefore_RB ,_, the_DT translation_NN between_IN two_CD very_RB different_JJ languages_NNS can_MD be_VB potentially_RB more_RBR difficult_JJ ._.
+Comparative_JJ or_CC contrastive_JJ studies_NNS of_IN discourse_NN structures_NNS offer_VBP clues_NNS to_TO express_VB properly_RB equivalent_JJ discourse_NN elements_NNS in_IN two_CD languages_NNS ._.
+These_DT clues_NNS can_MD be_VB useful_JJ for_IN both_DT human_JJ translation_NN and_CC machine_NN translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- ._.
+The_DT emphasis_NN on_IN the_DT idea_NN that_WDT discourse_NN information_NN may_MD be_VB useful_JJ for_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- has_VBZ become_VBN increasingly_RB popular_JJ ._.
+Discourse_NN analysis_NN is_VBZ an_DT unsolved_JJ problem_NN in_IN this_DT -LRB-_-LRB- 1_LS -RRB-_-RRB- RST_NNP is_VBZ one_CD of_IN the_DT most_RBS famous_JJ and_CC representative_JJ discourse_NN structure_NN theories_NNS ._.
+It_PRP shows_VBZ a_DT good_JJ applicability_NN in_IN a_DT cross-culture_JJ comparative_JJ study_NN ._.
+As_IN Mann_NNP and_CC Thompson_NNP indicate_VBP -LRB-_-LRB- 1988_CD :_: 247_CD -RRB-_-RRB- :_: ``_`` RST_NNP is_VBZ an_DT abstract_JJ set_NN of_IN conventions_NNS ._.
+We_PRP can_MD view_VB the_DT conventions_NNS as_IN either_DT independent_JJ or_CC inclusive_JJ of_IN particular_JJ relation_NN definitions_NNS ._.
+The_DT first_JJ view_NN is_VBZ more_RBR comprehensive_JJ ,_, but_CC the_DT latter_NN is_VBZ more_RBR convenient_JJ -_: we_PRP use_VBP the_DT latter_JJ ._.
+The_DT first_JJ view_NN would_MD be_VB essential_JJ for_IN a_DT cross-linguistic_JJ or_CC cross-cultural_JJ comparative_JJ study_NN in_IN which_WDT relation_NN definitions_NNS might_MD differ_VB ._. ''_''
+Our_PRP$ research_NN is_VBZ comparative_JJ and_CC focuses_VBZ on_IN a_DT parallel_JJ Chinese-Spanish_JJ corpus_NN ,_, which_WDT corresponds_VBZ to_TO the_DT above_JJ citation_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT set_NN of_IN relations_NNS proposed_VBN in_IN the_DT framework_NN of_IN RST_NNP is_VBZ representative_JJ for_IN the_DT analysis_NN of_IN the_DT discourse_NN of_IN any_DT field_NN or_CC text_NN genre_NN -LRB-_-LRB- Mann_NNP and_CC Thompson_NNP ,_, 1988_CD -RRB-_-RRB- ._.
+The_DT investigation_NN targets_NNS of_IN our_PRP$ work_NN are_VBP Chinese_JJ and_CC Spanish_JJ written_VBN texts_NNS ,_, which_WDT include_VBP various_JJ topics_NNS or_CC subjects_NNS ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- In_IN a_DT contrastive_JJ study_NN ,_, the_DT RST_NNP elements_NNS -LRB-_-LRB- segments_NNS ,_, relations_NNS and_CC discourse_NN structure_NN -RRB-_-RRB- can_MD discover_VB how_WRB the_DT discourse_NN elements_NNS are_VBP being_VBG expressed_VBN formally_RB in_IN each_DT language_NN ._.
+This_DT could_MD reflect_VB the_DT similarities_NNS and_CC differences_NNS of_IN the_DT rhetorical_JJ structure_NN of_IN the_DT language_NN pair_NN ._.
+Here_RB are_VBP two_CD examples_NNS of_IN discourse_NN similarities_NNS and_CC differences_NNS between_IN Chinese_JJ and_CC Spanish_JJ ._.
+Ex_NN ._.
+1_CD :_: 1.1_CD ._.
+Ch_NNP :_: 虽然他病得很重_CD ,_, 但是他去上班了_CD 。_CD -LSB-_NNP 虽然他病得很重_CD ,_, -RSB-_NNP EDU_S_NNP -LSB-_NNP 但是他去上班_VBD 了_CD 。_CD -RSB-_NNP EDU_N_NNP -LRB-_-LRB- Marker_1_NNP he_PRP ill_RB very_RB ,_, marker_2_NN he_PRP goes_VBZ to_TO work_VB ._. -RRB-_-RRB-
+1_CD 1.2_CD ._.
+Sp_NNP :_: Aunque_NNP está_NNP muy_NN enfermo_NN ,_, va_VBP a_DT trabajar_NN ._.
+-LSB-_NNP Aunque_NNP está_NNP muy_NN enfermo_NN ,_, -RSB-_NNP EDU_S_NNP -LSB-_NNP va_VBD a_DT trabajar_NN ._. -RSB-_NN
+EDU_N_NNP -LRB-_-LRB- Marker_1_NNP is_VBZ very_RB ill_RB ,_, goes_VBZ to_TO work_VB ._. -RRB-_-RRB-
+1.3_CD ._.
+En_IN :_: Though_IN he_PRP is_VBZ very_RB ill_RB ,_, he_PRP goes_VBZ to_TO work_VB ._.
+2_CD In_IN example_NN 1_CD ,_, Chinese_JJ and_CC Spanish_JJ passages_NNS show_VBP the_DT same_JJ rhetorical_JJ relation_NN -LRB-_-LRB- Concession_NN -RRB-_-RRB- ,_, and_CC the_DT order_NN of_IN the_DT Nucleus_NNP and_CC the_DT Satellite_NNP is_VBZ 1_CD In_IN this_DT work_NN ,_, we_PRP offer_VBP an_DT English_JJ literal_JJ translation_NN in_IN brackets_NNS for_IN the_DT first_JJ two_CD examples_NNS in_IN order_NN to_TO understand_VB each_DT example_NN better_RBR ._.
+2_CD In_IN this_DT work_NN ,_, for_IN all_PDT the_DT examples_NNS we_PRP give_VBP ,_, all_DT the_DT English_NNP translations_NNS are_VBP translated_VBN from_IN the_DT Chinese_JJ sentences_NNS by_IN authors_NNS ._.
+also_RB similar_JJ ._.
+However_RB ,_, in_IN Chinese_NNP ,_, it_PRP is_VBZ mandatory_JJ to_TO include_VB two_CD discourse_NN markers_NNS to_TO show_VB this_DT relation_NN :_: one_CD discourse_NN marker_NN ``_`` suiran_NN ''_'' -LRB-_-LRB- 虽然_CD -RRB-_-RRB- at_IN the_DT beginning_NN of_IN the_DT Satellite_NNP and_CC another_DT discourse_NN marker_NN ``_`` danshi_FW ''_'' -LRB-_-LRB- 但是_CD -RRB-_-RRB- at_IN the_DT beginning_NN of_IN the_DT Nucleus_NNP ._.
+These_DT two_CD discourse_NN markers_NNS are_VBP equivalent_JJ to_TO the_DT English_NNP discourse_NN marker_NN `_`` although_IN '_'' ._.
+By_IN contrast_NN ,_, in_IN Spanish_NNP ,_, to_TO show_VB the_DT Concession_NNP relation_NN ,_, only_RB one_CD discourse_NN marker_NN is_VBZ used_VBN at_IN the_DT beginning_NN of_IN the_DT Satellite_NNP -LRB-_-LRB- in_IN this_DT case_NN ,_, aunque_NN ,_, `_`` although_IN '_'' in_IN English_NNP -RRB-_-RRB- ._.
+Ex_SYM .2_CD :_: 2.1_CD ._.
+Ch_NNP :_: 很冷_NN ,_, 虽然没有下雨_CD 。_CD -LSB-_NNP 很冷_CD ,_, -RSB-_NNP EDU_N_NNP -LSB-_NNP 虽然没有下雨_CD -RSB-_NNP EDU_S_NNP -LRB-_-LRB- It_PRP 's_VBZ cold_JJ ,_, marker_1_JJ there_EX is_VBZ no_DT rain_NN ._. -RRB-_-RRB-
+2.2.1_CD ._.
+Sp_NNP :_: Hace_NNP frío_NNP ,_, aunque_IN no_DT llueve_NN ._.
+-LSB-_NNP Hace_NNP frío_NNP ,_, -RSB-_NNP EDU_N_NNP -LSB-_NNP aunque_IN no_DT llueve_NN ._. -RSB-_NN
+EDU_S_NNS -LRB-_-LRB- Makes_VBZ cold_JJ ,_, marker_1_JJ no_DT rain_NN ._. -RRB-_-RRB-
+2.2.2_CD ._.
+Sp_NNP :_: Aunque_NNP no_DT llueve_NN ,_, hace_NN frío_NN ._.
+-LSB-_NNP Aunque_NNP no_DT llueve_NN ,_, -RSB-_NNP EDU_S_NNP -LSB-_NNP hace_NN frío_NN ._. -RSB-_NN
+EDU_N_NNP -LRB-_-LRB- Marker_1_NNP no_DT rain_NN ,_, has_VBZ cold_JJ ._. -RRB-_-RRB-
+2.3_CD ._.
+En_IN :_: It_PRP is_VBZ cold_JJ ,_, though_IN there_EX is_VBZ no_DT rain_NN ._.
+In_IN example_NN 2_CD ,_, the_DT Chinese_JJ passage_NN could_MD have_VB the_DT same_JJ or_CC the_DT different_JJ rhetorical_JJ structure_NN ._.
+In_IN the_DT Chinese_JJ passage_NN ,_, the_DT discourse_NN marker_NN ``_`` suiran_NN ''_'' -LRB-_-LRB- 虽然_CD -RRB-_-RRB- at_IN the_DT beginning_NN of_IN Satellite_NNP ,_, which_WDT is_VBZ equivalent_JJ to_TO the_DT English_NNP discourse_NN marker_NN `_`` although_IN '_'' ,_, shows_VBZ a_DT Concession_NN relation_NN ,_, and_CC the_DT order_NN between_IN Nucleus_NNP and_CC the_DT Satellite_NNP can_MD not_RB be_VB changed_VBN ._.
+In_IN the_DT Spanish_JJ passage_NN ,_, aunque_NN is_VBZ also_RB at_IN the_DT beginning_NN of_IN Satellite_NNP ,_, `_`` although_IN '_'' ,_, and_CC shows_VBZ the_DT same_JJ discourse_NN relation_NN ,_, but_CC the_DT order_NN between_IN Nucleus_NNP and_CC Satellite_NNP can_MD be_VB changed_VBN and_CC this_DT makes_VBZ sense_NN syntactically_RB ._.
+From_IN the_DT examples_NNS above_IN ,_, we_PRP can_MD see_VB that_IN for_IN expressing_VBG a_DT same_JJ RST_NNP relation_NN in_IN a_DT written_VBN text_NN ,_, the_DT rhetorical_JJ structure_NN between_IN Chinese_JJ and_CC Spanish_JJ can_MD be_VB the_DT same_JJ ,_, but_CC the_DT number_NN of_IN discourse_NN markers_NNS may_MD be_VB different_JJ ._.
+Moreover_RB ,_, under_IN a_DT same_JJ RST_NNP relation_NN ,_, the_DT rhetorical_JJ structure_NN between_IN these_DT two_CD languages_NNS can_MD be_VB different_JJ or_CC same_JJ ,_, while_IN the_DT number_NN of_IN discourse_NN markers_NNS is_VBZ same_JJ ._.
+Taking_VBG into_IN account_NN discourse_NN information_NN when_WRB a_DT translation_NN is_VBZ carried_VBN out_RP is_VBZ necessary_JJ for_IN a_DT good_JJ quality_NN of_IN the_DT translation_NN ._.
+which_WDT also_RB corresponds_VBZ to_TO the_DT English_NNP discourse_NN marker_NN Based_VBN on_IN three_CD Chinese-Spanish_JJ parallel_JJ texts_NNS in_IN United_NNP Nations_NNPS Corpus_NNP -LRB-_-LRB- UN_NNP -RRB-_-RRB- -LRB-_-LRB- Rafalovitch_NNP and_CC Dale_NNP ,_, 2009_CD ;_: Eisele_NNP and_CC Chen_NNP ,_, 2010_CD -RRB-_-RRB- ,_, we_PRP will_MD compare_VB the_DT discourse_NN structure_NN of_IN Chinese_JJ and_CC Spanish_JJ ._.
+In_IN Section_NN 2_CD ,_, we_PRP will_MD introduce_VB some_DT related_JJ works_NNS that_WDT use_VBP RST_NNP ._.
+In_IN Section_NN 3_CD ,_, we_PRP will_MD give_VB the_DT detail_NN information_NN of_IN the_DT methodology_NN ._.
+In_IN Section_NN 4_CD ,_, we_PRP will_MD present_VB the_DT results_NNS ._.
+In_IN Section_NN 5_CD ,_, we_PRP will_MD conclude_VB the_DT research_NN information_NN and_CC look_VB ahead_RB at_IN future_JJ work_NN ._.
+2_CD Related_JJ Work_NN Thus_RB far_RB there_EX have_VBP not_RB been_VBN many_JJ studies_NNS addressing_VBG discourse_NN analysis_NN relating_VBG to_TO our_PRP$ subject_NN of_IN study_NN ._.
+Yet_CC some_DT comparative_JJ studies_NNS between_IN Chinese_JJ and_CC English_JJ by_IN employing_VBG RST_NNP exist_VBP ._.
+Cui_NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- presents_VBZ some_DT aspects_NNS regarding_VBG discourse_NN relations_NNS between_IN Chinese_JJ and_CC English_JJ ;_: Kong_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- compares_VBZ Chinese_JJ and_CC English_JJ business_NN letters_NNS ;_: Guy_NNP -LRB-_-LRB- 2000_CD ,_, 2001_CD -RRB-_-RRB- compares_VBZ Chinese_JJ and_CC English_JJ journalistic_JJ news_NN texts_NNS ._.
+Other_JJ pairs_NNS of_IN language_NN within_IN RST_NNP include_VBP Japanese_JJ and_CC Spanish_JJ -LRB-_-LRB- Kumpf_NNP ,_, 1986_CD ;_: Marcu_NNP et_FW al._FW ,_, 2000_CD -RRB-_-RRB- ,_, Arabic_NNP and_CC English_NNP -LRB-_-LRB- Mohamed_NNP and_CC Omer_NNP ,_, 1999_CD -RRB-_-RRB- ,_, French_JJ and_CC English_JJ -LRB-_-LRB- Delin_NNP ,_, Hartley_NNP and_CC Scott_NNP ,_, 1996_CD ;_: Salkie_NNP and_CC Oates_NNP ,_, 1999_CD -RRB-_-RRB- ,_, Dutch_NNP and_CC English_NNP -LRB-_-LRB- Abelen_NNP ,_, Gisla_NNP and_CC Thompson_NNP ,_, 1993_CD -RRB-_-RRB- ,_, Finnish_JJ and_CC English_JJ -LRB-_-LRB- Sarjala_NNP ,_, 1994_CD -RRB-_-RRB- ,_, Spanish_JJ and_CC Basque_JJ -LRB-_-LRB- da_NN Cunha_NNP and_CC Iruskieta_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+There_EX are_VBP few_JJ contrastive_JJ works_NNS between_IN Spanish_JJ and_CC Chinese_JJ ._.
+None_NN of_IN them_PRP use_VBP RST_NNP ._.
+Yao_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- uses_VBZ film_NN dialogues_NNS to_TO elaborate_VB an_DT annotated_JJ corpus_NN ,_, and_CC compares_VBZ the_DT Chinese_JJ and_CC Spanish_JJ discourse_NN markers_NNS in_IN order_NN to_TO give_VB some_DT suggestions_NNS for_IN teaching_NN and_CC learning_VBG Spanish_JJ and_CC Chinese_JJ ._.
+In_IN this_DT work_NN ,_, Yao_NNP does_VBZ not_RB use_VB any_DT framework_NN clearly_RB ;_: he_PRP just_RB analyses_VBZ and_CC compares_VBZ Spanish_JJ and_CC Chinese_JJ discourse_NN markers_NNS '_POS characteristics_NNS and_CC then_RB makes_VBZ conclusions_NNS ._.
+Taking_VBG different_JJ newspapers_NNS and_CC books_NNS as_IN the_DT research_NN corpus_NN ,_, Chien_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- compares_VBZ the_DT Spanish_JJ and_CC Chinese_JJ conditional_JJ discourse_NN markers_NNS to_TO give_VB some_DT conclusions_NNS on_IN the_DT conditional_JJ discourse_NN marker_NN for_IN foreign_JJ language_NN teaching_NN between_IN Spanish_JJ and_CC Chinese_JJ ._.
+Wang_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- uses_VBZ a_DT corpus_NN of_IN films_NNS to_TO analyse_VB how_WRB the_DT subtitled_VBN Spanish_JJ discourse_NN markers_NNS can_MD be_VB translated_VBN into_IN Chinese_JJ ,_, so_RB as_IN to_TO make_VB a_DT guideline_NN for_IN human_JJ translations_NNS and_CC audiovisual_JJ translation_NN between_IN the_DT language_NN pair_NN ._.
+The_DT RST_NNP contrastive_NN studies_NNS that_WDT use_VBP more_JJR than_IN two_CD languages_NNS are_VBP not_RB common_JJ ,_, for_IN example_NN ,_, Portuguese-French-English_NNP -LRB-_-LRB- Scott_NNP ,_, Delin_NNP and_CC Hartley_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+In_IN this_DT work_NN ,_, a_DT methodology_NN has_VBZ been_VBN presented_VBN for_IN RST_NNP contrastive_JJ analysis_NN while_IN the_DT empirical_JJ cross-lingual_JJ results_NNS have_VBP been_VBN published_VBN ._.
+Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- use_NN RST_NNP as_IN theoretical_JJ framework_NN to_TO compare_VB Basque_NNP ,_, Spanish_NNP and_CC English_NNP ,_, and_CC they_PRP create_VBP a_DT new_JJ qualitative_JJ method_NN for_IN the_DT comparison_NN of_IN rhetorical_JJ structures_NNS in_IN different_JJ languages_NNS and_CC to_TO specify_VB why_WRB the_DT rhetorical_JJ structure_NN may_MD be_VB different_JJ in_IN translated_VBN texts_NNS ._.
+3_CD Methodology_NNP The_NNP first_JJ methodology_NN for_IN the_DT comparison_NN of_IN discourse_NN analysis_NN was_VBD created_VBN by_IN Marcu_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- ._.
+This_DT method_NN was_VBD used_VBN to_TO compare_VB automatically_RB built_VBN discourse_NN trees_NNS with_IN manually_RB built_VBN ones_NNS ,_, so_RB as_IN to_TO evaluate_VB the_DT correctness_NN of_IN discourse_NN trees_NNS ._.
+However_RB ,_, other_JJ works_NNS have_VBP highlighted_VBN the_DT limitations_NNS of_IN this_DT method_NN ,_, which_WDT are_VBP the_DT following_NN -LRB-_-LRB- van_NN der_NN Vliet_NNP ,_, 2010_CD ;_: da_NN Cunha_NNP and_CC Iruskieta_NNP ,_, 2010_CD -RRB-_-RRB- :_: •_CD Factor_NN confliction_NN ._.
+The_DT method_NN compares_VBZ two_CD discourse_NN elements_NNS that_WDT are_VBP not_RB independent_JJ of_IN each_DT other_JJ ;_: these_DT are_VBP nuclearity_JJ and_CC relation_NN ._.
+•_NN Deficiencies_NNS in_IN the_DT descriptions_NNS ._.
+In_IN a_DT certain_JJ rhetorical_JJ structure_NN ,_, the_DT comparison_NN and_CC weight_NN of_IN the_DT agreement_NN was_VBD described_VBN as_IN superficial_JJ ._.
+In_IN order_NN to_TO improve_VB the_DT limitation_NN of_IN Marcu_NNP 's_POS -LRB-_-LRB- 2000_CD -RRB-_-RRB- method_NN ,_, Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- elaborate_VB a_DT new_JJ method_NN for_IN the_DT comparison_NN of_IN discourse_NN analysis_NN ,_, which_WDT has_VBZ been_VBN defined_VBN as_IN a_DT qualitative_JJ method_NN ._.
+This_DT new_JJ method_NN can_MD explain_VB the_DT causes_NNS of_IN discourse_NN differences_NNS in_IN written_VBN texts_NNS in_IN different_JJ languages_NNS and_CC has_VBZ been_VBN adopted_VBN for_IN thiswork_NN ._.
+In_IN this_DT qualitative_JJ method_NN ,_, four_CD independent_JJ criteria_NNS have_VBP been_VBN considered_VBN :_: 1_LS -RRB-_-RRB- constituent_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ;_: 2_LS -RRB-_-RRB- attachment_NN point_NN -LRB-_-LRB- A_NNP -RRB-_-RRB- ;_: 3_LS -RRB-_-RRB- the_DT direction_NN of_IN the_DT relation_NN -LRB-_-LRB- R_NN -RRB-_-RRB- and_CC 4_LS -RRB-_-RRB- effect_NN of_IN the_DT relation_NN ._.
+The_DT types_NNS of_IN agreement_NN and_CC sources_NNS of_IN disagreement_NN have_VBP been_VBN considered_VBN in_IN this_DT qualitative_JJ method_NN ._.
+There_EX are_VBP four_CD types_NNS of_IN agreement_NN -LRB-_-LRB- Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP ,_, 2015_CD :_: 276_CD -RRB-_-RRB- :_: •_CD Agreement_NN in_IN relation_NN ,_, constituent_NN and_CC attachment_NN point_NN -LRB-_-LRB- RCA_NNP -RRB-_-RRB- ._.
+•_NNP Agreement_NNP in_IN relation_NN and_CC constituent_NN -LRB-_-LRB- RC_NNP -RRB-_-RRB- ._.
+•_NNP Agreement_NNP in_IN relation_NN and_CC attachment_NN point_NN -LRB-_-LRB- RA_NNP -RRB-_-RRB- ._.
+•_NNP Agreement_NNP only_RB in_IN relation_NN -LRB-_-LRB- R_NN -RRB-_-RRB- ._.
+Meanwhile_RB seven_CD sources_NNS of_IN disagreement_NN have_VBP been_VBN found_VBN -LRB-_-LRB- Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP ,_, 2015_CD :_: 276_CD -RRB-_-RRB- :_: •_CD Different_JJ choice_NN in_IN nuclearity_NN entailing_VBG a_DT N/N-N/S_NNP mix-up_NN -LRB-_-LRB- N/N-N/S_NNP -RRB-_-RRB- ._.
+•_NNP Different_NNP choice_NN in_IN nuclearity_NN entailing_VBG a_DT discrepancy_NN in_IN N/S_NNP relations_NNS -LRB-_-LRB- N/S_NNP -RRB-_-RRB- ._.
+•_CD A_DT relation_NN has_VBZ the_DT same_JJ constituent_NN and_CC attachment_NN point_NN ,_, but_CC not_RB the_DT same_JJ relation_NN label_NN -LRB-_-LRB- =_SYM ̸R_NNP -RRB-_-RRB- ._.
+•_NNP Relations_NNP chosen_VBN are_VBP similar_JJ in_IN nature_NN -LRB-_-LRB- Similar_JJ R_NN -RRB-_-RRB- ._.
+•_NNP Relations_NNPS with_IN mismatched_JJ RST_NNP trees_NNS -LRB-_-LRB- Mismatch_NNP R_NNP -RRB-_-RRB- ._.
+•_CD A_DT relation_NN is_VBZ more_RBR specific_JJ than_IN other_JJ -LRB-_-LRB- Specificity_NN -RRB-_-RRB- ._.
+•_NNP Different_NNP choice_NN in_IN attachment_NN entailing_VBG a_DT different_JJ relation_NN -LRB-_-LRB- Attachment_NNP -RRB-_-RRB- ._.
+In_IN our_PRP$ work_NN ,_, we_PRP have_VBP selected_VBN three_CD texts_NNS named_VBN Article_NNP 9_CD ,_, Article_NNP 10_CD and_CC Article_NNP 11_CD in_IN the_DT UN_NNP corpus_NN to_TO as_IN the_DT test_NN samples_NNS ._.
+The_DT UN_NNP corpus_NN contains_VBZ all_DT 6_CD official_JJ languages_NNS -LRB-_-LRB- English_NNP ,_, Chinese_NNP ,_, Spanish_NNP ,_, Arabic_NNP ,_, Russian_NNP and_CC French_NNP -RRB-_-RRB- of_IN the_DT UN_NNP ,_, consisting_VBG of_IN around_IN 300_CD million_CD words_NNS for_IN each_DT language_NN ._.
+Recorded_VBN in_IN March_NNP of_IN 2010_CD ,_, this_DT corpus_NN consists_VBZ of_IN 463,406_CD documents_NNS ,_, 80,931,645_CD sentences_NNS in_IN total_NN ._.
+326_CD million_CD words_NNS have_VBP been_VBN calculated_VBN as_IN the_DT average_JJ number_NN for_IN five_CD of_IN the_DT six_CD official_JJ languages_NNS ._.
+The_DT original_JJ language_NN of_IN the_DT official_JJ documents_NNS in_IN the_DT UN_NNP corpus_NN is_VBZ English_JJ ._.
+The_DT parallel_JJ corpus_NN is_VBZ translated_VBN from_IN English_NNP ,_, so_IN the_DT parallel_JJ corpus_NN Chinese-Spanish_NNP is_VBZ actually_RB made_VBN up_IN of_IN two_CD parts_NNS ._.
+One_CD is_VBZ the_DT translation_NN between_IN English_NNP and_CC Chinese_NNP ,_, and_CC the_DT other_JJ is_VBZ translation_NN between_IN English_NNP and_CC Spanish_NNP ._.
+It_PRP is_VBZ these_DT translated_VBN Chinese_JJ and_CC Spanish_JJ documents_NNS make_VBP up_RP the_DT UN_NNP Chinese-Spanish_NNP parallel_JJ corpus_NN ._.
+The_DT UN_NNP Chinese-Spanish_NNP parallel_JJ corpus_NN is_VBZ not_RB a_DT direct_JJ translation_NN corpus_NN ._.
+Table_NNP 1_CD shows_VBZ the_DT detail_NN information_NN of_IN the_DT UN_NNP corpus_NN and_CC its_PRP$ subcorpus_NN in_IN Chinese_JJ and_CC in_IN Spanish_JJ ._.
+Name_NN UN_NNP corpus_VBZ Spanish_JJ subcorpus_NN Chinese_JJ subcorpus_NN No_DT of_IN documents_NNS 463,406_CD 70,509_CD 65,022_CD No_DT of_IN sentences_NNS 80,931,6_CD 45_CD 13,052,875_CD 10,839,473_CD No_DT of_IN words_NNS 326_CD million_CD for_IN each_DT language_NN 352,460,926_CD 756,108,566_CD No_DT of_IN Ch_NNP -_: Sp_NNP parallel_JJ documents_NNS /_VBP 62,738_CD Table_NNP 1_CD :_: Statistics_NNS of_IN the_DT Spanish_JJ and_CC Chinese_JJ subcorpora_NN In_IN this_DT research_NN ,_, we_PRP have_VBP annotated_VBN the_DT selected_VBN three_CD texts_NNS manually_RB with_IN RSTTool_NNP -LRB-_-LRB- O’Donnell_NNP ,_, 1997_CD -RRB-_-RRB- ._.
+Then_RB we_PRP do_VBP the_DT discourse_NN comparison_NN with_IN the_DT qualitative_JJ method_NN ._.
+Figure_NN 1_CD shows_VBZ an_DT example_NN of_IN annotation_NN Chinese_JJ and_CC Spanish_JJ passages_NNS with_IN RSTTool_NNP ._.
+-LRB-_-LRB- English_JJ translation_NN :_: I_PRP do_VBP not_RB like_VB this_DT coat_NN ,_, because_IN it_PRP looks_VBZ ugly_JJ ._. -RRB-_-RRB-
+Figure_NN 1_CD :_: Annotation_NNP Chinese_NNP and_CC Spanish_NNP passages_NNS with_IN RSTTool_JJ 4_CD Results_NNS Adopting_VBG the_DT qualitative_JJ method_NN for_IN this_DT work_NN ,_, we_PRP have_VBP encountered_VBN some_DT sources_NNS of_IN differences_NNS in_IN our_PRP$ annotation_NN result_NN ._.
+From_IN figure_NN 2_CD and_CC figure_NN 3_CD we_PRP can_MD see_VB that_IN ,_, in_IN Article_NNP 9_CD ,_, although_IN the_DT number_NN of_IN EDUs_NNS in_IN Chinese_JJ text_NN and_CC Spanish_JJ text_NN is_VBZ the_DT same_JJ ,_, there_EX are_VBP EUDs_NNS that_WDT do_VBP not_RB correspond_VB to_TO the_DT parallel_JJ EDUs_NNS ._.
+In_IN Article_NNP 9_CD ,_, EDU3_CD and_CC EDU4_CD in_IN Chinese_JJ text_NN correspond_VBP to_TO EDU3_CD in_IN Spanish_JJ text_NN ._.
+In_IN the_DT Chinese_JJ text_NN ,_, EDU4_CD contains_VBZ a_DT discourse_NN marker_NN ``_`` danshi_FW ''_'' -LRB-_-LRB- 但是_CD -RRB-_-RRB- and_CC is_VBZ a_DT nucleus_NN in_IN an_DT Antithesis_NNP relation_NN ._.
+EDU3_NN shows_VBZ a_DT disfavoured_JJ idea_NN and_CC is_VBZ the_DT satellite_NN of_IN EDU4_NNP ._.
+Nevertheless_RB ,_, in_IN the_DT Spanish_JJ text_NN ,_, EDU3_CD does_VBZ not_RB have_VB a_DT discourse_NN marker_NN to_TO show_VB an_DT Antithesis_NNP relation_NN and_CC it_PRP has_VBZ not_RB been_VBN segmented_JJ ._.
+that_IN must_MD be_VB rectified_VBN by_IN harmonizing_VBG the_DT numbers_NNS of_IN the_DT two_CD parts_NNS ._.
+Based_VBN on_IN this_DT point_NN ,_, we_PRP carry_VBP out_RP a_DT harmonization_NN work_NN regarding_VBG to_TO discourse_NN segmentation_NN ._.
+Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP -LRB-_-LRB- 2015_CD :_: 287_CD -RRB-_-RRB- consider_VBP it_PRP is_VBZ adequate_JJ :_: ``_`` We_PRP harmonize_VBP the_DT segmentation_NN taking_VBG into_IN account_NN the_DT structure_NN of_IN the_DT simplest_JJS passage_NN ._. ''_''
+Figure_NN 4_CD shows_VBZ the_DT harmonization_NN result_NN of_IN the_DT Article_NNP 9_CD ._.
+We_PRP combine_VBP EDU3_CD with_IN EDU4_CD as_IN one_CD EDU_NNP in_IN the_DT Chinese_JJ text_NN because_IN of_IN its_PRP$ parallel_JJ Spanish_JJ part_NN only_RB contains_VBZ one_CD EDU_NNP ._.
+For_IN the_DT case_NN of_IN Same-unit_NN ,_, we_PRP may_MD consider_VB EDU5_NNP and_CC EDU7_NNP as_IN a_DT new_JJ independent_JJ EDU5_NNS ,_, and_CC this_DT can_MD match_VB up_RP with_IN EDU5_NNS in_IN the_DT Chinese_JJ text_NN ._.
+-LRB-_-LRB- English_JJ translation_NN :_: When_WRB a_DT person_NN concerned_VBN who_WP is_VBZ qualified_VBN to_TO require_VB the_DT nationality_NN of_IN the_DT successor_NN State_NN ,_, but_CC also_RB the_DT nationality_NN of_IN another_DT State_NN concerned_VBN ._. -RRB-_-RRB-
+Figure_NN 2_CD :_: Annotation_NNP result_NN of_IN Article_NNP 9_CD in_IN Chinese_JJ text_NN and_CC Spanish_JJ text_NN In_IN Figure_NN 3_CD ,_, we_PRP can_MD see_VB that_IN in_IN the_DT Spanish_JJ text_NN ,_, as_IN an_DT embedded_VBN element_NN ,_, EDU6_NNP has_VBZ been_VBN moved_VBN outside_IN of_IN the_DT enclosing_VBG text_NN ,_, EDU5_NNP and_CC EDU7_NNP form_VBP a_DT Same-unit_JJ relation_NN ,_, but_CC this_DT relation_NN does_VBZ not_RB exist_VB in_IN the_DT Chinese_JJ text_NN ._.
+-LRB-_-LRB- English_JJ translation_NN :_: However_RB ,_, this_DT requirement_NN does_VBZ not_RB apply_VB in_IN a_DT manner_NN that_WDT would_MD cause_VB stateless_JJ ,_, even_RB if_IN only_RB temporarily_RB ._. -RRB-_-RRB-
+Figure_NN 3_CD :_: Annotation_NN of_IN Same-unit_JJ case_NN The_DT qualitative_JJ method_NN dictates_VBZ that_IN in_IN a_DT parallel_JJ corpus_NN ,_, each_DT part_NN must_MD contain_VB the_DT same_JJ number_NN of_IN EDUs_NNS as_IN its_PRP$ parallel_JJ part_NN ._.
+If_IN the_DT numbers_NNS of_IN EDUs_NNS are_VBP not_RB the_DT same_JJ ,_, we_PRP are_VBP presented_VBN with_IN a_DT situation_NN Figure_NN 4_CD :_: Harmonization_NNP work_NN of_IN Article_NNP 9_CD As_IN figure_NN 4_CD shows_NNS ,_, after_IN combining_VBG EDU5_NNS and_CC EDU7_NNP ,_, a_DT Same-unit_JJ relation_NN has_VBZ been_VBN eliminated_VBN ._.
+The_DT elimination_NN of_IN the_DT relation_NN is_VBZ another_DT harmonization_NN part_NN that_IN we_PRP need_VBP to_TO highlight_VB here_RB ._.
+This_DT is_VBZ a_DT consequence_NN of_IN the_DT harmonization_NN of_IN segmentation_NN ._.
+In_IN our_PRP$ future_JJ work_NN ,_, we_PRP will_MD annotate_VB and_CC explain_VB all_PDT the_DT changes_NNS caused_VBN by_IN this_DT harmonization_NN in_IN order_NN to_TO avoid_VB losing_VBG information_NN ._.
+Figure_NN 5_CD and_CC figure_NN 6_CD show_NN another_DT similar_JJ case_NN ._.
+The_DT comparison_NN of_IN the_DT second_JJ part_NN of_IN Article_NNP 11_CD before_IN we_PRP harmonize_VBP the_DT number_NN of_IN EDUs_NNPS is_VBZ demonstrated_VBN in_IN figure_NN 5_CD ._.
+-LRB-_-LRB- English_JJ translation_NN :_: If_IN the_DT person_NN concerned_JJ might_MD become_VB stateless_JJ as_IN a_DT result_NN of_IN the_DT succession_NN of_IN States_NNPS ,_, each_DT concerned_JJ State_NN grants_NNS the_DT right_NN to_TO opt_VB for_IN its_PRP$ nationality_NN to_TO persons_NNS concerned_VBN who_WP have_VBP a_DT link_NN with_IN that_DT State_NNP approved_VBD ._. -RRB-_-RRB-
+Figure_NN 5_CD :_: Comparison_NN of_IN the_DT second_JJ part_NN of_IN Article_NNP 11_CD before_IN the_DT harmonization_NN Figure_NN 5_CD shows_NNS that_IN in_IN Chinese_JJ text_NN ,_, the_DT sentence_NN ``_`` ruguo_NN youguan_JJ de_FW ren_FW keneng_FW yin_FW guoji_FW jicheng_FW er_FW chengwei_FW wuguoji_FW ''_'' -LRB-_-LRB- 如果有关的人可能因为国籍_CD 继承成为无国籍_CD -RRB-_-RRB- is_VBZ an_DT independent_JJ EDU18_NN and_CC is_VBZ a_DT conditioning_NN situation_NN of_IN EDU19_NNP ._.
+In_IN the_DT Spanish_JJ text_NN ,_, this_DT sentence_NN has_VBZ been_VBN segmented_JJ into_IN three_CD independent_JJ EDUs_NNS and_CC these_DT EDUs_NNS form_VBP two_CD RST_NNP relations_NNS ,_, one_CD is_VBZ Otherwise_RB and_CC another_DT relation_NN is_VBZ Same-unit_JJ ._.
+Following_VBG the_DT principle_NN of_IN ``_`` the_DT comparison_NN should_MD be_VB simple_JJ ''_'' ,_, in_IN the_DT Spanish_JJ text_NN ,_, we_PRP eliminate_VBP a_DT relation_NN so_IN that_IN the_DT comparison_NN could_MD be_VB simpler_JJR ._.
+Figure_NN 6_CD displays_NNS the_DT harmonization_NN result_NN of_IN the_DT second_JJ part_NN of_IN the_DT Article_NNP 11_CD ._.
+Figure_NN 6_CD :_: Harmonization_NNP of_IN Article_NNP 11_CD Figure_NN 6_CD shows_NNS that_IN in_IN the_DT Spanish_JJ text_NN the_DT relation_NN of_IN Otherwise_RB has_VBZ been_VBN eliminated_VBN ,_, meanwhile_RB we_PRP have_VBP combined_VBN EDU16_NNP ,_, EDU17_NNP and_CC EDU18_NNP into_IN an_DT independent_JJ EDU_NNP ,_, a_DT new_JJ EDU16_NNP ._.
+This_DT EDU16_CD correspond_VBP to_TO EDU16_NNP in_IN the_DT Chinese_JJ text_NN ._.
+During_IN the_DT comparison_NN ,_, another_DT situation_NN we_PRP find_VBP is_VBZ that_IN a_DT multinuclear_JJ relation_NN -LRB-_-LRB- except_IN the_DT Same-unit_JJ relation_NN -RRB-_-RRB- is_VBZ included_VBN in_IN a_DT constituent_NN of_IN another_DT relation_NN .3_CD Figure_NN 7_CD presents_NNS this_DT case_NN and_CC appears_VBZ in_IN the_DT Spanish_JJ text_NN ._.
+3_CD Though_IN the_DT Same-unit_JJ relation_NN is_VBZ a_DT multinuclear_JJ relation_NN ,_, in_IN our_PRP$ work_NN ,_, we_PRP consider_VBP the_DT two_CD EDUs_NNS ,_, which_WDT form_VBP a_DT Same-unit_JJ relation_NN ,_, as_IN an_DT independent_JJ EDU_NNP ._.
+Figure_NN 7_CD :_: A_DT multinuclear_JJ relation_NN inside_IN of_IN a_DT constituent_NN of_IN another_DT relation_NN in_IN Spanish_JJ text_NN In_IN figure_NN 7_CD ,_, EDU7-8_NNP and_CC EDU9-10_NNP form_VBP a_DT Preparation_NNP relation_NN :_: EDU7-8_NN is_VBZ the_DT satellite_NN that_WDT prepares_VBZ the_DT content_NN of_IN EDU9-10_NN ._.
+However_RB ,_, EDU9-10_NN contains_VBZ EDU9_NNP and_CC EDU10_NNP ,_, which_WDT form_VBP a_DT multinuclear_JJ relation_NN known_VBN as_IN List_NN ._.
+This_DT List_NN -LRB-_-LRB- multinuclear_JJ -RRB-_-RRB- relation_NN is_VBZ inside_IN the_DT Preparation_NNP relation_NN -LRB-_-LRB- N-S_JJ -RRB-_-RRB- ._.
+Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- introduce_VB two_CD choices_NNS for_IN this_DT case_NN :_: 1_LS -RRB-_-RRB- do_VBP not_RB compare_VB the_DT relations_NNS and_CC annotate_VB as_IN ``_`` no_DT match_NN ''_'' or_CC 2_CD -RRB-_-RRB- compare_VBP the_DT non-ambiguous_JJ relation_NN first_RB and_CC leave_VB the_DT problematic_JJ comparisons_NNS until_IN last_JJ ._.
+For_IN this_DT paper_NN ,_, we_PRP opt_VBP for_IN the_DT second_JJ option_NN ._.
+We_PRP first_RB compare_VBP the_DT Preparation_NNP relation_NN and_CC leave_VB the_DT List_NN relation_NN at_IN last_JJ ._.
+Table_NNP 2_CD concludes_VBZ the_DT types_NNS of_IN agreement_NN and_CC sources_NNS of_IN disagreement_NN of_IN this_DT work_NN ._.
+Table_NNP 2_CD :_: Annotation_NNP result_NN of_IN agreement_NN and_CC disagreement_NN In_IN Table_NNP 3_CD ,_, we_PRP present_VBP the_DT results_NNS of_IN our_PRP$ evaluation_NN method_NN for_IN the_DT example_NN in_IN table_NN 2_CD ._.
+Table_NNP 3_CD :_: Qualitative_JJ evaluation_NN results_NNS for_IN the_DT example_NN in_IN table_NN 2_CD Qualitative_JJ evaluation_NN Types_NNP of_IN agreement_NN Sources_NNS of_IN disagreement_NN RCA_NNP =_SYM ̸R_NNP CA_NNP R_NNP RC_NNP Nuclearity_NNP Relation_NNP Composition_NNP Attachment_NNP Match_NNP F1_NNP Match_NNP F1_NNP Match_NNP F1_NNP Match_NNP F1_NNP 15/17_CD 0.88_CD 17/17_CD 1_CD 16/17_CD 0.94_CD 13/17_CD 0.76_CD 5_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT work_NN ,_, based_VBN on_IN the_DT qualitative_JJ method_NN -LRB-_-LRB- Iruskieta_NNP ,_, da_NN Cunha_NNP and_CC Taboada_NNP ,_, 2015_CD -RRB-_-RRB- ,_, we_PRP annotate_VBP three_CD texts_NNS in_IN the_DT UN_NNP corpus_NN to_TO explore_VB the_DT discourse_NN similarities_NNS and_CC differences_NNS between_IN the_DT language_NN pair_NN Chinese-Spanish_NNP ._.
+Based_VBN on_IN the_DT annotation_NN result_NN ,_, we_PRP have_VBP established_VBN the_DT types_NNS of_IN agreement_NN and_CC sources_NNS of_IN disagreement_NN and_CC give_VB a_DT qualitative_JJ evaluation_NN for_IN our_PRP$ annotation_NN work_NN ._.
+We_PRP are_VBP aware_JJ of_IN that_IN the_DT only_JJ three_CD texts_NNS are_VBP not_RB sufficient_JJ for_IN a_DT comparative_JJ discourse_NN analysis_NN ,_, and_CC the_DT text_NN genre_NN is_VBZ simple_JJ ,_, which_WDT does_VBZ not_RB reflect_VB various_JJ rhetorical_JJ structures_NNS in_IN each_DT language_NN ._.
+The_DT small_JJ number_NN of_IN research_NN samples_NNS and_CC the_DT simple_JJ text_NN genre_NN explain_VBP why_WRB the_DT result_NN of_IN the_DT evaluation_NN is_VBZ quite_RB high_JJ ._.
+This_DT work_NN is_VBZ a_DT corpus-based_JJ preliminary_JJ study_NN ._.
+For_IN our_PRP$ future_JJ work_NN ,_, we_PRP will_MD annotate_VB more_JJR Chinese-Spanish_JJ parallel_NN texts_NNS in_IN order_NN to_TO make_VB the_DT evaluation_NN result_NN more_RBR accurate_JJ and_CC to_TO provide_VB more_JJR discourse_NN information_NN for_IN the_DT translation_NN between_IN this_DT language_NN pair_NN ._.
+References_NNS Abelen_NNP E._NNP ,_, Redeker_NNP G._NNP and_CC Thompson_NNP S._NNP A._NNP 1993_CD ._.
+The_DT rhetorical_JJ structure_NN of_IN US-American_JJ and_CC Dutch_JJ fund_NN -_: raising_VBG letters_NNS ._.
+Text_NN ,_, 13_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :323_CD -512_CD ._.
+Carlson_NNP L._NNP ,_, Marcu_NNP D._NNP ,_, and_CC Okurowski_NNP M._NNP E._NNP 2001_CD ._.
+Building_VBG a_DT discourse-tagged_JJ corpus_NN in_IN the_DT framework_NN of_IN Rhetorical_NNP Structure_NNP Theory_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Second_JJ SIGdial_NNP Workshop_NNP on_IN Discourse_NNP and_CC Dialogue_NNP ._.
+1-10_CD ._.
+Cui_NNP S._NNP R._NNP 1985_CD ._.
+Comparing_VBG Structures_NNS of_IN Essays_NNS in_IN Chinese_JJ and_CC English_JJ ._.
+Master_NNP thesis_NN ._.
+Los_NNP Angeles_NNP :_: University_NNP of_IN California_NNP ._.
+Chien_NNP Y._NNP S._NNP 2012_CD ._.
+Análisis_NNP contrastivo_FW de_FW los_FW marcadores_FW condicionales_FW del_FW español_FW y_FW del_FW chino_FW ._.
+PhD_NNP thesis_NN ._.
+Salamanca_NNP :_: Universidad_NNP de_IN Salamanca_NNP ._.
+da_NN Cunha_NNP I._NNP and_CC Iruskieta_NNP ,_, M._NNP 2010_CD ._.
+Comparing_VBG rhetorical_JJ structures_NNS of_IN different_JJ languages_NNS :_: The_DT influence_NN of_IN translation_NN strategies_NNS ._.
+Discourse_NN Studies_NNS 12_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+563-598_CD ._.
+Delin_NNP J._NNP ,_, Hartley_NNP A._NNP F._NNP and_CC Scott_NNP ,_, D._NNP R._NNP 1996_CD ._.
+Towards_IN a_DT contrastive_JJ pragmatics_NNS :_: Syntatic_JJ choice_NN in_IN English_NNP and_CC French_NNP instructions_NNS ._.
+Language_NNP Sciences_NNPS 18_CD -LRB-_-LRB- 3-4_CD -RRB-_-RRB- ._.
+897-931_CD ._.
+Eisele_NNP A._NN and_CC Chen_NNP Y._NNP 2010_CD ._.
+MultiUN_NNP :_: A_NNP Multilingual_NNP Corpus_NNP from_IN United_NNP Nation_NNP Documents_NNS ._.
+In_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP Conference_NNP ._.
+2868-2872_CD ._.
+Fomicheva_NNP M._NNP ,_, da_NN Cunha_NNP ,_, I._NNP ,_, and_CC Sierra_NNP ,_, G._NNP 2012_CD ._.
+La_NNP estructura_NN discursiva_NN como_NN criterio_FW de_FW evaluación_FW de_FW traducciones_FW automáticas_FW :_: una_JJ primera_NN aproximación_NN ._.
+In_IN Empiricism_NNP and_CC analytical_JJ tools_NNS for_IN 21_CD century_NN applied_VBD linguistics_NNS :_: selected_VBN papers_NNS from_IN the_DT XXIX_NNP International_NNP Conference_NNP of_IN the_DT Spanish_NNP Association_NNP of_IN Applied_NNP Linguistics_NNP -LRB-_-LRB- AESLA_NNP -RRB-_-RRB- ._.
+973-986_CD ._.
+Guy_NNP ,_, R._NNP 2000_CD ._.
+Linearity_NN in_IN Rhetorical_NNP Organisation_NNP :_: A_DT Comparative_JJ Cross-cultural_JJ Analysis_NN of_IN Newstext_NNP from_IN the_DT People_NNS 's_POS Republic_NNP of_IN China_NNP and_CC Australia_NNP ._.
+International_NNP Journal_NNP of_IN Applied_NNP Linguistics_NNP ,_, 10_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 241-58_CD ._.
+Guy_NNP ,_, R._NNP 2001_CD ._.
+What_WP Are_VBP They_PRP Getting_VBG At_IN ?_.
+Placement_NNP of_IN Important_NNP Ideas_NNS in_IN Chinese_JJ Newstext_NNP :_: A_NNP Contrastive_NNP Analysis_NNP with_IN Australian_JJ Newstext_NNP ._.
+Australian_JJ Review_NNP of_IN Applied_NNP Linguistics_NNP ,_, 24_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :17_CD -34_CD ._.
+Guzmán_NNP F._NNP ,_, Joty_NNP S._NNP ,_, Màrquez_NNP ,_, Ll._NNP ,_, and_CC Nakov_NNP ,_, P._NNP 2014_CD ._.
+Using_VBG Discourse_NNP Structure_NNP Improves_VBZ Machine_NN Translation_NN Evaluation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+687-698_CD ._.
+Iruskieta_NNP ,_, M._NNP ,_, da_NN Cunha_NNP ,_, I._NNP and_CC Taboada_NNP ,_, M._NNP 2015_CD ._.
+A_DT Qualitative_JJ Comparison_NNP Method_NNP for_IN Rhetorical_NNP Structures_NNPS :_: Identifying_VBG different_JJ discourse_NN structures_NNS in_IN multilingual_JJ corpora_NN ._.
+Language_NN resources_NNS and_CC evaluation_NN ,_, 49_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :263_CD -309_CD ._.
+Kong_NNP K._NNP C._NNP C._NNP 1998_CD ._.
+Are_VBP simple_JJ business_NN request_NN letters_NNS really_RB simple_JJ ?_.
+A_DT comparison_NN of_IN Chinese_JJ and_CC English_JJ business_NN request_NN letters_NNS ._.
+Text_NN ,_, 18_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :103_CD -141_CD ._.
+Kumpf_NNP L._NNP 1975_CD ._.
+Structuring_VBG Narratives_NNS in_IN a_DT Second_JJ Language_NN :_: A_DT description_NN of_IN Rhetoric_NNP and_CC Grammar_NNP ._.
+PhD_NNP thesis_NN ._.
+Los_NNP Angeles_NNP :_: University_NNP of_IN California_NNP ._.
+Mann_NNP W._NNP C._NNP and_CC Thompson_NNP ,_, S._NNP A._NNP 1988_CD ._.
+Rhetorical_NNP Structure_NNP Theory_NNP :_: Toward_IN a_DT functional_JJ theory_NN of_IN text_NN organization_NN ._.
+Text_NN ,_, 8_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :243_CD -281_CD ._.
+Marcu_NNP D._NNP 2000_CD ._.
+The_DT rhetorical_JJ parsing_NN of_IN unrestricted_JJ texts_NNS :_: A_DT surface-based_JJ approach_NN ._.
+Computational_NNP Linguistics_NNP ,_, 26_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :395_CD -448_CD ._.
+Marcu_NNP D._NNP ,_, Carlson_NNP ,_, L._NNP ,_, and_CC Watanabe_NNP ,_, M._NNP 2000_CD ._.
+The_DT automatic_JJ translation_NN of_IN discourse_NN structures_NNS ._.
+In_IN 1st_CD North_JJ American_JJ chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP conferences_NNS ._.
+9-17_CD ._.
+Mayor_NNP A._NN ,_, Alegria_NNP ,_, I._NNP ,_, Díaz_NNP de_IN Ilarraza_NNP ,_, A._NN ,_, Labaka_NNP ,_, G._NNP ,_, Lersundi_NNP ,_, M._NNP ,_, and_CC Sarasola_NNP ,_, K._NNP 2009_CD ._.
+Evaluación_NNP de_FW un_FW sistema_FW de_FW traducción_FW automática_FW basado_FW en_FW reglas_FW o_FW porqué_FW BLEU_FW sólo_FW sirve_FW para_FW lo_FW que_FW sirve_FW ._.
+Procesamiento_NNP del_NNP Lenguaje_NNP Natural_NNP ,_, 43:197_CD -205_CD ._.
+Mohamed_NNP A._NNP H._NNP and_CC Omer_NNP M._NNP R._NNP 1999_CD ._.
+Syntax_NNP as_IN a_DT marker_NN of_IN rhetorical_JJ organization_NN in_IN written_VBN texts_NNS :_: Arabic_NNP and_CC English_NNP ._.
+International_NNP Review_NNP of_IN Applied_NNP Linguistics_NNP in_IN Language_NNP Teaching_NNP -LRB-_-LRB- IRAL_NNP -RRB-_-RRB- ,_, 37_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :291_CD -305_CD ._.
+O’Donnell_NNP ,_, M._NNP 1997_CD ._.
+RST-tool_NNP :_: An_DT RST_NNP analysis_NN tool_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 6th_JJ European_JJ Work-shop_JJ on_IN Natural_JJ Language_NN Generation_NNP ._.
+92-96_CD ._.
+Rafalovitch_NNP ,_, A._NN and_CC Dale_NNP ,_, R._NNP 2009_CD ._.
+United_NNP Nations_NNPS general_JJ assembly_NN resolutions_NNS :_: A_DT six-languages_JJ parallel_NN corpus_NN ._.
+In_IN Proceedings_NNP of_IN MT_NNP Summit_NNP XII_NNP ._.
+292-299_CD ._.
+Salkie_NNP ,_, R._NNP ,_, Oates_NNP S._NNP L._NNP 1999_CD ._.
+Contrast_NN and_CC concession_NN in_IN French_JJ and_CC English_JJ ._.
+Languages_NNS in_IN Contrast_NNP ,_, 2_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :27_SYM -_: 56_CD ._.
+Sarjala_NNP ,_, M._NNP 1994_CD ._.
+Signalling_VBG of_IN reason_NN and_CC cause_NN relations_NNS in_IN academic_JJ discourse_NN ._.
+Anglicana_NNP Turkuensia_NNP ,_, 13:89_CD -98_CD ._.
+Scott_NNP R._NNP ,_, Delin_NNP ,_, J._NNP ,_, and_CC Hartley_NNP A._NNP F._NNP 1998_CD ._.
+Identifying_VBG congruent_JJ pragmatic_JJ relations_NNS in_IN procedural_JJ texts_NNS ._.
+Languages_NNS in_IN contrast_NN ,_, 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :45_CD -82_CD ._.
+Van_NNP der_NNP Vliet_NNP N._NNP 2010_CD ._.
+Inter_NNP annotator_NN agreement_NN in_IN discourse_NN analysis_NN -LSB-_NNP Online_NNP -RSB-_NNP ._.
+http://www.let.rug.nl/nerbonne/teach/rema-stats_NNS -_: meth-seminar_JJ /_NN -LSB-_NNP Last_JJ consulted_VBN :_: 14_CD of_IN May_NNP ,_, 2015_CD -RSB-_NNP Wilks_NNP ,_, Y._NNP 2009_CD ._.
+Machine_NN Translation_NN :_: Its_PRP$ scope_NN and_CC limits_NNS ._.
+3a_FW ed_FW ._.
+New_NNP York_NNP :_: Springer_NNP ._.
+Wang_NNP Y._NNP C._NNP 2013_CD ._.
+Los_NNP marcadores_VBZ conversacionales_NNS en_IN el_NN subtitulado_NN del_DT español_NN al_IN chino_NN :_: análisis_FW de_FW La_NNP mala_FW educación_FW y_FW Volver_FW de_FW Pedro_NNP Almodóvar_NNP ._.
+PhD_NNP thesis_NN ._.
+Barcelona_NNP :_: Universitat_NNP Autònoma_NNP de_IN Barcelona_NNP ._.
+Yao_NNP J._NNP M._NNP 2008_CD ._.
+Estudio_NNP comparativo_FW de_FW los_FW marcadores_FW del_FW discurso_FW en_FW español_FW y_FW en_FW chino_FW a_DT través_NNS de_IN diálogos_NNS cinematográficos_NNS ._.
+PhD_NNP thesis_NN ._.
+Valladolid_NNP :_: Universidad_NNP de_IN Valladolid_NNP ._.
+Yue_NNP M._NNP 2006_CD ._.
+Hanyu_NNP caijingpinglun_NN de_IN xiucijiegou_NN biaozhu_NN ji_FW pianzhang_FW yanjiu_FW -LRB-_-LRB- 汉语财经评论的修辞_CD 结构标注及篇章研究_CD ,_, -LSB-_NNP Annotation_NNP and_CC Analysis_NNP of_IN Chinese_NNP Financial_NNP News_NNP Commentaries_NNPS in_IN terms_NNS of_IN Rhetorical_NNP Structure_NNP -RSB-_NNP -RRB-_-RRB- ._.
+PhD_NNP thesis_NN ._.
+Beijing_NNP :_: Communication_NNP University_NNP of_IN China_NNP ._.
+Zhou_NNP L._NNP J._NNP ,_, Li_NNP B._NNP Y._NNP ,_, Wei_NNP ,_, Z._NNP Y._NNP ,_, and_CC Wong_NNP ,_, K._NNP F._NNP 2014_CD ._.
+The_DT CUHK_NNP Discourse_NN TreeBank_NNP for_IN Chinese_NNPS :_: Annotating_VBG Explicit_NNP Discourse_NNP Connectives_NNP for_IN the_DT Chinese_JJ TreeBank_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+942-949_CD ._.

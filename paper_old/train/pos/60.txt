@@ -1,0 +1,199 @@
+The_DT Innovative_JJ Development_NNP of_IN Taiwan_NNP Hakka_NNP Symbolic_NNP Code_NNP <nganggiang stiff neck>_NNP in_IN Media_NNP Discourse_NNP Abstract_NNP This_DT study_NN investigates_VBZ the_DT innovative_JJ devel_NN -_: opment_NN of_IN the_DT symbolic_JJ code_NN <nganggiang stiff neck>_NN into_IN an_DT iconographic_JJ reference_NN ,_, profiling_VBG its_PRP$ meaning_NN representation_NN and_CC extension_NN in_IN media_NNS discourse_NN ._.
+Employing_VBG text-analysis_NN tools_NNS ,_, the_DT study_NN retrieves_VBZ 3265_CD tokens_NNS from_IN the_DT four_CD major_JJ newspapers_NNS in_IN Taiwan_NNP society_NN ,_, Udndata_NNP ,_, Knowledge_NNP Management_NNP Winner_NNP ,_, Liberty_NNP Times_NNP Net_NN ,_, and_CC Apple_NNP Daily_NNP ._.
+The_DT data_NNS are_VBP ana_SYM -_: lyzed_VBN regarding_VBG their_PRP$ longitudinal_JJ distribution_NN ,_, theme_NN distribution_NN and_CC the_DT cross_NN distribution_NN across_IN four_CD dimensions_NNS ._.
+The_DT main_JJ findings_NNS are_VBP as_IN follows_VBZ ._.
+First_RB ,_, the_DT meaning_NN of_IN <nganggiang stiff neck>_NN ,_, used_VBN to_TO carry_VB negative_JJ connotation_NN ,_, has_VBZ turned_VBN into_IN a_DT symbolic_JJ code_NN with_IN positive_JJ connotation_NN due_JJ to_TO historical_JJ events_NNS contingent_NN on_IN the_DT social-political_JJ development_NN in_IN Taiwan_NNP ._.
+Even_RB since_IN ,_, denoting_VBG Hakka_JJ character_NN as_IN perse_NN -_: verance_NN ,_, it_PRP has_VBZ become_VBN a_DT Hakka_JJ symbolic_JJ code_NN stereotypically_RB employed_VBN to_TO depict_VB Hakka_NNP -_: related_VBN matters_NNS ,_, human_JJ or_CC non-human_JJ ,_, strongly_RB indicating_VBG ideological_JJ effect_NN in_IN media_NNS discourse_NN toward_IN Hakka_JJ groups_NNS ._.
+Second_NNP ,_, its_PRP$ semiotic_JJ in_IN -_: novation_NN continues_VBZ to_TO develop_VB through_IN mecha_NN -_: nisms_NNS of_IN metaphor_NN and_CC metonymy_NN ._.
+With_IN new_JJ ways_NNS of_IN representing_VBG various_JJ themes_NNS in_IN differ_VBP -_: ent_NN news_NN types_NNS ,_, <nganggiang stiff neck>_NN emerges_VBZ as_IN an_DT iconographic_JJ reference_NN repre_NN -_: senting_VBG a_DT simplistic_JJ image_NN with_IN familiar_JJ judg_NN -_: ment_NN and_CC values_NNS ,_, and_CC carrying_VBG linguistic_JJ ,_, se_FW -_: mantic_JJ ,_, affective_JJ ,_, and_CC pragmatic_JJ forces_NNS of_IN the_DT situation_NN reported_VBD in_IN the_DT news_NN ._.
+This_DT study_NN demonstrates_VBZ a_DT research_NN integrating_VBG computa_NN -_: tional_JJ and_CC corpus_JJ methods_NNS for_IN linguistic_JJ analy_NN -_: sis_NN of_IN news_NN discourse_NN ._.
+The_DT findings_NNS profile_VBP the_DT importance_NN of_IN placing_VBG semiotic_JJ innovation_NN in_IN its_PRP$ social_JJ ,_, cultural_JJ ,_, political_JJ and_CC historical_JJ contexts_NNS ,_, highlighting_VBG the_DT intertwining_VBG complexities_NNS be_VB -_: tween_NN media_NNS discourse_NN ,_, communication_NN ,_, and_CC society_NN ._.
+1_LS ._.
+Background_NN Media_NNP discourse_NN uses_VBZ culturally_RB conventional_JJ symbols_NNS to_TO create_VB news_NN stories_NNS to_TO communicate_VB ._.
+Among_IN the_DT symbols_NNS ,_, language_NN is_VBZ the_DT most_RBS salient_JJ one_CD often_RB employed_VBN to_TO represent_VB certain_JJ social_JJ im_NN -_: ages_NNS -LRB-_-LRB- Weng_NNP et_FW al._FW 1999_CD -RRB-_-RRB- ._.
+Since_IN linguistic_JJ codes_NNS contain_VBP systematic_JJ and_CC sensible_JJ connections_NNS of_IN symbols_NNS and_CC concepts_NNS ,_, they_PRP play_VBP the_DT most_RBS im_SYM -_: portant_JJ role_NN in_IN the_DT process_NN of_IN meaning_VBG representa_NN -_: tion_NN in_IN media_NNS discourse_NN ._.
+Previous_JJ studies_NNS on_IN Hakka_JJ images_NNS have_VBP found_VBN out_RP that_IN the_DT lexical_JJ item_NN in_IN Hakka_NNP <nganggiang stiff neck>_NNP -LRB-_-LRB- a_DT lexicalized_VBN item_NN meaning_NN tough_JJ ,_, in_IN -_: domitable_JJ -RRB-_-RRB- is_VBZ often_RB used_VBN by_IN media_NNS to_TO represent_VB Hakka_JJ groups_NNS ._.
+To_TO illustrate_VB ,_, Lee_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- investi_SYM -_: gates_NNS how_WRB media_NNS represents_VBZ Hakka_NNP images_NNS by_IN ana_NN -_: lyzing_VBG the_DT news_NN types_NNS ,_, themes_NNS ,_, directions_NNS and_CC tones_NNS of_IN three_CD main_JJ newspapers_NNS China_NNP Times_NNP ,_, United_NNP Daily_NNP News_NNP ,_, and_CC Liberal_NNP Times_NNP Net_NN during_IN the_DT time_NN period_NN of_IN June_NNP 14_CD ,_, 1995_CD and_CC June_NNP 14_CD ,_, 2007_CD ._.
+Her_PRP$ findings_NNS show_VBP that_IN news_NN about_IN Hakka_JJ cultural_JJ images_NNS tend_VBP to_TO be_VB positively-oriented_JJ ,_, and_CC <ngang- giang stiff neck>_NN is_VBZ the_DT most_RBS frequently_RB used_VBN term_NN to_TO depict_VB Hakka_JJ character_NN ._.
+Similarly_RB ,_, Peng_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- analyzes_VBZ Hakka_JJ news_NN reported_VBN in_IN 2006_CD by_IN the_DT four_CD main_JJ newspapers_NNS China_NNP Times_NNP ,_, United_NNP Daily_NNP News_NNP ,_, Liberal_NNP Times_NNP Net_NN and_CC Apple_NNP Daily_NNP in_IN Taiwan_NNP ._.
+His_PRP$ findings_NNS show_VBP that_IN Hakka_JJ news_NN increases_NNS tremen_SYM -_: dously_RB in_IN 2006_CD ,_, and_CC <nganggiang stiff neck>_NN is_VBZ one_CD of_IN the_DT four_CD adjectives_NNS mostly_RB used_VBN in_IN Hakka_NNP news_NN ._.
+He_PRP claims_VBZ that_IN the_DT results_NNS are_VBP due_JJ to_TO media_NNS framing_VBG effects_NNS in_IN that_DT news_NN media_NNS tend_VBP to_TO use_VB cer_SYM -_: tain_JJ linguistic_JJ forms_NNS to_TO stereotypically_RB depict_VB the_DT ethnic_JJ character_NN of_IN Hakka_JJ people_NNS ._.
+The_DT lexical_JJ item_NN <nganggiang stiff neck>_NN ,_, the_DT most_RBS representative_JJ form_NN ,_, is_VBZ hence_RB the_DT most_RBS frequently_RB used_VBN for_IN Hakka_JJ news_NN ._.
+In_IN fact_NN ,_, the_DT word_NN <nganggiang stiff neck>_NN 硬頸_NN is_VBZ a_DT unique_JJ lexical_JJ item_NN in_IN Taiwan_NNP Hakka_NNP ,_, not_RB found_VBN in_IN Taiwan_NNP Mandarin_NNP or_CC Taiwanese_JJ Southern_NNP Min_NNP ._.
+It_PRP used_VBD to_TO denote_VB someone_NN being_VBG stubborn_JJ or_CC bullheaded_JJ ,_, carrying_VBG negative_JJ connota_NN -_: tion_NN ._.
+However_RB ,_, it_PRP is_VBZ employed_VBN now_RB in_IN news_NN dis_SYM -_: course_NN as_IN a_DT symbolic_JJ code_NN to_TO represent_VB Hakka_NNP im_SYM -_: age_NN ,_, carrying_VBG positive_JJ connotation_NN ._.
+More_JJR interest_NN -_: ingly_RB ,_, the_DT meaning_NN of_IN this_DT lexical_JJ item_NN shows_VBZ a_DT spillover_JJ effect_NN in_IN media_NNS discourse_NN under_IN media_NNS framing_NN ,_, extending_VBG from_IN Hakka_JJ to_TO non-Hakka_JJ peo_NN -_: ple_NN ,_, and_CC even_RB to_TO non-human_JJ objects_NNS or_CC abstract_JJ concepts_NNS ._.
+With_IN regard_NN to_TO the_DT observations_NNS ,_, this_DT study_NN aims_VBZ to_TO delve_VB into_IN the_DT following_VBG two_CD ques_NNS -_: tions_NNS ._.
+What_WP are_VBP the_DT social-cultural_JJ factors_NNS that_WDT trig_SYM -_: ger_NN such_JJ innovative_JJ development_NN of_IN the_DT symbolic_JJ code_NN <nganggiang stiff neck>_NN in_IN media_NNS discourse_NN ?_.
+How_WRB is_VBZ this_DT semiotic_JJ change_NN actually_RB brought_VBD about_RB ?_.
+2_LS ._.
+Mechanisms_NNPS for_IN Semiotic_NNP Innovation_NNP The_NNP compounding_VBG of_IN the_DT word_NN <nganggiang stiff neck>_NN ,_, based_VBN on_IN a_DT bodily_NN experience_NN ,_, arouses_VBZ an_DT image_NN that_WDT is_VBZ identifiable_JJ ,_, understandable_JJ ,_, em_SYM -_: pathetic_JJ and_CC easy_JJ for_IN sense_NN making_NN ._.
+Its_PRP$ accessibil_NN -_: ity_NN and_CC uniqueness_NN meet_VBP the_DT needs_NNS for_IN communica_NN -_: tion_NN and_CC for_IN innovation_NN ._.
+Van_NNP Leeuwen_NNP -LRB-_-LRB- 2005:26_CD -RRB-_-RRB- claims_VBZ that_IN ``_`` -LSB-_NNP a_DT -RSB-_NNP s_VBZ a_DT society_NN changes_NNS ,_, new_JJ semiotic_JJ resources_NNS and_CC new_JJ ways_NNS of_IN using_VBG existing_VBG semiotic_JJ resources_NNS may_MD be_VB needed_VBN ''_'' ._.
+Of_IN the_DT two_CD layers_NNS of_IN meaning_NN ,_, denotation_NN and_CC connotation_NN ,_, the_DT latter_JJ with_IN positive_JJ or_CC negative_JJ implication_NN carries_VBZ a_DT lan_NN -_: guage_NN user_NN 's_POS subjective_JJ and_CC affective_JJ attitude_NN -LRB-_-LRB- Barthes_NNPS 1977_CD -RRB-_-RRB- ._.
+To_TO represent_VB such_PDT a_DT connotative_JJ meaning_NN for_IN communication_NN ,_, metaphor_NN and_CC meton_NN -_: ymy_NN ,_, two_CD cognitive_JJ mechanisms_NNS for_IN understanding_VBG abstract_JJ meanings_NNS ,_, are_VBP the_DT key_JJ principles_NNS ._.
+Metaphor_NN and_CC metonymy_NN are_VBP deemed_VBN to_TO be_VB concep_NN -_: tual_JJ connecting_VBG language_NN and_CC thought_NN ._.
+Conceptual_JJ metaphor_NN and_CC conceptual_JJ metonymy_NN are_VBP under_IN -_: stood_VBD on_IN the_DT basis_NN of_IN our_PRP$ concrete_JJ bodily_NN experi_NN -_: ence_NN -LRB-_-LRB- Lakoff_NNP &_CC Johnson_NNP 1980_CD -RRB-_-RRB- ._.
+Metaphor_NN is_VBZ con_JJ -_: ceptual_NN and_CC systematic_JJ ,_, employing_VBG concepts_NNS of_IN the_DT concrete_JJ source_NN domain_NN to_TO understand_VB those_DT of_IN the_DT abstract_JJ target_NN domain_NN ._.
+Table_NNP 1_CD illustrates_VBZ the_DT map_NN -_: pings_NNS of_IN the_DT metaphor_NN LOVE_NNP IS_VBZ A_DT JOURNEY_NN ._.
+Source_NNP domain_NN :_: JOURNEY_NNP Target_NNP domain_NN :_: LOVE_VB mains_NNS and_CC target_NN domains_NNS ;_: metaphor_NN is_VBZ domain_NN -_: external_JJ and_CC metonymy_NN is_VBZ domain-internal_JJ ._.
+Conceptual_JJ metaphor_NN and_CC metonymy_NN empha_NN -_: size_NN the_DT thinking_NN process_NN and_CC the_DT systematic_JJ map_NN -_: pings_NNS of_IN source_NN domains_NNS and_CC target_NN domains_NNS ._.
+Cam_SYM -_: eron_NN &_CC Deignan_NNP -LRB-_-LRB- 2006_CD :_: 673_CD -RRB-_-RRB- ,_, however_RB ,_, point_NN out_RP that_IN linguistic_JJ phenomena_NNS are_VBP not_RB that_IN systematic_JJ as_IN actual_JJ usages_NNS are_VBP examined_VBN in_IN the_DT corpus_NN ._.
+Take_VB FIRE_NN metaphor_NN example_NN ._.
+While_IN the_DT plural_JJ form_NN flames_NNS are_VBP often_RB used_VBN to_TO represent_VB anger_NN or_CC love_NN ,_, the_DT singular_JJ form_NN flame_NN is_VBZ used_VBN to_TO represent_VB belief_NN or_CC ideal_NN ._.
+The_DT word_NN burning_NN represents_VBZ ambition_NN or_CC desire_NN ,_, but_CC ignite_VBP represents_VBZ war_NN ._.
+Linguistic_JJ usages_NNS are_VBP full_JJ of_IN inconsistent_JJ and_CC unsystematic_JJ mappings_NNS ._.
+In_IN addition_NN ,_, cultural_JJ differences_NNS often_RB bring_VBP out_RP different_JJ emotional_JJ or_CC affective_JJ attitudes_NNS ._.
+They_PRP hence_RB maintain_VBP that_IN metaphor_NN should_MD take_VB both_DT language_NN and_CC thought_VBD into_IN consideration_NN ._.
+In_IN other_JJ words_NNS ,_, they_PRP maintain_VBP that_IN metaphor_NN should_MD be_VB ana_NN -_: lyzed_VBN both_DT linguistically_RB and_CC conceptually_RB in_IN its_PRP$ discourse_NN context_NN and_CC within_IN its_PRP$ social-cultural_JJ context_NN ._.
+In_IN fact_NN ,_, the_DT accessibility_NN and_CC application_NN of_IN corpora_NN not_RB only_RB give_VB rise_VB to_TO a_DT change_NN of_IN research_NN paradigm_NN of_IN metaphor_NN and_CC metonymy_NN but_CC also_RB bring_VB to_TO the_DT fore_NN the_DT importance_NN of_IN the_DT actual_JJ dis_NN -_: course_NN situation_NN in_IN which_WDT metaphor_NN or_CC metonymy_NN is_VBZ used_VBN ._.
+Linguistic_JJ innovation_NN occurs_VBZ under_IN the_DT influ_NN -_: ence_NN of_IN its_PRP$ social-cultural_JJ background_NN ,_, often_RB carry_VBP -_: ing_VBG strong_JJ emotional_JJ and_CC affective_JJ forces_NNS ._.
+Hawkins_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- coins_NNS the_DT term_NN iconographic_JJ reference_NN as_IN follows_VBZ :_: ``_`` Iconographic_JJ reference_NN is_VBZ a_DT common_JJ mode_NN of_IN textual_JJ representation_NN which_WDT represents_VBZ simplistic_JJ images_NNS of_IN our_PRP$ experiences_NNS and_CC does_VBZ so_RB in_IN such_PDT a_DT way_NN as_IN to_TO underscore_VB familiar_JJ values_NNS which_WDT interlocutors_NNS in_IN a_DT particular_JJ discourse_NN are_VBP implicitly_RB expected_VBN to_TO endorse_VB ._.
+The_DT effect_NN of_IN iconographic_JJ reference_NN is_VBZ to_TO establish_VB a_DT powerful_JJ conceptual_JJ link_NN between_IN the_DT referent_NN and_CC a_DT particular_JJ value_NN judg_NN -_: ment_NN ''_'' -LRB-_-LRB- 32_CD -RRB-_-RRB- ._.
+Dirven_NNP et_FW al._FW -LRB-_-LRB- 2003:3_CD -RRB-_-RRB- also_RB claim_VBP that_IN ``_`` -LSB-_JJ iconographic_JJ reference_NN -RSB-_NNP can_MD be_VB understood_VBN as_IN the_DT metaphorical_JJ pendant_NN of_IN a_DT stereotype_NN in_IN that_DT it_PRP is_VBZ a_DT representation_NN based_VBN on_IN simplistic_JJ images_NNS of_IN the_DT targeted_JJ people_NNS ,_, groups_NNS ,_, or_CC ideas_NNS ,_, and_CC associated_VBN with_IN familiar_JJ values_NNS ,_, either_CC positive_JJ or_CC negative_JJ ones_NNS ''_'' ._.
+The_DT claims_NNS highlight_VBP the_DT significance_NN of_IN us_PRP -_: ing_VBG authentic_JJ materials_NNS for_IN research_NN that_IN relies_VBZ heavily_RB on_IN using_VBG corpora_NN ._.
+Such_JJ an_DT analysis_NN is_VBZ only_RB possible_JJ when_WRB a_DT certain_JJ amount_NN of_IN data_NNS from_IN cor_NN -_: pora_NN is_VBZ analyzed_VBN ._.
+To_TO this_DT end_NN ,_, we_PRP need_VBP to_TO have_VB effi_SYM -_: the_DT travelers_NNS the_DT journey_NN the_DT obstacles_NNS encountered_VBD decisions_NNS about_IN which_WDT way_NN to_TO go_VB the_DT destination_NN of_IN the_DT journey_NN the_DT lovers_NNS events_NNS in_IN the_DT relationship_NN the_DT difficulties_NNS experienced_VBD choices_NNS about_IN what_WP to_TO do_VB the_DT goals_NNS of_IN the_DT relationship_NN Table_NNP 1_CD ._.
+LOVE_NN IS_VBZ A_DT JOURNEY_NN Kövecses_NNS and_CC Radden_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- claim_NN that_IN me_PRP -_: tonymy_NN is_VBZ also_RB conceptual_JJ ,_, manifested_VBN as_IN a_DT projec_FW -_: tion_NN between_IN a_DT source_NN concept_NN and_CC target_NN concept_NN within_IN an_DT experiential_JJ domain_NN ._.
+For_IN instance_NN ,_, in_IN the_DT case_NN He_PRP likes_VBZ Shakespeare_NNP ,_, a_DT metonymy_NN AUTHOR_NNP FOR_IN WORK_VBP is_VBZ triggered_VBN ._.
+In_IN short_RB ,_, both_DT metaphor_NN and_CC metonymy_NN involve_VBP mappings_NNS of_IN source_NN do_VBP -_: cient_NN and_CC effect_NN text_NN analysis_NN tools_NNS ._.
+The_DT next_JJ sec_NN -_: tion_NN presents_VBZ the_DT methodology_NN ._.
+3_LS ._.
+Methodology_NN 3.1_CD Material_NNP The_NNP data_NNS are_VBP retrieved_VBN from_IN four_CD major_JJ news_NN -_: papers_NNS online_VBP data_NNS bases_NNS in_IN Taiwan_NNP :_: Udndata_NNP -LRB-_-LRB- 聯合_CD 知識庫_CD -RRB-_-RRB- ,_, Knowledge_NNP Management_NNP Winner_NNP -LRB-_-LRB- KMW_NNP 知識贏家_CD -RRB-_-RRB- ,_, Liberty_NNP Times_NNP Net_NN -LRB-_-LRB- 自由新聞網_CD -RRB-_-RRB- and_CC Apple_NNP Daily_NNP -LRB-_-LRB- 蘋果日報_CD -RRB-_-RRB- ._.
+News_NNP with_IN the_DT keyword_NN <_NN nganggiang_NN stiff_JJ neck_NN 硬頸_CD >_NN is_VBZ collected_VBN ._.
+The_DT time_NN period_NN available_JJ for_IN search_NN in_IN each_DT corpus_NN var_NN -_: ies_NNS ._.
+In_IN total_JJ ,_, 2554_JJ items_NNS of_IN news_NN with_IN 1972589_CD characters_NNS are_VBP retrieved_VBN ,_, as_IN shown_VBN in_IN Table_NNP 2_CD ._.
+1st_CD line_NN 2nd_JJ line_NN 3rd_CD line_NN 4th_JJ line_NN 5th_JJ line_NN Headline_NNP Subheading_NNP News_NNP Type_NNP Sub-type_JJ Journalist_NNP Table_NNP 3_CD ._.
+Metadata_NNP format_NN News_NNP category_NN Sub-category_NNP Politics_NNP Central_NNP ,_, Local_NNP ,_, Political_NNP Party_NNP ,_, Politicians_NNPS Lifestyles_NNP Health_NNP Info_NNP ,_, Family_NNP ,_, Tourism_NNP ,_, Climate_NN &_CC Environments_NNS ,_, Human_NNP Characters_NNS World_NNP International_NNP 、_NNP Cross-strait_NNP Sports_NNP Events_NNS 、_VBP Human_JJ Characters_NNS Corpus_NNP Knowledge_NNP Management_NNP Winner_NNP -LRB-_-LRB- KMW_NNP -RRB-_-RRB- Apple_NNP Daily_NNP Search_NNP Duration_NNP 1994/1/1_CD ~_SYM 2015/3/20_CD 2003/5/2_CD ~_NN 2015/3/20_CD Articles_NNPS Characters_NNS 1005_CD 788,691_CD 136_CD 139,765_CD Society_NNP Edu_NNP &_CC Tech_NNP Business_NNP Entertainment_NNP Corpus_NNP Udndata_NNP Community_NNP constructions_NNS Education_NNP 、_NNP Technology_NNP 、_NNP Human_NNP Characters_NNS Human_JJ Characters_NNS Events_NNS 、_VBP Human_JJ Characters_NNS Table_NNP 4_CD ._.
+News_NNP categories_NNS Tokens_NNP 1503_CD Udndata_NNP 1951/1/1_CD ~_SYM 2015/3/20_CD 1155_CD 853,285_CD Culture_NNP &_CC Art_NNP Human_NNP Characters_NNS Liberty_NNP Times_NNP Net_JJ 2005/1/1_CD ~_SYM 2015/3/20_CD 258_CD 190,848_CD Total_JJ 2554_CD 1,972,589_CD Table_NNP 2_CD ._.
+Materials_NNPS for_IN the_DT data_NN 3.2_CD Data_NNP Coding_NNP Knowledge_NNP Management_NNP Winner_NNP 1299_CD Liberty_NNP Times_NNP Net_JJ 317_CD Apple_NNP Daily_NNP Total_NNP 146_CD 3265_CD Table_NNP 5_CD ._.
+Token_JJ distribution_NN In_IN order_NN to_TO create_VB consistent_JJ text_NN files_NNS for_IN text_NN analysis_NN ,_, all_PDT the_DT retrieved_VBN news_NN are_VBP constructed_VBN based_VBN on_IN the_DT metadata_NN format_NN shown_VBN in_IN Table_NNP 3_CD ._.
+The_DT four_CD newspapers_NNS use_VBP different_JJ news_NN categories_NNS to_TO categorize_VB their_PRP$ news_NN ._.
+In_IN order_NN to_TO maintain_VB con_NN -_: sistent_NN categorization_NN ,_, we_PRP reorganize_VBP news_NN catego_NN -_: ries_NNS and_CC sub-categories_NNS based_VBN on_IN the_DT themes_NNS of_IN the_DT news_NN content_NN for_IN the_DT retrieved_VBN data_NNS ._.
+The_DT news_NN cate_NN -_: gories_NNS are_VBP given_VBN in_IN Table_NNP 4_CD ._.
+In_IN total_JJ ,_, 3265_CD tokens_NNS are_VBP retrieved_VBN ,_, and_CC the_DT distribution_NN from_IN each_DT corpus_NN is_VBZ given_VBN in_IN Table_NNP 5_CD ._.
+Then_RB all_PDT the_DT tokens_NNS are_VBP ana_SYM -_: lyzed_VBN into_IN four_CD dimensions_NNS :_: Hakka/human_NNP ,_, Hakka/non-human_NNP ,_, non-Hakka/human_NNP ,_, and_CC non_SYM -_: Hakka/non-human_NN ._.
+The_DT next_JJ section_NN reports_VBZ the_DT results_NNS ._.
+4_LS ._.
+Results_NNS The_DT results_NNS are_VBP reported_VBN in_IN Figure_NN 1_CD ,_, Table_NNP 6_CD ,_, Table_NNP 7_CD ,_, and_CC Figure_NN 2_CD ._.
+Figure_NN 1_CD shows_VBZ the_DT yearly_JJ distribution_NN of_IN <nganggiang stiff neck>_NN in_IN each_DT corpus_NN ._.
+Since_IN Udndata_NNP has_VBZ the_DT most_RBS complete_JJ cov_NN -_: erage_NN of_IN the_DT years_NNS ,_, its_PRP$ distribution_NN reveals_VBZ the_DT most_RBS holistic_JJ picture_NN ._.
+Between_IN the_DT 38_CD years_NNS of_IN 1955_CD -_: 1993_CD ,_, only_RB 16_CD tokens_NNS are_VBP found_VBN ,_, and_CC the_DT first_JJ peak_NN emerges_VBZ during_IN 1993-1994_CD ._.
+A_DT drastic_JJ rise_NN occurs_VBZ during_IN 1998-1999_CD ,_, and_CC similar_JJ rises_NNS occur_VBP during_IN 2002-2003_CD ,_, 2006-2007_CD ,_, and_CC 2010-2012_CD ._.
+Table_NNP 6_CD shows_VBZ the_DT distribution_NN in_IN news_NN categories_NNS ,_, with_IN culture_NN &_CC art_NN ,_, politics_NNS ,_, and_CC lifestyles_NNS occupying_VBG the_DT top_JJ three_CD ._.
+Table_NNP 7_CD shows_VBZ the_DT distribution_NN of_IN the_DT four_CD dimensions_NNS :_: the_DT contrast_NN of_IN Hakka_NNP to_TO non-Hakka_JJ is_VBZ around_IN 65_CD %_NN to_TO 35_CD %_NN ;_: the_DT contrast_NN of_IN human_JJ to_TO non_VB -_: human_JJ is_VBZ also_RB 65_CD %_NN to_TO 35_CD %_NN ._.
+Finally_RB ,_, Figure_NN 2_CD shows_VBZ the_DT different_JJ years_NNS for_IN the_DT emergence_NN of_IN <nganggiang stiff neck>_NN in_IN different_JJ categories_NNS and_CC whether_IN <nganggiang stiff neck>_NN maintains_VBZ being_VBG used_VBN after_IN the_DT emergence_NN ._.
+The_DT figure_NN shows_VBZ that_IN it_PRP first_RB emerges_VBZ in_IN culture_NN &_CC art_NN and_CC steadily_RB exists_VBZ in_IN this_DT category_NN ._.
+It_PRP is_VBZ largely_RB used_VBN in_IN politics_NNS in_IN 1994_CD ,_, followed_VBN by_IN education_NN &_CC technology_NN ,_, business_NN ,_, entertainment_NN ,_, lifestyles_NNS ,_, and_CC sports_NNS ._.
+Alt_SYM -_: hough_JJ politics_NNS and_CC education_NN &_CC technology_NN use_VBP it_PRP more_RBR or_CC less_RBR at_IN the_DT same_JJ time_NN in_IN 1994_CD ,_, it_PRP is_VBZ much_RB more_RBR favored_VBN by_IN politics_NNS as_IN it_PRP still_RB actively_RB occurs_VBZ after_IN 1994_CD in_IN politics_NNS ._.
+The_DT two_CD lines_NNS -LRB-_-LRB- solid_JJ red_NN for_IN politics_NNS ;_: solid_JJ light_JJ blue_JJ for_IN education_NN &_CC technolo_NN -_: gy_NN -RRB-_-RRB- distinguish_VBP each_DT other_JJ very_RB clearly_RB after_IN 1995_CD with_IN the_DT former_JJ persisting_VBG and_CC the_DT latter_JJ declining_VBG ._.
+Human_NNP Non-human_NNP Total_NNP Hakka_NNP 1282_CD -LRB-_-LRB- 39.24_CD %_NN -RRB-_-RRB- 870_CD -LRB-_-LRB- 26.62_CD %_NN -RRB-_-RRB- 2142_CD -LRB-_-LRB- 65.86_CD %_NN -RRB-_-RRB- Non-hakka_NN 864_CD -LRB-_-LRB- 26.52_CD %_NN -RRB-_-RRB- 249_CD -LRB-_-LRB- 7.62_CD %_NN -RRB-_-RRB- 1113_CD -LRB-_-LRB- 34.14_CD %_NN -RRB-_-RRB- Total_JJ 2146_CD -LRB-_-LRB- 65.76_CD %_NN -RRB-_-RRB- 1119_CD -LRB-_-LRB- 34.24_CD %_NN -RRB-_-RRB- 3265_CD -LRB-_-LRB- 100_CD %_NN -RRB-_-RRB- Table_NNP 7_CD ._.
+Cross_NNP Distribution_NN Figure1_NNP ._.
+Yearly_JJ distribution_NN Regarding_VBG the_DT first_JJ research_NN question_NN ,_, what_WP so_RB -_: cial-cultural_JJ factors_NNS trigger_VBP the_DT innovative_JJ devel_NN -_: opment_NN of_IN <nganggiang stiff neck>_NN from_IN carrying_VBG negative_JJ connotation_NN to_TO carrying_VBG positive_JJ connota_NN -_: tion_NN ?_.
+The_DT yearly_JJ distribution_NN in_IN Figure_NN 1_CD indicates_VBZ that_IN Hakka_NNP news_NN increases_NNS around_IN 1990_CD ,_, and_CC a_DT sharp_JJ rise_NN occurs_VBZ during_IN 1993-1994_CD ._.
+An_DT examina_NN -_: tion_NN of_IN Hakka_NNP Movement_NNP back_RB then_RB gives_VBZ an_DT an_DT -_: swer_NN ._.
+Figure_NN 3_CD shows_VBZ the_DT three_CD stages_NNS of_IN Hakka_NNP Movement_NNP --_: the_DT stage_NN of_IN Emergency_NN ,_, that_IN of_IN Growth_NN ,_, and_CC that_IN of_IN Maturity_NNP -LRB-_-LRB- cf._NNP Luo_NNP 2008_CD -RRB-_-RRB- ._.
+Figure2_NN ._.
+Expansion_NN to_TO categories_NNS 5_CD ._.
+Discussion_NN Udndata_NNP KMW_NNP Liberty_NNP Times_NNP Net_NNP 6_CD 120_CD 11_CD 21_CD 76_CD 9_CD 37_CD 22_CD 15_CD 317_CD Apple_NNP Daily_NNP 8_CD 28_CD 9_CD 22_CD 20_CD 2_CD 25_CD 14_CD 18_CD 146_CD Total_JJ 75_CD -LRB-_-LRB- 2_CD %_NN -RRB-_-RRB- 795_CD -LRB-_-LRB- 24_CD %_NN -RRB-_-RRB- 209_CD -LRB-_-LRB- 6_CD %_NN -RRB-_-RRB- 312_CD -LRB-_-LRB- 10_CD %_NN -RRB-_-RRB- 1133_CD -LRB-_-LRB- 35_CD %_NN -RRB-_-RRB- 107_CD -LRB-_-LRB- 3_CD %_NN -RRB-_-RRB- 393_CD -LRB-_-LRB- 12_CD %_NN -RRB-_-RRB- 120_CD -LRB-_-LRB- 4_CD %_NN -RRB-_-RRB- 121_CD -LRB-_-LRB- 4_CD %_NN -RRB-_-RRB- 3265_CD -LRB-_-LRB- 100_CD %_NN -RRB-_-RRB- World_NNP Politics_NNP Society_NNP 90_CD 99_CD Business_NNP 185_CD 84_CD Culture_NNP &_CC Art_NNP 511_CD 526_CD Edu_NNP &_CC Tech_NNP 64_CD 32_CD Lifestyles_NNP 207_CD 124_CD Entertainment_NNP 57_CD 27_CD Sports_NNP 48_CD 40_CD Total_JJ 1503_CD 1299_CD 33 28 308 339_CD Table_NNP 6_CD ._.
+Distributions_NNS of_IN news_NN categories_NNS Figure3_NNP ._.
+Stages_NNS of_IN Hakka_NNP Movement_NNP Two_CD important_JJ events_NNS are_VBP very_RB influential_JJ dur_NN -_: ing_VBG the_DT emergent_NN stage_NN --_: Give_VB My_PRP$ Mother_NNP Tongue_NNP Back_RB in_IN 1988_CD ,_, and_CC the_DT establishment_NN of_IN Association_NNP of_IN Taiwan_NNP Hakka_NNP Public_NNP Affairs_NNPS in_IN 1990_CD ._.
+The_DT first_JJ president_NN of_IN the_DT Association_NNP is_VBZ Zhao-zheng_JJ Zhong_NNP ,_, a_DT famous_JJ Hakka_JJ figure_NN whose_WP$ presidential_JJ speech_NN strongly_RB advocates_VBZ New_NNP Hakka_NNP concept_NN ,_, encourag_NN -_: ing_VBG Hakka_JJ people_NNS to_TO bring_VB Hakka_JJ spirit_NN into_IN full_JJ play_NN ,_, to_TO be_VB proud_JJ of_IN being_VBG Hakka_NNP ,_, and_CC to_TO loudly_RB speak_VB their_PRP$ own_JJ language_NN so_RB as_IN to_TO pass_VB Hakka_JJ lan_NN -_: guage_VB down_RP to_TO generations_NNS ._.
+His_PRP$ presidential_JJ speech_NN and_CC his_PRP$ strong_JJ appeal_NN to_TO the_DT concept_NN New_NNP Hakka_NNP have_VBP turned_VBN the_DT word_NN <nganggiang stiff neck>_NN over_IN ,_, making_VBG it_PRP undergo_VB semantic_JJ elevation_NN ._.
+The_DT following_JJ lines_NNS of_IN his_PRP$ speech_NN are_VBP monumental_JJ :_: 客家人多以_CD 硬頸_CD 自許_NN 、_CD 自傲_NN ..._: 從這一_CD 刻起再次挺起你硬鐵的頸骨_CD ,_, 表示你是客_CD 家子弟_CD ,_, 說你的母語_CD ,_, 把你的母語傳給下_CD 一代_NN ..._: kèjiārén_FW duō_FW yǐ_FW yìngjǐng_FW zìxǔ_FW zìào_FW ..._: Cóng_NNP zhèyíkè_NNP qǐ_FW zàicì_FW tǐngqǐ_FW nǐ_FW yìngtiěde_FW jǐnggǔ_FW biǎoshì_FW nǐshì_FW kèjiāzǐdì_FW shuō_FW nǐde_FW mǔyǔ_FW bǎ_FW nǐde_FW mǔyǔ_FW chuán_FW gěi_FW xiàyídài_FW -LRB-_-LRB- Hakka-people-often-take-stiff_JJ neck-self_NN ex_FW -_: pect-self_JJ proud...from-this-moment-on-again_JJ -_: straighten-your-hard-neck-show-you_NN are_VBP -_: Hakka_JJ descendant-speak-your-mother_JJ tongue_NN -_: BA-your-mother_JJ tongue-pass_NN down_IN -_: next_JJ generation_NN -RRB-_-RRB- `_`` Hakka_FW people_NNS often_RB take_VBP pride_NN in_IN owning_VBG the_DT spirit_NN of_IN indomitability_NN ..._: From_IN now_RB on_IN ,_, keep_VB your_PRP$ neck_NN straight_RB !_.
+Show_NN that_IN you_PRP are_VBP Hakka_JJ descendants_NNS !_.
+Speak_VB your_PRP$ mother_NN tongue_NN !_.
+Pass_VB down_RP your_PRP$ mother_NN language_NN to_TO next_JJ genera_NN -_: tions_NNS !_. '_''
+Ever_RB since_IN ,_, the_DT word_NN <nganggiang stiff neck>_NN has_VBZ become_VBN associated_VBN with_IN positive_JJ meanings_NNS like_IN toughness_NN and_CC perseverance_NN ._.
+It_PRP also_RB becomes_VBZ a_DT symbolic_JJ code_NN representing_VBG Hakka_JJ character_NN ,_, and_CC gradually_RB develops_VBZ into_IN an_DT iconographic_JJ reference_NN to_TO stand_VB for_IN a_DT simplistic_JJ image_NN with_IN value_NN judg_NN -_: ments_NNS ._.
+Such_JJ an_DT innovative_JJ development_NN is_VBZ contin_JJ -_: gent_NN with_IN an_DT ideology_NN ._.
+The_DT highest_JJS occurrence_NN in_IN culture_NN &_CC art_NN in_IN Table_NNP 6_CD shows_NNS that_IN more_JJR straight_JJ news_NN related_VBN to_TO Hakka_NNP are_VBP reported_VBN in_IN the_DT media_NNS ._.
+The_DT fact_NN that_IN Hakka_JJ affairs_NNS occupy_VBP almost_RB 65_CD %_NN in_IN Table_NNP 7_CD also_RB reveals_VBZ stereotypical_JJ impressions_NNS to_TO -_: ward_VB Hakka_JJ issues_NNS in_IN the_DT news_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT results_NNS show_VBP that_IN <nganggiang stiff neck>_NN is_VBZ often_RB manipulated_VBN by_IN media_NNS discourse_NN to_TO depict_VB politicians_NNS for_IN political_JJ purposes_NNS ._.
+The_DT several_JJ rises_NNS in_IN Figure_NN 1_CD correspond_VBP to_TO the_DT two_CD or_CC three_CD years_NNS before_IN presidential_JJ elections_NNS in_IN Taiwan_NNP ._.
+This_DT strongly_RB implies_VBZ how_WRB Hakka_JJ issues_NNS are_VBP raised_VBN and_CC manipulated_VBN for_IN political_JJ reasons_NNS during_IN the_DT cam_NN -_: paign_NN since_IN Hakka_JJ people_NNS are_VBP known_VBN as_IN the_DT swing_NN votes_VBZ that_DT could_MD have_VB decisive_JJ effects_NNS of_IN win_VBP or_CC lose_VBP ._.
+Evidence_NN also_RB comes_VBZ from_IN Figure_NN 2_CD that_WDT shows_VBZ how_WRB politics_NNS is_VBZ the_DT domain_NN that_IN most_JJS active_JJ -_: ly_RB uses_VBZ this_DT item_NN ._.
+Under_IN media_NNS framing_VBG effects_NNS ,_, <nganggiang stiff neck>_NN keeps_VBZ on_IN expanding_VBG its_PRP$ usages_NNS in_IN differ_VBP -_: ent_NN frames_NNS ,_, functioning_VBG as_IN a_DT handy_JJ attractor_NN in_IN me_PRP -_: dia_NN discourse_NN ._.
+What_WP mechanisms_NNS bring_VBP about_RB such_JJ an_DT extension_NN ?_.
+Its_PRP$ meaning_NN extends_VBZ ,_, through_IN meta_NN -_: phor_NN and_CC metonymy_NN ,_, from_IN portraying_VBG Hakka_NNP char_SYM -_: acter_NN to_TO stereotypically_RB representing_VBG Hakka_NNP non_SYM -_: human_JJ objects_NNS or_CC concepts_NNS ,_, even_RB to_TO representing_VBG non-Hakka_JJ people_NNS and_CC non-Hakka_JJ objects_NNS or_CC con_NN -_: cepts_NNS ._.
+For_IN instance_NN ,_, it_PRP is_VBZ used_VBN to_TO report_VB news_NN about_IN tung_JJ flowers_NNS or_CC Hakka_JJ blue_JJ shirts_NNS ,_, described_VBD to_TO im_SYM -_: ply_VB the_DT spirit_NN of_IN toughness_NN or_CC persistence_NN ._.
+It_PRP is_VBZ em_SYM -_: ployed_VBN in_IN various_JJ news_NN types_NNS ,_, either_CC portraying_VBG the_DT protagonist_NN 's_POS perseverance_NN or_CC indomitability_NN ,_, or_CC depicting_VBG the_DT persistence_NN or_CC stability_NN of_IN certain_JJ ob_SYM -_: jects_NNS such_JJ as_IN money_NN currency_NN or_CC stock_NN ._.
+The_DT follow_VBP -_: ing_VBG headlines_NNS taken_VBN from_IN Udndata_NNP can_MD illustrate_VB :_: 裘莉硬頸挺難民_CD Qiúlì_NNP yìngjǐng_NNP tǐng_NNP nànmín_NNP -LRB-_-LRB- Angelina_NNP Jolie-stiff_NNP neck-back_JJ up-refugees_NNS -RRB-_-RRB- Jolie_NN strongly_RB backs_VBZ refugees_NNS up_RB ._.
+傷兵不怕戰_CD 尼克超硬頸_CD Shāngbīng_NNP búpà_NNP zhàn_VBD níkè_JJ chāoyìngjǐng_NN -LRB-_-LRB- wounded_JJ players-no-fear-fighting_NN -_: Knicks_NNP extremely-stiff_JJ neck_NN -RRB-_-RRB- `_`` The_DT wounded_VBN players_NNS do_VBP not_RB fear_NN ;_: New_NNP York_NNP Knicks_NNP Really_RB tough_JJ !_.
+東京還是如此硬頸_CD Dōngjīng_NNP háishì_NNP rúcǐ_NNP yìngjǐng_NNP -LRB-_-LRB- Tokyo-still-is-so-stiff_JJ neck_NN -RRB-_-RRB- Tokyo_NNP is_VBZ still_RB so_RB persistent_JJ !_.
+台泥登_IN 50_CD 元_CD 水泥股硬頸_CD táiní_IN dēngwǔshíyuán_JJ shuǐnígǔ_NN yìngjǐng_NN TaiNi-climb_NNP up-NT50-dollars-cement_NNP stock_NN -_: stiff_JJ neck_NN -RRB-_-RRB- `_`` TaiNi_NNP climbs_VBZ up_RP to_TO 50_CD dollars_NNS ._.
+The_DT cement_NN stock_NN stands_VBZ steadily_RB !_. '_''
+An_DT examination_NN of_IN the_DT lexical_JJ item_NN <ngang- giang stiff neck>_NN will_MD find_VB out_RP that_IN the_DT word_NN itself_PRP is_VBZ a_DT metonymically_RB lexicalized_VBN item_NN ._.
+When_WRB we_PRP get_VBP stubborn_JJ and_CC tough_JJ ,_, we_PRP often_RB make_VBP our_PRP$ necks_NNS stiff_JJ to_TO convey_VB our_PRP$ unyielding_JJ attitude_NN ._.
+We_PRP often_RB use_VBP our_PRP$ own_JJ bodily_NN experience_NN to_TO metaphorically_RB anal_JJ -_: ogize_NN other_JJ abstract_JJ concepts_NNS ._.
+The_DT referential_JJ do_VBP -_: mains_NNS of_IN <nganggiang stiff neck>_NN are_VBP expanded_VBN and_CC shifted_VBN to_TO different_JJ frames_NNS by_IN the_DT two_CD princi_NNS -_: ples_NNS --_: metaphor_NN and_CC metonymy_NN ._.
+The_DT character_NN of_IN being_VBG tough_JJ or_CC unyielding_JJ is_VBZ used_VBN to_TO depict_VB non_SYM -_: Hakka_JJ people_NNS such_JJ as_IN Angelina_NNP Jolie_NNP ._.
+Through_IN the_DT metonymy_JJ INSTITUTION_NNP FOR_IN PEOPLE_NNP ,_, it_PRP is_VBZ used_VBN to_TO refer_VB to_TO the_DT team_NN New_NNP York_NNP Knicks_NNPS that_WDT stands_VBZ for_IN the_DT players_NNS ;_: through_IN double_JJ metonymy_NN PLACE_NNP FOR_IN INSTITUTION_NNP FOR_IN PEOPLE_NNP ,_, it_PRP is_VBZ used_VBN to_TO refer_VB to_TO the_DT capital_NN city_NN Tokyo_NNP to_TO stand_VB for_IN the_DT Japanese_JJ government_NN and_CC in_IN turn_NN to_TO stand_VB for_IN the_DT decision_NN makers_NNS ._.
+And_CC through_IN personification_NN it_PRP manifests_VBZ analogical_JJ metaphor_NN STOCK_NNP IS_VBZ HU_NNP -_: MAN_NNP ,_, depicting_VBG constancy_NN or_CC steadiness_NN of_IN stock_NN ._.
+Table_NNP 8_CD gives_VBZ the_DT distribution_NN of_IN the_DT frame_NN expan_NN -_: sions_NNS to_TO different_JJ news_NN categories_NNS through_IN meton_NN -_: ymy_NN and_CC metaphor_NN ._.
+As_IN illustrated_VBN by_IN the_DT headlines_NNS ,_, <nganggiang stiff neck>_JJ becomes_VBZ in_IN media_NNS dis_SYM -_: course_NN an_DT iconographic_JJ reference_NN with_IN strong_JJ atti_NNS -_: tudinal_JJ judgments_NNS of_IN the_DT reported_VBN news_NN ._.
+Types_NNP World_NNP Politics_NNP Society_NNP Business_NNP Culture_NNP &_CC Art_NNP Edu_NNP &_CC Tech_NNP Lifestyles_NNP Entertainment_NNP Sports_NNP Total_NNP Metonymy_NNP 14_CD -LRB-_-LRB- 1.54_CD %_NN -RRB-_-RRB- 14_CD -LRB-_-LRB- 1.54_CD %_NN -RRB-_-RRB- 35_CD -LRB-_-LRB- 3.84_CD %_NN -RRB-_-RRB- 13_CD -LRB-_-LRB- 1.43_CD %_NN -RRB-_-RRB- 683_CD -LRB-_-LRB- 74.89_CD %_NN -RRB-_-RRB- 11_CD -LRB-_-LRB- 1.21_CD %_NN -RRB-_-RRB- 118_CD -LRB-_-LRB- 12.94_CD %_NN -RRB-_-RRB- 9_CD -LRB-_-LRB- 0.99_CD %_NN -RRB-_-RRB- 15_CD -LRB-_-LRB- 1.64_CD %_NN -RRB-_-RRB- 912_CD -LRB-_-LRB- 100_CD %_NN -RRB-_-RRB- Metaphor_NN 8_CD -LRB-_-LRB- 3.98_CD %_NN -RRB-_-RRB- 19_CD -LRB-_-LRB- 9.45_CD %_NN -RRB-_-RRB- 3_CD -LRB-_-LRB- 1.49_CD %_NN -RRB-_-RRB- 140_CD -LRB-_-LRB- 69.65_CD %_NN -RRB-_-RRB- 9_CD -LRB-_-LRB- 4.48_CD %_NN -RRB-_-RRB- 2_CD -LRB-_-LRB- 1.00_CD %_NN -RRB-_-RRB- 15_CD -LRB-_-LRB- 7.46_CD %_NN -RRB-_-RRB- 2_CD -LRB-_-LRB- 1.00_CD %_NN -RRB-_-RRB- 3_CD -LRB-_-LRB- 1.49_CD %_NN -RRB-_-RRB- 201_CD -LRB-_-LRB- 100_CD %_NN -RRB-_-RRB- Table8_NN ._.
+Distributions_NNS of_IN metonymy_NN and_CC metaphor_NN 6_CD ._.
+Conclusion_NN In_IN this_DT study_NN ,_, we_PRP investigate_VBP the_DT innovative_JJ de_IN -_: velopment_NN of_IN the_DT symbolic_JJ code_NN <nganggiang stiff neck>_NN into_IN an_DT iconographic_JJ reference_NN in_IN media_NNS dis_SYM -_: course_NN ._.
+Employing_VBG text_NN analysis_NN tools_NNS ,_, the_DT study_NN retrieves_VBZ 3265_CD tokens_NNS from_IN the_DT four_CD major_JJ newspa_NN -_: pers_NNS in_IN Taiwan_NNP society_NN ,_, Udndata_NNP ,_, Knowledge_NNP Man_NNP -_: agement_NN Winner_NNP ,_, Liberty_NNP Times_NNP Net_NN ,_, and_CC Apple_NNP Daily_NNP ._.
+The_DT data_NNS are_VBP analyzed_VBN regarding_VBG their_PRP$ longi_NNS -_: tudinal_JJ distribution_NN ,_, theme_NN distribution_NN and_CC the_DT cross_NN distribution_NN across_IN four_CD dimensions_NNS ._.
+The_DT main_JJ findings_NNS are_VBP as_IN follows_VBZ ._.
+First_RB ,_, the_DT meaning_NN of_IN <nganggiang stiff neck>_NN ,_, used_VBN to_TO carry_VB negative_JJ connotation_NN ,_, has_VBZ turned_VBN into_IN a_DT symbolic_JJ code_NN with_IN positive_JJ connotation_NN due_JJ to_TO historical_JJ events_NNS con_VBP -_: tingent_NN on_IN the_DT social-political_JJ development_NN in_IN Tai_NNP -_: wan_NN ._.
+Even_RB since_IN ,_, denoting_VBG Hakka_JJ character_NN as_IN per_IN -_: severance_NN ,_, it_PRP has_VBZ become_VBN a_DT Hakka_JJ symbolic_JJ code_NN stereotypically_RB employed_VBN to_TO depict_VB Hakka-related_JJ matters_NNS ,_, human_JJ or_CC non-human_JJ ,_, strongly_RB indicating_VBG ideological_JJ effect_NN in_IN media_NNS discourse_NN toward_IN Hakka_JJ groups_NNS ._.
+Its_PRP$ frequency_NN highly_RB correlates_VBZ with_IN major_JJ political_JJ events_NNS in_IN Taiwan_NNP ,_, with_IN high_JJ peaks_NNS occur_VBP -_: ring_NN particularly_RB two_CD or_CC three_CD years_NNS before_IN presi_NNS -_: dential_JJ elections_NNS ._.
+Second_NNP ,_, its_PRP$ semiotic_JJ innovation_NN continues_VBZ to_TO develop_VB ,_, extending_VBG from_IN prototypical_JJ Hakka_NNP frames_NNS to_TO Hakka_NNP non-human_JJ frames_NNS ,_, to_TO non_VB -_: Hakka_NNP frames_NNS ,_, and_CC to_TO non-Hakka_JJ non-human_JJ frames_NNS through_IN mechanisms_NNS of_IN metaphor_NN and_CC me_PRP -_: tonymy_NN ._.
+With_IN new_JJ ways_NNS of_IN representing_VBG various_JJ themes_NNS ranging_VBG from_IN international_JJ affairs_NNS ,_, publici_SYM -_: ties_NNS in_IN entertainment_NN or_CC sports_NNS to_TO technology_NN and_CC stock_NN or_CC money_NN currency_NN ,_, <nganggiang stiff neck>_NN emerges_VBZ as_IN an_DT iconographic_JJ reference_NN representing_VBG a_DT simplistic_JJ image_NN with_IN familiar_JJ judgment_NN and_CC val_NN -_: ues_NNS ,_, and_CC carrying_VBG linguistic_JJ ,_, semantic_JJ ,_, affective_JJ ,_, and_CC pragmatic_JJ forces_NNS of_IN the_DT situation_NN reported_VBD in_IN the_DT news_NN ._.
+Figure_NN 4_CD summarizes_VBZ the_DT semiotic_JJ inno_NN -_: vation_NN of_IN this_DT symbolic_JJ code_NN with_IN its_PRP$ frame_NN shifts_NNS by_IN metaphor_NN and_CC metonymy_NN ._.
+Of_IN course_NN ,_, such_PDT an_DT extension_NN will_MD not_RB happen_VB without_IN the_DT manipulation_NN of_IN language_NN users_NNS and_CC the_DT ideology_NN embedded_VBN in_IN the_DT social-cultural_JJ context_NN ._.
+Figure4_NNP ._.
+Semiotic_JJ innovation_NN This_DT study_NN demonstrates_VBZ a_DT research_NN integrating_VBG computational_JJ and_CC corpus_JJ methods_NNS for_IN linguistic_JJ analysis_NN of_IN media_NNS discourse_NN ._.
+The_DT findings_NNS profile_VBP the_DT importance_NN of_IN placing_VBG semiotic_JJ innovation_NN in_IN its_PRP$ social_JJ ,_, cultural_JJ ,_, political_JJ and_CC historical_JJ contexts_NNS ,_, highlighting_VBG the_DT intertwining_VBG complexities_NNS between_IN media_NNS discourse_NN ,_, communication_NN ,_, and_CC society_NN ._.
+References_NNS Barthes_NNS ,_, R._NNP 1977_CD ._.
+Elements_NNS of_IN Semiology_NNP ._.
+Translated_VBN by_IN Annette_NNP Lavers_NNP and_CC Colin_NNP Smith_NNP ._.
+New_NNP York_NNP :_: Hill_NNP and_CC Wang_NNP ._.
+Cameron_NNP ,_, L._NNP &_CC Deignan_NNP ,_, A._NN 2006_CD ._.
+The_DT emergence_NN of_IN metaphor_NN in_IN discourse_NN ._.
+Applied_NNP Linguistics_NNP ,_, 27_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :671_CD --_: 690_CD ._.
+Dirven_NNP ,_, R._NNP ,_, Frank_NNP ,_, R._NNP ,_, &_CC Pütz_NNP ,_, M._NNP 2003_CD ._.
+Introduction_NN :_: Categories_NNS ,_, cognitive_JJ models_NNS and_CC ideologies_NNS ._.
+In_IN R._NNP Dirven_NNP ,_, R._NNP M._NNP Frank_NNP ,_, and_CC M._NNP Pütz_NNP -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+,_, Cogni_NNP -_: tive_JJ models_NNS in_IN language_NN and_CC thought_NN :_: Ideology_NN ,_, metaphors_NNS and_CC meanings_NNS ,_, 1-21_CD ._.
+Berlin_NNP :_: Mouton_NNP de_IN Gruyter_NNP ._.
+Hawkins_NNP ,_, B._NNP 2001_CD ._.
+Ideology_NN ,_, metaphor_NN and_CC iconograph_NN -_: ic_JJ reference_NN ._.
+In_IN R._NNP Dirven_NNP ,_, R._NNP ,_, Frank_NNP ,_, R._NNP and_CC Ilie_NNP ,_, C._NNP -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+,_, Language_NN and_CC Ideology_NN ,_, Volume_NN II_NNP :_: Descrip_NNP -_: tive_JJ Cognitive_NNP Approaches_NNPS ,_, 27-50_CD ._.
+Philadelphia_NNP :_: John_NNP Benjamins_NNP Publishing_NNP Company_NNP ._.
+Kövecses_NNP ,_, Z_NNP &_CC Radden_NNP ,_, G._NNP 1998_CD ._.
+Metonymy_NNP :_: Develop_VB -_: ing_VBG a_DT cognitive_JJ linguistic_JJ view_NN ._.
+Cognitive_NNP Linguis_NNP -_: tics_NNS 9:37_CD -77_CD ._.
+Kövecses_NNP ,_, Z._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Metaphor_NN :_: A_DT practical_JJ introduction_NN ._.
+Oxford_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Lakoff_NNP ,_, G._NNP &_CC Johnson_NNP ,_, M._NNP 1980_CD ._.
+Metaphors_NNS we_PRP live_VBP by_IN ._.
+Chicago_NNP :_: University_NNP of_IN Chicago_NNP press_NN ._.
+Lakoff_NNP ,_, G._NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- ._.
+The_DT Contemporary_NNP Theory_NNP of_IN Meta_NNP -_: phor_NN ._.
+In_IN Andrew_NNP Ortony_NNP -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+,_, Metaphor_NNP and_CC Thought_NNP -LRB-_-LRB- pp._FW 202-251_CD -RRB-_-RRB- ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Lee_NNP ,_, M.-H_NNP ._.
+2013_CD ._.
+Taiwanese_JJ Hakka_NNP Media_NNP and_CC Cultural_NNP Communication_NNP :_: Representations_NNS ,_, Effects_NNPS ,_, and_CC Speech_NNP Communication_NNP ._.
+-LRB-_-LRB- 台灣客家族群媒體與文_CD 化傳播_CD :_: 再現_FW 、_FW 效果_FW 、_FW 語藝傳播_FW -RRB-_-RRB- Taipei_NNP :_: Shi_NNP Ying_NNP ._.
+Van_NNP Leeuwen_NNP T._NNP 2005_CD ._.
+Introducing_VBG Social_NNP Semiotics_NNPS :_: An_DT Introductory_NNP Textbook_NNP ._.
+London_NNP :_: Routledge_NNP ._.
+Peng_NNP ,_, D._NNP 2008_CD ._.
+Variety_NNP of_IN Hakka_NNP images_NNS in_IN Taiwan_NNP ma_SYM -_: jor_NN newspapers_NNS -LRB-_-LRB- 臺灣主要報紙客家意象多樣化研_CD 究_CD -RRB-_-RRB- ._.
+In_IN Chang_NNP ,_, W.-A._NNP ,_, Hsu_NNP ,_, C.-G._NNP ,_, Luo_NNP ,_, l._NN --_: l._NN -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+,_, Hakka_NNP and_CC Multi-ethnic_JJ Groups_NNS :_: The_DT 20th_JJ Anniver_NNP -_: sary_NN of_IN Hakka_NNP Movement_NNP in_IN Taiwan_NNP ,_, 274-295_CD ._.
+Xin_NNP Zhu_NNP :_: Association_NNP of_IN Taiwan_NNP Hakka_NNP research_NN ._.
+Weng_NNP ,_, S.-C._NNP ,_, Chung_NNP ,_, W.-W._NNP ,_, Jian_NNP ,_, M.-J_NNP ._.
+&_CC Chiu_NNP ,_, C.-C_NNP ._.
+1999_CD ._.
+The_DT Virtual_NNP World_NNP of_IN News_NNP Text_NNP :_: How_WRB News_NNP Represents_VBZ Parapsychological_NNP Experiences_NNPS ._.
+-LRB-_-LRB- 似假還真的新聞文本世界_CD :_: 新聞如_FW 何呈現超_FW 經_FW 驗_FW 事_FW 件_FW -RRB-_-RRB- 58:59_CD -83_CD -RRB-_-RRB- ._.
+Mass_NNP Communication_NNP Research_NNP ,_,

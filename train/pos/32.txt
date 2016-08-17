@@ -1,0 +1,242 @@
+Self_NN Syntactico-Semantic_JJ Enrichment_NN of_IN LMF_NNP Normalized_NNP Dictionaries_NNPS Elleuch_NNP Imen_NNP Abstract_NNP The_NNP main_JJ challenge_NN of_IN this_DT paper_NN is_VBZ the_DT syntactico-semantic_JJ enrichment_NN of_IN LMF_NNP normalized_VBD dictionaries_NNS ._.
+To_TO meet_VB this_DT challenge_NN ,_, we_PRP propose_VBP an_DT approach_NN based_VBN on_IN the_DT content_NN of_IN these_DT dictionaries_NNS ,_, namely_RB the_DT ``_`` Context_NNP ''_'' fields_NNS and_CC the_DT syntactic_NN and_CC semantic_JJ knowledge_NN ._.
+The_DT proposed_VBN approach_NN is_VBZ composed_VBN of_IN three_CD phases_NNS ._.
+The_DT first_JJ one_CD deals_NNS with_IN the_DT data_NN set_NN concerning_VBG the_DT syntactic_JJ arguments_NNS of_IN the_DT ``_`` Context_NNP ''_'' fields_NNS ._.
+The_DT second_JJ consists_VBZ in_IN connect_VB semantic_JJ arguments_NNS to_TO the_DT syntactic_JJ ones_NNS ._.
+The_DT last_JJ phase_NN links_NNS syntactic_JJ and_CC semantic_JJ arguments_NNS ._.
+In_IN order_NN to_TO evaluate_VB the_DT proposed_VBN approach_NN ,_, we_PRP have_VBP applied_VBN it_PRP to_TO an_DT available_JJ Arabic_NNP normalized_VBD dictionary_NN ._.
+The_DT results_NNS are_VBP encouraging_VBG with_IN respect_NN to_TO the_DT measurement_NN evaluation_NN ._.
+1_CD Introduction_NNP Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- tasks_NNS require_VBP reliable_JJ linguistic_JJ resources_NNS such_JJ as_IN lexicons_NNS ._.
+The_DT latter_JJ represent_VBP lexical_JJ resources_NNS that_WDT should_MD define_VB for_IN each_DT lemma_NN a_DT highly_RB valuable_JJ knowledge_NN such_JJ as_IN morphological_JJ features_NNS ,_, syntactic_JJ behaviors_NNS and_CC semantic_JJ knowledge_NN like_IN meanings_NNS ,_, contexts_NNS ,_, semantic_JJ classes_NNS and_CC thematic_JJ roles_NNS ._.
+The_DT availability_NN of_IN such_JJ knowledge_NN favors_VBZ the_DT efficiency_NN of_IN NLP_NNP tools_NNS ._.
+For_IN example_NN ,_, -LRB-_-LRB- Briscoe_NNP and_CC Carroll_NNP ,_, 2002_CD -RRB-_-RRB- estimate_NN that_IN about_IN half_NN of_IN the_DT errors_NNS of_IN parsers_NNS are_VBP based_VBN on_IN the_DT insufficient_JJ amount_NN of_IN knowledge_NN concerning_VBG the_DT syntactic_NN argument_NN structure_NN in_IN the_DT used_VBN lexicons_NNS ;_: on_IN the_DT other_JJ hand_NN ,_, -LRB-_-LRB- Carroll_NNP and_CC Fang_NNP ,_, 2004_CD -RRB-_-RRB- show_VBP that_IN the_DT use_NN of_IN syntactic_JJ lexicons_NNS by_IN a_DT syntactic_JJ parser_NN improves_VBZ Gargouri_NNP Bilel_NNP MIRACL_NNP Laboratory_NNP B.P._NNP 1088_CD 3018_CD Sfax_NNP ,_, Tunisia_NNP bilel.gargouri_NNP @fsegs_NNS ._.
+rnu.tn_NNP Ben_NNP Hamadou_NNP Abdelmajid_NNP MIRACL_NNP Laboratory_NNP B.P._NNP 242_CD 3021_CD Sakiet-Ezzit_NNP Sfax_NNP ,_, Tunisia_NNP abdelmajid.benhamadou_NNP @isimsf_NNP ._.
+rnu.tn_VB its_PRP$ performance_NN ._.
+Furthermore_RB ,_, the_DT lexicon_NN is_VBZ the_DT core_NN component_NN for_IN machine_NN translation_NN and_CC information_NN extraction_NN -LRB-_-LRB- Surdeanu_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Unfortunately_RB ,_, we_PRP find_VBP that_IN the_DT lexicons_NNS that_WDT combine_VBP syntactic_JJ and_CC semantic_JJ knowledge_NN -LRB-_-LRB- i.e._FW ,_, representing_VBG semantic_JJ predicates_NNS -RRB-_-RRB- are_VBP shallow_JJ for_IN some_DT languages_NNS and_CC unavailable_JJ for_IN many_JJ others_NNS ._.
+Among_IN the_DT first_JJ lexicons_NNS dealing_VBG with_IN the_DT syntactico-semantic_JJ knowledge_NN ,_, we_PRP note_VBP the_DT framework_NN of_IN -LRB-_-LRB- Gross_NNP ,_, 1975_CD -RRB-_-RRB- ,_, which_WDT was_VBD a_DT revelation_NN in_IN this_DT field_NN ._.
+However_RB ,_, the_DT enrichment_NN of_IN the_DT proposed_VBN structure_NN and_CC even_RB that_DT of_IN the_DT lexicons_NNS proposed_VBD thereafter_RB was_VBD such_JJ a_DT hard_JJ task_NN that_IN it_PRP could_MD not_RB be_VB accomplished_VBN due_JJ to_TO the_DT varied_VBN and_CC abundant_JJ knowledge_NN to_TO be_VB represented_VBN and_CC requiring_VBG a_DT high_JJ linguistic_JJ expertise_NN ._.
+Thus_RB ,_, this_DT enrichment_NN task_NN is_VBZ an_DT expensive_JJ and_CC time_NN -_: consuming_NN process_NN ._.
+Some_DT other_JJ researchers_NNS like_IN -LRB-_-LRB- Medelyan_JJ et_FW al._FW ,_, 2013_CD -RRB-_-RRB- have_VBP proposed_VBN to_TO enrich_VB such_JJ lexicons_NNS automatically_RB using_VBG statistical_JJ methods_NNS ._.
+Nevertheless_RB ,_, the_DT obtained_VBN content_NN of_IN such_JJ lexicons_NNS lacks_VBZ reliability_NN compared_VBN to_TO the_DT expert_NN enrichment_NN work_NN ._.
+We_PRP feel_VBP that_IN the_DT enrichment_NN issue_NN of_IN syntactico_NN -_: semantic_JJ lexicons_NNS can_MD not_RB be_VB dealt_VBN with_IN independently_RB of_IN their_PRP$ models_NNS ._.
+In_IN this_DT context_NN ,_, the_DT International_NNP Organization_NNP of_IN Standardization_NNP -LRB-_-LRB- ISO_NNP -RRB-_-RRB- has_VBZ published_VBN the_DT LMF-ISO_NNP 24613_CD -LRB-_-LRB- Lexical_JJ Markup_NNP Framework_NNP -RRB-_-RRB- standard_NN -LRB-_-LRB- Francopoulo_JJ and_CC George_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+LMF_NNP provides_VBZ a_DT unified_VBN model_NN for_IN constructing_VBG lexical_JJ resources_NNS covering_VBG all_DT linguistic_JJ levels_NNS and_CC dealing_VBG with_IN the_DT majority_NN of_IN languages_NNS ._.
+It_PRP offers_VBZ a_DT finely-structured_JJ model_NN including_VBG the_DT syntactico-semantic_JJ part_NN ._.
+Many_JJ compliant_JJ lexicons_NNS to_TO the_DT LMF_NNP standard_NN have_VBP been_VBN developed_VBN such_JJ as_IN Wordnet-LMF_JJ -LRB-_-LRB- Henrich_NNP and_CC Hinrichs_NNP ,_, 2010_CD -RRB-_-RRB- ,_, LG-LMF_NNP -LRB-_-LRB- Laporte_NNP and_CC Matthieu_NNP -_: Constant_JJ ,_, 2013_CD -RRB-_-RRB- and_CC the_DT El-Madar_NNP Arabic_NNP dictionary_NN -LRB-_-LRB- Khemakhem_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Considering_VBG the_DT richness_NN and_CC the_DT fine_JJ structure_NN of_IN LMF_NNP lexicons_NNS ,_, we_PRP propose_VBP in_IN this_DT paper_NN an_DT automatic_JJ approach_NN for_IN enriching_VBG LMF_NNP lexicons_NNS with_IN syntactico-semantic_JJ links_NNS ._.
+This_DT approach_NN uses_VBZ the_DT available_JJ syntactic_NN and_CC semantic_JJ knowledge_NN -LRB-_-LRB- already_RB enriched_VBN -RRB-_-RRB- and_CC operates_VBZ the_DT ``_`` Context_NNP ''_'' fields_NNS that_WDT explain_VBP each_DT meaning_NN with_IN reference_NN sentences_NNS ._.
+The_DT proposed_VBN approach_NN was_VBD experimented_VBN on_IN an_DT available_JJ Arabic_NNP dictionary_NN named_VBN El-Madar_NNP -LRB-_-LRB- Khemakhem_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+This_DT dictionary_NN offered_VBD us_PRP a_DT good_JJ framework_NN for_IN experimentation_NN because_IN it_PRP covers_VBZ ,_, among_IN others_NNS ,_, syntactic_NN ,_, semantic_JJ and_CC syntactico-semantic_JJ levels_NNS ._.
+The_DT content_NN of_IN this_DT dictionary_NN has_VBZ been_VBN enriched_VBN regarding_VBG syntactic_JJ behaviors_NNS -LRB-_-LRB- Elleuch_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Also_RB ,_, it_PRP contains_VBZ the_DT semantic_JJ classes_NNS of_IN each_DT meaning_NN of_IN a_DT given_VBN lexical_JJ entry_NN -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT remainder_NN of_IN this_DT paper_NN is_VBZ devoted_VBN primarily_RB to_TO the_DT presentation_NN of_IN some_DT related_JJ works_NNS ._.
+Secondly_RB ,_, the_DT proposed_VBN approach_NN to_TO enrich_VB LMF_NNP normalized_JJ dictionaries_NNS with_IN syntactico-semantic_JJ links_NNS is_VBZ detailed_VBN ._.
+Then_RB ,_, the_DT experimentation_NN carried_VBD out_RP on_IN an_DT available_JJ Arabic_NNP normalized_VBD dictionary_NN is_VBZ described_VBN and_CC the_DT obtained_VBN results_NNS are_VBP commented_VBN upon_IN ._.
+Finally_RB ,_, some_DT future_JJ works_NNS and_CC perspectives_NNS are_VBP announced_VBN in_IN the_DT conclusion_NN ._.
+2_CD Related_VBN Works_NNP Several_JJ lexical_JJ resources_NNS combining_VBG syntactic_NN and_CC semantic_JJ knowledge_NN for_IN numerous_JJ languages_NNS have_VBP been_VBN developed_VBN ._.
+In_IN this_DT section_NN ,_, we_PRP provide_VBP an_DT overview_NN of_IN such_JJ lexical_JJ resources_NNS for_IN the_DT French_NNP ,_, English_NNP and_CC Arabic_NNP languages_NNS ._.
+Regarding_VBG the_DT French_JJ language_NN ,_, we_PRP quote_VBP the_DT Lexicon-Grammar_NNP -LRB-_-LRB- -LRB-_-LRB- Gross_NNP ,_, 1975_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Tolone_NNP ,_, 2011_CD -RRB-_-RRB- -RRB-_-RRB- that_WDT includes_VBZ empirical_JJ knowledge_NN that_WDT is_VBZ quite_RB extensive_JJ and_CC detailed_JJ on_IN the_DT syntax_NN and_CC the_DT semantics_NNS of_IN verbs_NNS ,_, nouns_NNS ,_, adjectives_NNS and_CC adverbs_NNS represented_VBN as_IN tables_NNS ._.
+Each_DT table_NN represents_VBZ a_DT class_NN which_WDT includes_VBZ lexical_JJ items_NNS sharing_VBG some_DT syntactic_NN and_CC semantic_JJ properties_NNS ._.
+This_DT resource_NN suffers_VBZ from_IN some_DT gaps_NNS ._.
+Indeed_RB ,_, common_JJ properties_NNS of_IN verbs_NNS are_VBP not_RB encoded_VBN in_IN the_DT same_JJ tables_NNS but_CC only_RB described_VBD in_IN the_DT literature_NN ._.
+In_IN addition_NN ,_, this_DT resource_NN can_MD not_RB be_VB directly_RB used_VBN in_IN NLP_NNP applications_NNS due_JJ to_TO its_PRP$ complex_JJ structure_NN ._.
+Another_DT lexicon_NN for_IN the_DT French_JJ language_NN is_VBZ the_DT Lefff_NNP -LRB-_-LRB- Lexicon_NNP of_IN French_NNP inflected_VBD forms_NNS -RRB-_-RRB- -LRB-_-LRB- Sagot_NNP ,_, 2010_CD -RRB-_-RRB- ,_, which_WDT is_VBZ widely-used_JJ and_CC freely_RB available_JJ ._.
+This_DT lexicon_NN is_VBZ based_VBN on_IN the_DT Alexina_NNP -LRB-_-LRB- Architecture_NNP pour_VBP les_FW LEXiques_FW INformatiques_NNPS et_FW leur_FW Acquisition_NNP -RRB-_-RRB- model_NN ._.
+Thanks_NNS to_TO this_DT framework_NN ,_, Lefff_NNP can_MD be_VB directly_RB used_VBN in_IN NLP_NNP applications_NNS ._.
+However_RB ,_, this_DT lexicon_NN needs_VBZ to_TO be_VB improved_VBN regarding_VBG its_PRP$ precision_NN and_CC its_PRP$ coverage_NN ._.
+Concerning_VBG the_DT English_JJ language_NN ,_, we_PRP can_MD mention_VB VerbNet_NNP -LRB-_-LRB- Kipper_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT lexical_JJ resource_NN organizing_VBG verbs_NNS into_IN classes_NNS based_VBN on_IN the_DT Levin_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- verbal_JJ classification_NN ._.
+Each_DT class_NN is_VBZ described_VBN bythematic_JJ roles_NNS ,_, semantic_JJ restrictions_NNS on_IN the_DT arguments_NNS ,_, and_CC frames_NNS consisting_VBG of_IN a_DT syntactic_JJ description_NN and_CC semantic_JJ predicates_NNS ._.
+This_DT resource_NN doesn_NN ‟_CD t_NN use_NN any_DT standard_NN for_IN its_PRP$ implementation_NN ._.
+Moreover_RB ,_, certain_JJ verb_NN uses_NNS are_VBP not_RB covered_VBN by_IN frames_NNS ;_: besides_IN ,_, syntactic_JJ restrictions_NNS are_VBP not_RB well-defined_JJ and_CC difficult_JJ to_TO operate_VB ._.
+FrameNet_NNP -LRB-_-LRB- Baker_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- is_VBZ another_DT resource_NN for_IN English_NNP ._.
+It_PRP is_VBZ based_VBN on_IN semantic_JJ frames_NNS and_CC confirmed_VBN by_IN attestations_NNS in_IN the_DT corpus_NN ._.
+It_PRP aims_VBZ to_TO document_VB the_DT syntactic_NN and_CC semantic_JJ combinatorial_JJ for_IN each_DT lexical_JJ entry_NN through_IN a_DT manual_NN annotation_NN of_IN examples_NNS selected_VBN from_IN the_DT corpus_NN ._.
+Nonetheless_RB ,_, the_DT main_JJ limitation_NN of_IN this_DT resource_NN is_VBZ its_PRP$ poor_JJ coverage_NN ._.
+Indeed_RB ,_, the_DT lexical_JJ units_NNS are_VBP described_VBN only_RB with_IN a_DT lexicographic_JJ definition_NN ,_, without_IN any_DT example_NN sentences_NNS ._.
+As_IN regards_VBZ the_DT Arabic_NNP language_NN ,_, we_PRP note_VBP the_DT Arabic_NNP VerbNet_NNP -LRB-_-LRB- Mousser_NNP ,_, 2010_CD -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT lexicon_NN for_IN Arabic_NNP verbs_NNS using_VBG the_DT same_JJ process_NN as_IN that_DT of_IN the_DT English_NNP VerbNet_NNP ._.
+This_DT Arabic_NNP version_NN of_IN VerbNet_NNP does_VBZ not_RB represent_VB the_DT native_JJ characteristics_NNS and_CC features_NNS of_IN Arabic_NNP verbs_NNS because_IN it_PRP is_VBZ a_DT simple_JJ translation_NN of_IN the_DT classes_NNS used_VBN in_IN the_DT English_NNP VerbNet_NNP with_IN some_DT adaptations_NNS ._.
+Another_DT resource_NN for_IN Arabic_NNP is_VBZ the_DT Lexicon_NNP semantic_JJ verb_NN classes_NNS -LRB-_-LRB- Snider_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT lexicon_NN classifying_VBG Arabic_NNP verbs_NNS into_IN semantic_JJ classes_NNS ._.
+The_DT semantic_JJ class_NN puts_VBZ in_IN the_DT same_JJ group_NN verbs_NNS having_VBG similar_JJ syntactic_NN behavior_NN and_CC sharing_VBG the_DT same_JJ semantic_JJ elements_NNS of_IN meaning_NN ,_, with_IN reference_NN to_TO Levin_NNP ‟_NNP s_VBZ verb_NN classes_NNS -LRB-_-LRB- Levin_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+For_IN the_DT arguments_NNS of_IN verbs_NNS ,_, only_RB the_DT Subject-animacy_NN feature_NN is_VBZ used_VBN to_TO describe_VB the_DT semantic_JJ construction_NN of_IN active_JJ verbs_NNS ._.
+This_DT study_NN is_VBZ based_VBN on_IN an_DT unsupervised_JJ clustering_NN technique_NN to_TO construct_VB semantic_JJ classes_NNS of_IN verbs_NNS exploiting_VBG the_DT Arabic_NNP Treebank_NNP and_CC the_DT Arabic_NNP Gigaword_NNP resources_NNS ._.
+The_DT major_JJ insufficient_JJ point_NN of_IN this_DT lexicon_NN is_VBZ its_PRP$ primordial_JJ dependence_NN on_IN the_DT most_RBS frequent_JJ verbs_NNS in_IN the_DT Arabic_NNP Treebank_NNP ._.
+All_PDT the_DT approaches_NNS presented_VBN in_IN the_DT above_JJ -_: mentioned_VBN related_JJ works_NNS suggest_VBP some_DT interesting_JJ ideas_NNS ,_, but_CC each_DT one_CD of_IN them_PRP represents_VBZ some_DT gaps_NNS related_VBN to_TO their_PRP$ structure_NN and_CC content_NN ._.
+3_CD General_NNP Presentation_NNP of_IN the_DT Proposed_NNP Approach_NNP The_NNP Context_NNP field_NN is_VBZ widely_RB available_JJ ,_, semantically_RB well-guided_JJ ,_, controlled_JJ and_CC syntactically_RB described_VBN ._.
+It_PRP includes_VBZ reference_NN sentences_NNS explaining_VBG the_DT use_NN of_IN a_DT meaning_NN and_CC containing_VBG the_DT dealt_VBN with_IN lexical_JJ entry_NN ._.
+Thus_RB ,_, the_DT analysis_NN of_IN such_JJ sentences_NNS provides_VBZ enough_RB knowledge_NN on_IN the_DT syntactic_NN and_CC semantic_JJ arguments_NNS related_VBN to_TO a_DT given_VBN meaning_NN ._.
+The_DT proposed_VBN approach_NN is_VBZ composed_VBN of_IN three_CD phases_NNS as_IN shown_VBN in_IN Figure_NN 1_CD in_IN below_RB ._.
+The_DT first_JJ phase_NN ,_, ``_`` Identifying_VBG syntactic_JJ arguments_NNS of_IN Contexts_NNS ''_'' ,_, aims_VBZ to_TO find_VB out_RP the_DT syntactic_JJ arguments_NNS for_IN each_DT Context_NNP ._.
+As_IN for_IN the_DT second_JJ phase_NN ,_, ``_`` Identifying_VBG semantic_JJ arguments_NNS of_IN Contexts_NNS ''_'' ,_, it_PRP consists_VBZ in_IN the_DT identification_NN of_IN semantic_JJ classes_NNS for_IN each_DT syntactic_NN argument_NN from_IN the_DT LMF_NNP normalized_VBD dictionary_NN ._.
+The_DT third_JJ phase_NN ,_, ``_`` Establishing_VBG syntactico-semantic_JJ links_NNS ''_'' ,_, associates_NNS syntactic_NN and_CC semantic_JJ arguments_NNS in_IN order_NN to_TO obtain_VB syntactico_NN -_: semantic_JJ links_NNS ._.
+In_IN the_DT following_JJ sections_NNS ,_, we_PRP will_MD detail_NN these_DT three_CD phases_NNS ._.
+Figure_NN 1_CD :_: Proposed_VBN approach_NN 4_CD Identifying_VBG the_DT syntactic_JJ arguments_NNS of_IN Contexts_NNP According_VBG to_TO the_DT LMF_NNP representation_NN ,_, each_DT lexical_JJ entry_NN is_VBZ linked_VBN to_TO the_DT concerned_JJ Syntactic_NNP Behaviors_NNP -LRB-_-LRB- SBs_NNP -RRB-_-RRB- and_CC ,_, in_IN a_DT fine_JJ representation_NN ,_, each_DT meaning_NN of_IN an_DT entry_NN is_VBZ linked_VBN to_TO the_DT syntactic_JJ behaviors_NNS that_WDT match_VBP with_IN it_PRP ._.
+As_IN mentioned_VBN in_IN Figure2_NNP ,_, the_DT purpose_NN of_IN this_DT phase_NN is_VBZ to_TO search_VB all_PDT the_DT SB_NNP instances_NNS attached_VBN to_TO a_DT processed_VBN lexical_JJ entry_NN from_IN the_DT LMF_NNP normalized_VBD dictionary_NN and_CC to_TO determine_VB the_DT related_JJ SBs_NNP for_IN each_DT meaning_NN or_CC Context_NN ._.
+We_PRP point_VBP out_RP that_IN the_DT contexts_NNS are_VBP associated_VBN to_TO meanings_NNS ._.
+The_DT Contexts_NNP will_MD be_VB segmented_JJ in_IN order_NN to_TO identify_VB their_PRP$ syntactic_JJ arguments_NNS -LRB-_-LRB- SAs_NNS -RRB-_-RRB- ._.
+Figure_NN 2_CD :_: The_DT ``_`` Identifying_NNP SA_NNP of_IN Contexts_NNPS ''_'' phase_NN 4.1_CD Searching_VBG for_IN the_DT SBs_NNP of_IN a_DT Lexical_NNP Entry_NNP It_PRP consists_VBZ in_IN finding_VBG out_RP the_DT SBs_NNS of_IN a_DT given_VBN lexical_JJ entry_NN ._.
+For_IN example_NN ,_, Figure_NN 3_CD ,_, given_VBN below_IN ,_, represents_VBZ the_DT verb_NN ``_`` eat_VB ''_'' ,_, which_WDT has_VBZ three_CD SBs_NNS ._.
+The_DT first_JJ SB_NNP describes_VBZ the_DT ``_`` SVC_NNP ''_'' -LRB-_-LRB- Subject_NNP -LRB-_-LRB- S_NNP -RRB-_-RRB- followed_VBN by_IN a_DT Verb_NNP -LRB-_-LRB- V_NNP -RRB-_-RRB- followed_VBN by_IN a_DT Complement_NNP -LRB-_-LRB- C_NNP -RRB-_-RRB- -RRB-_-RRB- syntactic_JJ construction_NN ._.
+The_DT second_JJ SB_NN represents_VBZ the_DT ''_'' SVupC_NNP ''_'' syntactic_JJ construction_NN -LRB-_-LRB- -LRB-_-LRB- S_NNP -RRB-_-RRB- followed_VBN by_IN -LRB-_-LRB- V_NNP -RRB-_-RRB- followed_VBN by_IN the_DT ``_`` up_RB ''_'' preposition_NN followed_VBN by_IN a_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- -RRB-_-RRB- ._.
+The_DT third_JJ SB_NNP characterizes_VBZ the_DT intransitive_JJ syntactic_JJ construction_NN ``_`` SV_NNP ''_'' -LRB-_-LRB- -LRB-_-LRB- S_NNP -RRB-_-RRB- followed_VBN by_IN a_DT -LRB-_-LRB- V_NNP -RRB-_-RRB- -RRB-_-RRB- ._.
+This_DT step_NN searches_NNS for_IN those_DT three_CD SBs_NNS ._.
+Figure_NN 3_CD :_: Application_NN of_IN the_DT ``_`` Search_NN for_IN the_DT SBs_NNP of_IN the_DT verb_NN „_CD eat_VBP ‟''_CD 4.2_CD Searching_VBG for_IN Senses_NNS of_IN SBs_NNP As_IN mentioned_VBN previously_RB ,_, an_DT SB_NNP can_MD be_VB attached_VBN in_IN the_DT LMF_NNP dictionary_NN to_TO the_DT Sense_NN class_NN ._.
+Indeed_RB ,_, an_DT SB_NNP can_MD have_VB zero_CD to_TO many_JJ attached_VBN senses_NNS ._.
+The_DT aim_NN of_IN this_DT step_NN is_VBZ to_TO search_VB for_IN each_DT meaning_NN of_IN a_DT lexical_JJ related_JJ SB_NNP ._.
+The_DT application_NN of_IN the_DT ``_`` Search_NN for_IN senses_NNS of_IN SBs_NNS ''_'' to_TO the_DT verb_NN ``_`` eat_VB ''_'' ,_, as_IN shown_VBN in_IN Figure_NN 4_CD ,_, can_MD reveals_VBZ that_IN senses_NNS ``_`` e12P1_NNP ''_'' ,_, ``_`` e12P2_NN ''_'' ,_, and_CC ``_`` e12P3_NNP ''_'' respect_NN the_DT ``_`` VSC_NNP ''_'' SB_NNP ._.
+Sense_NN ``_`` e12P2_NNP ''_'' can_MD use_VB the_DT ``_`` VSupC_NNP ''_'' SB_NNP ._.
+Also_RB ,_, Sense_NN ``_`` e12P1_NNP ''_'' can_MD use_VB the_DT ``_`` SV_NNP ''_'' SB_NNP ._.
+Figure_NN 4_CD :_: Application_NN of_IN the_DT ``_`` Search_NN for_IN the_DT senses_NNS of_IN the_DT SBs_NNP of_IN the_DT verb_NN „_CD eat_VBP ‟''_CD 4.3_CD Searching_VBG for_IN Contexts_NNP Related_NNP to_TO SBs_NNP We_PRP point_VBP out_RP here_RB that_IN in_IN the_DT LMF_NNP dictionary_NN ,_, the_DT MRD_NNP extension_NN contains_VBZ the_DT Context_NNP class_NN that_WDT represents_VBZ a_DT text_NN string_NN which_WDT provides_VBZ an_DT authentic_JJ context_NN for_IN the_DT use_NN of_IN the_DT Lemma_NNP ._.
+This_DT context_NN is_VBZ related_VBN to_TO a_DT sense_NN of_IN a_DT given_VBN lexical_JJ entry_NN ._.
+It_PRP represents_VBZ an_DT example_NN of_IN use_NN by_IN a_DT simple_JJ sentence_NN ._.
+Thus_RB ,_, a_DT meaning_NN of_IN a_DT lexical_JJ entry_NN in_IN the_DT LMF_NNP dictionary_NN can_MD be_VB attached_VBN to_TO different_JJ SBs_NNS and_CC it_PRP is_VBZ described_VBN by_IN Contexts_NNS of_IN text_NN strings_NNS ._.
+This_DT step_NN aims_VBZ to_TO associate_JJ Contexts_NNS to_TO SBs_NNS ._.
+This_DT search_NN is_VBZ performed_VBN by_IN the_DT application_NN of_IN the_DT Grammars_NNP of_IN syntactic_JJ behaviors_NNS -_: constructed_VBN in_IN our_PRP$ previous_JJ work_NN -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, ._.
+2013_CD -RRB-_-RRB- -_: to_TO these_DT Contexts_NNP ._.
+Thus_RB ,_, the_DT application_NN of_IN the_DT Grammars_NNP of_IN syntactic_JJ behaviors_NNS on_IN a_DT sentence_NN can_MD out_RB puts_VBZ the_DT corresponding_JJ syntactic_NN behavior_NN and_CC all_DT SAs_NNS composing_VBG the_DT SB_NNP ._.
+At_IN this_DT stage_NN ,_, for_IN each_DT SB_NN we_PRP know_VBP the_DT related_JJ meanings_NNS ._.
+This_DT step_NN aims_VBZ to_TO detail_NN the_DT related_JJ contexts_NNS for_IN each_DT meaning_NN attached_VBN to_TO an_DT SB_NN ._.
+Figure_NN 5_CD illustrates_VBZ the_DT search_NN for_IN contexts_NNS of_IN SBs_NNS with_IN a_DT concrete_JJ example_NN ._.
+In_IN this_DT figure_NN ,_, the_DT ``_`` SVC_NNP ''_'' SB_NNP is_VBZ related_VBN to_TO senses_NNS ``_`` e12P1_NNP ''_'' ,_, ``_`` e12P2_NN ''_'' and_CC ``_`` e12P3_NNP ''_'' ._.
+The_DT application_NN of_IN the_DT Grammar_NNP of_IN the_DT ``_`` SVC_NNP ''_'' SB_NNP to_TO the_DT contexts_NNS of_IN those_DT senses_NNS reveals_VBZ that_IN only_RB the_DT first_JJ Context_NNP ``_`` The_DT little_JJ boys_NNS eat_VBP green_JJ apples_NNS ''_'' of_IN the_DT first_JJ sense_NN respects_VBZ the_DT rules_NNS of_IN this_DT Grammar_NN ._.
+The_DT latter_JJ segments_NNS this_DT context_NN into_IN SA_NNP :_: ``_`` the_DT little_JJ boys_NNS ''_'' :_: the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- ,_, ``_`` eat_VB ''_'' :_: the_DT -LRB-_-LRB- V_NNP -RRB-_-RRB- and_CC ``_`` green_JJ apples_NNS ''_'' :_: the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ._.
+For_IN the_DT ``_`` e12P2_NN ''_'' sense_NN ,_, only_RB the_DT context_NN ``_`` John_NNP is_VBZ late_JJ for_IN the_DT meeting_NN because_IN the_DT photocopier_NN ate_VBD his_PRP$ report_NN ''_'' respects_VBZ the_DT ``_`` SVC_NNP ''_'' SB_NNP ._.
+Regarding_VBG the_DT ``_`` e12P3_NN ''_'' sense_NN ,_, the_DT only_JJ existing_VBG context_NN ``_`` What_WP ‟_FW s_PRP eating_VBG you_PRP ''_'' fulfills_VBZ the_DT ``_`` SVC_NNP ''_'' SB_NNP ._.
+To_TO conclude_VB ,_, the_DT contexts_NNS related_VBN to_TO the_DT ``_`` SVC_NNP ''_'' SB_NNP are_VBP :_: ``_`` The_DT little_JJ boys_NNS eat_VBP green_JJ apples_NNS ''_'' ,_, ``_`` John_NNP is_VBZ late_JJ for_IN the_DT meeting_NN because_IN the_DT photocopier_NN ate_VBD his_PRP$ report_NN ''_'' and_CC ``_`` What_WP ‟_FW s_PRP eating_VBG you_PRP ''_'' ._.
+The_DT same_JJ treatment_NN is_VBZ performed_VBN on_IN other_JJ SBs_NNS as_IN described_VBN in_IN Figure_NN 5_CD ._.
+Figure_NN 5_CD :_: Application_NN of_IN the_DT ``_`` Search_NN for_IN the_DT contexts_NNS of_IN the_DT verb_NN „_CD eat_VBP ‟''_CD 5_CD ``_`` Identifying_VBG the_DT Syntactic_NNP Arguments_NNP of_IN Contexts_NNPS ''_'' Phase_NN At_IN this_DT stage_NN ,_, for_IN a_DT given_VBN SB_NNP we_PRP know_VBP the_DT related_JJ Senses_NNS and_CC more_JJR precisely_RB the_DT Contexts_NNPS ._.
+Furthermore_RB ,_, for_IN each_DT Context_NNP ,_, the_DT SAs_NNS are_VBP identified_VBN ._.
+The_DT purpose_NN of_IN the_DT second_JJ phase_NN of_IN the_DT proposed_VBN approach_NN is_VBZ to_TO determine_VB the_DT semantic_JJ argument_NN corresponding_JJ to_TO each_DT context_NN ._.
+As_IN shown_VBN in_IN Figure_NN 6_CD ,_, this_DT phase_NN is_VBZ composed_VBN of_IN the_DT ``_`` Segmentation_NN of_IN syntactic_JJ arguments_NNS ''_'' ,_, the_DT ``_`` Lemmatization_NN of_IN tokens_NNS ''_'' and_CC the_DT ``_`` Search_NN for_IN semantic_JJ classes_NNS by_IN syntactic_JJ arguments_NNS ''_'' steps_NNS ._.
+are_VBP necessary_JJ to_TO find_VB the_DT corresponding_JJ Semantic_NNP Classes_NNS -LRB-_-LRB- SC_NNP -RRB-_-RRB- from_IN the_DT LMF_NNP dictionary_NN ._.
+Figure_NN 8_CD details_NNS the_DT ``_`` Lemmatizing_JJ tokens_NNS ''_'' step_NN ._.
+Indeed_RB ,_, the_DT corresponding_JJ lemmas_NNS for_IN the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- ``_`` the_DT little_JJ boys_NNS ''_'' are_VBP :_: ``_`` the_DT ''_'' ,_, ``_`` little_JJ ''_'' and_CC ``_`` boy_NN ''_'' ._.
+The_DT Lemmas_NNP of_IN the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ``_`` green_JJ apples_NNS ''_'' are_VBP :_: ``_`` green_JJ ''_'' and_CC ``_`` apple_NN ''_'' ._.
+Figure_NN 8_CD :_: Application_NN of_IN the_DT ``_`` Lemmatizing_JJ tokens_NNS ''_'' to_TO the_DT verb_NN ``_`` eat_VB ''_'' 5.3_CD Searching_VBG for_IN Semantic_NNP Classes_NNS As_IN mentioned_VBN previously_RB ,_, the_DT syntactico-semantic_JJ link_NN is_VBZ composed_VBN by_IN the_DT combination_NN of_IN the_DT syntactic_NN and_CC semantic_JJ features_NNS ._.
+Since_IN the_DT syntactic_JJ content_NN is_VBZ already_RB defined_VBN by_IN the_DT SBs_NNP ,_, we_PRP have_VBP to_TO find_VB the_DT SCs_NNP for_IN each_DT argument_NN of_IN the_DT SB_NNP ‟_NNP s_VBZ Context_NNP ._.
+To_TO search_VB for_IN the_DT SCs_NNP ,_, we_PRP need_VBP all_PDT the_DT lemmas_NNS of_IN each_DT token_JJ of_IN the_DT LMF_NNP normalized_VBD dictionary_NN ._.
+As_IN the_DT SC_NNP is_VBZ attached_VBN to_TO the_DT sense_NN of_IN the_DT lexical_JJ entry_NN in_IN the_DT LMF_NNP dictionary_NN ,_, this_DT step_NN must_MD find_VB the_DT relevant_JJ SCs_NNP consistent_JJ to_TO the_DT meaning_NN of_IN the_DT treated_VBN Context_NNP ._.
+For_IN this_DT purpose_NN ,_, a_DT base_NN of_IN rules_NNS is_VBZ used_VBN to_TO find_VB the_DT relevant_JJ one_CD among_IN the_DT SCs_NNP of_IN the_DT SA_NNP ._.
+Figure_NN 9_CD searches_NNS for_IN SCs_NNS for_IN each_DT lemma_NN of_IN SA_NNP ._.
+Indeed_RB ,_, for_IN the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- ``_`` the_DT little_JJ boy_NN ''_'' ,_, this_DT step_NN searches_NNS in_IN the_DT LMF_NNP normalized_VBD dictionary_NN for_IN the_DT lexical_JJ entry_NN ``_`` little_JJ ''_'' ,_, which_WDT has_VBZ one_CD sense_NN ._.
+This_DT sense_NN can_MD be_VB applied_VBN to_TO the_DT ``_`` human/animal/abstract_JJ /_NN concrete_NN ''_'' SC_NNP ._.
+Furthermore_RB ,_, the_DT search_NN for_IN the_DT second_JJ token_JJ ,_, ``_`` boy_NN ,_, of_IN the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- SA_NNP in_IN the_DT dictionary_NN can_MD identify_VB two_CD senses_NNS ;_: both_DT of_IN them_PRP are_VBP applied_VBN to_TO the_DT ``_`` human_JJ ''_'' SC_NNP ._.
+So_RB ,_, the_DT Rule_NNP R1_NNP :_: if_IN the_DT SA_NNP is_VBZ composed_VBN of_IN more_JJR than_IN one_CD token_JJ and_CC a_DT common_JJ SC_NNP is_VBZ shared_VBN between_IN tokens_NNS ,_, then_RB the_DT relevant_JJ SC_NNP is_VBZ the_DT shared_VBN one_CD ._.
+Thus_RB ,_, based_VBN on_IN this_DT rule_NN ,_, the_DT corresponding_JJ SC_NNP of_IN the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- is_VBZ ``_`` Human_JJ ''_'' ._.
+Regarding_VBG the_DT ``_`` green_JJ apple_NN ''_'' -LRB-_-LRB- C_NNP -RRB-_-RRB- ,_, the_DT search_NN for_IN the_DT lexical_JJ item_NN ``_`` green_JJ ''_'' in_IN the_DT dictionary_NN identifies_VBZ five_CD senses_NNS ._.
+Sense1_NNP and_CC Sense2_NNP have_VBP the_DT ``_`` plants_NNS ''_'' SC_NNP ;_: Sense4_NNP and_CC 5_CD have_VBP the_DT ``_`` human_JJ ''_'' SC_NNP and_CC Sense3_NNP has_VBZ the_DT ``_`` plants_NNS :_: aliments_NNS :_: fruit_NN ''_'' SC_NNP ._.
+Also_RB ,_, the_DT search_NN for_IN the_DT Figure_NN 6_CD :_: The_DT ``_`` Identifying_VBG semantic_JJ arguments_NNS of_IN contexts_NNS ''_'' phase_NN 5.1_CD Segmenting_VBG Syntactic_NNP Arguments_NNP An_DT SA_NNP can_MD be_VB composed_VBN of_IN one_CD or_CC many_JJ tokens_NNS ._.
+Indeed_RB ,_, the_DT purpose_NN of_IN this_DT step_NN is_VBZ to_TO segment_NN each_DT SA_NNP into_IN tokens_NNS ._.
+This_DT segmentation_NN is_VBZ performed_VBN with_IN a_DT linguistic_JJ tokenizer_NN ._.
+In_IN order_NN to_TO demonstrate_VB the_DT application_NN of_IN the_DT ``_`` Segmenting_VBG syntactic_JJ arguments_NNS ''_'' step_NN ,_, we_PRP take_VBP ``_`` The_DT little_JJ boys_NNS eat_VBP green_JJ apples_NNS ''_'' context_NN of_IN the_DT first_JJ sense_NN of_IN the_DT verb_NN ``_`` eat_VB ''_'' as_IN illustrated_VBN in_IN the_DT following_VBG Figure_NN 7_CD ._.
+This_DT context_NN is_VBZ associated_VBN to_TO the_DT ``_`` SVC_NNP ''_'' SB_NNP ._.
+In_IN the_DT last_JJ step_NN ,_, the_DT SAs_NNS are_VBP :_: ``_`` The_DT little_JJ boys_NNS ''_'' is_VBZ the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- of_IN the_DT sentence_NN ,_, ``_`` eat_VB ''_'' is_VBZ the_DT treated_VBN lexical_JJ entry_NN and_CC ``_`` green_JJ apples_NNS ''_'' is_VBZ the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ._.
+The_DT purpose_NN of_IN this_DT step_NN is_VBZ to_TO segment_NN each_DT SA_NNP into_IN tokens_NNS ._.
+Thus_RB ,_, a_DT linguistic_JJ tokenizer_NN is_VBZ used_VBN to_TO parse_VB the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- into_IN 3_CD tokens_NNS :_: ``_`` the_DT ''_'' ,_, ``_`` little_JJ ''_'' and_CC ``_`` boys_NNS ''_'' ._.
+Regarding_VBG the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ,_, it_PRP is_VBZ segmented_JJ into_IN 2_CD elements_NNS :_: ``_`` green_JJ ''_'' and_CC ``_`` apples_NNS ''_'' ._.
+Figure_NN 7_CD :_: Application_NN of_IN the_DT ``_`` Segmenting_VBG SAs_NNS ''_'' step_NN 5.2_CD Lemmatizing_NNP Tokens_NNP The_NNP step_NN of_IN ``_`` Lemmatizing_VBG tokens_NNS ''_'' of_IN SAs_NNP puts_VBZ the_DT tokens_NNS of_IN the_DT SAs_NNP -_: recognized_VBN in_IN the_DT previous_JJ step_NN -_: in_IN input_NN and_CC uses_VBZ a_DT Lemmatizer_NNP in_IN order_NN to_TO find_VB their_PRP$ lemmas_NNS -LRB-_-LRB- gross_JJ forms_NNS -RRB-_-RRB- ._.
+The_DT Lemmas_NNP of_IN tokens_NNS second_JJ token_JJ of_IN the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ``_`` apple_NN ''_'' in_IN the_DT dictionary_NN finds_VBZ two_CD SCs_NNS :_: ``_`` plants_NNS :_: tree_NN ''_'' and_CC ``_`` plants_NNS :_: aliment_NN :_: fruit_NN ''_'' ._.
+Thus_RB ,_, the_DT base_NN of_IN rules_NNS identifies_VBZ the_DT ``_`` aliment_NN :_: fruit_NN ''_'' SC_NNP for_IN the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- ._.
+Figure_NN 9_CD :_: Application_NN of_IN the_DT ``_`` search_NN for_IN the_DT SCs_NNP ''_'' to_TO the_DT ``_`` the_DT little_JJ boys_NNS eat_VBP green_JJ apples_NNS ''_'' context_NN 6_CD The_DT Establishment_NN of_IN Syntactico_NNP -_: Semantic_NNP Links_NNP Step_NN At_IN this_DT stage_NN ,_, for_IN a_DT given_VBN SB_NNP we_PRP know_VBP the_DT related_JJ The_DT last_JJ phase_NN of_IN the_DT proposed_VBN approach_NN is_VBZ the_DT Establishment_NN of_IN syntactico-semantic_JJ links_NNS ._.
+At_IN this_DT stage_NN ,_, for_IN a_DT given_VBN SB_NNP ,_, we_PRP know_VBP the_DT related_JJ Senses_NNS and_CC more_JJR precisely_RB the_DT Contexts_NNPS ._.
+Furthermore_RB ,_, for_IN each_DT Context_NNP ,_, the_DT syntactic_NN and_CC semantic_JJ arguments_NNS are_VBP identified_VBN ._.
+The_DT purpose_NN of_IN the_DT third_JJ phase_NN is_VBZ to_TO associate_JJ syntactic_NN and_CC semantic_JJ arguments_NNS through_IN a_DT syntcatico-semantic_JJ links_NNS ._.
+As_IN shown_VBN in_IN Figure_NN 10_CD ,_, two_CD steps_NNS mark_NN this_DT phase_NN :_: the_DT ``_`` Construction_NN of_IN Semantic_NNP Predicates_VBZ ''_'' and_CC the_DT ``_`` Association_NNP of_IN syntactico-semantic_JJ links_NNS ''_'' steps_NNS ._.
+The_DT details_NNS of_IN each_DT of_IN the_DT steps_NNS are_VBP given_VBN ,_, with_IN examples_NNS ,_, in_IN the_DT following_JJ sections_NNS ._.
+The_DT LMF_NNP standard_JJ reserves_NNS Semantic_NNP Predicate_NNP -LRB-_-LRB- SP_NNP -RRB-_-RRB- class_NN that_IN represents_VBZ the_DT common_JJ meaning_NN between_IN different_JJ senses_NNS ._.
+A_DT SP_NNP instance_NN may_MD be_VB used_VBN to_TO represent_VB the_DT common_JJ meaning_NN between_IN different_JJ senses_NNS ._.
+The_DT purpose_NN of_IN this_DT step_NN is_VBZ the_DT construction_NN of_IN the_DT SP_NNP class_NN identified_VBN by_IN the_DT recognition_NN of_IN SCs_NNS of_IN semantic_JJ arguments_NNS ._.
+Thus_RB ,_, the_DT combination_NN of_IN those_DT classes_NNS composes_VBZ the_DT SP_NNP ._.
+The_DT construction_NN of_IN the_DT corresponding_JJ SP_NNP to_TO the_DT treated_VBN Context_NNP is_VBZ given_VBN in_IN Figure_NN 11_CD ._.
+Indeed_RB ,_, the_DT SP_NNP is_VBZ identified_VBN by_IN the_DT ``_`` humfru_NN ''_'' identifier_NN that_WDT is_VBZ composed_VBN of_IN two_CD SAs_NNS ;_: the_DT first_JJ has_VBZ the_DT ``_`` human_JJ ''_'' ``_`` restriction_NN ''_'' and_CC the_DT second_NN has_VBZ the_DT ``_`` fruit_NN ''_'' ``_`` restriction_NN ''_'' ._.
+Figure_NN 11_CD :_: Application_NN of_IN the_DT ``_`` Construction_NN of_IN SPs_NNP ''_'' step_NN 6.2_CD Associating_VBG Syntactico-Semantic_NNP Links_NNP At_IN this_DT stage_NN ,_, for_IN one_CD Sense_NN ,_, we_PRP have_VBP the_DT corresponding_JJ SB_NNP ,_, the_DT compliant_JJ Context_NNP and_CC the_DT suitable_JJ SP_NNP ._.
+The_DT last_JJ step_NN aims_VBZ to_TO establish_VB the_DT syntactico-semantic_JJ link_NN ._.
+It_PRP consists_VBZ of_IN two_CD parts_NNS ._.
+The_DT first_JJ part_NN aims_VBZ to_TO construct_VB the_DT SynSemCorrespondence_NNP -LRB-_-LRB- SSC_NNP -RRB-_-RRB- class_NN ,_, which_WDT 6.1_CD Figure10_NNP :_: the_DT ``_`` Establishment_NN of_IN syntactico_NN -_: semantic_JJ links_NNS ''_'' phase_NN Construction_NN of_IN Semantic_NNP Predicates_VBZ represents_VBZ a_DT set_NN of_IN SynSemArgMap_NNP -LRB-_-LRB- SSAM_NNP -RRB-_-RRB- instances_NNS representing_VBG the_DT links_NNS between_IN a_DT semantic_JJ argument_NN and_CC an_DT SA_NNP ._.
+The_DT second_JJ part_NN intends_VBZ to_TO introduce_VB the_DT PredicativeRepresentation_NNP -LRB-_-LRB- PR_NNP -RRB-_-RRB- class_NN ,_, which_WDT represents_VBZ the_DT link_NN between_IN the_DT Sense_NN and_CC the_DT SP_NNP classes_NNS ._.
+Figure_NN 12_CD demonstrates_VBZ the_DT unwinding_VBG of_IN the_DT last_JJ step_NN of_IN the_DT proposed_VBN approach_NN ._.
+This_DT step_NN constructs_VBZ the_DT SSC_NNP class_NN identified_VBN by_IN the_DT id_NN =_SYM ''_'' SVC_humfru_NNP ''_'' ._.
+It_PRP consists_VBZ of_IN two_CD SSAMs_NNS that_WDT associate_VBP the_DT -LRB-_-LRB- S_NNP -RRB-_-RRB- SA_NNP to_TO the_DT ``_`` A_NN ''_'' semantic_JJ argument_NN and_CC the_DT -LRB-_-LRB- C_NNP -RRB-_-RRB- SA_NNP to_TO the_DT ``_`` P_NN ''_'' semantic_JJ argument_NN ._.
+After_IN that_DT ,_, the_DT addition_NN of_IN the_DT SP_NNP class_NN to_TO the_DT treated_VBN first_JJ sense_NN ,_, ``_`` e12P1_NNP ''_'' ,_, takes_VBZ place_NN ._.
+The_DT latter_JJ includes_VBZ two_CD elements_NNS :_: the_DT SP_NNP ``_`` humfru_FW ''_'' and_CC the_DT Correspondences_NNPS ``_`` SVC_humfru_NNP ''_'' ._.
+roots_NNS and_CC 22,400_CD nouns_NNS ._.
+These_DT lexical_JJ entries_NNS comprise_VBP syntactic_NN knowledge_NN ._.
+Indeed_RB ,_, it_PRP includes_VBZ 155_CD syntactic_JJ behaviors_NNS -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, 2013_CD -RRB-_-RRB- of_IN Arabic_NNP verbs_NNS and_CC 9,800_CD verbs_NNS are_VBP linked_VBN to_TO those_DT syntactic_JJ behaviors_NNS -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+Concerning_VBG semantic_JJ features_NNS ,_, this_DT dictionary_NN is_VBZ expanded_VBN by_IN semantic_JJ classes_NNS assigned_VBN to_TO the_DT Senses_NNS of_IN lexical_JJ entries_NNS -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+This_DT study_NN is_VBZ limited_VBN to_TO assigning_VBG the_DT following_VBG semantic_JJ classes_NNS :_: ``_`` Animal_NNP ''_'' ,_, ``_`` Insect_NNP ''_'' ,_, ``_`` Plant_NN ''_'' ,_, ``_`` Aliment_NNP ''_'' ,_, ``_`` Furniture_NNP ''_'' and_CC ``_`` Clothes_NNPS ''_'' object_NN classes_NNS ._.
+7.2_CD Evaluation_NN and_CC Results_NNS The_DT experimentation_NN that_IN we_PRP carried_VBD out_RP could_MD not_RB be_VB applied_VBN to_TO all_DT semantic_JJ classes_NNS ._.
+Indeed_RB ,_, we_PRP have_VBP chosen_VBN to_TO treat_VB the_DT ``_`` Clothes_NNPS ''_'' ,_, ``_`` Aliment_NNP ''_'' and_CC ``_`` Furniture_NNP ''_'' semantic_JJ classes_NNS -LRB-_-LRB- Elleuch_NNP et_NNP al_NNP ,_, 2014_CD -RRB-_-RRB- in_IN the_DT El-Madar_NNP dictionary_NN because_IN it_PRP is_VBZ the_DT most_RBS coverage_NN and_CC finest_JJS classes_NNS regarding_VBG the_DT semantic_JJ content_NN ._.
+In_IN this_DT experimentation_NN ,_, we_PRP have_VBP dealt_VBN with_IN 406_CD verbs_NNS ._.
+For_IN these_DT verbs_NNS ,_, syntactico_NN -_: semantic_JJ links_NNS have_VBP been_VBN implemented_VBN and_CC synthesis_NN conclusions_NNS about_IN SBs_NNS have_VBP been_VBN detected_VBN ._.
+A_DT human_JJ linguistic_NN expert_NN evaluated_VBD the_DT resulting_VBG assignments_NNS concerning_VBG the_DT syntactico_NN -_: semantic_JJ links_NNS ._.
+Concerning_VBG the_DT semantic_JJ predicative_JJ classes_NNS that_WDT represent_VBP effectively_RB the_DT syntactico-semantic_JJ links_NNS added_VBD to_TO Senses_NNS of_IN processed_VBN lexical_JJ verbal_JJ entries_NNS ,_, the_DT number_NN of_IN assignments_NNS made_VBN is_VBZ equal_JJ to_TO 790_CD ._.
+Human_JJ linguistic_JJ experts_NNS evaluate_VBP the_DT resulting_VBG assignments_NNS approves_VBZ that_IN 90_CD missed_VBD assignments_NNS were_VBD detected_VBN and_CC 180_CD incorrect_JJ ones_NNS were_VBD discovered_VBN ._.
+The_DT resulting_VBG Recall_VB and_CC Precision_NNP measurement_NN evaluation_NN is_VBZ presented_VBN in_IN the_DT following_VBG Table_NNP 1_CD ._.
+Figure_NN 12_CD :_: Syntactico-semantic_JJ links_NNS of_IN the_DT context_NN :_: ``_`` the_DT little_JJ boys_NNS ate_VBD a_DT green_JJ apple_NN ''_'' 7_CD Experimentation_NN In_IN spite_NN of_IN the_DT generically_RB of_IN our_PRP$ proposed_VBN approach_NN ,_, we_PRP chose_VBD to_TO experiment_NN it_PRP on_IN the_DT Arabic_NNP language_NN through_IN an_DT available_JJ LMF_NNP normalized_VBD dictionary_NN named_VBN El-Madar_NNP ._.
+In_IN this_DT section_NN ,_, we_PRP will_MD present_VB the_DT El-Madar_NNP Arabic_NNP LMF_NNP dictionary_NN and_CC we_PRP will_MD detail_NN the_DT obtained_VBN results_NNS ._.
+7.1_CD The_DT LMF_NNP Normalized_NNP Arabic_NNP Dictionary_NNP An_DT Arabic_NNP LMF_NNP dictionary_NN named_VBN El-Madar_NNP was_VBD developed_VBN by_IN -LRB-_-LRB- Khemakhem_NNP et_NNP al_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+This_DT dictionary_NN takes_VBZ into_IN account_NN the_DT specificities_NNS of_IN the_DT Arabic_NNP language_NN and_CC covers_VBZ the_DT morphological_JJ ,_, syntactic_JJ ,_, semantic_JJ and_CC syntactico-semantic_JJ levels_NNS ._.
+The_DT current_JJ version_NN of_IN this_DT dictionary_NN contains_VBZ about_IN 37,000_CD lexical_JJ entries_NNS :_: 10,800_CD verbs_NNS ,_, 3,800_CD Table_NNP 1_CD :_: The_DT obtained_VBN results_NNS The_DT erroneous_JJ assignments_NNS can_MD be_VB owed_VBN to_TO the_DT following_VBG reasons_NNS :_: Semantic_JJ classes_NNS ``_`` Clothes_NNPS ''_'' ``_`` Aliment_NNP ''_'' ``_`` Furniture_NNP ''_'' Assigned_VBN syntactico_NN -_: semantic_JJ links_NNS 360_CD 280_CD 150_CD Incorrect_JJ assignments_NNS 96_CD 40_CD 44_CD Missed_VBN assignments_NNS 30_CD 24_CD 36_CD Recall_VB 0.89_CD 0.90_CD 0.74_CD Precision_NN 0.73_CD 0.85_CD 0.70_CD Some_DT syntactic_JJ behaviors_NNS --_: already_RB existing_VBG and_CC assigned_VBN to_TO some_DT Senses_NNS of_IN the_DT lexical_JJ entries_NNS in_IN the_DT Arabic_NNP dictionary_NN are_VBP incorrect_JJ and_CC don_VBP ‟_CD t_JJ reflect_VBP the_DT exact_JJ meaning_NN ._.
+The_DT base_NN of_IN rules_NNS that_WDT makes_VBZ the_DT decision_NN concerning_VBG the_DT relevant_JJ SC_NNP related_VBN to_TO the_DT processed_VBN meaning_NN generates_VBZ more_JJR than_IN one_CD SC_NNP ._.
+8_CD Conclusion_NN We_PRP proposed_VBD in_IN this_DT paper_NN an_DT approach_NN to_TO enrich_VB LMF_NNP normalized_JJ dictionaries_NNS with_IN syntactico_NN -_: semantic_JJ links_NNS ._.
+This_DT approach_NN consists_VBZ of_IN three_CD phases_NNS based_VBN on_IN the_DT analysis_NN of_IN the_DT Context_NNP content_NN presented_VBN in_IN the_DT LMF_NNP normalized_VBD dictionary_NN ._.
+The_DT first_JJ phase_NN aims_VBZ to_TO determine_VB the_DT syntactic_JJ arguments_NNS of_IN Contexts_NNS related_VBN to_TO a_DT specific_JJ syntactic_NN behavior_NN of_IN a_DT lexical_JJ entry_NN by_IN using_VBG Grammars_NNP of_IN syntactic_JJ behaviors_NNS ._.
+The_DT second_JJ phase_NN intends_VBZ to_TO define_VB the_DT semantic_JJ arguments_NNS of_IN these_DT Contexts_NNS by_IN means_NNS of_IN the_DT semantic_JJ classes_NNS of_IN the_DT lexical_JJ entries_NNS featured_VBN in_IN the_DT LMF_NNP dictionary_NN ._.
+Concerning_VBG the_DT third_JJ phase_NN ,_, it_PRP associates_NNS the_DT syntactic_NN and_CC semantic_JJ arguments_NNS in_IN order_NN to_TO establish_VB the_DT corresponding_JJ syntactico-semantic_JJ links_NNS ._.
+We_PRP performed_VBD an_DT experiment_NN using_VBG an_DT available_JJ Arabic_NNP LMF_NNP dictionary_NN ._.
+The_DT obtained_VBN results_NNS are_VBP satisfying_VBG concerning_VBG the_DT verbal_JJ predicates_NNS of_IN the_DT ``_`` Clothes_NNPS ''_'' ,_, ''_'' Aliment_NNP ''_'' and_CC ``_`` Furniture_NNP ''_'' semantic_JJ classes_NNS ._.
+In_IN the_DT future_NN ,_, we_PRP plan_VBP to_TO complete_VB the_DT experimentation_NN on_IN the_DT other_JJ domains_NNS of_IN Arabic_NNP verbal_JJ predicates_NNS ._.
+Finally_RB ,_, we_PRP foresee_VBP that_IN the_DT resulting_VBG enrichments_NNS of_IN the_DT LMF_NNP dictionary_NN can_MD be_VB incorporated_VBN in_IN different_JJ NLP_NNP applications_NNS ._.
+References_NNP Baker_NNP ,_, Kathryn_NNP ,_, Bloodgood_NNP ,_, Michael_NNP ,_, Callison-Burch_NNP ,_, Chris_NNP ,_, J._NNP ,_, Dorr_NNP ,_, Bonnie_NNP ,_, W._NNP ,_, Filardo_NNP ,_, Nathaniel_NNP ,_, Levin_NNP ,_, Lori_NNP ,_, Miller_NNP ,_, Scott_NNP &_CC Piatko_NNP ,_, Christine_NNP ,_, -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, Semantically-Informed_NNP Machine_NNP Translation_NN :_: A_DT Tree-Grafting_NNP Approach_NNP ._.
+Biennial_NNP Conference_NNP of_IN the_DT Association_NNP for_IN Machine_NNP Translation_NN in_IN the_DT Americas_NNPS ._.
+Denver_NNP ,_, Colorado_NNP ,_, pp.411-438_JJ ._.
+Carroll_NNP ,_, John_NNP &_CC Fang_NNP ,_, Alex_NNP C._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT automatic_JJ acquisition_NN of_IN verb_NN subcategorisations_NNS and_CC their_PRP$ impact_NN on_IN the_DT performance_NN of_IN an_DT HPSG_NNP parser_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 1st_CD International_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, Sanya_NNP City_NNP ,_, China_NNP ._.
+pp._SYM 107_CD --_: 114_CD ._.
+Carroll_NNP ,_, John_NNP &_CC Fang_NNP ,_, Alex_NNP C._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT automatic_JJ acquisition_NN of_IN verb_NN subcategorisations_NNS and_CC their_PRP$ impact_NN on_IN the_DT performance_NN of_IN an_DT HPSG_NNP parser_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 1st_CD International_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, Sanya_NNP City_NNP ,_, China_NNP ._.
+pp._SYM 107_CD --_: 114_CD ._.
+Elleuch_NNP ,_, Imen_NNP ,_, Gargouri_NNP ,_, Bilel_NNP ,_, &_CC Ben-Hamadou_NNP ,_, Abdelmajid_NNP ,_, -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, Syntactic_JJ enrichment_NN of_IN Arabic_NNP dictionaries_NNS normalized_VBD LMF_NNP using_VBG corpora_NN ._.
+Language_NN &_CC Technology_NNP Conference_NNP -LRB-_-LRB- LTC_NNP -RRB-_-RRB- ._.
+Poznan_NNP ,_, Poland_NNP ._.
+pp.314-318_NN ._.
+Elleuch_NNP ,_, Imen_NNP ,_, Gargouri_NNP ,_, Bilel_NNP ,_, Ben-Hamadou_NNP ,_, Abdelmajid_NNP ,_, -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, Towards_IN automatic_JJ enrichment_NN of_IN standardized_JJ electronic_JJ dictionaries_NNS by_IN semantic_JJ classes_NNS ,_, In_IN proceeding_NN of_IN the_DT 26th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNPS and_CC Speech_NNP Processing_NNP -LRB-_-LRB- ROCLING_NNP -RRB-_-RRB- ,_, 25-26_JJ September_NNP 2014_CD ,_, Zhongli_NNP ,_, Taiwan_NNP ._.
+pp._NNP 96-109_CD ._.
+Elleuch_NNP ,_, Imen_NNP ,_, Gargouri_NNP ,_, Bilel_NNP ,_, Ben-Hamadou_NNP ,_, Abdelmajid_NNP ,_, -LRB-_-LRB- 2015_CD -RRB-_-RRB- ,_, Self-Enrichment_NNP of_IN Normalized_NNP LMF_NNP Dictionaries_NNPS through_IN Syntactic-Behaviours-to_NNP -_: Meanings_NNP Links_NNP ,_, In_IN proceeding_NN of_IN the_DT 18th_JJ International_NNP Conference_NNP Text_NNP Speech_NNP and_CC Dialogue_NNP -LRB-_-LRB- TSD_NNP -RRB-_-RRB- ,_, 14-17_CD September_NNP 2015_CD ,_, Plzen_NNP ,_, Czech_JJ Republic_NNP ._.
+pp._NNP 603-610_CD ._.
+Francopoulo_NNP ,_, Gil_NNP &_CC George_NNP ,_, Monte_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ,_, Language_NN resource_NN management-Lexical_JJ markup_NN framework_NN -LRB-_-LRB- LMF_NNP -RRB-_-RRB- ._.
+Technical_NNP Report_NNP ,_, ISO/TC_NNP 37/SC_NNP 4_CD -LRB-_-LRB- N330_CD Rev._NNP 16_CD -RRB-_-RRB- ._.
+Gross_NNP ,_, Maurice_NNP ,_, -LRB-_-LRB- 1975_CD -RRB-_-RRB- ,_, Méthodes_NNS en_IN syntaxe_NN :_: Régimes_NNS des_FW constructions_NNS complétives_NNS ._.
+Hermann_NNP ,_, Paris_NNP ,_, France_NNP ._.
+Khemakhem_NNP ,_, A._NN ,_, Gargouri_NNP ,_, B._NNP and_CC Ben-Hamadou_NNP ,_, A._NN 2015_CD ._.
+„_CD ISO_NNP standard_JJ modeling_NN of_IN a_DT large_JJ Arabic_NNP dictionary_NN ‟_NN ._.
+Natural_JJ Language_NN Engineering_NNP ,_, Available_NNP on_IN CJO_NNP 2015_CD doi_FW :10.1017_CD /_CD S1351324915000224_NNP ._.
+Kipper_NNP ,_, Karin_NNP ,_, Korhonen_NNP ,_, Anna_NNP ,_, Ryant_NNP ,_, Neville_NNP &_CC Palmer_NNP ,_, Martha_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+A_DT large-scale_JJ classification_NN of_IN English_NNP verbs_NNS ._.
+Language_NN Resources_NNPS and_CC Evaluation_NNP Journal_NNP ._.
+Volume_NN 40_CD ._.
+pp._NNP 42-21_CD ._.
+Levin_NNP ,_, Beth_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- ,_, English_NNP Verb_NNP Classes_NNS and_CC Alternations_NNS a_DT Preliminary_JJ investigation_NN ,_, University_NNP of_IN Chicago_NNP Press_NNP ,_, Chicago_NNP and_CC London_NNP ._.
+Medelyan_NNP ,_, Olena_NNP ,_, Witten_NNP ,_, Ian_NNP H._NNP ,_, Divoli_NNP ,_, Anna_NNP &_CC Broeksra_NNP ,_, Jeen_NNP ._.
+-LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Automatic_NNP construction_NN of_IN lexicons_NNS ,_, taxonomies_NNS ,_, ontologies_NNS ,_, and_CC other_JJ knowledge_NN structures_NNS ._.
+Wiley_NNP Interdisciplinary_NNP Reviews_NNPS :_: Data_NNP Mining_NNP and_CC Knowledge_NNP Discovery_NNP ._.
+Volume_NN 3_CD ,_, Issue_NN 4_CD ,_, pp._SYM 257_CD --_: 279_CD ._.
+Mousser_NNP ,_, Jaoud_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, A_DT large_JJ Coverage_NNP Verb_NNP Taxonomy_NNP For_IN Arabic_NNP ._.
+International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC_NNP -RRB-_-RRB- ,_, Italy_NNP ,_, Malte_NNP ._.
+pp._NNP 2675_CD -_: 2681_CD ._.
+Sagot_NNP ,_, Benoît_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, The_DT Lefff_NNP ,_, a_DT freely_RB available_JJ and_CC large-coverage_JJ morphological_JJ and_CC syntactic_JJ lexicon_NN for_IN French_JJ ._.
+Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ,_, LREC_NNP 2010_CD ,_, 17-23_CD May_NNP 2010_CD ,_, Valletta_NNP ,_, Malta_NNP ._.
+European_JJ Language_NNP Resources_NNPS Association_NNP 2010_CD ,_, ISBN_NNP 2-9517408-6-7_CD ._.
+Snider_NNP ,_, Neal_NNP &_CC Diab_NNP ,_, Mouna_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- ,_, Unsupervized_NNP Induction_NNP of_IN Modern_NNP Standard_NNP Arabic_NNP Verb_NNP Classes_NNS using_VBG syntactic_JJ Frames_NNS and_CC LSA_NNP ._.
+International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP COLING/ACL_NNP ,_, Sydney_NNP ._.
+pp.795-802_NN ._.
+Surdeanu_NNP ,_, Mihai_NNP ,_, McClosky_NNP ,_, David_NNP ,_, Smith_NNP ,_, Mason_NNP R._NNP ,_, Gusev_NNP ,_, Andrey_NNP &_CC Manning_NNP ,_, Christopher_NNP D._NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Customizing_VBG an_DT Information_NN Extraction_NNP System_NNP to_TO a_DT New_NNP Domain_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP 2011_CD Workshop_NNP on_IN Relational_NNP Models_NNPS of_IN Semantics_NNS -LRB-_-LRB- RELMS_NNP 2011_CD -RRB-_-RRB- ,_, Portland_NNP ,_, Oregon_NNP ,_, USA_NNP ,_, June_NNP 23_CD ,_, 2011_CD ._.
+pp._NN 2_CD --_: 10_CD ._.
+Tolone_NNP ,_, Elsa_NNP &_CC Sagot_NNP ,_, Benoit_NNP ,_, -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, Using_VBG Lexicon_NNP -_: Grammar_NNP tables_NNS for_IN French_JJ verbs_NNS in_IN a_DT large-coverage_JJ parser_NN ._.
+Human_NNP Language_NNP Technology_NNP ._.
+Challenges_VBZ for_IN Computer_NNP Science_NNP and_CC Linguistics_NNP LNCSVolume_NNP 6562_CD ,_, 2011_CD ,_, pp.183-191_JJ ._.

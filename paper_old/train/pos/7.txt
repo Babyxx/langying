@@ -1,0 +1,280 @@
+Selecting_VBG Contextual_NNP Peripheral_NNP Information_NNP for_IN Answer_NNP Presentation_NNP :_: The_DT Need_NNP for_IN Pragmatic_NNP Models_NNPS Abstract_NNP This_DT paper_NN explores_VBZ the_DT possibility_NN of_IN pre_NN -_: senting_VBG additional_JJ contextual_JJ information_NN as_IN a_DT method_NN of_IN answer_NN presentation_NN Question_NN An_DT -_: swering_NN ._.
+In_IN particular_JJ the_DT paper_NN discusses_VBZ the_DT result_NN of_IN employing_VBG Bag_NN of_IN Words_NNS -LRB-_-LRB- BoW_NN -RRB-_-RRB- and_CC Bag_NN of_IN Concepts_NNS -LRB-_-LRB- BoC_NNP -RRB-_-RRB- models_NNS to_TO retrieve_VB contextual_JJ information_NN from_IN a_DT Linked_NNP Data_NNP resource_NN ,_, DBpedia_NNP ._.
+DBpedia_NNP provides_VBZ struc_SYM -_: tured_VBN information_NN on_IN wide_JJ variety_NN of_IN entities_NNS in_IN the_DT form_NN of_IN triples_NNS ._.
+We_PRP utilize_VBP the_DT QALD_NNP question_NN sets_VBZ consisting_VBG of_IN a_DT 100_CD instances_NNS in_IN the_DT training_NN set_NN and_CC another_DT 100_CD in_IN the_DT testing_NN set_NN ._.
+The_DT questions_NNS are_VBP categorized_VBN into_IN single_JJ entity_NN and_CC multiple_JJ entity_NN questions_NNS based_VBN on_IN the_DT number_NN of_IN entities_NNS mentioned_VBN in_IN the_DT ques_NNS -_: tion_NN ._.
+The_DT results_NNS show_VBP that_IN both_DT BoW_NNP -LRB-_-LRB- syn_SYM -_: tactic_NN models_NNS -RRB-_-RRB- and_CC BoC_NNP -LRB-_-LRB- semantic_JJ models_NNS -RRB-_-RRB- are_VBP not_RB capable_JJ enough_RB to_TO select_VB contextual_JJ infor_NN -_: mation_NN for_IN answer_NN presentation_NN ._.
+The_DT results_NNS further_RBR reveals_VBZ that_IN pragmatic_JJ aspects_NNS ,_, in_IN par_NN -_: ticular_JJ ,_, pragmatic_JJ intent_NN and_CC pragmatic_JJ infer_NN -_: ence_NN play_VB a_DT crucial_JJ role_NN in_IN contextual_JJ informa_NN -_: tion_NN selection_NN in_IN the_DT answer_NN presentation_NN ._.
+1_CD Introduction_NNP Answer_NNP Presentation_NNP is_VBZ the_DT final_JJ step_NN in_IN Question_NNP Answering_NNP -LRB-_-LRB- QA_NNP -RRB-_-RRB- which_WDT focuses_VBZ on_IN generating_VBG an_DT an_DT -_: swer_NN which_WDT closely_RB resemble_VBP with_IN a_DT human_JJ provided_VBN answer_NN -LRB-_-LRB- Perera_NNP ,_, 2012b_CD ;_: Perera_NNP ,_, 2012a_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014a_CD -RRB-_-RRB- ._.
+There_EX is_VBZ also_RB a_DT requirement_NN to_TO asso_VB -_: ciate_VB the_DT answer_NN with_IN additional_JJ contextual_JJ informa_NN -_: tion_NN when_WRB presenting_VBG the_DT answer_NN ._.
+This_DT paper_NN focus_NN of_IN exploring_VBG methods_NNS to_TO extract_VB additional_JJ contextual_JJ information_NN to_TO present_VB with_IN the_DT extracted_VBN factoid_NN answer_NN ._.
+We_PRP provide_VBP a_DT classifica_NN -_: tion_NN if_IN questions_NNS based_VBN on_IN the_DT type_NN of_IN the_DT answer_NN re_SYM -_: quired_VBN and_CC the_DT number_NN of_IN entities_NNS that_WDT mentioned_VBD in_IN the_DT questions_NNS ._.
+The_DT question_NN classification_NN is_VBZ illus_SYM -_: trated_VBN in_IN Fig._NNP 1_CD ._.
+Firstly_RB ,_, question_NN can_MD be_VB categorized_VBN based_VBN on_IN the_DT information_NN need_NN where_WRB questions_NNS may_MD require_VB a_DT definition_NN as_IN the_DT answer_NN or_CC a_DT factoid_NN an_DT -_: swer_NN which_WDT is_VBZ an_DT information_NN unit_NN -LRB-_-LRB- Perera_NNP ,_, 2012a_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014a_CD -RRB-_-RRB- ._.
+The_DT definitional_JJ questions_NNS need_VBP definitions_NNS which_WDT include_VBP both_DT direct_JJ and_CC re_SYM -_: lated_VBN background_NN information_NN and_CC there_EX is_VBZ no_DT need_NN to_TO further_JJ expand_VB the_DT answer_NN with_IN contextual_JJ informa_NN -_: tion_NN ._.
+So_RB far_RB the_DT way_NN factoid_NN questions_NNS presentation_NN involved_VBN only_RB the_DT answer_NN itself_PRP without_IN contextual_JJ information_NN ._.
+Recently_RB ,_, Mendes_NNP and_CC Coheur_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- argued_VBD that_IN even_RB factoid_JJ questions_NNS need_VBP to_TO present_VB additional_JJ information_NN ._.
+An_DT advantage_NN of_IN presenting_VBG contextual_JJ information_NN is_VBZ that_IN answer_NN is_VBZ justified_VBN by_IN the_DT information_NN provided_VBN ,_, so_IN that_IN users_NNS can_MD conclude_VB that_IN the_DT answer_NN that_WDT is_VBZ acquired_VBN by_IN the_DT system_NN is_VBZ one_CD that_IN they_PRP are_VBP searching_VBG for_IN ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ structured_VBN as_IN follows_VBZ ._.
+Sec_SYM -_: tion_NN 2_CD explores_VBZ BoW_NNP and_CC BoC_NNP models_NNS to_TO rank_VB con_NN -_: textual_JJ information_NN ._.
+Section_NN 3_CD focuses_VBZ on_IN presenting_VBG the_DT experimental_JJ framework_NN ._.
+Section_NN 5_CD presents_NNS in_IN -_: formation_NN on_IN related_JJ work_NN and_CC we_PRP conclude_VBP the_DT pa_NN -_: per_IN in_IN Section_NN 6_CD ._.
+2_CD Content_NN selection_NN using_VBG weighted_JJ triples_NNS This_DT section_NN presents_VBZ models_NNS to_TO rank_VB triples_NNS focusing_VBG on_IN open_JJ domain_NN questions_NNS as_IN communicative_JJ goals_NNS ._.
+Open_NNP domain_NN questions_NNS require_VBP knowledge_NN from_IN dif_NN -_: ferent_JJ domains_NNS to_TO be_VB aggregated_JJ which_WDT making_VBG it_PRP more_RBR challenging_JJ compared_VBN to_TO simply_RB generating_VBG a_DT content_NN for_IN given_VBN single_JJ theme_NN topic_NN ._.
+Our_PRP$ objective_NN is_VBZ to_TO select_VB a_DT set_NN of_IN triples_NNS which_WDT can_MD be_VB used_VBN to_TO gen_VB -_: erate_VB a_DT more_RBR informative_JJ answer_NN for_IN a_DT given_VBN ques_NNS -_: tion_NN ._.
+We_PRP investigate_VBP the_DT problem_NN from_IN two_CD perspec_SYM -_: tives_NNS ;_: as_IN a_DT Bag_NN of_IN Words_NNS -LRB-_-LRB- BoW_NN -RRB-_-RRB- and_CC as_IN a_DT Bag_NN of_IN Concepts_NNS -LRB-_-LRB- BoC_NNP -RRB-_-RRB- ._.
+In_IN the_DT following_JJ sections_NNS ,_, we_PRP dis_SYM -_: cuss_VB the_DT strategy_NN used_VBN for_IN ranking_JJ and_CC the_DT details_NNS on_IN the_DT supporting_VBG utilities_NNS including_VBG domain_NN corpus_NN ,_, ref_SYM -_: erence_NN corpus_NN ,_, triple_JJ retrieval_NN ,_, and_CC threshold_NN based_VBN selection_NN ._.
+The_DT high_JJ level_NN design_NN of_IN the_DT framework_NN used_VBN to_TO experiment_NN BoW_NN and_CC BoC_NNP is_VBZ shown_VBN in_IN the_DT Fig._NNP 2_CD ._.
+The_DT model_NN utilizes_VBZ two_CD corpora_NN -LRB-_-LRB- domain_NN and_CC refer_VBP -_: ence_NN -RRB-_-RRB- and_CC selectively_RB used_VBN based_VBN on_IN the_DT requirement_NN ._.
+The_DT domain_NN corpus_NN is_VBZ constructed_VBN using_VBG search_NN snip_NN -_: pets_NNS collected_VBN from_IN the_DT web_NN by_IN using_VBG information_NN from_IN the_DT question_NN and_CC answer_NN as_IN query_NN terms_NNS ._.
+The_DT reference_NN corpus_NN represents_VBZ knowledge_NN about_IN gen_NN -_: eral_JJ domain_NN ._.
+The_DT model_NN also_RB has_VBZ utility_NN functions_NNS to_TO retrieve_VB triples_NNS using_VBG SPARQL_NNP queries_NNS ,_, filter_NN the_DT duplicates_NNS ,_, and_CC to_TO perform_VB basic_JJ verbalization_NN ._.
+2.1_CD The_DT problem_NN as_IN a_DT Bag_NN of_IN Words_NNS We_PRP utilized_VBD token_JJ similarity_NN ,_, Term_NNP Frequency_NNP -_: In_IN -_: verse_NN Document_NNP Frequency_NNP -LRB-_-LRB- TF-IDF_NNP -RRB-_-RRB- ,_, and_CC Resid_NNP -_: ual_NN Inverse_NNP Document_NNP Frequency_NNP -LRB-_-LRB- RIDF_NNP -RRB-_-RRB- in_IN two_CD flavours_NNS which_WDT are_VBP widely_RB used_VBN in_IN information_NN re_SYM -_: trieval_JJ tasks_NNS ._.
+The_DT following_JJ sections_NNS describes_VBZ these_DT models_NNS in_IN detail_NN ._.
+2.1.1_CD Token_JJ similarity_NN Token_NNP similarity_NN ranks_VBZ the_DT triples_NNS based_VBN on_IN the_DT ap_NN -_: pearance_NN of_IN the_DT terms_NNS in_IN triple_JJ and_CC the_DT question_NN be_VB -_: ing_NN considered_VBN ._.
+In_IN particular_JJ we_PRP employ_VBP the_DT cosine_NN similarity_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- to_TO calculate_VB the_DT similarity_NN between_IN the_DT tokenized_VBN and_CC stopwords_NNS removed_VBD question/answer_NN and_CC the_DT triple_JJ ._.
+Figure_NN 1_CD :_: Classification_NN of_IN common_JJ question_NN types_NNS →_VBP −_CD →_CD −_CD Q_NNP ·_CD T_NNP =_SYM Σn_SYM Q2_SYM Σn_SYM T2_CD i_FW =_SYM 1_CD i_FW i_FW =_SYM 1_CD i_FW Here_RB ,_, Q_NNP and_CC T_NNP represent_VBP the_DT question_NN and_CC the_DT triple_JJ respectively_RB ._.
+2.1.2_CD Term_NNP Frequency_NN --_: Inverse_NNP Document_NNP Frequency_NNP -LRB-_-LRB- TF-IDF_NNP -RRB-_-RRB- The_DT TF-IDF_NNP -LRB-_-LRB- 2_LS -RRB-_-RRB- is_VBZ used_VBN to_TO rank_VB term_NN -LRB-_-LRB- t_VBN -RRB-_-RRB- from_IN the_DT question_NN and_CC answer_VB present_JJ in_IN the_DT triple_JJ -LRB-_-LRB- T_NNP -RRB-_-RRB- ._.
+A_DT triple_JJ is_VBZ then_RB associated_VBN with_IN a_DT weight_NN which_WDT is_VBZ the_DT sum_NN of_IN the_DT weights_NNS assigned_VBN to_TO the_DT triple_JJ terms_NNS ._.
+TF_NNP −_CD IDF_NNP -LRB-_-LRB- Q_NNP ,_, T_NNP -RRB-_-RRB- =_SYM tfi.idfi_FW i_FW ∈_FW Q_NNP ,_, T_NNP N_NNP -LRB-_-LRB- 2_LS -RRB-_-RRB- =_SYM tfi.log2_CD dfi_NNS i_FW ∈_FW Q_NNP ,_, T_NNP Where_WRB tf_NN represents_VBZ the_DT term_NN frequency_NN ,_, N_NNP stands_VBZ for_IN number_NN of_IN documents_NNS in_IN the_DT collection_NN and_CC df_NN is_VBZ the_DT number_NN of_IN documents_NNS with_IN the_DT corresponding_JJ term_NN ._.
+Q_NNP represents_VBZ the_DT question_NN ,_, however_RB in_IN our_PRP$ ex_FW -_: periment_NN we_PRP tested_VBD the_DT possibility_NN of_IN utilizing_VBG a_DT do_VBP -_: main_JJ corpus_JJ instead_RB of_IN the_DT original_JJ question_NN or_CC the_DT question_NN with_IN the_DT answer_NN ._.
+→_SYM −_SYM →_SYM −_SYM simcosine_NN -LRB-_-LRB- Q_NNP ,_, T_NNP -RRB-_-RRB- =_SYM Σni_FW =_SYM 1_CD Qi_NNP Ti_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- →_SYM −_SYM →_SYM −_FW |_FW Q_NNP |_FW |_FW T_FW |_FW Figure_NN 2_CD :_: The_DT schematic_JJ representation_NN of_IN the_DT content_NN selection_NN framework_NN 2.1.3_CD Okapi_NNP BM25_NNP Okapi_NNP ranking_NN is_VBZ an_DT extension_NN to_TO the_DT TF-IDF_NNP that_WDT is_VBZ based_VBN on_IN the_DT probabilistic_JJ retrieval_NN framework_NN ._.
+The_DT Okapi_NNP ranking_JJ function_NN can_MD be_VB defined_VBN as_IN fol_NN -_: lows_NNS :_: RIDF_NNP =_SYM idf_FW −_FW idf_FW i_FW ∈_FW T_FW 1_CD =_SYM idfi_FW −_FW log1_FW −_FW P_FW -LRB-_-LRB- 0_CD ;_: λi_FW -RRB-_-RRB- i_FW ∈_FW T_FW Okapi_FW -LRB-_-LRB- Q_NNP ,_, T_NNP -RRB-_-RRB- =_SYM -LRB-_-LRB- k1_FW +_FW 1_LS -RRB-_-RRB- tfi_FW ,_, T_NNP N_NNP logdf_NN ._.
+i_FW ∈_FW Q_NNP ,_, T_NNP i_FW -LRB-_-LRB- k3_FW +_FW 1_LS -RRB-_-RRB- tfi_FW ,_, Q_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- Where_WRB λi_FW represents_VBZ the_DT average_JJ number_NN of_IN oc_SYM -_: currences_NNS of_IN term_NN and_CC P_NN -LRB-_-LRB- 0_CD ;_: λi_FW -RRB-_-RRB- represents_VBZ the_DT Pois_NNP -_: son_NN prediction_NN of_IN df_NN where_WRB term_NN will_MD not_RB be_VB found_VBN in_IN a_DT document_NN ._.
+Therefore_RB ,_, 1_CD −_CD P_NNP -LRB-_-LRB- 0_CD ;_: λ_FW -RRB-_-RRB- can_MD be_VB inter_NN -_: i_FW preted_FW as_IN finding_VBG at_IN least_JJS one_CD term_NN and_CC can_MD be_VB mea_SYM -_: sured_VBN using_VBG :_: P_NN -LRB-_-LRB- k_NN ;_: λi_FW -RRB-_-RRB- =_SYM e_SYM −_SYM λi_FW λki_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- k_NN !_.
+Based_VBN on_IN the_DT same_JJ RIDF_NNP concept_NN ,_, we_PRP can_MD mod_SYM -_: erate_VB this_DT to_TO work_VB with_IN term_NN distribution_NN models_NNS that_WDT fits_VBZ well_RB with_IN actual_JJ df_NN such_JJ as_IN K_NNP mixture_NN ._.
+The_DT defi_NN -_: nition_NN of_IN the_DT K-mixture_NNP is_VBZ given_VBN below_IN ._.
+α_SYM β_FW k_NN P_NNP -LRB-_-LRB- k_NN ;_: λi_FW -RRB-_-RRB- =_SYM -LRB-_-LRB- 1_CD −_CD α_NN -RRB-_-RRB- δk_SYM ,0_CD +_SYM β_FW +_FW 1_CD β_CD +_NN 1_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- In_IN K-mixture_JJ based_VBN RIDF_NNP we_PRP interpreted_VBD the_DT devi_NNS -_: ation_NN from_IN predicated_VBN df_NN to_TO mark_VB the_DT term_NN as_IN a_DT non_NN -_: content_JJ term_NN ._.
+2.2_CD The_DT problem_NN as_IN a_DT Bag_NN of_IN Concepts_NNS This_DT section_NN explains_VBZ two_CD BoC_NNP models_NNS which_WDT can_MD rank_VB triples_NNS utilizing_VBG the_DT semantic_JJ representation_NN of_IN the_DT triple_JJ collection_NN ._.
+In_IN particular_JJ ,_, we_PRP employ_VBP ii_FW -LRB-_-LRB- 4_LS -RRB-_-RRB- L_NNP ._.
+k_NN +_NN tf_IN k1_CD -LRB-_-LRB- 1_CD −_CD b_NN -RRB-_-RRB- +_NN b_NN T_NNP +_CD tfi_NNS ,_, T_NN 3_CD i_FW ,_, Q_NNP Lave_NNP Where_WRB ,_, LT_NNP and_CC Lave_NNP represent_VBP the_DT length_NN of_IN the_DT triple_JJ and_CC average_JJ of_IN length_NN of_IN a_DT triple_JJ respectively_RB ._.
+The_DT Okapi_NNP also_RB uses_VBZ set_NN of_IN parameters_NNS where_WRB b_NN is_VBZ usually_RB set_VBN to_TO 0.75_CD and_CC k1_CD and_CC k3_CD range_NN between_IN 1.2_CD and_CC 2.0_CD ._.
+The_DT k1_CD and_CC k3_CD can_MD be_VB determined_VBN through_IN optimization_NN or_CC can_MD be_VB set_VBN to_TO range_VB within_IN 1.2_CD and_CC 2.0_CD in_IN the_DT absence_NN of_IN development_NN data_NNS -LRB-_-LRB- Manning_NNP and_CC Schutze_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+2.1.4_CD Residual_NNP Inverse_NNP Document_NNP Frequency_NNP -LRB-_-LRB- RIDF_NNP -RRB-_-RRB- The_DT idea_NN behind_IN the_DT RIDF_NNP is_VBZ to_TO find_VB content_JJ words_NNS based_VBN on_IN actual_JJ IDF_NNP and_CC predicted_VBD IDF_NNP ._.
+The_DT widely_RB used_VBN methods_NNS to_TO IDF_NNP prediction_NN is_VBZ Poisson_NNP and_CC K_NNP mixture_NN ._.
+However_RB ,_, K_NNP mixture_NN tends_VBZ to_TO fit_VB very_RB well_RB with_IN content_JJ terms_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, Poisson_NNP de_NNP -_: viates_NNS from_IN the_DT IDF_NNP remarkably_RB and_CC provides_VBZ non_SYM -_: content_JJ words_NNS ._.
+Given_VBN term_NN frequencies_NNS in_IN triple_JJ col_NN -_: lection_NN ,_, predicted_VBD IDF_NNP can_MD be_VB used_VBN to_TO measure_VB the_DT RIDF_NNP for_IN a_DT triple_JJ as_IN follows_VBZ :_: two_CD widely_RB accepted_VBN BoC_NNP models_NNS ;_: Latent_NNP Seman_NNP -_: tic_JJ Analysis_NNP -LRB-_-LRB- LSA_NNP -RRB-_-RRB- and_CC adoption_NN of_IN Log_NNP Likelihood_NNP Distance_NNP -LRB-_-LRB- LLD_NNP -RRB-_-RRB- using_VBG two_CD corpora_NN ._.
+The_DT following_JJ sections_NNS describe_VBP them_PRP in_IN detail_NN ._.
+2.2.1_CD Latent_NNP Semantic_NNP Analysis_NNP This_DT method_NN analysed_VBD how_WRB triples_NNS in_IN the_DT collec_NN -_: tion_NN can_MD be_VB ranked_VBN concept-wise_JJ and_CC retrieved_VBD re_SYM -_: lated_VBN to_TO the_DT question_NN and_CC answer_NN where_WRB triples_NNS are_VBP represented_VBN in_IN a_DT semantic_JJ space_NN ._.
+Such_JJ a_DT ranking_NN can_MD expose_VB the_DT original_JJ semantic_JJ structure_NN of_IN the_DT space_NN and_CC its_PRP$ dimensions_NNS -LRB-_-LRB- Manning_NNP and_CC Schutze_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+In_IN particular_JJ ,_, we_PRP employed_VBD the_DT Latent_NNP Semantic_NNP In_IN -_: dexing_NN -LRB-_-LRB- LSI_NNP -RRB-_-RRB- for_IN each_DT collection_NN of_IN triples_NNS associated_VBN with_IN the_DT question_NN ._.
+2.2.2_CD Corpus_NNP based_VBN Log_NNP Likelihood_NNP Distance_NNP -LRB-_-LRB- LLD_NNP -RRB-_-RRB- The_DT idea_NN behind_IN the_DT implementation_NN of_IN this_DT method_NN is_VBZ to_TO identify_VB domain_NN specific_JJ concepts_NNS -LRB-_-LRB- compared_VBN to_TO the_DT general_JJ concepts_NNS -RRB-_-RRB- and_CC rank_NN triples_NNS which_WDT contain_VBP such_JJ concepts_NNS ._.
+For_IN this_DT we_PRP employed_VBD a_DT domain_NN corpus_NN -LRB-_-LRB- see_VB Section_NNP 2.3_CD -RRB-_-RRB- and_CC a_DT general_JJ ref_NN -_: erence_NN corpus_NN -LRB-_-LRB- see_VB Section_NNP 2.4_CD -RRB-_-RRB- ._.
+The_DT model_NN extracts_VBZ concepts_NNS which_WDT are_VBP related_VBN to_TO the_DT domain_NN on_IN the_DT ba_NN -_: sis_NN of_IN their_PRP$ frequency_NN in_IN domain_NN corpus_NN and_CC general_JJ reference_NN corpus_NN ._.
+A_DT term_NN that_WDT is_VBZ more_RBR frequently_RB seen_VBN in_IN a_DT domain_NN corpus_NN compared_VBN to_TO the_DT general_JJ ref_NN -_: erence_NN corpus_NN implies_VBZ that_IN the_DT term_NN is_VBZ a_DT concept_NN that_WDT is_VBZ used_VBN in_IN the_DT domain_NN being_VBG considered_VBN -LRB-_-LRB- Perera_NNP and_CC Nand_NNP ,_, 2014b_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2014c_JJ -RRB-_-RRB- ._.
+We_PRP utilized_VBD the_DT log_VB likelihood_NN distance_NN -LRB-_-LRB- He_PRP et_FW al._FW ,_, 2006_CD ;_: Gelbukh_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- to_TO measure_VB the_DT importance_NN as_IN mentioned_VBN below_IN :_: fdom_NN W_NNP =_SYM 2_CD ×_CD fdom_NN ×_CD log_VBP t_FW +_FW f_SYM expdom_FW =_SYM s_PRP t_FW dom_FW fdom_FW +_FW fref_FW ×_FW t_FW t_FW -LRB-_-LRB- 8_CD -RRB-_-RRB- f_SYM expref_FW =_SYM s_PRP t_VBD ref_NN ×_SYM sdom_FW +_FW sref_FW fdom_FW +_FW fref_FW t_FW t_FW -LRB-_-LRB- 9_CD -RRB-_-RRB- sdom_FW +_FW sref_FW t_FW t_FW f_SYM expdom_FW t_FW where_WRB ,_, sdom_NN and_CC sref_NN represent_VBP total_JJ number_NN of_IN tokens_NNS in_IN domain_NN corpus_NN and_CC reference_NN corpus_NN re_SYM -_: spectively_RB ._.
+Next_JJ ,_, we_PRP can_MD calculate_VB the_DT weight_NN of_IN a_DT triple_JJ -LRB-_-LRB- ⟨_CD subject_JJ ,_, predicate_VB ,_, object_VB ⟩_CD -RRB-_-RRB- by_IN summing_VBG up_RP the_DT weight_NN assigned_VBN to_TO each_DT term_NN of_IN the_DT triple_JJ 2.3_CD Domain_NNP Corpus_NNP The_NNP domain_NN corpus_NN is_VBZ a_DT collection_NN of_IN text_NN related_VBN to_TO the_DT domain_NN of_IN the_DT question_NN being_VBG considered_VBN ._.
+How_WRB -_: ever_RB ,_, finding_VBG a_DT corpus_NN which_WDT belongs_VBZ to_TO the_DT same_JJ do_VBP -_: main_JJ as_IN the_DT question_NN is_VBZ challenge_NN on_IN its_PRP$ own_JJ ._.
+To_TO overcome_VB this_DT ,_, we_PRP have_VBP utilized_VBN an_DT unsupervised_JJ do_VBP -_: main_JJ corpus_JJ creation_NN based_VBN on_IN a_DT web_NN snippet_NN extrac_NN -_: tion_NN ._.
+The_DT input_NN to_TO this_DT process_NN is_VBZ a_DT set_NN of_IN extracted_VBN key_JJ phrases_NNS from_IN a_DT question_NN and_CC its_PRP$ answers_NNS ._.
+2.4_CD Reference_NNP Corpus_NNP The_NNP reference_NN corpus_NN is_VBZ an_DT additional_JJ resource_NN uti_SYM -_: lized_VBN for_IN the_DT LLD_NNP based_VBN contextual_JJ information_NN se_FW -_: lection_NN ._.
+We_PRP used_VBD the_DT British_NNP National_NNP Corpus_NNP -LRB-_-LRB- BNC_NNP -RRB-_-RRB- as_IN the_DT reference_NN corpus_NN ._.
+The_DT selection_NN is_VBZ influenced_VBN by_IN the_DT language_NN used_VBN in_IN the_DT DBpedia_NNP ,_, British_NNP En_NNP -_: glish_NN ._.
+However_RB ,_, what_WP is_VBZ important_JJ for_IN the_DT LLD_NNP cal_NN -_: culation_NN is_VBZ a_DT term_NN frequency_NN matrix_NN ._.
+We_PRP have_VBP first_JJ performed_VBN stopword_NN filtering_VBG on_IN the_DT BNC_NNP and_CC this_DT operation_NN reduced_VBD the_DT original_JJ size_NN of_IN BNC_NNP -LRB-_-LRB- 100_CD mil_SYM -_: lion_NN words_NNS -RRB-_-RRB- to_TO 52.3_CD million_CD words_NNS ._.
+Next_JJ ,_, the_DT term_NN frequency_NN matrix_NN is_VBZ built_VBN using_VBG a_DT unigram_NN analysis_NN ._.
+2.5_CD Triple_NNP retrieval_NN The_DT model_NN employs_VBZ the_DT Jena_NNP RDF_NNP framework_NN for_IN the_DT triple_JJ retrieval_NN ._.
+We_PRP have_VBP implemented_VBN a_DT Java_NNP li_SYM -_: brary_JJ to_TO query_NN and_CC automatically_RB download_JJ neces_NNS -_: sary_JJ RDF_NNP files_NNS from_IN DBpedia_NNP ._.
+2.6_CD Threshold_NN based_VBN selection_NN After_IN associating_VBG each_DT triple_JJ with_IN a_DT calculated_JJ weight_NN ,_, we_PRP then_RB need_VBP to_TO limit_VB the_DT selection_NN based_VBN on_IN a_DT particular_JJ cut-off_JJ point_NN as_IN the_DT threshold_NN -LRB-_-LRB- θ_FW -RRB-_-RRB- ._.
+Due_JJ fref_NN ×_CD log_VBP t_SYM fref_FW t_FW -LRB-_-LRB- 7_CD -RRB-_-RRB- f_SYM expref_FW t_FW where_WRB ,_, f_LS dom_NN and_CC f_LS ref_NN represent_VBP frequency_NN of_IN term_NN tt_NN -LRB-_-LRB- t_VBN -RRB-_-RRB- in_IN domain_NN corpus_NN and_CC reference_NN corpus_NN respec_NN -_: tively_RB ._.
+Expected_JJ frequency_NN of_IN a_DT term_NN -LRB-_-LRB- t_VBN -RRB-_-RRB- in_IN domain_NN -LRB-_-LRB- f_SYM expdom_FW -RRB-_-RRB- and_CC reference_NN corpora_NN -LRB-_-LRB- f_SYM expref_FW -RRB-_-RRB- were_VBD tt_NN calculated_VBN as_IN follows_VBZ :_: Table_NNP 1_CD :_: Dataset_NNP statistics_NNS ._.
+Invalid_JJ questions_NNS are_VBP those_DT that_WDT are_VBP already_RB marked_VBN by_IN dataset_NN providers_NNS as_IN invalid_JJ and_CC questions_NNS where_WRB for_IN which_WDT triples_NNS can_MD not_RB be_VB retrieved_VBN from_IN DBpedia_NNP Table_NNP 2_CD :_: Statistics_NNS related_VBN to_TO the_DT gold_NN triple_JJ percentage_NN in_IN total_JJ triple_JJ collection_NN in_IN training_NN dataset_NN ._.
+The_DT μ_NN rep_NN -_: resents_VBZ the_DT mean_JJ percentage_NN of_IN gold_NN triples_NNS included_VBD in_IN the_DT total_JJ collection_NN ._.
+The_DT σ_NN shows_VBZ the_DT standard_JJ deviation_NN ._.
+The_DT Max_NNP %_NN and_CC Min_NNP %_NN represent_VBP maximum_NN and_CC minimum_JJ percentage_NN of_IN gold_NN triples_NNS from_IN the_DT total_JJ collection_NN respec_NN -_: tively_RB ._.
+All_DT questions_NNS Invalid_JJ questions_NNS Single_JJ entity_NN questions_NNS Multiple_JJ entity_NN questions_NNS Training_VBG Test_NN 100_CD 100_CD 5_CD 10_CD 47_CD 42_CD 48_CD 48_CD μ_NN Single_JJ entity_NN 68.89_CD type_NN σ_NN Max_NNP %_NN Min_CD %_NN 4.28_CD 78.79_CD 63.58_CD 3.88_CD 37.06_CD 22.93_CD to_TO the_DT absence_NN of_IN knowledge_NN to_TO measure_VB the_DT θ_NN at_IN this_DT stage_NN ,_, it_PRP is_VBZ considered_VBN as_IN a_DT factor_NN that_WDT needs_VBZ to_TO be_VB tuned_VBN based_VBN on_IN experiments_NNS ._.
+Further_JJ discussion_NN on_IN selecting_VBG the_DT θ_NN can_MD be_VB found_VBN in_IN Section_NN 4_CD ._.
+3_CD Experimental_JJ framework_NN 3.1_CD Dataset_NNP We_PRP used_VBD the_DT QALD-2_NN training_NN and_CC test_NN datasets_NNS ,_, but_CC removed_VBD questions_NNS which_WDT marked_VBD as_IN ``_`` out_IN of_IN scope_NN ''_'' by_IN dataset_NN providers_NNS and_CC those_DT for_IN which_WDT DBpedia_NNP triples_NNS did_VBD not_RB exist_VB ._.
+Table_NNP 1_CD provides_VBZ the_DT statistics_NNS of_IN the_DT dataset_NN ,_, including_VBG the_DT distribution_NN of_IN questions_NNS in_IN two_CD different_JJ question_NN categories_NNS ,_, single_JJ entity_NN and_CC multiple_JJ entity_NN questions_NNS ._.
+We_PRP have_VBP also_RB built_VBN a_DT gold_NN triple_JJ collection_NN for_IN each_DT question_NN for_IN the_DT purpose_NN of_IN evaluation_NN ._.
+These_DT gold_JJ triples_NNS were_VBD selected_VBN by_IN analysing_VBG community_NN pro-_JJ vided_VBN answers_NNS for_IN the_DT questions_NNS in_IN our_PRP$ dataset_NN ._.
+Table_NNP 1_CD shows_VBZ the_DT statistics_NNS for_IN both_DT training_NN and_CC testing_NN datasets_NNS ._.
+3.2_CD Results_NNS and_CC discussion_NN The_DT evaluation_NN is_VBZ carried_VBN out_RP using_VBG gold_NN triples_NNS as_IN de_FW -_: scribed_VBN in_IN Section_NN 3.1_CD ._.
+The_DT definitions_NNS of_IN precision_NN -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, recall_VBP -LRB-_-LRB- R_NN -RRB-_-RRB- and_CC F-score_NN -LRB-_-LRB- F_NN *_SYM -RRB-_-RRB- are_VBP given_VBN below_IN :_: dataset_NN ._.
+This_DT threshold_NN value_NN was_VBD then_RB used_VBN to_TO select_VB triples_NNS which_WDT were_VBD relevant_JJ for_IN the_DT testing_NN dataset_NN ._.
+The_DT value_NN was_VBD experimentally_RB determined_VBN by_IN using_VBG a_DT combination_NN of_IN precision_NN and_CC recall_NN value_NN form_NN the_DT training_NN data_NNS ._.
+For_IN an_DT accurate_JJ model_NN ,_, the_DT pre_NN -_: cision_NN is_VBZ expected_VBN to_TO remain_VB constant_JJ until_IN it_PRP starts_VBZ selecting_VBG the_DT irrelevant_JJ triples_NNS after_IN which_WDT the_DT preci_NNS -_: sion_NN will_MD gradually_RB decrease_VB ._.
+Correspondingly_RB ,_, the_DT recall_NN value_NN will_MD increase_VB until_IN the_DT threshold_NN point_NN after_IN which_WDT the_DT model_NN will_MD start_VB selecting_VBG irrelevant_JJ triples_NNS ,_, which_WDT will_MD start_VB pushing_VBG the_DT recall_NN value_NN down_RB ._.
+Hence_RB the_DT optimum_JJ θ_NN value_NN will_MD be_VB the_DT point_NN at_IN the_DT maximum_NN point_NN for_IN both_DT recall_NN and_CC precision_NN which_WDT is_VBZ the_DT maximum_NN score_NN ._.
+Using_VBG the_DT θ_NN identified_VBN from_IN training_NN set_VBN ,_, we_PRP can_MD then_RB test_VB the_DT model_NN using_VBG testing_NN dataset_NN ._.
+When_WRB mea_SYM -_: suring_VBG the_DT θ_NN based_VBN on_IN the_DT training_NN dataset_NN it_PRP is_VBZ also_RB important_JJ to_TO measure_VB the_DT proportion_NN of_IN gold_NN triples_NNS compared_VBN to_TO the_DT number_NN of_IN total_JJ triples_NNS ._.
+A_DT set_NN of_IN statistics_NNS related_VBN to_TO this_DT calculation_NN is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+0.75_CD Multiple_JJ entity_NN type_NN 30.43_CD P_NNP =_SYM |_SYM triplesselected_VBD ∩_CD triplesgold_JJ |_NN |_NN triples_NNS R_NNP =_SYM |_SYM triplesselected_VBD ∩_CD triplesgold_JJ |_NN -LRB-_-LRB- 11_CD -RRB-_-RRB- |_SYM triplesgold_FW |_FW F_NN ∗_CD =_SYM 2PR_CD -LRB-_-LRB- 12_CD -RRB-_-RRB- P+R_NNP The_NNP threshold_NN -LRB-_-LRB- θ_FW -RRB-_-RRB- -LRB-_-LRB- measure_NN as_IN a_DT percentage_NN from_IN the_DT total_JJ triple_JJ collection_NN -RRB-_-RRB- value_NN for_IN the_DT ranked_VBN triples_NNS was_VBD experimentally_RB chosen_VBN to_TO using_VBG the_DT training_NN selected_VBN |_CD Cosine_NNP TFIDF_NNP Okapi_NNP -LRB-_-LRB- 10_CD -RRB-_-RRB- 0.7_CD 0.65_CD RIDF-Poisson_JJ RIDF-Kmixture_JJ 65_CD 70_CD 75_CD 80_CD 85_CD 90_CD 95_CD 100_CD Threshold_NNP -LRB-_-LRB- θ_FW -RRB-_-RRB- Figure_NN 3_CD :_: F-score_NN gained_VBN by_IN Bag_NN of_IN Words_NNS models_NNS plotted_VBN against_IN threshold_NN for_IN questions_NNS with_IN single_JJ entity_NN type_NN According_VBG to_TO statistics_NNS shown_VBN in_IN Table_NNP 2_CD it_PRP is_VBZ clear_JJ that_IN the_DT mean_JJ percentage_NN of_IN gold_NN triples_NNS percentages_NNS F-Score_JJ 0.8_CD 0.75_CD 0.7_CD 0.65_CD Figure_NN 4_CD :_: F-score_NN gained_VBN by_IN Bag_NN of_IN Concepts_NNS models_NNS plotted_VBN against_IN threshold_NN for_IN questions_NNS with_IN single_JJ entity_NN type_NN 0.5_CD 0.45_CD 0.4_CD Figure_NN 5_CD :_: F-score_NN gained_VBN by_IN Bag_NN of_IN Words_NNS models_NNS plotted_VBN against_IN threshold_NN for_IN questions_NNS with_IN multiple_JJ entity_NN types_NNS ._.
+Okapi_NNP and_CC K-mixture_NNP based_VBN ranking_JJ methods_NNS completely_RB failed_VBD to_TO identify_VB relevant_JJ triples_NNS ._.
+0.48_CD 0.47_CD 0.46_CD 0.45_CD LLD_NNP 30_CD 35_CD 40_CD 45_CD 50_CD 55_CD 60_CD 65_CD 70_CD 75_CD 80_CD 85_CD 90 95 100 105_CD Threshold_NNP -LRB-_-LRB- θ_FW -RRB-_-RRB- Figure_NN 6_CD :_: F-score_NN gained_VBN by_IN Bag_NN of_IN Concepts_NNS models_NNS plotted_VBN against_IN threshold_NN for_IN questions_NNS with_IN multiple_JJ en_IN -_: tity_NN types_NNS ._.
+The_DT LSI_NNP method_NN failed_VBD completely_RB in_IN identify_VB -_: ing_NN relevant_JJ triples_NNS ._.
+are_VBP 68.89_CD %_NN for_IN single_JJ entity_NN types_NNS and_CC 30.43_CD %_NN from_IN the_DT multiple_JJ entity_NN types_NNS ._.
+Furthermore_RB ,_, the_DT maxi_NN -_: mum_NN and_CC minimum_NN percentages_NNS are_VBP also_RB near_IN val_NN -_: ues_NNS to_TO the_DT receptive_JJ mean_NN values_NNS ._.
+This_DT encompasses_VBZ that_IN there_EX is_VBZ a_DT possibility_NN to_TO find_VB a_DT threshold_NN value_NN for_IN both_DT single_JJ and_CC multiple_JJ entity_NN types_NNS questions_NNS ._.
+Fig._NN 3_CD depicts_VBZ the_DT evaluation_NN performed_VBN on_IN the_DT single_JJ en_IN -_: tity_NN question_NN category_NN in_IN training_NN dataset_NN using_VBG five_CD BoW_NN models_NNS under_IN investigation_NN ._.
+The_DT results_NNS show_VBP that_IN the_DT maximum_NN F-score_NN obtained_VBN when_WRB θ_NN is_VBZ set_VBN to_TO 100_CD %_NN ._.
+This_DT shows_VBZ that_IN these_DT models_NNS unable_JJ to_TO accu_VB -_: rately_JJ differentiate_NN between_IN the_DT relevant_JJ and_CC relevant_JJ triples_NNS ._.
+The_DT BoW_NN models_NNS consider_VBP only_RB the_DT words_NNS Table_NNP 3_CD :_: Performance_NNP of_IN LLD_NNP on_IN single_JJ entity_NN type_NN ques_NNS -_: tion_JJ test_NN dataset_NN with_IN 78_CD %_NN threshold_NN Precision_NNP Recall_VB F-score_JJ Cosine_NNP TFIDF_NNP RIDF-Poisson_NNP LSI_NNP LLD_NNP LLD_NNP on_IN Test_NNP 0.72_CD Dataset_NNP -LRB-_-LRB- Single_NNP Entity_NNP -RRB-_-RRB- 0.84_CD 0.76_CD 30_CD 35_CD 40_CD 45_CD 50_CD 55_CD 60_CD 65_CD 70_CD 75_CD 80_CD 85_CD 90 95 100 105_CD Threshold_NNP -LRB-_-LRB- θ_FW -RRB-_-RRB- 20_CD 30_CD 40_CD 50_CD 60_CD 70_CD 80_CD 90_CD 100_CD Threshold_NNP -LRB-_-LRB- θ_FW -RRB-_-RRB- as_IN features_NNS and_CC therefore_RB every_DT entity_NN is_VBZ assigned_VBN the_DT same_JJ importance_NN ._.
+The_DT corresponding_JJ evaluation_NN performed_VBN on_IN the_DT single_JJ entity_NN question_NN category_NN in_IN training_NN dataset_NN us_PRP -_: ing_VBG BoC_NNP models_NNS is_VBZ shown_VBN in_IN Fig._NNP 4_CD ._.
+Latent_NN Seman_NNP -_: tic_JJ Indexing_NN -LRB-_-LRB- LSI_NNP -RRB-_-RRB- has_VBZ performed_VBN poorly_RB and_CC has_VBZ not_RB managed_VBN to_TO identify_VB a_DT global_JJ maximum_NN ._.
+However_RB ,_, the_DT Log_NNP Likelihood_NNP Distance_NNP -LRB-_-LRB- LLD_NNP -RRB-_-RRB- has_VBZ identified_VBN a_DT global_JJ maximum_NN with_IN a_DT θ_JJ value_NN of_IN 78_CD %_NN ._.
+Further_JJ -_: more_JJR ,_, it_PRP has_VBZ also_RB shown_VBN the_DT expected_VBN behaviour_NN with_IN an_DT increase_NN in_IN θ_JJ value_NN ._.
+When_WRB this_DT threshold_NN value_NN was_VBD used_VBN to_TO extract_VB triples_NNS from_IN the_DT test_NN dataset_VBD the_DT results_NNS were_VBD encouraging_VBG ._.
+Table_NNP 3_CD shows_NNS that_WDT LLD_NNP has_VBZ achieved_VBN F-score_NN of_IN 0.76_CD for_IN the_DT testing_NN dataset_NN with_IN a_DT 0.72_CD precision_NN value_NN ._.
+The_DT LLD_NNP model_NN out_IN -_: performs_VBZ the_DT other_JJ models_NNS in_IN this_DT context_NN mainly_RB because_IN it_PRP also_RB incorporates_VBZ the_DT domain_NN knowledge_NN -LRB-_-LRB- provided_VBN through_IN a_DT domain_NN corpus_NN as_IN explained_VBN in_IN Section_NN 2.2.2_CD -RRB-_-RRB- ._.
+Fig._NN 5_CD and_CC Fig._NNP 6_CD depict_VB the_DT evaluation_NN performed_VBN on_IN the_DT multiple_JJ entity_NN question_NN category_NN from_IN train_NN -_: ing_NN dataset_NN ,_, for_IN both_DT Bag_NN of_IN Words_NNS and_CC Bag_NN of_IN Con_NN -_: cepts_NNS models_NNS ._.
+RIDF-Kmixture_JJ and_CC Okapi_NNP have_VBP com_NN -_: pletely_RB failed_VBN without_IN any_DT success_NN in_IN identifying_VBG the_DT relevant_JJ triples_NNS ._.
+The_DT Cosine_NNP ,_, TF-IDF_NNP ,_, and_CC RIDF_NNP -_: Poisson_NNP have_VBP also_RB not_RB identified_VBN the_DT optimum_JJ thresh_NN -_: old_JJ -LRB-_-LRB- see_VB Fig._NNP 5_CD -RRB-_-RRB- ._.
+From_IN the_DT BoC_NNP models_NNS ,_, the_DT LSI_NNP method_NN has_VBZ also_RB failed_VBN entirely_RB ._.
+The_DT LLD_NNP mode_NN has_VBZ identified_VBN a_DT local_JJ maximum_NN at_IN θ_CD =_SYM 48_CD ,_, however_RB the_DT model_NN has_VBZ not_RB behaved_VBN as_IN expected_VBN ._.
+Furthermore_RB ,_, the_DT global_JJ maximum_NN identified_VBN at_IN θ_CD =_SYM 100_CD implies_VBZ that_IN the_DT model_NN can_MD identify_VB all_DT relevant_JJ triples_NNS only_RB when_WRB the_DT total_JJ triple_JJ collection_NN is_VBZ retrieved_VBN ._.
+This_DT confirms_VBZ that_IN although_IN a_DT Bag_NN of_IN Concepts_NNS model_NN such_JJ as_IN LLD_NNP performed_VBD well_RB in_IN the_DT single_JJ entity_NN type_NN questions_NNS ,_, none_NN of_IN the_DT models_NNS performed_VBD well_RB in_IN contextual_JJ information_NN selection_NN for_IN multiple_JJ en_IN -_: tity_NN type_NN questions_NNS ._.
+Analysis_NN of_IN the_DT erroneous_JJ triples_NNS for_IN this_DT experi_NN -_: F-Score_NN F-Score_NN F-Score_NN ment_NN revealed_VBD that_IN for_IN multiple_JJ entity_NN type_NN questions_NNS it_PRP is_VBZ important_JJ to_TO identify_VB the_DT intent_NN entity_NN from_IN the_DT question_NN ._.
+The_DT information_NN from_IN the_DT intent_NN of_IN the_DT question_NN can_MD be_VB used_VBN to_TO factor_NN in_IN a_DT weight_NN correction_NN for_IN the_DT triples_NNS ._.
+This_DT leads_VBZ to_TO the_DT study_NN the_DT Bag_NN of_IN Narrative_NNP -LRB-_-LRB- Cambria_NNP and_CC White_NNP ,_, 2014_CD -RRB-_-RRB- model_NN which_WDT is_VBZ essentially_RB based_VBN on_IN pragmatic_JJ aspects_NNS of_IN the_DT lan_NN -_: guage_NN ._.
+Section_NN 4_CD discusses_VBZ this_DT aspect_NN in_IN detail_NN ._.
+4_CD Pragmatic_JJ aspect_NN in_IN contextual_JJ information_NN selection_NN We_PRP introduce_VBP two_CD pragmatic_JJ based_VBN concepts_NNS that_WDT need_VBP to_TO be_VB studied_VBN in_IN contextual_JJ information_NN selec_NN -_: tion_NN approaches_NNS ,_, derived_VBN from_IN psycholinguistics_NNS ._.
+Table_NNP 5_CD :_: Example_NNP question_NN to_TO illustrate_VB the_DT pragmatic_JJ in_IN -_: ference_NN used_VBN in_IN the_DT information_NN elimination_NN •_IN •_CD 4.1_CD Pragmatic_JJ intent_NN -LRB-_-LRB- Byram_NNP and_CC Hu_NNP ,_, 2013_CD -RRB-_-RRB- of_IN a_DT question_NN in_IN the_DT perspective_NN of_IN contextual_JJ infor_NN -_: mation_NN and_CC ,_, Pragmatic_JJ inferences_NNS -LRB-_-LRB- Byram_NNP and_CC Hu_NNP ,_, 2013_CD ;_: Tomlinson_NNP and_CC Bott_NNP ,_, 2013_CD -RRB-_-RRB- that_WDT can_MD be_VB drawn_VBN based_VBN on_IN already_RB known_VBN information_NN ._.
+Pragmatic_JJ Intent_NN The_DT pragmatic_JJ intent_NN of_IN a_DT question_NN in_IN our_PRP$ problem_NN can_MD be_VB defined_VBN as_IN the_DT entity_NN that_IN a_DT user_NN is_VBZ actually_RB in_IN -_: tending_VBG to_TO know_VB more_JJR about_IN ._.
+This_DT concept_NN deviates_VBZ from_IN the_DT two_CD early_JJ approaches_NNS in_IN query_NN classifica_NN -_: tion_NN ;_: Broder_NNP 's_POS taxonomy_NN -LRB-_-LRB- Broder_NNP ,_, 2002_CD -RRB-_-RRB- -LRB-_-LRB- classifying_VBG queries_NNS as_IN informational_JJ ,_, transactional_JJ ,_, and_CC naviga_NN -_: tional_JJ -RRB-_-RRB- and_CC question_NN typologies_NNS -LRB-_-LRB- Li_NNP and_CC Roth_NNP ,_, 2006_CD -RRB-_-RRB- -LRB-_-LRB- determining_VBG the_DT answer_NN type_NN for_IN a_DT question_NN -RRB-_-RRB- ._.
+Consider_VB the_DT examples_NNS given_VBN in_IN Table_NNP 4_CD ,_, where_WRB in_IN each_DT question_NN multiple_JJ entities_NNS are_VBP mentioned_VBN ._.
+The_DT entities_NNS are_VBP numbered_VBN and_CC pragmatic_JJ intent_NN is_VBZ tagged_VBN -LRB-_-LRB- with_IN code_NN :_: i_FW -RRB-_-RRB- ._.
+In_IN Q1_CD ,_, Marc_NNP Mezvinsky_NNP is_VBZ the_DT pragmatic_JJ intent_NN of_IN the_DT question_NN which_WDT is_VBZ also_RB the_DT expected_VBN answer_NN ._.
+The_DT same_JJ rule_NN applies_VBZ for_IN Q2_NNP ,_, Q3_NNP ,_, and_CC Q4_NNP ._.
+How_WRB -_: ever_RB ,_, in_IN Q5_NNP and_CC Q6_NNP the_DT pragmatic_JJ intent_NN is_VBZ a_DT part_NN of_IN the_DT question_NN -LRB-_-LRB- -LSB-_NNP MI6_NNP -RSB-_NNP and_CC -LSB-_NNP Natalie_NNP Portman_NNP -RSB-_NNP -RRB-_-RRB- ,_, but_CC not_RB the_DT answer_NN ._.
+This_DT variation_NN makes_VBZ it_PRP difficult_JJ to_TO iden_VB -_: tify_VB the_DT pragmatic_JJ intent_NN of_IN a_DT question_NN compared_VBN to_TO the_DT question_NN target_NN identification_NN ._.
+When_WRB presenting_VBG contextual_JJ information_NN to_TO the_DT user_NN ,_, the_DT information_NN related_VBN to_TO the_DT pragmatic_JJ intent_NN together_RB with_IN infor_NN -_: mation_NN that_WDT is_VBZ shared_VBN by_IN pragmatic_JJ intent_NN and_CC other_JJ entities_NNS need_VBP to_TO be_VB given_VBN the_DT priority_NN ._.
+Which_WDT river_NN does_VBZ the_DT Brooklyn_NNP Bridge_NNP in_IN New_NNP York_NNP cross_NN ?_.
+East_NNP River_NNP ⟨_NNP East_NNP River_NNP ,_, flow_NN through_IN ,_, New_NNP York_NNP ⟩_NN 4.2_CD Pragmatic_JJ inference_NN The_DT pragmatic_JJ inference_NN is_VBZ the_DT interpreting_VBG informa_NN -_: tion_NN based_VBN on_IN the_DT context_NN that_IN it_PRP operates_VBZ on_IN ._.
+For_IN ex_FW -_: ample_JJ ,_, a_DT storyteller_NN will_MD not_RB mention_VB every_DT incident_NN or_CC fact_NN that_IN happened_VBD in_IN a_DT narrative_NN ,_, thus_RB some_DT parts_NNS may_MD be_VB left_VBN for_IN the_DT reader_NN to_TO interpret_VB using_VBG com_NN -_: mon_NN sense_NN knowledge_NN ,_, open_JJ domain_NN knowledge_NN ,_, and_CC knowledge_NN that_WDT is_VBZ already_RB mentioned_VBN in_IN the_DT narrative_NN ._.
+Applying_VBG this_DT well-established_JJ psycholinguistic_JJ the_DT -_: ory_NN in_IN our_PRP$ approach_NN ,_, we_PRP noticed_VBD several_JJ scenarios_NNS where_WRB we_PRP can_MD improve_VB the_DT contextual_JJ information_NN by_IN eliminating_VBG information_NN that_WDT can_MD be_VB pragmatically_RB inferred_VBN and_CC prioritizing_VBG information_NN that_IN needs_VBZ for_IN the_DT context_NN ._.
+Consider_VB the_DT question_NN -LRB-_-LRB- Q7_NNP -RRB-_-RRB- ,_, answer_NN and_CC the_DT triple_JJ provided_VBN in_IN Table_NNP 5_CD ._.
+Using_VBG the_DT question_NN and_CC its_PRP$ an_DT -_: swer_NN we_PRP can_MD infer_VB the_DT following_VBG two_CD facts_NNS encoded_VBN in_IN the_DT triples_NNS ._.
+•_SYM F1_CD :_: Brooklyn_NNP Bridge_NNP ,_, located_VBN in_IN ,_, New_NNP York_NNP •_NN F2_NN :_: Brooklyn_NNP Bridge_NNP ,_, crosses_VBZ ,_, East_NNP River_NNP As_IN humans_NNS ,_, we_PRP can_MD infer_VB that_IN if_IN Brooklyn_NNP Bridge_NNP is_VBZ located_VBN in_IN New_NNP York_NNP and_CC if_IN it_PRP crosses_VBZ the_DT East_NNP River_NNP ,_, then_RB East_NNP river_NN must_MD flow_VB through_IN New_NNP York_NNP ,_, hence_RB it_PRP is_VBZ co-located_VBN ._.
+Therefore_RB ,_, the_DT triple_JJ in_IN Table_NNP 5_CD becomes_VBZ unimportant_JJ for_IN the_DT context_NN because_IN it_PRP is_VBZ already_RB inferred_VBN by_IN F1_CD and_CC F2_CD which_WDT can_MD be_VB derived_VBN from_IN question_NN and_CC its_PRP$ answer_NN ._.
+The_DT pragmatic_JJ inference_NN can_MD also_RB be_VB used_VBN to_TO pri_SYM -_: oritize_VB the_DT information_NN using_VBG semantic_JJ relations_NNS that_WDT entities_NNS contain_VBP ._.
+For_IN example_NN consider_VBP the_DT two_CD sce_NN -_: narios_NNS illustrated_VBD in_IN Table_NNP 6_CD where_WRB important_JJ contex_NN -_: tual_JJ information_NN can_MD be_VB inferred_VBN based_VBN on_IN the_DT seman_NN -_: tic_JJ relationship_NN of_IN the_DT pragmatic_JJ intent_NN and_CC entities_NNS ._.
+In_IN Q8_CD the_DT relation_NN between_IN the_DT entity_NN ``_`` Virgin_NNP Group_NNP ''_'' and_CC its_PRP$ co-founders_NNS -LRB-_-LRB- ``_`` Richard_NNP Branson_NNP ''_'' and_CC ``_`` Nik_NNP Powell_NNP ''_'' -RRB-_-RRB- is_VBZ in_IN the_DT form_NN of_IN launching_VBG a_DT new_JJ or_CC -_: ganization_NN ._.
+This_DT makes_VBZ the_DT information_NN such_JJ as_IN cur_NN -_: Q7_NNP Answer_NNP Triple_NNP Table_NNP 4_CD :_: Example_NNP questions_NNS to_TO illustrate_VB the_DT pragmatic_JJ intent_NN variation_NN in_IN different_JJ questions_NNS ._.
+Entities_NNS are_VBP numbered_VBN and_CC intent_NN is_VBZ marked_VBN with_IN code_NN i_FW #_# Question_NNP Q1_NNP Who_WP is_VBZ the_DT daughter_NN of_IN -LSB-_NNP Bill_NNP Clinton_NNP -RSB-_NNP 1_CD married_VBN to_TO ?_.
+Q2_CD Which_WDT river_NN does_VBZ the_DT -LSB-_NNP Brooklyn_NNP Bridge_NNP -RSB-_NNP 1_CD in_IN -LSB-_NNP New_NNP York_NNP -RSB-_NNP 2_CD cross_NN ?_.
+Q3_CD Which_WDT bridge_NN located_VBN in_IN -LSB-_NNP New_NNP York_NNP -RSB-_NNP 1_CD is_VBZ opened_VBN on_IN 19th_JJ March_NNP 1945_CD ?_.
+Q4_CD What_WP is_VBZ the_DT highest_JJS place_NN in_IN -LSB-_NNP Karakoram_NNP -RSB-_NNP 1_CD ?_.
+Q5_CD In_IN which_WDT -LSB-_NNP UK_NNP -RSB-_NNP 1_CD city_NN is_VBZ the_DT headquarters_NN of_IN the_DT -LSB-_NNP MI6_NNP -RSB-_NNP i2_CD ?_.
+Q6_CD Was_VBD -LSB-_NNP Natalie_NNP Portman_NNP -RSB-_NNP i1_CD born_VBN in_IN the_DT -LSB-_NNP United_NNP States_NNPS -RSB-_NNP 2_CD ?_.
+Answer_NN -LSB-_NNP Marc_NNP Mezvinsky_NNP -RSB-_NNP i2_CD -LSB-_NNP East_NNP river_NN -RSB-_NNP i3_CD -LSB-_NNP Brooklyn_NNP Bridge_NNP -RSB-_NNP i2_CD -LSB-_NNP K2_NNP -RSB-_NNP i2_CD -LSB-_NNP London_NNP -RSB-_NNP 3_CD No_DT based_VBN on_IN the_DT summarization_NN tures_NNS ._.
+Several_JJ other_JJ summarization_NN based_VBN methods_NNS for_IN QA_NNP such_JJ as_IN Demner-Fushman_NNP and_CC Lin_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- and_CC Yu_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- also_RB exist_VBP with_IN slightly_RB vary_VBP -_: ing_NN techniques_NNS ._.
+Vargas-Vera_NNP and_CC Motta_NNP -LRB-_-LRB- Vargas-Vera_NNP and_CC Motta_NNP ,_, 2004_CD -RRB-_-RRB- present_RB an_DT ontology_NN based_VBN QA_NNP system_NN ,_, AQUA_NNP ._.
+Although_IN AQUA_NNP is_VBZ primarily_RB aimed_VBN at_IN ex_FW -_: tracting_VBG answers_NNS from_IN a_DT given_VBN ontology_NN ,_, it_PRP also_RB con_VBP -_: tributes_NNS to_TO answer_VB presentation_NN by_IN providing_VBG an_DT en_FW -_: riched_JJ answer_NN ._.
+The_DT AQUA_NNP system_NN extracts_VBZ ontology_JJ concepts_NNS from_IN the_DT entities_NNS mentioned_VBN in_IN the_DT question_NN and_CC present_JJ those_DT concepts_NNS in_IN aggregated_JJ natural_JJ lan_NN -_: guage_NN ._.
+6_CD Conclusion_NN This_DT study_NN has_VBZ examined_VBN the_DT role_NN and_CC effectiveness_NN of_IN syntactic_NN and_CC semantic_JJ models_NNS in_IN contextual_NN in_IN -_: formation_NN selection_NN for_IN answer_NN presentation_NN ._.
+The_DT re_SYM -_: sults_NNS showed_VBD that_IN the_DT semantic_JJ models_NNS -LRB-_-LRB- e.g._FW ,_, LLD_NNP -RRB-_-RRB- performed_VBD the_DT best_JJS for_IN single_JJ entity_NN based_VBN questions_NNS ,_, however_RB the_DT performance_NN dropped_VBD for_IN multiple_JJ en_IN -_: tity_NN questions_NNS ._.
+An_DT analysis_NN of_IN the_DT multi-entity_JJ ques_NNS -_: tions_NNS showed_VBD that_IN in_IN order_NN to_TO improve_VB performance_NN there_EX is_VBZ a_DT need_NN to_TO integrate_VB pragmatic_JJ aspects_NNS into_IN the_DT ranking_JJ framework_NN ._.
+Further_JJ work_NN needs_VBZ to_TO be_VB done_VBN to_TO establish_VB a_DT framework_NN to_TO model_VB pragmatic_JJ aspects_NNS in_IN contextual_JJ information_NN selection_NN ._.
+We_PRP have_VBP already_RB launched_VBN the_DT development_NN of_IN the_DT pragmatic_JJ framework_NN as_IN discussed_VBN in_IN Section_NN 4_CD ._.
+Future_JJ work_NN will_MD introduce_VB diverse_JJ methods_NNS of_IN answer_NN presenta_NN -_: tion_NN in_IN question_NN answering_VBG system_NN utilizing_VBG contex_SYM -_: tual_JJ information_NN -LRB-_-LRB- Perera_NNP and_CC Nand_NNP ,_, 2015b_CD ;_: Perera_NNP et_FW al._FW ,_, 2015_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2015a_CD ;_: Perera_NNP and_CC Nand_NNP ,_, 2015c_JJ -RRB-_-RRB- ._.
+Table_NNP 6_CD :_: Examples_NNS illustrate_VBP the_DT use_NN of_IN pragmatic_JJ infer_NN -_: ence_NN in_IN information_NN prioritization_NN #_# Question_NNP Answer_NNP Q8_NNP Who_WP is_VBZ the_DT founder_NN -LSB-_NNP Richard_NNP Branson_NNP -RSB-_NNP i2_NN of_IN -LSB-_NNP Virgin_NNP Group_NNP -RSB-_NNP 1_CD ?_.
+and_CC -LSB-_NNP Nik_NNP Powell_NNP -RSB-_NNP i3_CD Q9_NNP How_WRB often_RB was_VBD 2_CD -LSB-_NNP Michael_NNP Jordan_NNP -RSB-_NNP i1_CD divorced_VBN ?_.
+rent_NN positions_NNS which_WDT are_VBP held_VBN by_IN its_PRP$ co-founders_NNS to_TO be_VB prioritized_VBN over_IN other_JJ information_NN which_WDT is_VBZ not_RB strongly_RB related_VBN to_TO the_DT context_NN of_IN the_DT question_NN ._.
+Next_JJ ,_, Q9_NNP is_VBZ related_VBN to_TO Michael_NNP Jordan_NNP 's_POS marriage_NN ._.
+When_WRB retrieving_VBG contextual_JJ information_NN for_IN this_DT question_NN the_DT basic_JJ information_NN about_IN his_PRP$ wives_NNS such_JJ as_IN per_IN -_: sonal_JJ names_NNS becomes_VBZ more_RBR important_JJ for_IN the_DT context_NN of_IN the_DT question_NN ._.
+5_CD Related_VBN work_NN Benamara_NNP and_CC Dizier_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- present_VBP the_DT coopera_NN -_: tive_JJ question_NN answering_VBG approach_NN which_WDT generates_VBZ natural_JJ language_NN responses_NNS for_IN given_VBN questions_NNS ._.
+In_IN essence_NN ,_, a_DT cooperative_JJ QA_NNP system_NN moves_VBZ a_DT few_JJ steps_NNS further_RB from_IN ordinary_JJ question_NN answering_VBG systems_NNS by_IN providing_VBG an_DT explanation_NN of_IN the_DT answer_NN ._.
+How_WRB -_: ever_RB ,_, this_DT research_NN lacks_VBZ the_DT investigation_NN to_TO the_DT in_IN -_: formation_NN needs_NNS of_IN different_JJ questions_NNS and_CC the_DT pro-_JJ cess_NN of_IN utilizing_VBG cohesive_JJ information_NN for_IN the_DT expla_NN -_: nation_NN ,_, without_IN redundant_JJ text_NN ._.
+Bosma_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- incorporates_VBZ the_DT summarization_NN as_IN a_DT method_NN of_IN presenting_VBG additional_JJ information_NN in_IN QA_NNP systems_NNS ._.
+He_PRP coins_NNS the_DT term_NN ,_, an_DT intensive_JJ answer_NN to_TO refer_VB to_TO the_DT answer_NN generated_VBD from_IN the_DT system_NN ._.
+The_DT process_NN of_IN generating_VBG an_DT intensive_JJ answer_NN is_VBZ using_VBG rhetorical_JJ struc_NN -_: References_NNP Farah_NNP Benamara_NNP and_CC Patrick_NNP Saint_NNP Dizier_NNP ._.
+2003_CD ._.
+Dy_SYM -_: namic_JJ generation_NN of_IN cooperative_JJ natural_JJ language_NN re_SYM -_: sponses_NNS in_IN webcoop_NN ._.
+In_IN 9th_JJ European_JJ Workshop_NNP on_IN Natural_NNP Language_NNP Generation_NNP ,_, Budapest_NNP ,_, Hungary_NNP ._.
+ACL_NN ._.
+Wauter_NNP Bosma_NNP ._.
+2005_CD ._.
+Extending_VBG answers_NNS using_VBG dis_SYM -_: course_NN structure_NN ._.
+In_IN Recent_JJ Advances_NNS in_IN Natural_JJ Lan_SYM -_: guage_NN Processing_NNP ,_, Borovets_NNP ,_, Bulgaria_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Andrei_NNP Broder_NNP ._.
+2002_CD ._.
+A_DT Taxonomy_NN of_IN Web_NNP Search_NNP ._.
+ACM_NNP SIGIR_NNP Forum_NNP ,_, 36_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :3_CD --_: 10_CD ._.
+Michael_NNP Byram_NNP and_CC Adelheid_NNP Hu_NNP ._.
+2013_CD ._.
+Routledge_NNP Encyclopedia_NNP of_IN Language_NNP Teaching_NNP and_CC Learning_NNP ._.
+Routledge_NNP ,_, Taylor_NNP &_CC Francis_NNP Group_NNP ,_, London_NNP ,_, UK_NNP ._.
+Erik_NNP Cambria_NNP and_CC Bebo_NNP White_NNP ._.
+2014_CD ._.
+Jumping_VBG NLP_NNP Curves_NNPS :_: A_DT Review_NNP of_IN Natural_NNP Language_NNP Processing_NNP Research_NNP ._.
+IEEE_NNP Computational_NNP Intelligence_NNP Maga_NNP -_: zine_NN ,_, 9_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :48_CD --_: 57_CD ,_, May_NNP ._.
+Dina_NNP Demner-Fushman_NNP and_CC Jimmy_NNP Lin_NNP ._.
+2006_CD ._.
+Answer_NN extraction_NN ,_, semantic_JJ clustering_NN ,_, and_CC extractive_JJ summa_NN -_: rization_NN for_IN clinical_JJ question_NN answering_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Compu_NNP -_: tational_JJ Linguistics_NNPS and_CC the_DT 44th_JJ annual_JJ meeting_NN of_IN the_DT ACL_NNP -_: ACL_NN '_'' 06_CD ,_, pages_NNS 841_CD --_: 848_CD ,_, Morristown_NNP ,_, NJ_NNP ,_, USA_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Alexander_NNP Gelbukh_NNP ,_, Grigori_NNP Sidorov_NNP ,_, and_CC Liliana_NNP Lavin_NNP -_: Villa_NNP ,_, Eduardo_NNP Chanona-Hernandez_NNP ._.
+2010_CD ._.
+Automatic_NNP Term_NNP Extraction_NNP Using_VBG Log-Likelihood_NNP Based_VBD Com_NNP -_: parison_NN with_IN General_NNP Reference_NNP Corpus_NNP ._.
+In_IN Natural_JJ Language_NN Processing_NNP and_CC Information_NNP Systems_NNP ,_, pages_NNS 248_CD --_: 255_CD ._.
+Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+Tingting_VBG He_PRP ,_, Xiaopeng_NNP Zhang_NNP ,_, and_CC Ye_NNP Xinghuo_NNP ._.
+2006_CD ._.
+An_DT Approach_NN to_TO Automatically_RB Constructing_VBG Domain_NNP Ontology_NNP ._.
+In_IN 20th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Lan_NNP -_: guage_NN ,_, Information_NNP and_CC Computation_NNP ,_, pages_NNS 150_CD --_: 157_CD ,_, Wuhan_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Xin_NNP Li_NNP and_CC Dan_NNP Roth_NNP ._.
+2006_CD ._.
+Learning_NNP question_NN classi_NNS -_: fiers_NNS :_: the_DT role_NN of_IN semantic_JJ information_NN ._.
+Natural_JJ Lan_SYM -_: guage_NN Engineering_NNP ,_, 12_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :229_CD ._.
+Christopher_NNP D._NNP Manning_NNP and_CC Hinrich_NNP Schutze_NNP ._.
+1999_CD ._.
+Foundations_NNS of_IN statistical_JJ natural_JJ language_NN process_NN -_: ing_NN ._.
+Massachusetts_NNP Institute_NNP of_IN Technology_NNP ._.
+Ana_NNP Christina_NNP Mendes_NNP and_CC Luisa_NNP Coheur_NNP ._.
+2013_CD ._.
+When_WRB the_DT answer_NN comes_VBZ into_IN question_NN in_IN question-answering_NN :_: survey_NN and_CC open_JJ issues_NNS ._.
+Natural_JJ Language_NN Engineer_NN -_: ing_NN ,_, 19_CD -LRB-_-LRB- 01_CD -RRB-_-RRB- :1_CD --_: 32_CD ,_, January_NNP ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014a_NNS ._.
+Interaction_NNP his_PRP$ -_: tory_JJ based_VBN answer_NN formulation_NN for_IN question_NN answering_NN ._.
+In_IN International_NNP Conference_NNP on_IN Knowledge_NNP Engineer_NNP -_: ing_NN and_CC Semantic_NNP Web_NNP -LRB-_-LRB- KESW_NNP -RRB-_-RRB- ,_, pages_NNS 128_CD --_: 139_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014b_JJ ._.
+Real_JJ text-cs_NNS -_: corpus_NN based_VBN domain_NN independent_JJ content_NN selection_NN model_NN ._.
+In_IN IEEE_NNP International_NNP Conference_NNP on_IN Tools_NNPS with_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- ICTAI_NNP -RRB-_-RRB- ,_, pages_NNS 599_CD --_: 606_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2014c_JJ ._.
+The_DT role_NN of_IN linked_VBN data_NNS in_IN content_NN selection_NN ._.
+In_IN Pacific_NNP Rim_NNP In_IN -_: ternational_JJ Conference_NN on_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- PRI_NNP -_: CAI_NNP -RRB-_-RRB- ,_, pages_NNS 573_CD --_: 586_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015a_NNS ._.
+Generat_NNP -_: ing_NN lexicalization_NN patterns_NNS for_IN linked_VBN open_JJ data_NNS ._.
+In_IN Second_JJ Workshop_NNP on_IN Natural_NNP Language_NNP Processing_NNP and_CC Linked_NNP Open_NNP Data_NNP collocated_VBN with_IN 10th_JJ Recent_JJ Advances_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- RANLP_NNP -RRB-_-RRB- ,_, pages_NNS 2_CD --_: 5_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015b_JJ ._.
+A_DT multi_NNS -_: strategy_NN approach_NN for_IN lexicalizing_VBG linked_VBN open_JJ data_NNS ._.
+In_IN International_NNP Conference_NNP on_IN Intelligent_NNP Text_NNP Process_NNP -_: ing_NN and_CC Computational_NNP Linguistics_NNP -LRB-_-LRB- CICLing_NNP -RRB-_-RRB- ,_, pages_NNS 348_CD --_: 363_CD ._.
+Rivindu_NNP Perera_NNP and_CC Parma_NNP Nand_NNP ._.
+2015c_JJ ._.
+Realtext-asg_NN :_: A_DT model_NN to_TO present_VB answers_NNS utilizing_VBG the_DT linguistic_JJ struc_NN -_: ture_NN of_IN source_NN question_NN ._.
+In_IN 29th_JJ Pacific_NNP Asia_NNP Confer_NNP -_: ence_NN on_IN Language_NN ,_, Information_NNP and_CC Computation_NNP ._.
+Rivindu_NNP Perera_NNP ,_, Parma_NNP Nand_NNP ,_, and_CC Gisela_NNP Klette_NNP ._.
+2015_CD ._.
+Realtext-lex_NN :_: A_DT lexicalization_NN framework_NN for_IN linked_VBN open_JJ data_NNS ._.
+In_IN 14th_JJ International_NNP Semantic_NNP Web_NNP Con_NN -_: ference_NN ._.
+Rivindu_NNP Perera_NNP ._.
+2012a_NNS ._.
+Ipedagogy_NNP :_: Question_NN answer_NN -_: ing_NN system_NN based_VBN on_IN web_NN information_NN clustering_NN ._.
+In_IN IEEE_NNP Fourth_JJ International_NNP Conference_NNP on_IN Technology_NNP for_IN Education_NNP -LRB-_-LRB- T4E_NNP -RRB-_-RRB- ._.
+Rivindu_NNP Perera_NNP ._.
+2012b_JJ ._.
+Scholar_NN :_: Cognitive_NNP Computing_NNP Approach_NNP for_IN Question_NNP Answering_NNP ._.
+Honours_NNP thesis_NN ,_, University_NNP of_IN Westminster_NNP ._.
+John_NNP Tomlinson_NNP and_CC Lewis_NNP Bott_NNP ._.
+2013_CD ._.
+How_WRB intonation_NN constrains_VBZ pragmatic_JJ inference_NN ._.
+In_IN 35th_JJ Annual_JJ Con_NN -_: ference_NN of_IN the_DT Cognitive_NNP Science_NNP Society_NNP ,_, Berlin_NNP ,_, Ger_NNP -_: many_JJ ._.
+Cognitive_NNP Science_NNP Society_NNP ._.
+M_NNP Vargas-Vera_NNP and_CC E_NNP Motta_NNP ._.
+2004_CD ._.
+Aqua-ontology_JJ -_: based_VBN question_NN answering_VBG system_NN ._.
+In_IN Mexican_JJ Inter_NNP -_: national_JJ Conference_NN on_IN Artificial_NNP Intelligence_NNP ,_, Mexico_NNP City_NNP ,_, Mexico_NNP ._.
+Springer-Verlag_NNP ._.
+Hong_NNP Yu_NNP ,_, Minsuk_NNP Lee_NNP ,_, David_NNP Kaufman_NNP ,_, John_NNP Ely_NNP ,_, Jerome_NNP A._NNP Osheroff_NNP ,_, George_NNP Hripcsak_NNP ,_, and_CC James_NNP Cimino_NNP ._.
+2007_CD ._.
+Development_NNP ,_, implementation_NN ,_, and_CC a_DT cognitive_JJ evaluation_NN of_IN a_DT definitional_JJ question_NN answer_NN -_: ing_NN system_NN for_IN physicians_NNS ._.
+Journal_NNP of_IN Biomedical_NNP In_IN -_: formatics_NNS ,_, 40:236_CD --_: 251_CD ._.

@@ -1,0 +1,241 @@
+Pivot-Based_NNP Topic_NNP Models_NNPS for_IN Low-Resource_NNP Lexicon_NNP Extraction_NNP Abstract_NNP This_DT paper_NN proposes_VBZ a_DT range_NN of_IN solutions_NNS to_TO the_DT challenges_NNS of_IN extracting_VBG large_JJ and_CC high_JJ -_: quality_NN bilingual_JJ lexicons_NNS for_IN low-resource_JJ language_NN pairs_NNS ._.
+In_IN such_JJ scenarios_NNS there_EX is_VBZ often_RB no_DT parallel_NN or_CC even_RB comparable_JJ data_NNS available_JJ ._.
+We_PRP design_VBP three_CD e_SYM ective_FW pivot_SYM -_: based_VBN approaches_NNS inspired_VBN by_IN the_DT state-of_NN -_: the-art_NN technique_NN of_IN bilingual_JJ topic_NN mod_NN -_: elling_NN ,_, extending_VBG previous_JJ work_NN to_TO take_VB advantage_NN of_IN trilingual_JJ data_NNS ._.
+The_DT pro-_JJ posed_VBN models_NNS are_VBP shown_VBN to_TO outperform_VB tra_NN -_: ditional_JJ methods_NNS signi_VBP cantly_RB and_CC can_MD be_VB adapted_VBN based_VBN upon_IN the_DT nature_NN of_IN available_JJ training_NN data_NNS ._.
+We_PRP demonstrate_VBP the_DT accu_NN -_: racy_JJ of_IN these_DT pivot-based_JJ approaches_NNS in_IN a_DT realistic_JJ scenario_NN generating_VBG an_DT Icelandic_JJ -_: Korean_JJ lexicon_NN from_IN Wikipedia_NNP ._.
+1_CD Introduction_NNP Data-driven_JJ approaches_NNS to_TO natural_JJ language_NN processing_NN have_VBP been_VBN shown_VBN to_TO be_VB greatly_RB e_LS ec_SYM -_: tive_JJ ,_, and_CC the_DT case_NN of_IN bilingual_JJ lexicon_NN extraction_NN is_VBZ no_DT exception_NN ._.
+Recent_JJ advances_NNS in_IN this_DT area_NN have_VBP enabled_VBN the_DT construction_NN of_IN large_JJ ,_, high_JJ -_: quality_NN bilingual_JJ lexicons_NNS ,_, requiring_VBG less_JJR parallel_JJ data_NNS by_IN making_VBG use_NN of_IN comparable_JJ corpora_NN ._.
+While_IN such_JJ comparable_JJ corpora_NN are_VBP readily_RB available_JJ for_IN many_JJ language_NN pairs_NNS ,_, particularly_RB when_WRB one_CD of_IN those_DT languages_NNS is_VBZ English_NNP ,_, previous_JJ direct_JJ approaches_NNS fail_VBP when_WRB there_EX is_VBZ no_DT such_JJ data_NNS available_JJ ._.
+For_IN many_JJ language_NN pairs_NNS there_RB sim_SYM -_: ply_RB does_VBZ not_RB exist_VB comparable_JJ -LRB-_-LRB- and_CC even_RB less_RBR so_RB parallel_JJ -RRB-_-RRB- data_NNS ._.
+Even_RB for_IN languages_NNS with_IN a_DT large_JJ volume_NN of_IN available_JJ parallel_JJ data_NNS ,_, most_JJS corpora_NN cover_NN only_RB limited_JJ domains_NNS ._.
+There_EX are_VBP two_CD natural_JJ methods_NNS to_TO deal_VB with_IN this_DT problem_NN :_: constructing_VBG or_CC mining_VBG new_JJ data_NNS for_IN the_DT direct_JJ approach_NN ,_, and_CC nding_JJ new_JJ ways_NNS to_TO make_VB better_JJR use_NN of_IN what_WP data_NNS is_VBZ already_RB avail_NN -_: able_JJ ._.
+For_IN an_DT example_NN of_IN the_DT construction_NN of_IN comparable_JJ corpora_NN ,_, see_VBP Zhu_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+We_PRP take_VBP the_DT second_JJ approach_NN and_CC design_NN pivot-based_JJ models_NNS for_IN bilingual_JJ lexicon_NN extraction_NN ._.
+The_DT ma_NN -_: jor_NN advantage_NN of_IN using_VBG a_DT pivot_NN language_NN is_VBZ that_IN it_PRP is_VBZ possible_JJ to_TO take_VB advantage_NN of_IN the_DT large_JJ volume_NN of_IN comparable_JJ data_NNS sharing_VBG a_DT common_JJ language_NN such_JJ as_IN English_NNP ._.
+In_IN this_DT paper_NN we_PRP develop_VBP pivot-based_JJ ap_SYM -_: proaches_NNS to_TO make_VB use_NN of_IN modern_JJ bilingual_JJ lex_NN -_: icon_NN extraction_NN methods_NNS that_WDT can_MD be_VB trained_VBN on_IN comparable_JJ corpora_NN ._.
+We_PRP present_VBP a_DT selection_NN of_IN e_SYM cient_JJ algorithms_NNS using_VBG the_DT framework_NN of_IN topic_NN modelling_NN -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+Topic_NN mod_SYM -_: elling_NN has_VBZ been_VBN a_DT popular_JJ approach_NN for_IN bilingual_JJ lexicon_NN extraction_NN ,_, however_RB its_PRP$ use_NN as_IN a_DT pivot_NN model_NN has_VBZ yet_RB to_TO be_VB explored_VBN ._.
+The_DT use_NN of_IN topic_NN models_NNS as_IN a_DT semantic_JJ similarity_NN measure_NN is_VBZ a_DT scalable_JJ method_NN for_IN low-resource_JJ languages_NNS be_VB -_: cause_NN document-aligned_JJ comparable_JJ pivot_NN train_NN -_: ing_NN data_NNS -LRB-_-LRB- such_JJ as_IN for_IN English_NNP and_CC a_DT low-resource_JJ language_NN -RRB-_-RRB- is_VBZ growing_VBG ever_RB more_RBR widely_RB available_JJ ._.
+Examples_NNS of_IN such_JJ sources_NNS are_VBP Wikipedia_NNP ,_, multi_NNS -_: lingual_JJ newspaper_NN articles_NNS and_CC mined_VBD Web_NNP data_NNS ._.
+While_IN there_EX have_VBP been_VBN many_JJ studies_NNS on_IN bilin_NN -_: gual_JJ lexicon_NN extraction_NN ,_, there_EX has_VBZ been_VBN little_JJ fo_SYM -_: cus_NN on_IN the_DT important_JJ problem_NN of_IN resource_NN con_NN -_: struction_NN for_IN low-resource_JJ language_NN pairs_NNS ._.
+We_PRP present_VBP a_DT variety_NN of_IN solutions_NNS to_TO this_DT problem_NN ,_, demonstrating_VBG their_PRP$ application_NN to_TO a_DT practi_NN -_: cal_NN scenario_NN ,_, and_CC compare_VB their_PRP$ e_SYM ectiveness_FW to_TO mainstream_JJ approaches_NNS ._.
+2_CD Related_JJ Work_NN The_DT use_NN of_IN pivot_NN models_NNS has_VBZ been_VBN a_DT common_JJ theme_NN in_IN the_DT development_NN of_IN Natural_JJ Language_NN Processing_NNP systems_NNS that_WDT deal_VBP with_IN low-resource_JJ languages_NNS ._.
+In_IN the_DT eld_NN of_IN Machine_NN Transla_NNP -_: tion_NN ,_, pivot_NN models_NNS can_MD be_VB used_VBN in_IN both_DT decoding_NN and_CC the_DT construction_NN of_IN parallel_JJ training_NN data_NNS ._.
+Utiyama_NNP and_CC Isahara_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- give_VBP a_DT comparison_NN of_IN possible_JJ methods_NNS for_IN integrating_VBG a_DT pivot_NN lan_NN -_: guage_NN into_IN phrase-based_JJ SMT_NNP systems_NNS ._.
+Bilingual_JJ lexicon_NN extraction_NN has_VBZ had_VBN a_DT long_JJ history_NN of_IN using_VBG pivot_NN languages_NNS ._.
+Tanaka_NNP and_CC Umemura_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- build_VBP a_DT pivot_NN lexicon_NN by_IN com_NN -_: bining_VBG bilingual_JJ dictionaries_NNS ,_, and_CC more_RBR recently_RB there_EX have_VBP been_VBN attempts_NNS to_TO extract_VB lexicons_NNS or_CC paraphrase_NN patterns_NNS -LRB-_-LRB- Zhao_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- from_IN bilingual_JJ corpora_NN ._.
+A_DT common_JJ problem_NN with_IN the_DT use_NN of_IN a_DT pivot_NN language_NN is_VBZ associated_VBN noise_NN ,_, lead_NN -_: ing_NN to_TO a_DT number_NN of_IN studies_NNS aiming_VBG to_TO improve_VB pivot_NN lexicons_NNS ,_, such_JJ as_IN by_IN using_VBG cross-lingual_JJ cooccurrences_NNS -LRB-_-LRB- Tanaka_NNP and_CC Iwasaki_NNP ,_, 1996_CD -RRB-_-RRB- and_CC `_`` non-aligned_JJ signatures_NNS '_POS -LRB-_-LRB- Shezaf_NNP and_CC Rappoport_NNP ,_, 2010_CD -RRB-_-RRB- ,_, a_DT form_NN of_IN word_NN context_NN similarity_NN ._.
+Bilingual_JJ lexicon_NN mining_NN from_IN non-parallel_JJ data_NNS has_VBZ seen_VBN much_JJ popularity_NN in_IN recent_JJ years_NNS ._.
+Studies_NNS have_VBP considered_VBN a_DT variety_NN of_IN methods_NNS such_JJ as_IN canonical_JJ correlation_NN analysis_NN -LRB-_-LRB- Haghighi_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- and_CC label_NN propagation_NN -LRB-_-LRB- Tamura_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+We_PRP use_VBP the_DT method_NN of_IN bilingual_JJ topic_NN modelling_NN -LRB-_-LRB- Vulić_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, which_WDT has_VBZ been_VBN recently_RB applied_VBN to_TO a_DT variety_NN of_IN elds_NNS such_JJ as_IN transliteration_NN mining_NN -LRB-_-LRB- Richardson_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+3_CD Model_NNP Details_NNP We_PRP consider_VBP the_DT task_NN of_IN translating_VBG a_DT source_NN word_NN s_VBZ from_IN language_NN S_NNP to_TO a_DT target_NN word_NN t_NN from_IN language_NN T_NNP ._.
+The_DT baseline_NN model_NN is_VBZ a_DT direct_JJ ap_NN -_: proach_NN using_VBG S-T_NNP training_NN data_NNS ._.
+After_IN describ_NN -_: ing_VBG the_DT baseline_NN model_NN -LRB-_-LRB- bilingual_JJ LDA_NNP -RRB-_-RRB- ,_, we_PRP in_IN -_: troduce_NN three_CD novel_NN methods_NNS of_IN taking_VBG advantage_NN of_IN data_NNS including_VBG a_DT pivot_NN language_NN P_NNP ,_, such_JJ as_IN S_NNP -_: P_NNP +_NNP P-T_NNP and_CC S-P-T_NNP data_NNS ._.
+3.1_CD Baseline_NN :_: Bilingual_NNP LDA_NNP We_PRP begin_VBP with_IN a_DT baseline_NN non-pivot_JJ lexicon_NN ex_FW -_: traction_NN model_NN MST_NNP :_: S_NNP ×_CD T_NNP →_CD R_NN that_WDT gives_VBZ a_DT similarity_NN score_NN to_TO a_DT source-target_JJ word_NN pair_NN -LRB-_-LRB- using_VBG S-T_JJ training_NN data_NNS -RRB-_-RRB- ._.
+The_DT non-pivot_JJ lexicon_NN extraction_NN model_NN MST_NNP makes_VBZ use_NN of_IN a_DT bilingual_JJ topic_NN similarity_NN mea_NN -_: sure_JJ ._.
+We_PRP elected_VBD to_TO use_VB bilingual_JJ topic_NN mod_NN -_: els_NNS rather_RB than_IN the_DT more_JJR intuitive_JJ method_NN of_IN comparing_VBG monolingual_JJ context_NN vectors_NNS -LRB-_-LRB- Rapp_NNP ,_, 1995_CD -RRB-_-RRB- as_IN we_PRP believe_VBP topic_NN modelling_NN is_VBZ more_RBR suit_NN -_: able_JJ for_IN processing_VBG uncommon_JJ language_NN pairs_NNS ._.
+This_DT is_VBZ because_IN a_DT bilingual_JJ seed_NN lexicon_NN is_VBZ re_SYM -_: quired_VBN for_IN methods_NNS that_WDT learn_VBP a_DT mapping_NN be_VB -_: tween_NN source_NN and_CC target_NN vector_NN spaces_NNS ,_, such_JJ as_IN Haghighi_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- ,_, in_IN order_NN to_TO match_VB cross_NN -_: language_NN word_NN pairs_NNS ._.
+This_DT data_NN is_VBZ unlikely_JJ to_TO be_VB available_JJ in_IN su_NN cient_NN quantity_NN for_IN low-resource_JJ language_NN pairs_NNS ,_, however_RB comparable_JJ documents_NNS can_MD be_VB found_VBN from_IN sources_NNS such_JJ as_IN Wikipedia_NNP ._.
+We_PRP base_VBP our_PRP$ implementation_NN on_IN the_DT state-of_NN -_: the-art_NN system_NN of_IN Vulić_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- for_IN com_NN -_: parison_NN ._.
+This_DT method_NN uses_VBZ the_DT bilingual_JJ Latent_NNP Dirichlet_NNP Allocation_NNP -LRB-_-LRB- BiLDA_NNP -RRB-_-RRB- algorithm_NN -LRB-_-LRB- Mimno_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ,_, an_DT extension_NN of_IN monolingual_JJ LDA_NNP -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+Monolingual_NNP LDA_NNP takes_VBZ as_IN its_PRP$ input_NN a_DT set_NN of_IN monolingual_JJ documents_NNS and_CC generates_VBZ a_DT word-topic_JJ distribution_NN φ_NN classifying_VBG words_NNS appearing_VBG in_IN these_DT documents_NNS into_IN seman_NN -_: tically_RB similar_JJ topics_NNS ._.
+Bilingual_JJ LDA_NNP extends_VBZ this_DT by_IN considering_VBG pairs_NNS of_IN comparable_JJ docu_NN -_: ments_NNS in_IN each_DT of_IN two_CD languages_NNS ,_, and_CC outputs_VBZ a_DT pair_NN of_IN word-topic_JJ distributions_NNS φ_NN and_CC ψ_NN ,_, one_CD for_IN each_DT input_NN language_NN ._.
+The_DT graphical_JJ model_NN for_IN polylingual_JJ LDA_NNP is_VBZ illustrated_VBN in_IN Figure_NN 1_CD ._.
+In_IN order_NN to_TO apply_VB bilingual_JJ topic_NN models_NNS to_TO a_DT lexicon_NN extraction_NN task_NN ,_, we_PRP must_MD construct_VB an_DT e_SYM ective_FW word_NN similarity_NN measure_NN for_IN trans_NNS -_: lation_NN candidates_NNS ._.
+This_DT can_MD be_VB achieved_VBN by_IN a_DT variety_NN of_IN methods_NNS comparing_VBG the_DT similarity_NN of_IN K_NNP -_: dimensional_JJ word-topic_JJ vectors_NNS ._.
+We_PRP use_VBP the_DT simple_JJ and_CC well-studied_JJ cosine_NN similarity_NN mea_NN -_: sure_JJ -LRB-_-LRB- as_IN de_FW ned_FW below_IN -RRB-_-RRB- to_TO measure_VB the_DT similar_JJ -_: ity_NN between_IN topic_NN distribution_NN vectors_NNS ψk_VBP ,_, we_PRP and_CC φk_VB ,_, wf_VB for_IN translation_NN candidates_NNS we_PRP and_CC wf_VB ._.
+zw_SYM φ_SYM ψ_SYM α_SYM θ_FW z_SYM w_SYM β_SYM DzwωK_NNP Figure_NNP 1_CD :_: Graphical_JJ model_NN for_IN polylingual_JJ LDA_NNP with_IN K_NNP topics_NNS ,_, D_NNP document_NN pairs_NNS and_CC hyper-parameters_NNS α_NN and_CC β_NN ._.
+Bilingual_JJ LDA_NNP is_VBZ shown_VBN with_IN solid_JJ lines_NNS and_CC trilingual_JJ LDA_NNP adds_VBZ the_DT dotted_JJ lines_NNS ._.
+Topics_NNS for_IN each_DT document_NN are_VBP sampled_VBN from_IN the_DT common_JJ distribution_NN θ_NN ,_, and_CC the_DT two_CD -LRB-_-LRB- three_CD -RRB-_-RRB- languages_NNS have_VBP word-topic_JJ distributions_NNS φ_VBP ,_, ψ_VBP -LRB-_-LRB- and_CC ω_NN -RRB-_-RRB- ._.
+For_IN further_JJ details_NNS of_IN the_DT LDA_NNP formulation_NN see_VBP Blei_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+∑_CD K_NNP k_NN =_SYM 1_CD ψk_NN ,_, we_PRP φk_VBP ,_, wf_VBP 3.3_CD Pivot_NNP Model_NNP In_IN this_DT section_NN we_PRP consider_VBP an_DT e_SYM cient_JJ method_NN to_TO construct_VB a_DT pivot_NN model_NN MSP_NNP ,_, PT_NNP :_: S_NNP ×_CD T_NNP →_CD R_NNP -LRB-_-LRB- using_VBG S-P_NNP and_CC P-T_NNP training_NN data_NNS -RRB-_-RRB- that_WDT builds_VBZ upon_IN the_DT non-pivot_JJ models_NNS MSP_NNP and_CC MPT_NNP ,_, which_WDT are_VBP built_VBN with_IN the_DT baseline_NN -LRB-_-LRB- bilingual_JJ LDA_NNP -RRB-_-RRB- approach_NN ._.
+The_DT generation_NN of_IN a_DT target_NN word_NN t_IN ∈_CD T_NNP is_VBZ modelled_VBN as_IN the_DT two-step_JJ trans_NNS -_: lation_NN of_IN a_DT source_NN word_NN s_VBZ ∈_CD S_NNP to_TO a_DT pivot_NN word_NN p_SYM ∈_FW P_NN and_CC then_RB this_DT p_NN into_IN T_NNP ._.
+We_PRP assume_VBP that_IN for_IN any_DT translation_NN candidate_NN pair_NN s_VBZ ,_, t_NN :_: MSP_NNP ,_, PT_NNP -LRB-_-LRB- s_PRP ,_, t_VBN -RRB-_-RRB- =_SYM maxMSP_NNP -LRB-_-LRB- s_PRP ,_, p_VBN -RRB-_-RRB- MPT_NNP -LRB-_-LRB- p_NN ,_, t_VBN -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- p_SYM ∈_FW P_FW We_PRP would_MD now_RB like_VB to_TO generate_VB the_DT n-best_JJ dis_NN -_: tinct_JJ translations_NNS ,_, however_RB the_DT size_NN of_IN the_DT search_NN space_NN has_VBZ increased_VBN to_TO |_VB P_NNP |_CD |_CD T_NNP |_CD compared_VBN to_TO |_VB T_NNP |_NNP for_IN the_DT non-pivot_JJ model_NN ._.
+The_DT natural_JJ method_NN for_IN searching_VBG this_DT space_NN is_VBZ to_TO score_VB every_DT pivot_NN translation_NN s_VBZ →_CD pi_NNS with_IN We_PRP use_VBP a_DT faster_RBR ,_, approximate_JJ algorithm_NN that_WDT greatly_RB reduces_VBZ the_DT number_NN of_IN scoring_VBG operations_NNS required_VBN by_IN using_VBG a_DT beam_NN search_NN ._.
+The_DT scoring_VBG operation_NN ,_, i.e._FW calculating_VBG M_NNP -LRB-_-LRB- s_PRP ,_, t_VBN -RRB-_-RRB- ,_, is_VBZ the_DT most_RBS time_NN consuming_NN step_NN and_CC therefore_RB the_DT most_RBS im_SYM -_: portant_NN to_TO be_VB avoided_VBN ._.
+Using_VBG a_DT beam_NN width_NN b_NN ,_, the_DT top-b_JJ pivot_NN candidates_NNS p1_VBP ,_, ..._: ,_, pb_VBP ∈_CD P_NNP for_IN s_PRP are_VBP rst_JJ generated_VBN ,_, requiring_VBG |_CD P_NNP |_CD scoring_VBG operations_NNS as_IN we_PRP have_VBP no_DT way_NN to_TO sort_VB the_DT p_NN in_IN advance_NN ._.
+Then_RB for_IN each_DT pi_NNS ,_, we_PRP generate_VBP the_DT top-b_JJ target_NN candi_NNS -_: dates_NNS ti_VBP ,1_CD ,_, ..._: ,_, ti_NNS ,_, b_NN for_IN the_DT translation_NN of_IN pi_NNS into_IN T_NNP ._.
+This_DT step_NN requires_VBZ only_RB b_NN |_CD T_NNP |_CD scoring_VBG operations_NNS .1_CD There_EX will_MD be_VB some_DT search_NN errors_NNS with_IN this_DT method_NN and_CC therefore_RB b_NN should_MD be_VB increased_VBN if_IN a_DT very_RB accurate_JJ n-best_JJ list_NN is_VBZ required_VBN ._.
+The_DT 1_CD This_DT can_MD be_VB further_JJ reduced_VBN to_TO b_NN ′_FW |_FW T_FW |_FW where_WRB b_NN ′_CD ≤_CD b_NN by_IN keeping_VBG track_NN of_IN the_DT nal_NN top-n_JJ list_NN of_IN translations_NNS t_IN ∗_NN ._.
+This_DT allows_VBZ us_PRP to_TO discard_VB pi_NNS for_IN which_WDT MSP_NNP -LRB-_-LRB- s_PRP ,_, pi_NNS -RRB-_-RRB- ≤_VBP MSP_NNP ,_, PT_NNP -LRB-_-LRB- s_PRP ,_, t_SYM ∗_FW n_FW -RRB-_-RRB- ,_, as_IN we_PRP have_VBP MPT_NNP -LRB-_-LRB- pi_FW ,_, t_VBN -RRB-_-RRB- ≤_SYM 1_CD ._.
+Cos_NNP -LRB-_-LRB- we_PRP ,_, wf_VBN -RRB-_-RRB- =_SYM √_SYM ∑_CD K_NNP √_CD ∑_CD K_NNP ψ2_CD φ2_CD SP_NNP -LRB-_-LRB- |_FW P_FW |_FW scoring_VBG operations_NNS -RRB-_-RRB- and_CC then_RB for_IN each_DT k_NN =_SYM 1_CD k_NN ,_, we_PRP k_NN =_SYM 1_CD k_NN ,_, wf_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- 3.2_CD Trilingual_JJ LDA_NNP Model_NNP A_NNP simple_JJ yet_RB interesting_JJ extension_NN to_TO applying_VBG bilingual_JJ LDA_NNP to_TO source-target_JJ data_NNS is_VBZ training_VBG trilingual_JJ LDA_NNP on_IN a_DT set_NN of_IN source-pivot-target_JJ language_NN documents_NNS ._.
+Although_IN in_IN practice_NN there_EX may_MD not_RB exist_VB such_PDT a_DT large_JJ quantity_NN of_IN available_JJ trilingual_JJ data_NNS ,_, we_PRP show_VBP in_IN our_PRP$ experiments_NNS that_IN this_DT method_NN is_VBZ able_JJ to_TO outperform_VB the_DT bilingual_JJ case_NN even_RB when_WRB there_EX is_VBZ a_DT smaller_JJR volume_NN of_IN avail_NN -_: able_JJ trilingual_JJ data_NNS ._.
+An_DT advantage_NN of_IN this_DT approach_NN is_VBZ that_IN we_PRP can_MD expect_VB the_DT additional_JJ -LRB-_-LRB- pivot_NN -RRB-_-RRB- language_NN to_TO pro-_JJ vide_NN an_DT additional_JJ point_NN of_IN reference_NN ,_, stabilizing_VBG the_DT topic-document_NN distribution_NN ._.
+We_PRP show_VBP that_IN this_DT leads_VBZ to_TO a_DT considerable_JJ reduction_NN in_IN noise_NN ,_, improving_VBG the_DT translation_NN accuracy_NN ._.
+The_DT mathematical_JJ formulation_NN is_VBZ a_DT natural_JJ ex_FW -_: tension_NN of_IN the_DT bilingual_JJ case_NN ._.
+We_PRP generate_VBP a_DT triple_JJ of_IN word-topic_JJ distributions_NNS φ_VBP ,_, ψ_JJ and_CC ω_JJ and_CC a_DT shared_VBN document-topic_JJ distribution_NN θ_NN using_VBG the_DT same_JJ method_NN as_IN described_VBN above_IN for_IN bilingual_JJ LDA_NNP ._.
+The_DT model_NN is_VBZ trained_VBN on_IN triples_NNS of_IN aligned_VBN comparable_JJ documents_NNS ._.
+M_NNP pi_NNS to_TO score_VB every_DT target_NN translation_NN pi_FW →_FW tj_FW with_IN MP_NNP T_NNP -LRB-_-LRB- |_FW P_FW |_FW |_FW T_FW |_FW scoring_VBG operations_NNS -RRB-_-RRB- ._.
+These_DT scores_NNS are_VBP then_RB multiplied_VBN together_RB and_CC sorted_VBD to_TO gen_VB -_: erate_VB an_DT n-best_JJ list_NN ._.
+As_IN we_PRP have_VBP no_DT further_JJ infor_NN -_: mation_NN about_IN M_NNP it_PRP is_VBZ not_RB possible_JJ to_TO reduce_VB the_DT complexity_NN of_IN this_DT search_NN without_IN making_VBG some_DT approximations_NNS ._.
+approximate_JJ algorithm_NN collapses_VBZ into_IN the_DT exact_JJ method_NN as_IN b_NN increases_NNS ._.
+If_IN there_EX are_VBP many_JJ s_PRP to_TO translate_VB ,_, it_PRP would_MD be_VB possible_JJ to_TO cache_VB the_DT MP_NNP T_NNP ,_, further_JJ improving_VBG the_DT performance_NN ._.
+See_VB Figure_NN 2_CD for_IN an_DT illustration_NN of_IN our_PRP$ search_NN algorithm_NN ._.
+3.4_CD `_`` Box_NNP '_'' Model_NNP For_IN many_JJ low-resource_JJ language_NN pairs_NNS there_RB does_VBZ not_RB exist_VB source-target_JJ or_CC trilingual_JJ data_NNS and_CC therefore_RB the_DT pivot_NN model_NN is_VBZ the_DT only_JJ available_JJ option_NN ._.
+However_RB this_DT is_VBZ not_RB always_RB the_DT case_NN ._.
+For_IN comparison_NN we_PRP create_VBP one_CD further_JJ model_NN ,_, the_DT `_`` box_NN '_'' model_NN ,_, using_VBG all_DT available_JJ data_NNS ._.
+The_DT `_`` box_NN '_'' model_NN uses_VBZ source-pivot_JJ ,_, pivot_NN -_: target_NN ,_, source-target_JJ and_CC source-pivot-target_JJ data_NNS ._.
+The_DT data_NN is_VBZ combined_VBN by_IN creating_VBG -LRB-_-LRB- source_NN ,_, pivot_NN ,_, target_NN -RRB-_-RRB- triples_NNS for_IN each_DT document_NN ._.
+For_IN each_DT language_NN L_NNP ,_, if_IN there_EX is_VBZ a_DT version_NN of_IN the_DT doc_NN -_: ument_NN written_VBN in_IN L_NNP ,_, we_PRP add_VBP it_PRP to_TO the_DT triple_JJ ,_, oth_JJ -_: erwise_NN we_PRP insert_VBP an_DT empty_JJ string_NN ._.
+We_PRP liken_VBP this_DT method_NN to_TO packing_VBG boxes_NNS ,_, one_CD per_IN document_NN for_IN each_DT language_NN ,_, with_IN whatever_WDT data_NN is_VBZ available_JJ ._.
+These_DT triples_NNS are_VBP then_RB used_VBN to_TO train_VB a_DT trilingual_JJ topic_NN model_NN as_IN in_IN Section_NN 3.2_CD ._.
+This_DT approach_NN has_VBZ the_DT advantages_NNS of_IN avoiding_VBG noise_NN and_CC search_NN errors_NNS that_WDT can_MD be_VB introduced_VBN by_IN the_DT pivot_NN model_NN in_IN Section_NN 3.3_CD ,_, however_RB it_PRP re_SYM -_: lies_VBZ on_IN the_DT availability_NN of_IN su_NN cient_NN training_NN data_NNS ._.
+When_WRB such_JJ data_NNS is_VBZ not_RB available_JJ we_PRP are_VBP still_RB able_JJ to_TO use_VB the_DT pivot_NN model_NN ._.
+4_CD Experiments_NNS In_IN this_DT section_NN we_PRP consider_VBP a_DT task_NN where_WRB we_PRP wish_VBP to_TO extract_VB a_DT Korean-Icelandic_NNP -LRB-_-LRB- KO-IS_NNP -RRB-_-RRB- and_CC Icelandic-Korean_NNP -LRB-_-LRB- IS-KO_NNP -RRB-_-RRB- lexicon_NN from_IN compa_NN -_: rable_JJ Wikipedia_NNP documents_NNS using_VBG English_NNP -LRB-_-LRB- EN_NNP -RRB-_-RRB- as_IN a_DT pivot_NN language_NN ._.
+This_DT is_VBZ a_DT realistic_JJ sce_NN -_: nario_NN in_IN which_WDT we_PRP have_VBP a_DT su_NN cient_NN quantity_NN of_IN aligned_VBN pivot-source_NN and_CC pivot-target_NN document_NN pairs_NNS but_CC considerably_RB less_RBR source-target_JJ data_NNS ._.
+We_PRP chose_VBD this_DT language_NN pair_NN to_TO demonstrate_VB the_DT e_SYM ectiveness_NN of_IN our_PRP$ model_NN on_IN both_DT low-resource_JJ and_CC distant_JJ language_NN pairs_NNS ._.
+English_NNP was_VBD the_DT most_RBS natural_JJ pivot_NN language_NN for_IN this_DT task_NN ,_, how_WRB -_: ever_RB in_IN some_DT cases_NNS it_PRP might_MD be_VB preferable_JJ to_TO use_VB a_DT di_FW erent_FW language_NN ._.
+The_DT topic_NN models_NNS were_VBD all_DT trained_VBN on_IN document-aligned_JJ Wikipedia_NNP data_NNS ._.
+We_PRP ex_FW -_: tracted_VBN these_DT documents_NNS from_IN mid-2013_JJ Wikipedia_NNP XML_NNP dumps_VBZ and_CC they_PRP were_VBD aligned_VBN using_VBG Wikipedia_NNP `_`` langlinks_NNS '_POS ._.
+The_DT distribution_NN of_IN aligned_VBN document_NN pairs_NNS including_VBG combinations_NNS of_IN these_DT three_CD languages_NNS is_VBZ shown_VBN in_IN Table_NNP 1_CD ._.
+Table_NNP 1_CD :_: Number_NN of_IN aligned_VBN documents_NNS for_IN each_DT lan_NN -_: guage_NN combination_NN ._.
+✓_NN means_VBZ `_`` included_VBN '_'' ,_, ?_.
+means_NNS `_`` possibly_RB included_VBN '_'' ._.
+The_DT last_JJ row_NN shows_VBZ the_DT number_NN of_IN documents_NNS containing_VBG at_IN least_JJS 2_CD languages_NNS ._.
+Note_VB that_IN there_EX is_VBZ considerably_RB less_JJR IS-KO_JJ data_NNS than_IN for_IN either_DT EN-IS_NNP or_CC EN-KO_NNP -LRB-_-LRB- only_RB 60_CD %_NN of_IN EN-IS_NNP ,_, 10_CD %_NN of_IN EN-KO_NNP -RRB-_-RRB- ._.
+In_IN fact_NN the_DT majority_NN of_IN trilingual_JJ data_NNS covers_VBZ the_DT same_JJ documents_NNS as_IN the_DT IS-KO_NNP subset_NN ,_, as_IN the_DT documents_NNS with_IN IS_VBZ and_CC KO_NNP data_NNS very_RB commonly_RB also_RB have_VBP an_DT English_JJ version_NN ._.
+While_IN it_PRP is_VBZ true_JJ that_IN there_EX does_VBZ exist_VB some_DT IS-KO_JJ data_NNS in_IN Wikipedia_NNP that_WDT could_MD be_VB used_VBN di_FW -_: rectly_NN to_TO build_VB an_DT IS-KO_JJ lexicon_NN ,_, we_PRP show_VBP that_IN there_EX is_VBZ not_RB enough_JJ to_TO extract_VB translation_NN pairs_NNS with_IN high_JJ accuracy_NN ._.
+Furthermore_RB ,_, we_PRP also_RB show_VBP that_IN the_DT proposed_VBN pivot_NN model_NN in_IN Section_NN 3.3_CD functions_NNS well_RB without_IN requiring_VBG any_DT of_IN this_DT data_NN ._.
+4.1_CD Settings_NNS We_PRP used_VBD an_DT in-house_JJ English_NNP lemmatizer_NN and_CC tokenizer_NN to_TO prepare_VB the_DT English_NNP data_NNS ._.
+Ice_NNP -_: landic_JJ data_NNS was_VBD processed_VBN with_IN IceNLP_NNP -LRB-_-LRB- Lofts_NNP -_: son_NN and_CC Rögnvaldsson_NNP ,_, 2007_CD -RRB-_-RRB- and_CC Korean_JJ ana_NN -_: lyzed_VBN with_IN HanNanum_NNP -LRB-_-LRB- Park_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+For_IN each_DT language_NN we_PRP extracted_VBD the_DT most_RBS frequent_JJ 100K_JJ nouns_NNS for_IN our_PRP$ experiments_NNS ,_, a_DT vocabulary_JJ size_NN over_IN 10_CD times_NNS larger_JJR than_IN in_IN previous_JJ work_NN -LRB-_-LRB- Vulić_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT test_NN data_NNS consisted_VBD of_IN N_NNP =_SYM 200_CD -LRB-_-LRB- EN_NNP ,_, KO_NNP ,_, IS_VBZ -RRB-_-RRB- translation_NN triples_NNS ._.
+These_DT were_VBD created_VBN by_IN randomly_RB selecting_VBG 200_CD nouns_NNS from_IN our_PRP$ English_JJ EN_NNP IS_VBZ KO_NNP Documents_NNS ✓_VBP ✓_CD ?_.
+22K_CD ✓_CD ?_.
+✓_SYM 140K_CD ?_.
+✓_FW ✓_FW 14K_FW ✓_FW ✓_FW ✓_FW 14K_FW 2_CD +_CD languages_NNS 190K_NNP BiLDA_NNP BiLDA_NNP KO_NNP EN_NNP IS_VBZ vatn_NN -LRB-_-LRB- water_NN -RRB-_-RRB- drekka_FW -LRB-_-LRB- drink_NN -RRB-_-RRB- ís_NNS -LRB-_-LRB- ice_NN -RRB-_-RRB- fiskur_NN -LRB-_-LRB- fish_NN -RRB-_-RRB- hákarl_NN -LRB-_-LRB- shark_NN -RRB-_-RRB- ..._: 0.5_CD 0.2_CD water_NN 0.9_CD 0.4_CD ..._: 0.9_CD fish_NN 0.3_CD shark_NN 물고기_CD -LRB-_-LRB- fish_NN -RRB-_-RRB- 0.8_CD Figure_NN 2_CD :_: An_DT illustration_NN of_IN the_DT beam_NN search_NN algorithm_NN using_VBG b_NN =_SYM 2_CD ._.
+The_DT numbers_NNS shown_VBN are_VBP example_NN similarity_NN scores_NNS and_CC the_DT red_JJ arrows_NNS show_VBP the_DT optimal_JJ path_NN ._.
+Wikipedia_NNP vocabulary_NN and_CC translating_VBG these_DT by_IN hand_NN into_IN Korean_JJ and_CC Icelandic_JJ ._.
+For_IN comparison_NN the_DT same_JJ test_NN data_NNS was_VBD used_VBN for_IN all_DT experiments_NNS ._.
+We_PRP used_VBD the_DT PolyLDA_NNP +_NN +_NN tool_NN -LRB-_-LRB- Richardson_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- to_TO generate_VB multilingual_JJ topic_NN mod_NN -_: Lang_NNP Pair_NNP Method_NNP Top-1_NNP MRR_NNP IS-KO_NNP baseline_NN pivot_NN 0.265_CD 0.310_CD 0.334_CD 0.365_CD els_NNS ._.
+The_DT training_NN was_VBD run_VBN over_IN 1000_CD iterations_NNS using_VBG K_NNP =_SYM 2000_CD topics_NNS ._.
+We_PRP set_VBP the_DT LDA_NNP hyper_JJ -_: parameters_NNS as_IN α_NN =_SYM 50/K_CD and_CC β_CD =_SYM 0.01_CD ,_, which_WDT are_VBP the_DT settings_NNS used_VBD most_RBS commonly_RB in_IN previous_JJ work_NN on_IN topic_NN modelling_NN ._.
+The_DT models_NNS were_VBD evaluated_VBN by_IN generating_VBG an_DT n-best_JJ list_NN of_IN translations_NNS for_IN each_DT word_NN in_IN the_DT test_NN set_NN ._.
+The_DT following_VBG statistics_NNS were_VBD then_RB mea_SYM -_: sured_VBN for_IN the_DT extracted_VBN lexicon_NN ,_, where_WRB ranki_NNS was_VBD the_DT rank_NN given_VBN to_TO the_DT correct_JJ translation_NN in_IN the_DT n-best_JJ list_NN -LRB-_-LRB- ∞_FW if_IN not_RB in_IN n-best_JJ list_NN -RRB-_-RRB- ._.
+We_PRP used_VBD n_JJ =_SYM 10_CD ._.
+Wealsousedb_NNP =_SYM 10forthesearch_CD beam_NN width_NN ._.
+Table_NNP 2_CD :_: Results_NNS of_IN direct/pivot_NN comparison_NN experi_SYM -_: ment_NN ._.
+4.2_CD Comparison_NN between_IN Direct_NNP and_CC Pivot_NNP Model_NNP Before_IN applying_VBG the_DT proposed_VBN pivot-based_JJ ap_SYM -_: proaches_NNS to_TO a_DT realistic_JJ lexicon_NN extraction_NN sce_SYM -_: nario_NN ,_, we_PRP rst_VBP veri_FW ed_FW the_DT e_SYM ectiveness_NN of_IN the_DT pivot_NN model_NN in_IN Section_NN 3.3_CD using_VBG a_DT controlled_JJ data_NN set_NN ._.
+We_PRP consider_VBP a_DT task_NN where_WRB we_PRP have_VBP a_DT corpus_NN of_IN aligned_VBN triples_NNS of_IN -LRB-_-LRB- EN_NNP ,_, KO_NNP ,_, IS_VBZ -RRB-_-RRB- documents_NNS ._.
+Our_PRP$ data_NNS contained_VBD 14K_NNP triples_NNS -LRB-_-LRB- see_VB Table_NNP 1_CD -RRB-_-RRB- with_IN a_DT combined_VBN vocabulary_NN size_NN of_IN 30K_NNP nouns_NNS ._.
+The_DT experiment_NN is_VBZ to_TO test_VB the_DT e_SYM ectiveness_NN of_IN using_VBG the_DT KO-IS_NNP data_NNS directly_RB -LRB-_-LRB- baseline_NN -RRB-_-RRB- with_IN the_DT non_NN -_: pivot_NN model_NN MST_NNP against_IN using_VBG the_DT pivot_NN model_NN MSP_NNP ,_, PT_NNP with_IN only_RB KO-EN_NNP and_CC EN-IS_NNP data_NNS ._.
+This_DT is_VBZ designed_VBN to_TO be_VB a_DT fair_JJ comparison_NN as_IN we_PRP have_VBP the_DT same_JJ number_NN of_IN documents_NNS in_IN the_DT pivot_NN •_CD Top-1_JJ accuracy_NN :_: 1_CD ∑_CD N_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- δranki_FW ,1_FW •_FW Mean_FW Reciprocal_JJ Rank_NNP -LRB-_-LRB- MRR_NNP -RRB-_-RRB- :_: 1_CD ∑_CD N_NNP 1_CD N_NNP i_FW =_SYM 1_CD ranki_NN KO-IS_NNP baseline_NN pivot_NN 0.220_CD 0.240_CD 0.286_CD 0.321_CD N_NNP i_FW =_SYM 1_CD KO_NNP KO_NNP KO_NNP KO_NNP IS_VBZ IS_VBZ IS_VBZ IS_VBZ EN_NNP EN_NNP EN_NNP EN_NNP baseline_NN trilingual_JJ pivot_NN box_NN Figure_NN 4_CD :_: Subsets_NNS of_IN Wikipedia_NNP data_NNS required_VBN for_IN each_DT method_NN ._.
+and_CC non-pivot_JJ training_NN sets_NNS ._.
+The_DT organization_NN of_IN the_DT training_NN data_NN is_VBZ shown_VBN in_IN Figure_NN 3_CD ._.
+Table_NNP 2_CD shows_VBZ the_DT experimental_JJ results_NNS ._.
+These_DT results_NNS show_VBP that_IN when_WRB the_DT same_JJ amount_NN of_IN data_NNS is_VBZ available_JJ the_DT pivot_NN model_NN is_VBZ even_RB more_RBR e_SYM ective_FW than_IN using_VBG the_DT source-target_JJ data_NNS directly_RB ._.
+In_IN fact_NN the_DT scores_NNS are_VBP higher_JJR for_IN the_DT pivot_NN model_NN and_CC we_PRP believe_VBP there_EX could_MD be_VB two_CD reasons_NNS for_IN this_DT ._.
+Despite_IN the_DT same_JJ number_NN of_IN documents_NNS being_VBG used_VBN ,_, the_DT English_NNP articles_NNS are_VBP on_IN average_JJ longer_JJR than_IN their_PRP$ Icelandic_JJ and_CC Korean_JJ counter_NN -_: parts_NNS and_CC this_DT could_MD improve_VB the_DT e_SYM ectiveness_NN of_IN training_NN ._.
+It_PRP is_VBZ also_RB possible_JJ that_IN many_JJ of_IN the_DT Icelandic_JJ and_CC Korean_JJ articles_NNS were_VBD produced_VBN by_IN partially_RB or_CC fully_RB translating_VBG their_PRP$ corresponding_JJ English_NNP pages_NNS ._.
+This_DT would_MD lead_VB to_TO a_DT tighter_JJR similarity_NN in_IN the_DT models_NNS containing_VBG the_DT pivot_NN language_NN ._.
+4.3_CD Lexicon_NNP Extraction_NNP Experiment_NNP We_PRP now_RB turn_VBP to_TO the_DT main_JJ experiment_NN ,_, in_IN which_WDT we_PRP consider_VBP the_DT task_NN of_IN extracting_VBG a_DT bilingual_JJ lexicon_NN from_IN Wikipedia_NNP for_IN a_DT low-resource_JJ lan_NN -_: guage_NN pair_NN -LRB-_-LRB- IS-KO_JJ and_CC KO-IS_NNP -RRB-_-RRB- ._.
+In_IN order_NN to_TO demonstrate_VB the_DT practical_JJ application_NN of_IN the_DT pro-_JJ posed_VBN model_NN ,_, we_PRP use_VBP all_PDT the_DT available_JJ data_NNS in_IN Wikipedia_NNP ,_, combining_VBG pivot_NN and_CC non-pivot_JJ mod_NN -_: els_NNS ._.
+•_CD The_DT baseline_NN score_NN -LRB-_-LRB- `_`` baseline_NN '_'' -RRB-_-RRB- is_VBZ calculated_VBN for_IN the_DT non-pivot_JJ model_NN MST_NNP using_VBG only_RB KO-IS_JJ data_NNS ._.
+This_DT emulates_VBZ the_DT current_JJ state-of-the-art_JJ non-pivot_JJ lexicon_NN extrac_NN -_: tion_NN algorithm_NN ,_, which_WDT is_VBZ only_RB able_JJ to_TO use_VB the_DT KO-IS_NNP data_NNS and_CC model_NN for_IN direct_JJ trans_NNS -_: lation_NN ._.
+See_VB Section_NNP 3.1_CD ._.
+•_CD The_DT trilingual_JJ score_NN -LRB-_-LRB- `_`` trilingual_JJ '_'' -RRB-_-RRB- is_VBZ the_DT ac_SYM -_: curacy_NN of_IN our_PRP$ model_NN trained_VBN using_VBG a_DT trilin_NN -_: gual_JJ topic_NN model_NN on_IN trilingual_JJ -LRB-_-LRB- KO-EN-IS_NNP -RRB-_-RRB- Test_NNP data_NNS Baseline_NN -LRB-_-LRB- `_`` direct_JJ '_'' -RRB-_-RRB- Pivot_NNP -LRB-_-LRB- S-P-T_JJ articles_NNS -RRB-_-RRB- Only_RB use_VBP S-T_JJ data_NNS ._.
+Only_RB use_VB S-P_NNP and_CC P-T_NNP ._.
+S_NNP T_NNP Figure_NNP 3_CD :_: Training_VBG data_NNS used_VBN for_IN direct/pivot_NN comparison_NN experiment_NN ._.
+S_NNP P_NNP T_NNP S_NNP P_NNP P_NNP T_NNP Candidate_NNP Meaning_NNP Score_NN 결혼_CD marriage_NN 0.875_CD 남편_CD husband_NN 0.796_CD 아내_CD wife_NN 0.756_CD 약혼_NN engagement_NN 0.732_CD 결혼식_CD wedding_NN 0.726_CD data_NNS ,_, which_WDT in_IN practice_NN is_VBZ the_DT most_RBS di_FW cult_NN to_TO obtain_VB ._.
+See_VB Section_NNP 3.2_CD ._.
+•_CD The_DT pivot_NN score_NN -LRB-_-LRB- `_`` pivot_NN '_'' -RRB-_-RRB- is_VBZ evaluated_VBN for_IN the_DT proposed_VBN pivot_NN model_NN MSP_NNP ,_, P_NNP T_NNP ,_, able_JJ to_TO make_VB use_NN of_IN the_DT KO-EN_NNP and_CC EN-IS_NNP data_NNS ._.
+See_VB Section_NNP 3.3_CD ._.
+•_CD The_DT score_NN -LRB-_-LRB- `_`` box_NN '_'' -RRB-_-RRB- ,_, using_VBG all_DT possible_JJ data_NNS ,_, is_VBZ constructed_VBN by_IN combining_VBG baseline_NN -LRB-_-LRB- KO_SYM -_: IS_VBZ -RRB-_-RRB- ,_, pivot_NN -LRB-_-LRB- EN-KO_JJ ,_, EN-IS_JJ -RRB-_-RRB- and_CC trilingual_JJ -LRB-_-LRB- EN-KO-IS_JJ -RRB-_-RRB- data_NNS ._.
+See_VB Section_NNP 3.4_CD ._.
+Figure_NN 4_CD shows_VBZ the_DT data_NNS that_WDT is_VBZ required_VBN -LRB-_-LRB- and_CC was_VBD used_VBN -RRB-_-RRB- for_IN each_DT method_NN ._.
+The_DT results_NNS of_IN the_DT experiment_NN are_VBP shown_VBN in_IN Table_NNP 3_CD ._.
+Table_NNP 4_CD :_: An_DT example_NN of_IN a_DT good_JJ translation_NN :_: `_`` hjóna_SYM -_: band_NN '_'' -LRB-_-LRB- marriage_NN -RRB-_-RRB- ._.
+Table_NNP 5_CD :_: An_DT example_NN of_IN a_DT bad_JJ translation_NN :_: `_`` tilgangur_NN '_'' -LRB-_-LRB- purpose_NN -RRB-_-RRB- ._.
+pivot_NN model_NN score_NN is_VBZ not_RB far_RB from_IN the_DT most_RBS e_LS ec_SYM -_: tive_JJ method_NN `_`` box_NN '_'' ,_, which_WDT requires_VBZ all_PDT the_DT data_NNS ,_, some_DT of_IN which_WDT is_VBZ di_FW cult_NN in_IN general_JJ to_TO obtain_VB -LRB-_-LRB- trilingual_JJ and_CC KO-IS_JJ data_NNS -RRB-_-RRB- ._.
+This_DT shows_VBZ that_IN the_DT pivot_NN model_NN is_VBZ still_RB able_JJ to_TO compete_VB with_IN a_DT model_NN trained_VBN directly_RB on_IN source-target_JJ data_NNS ._.
+The_DT most_RBS e_SYM ective_FW method_NN was_VBD the_DT `_`` box_NN '_'' ap_SYM -_: proach_NN and_CC this_DT is_VBZ perhaps_RB to_TO be_VB expected_VBN as_IN it_PRP was_VBD able_JJ to_TO make_VB use_NN of_IN the_DT largest_JJS volume_NN of_IN data_NNS ._.
+For_IN relatively_RB high-resource_JJ language_NN pairs_NNS this_DT method_NN is_VBZ likely_JJ to_TO be_VB the_DT most_RBS e_LS ec_SYM -_: tive_JJ as_IN more_JJR data_NNS is_VBZ available_JJ ,_, however_RB the_DT pivot_NN model_NN becomes_VBZ the_DT only_JJ available_JJ option_NN as_IN the_DT source-target_JJ data_NNS becomes_VBZ sparse_JJ ._.
+When_WRB the_DT necessary_JJ data_NN is_VBZ available_JJ ,_, the_DT `_`` box_NN '_'' approach_NN can_MD improve_VB upon_IN the_DT pivot_NN model_NN ._.
+Tables_NNS 4_CD and_CC 5_CD give_VBP examples_NNS of_IN successful_JJ and_CC incorrect_JJ translations_NNS using_VBG the_DT pivot_NN model_NN ._.
+The_DT model_NN can_MD be_VB seen_VBN to_TO perform_VB more_JJR e_LS ec_SYM -_: tively_RB on_IN words_NNS with_IN a_DT concrete_JJ meaning_NN -LRB-_-LRB- Ta_SYM -_: ble_NN 4_LS -RRB-_-RRB- and_CC less_RBR so_RB on_IN abstract_JJ concepts_NNS -LRB-_-LRB- Table_NNP 5_CD -RRB-_-RRB- ,_, which_WDT often_RB have_VBP more_RBR variation_NN in_IN their_PRP$ repre_NN -_: sention_NN across_IN languages_NNS ._.
+Analysis_NN of_IN the_DT n-best_JJ lists_NNS revealed_VBD a_DT tendency_NN for_IN clumping_VBG of_IN pivot_NN words_NNS ._.
+As_IN in_IN the_DT example_NN in_IN Table_NNP 6_CD ,_, the_DT same_JJ pivot_NN word_NN was_VBD often_RB used_VBN to_TO generate_VB groups_NNS of_IN consecutive_JJ target_NN language_NN words_NNS ._.
+This_DT how_WRB -_: Candidate_NNP Meaning_NNP Score_NN 스튜어트_NNP Stewart_NNP 0.355_CD 주장_CD claim_NN 0.327_CD 반증_CD disproof_NN 0.301_CD 논란_NN controversy_NN 0.296_CD 증언_NN testimony_NN 0.289_CD Lang_NNP Pair_NNP Method_NNP Top-1_NNP MRR_NNP IS-KO_NNP baseline_NN trilingual_JJ pivot_NN box_NN 0.255_CD 0.350_CD 0.380_CD 0.420_CD 0.324_CD 0.428_CD 0.459_CD 0.495_CD KO-IS_NNP baseline_NN trilingual_JJ pivot_NN box_NN 0.230_CD 0.315_CD 0.305_CD 0.390_CD 0.296_CD 0.392_CD 0.398_CD 0.475_CD Table_NNP 3_CD :_: Results_NNS of_IN lexicon_NN extraction_NN experiment_NN ._.
+5_CD Analysis_NN and_CC Discussion_NNP It_PRP can_MD be_VB seen_VBN from_IN the_DT results_NNS that_IN all_DT three_CD pro-_JJ posed_VBD models_NNS considerably_RB outperform_VBP the_DT base_NN -_: line_NN ._.
+This_DT demonstrates_VBZ that_IN these_DT approaches_NNS are_VBP able_JJ to_TO improve_VB the_DT quality_NN of_IN extracted_VBN lex_SYM -_: icons_NNS for_IN low-resource_JJ language_NN pairs_NNS by_IN making_VBG use_NN of_IN pivot_NN language_NN data_NNS ,_, giving_VBG a_DT large_JJ accu_NN -_: racy_JJ improvement_NN over_IN previous_JJ work_NN ._.
+An_DT interesting_JJ observation_NN is_VBZ that_IN the_DT trilin_NN -_: gual_NN model_NN is_VBZ able_JJ to_TO greatly_RB improve_VB upon_IN the_DT baseline_NN even_RB though_IN it_PRP uses_VBZ less_JJR training_NN data_NNS ._.
+It_PRP is_VBZ probable_JJ that_IN the_DT addition_NN of_IN the_DT addi_NN -_: tional_JJ language_NN -LRB-_-LRB- English_NNP -RRB-_-RRB- has_VBZ helped_VBN to_TO reduce_VB the_DT noise_NN in_IN the_DT Korean-Icelandic_NNP model_NN by_IN sta_NN -_: bilizing_VBG the_DT document-topic_JJ distribution_NN ._.
+The_DT pivot_NN approach_NN further_JJ improves_VBZ on_IN this_DT by_IN making_VBG use_NN of_IN the_DT relatively_RB large_JJ volume_NN of_IN EN-KO_NNP and_CC EN-IS_NNP data_NNS ._.
+Furthermore_RB ,_, the_DT Rank_NNP Pivot_NNP p_NNP Target_NNP t_VBD MSP_NNP -LRB-_-LRB- s_PRP ,_, p_VBN -RRB-_-RRB- MPT_NNP -LRB-_-LRB- p_NN ,_, t_VBN -RRB-_-RRB- Score_NN 1_CD feminism_NN 나혜석_NN -LRB-_-LRB- Na_NNP Hyeseok_NNP -RRB-_-RRB- 0.902_CD 0.969_CD 0.873_CD 2_CD feminism_NN 여자_NN -LRB-_-LRB- woman_NN -RRB-_-RRB- 0.902_CD 0.967_CD 0.871_CD 3_CD feminism_NN 여성_NN -LRB-_-LRB- female_NN -RRB-_-RRB- 0.902_CD 0.907_CD 0.818_CD ..._: ..._: ..._: ..._: ..._: ..._: 9_CD feminism_NN 여학교_CD -LRB-_-LRB- girls_NNS '_POS school_NN -RRB-_-RRB- 0.902_CD 0.517_CD 0.466_CD 10_CD wife_NN 아내_NN -LRB-_-LRB- wife_NN -RRB-_-RRB- 0.315_CD 0.914_CD 0.288_CD Table_NNP 6_CD :_: Analysis_NN of_IN translation_NN for_IN `_`` kona_NNS '_POS -LRB-_-LRB- woman_NN -RRB-_-RRB- ,_, showing_VBG high_JJ clumping_NN ._.
+Rank_NNP Pivot_NNP p_NNP Target_NNP t_VBD MSP_NNP -LRB-_-LRB- s_PRP ,_, p_VBN -RRB-_-RRB- MPT_NNP -LRB-_-LRB- p_NN ,_, t_VBN -RRB-_-RRB- Score_NN 1_CD world_NN 세계_NN -LRB-_-LRB- world_NN -RRB-_-RRB- 0.712_CD 0.851_CD 0.606_CD 2_CD world_NN 월드_NN -LRB-_-LRB- world_NN -RRB-_-RRB- 0.712_CD 0.619_CD 0.441_CD 3_CD cosmos_NNS 창조_VBP -LRB-_-LRB- creation_NN -RRB-_-RRB- 0.278_CD 0.965_CD 0.268_CD 4_CD cosmos_NNS 만물_VBP -LRB-_-LRB- all_DT things_NNS -RRB-_-RRB- 0.278_CD 0.928_CD 0.258_CD 5_CD universe_NN 우주론_CD -LRB-_-LRB- cosmology_NN -RRB-_-RRB- 0.225_CD 0.973_CD 0.219_CD 6_CD universe_NN 빅뱅_CD -LRB-_-LRB- big_JJ bang_NN -RRB-_-RRB- 0.225_CD 0.965_CD 0.217_CD Table_NNP 7_CD :_: Analysis_NN of_IN translation_NN for_IN `_`` heimur_NN '_'' -LRB-_-LRB- world_NN -RRB-_-RRB- ,_, showing_VBG less_JJR clumping_NN ._.
+ever_RB seems_VBZ not_RB to_TO reduce_VB the_DT quality_NN of_IN the_DT out_JJ -_: put_VB ,_, as_IN we_PRP did_VBD not_RB notice_VB any_DT signi_NNS cant_JJ change_NN in_IN the_DT MRR_NNP scores_NNS when_WRB adding_VBG the_DT restriction_NN that_WDT only_RB one_CD target_NN word_NN could_MD be_VB generated_VBN from_IN any_DT pivot_NN word_NN ._.
+An_DT example_NN with_IN less_JJR clumping_NN is_VBZ shown_VBN in_IN Table_NNP 7_CD ._.
+6_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT paper_NN we_PRP have_VBP presented_VBN three_CD novel_NN pivot-based_JJ approaches_NNS for_IN bilingual_JJ lexicon_NN ex_FW -_: traction_NN with_IN low-resource_JJ language_NN pairs_NNS ._.
+The_DT proposed_VBN models_NNS are_VBP able_JJ to_TO generate_VB a_DT high_JJ -_: quality_NN lexicon_NN for_IN language_NN pairs_NNS with_IN no_DT direct_JJ source-target_JJ training_NN data_NNS ,_, and_CC we_PRP have_VBP shown_VBN that_IN each_DT model_NN considerably_RB outperforms_VBZ a_DT state-of-the-art_JJ non-pivot_JJ baseline_NN ._.
+With_IN a_DT vari_FW -_: ety_NN of_IN approaches_NNS it_PRP is_VBZ possible_JJ to_TO select_VB an_DT ap_NN -_: propriate_NN method_NN based_VBN on_IN the_DT size_NN and_CC nature_NN of_IN available_JJ training_NN data_NNS ._.
+There_EX is_VBZ much_RB still_RB to_TO explore_VB in_IN the_DT area_NN of_IN the_DT construction_NN of_IN lexicons_NNS for_IN low-resource_JJ lan_NN -_: guage_NN pairs_NNS ._.
+A_DT possible_JJ extension_NN to_TO the_DT pro-_JJ posed_VBN model_NN is_VBZ to_TO use_VB a_DT larger_JJR pivot_NN base_NN ,_, of_IN not_RB just_RB one_CD but_CC of_IN multiple_JJ pivot_NN languages_NNS acting_VBG as_IN a_DT form_NN of_IN interlingua_NN ,_, similar_JJ to_TO the_DT idea_NN in_IN Dabre_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+This_DT could_MD improve_VB the_DT quality_NN of_IN the_DT model_NN in_IN cases_NNS where_WRB there_EX is_VBZ not_RB such_JJ a_DT clear_JJ choice_NN for_IN an_DT appropriate_JJ pivot_NN lan_NN -_: guage_NN ._.
+Another_DT possibility_NN for_IN improvement_NN is_VBZ remov_SYM -_: ing_VBG the_DT assumption_NN that_IN there_EX is_VBZ an_DT appropriate_JJ pivot_NN word_NN ,_, using_VBG instead_RB a_DT direct_JJ mapping_NN be_VB -_: tween_IN the_DT word-topic_JJ vector_NN spaces_NNS for_IN source_NN -_: pivot_NN and_CC pivot-target_NN topic_NN models_NNS ._.
+In_IN the_DT future_NN we_PRP would_MD like_VB to_TO use_VB the_DT pro-_JJ posed_VBN method_NN to_TO improve_VB machine_NN translation_NN by_IN extracting_VBG a_DT large_JJ lexicon_NN and_CC applying_VBG it_PRP to_TO a_DT low-resource_JJ translation_NN task_NN ._.
+Acknowledgments_NNP We_PRP would_MD like_VB to_TO thank_VB the_DT reviewers_NNS for_IN their_PRP$ instructive_JJ comments_NNS ._.
+The_DT rst_NN author_NN is_VBZ sup_SYM -_: ported_VBN by_IN a_DT Japanese_JJ Government_NN Scholarship_NN -LRB-_-LRB- MEXT_NNP -RRB-_-RRB- ._.
+References_NNS David_NNP Blei_NNP ,_, Andrew_NNP Ng_NNP and_CC Michael_NNP Jordan_NNP ._.
+2003_CD ._.
+Latent_NN Dirichlet_NNP Allocation_NNP ._.
+In_IN The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, Volume_NN 3_CD ._.
+Raj_NNP Dabre_NNP ,_, Fabien_NNP Cromieres_NNP ,_, Sadao_NNP Kurohashi_NNP and_CC Pushpak_NNP Bhattacharyya_NNP ._.
+2014_CD ._.
+Leveraging_VBG Small_JJ Multilingual_JJ Corpora_NNP for_IN SMT_NNP Using_VBG Many_JJ Pivot_NNP Languages_NNPS ._.
+In_IN NAACL_NNP 2014_CD ._.
+Aria_NNP Haghighi_NNP ,_, Percy_NNP Liang_NNP ,_, Taylor_NNP Berg-Kirkpatrick_NNP and_CC Dan_NNP Klein_NNP ._.
+2008_CD ._.
+Learning_NNP Bilingual_NNP Lexicons_NNPS from_IN Monolingual_NNP Corpora_NNP ._.
+In_IN ACL_NNP 2008_CD ._.
+Hrafn_NNP Loftsson_NNP and_CC Eiríkur_NNP Rögnvaldsson_NNP ._.
+2007_CD ._.
+IceNLP_NNP :_: A_NNP Natural_NNP Language_NNP Processing_NNP Toolkit_NNP for_IN Icelandic_NNP ._.
+In_IN Interspeech_NNP 2007_CD ._.
+David_NNP Mimno_NNP ,_, Hanna_NNP Wallach_NNP ,_, Jason_NNP Naradowsky_NNP ,_, David_NNP Smith_NNP and_CC Andrew_NNP McCallum_NNP ._.
+2009_CD ._.
+Polylingual_JJ topic_NN models_NNS ._.
+In_IN EMNLP_NNP 2009_CD ._.
+Park_NNP ,_, S._NNP ,_, Choi_NNP ,_, D._NNP ,_, Kim_NNP ,_, E._NNP ,_, and_CC Choi_NNP ,_, K.-S_NNP ._.
+2010_CD ._.
+A_DT plug-in_JJ component-based_JJ Korean_JJ morphological_JJ analyzer_NN ._.
+In_IN HCLT_NNP 2010_CD ._.
+Reinhard_NNP Rapp_NNP ._.
+1995_CD ._.
+Identifying_VBG Word_NN Transla_NNP -_: tions_NNS in_IN Non-Parallel_NNP Texts_NNPS ._.
+In_IN ACL_NNP 1995_CD ._.
+John_NNP Richardson_NNP ,_, Toshiaki_NNP Nakazawa_NNP and_CC Sadao_NNP Kurohashi_NNP ._.
+2013_CD ._.
+Robust_JJ Transliteration_NNP Mining_NNP from_IN Comparable_JJ Corpora_NNP with_IN Bilingual_NNP Topic_NNP Models_NNPS ._.
+In_IN IJCNLP_NNP 2013_CD ._.
+Daphna_NNP Shezaf_NNP and_CC Ari_NNP Rappoport_NNP ._.
+2010_CD ._.
+Bilin_NNP -_: gual_JJ Lexicon_NNP Generation_NNP Using_VBG Non-Aligned_NNP Sig_NNP -_: natures_NNS ._.
+In_IN ACL_NNP 2010_CD ._.
+Akihiro_NNP Tamura_NNP ,_, Taro_NNP Watanabe_NNP and_CC Eiichiro_NNP Sumita_NNP ._.
+2012_CD ._.
+Bilingual_NNP Lexicon_NNP Extraction_NNP from_IN Comparable_JJ Corpora_NNP Using_VBG Label_NNP Propagation_NNP ._.
+In_IN EMNLP-CoNLL_JJ 2012_CD ._.
+Kumiko_NNP Tanaka_NNP and_CC Hideya_NNP Iwasaki_NNP ._.
+1996_CD ._.
+Extrac_NNP -_: tion_NN of_IN lexical_JJ translations_NNS from_IN non-aligned_JJ cor_NN -_: pora_NN ._.
+In_IN Conference_NN on_IN Computational_NNP Linguistics_NNP 1996_CD ._.
+Kumiko_NNP Tanaka_NNP and_CC Kyoji_NNP Umemura_NNP ._.
+1994_CD ._.
+Con_NN -_: struction_NN of_IN a_DT bilingual_JJ dictionary_NN intermediated_VBN by_IN a_DT third_JJ language_NN ._.
+In_IN Conference_NN on_IN Computa_NNP -_: tional_JJ Linguistics_NNP 1994_CD ._.
+Masao_NNP Utiyama_NNP and_CC Hitoshi_NNP Isahara_NNP ._.
+2007_CD ._.
+Compar_SYM -_: ison_NN of_IN Pivot_NNP Methods_NNPS for_IN Phrase-based_JJ Statistical_NNP Machine_NN Translation_NN ._.
+In_IN NAACL_NNP 2007_CD ._.
+Ivan_NNP Vulić_NNP ,_, Wim_NNP De_NNP Smet_NNP and_CC Marie-Francine_NNP Moens_NNPS ._.
+2011_CD ._.
+Identifying_VBG Word_NN Translations_NNS from_IN Comparable_JJ Corpora_NNP Using_VBG Latent_NNP Topic_NNP Models_NNPS ._.
+In_IN ACL_NNP 2011_CD ._.
+Shiqi_NNP Zhao_NNP ,_, Haifeng_NNP Wang_NNP ,_, Ting_NNP Liu_NNP and_CC Sheng_NNP Li_NNP ._.
+2008_CD ._.
+Pivot_NNP Approach_NNP for_IN Extracting_VBG Paraphrase_NNP Patterns_NNPS from_IN Bilingual_NNP Corpora_NNP ._.
+In_IN ACL_NNP 2008_CD ._.
+Zede_NNP Zhu_NNP ,_, Miao_NNP Li_NNP ,_, Lei_NNP Chen_NNP ,_, Zhenxin_NNP Yang_NNP ._.
+2013_CD ._.
+Building_NNP Comparable_JJ Corpora_NNP Based_VBD on_IN Bilingual_NNP LDA_NNP Model_NNP ._.
+In_IN ACL_NNP 2013_CD ._.

@@ -1,0 +1,287 @@
+Experiments_NNS on_IN Sarcasm_NNP Detection_NNP on_IN Twitter_NNP :_: A_NNP Survey_NNP Abstract_NNP Twitter_NNP is_VBZ the_DT best_JJS known_VBN microblogging_NN site_NN where_WRB people_NNS use_VBP various_JJ hashtags_NNS to_TO label_VB their_PRP$ tweets_NNS ._.
+We_PRP have_VBP used_VBN a_DT corpus_NN contain_VBP -_: ing_NN tweets_NNS with_IN `_`` #sarcasm_NN '_'' hashtag_NN for_IN our_PRP$ experiments_NNS on_IN sarcasm_NN classification_NN ._.
+We_PRP studied_VBD various_JJ lexical_JJ and_CC pragmatic_JJ features_NNS in_IN different_JJ combinations_NNS and_CC then_RB compared_VBD the_DT accuracy_NN and_CC F-score_NN of_IN different_JJ machine_NN learning_VBG algorithms_NNS which_WDT includes_VBZ indroduc_NN -_: tion_NN and_CC experimentation_NN of_IN two_CD new_JJ features_NNS -LRB-_-LRB- POS_NNP tag_NN patterns_NNS and_CC POS_NNP n-grams_NNS -RRB-_-RRB- ._.
+We_PRP also_RB studied_VBD the_DT effect_NN of_IN changing_VBG the_DT ratio_NN of_IN sar_NN -_: castic_NN and_CC non-sarcastic_JJ tweets_NNS in_IN the_DT data-set_NN on_IN accuracy_NN and_CC F-score_NN ._.
+Using_VBG Support_NN Vec_NNP -_: tor_NN Machine_NN and_CC Logistic_NNP Regression_NNP we_PRP at_IN -_: tained_VBD the_DT highest_JJS accuracy_NN of_IN 0.877_CD ,_, whereas_IN the_DT highest_JJS F-score_NN of_IN 0.86_CD was_VBD obtained_VBN using_VBG Deep_NNP Belief_NNP Network_NNP ._.
+1_CD Introduction_NNP In_IN recent_JJ years_NNS ,_, sarcasm_NN has_VBZ been_VBN widely_RB studied_VBN in_IN social_JJ media_NNS -LRB-_-LRB- Gibbs_NNP ,_, 1986_CD ;_: Gibbs_NNP and_CC Colston_NNP ,_, 2007_CD ;_: Kreuz_NNP and_CC Glucksberg_NNP ,_, 1989_CD ;_: Utsumi_NNP ,_, 2000_CD ;_: Nigam_NNP and_CC Hurst_NNP ,_, 2006_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2008_CD ;_: Davi_NNP -_: dov_NN et_FW al._FW ,_, 2010b_CD ;_: Gonza_NNP ́lez_SYM -_: Iba_SYM ́nez_FW et_FW al._FW ,_, 2011_CD -RRB-_-RRB- be_VB -_: cause_NN of_IN its_PRP$ use_NN in_IN extraction_NN of_IN real_JJ sentiment_NN the_DT author_NN is_VBZ trying_VBG to_TO convey_VB ._.
+In_IN certain_JJ circumstances_NNS ,_, people_NNS use_VBP sentences_NNS which_WDT may_MD have_VB positve_JJ literal_JJ meaning_NN but_CC with_IN negative_JJ emotions_NNS or_CC vice-versa_NN ._.
+According_VBG to_TO Merriam-Webster_NNP dictionary_NN ,_, sarcasm_NN is_VBZ defined_VBN as_IN ``_`` The_DT use_NN of_IN words_NNS that_WDT mean_VBP the_DT op_SYM -_: posite_NN of_IN what_WP you_PRP really_RB want_VBP to_TO say_VB ,_, especially_RB in_IN order_NN to_TO insult_NN someone_NN ,_, to_TO show_VB irritation_NN ,_, or_CC to_TO be_VB funny_JJ ''_'' ._.
+Second_JJ Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN Studying_VBG social_JJ media_NNS for_IN extraction_NN of_IN intelli_NNS -_: gent_JJ information_NN is_VBZ a_DT challenging_JJ task_NN and_CC one_CD of_IN the_DT emerging_VBG topics_NNS for_IN research_NN ._.
+Twitter_NNP is_VBZ a_DT mi_FW -_: croblogging_NN site_NN in_IN which_WDT people_NNS share_VBP there_EX senti_SYM -_: ments_NNS ,_, ideas_NNS ,_, opinion_NN in_IN a_DT short_JJ sentence_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- of_IN max_NN -_: imum_NN total_JJ length_NN of_IN 140_CD characters_NNS ._.
+Twitter_NNP cur_SYM -_: rently_NN ranks_NNS as_IN one_CD of_IN the_DT leading_VBG social_JJ networks_NNS worldwide_NN ,_, with_IN 288_CD million_CD monthly_JJ active_JJ users1_NN ._.
+These_DT users_NNS often_RB annotate_VBP tweets_NNS using_VBG hashtags_NNS like_IN `_`` #examsover_NN '_'' ,_, `_`` #party_NN '_'' ,_, `_`` #sarcasm_NN '_'' ._.
+Such_JJ hash_NN -_: tags_NNS make_VBP possible_JJ the_DT creation_NN of_IN various_JJ Twitter_NNP corpora_NN ._.
+We_PRP have_VBP used_VBN such_PDT a_DT corpus_NN for_IN training_NN classifiers_NNS for_IN sarcasm_NN detection_NN ._.
+Sarcasm_NNP detection_NN can_MD be_VB seen_VBN as_IN a_DT part_NN of_IN the_DT broader_JJR sentiment_NN analysis_NN process_NN ,_, which_WDT has_VBZ many_JJ reported_VBD applications_NNS ._.
+It_PRP is_VBZ used_VBN in_IN various_JJ social_JJ media_NNS monitoring_NN tasks_NNS including_VBG tracking_VBG customer_NN reviews_NNS ,_, prediction_NN of_IN poll_NN results_NNS etc._FW ._.
+Accuracy_NN of_IN such_JJ systems_NNS can_MD be_VB increased_VBN by_IN incorporating_VBG sarcasm_NN detection_NN methods_NNS ._.
+We_PRP have_VBP developed_VBN a_DT framework_NN for_IN sarcasm_NN classification_NN ._.
+In_IN this_DT pa_NN -_: per_IN ,_, we_PRP studied_VBD various_JJ lexical_JJ and_CC pragmatic_JJ fea_NN -_: tures_NNS in_IN 17_CD different_JJ combinations_NNS and_CC then_RB com_NN -_: pared_VBD the_DT accuracy_NN and_CC F-score_NN of_IN different_JJ machine_NN learning_VBG algorithms_NNS ._.
+The_DT work_NN reported_VBD here_RB ,_, thus_RB ,_, is_VBZ a_DT survey_NN of_IN sarcasm_NN detection_NN methods_NNS ,_, especially_RB in_IN the_DT context_NN of_IN microblogging_NN text_NN ._.
+We_PRP have_VBP used_VBN four_CD different_JJ algorithms_NNS ,_, viz_NN ._.
+Naive_JJ Bayes_NNP ,_, Lin_NNP -_: ear_NN Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ,_, Logistic_NNP Re_NNP -_: gression_NN -LRB-_-LRB- LogR_NNP -RRB-_-RRB- and_CC Deep_NNP Belief_NNP Network_NNP -LRB-_-LRB- DBN_NNP -RRB-_-RRB- ._.
+We_PRP present_VBP results_NNS for_IN three_CD sets_NNS of_IN experiment_NN ,_, first_JJ consisting_VBG of_IN 117842_CD regular_JJ -LRB-_-LRB- non-sarcastic_JJ -RRB-_-RRB- tweets_NNS 1_CD http://www.statista.com/topics/737/_CD twitter_NN /_NN and_CC the_DT second_JJ consisting_VBG of_IN 59858_CD regular_JJ -LRB-_-LRB- non_SYM -_: sarcastic_JJ -RRB-_-RRB- tweets_NNS ._.
+In_IN the_DT third_JJ experiment_NN we_PRP stud_VBP -_: ied_VBD the_DT effect_NN of_IN changing_VBG the_DT percentage_NN of_IN regular_JJ tweets_NNS in_IN the_DT data-set_NN on_IN accuracy_NN and_CC F-score_NN ._.
+Our_PRP$ paper_NN includes_VBZ discussion_NN on_IN previous_JJ work_NN in_IN the_DT area_NN of_IN sarcasm_NN classification_NN in_IN Section_NN 1.1_CD ._.
+Section_NN 2_CD describes_VBZ corpus_NN creation_NN -LRB-_-LRB- Section_NN 2.1_CD -RRB-_-RRB- ,_, steps_NNS followed_VBD in_IN extraction_NN of_IN features_NNS -LRB-_-LRB- Section_NN 2.2_CD -RRB-_-RRB- and_CC the_DT various_JJ classifiers_NNS used_VBN in_IN this_DT experiment_NN -LRB-_-LRB- Section_NN 2.3_CD -RRB-_-RRB- ._.
+In_IN Section_NN 3_CD ,_, we_PRP present_VBP our_PRP$ experi_NNS -_: mental_JJ setting_NN -LRB-_-LRB- Section_NN 3.1_CD -RRB-_-RRB- and_CC show_VB the_DT evaluation_NN of_IN our_PRP$ approach_NN -LRB-_-LRB- Section_NN 3.2_CD -RRB-_-RRB- ._.
+We_PRP conclude_VBP with_IN a_DT discussion_NN and_CC summary_NN -LRB-_-LRB- Section_NN 4_CD -RRB-_-RRB- and_CC with_IN an_DT outlook_NN on_IN possible_JJ future_JJ work_NN -LRB-_-LRB- Section_NN 5_CD -RRB-_-RRB- ._.
+1.1_CD Related_NNP Work_NNP Davidov_NNP et_FW al._FW -LRB-_-LRB- 2010b_JJ -RRB-_-RRB- used_VBN both_DT Twitter_NNP and_CC Ama_NNP -_: zon_NN product_NN reviews_VBZ data-set_JJ containing_VBG sarcastic_JJ sentences_NNS ._.
+Gonza_NNP ́lez_SYM -_: Iba_SYM ́nez_FW et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN tweets_NNS collected_VBN using_VBG sarcasm_NN hashtags_NNS as_IN gold_NN la_NNP -_: bels_NNS ._.
+Filatova_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- presented_VBD a_DT detailed_JJ work_NN on_IN creation_NN of_IN annotated_JJ sarcasm_NN corpus_NN using_VBG Amazon_NNP product_NN reviews_NNS ._.
+Liebrecht_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- extracted_VBN Dutch_JJ tweets_NNS using_VBG hashtag_NN `_`` sarcasme_NN '_'' ._.
+Reyes_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- collected_VBN a_DT training_NN corpus_VBZ based_VBN on_IN tweets_NNS that_WDT consist_VBP of_IN `_`` #irony_NN '_'' hashtag_NN in_IN order_NN to_TO train_VB their_PRP$ classifiers_NNS on_IN different_JJ types_NNS of_IN features_NNS ._.
+Sarcasm_NNP is_VBZ a_DT well_RB studied_VBN phenomenon_NN and_CC re_SYM -_: searched_VBN in_IN various_JJ branches_NNS including_VBG psychology_NN and_CC linguistics_NNS -LRB-_-LRB- Gibbs_NNP ,_, 1986_CD ;_: Kreuz_NNP and_CC Glucksberg_NNP ,_, 1989_CD ;_: Utsumi_NNP ,_, 2000_CD ;_: Gibbs_NNP and_CC Colston_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+Var_SYM -_: ious_JJ experiments_NNS have_VBP been_VBN conducted_VBN studying_VBG dif_SYM -_: ferent_JJ lexical_JJ and_CC syntactic_JJ features_NNS to_TO recognize_VB sar_SYM -_: casm_NN in_IN text_NN -LRB-_-LRB- Nigam_NNP and_CC Hurst_NNP ,_, 2006_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2008_CD ;_: Davidov_NNP et_FW al._FW ,_, 2010b_CD ;_: Rajadesingan_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Kreuz_NNP and_CC Caucci_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- experimented_VBN on_IN lexical_JJ features_NNS which_WDT includes_VBZ punctuation_NN symbols_NNS -LRB-_-LRB- e.g._FW ,_, ``_`` !_. ''_'' -RRB-_-RRB-
+,_, intensifiers_NNS and_CC interjections_NNS -LRB-_-LRB- e.g._FW ,_, ``_`` ahh_FW ''_'' or_CC ``_`` gosh_NN ''_'' -RRB-_-RRB- in_IN detection_NN of_IN sarcasm_NN ._.
+Lukin_NNP and_CC Walker_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- test_NN a_DT new_JJ bootstrap_NN -_: ping_NN method_NN to_TO train_VB the_DT sarcasm_NN and_CC nastiness_NN clas_NNS -_: sifiers_NNS in_IN dialogue_NN system_NN to_TO learn_VB lexical_JJ N-gram_JJ cues_NNS associated_VBN with_IN sarcasm_NN -LRB-_-LRB- e.g._FW ,_, ``_`` thanks_NNS ''_'' ,_, ``_`` oh_UH yeah_FW ''_'' ,_, ``_`` then_RB of_IN course_NN ''_'' ,_, ``_`` I_PRP '_'' am_VBP not_RB sure_JJ ''_'' ,_, etc._FW -RRB-_-RRB- and_CC lexico-syntactic_JJ patterns_NNS ._.
+Reyes_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- trained_VBN the_DT classifier_NN based_VBN on_IN tweets_NNS with_IN a_DT specific_JJ hashtag_NN and_CC also_RB tried_VBD distinguishing_VBG it_PRP from_IN tweets_NNS that_WDT con_VBP -_: tain_NN hashtag_NN other_JJ than_IN `_`` #irony_NN '_'' like_IN `_`` #education_NN '_'' ,_, `_`` #politics_NNS '_POS etc._FW ._.
+Carvalho_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- explored_VBN var_SYM -_: ious_JJ oral_JJ or_CC gestural_JJ clues_NNS in_IN user_NN comments_NNS repre_SYM -_: sented_VBN by_IN punctuation_NN symbols_NNS -LRB-_-LRB- such_JJ as_IN emoticons_NNS -RRB-_-RRB- and_CC other_JJ keyboard_NN characters_NNS and_CC found_VBD them_PRP to_TO be_VB more_RBR predictive_JJ of_IN sarcasm_NN in_IN sentences_NNS ._.
+Davidov_NNP et_FW al._FW -LRB-_-LRB- 2010b_JJ -RRB-_-RRB- presented_VBD a_DT semi-supervised_JJ learning_NN framework_NN that_WDT uses_VBZ syntactic_NN and_CC pattern_NN based_VBN fea_SYM -_: tures_NNS in_IN sarcastic_JJ sentences_NNS on_IN Amazon_NNP product_NN re_SYM -_: views_NNS data-set_NN ._.
+They_PRP used_VBD predefined_VBN list_NN of_IN posi_NNS -_: tive_JJ sentiment_NN words_NNS which_WDT captures_VBZ words_NNS typically_RB found_VBN in_IN reviews_NNS ,_, for_IN example_NN `_`` great_JJ '_'' ,_, `_`` excellent_JJ '_'' ,_, `_`` exciting_JJ '_'' etc._FW ._.
+Filatova_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- presented_VBD a_DT detailed_JJ work_NN on_IN creation_NN and_CC analysis_NN of_IN annotated_JJ sarcasm_NN corpus_NN using_VBG Amazon_NNP product_NN reviews_NNS ._.
+Riloff_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBN contrast_NN between_IN a_DT positive_JJ sentiment_NN referring_VBG to_TO a_DT negative_JJ situation_NN to_TO identify_VB sarcasm_NN in_IN tweets_NNS ._.
+Tepperman_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- worked_VBD on_IN sarcasm_NN de_IN -_: tection_NN in_IN utterances_NNS using_VBG prosodic_JJ and_CC spectral_JJ featres_NNS -LRB-_-LRB- e.g._FW average_JJ pitch_NN ,_, pitch_NN slope_NN etc._FW -RRB-_-RRB- as_RB well_RB as_IN contextual_NN features_NNS ,_, e.g._FW laughter_NN or_CC re_SYM -_: sponse_NN to_TO questions_NNS as_IN features_NNS ._.
+Cheang_NNP and_CC Pell_NNP -LRB-_-LRB- 2008_CD ;_: Cheang_NNP and_CC Pell_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- performed_VBN studies_NNS to_TO identify_VB acoustic_JJ features_NNS in_IN sarcastic_JJ utterances_NNS by_IN analyzing_VBG various_JJ speech_NN features_NNS such_JJ as_IN speech_NN rate_NN ,_, mean_VB amplitude_NN ,_, amplitude_NN range_NN etc._FW ._.
+Research_NNP has_VBZ been_VBN conducted_VBN to_TO identify_VB and_CC use_VB facial_JJ and_CC vo_SYM -_: cal_JJ cues_NNS in_IN speech_NN ,_, e.g._FW -LRB-_-LRB- Caucci_NNP and_CC Kreuz_NNP ,_, 2012_CD ;_: Rankin_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Gonza_NNP ́lez_SYM -_: Iba_SYM ́nez_FW et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN lexical_JJ and_CC pragmatic_JJ features_NNS for_IN sarcasm_NN detection_NN in_IN tweets_NNS collected_VBN using_VBG sarcasm_NN hashtags_NNS as_IN gold_NN labels_NNS ._.
+They_PRP extracted_VBD positive_JJ and_CC negative_JJ emotions_NNS from_IN tweets_NNS and_CC studied_VBD their_PRP$ correlation_NN with_IN sarcasm_NN ._.
+Liebrecht_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBN n-gram_NN features_NNS from_IN 1_CD to_TO 3-grams_CD to_TO build_VB a_DT classifier_NN to_TO detect_VB sarcasm_NN in_IN Dutch_JJ tweets_NNS ._.
+They_PRP also_RB made_VBD an_DT interesting_JJ ob_NN -_: servation_NN from_IN their_PRP$ most_RBS effective_JJ n-gram_NN features_NNS that_IN people_NNS tend_VBP to_TO be_VB more_RBR sarcastic_JJ towards_IN par_NN -_: ticular_JJ topics_NNS such_JJ as_IN homework_NN ,_, weather_NN ,_, returning_VBG from_IN vacation_NN ,_, school_NN ,_, public_JJ transport_NN ,_, the_DT church_NN ,_, the_DT dentist_NN etc._FW ._.
+Liebrecht_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBN Winnow_NNP classifica_NN -_: tion_NN method_NN ._.
+Gonza_NNP ́lez_SYM -_: Iba_SYM ́nez_FW et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN two_CD standard_JJ classifiers_NNS which_WDT are_VBP often_RB used_VBN in_IN senti_NNS -_: ment_NN classification_NN :_: Support_NN Vector_NNP Machines_NNS with_IN Sequential_NNP Minimal_NNP Optimization_NNP -LRB-_-LRB- SMO_NNP -RRB-_-RRB- and_CC Lo_NNP -_: gistic_JJ Regression_NN -LRB-_-LRB- LogR_NNP -RRB-_-RRB- ._.
+Riloff_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- used_VBD the_DT LIBSVM_NNP -LRB-_-LRB- Chang_NNP and_CC Lin_NNP ,_, 2011_CD -RRB-_-RRB- library_NN to_TO train_VB Support_NN Vector_NNP Machine_NNP classifiers_NNS ._.
+Davidov_NNP et_FW al._FW -LRB-_-LRB- 2010b_JJ -RRB-_-RRB- used_VBN k-nearest_JJ neighbors_NNS -LRB-_-LRB- kNN_NNP -RRB-_-RRB- -_: like_IN strat_NN -_: egy_NN for_IN training_VBG the_DT classifier_NN ._.
+Rajadesingan_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- used_VBN various_JJ baseline_NN approches_NNS including_VBG contrast_NN ,_, hybrid_JJ approaches_NNS and_CC random_JJ ,_, majority_NN and_CC n-gram_JJ classifier_NN ._.
+Buschmeier_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- com_NN -_: pared_VBD results_NNS of_IN various_JJ classifiers_NNS ,_, including_VBG Linear_NNP SVM_NNP ,_, Logistic_NNP Regression_NNP ,_, Decision_NNP Tree_NNP ,_, Random_NNP Forest_NNP and_CC Naive_NNP Bayes_NNP ._.
+2_CD Methodolgoy_NNP Development_NNP of_IN the_DT sarcasm_NN classification_NN frame_NN -_: work_NN described_VBN in_IN this_DT paper_NN can_MD be_VB subdivided_VBN into_IN three_CD different_JJ sub-tasks_NNS ._.
+The_DT first_JJ step_NN is_VBZ corpus_JJ cre_NN -_: ation_NN and_CC the_DT second_JJ step_NN is_VBZ identification_NN and_CC extrac_NN -_: tion_NN of_IN essential_JJ features_NNS from_IN the_DT data-set_NN ._.
+The_DT last_JJ step_NN is_VBZ to_TO feed_VB the_DT extracted_VBN features_NNS to_TO various_JJ min_SYM -_: ing_NN or_CC machine_NN learning_NN algorithms_NNS ,_, which_WDT involves_VBZ learning_NN and_CC choosing_VBG the_DT appropriate_JJ algorithm_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- that_WDT help_VBP to_TO mine_VB efficiently_RB the_DT datasets_NNS with_IN sub_NN -_: stantial_JJ accuracy_NN ._.
+2.1_CD Corpus_NNP Creation_NNP We_PRP thank_VBP Mathieu_NNP Cliche_NNP for_IN providing_VBG us_PRP the_DT dataset2_CD neccessary_JJ for_IN development_NN of_IN our_PRP$ sarcasm_NN detection_NN framework_NN ._.
+We_PRP also_RB collected_VBD data_NNS us_PRP -_: ing_VBG the_DT Twitter_NNP API_NNP ._.
+We_PRP also_RB thank_VBP Rajadesingan_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- and_CC Davide3_NNP for_IN providing_VBG us_PRP the_DT data_NNS containing_VBG tweet_NN ids_NNS which_WDT consist_VBP of_IN ``_`` #sarcasm_NN ''_'' hashtag_NN ._.
+Tweets_NNS extracted_VBD online_JJ do_VBP contain_VB URLs_NNS and_CC username_NN ._.
+We_PRP have_VBP total_NN of_IN 83,495_CD tweets_NNS con_JJ -_: taining_VBG sarcasm_NN hashtag_NN and_CC 330692_CD regular_JJ tweets_NNS ,_, which_WDT were_VBD reduced_VBN to_TO 25278_CD and_CC 117842_CD tweets_NNS re_SYM -_: spectively_RB after_IN normalization_NN ._.
+We_PRP carried_VBD out_RP the_DT normalization_NN process_NN in_IN order_NN to_TO eliminate_VB tweets_NNS which_WDT tend_VBP to_TO provide_VB very_RB little_JJ information_NN ,_, e.g._FW tweets_NNS with_IN length_NN less_JJR than_IN three_CD words_NNS ._.
+We_PRP briefly_RB describe_VBP the_DT normalization_NN process_NN as_IN follows_VBZ :_: 1_LS ._.
+Removing_VBG all_PDT the_DT hashtags_NNS including_VBG ``_`` #sar_SYM -_: casm_NN ''_'' 2_CD ._.
+Removing_VBG friends_NNS tag_NN -LRB-_-LRB- @username_JJ -RRB-_-RRB- which_WDT is_VBZ used_VBN to_TO respond_VB to_TO a_DT tweet_NN posted_VBN by_IN some_DT other_JJ 2_CD https://github.com/MathieuCliche/Sarcasm__NNP detector/blob/master_NN /_CD app/twitDB_NNP __SYM regular.csv_SYM 3Natural_NNP Language_NNP Engineering_NNP -LRB-_-LRB- NLE_NNP -RRB-_-RRB- Lab_NNP ,_, Technical_NNP Uni_NNP -_: versity_NN of_IN Valencia_NNP ,_, Spain_NNP user_NN ._.
+3_LS ._.
+Removingallthekeywordscontainingprefixas_NNP ``_`` sarcas_FW ''_'' ._.
+which_WDT in_IN particular_JJ removes_VBZ the_DT key_NN -_: words_NNS ``_`` sarcasm_NN ''_'' and_CC ``_`` sarcastic_JJ ''_'' ._.
+4_LS ._.
+Removing_VBG URLs_NNS ,_, e.g._FW http://abc.com_FW which_WDT do_VBP not_RB provide_VB any_DT relevant_JJ information_NN in_IN the_DT development_NN of_IN our_PRP$ sarcasm_NN detection_NN framework_NN ._.
+2.2_CD Features_NNPS First_NNP ,_, we_PRP randomly_RB mixed_JJ all4_IN the_DT sarcastic_JJ tweets_NNS and_CC extracted_VBD the_DT features_NNS ,_, and_CC then_RB in_IN the_DT first_JJ exper_NN -_: iment_NN ,_, randomly_RB mixed_JJ all5_IN the_DT regular_JJ tweets_NNS after_IN feature_NN extraction_NN with_IN sarcastic_JJ tweet_NN ._.
+In_IN the_DT sec_NN -_: ond_NN experiment_NN ,_, we_PRP randomly_RB selected_VBD 59858_CD reg_NN -_: ular_JJ tweets_NNS and_CC extracted_VBN features_NNS ._.
+After_IN extracting_VBG features_NNS form_VBP the_DT tweets_NNS ,_, we_PRP randomly_RB split_VBD our_PRP$ data_NNS -_: set_VBN into_IN two_CD parts_NNS ._.
+We_PRP used_VBD 70_CD percent_NN of_IN the_DT data-set_NN for_IN the_DT training_NN and_CC used_VBD the_DT remaining_VBG 30_CD percent_NN for_IN the_DT testing_NN ._.
+The_DT features_NNS we_PRP extracted_VBD are_VBP listed_VBN below_IN :_: 1_LS ._.
+N-gram_NN :_: Each_DT word_NN or_CC n-gram_JJ occurring_VBG in_IN the_DT tweet_NN can_MD be_VB used_VBN as_IN a_DT binary_JJ feature_NN ._.
+We_PRP have_VBP used_VBN both_DT unigrams_NNS and_CC bigrams_NNS as_IN fea_NN -_: ture_NN ._.
+For_IN this_DT ,_, the_DT tweets_NNS were_VBD tokenized_VBN and_CC passed_VBN through_IN a_DT stemmer_NN ._.
+In_IN one_CD of_IN the_DT ex_FW -_: perimental_JJ setups_NNS ,_, we_PRP removed_VBD the_DT stopwords_NNS and_CC then_RB used_VBD the_DT n-grams_JJ feature_NN and_CC in_IN an_DT -_: other_JJ we_PRP extracted_VBD n-grams_NNS without_IN removing_VBG stopwords_NNS ._.
+2_LS ._.
+Hyperbole_NNP :_: This_DT feature_NN indicates_VBZ occurrence_NN of_IN three_CD positive_JJ or_CC negative_JJ words_NNS as_IN in_IN -LRB-_-LRB- Gibbs_NNP and_CC Colston_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+We_PRP have_VBP limited_VBN this_DT to_TO occurrence_NN of_IN two_CD positive_JJ or_CC negative_JJ words_NNS ._.
+In_IN the_DT first_JJ step_NN we_PRP removed_VBD all_PDT the_DT stopwords_NNS using_VBG the_DT NLTK_NNP list_NN ,_, which_WDT contains_VBZ 127_CD stop_NN -_: words_NNS ._.
+Then_RB we_PRP check_VBP for_IN occurrence_NN of_IN two_CD positive_JJ sentiment_NN or_CC two_CD negative_JJ sentiment_NN words_NNS -LRB-_-LRB- occurring_VBG together_RB -RRB-_-RRB- and_CC accordingly_RB we_PRP marked_VBD hyperbole_NN feature_NN as_IN 1_CD or_CC 0_CD ._.
+3_LS ._.
+Readability_NN -LRB-_-LRB- Rajadesingan_JJ et_FW al._FW ,_, 2015_CD -RRB-_-RRB- :_: A_DT syl_NN -_: lable_NN is_VBZ a_DT unit_NN of_IN organization_NN for_IN a_DT sequence_NN of_IN 425278_CD sarcastic_JJ tweets_NNS 5117842_CD regular_JJ tweets_NNS speech_NN sounds_VBZ ._.
+A_DT syllable_JJ in_IN general_JJ is_VBZ made_VBN up_IN of_IN a_DT nucleus_NN -LRB-_-LRB- often_RB a_DT vowel_NN -RRB-_-RRB- with_IN optional_JJ ini_SYM -_: tial_JJ and_CC final_JJ margins_NNS -LRB-_-LRB- generally_RB consonants_NNS -RRB-_-RRB- ._.
+For_IN example_NN ,_, water_NN is_VBZ composed_VBN of_IN two_CD syl_SYM -_: lables_VBZ -LRB-_-LRB- wa_FW +_FW ter_FW -RRB-_-RRB- ._.
+Words_NNS can_MD be_VB made_VBN up_IN of_IN one_CD or_CC more_JJR syllables_NNS ._.
+The_DT number_NN of_IN sylla_NN -_: bles_NNS in_IN a_DT word_NN is_VBZ a_DT measure_NN of_IN its_PRP$ `_`` complexity_NN '_'' or_CC `_`` difficulty_NN '_'' ._.
+As_IN sarcasm_NN is_VBZ widely_RB acknowl_SYM -_: edged_VBD to_TO be_VB hard_JJ to_TO read_VB and_CC understand_VB ,_, we_PRP adapt_VBP standardized_JJ readability_NN tests_NNS to_TO measure_VB the_DT degree_NN of_IN complexity_NN and_CC understandabil_NN -_: ity_NN of_IN a_DT tweet_NN ._.
+We_PRP use_VBP as_IN features_NNS :_: number_NN of_IN words_NNS ,_, number_NN of_IN syllables_NNS ,_, number_NN of_IN sylla_NN -_: bles_NNS per_IN word_NN in_IN the_DT tweet_NN and_CC also_RB readability_NN index_NN derived_VBN from_IN the_DT ``_`` Flesch-Kincaid_NNP Grade_NNP Level_NNP ''_'' formula_NN -LRB-_-LRB- Flesch_NNP ,_, 1948_CD -RRB-_-RRB- -LRB-_-LRB- 4_CD features_NNS -RRB-_-RRB- ._.
+The_DT formula_NN is_VBZ given_VBN as_IN :_: value_NN is_VBZ set_VBN to_TO true_JJ indicating_VBG the_DT presence_NN of_IN the_DT pattern_NN ._.
+8_CD ._.
+Contrasting_VBG Sentiment_NN :_: SentiStrength6_NNP esti_SYM -_: mates_NNS the_DT strength_NN of_IN negative_JJ and_CC positive_JJ sen_NN -_: timent_NN in_IN texts_NNS -LRB-_-LRB- short_JJ length_NN -RRB-_-RRB- ,_, even_RB if_IN the_DT text_NN is_VBZ written_VBN in_IN informal_JJ language_NN ._.
+This_DT feature_NN is_VBZ formed_VBN using_VBG positive_JJ and_CC negative_JJ sentiment_NN extracted_VBN from_IN a_DT sentence_NN using_VBG SentiStrength_NNP ._.
+2.3_CD Classifiers_NNP After_IN preprocessing_VBG and_CC extraction_NN of_IN features_NNS as_IN de_FW -_: scribed_VBN above_IN ,_, we_PRP selected_VBD four_CD algorithms_NNS to_TO train_VB and_CC build_VB our_PRP$ framework_NN ._.
+The_DT classifiers_NNS we_PRP used_VBD are_VBP listed_VBN below_IN :_: 1_LS ._.
+Naive_JJ Bayes_NNP 2_CD ._.
+Support_NN Vector_NNP Machine_NNP 3_CD ._.
+Logistic_NNP Regression_NNP 4_CD ._.
+Deep_JJ Belief_NN Network_NNP 3_CD Results_NNS 3.1_CD Experimental_JJ Setup_NNP We_PRP experimented_VBD on_IN training_VBG the_DT classifier_NN using_VBG five_CD different_JJ features_NNS sets_NNS and_CC 12_CD composite7_JJ features_NNS sets_NNS ,_, counting_VBG to_TO a_DT total_JJ 17_CD sets_NNS of_IN features_NNS ._.
+For_IN Naive_NNP Bayes_NNP -LRB-_-LRB- NB_NNP -RRB-_-RRB- ,_, Logistic_NNP Regression_NNP -LRB-_-LRB- LogR_NNP -RRB-_-RRB- and_CC Sup_NNP -_: port_JJ Vector_NNP Machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ,_, we_PRP used_VBD the_DT sklearn_NN li_SYM -_: brary_JJ ,_, and_CC for_IN Deep_NNP Belief_NNP Networks_NNP -LRB-_-LRB- DBN_NNP -RRB-_-RRB- we_PRP used_VBD the_DT nolearn_JJ library_NN ._.
+Both_DT these_DT library_NN are_VBP freely_RB available_JJ for_IN Python_NNP ._.
+3.2_CD Evaluation_NN and_CC Analysis_NN We_PRP report_VBP below_IN the_DT results_NNS obtained_VBN from_IN three_CD dif_NN -_: ferent_JJ experimental_JJ setups_NNS ._.
+3.2.1_CD First_JJ Experiment_NNP Results_NNS for_IN the_DT first_JJ experiment_NN in_IN which_WDT the_DT num_NN -_: ber_NN of_IN regular_JJ tweets_NNS were_VBD 117842_CD is_VBZ listed_VBN in_IN Table_NNP 2_CD ._.
+In_IN the_DT first_JJ experiment_NN using_VBG the_DT NB_NNP classifier_NN ,_, we_PRP obtained_VBD highest_JJS accuracy_NN of_IN 0.822_CD using_VBG only_RB a_DT single_JJ feature_NN ,_, i.e._FW ,_, Hyperbole_NNP ,_, but_CC the_DT F-score_NN so_RB obtained_VBD was_VBD 0_CD ._.
+On_IN an_DT average_NN ,_, the_DT accuracy_NN lies_VBZ be_VB -_: tween_NN 0.73_CD to_TO 0.82_CD using_VBG any_DT feature_NN set_VBN trained_VBN over_IN the_DT NB_NNP classifier_NN ._.
+6_CD http://sentistrength.wlv.ac.uk_NN 7Using_VBG more_JJR than_IN one_CD feature_NN together_RB 0.39_CD +11.8_CD −_NN 15.59_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- total_JJ words_NNS total_JJ sentences_NNS total_VBP syllables_NNS total_JJ words_NNS 4_LS ._.
+Interjection_NNP -LRB-_-LRB- Buschmeier_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- :_: The_DT in_IN -_: terjection_NN feature_NN indicates_VBZ the_DT occurrence_NN of_IN terms_NNS like_IN ``_`` argh_JJ ''_'' ,_, ``_`` hurrahooops_NNS ''_'' and_CC ``_`` huh_FW ''_'' ,_, along_IN with_IN acronyms_NNS terms_NNS like_IN ``_`` lol_NN ''_'' ._.
+We_PRP com_NN -_: piled_VBD a_DT list_NN of_IN 124_CD interjections_NNS ._.
+5_CD ._.
+Punctuation_NN -LRB-_-LRB- Davidov_NNP et_FW al._FW ,_, 2010a_JJ -RRB-_-RRB- :_: It_PRP in_IN -_: cludes_NNS the_DT following_JJ generic_JJ features_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Num_SYM -_: ber_NN of_IN ``_`` !_. ''_''
+characters_NNS in_IN the_DT sentence_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Num_SYM -_: ber_NN of_IN ``_`` ?_. ''_''
+in_IN the_DT sentence_NN ._.
+6_CD ._.
+POS_NNP n-gram_NN :_: It_PRP is_VBZ a_DT binary_JJ feature_NN similar_JJ to_TO n-gram_JJ feature_NN after_IN removing_VBG stopwords_NNS and_CC stemming_VBG ,_, with_IN an_DT exception_NN that_WDT word_NN in_IN the_DT sentence_NN is_VBZ combined_VBN with_IN its_PRP$ POS_NNP tag_NN using_VBG `_`` '_'' ._.
+For_IN example_NN :_: ``_`` Oh_UH how_WRB I_PRP love_VBP being_VBG ignored_VBN ._. ''_''
+love_NN NN_NNP :_: 1_CD ,_, ignor_NN NN_NNP :_: 1_CD ,_, oh_UH UH_NNP :_: 1_CD 7_CD ._.
+POS_NNP tag_NN pattern_NN :_: For_IN this_DT feature_NN ,_, we_PRP re_VBP -_: moved_VBD stopwords_NNS from_IN the_DT tweets_NNS and_CC then_RB used_VBD TextBlob_NNP library_NN for_IN POS_NNP tagging_VBG the_DT sen_NN -_: tence_NN and_CC counted_VBD the_DT frequency_NN of_IN each_DT pat_NN -_: tern_NN extracted_VBN ._.
+At_IN the_DT end_NN of_IN processing_VBG all_PDT the_DT tweets_NNS ,_, we_PRP selected_VBD all_PDT the_DT patterns_NNS which_WDT have_VBP frequency_NN greater_JJR than_IN 30_CD and_CC do_VB not_RB oc_SYM -_: cur_NN in_IN non-sarcastic_JJ tweets_NNS ._.
+These_DT patterns_NNS are_VBP searched_VBN in_IN a_DT tweet_NN and_CC if_IN present_JJ ,_, the_DT binary_JJ Feature_NNP Set_NNP Code_NNP Feature_NNP Set_NNP NG_NNP N-gram_NNP PNG_NNP POS_NNP n-gram_JJ RD_NNP Readability_NNP PTP_NNP POS_NNP tag_NN pattern_NN HB_NNP Hyperbole_NNP NG-RD_NNP N-gram_NNP +_NNP Readability_NNP NG-PNG_NNP N-gram_NNP +_NNP POS-Ngram_NNP NGS-RD_NNP N-gram_NNP -LRB-_-LRB- with_IN stopwords_NNS -RRB-_-RRB- +_VBP Readability_NN NG-PNG-HB_NN N-gram_NNP +_NNP POS_NNP n-gram_JJ +_NN Hyperbole_NNP NG-PNG-RD_NNP N-gram_NNP +_NNP POS_NNP n-gram_JJ +_NN Readability_NN NG-RD-CS_NNP N-gram_NNP +_NNP Readability_NNP +_NNP Contrasting_NNP Sentiment_NN NG-HB_NNP N-gram_NNP +_NNP Hyperbole_NNP NG-RD-IJ_NNP N-gram_NNP +_NNP Readability_NNP +_NNP Interjection_NNP NG-RD-PT_NNP N-gram_NNP +_NNP Readability_NNP +_NNP Punctuation_NNP NG-RD-IJ-PT_NNP N-gram_NNP +_NNP Readability_NNP +_NNP Interjection_NNP +_NNP Punctuation_NNP NG-PTP-RD-IJ-PT_NNP N-gram_NNP +_NNP POS_NNP tag_NN pattern_NN +_NN Readability_NN +_NN Interjection_NNP +_NNP Punctuation_NNP NG-PTP-RD-IJ-PT-CS_NNP N-gram_NNP +_NNP POS_NNP tag_NN pattern_NN +_NN Readability_NN +_NN Interjection_NNP +_NNP Punctuation_NNP +_VBP Contrasting_VBG Sentiment_NN Table_NNP 1_CD :_: Feature_NNP Set_NNP Codes_NNP Features_VBZ Naive_NNP Bayes_NNP SVM_NNP Logistic_NNP Regression_NNP Deep_NNP belief_NN Network_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP NG_NNP 0.737_CD 0.529_CD 0.873_CD 0.5706_CD 0.873_CD 0.567_CD 0.8638_CD 0.85_CD PNG_NNP 0.82_CD 0.011_CD 0.82_CD 0_CD 0.823_CD 0_CD 0.8435_CD 0.84_CD RD_NNP 0.822_CD 0.014_CD 0.823_CD 0_CD 0.823_CD 0_CD 0.813_CD 0.74_CD PTP_NNP 0.821_CD 0.012_CD 0.226_CD 0.287_CD 0.824_CD 0_CD 0.81877_CD 0.74_CD HB_NNP 0.8217_CD 0_CD 0.825_CD 0_CD 0.825_CD 0_CD 0.823_CD 0.74_CD NG-RD_NNP 0.742_CD 0.535_CD 0.874_CD 0.59_CD 0.875_CD 0.57_CD 0.8125_CD 0.74_CD NG-PNG_NNP 0.734_CD 0.527_CD 0.874_CD 0.577_CD 0.873_CD 0.567_CD 0.866_CD 0.86_CD NGS-RD_NNP 0.739_CD 0.533_CD 0.874_CD 0.55_CD 0.875_CD 0.567_CD 0.812_CD 0.74_CD NG-PNG-HB_NN 0.731_CD 0.528_CD 0.876_CD 0.579_CD 0.875_CD 0.571_CD 0.867_CD 0.86_CD NG-PNG-RD_NNP 0.734_CD 0.529_CD 0.876_CD 0.571_CD 0.876_CD 0.577_CD 0.824_CD 0.74_CD NG-RD-CS_NNP 0.749_CD 0.545_CD 0.877_CD 0.566_CD 0.874_CD 0.568_CD 0.808_CD 0.74_CD NG-HB_NN 0.739_CD 0.534_CD 0.876_CD 0.574_CD 0.875_CD 0.568_CD 0.871_CD 0.86_CD NG-RD-IJ_NNP 0.747_CD 0.539_CD 0.87_CD 0.598_CD 0.875_CD 0.567_CD 0.8244_CD 0.75_CD NG-RD-PT_NNP 0.743_CD 0.538_CD 0.877_CD 0.575_CD 0.877_CD 0.571_CD 0.8225_CD 0.74_CD NG-RD-IJ-PT_NNP 0.746_CD 0.539_CD 0.875_CD 0.571_CD 0.875_CD 0.568_CD 0.824_CD 0.75_CD NG-PTP-RD-IJ-PT_NNP 0.747_CD 0.536_CD 0.876_CD 0.611_CD 0.877_CD 0.575_CD 0.813_CD 0.74_CD NG-PTP-RD-IJ-PT-CS_NNP 0.749_CD 0.539_CD 0.874_CD 0.526_CD 0.875_CD 0.563_CD 0.824_CD 0.74_CD Table_NNP 2_CD :_: Comparison_NN of_IN different_JJ classification_NN methods_NNS using_VBG different_JJ feature_NN sets_NNS when_WRB number_NN of_IN sarcastic_JJ tweets_NNS is_VBZ 25,278_CD and_CC regular_JJ tweets_NNS is_VBZ 117842_CD ._.
+The_DT results_NNS are_VBP much_RB better_RBR with_IN LSVM_NNP classi_NNS -_: fier_NN as_IN compared_VBN to_TO the_DT NB_NNP classifier_NN ._.
+Highest_JJS ac_SYM -_: curacy_NN reported_VBD was_VBD 0.877_CD using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, Readability_NNP ,_, Punctuation_NNP -RSB-_NNP and_CC F-score_NNP obtained_VBD was_VBD 0.575_CD ._.
+Using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, POS_NNP pattern_NN ,_, Read_NNP -_: ability_NN ,_, Interjection_NNP ,_, Punctuation_NNP -RSB-_NNP ,_, we_PRP obtained_VBD an_DT F_NN -_: score_NN of_IN 0.611_CD and_CC accuracy_NN of_IN 0.876_CD ._.
+LogR_JJ results_NNS were_VBD comparable_JJ to_TO LSVM_NNP ._.
+We_PRP ob_SYM -_: tained_VBN highest_JJS accuracy_NN of_IN 0.877_CD and_CC F-score_NN of_IN 0.575_CD using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, POS_NNP pattern_NN ,_, Read_NNP -_: ability_NN ,_, Interjection_NNP ,_, Punctuation_NNP -RSB-_NNP ,_, whereas_IN using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, POS-N-gram_NNP ,_, Readability_NNP -RSB-_NNP we_PRP obtained_VBD accuracy_NN as_IN 0.876_CD and_CC F-score_NN as_IN 0.577_CD ._.
+The_DT last_JJ classifier_NN that_IN we_PRP tried_VBD was_VBD DBN_NNP ,_, which_WDT performed_VBD better_JJR than_IN NB_NNP ._.
+Highest_JJS accuracy_NN ob_SYM -_: tained_VBN was_VBD 0.871_CD using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, Hyper_NNP -_: bole_SYM -RSB-_NNP and_CC F-score_NNP so_RB obtained_VBD was_VBD 0.86_CD ._.
+On_IN average_NN ,_, the_DT accuracy_NN lies_VBZ between_IN 0.81_CD to_TO 0.87_CD using_VBG any_DT fea_NN -_: ture_NN set_VBN trained_VBN over_IN DBN_NNP classifier_NN ._.
+3.2.2_CD Second_JJ Experiment_NN In_IN the_DT second_JJ experimental_JJ setup_NN ,_, we_PRP randomly_RB selected_VBD 59858_CD regular_JJ -LRB-_-LRB- non-sarcastic_JJ -RRB-_-RRB- tweets_NNS ._.
+Re_NNP -_: sults_NNS for_IN the_DT second_JJ experiment_NN are_VBP listed_VBN in_IN Table_NNP 3_CD ._.
+In_IN the_DT first_JJ experiment_NN in_IN this_DT setup_NN ,_, using_VBG the_DT NB_NNP classifier_NN ,_, we_PRP obtained_VBD highest_JJS accuracy_NN of_IN 0.774_CD using_VBG a_DT single_JJ feature_NN ,_, i.e._FW ,_, POS_NNP n-gram_NN ,_, but_CC the_DT F_NN -_: score_NN so_RB obtained_VBD was_VBD 0.635_CD ._.
+On_IN an_DT average_NN ,_, accu_SYM -_: Features_VBZ Naive_NNP Bayes_NNP SVM_NNP Logistic_NNP Regression_NNP Deep_NNP belief_NN Network_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP Accuracy_NNP F-score_NNP NG_NNP 0.754_CD 0.67_CD 0.817_CD 0.658_CD 0.817_CD 0.656_CD 0.811_CD 0.81_CD PNG_NNP 0.774_CD 0.635_CD 0.795_CD 0.591_CD 0.795_CD 0.599_CD 0.784_CD 0.78_CD RD_NNP 0.681_CD 0.236_CD 0.3_CD 0.46_CD 0.702_CD 0_CD 0.705_CD 0.58_CD PTP_NNP 0.705_CD 0_CD 0.708_CD 0_CD 0.708_CD 0_CD 0.704_CD 0.58_CD HB_NNP 0.705_CD 0_CD 0.71_CD 0_CD 0.712_CD 0_CD 0.699_CD 0.57_CD NG-RD_NNP 0.762_CD 0.677_CD 0.823_CD 0.668_CD 0.822_CD 0.664_CD 0.701_CD 0.58_CD NG-PNG_NNP 0.754_CD 0.669_CD 0.824_CD 0.672_CD 0.825_CD 0.671_CD 0.812_CD 0.81_CD NGS-RD_NNP 0.756_CD 0.674_CD 0.825_CD 0.67_CD 0.823_CD 0.661_CD 0.705_CD 0.58_CD NG-PNG-HB_NN 0.752_CD 0.666_CD 0.819_CD 0.668_CD 0.82_CD 0.665_CD 0.808_CD 0.81_CD NG-PNG-RD_NNP 0.757_CD 0.673_CD 0.824_CD 0.668_CD 0.824_CD 0.672_CD 0.809_CD 0.81_CD NG-RD-CS_NNP 0.753_CD 0.669_CD 0.824_CD 0.657_CD 0.825_CD 0.668_CD 0.7_CD 0.58_CD NG-HB_NN 0.752_CD 0.667_CD 0.821_CD 0.665_CD 0.822_CD 0.665_CD 0.809_CD 0.8_CD NG-RD-IJ_NNP 0.763_CD 0.678_CD 0.825_CD 0.668_CD 0.822_CD 0.666_CD 0.703_CD 0.58_CD NG-RD-PT_NNP 0.76_CD 0.67_CD 0.822_CD 0.667_CD 0.823_CD 0.669_CD 0.706_CD 0.58_CD NG-RD-IJ-PT_NNP 0.755_CD 0.674_CD 0.822_CD 0.66_CD 0.82_CD 0.66_CD 0.706_CD 0.58_CD NG-PTP-RD-IJ-PT_NNP 0.756_CD 0.671_CD 0.789_CD 0.679_CD 0.82_CD 0.669_CD 0.699_CD 0.58_CD NG-PTP-RD-IJ-PT-CS_NNP 0.763_CD 0.675_CD 0.822_CD 0.671_CD 0.822_CD 0.666_CD 0.705_CD 0.58_CD Table_NNP 3_CD :_: Comparison_NN of_IN different_JJ classification_NN methods_NNS using_VBG different_JJ feature_NN sets_NNS when_WRB number_NN of_IN sarcastic_JJ tweets_NNS is_VBZ 25,278_CD and_CC regular_JJ tweets_NNS is_VBZ 59,858_CD ._.
+racy_JJ lies_NNS between_IN 0.70_CD to_TO 0.78_CD using_VBG any_DT feature_NN set_VBN trained_VBN over_IN the_DT NB_NNP classifier_NN ._.
+The_DT result_NN on_IN the_DT LSVM_NNP classifier_NN are_VBP again_RB much_RB better_JJR as_IN compared_VBN to_TO the_DT NB_NNP classifier_NN ._.
+Highest_JJS ac_SYM -_: curacy_NN reported_VBD was_VBD 0.825_CD using_VBG features_NNS -LSB-_NNP N-gram8_NNP ,_, Readability_NNP -RSB-_NNP and_CC F-score_NNP obtained_VBD was_VBD 0.67_CD ._.
+The_DT same_JJ accuracy_NN was_VBD obtained_VBN using_VBG -LSB-_NNP N-gram_NNP ,_, Read_NNP -_: ability_NN and_CC Interjection_NNP -RSB-_NNP as_IN features_NNS ,_, whereas_IN using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, POS-pattern_NNP ,_, Readability_NNP ,_, Inter_NNP -_: jection_NN ,_, Punctuation_NNP -RSB-_NNP ,_, we_PRP obtained_VBD highest_JJS F-score_NN of_IN 0.679_CD and_CC accuracy_NN of_IN 0.789_CD ._.
+LogR_JJ results_NNS were_VBD also_RB again_RB comparable_JJ to_TO LSVM_NNP ._.
+We_PRP obtained_VBD the_DT highest_JJS accuracy_NN of_IN 0.825_CD and_CC F-score_NN of_IN 0.671_CD using_VBG features_NNS -LSB-_NNP N-gram_NNP ,_, POS_NNP n-gram_JJ -RSB-_NN ._.
+The_DT results_NNS on_IN the_DT DBN_NNP classifier_NN were_VBD better_JJR than_IN NB_NNP ._.
+Highest_JJS accuracy_NN obtained_VBD was_VBD 0.812_CD using_VBG fea_SYM -_: tures_NNS -LSB-_NNP N-gram_NNP ,_, Hyperbole_NNP -RSB-_NNP and_CC F-score_NNP so_RB obtained_VBD was_VBD 0.81_CD ._.
+On_IN an_DT average_NN ,_, accuracy_NN lies_VBZ between_IN 0.68_CD to_TO 0.82_CD using_VBG any_DT feature_NN set_VBN trained_VBN over_IN DBN_NNP clas_SYM -_: sifier_NN ._.
+3.2.3_CD Third_NNP Experiment_NNP In_IN the_DT third_JJ setup_NN ,_, we_PRP varied_VBD the_DT percentage_NN of_IN reg_NN -_: ular_JJ -LRB-_-LRB- non-sarcastic_JJ -RRB-_-RRB- tweets_NNS in_IN the_DT data-set_NN from_IN 46_CD %_NN to_TO 82_CD %_NN and_CC calculated_JJ accuracy_NN and_CC F-score_NN at_IN ev_SYM -_: ery_NN interval_NN of_IN 2_CD %_NN increase_NN in_IN non-sarcastic_JJ tweets_NNS in_IN the_DT data-set_NN ._.
+For_IN this_DT we_PRP selected_VBD four_CD combina_NNS -_: 8With_JJ stopwords_NNS tions_NNS of_IN features_NNS from_IN the_DT features_NNS sets_NNS and_CC used_VBN two_CD classifiers_NNS ,_, viz_NN ._.
+NB_NNP and_CC LSVM_NNP ._.
+As_IN shown_VBN in_IN Figure_NN 1_CD ,_, we_PRP got_VBD initial_JJ accuracy_NN of_IN 0.745_CD and_CC F-score_NN of_IN 0.773_CD using_VBG NB_NNP ,_, whereas_IN us_PRP -_: ing_VBG LSVM_NNP we_PRP got_VBD accuracy_NN of_IN 0.658_CD and_CC F-score_NN of_IN 0.573_CD when_WRB using_VBG POS_NNP tag_NN pattern_NN ,_, POS_NNP n-gram_NN ,_, Readability_NN and_CC Contrasting_VBG Sentiment_NN as_IN features_NNS ._.
+As_IN we_PRP increased_VBD the_DT percentage_NN of_IN regular_JJ tweets_NNS to_TO 82_CD %_NN in_IN the_DT data-set_NN ,_, F-score_NN dropped_VBD to_TO 0.375_CD and_CC accuracy_NN increased_VBD to_TO 0.826_CD ._.
+But_CC in_IN the_DT case_NN of_IN LSVM_NNP we_PRP see_VBP a_DT zig-zag_VB pattern_NN both_DT in_IN case_NN of_IN F-score_NN and_CC accuracy_NN ._.
+LSVM_NNP attains_VBZ highest_JJS ac_SYM -_: curacy_NN when_WRB percentage_NN of_IN regular_JJ tweets_NNS was_VBD in_IN -_: creased_VBN to_TO 82_CD %_NN ,_, but_CC the_DT lowest_JJS F-score_NN reported_VBD was_VBD 0.305_CD when_WRB percentage_NN of_IN regular_JJ tweets_NNS was_VBD 70_CD %_NN ._.
+For_IN the_DT Figure_NN 2_CD ,_, we_PRP see_VBP that_IN F-score_JJ followed_VBD the_DT same_JJ pattern_NN and_CC decreased_VBD from_IN 0.803_CD to_TO 0.548_CD and_CC 0.691_CD to_TO 0.418_CD in_IN case_NN of_IN NB_NNP and_CC LSVM_NNP ,_, respec_NN -_: tively_RB ,_, when_WRB we_PRP used_VBD a_DT combination_NN of_IN POS_NNP tag_NN pat_NN -_: tern_NN ,_, n-gram_NN ,_, Readability_NN and_CC Contrasting_VBG Sentiment_NN as_IN features_NNS ._.
+As_IN we_PRP increased_VBD the_DT percentage_NN of_IN regu_NN -_: lar_NN tweets_NNS to_TO 82_CD %_NN in_IN the_DT data-set_NN ,_, accuracy_NN dropped_VBD to_TO 0.752_CD when_WRB NB_NNP was_VBD used_VBN and_CC increased_VBN to_TO 0.859_CD in_IN the_DT case_NN of_IN LSVM_NNP ._.
+F-score_NN follows_VBZ the_DT same_JJ see_VBP zig-zag_VB pattern_NN in_IN the_DT case_NN of_IN LSVM_NNP ._.
+Again_RB for_IN the_DT Figure_NN 3_CD ,_, we_PRP see_VBP that_IN F-score_JJ fol_NN -_: lowed_VBD the_DT same_JJ pattern_NN as_IN above_JJ and_CC decreased_VBD from_IN 0.803_CD to_TO 0.538_CD and_CC 0.784_CD to_TO 0.556_CD in_IN case_NN of_IN NB_NNP and_CC LSVM_NNP ,_, respectively_RB when_WRB n-gram_NN and_CC Readability_NN Figure_NN 1_CD :_: Plot_NN of_IN accuracy_NN and_CC f-score_JJ obtained_VBN using_VBG combination_NN of_IN POS_NNP tag_NN pattern_NN ,_, POS_NNP n-gram_NN ,_, Readabil_NNP -_: ity_NN and_CC Contrasting_VBG Sentiment_NN as_IN features_NNS were_VBD used_VBN as_IN features_NNS ._.
+As_IN we_PRP increased_VBD the_DT percent_NN -_: age_NN of_IN regular_JJ tweets_NNS to_TO 82_CD %_NN in_IN the_DT data-set_NN ,_, accu_SYM -_: racy_JJ dropped_VBD to_TO 0.742_CD when_WRB NB_NNP was_VBD used_VBN and_CC in_IN -_: creased_VBN to_TO 0.874_CD in_IN case_NN of_IN LSVM_NNP ._.
+In_IN the_DT case_NN of_IN LSVM_NNP ,_, F-score_NN and_CC accuracy_NN attains_VBZ a_DT local_JJ minima_NN when_WRB percentage_NN lies_VBZ between_IN 65-70_CD %_NN ._.
+In_IN the_DT fourth_JJ combination_NN of_IN feature_NN set_VBN using_VBG Readability_NN ,_, N-gram_NN and_CC Contrasting_VBG Sentiment_NN as_IN features_NNS ,_, we_PRP see_VBP that_IN NB_NNP follows_VBZ same_JJ pattern_NN as_IN above_IN two_CD cases_NNS and_CC the_DT value_NN of_IN accuracy_NN and_CC F_NN -_: score_NN gradually_RB dropped_VBD as_IN percentage_NN of_IN regular_JJ tweets_NNS increased_VBD as_IN shown_VBN in_IN Figure_NN 4_CD ._.
+Highest_JJS F_NN -_: score_NN reported_VBD was_VBD 0.804_CD and_CC 0.795_CD in_IN case_NN of_IN NB_NNP and_CC LSVM_NNP ,_, respectively_RB ,_, when_WRB percentage_NN was_VBD 46_CD %_NN ._.
+In_IN the_DT case_NN of_IN LSVM_NNP ,_, we_PRP again_RB see_VBP several_JJ local_JJ min_NN -_: ima_NN both_DT in_IN the_DT case_NN of_IN F-score_NN and_CC accuracy_NN ._.
+LSVM_NNP Figure_NNP 2_CD :_: Plot_NN of_IN accuracy_NN and_CC f-score_JJ obtained_VBN using_VBG POS_NNP tag_NN pattern_NN ,_, n-gram_NN ,_, Readability_NN and_CC Contrasting_VBG Sentiment_NN in_IN the_DT feature_NN set_VBN attains_NNS highest_JJS accuracy_NN of_IN 0.874_CD and_CC lowest_JJS F-score_NN of_IN 0.569_CD when_WRB percentage_NN of_IN regular_JJ tweets_NNS was_VBD in_IN -_: creased_VBN to_TO 82_CD %_NN ._.
+4_CD Conclusion_NN We_PRP experimented_VBD with_IN the_DT task_NN of_IN sarcasm_NN classifica_NN -_: tion_NN using_VBG various_JJ lexical_JJ and_CC pragmatic_JJ features_NNS us_PRP -_: ing_VBG the_DT Twitter_NNP data_NNS ._.
+We_PRP tested_VBD 17_CD features_NNS using_VBG four_CD different_JJ algorithms_NNS ,_, using_VBG which_WDT we_PRP get_VBP accuracy_NN ranging_VBG from_IN 0.3_CD -LRB-_-LRB- using_VBG Readability_NN feature_NN in_IN the_DT case_NN when_WRB regular_JJ tweets_NNS were_VBD 59,858_CD -RRB-_-RRB- to_TO 0.877_CD ._.
+Lo_SYM -_: gistic_JJ Regression_NN and_CC SVM_NNP gave_VBD nearly_RB the_DT same_JJ re_NN -_: sults_NNS ,_, but_CC using_VBG Deep_JJ belief_NN Networks_NNP ,_, we_PRP got_VBD high_JJ -_: est_SYM F-score_NN of_IN 0.86_CD ._.
+We_PRP selected_VBD four_CD combinations_NNS of_IN features_NNS from_IN the_DT feature_NN set_NN and_CC conclude_VBP that_IN in_IN -_: creasing_VBG the_DT percentage_NN of_IN regular_JJ tweets_NNS increases_NNS Figure_NN 3_CD :_: Plot_NN of_IN accuracy_NN and_CC f-score_JJ obtained_VBN using_VBG n_SYM -_: gram_NN and_CC Readability_NN in_IN the_DT feature_NN set_VBN accuracy_NN but_CC decreases_VBZ F-score_RB in_IN case_NN we_PRP use_VBP SVM_NNP but_CC in_IN the_DT case_NN of_IN NB_NNP ,_, accuracy_NN also_RB decreased_VBD with_IN the_DT F-score_NN for_IN the_DT three_CD combinations_NNS of_IN features_NNS tested_VBN ._.
+In_IN this_DT paper_NN ,_, we_PRP tried_VBD two_CD new_JJ features_NNS -LRB-_-LRB- POS_NNP n-gram_NN and_CC POS_NNP tag_NN pattern_NN -RRB-_-RRB- ,_, which_WDT performed_VBD sat_VBD -_: isfactorily_RB in_IN the_DT case_NN of_IN SVM_NNP and_CC LogR_NNP ,_, but_CC very_RB good_JJ in_IN the_DT case_NN of_IN NB_NNP and_CC DBN_NNP ._.
+We_PRP tried_VBD various_JJ other_JJ feature_NN sets_NNS and_CC reported_VBD the_DT results_NNS on_IN them_PRP for_IN the_DT four_CD classifiers_NNS ._.
+The_DT best_JJS results_NNS were_VBD ob_SYM -_: tained_VBN when_WRB we_PRP used_VBD all_PDT the_DT features_NNS together_RB ._.
+It_PRP can_MD also_RB be_VB concluded_VBN that_IN the_DT two_CD new_JJ features_NNS help_VBP in_IN sarcasm_NN detection_NN ._.
+5_CD Future_NNP Work_NNP We_PRP look_VBP forward_RB to_TO conduct_VB further_JJ experimenta_NN -_: tions_NNS for_IN refinement_NN of_IN the_DT features_NNS by_IN including_VBG Figure_NN 4_CD :_: Plot_NN of_IN accuracy_NN and_CC f-score_JJ obtained_VBN using_VBG n_SYM -_: Gram_NN ,_, Readability_NN and_CC Contrasting_VBG sentiment_NN in_IN the_DT fea_NN -_: ture_NN set_VBN acoustic_JJ and_CC other_JJ lexical_JJ and_CC pragmatic_JJ features_NNS ._.
+New_NNP features_NNS can_MD be_VB tried_VBN to_TO further_JJ improve_VB the_DT efficiency_NN of_IN the_DT classifier_NN ._.
+We_PRP will_MD try_VB including_VBG amazon_IN data-set_NN and_CC increase_VB the_DT number_NN of_IN sarcas_NNS -_: tic_JJ and_CC regular_JJ tweets_NNS so_RB as_IN to_TO enrich_VB the_DT dataset_NN ._.
+The_DT preprocessing_JJ step_NN can_MD be_VB refined_VBN to_TO remove_VB re_SYM -_: peated_VBN characters_NNS from_IN word_NN like_IN ``_`` happpppy_JJ ''_'' ._.
+We_PRP will_MD try_VB other_JJ algorithms_NNS like_IN k-nearest_JJ neighbour_NN -LRB-_-LRB- KNN_NNP -RRB-_-RRB- and_CC various_JJ other_JJ algorithms_NNS based_VBN on_IN neural_JJ networks_NNS ._.
+References_NNS Konstantin_NNP Buschmeier_NNP ,_, Philipp_NNP Cimiano_NNP ,_, and_CC Roman_NNP Klinger_NNP ._.
+2014_CD ._.
+An_DT impact_NN analysis_NN of_IN features_NNS in_IN a_DT classification_NN approach_NN to_TO irony_NN detection_NN in_IN product_NN reviews_NNS ._.
+ACL_SYM 2014_CD ,_, page_NN 42_CD ._.
+Paula_NNP Carvalho_NNP ,_, Lu_NNP ́ıs_VBZ Sarmento_NNP ,_, Ma_NNP ́rio_VBD J_NNP Silva_NNP ,_, and_CC Euge_NNP ́nio_FW De_NNP Oliveira_NNP ._.
+2009_CD ._.
+Clues_NNS for_IN detecting_VBG irony_NN in_IN user-generated_JJ contents_NNS :_: oh_UH ..._: !!_VB it_PRP 's_VBZ so_RB easy_JJ ;--RRB-_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 1st_CD international_JJ CIKM_NNP workshop_NN on_IN Topic-sentiment_NN analysis_NN for_IN mass_NN opinion_NN ,_, pages_NNS 53_CD --_: 56_CD ._.
+ACM_NNP ._.
+Gina_NNP M_NNP Caucci_NNP and_CC Roger_NNP J_NNP Kreuz_NNP ._.
+2012_CD ._.
+Social_NNP and_CC paralinguistic_JJ cues_NNS to_TO sarcasm_NN ._.
+online_JJ 08/02/2012_CD ,_, 25:122_CD ,_, February_NNP ._.
+Henry_NNP S_NNP Cheang_NNP and_CC Marc_NNP D_NNP Pell_NNP ._.
+2008_CD ._.
+The_DT sound_NN of_IN sarcasm_NN ._.
+Speech_NN communication_NN ,_, 50_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :366_CD --_: 381_CD ._.
+Henry_NNP S_NNP Cheang_NNP and_CC Marc_NNP D_NNP Pell_NNP ._.
+2009_CD ._.
+Acoustic_NNP mark_NN -_: ers_NNS of_IN sarcasm_NN in_IN cantonese_NN and_CC english_JJ ._.
+The_DT Jour_NNP -_: nal_NN of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 126_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :1394_CD --_: 1405_CD ._.
+Dmitry_NNP Davidov_NNP ,_, Oren_NNP Tsur_NNP ,_, and_CC Ari_NNP Rappoport_NNP ._.
+2010a_NNS ._.
+Enhanced_JJ sentiment_NN learning_VBG using_VBG twitter_NN hashtags_NNS and_CC smileys_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 23rd_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNPS :_: Posters_NNS ,_, pages_NNS 241_CD --_: 249_CD ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Dmitry_NNP Davidov_NNP ,_, Oren_NNP Tsur_NNP ,_, and_CC Ari_NNP Rappoport_NNP ._.
+2010b_JJ ._.
+Semi-supervised_JJ recognition_NN of_IN sarcastic_JJ sentences_NNS in_IN twitter_NN and_CC amazon_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Four_CD -_: teenth_NN Conference_NN on_IN Computational_NNP Natural_NNP Lan_NNP -_: guage_NN Learning_NNP ,_, pages_NNS 107_CD --_: 116_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Elena_NNP Filatova_NNP ._.
+2012_CD ._.
+Irony_NN and_CC sarcasm_NN :_: Corpus_NNP gen_SYM -_: eration_NN and_CC analysis_NN using_VBG crowdsourcing_NN ._.
+In_IN LREC_NNP ,_, pages_NNS 392_CD --_: 398_CD ._.
+Rudolph_NNP Flesch_NNP ._.
+1948_CD ._.
+A_DT new_JJ readability_NN yardstick_NN ._.
+Journal_NNP of_IN applied_VBN psychology_NN ,_, 32_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :221_CD ._.
+Raymond_NNP W_NNP Gibbs_NNP and_CC Herbert_NNP L_NNP Colston_NNP ._.
+2007_CD ._.
+Irony_NN in_IN language_NN and_CC thought_NN :_: A_DT cognitive_JJ science_NN reader_NN ._.
+Psychology_NNP Press_NNP ._.
+Raymond_NNP W_NNP Gibbs_NNP ._.
+1986_CD ._.
+On_IN the_DT psycholinguistics_NNS of_IN sarcasm_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Gen_SYM -_: eral_NN ,_, 115_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :3_CD ._.
+Roberto_NNP Gonza_NNP ́lez_SYM -_: Iba_NNP ́nez_NNP ,_, Smaranda_NNP Muresan_NNP ,_, and_CC Nina_NNP Wacholder_NNP ._.
+2011_CD ._.
+Identifying_VBG sarcasm_NN in_IN twitter_NN :_: a_DT closer_JJR look_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS :_: short_JJ papers-Volume_JJ 2_CD ,_, pages_NNS 581_CD --_: 586_CD ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Roger_NNP J_NNP Kreuz_NNP and_CC Gina_NNP M_NNP Caucci_NNP ._.
+2007_CD ._.
+Lexical_NNP in_IN -_: fluences_NNS on_IN the_DT perception_NN of_IN sarcasm_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN computational_JJ approaches_NNS to_TO Fig_SYM -_: urative_JJ Language_NN ,_, pages_NNS 1_CD --_: 4_LS ._.
+Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNPS ._.
+Roger_NNP J_NNP Kreuz_NNP and_CC Sam_NNP Glucksberg_NNP ._.
+1989_CD ._.
+How_WRB to_TO be_VB sarcastic_JJ :_: The_DT echoic_NN reminder_NN theory_NN of_IN verbal_JJ irony_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, 118_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :374_CD ._.
+Christine_NNP Liebrecht_NNP ,_, Florian_NNP Kunneman_NNP ,_, and_CC Antal_NNP Van_NNP den_NN Bosch_NNP ._.
+2013_CD ._.
+The_DT perfect_JJ solution_NN for_IN de_FW -_: tecting_VBG sarcasm_NN in_IN tweets_NNS #not_VBP ._.
+In_IN Proceedings_NNP of_IN the_DT 4th_JJ Workshop_NNP on_IN Computational_NNP Approaches_NNPS to_TO Sub_NNP -_: jectivity_NN ,_, Sentiment_NN and_CC Social_NNP Media_NNP Analysis_NNP ,_, pages_NNS 29_CD --_: 37_CD ,_, Atlanta_NNP ,_, Georgia_NNP ,_, June_NNP ._.
+Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNPS ._.
+Stephanie_NNP Lukin_NNP and_CC Marilyn_NNP Walker_NNP ._.
+2013_CD ._.
+Really_RB ?_.
+well_RB ._.
+apparently_RB bootstrapping_VBG improves_VBZ the_DT perfor_NN -_: mance_NN of_IN sarcasm_NN and_CC nastiness_NN classifiers_NNS for_IN online_JJ dialogue_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Lan_NNP -_: guage_NN Analysis_NNP in_IN Social_NNP Media_NNP ,_, pages_NNS 30_CD --_: 40_CD ._.
+Kamal_NNP Nigam_NNP and_CC Matthew_NNP Hurst_NNP ._.
+2006_CD ._.
+Towards_IN a_DT ro_NN -_: bust_NN metric_NN of_IN polarity_NN ._.
+In_IN Computing_NNP Attitude_NNP and_CC Af_NNP -_: fect_NN in_IN Text_NN :_: Theory_NNP and_CC Applications_NNS ,_, pages_NNS 265_CD --_: 279_CD ._.
+Springer_NNP ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2008_CD ._.
+Opinion_NN mining_NN and_CC sentiment_NN analysis_NN ._.
+Foundations_NNS and_CC trends_NNS in_IN infor_NN -_: mation_NN retrieval_NN ,_, 2_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :1_CD --_: 135_CD ._.
+Ashwin_NNP Rajadesingan_NNP ,_, Reza_NNP Zafarani_NNP ,_, and_CC Huan_NNP Liu_NNP ._.
+2015_CD ._.
+Sarcasm_NNP detection_NN on_IN twitter_NN :_: A_DT behavioral_JJ modeling_NN approach_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Eighth_NNP ACM_NNP International_NNP Conference_NNP on_IN Web_NNP Search_NNP and_CC Data_NNP Mining_NNP ,_, WSDM_NNP '_POS 15_CD ,_, pages_NNS 97_CD --_: 106_CD ,_, New_NNP York_NNP ,_, NY_NNP ,_, USA_NNP ._.
+ACM_NNP ._.
+Katherine_NNP P_NNP Rankin_NNP ,_, Andrea_NNP Salazar_NNP ,_, Maria_NNP Luisa_NNP Gorno_NNP -_: Tempini_NNP ,_, Marc_NNP Sollberger_NNP ,_, Stephen_NNP M_NNP Wilson_NNP ,_, Dani_NNP -_: jela_NN Pavlic_NNP ,_, Christine_NNP M_NNP Stanley_NNP ,_, Shenly_NNP Glenn_NNP ,_, Michael_NNP W_NNP Weiner_NNP ,_, and_CC Bruce_NNP L_NNP Miller_NNP ._.
+2009_CD ._.
+De_NNP -_: tecting_VBG sarcasm_NN from_IN paralinguistic_JJ cues_NNS :_: anatomic_JJ and_CC cognitive_JJ correlates_VBZ in_IN neurodegenerative_NN disease_NN ._.
+Neuroimage_NNP ,_, 47_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :2005_CD --_: 2015_CD ._.
+Antonio_NNP Reyes_NNP ,_, Paolo_NNP Rosso_NNP ,_, and_CC Tony_NNP Veale_NNP ._.
+2013_CD ._.
+A_DT multidimensional_JJ approach_NN for_IN detecting_VBG irony_NN in_IN twit_NN -_: ter_NN ._.
+Lang_NNP ._.
+Resour_NNP ._.
+Eval._NNP ,_, 47_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :239_CD --_: 268_CD ,_, March_NNP ._.
+Ellen_NNP Riloff_NNP ,_, Ashequl_NNP Qadir_NNP ,_, Prafulla_NNP Surve_NNP ,_, Lalindra_NNP De_NNP Silva_NNP ,_, Nathan_NNP Gilbert_NNP ,_, and_CC Ruihong_NNP Huang_NNP ._.
+2013_CD ._.
+Sarcasm_NNP as_IN contrast_NN between_IN a_DT positive_JJ sentiment_NN and_CC negative_JJ situation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Conference_NN on_IN Emphirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Process_NNP -_: ing_NN -LRB-_-LRB- EMNLP_NNP 2013_CD -RRB-_-RRB- ,_, pages_NNS 704_CD --_: 714_CD ._.
+Joseph_NNP Tepperman_NNP ,_, David_NNP R_NNP Traum_NNP ,_, and_CC Shrikanth_NNP Narayanan_NNP ._.
+2006_CD ._. ''_''
+yeah_RB right_JJ ''_'' :_: sarcasm_NN recogni_NN -_: tion_NN for_IN spoken_VBN dialogue_NN systems_NNS ._.
+In_IN INTERSPEECH_NNP ._.
+Citeseer_NNP ._.
+Akira_NNP Utsumi_NNP ._.
+2000_CD ._.
+Verbal_JJ irony_NN as_IN implicit_JJ display_NN of_IN ironic_JJ environment_NN :_: Distinguishing_VBG ironic_JJ utterances_NNS from_IN nonirony_JJ ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 32_CD -LRB-_-LRB- 12_CD -RRB-_-RRB- :1777_CD --_: 1806_CD ._.

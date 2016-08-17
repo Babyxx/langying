@@ -1,0 +1,398 @@
+English_NNP to_TO Chinese_JJ Translation_NN :_: How_WRB Chinese_JJ Character_NN Matters_NNS ?_.
+Abstract_JJ Word_NN segmentation_NN is_VBZ helpful_JJ in_IN Chinese_JJ nat_NN -_: ural_JJ language_NN processing_NN in_IN many_JJ aspects_NNS ._.
+However_RB it_PRP is_VBZ showed_VBN that_IN different_JJ word_NN seg_NN -_: mentation_NN strategies_NNS do_VBP not_RB affect_VB the_DT per_FW -_: formance_NN of_IN Statistical_NNP Machine_NNP Translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- from_IN English_NNP to_TO Chinese_JJ significant_JJ -_: ly_RB ._.
+In_IN addition_NN ,_, it_PRP will_MD cause_VB some_DT confu_NN -_: sions_NNS in_IN the_DT evaluation_NN of_IN English_NNP to_TO Chinese_JJ SMT_NNP ._.
+So_IN we_PRP make_VBP an_DT empirical_JJ attempt_NN to_TO translation_NN English_JJ to_TO Chinese_JJ in_IN the_DT charac_NN -_: ter_NN level_NN ,_, in_IN both_DT the_DT alignment_NN model_NN and_CC lan_NN -_: guage_NN model_NN ._.
+A_DT series_NN of_IN empirical_JJ compari_NNS -_: son_NN experiments_NNS have_VBP been_VBN conducted_VBN to_TO show_VB how_WRB different_JJ factors_NNS affect_VBP the_DT performance_NN of_IN character-level_JJ English_JJ to_TO Chinese_JJ SMT_NNP ._.
+We_PRP also_RB apply_VBP the_DT recent_JJ popular_JJ continuous_JJ s_PRP -_: pace_NN language_NN model_NN into_IN English_JJ to_TO Chinese_JJ SMT_NNP ._.
+The_DT best_JJS performance_NN is_VBZ obtained_VBN with_IN the_DT BLEU_NNP score_NN 41.56_CD ,_, which_WDT improve_VBP base_NN -_: line_NN system_NN -LRB-_-LRB- 40.31_CD -RRB-_-RRB- by_IN around_IN 1.2_CD BLEU_NNP s_VBZ -_: core_NN ._.
+1_CD Introduction_NNP Word_NNP segmentation_NN is_VBZ necessary_JJ in_IN most_JJS Chinese_JJ language_NN processing_NN doubtlessly_RB ,_, because_IN there_EX are_VBP no_DT natural_JJ spaces_NNS between_IN characters_NNS in_IN Chinese_JJ tex_NN -_: t_NN -LRB-_-LRB- Xi_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ defined_VBN in_IN this_DT paper_NN as_IN character-based_JJ segmentation_NN if_IN Chinese_JJ sentence_NN is_VBZ segmented_JJ into_IN characters_NNS ,_, otherwise_RB as_IN word_NN seg_NN -_: mentation_NN ._.
+In_IN Statistical_NNP Machine_NNP Translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- in_IN which_WDT Chinese_NNP is_VBZ target_NN language_NN ,_, few_JJ work_NN have_VBP ∗_CD Correspondence_NN author_NN ._.
+shown_VBN that_IN better_JJR word_NN segmentation_NN will_MD lead_VB to_TO better_JJR result_NN in_IN SMT_NNP -LRB-_-LRB- Zhao_NNP et_FW al._FW ,_, 2013_CD ;_: Chang_NNP et_FW al._FW ,_, 2008_CD ;_: Zhang_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+Recently_RB Xi_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- demonstrate_VBP that_IN Chinese_JJ character_NN alignment_NN can_MD improve_VB both_DT of_IN alignment_NN quality_NN and_CC translation_NN performance_NN ,_, which_WDT also_RB motivates_VBZ us_PRP the_DT hypothe_NN -_: sis_NN whether_IN word_NN segmentation_NN is_VBZ not_RB even_RB necessary_JJ for_IN SMT_NNP where_WRB Chinese_JJ as_IN target_NN language_NN ._.
+From_IN the_DT view_NN of_IN evaluation_NN ,_, the_DT difference_NN be_VB -_: tween_IN the_DT word-based_JJ segmentation_NN methods_NNS will_MD al_SYM -_: so_RB makes_VBZ the_DT evaluation_NN of_IN SMT_NNP where_WRB Chinese_JJ as_IN target_NN language_NN confusing_VBG ._.
+The_DT automatic_JJ evalua_NN -_: tion_NN methods_NNS -LRB-_-LRB- such_JJ as_IN BLEU_NNP and_CC NIST_NNP BLEU_NNP s_VBZ -_: core_NN -RRB-_-RRB- in_IN SMT_NNP are_VBP mostly_RB based_VBN on_IN n-gram_JJ preci_NNS -_: sion_NN ._.
+If_IN the_DT segmentation_NN of_IN test_NN sets_NNS are_VBP differen_SYM -_: t_NN ,_, the_DT elements_NNS of_IN the_DT n-gram_NN of_IN test_NN sets_NNS will_MD al_SYM -_: so_RB be_VB different_JJ ,_, which_WDT means_VBZ that_IN the_DT evaluation_NN is_VBZ made_VBN on_IN different_JJ test_NN sets_NNS ._.
+To_TO evaluate_VB the_DT qual_NN -_: ity_NN of_IN Chinese_JJ translation_NN output_NN ,_, the_DT International_NNP Workshop_NNP on_IN Spoken_NNP Language_NNP Translation_NN in_IN 2005_CD -LRB-_-LRB- IWSLT_NNP '_POS 2005_CD -RRB-_-RRB- used_VBD the_DT word-level_JJ BLEU_NNP metric_JJ -LRB-_-LRB- Papineni_NNP et_FW al._FW ,2002_CD -RRB-_-RRB- ._.
+However_RB ,_, IWSLT_NNP ’08_CD and_CC NIST_NNP ’08_CD adopted_VBN character-level_JJ evaluation_NN metrics_NNS to_TO rank_VB the_DT submitted_VBN systems_NNS ._.
+Although_IN there_EX are_VBP also_RB a_DT lot_NN of_IN other_JJ works_NNS on_IN automatic_JJ evaluation_NN of_IN SMT_NNP ,_, such_JJ as_IN METEOR_NNP -LRB-_-LRB- Lavie_NNP and_CC Agarwal_NNP ,_, 2007_CD -RRB-_-RRB- ,_, GTM_NNP -LRB-_-LRB- Melamed_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- and_CC TER_NNP -LRB-_-LRB- Snover_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, whether_IN word_NN or_CC character_NN is_VBZ more_RBR suit_NN -_: able_JJ for_IN automatic_JJ evaluation_NN of_IN Chinese_JJ translation_NN output_NN has_VBZ not_RB been_VBN systematically_RB investigated_VBN -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Recently_RB ,_, different_JJ kinds_NNS of_IN character_NN -_: level_NN SMT_NNP evaluation_NN metrics_NNS are_VBP proposed_VBN ,_, which_WDT also_RB support_VBP that_IN character-level_JJ SMT_NNP may_MD have_VB its_PRP$ own_JJ advantage_NN accordingly_RB -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2011_CD ;_: Liu_NNP and_CC Ng_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Traditionally_RB ,_, Back-off_NN N-gram_NNP Language_NNP Mod_NNP -_: els_NNS -LRB-_-LRB- BNLM_NNP -RRB-_-RRB- -LRB-_-LRB- Chen_NNP and_CC Goodman_NNP ,_, 1996_CD ;_: Chen_NNP and_CC Goodman_NNP ,_, 1998_CD ;_: Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- are_VBP being_VBG widely_RB used_VBN for_IN probability_NN estimation_NN ._.
+For_IN a_DT better_JJR prob_SYM -_: ability_NN estimation_NN method_NN ,_, recently_RB ,_, Continuous_JJ -_: Space_NNP Language_NNP Models_NNP -LRB-_-LRB- CSLM_NNP -RRB-_-RRB- ,_, especially_RB Neu_NNP -_: ral_NN Network_NNP Language_NNP Models_NNP -LRB-_-LRB- NNLM_NNP -RRB-_-RRB- -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Schwenk_NNP ,_, 2007_CD ;_: Le_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- are_VBP be_VB -_: ing_NN used_VBN in_IN SMT_NNP -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Son_NNP et_FW al._FW ,_, 2010_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2012_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD ;_: Wang_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+These_DT works_NNS have_VBP shown_VBN that_IN CSLMs_NNS can_MD improve_VB the_DT BLEU_NNP scores_NNS of_IN SMT_NNP when_WRB com_NN -_: pared_VBN with_IN BNLMs_NNS ,_, on_IN the_DT condition_NN that_IN the_DT train_NN -_: ing_NN data_NNS for_IN language_NN modeling_NN are_VBP in_IN the_DT same_JJ size_NN ._.
+However_RB ,_, in_IN practice_NN ,_, CSLMs_NNS have_VBP not_RB been_VBN wide_JJ -_: ly_RB used_VBN in_IN SMT_NNP mainly_RB due_JJ to_TO high_JJ computational_JJ costs_NNS of_IN training_NN and_CC using_VBG CSLMs_NNS ._.
+Since_IN the_DT using_VBG costs_NNS of_IN CSLMs_NNS are_VBP very_RB high_JJ ,_, it_PRP is_VBZ difficult_JJ to_TO use_VB C_NNP -_: SLMs_NNS in_IN decoding_VBG directly_RB ._.
+A_DT common_JJ approach_NN in_IN SMT_NNP using_VBG CSLMs_NNP is_VBZ the_DT two_CD pass_NN approach_NN ,_, or_CC n_SYM -_: best_JJS reranking_NN ._.
+In_IN this_DT approach_NN ,_, the_DT first_JJ pass_NN uses_VBZ a_DT BNLM_NNP in_IN decoding_VBG to_TO produce_VB an_DT n-best_JJ list_NN ._.
+Then_RB ,_, a_DT CSLM_NNP is_VBZ used_VBN to_TO rerank_VB those_DT n-best_JJ translations_NNS in_IN the_DT second_JJ pass_NN -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Son_NNP et_FW al._FW ,_, 2010_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2012_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Near_IN -_: ly_RB all_DT of_IN the_DT previous_JJ works_NNS only_RB conduct_VB CSLMs_NNP on_IN English_NNP ,_, we_PRP conduct_VBP CSLM_NNP on_IN Chinese_NNPS in_IN this_DT pa_NN -_: per_IN ._.
+Vaswani_NNP et_FW al._FW propose_VB a_DT method_NN for_IN reducing_VBG the_DT training_NN cost_NN of_IN CSLM_NNP and_CC apply_VB it_PRP into_IN SMT_NNP decoder_NN -LRB-_-LRB- Vaswani_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Some_DT other_JJ stud_NN -_: ies_NNS try_VBP to_TO implement_VB neural_JJ network_NN LM_NNP or_CC transla_NN -_: tion_NN model_NN for_IN SMT_NNP -LRB-_-LRB- Gao_NNP et_FW al._FW ,_, 2014_CD ;_: Devlin_NNP et_FW al._FW ,_, 2014_CD ;_: Zhang_NNP et_FW al._FW ,_, 2014_CD ;_: Auli_NNP et_FW al._FW ,_, 2013_CD ;_: Liu_NNP et_FW al._FW ,_, 2013_CD ;_: Sundermeyer_NNP et_FW al._FW ,_, 2014_CD ;_: Cho_NNP et_FW al._FW ,_, 2014_CD ;_: Zou_NNP et_FW al._FW ,_, 2013_CD ;_: Lauly_NNP et_FW al._FW ,_, 2014_CD ;_: Kalchbrenner_NNP and_CC Blunsom_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+The_DT remainder_NN is_VBZ organized_VBN as_IN follows_VBZ :_: In_IN Section_NN 2_CD ,_, we_PRP will_MD review_VB the_DT background_NN of_IN English_NNP to_TO Chi_NNP -_: nese_NN SMT_NNP ._.
+The_DT character_NN based_VBN SMT_NNP will_MD be_VB pro-_JJ posed_VBN in_IN Section_NN 3_CD ._.
+In_IN Section_NN 4_CD ,_, the_DT experiments_NNS will_MD be_VB conducted_VBN and_CC the_DT results_NNS will_MD be_VB analyzed_VBN ._.
+We_PRP will_MD conclude_VB our_PRP$ work_NN in_IN the_DT Section_NN 5_CD ._.
+2_CD Background_NN The_DT ancient_JJ Chinese_JJ -LRB-_-LRB- or_CC Classical_JJ Chinese_JJ ,_, 文言文_JJ -RRB-_-RRB- can_MD be_VB conveniently_RB split_VBN into_IN characters_NNS ,_, for_IN most_JJS characters_NNS in_IN ancient_JJ Chinese_JJ still_RB keep_VB understood_VBN by_IN one_CD who_WP only_RB knows_VBZ modern_JJ Chinese_JJ -LRB-_-LRB- or_CC Written_VBN Vernacular_JJ Chinese_NNP ,_, 白话文_CD -RRB-_-RRB- words_NNS ._.
+For_IN example_NN ,_, ``_`` 三人行_FW ,_, 则必有我师焉_CD 。_NN ''_'' is_VBZ one_CD of_IN the_DT popular_JJ sentences_NNS in_IN the_DT Analects_NNP -LRB-_-LRB- 论语_CD -RRB-_-RRB- ,_, and_CC its_PRP$ correspond_VB -_: ing_NN modern_JJ Chinese_JJ words_NNS and_CC English_JJ meaning_NN are_VBP shown_VBN in_IN TABLE_NN 1_CD ._.
+From_IN the_DT table_NN ,_, we_PRP can_MD see_VB that_IN the_DT characters_NNS in_IN ancient_JJ Chinese_NNPS have_VBP indepen_SYM -_: dent_NN meaning_NN ,_, but_CC most_JJS of_IN the_DT characters_NNS in_IN modern_JJ Chinese_NNPS do_VBP not_RB ,_, and_CC they_PRP must_MD combine_VB together_RB in_IN -_: to_TO words_NNS to_TO make_VB sense_NN ._.
+If_IN we_PRP split_VBD modern_JJ Chinese_JJ sentences_NNS into_IN characters_NNS ,_, the_DT semantic_JJ meaning_NN in_IN the_DT words_NNS will_MD partially_RB lose_VB ._.
+Whether_IN or_CC not_RB this_DT semantic_JJ function_NN of_IN Chinese_JJ word_NN can_MD be_VB partly_RB re_SYM -_: placed_VBN by_IN the_DT alignment_NN model_NN and_CC Language_NN Model_NNP -LRB-_-LRB- LM_NNP -RRB-_-RRB- of_IN character-based_JJ SMT_NNP will_MD be_VB shown_VBN in_IN this_DT paper_NN ._.
+Ancient_NNP Chinese_NNP Modern_NNP Chinese_NNP English_NNP Meaning_VBG 三_CD 人_CD 行_NN ,_, 则_FW 必_FW 有_FW 我_FW 师_FW 焉_FW 。_FW 三个_FW 人_FW 走路_FW ,_, 那么_FW 一定_FW 存在_FW 我的_FW 老师_FW 在其中_FW 。_FW three_CD people_NNS walk_VBP ,_, so_RB must_MD be_VB my_PRP$ teacher/tutor_NN there_RB ._.
+Table_NNP 1_CD :_: Ancient_NNP Chinese_NNP and_CC Modern_NNP Chinese_NNP SMT_NNP as_IN a_DT research_NN domain_NN started_VBD in_IN the_DT late_JJ 1980s_NNS at_IN IBM_NNP -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 1993_CD -RRB-_-RRB- ,_, which_WDT maps_NNS individual_JJ words_NNS to_TO words_NNS and_CC allows_VBZ for_IN deletion_NN and_CC insertion_NN of_IN words_NNS ._.
+Lately_RB ,_, various_JJ research_NN -_: es_NNS have_VBP shown_VBN better_JJR translation_NN quality_NN with_IN phrase_NN translation_NN ._.
+Phrase-based_JJ SMT_NNP can_MD be_VB traced_VBN back_RB to_TO Och_NNP 's_POS alignment_NN template_NN model_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2004_CD -RRB-_-RRB- ,_, which_WDT can_MD be_VB re-framed_JJ as_IN a_DT phrase_NN trans_NNS -_: lation_NN system_NN ._.
+Other_JJ researchers_NNS augmented_VBD their_PRP$ systems_NNS with_IN phrase_NN translation_NN ,_, such_JJ as_IN Yamada_NNP and_CC Knight_NNP -LRB-_-LRB- Yamada_NNP and_CC Knight_NNP ,_, 2001_CD -RRB-_-RRB- ,_, who_WP used_VBD phrase_NN translation_NN in_IN a_DT syntax-based_JJ model_NN ._.
+The_DT phrase_NN translation_NN model_NN is_VBZ based_VBN on_IN the_DT noisy_JJ channel_NN model_NN ._.
+Bayes_NNP rule_NN is_VBZ mostly_RB used_VBN to_TO refor_VB -_: mulate_VB the_DT translation_NN probability_NN for_IN translating_VBG a_DT foreign_JJ sentence_NN f_LS into_IN target_NN e_LS as_IN :_: argmaxep_NN -LRB-_-LRB- e_LS |_FW f_LS -RRB-_-RRB- =_SYM argmaxep_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- p_NN -LRB-_-LRB- e_LS -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- This_DT allows_VBZ for_IN the_DT probabilities_NNS of_IN an_DT LM_NNP p_NN -LRB-_-LRB- e_LS -RRB-_-RRB- and_CC a_DT separated_JJ translation_NN model_NN p_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- ._.
+During_IN decoding_NN ,_, the_DT foreign_JJ input_NN sentence_NN f_LS is_VBZ segmented_JJ into_IN a_DT sequence_NN of_IN phrases_NNS f1i_NNS ._.
+It_PRP is_VBZ assumed_VBN a_DT unifor_NN -_: m_NN probability_NN distribution_NN over_IN all_DT possible_JJ segmen_NNS -_: tations_NNS ._.
+Each_DT foreign_JJ phrase_NN fi_FW in_IN f1i_CD is_VBZ translated_VBN into_IN an_DT target_NN phrase_NN ei_FW ._.
+The_DT target_NN phrases_NNS may_MD be_VB reordered_VBN ._.
+Phrase_NN translation_NN is_VBZ modeled_VBN by_IN a_DT prob_NN -_: ability_NN distribution_NN Ω_NNP -LRB-_-LRB- fi_FW |_FW ei_FW -RRB-_-RRB- ._.
+Recall_VB that_DT due_JJ to_TO the_DT Bayes_NNP rule_NN ,_, the_DT translation_NN direction_NN is_VBZ inverted_JJ ._.
+Reordering_NN of_IN the_DT output_NN phrases_NNS is_VBZ modeled_VBN by_IN a_DT relative_JJ distortion_NN probability_NN distribution_NN d_LS -LRB-_-LRB- starti_NNS ,_, endi_FW −_FW 1_LS -RRB-_-RRB- ,_, where_WRB starti_NNS denotes_VBZ the_DT start_NN position_NN of_IN the_DT foreign_JJ phrase_NN that_WDT is_VBZ translated_VBN in_IN -_: to_TO the_DT ith_NN target_NN phrase_NN ,_, and_CC endi_FW −_FW 1_CD denotes_NNS the_DT end_NN position_NN of_IN the_DT foreign_JJ phrase_NN that_WDT was_VBD translated_VBN in_IN -_: to_TO the_DT -LRB-_-LRB- i_FW −_FW 1_LS -RRB-_-RRB- −_CD th_JJ target_NN phrase_NN ._.
+A_DT simple_JJ distortion_NN model_NN d_LS -LRB-_-LRB- starti_NNS ,_, endi_FW −_FW 1_LS -RRB-_-RRB- =_SYM α_FW |_FW starti_FW −_FW endi_FW −_FW 1_CD −_CD 1_CD |_NN with_IN an_DT appropriate_JJ value_NN for_IN the_DT parameter_NN α_NN is_VBZ set_VBN ._.
+In_IN order_NN to_TO calibrate_VB the_DT output_NN length_NN ,_, a_DT factor_NN ω_NN -LRB-_-LRB- called_VBN word_NN cost_NN -RRB-_-RRB- for_IN each_DT generated_VBD English_NNP word_NN in_IN addition_NN to_TO the_DT tri-gram_JJ LM_NNP pLM_NNP is_VBZ proposed_VBN ._.
+This_DT is_VBZ a_DT simple_JJ means_NNS to_TO optimize_VB performance_NN ._.
+Usually_RB ,_, this_DT factor_NN is_VBZ larger_JJR than_IN 1_CD ,_, biasing_VBG toward_IN longer_JJR output_NN ._.
+In_IN summary_NN ,_, the_DT best_JJS output_NN sentence_NN given_VBN a_DT foreign_JJ input_NN sentence_NN f_LS according_VBG to_TO the_DT model_NN is_VBZ :_: argmaxep_NN -LRB-_-LRB- e_LS |_FW f_LS -RRB-_-RRB- =_SYM argmaxep_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- pLM_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- ωlength_NN -LRB-_-LRB- e_LS -RRB-_-RRB- ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- where_WRB p_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- is_VBZ decomposed_VBN into_IN :_: both_CC the_DT the_DT alignment_NN part_NN p_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- and_CC the_DT LM_NNP p_NN -LRB-_-LRB- e_LS -RRB-_-RRB- will_MD help_VB retrieve_VB the_DT sematic_JJ meaning_NN in_IN the_DT charac_NN -_: ters_NNS which_WDT is_VBZ originally_RB represented_VBN by_IN words_NNS ._.
+So_IN it_PRP is_VBZ possible_JJ that_IN we_PRP can_MD process_VB the_DT English_NNP to_TO Chi_NNP -_: nese_NN in_IN character_NN level_NN without_IN word_NN segmentation_NN ,_, which_WDT may_MD also_RB avoid_VB the_DT confusion_NN in_IN the_DT evalua_NN -_: tion_NN part_NN as_IN proposed_VBN above_IN ._.
+3_CD Character-based_JJ versus_CC Word-based_JJ SMT_NNP The_DT standards_NNS of_IN segmentation_NN between_IN word-based_JJ and_CC character-based_JJ English_JJ to_TO Chinese_JJ translation_NN are_VBP different_JJ ,_, as_RB well_RB as_IN the_DT standard_NN of_IN the_DT evalua_NN -_: tion_NN of_IN them_PRP ._.
+That_DT is_VBZ ,_, the_DT test_NN data_NNS contains_VBZ words_NNS as_IN the_DT smallest_JJS unit_NN for_IN word-based_JJ SMT_NNP ,_, and_CC charac_NN -_: ters_NNS for_IN character-based_JJ SMT_NNP ._.
+So_IN the_DT translated_VBN sen_NN -_: tences_NNS of_IN word-based_JJ translation_NN will_MD be_VB converted_VBN into_IN character-based_JJ sentence_NN ,_, and_CC evaluated_VBD togeth_NN -_: er_NN with_IN character-based_JJ translation_NN BLEU_NNP score_NN for_IN fair_JJ comparison_NN ._.
+We_PRP select_VBP two_CD popular_JJ segmenta_NN -_: tion_NN segmenters_NNS ,_, one_CD of_IN which_WDT is_VBZ based_VBN on_IN Forward_RB Maximum_NNP Matching_NNP -LRB-_-LRB- FMM_NNP -RRB-_-RRB- algorithm_NN with_IN the_DT lex_NN -_: icon_NN of_IN -LRB-_-LRB- Low_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, and_CC the_DT other_JJ is_VBZ based_VBN on_IN Conditional_JJ Random_NNP Fields_NNPS -LRB-_-LRB- CRF_NNP -RRB-_-RRB- with_IN the_DT same_JJ implementation_NN of_IN -LRB-_-LRB- Zhao_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Because_IN most_JJS Chinese_JJ words_NNS contains_VBZ 1_CD to_TO 4_CD characters_NNS ,_, so_IN we_PRP set_VBD the_DT word-based_JJ LM_NNP as_IN default_NN trigram_NN in_IN SRILM_NNP ,_, and_CC character-based_JJ LM_NNP for_IN 5-gram_JJ ._.
+All_PDT the_DT differ_VBP -_: ent_NN methods_NNS share_VBP the_DT same_JJ other_JJ default_NN parameters_NNS in_IN the_DT toolkits_NNS which_WDT will_MD be_VB further_JJ introduced_VBN in_IN Section_NN 4_CD ._.
+There_EX seems_VBZ to_TO be_VB no_DT ambiguity_NN in_IN different_JJ char_NN -_: acter_NN segmentations_NNS ,_, however_RB English_JJ characters_NNS ,_, numbers_NNS and_CC other_JJ symbols_NNS are_VBP also_RB contained_VBN in_IN the_DT corpus_NN ._.
+If_IN they_PRP are_VBP split_VBN into_IN ``_`` characters_NNS ''_'' like_IN ``_`` 年_FW 增_FW 长_FW 百_FW 分_FW 之_FW 2_CD 0_CD 0_CD ''_'' -LRB-_-LRB- 200_CD %_NN incre_NN -_: mentperyear_NN -RRB-_-RRB- or_CC ``_`` J_NNP o_NNP r_NN d_LS a_DT n_NN 是_FW 伟_FW 大_FW 的_FW 篮_FW 球_FW 运_FW 动_FW 员_FW ''_'' -LRB-_-LRB- Jordanisagreat_NNP basketball_NN player_NN -RRB-_-RRB- ,_, they_PRP will_MD cause_VB a_DT lot_NN of_IN misun_NN -_: derstanding_NN ._.
+So_IN the_DT segmentation_NN is_VBZ only_RB used_VBN for_IN Chinese_JJ characters_NNS ,_, and_CC the_DT foreign_JJ letters_NNS ,_, numbers_NNS and_CC other_JJ symbols_NNS in_IN Chinese_JJ text_NN are_VBP still_RB kept_VBN con_NN -_: sequent_NN ._.
+Shown_VBN in_IN Table_NNP 2_CD ,_, the_DT BLEU_NNP score_NN of_IN SMT_NNP sys_SYM -_: tem_NN with_IN character-based_JJ segmenter_NN is_VBZ much_RB higher_JJR than_IN both_DT FMM_NNP and_CC CRF_NNP segmenters_NNS ._.
+The_DT word_NN -_: based_VBN English_NNP to_TO Chinese_JJ SMT_NNP system_NN is_VBZ trained_VBN and_CC p_NN -LRB-_-LRB- f1i_FW |_FW ei1_FW -RRB-_-RRB- =_SYM φi1Ω_NNP -LRB-_-LRB- fi_FW |_FW ei_FW -RRB-_-RRB- d_LS -LRB-_-LRB- starti_NNS ,_, endi_FW −_FW 1_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- In_IN this_DT paper_NN ,_, the_DT f_LS stands_VBZ for_IN English_NNP and_CC the_DT e_LS stands_VBZ for_IN Chinese_NNP ._.
+In_IN short_RB ,_, there_EX are_VBP three_CD main_JJ parts_NNS both_DT in_IN the_DT English_NNP to_TO Chinese_NNPS and_CC Chinese_NNPS to_TO English_NNP SMT_NNP :_: the_DT alignment_NN p_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- ,_, the_DT LM_NNP p_NN -LRB-_-LRB- e_LS -RRB-_-RRB- and_CC the_DT parameters_NNS training_NN -LRB-_-LRB- tuning_VBG -RRB-_-RRB- ._.
+When_WRB Chinese_NNP is_VBZ the_DT foreign_JJ language_NN ,_, there_EX is_VBZ only_RB the_DT alignment_NN model_NN p_NN -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- containing_VBG Chinese_JJ language_NN process_NN -_: ing_NN ._.
+Contrarily_RB ,_, when_WRB Chinese_NNP is_VBZ the_DT target_NN language_NN ,_, tuned_VBN in_IN word_NN level_NN and_CC evaluated_VBN in_IN character_NN lev_NN -_: el_FW ,_, so_IN we_PRP use_VBP the_DT character-based_JJ LM_NNP to_TO re-score_VB the_DT nbest-list_NN of_IN the_DT results_NNS of_IN the_DT FMM_NNP and_CC CRF_NNP seg_SYM -_: menters_NNS ._.
+Firstly_RB we_PRP convert_VBP the_DT translated_VBN 1000-best_JJ candidates_NNS for_IN each_DT sentence_NN into_IN characters_NNS ._.
+Then_RB calculate_VBP their_PRP$ LM_NNP scores_NNS by_IN the_DT character-based_JJ LM_NNP ,_, and_CC replace_VB the_DT word-based_JJ LM_NNP score_NN with_IN character-based_JJ LM_NNP score_NN ._.
+At_IN last_JJ we_PRP re-calculate_VBP the_DT global_JJ score_NN to_TO get_VB the_DT new_JJ 1-best_JJ candidate_NN with_IN the_DT same_JJ tuning_NN weight_NN as_IN before_RB ._.
+The_DT BLEU_NNP s_VBZ -_: core_NN of_IN re-ranked_JJ method_NN is_VBZ slightly_RB higher_JJR than_IN be_VB -_: fore_NN ,_, but_CC still_RB much_RB less_JJR than_IN the_DT result_NN of_IN charac_NN -_: ter_NN segmenter_NN ._.
+Although_IN we_PRP can_MD not_RB conclude_VB the_DT character-based_JJ segmenter_NN is_VBZ better_RB simply_RB accord_NN -_: ing_NN to_TO this_DT experiment_NN ,_, this_DT result_NN gives_VBZ us_PRP the_DT con_NN -_: fidence_NN that_IN our_PRP$ approach_NN is_VBZ reasonable_JJ and_CC feasible_JJ at_IN least_JJS ._.
+4_CD Comparison_NNP Experiment_NNP We_PRP use_VBP the_DT patent_NN data_NNS for_IN the_DT Chinese_JJ to_TO English_NNP patent_NN translation_NN subtask_NN from_IN the_DT NTCIR-9_NN paten_NN -_: t_NN translation_NN task_NN -LRB-_-LRB- Goto_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT parallel_JJ training_NN ,_, development_NN ,_, and_CC test_NN data_NNS consists_VBZ of_IN 1_CD million_CD -LRB-_-LRB- M_NNP -RRB-_-RRB- ,_, 2,000_CD ,_, and_CC 2,000_CD sentences_NNS ,_, respective_JJ -_: ly1_NN ._.
+The_DT basic_JJ settings_NNS of_IN the_DT NTCIR-9_NNP English_NNP to_TO Chi_NNP -_: nese_JJ translation_NN baseline_NN system_NN -LRB-_-LRB- Goto_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- was_VBD followed2_CD ._.
+The_DT Moses_NNP phrase-based_JJ SMT_NNP sys_SYM -_: tem_NN was_VBD applied_VBN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, together_RB with_IN GIZA_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- for_IN alignment_NN and_CC MERT_NNP -LRB-_-LRB- Och_NNP ,_, 2003_CD -RRB-_-RRB- for_IN tuning_VBG on_IN the_DT developmen_NNS -_: t_NN data_NNS ._.
+14_CD standard_JJ SMT_NNP features_NNS were_VBD used_VBN :_: five_CD translation_NN model_NN scores_NNS ,_, one_CD word_NN penalty_NN score_NN ,_, seven_CD distortion_NN scores_NNS and_CC one_CD LM_NNP score_NN ._.
+The_DT translation_NN performance_NN was_VBD measured_VBN by_IN the_DT case_NN -_: insensitive_JJ BLEU_NNP on_IN the_DT tokenized_JJ test_NN data3_NN ._.
+4.1_CD The_DT Alignment_NNP In_IN this_DT subsection_NN we_PRP investigate_VBP two_CD factors_NNS in_IN the_DT phrase_NN alignment_NN ._.
+Four_CD different_JJ kinds_NNS of_IN methods_NNS 1Since_VBP we_PRP are_VBP the_DT participants_NNS of_IN NTCIR-9_NN ,_, so_IN we_PRP have_VBP the_DT bilingual_JJ sides_NNS of_IN the_DT evaluation_NN data_NNS ._.
+2We_JJ are_VBP aware_JJ that_IN the_DT original_JJ NTCIR_NNP patentMT_NN baseline_NN is_VBZ designed_VBN for_IN Chinese-English_JJ translation_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP follow_VBP the_DT same_JJ setting_NN of_IN the_DT baseline_NN system_NN ,_, only_RB convert_VBP the_DT source_NN language_NN and_CC the_DT target_NN language_NN ._.
+3It_NNP is_VBZ available_JJ at_IN http://www.itl.nist.gov/iad/_JJ mig/tests/mt_NN /_CD 2009_CD /_NN for_IN heuristics_NNS and_CC three_CD kinds_NNS of_IN maximum_NN length_NN of_IN phrases_NNS in_IN phrase_NN table_NN are_VBP used_VBN for_IN word_NN alignmen_NNS -_: t_NN ,_, with_IN other_JJ default_NN parameters_NNS in_IN the_DT toolkits_NNS ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 3_CD ._.
+The_DT grow_VBP −_CD diag_NN −_CD final_JJ −_CD and_CC ,_, which_WDT will_MD be_VB set_VBN as_IN default_NN without_IN special_JJ statement_NN in_IN the_DT following_JJ sections_NNS ,_, is_VBZ shown_VBN better_JJR than_IN other_JJ settings_NNS ,_, and_CC the_DT BLEU_NNP score_NN do_VBP not_RB increase_VB as_IN the_DT maximum_NN length_NN of_IN phrases_NNS in_IN -_: creases_NNS ._.
+Alignment_NNP Parameters_NNPS BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- union_NN intersect_NN grow-diag-final_JJ grow-diag-final-and_JJ 42.24_CD 40.64_CD 42.70_CD 42.80_CD 39.33_CD 38.08_CD 39.78_CD 40.31_CD Maximum_NNP Length_NNP BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- 7_CD 10_CD 13_CD 42.80_CD 42.78_CD 42.85_CD 40.31_CD 40.04_CD 40.30_CD Table_NNP 3_CD :_: Different_JJ Heuristics_NNS Used_VBN for_IN Word_NNP Alignment_NNP 4.2_CD The_DT N_NNP -_: gram_NN Language_NN Model_NNP In_IN this_DT part_NN ,_, we_PRP will_MD investigate_VB how_WRB the_DT factors_NNS in_IN the_DT n-gram_JJ LM_NNP influence_NN the_DT whole_JJ system_NN ._.
+The_DT scale_NN of_IN the_DT training_NN corpus_NN is_VBZ one_CD of_IN the_DT most_RBS important_JJ factors_NNS to_TO LM_NNP ._.
+And_CC ``_`` more_RBR data_NNS is_VBZ better_JJR data_NNS ''_'' -LRB-_-LRB- Brants_NNPS and_CC Xu_NNP ,_, 2009_CD -RRB-_-RRB- has_VBZ been_VBN proved_VBN to_TO be_VB one_CD of_IN the_DT most_RBS important_JJ rules_NNS for_IN constructing_VBG a_DT LMs_NNP ._.
+First_RB we_PRP randomly_RB divide_VBP the_DT whole_JJ training_NN sets_VBZ into_IN 4_CD parts_NNS equally_RB ._.
+We_PRP build_VBP the_DT LM_NNP with_IN 1_CD ,_, 2_CD and_CC 4_CD parts_NNS -LRB-_-LRB- i.e._FW for_IN 1/4_CD ,_, 1/2_CD and_CC the_DT whole_JJ corpus_NN respectively_RB -RRB-_-RRB- ,_, with_IN other_JJ setting_VBG as_IN default_NN ._.
+Then_RB ,_, we_PRP add_VBP the_DT dictionary_NN information_NN to_TO the_DT LM_NNP ._.
+The_DT pr_NN s_VBZ -_: tands_NNS for_IN the_DT size_NN of_IN the_DT dictionary_NN and_CC the_DT pf_NN stands_VBZ for_IN the_DT characters_NNS '_POS frequency_NN in_IN the_DT dictionary_NN ._.
+The_DT results_NNS in_IN Table_NNP 4_CD show_NN that_WDT using_VBG the_DT whole_JJ corpus_NN for_IN language_NN training_NN is_VBZ necessary_JJ and_CC using_VBG the_DT dic_NN -_: tionary_JJ information_NN does_VBZ not_RB improve_VB the_DT translation_NN performance_NN ._.
+We_PRP select_VBP the_DT three_CD most_RBS popular_JJ smoothing_VBG al_SYM -_: gorithms_NNS ,_, Witten-Bell_NNP ,_, Kneser-Ney_NNP -LRB-_-LRB- KN_NNP -RRB-_-RRB- ,_, and_CC im_SYM -_: proved_VBD Kneser-Ney_NNP -LRB-_-LRB- improved_VBN KN_NNP -RRB-_-RRB- ,_, and_CC compare_VB their_PRP$ performance_NN in_IN the_DT character-level_JJ English_JJ to_TO Chinese_JJ SMT_NNP task_NN ._.
+As_IN shown_VBN in_IN Table_NNP 5_CD ,_, when_WRB Segmentation_NNP Methods_NNPS BLEU_NNP FMM_NNP Segmenter_NNP FMM_NNP Segmenter_NNP +_NNP Character-based_JJ LM_NNP Re-rank_NNP CRF_NNP Segmenter_NNP CRF_NNP Segmenter_NNP +_NNP Character-based_JJ LM_NNP Re-rank_NNP Character_NNP Segmenter_NNP 34.56_CD 35.08_CD 38.28_CD 38.78_CD 40.31_CD Table_NNP 2_CD :_: Comparison_NNP Between_IN Word-based_JJ Translation_NN and_CC Character-based_JJ Translation_NN Size_NN of_IN The_DT Corpus_NNP BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- 1/4_CD Corpus_NNP 1/2_CD Corpus_NNP the_DT whole_JJ Corpus_NNP 42.30_CD 42.51_CD 42.80_CD 39.76_CD 40.19_CD 40.31_CD Dictionaries_NNPS pr_VBP =_SYM 10k_CD pf_NN =_SYM 5_CD pr_NN =_SYM 10k_FW pf_FW =_SYM 10_CD pr_NN =_SYM 20k_CD pf_NN =_SYM 10_CD No_DT Dictionary_NNP 42.63_CD 42.60_CD 42.73_CD 42.80_CD 40.01_CD 40.17_CD 40.02_CD 40.31_CD Table_NNP 4_CD :_: Scale_NNP of_IN Corpus_NNP for_IN LM_NNP n_NNP is_VBZ too_RB small_JJ ,_, the_DT result_NN is_VBZ less_RBR satisfactory_JJ ,_, and_CC the_DT BLEU_NNP score_NN continues_VBZ increase_NN as_IN n_NN increases_NNS ._.
+However_RB ,_, the_DT BLEU_NNP score_NN begins_VBZ to_TO decrease_VB when_WRB the_DT LM_NNP becomes_VBZ too_RB long_RB ._.
+The_DT best_JJS 9-gram_JJ LM_NNP with_IN Witten-Bell_NNP smoothing_NN ,_, corresponding_JJ to_TO 5-gram_JJ to_TO 7-gram_VB in_IN word-based_JJ LM_NNP ,_, which_WDT is_VBZ the_DT widestly_NN used_VBN in_IN word-bases_NNS English_JJ to_TO Chinese_JJ SMT_NNP ._.
+broadly_RB accepted_VBN as_IN the_DT evaluate_VB standard_NN when_WRB we_PRP tune_VBP the_DT other_JJ parameters_NNS using_VBG the_DT minimum_NN error_NN rate_NN training_NN ,_, which_WDT means_VBZ that_IN the_DT MERT_NNP stage_NN will_MD not_RB stop_VB until_IN it_PRP reaches_VBZ the_DT highest_JJS 4-gram_JJ BLEU_NNP on_IN the_DT development_NN set_NN ._.
+However_RB ,_, the_DT same_JJ sentence_NN becomes_VBZ longer_RBR if_IN the_DT character_NN based_VBN segmentation_NN is_VBZ applied_VBN ._.
+That_DT is_VBZ ,_, four_CD words_NNS may_MD be_VB segmented_JJ into_IN around_IN 10_CD characters_NNS ._.
+Will_MD the_DT system_NN gain_NN a_DT better_JJR performance_NN if_IN the_DT n-gram_NN of_IN BLEU_NNP score_NN in_IN the_DT MERT_NNP convergence_NN standard_JJ increases_NNS as_IN the_DT n_SYM -_: gram_NN in_IN the_DT LM_NNP increases_NNS ?_.
+To_TO evaluate_VB this_DT hypothesis_NN ,_, the_DT alignment_NN model_NN is_VBZ set_VBN the_DT same_JJ as_IN the_DT best_JJS performance_NN in_IN Table_NNP 3_CD ,_, and_CC 5-gram_JJ LM_NN with_IN improved_JJ KN_NNP smoothing_NN is_VBZ set_VBN for_IN LM_NNP ._.
+The_DT results_NNS in_IN Table_NNP 6_CD show_NN that_WDT singly_RB in_IN -_: creasing_VBG the_DT n-gram_NN of_IN MERT_NNP can_MD not_RB improve_VB the_DT performance_NN of_IN SMT_NNP ._.
+Table_NNP 6_CD :_: Different_JJ Setting_VBG on_IN MERT_NNP 4.4_CD Parameter_NNP Combinations_NNPS We_PRP have_VBP investigated_VBN how_WRB different_JJ factors_NNS affect_VBP the_DT performance_NN of_IN English_NNP to_TO Chinese_JJ SMT_NNP ._.
+However_RB ,_, most_JJS of_IN the_DT other_JJ factors_NNS are_VBP fixed_VBN when_WRB we_PRP discuss_VBP one_CD single_JJ factor_NN ._.
+So_RB in_IN this_DT subsection_NN ,_, we_PRP analyze_VBP how_WRB the_DT combined_VBN factors_NNS perform_VBP in_IN the_DT whole_JJ sys_SYM -_: tem_NN ._.
+Firstly_RB ,_, we_PRP combine_VBP the_DT parameters_NNS of_IN the_DT smooth_JJ -_: ing_NN methods_NNS and_CC the_DT maximum_NN length_NN of_IN phrases_NNS to_TO -_: gether_NN ._.
+The_DT LM_NNP is_VBZ set_VBN to_TO 9-gram_JJ and_CC grow_VB −_CD diag_NN −_CD f_LS inal_JJ −_JJ and_CC is_VBZ set_VBN for_IN alignment_NN ,_, which_WDT has_VBZ the_DT best_JJS BLEU_NN score_NN in_IN n-gram_JJ LM_NNP experiments_NNS ._.
+Other_JJ fac_SYM -_: n-gram_JJ MERT_NNP n-gram_NN BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- 4-gram_JJ BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- 4_CD 7_CD 10_CD 42.80_CD 25.45_CD 15.02_CD 40.31_CD 40.30_CD 40.17_CD Smoothing_NNP Method_NNP n-gram_JJ LM_NNP BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- Kneser-Ney_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Witten-Bell_NNP Witten-Bell_NNP Witten-Bell_NNP 9_CD 7_CD 9_CD 11_CD 7_CD 9_CD 11_CD 42.55_CD 42.95_CD 42.84_CD 42.44_CD 42.72_CD 42.71_CD 42.44_CD 39.91_CD 40.30_CD 40.55_CD 40.07_CD 40.10_CD 40.62_CD 39.67_CD 4.3_CD Table_NNP 5_CD :_: Different_NNP Smoothing_NNP Methods_NNPS for_IN LM_NNP The_NNP Tuning_NNP We_PRP have_VBP shown_VBN that_IN the_DT different_JJ lengths_NNS of_IN n-gram_JJ LMs_NNS make_VBP a_DT significant_JJ influence_NN in_IN the_DT English_NNP to_TO Chinese_JJ translation_NN ._.
+The_DT 4-gram_JJ BLEU_NNP score_NN is_VBZ Smoothing_VBG Method_NNP n-gram_NNP MERT_NNP BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- KN_NNP KN_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Witten-Bell_NNP Witten-Bell_NNP 4_CD 7_CD 4_CD 7_CD 10_CD 4_CD 7_CD 42.55_CD 25.33_CD 42.84_CD 25.93_CD 15.82_CD 42.71_CD 25.45_CD 39.91_CD 40.65_CD 40.55_CD 40.75_CD 40.37_CD 40.62_CD 40.30_CD tors_NNS is_VBZ set_VBN as_IN default_NN in_IN the_DT toolkits_NNS ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 7_CD ._.
+Smoothing_VBG Method_NN -LRB-_-LRB- LM_NNP -RRB-_-RRB- Maximum_NNP Length_NNP -LRB-_-LRB- align_VBN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- KN_NNP KN_NNP KN_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Improved_NNP KN_NNP Witten-Bell_NNP Witten-Bell_NNP Witten-Bell_NNP 7_CD 10_CD 13_CD 7_CD 10_CD 13_CD 7_CD 10_CD 13_CD 42.55_CD 42.80_CD 42.89_CD 42.84_CD 43.00_CD 40.07_CD 42.71_CD 42.85_CD 42.85_CD 39.91_CD 40.49_CD 39.93_CD 40.55_CD 40.24_CD 40.56_CD 40.62_CD 40.06_CD 40.09_CD Table_NNP 7_CD :_: Parameter_NNP Combinations_NNPS of_IN Smoothing_NNP Methods_NNPS and_CC Maximum_NNP Length_NNP of_IN Phrase_NNP Alignment_NNP Then_RB ,_, the_DT length_NN of_IN n-gram_JJ MERT_NNP and_CC the_DT differ_VBP -_: ent_NN order_NN n-gram_JJ LM_NNP are_VBP tuned_VBN together_RB ._.
+We_PRP set_VBP the_DT Improved_NNP KN_NNP as_IN the_DT smoothing_NN method_NN ,_, and_CC others_NNS as_IN default_NN in_IN the_DT toolkits_NNS ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 8_CD ._.
+Table_NNP 9_CD :_: Parameter_NNP Combinations_NNPS of_IN n-gram_JJ MERT_NNP and_CC Smoothing_NNP Methods_NNPS bring_VBP the_DT best_JJS performance_NN up_IN to_TO now_RB in_IN Table_NNP 10_CD ._.
+4.5_CD Continues_VBZ Space_NNP Language_NNP Model_NNP Traditional_JJ Backoff_NNP N-gram_NNP LMs_NNP -LRB-_-LRB- BNLMs_NNP -RRB-_-RRB- have_VBP been_VBN widely_RB used_VBN in_IN many_JJ NLP_NNP tasks_NNS -LRB-_-LRB- Jia_NNP and_CC Zhao_NNP ,_, 2014_CD ;_: Zhang_NNP et_FW al._FW ,_, 2012_CD ;_: Xu_NNP and_CC Zhao_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Recently_RB ,_, Continuous-Space_NNP Language_NNP Model_NNP -_: s_PRP -LRB-_-LRB- CSLMs_NNS -RRB-_-RRB- ,_, especially_RB Neural_NNP Network_NNP Language_NNP Models_NNP -LRB-_-LRB- NNLMs_NNP -RRB-_-RRB- -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Schwenk_NNP ,_, 2007_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2010_CD ;_: Le_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, are_VBP ac_SYM -_: tively_RB used_VBN in_IN SMT_NNP -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2012_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD ;_: Niehues_NNP and_CC Waibel_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+These_DT models_NNS have_VBP demonstrated_VBN that_IN CSLMs_NNS can_MD improve_VB BLEU_NNP s_VBZ -_: cores_NNS of_IN SMT_NNP over_IN n-gram_JJ LMs_NNS with_IN the_DT same_JJ sized_VBN corpus_NN for_IN LM_NNP training_NN ._.
+An_DT attractive_JJ feature_NN of_IN C_NNP -_: SLMs_NNS is_VBZ that_IN they_PRP can_MD predict_VB the_DT probabilities_NNS of_IN n_SYM -_: grams_NNS outside_IN the_DT training_NN corpus_VBZ more_RBR accurately_RB ._.
+A_DT CSLM_NNP implemented_VBD in_IN a_DT multi-layer_JJ neural_JJ net_NN -_: work_NN contains_VBZ four_CD layers_NNS :_: the_DT input_NN layer_NN projects_NNS all_DT words_NNS in_IN the_DT context_NN hi_IN onto_IN the_DT projection_NN layer_NN -LRB-_-LRB- the_DT first_JJ hidden_JJ layer_NN -RRB-_-RRB- ;_: the_DT second_JJ hidden_JJ layer_NN and_CC the_DT output_NN layer_NN achieve_VB the_DT non-liner_JJ probability_NN es_SYM -_: timation_NN and_CC calculate_VB the_DT LM_NNP probability_NN P_NNP -LRB-_-LRB- wi_FW |_FW hi_FW -RRB-_-RRB- for_IN the_DT given_VBN context_NN -LRB-_-LRB- Schwenk_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+The_DT CSLM_NNP calculates_VBZ the_DT probabilities_NNS of_IN al_SYM -_: l_NN words_NNS in_IN the_DT vocabulary_NN of_IN the_DT corpus_NN given_VBN the_DT context_NN at_IN once_RB ._.
+However_RB ,_, due_JJ to_TO too_RB high_JJ computa_NN -_: tional_JJ complexity_NN ,_, the_DT CSLM_NNP is_VBZ only_RB used_VBN to_TO calcu_VB -_: late_RB the_DT probabilities_NNS of_IN a_DT subset_NN of_IN the_DT whole_JJ vocab_NN -_: ulary_JJ ._.
+This_DT subset_NN is_VBZ called_VBN a_DT short-list_NN ,_, which_WDT con_VBP -_: sists_NNS of_IN the_DT most_RBS frequent_JJ words_NNS in_IN the_DT vocabulary_NN ._.
+The_DT CSLM_NNP also_RB calculates_VBZ the_DT sum_NN of_IN the_DT probabil_NN -_: ities_NNS of_IN all_DT words_NNS not_RB in_IN the_DT short-list_NN by_IN assigning_VBG a_DT n-gram_JJ LM_NNP n-gram_NNP MERT_NNP BLEU_NNP -LRB-_-LRB- dev_NN -RRB-_-RRB- 4-gram_JJ BLEU_NNP -LRB-_-LRB- test_NN -RRB-_-RRB- 7_CD 7_CD 9_CD 9_CD 9_CD 13_CD 4_CD 7_CD 4_CD 7_CD 10_CD 7_CD 42.95_CD 25.54_CD 42.84_CD 25.93_CD 15.82_CD 25.41_CD 40.30_CD 39.91_CD 40.55_CD 40.75_CD 40.37_CD 40.47_CD Table_NNP 8_CD :_: Parameter_NNP Combinations_NNPS of_IN n-gram_JJ LM_NNP and_CC n_SYM -_: gram_NN MERT_NNP At_IN last_JJ ,_, the_DT length_NN of_IN n-gram_JJ MERT_NNP and_CC the_DT s_PRP -_: moothing_NN methods_NNS are_VBP tuned_VBN together_RB ._.
+The_DT LM_NNP is_VBZ set_VBN as_IN 9-gram_JJ ,_, the_DT best_JJS BLEU_NN score_NN in_IN n-gram_JJ LM_NNP experiments_NNS ,_, and_CC other_JJ factors_NNS set_VBN as_IN default_NN in_IN the_DT toolkits_NNS ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 9_CD ._.
+Among_IN different_JJ parameters-combined_JJ setting_NN ,_, BLEU_NNP score_NN is_VBZ from_IN 38.08_CD to_TO 40.75_CD ,_, and_CC the_DT best_JJS per_IN -_: formance_NN is_VBZ not_RB gained_VBN when_WRB all_PDT the_DT factors_NNS which_WDT singly_RB perform_VBP best_JJS are_VBP put_VBN together_RB ._.
+The_DT highest_JJS BLEU_NNP score_NN occurs_VBZ when_WRB the_DT 9-gram_JJ LM_NNP ,_, the_DT 7_CD -_: gram_NN MERT_NNP method_NN and_CC the_DT improved_VBN KN_NNP smooth_JJ -_: ing_NN algorithm_NN ._.
+This_DT BLEU_NNP score_NN is_VBZ about_IN one_CD per_IN -_: cent_NN higher_JJR than_IN our_PRP$ baseline_NN ._.
+At_IN last_JJ ,_, we_PRP show_VBP three_CD parameter_NN combinations_NNS with_IN their_PRP$ NIST_NNP scores_NNS that_WDT Factors_NNP vs_VBZ BLEU_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- 40.75_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- 40.65_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- 40.62_CD Maximum_NNP Length_NNP of_IN Phrases_NNP Heuristic_NNP for_IN Alignment_NNP Scales_NNP of_IN LM_NNP Dictionary_NNP of_IN LM_NNP n-gram_NN of_IN LM_NNP Smoothing_NNP of_IN LM_NNP n-gram_NNP MERT_NNP NIST_NNP Score_NN 7_CD grow-diag-final-and_JJ whole_JJ none_NN 9_CD Improved_VBN KN_NNP 7_CD 9.32_CD 10_CD grow-diag-final-and_JJ whole_JJ none_NN 9_CD Kneser-Ney_NN 7_CD 9.40_CD 10_CD grow-diag-final-and_JJ whole_JJ none_NN 9_CD Witten-Bell_NNP 4_CD 9.23_CD Table_NNP 10_CD :_: Parameters_NNS for_IN TOP_NNP Performance_NNP Table_NNP 11_CD :_: CSLM_NNP Re-rank_NN and_CC decoding_NN for_IN TOP_NNP Performance_NNP Methods_NNPS vs_VBZ BLEU_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- 40.75_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- 40.65_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- 40.62_CD CSLM_NNP Re-rank_NN CSLM_NNP Decoding_NNP 41.15_CD 41.34_CD 41.27_CD 41.34_CD 41.18_CD 41.57_CD neuron_NN ._.
+The_DT probabilities_NNS of_IN other_JJ words_NNS not_RB in_IN the_DT short-list_NN are_VBP obtained_VBN from_IN an_DT Backoff_NNP N-gram_NNP LM_NNP -LRB-_-LRB- BNLM_NNP -RRB-_-RRB- -LRB-_-LRB- Schwenk_NNP ,_, 2007_CD ;_: Schwenk_NNP ,_, 2010_CD ;_: Wang_NNP et_FW al._FW ,_, 2013_CD ;_: Wang_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Let_VB wi_NNS ,_, hi_FW be_VB the_DT current_JJ word_NN and_CC history_NN ,_, respec_FW -_: tively_RB ._.
+The_DT CSLM_NNP with_IN a_DT BNLM_NNP calculates_VBZ the_DT prob_NN -_: ability_NN of_IN wi_NN given_VBN hi_NNS ,_, P_NNP -LRB-_-LRB- wi_FW |_FW hi_FW -RRB-_-RRB- ,_, as_IN follows_VBZ :_: in_IN the_DT second_JJ pass_NN -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD ;_: Son_NNP et_FW al._FW ,_, 2010_CD ;_: Schwenk_NNP et_FW al._FW ,_, 2012_CD ;_: Son_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Because_IN CSLM_NNP outperforms_VBZ BNLM_NNP in_IN probabili_NN -_: ty_NN estimation_NN accuracy_NN and_CC BNLM_NNP outperforms_VBZ C_NNP -_: SLM_NNP in_IN computational_JJ time_NN ._.
+To_TO integrate_VB CSLM_NNP more_RBR efficiently_RB into_IN decoding_NN ,_, some_DT existing_VBG ap_SYM -_: proaches_NNS calculate_VBP the_DT probabilities_NNS of_IN the_DT n-grams_NNS before_IN decoding_VBG and_CC store_VBP them_PRP -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2013_CD ;_: Wang_NNP et_FW al._FW ,_, 2014_CD ;_: Arsoy_NNP et_FW al._FW ,_, 2013_CD ;_: Arsoy_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- in_IN n-gram_NN format_NN ._.
+That_DT is_VBZ ,_, n-grams_NNS from_IN BNLM_NNP are_VBP used_VBN as_IN the_DT input_NN of_IN CSLM_NNP ,_, and_CC the_DT out_RP -_: put_VB probabilities_NNS of_IN CSLM_NNP together_RB with_IN the_DT corre_NN -_: sponding_VBG n-grams_NNS of_IN BNLM_NNP constitute_VBP converted_JJ C_NNP -_: SLM_NNP ._.
+The_DT converted_JJ CSLM_NNP is_VBZ directly_RB used_VBN in_IN SMT_NNP ,_, and_CC its_PRP$ decoding_NN speed_NN is_VBZ as_IN fast_RB as_IN the_DT n-gram_JJ LM_NNP ._.
+From_IN the_DT above_JJ tables_NNS ,_, we_PRP find_VBP the_DT most_RBS impor_JJ -_: tant_JJ parameter_NN for_IN character-based_JJ English_JJ to_TO Chi_NNP -_: nese_JJ translation_NN is_VBZ the_DT LM_NNP ,_, and_CC other_JJ parameters_NNS just_RB have_VBP a_DT minor_JJ influence_NN ._.
+To_TO verify_VB this_DT observation_NN ,_, we_PRP use_VBP 9-gram_JJ character_NN based_VBN CSLM_NNP -LRB-_-LRB- Schwenk_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, with_IN 4096_CD characters_NNS in_IN the_DT short_JJ list_NN ,_, the_DT projection_NN layer_NN of_IN dimension_NN 256_CD and_CC the_DT hidden_JJ layer_NN of_IN dimension_NN 192_CD are_VBP set_VBN in_IN the_DT CSLM_NNP exper_NN -_: iments_NNS ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- We_PRP add_VBP the_DT CSLM_NNP score_NN as_IN the_DT addi_NN -_: tional_JJ feature_NN to_TO re-rank_VB the_DT 1000-best_JJ candidates_NNS in_IN the_DT top_JJ three_CD performance_NN In_IN Table_NNP 10_CD ._.
+The_DT weight_NN parameters_NNS were_VBD tuned_VBN by_IN using_VBG Z-MERT_NNP -LRB-_-LRB- Zaidan_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+This_DT method_NN is_VBZ called_VBN CSLM_NNP Re-rank_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- We_PRP follow_VBP -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- 's_POS method_NN and_CC con_NN -_: vert_SYM CSLM_NNP into_IN n-gram_JJ LM_NNP ._.
+This_DT converted_VBD CSLM_NNP can_MD be_VB directly_RB applied_VBN to_TO SMT_NNP decoding_NN and_CC called_VBN ∑_CD Pc_NN -LRB-_-LRB- wi_FW |_FW hi_FW -RRB-_-RRB- w_SYM ∈_SYM V0_CD Pc_NN -LRB-_-LRB- w_FW |_FW hi_FW -RRB-_-RRB- P_NN -LRB-_-LRB- w_FW i_FW |_FW h_FW i_FW -RRB-_-RRB- =_SYM Pb_NNP -LRB-_-LRB- wi_FW |_FW hi_FW -RRB-_-RRB- P_NN -LRB-_-LRB- h_NN -RRB-_-RRB- ifw_NN ∈_CD V_NNP otherwise_RB -LRB-_-LRB- 4_LS -RRB-_-RRB- s_PRP i_FW i_FW 0_CD where_WRB V0_NNP is_VBZ the_DT short-list_NN ,_, Pc_NNP -LRB-_-LRB- ·_VBN -RRB-_-RRB- is_VBZ the_DT probability_NN cal_NN -_: culated_VBN by_IN the_DT CSLM_NNP ,_, ∑_CD Pc_NN -LRB-_-LRB- w_FW |_FW hi_FW -RRB-_-RRB- is_VBZ the_DT sum_NN -_: w_SYM ∈_SYM V0_CD mary_NN of_IN probabilities_NNS of_IN the_DT neuron_NN for_IN all_PDT the_DT words_NNS in_IN the_DT short-list_NN ,_, Pb_NNP -LRB-_-LRB- ·_VBN -RRB-_-RRB- is_VBZ the_DT probability_NN calculated_VBN by_IN the_DT BNLM_NNP ,_, and_CC Ps_NNP -LRB-_-LRB- hi_FW -RRB-_-RRB- =_SYM ∑_FW v_FW ∈_FW V0_FW Pb_FW -LRB-_-LRB- v_FW |_FW hi_FW -RRB-_-RRB- ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- We_PRP may_MD regard_VB that_IN the_DT CSLM_NNP redistributes_VBZ the_DT probability_NN mass_NN of_IN all_DT words_NNS in_IN the_DT short-list_NN ,_, which_WDT is_VBZ calculated_VBN by_IN using_VBG the_DT n-gram_JJ LM_NNP ._.
+Due_JJ to_TO too_RB high_JJ computational_JJ cost_NN ,_, it_PRP is_VBZ diffi_SYM -_: cult_NN to_TO use_VB CSLMs_NNP in_IN decoding_VBG directly_RB ._.
+As_IN men_NNS -_: tioned_VBN in_IN the_DT introduction_NN ,_, a_DT common_JJ approach_NN in_IN SMT_NNP using_VBG CSLMs_NNP is_VBZ a_DT two-pass_JJ procedure_NN ,_, or_CC n_SYM -_: best_JJS re-ranking_NN ._.
+In_IN this_DT approach_NN ,_, the_DT first_JJ pass_NN uses_VBZ a_DT BNLM_NNP in_IN decoding_VBG to_TO produce_VB an_DT n-best_JJ list_NN ._.
+Then_RB ,_, a_DT CSLM_NNP is_VBZ used_VBN to_TO re-rank_VB those_DT n-best_JJ translations_NNS CSLM-decoding_JJ ._.
+It_PRP is_VBZ shown_VBN in_IN Table_NNP 11_CD that_IN the_DT BLEU_NNP score_NN nearly_RB improve_VB by_IN 0.4_CD point_NN to_TO 0.6_CD point_NN -LRB-_-LRB- CSLM_NNP Re-rank_NN -RRB-_-RRB- and_CC 0.6_CD point_NN to_TO 0.9_CD point_NN -LRB-_-LRB- CSLM-decoding_JJ -RRB-_-RRB- ._.
+This_DT indicates_VBZ that_IN the_DT CSLMs_NNP affect_VB the_DT performance_NN of_IN character_NN based_VBN SMT_NNP in_IN a_DT significant_JJ way_NN ._.
+This_DT may_MD indicate_VB that_IN the_DT LM_NNP can_MD take_VB part_NN place_NN of_IN the_DT seg_NN -_: mentation_NN for_IN character_NN based_VBN English_NNP to_TO Chinese_JJ SMT_NNP ._.
+A_DT better_JJR character-based_JJ English_NNP to_TO Chinese_JJ translation_NN can_MD be_VB obtained_VBN by_IN building_VBG a_DT better_JJR LM_NNP ._.
+5_CD Conclusion_NNP Because_IN the_DT role_NN of_IN word_NN segmentation_NN in_IN En_NNP -_: glish_NN to_TO Chinese_JJ translation_NN is_VBZ arguable_JJ ,_, an_DT attemp_NN -_: t_NN of_IN character-based_JJ English_JJ to_TO Chinese_JJ translation_NN seems_VBZ to_TO be_VB necessary_JJ ._.
+In_IN this_DT paper_NN ,_, we_PRP have_VBP shown_VBN why_WRB character-based_JJ English_JJ to_TO Chinese_JJ translation_NN is_VBZ necessary_JJ and_CC feasible_JJ ,_, and_CC investigated_VBD how_WRB dif_SYM -_: ferent_JJ factors_NNS perform_VBP in_IN the_DT system_NN from_IN the_DT align_NN -_: ment_NN ,_, LM_NNP and_CC the_DT tuning_VBG aspects_NNS ._.
+Several_JJ empirical_JJ studies_NNS ,_, including_VBG recent_JJ popular_JJ CSLM_NNP ,_, have_VBP been_VBN done_VBN to_TO show_VB how_WRB to_TO determine_VB a_DT optimal_JJ param_NN -_: eters_NNS for_IN better_JJR SMT_NNP performance_NN ,_, and_CC the_DT results_NNS show_VBP that_IN the_DT LM_NNP is_VBZ the_DT most_RBS important_JJ factor_NN for_IN character-based_JJ English_JJ to_TO Chinese_JJ translation_NN ._.
+Acknowledgments_NNP We_PRP appreciate_VBP the_DT anonymous_JJ reviewers_NNS for_IN valu_NN -_: able_JJ comments_NNS and_CC suggestions_NNS on_IN our_PRP$ paper_NN ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP and_CC Bao-Liang_NNP Lu_NNP were_VBD partially_RB supported_VBN by_IN the_DT National_NNP Natural_NNP Science_NNP Foun_NNP -_: dation_NN of_IN China_NNP -LRB-_-LRB- No._NN 60903119_CD ,_, No._NN 61170114_CD ,_, and_CC No._NN 61272248_CD -RRB-_-RRB- ,_, the_DT National_NNP Basic_NNP Research_NNP Program_NNP of_IN China_NNP -LRB-_-LRB- No._NN 2013CB329401_CD -RRB-_-RRB- ,_, the_DT Sci_NNP -_: ence_NN and_CC Technology_NNP Commission_NNP of_IN Shanghai_NNP Mu_NNP -_: nicipality_NN -LRB-_-LRB- No._NN 13511500200_CD -RRB-_-RRB- ,_, the_DT European_JJ U_NNP -_: nion_NN Seventh_NNP Framework_NNP Program_NNP -LRB-_-LRB- No._NN 247619_CD -RRB-_-RRB- ,_, the_DT Cai_NNP Yuanpei_NNP Program_NNP -LRB-_-LRB- CSC_NNP fund_NN 201304490199_CD and_CC 201304490171_CD -RRB-_-RRB- ,_, and_CC the_DT art_NN and_CC science_NN inter_NN -_: discipline_NN funds_NNS of_IN Shanghai_NNP Jiao_NNP Tong_NNP University_NNP -LRB-_-LRB- A_DT study_NN on_IN mobilization_NN mechanism_NN and_CC alerting_VBG threshold_NN setting_VBG for_IN online_JJ community_NN ,_, and_CC media_NNS image_NN and_CC psychology_NN evaluation_NN :_: a_DT computational_JJ intelligence_NN approach_NN -RRB-_-RRB- ._.
+References_NNS Ebru_NNP Arsoy_NNP ,_, Stanley_NNP F._NNP Chen_NNP ,_, Bhuvana_NNP Ramabhadran_NNP ,_, and_CC Abhinav_NNP Sethy_NNP ._.
+2013_CD ._.
+Converting_VBG neural_JJ network_NN language_NN models_NNS into_IN back-off_JJ language_NN models_NNS for_IN ef_SYM -_: ficient_JJ decoding_NN in_IN automatic_JJ speech_NN recognition_NN ._.
+In_IN Proceeding_VBG of_IN International_NNP Conference_NNP on_IN Acoustic_NNP -_: s_PRP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, Vancouver_NNP ,_, Canada_NNP ,_, May_NNP ._.
+Ebru_NNP Arsoy_NNP ,_, Stanley_NNP F._NNP Chen_NNP ,_, Bhuvana_NNP Ramabhadran_NNP ,_, and_CC Abhinav_NNP Sethy_NNP ._.
+2014_CD ._.
+Converting_VBG neural_JJ net_NN -_: work_NN language_NN models_NNS into_IN back-off_JJ language_NN models_NNS for_IN efficient_JJ decoding_VBG in_IN automatic_JJ speech_NN recognition_NN ._.
+IEEE/ACM_NNP Transactions_NNS on_IN Audio_NNP ,_, Speech_NNP ,_, and_CC Lan_NNP -_: guage_NN Processing_NNP ,_, 22_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :184_CD --_: 192_CD ._.
+Michael_NNP Auli_NNP ,_, Michel_NNP Galley_NNP ,_, Chris_NNP Quirk_NNP ,_, and_CC Geoffrey_NNP Zweig_NNP ._.
+2013_CD ._.
+Joint_NNP language_NN and_CC translation_NN model_NN -_: ing_VBG with_IN recurrent_JJ neural_JJ networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 1044_CD --_: 1054_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Yoshua_NNP Bengio_NNP ,_, Re_NNP ́jean_JJ Ducharme_NNP ,_, Pascal_NNP Vincent_NNP ,_, and_CC Christian_NNP Janvin_NNP ._.
+2003_CD ._.
+A_DT neural_JJ probabilistic_JJ lan_NN -_: guage_NN model_NN ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP -LRB-_-LRB- JMLR_NNP -RRB-_-RRB- ,_, 3:1137_CD --_: 1155_CD ,_, March_NNP ._.
+Thorsten_NNP Brants_NNPS and_CC Peng_NNP Xu_NNP ._.
+2009_CD ._.
+Distributed_VBN lan_SYM -_: guage_NN models_NNS ._.
+In_IN Proceedings_NNP of_IN Human_NNP Language_NNP Technologies_NNPS :_: The_DT 2009_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP ,_, Companion_NNP Volume_NN :_: Tutorial_NNP Abstracts_NNPS ,_, NAACL-Tutorials_NNPS '_POS 09_CD ,_, pages_NNS 3_CD --_: 4_CD ,_, Boulder_NNP ,_, Colorado_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+Peter_NNP F._NNP Brown_NNP ,_, Vincent_NNP J._NNP Della_NNP Pietra_NNP ,_, Stephen_NNP A._NNP Della_NNP Pietra_NNP ,_, and_CC Robert_NNP L._NNP Mercer_NNP ._.
+1993_CD ._.
+The_DT mathematic_JJ -_: s_PRP of_IN statistical_JJ machine_NN translation_NN :_: parameter_NN estima_NN -_: tion_NN ._.
+Comput_NNP ._.
+Linguist._NNP ,_, 19_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :263_CD --_: 311_CD ,_, June_NNP ._.
+Pi-Chuan_NNP Chang_NNP ,_, Michel_NNP Galley_NNP ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2008_CD ._.
+Optimizing_VBG Chinese_JJ word_NN segmen_NNS -_: tation_NN for_IN machine_NN translation_NN performance_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Third_NNP Workshop_NNP on_IN Statistical_NNP Machine_NNP Translation_NN ,_, StatMT_NNP '_POS 08_CD ,_, pages_NNS 224_CD --_: 232_CD ,_, Columbus_NNP ,_, Ohio_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Stanley_NNP F._NNP Chen_NNP and_CC Joshua_NNP Goodman_NNP ._.
+1996_CD ._.
+An_DT empir_NN -_: ical_JJ study_NN of_IN smoothing_VBG techniques_NNS for_IN language_NN mod_NN -_: eling_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 34th_JJ annual_JJ meeting_NN on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, ACL_NNP '_POS 96_CD ,_, pages_NNS 310_CD --_: 318_CD ,_, Santa_NNP Cruz_NNP ,_, California_NNP ,_, USA_NNP ._.
+Associ_SYM -_: ation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Stanley_NNP F._NNP Chen_NNP and_CC Joshua_NNP Goodman_NNP ._.
+1998_CD ._.
+An_DT empiri_NN -_: cal_NN study_NN of_IN smoothing_VBG techniques_NNS for_IN language_NN model_NN -_: ing_NN ._.
+Technical_NNP report_NN ,_, Computer_NNP Science_NNP Group_NNP ,_, Har_NNP -_: vard_NN Univ._NNP ._.
+Kyunghyun_NNP Cho_NNP ,_, Bart_NNP van_NNP Merrienboer_NNP ,_, Caglar_NNP Gulcehre_NNP ,_, Dzmitry_NNP Bahdanau_NNP ,_, Fethi_NNP Bougares_NNP ,_, Holger_NNP Schwenk_NNP ,_, and_CC Yoshua_NNP Bengio_NNP ._.
+2014_CD ._.
+Learning_NNP phrase_NN represen_NN -_: tations_NNS using_VBG rnn_NN encoder_NN --_: decoder_NN for_IN statistical_JJ ma_NN -_: chine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 1724_CD --_: 1734_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Jacob_NNP Devlin_NNP ,_, Rabih_NNP Zbib_NNP ,_, Zhongqiang_NNP Huang_NNP ,_, Thomas_NNP Lamar_NNP ,_, Richard_NNP Schwartz_NNP ,_, and_CC John_NNP Makhoul_NNP ._.
+2014_CD ._.
+Fast_NNP and_CC robust_JJ neural_JJ network_NN joint_JJ models_NNS for_IN statis_NNS -_: tical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1370_CD --_: 1380_CD ,_, Baltimore_NNP ,_, Maryland_NNP ,_, June_NNP ._.
+Jianfeng_NNP Gao_NNP ,_, Xiaodong_NNP He_PRP ,_, Wen-tau_NNP Yih_NNP ,_, and_CC Li_NNP Deng_NNP ._.
+2014_CD ._.
+Learning_NNP continuous_JJ phrase_NN representations_NNS for_IN translation_NN modeling_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computation_NNP -_: al_IN Linguistics_NNP ,_, pages_NNS 699_CD --_: 709_CD ,_, Baltimore_NNP ,_, Maryland_NNP ,_, June_NNP ._.
+Isao_NNP Goto_NNP ,_, Bin_NNP Lu_NNP ,_, Ka_NNP Po_NNP Chow_NNP ,_, Eiichiro_NNP Sumita_NNP ,_, and_CC Benjamin_NNP K._NNP Tsou_NNP ._.
+2011_CD ._.
+Overview_NNP of_IN the_DT paten_NN -_: t_NN machine_NN translation_NN task_NN at_IN the_DT NTCIR-9_NNP workshop_NN ._.
+In_IN Proceedings_NNP of_IN NTCIR-9_NNP Workshop_NNP Meeting_VBG ,_, pages_NNS 559_CD --_: 578_CD ,_, Tokyo_NNP ,_, Japan_NNP ,_, December_NNP ._.
+Zhongye_NNP Jia_NNP and_CC Hai_NNP Zhao_NNP ._.
+2014_CD ._.
+A_DT joint_JJ graph_NN mod_NN -_: el_NN for_IN pinyin-to-chinese_JJ conversion_NN with_IN typo_NN correc_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1512_CD --_: 1523_CD ,_, Baltimore_NNP ,_, Maryland_NNP ,_, June_NNP ._.
+Nal_NNP Kalchbrenner_NNP and_CC Phil_NNP Blunsom_NNP ._.
+2013_CD ._.
+Recurren_NNP -_: t_NN continuous_JJ translation_NN models_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP ,_, pages_NNS 1700_CD --_: 1709_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Richard_NNP Zens_NNP ,_, Chris_NNP Dyer_NNP ,_, Ondrej_NNP Bojar_NNP ,_, Alexandra_NNP Con_NN -_: stantin_NN ,_, and_CC Evan_NNP Herbst_NNP ._.
+2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 45th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP Companion_NNP Volume_NN Pro-_JJ ceedings_NNS of_IN the_DT Demo_NNP and_CC Poster_NNP Sessions_NNP ,_, pages_NNS 177_CD --_: 180_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Stanislas_NNP Lauly_NNP ,_, Hugo_NNP Larochelle_NNP ,_, Mitesh_NNP Khapra_NNP ,_, Balaraman_NNP Ravindran_NNP ,_, Vikas_NNP C_NNP Raykar_NNP ,_, and_CC Amrita_NNP Saha_NNP ._.
+2014_CD ._.
+An_DT autoencoder_NN approach_NN to_TO learning_VBG bilingual_JJ word_NN representations_NNS ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS ,_, pages_NNS 1853_CD --_: 1861_CD ._.
+Alon_NNP Lavie_NNP and_CC Abhaya_NNP Agarwal_NNP ._.
+2007_CD ._.
+Meteor_NNP :_: an_DT au_SYM -_: tomatic_JJ metric_JJ for_IN mt_JJ evaluation_NN with_IN high_JJ levels_NNS of_IN correlation_NN with_IN human_JJ judgments_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Second_JJ Workshop_NNP on_IN Statistical_NNP Machine_NNP Transla_NNP -_: tion_NN ,_, StatMT_NNP '_POS 07_CD ,_, pages_NNS 228_CD --_: 231_CD ,_, Prague_NNP ,_, Czech_JJ Re_NNP -_: public_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Hai-Son_NNP Le_NNP ,_, I._NNP Oparin_NNP ,_, A._NN Allauzen_NNP ,_, J._NNP Gauvain_NNP ,_, and_CC F._NNP Yvon_NNP ._.
+2011_CD ._.
+Structured_JJ output_NN layer_NN neural_JJ network_NN language_NN model_NN ._.
+In_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Pro-_NNP cessing_NN -LRB-_-LRB- ICASSP_NNP -RRB-_-RRB- ,_, 2011_CD IEEE_NNP International_NNP Confer_NNP -_: ence_NN on_IN ,_, pages_NNS 5524_CD --_: 5527_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ,_, May_NNP ._.
+IEEE_NNP ._.
+Maoxi_NNP Li_NNP ,_, Chengqing_NNP Zong_NNP ,_, and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2011_CD ._.
+Automatic_NNP evaluation_NN of_IN Chinese_JJ translation_NN output_NN :_: Word-level_JJ or_CC character-level_JJ ?_.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS ,_, pages_NNS 159_CD --_: 164_CD ,_, Portland_NNP ,_, Oregon_NNP ,_, USA_NNP ,_, June_NNP ._.
+Associ_SYM -_: ation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Chang_NNP Liu_NNP and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2012_CD ._.
+Character-level_JJ machine_NN translation_NN evaluation_NN for_IN languages_NNS with_IN am_VBP -_: biguous_JJ word_NN boundaries_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computation_NNP -_: al_IN Linguistics_NNP :_: Long_NNP Papers_NNP -_: Volume_NN 1_CD ,_, ACL_NNP '_POS 12_CD ,_, pages_NNS 921_CD --_: 929_CD ,_, Jeju_NNP Island_NNP ,_, Korea_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Lemao_NNP Liu_NNP ,_, Taro_NNP Watanabe_NNP ,_, Eiichiro_NNP Sumita_NNP ,_, and_CC Tiejun_NNP Zhao_NNP ._.
+2013_CD ._.
+Additive_JJ neural_JJ networks_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 51st_CD Annu_NNP -_: al_IN Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ,_, pages_NNS 791_CD --_: 801_CD ,_, Sofia_NNP ,_, Bulgaria_NNP ,_, August_NNP ._.
+Jin_NNP Kiat_NNP Low_NNP ,_, Hwee_NNP Tou_NNP Ng_NNP ,_, and_CC Wenyuan_NNP Guo_NNP ._.
+2005_CD ._.
+A_DT Maximum_NNP Entropy_NNP Approach_NNP to_TO Chinese_JJ Word_NN Seg_NNP -_: mentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 4th_JJ SIGHAN_NNP Work_NNP -_: shop_NN on_IN Chinese_JJ Language_NN Processing_NNP ,_, Jeju_NNP Island_NNP ,_, Korea_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+I._NN Dan_NNP Melamed_NNP ,_, Ryan_NNP Green_NNP ,_, and_CC Joseph_NNP P._NNP Turi_NNP -_: an_DT ._.
+2003_CD ._.
+Precision_NN and_CC recall_NN of_IN machine_NN transla_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2003_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP on_IN Human_NNP Language_NNP Technol_NNP -_: ogy_NN :_: companion_NN volume_NN of_IN the_DT Proceedings_NNP of_IN HLT_NNP -_: NAACL_NNP 2003_CD --_: short_JJ papers_NNS -_: Volume_NN 2_CD ,_, NAACL-Short_NNP '_POS 03_CD ,_, pages_NNS 61_CD --_: 63_CD ,_, Edmonton_NNP ,_, Canada_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Tomas_NNP Mikolov_NNP ,_, Martin_NNP Karafia_NNP ́t_NN ,_, Lukas_NNP Burget_NNP ,_, Jan_NNP Cer_NNP -_: nocky_JJ `_`` ,_, and_CC Sanjeev_NNP Khudanpur_NNP ._.
+2010_CD ._.
+Recurren_NNP -_: t_NN neural_JJ network_NN based_VBN language_NN model_NN ._.
+In_IN INTER_NNP -_: SPEECH_NNP ,_, pages_NNS 1045_CD --_: 1048_CD ._.
+Jan_NNP Niehues_NNPS and_CC Alex_NNP Waibel_NNP ._.
+2012_CD ._.
+Continuous_JJ space_NN language_NN models_NNS using_VBG restricted_JJ boltzmann_JJ machines_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Workshop_NNP for_IN Spo_NNP -_: ken_NN Language_NNP Translation_NN ,_, IWSLT_NNP 2012_CD ,_, pages_NNS 311_CD --_: 318_CD ,_, Hong_NNP Kong_NNP ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT systemat_NN -_: ic_JJ comparison_NN of_IN various_JJ statistical_JJ alignment_NN models_NNS ._.
+Comput_NNP ._.
+Linguist._NNP ,_, 29_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :19_CD --_: 51_CD ,_, March_NNP ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2004_CD ._.
+The_DT alignmen_NNS -_: t_NN template_NN approach_NN to_TO statistical_JJ machine_NN translation_NN ._.
+Comput_NNP ._.
+Linguist._NNP ,_, 30_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :417_CD --_: 449_CD ,_, December_NNP ._.
+Franz_NNP Josef_NNP Och_NNP ._.
+2003_CD ._.
+Minimum_NNP error_NN rate_NN training_NN in_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 41st_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, pages_NNS 160_CD --_: 167_CD ,_, Sapporo_NNP ,_, Japan_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Holger_NNP Schwenk_NNP ,_, Daniel_NNP Dchelotte_NNP ,_, and_CC Jean-Luc_NNP Gau_NNP -_: vain_JJ ._.
+2006_CD ._.
+Continuous_JJ space_NN language_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT COLING/ACL_NNP on_IN Main_NNP conference_NN poster_NN sessions_NNS ,_, COLING-ACL_NNP '_POS 06_CD ,_, pages_NNS 723_CD --_: 730_CD ,_, Sydney_NNP ,_, Australi_NNP -_: a._NNP Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Holger_NNP Schwenk_NNP ,_, Anthony_NNP Rousseau_NNP ,_, and_CC Mohammed_NNP Attik_NNP ._.
+2012_CD ._.
+Large_JJ ,_, pruned_VBN or_CC continuous_JJ space_NN lan_NN -_: guage_NN models_NNS on_IN a_DT gpu_NN for_IN statistical_JJ machine_NN transla_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT NAACL-HLT_NNP 2012_CD Work_NN -_: shop_NN :_: Will_MD We_PRP Ever_RB Really_RB Replace_VB the_DT N-gram_NNP Model_NNP ?_.
+On_IN the_DT Future_NNP of_IN Language_NNP Modeling_NNP for_IN HLT_NNP ,_, WLM_NNP '_POS 12_CD ,_, pages_NNS 11_CD --_: 19_CD ,_, Montreal_NNP ,_, Canada_NNP ,_, June_NNP ._.
+Associa_SYM -_: tion_NN for_IN Computational_NNP Linguistics_NNP ._.
+Holger_NNP Schwenk_NNP ._.
+2007_CD ._.
+Continuous_JJ space_NN language_NN models_NNS ._.
+Computer_NNP Speech_NNP and_CC Language_NNP ,_, 21_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :492_CD --_: 518_CD ._.
+Holger_NNP Schwenk_NNP ._.
+2010_CD ._.
+Continuous-space_JJ language_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+The_DT Prague_NNP Bulletin_NNP of_IN Mathematical_NNP Linguistics_NNP ,_, pages_NNS 137_CD --_: 146_CD ._.
+Matthew_NNP Snover_NNP ,_, Bonnie_NNP Dorr_NNP ,_, Richard_NNP Schwartz_NNP ,_, Linnea_NNP Micciulla_NNP ,_, and_CC John_NNP Makhoul_NNP ._.
+2006_CD ._.
+A_DT study_NN of_IN trans_NNS -_: lation_NN edit_VB rate_NN with_IN targeted_JJ human_JJ annotation_NN ._.
+In_IN In_IN Proceedings_NNP of_IN Association_NNP for_IN Machine_NNP Translation_NN in_IN the_DT Americas_NNPS ,_, pages_NNS 223_CD --_: 231_CD ._.
+Le_NNP Hai_NNP Son_NNP ,_, Alexandre_NNP Allauzen_NNP ,_, Guillaume_NNP Wisniewski_NNP ,_, and_CC Franc_NNP ̧ois_VBZ Yvon_NNP ._.
+2010_CD ._.
+Training_VBG continuous_JJ space_NN language_NN models_NNS :_: some_DT practical_JJ issues_NNS ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2010_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, EMNLP_NNP '_POS 10_CD ,_, pages_NNS 778_CD --_: 788_CD ,_, Cambridge_NNP ,_, Massachusetts_NNP ,_, October_NNP ._.
+Asso_SYM -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ._.
+LeHaiSon_NNP ,_, AlexandreAllauzen_NNP ,_, andFranc_NNP ̧oisYvon_NNP ._.
+2012_CD ._.
+Continuous_JJ space_NN translation_NN models_NNS with_IN neu_NN -_: ral_NN networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Tech_NNP -_: nologies_NNS ,_, NAACL_NNP HLT_NNP '_POS 12_CD ,_, pages_NNS 39_CD --_: 48_CD ,_, Montreal_NNP ,_, Canada_NNP ,_, June_NNP ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+Srilm-an_JJ extensible_JJ language_NN modeling_NN toolkit_NN ._.
+In_IN Proceedings_NNP International_NNP Con_NN -_: ference_NN on_IN Spoken_NNP Language_NNP Processing_NNP ,_, pages_NNS 257_CD --_: 286_CD ,_, Seattle_NNP ,_, USA_NNP ,_, November_NNP ._.
+Martin_NNP Sundermeyer_NNP ,_, Tamer_NNP Alkhouli_NNP ,_, Joern_NNP Wuebker_NNP ,_, and_CC Hermann_NNP Ney_NNP ._.
+2014_CD ._.
+Translation_NN modeling_NN with_IN bidirectional_JJ recurrent_JJ neural_JJ networks_NNS ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 14_CD --_: 25_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Ashish_NNP Vaswani_NNP ,_, Yinggong_NNP Zhao_NNP ,_, Victoria_NNP Fossum_NNP ,_, and_CC David_NNP Chiang_NNP ._.
+2013_CD ._.
+Decoding_VBG with_IN large-scale_JJ neu_NN -_: ral_NN language_NN models_NNS improves_VBZ translation_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Method_NN -_: s_PRP in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 1387_CD --_: 1392_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Rui_NNP Wang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Isao_NNP Goto_NNP ,_, Eiichro_NNP Sumi_NNP -_: ta_NN ,_, Hai_NNP Zhao_NNP ,_, and_CC Bao-Liang_NNP Lu_NNP ._.
+2013_CD ._.
+Convert_VB -_: ing_VBG continuous-space_JJ language_NN models_NNS into_IN n-gram_JJ language_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 845_CD --_: 850_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao_NNP Liang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2014_CD ._.
+Neural_JJ network_NN based_VBN bilin_NN -_: gual_JJ language_NN model_NN growing_VBG for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 189_CD --_: 195_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Bao-Liang_NNP Lu_NNP ,_, M._NNP Utiyama_NNP ,_, and_CC E._NNP Sumita_NNP ._.
+2015_CD ._.
+Bilingual_JJ continuous-space_JJ lan_NN -_: guage_NN model_NN growing_VBG for_IN statistical_JJ machine_NN trans_NNS -_: lation_NN ._.
+Audio_NNP ,_, Speech_NNP ,_, and_CC Language_NNP Processing_NNP ,_, IEEE/ACM_NNP Transactions_NNS on_IN ,_, 23_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- :1209_CD --_: 1220_CD ,_, July_NNP ._.
+Ning_VBG Xi_NNP ,_, Guangchao_NNP Tang_NNP ,_, Xinyu_NNP Dai_NNP ,_, Shujian_NNP Huang_NNP ,_, and_CC Jiajun_NNP Chen_NNP ._.
+2012_CD ._.
+Enhancing_VBG statistical_JJ ma_SYM -_: chine_NN translation_NN with_IN character_NN alignment_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Associa_NNP -_: tion_NN for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- Volume_NN 2_CD :_: Short_JJ Papers_NNP -RRB-_-RRB- ,_, pages_NNS 285_CD --_: 290_CD ,_, Jeju_NNP Island_NNP ,_, Korea_NNP ,_, July_NNP ._.
+As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Qiongkai_NNP Xu_NNP and_CC Hai_NNP Zhao_NNP ._.
+2012_CD ._.
+Using_VBG deep_JJ linguistic_NN features_NNS for_IN finding_VBG deceptive_JJ opinion_NN spam_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN 24th_JJ International_NNP Conference_NNP on_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, pages_NNS 1341_CD --_: 1350_CD ,_, Mumbai_NNP ,_, Indi_NNP -_: a_DT ,_, December_NNP ._.
+Kenji_NNP Yamada_NNP and_CC Kevin_NNP Knight_NNP ._.
+2001_CD ._.
+A_DT syntax-based_JJ statistical_JJ translation_NN model_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 39th_JJ Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computation_NNP -_: al_IN Linguistics_NNP ,_, ACL_NNP '_POS 01_CD ,_, pages_NNS 523_CD --_: 530_CD ,_, Toulouse_NNP ,_, France_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Omar_NNP F._NNP Zaidan_NNP ._.
+2009_CD ._.
+Z-MERT_NNP :_: A_NNP fully_RB configurable_JJ open_JJ source_NN tool_NN for_IN minimum_JJ error_NN rate_NN training_NN of_IN machine_NN translation_NN systems_NNS ._.
+The_DT Prague_NNP Bulletin_NNP of_IN Mathematical_NNP Linguistics_NNP ,_, 91:79_CD --_: 88_CD ._.
+Ruiqiang_NNP Zhang_NNP ,_, Keiji_NNP Yasuda_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2008_CD ._.
+Improved_VBN statistical_JJ machine_NN translation_NN by_IN multiple_JJ Chinese_JJ word_NN segmentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Third_NNP Workshop_NNP on_IN Statistical_NNP Machine_NNP Trans_NNP -_: lation_NN ,_, StatMT_NNP '_POS 08_CD ,_, pages_NNS 216_CD --_: 223_CD ,_, Columbus_NNP ,_, Ohio_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Xiaotian_NNP Zhang_NNP ,_, Hai_NNP Zhao_NNP ,_, and_CC Cong_NNP Hui_NNP ._.
+2012_CD ._.
+A_DT ma_SYM -_: chine_NN learning_VBG approach_NN to_TO convert_VB CCGbank_NNP to_TO Penn_NNP treebank_NN ._.
+In_IN Proceedings_NNP of_IN 24th_JJ International_NNP Con_NN -_: ference_NN on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 535_CD --_: 542_CD ,_, Mumbai_NNP ,_, India_NNP ,_, December_NNP ._.
+Jingyi_NNP Zhang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Eiichiro_NNP Sumita_NNP ,_, and_CC Hai_NNP Zhao_NNP ._.
+2014_CD ._.
+Learning_NNP hierarchical_JJ translation_NN spans_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 183_CD --_: 188_CD ,_, Doha_NNP ,_, Qatar_NNP ,_, October_NNP ._.
+Hai_NNP Zhao_NNP ,_, Chang-Ning_NNP Huang_NNP ,_, and_CC Mu_NNP Li_NNP ._.
+2006_CD ._.
+An_DT im_SYM -_: proved_VBD Chinese_JJ word_NN segmentation_NN system_NN with_IN con_NN -_: ditional_JJ random_JJ field_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Fifth_NNP SIGHAN_NNP Workshop_NNP on_IN Chinese_NNP Language_NNP Processing_NNP ,_, pages_NNS 162_CD --_: 165_CD ,_, Sydney_NNP ,_, Australia_NNP ,_, July_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Hai_NNP Zhao_NNP ,_, Masao_NNP Utiyama_NNP ,_, Eiichiro_NNP Sumita_NNP ,_, and_CC Bao_NNP -_: Liang_NNP Lu_NNP ._.
+2013_CD ._.
+An_DT empirical_JJ study_NN on_IN word_NN seg_NN -_: mentation_NN for_IN Chinese_JJ machine_NN translation_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 14th_JJ international_JJ conference_NN on_IN Com_NNP -_: putational_JJ Linguistics_NNPS and_CC Intelligent_NNP Text_NNP Processing_NNP -_: Volume_NN 2_CD ,_, CICLing_VBG '_'' 13_CD ,_, pages_NNS 248_CD --_: 263_CD ,_, Berlin_NNP ,_, Hei_NNP -_: delberg_NN ._.
+Springer-Verlag_NNP ._.
+Will_MD Y._NNP Zou_NNP ,_, Richard_NNP Socher_NNP ,_, Daniel_NNP Cer_NNP ,_, and_CC Christo_NNP -_: pher_NN D._NNP Manning_NNP ._.
+2013_CD ._.
+Bilingual_JJ word_NN embeddings_NNS for_IN phrase-based_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Nat_NNP -_: ural_JJ Language_NN Processing_NNP ,_, pages_NNS 1393_CD --_: 1398_CD ,_, Seattle_NNP ,_, Washington_NNP ,_, USA_NNP ,_, October_NNP ._.

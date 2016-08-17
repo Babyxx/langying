@@ -1,0 +1,129 @@
+Chinese_JJ word_NN segmentation_NN based_VBN on_IN analogy_NN and_CC majority_NN voting_NN 2-7_CD Hibikino_NNP ,_, Wakamatsu-ku_NN ,_, Kitakyushu_NNP ,_, Fukuoka_NNP 808-0135_CD ,_, Japan_NNP -LCB-_-LRB- zzr0427@toki.,_CD yiwang@akane.,_JJ yves.lepage_NN @_IN -RCB-_-RRB- waseda.jp_JJ Abstract_NNP This_DT paper_NN proposes_VBZ a_DT new_JJ method_NN of_IN Chi_NNP -_: nese_JJ word_NN segmentation_NN based_VBN on_IN proportional_JJ analogy_NN and_CC majority_NN voting_NN ._.
+First_RB ,_, we_PRP in_IN -_: troduce_VB an_DT analogy-based_JJ method_NN for_IN solving_VBG the_DT word_NN segmentation_NN problem_NN ._.
+Second_NNP ,_, we_PRP show_VBP how_WRB to_TO use_VB majority_NN voting_NN to_TO make_VB the_DT decision_NN on_IN where_WRB to_TO segment_NN ._.
+The_DT prelimi_NN -_: nary_PDT results_NNS show_VBP that_IN this_DT approach_NN compares_VBZ well_RB with_IN other_JJ segmenters_NNS reported_VBN in_IN previ_NNS -_: ous_JJ studies_NNS ._.
+As_IN an_DT important_JJ and_CC original_JJ fea_NN -_: ture_NN ,_, our_PRP$ method_NN does_VBZ not_RB need_VB any_DT pretraining_NN or_CC lexical_JJ knowledge_NN ._.
+1_CD Introduction_NNP Words_NNS are_VBP usually_RB considered_VBN a_DT basic_JJ unit_NN in_IN natu_NN -_: ral_NN language_NN processing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- studies_NNS ._.
+As_IN natural_JJ language_NN texts_NNS are_VBP continuous_JJ sequences_NNS of_IN charac_NN -_: ters_NNS ,_, it_PRP is_VBZ generally_RB agreed_VBN that_IN word_NN segmentation_NN is_VBZ the_DT initial_JJ step_NN of_IN NLP_NNP ._.
+The_DT performance_NN of_IN the_DT best_JJS Chinese_JJ segmenters_NNS for_IN F-score_NN has_VBZ reached_VBN 95_CD %_NN ,_, as_IN reported_VBN in_IN the_DT second_JJ SIGHAN_NNP Chinese_NNP segmenta_NN -_: tion_NN bakeoff_NN -LRB-_-LRB- Emerson_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+These_DT best_JJS existing_VBG methods_NNS rely_VBP on_IN massive_JJ training_NN data_NNS ._.
+How_WRB to_TO utilize_VB as_RB much_JJ information_NN as_IN possible_JJ from_IN the_DT training_NN corpus_NN to_TO adapt_VB a_DT segmentation_NN sys_SYM -_: tem_NN towards_IN a_DT segmentation_NN standard_NN has_VBZ been_VBN the_DT main_JJ issue_NN -LRB-_-LRB- Kit_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Most_JJS of_IN existing_VBG meth_NN -_: ods_NNS can_MD be_VB roughly_RB classified_VBN as_IN either_DT dictionary_NN -_: based_VBN or_CC statistical-based_JJ methods_NNS ._.
+Dictionary-based_JJ methods_NNS usually_RB rely_VBP on_IN large_JJ -_: scale_NN lexicons_NNS and_CC are_VBP built_VBN upon_IN a_DT few_JJ basic_JJ ''_'' me_PRP -_: chanical_JJ ''_'' segmentation_NN methods_NNS based_VBN on_IN string_NN matching_NN ._.
+Without_IN a_DT large_JJ ,_, comprehensive_JJ dictio_NN -_: nary_PDT ,_, the_DT success_NN of_IN such_JJ methods_NNS degrade_VBP ._.
+Statistical-based_JJ methods_NNS consider_VBP the_DT segmenta_NN -_: tion_NN problem_NN as_IN a_DT classification_NN problem_NN on_IN charac_NN -_: ters_NNS and_CC usually_RB involve_VBP complicated_JJ language_NN mod_NN -_: els_NNS trained_VBN on_IN large-scale_JJ corpora_NN ._.
+All_DT of_IN these_DT methods_NNS require_VBP pre-training_JJ data_NNS and_CC prior_RB lexical_JJ knowledge_NN ._.
+All_DT current_JJ methods_NNS as_IN -_: sume_NN comprehensive_JJ lexical_JJ knowledge_NN ._.
+How_WRB to_TO model_VB human_JJ cognition_NN and_CC acquisition_NN it_PRP to_TO seg_SYM -_: ment_NN words_NNS efficiently_RB without_IN using_VBG knowledge_NN of_IN wordhood_NN is_VBZ still_RB a_DT challenge_NN in_IN CWS_NNP -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+After_IN this_DT introduction_NN ,_, we_PRP shall_MD introduce_VB the_DT no_DT -_: tion_NN of_IN proportional_JJ analogy_NN in_IN section_NN 2_CD on_IN which_WDT our_PRP$ proposal_NN relies_VBZ ._.
+In_IN section_NN 3_CD ,_, we_PRP shall_MD describe_VB the_DT main_JJ idea_NN of_IN our_PRP$ new_JJ method_NN for_IN CWS_NNP using_VBG proportional_JJ analogy_NN ._.
+Section_NN 4_CD shall_MD present_VB the_DT de_FW -_: tails_NNS of_IN our_PRP$ implementation_NN of_IN our_PRP$ method_NN ._.
+Section_NN 5_CD shall_MD detail_NN some_DT experiments_NNS done_VBN to_TO evaluate_VB our_PRP$ method_NN with_IN other_JJ state-of-the-art_JJ methods_NNS ._.
+2_CD Proportional_NNP Analogy_NNP Analogy_NNP has_VBZ shown_VBN great_JJ potential_JJ in_IN natural_JJ lan_NN -_: guage_NN processing_NN ,_, like_IN machine_NN translation_NN -LRB-_-LRB- Lepage_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- and_CC semantic_JJ relations_NNS -LRB-_-LRB- Turney_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+A_DT proportional_JJ analogy_NN is_VBZ a_DT relationship_NN be_VB -_: tweenfourobjects_NNS ,_, notedA_NNP :_: B_NNP :_: :_: C_NNP :_: Dinits_NNS general_JJ form_NN -LRB-_-LRB- Lepage_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+On_IN numbers_NNS we_PRP have_VBP :_: 5_CD =_SYM 10_CD alsowrittenasananalogy5_NNS :15_CD :_: :10:30_CD 15_CD 30_CD By_IN using_VBG words_NNS ,_, sequences_NNS of_IN words_NNS or_CC sentences_NNS instead_RB of_IN numbers_NNS ,_, we_PRP get_VBP proportional_JJ analogies_NNS between_IN words_NNS ,_, sequences_NNS of_IN words_NNS or_CC sentences_NNS ._.
+For_IN instance_NN ,_, the_DT following_VBG example_NN is_VBZ a_DT true_JJ anal_JJ -_: ogy_NN between_IN sequences_NNS of_IN words_NNS :_: I_PRP walked_VBD :_: to_TO walk_VB :_: :_: I_PRP laughed_VBD :_: to_TO laugh_NN We_PRP use_VBP the_DT algorithm_NN proposed_VBN by_IN Lepage_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- for_IN the_DT resolution_NN of_IN analogical_JJ equations_NNS ._.
+This_DT algo_NN -_: rithm_NN is_VBZ based_VBN on_IN the_DT formalization_NN of_IN proportional_JJ analogies_NNS shown_VBN in_IN formula_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- -LRB-_-LRB- Lepage_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Let_VB D_NNP be_VB an_DT input_NN sentence_NN to_TO be_VB segmented_JJ into_IN segmented_JJ sentence_NN D_NNP ̃_CD ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- We_PRP build_VBP all_DT analogical_JJ equations_NNS Ai_NNP :_: Bj_NNP :_: :_: x_LS :_: D_NNP with_IN the_DT input_NN sentence_NN D_NNP and_CC with_IN all_DT pairs_NNS of_IN sub-strings_NNS -LRB-_-LRB- Ai_NNP ,_, Bj_NNP -RRB-_-RRB- from_IN the_DT unsegmented_JJ part_NN of_IN the_DT training_NN corpus_NN ._.
+According_VBG to_TO for_IN -_: mula_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, not_RB all_DT analogical_JJ equations_NNS have_VBP a_DT solution_NN ._.
+In_IN order_NN to_TO get_VB more_JJR analogical_NN so_RB -_: lutions_NNS and_CC reduce_VB time_NN in_IN solving_VBG analogical_JJ equations_NNS ,_, we_PRP only_RB consider_VBP sub-strings_NNS Ai_NNP and_CC Bi_NNP which_WDT are_VBP more_RBR similar_JJ to_TO D_NNP than_IN a_DT given_VBN threshold_NN ;_: -LRB-_-LRB- ii_FW -RRB-_-RRB- We_PRP gather_VBP all_PDT the_DT solutions_NNS x_LS of_IN the_DT previous_JJ analogical_JJ equations_NNS and_CC only_RB keep_VB the_DT solu_NN -_: tions_NNS ,_, named_VBN Ci_NNP ,_, j_NN ,_, which_WDT belong_VBP to_TO the_DT training_NN corpus_NN ._.
+As_IN it_PRP is_VBZ easy_JJ to_TO map_VB from_IN unsegmented_JJ part_NN to_TO segmented_JJ part_NN for_IN any_DT sub-strings_NNS in_IN training_NN corpus_NN ,_, for_IN each_DT Ci_NNP ,_, j_NN ,_, Ai_NNP and_CC Bi_NNP ,_, we_PRP easily_RB retrieve_VBP their_PRP$ corresponding_JJ segmented_JJ formsC_NNP ,_, A_DT ̃_NN and_CC B_NNP ̃_CD in_IN the_DT segmented_JJ part_NN of_IN i_FW ,_, ji_FW i_FW the_DT training_NN corpus_NN ;_: -LRB-_-LRB- iii_FW -RRB-_-RRB- We_PRP then_RB form_VBP all_DT possible_JJ analogical_JJ equations_NNS A_DT :_: B_NNP :_: :_: C_NNP :_: D_NNP ⇔_CD |_CD A_DT |_NN a_DT −_NN |_NN B_NNP |_VBD a_DT =_SYM |_FW C_$ |_CD a_DT −_NN |_NN D_NNP |_VBD a_DT ,_, ∀_VBP a_DT dist_NN -LRB-_-LRB- A_DT ,_, B_NNP -RRB-_-RRB- =_SYM dist_NN -LRB-_-LRB- C_NNP ,_, D_NNP -RRB-_-RRB- dist_NN -LRB-_-LRB- A_DT ,_, C_NNP -RRB-_-RRB- =_SYM dist_NN -LRB-_-LRB- B_NNP ,_, D_NNP -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- Here_RB ,_, a_DT is_VBZ a_DT character_NN ,_, whatever_WDT the_DT writing_VBG sys_SYM -_: tem_NN ,_, and_CC A_DT ,_, B_NNP ,_, C_NNP and_CC D_NNP are_VBP strings_NNS of_IN characters_NNS ._.
+|_CD A_DT |_NN a_DT stands_NN for_IN the_DT number_NN of_IN occurrences_NNS of_IN char_NN -_: acter_IN a_DT in_IN the_DT string_NN of_IN characters_NNS A_DT and_CC dist_NN -LRB-_-LRB- A_DT ,_, B_NNP -RRB-_-RRB- stands_VBZ for_IN the_DT edit_NN distance_NN between_IN strings_NNS A_DT and_CC B_NNP which_WDT only_RB considering_VBG insertions_NNS and_CC deletions_NNS only_RB as_IN edit_NN operations_NNS ._.
+The_DT input_NN of_IN this_DT algorithm_NN is_VBZ three_CD strings_NNS of_IN characters_NNS ,_, words_NNS ,_, sequences_NNS of_IN words_NNS or_CC sentences_NNS ._.
+Its_PRP$ output_NN is_VBZ a_DT string_NN of_IN charac_NN -_: ters_NNS in_IN analogy_NN with_IN the_DT input_NN ._.
+The_DT following_NN is_VBZ an_DT example_NN applying_VBG this_DT algorithm_NN in_IN Chinese_NNPS :_: 我爱吃饭_NN :_: 我爱喝水_CD :_: :_: 你爱吃饭_NN :_: x_LS x_LS =_SYM 你爱喝水_CD 3_CD A_DT New_NNP Method_NNP for_IN CWS_NNP using_VBG proportional_JJ analogy_NN We_PRP propose_VBP a_DT new_JJ Chinese_JJ word_NN segmentation_NN method_NN based_VBN on_IN proportional_JJ analogies_NNS ._.
+Crucially_RB ,_, we_PRP no_RB longer_RBR need_VB any_DT pre-processing_JJ phase_NN -LRB-_-LRB- train_NN -_: ing_NN -RRB-_-RRB- or_CC lexical_JJ knowledge_NN -LRB-_-LRB- dictionary_JJ -RRB-_-RRB- ._.
+The_DT follow_VBP -_: ing_NN gives_VBZ the_DT basic_JJ idea_NN of_IN the_DT method_NN ._.
+We_PRP are_VBP inspired_VBN by_IN the_DT example-based_JJ machine_NN translation_NN system_NN proposed_VBN by_IN Lepage_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Let_VB us_PRP suppose_VB that_IN we_PRP have_VBP a_DT corpus_NN of_IN sen_NN -_: tences_NNS in_IN their_PRP$ usual_JJ unsegmented_JJ form_NN and_CC their_PRP$ segmented_JJ form_NN ._.
+We_PRP call_VBP it_PRP the_DT training_NN corpus_NN ._.
+A_DT line_NN in_IN such_JJ a_DT training_NN corpus_NN may_MD look_VB like_IN :_: unsegmented_JJ form_NN #_# segmented_JJ form_NN 迈向充满希望的新世纪_CD #迈向_FW 充_FW 满_FW 希望_FW 的_FW 新_FW 世纪_FW with_IN all_DT pairs_NNS -LRB-_-LRB- Ai_NNP ,_, Bj_NNP ,_, Ci_NNP ,_, j_NN -RRB-_-RRB- :_: Ai_NNS :_: Bi_NNS :_: :_: Ci_NNS ,_, j_NN :_: y_VB We_PRP output_NN the_DT solutions_NNS y_VBP =_SYM Di_NNP ,_, j_NN of_IN all_PDT these_DT analogical_JJ equations_NNS ._.
+They_PRP are_VBP hypotheses_NNS of_IN segmentation_NN for_IN D_NNP ._.
+We_PRP record_VBP the_DT number_NN of_IN times_NNS of_IN each_DT hypotheses_NNS ._.
+Recall_VB that_DT differ_VBP -_: ent_JJ analogical_JJ equations_NNS may_MD generate_VB identi_NNS -_: cal_JJ solutions_NNS ._.
+Figure_NN 1_CD gives_VBZ a_DT simple_JJ example_NN to_TO illustrate_VB the_DT basic_JJ work_NN flow_NN of_IN the_DT method_NN described_VBN above_IN ._.
+4_CD A_DT CWS_NNP system_NN using_VBG proportional_JJ analogy_NN In_IN this_DT section_NN we_PRP describe_VBP the_DT details_NNS of_IN our_PRP$ imple_NN -_: mentation_NN of_IN the_DT analogy-based_JJ word_NN segmentation_NN method_NN ._.
+The_DT key_JJ point_NN in_IN our_PRP$ method_NN is_VBZ to_TO generate_VB as_IN precise_JJ proportional_JJ analogies_NNS as_IN possible_JJ ._.
+These_DT solutions_NNS of_IN proportional_JJ analogy_NN are_VBP the_DT segmented_JJ results_NNS of_IN input_NN sentences_NNS ._.
+As_IN not_RB all_DT of_IN these_DT so_IN -_: lutions_NNS are_VBP exactly_RB correct_JJ ,_, we_PRP will_MD consider_VB them_PRP Figure_NN 1_CD :_: Illustration_NNP of_IN the_DT Chinese_JJ word_NN segmentation_NN method_NN based_VBN on_IN proportional_JJ analogy_NN as_IN hypotheses_NNS of_IN segmentation_NN ._.
+According_VBG to_TO for_IN -_: mula_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, the_DT longer_JJR the_DT sentences_NNS are_VBP ,_, the_DT more_JJR diffi_NN -_: cult_NN the_DT constrained_VBN equations_NNS are_VBP satisfied_JJ ._.
+It_PRP means_VBZ that_DT long_JJ sentences_NNS are_VBP easy_JJ to_TO miss_VB analogical_JJ so_RB -_: lutions_NNS and_CC further_JJ to_TO miss_VB hypotheses_NNS of_IN segmen_NNS -_: tation_NN ._.
+Splitting_VBG sentences_NNS is_VBZ necessary_JJ ._.
+We_PRP split_VBD sentences_NNS into_IN n-grams_NNS ,_, i.e._FW ,_, sub-strings_NNS of_IN length_NN n_NN ._.
+Our_PRP$ system_NN is_VBZ thus_RB divided_VBN into_IN two_CD parts_NNS :_: generat_SYM -_: ing_VBG hypotheses_NNS of_IN segmentation_NN for_IN n-grams_NNS and_CC re_SYM -_: combining_VBG strategy_NN for_IN segmentation_NN hypotheses_NNS to_TO generate_VB a_DT complete_JJ segmented_JJ result_NN for_IN the_DT entire_JJ input_NN sentences_NNS ._.
+4.1_CD Generating_NNP segmented_JJ references_NNS of_IN n-grams_JJ We_PRP adopt_VBP the_DT method_NN proposed_VBN in_IN section_NN 3_CD to_TO gen_VB -_: erate_VB the_DT segmented_JJ result_NN of_IN n-grams_NNS in_IN practice_NN in_IN our_PRP$ system_NN ._.
+The_DT work_NN flow_NN of_IN generating_VBG a_DT segmen_NN -_: tation_NN hypotheses_NNS for_IN n-grams_NNS is_VBZ shown_VBN in_IN figure_NN 2_CD ._.
+According_VBG to_TO formula_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, A_DT and_CC B_NNP should_MD share_VB characters_NNS with_IN D_NNP to_TO get_VB a_DT solution_NN from_IN equation_NN Ai_NNP :_: Bj_NNP :_: :_: x_SYM :D_NNP ._.
+ItmeansthatAandBshould_NNP be_VB similar_JJ strings_NNS to_TO D_NNP to_TO a_DT certain_JJ extent_NN ._.
+We_PRP use_VBP TRE_NNP agrep1_CD ,_, an_DT approximate_JJ regex_NN matching_VBG library_NN ,_, to_TO retrieve_VB sub-strings_NNS which_WDT are_VBP similar_JJ to_TO the_DT in_IN -_: put_VB D_NNP from_IN training_NN corpus_NN ._.
+We_PRP use_VBP edit_VB distance_NN ,_, with_IN only_RB insertions_NNS and_CC deletions_NNS as_IN edit_NN operations_NNS ,_, to_TO quantify_VB how_WRB similar_JJ two_CD strings_NNS are_VBP to_TO one_CD an_DT -_: 1_CD http://laurikari.net/tre/_NN other_JJ ._.
+Any_DT two_CD of_IN these_DT similar_JJ substrings_NNS and_CC input_NN D_NNP form_VBP an_DT analogical_JJ equation_NN ._.
+In_IN general_JJ ,_, not_RB all_DT solutions_NNS of_IN the_DT equations_NNS occur_VBP in_IN the_DT training_NN cor_NN -_: pus_NN ._.
+Consequently_RB ,_, only_RB the_DT solutions_NNS which_WDT occur_VBP in_IN the_DT segmented_JJ part_NN of_IN the_DT training_NN corpus_NN are_VBP con_JJ -_: sidered_VBN as_IN segmentation_NN hypotheses_NNS ._.
+Notice_NNP that_WDT dif_SYM -_: ferent_JJ analogical_JJ equations_NNS may_MD generate_VB identical_JJ solutions_NNS ._.
+The_DT same_JJ segmentation_NN hypotheses_NNS can_MD be_VB generated_VBN several_JJ times_NNS by_IN different_JJ analogical_JJ equations_NNS ._.
+We_PRP record_VBP this_DT number_NN of_IN occurrences_NNS ._.
+It_PRP is_VBZ natural_JJ to_TO think_VB that_IN the_DT larger_JJR the_DT number_NN of_IN occurrence_NN is_VBZ ,_, the_DT more_RBR likely_JJ the_DT segmentation_NN hy_SYM -_: pothesis_NN is_VBZ ._.
+4.2_CD Recombination_NN Strategy_NNP We_PRP use_VBP majority_NN voting_NN rules_NNS to_TO recombine_VB the_DT seg_NN -_: mentation_NN hypotheses_NNS of_IN n-grams_NNS ._.
+A_DT segmentation_NN hypothesis_NN can_MD be_VB represented_VBN as_IN a_DT sequence_NN of_IN char_NN -_: acters_NNS and_CC delimiters_NNS ._.
+The_DT general_JJ form_NN is_VBZ :_: c1_CD D1_CD c2_NN D2_NN ..._: cn_SYM −_SYM 1_CD Dn_NNP −_CD 1_CD cn_NN ,_, occurrence_NN number_NN =_SYM m_FW ._.
+In_IN this_DT form_NN ,_, Di_NNP is_VBZ either_RB a_DT space_NN or_CC not_RB a_DT space_NN ._.
+We_PRP let_VBP all_DT segmentation_NN hypotheses_VBZ vote_NN for_IN Di_NNP ._.
+When_WRB Di_NNP is_VBZ a_DT space_NN ,_, it_PRP means_VBZ that_IN this_DT segmen_NN -_: tation_NN hypothesis_NN votes_NNS m_VBP times_NNS for_IN segmentation_NN ._.
+When_WRB Di_NNP is_VBZ not_RB a_DT space_NN ,_, it_PRP votes_VBZ m_JJ times_NNS against_IN segmentation_NN ._.
+Figure_NN 3_CD is_VBZ an_DT example_NN to_TO illustrate_VB the_DT use_NN of_IN majority_NN voting_NN in_IN our_PRP$ system_NN ._.
+We_PRP sum_VBP Figure_NN 2_CD :_: Work_NN flow_NN of_IN generating_VBG segmented_JJ reference_NN of_IN n-grams_NNS in_IN our_PRP$ system_NN Figure_NN 3_CD :_: An_DT example_NN of_IN recombination_NN of_IN segmentation_NN hypotheses_NNS of_IN n-grams_NNS using_VBG majority_NN voting_NN Models_NNS PKU_NNP Corpus_NNP P_NNP R_NNP F_NN Roov_NNP Riv_NNP baseline_NN Best05_NNP closed-set_NN 84.3_CD 90.7_CD 87.4_CD 6.9_CD 95.8_CD 95.4_CD 94.6_CD 95.0_CD 78.7_CD 95.6_CD This_DT work_NN -LRB-_-LRB- closed-set_JJ -RRB-_-RRB- 90.9_CD 89.9_CD 90.4_CD 60.7_CD 91.6_CD PKU_NNP Word_NN tokens_NNS Word_VBD types_NNS OOV_NNP words_NNS tokens_NNS OOV_NNP words_NNS types_NNS 104372_CD 13148_CD 6006_CD 2863_CD Character_NNP tokens_NNS Character_NNP types_NNS OOV_NNP character_NN tokens_NNS OOV_NNP character_NN types_NNS 172733_CD 2934_CD 372_CD 92_CD Table_NNP 1_CD :_: Corpus_NNP details_NNS of_IN PKU_NNP test_NN set_NN ._.
+up_IN the_DT votes_NNS in_IN favor_NN and_CC against_IN segmentation_NN and_CC output_NN the_DT final_JJ results_NNS according_VBG to_TO the_DT vote_NN results_NNS ._.
+5_CD Experiments_NNS 5.1_CD Data_NNP and_CC Evaluation_NNP To_TO evaluate_VB the_DT effectiveness_NN of_IN our_PRP$ proposed_VBN method_NN ,_, we_PRP conduct_VBP experiments_NNS on_IN a_DT widely_RB used_VBN Chinese_JJ word-segmented_JJ corpora_NN ,_, namely_RB PKU_NNP ,_, from_IN the_DT second_JJ SIGHAN_NNP international_JJ Chinese_JJ word_NN segmentation_NN bakeoff_NN -LRB-_-LRB- Emerson_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+The_DT training_NN set_NN and_CC the_DT test_NN set_VBN are_VBP publicly_RB available_JJ from_IN the_DT official_JJ website2_NN ._.
+Table_NNP 1_CD shows_VBZ some_DT statistics_NNS on_IN the_DT data_NNS sets_NNS ._.
+All_DT evaluation_NN results_NNS in_IN this_DT paper_NN are_VBP tested_VBN by_IN the_DT official_JJ scoring_NN script_NN ,_, also_RB downloaded_VBN from_IN the_DT official_JJ website_NN ._.
+The_DT segmentation_NN accuracy_NN is_VBZ evaluated_VBN by_IN test_NN re_SYM -_: call_NN -LRB-_-LRB- R_NN -RRB-_-RRB- ,_, test_NN precision_NN -LRB-_-LRB- P_NNP -RRB-_-RRB- and_CC balanced_JJ F-score_NN ,_, as_IN defines_VBZ in_IN Equation_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+R_NN =_SYM total_JJ number_NN of_IN words_NNS in_IN gold_JJ standard_JJ segmentation_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- Table_NNP 3_CD :_: Performance_NNP of_IN our_PRP$ system_NN on_IN the_DT SIGHAN_NNP 2005_CD data_NN set_NN ._.
+Best05_NNS refers_VBZ to_TO the_DT best_JJS closed-set_NN results_NNS in_IN SIGHAN_NNP 2005_CD bakeoff_NN ._.
+5.2_CD Effects_NNPS of_IN Length_NNP of_IN n-grams_NNS and_CC Edit_VB Distance_NNP As_IN discussed_VBN in_IN section_NN 4_CD ,_, long_RB sentences_NNS are_VBP easier_JJR to_TO miss_VB hypotheses_NNS of_IN segmentation_NN ._.
+So_IN the_DT length_NN of_IN n-grams_NNS will_MD influence_VB the_DT segmentation_NN results_NNS ._.
+Moreover_RB ,_, the_DT larger_JJR edit_NN distance_NN is_VBZ used_VBN ,_, the_DT more_JJR similar_JJ sub-strings_NNS would_MD be_VB retrieved_VBN ._.
+To_TO measure_VB it_PRP ,_, we_PRP conduct_VBP experiments_NNS using_VBG different_JJ length_NN of_IN n-grams_NNS and_CC different_JJ edit_NN distance_NN ._.
+According_VBG to_TO our_PRP$ majority_NN voting_VBG method_NN ,_, we_PRP would_MD consider_VB a_DT position_NN is_VBZ not_RB segmented_JJ if_IN no_DT seg_NN -_: mentation_NN hypothesis_NN votes_NNS for_IN it_PRP ._.
+The_DT results_NNS in_IN Ta_NNP -_: ble_NN 2_CD shows_NNS that_IN this_DT data_NN sparse_NN problem_NN is_VBZ more_RBR serious_JJ when_WRB we_PRP used_VBD larger_JJR length_NN of_IN n-grams_NNS ._.
+5.3_CD Results_NNS We_PRP set_VBP length_NN of_IN n-grams_NNS to_TO 3_CD and_CC edit_VB distance_NN to_TO 2_CD for_IN approximate_JJ string_NN match_NN to_TO perform_VB our_PRP$ exper_NN -_: iments_NNS ._.
+Table_NNP 3_CD shows_VBZ our_PRP$ empirical_JJ results_NNS on_IN the_DT data_NN set_NN ._.
+Our_PRP$ system_NN achieve_VB a_DT significantly_RB better_JJR results_NNS than_IN the_DT baseline_NN ._.
+Riv_NNP score_NN shows_VBZ that_IN our_PRP$ method_NN performs_VBZ well_RB on_IN in_IN vocabulary_NN -LRB-_-LRB- IV_NNP -RRB-_-RRB- word_NN recognition_NN ._.
+Simultaneously_RB ,_, the_DT Roov_NNP score_NN shows_VBZ that_IN our_PRP$ method_NN has_VBZ certain_JJ ability_NN to_TO deal_VB with_IN out_RB -_: of-vocabulary_JJ -LRB-_-LRB- OOV_NNP -RRB-_-RRB- word_NN and_CC guess_VB their_PRP$ form_NN ._.
+Compared_VBN with_IN best_JJS result_NN -LRB-_-LRB- Tseng_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- in_IN SIGHAN_NNP 2005_CD ,_, our_PRP$ result_NN still_RB has_VBZ a_DT lot_NN of_IN room_NN for_IN improvement_NN ._.
+But_CC as_IN a_DT original_JJ method_NN which_WDT do_VBP not_RB need_VB any_DT pre-training_JJ or_CC lexical_JJ knowledge_NN ,_, our_PRP$ method_NN has_VBZ a_DT great_JJ potential_JJ in_IN CWS_NNP ._.
+6_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP presented_VBD an_DT approach_NN to_TO Chinese_JJ word_NN segmentation_NN based_VBN on_IN proportional_JJ analogy_NN and_CC majority_NN voting_NN to_TO make_VB decision_NN on_IN where_WRB to_TO segment_NN ._.
+Our_PRP$ approach_NN achieves_VBZ a_DT desirable_JJ accu_NN -_: racy_JJ ,_, when_WRB evaluated_VBN on_IN the_DT corpus_NN of_IN the_DT close_JJ track_NN of_IN SIGHAN_NNP 2005_CD and_CC shows_VBZ an_DT excellent_JJ perfor_NN -_: number_NN of_IN correctly_RB segmented_JJ words_NNS P_NNP =_SYM number_NN of_IN correctly_RB segmented_JJ words_NNS total_VBP number_NN of_IN words_NNS in_IN segmentation_NN result_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- F_NN =_SYM 2_CD ×_CD P_NNP ×_CD R_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- P+R_NNP Our_PRP$ experiments_NNS follow_VBP the_DT closed_JJ track_NN ._.
+It_PRP means_VBZ that_IN no_DT extra_JJ resource_NN other_JJ than_IN training_NN corpora_NN is_VBZ used_VBN ._.
+2_CD http://www.sighan.org/bakeoff2005/_CD #_# of_IN n-grams_NNS Edit_VBP Distance_NNP Word_NNP Count_NNP P_NNP R_NNP F_NN 63_CD 79828_CD 85.5_CD 65.4_CD 74.1_CD 53_CD 95079_CD 90.0_CD 82.0_CD 85.8_CD 42_CD 99103_CD 90.8_CD 86.2_CD 88.4_CD 32_CD 103186_CD 90.9_CD 89.9_CD 90.4_CD Table_NNP 2_CD :_: Performance_NNP of_IN our_PRP$ method_NN with_IN different_JJ length_NN of_IN n-grams_NNS and_CC edit_VB distance_NN ._.
+mance_NN in_IN word_NN identification_NN ._.
+As_IN an_DT important_JJ and_CC original_JJ feature_NN ,_, our_PRP$ method_NN does_VBZ not_RB need_VB any_DT pre_NN -_: training_NN or_CC lexical_JJ knowledge_NN ._.
+References_NNP Thomas_NNP Emerson_NNP ._.
+The_DT second_JJ international_JJ chinese_JJ word_NN segmentation_NN bakeoff_NN ._.
+In_IN Proceedings_NNP of_IN the_DT fourth_JJ SIGHAN_NNP workshop_NN on_IN Chinese_JJ language_NN Pro-_JJ cessing_NN ,_, volume_NN 133_CD ,_, 2005_CD ._.
+Chu-Ren_NNP Huang_NNP ,_, Petr_NNP Sˇimon_NNP ,_, Shu-Kai_NNP Hsieh_NNP ,_, and_CC Lau_NNP -_: rent_VB Pre_NNP ́vot_NNP ._.
+Rethinking_VBG chinese_JJ word_NN segmentation_NN :_: tokenization_NN ,_, character_NN classification_NN ,_, or_CC wordbreak_NN identification_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 45th_JJ annual_JJ meet_VBP -_: ing_NN of_IN the_DT ACL_NNP on_IN interactive_JJ poster_NN and_CC demonstration_NN sessions_NNS ,_, pages_NNS 69_CD --_: 72_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2007_CD ._.
+Chunyu_NNP Kit_NNP and_CC Xiaoyue_NNP Liu_NNP ._.
+An_DT example-based_JJ chi_NN -_: nese_JJ word_NN segmentation_NN system_NN for_IN cwsb-2_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Fourth_JJ SIGHAN_NNP Workshop_NNP on_IN Chinese_NNP Language_NNP Processing_NNP ,_, pages_NNS 146_CD --_: 149_CD ,_, 2005_CD ._.
+Yves_NNP Lepage_NNP ._.
+Solving_VBG analogies_NNS on_IN words_NNS :_: an_DT algorithm_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 36th_JJ Annual_JJ Meeting_VBG of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNPS and_CC 17th_JJ In_IN -_: ternational_JJ Conference_NN on_IN Computational_NNP Linguistics_NNP -_: Volume_NN 1_CD ,_, pages_NNS 728_CD --_: 734_CD ._.
+Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNP ,_, 1998_CD ._.
+Yves_NNP Lepage_NNP ._.
+Analogy_NNP and_CC formal_JJ languages_NNS ._.
+Elec_SYM -_: tronic_JJ notes_NNS in_IN theoretical_JJ computer_NN science_NN ,_, 53:180_CD --_: 191_CD ,_, 2004_CD ._.
+Yves_NNP Lepage_NNP and_CC Etienne_NNP Denoual_NNP ._.
+Purest_JJS ever_RB example_NN -_: based_VBN machine_NN translation_NN :_: Detailed_JJ presentation_NN and_CC assessment_NN ._.
+Machine_NN Translation_NN ,_, 19_CD -LRB-_-LRB- 3-4_CD -RRB-_-RRB- :251_CD --_: 282_CD ,_, 2005_CD ._.
+Huihsin_NNP Tseng_NNP ,_, Pichuan_NNP Chang_NNP ,_, Galen_NNP Andrew_NNP ,_, Daniel_NNP Jurafsky_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+A_DT conditional_JJ random_JJ field_NN word_NN segmenter_NN for_IN sighan_JJ bakeoff_NN 2005_CD ._.
+In_IN Proceedings_NNP of_IN the_DT fourth_JJ SIGHAN_NNP workshop_NN on_IN Chinese_JJ language_NN Processing_NNP ,_, volume_NN 171_CD ,_, 2005_CD ._.
+Peter_NNP D_NNP Turney_NNP and_CC Michael_NNP L_NNP Littman_NNP ._.
+Corpus-based_JJ learning_NN of_IN analogies_NNS and_CC semantic_JJ relations_NNS ._.
+Machine_NN Learning_NNP ,_, 60_CD -LRB-_-LRB- 1-3_JJ -RRB-_-RRB- :251_CD --_: 278_CD ,_, 2005_CD ._.

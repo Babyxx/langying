@@ -1,0 +1,273 @@
+A_DT Corpus-Based_NNP Study_NNP of_IN zunshou_NN and_CC Its_PRP$ English_JJ Equivalents_NNS Ying_NNP Liu_NNP Abstract_NNP This_DT paper_NN describes_VBZ a_DT corpus-based_JJ contrastive_NN study_NN of_IN collocation_NN in_IN English_NNP and_CC Chinese_NNP ._.
+In_IN light_NN of_IN the_DT corpus-based_JJ approach_NN to_TO identify_VB functionally_RB equivalent_JJ units_NNS ,_, the_DT present_JJ paper_NN attempts_NNS to_TO identify_VB the_DT collocational_JJ translation_NN equivalents_NNS of_IN zunshou_NN by_IN using_VBG a_DT parallel_JJ corpus_NN and_CC two_CD comparable_JJ corpora_NN ._.
+This_DT study_NN shows_VBZ that_IN more_RBR often_RB than_IN not_RB ,_, we_PRP can_MD find_VB in_IN English_NNP more_JJR than_IN one_CD translation_NN equivalents_NNS ._.
+By_IN taking_VBG collocates_NNS into_IN consideration_NN ,_, we_PRP are_VBP able_JJ to_TO establish_VB bilingual_JJ equivalence_NN with_IN more_JJR accuracy_NN ._.
+The_DT present_JJ study_NN indicates_VBZ that_IN semantic_JJ preference_NN and_CC semantic_JJ prosody_NN play_VB a_DT vital_JJ role_NN in_IN establishing_VBG equivalence_NN between_IN corresponding_JJ lexical_JJ sequences_NNS in_IN English_NNP and_CC Chinese_NNP ._.
+The_DT studies_NNS of_IN collocation_NN across_IN languages_NNS have_VBP potentially_RB useful_JJ implications_NNS for_IN foreign_JJ language_NN teaching_NN and_CC learning_NN ,_, contrastive_JJ linguistic_NN and_CC translation_NN studies_NNS ,_, as_RB well_RB as_IN bilingual_JJ lexicography_NN ._.
+1_CD Introduction_NNP The_NNP importance_NN of_IN the_DT concept_NN of_IN collocation_NN has_VBZ long_RB been_VBN recognized_VBN in_IN theoretical_JJ linguistics_NNS ._.
+It_PRP was_VBD first_RB put_VBN forward_RB as_IN an_DT academic_JJ terminology_NN by_IN Firth_NNP -LRB-_-LRB- 1957_CD -RRB-_-RRB- ._.
+Since_IN then_RB ,_, there_EX have_VBP been_VBN three_CD major_JJ approaches_NNS to_TO the_DT study_NN of_IN collocation_NN ,_, which_WDT can_MD be_VB referred_VBN to_TO as_IN the_DT semantic_JJ approach_NN ,_, the_DT lexical_JJ approach_NN -LRB-_-LRB- Halliday_NNP ,_, 1966_CD ;_: Sinclair_NNP ,_, 1966_CD -RRB-_-RRB- and_CC the_DT integrated_VBN approach_NN -LRB-_-LRB- Mitchell_NNP ,_, 1971_CD -RRB-_-RRB- ._.
+Since_IN the_DT 1980s_CD ,_, the_DT notion_NN of_IN collocation_NN has_VBZ been_VBN at_IN the_DT center_NN of_IN much_JJ corpus-linguistic_JJ work_NN ._.
+The_DT corpus-based_JJ and_CC corpus-driven_JJ approaches_NNS have_VBP been_VBN widely_RB adopted_VBN in_IN the_DT study_NN of_IN collocation_NN ._.
+Although_IN numerous_JJ studies_NNS of_IN collocation_NN based_VBN on_IN corpus_NN data_NNS have_VBP been_VBN conducted_VBN ,_, the_DT features_NNS of_IN collocation_NN have_VBP mainly_RB been_VBN explored_VBN in_IN monolingual_JJ context_NN and_CC there_EX are_VBP comparatively_RB fewer_JJR attempts_NNS to_TO investigate_VB collocation_NN across_IN different_JJ languages_NNS ._.
+The_DT use_NN of_IN parallel_JJ corpora_NN has_VBZ greatly_RB facilitated_VBN cross-linguistic_JJ research_NN in_IN recent_JJ decades_NNS and_CC indeed_RB ,_, ``_`` they_PRP have_VBP been_VBN a_DT principal_JJ reason_NN for_IN the_DT revival_NN of_IN contrastive_JJ linguistics_NNS ''_'' -LRB-_-LRB- Salkie_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+As_IN a_DT tentative_JJ attempt_NN ,_, the_DT present_JJ study_NN focuses_VBZ on_IN investigating_VBG the_DT cross-linguistic_JJ collocational_JJ equivalents_NNS of_IN one_CD verb_NN --_: 遵守_CD zunshou_NN using_VBG a_DT bi_SYM -_: directional_JJ English-Chinese_JJ parallel_NN corpus_NN and_CC two_CD comparable_JJ corpora_NN ._.
+A_DT close_JJ observation_NN of_IN the_DT right_JJ collocates_NNS of_IN 遵守_NN zunshou_NN and_CC its_PRP$ English_NNP equivalents_NNS in_IN terms_NNS of_IN semantic_JJ preference_NN and_CC semantic_JJ prosody_NN -LRB-_-LRB- Louw_NNP ,_, 1993_CD ;_: Sinclair_NNP ,_, 1996_CD -RRB-_-RRB- have_VBP been_VBN made_VBN ,_, with_IN a_DT view_NN to_TO determining_VBG the_DT collocational_JJ translation_NN equivalents_NNS in_IN English_NNP and_CC Chinese_NNP ._.
+In_IN what_WP follows_VBZ ,_, we_PRP will_MD first_RB describe_VB the_DT research_NN method_NN of_IN the_DT present_JJ study_NN in_IN Section_NN 2_CD ,_, which_WDT includes_VBZ the_DT corpora_NN to_TO be_VB used_VBN ,_, the_DT procedure_NN for_IN the_DT identification_NN of_IN translation_NN equivalents_NNS ,_, the_DT approaches_NNS and_CC analytical_JJ concepts_NNS of_IN collocation_NN ._.
+Section_NN 3_CD will_MD present_VB our_PRP$ corpus_NN findings_NNS ,_, followed_VBN by_IN some_DT discussions_NNS in_IN Section_NN 4_CD ._.
+Section_NN 5_CD will_MD conclude_VB this_DT research_NN with_IN various_JJ implications_NNS and_CC prospects_NNS for_IN future_JJ work_NN ._.
+2_CD Research_NNP Method_NNP 2.1_CD Corpora_NNP The_NNP data_NNS analyzed_VBD in_IN this_DT study_NN were_VBD obtained_VBN from_IN one_CD parallel_NN corpus_NN and_CC two_CD general_JJ corpora_NN ._.
+The_DT parallel_JJ corpus_NN is_VBZ the_DT Shanghai_NNP Jiao_NNP Tong_NNP University_NNP Parallel_JJ Corpus_NNP -LRB-_-LRB- henceforth_JJ JDPC_NNP -RRB-_-RRB- -LRB-_-LRB- Wei_NNP and_CC Lu_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ a_DT 9-million_JJ bi-directional_JJ English-Chinese_JJ parallel_JJ corpus_NN consisting_VBG of_IN 3,626,890_CD English_JJ tokens_NNS and_CC 5,362,748_CD Chinese_JJ characters_NNS ._.
+The_DT three_CD major_JJ categories_NNS in_IN JDPC_NNP are_VBP politics_NNS ,_, science_NN and_CC technology_NN ,_, and_CC humanities_NNS ._.
+In_IN addition_NN ,_, JDPC_NNP has_VBZ an_DT associated_VBN database_NN which_WDT contains_VBZ 590,799_CD pairs_NNS of_IN translation_NN equivalents_NNS of_IN varying_VBG lengths_NNS and_CC grammatical_JJ ranks_NNS ._.
+JDPC_NN serves_VBZ as_IN the_DT point_NN of_IN departure_NN from_IN which_WDT the_DT possible_JJ translation_NN equivalents_NNS are_VBP extracted_VBN for_IN further_JJ data_NNS analysis_NN ._.
+The_DT advantage_NN of_IN using_VBG a_DT parallel_JJ corpus_NN in_IN this_DT contrastive_JJ study_NN of_IN collocation_NN is_VBZ that_IN ``_`` it_PRP gives_VBZ the_DT benefit_NN of_IN such_JJ input_NN in_IN a_DT more_RBR reliable_JJ manner_NN ;_: it_PRP offers_VBZ a_DT range_NN of_IN possible_JJ translation_NN pairs_NNS that_WDT have_VBP already_RB been_VBN identified_VBN and_CC used_VBN by_IN translators_NNS ,_, in_IN other_JJ words_NNS ,_, verified_VBN by_IN actual_JJ translation_NN usage_NN ''_'' -LRB-_-LRB- Tognini_NNP -_: Bonelli_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+The_DT English_NNP general_JJ corpus_NN is_VBZ the_DT British_NNP National_NNP Corpus_NNP -LRB-_-LRB- henceforth_NN BNC_NNP -RRB-_-RRB- which_WDT consists_VBZ of_IN approximately_RB 100_CD million_CD words_NNS of_IN British_JJ English_NNP ,_, 90_CD %_NN from_IN written_VBN texts_NNS ,_, 10_CD %_NN from_IN spoken_VBN texts_NNS ._.
+The_DT written_JJ part_NN of_IN BNC_NNP was_VBD used_VBN in_IN this_DT study_NN ._.
+The_DT Chinese_JJ general_JJ corpus_NN is_VBZ the_DT Modern_NNP Chinese_NNP Corpus_NNP -LRB-_-LRB- henceforth_NN MCC_NNP -RRB-_-RRB- ._.
+We_PRP use_VBP its_PRP$ core_NN version_NN ,_, commonly_RB known_VBN as_IN the_DT Main_NNP Corpus_NNP of_IN MCC_NNP ,_, which_WDT contains_VBZ 20_CD million_CD Chinese_JJ characters_NNS proportionally_RB sampled_VBN from_IN the_DT whole_JJ corpus_NN ._.
+2.2_CD The_DT Procedure_NNP for_IN the_DT Identification_NN of_IN Translation_NN Equivalents_NNS The_DT procedure_NN for_IN identifying_VBG the_DT collocational_JJ translation_NN equivalents_NNS in_IN English_NNP and_CC Chinese_NNP involves_VBZ three_CD steps_NNS ._.
+The_DT first_JJ step_NN is_VBZ to_TO extract_VB prima_NN facie_NN translation_NN equivalents_NNS -LRB-_-LRB- Tognini_NNP -_: Bonelli_NNP ,_, 2002_CD :_: 81_CD -RRB-_-RRB- from_IN the_DT parallel_JJ corpus_NN ._.
+We_PRP searched_VBD 遵守_CD zunshou_NN in_IN JDPC_NNP and_CC found_VBD that_IN there_EX are_VBP three_CD prima_JJ facie_NN translation_NN equivalents_NNS of_IN 遵守_NN zunshou_NN ,_, namely_RB ,_, abide_VB by_IN ,_, adhere_VB to_TO and_CC observe_VB ._.
+However_RB ,_, what_WP a_DT parallel_JJ corpus_NN can_MD do_VB is_VBZ only_RB to_TO offer_VB a_DT set_NN of_IN possible_JJ translation_NN pairs_NNS ._.
+It_PRP is_VBZ more_RBR important_JJ to_TO base_VB our_PRP$ observation_NN on_IN the_DT comparable_JJ corpora_NN to_TO establish_VB correspondence_NN between_IN the_DT form_NN and_CC function_NN of_IN the_DT lexical_JJ items_NNS or_CC sequences_NNS under_IN study_NN ._.
+Therefore_RB ,_, the_DT second_JJ step_NN is_VBZ to_TO observe_VB the_DT formal_JJ and_CC functional_JJ features_NNS of_IN the_DT node_JJ words_NNS in_IN the_DT two_CD monolingual_JJ corpora_NN ._.
+So_IN we_PRP turn_VBP to_TO MCC_NNP and_CC BNC_NNP ._.
+The_DT right_JJ collocates_NNS of_IN 遵守_NN zunshou_NN ,_, abide_VBP by_IN ,_, adhere_VB to_TO and_CC observe_VB were_VBD extracted_VBN from_IN MCC_NNP and_CC BNC_NNP respectively_RB ._.
+Then_RB we_PRP come_VBP to_TO the_DT last_JJ step_NN --_: to_TO identify_VB de_IN facto_JJ translation_NN equivalents_NNS ._.
+Based_VBN on_IN the_DT data_NNS extracted_VBN in_IN the_DT previous_JJ steps_NNS ,_, we_PRP analyzed_VBD the_DT four_CD node_JJ words_NNS in_IN terms_NNS of_IN their_PRP$ collocates_NNS ,_, semantic_JJ preference_NN and_CC semantic_JJ prosody_NN ,_, which_WDT will_MD reveal_VB the_DT key_JJ patterning_NN of_IN the_DT node_JJ words_NNS and_CC help_VB to_TO establish_VB equivalence_NN across_IN the_DT two_CD languages_NNS ._.
+2.3_CD The_DT Approaches_NNS to_TO the_DT Study_NN of_IN Collocation_NNP and_CC Analytical_NNP Concepts_NNP Generally_RB ,_, there_EX are_VBP two_CD approaches_NNS to_TO the_DT study_NN of_IN collocation_NN using_VBG corpora_NN ,_, namely_RB ,_, the_DT corpus_NN -_: based_VBN approach_NN and_CC the_DT corpus-driven_JJ approach_NN ._.
+Although_IN there_EX is_VBZ no_DT clear-cut_JJ demarcation_NN between_IN them_PRP ,_, the_DT major_JJ difference_NN is_VBZ whether_IN corpus_NN data_NNS is_VBZ analyzed_VBN in_IN the_DT pre-constructed_JJ grammatical_JJ framework_NN ._.
+The_DT corpus-based_JJ approach_NN generalizes_VBZ collocational_JJ patterns_NNS on_IN the_DT basis_NN of_IN colligation_NN and_CC lexical_JJ co-occurrences_NNS -LRB-_-LRB- Wei_NNP ,_, 2002_CD -RRB-_-RRB- ,_, whilst_IN the_DT corpus-driven_JJ approach_NN proceeds_NNS with_IN data_NNS and_CC uses_VBZ purely_RB statistical_JJ method_NN to_TO extract_VB collocation_NN ._.
+The_DT present_JJ study_NN adopts_VBZ the_DT former_JJ approach_NN ._.
+The_DT study_NN to_TO be_VB presented_VBN in_IN the_DT remainder_NN of_IN this_DT paper_NN will_MD be_VB qualitative_JJ in_IN nature_NN and_CC statistical_JJ test_NN will_MD not_RB be_VB applied_VBN due_JJ to_TO the_DT low_JJ frequency_NN of_IN many_JJ collocates_NNS of_IN the_DT node_JJ words_NNS ._.
+Through_IN observing_VBG the_DT concordance_NN lines_NNS -LRB-_-LRB- the_DT KWIC_NNP Format_NN -RRB-_-RRB- ,_, we_PRP first_RB generalized_VBD the_DT colligation_NN and_CC then_RB analyzed_VBD the_DT right_JJ collocates_NNS of_IN the_DT node_JJ words_NNS in_IN the_DT colligational_JJ framework_NN ._.
+The_DT study_NN involves_VBZ two_CD key_JJ analytical_JJ concepts_NNS :_: semantic_JJ preference_NN and_CC semantic_JJ prosody_NN ._.
+As_IN with_IN Sinclair_NNP ,_, semantic_JJ preference_NN refers_VBZ to_TO ``_`` the_DT restriction_NN of_IN regular_JJ co-occurrence_NN to_TO items_NNS which_WDT share_VBP a_DT semantic_JJ feature_NN ''_'' -LRB-_-LRB- Sinclair_NNP ,_, 2004_CD :_: 142_CD -RRB-_-RRB- ,_, and_CC semantic_JJ prosody_NN refers_VBZ to_TO the_DT attitudinal_JJ meaning_NN a_DT node_JJ word_NN and_CC its_PRP$ co-selections_NNS convey_VBP ,_, which_WDT essentially_RB indicates_VBZ the_DT communicative_JJ purpose_NN of_IN the_DT speaker_NN -LRB-_-LRB- Sinclair_NNP ,_, 1996_CD :_: 87_CD -RRB-_-RRB- ._.
+The_DT four_CD node_JJ words_NNS will_MD be_VB compared_VBN in_IN terms_NNS of_IN these_DT two_CD analytical_JJ concepts_NNS in_IN order_NN to_TO establish_VB the_DT de_FW facto_FW cross-linguistic_JJ equivalence_NN ._.
+3_CD Corpus_NNP Evidence_NN 3.1_CD Evidence_NN from_IN the_DT Parallel_JJ Corpus_NNP An_DT initial_JJ check_NN of_IN zunshou_NN in_IN JDPC_NNP yielded_VBD 30_CD occurrences_NNS which_WDT were_VBD translated_VBN by_IN abide_VB by_IN in_IN 10_CD times_NNS ,_, by_IN adhere_NN to_TO in_IN 3_CD times_NNS ,_, and_CC by_IN observe_VBP in_IN 17_CD times_NNS of_IN all_DT cases_NNS ._.
+The_DT profiles_NNS of_IN the_DT 30_CD are_VBP presented_VBN in_IN Table_NNP 1_CD ,_, Table_NNP 2_CD and_CC Table_NNP 3_CD prima_NN facie_NN collocational_JJ translation_NN equivalents_NNS respectively_RB ._.
+Chinese_JJ collocations_NNS English_JJ collocations_NNS Freq_NNP ._.
+遵守宪法和法律_CD zunshou_NN xianfa_NN he_PRP falv_VBD abiding_VBG by_IN the_DT Constitution_NNP and_CC laws_NNS 2_CD 遵守党章_CD zunshou_NN dangzhang_NN abide_VBP by_IN the_DT Party_NNP Constitution_NNP 2_CD 遵守国家的法律法规_CD zunshou_NN guojia_NN de_IN falv_JJ fagui_NNS abide_VBP by_IN the_DT laws_NNS and_CC decrees_NNS of_IN the_DT State_NNP 2_CD 遵守人民政府法律_CD zunshou_NN renmin_NN zhengfu_NN falv_NN abiding_VBG by_IN its_PRP$ laws_NNS 1_CD 遵守_CD ..._: 法规和制度_CD zunshou_NN ..._: fagui_FW he_PRP zhidu_VBD abide_VB by_IN the_DT rules_NNS and_CC regulations_NNS 1_CD 遵守约法八章_CD zunshou_NN yuefa_NN bazhang_NN abide_VBP by_IN the_DT following_VBG eight-point_JJ covenant_NN 1_CD 遵守中英联合声明_CD zunshou_NN zhongying_NN lianhe_NN shengming_VBG abide_VB by_IN the_DT Sino-British_JJ Joint_NNP Declaration_NNP 1_CD TOTAL_JJ 10_CD Table_NNP 1_CD ._.
+遵守_NN zunshou_NN and_CC abide_VB by_IN with_IN their_PRP$ right_JJ collocates_NNS in_IN JDPC_NNP Table_NNP 2_CD ._.
+遵守_NN zunshou_NN and_CC adhere_NN to_TO with_IN their_PRP$ right_JJ collocates_NNS in_IN JDPC_NNP Chinese_NNP collocations_NNS English_JJ collocations_NNS Freq_NNP ._.
+遵守着_CD ``_`` 不干涉中国内政的政策_NN ''_'' zunshou_NN zhe_NN ``_`` bu_NN ganshe_NN zhongguo_NN neizheng_NN de_IN zhengce_NN ''_'' adhered_VBD to_TO a_DT policy_NN of_IN non-interference_NN in_IN China_NNP 's_POS internal_JJ affairs_NNS 1_CD 遵守_CD ..._: 宗旨和原则_CD zunshou_NN ..._: zongzhi_NN he_PRP yuanze_VBD adhere_NN to_TO the_DT purpose_NN and_CC principles_NNS 1_CD 遵守_CD ..._: 各项重要文件_CD zunshou_NN ..._: gexiang_NN zhongyao_NN wenjian_NN adhere_VBP to_TO the_DT important_JJ documents_NNS 1_CD TOTAL_JJ 3_CD Chinese_JJ collocations_NNS English_JJ collocations_NNS Freq_NNP ._.
+遵守纪律_CD zunshou_NN jilv_NN observe_VBP discipline_NN 5_CD 遵守党的指示_CD zunshou_NN dang_NN de_IN zhishi_NNS observe_VBP the_DT directives_NNS of_IN the_DT party_NN 2_CD 遵守宪法和法律_CD zunshou_NN xianfa_NN he_PRP falv_VBD observing_VBG the_DT Constitution_NNP and_CC laws_NNS 2_CD 遵守正确的原则_CD zunshou_NN zhengque_NN de_IN yuanze_NN observe_VBP the_DT correct_JJ principles_NNS 2_CD 遵守_CD ..._: 法律法规_CD zunshou_NN ..._: falv_NN fagui_NNS observe_VBP ..._: laws_NNS and_CC regulations_NNS 1_CD 遵守党纪国法_CD zunshou_NN dangji_NN guofa_NN observe_VBP party_NN discipline_NN and_CC state_NN laws_NNS 1_CD 遵守党的章程_CD zunshou_NN dang_NN de_IN zhangcheng_NN observe_VBP the_DT provisions_NNS of_IN the_DT party_NN constitution_NN 1_CD 遵守_CD ..._: 原则_CD zunshou_NN ..._: yuanze_NN observing_VBG principles_NNS 1_CD 遵守社会公德_CD zunshou_NN shehui_NN gongde_NN be_VB polite_JJ and_CC observe_VB common_JJ courtesy_NN 1_CD 遵守基本行为准则_CD zunshou_NN jiben_NN xingwei_NN zhunze_NN observing_VBG the_DT basic_JJ code_NN of_IN conduct_NN 1_CD TOTAL_NNP 17_CD Table_NNP 3_CD ._.
+遵守_NN zunshou_NN and_CC observe_VB with_IN their_PRP$ right_JJ collocates_NNS in_IN JDPC_NNP 3.2_CD Evidence_NN from_IN the_DT Chinese_JJ Corpus_NNP Adopting_VBG the_DT method_NN as_IN defined_VBN in_IN Section_NN 2.2_CD ,_, the_DT present_JJ study_NN obtained_VBD 497_CD instances_NNS of_IN 遵守_NN zunshou_NN from_IN the_DT core_NN part_NN of_IN MCC_NNP ._.
+In_IN order_NN to_TO show_VB its_PRP$ patterning_NN ,_, we_PRP present_VBP 10_CD concordance_NN lines_NNS randomly_RB selected_VBN from_IN the_DT overall_JJ data_NNS as_IN shown_VBN in_IN Table_NNP 4_CD below_IN ._.
+1_LS ._.
+用生命换来的_IN 。_CD 我们一定要珍惜宪法_CD 遵守_NN 2_CD ._.
+只有统治阶级的所有成员毫无例外地_NNP 遵守_CD 3_CD ._.
+犯罪_NNP ,_, 解决民事纠纷_CD ,_, 教育公民自觉_CD 遵守_NN 4_CD ._.
+鄙人完全拥护共产党的政策_NNP ,_, 一定_CD 遵守_CD 人民政府的法令_CD ,_, 同意把分行改为代办行!朱德_CD 宪法_CD ,_, 维护宪法_CD 。_CD 我国现行宪法是第五届全国人_NN 法律_NN ,_, 并制裁其中的违法犯罪分子_NN ,_, 才能维护统_CD 法律_CD ,_, 积极同违法犯罪行为作斗争_CD ,_, 维护社会主_CD 5_CD ._.
+决要求回归祖国_NNP ,_, 希望美方管理当局_CD 6_CD ._.
+欢迎与中国合作_CD 。_CD 美国将坚定不渝地_NN 7_CD ._.
+我们要把它记在心里_NNP ,_, 让它化为力量_CD 8_CD ._.
+条令_NNP ,_, 我们抓管理的如果自身不自觉_CD 9_CD ._.
+自觉地保卫祖国啊!那就应该自觉地_NNP 10_CD ._.
+一样_NNP ,_, 根据马克思列宁主义的精神_CD ,_, Table_NNP 4_CD ._.
+Concordance_NN lines_NNS of_IN 遵守_NN zunshou_NN A_DT close_JJ observation_NN of_IN the_DT data_NNS reveals_VBZ that_IN over_IN 90_CD %_NN of_IN all_PDT the_DT instances_NNS of_IN 遵守_NN zunshou_NN are_VBP followed_VBN by_IN a_DT noun_NN phrase_NN ._.
+In_IN a_DT few_JJ cases_NNS ,_, it_PRP is_VBZ used_VBN to_TO end_VB a_DT clause_NN or_CC sentence_NN ._.
+Since_IN the_DT present_JJ study_NN focuses_VBZ on_IN collocates_NNS in_IN the_DT right_JJ co-text_NN and_CC examination_NN of_IN the_DT usage_NN of_IN 遵守_CD zunshou_NN in_IN the_DT sentence-final_JJ position_NN does_VBZ not_RB reveal_VB many_JJ new_JJ collocates_NNS ,_, we_PRP only_RB focus_VB on_IN analyzing_VBG the_DT data_NNS in_IN the_DT first_JJ colligational_JJ framework_NN ._.
+It_PRP has_VBZ been_VBN observed_VBN that_IN most_JJS of_IN the_DT right_JJ collocates_NNS of_IN 遵守_NN zunshou_NN can_MD be_VB categorized_VBN into_IN different_JJ groups_NNS according_VBG to_TO two_CD criteria_NNS :_: whether_IN they_PRP are_VBP authoritative_JJ or_CC compulsory_JJ ._.
+By_IN being_VBG authoritative_JJ is_VBZ meant_VBN that_IN they_PRP are_VBP documented_VBN and_CC enforced_VBN by_IN a_DT country_NN 's_POS government_NN or_CC government_NN organs_NNS -LRB-_-LRB- e.g._FW laws_NNS and_CC regulations_NNS -RRB-_-RRB- ,_, or_CC agreed_VBD between_IN governments_NNS of_IN different_JJ countries_NNS -LRB-_-LRB- e.g._FW treaty_NN or_CC declaration_NN -RRB-_-RRB- ;_: by_IN being_VBG compulsory_JJ is_VBZ meant_VBN that_IN they_PRP must_MD be_VB obeyed_VBN and_CC if_IN not_RB ,_, the_DT related_JJ party_NN should_MD suffer_VB the_DT consequences_NNS ._.
+In_IN terms_NNS of_IN these_DT two_CD criteria_NNS ,_, the_DT right_JJ collocates_NNS of_IN 遵守_NN zunshou_NN can_MD be_VB put_VBN in_IN a_DT hierarchy_NN scale_NN with_IN differing_VBG degrees_NNS of_IN authoritativeness_NN and_CC compulsoriness_NN ._.
+For_IN reasons_NNS of_IN space_NN ,_, we_PRP only_RB present_JJ those_DT right_JJ collocates_NNS of_IN 遵守_NN zunshou_NN with_IN a_DT frequency_NN higher_JJR than_IN five_CD -LRB-_-LRB- including_VBG five_CD -RRB-_-RRB- in_IN Table_NNP 5_CD ._.
+Note_VB that_IN the_DT raw_JJ frequencies_NNS of_IN the_DT collocates_NNS are_VBP listed_VBN in_IN the_DT brackets_NNS ._.
+遵守_SYM 日内瓦战俘公约_CD ,_, 尊重我们的个人意愿_CD ;_: 为了我_FW 遵守_FW 中美之间的三个联合公报_FW 。_FW 美国的政策_FW ``_`` 是以只_FW 遵守_FW 党的政策_FW ,_, 兢兢业业_CD ,_, 为佧佤人民做好工作_CD 。_SYM 象_SYM 遵守_SYM 规定_CD ,_, 就不能正人_CD 。_NN ''_'' 他没为亲友办过一个后门_CD 遵守_CD 纪律_NN ,_, 革命军队需要铁的纪律_NN ,_, 比不得在农村干_CD 遵守_CD 马克思列宁主义的原则_NN ,_, 同时又不机械抄袭现成_CD Criteria_NNP Right_NNP collocates_NNS of_IN 遵守_NN zunshou_NN Most_JJS authoritative_JJ &_CC compulsory_JJ 法律_NN falv_NN -LRB-_-LRB- 39_CD -RRB-_-RRB- ,_, 宪法和法律_CD xianfa_NN he_PRP falv_VBD -LRB-_-LRB- 17_CD -RRB-_-RRB- ,_, 宪法_FW xianfa_FW -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, 法规_FW fagui_FW -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, 法令_FW faling_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- Authoritative_NNP &_CC compulsory_JJ 规则_NN guize_NN -LRB-_-LRB- 20_CD -RRB-_-RRB- ,_, 规定_FW guiding_VBG -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, 政策_FW zhengce_FW -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, 条约_FW tiaoyue_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- Non-compulsory_JJ 纪律_CD jilv_NN -LRB-_-LRB- 32_CD -RRB-_-RRB- ,_, 原则_FW yuanze_FW -LRB-_-LRB- 15_CD -RRB-_-RRB- ,_, 劳动纪律_FW laodong_FW jilv_FW -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, 规范_FW guifan_FW -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, 道德_FW daode_FW -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, 党的纪律_FW dang_FW de_FW jilv_FW -LRB-_-LRB- 9_CD -RRB-_-RRB- ,_, 公共秩序_CD gonggong_NN zhixu_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, 标准_FW biaozhun_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- Non-authoritative_JJ 命令_NN mingling_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, 要求_FW yaoqiu_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, 指示_FW zhishi_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- It_PRP needs_VBZ to_TO be_VB noted_VBN that_IN the_DT demarcation_NN between_IN these_DT collocates_NNS of_IN 遵守_NN zunshou_NN is_VBZ ,_, in_IN fact_NN ,_, not_RB so_RB clear-cut_JJ as_IN Table_NNP 5_CD shows_NNS and_CC the_DT aim_NN to_TO present_VB such_PDT a_DT hierarchy_NN scale_NN is_VBZ mainly_RB for_IN the_DT sake_NN of_IN classification_NN ._.
+As_IN shown_VBN in_IN Table_NNP 5_CD ,_, at_IN the_DT top_NN of_IN the_DT hierarchy_NN scale_NN are_VBP the_DT most_RBS authoritative_JJ and_CC compulsory_JJ collocates_NNS such_JJ as_IN 宪_CD 法_CD xianfa_NN ,_, 法律_CD falv_NN ,_, 法规_CD fagui_NNS ,_, etc._FW ._.
+Down_IN the_DT scale_NN ,_, we_PRP can_MD find_VB words_NNS such_JJ as_IN 规则_CD guize_NN and_CC 政策_NN zhengce_NN which_WDT are_VBP less_RBR authoritative_JJ and_CC compulsory_JJ than_IN words_NNS in_IN the_DT first_JJ layer_NN ._.
+Words_NNS in_IN the_DT third_JJ layer_NN include_VBP the_DT non-compulsory_JJ 纪律_CD jilv_NN ,_, 道德_CD daode_NN ,_, 公共秩序_CD gonggong_NN zhixu_NN ,_, etc._FW ._.
+Although_IN they_PRP might_MD be_VB authoritative_JJ ,_, but_CC people_NNS still_RB can_MD be_VB free_JJ to_TO choose_VB to_TO follow_VB it_PRP or_CC not_RB ._.
+At_IN the_DT bottom_NN of_IN the_DT hierarchy_NN scale_NN ,_, we_PRP can_MD find_VB words_NNS such_JJ as_IN 命令_NN mingling_NN and_CC 要求_NN yaoqiu_NN which_WDT are_VBP usually_RB non-authoritative_JJ but_CC still_RB might_MD be_VB compulsory_JJ ._.
+In_IN the_DT following_JJ sections_NNS ,_, the_DT right_JJ collocates_NNS of_IN the_DT three_CD node_JJ words_NNS -LRB-_-LRB- i.e._FW abide_VB by_IN ,_, adhere_VB to_TO and_CC observe_VB -RRB-_-RRB- are_VBP also_RB classified_VBN according_VBG to_TO the_DT same_JJ criteria_NNS ._.
+3.3_CD Evidence_NN from_IN the_DT English_NNP Corpus_NNP For_IN the_DT collocates_NNS of_IN abide_VBP by_IN ,_, adhere_VB to_TO and_CC observe_VB ,_, this_DT study_NN uses_VBZ a_DT span_NN of_IN up_RB to_TO five_CD words_NNS to_TO the_DT right_NN of_IN the_DT node_NN ._.
+This_DT is_VBZ in_IN line_NN with_IN Sinclair_NNP 's_POS -LRB-_-LRB- 1991_CD :_: 106_CD -RRB-_-RRB- suggestion_NN that_IN beyond_IN four_CD words_NNS from_IN the_DT node_NN there_EX were_VBD no_DT statistical_JJ indication_NN of_IN the_DT attractive_JJ power_NN of_IN the_DT node_NN ._.
+It_PRP needs_VBZ to_TO be_VB noted_VBN that_IN the_DT lists_NNS of_IN the_DT right_JJ collocates_NNS of_IN these_DT three_CD node_JJ words_NNS in_IN the_DT Table_NNP 5_CD ._.
+Right_RB collocates_NNS of_IN 遵守_NN zunshou_NN following_VBG Table_NNP 7_CD ,_, Table_NNP 9_CD and_CC Table_NNP 11_CD are_VBP not_RB exhaustive_JJ and_CC we_PRP also_RB have_VBP removed_VBN a_DT few_JJ collocates_NNS which_WDT seem_VBP to_TO be_VB of_IN little_JJ relevance_NN and_CC importance_NN ._.
+In_IN addition_NN ,_, those_DT collocates_NNS which_WDT are_VBP relevant_JJ to_TO our_PRP$ study_NN but_CC difficult_JJ to_TO categorize_VB in_IN terms_NNS of_IN the_DT two_CD criteria_NNS defined_VBN above_IN have_VBP been_VBN classified_VBN as_IN ``_`` others_NNS ''_'' ._.
+3.3.1_CD Abide_NN by_IN with_IN Its_PRP$ Right_NNP Collocates_NNP We_PRP have_VBP extracted_VBN in_IN total_JJ 193_CD instances_NNS of_IN abide_VBP by_IN from_IN BNC_NNP ._.
+In_IN Table_NNP 6_CD ,_, we_PRP report_VBP ten_CD randomly_RB selected_VBN concordance_NN lines_NNS from_IN the_DT overall_JJ data_NNS to_TO show_VB the_DT patterning_NN of_IN abide_VB by_IN ._.
+1_LS ._.
+2_LS ._.
+3_LS ._.
+4_LS ._.
+5_CD ._.
+6_CD ._.
+7_CD ._.
+8_CD ._.
+9_CD ._.
+10_CD ._.
+united_VBN States_NNPS ,_, who_WP accepted_VBD them_PRP and_CC agreed_VBD to_TO comes_VBZ illegal_JJ which_WDT will_MD I_PRP 'm_VBP sure_JJ all_DT people_NNS will_MD troops_NNS in_IN the_DT area_NN until_IN the_DT factions_NNS agreed_VBD to_TO achieve_VB such_JJ aims_NNS ,_, an_DT advertiser_NN usually_RB has_VBZ to_TO demanded_VBD that_IN the_DT Efta_NNP states_NNS agree_VBP in_IN advance_NN to_TO Hussein_NNP was_VBD under_IN pressure_NN on_IN the_DT one_CD hand_NN to_TO The_DT government_NN stated_VBD its_PRP$ willingness_NN to_TO Indian_JJ tradition_NN with_IN the_DT obedience_NN required_VBN to_TO do_VB its_PRP$ utmost_JJ to_TO achieve_VB reconciliation_NN and_CC to_TO practice_VB ._.
+Companies_NNS wishing_VBG to_TO join_VB will_MD have_VB to_TO abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN abide_VB by_IN the_DT new_JJ constitution_NN ._.
+Our_PRP$ constitutional_JJ the_DT law_NN ._.
+I_PRP 'm_VBP sorry_JJ about_IN the_DT turning_VBG a_DT blind_JJ a_DT ceasefire_NN ._.
+The_DT SOC_NNP government_NN issued_VBD a_DT a_DT number_NN of_IN laws_NNS and_CC codes_NNS of_IN practice_NN ._.
+a_DT common_JJ defence_NN policy_NN which_WDT is_VBZ as_RB yet_RB the_DT UN_NNP resolution_NN to_TO impose_VB sanctions_NNS on_IN the_DT UN_NNP sanctions_NNS policy_NN ,_, but_CC sought_VBD to_TO the_DT rules_NNS governing_VBG non-violent_JJ action_NN ._.
+the_DT peace_NN accord_NN ._.
+Qian_JJ announced_VBD that_IN a_DT code_NN of_IN conduct_NN ._.
+Not_RB all_DT have_VBP welcome_JJ As_IN indicated_VBN in_IN Table_NNP 6_CD ,_, in_IN terms_NNS of_IN colligation_NN ,_, it_PRP has_VBZ been_VBN observed_VBN that_IN abide_VBP by_IN is_VBZ often_RB followed_VBN by_IN a_DT noun_NN phrase_NN ._.
+Then_RB we_PRP categorize_VBP the_DT right_JJ collocates_NNS of_IN abide_VBP by_IN according_VBG to_TO the_DT two_CD criteria_NNS mentioned_VBN in_IN Section_NN 3.2_CD ._.
+Note_VB that_IN the_DT raw_JJ frequencies_NNS of_IN the_DT collocates_NNS are_VBP listed_VBN in_IN the_DT brackets_NNS in_IN Table_NNP 7_CD ._.
+For_IN some_DT words_NNS ,_, we_PRP also_RB give_VBP one_CD example_NN of_IN a_DT wider_JJR context_NN -LRB-_-LRB- e.g._FW the_DT federation_NN 's_POS code_NN of_IN practice_NN -RRB-_-RRB- to_TO justify_VB our_PRP$ classification_NN ._.
+Table_NNP 6_CD ._.
+Concordance_NN lines_NNS of_IN abide_VBP by_IN Criteria_NNP Right_NNP collocates_NNS of_IN abide_VBP by_IN Authoritative_NNP &_CC compulsory_JJ rule_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 30_CD -RRB-_-RRB- ,_, law_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, terms_NNS -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, Code_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, regulations_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, treaty_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, policies_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, conditions_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, provisions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, proviso_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, accord_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, contract_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, constitution_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, convention_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, declaration_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, resolution_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, ceasefire_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, settlement_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, sanctions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, etc_FW Compulsory_NNP -LRB-_-LRB- either_CC from_IN institutions_NNS or_CC person_NN in_IN authority_NN or_CC as_IN a_DT must_MD -RRB-_-RRB- code_NN of_IN practice_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW the_DT federation_NN 's_POS code_NN of_IN practice_NN -RRB-_-RRB- ,_, order_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW the_DT court_NN order_NN -RRB-_-RRB- ,_, directive_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- -LRB-_-LRB- e.g._FW the_DT directive_NN of_IN the_DT government_NN -RRB-_-RRB- ,_, plan_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- -LRB-_-LRB- e.g._FW a_DT peace_NN plan_NN -RRB-_-RRB- ,_, standards_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW government-imposed_JJ standards_NNS -RRB-_-RRB- ,_, principle_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- -LRB-_-LRB- e.g._FW principle_NN of_IN non-interference_NN in_IN the_DT internal_JJ affairs_NNS -RRB-_-RRB- ,_, injunctions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW the_DT injunction_NN of_IN official_JJ leaders_NNS -RRB-_-RRB- ,_, etc_FW Others_NNS decision_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, restrictions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, words_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, maxim_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, oath_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, intention_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc._FW ._.
+3.3.2_CD Adhere_NNP to_TO with_IN Its_PRP$ Right_NNP Collocates_NNP In_IN BNC_NNP ,_, there_EX are_VBP 274_CD occurrences_NNS of_IN adhere_NN to_TO in_IN total_NN ._.
+In_IN Table_NNP 8_CD below_IN ,_, we_PRP also_RB present_VBP ten_CD randomly_RB selected_VBN concordance_NN lines_NNS from_IN the_DT overall_JJ data_NNS to_TO show_VB the_DT collocational_JJ patterning_NN of_IN adhere_NN to_TO ._.
+1_LS ._.
+2_LS ._.
+3_LS ._.
+4_LS ._.
+5_CD ._.
+6_CD ._.
+h_JJ leadership_NN ._.
+Many_JJ people_NNS had_VBD struggled_VBN to_TO selves_NNS ,_, fellow_JJ workers_NNS or_CC client_NN employees_NNS ,_, in_IN which_WDT it_PRP was_VBD reared_VBN ,_, did_VBD not_RB necessarily_RB the_DT Charter_NNP ,_, to_TO settle_VB disputes_NNS peacefully_RB ,_, to_TO onarchies_NNS ,_, as_RB well_RB as_IN with_IN those_DT that_WDT claimed_VBD to_TO nstrative_JJ staff_NN ._.
+Departmental_JJ employees_NNS must_MD adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO a_DT strict_JJ moral_JJ code_NN for_IN years_NNS -LRB-_-LRB- while_IN others_NNS the_DT rules_NNS relating_VBG to_TO health_NN and_CC safety_NN the_DT principles_NNS of_IN predictability_NN ,_, even_RB had_VBD the_DT principles_NNS of_IN equal_JJ rights_NNS and_CC self-deter_JJ Marxism-Leninism_NNP ._.
+How_WRB far_RB this_DT reorienta_NN the_DT following_VBG guidelines_NNS to_TO reduce_VB the_DT Table_NNP 7_CD ._.
+Right_RB collocates_NNS of_IN abide_VBP by_IN 7_CD ._.
+8_CD ._.
+9_CD ._.
+10_CD ._.
+not_RB know_VB how_WRB many_JJ agencies_NNS and_CC courts_NNS still_RB responsibility_NN of_IN the_DT employees_NNS concerned_VBN to_TO plicature_VB ._.
+So_RB Grice_NNP 's_POS point_NN is_VBZ not_RB that_IN we_PRP always_RB feature_VBP for_IN more_JJR details_NNS -RRB-_-RRB- ._.
+All_DT members_NNS must_MD adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO adhere_VB to_TO this_DT policy_NN and_CC practice_NN ._.
+The_DT purpose_NN of_IN these_DT guidelines_NNS and_CC procedures_NNS ._.
+No_DT matter_NN these_DT maxims_NNS on_IN a_DT superficial_JJ level_NN but_CC a_DT national_JJ Code_NNP of_IN Practice_NNP ,_, and_CC a_DT common_JJ As_IN can_MD be_VB seen_VBN from_IN Table_NNP 8_CD ,_, similar_JJ to_TO 遵守_VB zunshou_NN and_CC abide_VB by_IN ,_, adhere_VB to_TO is_VBZ also_RB frequently_RB followed_VBN by_IN a_DT noun_NN phrase_NN at_IN the_DT colligational_JJ level_NN ._.
+Table_NNP 9_CD below_IN presents_NNS the_DT categorization_NN of_IN the_DT right_JJ collocates_NNS of_IN adhere_NN to_TO in_IN terms_NNS of_IN the_DT two_CD criteria_NNS stated_VBN above_IN ._.
+Note_VB that_IN the_DT raw_JJ frequencies_NNS of_IN the_DT collocates_NNS are_VBP listed_VBN in_IN the_DT brackets_NNS in_IN Table_NNP 9_CD and_CC we_PRP also_RB give_VBP one_CD example_NN of_IN a_DT wider_JJR context_NN -LRB-_-LRB- e.g._FW ethical_JJ standards_NNS -RRB-_-RRB- for_IN some_DT words_NNS to_TO justify_VB our_PRP$ classification_NN ._.
+Table_NNP 8_CD ._.
+Concordance_NN lines_NNS of_IN adhere_NN to_TO Criteria_NNP Right_NNP collocates_NNS of_IN adhere_NN to_TO Authoritative_NNP &_CC compulsory_JJ -LRB-_-LRB- but_CC not_RB so_RB authoritative_JJ as_IN laws_NNS -RRB-_-RRB- policy_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- ,_, rule_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, regulations_NNS -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, treaty_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, sanctions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, resolution_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, protocol_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Non-compulsory_JJ standards_NNS -LRB-_-LRB- 9_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW ethical_JJ standards_NNS -RRB-_-RRB- ,_, principle_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, code_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- -LRB-_-LRB- e.g._FW moral_JJ code_NN -RRB-_-RRB- ,_, doctrine_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, guidelines_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, norm_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- -LRB-_-LRB- e.g._FW cultural_JJ norms_NNS -RRB-_-RRB- ,_, disciplines_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- -LRB-_-LRB- eg_FW ._.
+the_DT economic_JJ and_CC financial_JJ disciplines_NNS -RRB-_-RRB- ,_, school_NN of_IN thought_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, Marxism_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, Marxism-leninism_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, Pluralism_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, structuralism_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, ethic_JJ -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, code_NN of_IN practice_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, sect_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, ideals_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, scheme_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Non-authoritative_JJ requirements_NNS -LRB-_-LRB- 4_CD -RRB-_-RRB- ,_, specification_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, demands_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, instructions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, restrictions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, etc_FW Personal_JJ idea_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, position_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, convictions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, arrangements_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, opinion_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, schedule_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, timetable_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, lifestyle_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Others_NNS practice_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, procedure_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, programme_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, interpretations_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, values_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, etc_FW As_IN can_MD be_VB seen_VBN from_IN Table_NNP 7_CD in_IN Section_NN 3.3.1_CD and_CC Table_NNP 9_CD above_IN ,_, abide_VB by_IN and_CC adhere_VB to_TO share_VB a_DT few_JJ right_JJ collocates_NNS ._.
+However_RB ,_, a_DT closer_JJR look_NN at_IN the_DT modifiers_NNS of_IN these_DT shared_VBN collocates_NNS reveals_VBZ marked_JJ differences_NNS between_IN these_DT two_CD node_JJ words_NNS ._.
+Let_VB us_PRP take_VB standards_NNS for_IN example_NN ._.
+There_EX are_VBP three_CD cases_NNS of_IN co-occurrences_NNS of_IN abide_VBP by_IN with_IN standards_NNS in_IN BNC_NNP ._.
+Let_VB us_PRP look_VB at_IN a_DT wider_JJR context_NN as_IN follows_VBZ ._.
+1_LS ._.
+The_DT American_NNP Mining_NNP Congress_NNP has_VBZ lambasted_VBN the_DT report_NN as_IN ``_`` a_DT gross_JJ distortion_NN of_IN the_DT truth_NN ''_'' ,_, arguing_VBG that_IN its_PRP$ members_NNS at_IN least_JJS abide_VB by_IN government-imposed_JJ standards_NNS ._.
+2_LS ._.
+Ramprakash_NNP is_VBZ a_DT lad_NN who_WP could_MD be_VB a_DT superb_JJ player_NN ,_, but_CC there_EX are_VBP standards_NNS you_PRP have_VBP to_TO abide_VB by_IN ._.
+If_IN you_PRP are_VBP an_DT England_NNP player_NN you_PRP have_VBP to_TO behave_VB in_IN a_DT certain_JJ way_NN ._.
+3_LS ._.
+At_IN the_DT same_JJ time_NN ,_, the_DT integrity_NN of_IN the_DT profession_NN was_VBD maintained_VBN by_IN offering_VBG membership_NN only_RB to_TO those_DT who_WP were_VBD willing_JJ to_TO abide_VB by_IN prescribed_JJ standards_NNS ._.
+In_IN Example_NNP 1_CD ,_, standards_NNS is_VBZ premodified_VBN by_IN government-imposed_JJ which_WDT indicates_VBZ that_IN the_DT standards_NNS in_IN question_NN must_MD be_VB obeyed_VBN ._.
+In_IN Example_NN 2_CD ,_, abide_VBP by_IN follows_VBZ have_VBP to_TO which_WDT shows_VBZ that_IN the_DT standards_NNS are_VBP compulsory_JJ ._.
+In_IN Example_NN 3_CD ,_, abiding_VBG by_IN prescribed_VBN standards_NNS is_VBZ required_VBN as_IN a_DT must_MD for_IN offering_VBG membership_NN ._.
+In_IN contrast_NN ,_, with_IN regard_NN to_TO adhere_VB to_TO ,_, we_PRP can_MD find_VB a_DT set_NN of_IN collocation_NN such_JJ as_IN proper_JJ standards_NNS of_IN behavior_NN ,_, general_JJ standards_NNS of_IN decency_NN ,_, ethical_JJ standards_NNS ,_, etc._FW ._.
+It_PRP can_MD be_VB seen_VBN that_IN adhere_VBP to_TO typically_RB co-occurs_JJ with_IN non-authoritative_JJ and_CC non_SYM -_: compulsory_JJ standards_NNS ._.
+In_IN addition_NN to_TO standards_NNS ,_, we_PRP also_RB find_VBP marked_JJ differences_NNS in_IN other_JJ shared_VBN collocates_NNS such_JJ as_IN code_NN ,_, rule_NN ,_, principles_NNS ,_, etc._FW ._.
+Here_RB the_DT point_NN is_VBZ that_IN the_DT shared_VBN collocates_NNS of_IN abide_VBP by_IN and_CC adhere_VB to_TO co-occur_VB with_IN different_JJ modifiers_NNS whose_WP$ meaning_NN is_VBZ in_IN harmony_NN with_IN the_DT whole_JJ environment_NN ,_, especially_RB in_IN harmony_NN with_IN the_DT meaning_NN indicated_VBN by_IN the_DT node_JJ words_NNS ._.
+3.3.3_CD Observe_NNP with_IN Its_PRP$ Right_NNP Collocates_NNP The_NNP usage_NN of_IN observe_VB is_VBZ more_RBR complicated_JJ than_IN that_DT Table_NNP 9_CD ._.
+Right_RB collocates_NNS of_IN adhere_NN to_TO of_IN abide_VB by_IN and_CC adhere_VB to_TO due_JJ to_TO the_DT reason_NN that_WDT observe_VBP is_VBZ a_DT polysemous_JJ word_NN ._.
+It_PRP has_VBZ five_CD senses_NNS in_IN Collins_NNP COBUILD_NNP Advanced_NNP Dictionary_NNP of_IN English_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, but_CC only_RB one_CD meaning_NN --_: ``_`` If_IN you_PRP observe_VBP something_NN such_JJ as_IN a_DT law_NN or_CC custom_NN ,_, you_PRP obey_VBP it_PRP or_CC follow_VB it_PRP ''_'' is_VBZ relevant_JJ for_IN the_DT present_JJ study_NN ._.
+In_IN BNC_NNP ,_, there_EX are_VBP 1,623_CD instances_NNS of_IN observe_VBP in_IN total_NN ._.
+Manually_RB removing_VBG those_DT concordances_NNS lines_NNS carrying_VBG the_DT irrelevant_JJ senses_NNS ,_, we_PRP got_VBD 248_CD instances_NNS for_IN observe_VBP ._.
+Table_NNP 10_CD below_IN presents_NNS ten_CD randomly_RB selected_VBN instances_NNS from_IN the_DT overall_JJ data_NNS to_TO show_VB the_DT patterning_NN of_IN observe_VB ._.
+1_LS ._.
+2_LS ._.
+3_LS ._.
+4_LS ._.
+5_CD ._.
+6_CD ._.
+7_CD ._.
+8_CD ._.
+9_CD ._.
+10_CD ._.
+ion_NN qua_NN members_NNS of_IN the_DT Commission_NNP had_VBD to_TO then_RB ,_, although_IN ,_, as_IN in_IN the_DT former_JJ case_NN ,_, they_PRP again_RB ,_, can_MD the_DT citizens_NNS of_IN a_DT city_NN properly_RB ssion_NN or_CC assembly_NN and_CC knowingly_RB failing_VBG to_TO then_RB ,_, that_IN it_PRP would_MD be_VB far_RB more_RBR advisable_JJ to_TO principle_NN ,_, which_WDT provides_VBZ that_IN a_DT firm_NN should_MD necessity_NN ._.
+The_DT wardens_NNS of_IN the_DT agora_NN shall_MD instructions_NNS ,_, labels_NNS or_CC markings_NNS ._.
+You_PRP shall_MD nanted_VB with_IN the_DT landlord_NN to_TO pay_VB the_DT rent_NN and_CC the_DT question_NN ``_`` What_WP causes_VBZ the_DT peasant_NN to_TO observe_VB observe_VB observe_VB observe_VB observe_VB observe_VB observe_VB observe_VB observe_VB observe_VB the_DT rules_NNS in_IN performance_NN of_IN the_DT treaty_NN ._.
+The_DT the_DT law_NN ,_, the_DT government_NN is_VBZ a_DT pure_JJ the_DT laws_NNS by_IN habit_NN only_RB ,_, and_CC without_IN the_DT conditions_NNS ,_, and_CC knowingly_RB taking_VBG part_NN the_DT treaty_NN ,_, which_WDT their_PRP$ sagacious_JJ high_JJ standards_NNS of_IN integrity_NN and_CC fair_JJ dealing_VBG the_DT order_NN appointed_VBN by_IN law_NN for_IN the_DT the_DT requirements_NNS of_IN UK_NNP legislation_NN and_CC any_DT the_DT covenants_NNS during_IN the_DT residue_NN of_IN the_DT term_NN this_DT ethic_NN ?_. ''_''
+;_: a_DT question_NN that_WDT can_MD not_RB really_RB As_IN shown_VBN in_IN Table_NNP 10_CD ,_, similar_JJ to_TO abide_VB by_IN and_CC adhere_VB to_TO ,_, at_IN the_DT colligational_JJ level_NN ,_, observe_VBP is_VBZ also_RB typically_RB followed_VBN by_IN a_DT noun_NN phrase_NN ._.
+In_IN Table_NNP 11_CD below_IN ,_, we_PRP present_VBP the_DT categorization_NN of_IN the_DT right_JJ collocates_NNS of_IN observe_VBP in_IN terms_NNS of_IN the_DT two_CD criteria_NNS defined_VBN in_IN Section_NN 3.2_CD ._.
+Note_VB that_IN the_DT raw_JJ frequencies_NNS of_IN the_DT collocates_NNS are_VBP listed_VBN in_IN the_DT brackets_NNS in_IN Table_NNP 11_CD ._.
+Table_NNP 10_CD ._.
+Concordance_NN lines_NNS of_IN observe_VBP Criteria_NNP Right_NNP collocates_NNS of_IN observe_VBP Authoritative_NNP &_CC compulsory_JJ rule_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 70_CD -RRB-_-RRB- ,_, law_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, covenants_NNS -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, conditions_NNS -LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, terms_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, treaty_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, truce_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, articles_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, provisions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, stipulation_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, code_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, regulations_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, contract_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Non-compulsory_JJ principle_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, procedures_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, conventions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, standards_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, ethic_JJ -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, methods_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, custom_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, routine_JJ -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Non-authoritative_JJ order_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, directions_NNS -LRB-_-LRB- 4_CD -RRB-_-RRB- ,_, requirements_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, instructions_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- ,_, commands_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, injunctions_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, request_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW Others_NNS restrictions_NNS -LRB-_-LRB- 3_CD -RRB-_-RRB- ,_, limitations_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, constraint_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, proprieties_NNS -LRB-_-LRB- 1_CD -RRB-_-RRB- ,_, faith_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, maxim_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, etc_FW 4_CD Discussion_NNP This_DT section_NN proposes_VBZ an_DT analysis_NN of_IN the_DT four_CD node_JJ words_NNS -LRB-_-LRB- i.e._FW 遵守_FW zunshou_FW ,_, abide_VB by_IN ,_, adhere_VB to_TO and_CC observe_VB -RRB-_-RRB- in_IN terms_NNS of_IN their_PRP$ semantic_JJ preference_NN and_CC semantic_JJ prosody_NN ._.
+Semantic_JJ preference_NN and_CC semantic_JJ prosody_NN are_VBP crucial_JJ in_IN establishing_VBG collocational_JJ translation_NN equivalents_NNS ;_: only_RB when_WRB they_PRP are_VBP equivalent_JJ will_MD a_DT collocation_NN be_VB available_JJ as_IN a_DT possible_JJ choice_NN to_TO a_DT translator_NN ._.
+Semantic_JJ preference_NN refers_VBZ to_TO the_DT semantic_JJ sets_NNS into_IN which_WDT the_DT collocates_NNS fall_VBP ._.
+The_DT corpus_NN evidence_NN presented_VBN in_IN Section_NN 3_CD shows_NNS that_WDT 遵守_VBP zunshou_NN ,_, abide_VBP by_IN ,_, adhere_VB to_TO and_CC observe_VB allow_VB collocates_NNS that_WDT fall_VBP into_IN different_JJ semantic_JJ sets_NNS :_: 1_LS ._.
+遵守_NN zunshou_NN usually_RB collocates_VBZ with_IN things_NNS that_WDT must_MD be_VB or_CC need_VB to_TO be_VB obeyed_VBN or_CC done_VBN ._.
+2_LS ._.
+Abide_VB by_IN allows_VBZ collocates_NNS which_WDT are_VBP things_NNS that_WDT must_MD be_VB obeyed_VBN or_CC done_VBN ._.
+3_LS ._.
+Adhere_NNP to_TO is_VBZ typically_RB followed_VBN by_IN things_NNS that_WDT need_VBP to_TO be_VB obeyed_VBN or_CC done_VBN but_CC not_RB all_DT of_IN them_PRP are_VBP compulsory_JJ ._.
+4_LS ._.
+Observe_VB allows_VBZ collocates_NNS with_IN a_DT wider_JJR meaning_NN ._.
+They_PRP are_VBP things_NNS that_WDT must_MD be_VB or_CC need_VB to_TO be_VB obeyed_VBN or_CC done_VBN ,_, either_CC compulsory_JJ or_CC non-compulsory_JJ ._.
+In_IN addition_NN to_TO the_DT comparison_NN of_IN semantic_JJ preference_NN ,_, the_DT matching_NN of_IN equivalents_NNS has_VBZ to_TO be_VB Table_NNP 11_CD ._.
+Right_RB collocates_NNS of_IN observe_VBP verified_VBN when_WRB all_PDT the_DT components_NNS that_WDT are_VBP necessary_JJ for_IN the_DT unit_NN to_TO function_VB have_VBP been_VBN identified_VBN -LRB-_-LRB- Tognini-Bonelli_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, equivalence_NN also_RB needs_VBZ to_TO be_VB achieved_VBN at_IN the_DT level_NN of_IN the_DT ultimate_JJ pragmatic_JJ function_NN --_: the_DT semantic_JJ prosody_NN ._.
+In_IN terms_NNS of_IN semantic_JJ prosody_NN ,_, we_PRP can_MD see_VB that_IN abide_VB by_IN is_VBZ used_VBN to_TO impose_VB an_DT obligation_NN in_IN various_JJ forms_NNS such_JJ as_IN laws_NNS ,_, regulations_NNS and_CC rules_NNS ._.
+5_CD Conclusion_NN and_CC Implications_NNS Taking_VBG account_NN of_IN the_DT right_JJ collocates_NNS ,_, the_DT semantic_JJ preference_NN and_CC semantic_JJ prosody_NN of_IN the_DT four_CD node_JJ words_NNS ,_, we_PRP can_MD finally_RB establish_VB the_DT The_DT function_NN associated_VBN with_IN adhere_NN to_TO is_VBZ to_TO ask_VB people_NNS to_TO obey_VB something_NN but_CC still_RB leaving_VBG some_DT freedom_NN for_IN people_NNS to_TO choose_VB to_TO follow_VB it_PRP or_CC not_RB ._.
+Observe_NNP has_VBZ an_DT integrated_JJ function_NN ,_, incorporating_VBG the_DT function_NN of_IN both_DT abide_VBP by_IN and_CC adhere_VB to_TO ._.
+The_DT semantic_JJ prosody_NN of_IN 遵守_CD zunshou_NN is_VBZ ,_, in_IN fact_NN ,_, the_DT combination_NN of_IN that_DT of_IN its_PRP$ three_CD English_JJ equivalents_NNS ._.
+following_VBG sets_NNS of_IN de_IN facto_JJ collocational_JJ translation_NN equivalents_NNS in_IN English_NNP and_CC Chinese_NNP -LRB-_-LRB- see_VBP Table_NNP 12_CD below_IN -RRB-_-RRB- ,_, the_DT matching_NN of_IN which_WDT is_VBZ not_RB only_RB at_IN the_DT formal_JJ and_CC semantic_JJ level_NN but_CC also_RB at_IN the_DT functional_JJ level_NN ._.
+Chinese_JJ collocations_NNS English_JJ collocations_NNS 遵守宪法_VBP zunshou_NN xianfa_NN abide_VBP by_IN the_DT Constitution_NNP 遵守法律_CD zunshou_NN falv_NN abide_VBP by/observe_NN the_DT law_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守法规_CD zunshou_NN fagui_NN abide_VBP by/observe_NN the_DT code_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守政策_CD zunshou_NN zhengce_NN abide_VBP by_IN /_CD adhere_NN to_TO the_DT policy_NN 遵守条例_NN zunshou_NN tiaoli_NNS abide_VBP by/adhere_JJ to/observe_IN the_DT regulation_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守条约_CD zunshou_NN tiaoyue_NN abide_VBP by_IN /_CD adhere_NN to_TO /_CD observe_VBP the_DT treaty_NN 遵守条款_CD zunshou_NN tiaokuan_NN abide_VBP by/observe_NN the_DT provisions/term_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守规则_CD zunshou_NN guize_NN abide_VBP by/adhere_JJ to/observe_IN the_DT rule_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守原则_CD zunshou_NN yuanze_NN abide_VBP by/adhere_JJ to/observe_IN the_DT principle_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守纪律_FW zunshou_FW jilv_FW adhere_FW to/observe_FW the_DT discipline_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守道德_FW zunshou_FW daode_FW adhere_FW to/observe_FW a_DT moral_JJ code_NN 遵守命令_CD zunshou_NN mingling_VBG abide_VB by/observe_IN the_DT order_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 遵守要求_FW zunshou_FW yaoqiu_FW adhere_FW to/observe_FW the_DT requirement_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- Obviously_RB ,_, in_IN some_DT cases_NNS ,_, English_NNP offers_VBZ more_JJR than_IN one_CD possible_JJ equivalents_NNS for_IN Chinese_JJ ._.
+It_PRP has_VBZ been_VBN shown_VBN that_IN abide_VBP by_IN ,_, adhere_VB to_TO and_CC observe_VB are_VBP used_VBN together_RP with_IN a_DT specific_JJ set_NN of_IN words_NNS and_CC encoded_VBN with_IN an_DT inherent_JJ semantic_JJ prosody_NN ._.
+By_IN taking_VBG into_IN collocation_NN into_IN consideration_NN ,_, we_PRP are_VBP able_JJ to_TO establish_VB bilingual_JJ equivalence_NN with_IN more_JJR accuracy_NN ._.
+Also_RB ,_, semantic_JJ preference_NN and_CC semantic_JJ prosody_NN is_VBZ found_VBN to_TO play_VB a_DT vital_JJ role_NN in_IN establishing_VBG cross-linguistic_JJ equivalence_NN ._.
+The_DT present_JJ contrastive_NN study_NN of_IN collocation_NN has_VBZ potentially_RB useful_JJ implications_NNS for_IN foreign_JJ language_NN teaching_NN and_CC learning_NN ._.
+It_PRP can_MD enhance_VB learners_NNS '_POS awareness_NN that_IN the_DT correspondence_NN across_IN different_JJ languages_NNS needs_VBZ to_TO be_VB identified_VBN not_RB only_RB at_IN the_DT formal_JJ and_CC semantic_JJ level_NN but_CC also_RB at_IN the_DT functional_JJ level_NN ._.
+There_EX is_VBZ certainly_RB danger_NN if_IN learners_NNS are_VBP totally_RB ignorant_JJ of_IN the_DT semantic_JJ preference_NN and_CC semantic_JJ prosody_NN of_IN the_DT lexical_JJ items_NNS or_CC sequences_NNS ._.
+With_IN parallel_NN and_CC monolingual_JJ corpora_NN at_IN hand_NN ,_, contrastive_JJ studies_NNS of_IN collocation_NN can_MD also_RB shed_VB new_JJ light_NN on_IN contrastive_JJ linguistic_NN and_CC translation_NN studies_NNS ,_, as_RB well_RB as_IN bilingual_JJ lexicography_NN ._.
+However_RB ,_, the_DT study_NN of_IN collocation_NN across_IN languages_NNS from_IN a_DT contrastive_JJ angle_NN is_VBZ still_RB in_IN its_PRP$ infancy_NN ._.
+The_DT present_JJ study_NN is_VBZ only_RB a_DT small_JJ -_: scaled_VBN tentative_JJ attempt_NN and_CC it_PRP is_VBZ desirable_JJ that_IN further_JJ explorations_NNS in_IN this_DT direction_NN can_MD be_VB done_VBN in_IN the_DT future_NN ._.
+References_NNP Collins_NNP COBUILD_NNP Advanced_NNP Dictionary_NNP of_IN English_NNP ._.
+-LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+Beijing_NNP :_: Higher_JJR Education_NNP Press_NNP ._.
+Table_NNP 12_CD ._.
+De_NNP facto_JJ translation_NN equivalents_NNS Firth_NNP ,_, J._NNP R._NNP -LRB-_-LRB- 1957_CD -RRB-_-RRB- ._.
+Papers_NNP in_IN Linguistics_NNP ._.
+London_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Halliday_NNP ,_, M._NNP A.K._NNP -LRB-_-LRB- 1966_CD -RRB-_-RRB- ._.
+Lexis_NNP as_IN a_DT linguistic_JJ level_NN ._.
+In_IN C._NNP E._NNP Bazell_NNP ,_, J._NNP C._NNP Catford_NNP ,_, M._NNP A._NNP K._NNP Halliday_NNP &_CC R._NNP H._NNP Robins_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+In_IN memory_NN of_IN J._NNP R._NNP Firth_NNP ,_, pp._NNP 148-162_CD ._.
+London_NNP :_: Longman_NNP ._.
+Louw_NNP ,_, B._NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- ._.
+Irony_NN in_IN the_DT text_NN or_CC insincerity_NN in_IN the_DT writer_NN ?_.
+The_DT diagnostic_JJ potential_NN of_IN semantic_JJ prosodies_NNS ._.
+In_IN M._NNP Baker_NNP ,_, G._NNP Francis_NNP &_CC E._NNP Tognini_NNP -_: Bonelli_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+Text_NN and_CC Technology_NN :_: In_IN Honour_NNP of_IN John_NNP Sinclair_NNP ,_, pp._NNP 157-176_CD ._.
+Amsterdam_NN :_: John_NNP Benjamins_NNP ._.
+Mitchell_NNP ,_, T._NNP F._NNP -LRB-_-LRB- 1971_CD -RRB-_-RRB- ._.
+Linguistics_NNP `_`` Going_VBG On_IN '_'' :_: Collocations_NNS and_CC other_JJ Lexical_NNP Matters_NNS Arising_VBG on_IN the_DT Syntagmatic_NNP /_NNP Linguistics_NNP Record_NNP ._.
+ARCHIVUM_NNP LINGUISTICUM_NNP ,_, 2_CD -LRB-_-LRB- new_JJ series_NN ,_, 35-69_CD -RRB-_-RRB- ._.
+Salkie_NNP ,_, Raphael_NNP ._.
+-LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+How_WRB can_MD linguists_NNS profit_VB from_IN parallel_JJ corpora_NN ?_.
+Paper_NNP given_VBN at_IN the_DT symposium_NN on_IN parallel_JJ corpora_NN ,_, 22-23_CD April_NNP 1999_CD ,_, University_NNP of_IN Uppsala_NNP ._.
+Sinclair_NNP ,_, J._NNP -LRB-_-LRB- 1966_CD -RRB-_-RRB- ._.
+Beginning_VBG the_DT study_NN of_IN lexis_NNS ._.
+In_IN C._NNP E._NNP Bazell_NNP ,_, J._NNP C._NNP Catford_NNP ,_, M._NNP A._NNP K._NNP Halliday_NNP &_CC R._NNP H._NNP Robins_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+In_IN memory_NN of_IN J._NNP R._NNP Firth_NNP ,_, pp._NNP 148-162_CD ._.
+London_NNP :_: Longman_NNP ._.
+Sinclair_NNP ,_, J._NNP -LRB-_-LRB- 1991_CD -RRB-_-RRB- ._.
+Corpus_NNP ,_, Concordance_NNP ,_, Collocation_NNP ._.
+Oxford_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Sinclair_NNP ,_, J._NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- ._.
+The_DT search_NN for_IN the_DT units_NNS of_IN meaning_NN ._.
+Textus_NNP ,_, 9_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 75-106_CD ._.
+Sinclair_NNP ,_, J._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+Trust_NNP the_DT Text_NN ._.
+London_NNP :_: Routledge_NNP ._.
+The_DT British_NNP National_NNP Corpus_NNP ,_, version_NN 3_CD -LRB-_-LRB- BNC_NNP XML_NNP Edition_NNP -RRB-_-RRB- ._.
+-LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Tognini-Bonelli_NNP ,_, Elena_NNP ._.
+-LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Corpus_NNP Linguistics_NNPS at_IN Work_NNP ._.
+Amsterdam_NN :_: John_NNP Benjamins_NNP ._.
+Tognini-Bonelli_NNP ,_, Elena_NNP ._.
+-LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Functionally_RB complete_JJ units_NNS of_IN meaning_NN across_IN English_NNP and_CC Italian_JJ :_: Towards_IN a_DT corpus-driven_JJ approach_NN ._.
+In_IN B._NNP Alenberg_NNP &_CC S._NNP Granger_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+Lexis_NNP in_IN Contrast_NNP ,_, pp._NNP 73-95_CD ._.
+Amsterdam_NN :_: John_NNP Benjamins_NNP ._.
+Wei_NNP ,_, Naixing_NNP ._.
+-LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+The_DT Definition_NNP and_CC Research_NNP System_NNP of_IN the_DT Word_NNP Collocation_NNP ._.
+Shanghai_NNP :_: Shanghai_NNP Jiao_NNP Tong_NNP University_NNP Press_NNP ._.
+Wei_NNP ,_, Naixing_NNP and_CC Lu_NNP ,_, Jun._NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+-LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Phraseology_NNP in_IN Contrast_NNP :_: Evidence_NN from_IN English-Chinese_JJ Corpora_NNP ._.
+Beijing_NNP :_: Foreign_NNP Language_NNP Teaching_NNP and_CC Research_NNP Press_NNP ._.
+Distributed_VBN by_IN Oxford_NNP University_NNP Computing_NNP Services_NNPS on_IN behalf_NN of_IN the_DT BNC_NNP Consortium_NNP ._.

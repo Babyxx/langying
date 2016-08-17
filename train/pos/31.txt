@@ -1,0 +1,339 @@
+Feature_NNP Reduction_NNP Using_VBG Ensemble_NNP Approach_NNP Abstract_NNP The_NNP performance_NN of_IN many_JJ content_JJ analysis_NN methods_NNS heavily_RB dependent_JJ on_IN the_DT features_NNS they_PRP are_VBP applied_VBN ._.
+A_DT fundamental_JJ problem_NN that_WDT makes_VBZ the_DT content_JJ analysis_NN difficult_JJ is_VBZ the_DT curse_NN of_IN dimensionality_NN ._.
+In_IN this_DT study_NN ,_, we_PRP propose_VBP a_DT novel_NN feature_NN reduction_NN method_NN which_WDT adopts_VBZ ensemble_NN approach_NN to_TO measure_VB the_DT divergence_NN between_IN the_DT training_NN set_NN and_CC test_NN set_NN and_CC use_VB the_DT divergence_NN to_TO supervise_VB the_DT feature_NN reduction_NN procedure_NN ._.
+The_DT proposed_VBN method_NN uses_VBZ pairwise_NN measure_NN to_TO get_VB the_DT diversity_NN between_IN classifiers_NNS and_CC selects_VBZ the_DT complementary_JJ classifiers_NNS to_TO get_VB the_DT pseudo_NN labels_NNS on_IN test_NN set_NN ._.
+The_DT pseudo_NN labels_NNS are_VBP used_VBN to_TO measure_VB the_DT divergence_NN between_IN training_NN set_NN and_CC test_NN set_NN ._.
+The_DT feature_NN reduction_NN algorithm_NN merges_VBZ the_DT adjacent_JJ feature_NN space_NN according_VBG to_TO the_DT divergence_NN ,_, such_JJ reduce_VB the_DT feature_NN number_NN ._.
+We_PRP evaluated_VBD the_DT proposed_VBN method_NN on_IN several_JJ standard_JJ datasets_NNS ._.
+Experiment_NN results_NNS shown_VBN the_DT efficiency_NN of_IN the_DT proposed_VBN feature_NN reduction_NN method_NN ._.
+1_CD Introduction_NNP Gao_NNP and_CC Chien_NNP ,_, 2012_CD ;_: Robati_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+It_PRP makes_VBZ the_DT content_JJ analysis_NN tools_NNS more_RBR and_CC more_RBR important_JJ ._.
+A_DT main_JJ problem_NN is_VBZ the_DT high_JJ dimensions_NNS of_IN features_NNS which_WDT not_RB only_RB increase_VB the_DT processing_NN time_NN but_CC also_RB decrease_VB the_DT performance_NN of_IN analysis_NN tools_NNS ._.
+Automatic_NNP feature_NN reduction_NN or_CC selection_NN methods_NNS are_VBP usually_RB used_VBN to_TO reduce_VB the_DT number_NN of_IN features_NNS -LRB-_-LRB- Reif_NNP and_CC Shafait_NNP 2014_CD -RRB-_-RRB- ._.
+Removing_VBG irrelevant_JJ or_CC redundant_JJ features_NNS not_RB only_RB improves_VBZ performance_NN ,_, but_CC also_RB reduces_VBZ the_DT dimensionality_NN of_IN the_DT data_NNS thereby_RB shortening_VBG the_DT training_NN and_CC application_NN time_NN of_IN the_DT learning_VBG scheme_NN ,_, building_VBG better_JJR generalizable_JJ models_NNS ,_, and_CC decreasing_VBG required_JJ storage_NN ._.
+Furthermore_RB ,_, shorter_JJR feature_NN vectors_NNS help_VBP the_DT content_JJ analysis_NN tools_NNS in_IN better_JJR coping_VBG with_IN the_DT curse_NN of_IN dimensionality_NN ._.
+There_EX is_VBZ a_DT vast_JJ literature_NN on_IN the_DT feature_NN reduction_NN -LRB-_-LRB- How_WRB and_CC Kiong_NNP ,_, 2005_CD ;_: Garcia_NNP et_FW al._FW ,_, 2013_CD ;_: Choudhary_NNP and_CC Saraswat_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+When_WRB dealing_VBG with_IN the_DT features_NNS with_IN continuous_JJ -LRB-_-LRB- real_JJ -RRB-_-RRB- values_NNS ,_, the_DT feature_NN reduction_NN can_MD be_VB regarded_VBN as_IN discretization_NN procedure_NN which_WDT aim_NN at_IN finding_VBG a_DT representation_NN of_IN each_DT feature_NN that_WDT contains_VBZ enough_JJ information_NN for_IN the_DT learning_VBG task_NN at_IN hand_NN ,_, while_IN ignoring_VBG minor_JJ fluctuations_NNS that_WDT maybe_RB irrelevant_JJ for_IN that_DT task_NN -LRB-_-LRB- Ferreira_NNP and_CC Figueiredo_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN practice_NN ,_, discretization_NN can_MD be_VB viewed_VBN as_IN a_DT feature_NN reduction_NN method_NN since_IN it_PRP maps_NNS data_NNS from_IN a_DT huge_JJ spectrum_NN of_IN numeric_JJ values_NNS to_TO a_DT greatly_RB reduced_VBN subset_NN of_IN discrete_JJ values_NNS -LRB-_-LRB- Garcia_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Actually_RB ,_, the_DT techniques_NNS in_IN Garcia_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- can_MD also_RB be_VB adopted_VBN to_TO discrete_JJ values_NNS ._.
+The_DT feature_NN reduction_NN task_NN can_MD be_VB defined_VBN as_RB following_VBG :_: Assuming_VBG a_DT data_NN set_NN consisting_VBG of_IN N_NNP examples_NNS and_CC C_NNP target_NN classes_NNS ,_, for_IN a_DT feature_NN A_DT in_IN this_DT data_NN set_NN with_IN A_DT large_JJ number_NN of_IN electronic_JJ documentations_NNS are_VBP generated_VBN everyday_JJ on_IN webs_NNS and_CC the_DT Internet_NNP ._.
+For_IN example_NN :_: e-books_NNS ,_, e_SYM -_: newspapers_NNS ,_, e-magazines_NNS ,_, and_CC essays_NNS in_IN blogs_NNS ._.
+It_PRP is_VBZ difficult_JJ for_IN web_NN administrators_NNS to_TO manage_VB and_CC classify_VB numerous_JJ electronic_JJ documentations_NNS manually_RB -LRB-_-LRB- Ng_NNP et_FW al._FW 1997_CD ;_: Combarro_NNP et_NNP al._IN 2005_CD ;_: textual_JJ continuous_JJ values_NNS which_WDT has_VBZ the_DT range_NN -LSB-_NNP d0_CD ,_, dm_NN -RSB-_NNP ,_, or_CC a_DT set_NN of_IN discrete_JJ values_NNS -LRB-_-LRB- d0_CD ,_, d1_CD ,_, ..._: ,_, dm_NN -RRB-_-RRB- ._.
+The_DT feature_NN reduction_NN algorithms_NNS aim_VBP to_TO put_VB these_DT values_NNS into_IN several_JJ bins_NNS or_CC intervals_NNS :_: D_NNP =_SYM -LCB-_-LRB- -LSB-_NNP d0_CD ,_, d1_CD -RSB-_NNP ,_, -LSB-_NNP d1_CD ,_, d2_CD -RSB-_NNP ,_, ..._: ,_, -LSB-_NNP dm-1_JJ ,_, dm_JJ -RSB-_NN -RCB-_-RRB- ._.
+Each_DT feature_NN value_NN is_VBZ then_RB mapped_VBN into_IN the_DT bin_NN or_CC interval_NN in_IN which_WDT it_PRP falls_VBZ ._.
+By_IN tuning_VBG the_DT number_NN of_IN the_DT bins_NNS ,_, the_DT feature_NN space_NN can_MD be_VB reduced_VBN ._.
+Two_CD major_JJ categories_NNS of_IN feature_NN reduction_NN techniques_NNS include_VBP unsupervised_JJ and_CC supervised_JJ methods_NNS ._.
+Unsupervised_JJ methods_NNS -LRB-_-LRB- Bay_NNP ,_, 2001_CD ;_: Li_NNP and_CC Wang_NNP ,_, 2002_CD ;_: Yang_NNP and_CC Webb_NNP ,_, 2009_CD -RRB-_-RRB- do_VBP not_RB consider_VB the_DT class_NN label_NN whereas_IN supervised_JJ ones_NNS do_VBP ._.
+-LRB-_-LRB- Wu_NNP ,_, 1996_CD ;_: Kerber_NNP ,_, 1992_CD ;_: Zighed_NNP et_FW al._FW ,_, 1998_CD ;_: Singh_NNP and_CC Minz_NNP ,_, 2007_CD ;_: Jin_NNP et_FW al._FW ,_, 2009_CD ;_: Jiang_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- Comprehensive_NNP listings_NNS of_IN these_DT techniques_NNS can_MD be_VB found_VBN in_IN the_DT works_NNS of_IN Garcia_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+The_DT main_JJ drawback_NN of_IN all_PDT the_DT previous_JJ work_NN is_VBZ the_DT difficulty_NN to_TO accurately_RB handle_VB the_DT gap_NN between_IN the_DT training_NN set_NN and_CC test_NN set_NN ._.
+Once_RB the_DT test_NN set_VBN changes_NNS ,_, the_DT previous_JJ trained_JJ model_NN can_MD not_RB catch_VB the_DT property_NN of_IN the_DT new_JJ test_NN set_NN ._.
+In_IN this_DT study_NN ,_, we_PRP propose_VBP a_DT novel_NN feature_NN reduction_NN method_NN which_WDT adopts_VBZ ensemble_NN approach_NN to_TO evaluate_VB the_DT difference/divergence_NN between_IN training_NN set_NN and_CC test_NN set_NN ._.
+The_DT divergence_NN is_VBZ used_VBN to_TO merge_VB and_CC modify_VB the_DT feature_NN space_NN ,_, such_JJ reduce_VB the_DT feature_NN number_NN ._.
+The_DT remaining_VBG sections_NNS of_IN the_DT paper_NN are_VBP organized_VBN as_IN follows_VBZ ._.
+Section_NN 2_CD presents_VBZ our_PRP$ methods_NNS for_IN feature_NN reduction_NN ._.
+Section_NN 3_CD reports_NNS experimental_JJ results_NNS on_IN standard_JJ datasets_NNS ._.
+Section_NN 4_CD presents_NNS concluding_VBG remarks_NNS and_CC future_JJ work_NN ._.
+2_CD Method_NNP 2.1_CD Related_VBN work_NN As_IN shown_VBN by_IN Dougherty_NNP el_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, the_DT unsupervised_JJ methods_NNS and_CC supervised_JJ methods_NNS are_VBP different_JJ in_IN the_DT way_NN they_PRP use_VBP the_DT instance_NN labels_NNS ._.
+The_DT unsupervised_JJ methods_NNS do_VBP not_RB make_VB use_NN of_IN the_DT instance_NN labels_NNS ._.
+In_IN contrast_NN ,_, supervised_JJ methods_NNS utilize_VBP the_DT class_NN labels_NNS of_IN instances_NNS ._.
+The_DT representative_NN unsupervised_JJ method_NN are_VBP Equal_NNP Width_NNP and_CC Equal_NNP Frequency_NNP ._.
+The_DT Equal_NNP Width_NNP method_NN divides_VBZ the_DT range_NN of_IN observed_JJ values_NNS for_IN a_DT feature_NN into_IN k_NN equal_JJ sized_VBN bins_NNS ,_, where_WRB k_NN is_VBZ a_DT user_NN -_: supplied_VBD parameter_NN ._.
+Equal_NNP Frequency_NNP method_NN divides_VBZ a_DT continuous_JJ variable_JJ into_IN k_NN bins_NNS where_WRB -LRB-_-LRB- given_VBN m_NN instances_NNS -RRB-_-RRB- each_DT bin_NN contains_VBZ m/k_NN -LRB-_-LRB- possibly_RB duplicated_VBN -RRB-_-RRB- adjacent_JJ values_NNS ._.
+Take_VB a_DT feature_NN which_WDT is_VBZ observed_VBN to_TO have_VB values_NNS bounded_VBN by_IN d0_CD and_CC dm_NN -LRB-_-LRB- -LSB-_JJ d0_NN ,_, dm_NN -RSB-_NNP -RRB-_-RRB- ,_, the_DT Equal_NNP Width_NNP method_NN computes_VBZ the_DT bin_NN width_NN :_: δ_VB =_SYM −_SYM 0_CD The_DT bin_NN boundaries_NNS are_VBP constructed_VBN at_IN d0_CD +_CD i_FW ,_, where_WRB i_FW =_SYM 1_CD ,_, ..._: ,_, k-1_JJ ,_, thus_RB the_DT intervals_NNS will_MD be_VB -LCB-_-LRB- -LSB-_NNP d0_CD ,_, d0_CD +_SYM -RSB-_NNP ,_, -LRB-_-LRB- d0_CD +_NN ,_, d0_CD +2_CD -RSB-_NNP ,_, ..._: ,_, -LRB-_-LRB- d0_FW +_FW -LRB-_-LRB- k-1_JJ -RRB-_-RRB- ,_, d0_FW +_FW k_NN -RSB-_NNP -RCB-_-RRB- The_DT method_NN is_VBZ applied_VBN to_TO each_DT feature_NN independently_RB ._.
+It_PRP makes_VBZ no_DT use_NN of_IN instance_NN class_NN information_NN ._.
+Since_IN these_DT unsupervised_JJ methods_NNS do_VBP not_RB utilize_VB instance_NN labels_NNS in_IN setting_VBG partition_NN boundaries_NNS ,_, it_PRP is_VBZ likely_JJ that_IN classification_NN information_NN will_MD be_VB lost_VBN by_IN binning_VBG as_IN a_DT result_NN of_IN combing_VBG values_NNS that_WDT are_VBP strongly_RB associated_VBN with_IN different_JJ classes_NNS into_IN the_DT same_JJ bin_NN -LRB-_-LRB- Kerber_NNP ,_, 1992_CD -RRB-_-RRB- ._.
+In_IN some_DT cases_NNS this_DT could_MD make_VB effective_JJ classification_NN much_RB more_RBR difficult_JJ ._.
+As_IN mentioned_VBN above_IN ,_, the_DT supervised_JJ methods_NNS utilize_VBP the_DT instances_NNS labels_NNS to_TO adjust_VB the_DT bin/interval_JJ borders_NNS ._.
+The_DT simplest_JJS way_NN may_MD be_VB to_TO place_VB interval_NN borders_NNS between_IN each_DT adjacent_JJ pair_NN of_IN examples_NNS that_WDT are_VBP not_RB classified_VBN into_IN the_DT same_JJ class_NN ._.
+Suppose_VB the_DT pair_NN of_IN adjacent_JJ values_NNS on_IN feature_NN A_DT are_VBP x1_CD and_CC x2_CD ,_, x_LS =_SYM -LRB-_-LRB- x1_FW +_FW x2_FW -RRB-_-RRB- /_SYM 2_CD can_MD be_VB taken_VBN as_IN an_DT interval_NN border_NN ._.
+If_IN the_DT feature_NN A_DT is_VBZ very_RB informative_JJ ,_, which_WDT means_VBZ that_IN positive_JJ and_CC negative_JJ examples_NNS take_VBP different_JJ value_NN intervals_NNS on_IN the_DT attribute_NN ,_, this_DT method_NN is_VBZ very_RB efficient_JJ and_CC useful_JJ ._.
+However_RB ,_, this_DT method_NN tends_VBZ to_TO produce_VB too_RB many_JJ intervals_NNS on_IN those_DT attributes_NNS which_WDT are_VBP not_RB very_RB informative_JJ ._.
+Such_JJ many_JJ other_JJ supervised_JJ methods_NNS have_VBP been_VBN proposed_VBN ._.
+The_DT representative_NN method_NN is_VBZ Bayesian_JJ method_NN -LRB-_-LRB- Wu_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+According_VBG to_TO Bayes_NNP formula_NN ,_, -LRB-_-LRB- |_JJ -RRB-_-RRB- =_SYM -LRB-_-LRB- |_JJ -RRB-_-RRB- -LRB-_-LRB- -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- ∑_CD =_SYM 1_CD -LRB-_-LRB- |_NN -RRB-_-RRB- -LRB-_-LRB- -RRB-_-RRB- Where_WRB -LRB-_-LRB- |_JJ -RRB-_-RRB- is_VBZ the_DT probability_NN of_IN an_DT example_NN belonging_VBG to_TO class_NN cj_NN if_IN the_DT example_NN takes_VBZ value_NN x._NN -LRB-_-LRB- |_FW -RRB-_-RRB- is_VBZ the_DT probability_NN of_IN the_DT example_NN taking_VBG value_NN x_LS on_IN the_DT feature_NN if_IN it_PRP is_VBZ classified_VBN in_IN the_DT class_NN cj_NN ._.
+Given_VBN -LRB-_-LRB- -RRB-_-RRB- and_CC -LRB-_-LRB- |_JJ -RRB-_-RRB- ,_, we_PRP can_MD construct_VB a_DT probability_NN curve_NN for_IN each_DT class_NN cj_NN :_: -LRB-_-LRB- -RRB-_-RRB- =_SYM -LRB-_-LRB- |_JJ -RRB-_-RRB- -LRB-_-LRB- -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- When_WRB the_DT curves_NNS for_IN every_DT class_NN have_VBP been_VBN constructed_VBN ,_, interval/bin_VBG borders_NNS are_VBP placed_VBN on_IN each_DT of_IN those_DT points_NNS where_WRB the_DT leading_VBG curves_NNS are_VBP different_JJ on_IN its_PRP$ two_CD sides_NNS ._.
+Between_IN each_DT pair_NN of_IN those_DT points_NNS including_VBG the_DT two_CD open_JJ ends_NNS ,_, the_DT learning_VBG curve_NN is_VBZ the_DT same_JJ ._.
+2.2_CD Motivation_NN From_IN the_DT description_NN in_IN Section_NN 2.1_CD ,_, we_PRP known_VBD that_IN the_DT supervised_JJ methods_NNS consider_VBP the_DT class_NN attribute_NN depends_VBZ on_IN the_DT interaction_NN between_IN input_NN features_NNS and_CC class_NN labels_NNS ._.
+It_PRP depends_VBZ on_IN the_DT stationary_JJ assumption_NN ._.
+Actually_RB ,_, the_DT stationary_JJ assumption_NN does_VBZ not_RB always_RB hold_VB in_IN the_DT real_JJ applications_NNS -LRB-_-LRB- Bai_NNP et_FW al._FW ,_, 2014_CD ;_: Gama_NNP et_FW al._FW 2014_CD -RRB-_-RRB- ._.
+For_IN many_JJ learning_VBG tasks_NNS where_WRB data_NNS is_VBZ collected_VBN over_IN an_DT extended_JJ period_NN of_IN time_NN ,_, its_PRP$ underlying_JJ distribution_NN is_VBZ likely_JJ to_TO change_VB ._.
+The_DT drift_NN in_IN the_DT underling_NN distribution_NN may_MD result_VB in_IN a_DT change_NN in_IN the_DT learning_NN problem_NN ._.
+If_IN we_PRP can_MD get_VB the_DT real_JJ labels_NNS in_IN the_DT test_NN set_NN ,_, we_PRP should_MD utilize_VB these_DT labels_NNS to_TO supervise_VB the_DT feature_NN reduction_NN ._.
+But_CC actually_RB ,_, we_PRP ca_MD n't_RB get_VB the_DT real_JJ labels_NNS ._.
+Consider_VB that_IN there_EX is_VBZ always_RB a_DT pool_NN of_IN classifiers_NNS such_JJ as_IN Random_NNP Forest_NNP ,_, Gradient_NNP Boosting_NNP ,_, Maximum_NNP Entropy_NNP and_CC Naïve_NNP Bayes_NNP ._.
+Each_DT classifier_NN has_VBZ its_PRP$ own_JJ advantage_NN ._.
+The_DT ensemble_NN learning_NN -LRB-_-LRB- Dietterich_NNP ,_, 2000_CD ;_: Wozniak_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ such_JJ a_DT technique_NN focus_NN on_IN the_DT combination_NN of_IN classifiers_NNS from_IN heterogeneous_JJ or_CC homogeneous_JJ modeling_NN background_NN to_TO give_VB the_DT final_JJ decision_NN ._.
+It_PRP is_VBZ primarily_RB used_VBN to_TO improve_VB the_DT classification_NN performance_NN of_IN a_DT model_NN ,_, or_CC reduce_VB the_DT likelihood_NN of_IN an_DT unfortunate_JJ selection_NN of_IN a_DT poor_JJ one_CD ._.
+Dietterich_NNP -LRB-_-LRB- 2000a_JJ -RRB-_-RRB- summarized_VBD the_DT benefits_NNS :_: -LRB-_-LRB- a_DT -RRB-_-RRB- Allowing_VBG to_TO filter_NN out_RP hypothesis_NN that_IN ,_, though_IN accurate_JJ ,_, might_MD be_VB incorrect_JJ due_JJ to_TO a_DT small_JJ training_NN set_NN ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- Combining_VBG classifiers_NNS trained_VBN starting_VBG from_IN different_JJ initial_JJ conditions_NNS could_MD overcome_VB the_DT local_JJ optima_NN problem_NN ._.
+-LRB-_-LRB- c_NN -RRB-_-RRB- The_DT true_JJ function_NN may_MD be_VB impossible_JJ to_TO be_VB modeled_VBN by_IN any_DT single_JJ hypothesis_NN ,_, but_CC combinations_NNS of_IN hypotheses_NNS may_MD expand_VB the_DT space_NN of_IN representable_JJ functions_NNS ._.
+In_IN this_DT study_NN ,_, we_PRP adopt_VBP the_DT ensemble_NN learning_VBG method_NN to_TO the_DT feature_NN reduction_NN ._.
+We_PRP employ_VBP ensemble_NN classifiers_NNS to_TO process_VB the_DT test_NN set_NN and_CC get_VB classification_NN labels_NNS ._.
+We_PRP call_VBP the_DT labels_NNS gotten_VBN from_IN this_DT procedure_NN the_DT pseudo_NN labels_NNS since_IN they_PRP are_VBP not_RB the_DT real_JJ labels_NNS in_IN the_DT test_NN set_NN ._.
+The_DT pseudo_NN labels_NNS are_VBP utilized_VBN to_TO measure_VB the_DT difference/divergence_NN between_IN the_DT training_NN set_NN and_CC test_NN set_NN ._.
+The_DT difference_NN is_VBZ been_VBN used_VBN to_TO modify_VB the_DT feature_NN space_NN ._.
+More_RBR concretely_RB ,_, for_IN each_DT adjacent_JJ interval_NN ,_, the_DT proposed_VBN method_NN calculates_VBZ the_DT divergence_NN between_IN the_DT labeled_VBN examples_NNS in_IN training_NN set_NN and_CC the_DT pseudo_NN labeled_VBN examples_NNS in_IN test_NN set_NN and_CC decide_VB whether_IN merge_VB these_DT intervals_NNS or_CC not_RB ._.
+2.3_CD Method_NN To_TO simplify_VB ,_, we_PRP take_VBP the_DT two-class_JJ classification_NN as_IN example_NN ._.
+The_DT task_NN of_IN feature_NN reduction_NN is_VBZ to_TO put_VB the_DT feature_NN values_VBZ into_IN several_JJ bins_NNS ._.
+The_DT feature_NN number_NN will_MD be_VB reduced_VBN since_IN the_DT number_NN of_IN bins_NNS is_VBZ generally_RB less_JJR than_IN the_DT feature_NN value_NN number_NN ._.
+The_DT typical_JJ unsupervised_JJ method_NN such_JJ as_IN the_DT Equal_NNP Width_NNP method_NN ,_, do_VBP not_RB make_VB use_NN of_IN instance_NN labels_NNS ._.
+The_DT feature_NN values_NNS are_VBP put_VBN into_IN several_JJ equal_JJ sized_VBN bins_NNS ._.
+The_DT supervised_JJ methods_NNS try_VBP to_TO utilize_VB the_DT distribution_NN of_IN the_DT classes_NNS in_IN the_DT training_NN set_VBN to_TO supervise_VB the_DT feature_NN merge_VBP procedure_NN ._.
+The_DT equal_JJ -_: width_NN method_NN has_VBZ the_DT risk_NN that_IN merges_VBZ values_NNS that_WDT are_VBP strongly_RB associated_VBN with_IN different_JJ classes_NNS into_IN the_DT same_JJ bin_NN ._.
+The_DT representative_JJ supervised_JJ method_NN such_JJ as_IN Bayesian_JJ avoids_NNS this_DT problem_NN by_IN estimating_VBG the_DT condition_NN probability_NN in_IN the_DT training_NN set_NN ._.
+The_DT basic_JJ assumption_NN is_VBZ that_IN the_DT training_NN set_NN and_CC test_NN set_NN has_VBZ the_DT same_JJ distribution_NN ,_, but_CC it_PRP does_VBZ not_RB always_RB holds_VBZ ._.
+When_WRB distribution_NN of_IN training_NN and_CC test_NN set_NN are_VBP difference_NN ,_, the_DT typical_JJ supervised_JJ method_NN will_MD fail_VB ._.
+The_DT ensemble_NN learning_VBG approach_NN is_VBZ adopted_VBN in_IN this_DT study_NN ,_, we_PRP get_VBP the_DT pseudo_NN labels_NNS of_IN every_DT instance_NN in_IN the_DT test_NN set_VBN by_IN using_VBG other_JJ classifiers_NNS ._.
+Then_RB ,_, we_PRP use_VBP the_DT KL_NNP divergence_NN to_TO measure_VB the_DT difference_NN between_IN training_NN set_NN and_CC test_NN set_NN ._.
+-LRB-_-LRB- |_JJ -RRB-_-RRB- D_NNP -LRB-_-LRB- ∥_CD -RRB-_-RRB- =_SYM ∑_SYM ∑_CD -LRB-_-LRB- |_NN -RRB-_-RRB- -LRB-_-LRB- |_JJ -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- Here_RB the_DT fi_FW denote_VBP the_DT feature_NN i_FW ,_, the_DT Ptr_NNP -LRB-_-LRB- y_FW |_FW fi_FW -RRB-_-RRB- and_CC Pts_NNP -LRB-_-LRB- y_FW |_FW fi_FW -RRB-_-RRB- are_VBP the_DT probability_NN of_IN the_DT output_NN label_NN under_IN the_DT condition_NN fi_FW in_IN the_DT training_NN set_NN and_CC test_NN set_VBN respectively_RB ,_, the_DT D_NNP -LRB-_-LRB- Ptr_NNP |_NNP |_NNP Pts_NNP -RRB-_-RRB- is_VBZ the_DT divergence_NN between_IN the_DT training_NN set_NN and_CC test_NN set_VBN in_IN the_DT given_VBN interval_NN ._.
+Since_IN the_DT pseudo_NN labels_NNS are_VBP the_DT crucial_JJ to_TO the_DT feature_NN reduction_NN ,_, how_WRB to_TO select_VB the_DT candidate_NN classifiers_NNS for_IN getting_VBG the_DT pseudo_NN labels_NNS is_VBZ also_RB the_DT key_JJ point_NN ._.
+The_DT intuition_NN is_VBZ that_IN the_DT mutually_RB complementary_JJ classifiers_NNS which_WDT are_VBP characterized_VBN by_IN high_JJ diversity_NN and_CC accuracy_NN should_MD be_VB selected_VBN to_TO get_VB the_DT pseudo_NN labels_NNS for_IN each_DT other_JJ ._.
+Actually_RB ,_, the_DT diversity_NN has_VBZ been_VBN recognized_VBN as_IN a_DT very_RB important_JJ characteristic_NN in_IN classifier_NN combination_NN ._.
+Empirical_JJ results_NNS have_VBP illustrated_VBN that_IN there_EX exists_VBZ positive_JJ correlation_NN between_IN accuracy_NN of_IN the_DT ensemble_NN and_CC diversity_NN among_IN the_DT base_NN cassifiers_NNS -LRB-_-LRB- Dietterich_NNP ,_, 2000b_CD ;_: Kuncheva_NNP and_CC Whitaker_NNP ,_, 2003_CD ;_: Tang_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Further_RB ,_, most_JJS of_IN the_DT existing_VBG ensemble_NN learning_VBG algorithms_NNS -LRB-_-LRB- Brieman_NNP ,_, 1996_CD ;_: Liu_NNP et_FW al._FW 2000_CD -RRB-_-RRB- can_MD be_VB interpreted_VBN as_IN building_NN diverse_JJ base_NN classifiers_NNS implicitly_RB ._.
+However_RB ,_, the_DT problem_NN of_IN measuring_VBG classifier_JJR diversity_NN and_CC so_RB using_VBG it_PRP effectively_RB for_IN building_VBG better_JJR classifier_NN ensembles_NNS is_VBZ still_RB an_DT open_JJ topic_NN ._.
+Most_JJS researchers_NNS discuss_VBP the_DT concept_NN of_IN diversity_NN in_IN terms_NNS of_IN correct/incorrect_JJ outputs_NNS -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 2005_CD ;_: Kuncheva_NNP and_CC Whitaker_NNP ,_, 2003_CD ;_: Tang_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Kuncheva_NNP and_CC Whitaker_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- divide_VBP the_DT diversity_NN measures_VBZ into_IN pairwise_NN diversity_NN measures_NNS and_CC non-pairwise_JJ diversity_NN measures_NNS ._.
+For_IN pairwise_NN diversity_NN measure_NN ,_, the_DT Q_NNP statistics_NNS ,_, the_DT correlation_NN coefficient_NN ,_, the_DT disagreement_NN measure_NN and_CC the_DT double-fault_NN measure_NN are_VBP most_RBS commonly_RB used_VBN ._.
+The_DT previous_JJ experimental_JJ studies_NNS have_VBP shown_VBN that_IN most_JJS diversity_NN measures_NNS perform_VBP similarly_RB -LRB-_-LRB- Kuncheva_NNP and_CC Whitaker_NNP ,_, 2003_CD ;_: Tang_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+In_IN this_DT study_NN ,_, we_PRP adopt_VBP the_DT disagreement_NN measure_NN -LRB-_-LRB- Ho_NNP ,_, 1998_CD ;_: Skalak_NNP ,_, 1996_CD -RRB-_-RRB- to_TO select_VB the_DT classifiers_NNS for_IN getting_VBG pseudo_JJ labels_NNS ._.
+The_DT disagreement_NN measure_NN of_IN classifier_NN i_FW and_CC k_NN is_VBZ defined_VBN as_IN :_: 01_CD 10_CD confidence_NN ,_, which_WDT was_VBD theoretically_RB proved_VBN to_TO be_VB a_DT key_JJ factor_NN on_IN the_DT generalization_NN performance_NN -LRB-_-LRB- Shawe-Taylor_NNP and_CC Cristianini_NNP ,_, 1999_CD -RRB-_-RRB- ,_, has_VBZ been_VBN utilized_VBN in_IN certain_JJ ensemble_NN learning_VBG algorithms_NNS -LRB-_-LRB- Freund_NNP and_CC Schapire_NNP ,_, 1997_CD ;_: Li_NNP et_FW al._FW ,_, 2014_CD ;_: Quinlan_NNP ,_, 1996_CD ;_: Schapire_NNP and_CC Singer_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+In_IN this_DT study_NN ,_, we_PRP extract_VBP the_DT pseudo_NN labels_NNS by_IN combining_VBG the_DT ensemble_NN margin_NN -LRB-_-LRB- Schapire_NNP et_FW al._FW ,_, 1998_CD -RRB-_-RRB- and_CC classification_NN confidence_NN -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Let_VB :_: hj_NN -LRB-_-LRB- j_FW =_SYM 1,2_CD ,_, ..._: ,_, L_NNP -RRB-_-RRB- :_: the_DT selected_VBN classifiers_NNS with_IN high_JJ diversity_NN ._.
+X_NNP ={_CD -LRB-_-LRB- xi_FW ,_, yi_FW -RRB-_-RRB- ,_, i_FW =_SYM 1,2_CD ,_, ..._: ,_, n_JJ -RCB-_-RRB- :_: the_DT data_NN set_NN yi_NNS :_: the_DT class_NN label_NN of_IN the_DT sample_NN xi_NN ̅_NN :_: the_DT classification_NN decision_NN of_IN xi_JJ estimated_VBN by_IN the_DT classifier_NN hj_NN cij_NN :_: the_DT classification_NN confidence_NN of_IN xi_JJ estimated_VBN by_IN the_DT classifier_NN hj_NN define_VBP the_DT margin_NN as_IN :_: m_NN -LRB-_-LRB- -RRB-_-RRB- =_SYM ∑_FW =_SYM 1_CD γ_FW s.t._FW ≥_FW 0_CD ,_, ∑_CD =_SYM 1_CD =_SYM 1_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- where_WRB the_DT wj_NN is_VBZ the_DT weight_NN of_IN the_DT classifier_NN hj_NN and_CC ,_, =_SYM +_SYM 00_CD +_NN 01_CD +_NN 10_CD +_NN 11_CD 1_CD ={_CD −_NN 1_CD =_SYM ̅_FW =_SYM ̸_SYM ̅_FW Where_WRB N00_NNP ,_, N01_NNP ,_, N10_NNP and_CC N11_NNP are_VBP derived_VBN from_IN the_DT below_IN table_NN :_: Table_NNP 1_CD :_: A_DT 2_CD *_SYM 2_CD table_NN of_IN the_DT relationship_NN between_IN a_DT pair_NN of_IN classifiers_NNS Support_NN we_PRP have_VBP gotten_VBN the_DT L_NNP classifiers_NNS which_WDT have_VBP high_JJ diversity_NN with_IN the_DT target_NN classifier_NN for_IN feature_NN space_NN reduction_NN ._.
+The_DT straightforward_JJ way_NN is_VBZ to_TO use_VB the_DT classifier_NN with_IN highest_JJS diversity_NN to_TO get_VB the_DT pseudo_NN labels_NNS ._.
+However_RB ,_, this_DT method_NN does_VBZ not_RB consider_VB the_DT accuracy_NN of_IN the_DT classifier_NN been_VBN selected_VBN ._.
+How_WRB about_IN the_DT result_NN if_IN the_DT classifier_NN with_IN the_DT highest_JJS diversity_NN does_VBZ not_RB performance_NN well_RB ?_.
+Actually_RB ,_, beside_IN the_DT diversity_NN ,_, the_DT accuracy_NN of_IN the_DT classifier_NN and_CC the_DT classification_NN confidence_NN are_VBP also_RB key_JJ factors_NNS for_IN the_DT pseudo_NN labels_NNS getting_VBG ._.
+The_DT accuracy_NN of_IN classifier_NN can_MD be_VB explicitly_RB expressed_VBN by_IN the_DT weight_NN of_IN classifier_NN ._.
+The_DT classification_NN minizing_VBG the_DT objective_JJ function_NN below_IN :_: W_NNP =_SYM argmin_IN ‖_CD −_CD Τ_NNP ‖_CD 2_CD +_SYM ‖_SYM ‖_SYM 2_CD WhereU_NNP =_SYM -LSB-_SYM 1_CD ,_, ..._: ,1_CD -RSB-_NNP ,_, Τ_NNP =[_CD -RSB-_NNP ∗_CD 1_CD ∗_CD ‖_SYM −_SYM Τ_SYM ‖_SYM 2_CD =_SYM ∑_FW =_SYM 1_CD -LRB-_-LRB- 1_CD −_CD -LRB-_-LRB- -RRB-_-RRB- -RRB-_-RRB- 2_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- -LRB-_-LRB- 8_CD -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- We_PRP can_MD get_VB the_DT optimal_JJ W_NNP =_SYM -LSB-_NNP ,_, ..._: ,_, -RSB-_JJ by_IN 1_CD ∗_CD 1_CD Dk_NN correct_JJ -LRB-_-LRB- 1_CD -RRB-_-RRB- Dk_NN wrong_JJ -LRB-_-LRB- 0_CD -RRB-_-RRB- Di_NNP correct_JJ -LRB-_-LRB- 1_LS -RRB-_-RRB- N11_CD N10_CD Di_NNP wrong_JJ -LRB-_-LRB- 0_CD -RRB-_-RRB- N01_CD N00_CD λ_NN is_VBZ a_DT Lagrange_NNP multiplier_NN The_DT optimal_JJ W_NNP is_VBZ utilized_VBN to_TO get_VB the_DT finnal_JJ pseudo_NN labels_NNS by_IN combine_VBP the_DT L_NNP classifiers_NNS with_IN high_JJ diversity_NN ._.
+Once_RB we_PRP got_VBD the_DT pseudo_NN labels_NNS ,_, we_PRP will_MD use_VB these_DT labels_NNS to_TO supervise_VB the_DT feature_NN reduction_NN procedure_NN ._.
+The_DT distribution_NN difference_NN between_IN the_DT training_NN set_NN and_CC test_NN set_NN can_MD be_VB measured_VBN ._.
+The_DT proposed_VBN feature_NN reduction_NN method_NN searches_VBZ the_DT whole_JJ feature_NN space_NN by_IN a_DT fixed_JJ step_NN ._.
+For_IN each_DT adjacent_JJ interval_NN ,_, the_DT proposed_VBN method_NN calculates_VBZ the_DT divergence_NN between_IN the_DT labeled_VBN examples_NNS in_IN training_NN set_NN and_CC the_DT pseudo_NN labeled_VBN examples_NNS in_IN test_NN set_NN and_CC decides_VBZ whether_IN merge_VBP these_DT intervals_NNS or_CC not_RB ._.
+The_DT adjacent_JJ intervals_NNS which_WDT have_VBP small_JJ change_NN in_IN the_DT distribution_NN will_MD be_VB merged_VBN ._.
+By_IN elaborately_RB selected_VBN moving_VBG step_NN and_CC the_DT distribution_NN distance_NN threshold_NN ,_, the_DT feature_NN space_NN will_MD finnally_RB partitioned_VBN into_IN several_JJ sub-space_NN which_WDT will_MD reduce_VB the_DT original_JJ feature_NN space_NN ._.
+The_DT algorithm_NN is_VBZ shown_VBN below_IN :_: BEGIN_NN For_IN each_DT classifier_NN i_FW :_: Select_NNP the_DT L_NNP classifiers_NNS with_IN high_JJ disagreement_NN with_IN the_DT classifier_NN i_FW in_IN the_DT classifier_NN pool_NN Optimize_VB the_DT weight_NN W_NNP of_IN the_DT selected_VBN L_NNP classifiers_NNS Make_VBP an_DT ensemble_NN model_NN form_NN the_DT selected_VBN L_NNP classifiers_NNS and_CC the_DT optimal_JJ weight_NN W_NNP Get_VB the_DT pseudo_NN labels_NNS in_IN the_DT test_NN set_VBN using_VBG the_DT ensemble_NN model_NN For_IN each_DT feature_NN fi_FW :_: of_IN the_DT proposed_VBN ensemble_NN featrure_NN reduction_NN method_NN ._.
+The_DT conventional_JJ weighted_JJ majority_NN voting_NN approach_NN is_VBZ adopted_VBN as_IN the_DT fusion_NN method_NN for_IN multiply_VB classifier_NN ._.
+Some_DT analysis_NN -LRB-_-LRB- Kuncheva_NNP ,_, 2004_CD ;_: Wozniak_NNP and_CC Jackowski_NNP ,_, 2009_CD -RRB-_-RRB- shown_VBN that_IN it_PRP is_VBZ an_DT effective_JJ way_NN for_IN fusion_NN of_IN multiply_VB classifier_NN ._.
+The_DT algorithm_NN begins_VBZ by_IN creating_VBG a_DT set_NN of_IN experts_NNS and_CC assigning_VBG a_DT weight_NN to_TO each_DT ._.
+When_WRB a_DT new_JJ instance_NN arrives_VBZ ,_, the_DT algorithm_NN passes_VBZ it_PRP to_TO and_CC receives_VBZ a_DT prediction_NN from_IN each_DT expert_NN ._.
+The_DT algorithm_NN predicts_VBZ based_VBN on_IN a_DT weighted_JJ majority_NN vote_NN of_IN the_DT expert_NN predictions_NNS ._.
+The_DT data_NNS sets_NNS considered_VBN are_VBP partitioned_VBN using_VBG the_DT 10-fold_JJ cross-validation_NN procedure_NN ._.
+The_DT `_`` Accuracy_NN '_'' is_VBZ used_VBN as_IN the_DT performance_NN measures_NNS ._.
+The_DT `_`` Accuracy_NN '_'' is_VBZ the_DT number_NN of_IN successful_JJ hits_NNS relative_JJ to_TO the_DT total_JJ number_NN of_IN classification_NN ._.
+It_PRP has_VBZ been_VBN by_IN far_RB the_DT most_RBS commonly_RB used_VBN metric_JJ for_IN assessing_VBG the_DT performance_NN of_IN classifiers_NNS for_IN years_NNS -LRB-_-LRB- Prati_NNP et_FW al._FW ,_, 2011_CD ;_: Witten_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Set_VB the_DT interval_NN merge_VBP step_NN :_: T_NN For_IN each_DT adjacent_JJ T_NNP :_: Get_VB the_DT Bayesian_JJ measure_NN BT_NNP using_VBG the_DT formula_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- Get_VB KL_NNP Divergence_NNP Dp_NNP using_VBG the_DT formula_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- IF_IN BT_NNP <_CD θb_NN andDp_NN <_CD θd_NN Merge_VBP the_DT adjacent_JJ intervals_NNS ELSE_VBP Go_VB to_TO next_JJ interval_NN T_NNP END_NNP Here_RB ,_, the_DT θb_NN and_CC θd_NN are_VBP the_DT threshold_NN for_IN Bayesian-measure_NN and_CC KL_NNP divergence_NN respectively_RB ._.
+3_CD Experimental_JJ Results_NNS The_DT performance_NN of_IN the_DT proposed_VBN method_NN is_VBZ evaluated_VBN on_IN 20_CD UCI_NNP datasets_NNS -LRB-_-LRB- Frank_NNP and_CC Asuncion_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT detailed_JJ information_NN of_IN these_DT datasets_NNS are_VBP shown_VBN in_IN Table_NNP 2_CD ._.
+In_IN the_DT table_NN 2_CD ,_, '_'' #I_NNP '_POS denotes_NNS the_DT number_NN of_IN instances_NNS ,_, '_'' #F_NNP '_POS denotes_NNS the_DT feature_NN number_NN and_CC '_'' #C_NNP '_POS denotes_NNS the_DT classess_NN number_NN ._.
+These_DT datasets_NNS cover_VBP some_DT high_JJ -_: dimensional_JJ sets_NNS ,_, some_DT large_JJ sets_NNS ,_, some_DT small_JJ sets_NNS and_CC some_DT typical/balanced_VBN sets_NNS ._.
+More_RBR detailed_JJ information_NN can_MD be_VB found_VBN on_IN the_DT UCI_NNP website_NN ._.
+The_DT classifier_NN pool_NN includes_VBZ Random_NNP Forest_NNP ,_, Decision_NNP Tree_NNP ,_, Gradient_NN boosting_VBG ,_, Maximum_NNP Entropy_NNP and_CC Naïve_NNP Bayes_NNP ._.
+Every_DT model_NN uses_VBZ the_DT pseudo_NN labels_NNS gotten_VBN from_IN others_NNS to_TO make_VB the_DT feature_NN reduction_NN ._.
+A_DT set_NN of_IN experiments_NNS are_VBP conducted_VBN in_IN the_DT multiple_JJ classifier_NN system_NN to_TO show_VB the_DT performance_NN Table_NNP 2_CD ._.
+The_DT datasets_NNS description_NN Dataset_NNP #I_NNP #F_NNP #C_NNP Abalone_NNP 4177_CD 8_CD 28_CD Audiology_NNP 226_CD 69_CD 23_CD Breast_NNP Cancer_NNP 286_CD 9_CD 2_CD Car_NN Evaluation_NN 1728_CD 6_CD 4_CD Census_NNP 199523_CD 40_CD 2_CD Ecoli_NNP 336_CD 8_CD 8_CD Internet_NNP Advertisements_NNP 3279_CD 1558_CD 2_CD Iris_NNP 150_CD 4_CD 3_CD Letter_NNP Recognition_NNP 20000_CD 16_CD 26_CD Magic_NNP Gamma_NNP Telescope_NNP 19020_CD 11_CD 2_CD Mammographic_NNP Mass_NNP 961_CD 6_CD 2_CD Molecular_JJ Biology_NNP 3190_CD 61_CD 3_CD Musk_NNP 476_CD 168_CD 2_CD Nursery_NNP 12960_CD 8_CD 5_CD Ozone_NN Level_NNP Detection_NNP 2536_CD 73_CD 2_CD Page_NNP Blocks_NNP Classification_NNP 5473_CD 10_CD 5_CD Pima_NNP Indians_NNPS Diabetes_NNP 768_CD 8_CD 2_CD Spectf_NNP Heart_NNP 267_CD 44_CD 2_CD Statlog_NNP -LRB-_-LRB- Vehicle_NNP Silhouettes_NNPS -RRB-_-RRB- 946_CD 18_CD 4_CD Yeast_NN 1484_CD 8_CD 10_CD The_DT experimental_JJ results_NNS on_IN very_RB data_NN set_NN are_VBP shown_VBN on_IN Table_NNP 3_CD ._.
+Here_RB ,_, the_DT proposed_VBN ensemble_NN method_NN is_VBZ compared_VBN with_IN the_DT typical_JJ unsupervised_JJ method_NN EW_NNP -LRB-_-LRB- Equal_NNP Width_NNP -RRB-_-RRB- and_CC the_DT typical_JJ supervised_JJ method_NN Bayes_NNP -LRB-_-LRB- Bayesian_NNP -RRB-_-RRB- ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN the_DT proposed_VBN ensemble_NN method_NN outperform_VBP the_DT conventional_JJ method_NN -LRB-_-LRB- Equal_NNP Width_NNP and_CC Bayesian_NNP -RRB-_-RRB- on_IN almost_RB all_DT data_NNS set_VBN except_IN the_DT `_`` Iris_NNP '_'' data_NN set_NN ._.
+By_IN analysis_NN of_IN the_DT size_NN of_IN dataset_NN ,_, we_PRP found_VBD that_IN the_DT dataset_NN size_NN will_MD impact_VB the_DT performance_NN ._.
+Take_VB the_DT `_`` Iris_NNP '_'' as_IN example_NN ,_, there_EX are_VBP only_RB 150_CD instances_NNS in_IN this_DT dataset_NN which_WDT lead_VBP to_TO a_DT small_JJ feature_NN space_NN -LRB-_-LRB- only_RB 22_CD unique_JJ values_NNS for_IN the_DT first_JJ feature_NN -RRB-_-RRB- ._.
+There_EX is_VBZ little_JJ hint_NN to_TO make_VB the_DT feature_NN reduction_NN ._.
+It_PRP is_VBZ very_RB difficult_JJ to_TO put_VB them_PRP into_IN several_JJ bins_NNS ._.
+reduction_NN method_NN ,_, the_DT compared_VBN experiments_NNS on_IN each_DT single_JJ classifier_NN are_VBP also_RB conducted_VBN to_TO show_VB the_DT effect_NN of_IN the_DT proposed_VBN method_NN ._.
+Here_RB ,_, we_PRP take_VBP the_DT Equal_NNP Width_NNP as_IN the_DT baseline_NN method_NN and_CC the_DT relative_JJ difference_NN is_VBZ taken_VBN as_IN the_DT evaluation_NN measure_NN ._.
+The_DT relative_JJ difference_NN is_VBZ calculated_VBN as_IN :_: −_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- Here_RB ,_, the_DT Accuracybaseline_NNP is_VBZ the_DT accuracy_NN of_IN EW_NNP on_IN each_DT dataset_NN ._.
+The_DT Accuracyref_NNP is_VBZ the_DT accuracy_NN of_IN Bayesian_NNP and_CC the_DT proposed_VBN ensemble_NN method_NN ._.
+Figure_NN 1_CD ~_NN 6_CD show_VBP the_DT experimental_JJ results_NNS on_IN each_DT individual_JJ classifier_NN -LRB-_-LRB- Random_NNP Forest_NNP ,_, Decision_NNP Tree_NNP ,_, Gradient_NN boosting_VBG ,_, Maximum_NNP Entropy_NNP and_CC Naïve_NNP Bayes_NNP -RRB-_-RRB- ._.
+Here_RB ,_, the_DT baseline_NN method_NN is_VBZ Equal_NNP Width_NNP ._.
+The_DT blue_JJ line_NN is_VBZ the_DT relative_JJ difference_NN of_IN Bayesian_JJ method_NN comparing_VBG with_IN the_DT baseline_NN ._.
+The_DT red_JJ line_NN is_VBZ the_DT relative_JJ difference_NN of_IN the_DT Ensemble_NNP method_NN ._.
+The_DT x-axis_JJ shows_NNS the_DT name_NN of_IN the_DT selected_VBN datasets_NNS which_WDT are_VBP sorted_VBN by_IN the_DT size_NN ._.
+The_DT smallest_JJS dataset_NN is_VBZ `_`` Iris_NNP '_'' which_WDT only_RB has_VBZ 150_CD instances_NNS while_IN the_DT largest_JJS dataset_NN is_VBZ the_DT '_'' Census_NNP '_POS dataset_NN which_WDT has_VBZ 199,523_CD instances_NNS ._.
+Dataset_NNP EW_NNP Bayes_NNP Ensemble_NNP Abalone_NNP 87.86_CD 88.62_CD 89.58_CD Audiolog_NNP 59.13_CD 59.6_CD 60.06_CD Breast_NNP Cancer_NNP 90.6_CD 91.65_CD 92.21_CD Car_NN Evaluation_NN 84.24_CD 85.12_CD 86.19_CD Census_NNP 84.04_CD 84.39_CD 86.53_CD Ecoli_NNP 77.5_CD 78.35_CD 78.89_CD Internet_NNP 64.09_CD 64.64_CD 65.85_CD Iris_NNP 95.5_CD 94.25_CD 94.25_CD Letter_NN 87.59_CD 88.21_CD 90.26_CD Magic_NNP 86.72_CD 87.82_CD 90.09_CD Mammographic_NNP 67.6_CD 68.05_CD 69.01_CD Molecular_JJ 70.89_CD 71.64_CD 72.83_CD Musk_NNP 84.42_CD 84.61_CD 85.35_CD Nursery_NNP 83.59_CD 84.29_CD 86.05_CD Ozone_NN 73.02_CD 73.26_CD 74.95_CD Page_NNP 83.72_CD 84.16_CD 85.63_CD Pima_NNP 69.07_CD 69.52_CD 70.61_CD Spectf_NNP Heart_NNP 80.57_CD 80.72_CD 81.19_CD Statlog_NNP 89.05_CD 89.35_CD 90.61_CD Yeast_NN 60.99_CD 61.84_CD 62.65_CD 6_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN -2_CD %_NN Ensemble_NNP Bayesian_NNP Table_NNP 3_CD ._.
+The_DT experimental_JJ results_NNS Since_IN the_DT feature_NN space_NN reduction_NN is_VBZ conducted_VBN on_IN the_DT feature_NN space_NN for_IN each_DT classifier_NN ._.
+To_TO further_RBR investigate_VB the_DT performance_NN of_IN the_DT proposed_VBN feature_NN Figure_NN 1_CD ._.
+The_DT experimental_JJ results_NNS on_IN Random_NNP Forest_NNP From_IN Figure_NNP 1_CD ,_, we_PRP see_VBP that_IN for_IN Random_NNP Forest_NNP classifiers_NNS ,_, the_DT more_RBR data_NNS ,_, the_DT better_JJR performance_NN ._.
+More_JJR than_IN 4_CD %_NN enhancement_NN has_VBZ been_VBN achived_VBN on_IN the_DT `_`` Census_NNP '_'' dataset_NN which_WDT has_VBZ 199,523_CD instances_NNS ._.
+In_IN most_JJS dataset_NN ,_, the_DT proposed_VBN ensemble_NN method_NN and_CC Bayesian_JJ method_NN are_VBP better_JJR than_IN the_DT unpervised_JJ method_NN Equal_NNP Width_NNP ._.
+When_WRB the_DT dataset_NN is_VBZ small_JJ ,_, the_DT performance_NN is_VBZ not_RB so_RB satisfied_JJ ._.
+For_IN example_NN ,_, the_DT ensemlbe_NN method_NN and_CC Bayesian_JJ method_NN worse_JJR than_IN the_DT Equal_NNP Width_NNP method_NN on_IN the_DT `_`` Iris_NNP '_'' dataset_NN ._.
+Also_RB we_PRP can_MD see_VB that_IN ,_, when_WRB the_DT dataset_NN is_VBZ small_JJ ,_, the_DT ensemble_NN method_NN can_MD not_RB beat_VB the_DT Bayesian_JJ method_NN -LRB-_-LRB- '_'' Audiolog_NNP '_POS :_: 226_CD instances_NNS -RRB-_-RRB- ._.
+8_CD %_NN 6_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN -2_CD %_NN Ensemble_NNP Bayesian_NNP 6_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN -2_CD %_NN Ensemble_NNP Bayesian_NNP Figure_NNP 2_CD ._.
+The_DT experimental_JJ results_NNS on_IN Decision_NNP Tree_NNP Figure_NNP 4_CD ._.
+The_DT experimental_JJ results_NNS on_IN Maximum_NNP Entropy_NNP Figure_NNP 4_CD shows_VBZ the_DT experimental_JJ results_NNS using_VBG Maximum_NNP Entropy_NNP classifier_NN ._.
+The_DT proposed_VBN ensemble_NN method_NN achived_VBD about_IN 8_CD %_NN enhancement_NN when_WRB the_DT dataset_NN is_VBZ large_JJ -LRB-_-LRB- `_`` Census_NNP '_'' :_: 199,523_CD instances_NNS -RRB-_-RRB- ._.
+However_RB ,_, the_DT performance_NN also_RB fluctuant_JJ when_WRB the_DT dataset_NN is_VBZ small_JJ ._.
+It_PRP become_VBP stable_JJ when_WRB the_DT dataset_NN size_NN is_VBZ larger_JJR than_IN 500_CD ._.
+This_DT may_MD because_IN the_DT ensemble_NN method_NN need_VBP more_JJR data_NNS to_TO measure_VB the_DT distribution_NN divergence_NN between_IN training_NN set_NN and_CC test_NN Figure_NN 2_CD shows_VBZ the_DT experimental_JJ results_NNS using_VBG Decision_NNP Tree_NNP classifier_NN ._.
+We_PRP can_MD see_VB that_IN the_DT same_JJ trend_NN as_IN shown_VBN on_IN the_DT Random_NNP Forest_NNP ._.
+The_DT highest_JJS enhancement_NN is_VBZ about_IN 5_CD %_NN which_WDT is_VBZ a_DT little_JJ high_JJ than_IN Random_NNP Forest_NNP ._.
+It_PRP is_VBZ also_RB gotten_VBN from_IN the_DT `_`` Census_NNP '_'' dataset_NN ._.
+set_NN ._.
+6_CD %_NN 8_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN Ensemble_NNP Bayesian_NNP 6_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN Ensemble_NNP Bayesian_NNP -2_CD %_NN -2_CD %_NN Figure_NN 3_CD ._.
+The_DT experimental_JJ results_NNS on_IN Gradient_NNP Boosting_NNP Figure_NNP 3_CD shows_VBZ the_DT experimental_JJ results_NNS using_VBG Gradient_NNP Boosting_NNP classifiers_NNS ._.
+It_PRP 's_VBZ similar_JJ with_IN the_DT Rodom_NNP Forest_NNP and_CC Decision_NNP Tree_NNP ._.
+For_IN Gradient_NNP Boosting_NNP classifier_NN ,_, the_DT ensemble_NN method_NN also_RB does_VBZ not_RB performance_NN well_RB on_IN the_DT small_JJ datasets_NNS ._.
+Figure_NN 5_CD ._.
+The_DT experimental_JJ results_NNS on_IN Naïve_NNP Bayes_NNP Figure_NNP 5_CD shows_VBZ the_DT experimental_JJ results_NNS using_VBG Naïve_NNP Bayes_NNP classifier_NN ._.
+The_DT enhancement_NN is_VBZ also_RB great_JJ -LRB-_-LRB- more_JJR than_IN 6_CD %_NN -RRB-_-RRB- ._.
+It_PRP is_VBZ more_RBR fluctuanct_JJ than_IN the_DT Maximum_NNP Entroyp_NNP classifier_NN when_WRB the_DT dataset_NN is_VBZ small_JJ ._.
+To_TO further_RBR investigate_VB the_DT performance_NN on_IN different_JJ data_NNS size_NN ._.
+A_DT set_NN of_IN experiments_NNS on_IN `_`` Census_NNP '_'' dataset_NN are_VBP conducted_VBN ._.
+The_DT sub-datasets_JJ range_NN from_IN 50_CD to_TO 190,000_CD are_VBP extracted_VBN from_IN the_DT whole_JJ dataset_NN ._.
+The_DT experiments_NNS are_VBP intend_VBP to_TO compare_VB the_DT performance_NN of_IN EW_NNP ,_, Bayesian_NNP and_CC the_DT proposed_VBN ensemble_NN method_NN ._.
+The_DT experimental_JJ results_NNS are_VBP shown_VBN as_IN the_DT relative_JJ difference_NN with_IN the_DT baseline_NN method_NN -LRB-_-LRB- Equal_NNP Width_NNP method_NN -RRB-_-RRB- ._.
+Figure_NN 6_CD shows_VBZ the_DT experimental_JJ results_NNS ._.
+The_DT x_SYM -_: axis_NN shows_VBZ the_DT size_NN of_IN each_DT sub-datasets_NNS ._.
+The_DT y-axis_JJ shows_NNS the_DT relative_JJ difference_NN ._.
+The_DT expeirments_NNS are_VBP conducted_VBN in_IN the_DT multiply_VBP classifier_NN scenario_NN ,_, that_WDT is_VBZ the_DT finnal_JJ predciton_NN is_VBZ made_VBN by_IN the_DT ensemble_NN classifier_NN ._.
+We_PRP can_MD see_VB that_IN the_DT total_JJ enhancement_NN is_VBZ not_RB higher_JJR than_IN the_DT Maximum_NNP Entropy_NNP or_CC the_DT Naïve_NNP Bayes_NNP classifier_NN ._.
+This_DT is_VBZ because_IN the_DT fusion_NN procedure_NN highly_RB depends_VBZ on_IN the_DT diversity_NN among_IN the_DT classifiers_NNS ._.
+It_PRP ca_MD n't_RB get_VB the_DT highest_JJS enhancement_NN as_IN the_DT single_JJ classifier_NN ._.
+When_WRB the_DT data_NNS size_NN is_VBZ small_JJ ,_, both_DT the_DT proposed_VBN ensemble_NN and_CC Bayesian_JJ method_NN can_MD not_RB get_VB good_JJ performance_NN ._.
+For_IN example_NN ,_, when_WRB the_DT data_NNS size_NN is_VBZ less_JJR than_IN 100_CD ,_, the_DT ensemble_NN and_CC Bayesian_JJ methods_NNS are_VBP worse_JJR than_IN EW_NNP ._.
+It_PRP is_VBZ because_IN that_IN the_DT Bayesian_JJ method_NN needs_VBZ to_TO make_VB statistic_NN on_IN the_DT training_NN set_NN ._.
+The_DT ensemble_NN method_NN need_VBP more_JJR data_NNS to_TO calculate_VB the_DT distribution_NN difference_NN between_IN training_NN set_NN and_CC test_NN set_NN ._.
+From_IN the_DT Figure_NN 6_CD ,_, we_PRP can_MD see_VB that_IN ,_, even_RB there_EX are_VBP about_RB 1,000_CD samples_NNS ,_, the_DT ensemble_NN method_NN can_MD not_RB get_VB great_JJ enhancement_NN in_IN comparison_NN with_IN the_DT Bayesian_JJ method_NN ._.
+The_DT ensemble_NN method_NN is_VBZ worse_JJR than_IN Bayesian_JJ method_NN when_WRB the_DT data_NNS size_NN is_VBZ small_JJ than_IN 200_CD ._.
+With_IN the_DT bigger_JJR dataset_NN ,_, the_DT ensemble_NN method_NN performance_NN better_RB ,_, about_IN 4_CD %_NN enhancement_NN can_MD be_VB achieved_VBN ._.
+4_CD Conclusions_NNS and_CC Future_NNP Work_NNP In_IN this_DT study_NN ,_, we_PRP propose_VBP a_DT feature_NN reduction_NN method_NN which_WDT uses_VBZ ensemble_NN approach_NN to_TO get_VB the_DT pseudo_NN labels_NNS and_CC utilize_VB the_DT pseudo_NN labels_NNS to_TO supervise_VB the_DT feature_NN reduction_NN procedure_NN ._.
+The_DT experiments_NNS conducted_VBN on_IN different_JJ type_NN of_IN datasets_NNS compared_VBN the_DT proposed_VBN method_NN with_IN the_DT conventional_JJ feature_NN reduction_NN methods_NNS ._.
+The_DT experimental_JJ results_NNS shown_VBN the_DT effectiveness_NN and_CC efficiency_NN of_IN the_DT proposed_VBN method_NN ._.
+The_DT future_JJ work_NN includes_VBZ the_DT scheme_NN on_IN selecting_VBG the_DT candidate_NN models_NNS for_IN getting_VBG the_DT pseudo_NN labels_NNS ._.
+The_DT measurement_NN on_IN distribution_NN difference_NN between_IN training_NN set_NN and_CC test_NN set_NN also_RB need_VBP to_TO be_VB explored_VBN ._.
+How_WRB to_TO improve_VB the_DT performance_NN on_IN small_JJ datasets_NNS is_VBZ also_RB research_NN topic_NN ._.
+References_NNS Bai_NNP Q._NNP X._NNP ,_, Lam_NNP H._NNP and_CC Sclaroff_NNP S._NNP 2014_CD ._.
+A_DT Bayesian_NNP Framework_NNP for_IN Online_NNP Classifier_NNP Ensemble_NNP ._.
+The_DT 31st_CD International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ,_, pages_NNS 1584-1592_CD ,_, Beijing_NNP ,_, China_NNP ,_, 2014_CD ._.
+Bay_NNP S._NNP D._NNP 2001_CD ._.
+Multivariate_NNP Discretization_NNP for_IN set_VBN Mining_NN ._.
+Knowledge_NN information_NN Systems_NNPS ,_, Vol_NNP ._.
+3_CD ,_, pp_NN 491-512_CD Breiman_NNP L._NNP 1996_CD ._.
+Bagging_VBG predictors_NNS ._.
+Machine_NN Learning_NNP ,_, 24_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 1996_CD ,_, 123-140_CD Brown_NNP G._NNP ,_, Wyatt_NNP J._NNP ,_, Harris_NNP R._NNP and_CC Yao_NNP X._NNP 2005_CD ._.
+Diversity_NN creation_NN methods_NNS :_: a_DT survey_NN and_CC categorization_NN ._.
+Journal_NNP of_IN Information_NNP Fusion_NNP 6_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 2005_CD ,_, 5_CD --_: 20_CD ._.
+Choudhary_NNP A._NN ,_, and_CC Saraswat_NNP J._NNP K._NNP 2014_CD ._.
+Survey_NN on_IN Hybrid_NNP Approach_NNP for_IN Feature_NNP Selection_NNP ._.
+International_NNP Journal_NNP of_IN Science_NNP and_CC Research_NNP ,_, 3_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, 438-439_CD ._.
+Combarro_NNP E._NNP F._NNP ,_, Montan_NNP E._NNP ,_, D_NNP ′_CD Iaz_NNP I._NN ,_, Ranilla_NNP J._NNP ,_, and_CC Mones_NNP R._NNP 2005_CD ._.
+Introducing_VBG a_DT Family_NNP of_IN Linear_NNP Measures_NNS for_IN Feature_NNP Selection_NNP in_IN Text_NNP Categorization_NNP ._.
+IEEE_NNP Transactions_NNS on_IN Knowledge_NN and_CC Data_NNP Engineering_NNP ,_, Vol_NNP ._.
+17_CD ,_, No._NN 9_CD ,_, pp._SYM 1223-1232_CD Dietterich_NNP T._NNP 2000a_NNP ._.
+Ensemble_NN methods_NNS in_IN machine_NN learning_NN ,_, in_IN :_: Multiple_NNP Classifier_NNP Systems_NNPS ._.
+Lecture_NN Notes_NNS in_IN Computer_NNP Science_NNP ,_, vol_NN ._.
+1857_NNP ,_, Springer_NNP ,_, Berlin_NNP ,_, Heidelberg_NNP ,_, 2000_CD ,_, 1_CD --_: 15_CD ._.
+Dietterich_NNP T._NNP 2000b_NNP ._.
+An_DT experimental_JJ comparison_NN of_IN three_CD methods_NNS for_IN constructing_VBG ensembles_NNS of_IN decision_NN trees_NNS :_: Bagging_NNP ,_, boosting_VBG and_CC randomization_NN ._.
+Machine_NN Learning_NNP ,_, 40_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 2000_CD ,_, 1-22_CD ._.
+Dougherty_NNP J._NNP ,_, Kohavi_NNP R._NNP ,_, and_CC Sahami_NNP M._NNP 1995_CD ._.
+Supervised_VBN and_CC unsupervised_JJ discretization_NN of_IN 6_CD %_NN 4_CD %_NN 2_CD %_NN 0_CD %_NN -2_CD %_NN Ensemble_NNP Bayesian_NNP Figure_NNP 6_CD ._.
+The_DT experimental_JJ results_NNS on_IN dataset_NN size_NN continuous_JJ features_NNS ._.
+In_IN Machine_NN learning_NN :_: proceedings_NNS of_IN the_DT twelfth_JJ international_JJ conference_NN ,_, Vol_NNP ._.
+12_CD ,_, pp_NN 194-202_CD Ferreira_NNP A._NNP J._NNP and_CC Figueiredo_NNP M._NNP A._NNP T._NNP 2012_CD ._.
+An_DT unsupervised_JJ approach_NN to_TO feature_VB discretization_NN and_CC selection_NN ._.
+Pattern_NN Recognition_NN 45_CD -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, pp._FW 3048_CD --_: 3060_CD Frank_NNP A._NN and_CC Asuncion_NNP A._NNP 2010_CD ._.
+UCI_NNP machine_NN learning_VBG repository_NN ,_, http://archive.ics.uci.edu/ml_NN ._.
+Freund_NNP Y._NNP and_CC Schapire_NNP R._NNP E._NNP 1997_CD ._.
+A_DT decision-theoretic_JJ generalization_NN of_IN on-line_JJ learning_NN and_CC an_DT application_NN to_TO boosting_VBG ._.
+Journal_NNP of_IN computer_NN and_CC system_NN sciences_NNS ,_, 55_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 1997_CD ,_, 119-139_CD ._.
+Gama_NNP J._NNP ,_, zliobaite_NN I._NN ,_, Bifet_NNP A._NN ,_, Pechenizkiy_NNP M._NNP and_CC Bouchachia_NNP A._NNP 2014_CD ._.
+A_DT survey_NN on_IN concept_NN drift_NN adaptation_NN ._.
+ACM_NNP Computing_NNP Surveys_NNS 46.4_CD -LRB-_-LRB- 2014_CD -RRB-_-RRB- :_: 44_CD ._.
+Gao_NNP L._NNP J._NNP and_CC Chien_NNP B._NNP C._NNP 2012_CD ._.
+Feature_NNP Reduction_NNP for_IN Text_NNP Categorization_NNP Using_VBG Cluster-Based_NNP Discriminant_NNP Coefficient_NNP ._.
+In_IN Technologies_NNPS and_CC Applications_NNS of_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- TAAI_NNP -RRB-_-RRB- ,_, 2012_CD Conference_NN on_IN -LRB-_-LRB- pp._FW 137-142_CD -RRB-_-RRB- ._.
+IEEE_NNP ._.
+Garcia_NNP S._NNP ,_, Luengo_NNP J._NNP ,_, Sez_NNP J._NNP ,_, Lpez_NNP V._NNP and_CC Herrera_NNP F._NNP 2013_CD ._.
+A_DT survey_NN of_IN discretization_NN techniques_NNS :_: Taxonomy_NNP and_CC empirical_JJ analysis_NN in_IN supervised_JJ learning_NN ._.
+IEEE_NNP Transactions_NNS on_IN Knowledge_NN and_CC Data_NNP Engineering_NNP 25_CD ,_, pp._SYM 734_CD --_: 750_CD ._.
+Ho_NNP T._NNP 1998_CD ._.
+The_DT random_JJ space_NN method_NN for_IN constructing_VBG decision_NN forests_NNS ._.
+IEEE_NNP Transactions_NNS on_IN Pattern_NNP Analysis_NNP and_CC Machine_NNP Intelligence_NNP ,_, 20:8_CD ,_, 1998_CD ,_, 832_CD --_: 844_CD ._.
+How_WRB B._NNP C._NNP and_CC Kiong_NNP W._NNP T._NNP 2005_CD ._.
+An_DT examination_NN of_IN feature_NN selection_NN frameworks_NNS in_IN text_NN categorization_NN ._.
+In_IN AIRS_NNP '_POS 05_CD :_: Proceedings_NNP of_IN 2nd_CD Asia_NNP information_NN retrieval_NN symposium_NN ,_, PP_NNP 558_CD --_: 564_CD ._.
+Kerber_NNP R._NNP 1992_CD ._.
+ChiMerge_NNP :_: Discretization_NN of_IN Numeric_NNP Attributes_NNPS ._.
+Proc_NNP ._.
+Nat'l_NNP Conf_NNP ._.
+Artifical_JJ Intelligence_NNP Am_NNP ._.
+Assoc._NNP for_IN Artificial_NNP intelligence_NN ,_, pp_NN 123-128_CD Kuncheva_NNP L._NNP 2004_CD ._.
+Combining_VBG Pattern_NNP Classifiers_NNPS :_: Method_NN and_CC Algorithms_NNS ,_, Wiley_NNP Interscience_NNP ,_, 2004_CD Kuncheva_NNP L._NNP and_CC Whitaker_NNP C._NNP 2003_CD ._.
+Measures_NNS of_IN diversity_NN in_IN classifier_NN ensembles_NNS and_CC their_PRP$ relationship_NN with_IN the_DT ensemble_NN accuracy_NN ._.
+Machine_NN Learning_NNP ,_, 51:181_CD -207_CD ,_, 2003_CD ._.
+Jiang_NNP F._NNP ,_, Zhao_NNP Z._NNP ,_, and_CC Ge_NNP Y._NNP 2010_CD ._.
+A_DT Supervised_VBN and_CC Multivariate_NNP Discretization_NNP Algorithm_NNP for_IN Rough_NNP Sets_NNPS ._.
+Proc_NNP ._.
+Fifth_NNP Int_NNP '_POS l_NN Conf_NNP ._.
+Rough_JJ Set_NNP and_CC Knowledge_NNP Technology_NNP -LRB-_-LRB- RSKT_NNP -RRB-_-RRB- ,_, pp._FW 596-603_CD Li_NNP L._NNP ,_, Hu_NNP Q._NNP ,_, Wu_NNP X._NNP and_CC Yu_NNP D._NNP 2014_CD ._.
+Exploration_NN of_IN classification_NN confidence_NN in_IN ensemble_NN learning_NN ._.
+Pattern_NN Recognition_NN ,_, 47_CD -LRB-_-LRB- 9_CD -RRB-_-RRB- ,_, 2014_CD ,_, 3120-3131_CD ._.
+Li_NNP R._NNP P._NNP and_CC Wang_NNP Z._NNP O._NNP 2002_CD ._.
+An_DT Entropy-based_JJ Discretization_NNP Method_NNP for_IN Classification_NNP Rules_NNPS with_IN Inconsistency_NNP Checking_NNP ._.
+Proc_NNP ._.
+First_NNP Int_NNP '_POS l_NN Conf_NNP ._.
+Machine_NN Learning_NNP and_CC Cybernetics_NNP ._.
+pp_SYM 243-246_CD Liu_NNP H._NNP and_CC Setiono_NNP R._NNP 1997_CD ._.
+Feature_NN selection_NN via_IN discretization_NN ._.
+IEEE_NNP transactions_NNS on_IN knowledge_NN and_CC data_NNS engineering_NN ,_, Vol_NNP 9_CD ,_, No._NN 4_CD ,_, 642-645_CD Liu_NNP Y._NNP Yao_NNP X._NNP and_CC Higuchi_NNP T._NNP 2000_CD ._.
+Evolutionary_JJ ensembles_NNS with_IN negative_JJ correlation_NN learning_NN ._.
+IEEE_NNP Transactions_NNS on_IN Evolutionary_NNP Computation_NNP ,_, 4_CD ,_, 2000_CD ,_, 380-387_CD Jin_NNP R._NNP ,_, Breitbart_NNP Y._NNP and_CC Muoh_NNP C._NNP 2009_CD ._.
+Data_NNP Discretization_NNP Unification_NNP ._.
+Knowledge_NN and_CC Information_NNP Systems_NNP ,_, Vol_NNP ._.
+19_CD ,_, pp_NN 1-29_CD Ng_NNP H._NNP T._NNP ,_, Goh_NNP W._NNP B._NNP ,_, and_CC Low_NNP K._NNP L._NNP 1997_CD ._.
+Feature_NN selection_NN ,_, perceptron_NN learning_NN ,_, and_CC a_DT usability_NN case_NN study_NN for_IN text_NN categorization_NN ._.
+In_IN SIGIR_NNP '_POS 97_CD :_: Proceedings_NNP of_IN the_DT 20th_JJ annual_JJ international_JJ ACM_NNP SIGIR_NNP conference_NN on_IN Research_NNP and_CC development_NN in_IN information_NN retrieval_NN ,_, PP_NNP 67_CD --_: 73_CD Prati_NNP R.C._NNP ,_, Batista_NNP G.E.A.P.A._NNP ,_, and_CC Monard_NNP M.C._NNP 2011_CD ._.
+A_DT Survey_NN on_IN Graphical_NNP Methods_NNPS for_IN Classification_NNP Predictive_NNP Performance_NNP Evaluation_NNP ,_, IEEE_NNP Trans_NNP ._.
+Knowledge_NN and_CC Data_NNP Eng._NNP ,_, Vol_NNP ._.
+23_CD ,_, No._NN 11_CD ,_, pp._VBP 1601_CD -_: 1618_CD ,_, Nov._NNP 2011_CD ,_, doi_FW :_: 10.1109_CD /_CD TKDE_NNP .2011.59_CD ._.
+Quinlan_NNP J._NNP R._NNP 1996_CD ._.
+Bagging_VBG ,_, boosting_VBG ,_, and_CC C4_NNP ._.
+5_CD ._.
+In_IN AAAI/IAAI_NNP ,_, Vol_NNP ._.
+1_CD ,_, 1996_CD ,_, 725-730_CD Reif_NNP M._NNP and_CC Shafait_NNP F._NNP 2014_CD ._.
+Efficient_JJ feature_NN size_NN reduction_NN via_IN predictive_JJ forward_RB selection_NN ,_, Pattern_NNP Recognition_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, Vol_NNP ._.
+47_CD ,_, PP_NNP 1664-1673_CD Robati_NNP ,_, Z._NNP ,_, Zahedi_NNP ,_, M._NNP ,_, and_CC Fayazi_NNP Far_NNP ,_, N._NNP 2015_CD ._.
+Feature_NNP Selection_NNP and_CC Reduction_NNP for_IN Persian_NNP Text_NNP Classification_NNP ._.
+International_NNP Journal_NNP of_IN Computer_NNP Applications_NNS ,_, 109_CD -LRB-_-LRB- 17_CD -RRB-_-RRB- ,_, 1-5_CD ._.
+Schapire_NNP R._NNP E._NNP ,_, Freund_NNP Y._NNP ,_, Bartlett_NNP P._NNP and_CC Lee_NNP W._NNP S._NNP 1998_CD ._.
+Boosting_VBG the_DT margin_NN :_: A_DT new_JJ explanation_NN for_IN the_DT effectiveness_NN of_IN voting_VBG methods_NNS ._.
+Annals_NNS of_IN statistics_NNS ,_, 1998_CD ,_, 1651-1686_CD ._.
+Schapire_NNP R._NNP E._NNP and_CC Singer_NNP Y._NNP 1999_CD ._.
+Improved_VBN boosting_VBG algorithms_NNS using_VBG confidence-rated_JJ predictions_NNS ._.
+Machine_NN learning_NN ,_, 37_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 1999_CD ,_, 297-336_CD ._.
+Shawe-Taylor_NNP J._NNP and_CC Cristianini_NNP N._NNP 1999_CD ._.
+Robust_JJ bounds_NNS on_IN generalization_NN from_IN the_DT margin_NN distribution_NN ._.
+The_DT 4th_JJ European_JJ Conference_NN on_IN Computational_NNP Learning_NNP Theory_NNP ,_, 1999_CD ._.
+Singh_NNP G._NNP K._NNP and_CC Minz_NNP S._NNP 2007_CD ._.
+Discretization_NNP Using_VBG Clustering_VBG and_CC Rough_JJ Set_NNP Theory_NNP ._.
+Proc_NNP ._.
+17th_JJ int_NN '_'' l_NN Conf_NNP ._.
+Computer_NNP Theory_NNP and_CC Applications_NNS ,_, pp_NN 330-336_CD Skalak_NNP D._NNP 1996_CD ._.
+The_DT sources_NNS of_IN increased_VBN accuracy_NN for_IN two_CD proposed_VBN boosting_VBG algorithms_NNS ._.
+In_IN Proc_NNP ._.
+American_NNP Association_NNP for_IN Artificial_NNP Intelligence_NNP ,_, AAAI-96_NNP ,_, Integrating_NNP Multiple_NNP Learned_VBD Models_NNP Workshop_NNP Tang_NNP E._NNP K._NNP ,_, Suganthan_NNP P._NNP N._NNP and_CC Yao_NNP X._NNP 2006_CD ._.
+An_DT analysis_NN of_IN diversity_NN measures_NNS ._.
+Mach_NNP ._.
+Learn_VB ._.
+65_CD -LRB-_-LRB- 2006_CD -RRB-_-RRB- 247_CD --_: 271_CD ._.
+Witten_NNP I.H._NNP ,_, Frank_NNP E._NNP ,_, and_CC Hall_NNP M.A._NNP 2011_CD ._.
+Data_NNP Mining_NNP :_: Practical_NNP Machine_NNP Learning_NNP Tools_NNPS and_CC Techniques_NNPS ,_, third_JJ ed_VBD ._.
+Morgan_NNP Kaufmann_NNP ,_, 2011_CD ._.
+Wozniak_NNP M._NNP ,_, Grana_NNP M._NNP and_CC Corchado_NNP E._NNP 2014_CD ._.
+A_DT survey_NN of_IN multiple_JJ classifier_NN systems_NNS as_IN hybrid_JJ systems_NNS ._.
+Information_NNP Fusion_NNP ,_, 16:3_CD -17_CD ,_, 2014_CD ._.
+Wozniak_NNP M._NNP and_CC Jackowski_NNP K._NNP 2009_CD ._.
+Some_DT remarks_NNS on_IN chosen_VBN methods_NNS of_IN classifier_NN fusion_NN based_VBN on_IN weighted_JJ voting_NN ,_, in_IN :_: E._NNP Corchado_NNP ,_, X._NNP Wu_NNP ,_, E._NNP Oja_NNP ,_, A._NN Herrero_NNP ,_, B._NNP Baruque_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Hybrid_NNP Artificial_NNP Intelligence_NNP Systems_NNPS ,_, Lecture_NNP Notes_NNP in_IN Computer_NNP Science_NNP ,_, vol_NN ._.
+5572_CD ,_, Springer_NNP ,_, Berlin/Heidelberg_NNP ,_, 2009_CD ,_, pp._SYM 541_CD --_: 548_CD Wu_NNP X._NNP 1996_CD ._.
+A_DT Bayesian_JJ discretizer_NN for_IN real-valued_JJ attributes_NNS ._.
+The_DT Computer_NNP Journal_NNP ,_, 39_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, 688-691_CD ._.
+Yang_NNP Y._NNP and_CC Webb_NNP G._NNP I._NNP 2009_CD ._.
+Discretization_NNP for_IN Naive_NNP -_: Bayes_NNP Learning_NNP :_: Managing_VBG Discratization_NNP bias_NN and_CC Variance_NNP ._.
+Machine_NN Learning_NNP ._.
+vol_NN ._.
+74_CD ,_, No._NN 1_CD ,_, pp_NN 39-74_CD Zighed_NNP D._NNP A._NNP ,_, Rabaseda_NNP S._NNP and_CC Rakotomalala_NNP R._NNP 1998_CD ._.
+FUSINTER_NNP :_: A_NNP method_NN for_IN discretization_NN of_IN continuous_JJ Attributes_NNS ._.
+Int_NNP '_POS l_NN J._NNP Uncertainty_NN ,_, Fuzziness_NN Knowledge-based_JJ Systems_NNPS ,_, Vol_NNP ._.
+6_CD ,_, pp_NN 307-326_CD

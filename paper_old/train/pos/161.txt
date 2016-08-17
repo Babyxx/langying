@@ -1,0 +1,361 @@
+Abstract_JJ Korean_JJ is_VBZ one_CD of_IN the_DT well-known_JJ „_CD pro-drop_JJ ‟_NN languages_NNS ._.
+When_WRB translating_VBG Korean_JJ zero_CD object_NN into_IN languages_NNS in_IN which_WDT objects_NNS have_VBP to_TO be_VB overtly_RB expressed_VBN ,_, the_DT resolution_NN of_IN zero_CD object_NN is_VBZ crucial_JJ ._.
+This_DT paper_NN proposes_VBZ a_DT machine_NN learning_VBG method_NN to_TO resolve_VB Korean_JJ zero_CD object_NN ._.
+We_PRP proposed_VBD 8_CD linguistically_RB motivated_JJ features_NNS for_IN ML_NNP -LRB-_-LRB- Machine_NNP Learning_NNP -RRB-_-RRB- ._.
+Our_PRP$ approach_NN has_VBZ been_VBN implemented_VBN with_IN WEKA_NNP 3.6.10_CD and_CC evaluated_VBN by_IN using_VBG 10-fold_JJ cross_NN validation_NN method_NN ._.
+The_DT accuracy_NN of_IN the_DT proposed_VBN method_NN reached_VBD 73.37_CD %_NN ._.
+1_CD Introduction_NNP Korean_NNP is_VBZ one_CD of_IN the_DT so-called_JJ pro-drop_JJ languages_NNS ._.
+Certain_JJ pronouns_NNS may_MD be_VB omitted_VBN and_CC the_DT omitted_VBN pronouns_NNS are_VBP often_RB called_VBN zero_CD pronouns_NNS ._.
+This_DT kind_NN of_IN pronoun_NN also_RB occurs_VBZ in_IN other_JJ languages_NNS ,_, such_JJ as_IN Japanese_JJ or_CC Spanish_JJ ._.
+The_DT omitted_VBN pronouns_NNS in_IN Korean_NNP can_MD appear_VB in_IN subject_JJ and_CC object_NN position_NN ,_, whereas_IN in_IN Spanish_JJ or_CC Italian_JJ ,_, they_PRP can_MD appear_VB only_RB in_IN subject_JJ position_NN ._.
+A_DT zero_CD subject_NN is_VBZ the_DT most_RBS frequent_JJ type_NN of_IN anaphoric_JJ expressions_NNS in_IN Korean_JJ ._.
+Hong_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- reported_VBD that_IN about_IN 57_CD %_NN of_IN the_DT pronouns_NNS are_VBP a_DT zero_CD subject_JJ pronoun_NN in_IN pronoun_NN occurrences_NNS in_IN Korean_JJ spoken_VBN text_NN ._.
+Corresponding_VBG author_NN Munpyo_NNP Hong_NNP Dept._NNP of_IN German_NNP Linguistics_NNP &_CC Literature_NNP ,_, Sungkyunkwan_NNP University_NNP /_SYM 25-2_CD ,_, Sungkyunkwan-Ro_NNP ,_, Jongno-Gu_NNP ,_, Seoul_NNP ,_, Korea_NNP skkhmp@skku.edu_NNP Zero_NNP Object_NNP Resolution_NNP in_IN Korean_JJ Seunghee_NNP Lim_NNP Dept._NNP of_IN German_NNP Linguistics_NNP &_CC Literature_NNP ,_, Sungkyunkwan_NNP University_NNP /_SYM 25-2_CD ,_, Sungkyunkwan-Ro_NNP ,_, Jongno-Gu_NNP ,_, Seoul_NNP ,_, Korea_NNP rusilen21@skku.edu_NNP Zero_NNP object_NN is_VBZ the_DT second_JJ most_RBS frequent_JJ zero_CD pronoun_NN type_NN in_IN Korean_JJ spoken_VBN text_NN ._.
+Despite_IN of_IN the_DT frequent_JJ use_NN of_IN zero_CD objects_NNS ,_, most_JJS of_IN the_DT previous_JJ works_NNS do_VBP not_RB deal_VB with_IN the_DT zero_CD objects_NNS in_IN Korean_JJ ._.
+In_IN this_DT work_NN ,_, we_PRP focus_VBP on_IN Korean_JJ spoken_VBN texts_NNS ,_, since_IN zero_CD pronouns_NNS occur_VBP more_RBR frequently_RB than_IN in_IN a_DT written_VBN text_NN ._.
+Ryu_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- showed_VBD that_IN a_DT zero_CD pronoun_NN rarely_RB appears_VBZ in_IN written_VBN texts_NNS when_WRB it_PRP is_VBZ compared_VBN with_IN spoken_VBN texts_NNS in_IN Korean_JJ ._.
+For_IN this_DT reason_NN ,_, we_PRP conduct_VBP a_DT study_NN for_IN Korean_JJ zero_CD object_NN in_IN Korean_JJ spoken_VBN text_NN and_CC try_VB to_TO find_VB the_DT linguistic_JJ clues_NNS for_IN the_DT zero_CD object_NN resolution_NN ._.
+In_IN the_DT context_NN of_IN machine_NN translation_NN ,_, the_DT resolution_NN of_IN Korean_JJ zero_CD objects_NNS could_MD be_VB one_CD of_IN the_DT most_RBS important_JJ issues_NNS in_IN order_NN to_TO translate_VB them_PRP into_IN the_DT target_NN language_NN like_IN English_NNP and_CC German_NNP ._.
+One_CD of_IN the_DT reasons_NNS that_WDT zero_VBP objects_NNS in_IN Korean_JJ is_VBZ a_DT problem_NN in_IN MT_NNP is_VBZ that_IN the_DT omitted_VBN objects_NNS in_IN Korean_JJ have_VBP to_TO be_VB translated_VBN into_IN overt_JJ objects_NNS in_IN target_NN languages_NNS ._.
+Unfortunately_RB ,_, the_DT majority_NN of_IN MT_NNP systems_NNS do_VBP not_RB deal_VB with_IN this_DT problem_NN ,_, because_IN most_JJS of_IN the_DT current_JJ commercial_JJ MT_NNP systems_NNS do_VBP not_RB treat_VB the_DT linguistic_JJ phenomena_NNS that_WDT go_VBP beyond_IN a_DT sentence_NN level_NN ._.
+To_TO illustrate_VB this_DT issue_NN ,_, let_VB 's_POS take_VB a_DT look_NN at_IN the_DT following_VBG example_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- MT_JJ results_NNS from_IN Korean_JJ -LRB-_-LRB- a_DT -RRB-_-RRB- to_TO German_NNP -LRB-_-LRB- b_NN -RRB-_-RRB- -LRB-_-LRB- a_DT -RRB-_-RRB- Korean_JJ A_NN :_: 여권_CD i_FW 을_FW 분실했습니다_FW ._.
+a_DT passport-OBJ_JJ lost_VBN -LRB-_-LRB- yekwenul_JJ punsilhaysssupnita_NN ._. -RRB-_-RRB-
+``_`` I_PRP lost_VBD a_DT passport_NN ._. ''_''
+2_CD Related_VBN Works_NNP Zero_NNP pronouns_NNS have_VBP already_RB been_VBN studied_VBN in_IN other_JJ languages_NNS ,_, such_JJ as_IN Japanese_JJ -LRB-_-LRB- e.g._FW Nakaiwa_FW and_CC Shirai_NNP ,_, 1996_CD ;_: Okumura_NNP and_CC Tamura_NNP ,_, 1996_CD -RRB-_-RRB- and_CC Spanish_JJ -LRB-_-LRB- Park_NNP and_CC Hong_NNP ,_, 2014_CD ;_: Palomar_NNP et_FW al._FW ,_, 2001_CD ;_: Ferrández_NNP and_CC Peral_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+These_DT studies_NNS are_VBP based_VBN on_IN the_DT researches_VBZ about_IN anaphora_NN resolution_NN ._.
+It_PRP has_VBZ been_VBN a_DT wide-open_JJ research_NN field_NN since_IN 1970_CD focusing_VBG on_IN English_NNP ._.
+Regardless_RB of_IN languages_NNS ,_, similar_JJ strategies_NNS for_IN anaphora_NN resolution_NN have_VBP been_VBN applied_VBN ._.
+Using_VBG linguistic_JJ information_NN is_VBZ the_DT most_RBS representative_JJ technique_NN ;_: constraints_NNS and_CC preferences_NNS methods_NNS are_VBP distinguished_VBN in_IN the_DT related_JJ works_NNS -LRB-_-LRB- Baldwin_NNP ,_, 1997_CD ;_: Lappin_NNP and_CC Leass_NNP ,_, 1994_CD ;_: Carbonell_NNP and_CC Brown_NNP ,_, 1988_CD -RRB-_-RRB- ._.
+Constraints_NNS discard_VBP possible_JJ antecedents_NNS and_CC are_VBP considered_VBN as_IN absolute_JJ criteria_NNS ._.
+Preferences_NNPS being_VBG proposed_VBN as_IN heuristic_JJ rules_NNS tend_VBP to_TO be_VB relative_JJ ._.
+After_IN applying_VBG constraints_NNS ,_, if_IN there_EX are_VBP still_RB unresolved_JJ candidate_NN antecedents_NNS ,_, preferences_NNS set_VBP priorities_NNS among_IN candidate_NN antecedents_NNS ._.
+Nakaiwa_NNP and_CC Shirai_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- focus_NN on_IN semantic_JJ and_CC pragmatic_JJ constraints_NNS such_JJ as_IN cases_NNS ,_, modal_JJ expressions_NNS ,_, verbal_JJ semantic_JJ attributes_NNS and_CC conjunctions_NNS in_IN order_NN to_TO determine_VB the_DT reference_NN of_IN Japanese_JJ zero_CD pronouns_NNS ._.
+However_RB ,_, they_PRP proposed_VBD constraints_NNS focusing_VBG on_IN zero_CD subjects_NNS mainly_RB ._.
+Therefore_RB ,_, it_PRP is_VBZ hard_JJ to_TO apply_VB their_PRP$ approach_NN on_IN zero_CD object_NN resolution_NN ._.
+Centering_VBG theory_NN -LRB-_-LRB- Grosz_NNP et_FW al._FW ,_, 1995_CD -RRB-_-RRB- is_VBZ one_CD of_IN the_DT approaches_NNS using_VBG heuristic_JJ rules_NNS ._.
+It_PRP is_VBZ claimed_VBN that_IN certain_JJ entities_NNS mentioned_VBN in_IN an_DT utterance_NN are_VBP more_RBR central_JJ than_IN others_NNS ,_, and_CC this_DT property_NN has_VBZ been_VBN applied_VBN to_TO determine_VB the_DT antecedent_NN of_IN the_DT anaphor_NN ._.
+Walker_NNP et_FW al._FW -LRB-_-LRB- 1994_CD -RRB-_-RRB- applied_VBD the_DT centering_VBG model_NN on_IN zero_CD pronoun_NN resolution_NN in_IN Japanese_JJ ._.
+Roh_NNP and_CC Lee_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- proposed_VBD a_DT generation_NN algorithm_NN of_IN zero_CD pronouns_NNS using_VBG a_DT Cost-based_JJ Centering_NNP Model_NNP which_WDT considers_VBZ the_DT inference_NN cost_NN ._.
+It_PRP is_VBZ known_VBN that_IN the_DT most_RBS salient_JJ element_NN of_IN the_DT given_VBN discourse_NN is_VBZ likely_JJ to_TO be_VB realized_VBN as_IN a_DT zero_CD pronoun_NN ._.
+We_PRP take_VBP this_DT into_IN account_NN in_IN selecting_VBG the_DT features_NNS for_IN ML_NNP ._.
+Current_JJ anaphora_NN resolution_NN methods_NNS rely_VBP mainly_RB on_IN constraint_NN and_CC preference_NN heuristics_NNS ,_, which_WDT employ_VBP morpho-syntactic_JJ information_NN or_CC shallow_JJ semantic_JJ analysis_NN ._.
+These_DT methods_NNS are_VBP a_DT deterministic_JJ algorithm_NN which_WDT always_RB produces_VBZ the_DT same_JJ output_NN in_IN a_DT given_VBN particular_JJ condition_NN ._.
+However_RB ,_, even_RB if_IN the_DT condition_NN is_VBZ applied_VBN ,_, the_DT B_NNP :_: øi_FW 다시_FW again_RB 발급받으셔야_CD 합니다_NN ._.
+have_VB to_TO issue_VB palkuppatusyeya_NN hapnita_NN ._. -RRB-_-RRB-
+-LRB-_-LRB- tasi_FW ``_`` You_PRP have_VBP to_TO issue_VB a_DT passport_NN again_RB ._. ''_''
+-LRB-_-LRB- b1_CD -RRB-_-RRB- German_JJ -_: Systran_NNP translator_NN A_NN :_: Verlor_NNP den_NN Pass_NN ._.
+B_NNP :_: Fragen_NNP wiederholt_NNP ._.
+-LRB-_-LRB- b2_CD -RRB-_-RRB- German_JJ -_: Google_NNP translator_NN A_DT :_: Ich_JJ habe_NN meinen_NNS Pass_VBP verloren_NNS ._.
+B_NNP :_: Wir_NNP müssen_NNP neu_NN aufgelegt_NN zu_NNP werden_NN ._.
+The_DT omitted_VBN object_NN is_VBZ represented_VBN by_IN the_DT symbol_NN ø_NN ._.
+In_IN this_DT example_NN ,_, the_DT Korean_JJ object_NN is_VBZ not_RB overtly_RB expressed_VBN in_IN the_DT sentence_NN B_NN and_CC it_PRP refers_VBZ to_TO „_CD 여권_CD ‟_NN -LRB-_-LRB- yekwen_JJ ,_, ``_`` Passport_NN ''_'' -RRB-_-RRB- in_IN sentence_NN A._NN To_TO translate_VB the_DT omitted_VBN object_NN into_IN German_JJ correctly_RB ,_, the_DT gender_NN and_CC number_NN of_IN the_DT antecedent_NN „_NN yekwen_JJ ‟_NN has_VBZ to_TO be_VB considered_VBN ._.
+Since_IN the_DT morphological_JJ information_NN of_IN „_CD yekwen_JJ ‟_NN is_VBZ „_CD masculine_JJ ‟_NN and_CC „_NN singular_JJ ‟_NN in_IN German_JJ ,_, the_DT omitted_VBN object_NN has_VBZ to_TO be_VB translated_VBN as_IN „_CD ihn_NN ‟_NN considering_VBG its_PRP$ case_NN ._.
+However_RB ,_, the_DT object_NN of_IN the_DT sentence_NN B_NN is_VBZ not_RB translated_VBN in_IN German_JJ in_IN either_DT MT_NNP system_NN ._.
+Then_RB ,_, the_DT results_NNS would_MD be_VB ungrammatical_JJ in_IN German_JJ ._.
+Therefore_RB ,_, the_DT resolution_NN of_IN Korean_JJ zero_CD objects_NNS is_VBZ crucial_JJ in_IN MT_NNP systems_NNS with_IN Korean_JJ as_IN a_DT source_NN language_NN ,_, when_WRB translating_VBG them_PRP into_IN languages_NNS in_IN which_WDT objects_NNS have_VBP to_TO be_VB overtly_RB expressed_VBN ._.
+In_IN section_NN 2_CD we_PRP present_VBP the_DT related_JJ works_NNS about_IN anaphora_NN resolution_NN and_CC their_PRP$ limitation_NN ._.
+Section_NN 3_CD explains_VBZ zero_CD objects_NNS phenomenon_NN in_IN Korean_JJ ._.
+We_PRP suggest_VBP the_DT machine_NN learning_NN -LRB-_-LRB- ML_NNP -RRB-_-RRB- method_NN for_IN Korean_JJ zero_CD object_NN resolution_NN and_CC propose_VB 8_CD features_NNS for_IN ML_NNP method_NN in_IN section_NN 4_CD ._.
+In_IN addition_NN ,_, the_DT effect_NN of_IN using_VBG ML_NNP is_VBZ evaluated_VBN ._.
+Finally_RB ,_, the_DT conclusion_NN is_VBZ presented_VBN in_IN section_NN 5_CD ._.
+output_NN can_MD be_VB wrong_JJ ._.
+ML_NNP methods_NNS which_WDT are_VBP a_DT non-deterministic_JJ algorithm_NN have_VBP been_VBN studied_VBN on_IN anaphora_NN resolution_NN -LRB-_-LRB- Connolly_NNP et_FW al._FW ,_, 1994_CD ;_: Paul_NNP et_NNP al._NNP ,_, 1999_CD -RRB-_-RRB- ._.
+Since_IN ML_NNP learns_VBZ from_IN data_NNS and_CC makes_VBZ predictions_NNS of_IN the_DT most_RBS likely_JJ candidate_NN on_IN the_DT data_NNS ,_, it_PRP can_MD overcome_VB the_DT limitation_NN of_IN the_DT deterministic_JJ method_NN ._.
+Park_NNP and_CC Hong_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- proposed_VBD a_DT hybrid_JJ approach_NN to_TO resolve_VB Spanish_JJ zero_CD subjects_NNS that_WDT integrates_VBZ heuristic_JJ rules_NNS and_CC ML_NNP in_IN the_DT context_NN of_IN Spanish_JJ to_TO Korean_JJ MT._NNP Since_IN Spanish_NNP zero_CD subjects_NNS can_MD be_VB restored_VBN from_IN the_DT verb_NN ending_VBG ,_, they_PRP use_VBP morphological_JJ flections_NNS for_IN verbs_NNS ._.
+After_IN that_DT ,_, ML_NNP is_VBZ utilized_VBN for_IN some_DT ambiguous_JJ cases_NNS ._.
+Unlike_IN this_DT work_NN ,_, our_PRP$ work_NN deals_NNS with_IN Korean_JJ zero_CD object_NN ._.
+Morphological_JJ information_NN can_MD not_RB be_VB utilized_VBN for_IN Korean_JJ because_IN of_IN the_DT difference_NN of_IN the_DT two_CD languages_NNS ._.
+For_IN this_DT reason_NN ,_, we_PRP use_VBP ML_NNP method_NN alone_RB to_TO determine_VB the_DT antecedent_NN of_IN the_DT zero_CD objects_NNS in_IN spoken_VBN Korean_JJ ._.
+3_CD Zero_NNP object_NN phenomenon_NN in_IN Korean_JJ Given_VBN the_DT hierarchy_NN of_IN the_DT forward_JJ looking_VBG center_NN ranking_NN ,_, a_DT zero_CD object_NN can_MD be_VB interpreted_VBN as_IN the_DT topic_NN which_WDT is_VBZ the_DT most_RBS salient_JJ discourse_NN entity_NN ._.
+The_DT topic_NN of_IN the_DT sentence_NN contributes_VBZ to_TO discourse_NN salience_NN and_CC maintains_VBZ discourse_NN coherence_NN by_IN preferring_VBG the_DT CONTINUE_NNP transition_NN state_NN ._.
+The_DT topic_NN of_IN the_DT sentence_NN can_MD be_VB detected_VBN easily_RB in_IN Korean_JJ using_VBG the_DT topic_NN markers_NNS „_VBP 은_CD ‟_CD -LRB-_-LRB- eun_NN -RRB-_-RRB- ,_, „_FW 는_FW ‟_FW -LRB-_-LRB- nun_NN -RRB-_-RRB- and_CC delimiters_NNS such_JJ as_IN „_CD 도_CD ‟_NN -LRB-_-LRB- to_TO -RRB-_-RRB- ,_, „_FW 만_FW ‟_FW -LRB-_-LRB- man_NN -RRB-_-RRB- ._.
+Therefore_RB ,_, it_PRP is_VBZ likely_JJ a_DT candidate_NN antecedent_NN is_VBZ the_DT antecedent_NN of_IN the_DT zero_CD object_NN if_IN the_DT candidate_NN has_VBZ one_CD of_IN the_DT topic_NN markers_NNS or_CC delimiters_NNS ._.
+We_PRP can_MD see_VB some_DT examples_NNS in_IN the_DT following_VBG table_NN ._.
+A_DT prominent_JJ phenomenon_NN in_IN Korean_JJ is_VBZ the_DT prevalence_NN of_IN zero_CD pronouns_NNS ._.
+Unlike_IN English_NNP ,_, zero_CD pronouns_NNS occur_VBP very_RB frequently_RB in_IN Korean_JJ ._.
+In_IN Korean_JJ ,_, a_DT zero_CD subject_NN is_VBZ the_DT most_RBS frequent_JJ type_NN of_IN anaphoric_JJ expression_NN ._.
+The_DT second_JJ most_RBS frequent_JJ type_NN is_VBZ zero_CD objects_NNS ,_, especially_RB when_WRB the_DT direct_JJ object_NN is_VBZ omitted_VBN ._.
+According_VBG to_TO Hong_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- ,_, when_WRB the_DT direct_JJ object_NN does_VBZ not_RB occur_VB in_IN spoken_VBN Korean_JJ ,_, the_DT rate_NN becomes_VBZ 19.1_CD %_NN ._.
+To_TO resolve_VB zero_CD object_NN ,_, centering_VBG theory_NN can_MD be_VB utilized_VBN ._.
+The_DT centering_VBG theory_NN endeavors_NNS to_TO identify_VB the_DT antecedent_NN of_IN a_DT -LRB-_-LRB- zero_CD -RRB-_-RRB- pronoun_NN using_VBG the_DT idea_NN of_IN the_DT most_RBS central_JJ entity_NN that_IN a_DT sentence_NN concerns_NNS which_WDT tends_VBZ to_TO be_VB expressed_VBN by_IN a_DT -LRB-_-LRB- zero_CD -RRB-_-RRB- pronoun_NN ._.
+There_EX are_VBP some_DT studies_NNS attempting_VBG to_TO apply_VB the_DT centering_VBG theory_NN to_TO anaphora_NN resolution_NN -LRB-_-LRB- Choi_NNP and_CC Lee_NNP ,_, 1999_CD ;_: Hong_NNP ,_, 2000_CD ;_: Hong_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT forward_JJ looking_VBG center_NN rankings_NNS for_IN Korean_JJ are_VBP defined_VBN differently_RB in_IN the_DT studies_NNS ._.
+Following_VBG Hong_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ‟_FW s_PRP discussion_NN ,_, we_PRP accept_VBP the_DT forward_RB looking_VBG center_NN ranking_VBG for_IN Korean_JJ as_IN follows_VBZ :_: Speaker_NNP A_NNP B_NNP Korean_NNP dialogue_NN 음식_CD 주문_NN 1_CD 을_CD ordering_VBG a_DT food-OBJ_NNP -LRB-_-LRB- umsik_JJ cumunul_NN 어떻게_CD 하는_CD 거죠_NN ?_.
+how_WRB can_MD ettehkey_VB hanun_NN kecyo_NN ?_. -RRB-_-RRB-
+``_`` How_WRB can_MD I_PRP order_VB a_DT food_NN ?_. ''_''
+∙_NNP Forward_RB looking_VBG center_NN ranking_VBG for_IN Korean_JJ -LRB-_-LRB- Hong_NNP ,_, 2011_CD -RRB-_-RRB- TOPIC_NN >_CD SUBJECT_NNP >_CD OBJECT_NNP >_CD ADVERB_NNP >_CD OTHERS_NNS is_VBZ possible_JJ to_TO toynun_VB kenkayo_NN ?_. -RRB-_-RRB-
+``_`` Is_VBZ it_PRP possible_JJ to_TO have_VB breakfast_NN until_IN 11_CD o_NN ‟_NN clock_NN ?_. ''_''
+저_SYM 기계_SYM 2_CD 에서_NN that_WDT machine-ADV_NNP -LRB-_-LRB- ce_FW kikyeyeyse_FW 선택한_FW 후_FW after_IN selecting_VBG senthaykhan_NN hu_NN 뽑으세요_NN ._.
+buy_VB ppopuseyyo_NN ._. -RRB-_-RRB-
+메뉴_NN 3_CD 를_CD menu-OBJ_JJ menyulul_NN 식권_NN 4_CD 을_CD a_DT meal_NN ticket-OBJ_JJ sikkwenul_NN ``_`` You_PRP can_MD buy_VB a_DT meal_NN ticket_NN after_IN selecting_VBG menu_NN from_IN that_DT vending_VBG machine_NN ._. ''_''
+A_DT B_NNP 아침_CD 식사5는_CD breakfast-TOP_NN -LRB-_-LRB- achim_NN siksanun_NN 되는_CD 건가요_CD ?_.
+11시까지만_CD until_IN 11_CD o_NN ‟_CD clock_NN 11sikkaciman_CD 네_CD ,_, 지금_CD Yes_UH ,_, right_RB now_RB -LRB-_-LRB- ney_NN ,_, cikum_NN 정확히_CD 11_CD 시니까_NN because_IN it_PRP ‟_VBD s_PRP 11_CD o_NN ‟_CD clock_NN cenghwakhi_NNS 11sinikka_FW ø_FW 원하싞다면_FW ø_FW 해_FW 드릴게요_FW ._.
+if_IN you_PRP want_VBP can_MD serve_VB wenhasintamyen_JJ hay_NN tulilkeyyo_NN ._. -RRB-_-RRB-
+``_`` Yes_UH ,_, if_IN you_PRP want_VBP ,_, I_PRP can_MD serve_VB you_PRP a_DT breakfast_NN because_IN it_PRP ‟_VBD s_PRP 11_CD o_NN ‟_NN clock_NN right_RB now_RB ._. ''_''
+A_DT 감사합니다_NN ._.
+thank_VB you_PRP -LRB-_-LRB- kamsahapnita_FW ._. -RRB-_-RRB-
+``_`` Thank_VB you_PRP ._. ''_''
+Table_NNP 1_CD dialogue_NN example_NN including_VBG topic_NN markers_NNS In_IN table_NN 1_CD ,_, the_DT dialogue_NN ‟_NN s_VBZ omitted_VBN object_NN is_VBZ represented_VBN by_IN the_DT symbol_NN ø_NN ._.
+There_EX are_VBP 5_CD candidate_NN antecedents_NNS :_: 1_LS ._.
+„_SYM 음식_FW 주문_FW ‟_FW -LRB-_-LRB- umsik_JJ cumun_NN ,_, ``_`` order_NN ''_'' -RRB-_-RRB- ,_, 2_CD ._.
+„_SYM 기계_SYM ‟_CD -LRB-_-LRB- kikyey_NN ,_, ``_`` machine_NN ''_'' -RRB-_-RRB- ,_, 3_CD ._.
+„_SYM 메뉴_SYM ‟_CD -LRB-_-LRB- menyu_NN ,_, ``_`` menu_NN ''_'' -RRB-_-RRB- ,_, 4_CD ._.
+„_SYM 식권_SYM ‟_CD -LRB-_-LRB- sikkwen_NN ,_, ``_`` meal_NN ticket_NN ''_'' -RRB-_-RRB- ,_, 5_CD ._.
+„_SYM 아침_SYM 식사_SYM ‟_CD -LRB-_-LRB- achim_NN siksa_NN ,_, ``_`` breakfast_NN ''_'' -RRB-_-RRB- ._.
+The_DT first_JJ ,_, third_JJ and_CC fourth_JJ candidates_NNS occur_VBP in_IN the_DT object_NN position_NN ,_, the_DT second_JJ candidate_NN is_VBZ in_IN the_DT adverb_NN position_NN ,_, and_CC the_DT last_JJ candidate_NN has_VBZ a_DT topic_NN marker_NN „_CD nun_NN ‟_NN ._.
+Since_IN the_DT topic_NN is_VBZ the_DT highest_JJS position_NN of_IN the_DT forward_JJ looking_VBG center_NN ranking_NN ,_, the_DT last_JJ candidate_NN is_VBZ likely_JJ to_TO be_VB the_DT antecedent_NN of_IN the_DT zero_CD object_NN ._.
+``_`` Wait_VB a_DT minute_NN ._. ''_''
+A_DT B_NNP Table_NNP 2_CD dialogue_NN example_NN of_IN syntactic_JJ function_NN In_IN this_DT case_NN ,_, there_EX are_VBP 2_CD candidate_NN antecedents_NNS for_IN the_DT zero_CD object_NN which_WDT are_VBP „_CD 화장실_CD ‟_NN -LRB-_-LRB- hwacangsil_NN ,_, ``_`` restroom_NN ''_'' -RRB-_-RRB- and_CC „_CD 휴지_CD ‟_NN -LRB-_-LRB- huci_FW ,_, ``_`` toilet_NN tissue_NN ''_'' -RRB-_-RRB- ._.
+Since_IN the_DT second_JJ candidate_NN has_VBZ the_DT higher_JJR raking_VBG in_IN the_DT forward_JJ looking_VBG center_NN ranking_NN than_IN the_DT first_JJ one_CD ,_, it_PRP can_MD be_VB the_DT antecedent_NN of_IN the_DT zero_CD object_NN ,_, and_CC this_DT is_VBZ actually_RB the_DT case_NN ._.
+As_IN the_DT syntactic_JJ function_NN of_IN the_DT candidate_NN antecedents_NNS is_VBZ important_JJ to_TO resolve_VB Korean_JJ zero_CD object_NN ,_, we_PRP utilize_VBP this_DT information_NN ._.
+Property-sharing_JJ constraint_NN can_MD also_RB be_VB the_DT clue_NN to_TO resolve_VB Korean_JJ zero_CD object_NN ._.
+Kameyama_NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- suggested_VBD property-sharing_NN constraint_NN of_IN zero_CD pronouns_NNS in_IN Japanese_JJ ._.
+She_PRP claimed_VBD that_IN if_IN a_DT zero_CD pronoun_NN is_VBZ the_DT subject_NN of_IN a_DT verb_NN ,_, the_DT antecedent_NN is_VBZ perhaps_RB a_DT subject_NN in_IN the_DT antecedent_NN ‟_NN s_VBZ sentence_NN ._.
+In_IN addition_NN ,_, if_IN a_DT zero_CD pronoun_NN is_VBZ an_DT object_NN ,_, the_DT antecedent_NN is_VBZ highly_RB likely_JJ an_DT object_NN ._.
+Since_IN Japanese_JJ and_CC Korean_JJ share_NN many_JJ of_IN their_PRP$ linguistic_JJ properties_NNS ,_, we_PRP can_MD apply_VB this_DT constraint_NN to_TO resolve_VB Korean_JJ zero_CD object_NN ._.
+The_DT following_JJ table_NN shows_VBZ an_DT example_NN of_IN property-sharing_NN constraint_NN ._.
+제가_CD I-SUBJ_NNP -LRB-_-LRB- ceyka_FW ø_FW 꺼내드릴게요_FW ._.
+will_MD give_VB kkenay_NN tulilkeyo_NN ._. -RRB-_-RRB-
+``_`` I_PRP ‟_VBP ll_RB give_VB it_PRP to_TO you_PRP ._. ''_''
+알겠습니다_NN ._.
+all_DT right_JJ -LRB-_-LRB- alkeysssupnita_JJ ._. -RRB-_-RRB-
+``_`` All_DT right_NN ._. ''_''
+Speaker_NNP A_NNP B_NNP A_NNP Korean_NNP dialogue_NN 무슨_CD 일_CD 있으싞가요_CD ?_.
+what_WP happened_VBD -LRB-_-LRB- musun_JJ il_NN issusinkayo_NN ?_. -RRB-_-RRB-
+``_`` What_WP happened_VBD ?_. ''_''
+Speaker_NNP A_NNP B_NNP Korean_NNP dialogue_NN 제_CD 애완동물1을_CD my_PRP$ pet-OBJ_NN -LRB-_-LRB- cey_NN aywantongmulul_NN 잃어버렸습니다_NN ._.
+have_VBP lost_VBN ilhepelyesssupnita_NN ._. -RRB-_-RRB-
+``_`` I_PRP have_VBP lost_VBN my_PRP$ pet_NN ._. ''_''
+ø1_CD 어디서_CD 잃어버리셨나요_CD ?_.
+where_WRB have_VBP lost_VBN -LRB-_-LRB- etise_FW ilhepelisyessnayo_FW ?_. -RRB-_-RRB-
+화장실_SYM 1_CD 에_CD in_IN toilet-ADV_NNP -LRB-_-LRB- hwacangsiley_NN 없어서요_NN ._.
+is_VBZ not_RB eppseseyo_JJ ._. -RRB-_-RRB-
+휴지_NN 2_CD 가_CD toilet_NN tissue-TOP_JJ hucika_FW ``_`` There_EX is_VBZ no_DT toilet_NN paper_NN in_IN the_DT restroom_NN ._. ''_''
+잠시만요_NN ._.
+wait_VB a_DT minute_NN -LRB-_-LRB- camsimanyo_NN ._. -RRB-_-RRB-
+A_DT B_NNP A_NNP B_NNP 객실_NN 2_CD 에서_CD 나오면서_CD ``_`` Where_WRB have_VBP you_PRP lost_VBD her_PRP ?_. ''_''
+The_DT semantic_JJ relation_NN between_IN the_DT predicate_NN of_IN a_DT zero_CD object_NN and_CC a_DT candidate_NN antecedent_NN is_VBZ another_DT property_NN of_IN Korean_JJ zero_CD object_NN ._.
+When_WRB the_DT semantic_JJ of_IN the_DT predicates_NNS correlates_VBZ between_IN a_DT zero_CD object_NN and_CC a_DT candidate_NN antecedent_NN ,_, the_DT candidate_NN preferred_VBN to_TO be_VB the_DT antecedent_NN of_IN the_DT zero_CD object_NN ._.
+Speaker_NNP Korean_NNP dialogue_NN A_DT 어디_FW 가시나요_FW ?_.
+where_WRB are_VBP you_PRP going_VBG room-ADV_NNP -LRB-_-LRB- kayksileyse_JJ naomyense_NN when_WRB come_VBN out_IN of_IN 사라졌습니다_NN ._.
+disappeared_VBD salacyesssupnita_NN ._. -RRB-_-RRB-
+``_`` She_PRP disappeared_VBD when_WRB I_PRP came_VBD out_IN of_IN the_DT room_NN ._. ''_''
+모두_SYM 찾아보셨나요_CD ?_.
+everywhere_RB have_VBP been_VBN looking_VBG for_IN -LRB-_-LRB- motu_NN chacaposyessnayo_NN ?_. -RRB-_-RRB-
+``_`` Have_VBP you_PRP been_VBN looking_VBG for_IN her_PRP$ everywhere_RB ?_. ''_''
+-LRB-_-LRB- eti_FW kasinayo_FW ?_. -RRB-_-RRB-
+``_`` Where_WRB are_VBP you_PRP going_VBG ?_. ''_''
+B_NNP A_NNP 이미_VBD 콘서트광장2은_CD already_RB the_DT concert_NN hall-TOP_NNP -LRB-_-LRB- imi_FW khonsethu_FW kwangcangun_FW 사람3이_FW 많아서_FW people-SUBJ_FW many_JJ salami_NN manhase_NN 들어가실_CD 수_CD 없습니다_NN ._.
+can_MD ‟_VB t_NN enter_VBP to_TO tulekasil_VB su_NN epssupnita_NN ._. -RRB-_-RRB-
+``_`` You_PRP can_MD ‟_VB t_NN enter_VBP the_DT concert_NN hall_NN because_IN there_EX are_VBP already_RB too_RB many_JJ people_NNS ._. ''_''
+콘서트_SYM 1_CD 를_CD 관람하러_CD 갑니다_NN ._.
+관리실_NN 3_CD 빼고는_CD except_IN management_NN office-ADV_NNP -LRB-_-LRB- kwanlisil_FW ppaykonun_FW 다_FW 찾아봤습니다_FW ._.
+all_DT have_VBP been_VBN looking_VBG for_IN ta_NN chacapwasssupnita_NN ._. -RRB-_-RRB-
+``_`` I_PRP have_VBP been_VBN looking_VBG for_IN her_PRP$ everywhere_RB except_IN for_IN the_DT management_NN office_NN ._. ''_''
+go_VB to_TO watch_VB ``_`` I_PRP go_VBP to_TO -LRB-_-LRB- watch_NN -RRB-_-RRB- the_DT concert_NN ._. ''_''
+concert-OBJ_JJ -LRB-_-LRB- khonsethulul_JJ kwanlamhale_NN kapnita_NN ._. -RRB-_-RRB-
+그럼_NN then_RB -LRB-_-LRB- kulem_FW 저희_FW 직원들_FW 4_CD 이_CD our_PRP$ staff-SUBJ_JJ cehuy_NN cikwentuli_NNS ø2_VBP 찾아보겠습니다_CD ._.
+will_MD look_VB for_IN chacapokeyssupnita_NN ._. -RRB-_-RRB-
+``_`` Then_RB our_PRP$ staff_NN will_MD look_VB for_IN her_PRP$ there_EX ._. ''_''
+B_NNP 저도_CD 좀_CD ø1_CD I-SUBJ_NNP 관람하고_CD 싶습니다_NN ._.
+want_VB to_TO watch_VB kwanlamhako_NN sipsupnita_NN ._. -RRB-_-RRB-
+Table_NNP 3_CD dialogue_NN example_NN of_IN property-sharing_NN constraint_NN -LRB-_-LRB- ceto_JJ com_NN ``_`` I_PRP want_VBP to_TO watch_VB the_DT concert_NN ,_, too_RB ._. ''_''
+In_IN the_DT above_JJ examples_NNS ,_, there_EX are_VBP 4_CD antecedents_NNS for_IN the_DT second_JJ zero_CD object_NN ._.
+candidate_NN antecedents_NNS ,_, the_DT first_JJ candidate_NN From_IN the_DT candidate_NN 볼_IN 수_CD 있었을_CD 겁니다_NN ._.
+could_MD see_VB pol_NN su_NN issessul_NN kepnita_NN ._. -RRB-_-RRB-
+``_`` If_IN you_PRP had_VBD come_VBN earlier_RB ,_, then_RB you_PRP could_MD have_VB seen_VBN the_DT concert_NN ._. ''_''
+„_SYM 애완동물_CD ‟_NN -LRB-_-LRB- aywantongmul_NN ,_, ``_`` pet_NN ''_'' -RRB-_-RRB- is_VBZ the_DT antecedent_NN of_IN the_DT zero_CD object_NN ._.
+Even_RB if_IN there_EX is_VBZ an_DT entity_NN which_WDT has_VBZ ranked_VBN higher_JJR in_IN the_DT forward_JJ looking_VBG center_NN ranking_NN ,_, the_DT farthest_JJS candidate_NN which_WDT is_VBZ in_IN the_DT object_NN position_NN as_IN the_DT zero_CD object_NN is_VBZ the_DT antecedent_NN of_IN the_DT second_JJ zero_CD object_NN ._.
+This_DT is_VBZ one_CD of_IN examples_NNS showing_VBG the_DT property-sharing_NN constraint_NN ._.
+Therefore_RB ,_, the_DT parallelism_NN of_IN syntactic_JJ function_NN between_IN a_DT zero_CD object_NN and_CC a_DT candidate_NN antecedent_NN can_MD be_VB utilized_VBN ._.
+Table_NNP 4_CD dialogue_NN example_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- including_VBG semantic_JJ relation_NN of_IN predicates_NNS Table_NNP 4_CD shows_VBZ the_DT importance_NN of_IN utilizing_VBG semantic_JJ between_IN the_DT predicate_NN of_IN the_DT candidate_NN A_DT 좀_FW 일찍_FW earliy_FW -LRB-_-LRB- com_NN ilccik_NN 오셨더라면_CD ø2_CD if_IN you_PRP have_VBP come_VBN osyesstelamyen_JJ antecedents_NNS and_CC the_DT zero_CD objects_NNS ._.
+In_IN this_DT case_NN ,_, there_EX are_VBP three_CD candidate_NN antecedents_NNS :_: 1_LS ._.
+„_SYM 콘서트_SYM ‟_CD -LRB-_-LRB- khonsethu_NN ,_, ``_`` concert_NN ''_'' -RRB-_-RRB- ,_, 2_CD ._.
+„_IN 콘서트_CD 광장_CD ‟_NN -LRB-_-LRB- khonse_FW -_: thu_NN kwangcang_NN ,_, ``_`` concert_NN hall_NN ''_'' -RRB-_-RRB- ,_, 3_CD ._.
+„_SYM 사람_SYM ‟_CD -LRB-_-LRB- salam_NN ,_, ``_`` people_NNS ''_'' -RRB-_-RRB- ._.
+Even_RB though_IN the_DT last_JJ two_CD candidates_NNS have_VBP the_DT higher_JJR syntactic_NN function_NN than_IN the_DT first_JJ one_CD ,_, the_DT first_JJ candidate_NN „_NN khonsethu_NN ‟_NN is_VBZ the_DT antecedent_NN of_IN the_DT zero_CD objects_NNS ,_, because_IN the_DT first_JJ candidate_NN and_CC the_DT first_JJ zero_CD object_NN have_VBP the_DT same_JJ predicate_NN „_CD 관람하다_CD ‟_NN -LRB-_-LRB- kwanlamhata_FW ,_, ``_`` watch_NN ''_'' -RRB-_-RRB- ._.
+The_DT antecedent_NN of_IN the_DT second_JJ zero_CD object_NN is_VBZ the_DT first_JJ candidate_NN antecedent_NN ._.
+The_DT meaning_NN of_IN predicates_NNS „_SYM kwanlamhata_FW ‟_FW and_CC „_CD 보다_CD ‟_NN -LRB-_-LRB- pota_NNS ,_, ``_`` see_VB ''_'' -RRB-_-RRB- is_VBZ similar_JJ ._.
+Therefore_RB ,_, we_PRP consider_VBP the_DT semantic_JJ of_IN predicates_NNS between_IN a_DT candidate_NN antecedent_NN and_CC a_DT zero_CD object_NN as_IN one_CD of_IN the_DT important_JJ indicators_NNS to_TO resolve_VB Korean_JJ zero_CD object_NN ._.
+The_DT opposite_JJ meaning_NN of_IN predicates_NNS can_MD also_RB be_VB the_DT clue_NN in_IN the_DT following_VBG table_NN example_NN ._.
+``_`` After_IN the_DT machine_NN completely_RB takes_VBZ off_RP ,_, you_PRP can_MD turn_VB on_IN the_DT cell-phone_NN ._. ''_''
+Table_NNP 5_CD dialogue_NN example_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- including_VBG semantic_JJ relation_NN of_IN predicates_NNS The_DT above_IN table_NN dialogue_NN has_VBZ 3_CD candidate_NN antecedents_NNS ._.
+From_IN these_DT candidates_NNS ,_, the_DT second_JJ candidate_NN is_VBZ the_DT antecedent_NN of_IN the_DT zero_CD object_NN ._.
+The_DT antecedent_NN and_CC the_DT zero_CD object_NN have_VBP predicates_VBZ „_CD 끄다_CD ‟_NN -LRB-_-LRB- kkuta_FW ,_, ``_`` turn_VB off_RP ''_'' -RRB-_-RRB- and_CC „_CD 켜다_CD ‟_NN -LRB-_-LRB- khyeta_FW ,_, ``_`` turn_VB on_RP ''_'' -RRB-_-RRB- ,_, respectively_RB ._.
+The_DT predicates_NNS are_VBP in_IN an_DT antonym_NN relation_NN which_WDT is_VBZ much_RB more_RBR important_JJ than_IN the_DT syntactic_JJ function_NN ._.
+This_DT is_VBZ one_CD of_IN the_DT reasons_NNS why_WRB we_PRP consider_VBP the_DT semantic_JJ of_IN predicates_NNS between_IN the_DT candidate_NN antecedents_NNS and_CC the_DT zero_CD object_NN as_IN a_DT clue_NN for_IN Korean_JJ zero_CD object_NN resolution_NN ._.
+Like_IN WordNet_NNP in_IN English_NNP ,_, Korean_JJ dictionary_NN can_MD give_VB information_NN whether_IN predicates_NNS are_VBP identical_JJ or_CC different_JJ or_CC opposite_JJ in_IN meaning_NN ._.
+Sejong_VBG electronic_JJ dictionary1_NNS and_CC KorLex2_NNP are_VBP one_CD of_IN the_DT Korean_JJ dictionaries_NNS which_WDT are_VBP available_JJ to_TO extract_VB information_NN ._.
+Sejong_VBG electronic_JJ dictionary_NN includes_VBZ information_NN about_IN word_NN meaning_NN relation_NN such_JJ as_IN synonyms_NNS and_CC antonyms_NNS ._.
+KorLex_NNP is_VBZ another_DT dictionary_NN based_VBN on_IN WordNet_NNP ._.
+This_DT dictionary_NN is_VBZ constructed_VBN by_IN translating_VBG WordNet_NNP and_CC then_RB modifying_VBG for_IN Korean_JJ ._.
+Using_VBG these_DT dictionaries_NNS ,_, meaning_VBG relation_NN of_IN predicates_NNS between_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN can_MD be_VB automatically_RB compared_VBN ._.
+4_CD Experiments_NNS 4.1_CD Featuresets_NNPS In_IN this_DT paper_NN ,_, we_PRP employ_VBP a_DT machine_NN learning_VBG method_NN to_TO deal_VB with_IN the_DT zero_CD objects_NNS phenomenon_NN ._.
+In_IN order_NN to_TO apply_VB a_DT machine_NN learning_VBG method_NN ,_, 8_CD features_NNS are_VBP proposed_VBN as_IN presented_VBN in_IN table_NN 6_CD ._.
+The_DT following_VBG table_NN explains_VBZ the_DT functions_NNS of_IN each_DT feature_NN with_IN their_PRP$ value_NN ._.
+Value_NN of_IN top_JJ ,_, sub_NN ,_, obj_NN ,_, adv_NN ,_, comp_NN ,_, Speaker_NNP A_NNP Korean_NNP dialogue_NN 죄송합니다_CD ,_, 기내_CD 1_CD 에서는_CD sorry_JJ ,_, in_IN flight-ADV_NNP -LRB-_-LRB- coysonghapnita_NN ,_, kinayeysenun_NN 휴대전화2를_CD the_DT phone-OBJ_JJ hyutaycen-hwalul_NN 꺼_CD 주셔야_CD 합니다_NN ._.
+have_VB to_TO turn_VB off_RP kke_NN cusyeya_NN hapnita_NN ._. -RRB-_-RRB-
+``_`` Sorry_JJ ,_, you_PRP have_VBP to_TO turn_VB off_RP the_DT cell-phone_NN during_IN the_DT flight_NN ._. ''_''
+B_NNP A_NNP 그런가요_NNP ,_, 알겠습니다_CD ._.
+all_DT right_NN -LRB-_-LRB- kulenkayo_FW ,_, alkeysssupnita_NN ._. -RRB-_-RRB-
+``_`` All_DT right_NN ._. ''_''
+비행기_CD 3_CD 가_NN 완전히_CD flight-SUBJ_NNP completely_RB -LRB-_-LRB- pihayngkika_FW wancenhi_FW 이륙한_FW 후에는_FW ø_FW takes_VBZ off_RP after_IN ilyukhan_JJ hueynun_NN 키셔도_CD 됩니다_NN ._.
+can_MD turn_VB on_RP kisyeto_NN toypnita_NN ._. -RRB-_-RRB-
+Feature_NN function_NN Syntactic_NNP candidate_NN antecedent_NN f1_CD 1_CD https://ithub.korean.go.kr/_NN 2_CD http://klpl.re.pusan.ac.kr/_NN f2_NN Parallelism_NN of_IN syntactic_JJ function_NN Semantic_JJ relation_NN between_IN f3_CD predicates_VBZ f4_CD Sentence_NN distance_NN f5_CD Sentence_NN distance_NN based_VBN on_IN Speaker_NNP of_IN zero_CD object_NN f6_CD Headedness_NNP of_IN candidate_NN antecedent_NN f7_CD The_DT most_RBS salient_JJ candidate_NN antecedent_NN f8_CD Gold_NNP referential_JJ relation_NN Table_NNP 6_CD Features_NNS for_IN poss_NN para_NN ,_, diff_NN sim_NN ,_, same_JJ ,_, oppo_NN ,_, diff_NN ,_, loc3_CD loc_NN ,_, 0_CD ,_, ..._: n_SYM -_: n._NN ._.
+.0_CD ..._: n_JJ head_NN ,_, not_RB 1_CD ,_, 0_CD yes_UH ,_, no_DT ML_NNP Since_IN we_PRP deal_VBP with_IN spoken_VBN text_NN form_NN ,_, there_EX is_VBZ a_DT chance_NN to_TO have_VB some_DT difficulties_NNS in_IN applying_VBG the_DT methods_NNS in_IN the_DT previous_JJ studies_NNS focusing_VBG on_IN written_VBN sentences_NNS ._.
+Because_IN of_IN this_DT reason_NN ,_, we_PRP introduce_VBP feature_NN 5_CD which_WDT reflect_VBP the_DT properties_NNS of_IN spoken_VBN texts_NNS ._.
+Feature_NN 5_CD encodes_VBZ the_DT sentence_NN distance_NN between_IN the_DT zero_CD object_NN and_CC the_DT candidate_NN antecedent_NN based_VBN on_IN the_DT speaker_NN of_IN the_DT zero_CD object_NN ._.
+We_PRP assumed_VBD that_IN considering_VBG the_DT sentence_NN distance_NN based_VBN on_IN the_DT speaker_NN of_IN the_DT zero_CD object_NN can_MD reflect_VB the_DT original_JJ aim_NN to_TO introduce_VB sentence_NN distance_NN for_IN one_CD of_IN the_DT features_NNS for_IN ML_NNP ._.
+Unlike_IN feature_NN 4_CD ,_, the_DT value_NN of_IN feature_NN 5_CD can_MD be_VB negative_JJ according_VBG to_TO the_DT consistency_NN of_IN the_DT speaker_NN between_IN the_DT zero_CD object_NN and_CC the_DT candidate_NN antecedent_NN ._.
+If_IN the_DT speaker_NN of_IN them_PRP is_VBZ not_RB the_DT same_JJ ,_, then_RB the_DT value_NN of_IN this_DT feature_NN will_MD be_VB negative_JJ ._.
+Feature_NN 6_CD represents_VBZ the_DT headedness_NN of_IN the_DT candidate_NN antecedent_NN ._.
+When_WRB a_DT candidate_NN antecedent_NN NP_NNP occurs_VBZ in_IN the_DT head_NN of_IN the_DT NP_NNP ,_, then_RB it_PRP can_MD be_VB considered_VBN as_IN the_DT likeliest_JJS antecedent_NN than_IN the_DT candidates_NNS which_WDT are_VBP not_RB the_DT head_NN of_IN the_DT NP_NNP ._.
+Feature_NN 7_CD is_VBZ based_VBN on_IN the_DT framework_NN of_IN centering_VBG theory_NN ._.
+In_IN the_DT previous_JJ literature_NN ,_, it_PRP is_VBZ argued_VBN that_IN a_DT salient_JJ entity_NN recoverable_JJ by_IN inference_NN from_IN the_DT context_NN is_VBZ frequently_RB omitted_VBN -LRB-_-LRB- Walker_NNP et_FW al._FW ,_, 1994_CD ;_: Iida_NNP ,_, 1998_CD ;_: Hong_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, we_PRP utilize_VBP the_DT forward_RB looking_VBG center_NN ranking_VBG for_IN Korean_JJ ,_, assuming_VBG the_DT most_RBS salient_JJ candidate_NN antecedent_NN which_WDT is_VBZ marked_VBN as_IN a_DT value_NN 1_CD is_VBZ likely_JJ to_TO be_VB the_DT antecedent_NN of_IN the_DT zero_CD object_NN ._.
+Feature_NN 8_CD encodes_VBZ the_DT gold_NN referential_JJ relation_NN between_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN ._.
+It_PRP takes_VBZ the_DT value_NN yes_RB if_IN the_DT noun_NN phrase_NN is_VBZ in_IN fact_NN an_DT antecedent_NN of_IN the_DT zero_CD object_NN ,_, and_CC no_DT if_IN it_PRP is_VBZ not_RB ._.
+4.2_CD Experiment_NN To_TO evaluate_VB the_DT effect_NN of_IN machine_NN learning_VBG method_NN ,_, we_PRP use_VBP „_CD WEKA_NNP ‟_CD system_NN -LRB-_-LRB- 3.6.10_CD version_NN -RRB-_-RRB- ._.
+Since_IN SVM_NNP -LRB-_-LRB- Support_NN Vector_NNP Machine_NNP -RRB-_-RRB- algorithm_NN has_VBZ shown_VBN good_JJ performance_NN in_IN various_JJ tasks_NNS in_IN NLP_NNP -LRB-_-LRB- Kudo_NNP and_CC Matsumoto_NNP ,_, 2001_CD ;_: Isozaki_NNP and_CC Kazawa_NNP ,_, 2002_CD -RRB-_-RRB- ,_, SVM_NNP algorithm_NN is_VBZ selected_VBN for_IN evaluation_NN ._.
+We_PRP collect_VBP spoken_VBN texts_NNS about_IN tourism_NN containing_VBG Korean_JJ zero_CD objects_NNS ._.
+1123_CD coreferential_JJ pairs_NNS are_VBP extracted_VBN from_IN the_DT corpus_NN ;_: 308_CD pairs_NNS are_VBP positive_JJ ,_, and_CC 824_CD pairs_NNS are_VBP negative_JJ ._.
+In_IN this_DT paragraph_NN we_PRP explain_VBP feature_NN 1_CD and_CC 2_CD in_IN detail_NN ._.
+Among_IN feature_NN 1_CD values_NNS ,_, if_IN the_DT value_NN top_NN is_VBZ assigned_VBN to_TO an_DT entity_NN ,_, it_PRP has_VBZ given_VBN preferential_JJ treatment_NN to_TO make_VB them_PRP antecedent_NN ._.
+In_IN Korean_JJ ,_, the_DT markers_NNS „_VBP eun_NN ‟_CD ,_, „_CD nun_NN ‟_CD ,_, „_CD to_TO ‟_CD ,_, „_CD man_NN ‟_CD show_NN which_WDT entity_NN is_VBZ a_DT topic_NN or_CC delimiter_NN ._.
+Feature_NN 2_CD encodes_VBZ whether_IN the_DT syntactic_JJ function_NN of_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN are_VBP equal_JJ ._.
+When_WRB the_DT syntactic_NN functions_NNS are_VBP different_JJ ,_, the_DT value_NN is_VBZ diff_NN ._.
+When_WRB a_DT candidate_NN antecedent_NN has_VBZ the_DT same_JJ syntactic_NN function_NN as_IN the_DT zero_CD object_NN ,_, it_PRP is_VBZ more_RBR likely_JJ to_TO be_VB an_DT antecedent_NN ._.
+This_DT is_VBZ one_CD of_IN the_DT reasons_NNS why_WRB we_PRP introduce_VBP feature_NN 2_CD ._.
+Feature_NN 3_CD represents_VBZ the_DT semantic_JJ relation_NN of_IN predicates_NNS between_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN ._.
+In_IN Korean_JJ ,_, it_PRP tends_VBZ to_TO be_VB correlated_VBN for_IN meaning_NN between_IN the_DT predicate_NN of_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN ._.
+The_DT values_NNS of_IN feature_NN 3_CD encode_VBP this_DT tendency_NN ._.
+Feature_NN 4_CD is_VBZ about_IN the_DT sentence_NN distance_NN between_IN the_DT zero_CD object_NN and_CC the_DT candidate_NN antecedent_NN ._.
+The_DT value_NN loc_NN indicates_VBZ that_IN the_DT pronoun_NN and_CC the_DT potential_JJ antecedent_NN are_VBP in_IN the_DT same_JJ local_JJ clause_NN ._.
+When_WRB the_DT pronoun_NN and_CC the_DT potential_JJ antecedent_NN occur_VBP in_IN the_DT same_JJ sentence_NN but_CC not_RB in_IN the_DT same_JJ clause_NN ,_, the_DT value_NN becomes_VBZ 0_CD ._.
+Higher_JJR values_NNS indicate_VBP larger_JJR distances_NNS ._.
+Candidates_NNS ,_, which_WDT appear_VBP on_IN the_DT first_JJ sentence_NN from_IN the_DT complex_JJ sentence_NN or_CC the_DT sentence_NN before_IN the_DT current_JJ sentence_NN ,_, are_VBP more_RBR preferred_VBN to_TO be_VB the_DT antecedent_NN than_IN the_DT other_JJ candidates_NNS ._.
+3_CD If_IN the_DT candidate_NN antecedent_NN and_CC the_DT zero_CD object_NN occur_VBP in_IN the_DT same_JJ clause_NN ,_, the_DT value_NN loc_NN is_VBZ assigned_VBN ._.
+The_DT experiment_NN result_NN was_VBD obtained_VBN by_IN splitting_NN the_DT data_NN set_NN in_IN ten_CD parts_NNS equally_RB for_IN 10-fold_JJ cross_NN validation_NN ._.
+Each_DT training_NN set_VBN contains_VBZ 90_CD %_NN of_IN the_DT total_JJ number_NN of_IN pairs_NNS ,_, and_CC the_DT remaining_VBG 10_CD %_NN are_VBP assigned_VBN to_TO the_DT test_NN sets_NNS ._.
+Using_VBG 8_CD features_NNS ,_, we_PRP have_VBP found_VBN 73.37_CD %_NN of_IN accuracy_NN ._.
+It_PRP may_MD not_RB be_VB quite_RB fair_JJ comparison_NN if_IN we_PRP compare_VBP our_PRP$ result_NN with_IN the_DT results_NNS of_IN other_JJ studies_NNS on_IN Korean_JJ written_VBN texts_NNS ._.
+Therefore_RB ,_, we_PRP set_VBD a_DT baseline_NN by_IN choosing_VBG the_DT most_RBS salient_JJ candidate_NN in_IN the_DT discourse_NN according_VBG to_TO the_DT forward_JJ looking_VBG center_NN ranking_NN in_IN Hong_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- for_IN comparison_NN ._.
+As_IN shown_VBN in_IN Table_NNP 7_CD ,_, the_DT proposed_VBN method_NN can_MD improve_VB the_DT accuracy_NN up_IN to_TO 62_CD %_NN which_WDT is_VBZ above_IN the_DT baseline_NN ._.
+ranking_JJ reflects_VBZ the_DT importance_NN of_IN the_DT role_NN of_IN sentence_NN distance_NN ._.
+As_IN the_DT table_NN 8_CD shows_NNS ,_, feature_VBP 3_CD ranked_VBD second_JJ ._.
+In_IN the_DT previous_JJ works_NNS ,_, subcategorization_NN information_NN is_VBZ utilized_VBN for_IN semantic_JJ constraints_NNS ._.
+For_IN example_NN ,_, if_IN a_DT zero_CD is_VBZ the_DT subject_NN of_IN „_CD eat_VBP ,_, ‟_VBP the_DT antecedent_NN is_VBZ probably_RB a_DT person_NN or_CC an_DT animal_NN ,_, and_CC so_RB on_IN ._.
+However_RB ,_, feature_VBP 3_CD ,_, which_WDT is_VBZ different_JJ from_IN the_DT semantic_JJ constraints_NNS from_IN the_DT other_JJ studies_NNS ,_, is_VBZ first_JJ introduced_VBN in_IN this_DT work_NN for_IN zero_CD object_NN resolution_NN ._.
+From_IN the_DT result_NN ,_, we_PRP can_MD assume_VB that_IN this_DT feature_NN plays_VBZ very_RB important_JJ role_NN to_TO zero_CD object_NN resolution_NN in_IN Korean_JJ ._.
+We_PRP can_MD also_RB verify_VB that_IN the_DT centering_VBG theory_NN is_VBZ crucial_JJ to_TO resolve_VB Korean_JJ zero_CD object_NN ._.
+According_VBG to_TO the_DT theory_NN ,_, there_EX is_VBZ a_DT tendency_NN that_IN the_DT most_RBS salient_JJ candidate_NN antecedent_NN is_VBZ realized_VBN as_IN a_DT zero_CD pronoun_NN ._.
+Since_IN feature_NN 7_CD reflects_VBZ this_DT property_NN and_CC this_DT feature_NN ranked_VBD third_JJ among_IN the_DT features_NNS we_PRP proposed_VBD ,_, the_DT tendency_NN is_VBZ proven_VBN to_TO be_VB significant_JJ for_IN zero_CD object_NN resolution_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP proposed_VBD a_DT ML_NNP method_NN to_TO resolve_VB Korean_JJ zero_CD object_NN in_IN spoken_VBN texts_NNS ._.
+Determining_VBG an_DT antecedent_NN of_IN a_DT zero_CD object_NN is_VBZ crucial_JJ in_IN developing_VBG MT_NNP systems_NNS with_IN Korean_JJ as_IN a_DT source_NN language_NN ._.
+In_IN case_NN of_IN translating_VBG Korean_JJ into_IN target_NN languages_NNS like_IN English_NNP and_CC German_NNP ,_, the_DT omitted_VBN object_NN has_VBZ to_TO be_VB resolved_VBN in_IN order_NN to_TO generate_VB overt_JJ objects_NNS in_IN target_NN languages_NNS ._.
+In_IN order_NN to_TO utilize_VB ML_NNP ,_, 8_CD features_NNS were_VBD suggested_VBN for_IN Korean_JJ zero_CD object_NN resolution_NN ._.
+An_DT experiment_NN was_VBD conducted_VBN to_TO test_VB the_DT feasibility_NN for_IN our_PRP$ method_NN ._.
+The_DT accuracy_NN was_VBD 73.37_CD %_NN which_WDT was_VBD higher_JJR than_IN the_DT baseline_NN ,_, when_WRB 8_CD features_NNS were_VBD used_VBN for_IN the_DT ML_NNP ._.
+Currently_RB ,_, we_PRP are_VBP increasing_VBG the_DT size_NN of_IN the_DT training_NN corpus_NN ,_, and_CC are_VBP planning_VBG to_TO validate_VB our_PRP$ model_NN in_IN depth_NN with_IN the_DT new_JJ training_NN corpus_NN ._.
+Acknowledgments_NNS This_DT work_NN was_VBD supported_VBN by_IN the_DT IT_PRP R&D_VBD program_NN of_IN MSIP/KEIT_NNP ._.
+-LSB-_NNP 10041807_CD ,_, Development_NNP of_IN Original_NNP Software_NNP Technology_NNP for_IN Automatic_NNP Speech_NNP Translation_NN with_IN Performance_NNP 90_CD %_NN for_IN Tour/International_NNP Event_NNP focused_VBD on_IN Multilingual_NNP Expansibility_NNP and_CC based_VBN on_IN Knowledge_NNP Learning_NNP -RSB-_NNP Accuracy_NNP Baseline_NNP 11.66_CD %_NN Experiment_NN 73.37_CD %_NN remark_NN 61.71_CD %_NN improved_VBN Table_NNP 7_CD The_DT result_NN of_IN experiment_NN Ranking_NNP Feature_NNP 1_CD f4_CD 2_CD f3_CD 3_CD f7_NN 4_CD f5_CD 5_CD f1_NN 6_CD f2_NN 7_CD f6_CD Sentence_NN distance_NN Semantic_JJ relation_NN between_IN predicates_NNS The_DT most_RBS salient_JJ candidate_NN antecedent_NN Sentence_NN distance_NN based_VBN on_IN Speaker_NNP of_IN zero_CD object_NN Syntactic_NNP function_NN of_IN candidate_NN antecedent_NN Parallelism_NNP of_IN syntactic_JJ function_NN Headedness_NNP of_IN candidate_NN antecedent_NN Table_NNP 8_CD The_DT ranking_NN of_IN features_NNS Table_NNP 8_CD shows_VBZ the_DT ranking_NN of_IN the_DT features_NNS selected_VBN by_IN „_CD InfoGainAttribute_NNP Evaluator_NNP ‟_NN ._.
+As_IN table_NN 8_CD shows_NNS ,_, feature_VBP 5_CD has_VBZ ranked_VBN top_NN ._.
+Sentence_NN distance_NN is_VBZ commonly_RB utilized_VBN in_IN other_JJ works_NNS on_IN anaphora_NN resolution_NN ,_, because_IN candidate_NN antecedents_NNS from_IN the_DT previous_JJ clause_NN or_CC sentence_NN are_VBP preferred_VBN ._.
+McEnery_NNP et_FW al._FW -LRB-_-LRB- 1997_CD -RRB-_-RRB- examined_VBD the_DT distance_NN of_IN pronouns_NNS and_CC their_PRP$ antecedent_NN ,_, and_CC concluded_VBD that_IN the_DT antecedents_NNS of_IN pronouns_NNS do_VBP exhibit_VB clear_JJ patterns_NNS of_IN distribution_NN ._.
+The_DT result_NN of_IN the_DT feature_NN References_NNP Baldwin_NNP ,_, B._NNP 1997_CD ._.
+CogNAC_NN :_: high_JJ precision_NN coreference_NN with_IN limited_JJ knowledge_NN and_CC linguistic_JJ resources_NNS ._.
+In_IN Proceedings_NNP of_IN a_DT Workshop_NNP on_IN Operational_NNP Factors_NNP in_IN Practical_NNP ,_, Robust_NNP Anaphora_NNP Resolution_NNP for_IN Unrestricted_NNP Texts_NNPS ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 38-45_CD ._.
+Carbonell_NNP ,_, J._NNP G._NNP ,_, &_CC Brown_NNP ,_, R._NNP D._NNP 1988_CD ._.
+Anaphora_NNP resolution_NN :_: a_DT multi-strategy_JJ approach_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 12th_JJ conference_NN on_IN Computational_JJ linguistics_NNS ,_, Volume_NN 1_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 96-101_CD ._.
+Choi_NNP ,_, J._NNP &_CC Lee_NNP ,_, M._NNP 1999_CD ._.
+Focus_NN --_: Formal_JJ Semantics_NNS and_CC description_NN of_IN Korean_JJ ._.
+Seoul_NNP :_: Hanshin_NNP publishing_VBG company_NN ._.
+-LRB-_-LRB- in_IN Korean_JJ -RRB-_-RRB- Connolly_NNP ,_, D._NNP ,_, Burger_NNP ,_, J._NNP D._NNP ,_, &_CC Day_NNP ,_, D._NNP S._NNP 1997_CD ._.
+A_DT machine_NN learning_VBG approach_NN to_TO anaphoric_JJ reference_NN ._.
+In_IN New_NNP Methods_NNPS in_IN Language_NNP Processing_NNP ._.
+pp._NNP 133-144_CD ._.
+Ferrández_NNP ,_, A._NN ,_, &_CC Peral_NNP ,_, J._NNP 2000_CD ._.
+A_DT computational_JJ approach_NN to_TO zero-pronouns_NNS in_IN Spanish_JJ ._.
+In_IN Proceedings_NNP of_IN the_DT 38th_JJ Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._NNP 166_CD -_: 172_CD ._.
+Grosz_NNP ,_, B._NNP J._NNP ,_, Weinstein_NNP ,_, S._NNP ,_, &_CC Joshi_NNP ,_, A._NN K._NNP 1995_CD ._.
+Centering_VBG :_: A_DT framework_NN for_IN modeling_NN the_DT local_JJ coherence_NN of_IN discourse_NN ._.
+Computational_JJ linguistics_NNS ,_, 21_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, pp._FW 203-225_CD ._.
+Hong_NNP ,_, M._NNP 2000_CD ._.
+Centering_VBG Theory_NNP and_CC Argument_NNP Deletion_NNP in_IN Spoken_NNP Korean_NNP ._.
+The_DT Korean_JJ Journal_NNP Cognitive_NNP Science_NNP ._.
+Vol_NNP ._.
+11_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+pp._NNP 9-24_CD ._.
+-LRB-_-LRB- in_IN Korean_JJ -RRB-_-RRB- Hong_NNP ,_, M._NNP 2002_CD ._.
+A_DT review_NN on_IN zero_CD anaphora_NN resolution_NN theories_NNS in_IN Korean_JJ ._.
+Studies_NNS in_IN Modern_NNP Grammar_NNP ,_, 29_CD ,_, pp._SYM 167-186_CD ._.
+Hong_NNP ,_, M._NNP 2011_CD ._.
+Zero_NNP subject_JJ Resolution_NN in_IN Korean_JJ for_IN machine_NN translation_NN into_IN German_JJ ._.
+German_JJ linguistics_NNS ,_, 24_CD ,_, pp._SYM 417-439_CD ._.
+-LRB-_-LRB- in_IN Korean_JJ -RRB-_-RRB- Iida_NNP ,_, M._NNP 1998_CD ._.
+Discourse_NN coherence_NN and_CC shifting_VBG centers_NNS in_IN Japanese_JJ texts_NNS ._.
+Centering_VBG theory_NN in_IN discourse_NN ,_, pp._VBP 161-180_CD ._.
+Isozaki_NNP ,_, H._NNP ,_, &_CC Kazawa_NNP ,_, H._NNP 2002_CD ._.
+Efficient_JJ support_NN vector_NN classifiers_NNS for_IN named_VBN entity_NN recognition_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 19th_JJ international_JJ conference_NN on_IN Computational_JJ linguistics_NNS ,_, Volume_NN 1_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._NNP 168-184_CD ._.
+Kameyama_NNP ,_, M._NNP 1986_CD ._.
+A_DT property-sharing_NN constraint_NN in_IN centering_VBG ._.
+In_IN Proceedings_NNP of_IN the_DT 24th_JJ annual_JJ meeting_NN on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 200_CD -_: 206_CD ._.
+Kim_NNP ,_, L._NNP K._NNP 2010_CD ._.
+Korean_JJ Honorific_NNP Agreement_NNP too_RB Guides_NNPS Null_NNP Argument_NNP Resolution_NNP :_: Evidence_NN from_IN an_DT Offline_NNP Study_NNP ._.
+University_NNP of_IN Pennsylvania_NNP Working_NNP Papers_NNP in_IN Linguistics_NNP ,_, 16_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 12_CD ._.
+pp._NNP 101-108_CD ._.
+Kudo_NNP ,_, T._NNP ,_, &_CC Matsumoto_NNP ,_, Y._NNP 2001_CD ._.
+Chunking_VBG with_IN support_NN vector_NN machines_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT second_JJ meeting_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS on_IN Language_NN technologies_NNS ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 1-8_CD ._.
+Lappin_NNP ,_, S._NNP ,_, &_CC Leass_NNP ,_, H._NNP J._NNP 1994_CD ._.
+An_DT algorithm_NN for_IN pronominal_JJ anaphora_NN resolution_NN ._.
+Computational_JJ linguistics_NNS ,_, 20_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, pp._FW 535-561_CD ._.
+Lee_NNP ,_, D._NNP 2002_CD ._.
+Discourse_NN Representation_NN Methods_NNS and_CC Korean_JJ Dialogue_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2002_CD Winter_NNP Linguistic_NNP Society_NNP of_IN Korea_NNP Conference_NNP ._.
+Seoul_NNP National_NNP University_NNP ,_, pp._NNP 88-104_CD ._.
+Okumura_NNP ,_, M._NNP ,_, &_CC Tamura_NNP ,_, K._NNP 1996_CD ._.
+Zero_NNP pronoun_NN resolution_NN in_IN Japanese_JJ discourse_NN based_VBN on_IN centering_VBG theory_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ conference_NN on_IN Computational_JJ linguistics_NNS ,_, Volume_NN 2_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._NNP 871-876_CD ._.
+McEnery_NNP et_FW al._FW 1997_CD ._.
+Corpus_NNP annotation_NN and_CC reference_NN resolution_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP Workshop_NNP on_IN Operational_NNP Factors_NNP in_IN Practical_NNP ,_, Robust_NNP Anaphora_NNP Resolution_NNP for_IN Unrestricted_NNP Texts_NNP ,_, pp._NNP 67-74_CD ._.
+Nakaiwa_NNP ,_, H._NNP ,_, &_CC Shirai_NNP ,_, S._NNP 1996_CD ._.
+Anaphora_NNP resolution_NN of_IN Japanese_JJ zero_CD pronouns_NNS with_IN deictic_JJ reference_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ conference_NN on_IN Computational_JJ linguistics_NNS ,_, Volume_NN 2_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._SYM 812-817_CD ._.
+Palomar_NNP ,_, M._NNP ,_, Ferrández_NNP ,_, A._NN ,_, Moreno_NNP ,_, L._NNP ,_, Martínez_NNP -_: Barco_NNP ,_, P._NNP ,_, Peral_NNP ,_, J._NNP ,_, Saiz-Noeda_NNP ,_, M._NNP ,_, &_CC Muñoz_NNP ,_, R._NNP 2001_CD ._.
+An_DT algorithm_NN for_IN anaphora_NN resolution_NN in_IN Spanish_JJ texts_NNS ._.
+Computational_NNP Linguistics_NNP ,_, 27_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, pp._FW 545-567_CD ._.
+Park_NNP ,_, A._NN ,_, &_CC Hong_NNP ,_, M._NNP 2014_CD ._.
+Hybrid_JJ Approach_NN to_TO Zero_NNP Subject_NNP Resolution_NNP for_IN multilingual_JJ MT-Spanish-to_JJ -_: Korean_JJ Cases_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 28th_JJ Pacific_NNP Asia_NNP Conference_NNP On_IN Language_NNP Information_NNP and_CC Computing_NNP ._.
+pp.254-261_JJ ._.
+Paul_NNP ,_, M._NNP ,_, Yamamoto_NNP ,_, K._NNP ,_, &_CC Sumita_NNP ,_, E._NNP 1999_CD ._.
+Corpus_NNP -_: based_VBN anaphora_NN resolution_NN towards_IN antecedent_NN preference_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Coreference_NNP and_CC its_PRP$ Applications_NNS ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._NNP 47-52_CD ._.
+Roh_NNP ,_, J._NNP E._NNP ,_, &_CC Lee_NNP ,_, J._NNP H._NNP 2003_CD ._.
+An_DT empirical_JJ study_NN for_IN generating_VBG zero_CD pronoun_NN in_IN Korean_JJ based_VBN on_IN Cost_NN -_: based_VBN Centering_NNP Model_NNP ._.
+In_IN Proceedings_NNP of_IN Australasian_NNP Language_NNP Technology_NNP Association_NNP ,_, pp._NNP 90-97_CD ._.
+Ryu_NNP ,_, B._NNP R._NNP 2001_CD ._.
+Centering_VBG and_CC zero_CD anaphora_NN in_IN the_DT Korean_JJ discourse_NN ._.
+Seoul_NNP National_NNP University_NNP ,_, MS_NNP Thesis_NNP ._.
+Walker_NNP ,_, M._NNP ,_, Cote_NNP ,_, S._NNP ,_, &_CC Iida_NNP ,_, M._NNP 1994_CD ._.
+Japanese_JJ discourse_NN and_CC the_DT process_NN of_IN centering_VBG ._.
+In_IN Proceedings_NNP of_IN Computational_NNP linguistics_NNS ,_, 20_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, pp._FW 193-232_CD ._.

@@ -1,0 +1,292 @@
+WICHAI_NNP a_DT Webservices_NNP Platform_NNP for_IN Tourism_NNP Based_VBD on_IN New_NNP Techniques_NNPS in_IN Thai-English_NNP Transliterated_NNP Words_NNP Searching_NNP Abstract_NNP This_DT research_NN proposes_VBZ a_DT new_JJ technique_NN in_IN Thai-English_NNP transliterated_VBD words_NNS searching_VBG by_IN using_VBG the_DT similar-sounding_JJ words_NNS database_NN with_IN similarity_NN and_CC relatedness_NN calculations_NNS ._.
+The_DT ''_'' WICHAI_NNP ''_'' platform_NN was_VBD employed_VBN as_IN a_DT core_NN of_IN the_DT search_NN engine_NN components_NNS ._.
+The_DT newly_RB proposed_VBN method_NN can_MD help_VB non-native_JJ -_: speaker_NN tourists_NNS ,_, who_WP lack_VBP of_IN Thai_NNP language_NN skills_NNS ,_, to_TO find_VB the_DT relevant_JJ and_CC accurate_JJ key_NN -_: words_NNS on_IN the_DT internet_NN with_IN wider_JJR and_CC better_JJR flexibility_NN ._.
+The_DT calculations_NNS uses_VBZ succesively_RB consonants_NNS and_CC vowels_NNS comparisons_NNS based_VBN on_IN the_DT Royal_NNP Thai_NNP General_NNP System_NNP of_IN Transcrip_NNP -_: tion_NN -LRB-_-LRB- RTGS_NNP -RRB-_-RRB- ,_, iterations_NNS with_IN similar_JJ charac_NN -_: ters_NNS ,_, and_CC finally_RB ,_, Livenshtein_NNP method_NN ._.
+Simi_SYM -_: larity_NN calculations_NNS with_IN various_JJ threshold_NN lev_NN -_: els_NNS were_VBD conducted_VBN in_IN order_NN to_TO obtain_VB the_DT most_RBS appropriate_JJ words_NNS whereas_IN the_DT level_NN of_IN word_NN -_: meaning_VBG understanding_NN is_VBZ still_RB maintained_VBN ._.
+Keywords_NNS :_: Thai_NNP Language_NNP ,_, Transliteration_NNP ,_, Livenshtein_NNP Algorithm_NNP ,_, Phuket_NNP Tourism_NNP Plat_NNP -_: form_NN ,_, Ontologies_NNPS 1_CD Introduction_NNP Tourism_NNP is_VBZ an_DT important_JJ business_NN section_NN in_IN many_JJ countries_NNS including_VBG Thailand_NNP ._.
+Thailand_NNP is_VBZ a_DT country_NN with_IN rich_JJ natural_JJ resources_NNS suitable_JJ for_IN tourism_NN in_IN all_DT regions_NNS ._.
+In_IN 2014_CD ,_, Thailand_NNP won_VBD ''_'' The_DT most_RBS popular_JJ tourist_NN destination_NN in_IN Asia_NNP ''_'' award_NN conferred_VBD by_IN Ger_NNP -_: man_NN travel_NN industry_NN group_NN Go_NNP Asia_NNP ._.
+Facilities_NNP for_IN tourists_NNS who_WP are_VBP not_RB native_JJ speakers_NNS have_VBP become_VBN an_DT essence_NN to_TO maintain_VB and_CC enhance_VB this_DT business_NN sec_SYM -_: tion_NN in_IN international_JJ level_NN ._.
+One_CD of_IN the_DT major_JJ obsta_NN -_: cles_NNS for_IN tourists_NNS to_TO find_VB information_NN of_IN a_DT desired_VBN des_FW -_: tination_NN on_IN the_DT internet_NN is_VBZ the_DT language_NN barrier_NN ._.
+The_DT universal_JJ standard_NN called_VBN ''_'' karaoke_NN language_NN ''_'' is_VBZ used_VBN for_IN transliterating_VBG Thai_NNP into_IN the_DT Roman_NNP script_NN ._.
+More_RBR -_: over_IN ,_, the_DT native_JJ language_NN can_MD be_VB used_VBN in_IN both_DT formal_JJ and_CC informal_JJ approaches_NNS ._.
+Some_DT words_NNS ,_, phrases_NNS and_CC accents_NNS are_VBP used_VBN only_RB in_IN some_DT specific_JJ social_JJ situa_NN -_: tions_NNS and_CC regions_NNS with_IN their_PRP$ local_JJ dialect_NN ._.
+Tourists_NNS may_MD get_VB some_DT suggestions_NNS for_IN unseen_JJ destinations_NNS from_IN the_DT locals_NNS and_CC might_MD not_RB be_VB able_JJ to_TO find_VB fur_NN -_: ther_NN information_NN from_IN the_DT internet_NN ._.
+This_DT is_VBZ due_JJ to_TO language_NN barriers_NNS and_CC also_RB variation_NN of_IN sound_NN and_CC pronunciation_NN of_IN the_DT native_JJ language_NN ._.
+For_IN example_NN ,_, locals_NNS would_MD say_VB ''_'' Namtok_NNP Kathu_NNP ''_'' to_TO indicate_VB the_DT ''_'' Kathu_NNP Waterfall_NNP ''_'' ._.
+Therefore_RB ,_, when_WRB tourists_NNS search_NN ''_'' Namtok_NNP Kathu_NNP ''_'' -LRB-_-LRB- keywords_NNS ,_, names_NNS and_CC places_NNS -RRB-_-RRB- in_IN Thai_NNP language_NN on_IN the_DT internet_NN ,_, they_PRP will_MD not_RB be_VB able_JJ to_TO find_VB the_DT required_VBN information_NN unless_IN the_DT search_NN en_IN -_: gine_NN recognizes_VBZ that_IN ''_'' Namtok_NNP Kathu_NNP ''_'' is_VBZ related_VBN to_TO ''_'' Kathu_NNP Waterfall_NNP ''_'' ._.
+This_DT provides_VBZ the_DT possibility_NN to_TO enhance_VB the_DT current_JJ system_NN with_IN the_DT newly_RB proposed_VBN algorithm_NN ._.
+In_IN the_DT globalization_NN era_NN ,_, most_JJS people_NNS can_MD connect_VB to_TO each_DT other_JJ via_IN internet_NN anytime_RB and_CC anywhere_RB ._.
+Most_JJS search_NN engines_NNS use_VBP keywords_NNS query_NN which_WDT is_VBZ identical_JJ and_CC relevant_JJ to_TO conceptual_JJ search_NN -LRB-_-LRB- Singth_NNP -_: ongchai_NN and_CC Niwattanakul_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+This_DT means_VBZ that_IN the_DT way_NN the_DT user_NN spells_NNS a_DT word_NN affects_VBZ the_DT search_NN re_SYM -_: sults_NNS and_CC thus_RB a_DT spelling_NN mismatch_NN would_MD give_VB inac_SYM -_: curate_VB results_NNS ._.
+Unfortunately_RB ,_, keywords_NNS for_IN touris_NNS -_: tic_JJ attractions_NNS in_IN Thailand_NNP are_VBP often_RB expressed_VBN in_IN Thai_NNP language_NN such_JJ as_IN the_DT name_NN of_IN touristic_JJ sites_NNS ,_, museums_NNS ,_, restaurants_NNS or_CC plaza_NN ._.
+These_DT keywords_NNS can_MD not_RB be_VB translated_VBN into_IN English_NNP such_JJ as_IN ``_`` วัด_SYM -_: จันทร์_NN ''_'' -LRB-_-LRB- ``_`` Wat_NNP Chan_NNP ''_'' -RRB-_-RRB- ,_, which_WDT is_VBZ used_VBN by_IN locals_NNS to_TO indicate_VB the_DT ``_`` Chan_NNP ''_'' temple_NN ._.
+When_WRB trans_NNS -_: lated_VBN to_TO English_NNP ,_, the_DT keyword_NN ``_`` Wat_NNP Chan_NNP ''_'' be_VB -_: comes_VBZ ``_`` Moon_NNP Temple_NNP ''_'' and_CC when_WRB a_DT non_NN native_JJ user_NN searches_VBZ the_DT translation_NN he_PRP will_MD not_RB have_VB the_DT desired_VBN result_NN ._.
+Therefore_RB ,_, tourists_NNS have_VBP to_TO search_VB only_RB in_IN transliterated_JJ keywords_NNS ._.
+Cur_SYM -_: rently_RB ,_, word_NN transliteration_NN from_IN Thai_NNP to_TO En_SYM -_: glish_NN has_VBZ fixed_VBN guidelines_NNS and_CC rules_NNS but_CC ,_, due_JJ to_TO the_DT language_NN barrier_NN ,_, these_DT guidelines_NNS can_MD not_RB be_VB used_VBN by_IN tourists_NNS -LRB-_-LRB- non_JJ native_JJ users_NNS -RRB-_-RRB- ._.
+Thereby_RB ,_, tourists_NNS may_MD not_RB find_VB suitable_JJ and_CC accurate_JJ in_IN -_: formation_NN on_IN touristic_JJ attractions_NNS on_IN the_DT inter_NN -_: net_NN without_IN the_DT help_NN of_IN a_DT personal_JJ native_JJ guide_NN or_CC friends_NNS ._.
+The_DT new_JJ algorithm_NN that_IN we_PRP propose_VBP in_IN this_DT pa_NN -_: per_IN enhances_VBZ the_DT effectiveness_NN of_IN search_NN engines_NNS when_WRB transliterated_VBN words_NNS are_VBP used_VBN ._.
+This_DT is_VBZ done_VBN by_IN adding_VBG ,_, organizing_VBG and_CC classifying_VBG words_NNS into_IN groups_NNS of_IN consonants_NNS and_CC vowels_NNS ._.
+A_DT search_NN en_IN -_: gine_NN using_VBG our_PRP$ new_JJ algorithm_NN can_MD match_VB and_CC find_VB correct_JJ or_CC nearest_JJS and_CC most_RBS related_JJ words_NNS as_RB much_RB as_IN possible_JJ even_RB when_WRB misspellings_NNS -LRB-_-LRB- with_IN acceptable_JJ basis_NN -RRB-_-RRB- are_VBP present_JJ in_IN the_DT search_NN ._.
+The_DT new_JJ proposed_VBN approach_NN can_MD provide_VB more_JJR flex_SYM -_: ibility_NN to_TO find_VB information_NN on_IN search_NN engines_NNS ._.
+This_DT is_VBZ a_DT powerful_JJ tool_NN which_WDT can_MD reduce_VB the_DT search_NN time_NN and_CC provide_VB more_JJR flexibility_NN for_IN non_NN -_: native_JJ travelers_NNS in_IN Thailand_NNP ._.
+In_IN the_DT second_JJ section_NN of_IN this_DT paper_NN we_PRP present_VBP the_DT related_JJ work_NN on_IN information_NN re_SYM -_: trieval_NN and_CC searching_VBG transliterated_JJ words_NNS with_IN RTGS_NNP ._.
+Then_RB ,_, in_IN the_DT third_JJ section_NN ,_, we_PRP intro_VBP -_: duce_NN ''_'' WICHAI_NNP ''_'' :_: a_DT platform_NN for_IN Phuket_NNP tourism_NN based_VBN on_IN ontology_NN and_CC Thai-English_JJ transliter_NN -_: ated_JJ words_NNS searching_VBG methodology_NN ._.
+In_IN the_DT fourth_JJ section_NN ,_, we_PRP show_VBP the_DT final_JJ results_NNS based_VBN on_IN the_DT combination_NN of_IN all_DT proposed_VBN processes_NNS ._.
+Finally_RB ,_, we_PRP conclude_VBP by_IN a_DT discussion_NN and_CC summary_NN ._.
+For_IN the_DT rest_NN of_IN the_DT paper_NN we_PRP use_VBP the_DT abbrevi_NN -_: ations_NNS TH_NNP ,_, EN_NNP ,_, FR_NNP and_CC TW_NNP to_TO refer_VB to_TO Thai_NNP ,_, English_NNP ,_, French_NNP and_CC Transliterated_NNP Words_NNS ,_, re_SYM -_: spectively_RB ._.
+We_PRP also_RB use_VBP the_DT form_NN -LSB-_NNP W1_NNP -LRB-_-LRB- L1_NNP -RRB-_-RRB- →_SYM W2_CD -LRB-_-LRB- L2_NN -RRB-_-RRB- -RSB-_NN to_TO say_VB that_IN word_NN W2_NN is_VBZ the_DT translation_NN of_IN word_NN W1_CD from_IN language_NN L1_CD to_TO language_NN L2_NN ._.
+2_CD Related_JJ work_NN 2.1_CD Information_NN Retrieval_NNP Information_NNP retrieval_NN is_VBZ the_DT name_NN of_IN the_DT activ_NN -_: ity_NN that_IN connects_VBZ a_DT collection_NN of_IN information_NN re_SYM -_: sources_NNS to_TO the_DT users_NNS needing_VBG it_PRP ._.
+It_PRP is_VBZ to_TO obtain_VB information_NN resources_NNS relevant_JJ to_TO specific_JJ infor_NN -_: mation_NN need_NN ._.
+The_DT search_NN is_VBZ based_VBN essentially_RB on_IN the_DT definition_NN of_IN keywords_NNS ._.
+The_DT output_NN is_VBZ ob_SYM -_: tained_VBN by_IN only_RB selecting_VBG the_DT information_NN that_WDT users_NNS need_VBP and_CC removing_VBG or_CC filtering_VBG unrelated_JJ words_NNS -LRB-_-LRB- Baeza-Yates_NNPS and_CC Ribeiro-Neto_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+During_IN the_DT last_JJ decade_NN ,_, information_NN retrieval_NN techniques_NNS was_VBD based_VBN on_IN dictionary_NN -LRB-_-LRB- thesaurus_NN -RRB-_-RRB- searches_NNS ._.
+As_IN the_DT words_NNS are_VBP being_VBG added_VBD all_PDT the_DT time_NN ,_, we_PRP need_VBP enough_JJ space_NN to_TO keep_VB the_DT in_IN -_: formation_NN -LRB-_-LRB- Sanderson_NNP and_CC Croft_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT next_JJ problem_NN is_VBZ that_IN the_DT Thai_NNP language_NN can_MD be_VB written_VBN in_IN different_JJ formats_NNS depending_VBG on_IN the_DT linguistic_JJ familiarity_NN of_IN the_DT user_NN ._.
+Exam_NN -_: ple_NN ,_, the_DT word_NN ``_`` สวัสดี_NN ''_'' -LSB-_NNP TH_NNP -RSB-_NNP means_VBZ ``_`` Hello_UH ''_'' -LSB-_NNP EN_NNP -RSB-_NNP and_CC can_MD be_VB correctly_RB transliterated_VBN into_IN ``_`` Sawas_NNP -_: dee_NN ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+The_DT problem_NN is_VBZ that_IN the_DT same_JJ pro-_JJ nunciation_NN can_MD be_VB obtained_VBN using_VBG other_JJ different_JJ transliterations_NNS of_IN the_DT word_NN :_: ``_`` Sawatdee_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, ``_`` Sawadee_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP and_CC ``_`` Sawade_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+The_DT reason_NN is_VBZ that_IN some_DT combinations_NNS of_IN characters_NNS can_MD re_VB -_: flect_VB a_DT similar_JJ pronunciation_NN and_CC thus_RB they_PRP can_MD replace_VB each_DT other_JJ ._.
+A_DT good_JJ system_NN requires_VBZ a_DT complete_JJ and_CC correct_JJ support_NN of_IN consonants_NNS and_CC vowels_NNS in_IN order_NN to_TO be_VB able_JJ to_TO search_VB relevant_JJ in_IN -_: formation_NN efficiently_RB ._.
+2.2_CD Transliteration_NNP for_IN Thai_NNP Language_NNP Fundamentals_NNS of_IN consonants_NNS and_CC vowels_NNS map_VBP -_: ping_NN between_IN Thai_NNP and_CC English_NNP are_VBP an_DT essential_JJ key_NN of_IN this_DT paper_NN ._.
+The_DT transcription_NN between_IN languages_NNS is_VBZ very_RB difficult_JJ due_JJ to_TO the_DT difficulty_NN to_TO do_VB phonetics_NNS distinction_NN between_IN vowels_NNS and_CC consonants_NNS ._.
+The_DT transcription_NN is_VBZ indeed_RB com_NN -_: posed_VBN of_IN two_CD parts_NNS :_: transcription_NN of_IN consonants_NNS and_CC transcription_NN of_IN vowels_NNS ._.
+Basic_JJ Thai_NNP textual_JJ syllables_NNS can_MD be_VB represented_VBN in_IN the_DT form_NN of_IN initial_JJ consonant_JJ ,_, a_DT vowel_NN ,_, a_DT final_JJ consonant_JJ or_CC a_DT tone_NN ._.
+In_IN the_DT Thai_NNP language_NN ,_, phonetics_NNS are_VBP based_VBN on_IN the_DT exact_JJ tone_NN of_IN the_DT voice_NN -LRB-_-LRB- 5_CD tone_NN levels_NNS and_CC 4_CD tone_NN marks_NNS -RRB-_-RRB- -LRB-_-LRB- Sangkavichitr_NNP ,_, 2012_CD -RRB-_-RRB- and_CC their_PRP$ tones_NNS have_VBP unique_JJ significantly_RB different_JJ -LRB-_-LRB- Kertkeidka_NNP -_: chorn_NN et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+This_DT mapping_NN rule_NN has_VBZ ,_, how_WRB -_: ever_RB ,_, many_JJ limitations_NNS due_JJ to_TO the_DT absence_NN of_IN the_DT necessary_JJ tone_NN marks_NNS to_TO distinguish_VB words_NNS and_CC meanings_NNS in_IN Thai_NNP ._.
+Most_JJS of_IN transcription_NN prob_NN -_: lems_NNS come_VBP from_IN character-sound_JJ mapping_NN ambi_NNS -_: guity_NN ,_, functional_JJ consonants_NNS ,_, character_NN ordering_VBG and_CC implicit_JJ vowels_NNS -LRB-_-LRB- Thangthai_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+The_DT mapping_NN of_IN consonants_NNS and_CC vowels_NNS used_VBN in_IN this_DT research_NN is_VBZ based_VBN on_IN two_CD resources_NNS ._.
+The_DT first_JJ is_VBZ The_DT Royal_NNP Thai_NNP General_NNP System_NNP of_IN Tran_NNP -_: scription_NN -LRB-_-LRB- RTGS_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+The_DT second_JJ is_VBZ the_DT simi_NN -_: lar_NN table_NN ._.
+RTGS_NNP is_VBZ the_DT official_JJ system_NN for_IN render_NN -_: ing_NN Thai_NNP words_NNS in_IN the_DT Latin_NNP alphabet_NN ._.
+This_DT sys_SYM -_: tem_NN is_VBZ published_VBN by_IN the_DT Royal_NNP institute_NN of_IN Thai_NNP -_: land_NN which_WDT is_VBZ authorized_VBN to_TO issue_VB official_JJ guide_NN -_: lines_NNS for_IN Thai_NNP transcriptions_NNS of_IN foreign_JJ words_NNS and_CC also_RB Romanization_NN of_IN Thai_NNP words_NNS ._.
+The_DT purpose_NN of_IN RTGS_NNP is_VBZ to_TO enable_VB a_DT user_NN to_TO read_VB and_CC write_VB Thai_NNP words_NNS using_VBG the_DT Roman_JJ alphabets_NNS that_WDT are_VBP the_DT closest_JJS to_TO the_DT original_JJ Thai_NNP ones_NNS -LRB-_-LRB- Romanized_NNP Character_NNP Part_NNP :_: Figures_NNS 1_CD and_CC 2_CD -RRB-_-RRB- ._.
+The_DT official_NN rule_NN to_TO convert_VB transliterated_JJ words_NNS uses_VBZ the_DT principle_NN of_IN romanization_NN by_IN transcription_NN method_NN as_IN -LRB-_-LRB- called_VBN romanized_VBN char_SYM -_: acters_NNS -RRB-_-RRB- proposed_VBN by_IN the_DT Royal_NNP Institute_NNP ._.
+Ro_SYM -_: manization_NN of_IN Thai_NNP words_NNS is_VBZ based_VBN on_IN sound_JJ transcription_NN ._.
+Both_DT consonants_NNS and_CC vowels_NNS must_MD be_VB spelled_VBN and_CC sorted_VBN grammatically_RB correctly_RB ._.
+Otherwise_RB ,_, the_DT search_NN engine_NN may_MD not_RB find_VB the_DT required_VBN information_NN ._.
+In_IN addition_NN ,_, some_DT words_NNS in_IN Thai_NNP are_VBP the_DT same_JJ in_IN English_NNP such_JJ as_IN the_DT word_NN -LSB-_JJ computer_NN -LRB-_-LRB- EN_IN -RRB-_-RRB- →_CD ``_`` คอมพิวเตอร์_NN ''_'' -LRB-_-LRB- TH_NNP -RRB-_-RRB- -RSB-_NNP ._.
+But_CC when_WRB transliterated_VBN ,_, the_DT word_NN ``_`` computer_NN ''_'' in_IN Thai_NNP becomes_VBZ ``_`` computoe_NN ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+Therefore_RB ,_, when_WRB a_DT user_NN searches_NNS for_IN the_DT transliterated_VBN form_NN of_IN this_DT word_NN ,_, search_NN engines_NNS will_MD most_RBS likely_JJ find_VBP the_DT closest_JJS English_JJ words_NNS that_IN most_JJS users_NNS know_VBP and_CC not_RB the_DT transliterated_VBN one_CD ._.
+In_IN this_DT case_NN ,_, the_DT transliterated_VBN word_NN will_MD not_RB be_VB available_JJ for_IN searching_VBG ._.
+The_DT sound_NN of_IN English_NNP alphabets_NNS can_MD be_VB com_NN -_: pared_VBN to_TO Thai_NNP alphabets_NNS such_JJ as_IN the_DT sound_NN of_IN the_DT letter_NN ``_`` K_NNP ''_'' is_VBZ represented_VBN by_IN one_CD of_IN the_DT let_VB -_: ters_NNS ``_`` ก_FW ''_'' ,_, ``_`` ข_FW ''_'' or_CC ``_`` ค_FW ''_'' -LRB-_-LRB- Chai_NNP and_CC Aus_NNP -_: dang_NN ,_, 2010_CD -RRB-_-RRB- ._.
+In_IN addition_NN ,_, letters_NNS from_IN the_DT same_JJ alphabetical_JJ group_NN in_IN English_NNP can_MD give_VB differ_VB -_: ent_JJ words_NNS and_CC meanings_NNS in_IN Thai_NNP ._.
+An_DT exam_NN -_: ple_NN of_IN this_DT case_NN is_VBZ the_DT letters_NNS ``_`` K_NNP ''_'' and_CC ``_`` G_NNP ''_'' :_: When_WRB the_DT letter_NN ``_`` G_NNP ''_'' is_VBZ replaced_VBN by_IN ``_`` K_NNP ''_'' in_IN the_DT classical_JJ thai_JJ meal_NN ``_`` Tom_NNP Kah_NNP Gai_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, we_PRP end_VBP up_RP with_IN the_DT transliterated_VBN word_NN ``_`` Tom_NNP Kah_NNP Kai_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP where_WRB ``_`` Gai_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP means_VBZ chicken_NN while_IN ``_`` Kai_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP means_VBZ egg_NN ._.
+Due_JJ to_TO the_DT above_JJ reasons_NNS ,_, Thai-English_JJ translation_NN is_VBZ considered_VBN very_RB complex_JJ and_CC less_RBR flexible_JJ for_IN searching_VBG ._.
+This_DT work_NN reuses_VBZ the_DT results_NNS of_IN a_DT research_NN pa_NN -_: per_IN written_VBN in_IN Thai_NNP by_IN Tasanawan_NNP Soonklang_NNP ,_, Somchai_NNP Prasitjutrakul_NNP and_CC Boonserm_NNP Kijsirikul_NNP in_IN 2000_CD ._.
+Then_RB we_PRP apply_VBP to_TO it_PRP phonetics_VBZ mapping_NN of_IN consonants_NNS and_CC vowels_NNS between_IN Thai_NNP and_CC En_NNP -_: glish_NN ._.
+We_PRP created_VBD the_DT similar_JJ table_NN which_WDT orga_SYM -_: nizes_VBZ the_DT groups_NNS of_IN similar_JJ consonants_NNS and_CC vow_NN -_: els_NNS together_RB ._.
+Moreover_RB ,_, the_DT number_NN of_IN similar_JJ characters_NNS is_VBZ increased_VBN in_IN order_NN to_TO gain_VB more_JJR comprehensibility_NN as_IN shown_VBN in_IN Figures_NNS 1_CD and_CC 2_CD ._.
+The_DT similar_JJ table_NN -LRB-_-LRB- consonants_NNS and_CC vowels_NNS -RRB-_-RRB- is_VBZ compatible_JJ with_IN users_NNS with_IN no_DT knowledge_NN of_IN linguistics_NNS ._.
+This_DT table_NN is_VBZ not_RB officially_RB used_VBN as_IN an_DT alternative_JJ standard_NN ._.
+However_RB ,_, it_PRP will_MD be_VB useful_JJ in_IN reducing_VBG search_NN limitations_NNS in_IN practice_NN ._.
+Figure_NN 1_CD :_: Vowel_NNP Mapping_NNP -LRB-_-LRB- sound_NN -RRB-_-RRB- Prayut_NNP and_CC Somboon_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- presented_VBD an_DT algorithm_NN for_IN Thai-English_NNP cross-language_NN transliterated_VBD word_NN retrieval_NN ._.
+The_DT retrieval_NN is_VBZ done_VBN by_IN using_VBG phonetic_JJ codes_NNS retrieval_NN based_VBN on_IN a_DT modified_VBN soundex_NN coding_NN ._.
+The_DT soundex_JJ system_NN is_VBZ fast_RB and_CC usually_RB matches_VBZ names_NNS that_IN it_PRP should_MD Figure_NN 2_CD :_: Consonant_NNP Mapping_NNP -LRB-_-LRB- sound_NN -RRB-_-RRB- find_VBP ,_, but_CC often_RB causes_VBZ errors_NNS such_JJ as_IN incorrectly_RB matched_VBN names_NNS that_WDT do_VBP not_RB have_VB actually_RB sim_SYM -_: ilar_NN sounds_NNS ._.
+Tasanawan_NNP Soonklang_NNP and_CC Ki_NNP -_: jsirikul_NN -LRB-_-LRB- 2000_CD -RRB-_-RRB- proposed_VBN Thai-English_NNP transliter_NN -_: ated_VBN word_NN encoding_VBG for_IN cross-language_JJ retrieval_NN system_NN using_VBG back_RB propagation_NN neural_JJ network_NN ._.
+This_DT encoding_NN uses_VBZ the_DT network_NN output_NN to_TO ob_SYM -_: tain_VB a_DT list_NN of_IN phonetic_JJ codes_NNS of_IN a_DT word_NN ._.
+The_DT ex_FW -_: perimental_JJ results_NNS using_VBG K-fold_JJ cross_NN validation_NN technique_NN ._.
+Lin_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- presented_VBD the_DT Japanese_JJ -_: Chinese_JJ retrieval_NN system_NN based_VBN on_IN the_DT PageRank_NNP algorithm_NN ._.
+It_PRP applied_VBD query_NN transliteration_NN with_IN Sanseido_NNP Japanese-Chinese_NNP bilingual_JJ dictionary_NN and_CC translated_VBN query_NN terms_NNS with_IN wikipedia_NN ._.
+Jhamtani_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- presented_VBN code_NN switch_NN -_: ing_NN between_IN English_NNP and_CC Hindi_NNP ._.
+They_PRP use_VBP frequently_RB characters_NNS substituted_VBN for_IN standard_JJ characters_NNS in_IN transliterated_JJ forms_NNS ._.
+Modified_VBN edit_JJ distance_NN algorithm_NN is_VBZ calculated_VBN for_IN results_NNS ._.
+3_CD Contribution_NN 3.1_CD WICHAI_NNP Platform_NN WICHAI_NNP -LRB-_-LRB- WebservICes_NNP platform_NN for_IN pHuket_NNP tourism_NN bAsed_VBD on_IN ontologIes_NNS -RRB-_-RRB- is_VBZ a_DT platform_NN for_IN searching_VBG touristic_JJ attractions_NNS ,_, activities_NNS and_CC destinations_NNS in_IN Phuket_NNP -LRB-_-LRB- Thailand_NNP -RRB-_-RRB- based_VBN on_IN three_CD ontologies_NNS as_IN shown_VBN in_IN Figure_NN 3_CD ._.
+It_PRP is_VBZ useful_JJ for_IN visitors_NNS to_TO be_VB able_JJ to_TO search_VB in_IN -_: formation_NN easily_RB and_CC correctly_RB ._.
+This_DT platform_NN is_VBZ composed_VBN of_IN a_DT website_NN ,_, search_NN engine_NN and_CC ontolo_NN -_: gies_NNS ._.
+The_DT website_NN is_VBZ a_DT key_JJ component_NN for_IN users_NNS to_TO access_VB the_DT main_JJ functions_NNS ._.
+It_PRP provides_VBZ various_JJ services_NNS such_JJ as_IN register_NN or_CC login_NN to_TO establish_VB a_DT connection_NN to_TO the_DT user_NN profile_NN ontology_NN ,_, search_NN by_IN keywords_NNS ,_, GPS_NNP ,_, etc._FW ._.
+The_DT website_NN of_IN the_DT plat_NN -_: form_NN connects_VBZ to_TO the_DT search_NN engine_NN ._.
+The_DT search_NN engine_NN represents_VBZ the_DT main_JJ linguistic_JJ processing_NN part_NN of_IN the_DT platform_NN ._.
+It_PRP consists_VBZ of_IN three_CD compo_NN -_: nents_NNS :_: EnglishWords_NNS Searching_VBG ,_, Transliterated_NNP -_: Words_NNS Searching_VBG and_CC PossibleWords_NNP Searching_NNP using_VBG interoperability_NN between_IN Romanized_NNP and_CC similar_JJ table_NN ._.
+The_DT search_NN engine_NN is_VBZ the_DT part_NN that_WDT guarantees_VBZ a_DT high_JJ efficiency_NN for_IN searching_VBG when_WRB using_VBG the_DT platform_NN ._.
+The_DT last_JJ part_NN is_VBZ the_DT ontolo_NN -_: gies_NNS ,_, it_PRP is_VBZ composed_VBN of_IN three_CD ontologies_NNS which_WDT are_VBP PhuketTourism_NNP ,_, Language_NN and_CC UserProfile_NNP ._.
+The_DT first_JJ ontology_NN ,_, PhuketTourism_NNP ,_, represents_VBZ the_DT various_JJ information_NN available_JJ in_IN Phuket_NNP such_JJ as_IN attractions_NNS ,_, activities_NNS ,_, events_NNS etc._FW ._.
+Next_JJ ,_, the_DT Language_NN ontology_NN is_VBZ the_DT collecting_VBG of_IN relevant_JJ words_NNS ,_, synonyms_NNS and_CC data_NNS types_NNS to_TO be_VB applied_VBN with_IN the_DT algorithm_NN to_TO create_VB the_DT list_NN of_IN similar_JJ words_NNS ._.
+Finally_RB ,_, the_DT UserProfile_NNP ontology_NN stores_NNS the_DT details_NNS of_IN users_NNS such_JJ as_IN the_DT favorite_JJ sport_NN ,_, the_DT travel_NN time_NN ,_, etc._FW ._.
+It_PRP is_VBZ used_VBN as_IN initial_JJ data_NNS for_IN Figure_NN 3_CD :_: WICHAI_NNP Platform_NNP search_NN mapping_NN ._.
+3.2_CD Methodology_NNP Thai_NNP alphabets_NNS consists_VBZ of_IN 44_CD consonants_NNS -LRB-_-LRB- classi_SYM -_: fied_VBN in_IN 14_CD groups_NNS of_IN sound_NN -RRB-_-RRB- and_CC 44_CD vowels-sound_JJ -LRB-_-LRB- classified_VBN in_IN 21_CD groups_NNS -RRB-_-RRB- ._.
+Each_DT syllable_NN in_IN the_DT Thai_NNP alphabet_NN must_MD contain_VB both_DT vowels_NNS and_CC consonants_NNS ._.
+For_IN a_DT consonant_JJ ,_, the_DT translitera_NN -_: tion_NN differs_VBZ depending_VBG on_IN its_PRP$ location_NN in_IN the_DT syl_NN -_: lable_NN ._.
+Thai_NNP consonants_NNS can_MD be_VB initial_JJ consonants_NNS or_CC final_JJ consonants_NNS ._.
+The_DT initial_JJ consonants_NNS are_VBP required_VBN in_IN all_DT syllables_NNS ._.
+An_DT initial_JJ consonant_JJ might_MD be_VB pronounced_JJ differently_RB when_WRB used_VBN as_IN a_DT final_JJ consonant_JJ ._.
+For_IN example_NN ,_, the_DT word_NN ``_`` ดาด_FW ''_'' -LSB-_NNP TH_NNP -RSB-_NNP can_MD be_VB transliterated_VBN as_IN ``_`` DAT_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+We_PRP notice_VBP that_IN the_DT consonant_JJ ``_`` ด_FW ''_'' is_VBZ pronounced_VBN as_IN ``_`` D_NNP ''_'' when_WRB it_PRP is_VBZ an_DT initial_JJ consonant_JJ while_IN it_PRP is_VBZ pronounced_VBN as_IN ``_`` T_NNP ''_'' when_WRB it_PRP is_VBZ a_DT final_JJ consonant_JJ ._.
+Consonants_NNS in_IN Thai_NNP can_MD not_RB be_VB pronounced_VBN without_IN vowels_NNS ._.
+Each_DT vowel_NN begins_VBZ with_IN either_DT a_DT ,_, e_LS ,_, i_FW ,_, o_NN or_CC u._NN Vowels_NNS in_IN Thai_NNP are_VBP very_RB compli_JJ -_: cated_VBN ._.
+They_PRP are_VBP divided_VBN into_IN vowel_NN sounds_NNS and_CC diphthongs_NNS ._.
+RTGS_NNP defined_VBD the_DT Romanized_NNP char_NN -_: acters_NNS for_IN consonant_JJ and_CC vowel_NN sounds_NNS in_IN Thai_NNP ._.
+But_CC it_PRP is_VBZ very_RB difficult_JJ for_IN non-native_JJ speakers_NNS ._.
+Therefore_RB ,_, the_DT similar_JJ table_NN is_VBZ applied_VBN on_IN a_DT set_NN of_IN characters_NNS that_WDT have_VBP similar_JJ pronunciation_NN ._.
+Adding_VBG additional_JJ similar_JJ characters_NNS to_TO a_DT group_NN makes_VBZ it_PRP more_RBR easy_JJ and_CC flexible_JJ to_TO use_VB ._.
+The_DT algorithm_NN consists_VBZ of_IN three_CD principal_JJ steps_NNS -LRB-_-LRB- Figure_NN 4_CD -RRB-_-RRB- :_: Processing_NNP of_IN transliterated_JJ words_NNS ,_, Levenshtein_NNP distance_NN and_CC Levenshtein_NNP similarity_NN ._.
+The_DT user_NN input_NN goes_VBZ first_RB through_IN the_DT Ro_NNP -_: manized_VBN Processing_NNP step_NN which_WDT is_VBZ used_VBN to_TO ex_FW -_: tract_NN relevant_JJ characters_NNS in_IN the_DT RTGS_NNP table_NN ._.
+If_IN the_DT word_NN is_VBZ correct_JJ -LRB-_-LRB- a_DT match_NN is_VBZ found_VBN -RRB-_-RRB- then_RB the_DT algorithm_NN stops_VBZ ._.
+Otherwise_RB ,_, the_DT Roman_NNP -_: ized_VBD +_SYM Possiblewords_NNPS Processing_NNP is_VBZ used_VBN to_TO ex_FW -_: tracts_NNS words_NNS from_IN the_DT RTGS_NNP table_NN and_CC the_DT sim_NN -_: ilar_NN table_NN ._.
+The_DT output_NN of_IN this_DT step_NN is_VBZ a_DT list_NN of_IN possible_JJ words_NNS if_IN the_DT entered_VBN word_NN was_VBD cor_SYM -_: rect_NN ._.
+The_DT list_NN of_IN possible_JJ words_NNS contains_VBZ the_DT matched_VBN words_NNS between_IN the_DT two_CD tables_NNS ._.
+In_IN con_NN -_: trary_NN ,_, if_IN the_DT Romanized_NNP +_NNP Possiblewords_NNP Process_NNP -_: ing_NN fails_VBZ ,_, the_DT output_NN contains_VBZ a_DT list_NN of_IN wrong_JJ words_NNS that_WDT will_MD be_VB passed_VBN next_JJ to_TO the_DT Leven_NNP -_: shtein_NN distance_NN and_CC Levenshtein_NNP similarity_NN cal_NN -_: culation_NN step_NN ._.
+These_DT calculations_NNS use_VBP the_DT Lev_NNP -_: enshtein_NN algorithm_NN ._.
+This_DT is_VBZ very_RB useful_JJ when_WRB we_PRP have_VBP errors_NNS resulting_VBG from_IN wrong_JJ keyboard_NN input_NN as_IN they_PRP are_VBP often_RB of_IN the_DT same_JJ kind_NN as_IN the_DT allowed_VBN edit_NN operations_NNS -LRB-_-LRB- Gupta_NNP and_CC Mathur_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT Levenshtein_NNP distance_NN -LRB-_-LRB- Edit_NNP Distance_NNP -RRB-_-RRB- is_VBZ a_DT string_NN metric_JJ for_IN measuring_VBG the_DT difference_NN be_VB -_: tween_VB two_CD sequences_NNS -LRB-_-LRB- p_NN and_CC q_VB -RRB-_-RRB- ._.
+It_PRP calculates_VBZ the_DT least_JJS number_NN of_IN edit_NN operations_NNS that_WDT are_VBP nec_SYM -_: essary_NN to_TO modify_VB one_CD string_NN to_TO the_DT other_JJ -LRB-_-LRB- Lev_SYM -_: enshtein_NN -LRB-_-LRB- p_FW ,_, q_VB -RRB-_-RRB- -RRB-_-RRB- ._.
+Informally_RB ,_, the_DT Levenshtein_NNP dis_SYM -_: tance_NN between_IN two_CD words_NNS is_VBZ the_DT minimum_JJ num_NN -_: ber_NN of_IN single-character_JJ edits_NNS -LRB-_-LRB- i.e._FW change_VB a_DT letter_NN -LRB-_-LRB- substitutions_NNS -RRB-_-RRB- ,_, insert_VB a_DT letter_NN -LRB-_-LRB- insertions_NNS -RRB-_-RRB- and_CC delete_VB a_DT letter_NN -LRB-_-LRB- deletions_NNS -RRB-_-RRB- -RRB-_-RRB- required_VBN to_TO change_VB one_CD word_NN into_IN the_DT other_JJ -LRB-_-LRB- Haldar_NNP and_CC Mukhopad_NNP -_: hyay_NN ,_, 2011_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, the_DT ``_`` NMTOL_NNP ''_'' can_MD be_VB transformed_VBN into_IN ``_`` NAMTOK_NNP ''_'' by_IN adding_VBG the_DT letter_NN ``_`` A_NNP ''_'' after_IN the_DT letter_NN ``_`` N_NNP ''_'' and_CC substituting_VBG the_DT letter_NN ``_`` L_NNP ''_'' at_IN the_DT end_NN of_IN the_DT word_NN by_IN the_DT letter_NN ``_`` K_NNP ''_'' ._.
+LevSim_NNP -LRB-_-LRB- p_NN ,_, q_VB -RRB-_-RRB- =_SYM 1_CD −_CD LevDis_NNP -LRB-_-LRB- p_NN ,_, q_VB -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- max_FW -LRB-_-LRB- length_NN |_CD p_NN |_NN ,_, length_NN |_CD q_NN |_NN -RRB-_-RRB- On_IN the_DT other_JJ hand_NN ,_, the_DT Levenshtein_NNP Similarity_NN function_NN calculates_VBZ the_DT similarity_NN index_NN of_IN its_PRP$ two_CD arguments_NNS based_VBN on_IN the_DT edit_NN distance_NN -LRB-_-LRB- Equation_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- -RRB-_-RRB- :_: ``_`` 0_CD ''_'' means_VBZ that_IN the_DT strings_NNS are_VBP entirely_RB dif_SYM -_: ferent_NN while_IN ``_`` 1_CD ''_'' means_VBZ that_IN they_PRP are_VBP identical_JJ ._.
+4_CD 4.1_CD Experiment_NN and_CC Discussion_NNP Data_NNP and_CC Experiment_NNP The_DT data_NN set_NN used_VBN in_IN our_PRP$ research_NN is_VBZ a_DT list_NN of_IN Thai_NNP words_NNS that_WDT covers_VBZ the_DT 14_CD groups_NNS of_IN consonants_NNS Figure_NN 4_CD :_: Overview_NNP of_IN the_DT transliterated_JJ words_NNS searching_VBG and_CC the_DT 21_CD groups_NNS of_IN vowels_NNS ._.
+There_EX are_VBP differ_VBP -_: ent_NN patterns_NNS with_IN a_DT total_NN of_IN 108_CD words_NNS or_CC 141_CD syllables_NNS ._.
+The_DT experiments_NNS were_VBD conducted_VBN on_IN a_DT group_NN of_IN 15_CD PhD_NN students_NNS from_IN the_DT FEMTO_NNP -_: ST_NNP Institute_NNP ,_, University_NNP of_IN France-Comte_NNP ,_, Be_VB -_: sancon_NN ,_, France_NNP ._.
+They_PRP all_DT come_VBP from_IN different_JJ nationalities_NNS but_CC do_VBP not_RB have_VB any_DT knowledge_NN of_IN Thai_NNP linguistic_JJ ._.
+The_DT words_NNS we_PRP use_VBP in_IN our_PRP$ data_NN set_NN consist_VBP of_IN initial_JJ consonants_NNS ,_, vowels_NNS and_CC final_JJ consonants_NNS -LRB-_-LRB- optional_JJ -RRB-_-RRB- ._.
+In_IN our_PRP$ experiments_NNS we_PRP compare_VBP on_IN the_DT basis_NN of_IN syllables_NNS and_CC not_RB only_RB the_DT whole_JJ word_NN ._.
+This_DT helps_VBZ us_PRP to_TO understand_VB with_IN which_WDT consonants_NNS or_CC vowels_NNS a_DT foreign_JJ user_NN has_VBZ the_DT most_RBS problems_NNS ._.
+This_DT process_NN requires_VBZ an_DT in-depth_JJ analysis_NN of_IN alphabets_NNS ._.
+Experiments_NNS that_WDT were_VBD conducted_VBN on_IN the_DT 15_CD PhD_NNP students_NNS re_SYM -_: sulted_VBN in_IN 2091_CD syllables_NNS to_TO analyze_VB :_: 141_CD -LRB-_-LRB- initial_JJ data_NN set_NN syllables_NNS -RRB-_-RRB- *_SYM 15_CD -LRB-_-LRB- number_NN of_IN students_NNS un_SYM -_: dergoing_VBG the_DT experiments_NNS -RRB-_-RRB- -_: 24_CD -LRB-_-LRB- missing_VBG data_NNS or_CC incomplete_JJ words_NNS -RRB-_-RRB- =_SYM 2091_CD syllables_NNS ._.
+As_IN shown_VBN in_IN Table_NNP 1_CD ,_, the_DT Romanized_NNP process_NN -_: ing_NN step_NN extracted_VBD only_RB 524_CD syllables_NNS which_WDT rep_NN -_: resents_VBZ 25.06_CD %_NN of_IN the_DT data_NN set_NN -LRB-_-LRB- 2091_CD syllables_NNS -RRB-_-RRB- ._.
+The_DT combination_NN between_IN the_DT Romanized_NNP and_CC the_DT Possiblewords_NNPS processing_NN can_MD give_VB more_RBR cor_SYM -_: rect_JJ output_NN by_IN extracting_VBG 846_CD syllables_NNS which_WDT represents_VBZ 40.46_CD %_NN of_IN the_DT data_NN set_NN ._.
+Table_NNP 1_CD :_: Results_NNS comparison_NN all_DT steps_NNS ._.
+We_PRP performed_VBD an_DT in-depth_JJ analysis_NN of_IN result_NN -_: ing_VBG syllables_NNS separating_VBG them_PRP into_IN initial_JJ conso_NN -_: nants_NNS ,_, vowels_NNS and_CC final_JJ consonants_NNS ,_, as_IN shown_VBN in_IN Table_NNP 2_CD ._.
+The_DT analysis_NN of_IN the_DT data_NN set_NN showed_VBD that_IN 2091_CD syllables_NNS contain_VBP an_DT initial_JJ consonant_JJ and_CC a_DT vowel_NN while_IN only_RB 874_CD syllables_NNS contain_VBP a_DT final_JJ consonant_JJ ._.
+From_IN table_NN 2_CD ,_, and_CC for_IN the_DT initial_JJ con_NN -_: Table_NNP 2_CD :_: Results_NNS from_IN Romanized_VBN and_CC Possiblewords_NNP processing_NN in_IN consonants_NNS and_CC vowels_NNS sonants_NNS ,_, we_PRP notice_VBP that_IN the_DT Romanized_NNP process_NN -_: ing_NN can_MD extract_VB 1298_CD related_JJ syllables_NNS -LRB-_-LRB- 62.08_CD %_NN -RRB-_-RRB- while_IN the_DT Possiblewords_NNP processing_NN step_NN can_MD ex_FW -_: tract_NN 482_CD related_VBN syllables_NNS -LRB-_-LRB- 23.05_CD %_NN -RRB-_-RRB- ._.
+This_DT can_MD help_VB us_PRP to_TO obtain_VB a_DT high_JJ performance_NN because_IN it_PRP is_VBZ easier_JJR to_TO find_VB similar_JJ pronunciation_NN of_IN conso_NN -_: nants_NNS than_IN vowels_NNS in_IN English_NNP ._.
+For_IN example_NN ,_, to_TO search_VB for_IN the_DT word_NN ``_`` การ_FW ''_'' -LSB-_NNP TH_NNP -RSB-_NNP that_WDT is_VBZ transliter_NN -_: ated_VBN as_IN ``_`` KAN_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, users_NNS can_MD write_VB several_JJ dif_NN -_: ferent_JJ possible_JJ words_NNS such_JJ as_IN ``_`` GAN_NNP ''_'' ,_, ``_`` KHAN_NNP ''_'' or_CC ``_`` CAN_NNP ''_'' ._.
+For_IN vowels_NNS ,_, results_NNS showed_VBD that_IN there_EX is_VBZ a_DT high_JJ percentage_NN of_IN incorrect_JJ results_NNS -LRB-_-LRB- 42.52_CD %_NN of_IN the_DT dataset_NN -RRB-_-RRB- ._.
+This_DT is_VBZ because_IN some_DT vowels_NNS are_VBP very_RB complex_JJ such_JJ as_IN ``_`` เ_SYM -_: ือย_NN ''_'' -LSB-_NNP TH_NNP -RSB-_NNP which_WDT is_VBZ translit_NN -_: erated_VBD as_IN ``_`` UEAI_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, ``_`` เ_SYM -_: ียว_NN ''_'' -LSB-_NNP TH_NNP -RSB-_NNP which_WDT is_VBZ transliterated_VBN as_IN ``_`` IAO_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+In_IN some_DT vowel_NN groups_NNS ,_, switching_VBG a_DT character_NN can_MD change_VB the_DT vowel_NN to_TO another_DT group_NN ._.
+For_IN example_NN ,_, the_DT vowel_NN ``_`` เ_SYM -_: ''_'' -LSB-_NNP TH_NNP -RSB-_NNP that_WDT is_VBZ transliterated_VBN as_IN ``_`` E_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, the_DT vowel_NN ``_`` แ_SYM -_: ''_'' -LSB-_NNP TH_NNP -RSB-_NNP that_WDT is_VBZ transliterated_VBN as_IN ``_`` -_: AE_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP and_CC the_DT vowel_NN ``_`` ัว_FW ''_'' -LSB-_NNP TH_NNP -RSB-_NNP that_WDT is_VBZ transliterated_VBN as_IN ``_`` EA_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+This_DT leads_VBZ to_TO a_DT con_NN -_: fusion_NN when_WRB the_DT search_NN retrieves_VBZ the_DT transliter_NN -_: ated_JJ words_NNS ._.
+Another_DT reason_NN is_VBZ that_IN some_DT English_JJ words_NNS are_VBP pronounced_VBN the_DT same_JJ as_IN Thai_NNP words_NNS ._.
+The_DT result_NN is_VBZ that_IN a_DT user_NN that_WDT is_VBZ familiar_JJ with_IN English_NNP will_MD probably_RB search_VB for_IN the_DT English_NNP pro-_JJ nunciation_NN of_IN these_DT words_NNS instead_RB of_IN searching_VBG for_IN their_PRP$ transliterated_JJ versions_NNS ._.
+An_DT example_NN of_IN such_JJ words_NNS is_VBZ the_DT word_NN ``_`` เฮลิคอปเตอร์_NN ''_'' -LSB-_NNP TH_NNP -RSB-_NNP :_: The_DT vowel_NN ``_`` เ-อ_FW ''_'' -LSB-_NNP TH_NNP -RSB-_NNP is_VBZ transliterated_VBN as_IN ``_`` OE_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP and_CC thus_RB ``_`` HELIKHOPTOE_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP is_VBZ the_DT cor_NN -_: rect_NN transliteration_NN but_CC most_RBS users_NNS will_MD search_VB for_IN ``_`` HELICOPTER_NNP ''_'' -LSB-_NNP EN_NNP -RSB-_NNP instead_RB ._.
+For_IN final_JJ consonants_NNS ,_, there_EX are_VBP 2_CD groups_NNS that_WDT are_VBP mostly_RB used_VBN :_: group_NN 6_CD -LRB-_-LRB- r-n-l_NN -RRB-_-RRB- and_CC group_NN 12_CD -LRB-_-LRB- t-d-th-dh_JJ -RRB-_-RRB- -LRB-_-LRB- table_NN 2_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, the_DT words_NNS ``_`` SANIT_NNP ''_'' ,_, ``_`` SANID_NNP ''_'' ,_, ``_`` SANITH_NNP ''_'' or_CC ``_`` SANIDH_NNP ''_'' ._.
+To_TO summarize_VB ,_, table_NN 1_CD shows_NNS that_IN the_DT sys_NNS -_: tem_NN can_MD correctly_RB retrieve_VB 846_CD syllables_NNS of_IN the_DT data_NN set_NN while_IN it_PRP is_VBZ unable_JJ to_TO retrieve_VB 1245_CD one_CD ._.
+This_DT is_VBZ because_IN the_DT Thai_NNP language_NN is_VBZ very_RB com_NN -_: plicated_VBN both_DT in_IN consonants_NNS and_CC vowels_NNS ._.
+It_PRP is_VBZ very_RB difficult_JJ for_IN users_NNS who_WP do_VBP not_RB speak_VB Thai_NNP to_TO find_VB correctly_RB ,_, precisely_RB and_CC completely_RB the_DT required_VBN information_NN using_VBG only_RB the_DT Romanized_NNP and_CC Possible_JJ words_NNS processing_NN ._.
+Therefore_RB ,_, we_PRP calculate_VBP the_DT similarity_NN between_IN syllables_NNS which_WDT can_MD not_RB be_VB extracted_VBN in_IN the_DT Romanized_NNP and_CC Pos_NNP -_: sible_NN words_NNS processing_VBG using_VBG the_DT Levenshtein_NNP al_SYM -_: gorithm_NN ._.
+This_DT enables_VBZ us_PRP to_TO calculate_VB the_DT num_NN -_: ber_NN of_IN mutations_NNS and_CC Levenshtein_NNP similarity_NN to_TO find_VB the_DT searched_VBN words_NNS at_IN different_JJ similarity_NN level_NN as_IN shown_VBN in_IN Figure_NN 5_CD ._.
+Figure_NN 5_CD :_: Calculating_VBG similarity_NN for_IN searching_VBG Figure_NN 5_CD shows_NNS that_IN the_DT similarity_NN calcula_NN -_: tion_NN can_MD filter_NN and_CC extract_VB similar_JJ words_NNS from_IN wrong_JJ words_NNS -LRB-_-LRB- 1245_CD words_NNS -RRB-_-RRB- ._.
+Similarity_NN calcula_NN -_: tion_NN with_IN a_DT threshold_NN of_IN 0.6_CD revealed_VBD interesting_JJ results_NNS ._.
+This_DT threshold_NN is_VBZ consistent_JJ with_IN the_DT re_NN -_: sults_NNS proposed_VBN by_IN Heuser_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- :_: Authors_NNS presented_VBD the_DT quality_NN of_IN similarity_NN calculations_NNS ._.
+Using_VBG a_DT similarity_NN threshold_NN of_IN 0.6_CD we_PRP can_MD suc_SYM -_: cessfully_NN separate_JJ relevant_JJ and_CC irrelevant_JJ words_NNS ._.
+Figure_NN 5_CD shows_NNS that_IN the_DT similarity_NN calculation_NN using_VBG the_DT threshold_NN of_IN 0.8_CD shows_NNS no_DT significant_JJ results_NNS compared_VBN to_TO those_DT using_VBG the_DT threshold_NN of_IN 1.0_CD -LRB-_-LRB- correct_JJ words_NNS -RRB-_-RRB- ._.
+It_PRP can_MD extract_VB only_RB more_RBR 148_CD syllables_NNS ._.
+In_IN contrast_NN ,_, the_DT similarity_NN calcula_NN -_: tion_NN with_IN a_DT threshold_NN of_IN 0.6_CD revealed_VBD interesting_JJ results_NNS ._.
+With_IN this_DT threshold_NN ,_, the_DT engine_NN could_MD search_VB with_IN higher_JJR efficiency_NN and_CC find_VB more_JJR 937_CD syllables_NNS ._.
+Results_NNS show_VBP that_IN the_DT similarity_NN threshold_NN of_IN 0.6_CD is_VBZ an_DT acceptable_JJ value_NN for_IN Thai-English_JJ transliterated_JJ words_NNS search_NN ._.
+Each_DT syllable_JJ length_NN is_VBZ 3-4_CD characters_NNS and_CC each_DT word_NN consists_VBZ of_IN 1-2_CD syllables_NNS ._.
+So_RB ,_, each_DT word_NN has_VBZ 3-8_CD characters_NNS ._.
+The_DT similarity_NN calculation_NN with_IN a_DT threshold_NN of_IN 0.6_CD makes_VBZ some_DT errors_NNS only_RB in_IN 1-3_JJ words_NNS depending_VBG on_IN the_DT length_NN of_IN the_DT characters_NNS ._.
+The_DT result_NN is_VBZ excellent_JJ for_IN users_NNS who_WP lack_VBP of_IN Thai_NNP language_NN skills_NNS but_CC they_PRP can_MD still_RB search_VB with_IN Thai_NNP words_NNS -LRB-_-LRB- transliterated_JJ words_NNS -RRB-_-RRB- using_VBG an_DT Latin_JJ keyboard_NN ._.
+Table_NNP 1_CD shows_NNS that_WDT using_VBG Romanized_NNP process_NN -_: ing_NN ,_, possible_JJ words_NNS processing_NN and_CC similarity_NN cal_NN -_: culation_NN with_IN a_DT threshold_NN of_IN 0.6_CD gives_VBZ the_DT most_RBS efficient_JJ results_NNS 85.27_CD %_NN -LRB-_-LRB- 1783_CD datasets_NNS of_IN 2091_CD -RRB-_-RRB- ._.
+4.2_CD Discussion_NNP Experiments_NNS in_IN this_DT research_NN were_VBD conducted_VBN on_IN PhD_NNP students_NNS that_WDT do_VBP not_RB speak_VB the_DT Thai_NNP Lan_NNP -_: guage_NN ._.
+They_PRP come_VBP from_IN different_JJ countries_NNS but_CC they_PRP all_DT speak_VBP the_DT English_JJ language_NN ._.
+Most_JJS of_IN the_DT errors_NNS that_WDT were_VBD found_VBN are_VBP similar_JJ between_IN char_NN -_: acters_NNS :_: they_PRP can_MD not_RB divide_VB each_DT alphabet_NN and_CC vowel_NN clearly_RB ._.
+The_DT analysis_NN of_IN these_DT two_CD lan_SYM -_: guages_NNS can_MD be_VB divided_VBN into_IN two_CD parts_NNS :_: conso_NN -_: nants_NNS and_CC vowels_NNS ._.
+Consonants_NNS :_: 1_LS ._.
+Thai_NNP alphabets_NNS are_VBP composed_VBN of_IN two_CD char_SYM -_: acters_NNS such_JJ as_IN ``_`` KH_NNP ''_'' ,_, ``_`` CH_NNP ''_'' ,_, ``_`` TH_NNP ''_'' and_CC ``_`` PH_NNP ''_'' ._.
+The_DT letter_NN ``_`` H_NNP ''_'' is_VBZ often_RB omitted_VBN in_IN the_DT results_NNS giving_VBG ,_, for_IN example_NN ,_, ``_`` Kram_NNP ''_'' or_CC ``_`` Kam_NNP ''_'' instead_RB of_IN ``_`` Khram_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ._.
+2_LS ._.
+Some_DT final_JJ letters_NNS ``_`` ป_FW ''_'' and_CC ``_`` บ_FW ''_'' in_IN Thai_NNP have_VBP similar_JJ pronunciation_NN ._.
+So_RB ,_, ``_`` P_NN ''_'' and_CC ``_`` B_NNP ''_'' is_VBZ often_RB replaced_VBN ._.
+For_IN example_NN ,_, the_DT word_NN ``_`` บาป_FW ''_'' -LSB-_NNP TH_NNP -RSB-_NNP ,_, which_WDT is_VBZ transliterated_VBN as_IN ``_`` Bap_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP ,_, is_VBZ often_RB written_VBN as_IN ``_`` Bab_NNP ''_'' ._.
+3_LS ._. ''_''
+ง_NN ''_'' in_IN Thai_NNP is_VBZ transliterated_VBN to_TO ``_`` NG_NNP ''_'' ._.
+This_DT letter_NN is_VBZ difficult_JJ to_TO be_VB transliterated_VBN be_VB -_: cause_VB it_PRP does_VBZ not_RB have_VB the_DT same_JJ pronuncia_NN -_: tion_NN in_IN English_NNP Vowels_NNPS :_: 5_CD 1_CD ._.
+2_LS ._.
+Some_DT transliterated_JJ words_NNS are_VBP familiar_JJ words_NNS in_IN English_NNP ._.
+For_IN example_NN ,_, the_DT word_NN ``_`` มากมาย_NN ''_'' -LSB-_NNP TH_NNP -RSB-_NNP is_VBZ transliterated_VBN as_IN ``_`` Mak_NNP -_: mai_FW ''_'' -LSB-_NNP TW_NNP -RSB-_NNP but_CC ,_, instead_RB ,_, we_PRP often_RB find_VBP the_DT words_NNS ``_`` Makmine_NNP ''_'' or_CC ``_`` Makmy_NNP ''_'' in_IN the_DT re_NN -_: sults_NNS ._.
+The_DT vowels_NNS transliterated_VBD into_IN ``_`` E_NNP ''_'' and_CC ``_`` AE_NNP ''_'' respec_SYM -_: tively_RB ._.
+But_CC most_JJS of_IN results_NNS are_VBP ``_`` AE_NNP ''_'' which_WDT are_VBP incorrect_JJ ._.
+For_IN example_NN ,_, the_DT word_NN -LSB-_NNP ``_`` ทะ_SYM -_: เล_NN ''_'' -LRB-_-LRB- TH_NNP -RRB-_-RRB- →_CD ``_`` Sea_NNP ''_'' -LRB-_-LRB- EN_NNP -RRB-_-RRB- -RSB-_NNP should_MD be_VB translit_NN -_: erated_VBD as_IN ``_`` Tale_NNP ''_'' -LSB-_NNP TW_NNP -RSB-_NNP except_IN that_DT it_PRP was_VBD transliterated_VBN as_IN ``_`` Talae_NNP ''_'' in_IN most_JJS of_IN the_DT re_NN -_: sults_NNS ._.
+Conclusion_NN and_CC Future_NNP Work_NNP ``_`` เ_SYM -_: ``_`` and_CC ``_`` แ_SYM -_: ``_`` in_IN Thai_NNP are_VBP In_IN this_DT paper_NN ,_, we_PRP proposed_VBD word_NN searching_VBG algo_SYM -_: rithm_NN based_VBN on_IN the_DT ``_`` WICHAI_NNP ''_'' platform_NN ._.
+Thai_NNP -_: English_NNP transliterated_VBD words_NNS searching_VBG using_VBG the_DT similarity_NN table_NN can_MD improve_VB the_DT search_NN effi_SYM -_: ciency_NN ._.
+This_DT algorithm_NN uses_VBZ both_CC the_DT RTGS_NNP ta_SYM -_: ble_NN and_CC the_DT similar_JJ table_NN in_IN order_NN to_TO extract_VB the_DT possible_JJ words_NNS and_CC match_VB the_DT user_NN requirement_NN ._.
+Similarity_NN calculations_NNS with_IN the_DT Levenshtein_NNP al_SYM -_: gorithm_NN was_VBD applied_VBN ._.
+The_DT newly_RB proposed_VBN algo_SYM -_: rithm_NN showed_VBD that_IN similarity_NN calculations_NNS using_VBG the_DT threshold_NN of_IN 0.6_CD is_VBZ the_DT best_JJS value_NN because_IN it_PRP gives_VBZ the_DT maximum_NN matching_VBG for_IN relevant_JJ words_NNS ._.
+This_DT work_NN is_VBZ useful_JJ for_IN tourists_NNS in_IN Thailand_NNP who_WP do_VBP not_RB speak_VB Thai_NNP ._.
+Using_VBG our_PRP$ platform_NN ,_, they_PRP can_MD search_VB all_PDT the_DT words_NNS they_PRP hear_VBP from_IN locals_NNS easily_RB using_VBG an_DT Latin_JJ keyboard_NN anytime_RB and_CC anywhere_RB ._.
+They_PRP can_MD obtain_VB information_NN with_IN more_JJR flexibil_NN -_: ity_NN by_IN using_VBG this_DT newly_RB proposed_VBN algorithm_NN to_TO overcome_VB the_DT language_NN barrier_NN and_CC enjoy_VB their_PRP$ stay_NN in_IN Thailand_NNP ._.
+For_IN the_DT future_JJ work_NN ,_, we_PRP plan_VBP to_TO conduct_VB our_PRP$ experiments_NNS on_IN two_CD populations_NNS of_IN people_NNS who_WP speak_VBP the_DT English_JJ language_NN -LRB-_-LRB- native_JJ and_CC non_JJ na_TO -_: tive_JJ speakers_NNS -RRB-_-RRB- ,_, in_IN order_NN to_TO be_VB able_JJ to_TO compare_VB the_DT performance_NN of_IN information_NN retrieval_NN ,_, and_CC add_VB more_JJR character_NN in_IN the_DT same_JJ group_NN ._.
+In_IN addition_NN ,_, we_PRP will_MD calculate_VB the_DT similarity_NN using_VBG other_JJ al_SYM -_: gorithms_NNS such_JJ as_IN the_DT Jaccard_NNP 's_POS coefficient_NN and_CC Dice_NNP 's_POS coefficient_NN ._.
+This_DT will_MD enable_VB us_PRP to_TO find_VB the_DT best_JJS similarity_NN calculation_NN algorithm_NN to_TO use_VB for_IN Thai-English_JJ transliterated_VBN words_NNS searching_VBG ._.
+References_NNP Ricardo_NNP Baeza-Yates_NNP and_CC Berthier_NNP Ribeiro-Neto_NNP ._.
+1999_CD ._.
+Modern_NNP information_NN retrieval_NN ._.
+Addison_NNP Wesley/ACM_NNP Press_NNP ._.
+Wutiwiwatchai_NNP Chai_NNP and_CC Thangthai_NNP Ausdang_NNP ._.
+2010_CD ._.
+Syllable-based_JJ thai-english_JJ machine_NN translitera_NN -_: tion_NN ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 2010_CD Named_VBN Entities_NNS Work_VBP -_: shop_NN ,_, News_NNP '_POS 10_CD ,_, pages_NNS 66_CD --_: 70_CD ,_, Stroudsburg_NNP ,_, PA_NNP ,_, USA_NNP ._.
+Assoc._NNP for_IN Computational_NNP Linguistics_NNP ._.
+Neha_NNP Gupta_NNP and_CC Pratistha_NNP Mathur_NNP ._.
+2012_CD ._.
+Spell_VB checking_VBG techniques_NNS in_IN nlp_NN :_: A_DT survey_NN ._.
+Dec._NNP ._.
+Rishin_NNP Haldar_NNP and_CC Debajyoti_NNP Mukhopadhyay_NNP ._.
+2011_CD ._.
+Levenshtein_JJ distance_NN technique_NN in_IN dictionary_JJ lookup_NN methods_NNS :_: An_DT improved_VBN approach_NN ._.
+CoRR_NNP ,_, abs/1101_CD .1232_CD ._.
+Carlos_NNP A_NNP Heuser_NNP ,_, Francisco_NNP NA_NNP Krieser_NNP ,_, and_CC Vi_NNP -_: viane_NN Moreira_NNP Orengo_NNP ._.
+2007_CD ._.
+Simeval_NNP :_: a_DT tool_NN for_IN evaluating_VBG the_DT quality_NN of_IN similarity_NN functions_NNS ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 26th_JJ intern_NN ._.
+conf_NN ._.
+on_IN Conceptual_JJ mod_NN -_: eling_SYM -_: Vol_NNP ._.
+83_CD ,_, pages_NNS 71_CD --_: 76_CD ._.
+Australian_JJ Comp_NN ._.
+Soc_JJ ._.
+Inc._NNP ._.
+Harsh_JJ Jhamtani_NNP ,_, Suleep_NNP Kumar_NNP Bhogi_NNP ,_, and_CC Vaskar_NNP Raychoudhury_NNP ._.
+2014_CD ._.
+Word-level_JJ language_NN iden_SYM -_: tification_NN in_IN bi-lingual_JJ code-switched_JJ texts_NNS ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 28th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Lan_NNP -_: guage_NN ,_, Information_NNP ,_, and_CC Computation_NNP ,_, pages_NNS 348_CD --_: 357_CD ,_, Phuket_NNP ,_, Thailand_NNP ,_, Dec._NNP ._.
+Natthawut_NNP Kertkeidkachorn_NNP ,_, Proadpran_NNP Pun_NNP -_: yabukkana_NN ,_, and_CC Atiwong_NNP Suchato_NNP ._.
+2014_CD ._.
+Using_VBG tone_NN information_NN in_IN thai_JJ spelling_NN speech_NN recogni_NN -_: tion_NN ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 28th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP ,_, and_CC Computation_NNP ,_, pages_NNS 178_CD --_: 184_CD ,_, Phuket_NNP ,_, Thailand_NNP ,_, Dec._NNP ._.
+Chu-Cheng_NNP Lin_NNP ,_, Yu-Chun_NNP Wang_NNP ,_, and_CC Richard_NNP Tzong-Han_NNP Tsai_NNP ._.
+2010_CD ._.
+Japanese-chinese_JJ information_NN retrieval_NN with_IN and_CC iterative_JJ weightin_NN g_NN scheme_NN ._.
+J._NNP Inf_NNP ._.
+Sci_NNP ._.
+Eng._NNP ,_, 26_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :685_CD --_: 697_CD ._.
+Suwanvisat_NNP Prayut_NNP and_CC Prasitjutrakul_NNP Somboon_NNP ._.
+1998_CD ._.
+Thai-english_JJ cross-language_NN transliterated_VBD word_NN retrieval_NN using_VBG soundex_JJ technique_NN ._.
+In_IN Proc_NNP ._.
+of_IN the_DT National_NNP Comp_NNP ._.
+Sc_NNP ._.
+and_CC Engineering_NNP Conf._NNP ,_, Bangkok_NNP ,_, Thailand_NNP ._.
+RTGS_NNP ._.
+1999_CD ._.
+The_DT royal_JJ thai_JJ general_JJ system_NN of_IN tran_NN -_: scription_NN ._.
+In_IN The_DT Royal_NNP Institute_NNP of_IN Thailand_NNP ,_, http://www.royin.go.th_NN ._.
+Mark_NNP Sanderson_NNP and_CC Bruce_NNP Croft_NNP ._.
+2012_CD ._.
+The_DT his_PRP$ -_: tory_NN of_IN information_NN retrieval_NN research_NN ._.
+Proceedings_NNP of_IN the_DT IEEE_NNP ,_, 100_CD -LRB-_-LRB- Special_JJ Centennial_NNP Issue_NNP -RRB-_-RRB- :1444_CD --_: 1451_CD ,_, May_NNP ._.
+Chalermsub_NNP Sangkavichitr_NNP ._.
+2012_CD ._.
+A_DT design_NN of_IN thai-english_JJ transliterated_VBN word_NN retrieval_NN for_IN smart_JJ phones_NNS ._.
+In_IN Int_NNP ._.
+Conf_NNP ._.
+on_IN Systems_NNP and_CC Electronic_NNP Engineering_NNP ,_, pages_NNS 34_CD --_: 38_CD ._.
+Jatsada_NNP Singthongchai_NNP and_CC Suphakit_NNP Niwattanakul_NNP ._.
+2013_CD ._.
+A_DT method_NN for_IN measuring_VBG keywords_NNS similarity_NN by_IN applying_VBG jaccard_NN 's_POS ,_, n-gram_JJ and_CC vector_NN space_NN ._.
+Lecture_NN Notes_NNS on_IN Information_NN Theory_NNP Vol_NNP .1_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, Dec._NNP ._.
+Somchai_NNP Prasitjutrakul_NNP Tasanawan_NNP Soonklang_NNP and_CC Boonserm_NNP Kijsirikul_NNP ._.
+2000_CD ._.
+Thai-english_JJ translit_NN -_: erated_JJ word_NN encoding_VBG cross-language_JJ retrieval_NN us_PRP -_: ing_VBG neural_JJ networks_NNS ._.
+In_IN National_NNP Comp_NNP ._.
+Sc_NNP ._.
+and_CC Engineering_NNP Conf_NNP ._.
+Ausdang_NNP Thangthai_NNP ,_, Chatchawarn_NNP Hansakunbunthe_NNP -_: ung_NN ,_, Rungkarn_NNP Siricharoenchai_NNP ,_, and_CC Chai_NNP Wutiwi_NNP -_: watchai_NN ._.
+2006_CD ._.
+Automatic_NNP syllable-pattern_JJ induc_NN -_: tion_NN in_IN statistical_JJ thai_JJ text-to-phone_NN transcription_NN ._.
+In_IN Interspeech_NNP 2006_CD -_: ICSLP_NNP ,_, PA_NNP ,_, USA_NNP ,_, 2006_CD ._.

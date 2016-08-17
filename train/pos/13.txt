@@ -1,0 +1,298 @@
+Intrusion_NNP Detection_NNP Based_VBD on_IN Neuro-Fuzzy_NNP Classification_NNP Abstract_NNP Computer_NNP security_NN is_VBZ far_RB from_IN guaranteed_VBN due_JJ to_TO the_DT scalability_NN of_IN computer_NN networks_NNS the_DT constant_JJ evolution_NN of_IN risks_NNS and_CC the_DT presence_NN of_IN noisy_JJ information_NN ._.
+Several_JJ solutions_NNS were_VBD proposed_VBN to_TO ensure_VB the_DT integrity_NN ,_, confidentiality_NN and_CC availability_NN of_IN resources_NNS ,_, including_VBG intrusion_NN detection_NN systems_NNS -LRB-_-LRB- IDS_NNP -RRB-_-RRB- ._.
+The_DT main_JJ objective_NN of_IN the_DT current_JJ work_NN is_VBZ first_JJ to_TO take_VB advantage_NN of_IN data_NNS mining_NN techniques_NNS such_JJ as_IN normalization_NN ,_, feature_NN selection_NN and_CC eliminating_VBG redundancies_NNS in_IN order_NN to_TO analyze_VB the_DT huge_JJ data_NNS like_IN the_DT KDDCUP_NNP '_POS 99_CD ._.
+Second_NNP ,_, the_DT learning_VBG ability_NN of_IN neural_JJ networks_NNS and_CC third_JJ the_DT fuzzy_JJ logic_NN reasoning_NN that_WDT realizes_VBZ knowledge_NN wave_NN characters_NNS ._.
+The_DT proposed_VBN model_NN is_VBZ the_DT Neuro-Fuzzy_NNP model_NN precisely_RB the_DT NEFCLASS_NNP -LRB-_-LRB- Neuro_NNP Fuzzy_NNP Classification_NNP -RRB-_-RRB- model_NN of_IN a_DT generic_JJ fuzzy_JJ perceptron_NN which_WDT is_VBZ in_IN the_DT form_NN of_IN a_DT combination_NN of_IN neuron_NN and_CC fuzzy_JJ system_NN networks_NNS ._.
+This_DT model_NN is_VBZ characterized_VBN by_IN its_PRP$ powerfulness_NN thanks_NNS to_TO its_PRP$ large_JJ database_NN and_CC rapidity_NN due_JJ to_TO its_PRP$ parallel_JJ architecture_NN ._.
+Moreover_RB ,_, it_PRP can_MD be_VB easily_RB updated_VBN through_IN the_DT re-learning_NN process_NN following_VBG the_DT scalability_NN potential_JJ inherited_VBN in_IN its_PRP$ architecture_NN ._.
+As_RB well_RB as_IN it_PRP is_VBZ distinguished_VBN by_IN an_DT intuitive_JJ model_NN presented_VBN by_IN linguistic_JJ rules_NNS that_WDT are_VBP easily_RB understood_VBN by_IN the_DT security_NN operator_NN ._.
+To_TO test_VB out_RP the_DT adaptability_NN of_IN our_PRP$ approach_NN in_IN detecting_VBG unknown_JJ attacks_NNS we_PRP use_VBP a_DT test_NN database_NN ,_, namely_RB corrected_VBN test_NN that_IN contains_VBZ new_JJ attacks_NNS that_WDT are_VBP not_RB present_JJ in_IN the_DT training_NN set_NN and_CC compare_VB the_DT results_NNS obtained_VBN by_IN the_DT model_NN ANFIS_NNP ._.
+We_PRP prove_VBP that_IN our_PRP$ approach_NN based_VBN on_IN NEFCLASS_NNP model_NN is_VBZ more_RBR powerful_JJ in_IN classifying_VBG intrusions_NNS than_IN the_DT one_CD based_VBN on_IN ANFIS_NNP model_NN ._.
+To_TO highlight_VB the_DT motivation_NN for_IN using_VBG the_DT Neuro-Fuzzy_NNP Classifier_NNP ,_, a_DT comparative_JJ study_NN was_VBD conducted_VBN by_IN using_VBG the_DT full_JJ 10_CD %_NN KDD_NNP among_IN the_DT NEFCLASS_NNP model_NN and_CC other_JJ supervised_JJ classifiers_NNS which_WDT are_VBP ANN_NNP and_CC C5_NNP .0_CD ._.
+1_CD Introduction_NNP The_NNP connectivity_NN of_IN computer_NN networks_NNS is_VBZ rapidly_RB increasing_VBG giving_VBG rise_NN to_TO greater_JJR risks_NNS ._.
+Julish_JJ -LSB-_NN 1_CD -RSB-_NNP stated_VBD that_IN 99_CD %_NN of_IN generated_VBN alerts_VBZ are_VBP false_JJ alarms_NNS -LRB-_-LRB- i.e._FW false_JJ positive_JJ :_: an_DT alert_NN is_VBZ triggered_VBN following_VBG a_DT legitimate_JJ action_NN that_WDT is_VBZ identified_VBN as_IN an_DT intrusion_NN -RRB-_-RRB- ._.
+This_DT is_VBZ due_JJ to_TO the_DT redundant_JJ nature_NN alerts_VBZ saved_VBN in_IN the_DT log_VB file_NN and_CC this_DT can_MD distort_VB computer_NN system_NN security_NN by_IN Concealing_VBG the_DT generation_NN of_IN true_JJ positives_NNS -LRB-_-LRB- real_JJ intrusion_NN is_VBZ identified_VBN -RRB-_-RRB- ._.
+To_TO further_RBR simplify_VB the_DT analysis_NN task_NN for_IN security_NN operators_NNS ,_, it_PRP should_MD be_VB pointed_VBN out_RP that_IN the_DT objective_NN behind_IN automate_NN alert_JJ analysis_NN phases_NNS is_VBZ to_TO ease_VB the_DT huge_JJ number_NN of_IN alerts_VBZ generated_VBN and_CC improve_VB the_DT semantics_NNS of_IN these_DT alerts_VBZ to_TO build_VB a_DT high_JJ alert_JJ level_NN ._.
+Several_JJ solutions_NNS have_VBP been_VBN identified_VBN to_TO safeguard_VB the_DT security_NN of_IN computer_NN systems_NNS including_VBG the_DT intrusion_NN detection_NN systems_NNS -LRB-_-LRB- IDS_NNP -RRB-_-RRB- whose_WP$ role_NN is_VBZ to_TO detect_VB intrusion_NN attempts_NNS ._.
+The_DT large_JJ amount_NN of_IN information_NN contained_VBN in_IN the_DT IDS_NNP produces_VBZ many_JJ redundant_JJ alerts_VBZ because_IN it_PRP lacks_VBZ different_JJ specifics_NNS -LRB-_-LRB- The_DT information_NN contained_VBD lack_NN specifics_NNS which_WDT can_MD lead_VB to_TO many_JJ false_JJ alarms_NNS -RRB-_-RRB- ._.
+The_DT presence_NN of_IN imperfect_JJ information_NN greatly_RB influences_VBZ the_DT response_NN data_NNS using_VBG IDS_NNP tools_NNS under_IN non-suitable_JJ as_IN a_DT medium_NN for_IN decision-making_NN ._.
+Uncertainty_NN is_VBZ presented_VBN as_IN imperfect_JJ data_NNS ,_, the_DT variability_NN of_IN the_DT data_NNS that_WDT resides_VBZ in_IN the_DT random_JJ nature_NN of_IN the_DT information_NN due_JJ to_TO the_DT heterogeneity_NN of_IN data_NNS sources_NNS ,_, vagueness_NN and_CC incompleteness_NN of_IN data_NNS due_JJ to_TO the_DT lack_NN of_IN useful_JJ data_NNS ._.
+The_DT IDS_NNP mechanism_NN has_VBZ several_JJ challenges_NNS among_IN which_WDT we_PRP may_MD mention_VB the_DT reduced_JJ time_NN response_NN which_WDT allows_VBZ us_PRP to_TO predict_VB the_DT attacks_NNS in_IN real_JJ time_NN ,_, the_DT robustness_NN of_IN the_DT model_NN and_CC its_PRP$ large_JJ bases_NNS to_TO solve_VB complex_JJ problems_NNS as_RB well_RB as_IN its_PRP$ maintenance_NN access_NN ._.
+Data_NNP mining_NN is_VBZ currently_RB a_DT patrimony_NN of_IN promising_JJ research_NN which_WDT aims_VBZ at_IN exploiting_VBG the_DT large_JJ amounts_NNS of_IN data_NNS collected_VBN every_DT day_NN ._.
+This_DT multidisciplinary_JJ field_NN is_VBZ located_VBN at_IN the_DT junction_NN of_IN artificial_JJ intelligence_NN -LRB-_-LRB- including_VBG machine_NN learning_NN -RRB-_-RRB- ,_, statistics_NNS ,_, and_CC database_NN ._.
+Several_JJ IDS_NNP based_VBN on_IN the_DT paradigm_NN of_IN data_NNS mining_NN have_VBP been_VBN proposed_VBN :_: among_IN which_WDT we_PRP distinguish_VBP the_DT IDS_NNP based_VBN on_IN clustering_VBG technology_NN -LSB-_NN 2_CD -RSB-_NNP -LSB-_NNP 3_CD -RSB-_NNP and_CC the_DT IDS_NNP based_VBN on_IN classification_NN technique_NN -LSB-_NN 4_CD -RSB-_NNP -LSB-_NNP 5_CD -RSB-_NNP -LSB-_NNP 6_CD -RSB-_NNP -LSB-_NN 7_CD -RSB-_NNP -LSB-_NN 8_CD -RSB-_NN ._.
+Today_NN ,_, we_PRP can_MD state_VB that_IN the_DT IDS_NNP can_MD be_VB seen_VBN as_IN classification_NN problems_NNS :_: several_JJ classification_NN models_NNS have_VBP been_VBN proposed_VBN :_: IDS_NNP based_VBN on_IN neural_JJ networks_NNS -LSB-_VBP 5_CD -RSB-_JJ -LSB-_NN 9_CD -RSB-_NN are_VBP to_TO direct_VB the_DT monitoring_NN of_IN user_NN behaviour_NN ,_, probabilistic_JJ IDS_NNP based_VBN on_IN Bayesian_JJ networks_NNS -LSB-_NNP 10_CD -RSB-_NNP ,_, -LSB-_NNP 11_CD -RSB-_NN to_TO build_VB dynamic_JJ profiles_NNS ,_, IDS_NNP based_VBN on_IN new_JJ decision_NN tree_NN technique_NN c5_CD .0_CD which_WDT is_VBZ considered_VBN very_RB useful_JJ to_TO handle_VB missing_VBG data_NNS and_CC a_DT large_JJ amount_NN of_IN data_NNS -LSB-_NN 9_CD -RSB-_NN ._.
+We_PRP also_RB distinguish_VBP IDS_NNP which_WDT is_VBZ totally_RB distributed_VBN according_VBG to_TO the_DT functioning_NN on_IN their_PRP$ biological_JJ systems_NNS that_WDT are_VBP built_VBN upon_IN the_DT natural_JJ selection_NN of_IN a_DT population_NN for_IN genetic_JJ algorithms_NNS -LSB-_NN 7_CD -RSB-_NNP and_CC on_IN the_DT immune_JJ system_NN of_IN living_VBG beings_NNS for_IN immunological_JJ approaches_NNS -LSB-_NN 8_CD -RSB-_NN ._.
+Recently_RB ,_, hybrid_JJ approaches_NNS like_IN the_DT neural_JJ fuzzy_JJ -LSB-_NN 6_CD -RSB-_NNP -LSB-_NNP 12_CD -RSB-_NNP ,_, genetic_JJ fuzzy_JJ -LSB-_NNP 13_CD -RSB-_NNP and_CC Hybrid_NNP decision_NN tree-SVM_NNP -LSB-_NNP 14_CD -RSB-_NNP have_VBP shown_VBN promising_JJ results_NNS in_IN detection_NN intrusion_NN ._.
+This_DT is_VBZ a_DT consistent_JJ architecture_NN that_WDT combines_VBZ the_DT clarity_NN and_CC flexibility_NN of_IN fuzzy_JJ logic_NN and_CC decision_NN tree_NN and_CC the_DT learning_NN ability_NN of_IN the_DT SVM_NNP ,_, genetic_JJ algorithm_NN and_CC neural_JJ network_NN ._.
+The_DT choice_NN of_IN learning_VBG algorithm_NN is_VBZ important_JJ to_TO decrease_VB data_NNS uncertainty_NN and_CC to_TO reduce_VB the_DT huge_JJ number_NN of_IN alerts_VBZ ._.
+The_DT purpose_NN of_IN learning_NN is_VBZ to_TO produce_VB a_DT classification_NN task_NN which_WDT uses_VBZ the_DT model_NN of_IN supervised_JJ learning_NN which_WDT consists_VBZ of_IN regrouping_VBG alerts_VBZ in_IN meta-alerts_NNS ._.
+This_DT allows_VBZ us_PRP to_TO automatically_RB create_VB rules_NNS from_IN the_DT examples_NNS that_WDT are_VBP considered_VBN as_IN training_NN data_NNS ._.
+This_DT model_NN is_VBZ run_VBN on_IN other_JJ types_NNS of_IN data_NNS :_: test_NN data_NNS to_TO classify_VB new_JJ examples_NNS ._.
+This_DT phase_NN is_VBZ meant_VBN to_TO generalize_VB at_IN best_JJS the_DT function_NN to_TO approximate_JJ ._.
+2_CD Neuro-Fuzzy_NNP Classification_NNP We_PRP propose_VBP to_TO utilise_VB the_DT model_NN NEFCLASS_NNP -LSB-_NNP 15_CD -RSB-_NNP ,_, which_WDT is_VBZ in_IN the_DT form_NN of_IN neural_JJ network_NN and_CC fuzzy_JJ combination_NN system_NN ._.
+This_DT hybridization_NN brings_VBZ privileges_NNS for_IN intrusion_NN classification_NN problem_NN solution_NN :_: the_DT ability_NN to_TO learn_VB neural_JJ networks_NNS and_CC fuzzy_JJ logic_NN reasoning_NN that_WDT realizes_VBZ the_DT knowledge_NN of_IN vague_JJ characters_NNS ._.
+The_DT fuzzy_JJ classification_NN model_NN is_VBZ represented_VBN as_IN linguistic_JJ rules_NNS which_WDT are_VBP easy_JJ to_TO interpret_VB by_IN the_DT user_NN ._.
+The_DT system_NN NEFCLASS_NNP used_VBD for_IN data_NNS analysis_NN is_VBZ a_DT fuzzy_JJ perceptron_NN model_NN that_WDT is_VBZ similar_JJ to_TO conventional_JJ multi-layer_JJ perceptron_NN ,_, except_IN that_IN the_DT weights_NNS are_VBP modelled_VBN by_IN fuzzy_JJ sets_NNS ._.
+Activations_NNS ,_, outputs_NNS ,_, and_CC propagation_NN functions_NNS will_MD also_RB be_VB changed_VBN ._.
+This_DT architecture_NN can_MD be_VB seen_VBN as_IN a_DT neural_JJ network_NN ,_, where_WRB in_IN each_DT layer_NN is_VBZ a_DT component_NN of_IN a_DT fuzzy_JJ system_NN ._.
+To_TO describe_VB the_DT architecture_NN and_CC operation_NN of_IN the_DT proposed_VBN system_NN ,_, we_PRP consider_VBP Figure_NN 1_CD which_WDT shows_VBZ the_DT internal_JJ structure_NN of_IN the_DT proposed_VBN fuzzy_JJ perceptron_NN with_IN 2_CD inputs_NNS ,_, 2_CD outputs_NNS and_CC 5_CD rules_NNS ._.
+It_PRP consists_VBZ of_IN three_CD main_JJ layers_NNS :_: it_PRP is_VBZ simple_JJ to_TO implement_VB ,_, it_PRP avoids_VBZ the_DT defuzzification_NN step_NN which_WDT gives_VBZ a_DT higher_JJR classification_NN speed_NN ._.
+The_DT first_JJ layer_NN represents_VBZ the_DT system_NN inputs_NNS :_: it_PRP defines_VBZ the_DT Membership_NN Functions_NNS -LRB-_-LRB- MF_NNP -RRB-_-RRB- ;_: the_DT fuzzy_JJ sets_NNS are_VBP encoded_VBN as_IN fuzzy_JJ connection_NN weights_NNS ._.
+The_DT second_JJ hidden_JJ layer_NN represents_VBZ fuzzy_JJ rules_NNS that_WDT can_MD be_VB interpreted_VBN as_IN a_DT vague_JJ prototype_NN of_IN the_DT data_NNS from_IN which_WDT the_DT fuzzy_JJ classifier_NN was_VBD created_VBN from_IN ._.
+The_DT third_JJ layer_NN represents_VBZ the_DT output_NN of_IN the_DT system_NN :_: it_PRP is_VBZ considered_VBN as_IN one_CD unit_NN per_IN class_NN ._.
+The_DT system_NN used_VBN in_IN our_PRP$ approach_NN is_VBZ Mamdani_NNP which_WDT is_VBZ considered_VBN as_IN a_DT Fuzzy_NNP Inference_NNP System_NNP using_VBG MIN-MAX_NNP for_IN T-norms_NNS and_CC T-conorm_NN as_IN activation_NN functions_NNS ,_, respectively_RB -LRB-_-LRB- see_VB Figure_NN 2_CD -RRB-_-RRB- ._.
+The_DT first_JJ stage_NN consists_VBZ of_IN the_DT step_NN of_IN Fuzzification_NNP used_VBD to_TO determine_VB the_DT degrees_NNS of_IN membership_NN of_IN the_DT input_NN variables_NNS ,_, x_LS and_CC y_JJ corresponding_JJ to_TO the_DT fuzzy_JJ sets_NNS ._.
+The_DT rule_NN evaluation_NN step_NN comprises_VBZ applying_VBG to_TO the_DT antecedents_NNS of_IN the_DT fuzzy_JJ rules_NNS in_IN the_DT case_NN of_IN multiple_JJ antecedents_NNS for_IN one_CD rule_NN ,_, the_DT fuzzy_JJ operator_NN AND_CC typically_RB the_DT intersection_NN operation_NN transited_VBN by_IN MIN_NNP A_NNP B_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM min_SYM -LSB-_NNP A_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, B_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- -RSB-_NN is_VBZ used_VBN to_TO obtain_VB the_DT final_JJ conclusion_NN ._.
+Each_DT result_NN is_VBZ then_RB associated_VBN with_IN the_DT corresponding_JJ membership_NN function_NN result_NN ._.
+The_DT next_JJ step_NN is_VBZ to_TO evaluate_VB the_DT fuzzy_JJ rules_NNS to_TO correlate_VB the_DT evaluation_NN of_IN history_NN with_IN the_DT result_NN ._.
+The_DT third_JJ step_NN is_VBZ to_TO unify_VB the_DT results_NNS of_IN all_PDT the_DT rules_NNS by_IN aggregating_VBG all_DT substantial_JJ memberships_NNS featuring_VBG a_DT composite_JJ fuzzy_JJ set_NN using_VBG fuzzy_JJ implication_NN described_VBN by_IN the_DT fuzzy_JJ OR_NNP operator_NN ._.
+Typically_RB the_DT operation_NN resulted_VBD in_IN a_DT union_NN MAX_NNP A_NNP B_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM max_FW -LSB-_FW A_DT -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, B_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- -RSB-_NN ._.
+The_DT last_JJ step_NN is_VBZ used_VBN to_TO convert_VB all_DT linguistic_JJ values_NNS obtained_VBN in_IN the_DT third_JJ step_NN into_IN a_DT unique_JJ number_NN using_VBG several_JJ methods_NNS such_JJ as_IN -LRB-_-LRB- calculation_NN of_IN center_NN of_IN gravity_NN ,_, Neural_NNP Networks_NNP ,_, etc._FW -RRB-_-RRB- The_DT learning_NN of_IN Neuro-Fuzzy_NNP systems_NNS is_VBZ used_VBN to_TO determine_VB or_CC change_VB system_NN settings_NNS in_IN order_NN to_TO adopt_VB a_DT desired_VBN behaviour_NN ._.
+The_DT refinement_NN of_IN these_DT parameters_NNS can_MD be_VB seen_VBN as_IN an_DT optimization_NN problem_NN of_IN neural_JJ networks_NNS ._.
+Adjustments_NNS are_VBP then_RB made_VBN to_TO the_DT various_JJ system_NN parameters_NNS -LRB-_-LRB- weights_NNS ,_, thresholds_NNS ,_, rules_NNS ,_, MF_NNP ,_, etc._FW -RRB-_-RRB- ._.
+The_DT system_NN can_MD be_VB built_VBN with_IN basic_JJ initial_JJ rules_NNS defined_VBD a_DT priori_FW and_CC will_MD be_VB then_RB refined_VBN during_IN the_DT learning_VBG phase_NN ,_, or_CC it_PRP may_MD start_VB with_IN a_DT base_NN of_IN empty_JJ rules_NNS that_WDT will_MD be_VB filled_VBN from_IN the_DT training_NN data_NNS ._.
+Figure_NN 1_CD ._.
+NEFCLASS_NNP Structure_NNP -LSB-_NNP 15_CD -RSB-_NNP Figure_NNP 2_CD ._.
+The_DT Mamdani_NNP Fuzzy_NNP Inference_NNP System_NNP using_VBG Min-Max_NNP Method_NNP -LSB-_NNP 16_CD -RSB-_NNP The_DT learning_NN of_IN rules_NNS has_VBZ two_CD important_JJ cycles_NNS :_: in_IN the_DT first_JJ cycle_NN ,_, a_DT combination_NN of_IN fuzzy_JJ sets_NNS is_VBZ defined_VBN with_IN degrees_NNS of_IN membership_NN ._.
+These_DT sets_NNS are_VBP distincts_NNS for_IN each_DT input_NN and_CC output_NN and_CC result_NN in_IN a_DT combined_VBN antecedent_NN ._.
+If_IN it_PRP does_VBZ not_RB exist_VB in_IN the_DT basic_JJ rules_NNS ,_, it_PRP will_MD be_VB added_VBN ._.
+In_IN the_DT second_JJ cycle_NN the_DT rules_NNS are_VBP completed_VBN by_IN choosing_VBG the_DT best_JJS consistent_JJ ._.
+The_DT assignment_NN of_IN weights_NNS to_TO the_DT different_JJ rules_NNS changes_NNS according_VBG to_TO the_DT priority_NN of_IN the_DT importance_NN of_IN rules_NNS and_CC measurement_NN of_IN their_PRP$ performance_NN in_IN the_DT classification_NN ._.
+Selection_NN is_VBZ used_VBN to_TO reduce_VB the_DT size_NN of_IN the_DT basis_NN of_IN candidate_NN rules_NNS ._.
+For_IN learning_VBG the_DT membership_NN functions_NNS ,_, a_DT simple_JJ retro_NN spread_NN will_MD be_VB adopted_VBN ._.
+Each_DT rule_NN alters_VBZ its_PRP$ membership_NN functions_NNS by_IN changing_VBG their_PRP$ degree_NN of_IN membership_NN ._.
+The_DT process_NN is_VBZ to_TO calculate_VB the_DT activation_NN of_IN neurons_NNS in_IN front_NN of_IN the_DT different_JJ layers_NNS ,_, the_DT error_NN is_VBZ then_RB propagated_VBN retro_NN in_IN reverse_JJ activation_NN to_TO calculate_VB each_DT neuron_NN 's_POS contribution_NN ._.
+Algorithm_NNP 1_CD and_CC 2_CD show_VBP the_DT pseudo-code_NN of_IN structure_NN learning_NN and_CC parameters_NNS learning_VBG ,_, respectively_RB ._.
+We_PRP consider_VBP ,_, as_IN an_DT example_NN ,_, the_DT triangular_JJ membership_NN function_NN which_WDT is_VBZ regarded_VBN as_IN a_DT special_JJ case_NN of_IN the_DT trapezoidal_JJ shape_NN ._.
+Figure_NN 3_CD displays_NNS the_DT variation_NN of_IN the_DT degrees_NNS of_IN membership_NN of_IN the_DT two_CD forms_NNS ._.
+The_DT model_NN is_VBZ :_: n_VB input_NN units_NNS K_NNP =_SYM 0_CD ,_, i.e._FW bases_NNS empty_JJ rules_NNS m_NN output_NN units_NNS represents_VBZ intrusions_NNS S_NNP forms_NNS training_NN -LRB-_-LRB- each_DT form_NN consists_VBZ of_IN a_DT relevant_JJ vector_NN of_IN entry_NN p_NN and_CC a_DT desired_VBN output_NN vector_NN -LRB-_-LRB- Class_NN alerts_VBZ -RRB-_-RRB- t_NN -RRB-_-RRB- Class_NN alerts_VBZ is_VBZ represented_VBN in_IN the_DT form_NN of_IN n_NN successive_JJ numbers_NNS that_WDT are_VBP either_RB 0_CD or_CC 1_CD ,_, affects_VBZ 1_CD in_IN the_DT attack_NN occurred_VBD For_IN each_DT form_NN -LRB-_-LRB- p_FW ,_, t_VBN -RRB-_-RRB- do_VBP begin_VB For_IN each_DT input_NN do_VBP find_VB =_SYM Create_VB the_DT antecedent_NN A_DT =_SYM -LRB-_-LRB- -LCB-_-LRB- -LRB-_-LRB- p_NN -RRB-_-RRB- -RCB-_-RRB- ;_: ..._: ._. -RRB-_-RRB-
+;_: If_IN -LRB-_-LRB- A_DT list_NN of_IN antecedent_NN -RRB-_-RRB- then_RB Add_VB A_DT in_IN the_DT list_NN of_IN history_NN ._.
+end_NN ;_: end_NN ;_: For_IN any_DT form_NN -LRB-_-LRB- p_FW ,_, t_VBN -RRB-_-RRB- do_VBP begin_VB For_IN each_DT A_DT list_NN of_IN antecedent_NN do_VBP -LSB-_NNP Classe_NNP -LRB-_-LRB- p_VBN -RRB-_-RRB- -RSB-_JJ =_SYM -LSB-_NNP classe_NN -LRB-_-LRB- p_NN -RRB-_-RRB- -RSB-_JJ +_NN A_DT -LRB-_-LRB- p_NN -RRB-_-RRB- end_NN ;_: end_NN ;_: For_IN any_DT form_NN -LRB-_-LRB- p_FW ,_, t_VBN -RRB-_-RRB- do_VBP begin_VB For_IN each_DT A_DT list_NN of_IN antecedent_NN do_VBP -LSB-_NNP Classe_NNP -LRB-_-LRB- p_VBN -RRB-_-RRB- -RSB-_JJ =_SYM -LSB-_NNP classe_NN -LRB-_-LRB- p_NN -RRB-_-RRB- -RSB-_JJ +_NN A_DT -LRB-_-LRB- p_NN -RRB-_-RRB- end_NN ;_: end_NN ;_: For_IN each_DT A_DT list_NN of_IN antecedent_NN do_VBP begin_VB j_SYM ={_FW -RCB-_-RRB- Create_VB a_DT rule_NN R_NN with_IN the_DT antecedent_NN A_DT and_CC consequent_JJ Add_VB R_NN in_IN the_DT candidate_NN rule_NN base_NN and_CC connect_VB to_TO the_DT output_NN -_: Algorithm1_NNP ._.
+Rule_NNP Learning_NNP algorithm_NN repeat_NN propagate_VB the_DT next_JJ form_NN -LRB-_-LRB- p_FW ,_, t_VBN -RRB-_-RRB- of_IN the_DT τ_NN it_PRP by_IN NEFCLASS_NNP For_IN each_DT output_NN unit_NN ,_, determine_VB the_DT delta_JJ value_NN =_SYM --_: For_IN each_DT rule_NN unit_NN R_NN with_IN >_NN 0_CD begin_VBP Determine_VB the_DT delta_JJ value_NN =_SYM Find_VB such_JJ that_IN W_NNP -LRB-_-LRB- ,_, R_NNP -RRB-_-RRB- -LRB-_-LRB- =_SYM -LCB-_-LRB- W_NNP -LRB-_-LRB- x_LS ,_, R_NNP -RRB-_-RRB- -RCB-_-RRB- For_IN the_DT fuzzy_JJ set_NN W_NNP -LRB-_-LRB- ,_, R_NNP -RRB-_-RRB- determine_VB the_DT delta_NN values_NNS for_IN its_PRP$ :_: Increase_VB status_NN :_: decrease_NN status_NN Figure_NN 3_CD ._.
+Adaption_NN of_IN Triangular_JJ MF_NNP -LRB-_-LRB- to_TO the_DT left_NN -RRB-_-RRB- and_CC Trapezoidal_NNP MF_NNP -LRB-_-LRB- to_TO the_DT right_NN -RRB-_-RRB- ._.
+3_CD KDD_NNP Cup_NNP 99_CD Data_NNP Set_NNP Nowadays_NNPS ,_, very_RB little_JJ traffic_NN traces_NNS are_VBP freely_RB available_JJ to_TO the_DT scientific_JJ community_NN ,_, for_IN obvious_JJ privacy_NN reasons_NNS ._.
+In_IN addition_NN ,_, public_JJ traces_NNS containing_VBG well-documented_JJ abnormalities_NNS are_VBP even_RB rarer_JJR ._.
+Indeed_RB ,_, among_IN the_DT only_JJ public_JJ traces_NNS labelled_VBD ,_, we_PRP found_VBD :_: PLACID_NNP -LRB-_-LRB- Probabilistic_NNP Models_NNPS and_CC graphical_JJ logics_NNS for_IN alarm_NN correlation_NN in_IN intrusion_NN detection_NN -RRB-_-RRB- ,_, DARPA_NNP '98_CD -LRB-_-LRB- Defense_NNP Advanced_NNP Research_NNP Projects_NNP Agency_NNP -RRB-_-RRB- ,_, DADDI_NNP -LRB-_-LRB- Dependable_JJ Anomaly_NNP Detection_NNP with_IN Diagnosis_NNP -RRB-_-RRB- ._.
+We_PRP used_VBD the_DT KDD_NNP '_POS 99_CD -LRB-_-LRB- KDD_NNP =_SYM Knowledge_NNP Discovery_NNP in_IN Databases_NNP -RRB-_-RRB- exploited_VBN at_IN the_DT annual_JJ conference_NN in_IN the_DT DARPA_NNP program_NN as_IN part_NN of_IN experiment_NN a_DT data_NN ._.
+They_PRP contain_VBP traces_NNS of_IN anomalies_NNS that_WDT documented_VBD 90_CD %_NN of_IN normal_JJ connections_NNS and_CC 10_CD %_NN of_IN intrusion_NN type_NN connections_NNS or_CC attacks_NNS ._.
+Each_DT record_NN or_CC connection_NN codes_NNS a_DT data_NN flow_NN between_IN a_DT source_NN and_CC a_DT destination_NN with_IN a_DT given_VBN protocol_NN -LRB-_-LRB- TCP_NNP ,_, UDP_NNP ..._: -RRB-_-RRB- ,_, and_CC each_DT connection_NN contains_VBZ 41_CD attributes_NNS ._.
+The_DT data_NN set_NN comprise_VB four_CD classes_NNS ,_, namely_RB -LSB-_NNP 17_CD -RSB-_NNP :_: Probe_NNP :_: This_DT acquires_VBZ crucial_JJ information_NN to_TO conduct_VB a_DT more_RBR scalable_JJ attack_NN later_RB ,_, e.g._FW ,_, port_JJ sweep_NN ._.
+Dos_NNP -LRB-_-LRB- Denial_NNP of_IN Service_NNP -RRB-_-RRB- :_: This_DT is_VBZ to_TO prevent_VB by_IN all_DT means_NNS ,_, the_DT users_NNS accessing_VBG the_DT resources_NNS available_JJ in_IN time_NN ,_, e.g._FW ,_, smurf_NN ._.
+R2L_CD -LRB-_-LRB- Root_NN to_TO Local_JJ -RRB-_-RRB- :_: This_DT is_VBZ to_TO have_VB unauthorized_JJ access_NN from_IN a_DT remote_JJ machine_NN ,_, e.g._FW ,_, imap_NN ._.
+U2R_CD -LRB-_-LRB- User_NN to_TO Root_NN -RRB-_-RRB- :_: This_DT is_VBZ to_TO have_VB unauthorized_JJ access_NN as_IN local_JJ super-In_JJ user_NN ,_, e.g._FW ,_, buffer_NN overflow_NN ._.
+KDD_NNP dataset_NN is_VBZ divided_VBN into_IN the_DT following_VBG record_NN sets_NNS :_: data_NNS labelled_VBD for_IN the_DT training_NN phase_NN and_CC data_NNS unlabelled_JJ for_IN the_DT test_NN phase_NN ._.
+The_DT total_JJ number_NN of_IN connection_NN records_NNS in_IN the_DT training_NN end_NN ;_: parameters_NNS ,_, ,_, using_VBG the_DT learning_NN rate_NN of_IN the_DT fuzzy_JJ set_NN μ_SYM >_SYM 0_CD sgn_NN -LRB-_-LRB- -_: -RRB-_-RRB- =_SYM -_: +_NN ,_, +_NN Apply_VB the_DT changes_NNS to_TO W_NNP -LRB-_-LRB- ,_, R_NNP -RRB-_-RRB- end_NN ;_: Algorithm_NNP 2_CD ._.
+Fuzzy_JJ Set_NNP Learning_NNP algorithm_NN 4_CD data_NN set_NN is_VBZ too_RB large_JJ ,_, at_IN about_IN 5000000_CD records_NNS ._.
+We_PRP used_VBD just_RB 10_CD %_NN of_IN this_DT data_NN ._.
+Proposed_NNP Method_NNP maximum_NN information_NN gain_NN ,_, most_JJS of_IN the_DT features_NNS have_VBP information_NN gain_NN ratio_NN -LRB-_-LRB- IGR_NNP -RRB-_-RRB- over_IN 0.6_CD -LSB-_NNP 19_CD -RSB-_NNP -LSB-_NNP 21_CD -RSB-_NNP ._.
+The_DT purpose_NN of_IN eliminating_VBG no-useful_JJ attributes_NNS is_VBZ to_TO achieve_VB a_DT classification_NN suitable_JJ for_IN the_DT evaluation_NN of_IN IDS_NNP and_CC subsequently_RB bring_VB about_RB a_DT better_JJR performance_NN by_IN the_DT system_NN ._.
+Figure_NN 4_CD ._.
+Selection_NN of_IN relevant_JJ attributes_NNS based_VBN on_IN Information_NN Gain_NNP Figure_NNP 5_CD ._.
+Selection_NN of_IN relevant_JJ attributes_NNS bases_NNS on_IN Gini_NNP Index_NNP Eliminating_VBG redundancies_NNS :_: One_CD of_IN the_DT most_RBS significant_JJ deficiencies_NNS in_IN the_DT KDD_NNP data_NN set_NN is_VBZ the_DT huge_JJ number_NN of_IN redundant_JJ records_NNS ,_, which_WDT causes_VBZ the_DT learning_VBG algorithms_NNS to_TO be_VB biased_VBN towards_IN the_DT frequent_JJ records_NNS ,_, and_CC thus_RB prevent_VB them_PRP from_IN learning_VBG infrequent_JJ records_NNS which_WDT are_VBP usually_RB more_RBR harmful_JJ to_TO networks_NNS such_JJ as_IN U2R_NNP and_CC R2L_NNP attacks_NNS ._.
+In_IN addition_NN ,_, the_DT existence_NN of_IN these_DT repeated_VBN records_NNS in_IN the_DT test_NN set_NN will_MD cause_VB the_DT evaluation_NN results_NNS to_TO be_VB biased_VBN by_IN the_DT methods_NNS which_WDT have_VBP superior_JJ detection_NN rates_NNS on_IN the_DT frequent_JJ records_NNS -LSB-_VBP 20_CD -RSB-_NNP ._.
+This_DT issue_NN was_VBD solved_VBN by_IN removing_VBG all_PDT the_DT repeated_VBN records_NNS in_IN the_DT entire_JJ KDD_NNP training_NN and_CC test_NN set_NN ,_, and_CC retaining_VBG only_RB one_CD copy_NN of_IN each_DT record_NN ._.
+The_DT following_VBG charts_NNS -LRB-_-LRB- see_VB Figure_NN 6_CD and_CC Figure_NN 7_CD -RRB-_-RRB- illustrate_VBP the_DT statistics_NNS of_IN the_DT reduction_NN of_IN repeated_VBN records_NNS in_IN the_DT KDD_NNP training_NN and_CC test_NN sets_NNS ,_, respectively_RB ._.
+Classification_NN includes_VBZ three_CD main_JJ process_NN :_: Model_NNP Design_NNP :_: comprises_VBZ Data_NNP preprocessing_NN implies_VBZ to_TO transform_VB raw_JJ data_NNS into_IN an_DT understandable_JJ format_NN and_CC Fuzzification_NNP inputs_NNS implies_VBZ to_TO transform_VB crisp_JJ values_NNS into_IN grades_NNS of_IN membership_NN for_IN linguistic_JJ terms_NNS of_IN fuzzy_JJ sets_NNS ._.
+Classifier_NNP Structure_NNP :_: Consists_NNS of_IN two_CD process_NN which_WDT are_VBP training_VBG parameters_NNS -LRB-_-LRB- Training_VBG Fuzzy_NNP Sets_NNPS -RRB-_-RRB- and_CC training_NN structure_NN -LRB-_-LRB- Training_VBG Rules_NNS -RRB-_-RRB- ._.
+To_TO evaluate_VB the_DT classifier_NN obtained_VBD we_PRP used_VBD certain_JJ measures_NNS which_WDT are_VBP error_NN rate_NN and_CC confidence_NN intervals_NNS Test_NN of_IN classifier_NN :_: To_TO check_VB the_DT classifier_NN 's_POS generalization_NN ability_NN ,_, the_DT classifier_NN performs_VBZ on_IN unseen_JJ data_NNS characterized_VBD the_DT test_NN data_NNS ._.
+Some_DT performance_NN measures_NNS are_VBP used_VBN to_TO assessing_VBG the_DT classifier_NN performance_NN ._.
+4.1_CD Preprocessing_NNP Normalization_NNP :_: Some_DT attributes_NNS are_VBP of_IN a_DT discrete_JJ type_NN -LRB-_-LRB- assuming_VBG a_DT finite_JJ number_NN of_IN values_NNS -RRB-_-RRB- ,_, while_IN others_NNS are_VBP of_IN the_DT order_NN of_IN and_CC others_NNS of_IN continuous_JJ type_NN ._.
+In_IN order_NN to_TO become_VB adaptable_JJ to_TO the_DT Neuro-Fuzzy_NNP model_NN ,_, a_DT normalization_NN step_NN is_VBZ necessary_JJ ._.
+The_DT normalization_NN is_VBZ effected_VBN by_IN the_DT following_VBG function_NN :_: The_DT original_JJ value_NN of_IN the_DT attribute_NN The_DT minimum_JJ value_NN of_IN all_DT possible_JJ values_NNS of_IN the_DT attribute_NN The_DT maximum_NN value_NN of_IN all_DT possible_JJ values_NNS of_IN the_DT attribute_NN The_DT normalized_VBN value_NN ∈_CD -LSB-_NNP 0,1_CD -RSB-_NNP Selection_NNP Feature_NNP :_: We_PRP selected_VBD among_IN the_DT connection_NN data_NNS only_RB those_DT that_WDT are_VBP considered_VBN most_RBS relevant_JJ ._.
+We_PRP processed_VBD the_DT data_NN selection_NN problem_NN by_IN applying_VBG AFCM_NNP analysis_NN -LRB-_-LRB- Factorial_NNP Multiple_NNP Correspondence_NNP Analysis_NNP -RRB-_-RRB- based_VBN on_IN the_DT calculation_NN of_IN GINI_NNP indexes_NNS -LRB-_-LRB- when_WRB the_DT GINI_NNP index_NN increases_NNS ,_, the_DT relevance_NN of_IN attribute_NN increases_NNS -RRB-_-RRB- -LSB-_JJ 18_CD -RSB-_NN ._.
+We_PRP used_VBD just_RB 9_CD relevant_JJ attributes_NNS ._.
+We_PRP also_RB propose_VBP to_TO use_VB the_DT first_JJ 9_CD relevant_JJ attributes_NNS based_VBN on_IN the_DT Number_NNP of_IN Input_NNP 9_CD Number_NN of_IN Output_NN 9_CD Form_NN of_IN Membership_NN Functions_NNS Trapezoidal_NNP Function_NNP Fuzzy_NNP Inference_NNP System_NNP Mamdani_NNP Generation_NNP of_IN Fuzzy_NNP Inference_NNP System_NNP Grid_NNP Partitioning_NNP T-Norme/T-Conorme_NNP Min/Max_NNP Parameters_NNPS Learning_NNP Back-propagation_NN -LRB-_-LRB- simple_JJ heuristics_NNS -RRB-_-RRB- +_RB least_JJS square_JJ Structure_NN learning_VBG Best_JJS Rules_NNPS Figure_NNP 6_CD ._.
+Statistics_NNS of_IN redundancy_NN in_IN the_DT KDD_NNP Train_NN set_VBD Figure_NN 7_CD ._.
+Statistics_NNS of_IN redundancy_NN in_IN the_DT KDD_NNP Test_NNP 4.2_CD Classifier_NNP Structure_NNP The_NNP amelioration_NN of_IN learning_VBG Neuro-Flou_NNP parameters_NNS is_VBZ related_VBN to_TO several_JJ factors_NNS ,_, including_VBG :_: the_DT number_NN of_IN forms_NNS of_IN learning_NN ,_, the_DT number_NN of_IN hidden_JJ layers_NNS ,_, the_DT activation_NN function_NN ,_, choice_NN of_IN basic_JJ tests_NNS -LRB-_-LRB- empty_JJ or_CC not_RB -RRB-_-RRB- ,_, and_CC algorithms_NNS learning_VBG ._.
+All_PDT the_DT Membership_NN Functions_NNS input_NN stands_VBZ for_IN the_DT trapezoidal_JJ functions_NNS with_IN 5_CD fuzzy_JJ sets_NNS ._.
+The_DT inference_NN mechanism_NN used_VBN is_VBZ of_IN type_NN Mamdani_NNP fuzzy_JJ ._.
+Fuzzy_JJ intersection_NN -LRB-_-LRB- T-norms_NNS -RRB-_-RRB- and_CC fuzzy_JJ union_NN -LRB-_-LRB- T-conorms_NNS -RRB-_-RRB- are_VBP used_VBN as_IN activation_NN functions_NNS ._.
+The_DT following_VBG table_NN summarizes_VBZ the_DT characteristic_NN of_IN the_DT model_NN NEFCLASS_NNP ._.
+We_PRP apply_VBP two_CD types_NNS of_IN selection_NN method_NN :_: the_DT first_JJ is_VBZ based_VBN on_IN the_DT Information_NNP Gain_NNP -LRB-_-LRB- IG_NNP -RRB-_-RRB- and_CC the_DT second_JJ on_IN the_DT Gini_NNP Index_NNP -LRB-_-LRB- GI_NNP -RRB-_-RRB- ._.
+We_PRP use_VBP the_DT model_NN NEFCLASS_NNP in_IN two_CD forms_NNS of_IN Binary_NNP -LRB-_-LRB- B-NFC_NNP -RRB-_-RRB- and_CC Multi_NNP -_: classifier_NN -LRB-_-LRB- M-NFC_NNP -RRB-_-RRB- to_TO classify_VB into_IN normal_JJ and_CC suspicious_JJ or_CC intrusive_JJ activity_NN ._.
+In_IN binary_JJ classification_NN ,_, the_DT classifier_NN model_NN has_VBZ been_VBN trained_VBN with_IN training_NN dataset_NN labelled_VBD to_TO one_CD of_IN the_DT two_CD classes_NNS ,_, 0_CD for_IN normal_JJ and_CC 1_CD for_IN attack_NN ._.
+Unlike_IN the_DT binary_JJ classifier_NN ,_, attacks_NNS in_IN the_DT training_NN dataset_NN for_IN multi-classifier_NN may_MD be_VB categorized_VBN into_IN five_CD classes_NNS ,_, 0_CD for_IN normal_JJ ,_, 1_CD for_IN Dos_NNP ,_, 2_CD for_IN R2L_NNP ,_, 3_CD for_IN U2R_NNP ,_, and_CC 4_CD for_IN Probe_NNP ._.
+Table_NNP 1_CD :_: Characteristic_NNP of_IN approach_NN 4.3_CD Evaluation_NN classifier_NN Model_NNP evaluation_NN is_VBZ an_DT integral_JJ part_NN of_IN the_DT model_NN development_NN process_NN ._.
+It_PRP helps_VBZ to_TO find_VB the_DT best_JJS model_NN that_IN represents_VBZ our_PRP$ data_NNS and_CC how_WRB well_RB the_DT chosen_VBN model_NN will_MD work_VB in_IN the_DT future_NN ._.
+We_PRP used_VBD the_DT technique_NN of_IN Cross-Validation_NNP ,_, we_PRP divided_VBD the_DT data_NNS into_IN K_NNP subsets_NNS of_IN equal_JJ size_NN ,_, we_PRP built_VBD models_NNS K_NNP times_NNS ,_, each_DT time_NN omitting_VBG one_CD of_IN the_DT subsets_NNS from_IN training_NN and_CC uses_VBZ this_DT as_IN the_DT test_NN set_NN ._.
+If_IN K_NNP equals_VBZ the_DT sample_NN size_NN ,_, this_DT is_VBZ called_VBN ``_`` leave-one-out_NN ''_'' ._.
+We_PRP adopt_VBP a_DT retro_NN propagation_NN algorithm_NN in_IN combination_NN with_IN a_DT least_JJS squares_NNS estimation_NN to_TO evaluate_VB our_PRP$ model_NN ._.
+This_DT technique_NN helps_VBZ to_TO better_JJR understand_VB how_WRB the_DT Neuro-Fuzzy_NNP model_NN works_VBZ ._.
+Its_PRP$ purpose_NN is_VBZ to_TO reduce_VB some_DT error_NN measure_NN defined_VBN by_IN the_DT sum_NN of_IN squared_VBN differences_NNS between_IN actual_JJ and_CC desired_VBN results_NNS ._.
+We_PRP have_VBP conducted_VBN to_TO construct_VB the_DT final_JJ model_NN that_WDT should_MD be_VB attached_VBN with_IN the_DT complete_JJ set_NN of_IN learning_VBG and_CC which_WDT aims_VBZ to_TO classify_VB each_DT observation_NN in_IN the_DT test_NN set_NN ._.
+we_PRP selected_VBD 48840_CD random_JJ points_NNS from_IN the_DT subset_NN of_IN 10_CD %_NN of_IN data_NNS used_VBN as_IN training_NN dataset_NN and_CC 4884_CD records_NNS of_IN data_NNS which_WDT do_VBP not_RB overlap_VB with_IN training_NN set_VBN dataset_NN ,_, selected_VBN as_IN the_DT checking_NN data_NNS -LRB-_-LRB- used_VBN for_IN validating_VBG the_DT model_NN -RRB-_-RRB- for_IN both_DT the_DT binary_JJ and_CC multi-classifiers_NNS ._.
+To_TO estimate_VB the_DT number_NN of_IN misclassifications_NNS per_IN pattern_NN for_IN unseen_JJ data_NNS in_IN order_NN to_TO account_VB for_IN the_DT validity_NN of_IN the_DT classifier_NN ,_, we_PRP used_VBD the_DT following_VBG measures_NNS :_: a_DT Mean_NN of_IN Error_NN -LRB-_-LRB- ME_NNP -RRB-_-RRB- of_IN 10_CD error_NN values_VBZ obtained_VBN ,_, a_DT Standard_JJ Deviation_NN -LRB-_-LRB- SD_NNP -RRB-_-RRB- and_CC a_DT Confidence_NN Interval_NNP -LRB-_-LRB- CI_NNP -RRB-_-RRB- as_IN precision_NN indicators_NNS for_IN the_DT results_NNS obtained_VBN ._.
+Furthermore_RB ,_, we_PRP fixed_VBD the_DT number_NN of_IN rules_NNS -LRB-_-LRB- NR_NNP -RRB-_-RRB- to_TO determine_VB the_DT complexity_NN Classifier_NNP SM_NNP CI_NNP B-NFC_NNP GI_NNP 0.028737_CD +_SYM /_SYM -_: 0.002082_CD IG_NNP 0.030166_CD +_SYM /_SYM -_: 0.008737_CD M-NFC_NNP GI_NNP 0.022632_CD +_SYM /_SYM -_: 0.001714_CD IG_NNP 0.026146_CD +_SYM /_SYM -_: 0.001810_CD of_IN classifier_NN ._.
+Usually_RB the_DT number_NN of_IN rules_NNS is_VBZ less_JJR than_IN min_NN -LCB-_-LRB- |_NN ,_, where_WRB |_NN is_VBZ the_DT cardinality_NN of_IN training_NN data_NNS set_VBN and_CC is_VBZ the_DT number_NN of_IN fuzzy_JJ set_VBN provided_VBN for_IN each_DT variable_JJ ._.
+Table_NNP 2_CD and_CC Table_NNP 3_CD show_VBP the_DT performance_NN on_IN training_NN data_NNS of_IN each_DT category_NN of_IN classifier_NN ._.
+To_TO evaluate_VB the_DT classifier_NN we_PRP relied_VBP on_IN the_DT following_VBG measures_NNS :_: Detection_NNP Rate_NNP -LRB-_-LRB- DR_NNP -RRB-_-RRB- is_VBZ defined_VBN as_IN the_DT number_NN of_IN examples_NNS correctly_RB classified_VBN by_IN our_PRP$ system_NN ,_, False_NNP Positive_NNP Rate_NNP -LRB-_-LRB- FP_NNP -RRB-_-RRB- ._.
+Certain_JJ patterns_NNS will_MD not_RB be_VB classified_VBN -LRB-_-LRB- UP_RP -RRB-_-RRB- if_IN the_DT degrees_NNS of_IN membership_NN of_IN different_JJ classes_NNS are_VBP very_RB similar_JJ ,_, or_CC if_IN none_NN of_IN the_DT degrees_NNS of_IN membership_NN exceeds_VBZ a_DT certain_JJ threshold_NN ._.
+Results_NNS indicate_VBP that_IN NEFCLASS_NNP is_VBZ more_RBR appropriate_JJ as_IN a_DT M-NFC_NN than_IN as_IN a_DT B-NFC_NN ._.
+It_PRP has_VBZ got_VBN high_JJ DR_NN which_WDT can_MD reach_VB 97.71_CD %_NN ,_, less_JJR FP_NN about_IN 0.26_CD %_NN and_CC UP_RP about_IN 0.77_CD %_NN for_IN GI_NNP method_NN ._.
+The_DT form_NN of_IN B_NNP -_: NFC_NNP has_VBZ got_VBN high_JJ DR_NN which_WDT can_MD reach_VB 97.08_CD %_NN ,_, FP_NNP about_IN 0.7_CD %_NN and_CC UP_RP about_IN 1.1_CD %_NN for_IN GI_NNP method_NN and_CC has_VBZ got_VBN the_DT least_JJS FP_NN about_IN 0.27_CD %_NN and_CC UP_RP about_IN 2.08_CD %_NN for_IN IG_NNP method_NN ._.
+Classifiers_NNS that_WDT use_VBP the_DT GI_NNP method_NN are_VBP considered_VBN the_DT best_JJS because_IN they_PRP have_VBP the_DT smallest_JJS number_NN of_IN errors_NNS between_IN targets_NNS and_CC outputs_NNS ._.
+We_PRP notice_VBP that_IN accuracy_NN is_VBZ higher_JJR with_IN a_DT lot_NN of_IN rules_NNS ._.
+Table_NNP 3_CD :_: Confidence_NN Interval_NNP of_IN each_DT category_NN of_IN classifier_NN and_CC method_NN selection_NN 4.4_CD Test_NN of_IN classifier_NN Following_VBG the_DT trained_JJ network_NN ,_, the_DT final_JJ values_NNS of_IN network_NN parameters_NNS are_VBP obtained_VBN ._.
+An_DT evaluation_NN step_NN is_VBZ necessary_JJ ;_: the_DT objective_NN of_IN this_DT phase_NN is_VBZ to_TO verify_VB the_DT adequacy_NN of_IN the_DT behaviour_NN predicted_VBN by_IN the_DT model_NN and_CC the_DT reality_NN of_IN the_DT modelled-system_NN ._.
+This_DT is_VBZ meant_VBN to_TO confirm_VB the_DT generalization_NN of_IN the_DT model_NN with_IN respect_NN to_TO the_DT training_NN set_NN ,_, using_VBG new_JJ test_NN data_NNS known_VBN as_IN ``_`` corrected_VBN KDD_NNP ''_'' ._.
+This_DT data_NN includes_VBZ 14_CD new_JJ types_NNS of_IN attack_NN ._.
+We_PRP used_VBD 50000_CD records_NNS of_IN ``_`` corrected_VBN KDD_NNP ''_'' to_TO evaluate_VB our_PRP$ classifiers_NNS ._.
+It_PRP 's_VBZ important_JJ to_TO point_VB that_IN a_DT little_JJ existing_VBG method_NN of_IN comparison_NN in_IN the_DT quoted_VBN reference_NN used_VBN this_DT nature_NN of_IN data_NNS ._.
+Among_IN the_DT works_NNS ,_, we_PRP mentioned_VBD this_DT approach_NN -LSB-_NN 6_CD -RSB-_NN which_WDT uses_VBZ ANFIS_NNP -LRB-_-LRB- Adaptive_NNP Neuro-Fuzzy_NNP Inference_NNP System_NNP -RRB-_-RRB- that_WDT is_VBZ functionally_RB equivalent_JJ to_TO the_DT Sugeno_NNP Fuzzy_NNP Inference_NNP Systems_NNPS for_IN building_VBG their_PRP$ IDS_NNP ._.
+The_DT key_JJ objective_NN of_IN this_DT work_NN is_VBZ to_TO utilize_VB ANFIS_NNP -LRB-_-LRB- Adaptive_NNP Neuro_NNP Fuzzy_NNP Inference_NNP System_NNP -RRB-_-RRB- as_IN a_DT classifier_NN to_TO detect_VB intrusions_NNS in_IN computer_NN networks_NNS ._.
+Similar_JJ to_TO what_WP has_VBZ been_VBN done_VBN ,_, the_DT performance_NN of_IN ANFIS_NNP has_VBZ been_VBN evaluated_VBN in_IN relation_NN to_TO two_CD forms_NNS :_: Binary_JJ and_CC multi-classifier_JJ and_CC they_PRP have_VBP used_VBN the_DT KDD_NNP Cup_NNP 99_CD intrusion_NN detection_NN dataset_NN ._.
+The_DT model_NN ANFIS_NNP implements_VBZ backpropagation_NN by_IN gradient_NN descent_NN as_IN Parameters_NNS Learning_NNP -LRB-_-LRB- PL_NNP -RRB-_-RRB- ,_, while_IN in_IN the_DT model_NN NEFCLASS_NNP ,_, the_DT fuzzy_JJ sets_NNS are_VBP trained_VBN by_IN backpropagation_NN ,_, used_VBN for_IN a_DT better_JJR suited_VBN procedure_NN -LRB-_-LRB- simple_JJ heuristics_NNS -RRB-_-RRB- to_TO fuzzy_JJ operators_NNS of_IN Mamdani_NNP System_NNP ._.
+In_IN our_PRP$ case_NN ,_, we_PRP did_VBD not_RB use_VB the_DT adaptive_JJ rule_NN weights_NNS in_IN order_NN to_TO keep_VB semantics_NNS of_IN a_DT NEFCLASS_NNP System_NNP ._.
+In_IN -LSB-_NNP 22_CD -RSB-_NNP ,_, it_PRP is_VBZ reported_VBN that_IN rule_NN weights_NNS do_VBP not_RB necessarily_RB serve_VB to_TO obtain_VB good_JJ classification_NN ._.
+Moreover_RB ,_, each_DT rule_NN unit_NN is_VBZ connected_VBN to_TO only_RB one_CD output_NN unit_NN so_IN it_PRP does_VBZ not_RB necessarily_RB compute_VB the_DT sum_NN of_IN errors_NNS of_IN rules_NNS ._.
+To_TO fix_VB the_DT size_NN of_IN rule_NN base_NN ,_, we_PRP determine_VBP Classifier_NNP SM_NNP NR_NNP ME_NNP SD_NNP B-NFC_NNP GI_NNP 383_CD 0.028737_CD 0.002421_CD IG_NNP 273_CD 0.030166_CD 0.010159_CD M-NFC_NNP GI_NNP 383_CD 0.022632_CD 0.002105_CD IG_NNP 273_CD 0.026146_CD 0.002660_CD Table_NNP 2_CD :_: Performance_NNP on_IN Training_NNP Data_NNP of_IN each_DT category_NN of_IN classifier_NN automatically_RB the_DT number_NN of_IN rules_NNS in_IN order_NN to_TO increase_VB the_DT accuracy_NN of_IN classifier_NN ._.
+To_TO increase_VB the_DT interpretability_NN ,_, we_PRP proceed_VBP to_TO select_VB just_RB the_DT best_JJS among_IN all_DT the_DT rules_NNS -LRB-_-LRB- by_IN deleting_VBG the_DT classes_NNS represented_VBN by_IN weak_JJ rules_NNS -RRB-_-RRB- ._.
+Contrary_JJ to_TO NEFCLASS_NNP model_NN the_DT interpretability_NN is_VBZ not_RB ensured_VBN by_IN the_DT model_NN ANFIS_NNP because_IN the_DT consequence_NN of_IN rule_NN is_VBZ a_DT functional_JJ independence_NN ._.
+In_IN the_DT other_JJ hand_NN ,_, NEFCLASS_NNP is_VBZ considered_VBN as_IN faster_JJR than_IN ANFIS_NNP because_IN Defuzzification_NNP step_NN is_VBZ not_RB followed_VBN ._.
+Table_NNP 4_CD prove_VBP performance_NN 's_POS comparison_NN of_IN the_DT aforementioned_JJ approaches_NNS ._.
+Table_NNP 4_CD :_: Comparison_NN of_IN performance_NN of_IN model_NN NEFCLASS_NNP and_CC ANFIS_NNP 4.5_CD Classifier_NNP Performance_NNP Comparison_NNP A_DT good_JJ classification_NN is_VBZ distinguished_VBN by_IN a_DT reduced_VBN response_NN time_NN ,_, good_JJ detection_NN ,_, and_CC a_DT low_JJ false_JJ alarm_NN rate_NN ._.
+An_DT evaluation_NN based_VBN on_IN the_DT measurement_NN of_IN performance_NN ,_, such_JJ as_IN :_: True_JJ Positive_JJ Rate_NN -LRB-_-LRB- TP_NNP -RRB-_-RRB- ,_, False_NNP Alarm_NNP Rate_NNP -LRB-_-LRB- FP_NNP -RRB-_-RRB- ,_, Percentage_NN of_IN Successful_JJ Prediction_NN -LRB-_-LRB- PSP_NNP -RRB-_-RRB- ,_, and_CC Training_VBG Time_NNP -LRB-_-LRB- TT_NNP -RRB-_-RRB- ,_, to_TO show_VB the_DT results_NNS were_VBD conducted_VBN in_IN this_DT survey_NN -LSB-_NNP 21_CD -RSB-_NNP ._.
+The_DT results_NNS show_VBP that_IN it_PRP is_VBZ difficult_JJ or_CC impossible_JJ to_TO achieve_VB these_DT three_CD criteria_NNS at_IN the_DT same_JJ time_NN ._.
+This_DT survey_NN showed_VBD that_IN Fuzzy_JJ logic_NN -LRB-_-LRB- FL_NNP -RRB-_-RRB- is_VBZ superior_JJ to_TO Multi-Layer_NNP Perceptron_NNP -LRB-_-LRB- MLP_NNP -RRB-_-RRB- in_IN respect_NN to_TO classifying_VBG Probe_NNP ,_, R2L_NNP and_CC U2R_NNP with_IN 98.4_CD %_NN ,92.1_CD %_NN ,_, 69.6_CD %_NN respectively_RB ,_, but_CC it_PRP takes_VBZ more_JJR time_NN to_TO provide_VB the_DT results_NNS than_IN MLP_NNP with_IN accuracy_NN of_IN 94.8_CD %_NN ._.
+DOS_NNP attacks_NNS have_VBP the_DT highest_JJS TP_NN rates_NNS with_IN MLP_NNP which_WDT generate_VBP the_DT lowest_JJS false_JJ alarm_NN of_IN all_DT types_NNS of_IN attacks_NNS than_IN FL_NNP algorithm_NN and_CC MLP_NNP algorithm_NN had_VBD higher_JJR training_NN times_NNS than_IN other_JJ algorithm_NN of_IN data_NNS mining_NN which_WDT are_VBP mentioned_VBN in_IN this_DT survey_NN -LSB-_NNP 21_CD -RSB-_NNP ._.
+We_PRP reviewed_VBD in_IN this_DT section_NN two_CD supervised_JJ classification_NN approaches_VBZ namely_RB C5_CD .0_CD and_CC ANN_NNP in_IN addition_NN to_TO the_DT classifier_NN NEFCLASS_NNP ._.
+We_PRP used_VBD the_DT following_JJ performance_NN measurement_NN :_: the_DT Accuracy_NNP -LRB-_-LRB- DR_NNP -RRB-_-RRB- ,_, The_DT sensitivity_NN -LRB-_-LRB- TP_NNP -RRB-_-RRB- and_CC the_DT specificity_NN -LRB-_-LRB- TN_NNP -RRB-_-RRB- ._.
+we_PRP used_VBD the_DT whole_NN of_IN 10_CD %_NN KDD99_CD data_NNS and_CC evaluate_VB each_DT detector_NN by_IN using_VBG the_DT same_JJ test_NN data_NNS -LRB-_-LRB- almost_RB 10_CD %_NN of_IN training_NN data_NNS -RRB-_-RRB- ._.
+The_DT results_NNS show_VBP that_IN the_DT NEFCLASS_NNP produces_VBZ good_JJ accuracy_NN with_IN 99.88_CD %_NN and_CC it_PRP generates_VBZ a_DT low_JJ false_JJ positive_JJ rate_NN with_IN 0_CD %_NN ._.
+Otherwise_RB ,_, C5_NNP .0_CD getting_VBG higher_JJR accuracy_NN in_IN classification_NN with_IN 99.95_CD %_NN but_CC it_PRP generates_VBZ a_DT higher_JJR false_JJ positive_JJ rate_NN than_IN NEFCLASS_NNS with_IN 0.03_CD %_NN ._.
+ANN_NNP achieves_VBZ the_DT lowest_JJS accuracy_NN and_CC the_DT higher_JJR false_JJ positive_JJ rate_NN compare_VB to_TO C5_CD .0_CD and_CC NEFCLASS_NNP classifiers_NNS with_IN 99.40_CD %_NN as_IN detection_NN rate_NN and_CC 0.25_CD %_NN as_IN a_DT false_JJ positive_JJ rate_NN ._.
+To_TO determine_VB a_DT better_JJR method_NN to_TO identify_VB each_DT type_NN of_IN four_CD attacks_NNS ._.
+The_DT NEFCLASS_NNP classifier_NN is_VBZ considered_VBN superior_JJ to_TO C5_CD .0_CD and_CC ANN_NNP in_IN respect_NN to_TO classifying_VBG the_DT attacks_NNS DOS_NNP ,_, U2R_NNP Probe_NNP with_IN 100_CD %_NN for_IN DOS_NNP and_CC U2R_NNP and_CC 99.75_CD %_NN for_IN Probe_NNP ._.
+However_RB ,_, R2L_NNP attacks_NNS have_VBP been_VBN identified_VBN well_RB by_IN using_VBG C5_NNP .0_CD method_NN with_IN 99.12_CD %_NN ._.
+To_TO predict_VB attacks_NNS in_IN real_JJ time_NN ,_, We_PRP used_VBD the_DT feature_NN selection_NN to_TO realize_VB a_DT performance_NN optimization_NN of_IN detection_NN rules_NNS in_IN order_NN to_TO minimize_VB the_DT complexity_NN of_IN classifier_NN rules_NNS ranging_VBG from_IN 3220_CD rules_NNS created_VBN to_TO 408_CD rules_NNS created_VBN ._.
+The_DT results_NNS of_IN features_NNS reduced_VBN is_VBZ shown_VBN in_IN table_NN 5_CD ._.
+Although_IN we_PRP made_VBD use_NN of_IN just_RB 9_CD relevant_JJ attributes_NNS ,_, the_DT NEFCLASS_NNP model_NN achieves_VBZ a_DT good_JJ detection_NN accuracy_NN with_IN 99.49_CD %_NN compared_VBN to_TO ANN_NNP and_CC C5_NNP .0_CD classifier_NN which_WDT used_VBD 32_CD relevant_JJ features_NNS ._.
+Table_NNP 5_CD :_: Characteristic_NNP of_IN approach_NN To_TO promote_VB a_DT better_JJR evaluation_NN of_IN each_DT classifier_NN ,_, we_PRP adopted_VBD ROC_NNP graphs_NNS and_CC the_DT measure_NN AUC_NNP -LRB-_-LRB- Area_NNP Under_IN the_DT Curve_NNP -RRB-_-RRB- which_WDT is_VBZ considered_VBN a_DT good_JJ metric_NN in_IN comparing_VBG detectors_NNS together_RB ._.
+Generally_RB AUC_NNP is_VBZ always_RB ranked_VBN between_IN 0.5_CD -LRB-_-LRB- random_JJ classifier_NN -RRB-_-RRB- and_CC 1.0_CD -LRB-_-LRB- Perfect_NNP classifier_NN :_: there_EX is_VBZ a_DT threshold_NN value_NN that_WDT can_MD achieve_VB a_DT perfect_JJ separation_NN between_IN the_DT classes_NNS -RRB-_-RRB- ._.
+For_IN calculate_VBP multi-class_JJ AUC_NNP ``_`` Total_JJ AUC_NN ''_'' we_PRP calculated_VBD the_DT average_NN of_IN AUC_NNP of_IN each_DT class_NN ._.
+We_PRP plotted_VBD TP_NNP -LRB-_-LRB- sensitivity_NN -RRB-_-RRB- against_IN FP_NNP -LRB-_-LRB- 1-specificty_JJ -RRB-_-RRB- for_IN each_DT threshold_NN or_CC decision_NN cutoff_NN used_VBN ._.
+Whenever_NNP sensitivity_NN goes_VBZ up_RB ,_, specificity_NN goes_VBZ down_RB ._.
+The_DT figure_NN 8_CD shows_VBZ the_DT shape_NN of_IN each_DT ROC_NNP ._.
+we_PRP notice_VBP Model_NNP Classifier_NNP FP_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- DR_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- ANFIS_VBZ -LSB-_NN 6_CD -RSB-_NNP B-NFC_NNP 0.3_CD 89.43_CD M-NFC_NNP 3.4_CD 91.14_CD NEFCLASS+GI_NNP B-NFC_NNP 0_CD ._.
+1_CD 96.70_CD M-NFC_NNP 0.11_CD 95.38_CD Classifier_NNP FS_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- DR_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- ANN_NNP -LSB-_NNP 9_CD -RSB-_NNP 32_CD 99.49_CD C5_CD .0_CD -LSB-_NN 9_CD -RSB-_NNP 32_CD 99.99_CD NEFCLASS_NNP +_CD GI_NNP 9_CD 99.49_CD that_IN the_DT classifier_NN NEFCLASS_NNP always_RB outperforms_VBZ References_NNP the_DT other_JJ classifiers_NNS ._.
+He_PRP has_VBZ the_DT best_JJS ROC_NN curve_NN with_IN AUC_NNP =_SYM 1_CD ._.
+The_DT optimized_VBN model_NN of_IN NEFCLASS_NNP +_CD GI_NNP is_VBZ considered_VBN as_IN a_DT good_JJ classifier_NN with_IN AUC_NNP =_SYM 0.992_CD ._.
+It_PRP closer_JJR to_TO the_DT accuracy_NN of_IN C5_CD .0_CD with_IN AUC_NNP =_SYM 0.999_CD and_CC has_VBZ higher_JJR accuracy_NN than_IN ANN_NNP which_WDT has_VBZ AUC_NNP =_SYM 0.984_CD ._.
+-LSB-_NN 1_CD -RSB-_NNP Julish_NNP ._.
+K._NNP and_CC Dacier_NNP ._.
+M._NNP 2002_CD ._.
+Mining_NNP Intrusion_NNP Detection_NNP Alarms_NNP for_IN Actionable_NNP Knowledge_NNP ._.
+Proceedings_NNP of_IN Knowledge_NNP Discovery_NNP in_IN Data_NNP and_CC Data_NNP Mining_NNP SIGKDD_NNP '_POS 02_CD ._.
+Edmonton_NNP ,_, Alberta_NNP ,_, Canada_NNP ._.
+-LSB-_NN 2_CD -RSB-_NNP Wang_NNP ._.
+G_NNP ,_, Hao_NNP ._.
+J_NNP ,_, Ma_NNP ,_, J._NNP and_CC Huang_NNP ._.
+L._NNP September_NNP 2010_CD ._.
+A_DT new_JJ approach_NN to_TO intrusion_NN detection_NN using_VBG Artificial_NNP Neural_NNP Networks_NNP and_CC fuzzy_JJ clustering_NN ._.
+Journal_NNP of_IN Expert_NNP Systems_NNPS with_IN Applications_NNS ,_, volume_NN 37_CD :_: 6225-6232_CD ._.
+-LSB-_NN 3_CD -RSB-_NNP Sathyabama.S_NNP ,_, IrfanAhmed.M.andSaravanan.A_NNP ._.
+September_NNP 2011_CD ._.
+Network_NNP Intrusion_NNP Detection_NNP Using_VBG Clustering_NNP :_: A_NNP Data_NNP Mining_NNP Approach_NNP ._.
+International_NNP Journal_NNP of_IN Computer_NNP Application_NNP ,_, -LRB-_-LRB- 0975-8887_CD -RRB-_-RRB- ,_, volume_NN 30_CD ,_, no._RB 4_CD ,_, 14-17_CD ._.
+-LSB-_NN 4_CD -RSB-_NNP Shanmugavadivu_NNP ._.
+R._NNP and_CC Nagarajan_NNP ._.
+N._NNP 2011_CD ._.
+Network_NNP Intrusion_NNP Detection_NNP System_NNP Using_VBG Fuzzy_NNP Logic_NNP ._.
+Indian_JJ Journal_NNP of_IN Computer_NNP Science_NNP and_CC Engineering_NNP -LRB-_-LRB- IJCSE_NNP -RRB-_-RRB- ,_, vol_NN ._.
+2_CD no._NN 1_CD ,_, 101-111_CD ._.
+-LSB-_NN 5_CD -RSB-_NNP Debar.H.Becker.M.andSiboni.D_NNP .1992_CD ._.
+Aneural_JJ network_NN component_NN for_IN an_DT intrusion_NN detection_NN system_NN ._.
+Proceedings_NNP of_IN the_DT 1992_CD IEEE_NNP Symposium_NNPS on_IN Security_NNP and_CC Privacy_NNP ._.
+London_NNP ._.
+-LSB-_NN 6_CD -RSB-_NNP Nadjaran_NNP Toosi_NNP ._.
+A_DT ,_, Kahani.M_NNP ._.
+and_CC Monsefi_NNP ._.
+R._NNP 2007_CD ._.
+Network_NNP Intrusion_NNP Detection_NNP Based_VBD on_IN Neuro_NNP -_: Fuzzy_NNP Classification_NNP ._.
+International_NNP Conference_NNP on_IN Computing_NNP &_CC Informatics_NNP ,_, 2006_CD ._.
+ICOCI_NNP '_POS 06_CD ._.
+Kuala_NNP Lumpur_NNP ._.
+-LSB-_NN 7_CD -RSB-_NNP Hoque_NNP M.S_NNP ,_, Mukit_NNP ._.
+M.A._NNP and_CC Bikas_NNP ._.
+A.N._NNP March_NNP 2012_CD ._.
+An_DT implementation_NN of_IN intrusion_NN detection_NN System_NNP using_VBG Genetic_JJ Algorithm_NNP ._.
+International_NNP Journal_NNP of_IN Network_NNP Security_NNP &_CC Its_PRP$ Applications_NNS -LRB-_-LRB- IJNSA_NNP -RRB-_-RRB- ,_, volume_NN 4_CD ,_, No._NN 2_CD ,_, 109_CD --_: 120_CD ._.
+-LSB-_NN 8_CD -RSB-_NNP Zekri_NNP ._.
+M._NNP and_CC Meslati_NNP ._.
+L.S._NNP 2014_CD ._.
+Immunological_NNP Approach_NNP for_IN Intrusion_NNP Detection_NNP ._.
+ARIMA_NNP Journal_NNP ,_, volume_NN 17_CD ,_, 221_CD --_: 240_CD ._.
+-LSB-_NN 9_CD -RSB-_NNP Soni_NNP ._.
+P._NNP and_CC Sharma_NNP ._.
+P._NNP July_NNP 2014_CD ._.
+An_DT Intrusion_NNP Detection_NNP System_NNP Based_VBD on_IN KDD-99_NNP Data_NNP using_VBG Data_NNP Mining_NNP Techniques_NNPS and_CC Feature_NNP Selection_NNP ._.
+International_NNP Journal_NNP of_IN Soft_NNP Computing_NNP and_CC Engineering_NNP -LRB-_-LRB- IJSCE_NNP -RRB-_-RRB- ._.
+vol_NN .4_CD ,_, 112-118_CD ._.
+-LSB-_NNP 10_CD -RSB-_NNP Taiba.K_NNP ._.
+and_CC Leary.P_NNP ._.
+2010_CD ._.
+Approches_NNP basées_VBZ sur_NN les_FW réseaux_FW Bayésiens_NNPS pour_VBP la_DT prédiction_NN d’attaques_VBZ sévères_NNS ._.
+5e_JJ ̀mes_NNS Journées_NNS Francophones_NNS sur_VBP les_FW Réseaux_FW Bayésiens_NNS -LRB-_-LRB- JFRB2010_CD -RRB-_-RRB- ,_, Nantes_NNP ,_, France_NNP ._.
+-LSB-_NNP 11_CD -RSB-_NNP Benferhat_NNP ._.
+S_NNP ,_, Kenaza_NNP ._.
+T._NNP and_CC Mokhtari_NNP ._.
+A._NN 2008_CD ._.
+Réseaux_NNP Bayésiens_NNP naïfs_VBZ pour_VBP la_DT détection_NN des_FW attaques_FW coordonnées_FW ._.
+Journées_NNS Francophone_JJ sur_NN les_FW Réseaux_FW Bayésiens_NNPS ,_, Lyon_NNP :_: France_NNP ._.
+-LSB-_NNP 12_CD -RSB-_NNP Raut.A.S.and_NNP Singh_NNP ,_, K.R._NNP July_NNP 2014_CD ._.
+Adaptative_NNP Neuro-Fuzzy_NNP Inference_NNP System_NNP for_IN anomaly-based_JJ intrusion_NN detection_NN ._.
+International_NNP Journal_NNP of_IN Research_NNP in_IN Engineering_NNP and_CC Applied_NNP Sciences_NNPS ,_, volume_NN 02_CD ,_, 27-36_CD ._.
+Figure_NN 8_CD ._.
+ROC_NNP curve_NN 5_CD Conclusion_NN We_PRP have_VBP shown_VBN that_IN the_DT Neuro-Fuzzy_NNP model_NN is_VBZ highly_RB efficacious_JJ for_IN the_DT reduction_NN of_IN false_JJ alarms_NNS and_CC for_IN its_PRP$ higher_JJR accuracy_NN rate_NN in_IN comparison_NN with_IN other_JJ models_NNS ._.
+The_DT trade-off_NN between_IN high_JJ performance_NN and_CC good_JJ interpretation_NN is_VBZ difficult_JJ and_CC even_RB impossible_JJ :_: Data_NNP selection_NN is_VBZ a_DT very_RB important_JJ asset_NN to_TO improve_VB the_DT results_NNS of_IN our_PRP$ classification_NN ._.
+In_IN fact_NN ,_, our_PRP$ solution_NN is_VBZ understandable_JJ via_IN the_DT security_NN operator_NN with_IN the_DT Mamdani_NNP fuzzy_JJ inference_NN system_NN which_WDT allows_VBZ us_PRP to_TO provide_VB linguistic_JJ rules_NNS ._.
+The_DT task_NN of_IN classification_NN is_VBZ critical_JJ because_IN it_PRP may_MD discriminate_JJ the_DT mischievous_JJ activities_NNS of_IN legitimate_JJ activities_NNS ._.
+In_IN the_DT case_NN of_IN true_JJ positive_JJ ;_: each_DT type_NN of_IN intrusion_NN is_VBZ presented_VBN by_IN a_DT single_JJ copy_NN to_TO determine_VB the_DT level_NN of_IN attack_NN that_WDT is_VBZ carried_VBN out_RP in_IN several_JJ steps_NNS ._.
+Although_IN the_DT proposed_VBN method_NN works_VBZ well_RB in_IN the_DT detection_NN of_IN intrusions_NNS of_IN KDD_NNP '_POS 99_CD ,_, we_PRP must_MD optimize_VB the_DT Neuro-Fuzzy_NNP model_NN equally_RB to_TO its_PRP$ parameters_NNS -LRB-_-LRB- MF_NNP -RRB-_-RRB- in_IN order_NN to_TO start_VB the_DT system_NN ,_, with_IN a_DT strong_JJ rules-based_JJ foundation_NN and_CC propose_VB a_DT method_NN to_TO explicitly_RB correlate_VB alerts_VBZ to_TO predict_VB all_DT potential_JJ plans_NNS by_IN reducing_VBG system_NN latency_NN to_TO active_JJ the_DT anti-intrusion_JJ stage_NN in_IN time_NN ._.
+-LSB-_NNP 13_CD -RSB-_NNP Jongsuebsuk.P_NNP ,_, Wattanapongsakor_NNP ._.
+N._NNP and_CC Charnsripinyo_NNP ._.
+C._NNP May_NNP 2013_CD ._.
+Real-time_JJ intrusion_NN detection_NN with_IN fuzzy_JJ genetic_JJ algorithm_NN ._.
+10th_JJ International_NNP Conference_NNP on_IN Electrical_JJ Engineering/Electronics_NNS ,_, Computer_NNP ,_, Telecommunications_NNP and_CC Information_NNP Technology_NNP -LRB-_-LRB- ECTI-CON_NNP -RRB-_-RRB- ,_, Krabi_NNP ._.
+-LSB-_NNP 14_CD -RSB-_NNP Golmah.V_NNP ._.
+2014_CD ._.
+An_DT Efficient_JJ Hybrid_NNP Intrusion_NNP Detection_NNP System_NNP based_VBN on_IN C5_CD .0_CD and_CC SVM_NNP ._.
+International_NNP journal_NN of_IN Database_NNP Theory_NNP and_CC Application_NNP ,_, volume_NN 7_CD ,_, No._NN 2_CD :_: 59-70_CD ._.
+-LSB-_NNP 15_CD -RSB-_NNP Nauck.D_NNP ._.
+and_CC Kruse_NNP ._.
+R._NNP 1999_CD ._.
+Obtaining_VBG interpretable_JJ fuzzy_JJ classification_NN rules_NNS from_IN medical_JJ data_NNS ._.
+Artificial_JJ Intelligence_NNP in_IN Medicine_NNP ._.
+-LSB-_NNP 16_CD -RSB-_NNP Jang_NNP ._.
+J.S.R_NNP ,_, Sun_NNP ._.
+C.T._NNP and_CC Mizutani_NNP ._.
+E._NNP September_NNP 1996.Neuro-Fuzzy_NNP and_CC soft_JJ computing_NN ,_, a_DT Book_NN ,_, 1st_CD ed_VBD ._.
+-LSB-_NNP 17_CD -RSB-_NNP KDD_NNP Cup_NNP 1999_CD Intrusion_NNP detection_NN dataset_NN :_: The_DT UCI_NNP KDD_NNP Archive_NNP Information_NNP and_CC Computer_NNP Science_NNP ,_, University_NNP of_IN California_NNP ,_, Irvine_NNP ._.
+DOI_NNP =_SYM http://kdd.ics.uci.edu/databases/kddcup99/_CD -LSB-_NNP 18_CD -RSB-_NNP Jemili_NNP ._.
+F_NN ,_, Zaghdoud_NNP ._.
+M._NNP and_CC Ben_NNP Ahmed_NNP ._.
+M._NNP 2009_CD ._.
+Intrusion_NNP Detection_NNP based_VBN on_IN Hybrid_NNP Propagation_NNP in_IN Bayesian_NNP Networks_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT IEEE_NNP International_NNP Conference_NNP on_IN Intelligence_NNP and_CC security_NN informatics_NNS ._.
+-LSB-_NNP 19_CD -RSB-_NNP Wei_NNP ._.
+W_NNP ,_, Gombault_NNP ._.
+S._NNP and_CC Guyet_NNP ._.
+T._NNP 2008_CD ._.
+Towards_IN Fast_NNP Detecting_NNP Intrusions_NNPS :_: Using_VBG Key_NNP Attributes_NNPS of_IN Traffic_NNP ._.
+The_DT Third_NNP International_NNP Conference_NNP on_IN Internet_NNP Monitoring_NN and_CC Protection_NN ,_, 2008_CD ._.
+ICIMP_NNP `_`` 08_CD ,_, volume_NN 13_CD :_: 86-91_CD ,_, Bucharest_NNP ._.
+-LSB-_NNP 20_CD -RSB-_NNP Mahbod_NNP ._.
+T_NNP ,_, Bagheri_NNP ._.
+E_NNP ,_, Wei_NNP ._.
+L._NNP and_CC Ghorbani_NNP ._.
+A._NN A._NN 2009_CD ._.
+A_DT Detailed_NNP Analysis_NNP of_IN the_DT KDD_NNP CUP_NNP 99_CD Data_NNP Set_NNP ._.
+IEEE_NNP Symposium_NNPS on_IN Computational_NNP Intelligence_NNP for_IN Security_NNP and_CC Defense_NNP Applications_NNS ._.
+CISDA_NNP 2009_CD :_: 1-6_CD ,_, Ottawa_NNP ._.
+-LSB-_NNP 21_CD -RSB-_NNP Al-mamory_NN ._.
+S.O._NNP and_CC Jassim_NNP ,_, F._NNP S._NNP 2013_CD ._.
+Evaluation_NN of_IN Different_NNP Data_NNP Mining_NNP Algorithms_NNPS with_IN KDD_NNP CUP_NNP 99_CD Data_NNP Set_NNP ,_, Journal_NNP of_IN Babylon_NNP University/Pure_NNP and_CC Applied_NNP Sciences_NNPS ,_, No_DT -LRB-_-LRB- 8_CD -RRB-_-RRB- /_NN volume_NN 21_CD ._.
+-LSB-_NNP 22_CD -RSB-_NNP D._NNP Nauck_NNP ,_, F._NNP Klawonn_NNP ,_, and_CC R.Kruse_NNP ._.
+September_NNP 1997_CD ._.
+Foundations_NNS of_IN Neuro-Fuzzy_NNP Systems_NNPS ,_, a_DT book_NN ,_, 1st_CD ed_VBD ,_, Wiley_NNP ,_, Chichester_NNP ._.

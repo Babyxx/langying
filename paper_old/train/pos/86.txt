@@ -1,0 +1,327 @@
+1_CD Abstract1_NNP The_NNP Complete_JJ Tang_NNP Poems_NNS -LRB-_-LRB- CTP_NNP -RRB-_-RRB- is_VBZ the_DT most_RBS important_JJ source_NN to_TO study_VB Tang_NNP poems_NNS ._.
+We_PRP look_VBP into_IN CTP_NNP with_IN computational_JJ tools_NNS from_IN specific_JJ linguistic_JJ perspectives_NNS ,_, including_VBG distributional_JJ semantics_NNS and_CC collocational_JJ analysis_NN ._.
+From_IN such_JJ quantitative_JJ viewpoints_NNS ,_, we_PRP compare_VBP the_DT usage_NN of_IN ``_`` wind_NN ''_'' and_CC ``_`` moon_NN ''_'' in_IN the_DT poems_NNS of_IN Li_NNP Bai2_NNP -LRB-_-LRB- 李白_CD -RRB-_-RRB- and_CC Du_NNP Fu_NNP -LRB-_-LRB- 杜甫_CD -RRB-_-RRB- ._.
+Colors_NNS in_IN poems_NNS function_VBP like_IN sounds_NNS in_IN movies_NNS ,_, and_CC play_VB a_DT crucial_JJ role_NN in_IN the_DT im_NN -_: ageries_NNS of_IN poems_NNS ._.
+Thus_RB ,_, words_NNS for_IN colors_NNS are_VBP studied_VBN ,_, and_CC ``_`` 白_FW ''_'' -LRB-_-LRB- bai2_CD ,_, white_JJ -RRB-_-RRB- is_VBZ the_DT main_JJ focus_NN because_IN it_PRP is_VBZ the_DT most_RBS frequent_JJ color_NN in_IN CTP_NNP ._.
+We_PRP also_RB explore_VBP some_DT cases_NNS of_IN using_VBG colored_VBN words_NNS in_IN antithesis_NN -LRB-_-LRB- 對仗_FW -RRB-_-RRB- 3_CD pairs_NNS that_WDT were_VBD central_JJ for_IN fostering_VBG the_DT imageries_NNS of_IN the_DT poems_NNS ._.
+CTP_NNP also_RB contains_VBZ useful_JJ historical_JJ information_NN ,_, and_CC we_PRP extract_VBP person_NN names_NNS in_IN CTP_NNP to_TO study_VB the_DT social_JJ networks_NNS of_IN the_DT Tang_NNP poets_NNS ._.
+Such_JJ information_NN can_MD then_RB be_VB inte_JJ -_: grated_VBN with_IN the_DT China_NNP Biographical_NNP Database_NNP of_IN Harvard_NNP University_NNP ._.
+Introduction_NN was_VBD officially_RB compiled_VBN during_IN the_DT Kangxi_NNP years_NNS of_IN the_DT Qing_NNP dynasty_NN ,_, and_CC includes_VBZ more_RBR than_IN 40,000_CD poems_NNS ,_, totaling_VBG more_JJR than_IN 3_CD million_CD characters_NNS ,_, that_WDT were_VBD authored_VBN by_IN more_JJR than_IN 2000_CD poets_NNS ._.
+Employing_VBG linguistic_JJ theories_NNS and_CC computational_JJ tools_NNS ,_, we_PRP analyze_VBP the_DT contents_NNS of_IN CTP_NNP for_IN a_DT wide_JJ variety_NN of_IN explorations_NNS ._.
+Lo_NNP and_CC her_PRP$ colleagues_NNS pioneered_VBD to_TO handle_VB texts_NNS of_IN Chinese_JJ classical_JJ poetry_NN with_IN computer_NN software_NN -LRB-_-LRB- Lo_FW et_FW al._FW ,_, 1997_CD -RRB-_-RRB- ._.
+Hu_NNP and_CC Yu_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- achieved_VBD a_DT better_JJR environment_NN and_CC demonstrated_VBD its_PRP$ functions_NNS with_IN a_DT temporal_JJ analysis_NN of_IN selected_VBN Chinese_JJ unigrams_NNS ,_, i.e._FW ,_, 愁_CD -LRB-_-LRB- chou2_NN -RRB-_-RRB- ,_, 苦_FW -LRB-_-LRB- ku3_FW -RRB-_-RRB- ,_, 恨_FW -LRB-_-LRB- hen4_CD -RRB-_-RRB- ,_, 悲_FW -LRB-_-LRB- bei1_CD -RRB-_-RRB- ,_, 哀_FW -LRB-_-LRB- ai1_CD -RRB-_-RRB- ,_, and_CC 憂_NN -LRB-_-LRB- you1_CD -RRB-_-RRB- ._.
+Jiang_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- employed_VBN tools_NNS for_IN information_NN retrieval_NN to_TO find_VB and_CC study_VB selected_VBN poems_NNS of_IN Li_NNP Bai_NNP and_CC Du_NNP Fu_NNP that_WDT mentioned_VBD ``_`` wind_NN ''_'' and_CC ``_`` moon_NN ''_'' ._.
+Huang_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- analyzed_VBD the_DT ontology_NN in_IN Su_NNP Shi_NNP 's_POS -LRB-_-LRB- 蘇軾_CD -RRB-_-RRB- poems_NNS based_VBN on_IN 300_CD Tang_NNP Poems_NNPS ,_, and_CC Chang_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- continued_VBD this_DT line_NN of_IN work_NN ._.
+Lo_NNP then_RB built_VBD a_DT more_RBR complete_JJ taxonomy_NN for_IN Tang_NNP poems_NNS -LRB-_-LRB- Lo_NNP ,_, 2008_CD ;_: Fang_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Lee_NNP conduct_NN part-of-speech_NN analysis_NN of_IN CTP_NNP -LRB-_-LRB- Lee_NNP ,_, 2012_CD -RRB-_-RRB- and_CC dependency_NN trees_NNS -LRB-_-LRB- Lee_NNP and_CC Kong_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+They_PRP also_RB explored_VBD the_DT roles_NNS of_IN a_DT variety_NN of_IN named_VBN entities_NNS ,_, e.g._FW ,_, seasons_NNS ,_, direc_NN -_: tions_NNS ,_, and_CC colors_NNS ,_, in_IN CTP_NNP -LRB-_-LRB- Lee_NNP and_CC Wong_NNP ,_, 2012_CD -RRB-_-RRB- ,_, and_CC used_VBD their_PRP$ analysis_NN of_IN CTP_NNP for_IN teaching_NN computational_JJ linguistics_NNS -LRB-_-LRB- Lee_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+CTP_NNP can_MD serve_VB as_IN the_DT bases_NNS of_IN other_JJ innova_NN -_: tive_JJ applications_NNS ._.
+Zhao_NNP and_CC his_PRP$ colleagues_NNS have_VBP created_VBN a_DT website_NN 4_CD for_IN suggesting_VBG couplets_NNS ,_, which_WDT was_VBD accomplished_VBN partially_RB based_VBN on_IN their_PRP$ analysis_NN of_IN the_DT CTP_NNP -LRB-_-LRB- Jiang_NNP and_CC Zhou_NNP 2008_CD ;_: Zhou_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Voigt_NNP and_CC Jarafsky_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- consid_SYM -_: ered_VBD CTP_NNP when_WRB they_PRP compared_VBD ancient_JJ and_CC modern_JJ verses_NNS of_IN China_NNP and_CC Taiwan_NNP ._.
+Our_PRP$ work_NN is_VBZ special_JJ in_IN that_IN we_PRP analyze_VBP the_DT contents_NNS of_IN CTP_NNP from_IN some_DT linguistic_JJ perspectives_NNS ,_, including_VBG collocational_JJ analysis_NN and_CC distributional_JJ Color_NNP Aesthetics_NNPS and_CC Social_NNP Networks_NNP in_IN Complete_JJ Tang_NNP Poems_NNPS :_: Explorations_NNS and_CC Discoveries_NNS Chao-Lin_NNP Liu_NNP †_NNP Hongsu_NNP Wang_NNP ‡_CD Wen-Huei_NNP Cheng_NNP ∮_CD Chu-Ting_NNP Hsu_NNP §_CD Wei-Yun_NNP Chiu_NNP !_.
+†_SYM §_FW Department_NNP of_IN Computer_NNP Science_NNP ,_, National_NNP Chengchi_NNP University_NNP ,_, Taiwan_NNP ‡_NNP Institute_NNP for_IN Quantitative_NNP Social_NNP Science_NNP ,_, Harvard_NNP University_NNP ,_, USA_NNP ∮_CD !_.
+Department_NNP of_IN Chinese_NNP Literature_NNP ,_, National_NNP Chengchi_NNP University_NNP ,_, Taiwan_NNP †_NNP Graduate_NNP Institute_NNP of_IN Linguistics_NNPS ,_, National_NNP Chengchi_NNP University_NNP ,_, Taiwan_NNP -LCB-_-LRB- †_SYM chaolin_NN ,_, §_CD 104753021_CD ,_, ∮_CD whcheng_NN -RCB-_-RRB- @nccu.edu_NN ._.
+tw_NN ,_, ‡hongsuwang@fas.harvard.edu_NN ,_, ǂacwu0523_CD @gmail.com_NN Complete_JJ Tang_NNP Poems_NNS -LRB-_-LRB- CTP_NNP -RRB-_-RRB- is_VBZ the_DT single_JJ most_RBS important_JJ collection_NN for_IN studying_VBG Tang_NNP poems_NNS from_IN the_DT literary_JJ and_CC linguistic_JJ perspectives_NNS -LRB-_-LRB- Fang_NNP et_FW al._FW ,_, 2009_CD ;_: Lee_NNP and_CC Wong_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+CTP_NNP 1_CD A_DT majority_NN of_IN the_DT contents_NNS of_IN this_DT paper_NN was_VBD also_RB published_VBN in_IN Chinese_JJ in_IN -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+2_CD Romanized_JJ Chinese_JJ names_NNS are_VBP in_IN the_DT order_NN of_IN surname_NN and_CC first_JJ name_NN ,_, following_VBG the_DT request_NN of_IN a_DT reviewer_NN ._.
+3_CD ``_`` Antithesis_NNP ''_'' is_VBZ not_RB a_DT perfect_JJ translation_NN of_IN ``_`` 對仗_FW ''_'' -LRB-_-LRB- dui4_CD zhang4_CD -RRB-_-RRB- ._.
+Roughly_RB speaking_NN ,_, ``_`` 對仗_FW ''_'' refers_VBZ to_TO constrained_VBN collocations_NNS ,_, and_CC requires_VBZ two_CD terms_NNS to_TO have_VB opposite_JJ relationships_NNS in_IN pronunciations_NNS ,_, but_CC does_VBZ not_RB demand_VB the_DT terms_NNS to_TO be_VB opposite_JJ in_IN meanings_NNS ._.
+In_IN English_NNP ,_, ``_`` antithesis_NN ''_'' carries_VBZ a_DT rather_RB obvious_JJ demand_NN for_IN two_CD referred_VBD terms_NNS to_TO be_VB opposite_JJ in_IN meanings_NNS ._.
+4_CD http://couplet.msra.cn/_NN of_IN Microsoft_NNP Research_NNP Asia_NNP p_VBD 3000_CD i_FW 2500_CD e_SYM 2000_CD c_NN 1500_CD e_SYM 1000_CD s_PRP 500_CD 0_CD Figure_NN 1_CD ._.
+Number_NN of_IN works_NNS of_IN the_DT leading_VBG poets_NNS in_IN CTP_NNP semantics_NNS ._.
+We_PRP rely_VBP on_IN certain_JJ literary_JJ knowledge_NN for_IN handling_VBG the_DT CTP_NNP texts_NNS such_JJ that_IN typical_JJ procedures_NNS for_IN text_NN analysis_NN are_VBP not_RB absolutely_RB necessary_JJ for_IN obtaining_VBG the_DT words_NNS in_IN poems_NNS ._.
+The_DT concept_NN of_IN distributional_JJ semantics_NNS -LRB-_-LRB- Harris_NNP ,_, 1954_CD ;_: Miller_NNP and_CC Walter_NNP ,_, 1991_CD -RRB-_-RRB- provides_VBZ the_DT basis_NN for_IN comparing_VBG poets_NNS '_POS styles_NNS ._.
+We_PRP investigate_VBP the_DT functions_NNS of_IN colors_NNS in_IN poems_NNS by_IN considering_VBG their_PRP$ collocations_NNS and_CC antitheses_NNS ._.
+Colors_NNS in_IN poems_NNS play_VBP similar_JJ roles_NNS as_IN sounds_NNS and_CC lights_NNS in_IN movies_NNS ._.
+They_PRP are_VBP crucial_JJ for_IN nurturing_VBG the_DT imageries_NNS in_IN art_NN works_NNS ._.
+Analyzing_VBG the_DT appearances_NNS of_IN colors_NNS in_IN poems_NNS leads_VBZ to_TO interesting_JJ observations_NNS ._.
+We_PRP extend_VBP our_PRP$ exploration_NN from_IN literature_NN to_TO history_NN in_IN CTP_NNP ,_, just_RB like_IN Chen_NNP 's_POS -LRB-_-LRB- 2010_CD -RRB-_-RRB- studies_NNS of_IN the_DT political_JJ information_NN hidden_VBN in_IN the_DT poems_NNS of_IN Tang_NNP Taizong_NNP -LRB-_-LRB- 唐太宗_CD -RRB-_-RRB- ._.
+Person_NN names_NNS that_WDT were_VBD mentioned_VBN in_IN the_DT poems_NNS provide_VBP hints_NNS about_IN the_DT social_JJ networks_NNS of_IN the_DT poets_NNS ._.
+Hence_RB ,_, we_PRP may_MD employ_VB CTP_NNP as_IN a_DT source_NN of_IN biographical_JJ infor_NN -_: mation_NN for_IN the_DT China_NNP Biographical_NNP Database_NNP of_IN Harvard_NNP University_NNP ._.
+In_IN Section_NN 2_CD ,_, we_PRP check_VBP the_DT CTP_NNP used_VBN in_IN our_PRP$ work_NN ,_, and_CC report_VB a_DT basic_JJ analysis_NN of_IN its_PRP$ contents_NNS ._.
+In_IN Section_NN 3_CD ,_, through_IN a_DT distributional_JJ semantics_NNS perspective_NN ,_, we_PRP compare_VBP the_DT usage_NN of_IN ``_`` wind_NN ''_'' and_CC ``_`` moon_NN ''_'' of_IN Li_NNP Bai_NNP and_CC Du_NNP Fu_NNP ,_, and_CC examine_VB why_WRB some_DT poets_NNS ,_, e.g._FW ,_, Bai_NNP Juyi_NNP -LRB-_-LRB- 白居易_CD -RRB-_-RRB- ,_, were_VBD classified_VBN as_IN a_DT social_JJ poet_NN -LRB-_-LRB- 社會詩人_CD ,_, she4_CD hui4_CD shi1_CD ren2_NN -RRB-_-RRB- ._.
+In_IN Section_NN 4_CD ,_, we_PRP dig_VBP into_IN the_DT usage_NN of_IN more_JJR colors_NNS and_CC related_JJ words_NNS by_IN considering_VBG their_PRP$ collocations_NNS and_CC antitheses_NNS ._.
+In_IN Section_NN 5_CD ,_, we_PRP show_VBP and_CC discuss_VBP how_WRB social_JJ networks_NNS of_IN poets_NNS can_MD be_VB computed_VBN from_IN CTP_NNP ._.
+In_IN Section_NNP 6_CD ,_, we_PRP extend_VBP applications_NNS and_CC analyses_NNS of_IN CTP_NNP to_TO couplet_NN suggestion_NN and_CC authorship_NN attribution_NN ._.
+2_CD Data_NNP Sources_NNS and_CC Basic_JJ Analysis_NNP Although_IN we_PRP have_VBP found_VBN several_JJ papers_NNS on_IN the_DT analyses_NNS of_IN CTP_NNP ,_, none_NN of_IN them_PRP specified_VBN exactly_RB which_WDT version_NN of_IN CTPs_NNS was_VBD used_VBN in_IN their_PRP$ work_NN ._.
+Although_IN there_EX is_VBZ only_RB version_NN of_IN CTP_NNP in_IN ``_`` 欽定_FW 四庫全書_FW ''_'' 5_CD -LRB-_-LRB- qin1_FW ding4_FW si4_FW ku4_FW quan2_FW shu1_FW -RRB-_-RRB- ,_, there_EX exist_VBP alternative_JJ text_NN versions_NNS ._.
+2.1_CD Data_NNP Sources_NNS There_EX is_VBZ no_DT ``_`` the_DT ''_'' authoritative_JJ version_NN of_IN CTP_NNP ._.
+In_IN ``_`` 御定全唐詩_NN ''_'' -LRB-_-LRB- yu4_FW ding4_FW quan2_FW tang2_FW shi1_FW -RRB-_-RRB- ,_, we_PRP can_MD find_VB Li_NNP Bai_NNP 's_POS ``_`` 牀前看月光_FW ''_'' 6_CD -LRB-_-LRB- chuang2_CD qian2_CD kan4_CD yue4_CD guang1_NNS -RRB-_-RRB- ,_, but_CC ,_, in_IN textbooks_NNS in_IN Taiwan_NNP ,_, we_PRP will_MD read_VB ``_`` 牀前明月光_FW ''_'' -LRB-_-LRB- chuang2_CD qian2_CD ming2_CD yue4_CD guang1_NNS -RRB-_-RRB- ._.
+Both_DT are_VBP accepted_VBN by_IN domain_NN experts_NNS ._.
+7_CD We_PRP can_MD find_VB online_JJ CTP_NNP in_IN WikiSource_NNP ,_, Wenxue1008_NNP ,_, Xysa9_NNP ,_, Ctext10_NNP ,_, ChillySpring11_NNP ,_, and_CC Guji12_NNP ,_, for_IN example_NN ._.
+Most_JJS of_IN these_DT websites_NNS allow_VBP online_JJ reading_NN but_CC do_VBP not_RB allow_VB complete_JJ download_NN ,_, though_IN some_DT do_VBP ._.
+We_PRP have_VBP completed_VBN a_DT preliminary_JJ comparison_NN between_IN the_DT Wen_NNP -_: xue100_CD and_CC Ctext_NNP versions_NNS ._.
+They_PRP are_VBP very_RB similar_JJ ,_, and_CC appear_VB to_TO have_VB a_DT common_JJ source_NN ._.
+In_IN this_DT paper_NN we_PRP are_VBP using_VBG the_DT version_NN that_IN we_PRP obtained_VBD from_IN Wenxue100_JJ ._.
+2.2_CD Basic_JJ Analyses_NNS In_IN the_DT Wenxue100_NNP version_NN ,_, we_PRP have_VBP 42,863_CD works_NNS ,_, and_CC ,_, in_IN Figure_NN 1_CD ,_, we_PRP show_VBP the_DT poets_NNS who_WP have_VBP leading_VBG numbers_NNS of_IN works_NNS in_IN CTP_NNP ._.
+The_DT vertical_JJ axis_NN shows_VBZ the_DT numbers_NNS of_IN their_PRP$ works_NNS included_VBN in_IN CTP_NNP ,_, and_CC poets_NNS '_POS Chinese_JJ names_NNS are_VBP shown_VBN along_IN the_DT horizontal_JJ axis_NN ,_, where_WRB ``_`` 不詳_FW ''_'' 5_CD 6_CD 7_CD 8_CD 9_CD 10_CD 11_CD 12_CD https://en.wikipedia.org/wiki/Siku_Quanshu_NNP source_NN :_: Li_NNP Bai_NNP -LRB-_-LRB- 李白_CD -RRB-_-RRB- :_: 靜夜思_CD -LRB-_-LRB- jing4_JJ ye4_JJ si1_NN -RRB-_-RRB- WikiSource_NNP :_: https://zh.wikisource.org/zh-hant/_JJ Wenxue100_NN :_: http://www.wenxue100.com_CD Xysa_NNP :_: http://www.xysa.com/_NN Ctext_NNP :_: http://www.ctext.org/_JJ ChillySpring_NNP :_: http://210.69.170.100/s25/_NNS Guji_NNP :_: http://guji.artx.cn/_SYM 白居易_FW 杜甫_FW 李白_FW 不詳_FW 齊己_FW 劉禹錫_FW 元稹_FW 李商隱_FW 貫休_FW 韋應物_FW 陸龜蒙_FW 劉長卿_FW 許渾_FW 皎然_FW 杜牧_FW 羅隱_FW 張籍_FW 姚合_FW 錢起_FW 賈島_FW 孟郊_FW 王建_FW 岑參_FW 韓愈_FW 張祜_FW 皮日休_FW 溫庭筠_FW 王維_FW 權德輿_FW 方幹_FW 韋莊_FW 杜荀鶴_FW 盧綸_FW 韓偓_FW 鄭穀_FW 張說_FW 戴叔倫_FW 李中_FW 吳融_FW 李端_FW 薛能_FW 孟浩然_FW Table_NNP 1_CD ._.
+Frequent_JJ bigrams_NNS in_IN CTP_NNP bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+何處_SYM 1669_CD 無人_CD 881_CD 青山_NN 662_CD 流水_CD 550_CD 落日_NN 498_CD 不知_CD 1469_CD 風吹_NN 834_CD 少年_CD 634_CD 回首_NN 544_CD 不如_CD 497_CD 萬里_NN 1455_CD 惆悵_CD 780_CD 相逢_NN 629_CD 可憐_CD 539_CD 歸去_NN 496_CD 千里_CD 1305_CD 故人_NN 778_CD 平生_CD 597_CD 如此_NN 526_CD 日暮_CD 496_CD 今日_NN 1165_CD 秋風_CD 749_CD 年年_NN 593_CD 白髮_CD 520_CD 不能_NN 481_CD 不見_CD 1158_CD 悠悠_NN 740_CD 寂寞_CD 592_CD 主人_NN 517_CD 別離_CD 481_CD 不可_NN 1148_CD 相思_CD 733_CD 黃金_NN 589_CD 今朝_CD 516_CD 何時_NN 478_CD 春風_CD 1128_CD 長安_NN 722_CD 天子_CD 588_CD 月明_NN 515_CD 此時_CD 477_CD 白雲_NN 1108_CD 白日_CD 697_CD 人不_NN 587_CD 從此_CD 509_CD 洛陽_NN 476_CD 不得_CD 947_CD 如何_NN 687_CD 天地_CD 586_CD 日月_NN 508_CD 天下_CD 472_CD 明月_NN 896_CD 十年_CD 678_CD 何事_NN 579_CD 行人_CD 507_CD 芳草_NN 472_CD 人間_CD 890_CD 何人_NN 663_CD 江上_CD 553_CD 將軍_NN 499_CD 歸來_CD 471_CD -LRB-_-LRB- bu4_CD xiang2_CD -RRB-_-RRB- means_VBZ unknown_JJ and_CC is_VBZ not_RB a_DT name_NN ._.
+Bai_NNP Juyi_NNP is_VBZ the_DT most_RBS popular_JJ poet_NN in_IN CTP_NNP ,_, and_CC has_VBZ 2643_CD works_NNS ,_, followed_VBN by_IN Du_NNP Fu_NNP 's_POS 1158_CD works_NNS and_CC Li_NNP Bai_NNP 's_POS 896_CD works_NNS ._.
+In_IN total_JJ ,_, we_PRP have_VBP 3,055,044_CD Chinese_JJ characters_NNS and_CC punctuations_NNS in_IN this_DT version_NN of_IN CTP_NNP ._.
+The_DT exact_JJ number_NN of_IN works_NNS in_IN CTP_NNP needs_VBZ further_JJ research_NN to_TO make_VB sure_JJ ._.
+Some_DT adjustments_NNS should_MD be_VB expected_VBN ._.
+We_PRP can_MD not_RB determine_VB the_DT authors_NNS of_IN some_DT poems_NNS even_RB when_WRB we_PRP read_VBP the_DT ``_`` 御定全唐詩_NN ''_'' ._.
+The_DT author_NN of_IN the_DT poem_NN with_IN title_NN ``_`` 題霍山秦尊師_NN ''_'' -LRB-_-LRB- ti2_FW huo4_FW shan1_FW qin2_FW zun1_FW shi1_FW -RRB-_-RRB- may_MD be_VB Du_NNP Gaung-Ting_NNP -LRB-_-LRB- 杜光庭_CD -RRB-_-RRB- or_CC Zheng_NNP Ao_NNP -LRB-_-LRB- 鄭遨_CD -RRB-_-RRB- as_IN the_DT piece_NN appeared_VBD in_IN volumes_NNS 854_CD and_CC 855_CD ,_, respectively_RB ._.
+It_PRP is_VBZ very_RB easy_JJ to_TO compute_VB the_DT most_RBS common_JJ unigrams_NNS in_IN CTP_NNP ,_, and_CC they_PRP are_VBP ``_`` 不_FW ''_'' -LRB-_-LRB- bu4_CD -RRB-_-RRB- ,_, ``_`` 人_FW ''_'' -LRB-_-LRB- ren2_CD -RRB-_-RRB- ,_, ``_`` 山_FW ''_'' -LRB-_-LRB- shan1_CD -RRB-_-RRB- ,_, ``_`` 無_FW ''_'' -LRB-_-LRB- wu2_CD -RRB-_-RRB- ,_, ``_`` 風_FW ''_'' -LRB-_-LRB- feng1_CD -RRB-_-RRB- ,_, ``_`` 一_FW ''_'' -LRB-_-LRB- yi1_CD -RRB-_-RRB- ,_, ``_`` 日_FW ''_'' -LRB-_-LRB- ri4_CD -RRB-_-RRB- ,_, ``_`` 雲_FW ''_'' -LRB-_-LRB- yun2_CD -RRB-_-RRB- ,_, ``_`` 有_FW ''_'' -LRB-_-LRB- you3_CD -RRB-_-RRB- ,_, and_CC ``_`` 何_FW ''_'' -LRB-_-LRB- he2_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ very_RB challenging_JJ to_TO precisely_RB segment_NN words_NNS in_IN poems_NNS without_IN human_JJ final_JJ inspection_NN ._.
+Nevertheless_RB ,_, it_PRP is_VBZ well-known_JJ that_IN the_DT patterns_NNS of_IN 5-character_JJ and_CC 7-character_JJ Tang_NNP poems_NNS usu_SYM -_: ally_NN follow_VBP specific_JJ traditions_NNS -LRB-_-LRB- Lo_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+The_DT segments_NNS in_IN poems_NNS were_VBD constituted_VBN by_IN words_NNS of_IN one_CD or_CC two_CD characters_NNS ._.
+For_IN 5-character_JJ Tang_NNP poems_NNS ,_, the_DT sentences_NNS in_IN poems_NNS can_MD be_VB segmented_JJ into_IN words_NNS of_IN 2_CD ,_, 2_CD ,_, and_CC 1_CD characters_NNS or_CC alternatively_RB 2_CD ,_, 1_CD ,_, 2_CD charac_NN -_: ters_NNS ._.
+For_IN instance_NN ``_`` 白日依山盡_NN ''_'' 13_CD -LRB-_-LRB- bai2_FW ri4_FW yi1_FW shan1_FW jin4_FW -RRB-_-RRB- and_CC ``_`` 感時花濺淚_FW ''_'' 14_CD -LRB-_-LRB- gan3_FW shi2_FW hua1_FW jian4_FW lei4_FW -RRB-_-RRB- used_VBN ,_, respectively_RB ,_, 2_CD +2_CD +1_CD and_CC 2_CD +1_CD +2_CD patterns_NNS ._.
+Similarly_RB ,_, the_DT sentences_NNS of_IN 13_CD source_NN :_: Wang_NNP Zhi-Huan_NNP -LRB-_-LRB- 王之渙_CD -RRB-_-RRB- :_: 登鸛雀樓_CD -LRB-_-LRB- deng1_CD guan4_CD que4_CD lou2_NN -RRB-_-RRB- 14_CD source_NN :_: Du_NNP Fu_NNP -LRB-_-LRB- 杜甫_CD -RRB-_-RRB- :_: 春望_NN -LRB-_-LRB- chun1_CD wang4_CD -RRB-_-RRB- 7-character_JJ Tang_NNP poems_NNS usually_RB used_VBN 2_CD +2_CD +2_CD +1_CD and_CC 2_CD +2_CD +1_CD +2_CD patterns_NNS ,_, e.g._FW ,_, ``_`` 東風不與周郎_IN 便_CD ''_'' 15_CD -LRB-_-LRB- dong1_CD feng1_CD bu4_CD yu3_CD zhou1_CD lang2_NN bian4_CD -RRB-_-RRB- and_CC ``_`` 晉代衣冠成古丘_CD ''_'' 16_CD -LRB-_-LRB- jin4_FW dai4_FW yi1_FW guan1_FW cheng2_FW gu3_FW qiu1_FW -RRB-_-RRB- ,_, respectively_RB ._.
+Employing_VBG such_JJ a_DT literary_JJ common_JJ sense_NN as_IN a_DT heuristic_JJ for_IN segmenting_VBG words_NNS in_IN CTP_NNP ,_, we_PRP can_MD find_VB words_NNS of_IN relatively_RB high_JJ frequencies_NNS in_IN Table_NNP 1_CD ._.
+In_IN the_DT order_NN of_IN higher_JJR frequencies_NNS ,_, the_DT most_RBS common_JJ two-character_JJ words_NNS in_IN CTP_NNP are_VBP ``_`` 何處_FW ''_'' -LRB-_-LRB- he1_CD chu4_CD ,_, where_WRB -RRB-_-RRB- ,_, ``_`` 不知_FW ''_'' -LRB-_-LRB- bu4_CD zhi1_CD ,_, unknown_NN -RRB-_-RRB- ,_, ``_`` 萬里_FW ''_'' -LRB-_-LRB- wan4_CD li3_CD ,_, tens_NNS of_IN thousands_NNS of_IN miles_NNS -RRB-_-RRB- ,_, ``_`` 千里_FW ''_'' -LRB-_-LRB- qian1_CD li3_CD ,_, thousands_NNS of_IN miles_NNS -RRB-_-RRB- ,_, ``_`` 今日_FW ''_'' -LRB-_-LRB- jin1_CD ri4_CD ,_, today_NN -RRB-_-RRB- ,_, ``_`` 不見_FW ''_'' -LRB-_-LRB- bu2_CD jian4_CD ,_, can_MD not_RB be_VB seen_VBN -RRB-_-RRB- ,_, ``_`` 不可_FW ''_'' -LRB-_-LRB- bu4_CD ke3_CD ,_, can_MD not_RB -RRB-_-RRB- ,_, ``_`` 春_FW 風_FW ''_'' -LRB-_-LRB- chun1_CD feng1_CD ,_, spring_NN wind_NN -RRB-_-RRB- ,_, ``_`` 白雲_FW ''_'' -LRB-_-LRB- bai2_CD yun2_CD ,_, white_JJ cloud_NN -RRB-_-RRB- ,_, ``_`` 不得_FW ''_'' -LRB-_-LRB- bu4_CD de2_CD ,_, can_MD not_RB -RRB-_-RRB- ,_, ``_`` 明月_FW ''_'' -LRB-_-LRB- ming2_CD yue4_CD ,_, bright_JJ moon_NN -RRB-_-RRB- 和_FW ``_`` 人間_FW ''_'' -LRB-_-LRB- ren2_CD jian1_CD ,_, human_JJ world_NN -RRB-_-RRB- ._.
+Not_RB all_DT frequent_JJ strings_NNS thus_RB identified_VBN are_VBP real_JJ words_NNS ._.
+``_`` 人不_FW ''_'' -LRB-_-LRB- ren2_CD bu4_CD -RRB-_-RRB- in_IN Table_NNP 1_CD is_VBZ not_RB a_DT word_NN but_CC just_RB a_DT frequent_JJ string_NN as_IN in_IN ``_`` 盡日傷心_FW ''_'' 17_CD -LRB-_-LRB- jin4_FW ri4_FW shang1_FW xin1_FW ren2_FW bu2_FW jian4_FW -RRB-_-RRB- ''_'' 18_CD -LRB-_-LRB- sui1_CD bing4_CD ren2_NN bu4_CD zhi1_CD -RRB-_-RRB- ._.
+Proposing_VBG nonwords_NNS like_IN ``_`` 人不_FW ''_'' brings_VBZ re_SYM -_: searchers_NNS inconvenience_NN but_CC does_VBZ not_RB cause_VB serious_JJ troubles_NNS ._.
+Considering_VBG that_IN we_PRP are_VBP han_SYM -_: dling_VBG millions_NNS of_IN characters_NNS in_IN CTP_NNP and_CC that_IN it_PRP is_VBZ neither_DT impossible_JJ nor_CC very_JJ time-consuming_JJ to_TO 15_CD source_NN :_: Li_NNP Bai_NNP -LRB-_-LRB- 李白_CD -RRB-_-RRB- :_: 登金陵鳳凰臺_VBN -LRB-_-LRB- deng1_CD jin1_CD ling2_NN feng4_CD huang2_CD tai2_NN -RRB-_-RRB- 16_CD source_NN :_: Du_NNP Mu_NNP -LRB-_-LRB- 杜牧_CD -RRB-_-RRB- :_: 赤壁_NN -LRB-_-LRB- chi4_JJ bi4_NN -RRB-_-RRB- 17_CD source_NN :_: Li_NNP Shang-Yin_NNP -LRB-_-LRB- 李商隱_CD -RRB-_-RRB- :_: 遊靈伽寺_NN -LRB-_-LRB- you2_FW ling2_FW qie2_FW si4_FW -RRB-_-RRB- 18_CD source_NN :_: Bai_NNP Juyi_NNP -LRB-_-LRB- 白居易_CD -RRB-_-RRB- :_: 讀史五首_NN -LRB-_-LRB- du2_FW shi3_FW wu3_FW shou3_FW -RRB-_-RRB- 人不見_CD and_CC ``_`` 雖病人不知_NNP Table_NNP 2_CD ._.
+Li_NNP Bai_NNP 's_POS wind_NN Table_NNP 3_CD ._.
+Du_NNP Fu_NNP 's_POS wind_NN bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+春風_CD 72_CD 松風_NN 17_CD 南風_NN 8_CD 悲風_NN 6_CD 高風_NN 4_CD 清風_CD 28_CD 隨風_NN 14_CD 北風_NN 8_CD 飄風_NN 5_CD 西風_NN 4_CD 秋風_CD 26_CD 香風_NN 11_CD 涼風_NN 8_CD 胡風_NN 5_CD 扶風_NN 4_CD 東風_CD 24_CD 天風_NN 10_CD 狂風_NN 7_CD 從風_NN 5_CD 屏風_NN 4_CD 長風_CD 22_CD 英風_NN 8_CD 雄風_NN 6_CD 嚴風_NN 5_CD 動風_NN 4_CD bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+秋風_CD 30_CD 朔風_NN 8_CD 高風_NN 6_CD 江風_NN 4_CD 南風_NN 4_CD 春風_CD 19_CD 微風_NN 8_CD 清風_NN 6_CD 驚風_NN 4_CD 涼風_NN 4_CD 北風_CD 14_CD 隨風_NN 7_CD 天風_NN 6_CD 山風_NN 4_CD 東風_NN 4_CD 悲風_CD 10_CD 回風_NN 7_CD 長風_NN 5_CD 多風_NN 4_CD 裡風_NN 8_CD 臨風_NN 7_CD 陰風_NN 4_CD 含風_NN 4_CD identify_VBP such_JJ nonwords_NNS ,_, our_PRP$ experience_NN indicates_VBZ that_IN applying_VBG computational_JJ tools_NNS for_IN automatic_JJ processing_NN of_IN the_DT CTP_NNP contents_NNS made_VBD our_PRP$ study_NN of_IN CTP_NNP more_RBR efficient_JJ than_IN without_IN using_VBG the_DT tools.We_NNP have_VBP designed_VBN tools_NNS for_IN extracting_VBG con_NN -_: texts_NNS that_WDT contain_VBP candidate_NN words_NNS for_IN research_NN -_: ers_NNS '_POS inspections_NNS ,_, so_RB validating_VBG candidate_NN words_NNS is_VBZ very_RB easy_JJ ._.
+Furthermore_RB ,_, sometimes_RB the_DT words_NNS that_WDT do_VBP not_RB exist_VB in_IN contemporary_JJ literature_NN may_MD turn_VB out_RP to_TO be_VB artistic_JJ usages_NNS of_IN words_NNS that_WDT are_VBP hard_JJ to_TO be_VB correctly_RB handled_VBN by_IN current_JJ tools_NNS for_IN Chinese_JJ segmentation_NN ,_, and_CC researchers_NNS are_VBP more_RBR than_IN happy_JJ to_TO check_VB those_DT innovative_JJ words_NNS with_IN a_DT limited_JJ cost_NN in_IN time_NN ._.
+Table_NNP 1_CD exemplifies_VBZ a_DT problem_NN of_IN this_DT paper_NN :_: that_IN we_PRP can_MD not_RB provide_VB pronunciations_NNS for_IN all_DT Chinese_JJ words_NNS that_WDT appear_VBP in_IN this_DT page-limited_JJ manuscript_NN ._.
+Due_JJ to_TO the_DT large_JJ number_NN of_IN Chinese_JJ words_NNS in_IN this_DT and_CC other_JJ tables_NNS ,_, we_PRP can_MD not_RB afford_VB to_TO annotate_VB and_CC explain_VB all_DT of_IN the_DT words_NNS in_IN tables_NNS ._.
+3_LS Styles_NNPS Adapting_VBG the_DT concept_NN of_IN distributional_JJ seman_NN -_: tics19_CD -LRB-_-LRB- Harris_NNP ,_, 1954_CD ;_: Miller_NNP and_CC Walter_NNP 1991_CD -RRB-_-RRB- ,_, researchers_NNS investigate_VBP the_DT semantics_NNS of_IN a_DT word_NN from_IN the_DT distributions_NNS of_IN its_PRP$ surrounding_VBG words_NNS ._.
+Firth_NNP -LRB-_-LRB- 1957_CD -RRB-_-RRB- stated_VBD that_IN ``_`` You_PRP shall_MD know_VB a_DT word_NN by_IN the_DT company_NN it_PRP keeps_VBZ ._. ''_''
+Similarly_RB ,_, we_PRP should_MD be_VB able_JJ to_TO extend_VB the_DT concept_NN of_IN distributional_JJ semantics_NNS to_TO compare_VB poets_NNS '_POS styles_NNS :_: ``_`` You_PRP shall_MD know_VB a_DT poet_NN 's_POS style_NN by_IN the_DT words_NNS s/he_VBP uses_NNS ._. ''_''
+19_CD A_DT reviewer_NN for_IN this_DT paper_NN ,_, referring_VBG to_TO -LRB-_-LRB- Lin_NNP ,_, 1998_CD -RRB-_-RRB- ,_, considers_VBZ our_PRP$ approach_NN as_IN a_DT collocational_JJ analysis_NN of_IN words_NNS in_IN a_DT given_VBN context_NN ._.
+We_PRP used_VBD ``_`` distributional_JJ ''_'' because_IN there_EX is_VBZ a_DT sense_NN of_IN distribution_NN when_WRB we_PRP can_MD consider_VB the_DT frequency_NN distribution_NN of_IN a_DT set_NN of_IN words_NNS ._.
+3.1_CD Wind_NN and_CC Moon_NNP Jiang_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- compared_VBN the_DT styles_NNS of_IN Li_NNP Bai_NNP and_CC Du_NNP Fu_NNP by_IN looking_VBG into_IN how_WRB they_PRP used_VBD ``_`` 風_FW ''_'' -LRB-_-LRB- feng1_CD ,_, wind_NN -RRB-_-RRB- and_CC ``_`` 月_FW ''_'' -LRB-_-LRB- yue4_CD ,_, moon_NN -RRB-_-RRB- in_IN their_PRP$ works_NNS by_IN checking_VBG into_IN individual_JJ pieces_NNS of_IN poems_NNS ._.
+We_PRP take_VBP a_DT quantitative_JJ approach_NN by_IN ex_FW -_: amining_VBG the_DT terms_NNS related_VBN to_TO ``_`` 風_FW ''_'' and_CC ``_`` 月_FW ''_'' in_IN the_DT poets_NNS '_POS works_NNS ._.
+We_PRP can_MD employ_VB the_DT PAT-tree_JJ techniques_NNS -LRB-_-LRB- Chien_NNP ,_, 1997_CD -RRB-_-RRB- or_CC our_PRP$ own_JJ tools20_NNS for_IN finding_VBG the_DT characters_NNS that_WDT appear_VBP immediately_RB before_IN a_DT specified_VBN Chinese_JJ character_NN to_TO find_VB words_NNS con_NN -_: taining_VBG ``_`` 風_FW ''_'' and_CC ``_`` 月_FW ''_'' in_IN poets_NNS '_POS works_NNS ._.
+Tables_NNS 2_CD and_CC 3_CD show_NN how_WRB Li_NNP and_CC Du_NNP used_VBD ``_`` wind_NN ._. ''_''
+Both_DT Li_NNP and_CC Du_NNP were_VBD very_RB creative_JJ in_IN inventing_VBG terms_NNS for_IN ``_`` 風_FW ''_'' ._.
+The_DT most_RBS common_JJ term_NN of_IN ``_`` 風_FW ''_'' in_IN Li_NNP Bai_NNP 's_POS works_NNS were_VBD ``_`` 春風_FW ''_'' -LRB-_-LRB- chun1_CD feng1_CD ,_, spring_NN wind_NN -RRB-_-RRB- ,_, ``_`` 清風_FW ''_'' -LRB-_-LRB- qing1_CD feng1_CD ,_, clear_JJ wind_NN -RRB-_-RRB- ,_, ``_`` 秋風_FW ''_'' -LRB-_-LRB- qiu1_CD feng1_CD ,_, autumn_NN wind_NN -RRB-_-RRB- ,_, ``_`` 東風_FW ''_'' -LRB-_-LRB- dong1_CD feng1_CD ,_, eastern_JJ wind_NN -RRB-_-RRB- ,_, and_CC ``_`` 長風_FW ''_'' -LRB-_-LRB- zhang2_CD feng1_CD ,_, long_RB wind_NN -RRB-_-RRB- ._.
+Du_NNP Fu_NNP ,_, on_IN the_DT other_JJ hand_NN ,_, had_VBD ``_`` 秋風_FW ''_'' ,_, ``_`` 春風_FW ''_'' ,_, ``_`` 北風_FW ''_'' -LRB-_-LRB- bei3_CD feng1_CD ,_, northern_JJ wind_NN -RRB-_-RRB- ,_, ``_`` 悲風_FW ''_'' -LRB-_-LRB- bei1_CD feng1_CD ,_, sad_JJ wind_NN -RRB-_-RRB- ,_, and_CC ``_`` 朔風_FW ''_'' -LRB-_-LRB- shuo4_CD feng1_CD ,_, northern_JJ wind_NN -RRB-_-RRB- ._.
+For_IN those_DT who_WP can_MD appreciate_VB Chinese_JJ ,_, the_DT poets_NNS '_POS ``_`` 風_FW ''_'' carried_VBD very_RB different_JJ imageries_NNS ._.
+For_IN instance_NN ,_, in_IN China_NNP ,_, winds_NNS from_IN the_DT north_NN are_VBP generally_RB cold_JJ ,_, which_WDT has_VBZ been_VBN used_VBN to_TO convey_VB a_DT sense_NN of_IN sadness_NN by_IN many_JJ ._.
+In_IN contrast_NN ,_, the_DT east_JJ -_: ern_NN wind_NN and_CC spring_NN wind_NN are_VBP more_RBR comfortable_JJ and_CC pleasing_NN ._.
+Tables_NNS 4_CD and_CC 5_CD show_NN how_WRB Li_NNP and_CC Du_NNP used_VBD ``_`` moon_NN ._. ''_''
+Although_IN Du_NNP had_VBD more_RBR works_VBZ in_IN CTP_NNP 20_CD https://sites.google.com/site/taiwandigitalhumanities/_NNP Table_NNP 4_CD ._.
+Li_NNP Bai_NNP 's_POS moon_NN Table_NNP 5_CD ._.
+Du_NNP Fu_NNP 's_POS moon_NN bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+明月_CD 57_CD 溪月_NN 9_CD 有月_NN 5_CD 湖月_NN 3_CD 夜月_NN 3_CD 秋月_CD 40_CD 八月_NN 9_CD 轉月_NN 4_CD 漢月_NN 3_CD 夕月_NN 3_CD 五月_CD 28_CD 雲月_NN 9_CD 曉月_NN 4_CD 樓月_NN 3_CD 喘月_NN 3_CD 日月_CD 23_CD 花月_NN 8_CD 孤月_NN 4_CD 新月_NN 3_CD 向月_NN 3_CD 海月_CD 14_CD 見月_NN 7_CD 台月_NN 4_CD 待月_NN 3_CD 古月_NN 3_CD 上月_CD 13_CD 江月_NN 6_CD 落月_NN 3_CD 弄月_NN 3_CD 十月_NN 3_CD 三月_CD 13_CD 蘿月_NN 5_CD 片月_NN 3_CD 如月_NN 3_CD 二月_NN 3_CD 山月_CD 10_CD 素月_NN 5_CD 滿月_NN 3_CD 好月_NN 3_CD 乘月_NN 3_CD bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+日月_SYM 20_CD 明月_NN 7_CD 落月_NN 4_CD 正月_NN 3_CD 從月_NN 3_CD 歲月_CD 14_CD 江月_NN 6_CD 秋月_NN 4_CD 星月_NN 3_CD 九月_NN 3_CD 十月_CD 10_CD 五月_NN 6_CD 漢月_NN 4_CD 新月_NN 3_CD 三月_NN 9_CD 夜月_NN 5_CD 門月_NN 3_CD 四月_NN 3_CD 八月_NN 8_CD 二月_NN 5_CD 素月_NN 3_CD 六月_NN 3_CD -LRB-_-LRB- cf._FW Section_NN 2.2_CD -RRB-_-RRB- ,_, statistics_NNS in_IN Tables_NNP 4_CD and_CC 5_CD show_NN that_WDT Li_NNP used_VBD more_RBR words_NNS about_IN ``_`` 月_FW ''_'' than_IN Du_NNP ._.
+Li_NNP and_CC Du_NNP also_RB demonstrated_VBD quite_RB diverging_VBG styles_NNS in_IN using_VBG ``_`` 月_FW ''_'' ._.
+For_IN frequent_JJ terms_NNS of_IN ``_`` 月_FW ''_'' ,_, Li_NNP had_VBD ``_`` 明月_FW ''_'' -LRB-_-LRB- ming2_CD yue4_CD ,_, bright_JJ moon_NN -RRB-_-RRB- ,_, ``_`` 秋_FW 月_FW ''_'' -LRB-_-LRB- qiu1_CD yue4_CD ,_, autumn_NN moon_NN -RRB-_-RRB- ,_, ``_`` 日月_FW ''_'' -LRB-_-LRB- ri4_CD yue4_CD ,_, sun_NN and_CC moon_NN -RRB-_-RRB- ,_, ``_`` 海月_FW ''_'' -LRB-_-LRB- hai3_CD yue4_CD ,_, sea_NN and_CC moon_NN -RRB-_-RRB- ,_, and_CC ``_`` 山月_FW ''_'' -LRB-_-LRB- shan1_CD yue4_CD ,_, mountain_NN moon_NN -RRB-_-RRB- ;_: in_IN contrast_NN ,_, Du_NNP used_VBD more_RBR ``_`` 歲月_FW ''_'' -LRB-_-LRB- sui4_CD yue4_CD ,_, ages_NNS -RRB-_-RRB- and_CC monthly_JJ names_NNS ,_, e.g._FW ,_, ``_`` 十月_FW ''_'' -LRB-_-LRB- shi2_CD yue4_CD ,_, October_NNP -RRB-_-RRB- ,_, ``_`` 三月_FW ''_'' -LRB-_-LRB- san1_CD yue4_CD ,_, March_NNP -RRB-_-RRB- ,_, and_CC ``_`` 八月_FW ''_'' -LRB-_-LRB- ba1_CD yue4_CD ,_, August_NNP -RRB-_-RRB- ._.
+3.2_CD White_NNP Words_NNPS in_IN CTP_NNP Colors_NNP for_IN poems_NNS are_VBP like_IN sounds_NNS for_IN movies_NNS ._.
+They_PRP foster_VBP the_DT feelings_NNS and_CC imageries_NNS of_IN the_DT artistic_JJ works_NNS ._.
+When_WRB we_PRP checked_VBD the_DT most_RBS fre_SYM -_: quent_NN unigrams_NNS in_IN CTP_NNP -LRB-_-LRB- cf._NNP Section_NNP 2.2_CD -RRB-_-RRB- ,_, we_PRP have_VBP found_VBN that_IN ``_`` 白_FW ''_'' -LRB-_-LRB- bai2_CD ,_, white_JJ -RRB-_-RRB- is_VBZ the_DT most_RBS frequent_JJ color_NN name_NN in_IN CTP_NNP ._.
+Using_VBG the_DT same_JJ mechanism_NN for_IN finding_VBG words_NNS that_WDT contained_VBD ``_`` 風_FW ''_'' and_CC ``_`` 月_FW ''_'' in_IN CTP_NNP ,_, we_PRP can_MD find_VB words_NNS that_WDT started_VBD with_IN ``_`` 白_FW ''_'' ._.
+Then_RB ,_, we_PRP can_MD calculate_VB the_DT percentage_NN of_IN a_DT poet_NN 's_POS poems_NNS that_IN used_VBN specific_JJ words_NNS that_WDT started_VBD with_IN ``_`` 白_FW ''_'' ._.
+The_DT statistics_NNS are_VBP collected_VBN for_IN 13_CD renowned_JJ poets_NNS and_CC are_VBP listed_VBN in_IN Table_NNP 6_CD ,_, which_WDT is_VBZ placed_VBN at_IN the_DT end_NN of_IN this_DT manuscript_NN because_IN of_IN its_PRP$ huge_JJ size.The_NN third_JJ and_CC following_JJ rows_NNS of_IN Table_NNP 6_CD show_NN two_CD types_NNS of_IN information_NN ._.
+The_DT second_JJ leftmost_NN column_NN lists_VBZ the_DT white_JJ words_NNS that_WDT ap_SYM -_: peared_VBD more_JJR than_IN 30_CD times_NNS in_IN the_DT works_NNS of_IN 12_CD poets21_CD ._.
+The_DT leftmost_JJS column_NN lists_VBZ the_DT total_JJ fre_NN -_: quencies_NNS of_IN these_DT white_JJ words_NNS that_WDT were_VBD used_VBN in_IN the_DT poets_NNS '_POS poems_NNS ._.
+The_DT percentages_NNS that_WDT appear_VBP to_TO the_DT right_NN of_IN the_DT white_JJ words_NNS indicate_VBP how_WRB often_RB an_DT individual_JJ poet_NN used_VBN this_DT white_JJ word_NN ,_, while_IN the_DT thick_JJ boxes_NNS indicate_VBP the_DT most_RBS frequent_JJ words_NNS used_VBN by_IN the_DT poets_NNS ._.
+The_DT first_JJ row_NN ,_, Ratio_NNP A_NNP ,_, of_IN Table_NNP 6_CD shows_VBZ the_DT total_JJ percentage_NN of_IN the_DT poet_NN 's_POS poems_NNS in_IN CTP_NNP that_WDT used_VBD the_DT white_JJ words_NNS in_IN Table_NNP 6_CD ._.
+Li_NNP Bai_NNP liked_VBD to_TO use_VB ``_`` 白_FW ''_'' much_RB more_JJR than_IN others_NNS based_VBN on_IN the_DT data_NNS ._.
+Nearly_RB half_NN of_IN Li_NNP 's_POS poems_NNS in_IN CTP_NNP ,_, i.e._FW ,_, 46.65_CD %_NN ,_, used_VBD the_DT color_NN ._.
+The_DT second_JJ row_NN ,_, Ratio_NNP B_NNP ,_, of_IN Table_NNP 6_CD shows_VBZ the_DT total_JJ percentage_NN of_IN poets_NNS '_POS poems_NNS that_IN used_VBN ``_`` 白髮_FW ''_'' -LRB-_-LRB- bai2_CD fa3_CD ,_, gray_JJ hair_NN -RRB-_-RRB- ,_, ``_`` 白頭_FW ''_'' -LRB-_-LRB- bai2_CD tao2_CD ,_, white_JJ head_NN -RRB-_-RRB- ,_, ``_`` 白首_FW ''_'' -LRB-_-LRB- bai2_CD shou3_CD ,_, white_JJ head_NN -RRB-_-RRB- ,_, ``_`` 白鬚_FW ''_'' -LRB-_-LRB- bai2_CD syu1_CD ,_, white_JJ beard_NN -RRB-_-RRB- ,_, ``_`` 白骨_FW ''_'' -LRB-_-LRB- bai2_CD gu3_CD ,_, white_JJ bone_NN -RRB-_-RRB- ,_, and_CC ``_`` 白髭_FW ''_'' -LRB-_-LRB- bai2_CD zi1_CD ,_, white_JJ mustache_NN -RRB-_-RRB- ._.
+Statistics_NNS for_IN these_DT terms_NNS are_VBP specially_RB marked_VBN by_IN shadowed_JJ rows_NNS ._.
+These_DT six_CD terms_NNS typically_RB appeared_VBD in_IN works_NNS that_WDT carried_VBD pessi_SYM -_: mistic_JJ senses_NNS ._.
+It_PRP is_VBZ thus_RB possible_JJ to_TO peek_NN into_IN the_DT differ_VBP -_: ences_NNS of_IN the_DT main_JJ themes_NNS of_IN poets_NNS '_POS works_NNS with_IN Ratio_NNP B_NNP ._.
+The_DT B_NNP ratios_NNS of_IN Meng_NNP Hao-Ran_NNP -LRB-_-LRB- 孟浩_FW 然_FW -RRB-_-RRB- ,_, Li_NNP Shang-Yin_NNP -LRB-_-LRB- 李商隱_CD -RRB-_-RRB- ,_, and_CC Wen_NNP Ting-Yun_NNP -LRB-_-LRB- 溫庭筠_CD -RRB-_-RRB- are_VBP less_JJR than_IN 2_CD %_NN ._.
+In_IN sharp_JJ contrast_NN ,_, we_PRP could_MD see_VB that_IN the_DT B_NNP ratios_NNS of_IN Du_NNP Fu_NNP and_CC Bai_NNP Juyi_NNP are_VBP more_RBR than_IN 7_CD %_NN ._.
+In_IN general_JJ ,_, Meng_NNP 's_POS works_NNS are_VBP 21_CD Table_NNP 6_CD also_RB includes_VBZ statistics_NNS for_IN selected_VBN words_NNS that_WDT appeared_VBD more_JJR less_JJR than_IN 30_CD times_NNS ._.
+This_DT table_NN is_VBZ adapted_VBN from_IN a_DT similar_JJ table_NN in_IN -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Table_NNP 6_CD ._.
+Percentages_NNS of_IN poets_NNS '_POS works_NNS that_IN used_VBN white_JJ words_NNS Ratio_NNP A_NNP 8.96_CD 18.41_CD 9.73_CD 46.65_CD 23.83_CD 12.55_CD 26.94_CD 15.67_CD 18.80_CD 17.37_CD 16.30_CD 10.48_CD Ratio_NNP B_NNP 1.87_CD 5.72_CD 1.80_CD 5.92_CD 2.13_CD 4.66_CD 7.94_CD 1.99_CD 2.28_CD 7.19_CD 3.70_CD 3.23_CD freq_NN ._.
+bigram_FW 孟浩然_FW 孟郊_FW 李商隱_FW 李白_FW 李賀_FW 杜牧_FW 杜甫_FW 溫庭筠_FW 王維_FW 白居易_FW 賈島_FW 韓愈_FW 217_CD 白日_CD 0.75_CD 4.73_CD 1.62_CD 6.92_CD 2.98_CD 164_CD 白髮_NN 1.12_CD 3.73_CD 0.54_CD 2.34_CD 1.28_CD 158_CD 白雲_NN 2.99_CD 1.99_CD 0.54_CD 3.79_CD 0.85_CD 149_CD 白頭_NN 0.00_CD 0.75_CD 0.72_CD 0.67_CD 0.43_CD 86_CD 白首_NN 0.75_CD 1.00_CD 0.18_CD 1.56_CD 0.43_CD 74_CD 白玉_NN 0.00_CD 0.50_CD 2.34_CD 3.01_CD 0.85_CD 74_CD 白馬_NN 0.37_CD 0.50_CD 0.00_CD 2.34_CD 4.68_CD 63_CD 白雪_NN 0.37_CD 0.25_CD 0.36_CD 2.34_CD 0.00_CD 59_CD 白帝_NN 0.00_CD 0.00_CD 0.18_CD 1.00_CD 0.43_CD 58_CD 白露_NN 0.00_CD 0.50_CD 0.18_CD 1.56_CD 0.43_CD 54_CD 白石_NN 0.00_CD 1.00_CD 0.90_CD 1.12_CD 0.43_CD 38_CD 白蘋_NN 0.37_CD 0.75_CD 0.18_CD 0.22_CD 1.28_CD 32_CD 白水_NN 0.00_CD 0.25_CD 0.00_CD 0.89_CD 1.28_CD 31_CD 白鬚_NN 0.00_CD 0.00_CD 0.18_CD 0.11_CD 0.00_CD 30_CD 白鷺_NN 0.00_CD 0.25_CD 0.00_CD 1.79_CD 0.00_CD 21_CD 白骨_NN 0.00_CD 0.25_CD 0.18_CD 1.23_CD 0.00_CD 17_CD 白衣_NN 0.00_CD 0.00_CD 0.18_CD 0.22_CD 0.00_CD 15_CD 白髭_NN 0.00_CD 0.00_CD 0.00_CD 0.00_CD 0.00_CD 15_CD 皓齒_NN 0.00_CD 0.00_CD 0.00_CD 0.78_CD 0.85_CD considered_VBN to_TO belong_VB to_TO the_DT relaxing_VBG category_NN -LRB-_-LRB- 田_FW 園詩派_FW ,_, Tian2_NNP Yuan2_NNP Shi1_NNP Pai4_NNP -RRB-_-RRB- ,_, and_CC Li_NNP and_CC Wen_NNP are_VBP considered_VBN to_TO use_VB expressions_NNS that_WDT lead_VBP to_TO ``_`` a_DT beautiful_JJ and_CC gorgeous_JJ conception_NN ''_'' -LRB-_-LRB- Lee_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+Both_DT Du_NNP Fu_NNP and_CC Bai_NNP Juyi_NNP ,_, on_IN the_DT other_JJ hand_NN ,_, are_VBP considered_VBN as_IN social_JJ poets_NNS who_WP cared_VBD about_IN the_DT status_NN of_IN the_DT society_NN ._.
+4_CD Collocations_NNP and_CC Antithesis_NNP Collocations_NNP refer_VBP to_TO the_DT occurrence_NN of_IN two_CD words_NNS within_IN a_DT specified_VBN range_NN ._.
+If_IN two_CD words_NNS constantly_RB appear_VBP within_IN a_DT short_JJ range_NN ,_, they_PRP may_MD have_VB some_DT close_JJ relationships_NNS in_IN semantics_NNS ._.
+Antithesis_NNP -LRB-_-LRB- 對仗_CD ,_, dui4_CD zhang4_CD -RRB-_-RRB- refers_VBZ to_TO the_DT parallelism_NN in_IN poems_NNS ._.
+Two_CD words_NNS need_VBP to_TO have_VB special_JJ relationships_NNS in_IN their_PRP$ positions_NNS ,_, pronunci_SYM -_: ations_NNS ,_, and_CC meanings_NNS to_TO form_VB an_DT antithesis_NN pair_NN ._.
+There_EX are_VBP complex_JJ rules_NNS 22_CD for_IN observing_VBG antitheses_NNS and_CC rhymes_NNS in_IN Tang_NNP poems_NNS ._.
+In_IN a_DT Lu_NNP Shi_NNP -LRB-_-LRB- 律詩_CD -RRB-_-RRB- ,_, the_DT third_JJ and_CC the_DT fourth_JJ sentences_NNS form_VBP a_DT sentence_NN pair_NN -LRB-_-LRB- 聯_CD ,_, lian2_CD -RRB-_-RRB- ,_, so_RB do_VB the_DT fifth_JJ and_CC the_DT sixth_JJ sentences_NNS ._.
+A_DT pair_NN of_IN sentences_NNS should_MD follow_VB the_DT antithesis_NN rules_NNS ._.
+In_IN ``_`` 白日當空_FW 天氣暖_FW ,_, 好風飄樹柳陰涼_CD ''_'' 23_CD ,_, ``_`` 白日_FW ''_'' and_CC ``_`` 柳陰_FW ''_'' 22_CD http://cls.hs.yzu.edu.tw/300/all/primary1/DET4.htm_NNP 23_CD source_NN :_: Yuan_NNP Zhen_NNP -LRB-_-LRB- 元稹_CD -RRB-_-RRB- :_: 清都春霽_CD ,_, 寄胡三_CD 、_CD 1.01_CD 2.42_CD 0.00_CD 1.14_CD 2.04_CD 2.22_CD 3.23_CD 1.62_CD 1.99_CD 0.00_CD 0.85_CD 2.50_CD 2.22_CD 0.54_CD 1.42_CD 0.86_CD 0.28_CD 7.41_CD 0.95_CD 4.44_CD 0.27_CD 2.23_CD 3.37_CD 1.14_CD 0.57_CD 2.23_CD 0.49_CD 1.61_CD 0.20_CD 1.99_CD 0.85_CD 0.85_CD 1.02_CD 0.25_CD 0.81_CD 0.81_CD 0.60_CD 0.00_CD 0.85_CD 0.53_CD 0.00_CD 0.27_CD 0.00_CD 1.38_CD 2.85_CD 0.85_CD 0.30_CD 0.00_CD 0.00_CD 0.40_CD 1.04_CD 0.28_CD 0.00_CD 0.68_CD 0.00_CD 0.27_CD 0.00_CD 3.54_CD 0.28_CD 0.00_CD 0.08_CD 0.00_CD 0.54_CD 0.00_CD 0.86_CD 0.28_CD 0.28_CD 0.79_CD 0.99_CD 0.27_CD 0.00_CD 0.26_CD 0.57_CD 0.57_CD 0.68_CD 1.23_CD 0.81_CD 0.20_CD 0.52_CD 2.85_CD 0.00_CD 0.30_CD 0.00_CD 0.54_CD 0.00_CD 1.12_CD 0.00_CD 0.57_CD 0.08_CD 0.00_CD 0.27_CD 0.20_CD 0.00_CD 0.00_CD 0.00_CD 0.98_CD 0.49_CD 0.00_CD 0.40_CD 0.26_CD 0.00_CD 0.85_CD 0.15_CD 0.25_CD 0.00_CD 0.00_CD 0.60_CD 0.00_CD 0.00_CD 0.00_CD 0.00_CD 0.27_CD 0.00_CD 0.17_CD 0.00_CD 0.57_CD 0.19_CD 0.99_CD 0.00_CD 0.40_CD 0.00_CD 0.00_CD 0.00_CD 0.45_CD 0.25_CD 0.00_CD 0.00_CD 0.26_CD 0.85_CD 0.00_CD 0.00_CD 0.00_CD 0.00_CD form_NN a_DT collocation_NN but_CC not_RB antithesis_NNS ,_, while_IN ``_`` 白_FW 日_FW ''_'' and_CC ``_`` 好風_FW ''_'' are_VBP both_DT a_DT pair_NN of_IN collocation_NN and_CC a_DT pair_NN of_IN antithesis_NN ._.
+In_IN this_DT case_NN ,_, ``_`` 白日_FW ''_'' and_CC ``_`` 柳陰_FW ''_'' do_VBP not_RB locate_VB at_IN corresponding_JJ positions_NNS ._.
+If_IN we_PRP can_MD segment_NN words_NNS in_IN poems_NNS correctly_RB ,_, then_RB recognizing_VBG antithesis_NNS will_MD not_RB be_VB very_RB difficult_JJ ._.
+However_RB ,_, perfect_JJ word_NN segmentation_NN in_IN poems_NNS needs_VBZ semantic_JJ information_NN ._.
+Sometimes_RB the_DT poems_NNS could_MD carry_VB ambiguous_JJ meanings_NNS ._.
+4.1_CD Word_NN Pairs_NNP We_PRP can_MD compute_VB the_DT collocations_NNS of_IN a_DT word_NN to_TO acquire_VB a_DT sense_NN of_IN the_DT circumstances_NNS of_IN the_DT word_NN 's_POS occurrences_NNS ._.
+To_TO do_VB so_RB ,_, we_PRP extract_VBP con_NN -_: texts_NNS of_IN words_NNS ,_, say_VBP n_JJ characters_NNS ,_, before_RB and_CC after_IN the_DT word_NN of_IN interest_NN from_IN CTP_NNP ._.
+Then_RB we_PRP can_MD compute_VB frequent_JJ words_NNS from_IN the_DT contexts_NNS -LRB-_-LRB- cf._FW Section_NN 2.2_CD -RRB-_-RRB- ._.
+Table_NNP 7_CD lists_NNS some_DT educational_JJ findings_NNS when_WRB we_PRP set_VBP n_NN to_TO 30_CD ._.
+It_PRP is_VBZ very_RB interesting_JJ to_TO find_VB out_RP that_IN ``_`` 白雲_FW ''_'' -LRB-_-LRB- bai2_CD yun2_CD ,_, white_JJ cloud_NN -RRB-_-RRB- collo_SYM -_: cates_NNS with_IN ``_`` 明月_FW ''_'' -LRB-_-LRB- ming2_CD yue4_CD ,_, bright_JJ moon_NN -RRB-_-RRB- and_CC ``_`` 流水_FW ''_'' -LRB-_-LRB- liu2_CD shui3_CD ,_, running_VBG water_NN -RRB-_-RRB- ,_, that_IN ``_`` 白_FW 日_FW ''_'' -LRB-_-LRB- bai2_CD ri4_CD ,_, bright_JJ sun_NN -RRB-_-RRB- collocates_VBZ with_IN ``_`` 青春_FW ''_'' 吳十一_CD -LRB-_-LRB- qing1_CD dou1_CD chun1_CD ji4_NN ,_, ji4_FW hu2_FW san1_FW 、_FW wu2_FW shi2_FW yi1_FW -RRB-_-RRB- Table_NNP 7_CD ._.
+Statistics_NNS of_IN some_DT collocations_NNS in_IN CTP_NNP -LRB-_-LRB- n_JJ =_SYM 30_CD -RRB-_-RRB- 白雲_SYM 白日_SYM 白髮_SYM bigram_FW freq_FW ._.
+bigram_NN freq_NN ._.
+明月_SYM 61_CD 清露_CD 10_CD 流水_NN 40_CD 青壁_NN 7_CD 芳草_CD 29_CD 秋草_NN 7_CD 滄海_CD 28_CD 丹灶_NN 5_CD 紅葉_CD 17_CD 青鏡_NN 2_CD 黃葉_CD 16_CD 青玉_NN 2_CD 青草_CD 14_CD 皇道_NN 1_CD bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+bigram_NN freq_NN ._.
+青春_SYM 32_CD 青山_CD 38_CD 丹砂_NN 7_CD 青山_CD 21_CD 青雲_NN 27_CD 黃河_NN 6_CD 清風_CD 18_CD 朱顏_NN 16_CD 清光_NN 4_CD 紅塵_CD 15_CD 青春_NN 15_CD 丹霄_NN 4_CD 黃河_CD 15_CD 黃金_NN 13_CD 黃衣_NN 3_CD 滄江_NN 6_CD 滄洲_NN 8_CD 紅塵_NN 3_CD 青蓮_NN 3_CD 青衫_NN 7_CD 紅旗_NN 3_CD 青霄_NN 3_CD 青楓_NN 2_CD Table_NNP 8_CD ._.
+Corresponding_VBG colors_NNS in_IN CTP_NNP 白青紅黃綠紫碧丹赤黑_CD CFCFCFCFCFCFCFCFCFCF_NNP 青_CD 919_CD 白_NN 919_CD 白_CD 358_CD 白_NN 505_CD 紅_CD 335_CD 青_NN 197_CD 紅_CD 199_CD 白_NN 142_CD 青_CD 54_CD 青_NN 36_CD 黃505綠202綠335青152青202黃139青188紫_CD 70_CD 黃39黃27_CD 紅358紫197碧199紫139黃_CD 83_CD 紅107清100碧_CD 50_CD 白33紅24_CD 清274碧188翠139綠_CD 83_CD 白_NN 70_CD 丹142黃152青111碧_CD 74_CD 清_NN 70_CD 滄_CD 99_CD 紅_CD 111_CD 紫_NN 107_CD 紅_CD 44_CD 丹_NN 31_CD 朱_CD 97_CD 翠_NN 54_CD 黃_CD 44_CD 赤_NN 39_CD 朱_CD 27_CD 明_NN 96_CD 赤_CD 54_CD 清_NN 36_CD 翠_CD 33_CD 紫_NN 26_CD 綠_CD 70_CD 明_NN 42_CD 素_CD 31_CD 清_NN 32_CD 碧_CD 26_CD 玄_NN 66_CD 丹_CD 41_CD 金_NN 21_CD 黑_CD 27_CD 金_NN 23_CD -LRB-_-LRB- qing1_CD chun1_CD ,_, young_JJ age_NN -RRB-_-RRB- and_CC ``_`` 青山_FW ''_'' -LRB-_-LRB- qing1_CD shan1_CD ,_, mountains_NNS -RRB-_-RRB- ,_, and_CC that_IN ``_`` 白髮_FW ''_'' -LRB-_-LRB- bai2_CD fa3_CD ,_, gray_JJ hair_NN -RRB-_-RRB- collocates_VBZ with_IN ``_`` 青山_FW ''_'' and_CC ``_`` 青雲_FW ''_'' -LRB-_-LRB- qing1_CD yun2_CD ,_, blueish_JJ clouds_NNS -RRB-_-RRB- ._.
+We_PRP can_MD also_RB study_VB the_DT cases_NNS of_IN antitheses_NNS of_IN the_DT white_JJ words_NNS that_WDT were_VBD used_VBN by_IN individual_JJ poets_NNS ._.
+For_IN instance_NN ,_, we_PRP can_MD find_VB at_IN least_JJS 26_CD in_IN -_: stances_NNS of_IN ``_`` 白髮_FW ''_'' and_CC ``_`` 青雲_FW ''_'' that_WDT were_VBD used_VBN as_IN a_DT antithesis_NN pair_NN in_IN CTP_NNP ._.
+``_`` 白雲_FW ''_'' and_CC ``_`` 流水_FW ''_'' were_VBD used_VBN as_IN a_DT antithesis_NN pair_NN by_IN Liu_NNP Yu-Xi_NNP -LRB-_-LRB- 劉禹錫_CD -RRB-_-RRB- ,_, Yao_NNP He_PRP -LRB-_-LRB- 姚合_CD -RRB-_-RRB- ,_, Huang-fu_JJ Ran_NN -LRB-_-LRB- 皇甫冉_FW -RRB-_-RRB- ,_, Huang-fu_JJ Cent_NNP -LRB-_-LRB- 皇甫曾_CD -RRB-_-RRB- ,_, Jia_NNP Dao_NNP -LRB-_-LRB- 賈島_CD -RRB-_-RRB- ,_, and_CC Qian_NNP Qi_NNP -LRB-_-LRB- 錢起_CD -RRB-_-RRB- ,_, while_IN ``_`` 白雲_FW ''_'' and_CC ``_`` 青草_FW ''_'' -LRB-_-LRB- qing1_CD cao3_CD ,_, green_JJ grass_NN -RRB-_-RRB- were_VBD used_VBN as_IN a_DT antithesis_NN pair_NN by_IN Liu_NNP Zhang-Qing_NNP -LRB-_-LRB- 劉長卿_CD -RRB-_-RRB- ,_, Shu-kong_JJ Si_NNP -LRB-_-LRB- 司_FW 空曙_FW -RRB-_-RRB- ,_, Yao_NNP Ho_NNP -LRB-_-LRB- 姚合_CD -RRB-_-RRB- ,_, Zhang_NNP Ji_NNP -LRB-_-LRB- 張籍_CD -RRB-_-RRB- ,_, Li_NNP Tuan_NNP -LRB-_-LRB- 李端_CD -RRB-_-RRB- ,_, and_CC Lang_NNP Shi-Yuan_NNP -LRB-_-LRB- 郎士元_CD -RRB-_-RRB- ._.
+These_DT statistics_NNS offer_VBP some_DT hints_NNS about_IN the_DT word_NN semantics_NNS ,_, and_CC researchers_NNS may_MD want_VB to_TO -LRB-_-LRB- and_CC we_PRP can_MD -RRB-_-RRB- extract_VB the_DT poems_NNS that_WDT contain_VBP a_DT specific_JJ pair_NN of_IN words_NNS to_TO examine_VB the_DT complete_JJ poems_NNS for_IN either_DT literary_JJ or_CC social_JJ studies_NNS ._.
+白_SYM 72_CD 黃_CD 74_CD 青_NN 41_CD 紫19白15_CD 丹_NN 70_CD 白_CD 57_CD 翠_NN 35_CD 蒼15明13_CD 清_NN 56_CD 丹_CD 50_CD 綠_NN 31_CD 紅_CD 13_CD 清_NN 10_CD 朱_CD 41_CD 金_NN 42_CD 玉_CD 29_CD 滄_NN 12_CD 丹_NN 8_CD 金_CD 39_CD 紫_NN 35_CD 素_CD 25_CD 丹_NN 10_CD 寒_NN 8_CD 碧_CD 35_CD 朱_NN 31_CD 金_CD 21_CD 清_NN 8_CD 紫_NN 7_CD 玄_CD 32_CD 寒_NN 22_CD 清_NN 17_CD 朱_NN 7_CD 赤_NN 7_CD 4.2_CD More_JJR Colors_NNP in_IN CTP_NNP It_PRP is_VBZ certainly_RB possible_JJ to_TO focus_VB on_IN one-character_JJ color_NN words_NNS as_RB well_RB ._.
+We_PRP can_MD check_VB the_DT positions_NNS of_IN the_DT colors_NNS in_IN sentences_NNS ,_, and_CC find_VB pairs_NNS of_IN colors_NNS that_WDT appear_VBP at_IN the_DT same_JJ corresponding_JJ positions_NNS in_IN a_DT pair_NN of_IN sentences_NNS ._.
+As_IN the_DT most_RBS common_JJ color_NN in_IN CTP_NNP ,_, ``_`` 白_FW ''_'' corresponds_VBZ to_TO many_JJ other_JJ colors_NNS :_: ``_`` 朱_FW ''_'' -LRB-_-LRB- zhu1_CD -RRB-_-RRB- ,_, ``_`` 丹_FW ''_'' -LRB-_-LRB- dan1_JJ -RRB-_-RRB- ,_, ``_`` 紅_FW ''_'' -LRB-_-LRB- hong2_CD -RRB-_-RRB- ,_, ``_`` 緋_FW ''_'' -LRB-_-LRB- fei1_CD -RRB-_-RRB- ,_, ``_`` 彤_FW ''_'' -LRB-_-LRB- tong2_CD -RRB-_-RRB- ,_, ``_`` 青_FW ''_'' -LRB-_-LRB- qing1_CD -RRB-_-RRB- ,_, ``_`` 翠_FW ''_'' -LRB-_-LRB- cui4_CD -RRB-_-RRB- ,_, ``_`` 碧_FW ''_'' -LRB-_-LRB- bi4_CD -RRB-_-RRB- ,_, ``_`` 綠_FW ''_'' -LRB-_-LRB- lu4_CD -RRB-_-RRB- ,_, ``_`` 蒼_FW ''_'' -LRB-_-LRB- cang1_CD -RRB-_-RRB- ,_, ``_`` 清_FW ''_'' -LRB-_-LRB- qing1_CD -RRB-_-RRB- ,_, ``_`` 紫_FW ''_'' -LRB-_-LRB- zi3_CD -RRB-_-RRB- ,_, ``_`` 玄_FW ''_'' -LRB-_-LRB- xuan2_CD -RRB-_-RRB- ,_, ``_`` 皂_FW ''_'' -LRB-_-LRB- zao4_CD -RRB-_-RRB- ,_, ``_`` 黑_FW ''_'' -LRB-_-LRB- hei1_CD -RRB-_-RRB- ,_, ``_`` 淥_FW ''_'' -LRB-_-LRB- lu4_CD -RRB-_-RRB- ,_, ``_`` 明_FW ''_'' -LRB-_-LRB- ming2_CD -RRB-_-RRB- ,_, ``_`` 黃_FW ''_'' -LRB-_-LRB- huang2_CD -RRB-_-RRB- ,_, ``_`` 金_FW ''_'' -LRB-_-LRB- jin1_CD -RRB-_-RRB- ,_, and_CC ``_`` 銀_FW ''_'' -LRB-_-LRB- yin2_CD -RRB-_-RRB- ._.
+Table_NNP 8_CD lists_NNS some_DT of_IN the_DT frequent_JJ color_NN pairs_NNS for_IN 10_CD colors_NNS in_IN 10_CD major_JJ columns_NNS ,_, each_DT separated_VBN by_IN a_DT double_JJ bar_NN ._.
+In_IN each_DT major_JJ column_NN ,_, the_DT C_NNP sub-column_NN lists_VBZ the_DT colors_NNS that_WDT correspond_VBP to_TO the_DT color_NN of_IN the_DT major_JJ column_NN ,_, and_CC the_DT F_NN sub-column_NN shows_VBZ the_DT frequencies_NNS ._.
+That_IN ``_`` 白_FW ''_'' corresponds_VBZ to_TO ``_`` 青_FW ''_'' -LRB-_-LRB- qing1_CD ,_, blue_JJ -RRB-_-RRB- and_CC ``_`` 黃_FW ''_'' -LRB-_-LRB- huang2_CD ,_, yellow_JJ -RRB-_-RRB- and_CC that_IN ``_`` 碧_FW ''_'' -LRB-_-LRB- bi4_CD ,_, green_JJ -RRB-_-RRB- corresponds_VBZ to_TO ``_`` 紅_FW ''_'' -LRB-_-LRB- hong2_CD ,_, red_JJ -RRB-_-RRB- and_CC ``_`` 青_FW ''_'' most_RBS frequently_RB are_VBP s_PRP interesting_JJ findings_NNS ._.
+Given_VBN these_DT statistics_NNS and_CC other_JJ computa_NN -_: tional_JJ supports_NNS ,_, we_PRP are_VBP ready_JJ to_TO explore_VB more_JJR interesting_JJ topics_NNS that_WDT are_VBP related_VBN colors_NNS in_IN CTP_NNP -LRB-_-LRB- Cheng_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+5_CD Social_NNP Network_NNP Analysis_NNP Poets_NNPS mentioned_VBD names_NNS of_IN their_PRP$ friends_NNS or_CC other_JJ people_NNS in_IN the_DT titles_NNS and_CC contents_NNS of_IN their_PRP$ poems_NNS ,_, so_IN we_PRP can_MD use_VB the_DT CTP_NNP as_IN a_DT basis_NN for_IN studying_VBG social_JJ networks_NNS of_IN Tang_NNP poets_NNS ._.
+As_IN an_DT extreme_JJ example_NN ,_, Li_NNP Bai_NNP mentioned_VBD himself_PRP in_IN his_PRP$ own_JJ poems_NNS :_: ``_`` 李白乘舟將欲行_CD ,_, 忽聞岸上踏歌聲_CD ''_'' 24_CD -LRB-_-LRB- li3_FW bai2_FW cheng2_FW zhou1_FW jiang1_FW yu4_FW xing2_FW ,_, hu1_FW wen2_FW an4_FW shang4_FW ta4_FW ge1_FW sheng1_FW -RRB-_-RRB- ._.
+In_IN CTP_NNP ,_, at_IN least_JJS eight_CD poets_NNS mentioned_VBD Li_NNP Bai_NNP in_IN 15_CD works_NNS ,_, among_IN which_WDT Du_NNP Fu_NNP contribut_NN -_: ed_VBD seven_CD ._.
+We_PRP can_MD also_RB see_VB comments_NNS on_IN Du_NNP Fu_NNP by_IN Luo_NNP Yin_NNP -LRB-_-LRB- 羅隱_CD -RRB-_-RRB- ,_, i.e._FW ,_, ``_`` 杜甫詩中韋曲花_CD ,_, 至今_CD 無賴尚豪家_CD ''_'' 25_CD -LRB-_-LRB- du4_FW fu3_FW sh1i_FW zhong1_FW wei3_FW qu3_FW hua1_FW ,_, zhi4_FW jin1_FW wu2_FW lai4_FW shang4_FW hao2_FW jia1_FW -RRB-_-RRB- ._.
+Of_IN course_NN ,_, mentioning_VBG a_DT person_NN 's_POS name_NN may_MD not_RB imply_VB direct_JJ friendship_NN ._.
+The_DT title_NN ``_`` 長沙過賈_FW 誼宅_FW ''_'' -LRB-_-LRB- chang1_CD sha1_CD guo4_NN jia3_CD yi2_CD zhai2_NN -RRB-_-RRB- can_MD not_RB be_VB used_VBN to_TO infer_VB that_DT Liu_NNP Zhang-Qing_NNP -LRB-_-LRB- 劉長卿_CD -RRB-_-RRB- ,_, the_DT author_NN ,_, passed_VBD Jia_NNP Yi_NNP 's_POS -LRB-_-LRB- 賈誼_CD -RRB-_-RRB- home_NN ,_, which_WDT is_VBZ almost_RB impossible_JJ as_IN Jia_NNP passed_VBD away_RB in_IN 168_CD BC_NNP ,_, and_CC Liu_NNP was_VBD born_VBN in_IN 709_CD AD_NN ._.
+It_PRP is_VBZ easy_JJ to_TO build_VB the_DT relationship_NN of_IN ``_`` men_NNS -_: tioning_VBG the_DT name_NN of_IN ''_'' in_IN poems_NNS ,_, but_CC it_PRP takes_VBZ more_JJR discretion_NN to_TO judge_VB direct_JJ friendships_NNS ._.
+We_PRP can_MD employ_VB other_JJ biographical_JJ information_NN such_JJ as_IN style_NN names_NNS -LRB-_-LRB- 字_CD ,_, zi4_CD -RRB-_-RRB- ,_, pen_NN names_NNS -LRB-_-LRB- 號_CD ,_, hao4_CD -RRB-_-RRB- ,_, birthdays_NNS of_IN the_DT poets_NNS ,_, from_IN the_DT China_NNP Bio_NNP -_: graphical_JJ Database26_NNP to_TO make_VB reliable_JJ decisions_NNS ._.
+Sometimes_RB ,_, a_DT poet_NN 's_POS name_NN is_VBZ not_RB completely_RB listed_VBN in_IN poems_NNS ._.
+In_IN ``_`` 白也詩無敵_NN ,_, 飄然思不群_CD ''_'' 27_CD -LRB-_-LRB- bai2_CD ye3_JJ shi1_CD wu2_CD di2_NN ,_, piao1_CD ran2_CD si1_CD bu4_CD qun2_NN -RRB-_-RRB- ,_, Du_NNP Fu_NNP referred_VBD to_TO Li_NNP Bai_NNP only_RB by_IN ``_`` 白_FW ''_'' ._.
+Hence_RB ,_, cares_VBZ are_VBP needed_VBN to_TO handle_VB special_JJ cases_NNS ._.
+Verbs_NNS can_MD offer_VB extra_JJ information_NN about_IN the_DT relationships_NNS between_IN the_DT poets_NNS and_CC the_DT men_NNS -_: tioned_VBN persons_NNS ._.
+For_IN instance_NN ,_, Li_NNP Shi-Min_NNP -LRB-_-LRB- 李世_FW 民_FW -RRB-_-RRB- was_VBD a_DT Tang_NNP emperor_NN ,_, and_CC he_PRP ``_`` 賜_FW ''_'' -LRB-_-LRB- ci4_CD ,_, give_VBP as_IN a_DT present_JJ -RRB-_-RRB- his_PRP$ poems_NNS to_TO officers_NNS ._.
+Du_NNP Fu_NNP would_MD ``_`` 憶_FW ''_'' -LRB-_-LRB- yi4_CD ,_, recall_NN -RRB-_-RRB- Li_NNP Bai_NNP ._.
+Such_JJ verbs_NNS show_VBP us_PRP not_RB only_RB the_DT way_NN to_TO find_VB connections_NNS between_IN per_IN -_: sons_NNS but_CC also_RB the_DT types_NNS of_IN connections_NNS ._.
+Poems_NNS of_IN 24_CD source_NN :_: Li_NNP Bai_NNP -LRB-_-LRB- 李白_CD -RRB-_-RRB- :_: 贈汪倫_CD -LRB-_-LRB- zeng4_CD wang1_CD lun2_NN -RRB-_-RRB- 25_CD source_NN :_: 寄南城韋逸人_CD -LRB-_-LRB- ji4_FW nan2_FW cheng2_FW wei3_FW yi4_FW ren2_FW -RRB-_-RRB- 26_CD http://isites.harvard.edu/icb/icb.do?keyword=k35201_CD 27_CD source_NN :_: Du_NNP Fu_NNP -LRB-_-LRB- 杜甫_CD -RRB-_-RRB- :_: 春日憶李白_VBN -LRB-_-LRB- chun1_CD ri4_JJ yi4_CD li3_CD bai2_NN -RRB-_-RRB- emperors_NNS ,_, for_IN instance_NN ,_, shed_VBD light_NN on_IN their_PRP$ con_NN -_: nections_NNS with_IN high-ranking_JJ officers_NNS that_WDT are_VBP useful_JJ for_IN historical_JJ studies_NNS -LRB-_-LRB- cf._FW Chen_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+We_PRP may_MD request_VB a_DT list_NN of_IN such_JJ special_JJ verbs_NNS from_IN domain_NN experts_NNS ,_, or_CC we_PRP may_MD apply_VB the_DT tech_NN -_: nique_NN of_IN ``_`` word_NN clippers_NNS ''_'' -LRB-_-LRB- Chang_NNP ,_, 2006_CD -RRB-_-RRB- to_TO find_VB verbs_NNS that_WDT collocated_VBD with_IN names_NNS ,_, thus_RB providing_VBG opportunities_NNS for_IN finding_VBG diverse_JJ ,_, realistic_JJ and_CC virtual_JJ connections_NNS among_IN poets_NNS ._.
+6_CD Concluding_VBG Remarks_NNPS Finding_VBG a_DT needle_NN in_IN a_DT haystack_NN is_VBZ challenging_VBG for_IN human_JJ beings_NNS ,_, but_CC finding_VBG specific_JJ words_NNS in_IN millions_NNS of_IN words_NNS is_VBZ easy_JJ for_IN computers_NNS ._.
+With_IN the_DT aforementioned_JJ applications_NNS ,_, we_PRP demon_NN -_: strated_VBD the_DT potentials_NNS of_IN computational_JJ tools_NNS for_IN studying_VBG the_DT Complete_JJ Tang_NNP Poems_NNPS ,_, which_WDT is_VBZ a_DT bright_JJ spot_NN in_IN a_DT fast-growing_JJ research_NN field_NN --_: Digital_NNP Humanities_NNP ._.
+Computational_JJ tools_NNS ,_, such_JJ as_IN information_NN retrieval_NN ,_, textual_JJ analysis_NN ,_, and_CC text_NN mining_NN ,_, can_MD not_RB accomplish_VB deep_JJ research_NN yet_RB ,_, but_CC they_PRP can_MD help_VB researchers_NNS find_VB and_CC collect_VB much_RB more_RBR relevant_JJ research_NN material_NN with_IN astonishing_JJ efficiency_NN ._.
+Evidence_NN shows_VBZ that_IN knowing_VBG the_DT collection_NN of_IN words_NNS that_WDT were_VBD used_VBN by_IN individual_JJ poets_NNS opens_VBZ a_DT window_NN for_IN observing_VBG the_DT inner_JJ worlds_NNS of_IN the_DT poets_NNS ._.
+The_DT concept_NN of_IN distributional_JJ se_FW -_: mantics_FW is_VBZ proved_VBN to_TO be_VB effective_JJ for_IN studying_VBG CTP_NNP ._.
+We_PRP still_RB need_VBP to_TO strengthen_VB our_PRP$ ability_NN to_TO check_VB the_DT constraints_NNS for_IN pronunciations_NNS and_CC rhymes_NNS in_IN poems_NNS so_IN that_IN we_PRP can_MD judge_VB antithesis_NNS more_RBR precisely_RB with_IN less_JJR human_JJ participation_NN ._.
+The_DT functions_NNS of_IN colors_NNS in_IN poems_NNS offer_VBP a_DT stimulating_JJ direction_NN that_IN we_PRP intend_VBP to_TO dig_VB in_IN further_JJ ._.
+To_TO do_VB so_RB ,_, we_PRP need_VBP to_TO employ_VB more_JJR tech_NN -_: nologies_NNS for_IN affective_JJ computing_NN -LRB-_-LRB- Zheng_NNP ,_, 2012_CD -RRB-_-RRB- so_RB that_IN our_PRP$ software_NN can_MD learn_VB to_TO read_VB between_IN the_DT lines_NNS ._.
+We_PRP are_VBP grateful_JJ to_TO the_DT reviewers_NNS of_IN this_DT pa_NN -_: per_IN for_IN valuable_JJ pointers_NNS for_IN collocation_NN net_NN -_: works_NNS -LRB-_-LRB- Williams_NNP ,_, 1998_CD -RRB-_-RRB- and_CC style_NN analysis_NN -LRB-_-LRB- Quiniou_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+We_PRP will_MD have_VB to_TO consider_VB these_DT suggestions_NNS in_IN the_DT context_NN of_IN CTP_NNP ,_, which_WDT contains_VBZ limited_JJ material_NN for_IN individual_JJ poets_NNS ._.
+The_DT actual_JJ work_NN about_IN building_VBG social_JJ networks_NNS with_IN CTP_NNP is_VBZ still_RB underway_JJ ._.
+Acknowledgements_NNS This_DT work_NN was_VBD supported_VBN in_IN part_NN by_IN the_DT Ministry_NNP of_IN Science_NNP and_CC Technology_NNP of_IN Taiwan_NNP under_IN grants_NNS MOST-102-2420-H-004-054-MY2_NNP and_CC MOST-104-2221-E-004-005-MY3_NNP ._.
+References_NNS Chang_NNP ,_, Shan-Pin_NNP -LRB-_-LRB- 張尚斌_CD -RRB-_-RRB- ._.
+2006_CD ._.
+A_DT Word-Clip_JJ algo_NN -_: rithm_NN for_IN Named_VBN Entity_NNP Recognition_NNP -_: by_IN example_NN of_IN historical_JJ documents_NNS ,_, Master_NNP 's_POS thesis_NN ,_, National_NNP Taiwan_NNP University_NNP ,_, Taiwan_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Chang_NNP ,_, Ru-Yng_NNP ,_, Chu-Ren_NNP Huang_NNP ,_, Fengju_NNP Lo_NNP ,_, and_CC Sueming_NNP Chang_NNP ._.
+2005_CD ._.
+From_IN general_JJ ontology_NN to_TO specialized_VBN ontology_NN :_: A_DT study_NN based_VBN on_IN a_DT single_JJ author_NN historical_JJ corpus_NN ,_, Proc_NNP ._.
+of_IN the_DT Workshop_NNP on_IN Ontologies_NNPS and_CC Lexical_NNP Resources_NNPS ,_, 16_CD --_: 21_CD ._.
+Chen_NNP ,_, Jack_NNP Wei_NNP ._.
+2010_CD ._.
+The_DT Poetics_NNPS of_IN Sovereignty_NNP :_: On_IN Emperor_NNP Taizong_NNP of_IN the_DT Tang_NNP Dynasty_NNP ,_, Harvard_NNP University_NNP Asia_NNP Center_NNP ,_, 2010_CD ._.
+Cheng_NNP ,_, Wen-Hui_NNP ,_, Chao-Lin_NNP Liu_NNP ,_, Chu-Ting_NNP Hsu_NNP ,_, and_CC Wei-Yuan_NNP Chiu_NNP ._.
+2015_CD ._.
+Sentiment_NN phenomenology_NN and_CC color_NN politics_NNS :_: Observations_NNS of_IN white_JJ words_NNS in_IN mid-Tang_JJ poems_NNS ,_, under_IN review_NN ._.
+Chien_NNP ,_, Lee-Feng_NNP ._.
+1997_CD ._.
+PAT-tree-based_JJ keyword_NN extraction_NN for_IN Chinese_JJ information_NN retrieval_NN ,_, Proc_NNP ._.
+of_IN the_DT 20th_JJ Annual_JJ Int_NNP '_POS l_NN ACM_NNP SIGIR_NNP Conf_NNP ._.
+on_IN Re_NNP -_: search_NN and_CC Development_NNP in_IN Information_NNP Retrieval_NNP ,_, 50_CD --_: 58_CD ._.
+Fang_NNP ,_, Alex_NNP Chengyu_NNP ,_, Fengju_NNP Lo_NNP ,_, and_CC Cheuk_NNP Kit_NNP Chinn_NNP ._.
+2009_CD ._.
+Adapting_VBG NLP_NNP and_CC corpus_JJ analysis_NN techniques_NNS to_TO structured_JJ imagery_NN analysis_NN in_IN clas_NNS -_: sical_JJ Chinese_JJ poetry_NN ,_, Proc_NNP ._.
+of_IN the_DT Workshop_NNP on_IN Adaptation_NNP of_IN Language_NNP Resource_NNP and_CC Technology_NNP to_TO New_NNP Domains_NNP ,_, 27_CD --_: 34_CD ._.
+Firth_NNP ,_, John_NNP Rupert_NNP ._.
+1957_CD ._.
+A_DT synopsis_NN of_IN linguistic_JJ theory_NN 1930_CD --_: 1955_CD ,_, Studies_NNP in_IN Linguistic_NNP Analysis_NNP ,_, 1_CD --_: 32_CD ._.
+Harris_NNP ,_, Zellig_NNP ._.
+1954_CD ._.
+Distributional_JJ structure_NN ,_, Word_NN ,_, 10_CD -LRB-_-LRB- 2-3_CD -RRB-_-RRB- :1456_CD --_: 1162_CD ._.
+Hu_NNP ,_, Junfeng_NNP -LRB-_-LRB- 胡俊峰_CD -RRB-_-RRB- and_CC Shiwen_NNP Yu_NNP -LRB-_-LRB- 俞士汶_CD -RRB-_-RRB- ._.
+2001_CD ._.
+The_DT computer_NN aided_VBN research_NN work_NN of_IN Chinese_NNPS an_DT -_: cient_JJ poems_NNS ,_, ACTA_NNP Scientiarum_NNP Naturalium_NNP Uni_NNP -_: versitatis_NN Pekinensis_NNP ,_, 37_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :725_CD --_: 733_CD ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Huang_NNP ,_, Chu-Ren_NNP ._.
+2004_CD ._.
+Text-based_JJ construction_NN and_CC comparison_NN of_IN domain_NN ontology_NN :_: A_DT study_NN based_VBN on_IN classical_JJ poetry_NN ,_, Proc_NNP ._.
+of_IN the_DT 18th_JJ Pacific_NNP Asia_NNP Conf_NNP ._.
+on_IN Language_NN ,_, Information_NNP and_CC Computation_NNP ,_, 17_CD --_: 20_CD ._.
+Jiang_NNP ,_, Long_NNP and_CC Ming_NNP Zhou_NNP ._.
+2008_CD ._.
+Generating_NNP Chi_NNP -_: nese_JJ couplets_NNS using_VBG a_DT statistical_JJ MT_NNP approach_NN ,_, Proc_NNP ._.
+of_IN the_DT 22nd_JJ Int_NNP '_POS l_NN Conf_NNP ._.
+on_IN Computational_NNP Linguis_NNP -_: tics_NNS ,_, 377_CD --_: 384_CD ._.
+Jiang_NNP ,_, Shao-Yu_NNP -LRB-_-LRB- 蔣紹愚_CD -RRB-_-RRB- ._.
+2003_CD ._.
+``_`` Moon_NNP ''_'' and_CC ``_`` Wind_NN ''_'' in_IN Bai_NNP Li_NNP 's_POS and_CC Fu_NNP Du_NNP 's_POS poems_NNS --_: Using_VBG computers_NNS for_IN studying_VBG classical_JJ poems_NNS ,_, Proc_NNP ._.
+of_IN the_DT 1st_CD Int_NNP '_POS l_NN Conf_NNP ._.
+on_IN Literature_NNP and_CC Information_NNP Technologies_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lee_NNP ,_, John_NNP ._.
+2012_CD ._.
+A_DT classical_JJ Chinese_JJ corpus_NN with_IN nested_JJ part-of-speech_NN tags_NNS ,_, Proc_NNP ._.
+of_IN the_DT 6th_JJ EACL_NNP Workshop_NNP on_IN Language_NNP Technology_NNP for_IN Cultural_NNP Heritage_NNP ,_, Social_NNP Sciences_NNPS ,_, and_CC Humanities_NNP ,_, 75_CD --_: 84_CD ._.
+Lee_NNP ,_, John_NNP ,_, Ying_NNP Cheuk_NNP Hui_NNP ,_, and_CC Yin_NNP Hei_NNP Kong_NNP ._.
+2013_CD ._.
+Treebanking_VBG for_IN data-driven_JJ research_NN in_IN the_DT class_NN -_: room_NN ,_, Proc_NNP ._.
+of_IN the_DT 4th_JJ Workshop_NNP on_IN Teaching_NNP Nat_NNP -_: ural_JJ Language_NN Processing_NNP ,_, 56_CD --_: 60_CD ._.
+Lee_NNP ,_, John_NNP and_CC Yin_NNP Hei_NNP Kong_NNP ._.
+2012_CD ._.
+A_DT dependency_NN treebank_NN of_IN classical_JJ Chinese_JJ poems_NNS ,_, Proc_NNP ._.
+of_IN the_DT 2012_CD Conf_NNP ._.
+of_IN the_DT North_NNP Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS ,_, 191_CD --_: 199_CD ._.
+Lee_NNP ,_, John_NNP and_CC Tak-sum_NNP Wong_NNP ._.
+2012_CD ._.
+Glimpses_NNS of_IN ancient_JJ China_NNP from_IN classical_JJ Chinese_JJ poems_NNS ,_, Proc_NNP ._.
+of_IN the_DT 24th_JJ Int_NNP '_POS l_NN Conf_NNP ._.
+on_IN Computational_NNP Linguis_NNP -_: tics_NNS ,_, posters_NNS ,_, 621_CD --_: 632_CD ._.
+Lee_NNP ,_, Wei-Chih_NNP -LRB-_-LRB- 李瑋質_CD -RRB-_-RRB- ._.
+2009_CD ._.
+Wen_NNP Ting-Yun_NNP and_CC Li_NNP Shan-Yin_NNP 's_POS works_NNS in_IN the_DT late_JJ Tang_NNP receive_VBP to_TO the_DT Gong-Ti_NNP Poetry_NNP of_IN the_DT Southern_NNP Dynasties_NNPS ,_, Mas_SYM -_: ter_NN 's_POS thesis_NN ,_, National_NNP Central_NNP University_NNP ,_, Taiwan_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lin_NNP ,_, Dekang_NNP ._.
+1998_CD ._.
+Automatic_NNP retrieval_NN and_CC clustering_NN of_IN similar_JJ words_NNS ._.
+Proc_NNP ._.
+of_IN the_DT 36th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 768_CD --_: 774_CD ._.
+Liu_NNP ,_, Chao-Lin_NNP ,_, Chun-Ning_NNP Chang_NNP ,_, Chu-Ting_NNP Hsu_NNP ,_, Wen-Huei_NNP Cheng_NNP ,_, Hongsu_NNP Wang_NNP ,_, and_CC Wei-Yuan_NNP Chiu_NNP ._.
+2015_CD ._.
+Textual_NNP Analysis_NNP of_IN Complete_JJ Tang_NNP Poems_NNP for_IN Discoveries_NNPS and_CC Applications_NNS -_: Style_NN ,_, Antitheses_NNS ,_, Social_NNP Networks_NNP ,_, and_CC Couplets_NNS ,_, to_TO ap_SYM -_: pear_NN in_IN Proc_NNP ._.
+of_IN the_DT 27th_JJ Conf_NNP ._.
+on_IN Computational_NNP Linguistics_NNPS and_CC Speech_NNP Analysis_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lo_NNP ,_, Fengju_NNP -LRB-_-LRB- 羅鳳珠_CD -RRB-_-RRB- ._.
+2005_CD ._.
+Design_NN and_CC applications_NNS of_IN systems_NNS for_IN word_NN segmentation_NN and_CC sense_NN classi_NNS -_: fication_NN for_IN Chinese_JJ poems_NNS ,_, Proc_NNP ._.
+of_IN the_DT 4th_JJ Con_NN -_: ference_NN on_IN Technologies_NNPS for_IN Digital_NNP Archives_NNPS ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lo_NNP ,_, Fengju_NNP ._.
+2008_CD ._.
+The_DT research_NN of_IN building_VBG a_DT semantic_JJ category_NN system_NN based_VBN on_IN the_DT language_NN characteris_SYM -_: tic_NN of_IN Chinese_JJ poetry_NN ,_, Proc_NNP ._.
+of_IN the_DT 9th_JJ Cross-Strait_NNP Symposium_NNP on_IN Library_NNP Information_NNP Science_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lo_NNP ,_, Fengju_NNP ,_, Yuanping_NNP Li_NNP -LRB-_-LRB- 李元萍_CD -RRB-_-RRB- ,_, and_CC Weizheng_NNP Cao_NNP -LRB-_-LRB- 曹偉政_CD -RRB-_-RRB- ._.
+1997_CD ._.
+A_DT realization_NN of_IN computer_NN aided_VBN support_NN environment_NN for_IN studying_VBG classical_JJ Chinese_JJ poetry_NN ,_, J._NNP of_IN Chinese_NNP Information_NNP Pro-_NNP cessing_NN ,_, 1_CD :_: 27_CD --_: 36_CD ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Miller_NNP ,_, George_NNP and_CC Walter_NNP Charles_NNP ._.
+1991_CD ._.
+Contextual_JJ correlates_NNS of_IN semantic_JJ similarity_NN ,_, Language_NN and_CC Cognitive_NNP Processes_NNPS ,_, 6:1_CD --_: 28_CD ._.
+Quiniou_NNP ,_, Solen_NNP ,_, Peggy_NNP Cellier_NNP ,_, Thierry_NNP Charnois_NNP ,_, Dominique_NNP Legallois_NNP ._.
+2012_CD ._.
+What_WP about_IN sequential_JJ data_NNS mining_NN techniques_NNS to_TO identify_VB linguistic_JJ pat_NN -_: terns_NNS for_IN stylistics_NNS ?_.
+Proc_NNP ._.
+of_IN the_DT 13th_JJ Int_NNP '_POS l_NN Conf_NNP ._.
+on_IN Intelligent_NNP Text_NNP Processing_NNP and_CC Computational_NNP Linguistics_NNP ,_, 166_CD --_: 177_CD ._.
+Voigt_NNP ,_, Rob_NNP and_CC Dan_NNP Jurafsky_NNP ._.
+2013_CD ._.
+Tradition_NN and_CC modernity_NN in_IN 20th_JJ century_NN Chinese_JJ poetry_NN ,_, Proc_NNP ._.
+of_IN the_DT 2nd_JJ Workshop_NNP on_IN Computational_NNP Linguistics_NNP for_IN Literature_NNP ,_, 17_CD --_: 22_CD ._.
+Williams_NNP ,_, Geoffrey_NNP ._.
+1998_CD ._.
+Collocational_NNP networks_NNS :_: Interlocking_JJ patterns_NNS of_IN lexis_NNS in_IN a_DT corpus_NN of_IN plant_NN biology_NN research_NN articles_NNS Zheng_NNP ,_, Yongxiao_NNP -LRB-_-LRB- 鄭永曉_CD -RRB-_-RRB- ._.
+2012_CD ._.
+Affective_JJ compu_NN -_: ting_VBG applied_VBN in_IN Chinese_JJ classical_JJ poetry_NN ,_, E-Science_NN :_: Technology_NNP &_CC Application_NNP ,_, 3_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :59_CD --_: 66_CD ._.
+-LRB-_-LRB- in_IN Chi_NNP -_: nese_NN -RRB-_-RRB- Zhou_NNP ,_, Ming_NNP ,_, Long_NNP Jiang_NNP ,_, and_CC Jing_NNP He_PRP ._.
+2009_CD ._.
+Gener_NNP -_: ating_NN Chinese_JJ couplets_NNS and_CC quatrain_NN using_VBG a_DT statis_NN -_: tical_JJ approach_NN ,_, Proc_NNP ._.
+of_IN the_DT 23rd_JJ Pacific_NNP Asia_NNP Conf_NNP ._.
+on_IN Language_NN ,_, Information_NNP and_CC Computation_NNP ,_, 43_CD --_: 52_CD

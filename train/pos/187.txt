@@ -1,0 +1,297 @@
+1_CD d._NN I_PRP cip-i_VBP kyewul-i_JJ this_DT house-nom_NN winter-nom_NN ohwu-ka_JJ ttattusha-ta_JJ afternoon-nom_JJ is-warm_NN -_: decl_NN `_`` This_DT house_NN is_VBZ warm_JJ in_IN winter_NN afternoon_NN ._. '_''
+In_IN the_DT literature_NN ,_, MSCs_NNPS have_VBP been_VBN classified_VBN according_VBG to_TO certain_JJ interpretive_JJ relationships_NNS between_IN the_DT multiple_JJ nom-marked_JJ NPs_NNS ._.
+For_IN example_NN ,_, the_DT two_CD NPs_NNP in_IN -LRB-_-LRB- 1a_FW ,_, b_NN -RRB-_-RRB- stand_NN in_IN a_DT Possessor-Possessee_NNP -LRB-_-LRB- Part-Whole_NNP relation_NN -RRB-_-RRB- as_IN indicated_VBN by_IN the_DT paraphrases_NNS -LRB-_-LRB- 2a_CD ,_, b_NN -RRB-_-RRB- ,_, whereas_IN the_DT first_JJ NP_NNP in_IN -LRB-_-LRB- 1c_JJ ,_, d_LS -RRB-_-RRB- functions_NNS as_IN a_DT scene-setting_NN or_CC temporal_JJ Adjunct_NNP with_IN respect_NN to_TO which_WDT the_DT event_NN denoted_VBN by_IN the_DT second_JJ NP_NNP and_CC its_PRP$ predicate_NN is_VBZ interpreted_VBN ._.
+Two_CD Types_NNP of_IN Multiple_NNP Subject_NNP Constructions_NNP -LRB-_-LRB- MSCs_NNS -RRB-_-RRB- in_IN Korean_JJ Ji-Hye_NNP Kim_NNP Baird_NNP University_NNP College_NNP Soongsil_NNP University_NNP Seoul_NNP ,_, Korea_NNP psychlg@gmail.com_NNP Abstract_NNP Although_IN Multiple_NNP Subject_NNP Constructions_NNP in_IN Korean_NNP have_VBP received_VBN significant_JJ attention_NN in_IN theoretical_JJ literature_NN ,_, few_JJ experimental_JJ investigations_NNS of_IN various_JJ syntactic_NN and_CC semantic_JJ properties_NNS of_IN these_DT constructions_NNS have_VBP been_VBN conducted_VBN ._.
+In_IN this_DT study_NN ,_, we_PRP administered_VBD a_DT Magnitude_NNP Estimation_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- experiment_NN in_IN order_NN to_TO compare_VB the_DT acceptability_NN of_IN Multiple_NNP Subject_NNP and_CC related_JJ Single_NNP Subject_NNP Constructions_NNP -LRB-_-LRB- MSCs_NNPS vs._FW SSCs_FW -RRB-_-RRB- and_CC that_IN of_IN two_CD types_NNS of_IN MSCs_NNS -LRB-_-LRB- Possessor-type_JJ vs._FW Adjunct-type_JJ MSCs_NNS -RRB-_-RRB- ._.
+The_DT results_NNS showed_VBD that_IN MSCs_NNS received_VBD lower_JJR acceptability_NN than_IN SSCs_NNS ._.
+In_IN addition_NN ,_, the_DT Adjunct-type_JJ MSCs_NNS received_VBD higher_JJR acceptability_NN scores_NNS than_IN the_DT Possessor-type_JJ MSCs_NNS ._.
+Possible_JJ reasons_NNS for_IN these_DT results_NNS are_VBP discussed_VBN ._.
+Introduction_NNP Korean_NNP has_VBZ a_DT type_NN of_IN sentence_NN where_WRB more_JJR than_IN one_CD nominative-marked_JJ NP_NNP occurs_VBZ in_IN a_DT single_JJ clause_NN ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+These_DT sentences_NNS are_VBP called_VBN Multiple_NNP Nominative_NNP Constructions_NNP -LRB-_-LRB- MNCs_NNP -RRB-_-RRB- or_CC Multiple_NNP Subject_NNP Constructions_NNP -LRB-_-LRB- MSCs_NNS -RRB-_-RRB- :_: -LRB-_-LRB- 1a_FW -RRB-_-RRB- and_CC -LRB-_-LRB- 1c_JJ -RRB-_-RRB- show_VBP a_DT sentence_NN with_IN two_CD nom-marked_JJ NPs_NNS ,_, and_CC -LRB-_-LRB- 1b_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 1d_CD -RRB-_-RRB- show_VBP a_DT sentence_NN with_IN more_JJR than_IN two_CD nom-marked_JJ NPs_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- a._SYM Cheli-ka/uy_JJ kho-ka_FW Cheli-nom/gen_JJ nose-nom_JJ khu-ta_JJ is-big-decl_NN -LRB-_-LRB- 1_CD -RRB-_-RRB- a._IN Cheli-ka_JJ Cheli-nom_JJ kho-ka_FW khu-ta_FW c._FW Yelum-i/ey_JJ maykcwu-ka_FW summer-nom/gen_JJ beer-nom_NN `_`` In_IN summer_NN ,_, beer_NN is_VBZ good_JJ ._. '_''
+coh-ta_JJ good-decl_NN nose-nom_JJ is-big-decl_NN `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ nose_NN is_VBZ big_JJ ._. '_''
+Eunah_NNP Kim_NNP College_NNP English_NNP Program_NNP Seoul_NNP National_NNP University_NNP Seoul_NNP ,_, Korea_NNP eakim2@gmail.com_NNP James_NNP Hye-Suk_NNP Yoon_NNP Department_NNP of_IN Linguistics_NNP University_NNP of_IN Illinois_NNP ,_, Urbana-Champaign_NNP U.S.A._NNP apeci-ka_JJ father-nom_NN b._NN Cheli-ka_JJ Cheli-nom_JJ kho-ka_FW nose-nom_FW khu-ta_FW is-big-decl_FW `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ father_NN 's_POS nose_NN is_VBZ big_JJ ._. '_''
+c._SYM Yelum-i_JJ maykcwu-ka_FW summer-nom_FW beer-nom_FW `_`` In_IN summer_NN ,_, beer_NN is_VBZ good_JJ ._. '_''
+coh-ta_JJ good-decl_NN `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ nose_NN is_VBZ big_JJ ._. '_''
+b._SYM Cheli-ka/uy_JJ apeci-ka/uy_JJ kho-ka_FW Cheli-nom/gen_JJ father-nom/gen_JJ nose-nom_JJ khu-ta_JJ is-big-decl_NN `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ father_NN 's_POS nose_NN is_VBZ big_JJ ._. '_''
+d._IN I_PRP cip-i/eyse_VBP -LRB-_-LRB- -_: nun_NN -RRB-_-RRB- kyewul-i/ey_NN this_DT house-nom/loc_JJ -LRB-_-LRB- -_: top_NN -RRB-_-RRB- winter-nom/loc_JJ ohwu.sikan-i_JJ ttattusha-ta_JJ afternoon-nom_JJ is-warm_NN -_: decl_NN `_`` This_DT house_NN is_VBZ warm_JJ in_IN winter_NN afternoon_NN ._. '_''
+Based_VBN on_IN the_DT possible_JJ paraphrases_NNS ,_, the_DT first_JJ type_NN of_IN MSCs_NNS -LRB-_-LRB- cf._FW 1a_FW ,_, b_NN -RRB-_-RRB- is_VBZ called_VBN `_`` Possessor-type_JJ MSCs_NNS '_POS ,_, while_IN the_DT second_JJ -LRB-_-LRB- cf._FW 1c_FW ,_, d_LS -RRB-_-RRB- is_VBZ dubbed_VBN `_`` Adjunct_NNP -_: type_NN MSCs_NNS '_POS ._.
+Whether_IN or_CC not_RB this_DT classification_NN is_VBZ theoretically_RB significant_JJ depends_VBZ on_IN a_DT host_NN of_IN interrelated_JJ questions_NNS .1_CD In_IN this_DT paper_NN ,_, we_PRP follow_VBP the_DT view_NN on_IN MSCs_NNS that_WDT Yoon_NNP -LRB-_-LRB- 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD -RRB-_-RRB- endorsed_VBN ,_, where_WRB MSCs_NNS are_VBP viewed_VBN as_IN containing_VBG multiple_JJ Subjects_NNS ,_, with_IN the_DT rightmost_JJS NP_NNP functioning_VBG as_IN the_DT Grammatical_NNP Subject_NNP that_WDT takes_VBZ the_DT VP_NNP as_IN predicate_NN ,_, and_CC the_DT outer_JJ NPs_NNP functioning_NN as_IN Major_JJ Subjects_NNS that_WDT take_VBP a_DT Sentential_NNP Predicate_NNP -LRB-_-LRB- SP_NNP -RRB-_-RRB- constituted_VBD of_IN the_DT Grammatical_NNP Subject_NNP and_CC its_PRP$ predicate_NN -LRB-_-LRB- Teng_NNP ,_, 1974_CD ;_: B-S_NNP Park_NNP ,_, 1973_CD ,_, 2001_CD ;_: I-H_NNP Lee_NNP ,_, 1987_CD ;_: Heycock_NNP and_CC Lee_NNP ,_, 1989_CD ;_: Chae_NNP and_CC Kim_NNP ,_, 2008_CD 2_CD ;_: Yoon_NNP ,_, 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD -RRB-_-RRB- ._.
+According_VBG to_TO Yoon_NNP -LRB-_-LRB- 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD -RRB-_-RRB- ,_, the_DT licensing_NN conditions_NNS on_IN MSCs_NNS are_VBP as_IN follows_VBZ :_: characteristic_JJ property_NN of_IN the_DT referent_NN of_IN the_DT MS._NNP e._NNP MSs_NNP are_VBP felicitous_JJ if_IN they_PRP can_MD be_VB construed_VBN denoting_VBG a_DT newsworthy_JJ entity_NN ._.
+In_IN particular_JJ ,_, the_DT properties_NNS -LRB-_-LRB- 3c-e_JJ -RRB-_-RRB- distinguish_VBP MSCs_NNS from_IN single_JJ subject_JJ constructions_NNS -LRB-_-LRB- SSCs_NNS -RRB-_-RRB- .3_CD In_IN this_DT approach_NN to_TO MSCs_NNS ,_, all_DT MSCs_NNS are_VBP licensed_VBN in_IN the_DT same_JJ way_NN ._.
+Thus_RB ,_, classificatory_JJ distinctions_NNS such_JJ as_IN P-type_JJ vs._FW A-type_JJ do_VBP not_RB carry_VB theoretical_JJ significance_NN ._.
+This_DT is_VBZ an_DT important_JJ point_NN that_IN we_PRP return_VBP to_TO in_IN the_DT discussion_NN ._.
+Though_IN there_EX is_VBZ a_DT great_JJ deal_NN of_IN previous_JJ research_NN on_IN MSCs_NNS in_IN Korean_JJ and_CC other_JJ languages_NNS -LRB-_-LRB- Teng_NNP ,_, 1974_CD ;_: B-S_NNP Park_NNP ,_, 1973_CD ,_, 2001_CD ;_: I-H_NNP Lee_NNP ,_, 1987_CD ;_: Heycock_NNP and_CC Lee_NNP ,_, 1989_CD ;_: Heycock_NNP ,_, 1993_CD ;_: Chae_NNP and_CC Kim_NNP ,_, 2008_CD ;_: Yoon_NNP ,_, 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD ;_: Ryu_NNP ,_, 2010_CD ,_, 2013_CD ,_, 2014_CD ,_, etc._FW -RRB-_-RRB- ,_, they_PRP were_VBD based_VBN on_IN the_DT intuition_NN of_IN researchers_NNS ,_, and_CC not_RB validated_VBN through_IN experimental_JJ investigation_NN ._.
+The_DT current_JJ study_NN is_VBZ one_CD of_IN the_DT few_JJ studies_NNS that_WDT adopt_VBP experimental_JJ methods_NNS to_TO investigate_VB the_DT properties_NNS of_IN MSCs_NNS ._.
+In_IN particular_JJ ,_, this_DT study_NN focuses_VBZ on_IN two_CD different_JJ types_NNS of_IN MSCs_NNS mentioned_VBN in_IN the_DT literature_NN --_: Possessor_NNP -_: type_NN and_CC Adjunct-type_JJ MSCs_NNS ._.
+Using_VBG Magnitude_NNP Estimation_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- ,_, we_PRP examined_VBD native_JJ Korean_JJ speakers_NNS '_POS knowledge_NN of_IN these_DT two_CD types_NNS of_IN constructions_NNS ._.
+The_DT organization_NN of_IN the_DT paper_NN is_VBZ as_IN follows_VBZ ._.
+The_DT next_JJ section_NN will_MD introduce_VB some_DT relevant_JJ previous_JJ studies_NNS done_VBN on_IN the_DT matter_NN ._.
+The_DT following_JJ section_NN will_MD explain_VB the_DT methodology_NN of_IN our_PRP$ experiment_NN and_CC present_VB the_DT results_NNS ._.
+Finally_RB ,_, we_PRP will_MD discuss_VB the_DT results_NNS and_CC conclude_VBP with_IN the_DT future_JJ direction_NN of_IN thestudy_NN ._.
+2_CD Previous_JJ Studies_NNP One_CD reason_NN we_PRP decided_VBD to_TO distinguish_VB P-type_JJ vs._FW A_DT -_: type_NN MSCs_NNPS is_VBZ because_RB many_JJ previous_JJ studies_NNS have_VBP posited_VBN different_JJ analyses_NNS for_IN the_DT two_CD ._.
+As_IN mentioned_VBN in_IN footnote_NN 1_CD ,_, many_JJ researchers_NNS assume_VBP that_IN P-type_JJ MSCs_NNS can_MD be_VB explained_VBN through_IN the_DT Possessor_NNP Raising_NNP -LRB-_-LRB- PR_NNP -RRB-_-RRB- -LRB-_-LRB- Chun_NNP ,_, 1985_CD ;_: Youn_NNP ,_, 1990_CD -RRB-_-RRB- ._.
+The_DT idea_NN is_VBZ that_IN the_DT P-type_JJ MSC_NNP in_IN -LRB-_-LRB- 4b_JJ -RRB-_-RRB- is_VBZ derived_VBN 3_CD Most_JJS subjects_NNS in_IN SSCs_NNS are_VBP nom-marked_JJ ,_, so_RB nom-marking_JJ of_IN subjects_NNS does_VBZ not_RB differentiate_VB MSCs_NNS from_IN SSCs_NNS ._.
+The_DT external_JJ argument_NN of_IN V_NNP in_IN VP_NNP is_VBZ the_DT predicate_NN variable_NN in_IN SSCs_NNS ,_, so_RB that_IN the_DT requirement_NN of_IN a_DT predicate_NN variable_NN does_VBZ not_RB distinguish_VB the_DT two_CD either_RB ,_, though_IN the_DT MSCs_NNPS the_DT predicate_NN variable_NN is_VBZ not_RB the_DT external_JJ argument_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- a._FW b._FW c._FW d._FW Properties_NNPS of_IN MSCs_NNPS Outer_NNP nom-marked_JJ NPs_NNP in_IN MSCs_NNPS are_VBP licensed_JJ syntactically_RB by_IN being_VBG assigned_VBN nominative_JJ case_NN ,_, as_IN multiple_JJ Case_NN assignment_NN is_VBZ possible_JJ in_IN Korean_JJ ._.
+Outer_JJ nom-marked_JJ NPs_NNS in_IN MSCs_NNS are_VBP licensed_JJ semantically_RB through_IN predication_NN from_IN the_DT Sentential_NNP Predicate_NNP -LRB-_-LRB- SP_NNP -RRB-_-RRB- as_IN Major_NNP Subject_NNP -LRB-_-LRB- MS_NNP -RRB-_-RRB- ,_, by_IN binding_JJ a_DT predicate_NN variable_NN within_IN the_DT SP_NNP ._.
+MS_NNP and_CC SP_NNP in_IN MSCs_NNPS have_VBP restricted_VBN interpretive_JJ properties_NNS compared_VBN to_TO Grammatical_NNP Subjects_NNP -LRB-_-LRB- GS_NNP -RRB-_-RRB- and_CC VP_NNP ._.
+Sentential_NNP Predicates_VBZ -LRB-_-LRB- SPs_NNS -RRB-_-RRB- are_VBP felicitous_JJ if_IN they_PRP can_MD be_VB construed_VBN as_IN denoting_VBG a_DT salient_JJ 1_CD Possessor_NNP vs._IN adjunct_JJ classification_NN is_VBZ theoretically_RB meaningful_JJ if_IN one_CD derives_VBZ the_DT first_JJ NP_NNP in_IN a_DT P-type_JJ MSC_NNP through_IN Possessor_NNP Raising_NNP -LRB-_-LRB- Chun_NNP ,_, 1985_CD ;_: Youn_NNP ,_, 1990_CD -RRB-_-RRB- ._.
+Under_IN this_DT analysis_NN ,_, P-type_JJ MSCs_NNS have_VBP a_DT unique_JJ subject_NN -LRB-_-LRB- 1st_CD -RRB-_-RRB- NP_NNP ,_, while_IN in_IN A-type_JJ MSCs_NNS ,_, the_DT unique_JJ subject_NN is_VBZ the_DT 2nd_JJ NP_NNP ,_, with_IN the_DT 1st_CD NP_NNP functioning_NN as_IN topic/focus_NN -LRB-_-LRB- Chun_NNP ,_, 1985_CD ;_: Youn_NNP ,_, 1990_CD -RRB-_-RRB- ._.
+The_DT distinction_NN is_VBZ without_IN significance_NN if_IN the_DT two_CD types_NNS are_VBP licensed_VBN in_IN the_DT same_JJ way_NN ._.
+2_CD Chae_NNP &_CC Kim_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- admitted_VBD the_DT clausal_JJ analysis_NN of_IN MSCs_NNS ,_, but_CC did_VBD not_RB agree_VB on_IN the_DT distinct_JJ functions_NNS of_IN MS_NNP and_CC GS_NNP in_IN MSCs_NNPS ._.
+by_IN PR_NNP from_IN a_DT single_JJ subject_JJ construction_NN -LRB-_-LRB- SSC_NNP -RRB-_-RRB- where_WRB the_DT first_JJ NP_NNP is_VBZ licensed_VBN as_IN a_DT Possessor_NNP -LRB-_-LRB- cf._FW 4a_FW -RRB-_-RRB- ._.
+whether_IN the_DT two_CD interpretive_JJ conditions4_NN mentioned_VBN above_RB --_: characteristic_JJ property_NN predication_NN by_IN SPs_NNS -LRB-_-LRB- cf._FW 3d_FW -RRB-_-RRB- and_CC the_DT newsworthiness_NN requirement_NN on_IN MSs_NNS -LRB-_-LRB- cf._FW 3e_FW -RRB-_-RRB- --_: play_VB a_DT role_NN in_IN native_JJ speakers_NNS '_POS judgments_NNS ._.
+The_DT results_NNS demonstrated_VBD that_IN the_DT native_JJ speakers_NNS of_IN Korean_JJ are_VBP sensitive_JJ to_TO the_DT two_CD interpretive_JJ conditions_NNS ._.
+However_RB ,_, Kim_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- focused_VBD on_IN the_DT Possessor-type_JJ MSCs_NNPS only_RB and_CC did_VBD not_RB examine_VB the_DT Adjunct-type_JJ MSCs_NNS in_IN her_PRP$ study_NN ._.
+Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- tested_VBD the_DT acceptability_NN of_IN different_JJ types_NNS of_IN MSCs_NNS ,_, adopting_VBG Ryu_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- 's_POS classifications_NNS of_IN semantic_JJ relations_NNS which_WDT hold_VBP between_IN the_DT two_CD nominative_JJ NPs_NNP in_IN MSCs_NNPS ._.
+5_CD Although_IN the_DT focus_NN of_IN Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- was_VBD not_RB the_DT distinction_NN between_IN P-type_JJ vs._FW A-type_JJ MSCs_NNS ,_, either_RB ,_, the_DT materials_NNS of_IN his_PRP$ study_NN included_VBD both_DT types_NNS of_IN MSCs_NNS ._.
+Among_IN his_PRP$ data_NNS sets_NNS ,_, sentences_NNS such_JJ as_IN -LRB-_-LRB- 6b_JJ -RRB-_-RRB- are_VBP P-type_JJ MSCs_NNS ,_, since_IN -LRB-_-LRB- 6b_JJ -RRB-_-RRB- can_MD be_VB paraphrased_VBN as_IN -LRB-_-LRB- 6a_JJ -RRB-_-RRB- ._.
+khi-ka_FW -RSB-_NNP height-nom_NN khi-ka_FW height-nom_FW The_DT effect_NN of_IN PR_NNP is_VBZ to_TO demote_VB the_DT NP_NNP Cheli-uy_NNP khi_FW -_: ka_FW from_IN subject_JJ status_NN and_CC create_VB a_DT new_JJ subject_JJ Cheli-ka_NN ._.
+PR_NNP can_MD not_RB extend_VB to_TO A-type_JJ MSC_NNP in_IN -LRB-_-LRB- 5a_FW ,_, c_NN -RRB-_-RRB- ,_, in_IN which_WDT the_DT first_JJ NP_NNP can_MD not_RB be_VB expressed_VBN as_IN a_DT Possessor_NNP of_IN the_DT second_JJ ._.
+Therefore_RB ,_, these_DT MSCs_NNS must_MD be_VB licensed_VBN differently_RB ._.
+Youn_NNP -LRB-_-LRB- 1990_CD -RRB-_-RRB- proposes_VBZ that_IN in_IN A-type_JJ MSCs_NNS ,_, the_DT second_JJ NP_NNP is_VBZ the_DT subject_NN ,_, while_IN the_DT 1st_CD NP_NNP is_VBZ topic/focus_NN ,_, under_IN the_DT additional_JJ assumption_NN that_IN the_DT nominative_JJ particle_NN doubles_VBZ as_IN topic/focus_NN particles_NNS -LRB-_-LRB- see_VB also_RB Yoon_NNP 1989_CD ;_: Schutze_NNP 2001_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- a._FW ?_.
+*_SYM Yelum-uy_NN maykcwu-ka_FW coh-ta_FW summer-gen_NN beer-nom_NN good-decl_NN ?_.
+`_`` It_PRP is_VBZ during_IN the_DT summer_NN that_WDT beer_NN is_VBZ good_JJ ._. '_''
+b._SYM Yelum-i_JJ maykcwu-ka_FW coh-ta_FW summer-nom_FW beer-nom_FW good-decl_FW `_`` In_IN summer_NN ,_, beer_NN is_VBZ good_JJ ._.
+-LRB-_-LRB- =_SYM It_PRP is_VBZ during_IN the_DT summer_NN that_WDT beer_NN is_VBZ good_JJ ._. -RRB-_-RRB- '_''
+c._NN ?_.
+*_SYM Pihayngki-uy_NN 747-i_JJ khu-ta_JJ airplane-gen_NN 747-nom_JJ big-decl_NN ?_.
+`_`` It_PRP is747_VBZ that_IN airplane_NN is_VBZ big_JJ ._. '_''
+Since_IN the_DT analyses_NNS of_IN the_DT two_CD types_NNS of_IN MSCs_NNS are_VBP quite_RB different_JJ ,_, we_PRP examined_VBD whether_IN native_JJ speakers_NNS distinguish_VBP between_IN the_DT two_CD types_NNS in_IN their_PRP$ acceptability_NN judgments_NNS ._.
+There_EX have_VBP been_VBN only_RB a_DT few_JJ experimental_JJ studies_NNS conducted_VBN on_IN various_JJ syntactic_NN and_CC semantic_JJ properties_NNS of_IN MSCs_NNS ._.
+Kim_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- conducted_VBD an_DT acceptability_NN judgment_NN of_IN MSC_NNP sentences_NNS ,_, testing_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- a._IN -LSB-_NNP Cheli-uy_JJ Cheli-gen_JJ `_`` Cheli_NNP is_VBZ tall_JJ ._. '_''
+b._FW Cheli-ka_FW khu-ta_FW is-tall-decl_FW khu-ta_FW is-tall-decl_FW Cheli-nom_JJ `_`` -LRB-_-LRB- It_PRP is_VBZ -RRB-_-RRB- Cheli_NNP -LRB-_-LRB- who_WP -RRB-_-RRB- is_VBZ tall_JJ ._. '_''
+d._SYM Pihayngki-ka_NN 747-i_JJ airplane-nom_NN 747-nom_JJ `_`` As_IN for_IN airplanes_NNS ,_, 747_CD is_VBZ big_JJ ._.
+-LRB-_-LRB- =_SYM /_FW =_SYM ?_.
+It_PRP is_VBZ airplane_NN that_IN 747_CD is_VBZ big_JJ -RRB-_-RRB- '_'' -LRB-_-LRB- 7_CD -RRB-_-RRB- a._FW b._FW ?_.
+Yelum-ey_JJ maykcwu-ka_FW summer-loc_FW beer-nom_FW masiss-ta_FW tasty-decl_FW `_`` In_IN summer_NN ,_, beer_NN is_VBZ tasty_JJ ._. '_''
+Yelum-i_JJ maykcwu-ka_FW masiss-ta_FW summer-nom_FW beer-nom_FW tasty-decl_FW `_`` It_PRP is_VBZ during_IN the_DT summer_NN that_WDT beer_NN is_VBZ tasty_JJ ._. '_''
+khu-ta_JJ big-decl_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- a._IN Thokki-uy_JJ kwi-ka_FW Rabbit-gen_NN ear-nom_JJ `_`` The_DT ears_NNS of_IN rabbits_NNS are_VBP long_RB ._. '_''
+b._SYM Thokki-ka_FW kwi-ka_FW Rabbit-nom_NN ear-nom_JJ `_`` The_DT ears_NNS of_IN rabbits_NNS are_VBP long_RB ._. '_''
+kil-ta_NN ._.
+long-decl_JJ kil-ta_NN ._.
+long-decl_JJ On_IN the_DT other_JJ hand_NN ,_, -LRB-_-LRB- 7b_CD -RRB-_-RRB- are_VBP A-type_JJ MSCs_NNS ._.
+Unlike_IN -LRB-_-LRB- 6b_JJ -RRB-_-RRB- ,_, -LRB-_-LRB- 7b_CD -RRB-_-RRB- can_MD not_RB be_VB analyzed_VBN as_IN derived_VBN from_IN a_DT sentence_NN with_IN possessed-NP_JJ subject_NN ._.
+Lee_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- results_NNS for_IN P-type_JJ and_CC A-type_JJ MSCs_NNS are_VBP as_IN follows_VBZ ._.
+He_PRP used_VBD line-drawing_NN Magnitude_NNP Estimation_NNP in_IN his_PRP$ experiment_NN ,_, and_CC the_DT range_NN of_IN score_NN was_VBD 0mm-170mm_JJ ._.
+4_LS See_VB Yoon_NNP -LRB-_-LRB- 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD -RRB-_-RRB- and_CC Kim_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- for_IN more_JJR detailed_JJ discussions_NNS of_IN characteristic/characterizing_VBG properties_NNS of_IN SP_NNP and_CC newsworthiness_NN of_IN MS._NNP 5_CD Ryu_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- proposed_VBD a_DT unified_VBN analysis_NN of_IN Multiple_NNP Subject_NNP Constructions_NNP -LRB-_-LRB- MSCs_NNS -RRB-_-RRB- and_CC Multiple_NNP Accusative_NNP Constructions_NNP -LRB-_-LRB- MACs_NNS -RRB-_-RRB- into_IN Multiple_NNP Case_NNP Constructions_NNP -LRB-_-LRB- MCCs_NNS -RRB-_-RRB- ._.
+P-type_JJ MSCs_NNS A-type_JJ MSCs_NNS -LRB-_-LRB- 6b_CD -RRB-_-RRB- ,_, m_FW =_SYM 128.20_CD -LRB-_-LRB- 7b_NN -RRB-_-RRB- ,_, m_FW =_SYM 101.50_CD Table_NNP 1_CD ._.
+P-type_JJ vs._FW A-type_JJ in_IN Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- As_IN shown_VBN in_IN this_DT table_NN ,_, the_DT acceptability_NN of_IN P-type_JJ MSCs_NNS was_VBD higher_JJR than_IN that_DT of_IN A-type_JJ MSCs_NNS ._.
+Lee_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- results_NNS suggest_VBP that_IN P-type_JJ MSCs_NNS and_CC A-type_JJ MSCs_NNS are_VBP judged_VBN differently_RB by_IN native_JJ speakers_NNS ,_, perhaps_RB because_IN they_PRP are_VBP licensed_VBN in_IN different_JJ ways_NNS ,_, as_IN posited_VBN under_IN the_DT theoretical_JJ analyses_NNS sketched_VBN in_IN the_DT previous_JJ section_NN ._.
+It_PRP also_RB seems_VBZ that_IN P-type_JJ MSCs_NNS are_VBP judged_VBN better_JJR than_IN A_DT -_: type_NN MSCs_NNS ._.
+However_RB ,_, Lee_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- study_NN had_VBD different_JJ classification_NN in_IN the_DT type_NN of_IN MSCs_NNPS and_CC there_EX were_VBD not_RB enough_JJ tokens_NNS for_IN the_DT clear_JJ division_NN of_IN the_DT two_CD types_NNS of_IN MSCs_NNS ._.
+We_PRP therefore_RB investigated_VBD whether_IN the_DT two_CD types_NNS of_IN MSCs_NNS are_VBP accepted_VBN differently_RB by_IN native_JJ speakers_NNS based_VBN on_IN a_DT larger_JJR data_NN set_NN ._.
+presented_VBN without_IN a_DT context_NN is_VBZ not_RB easy_JJ ,_, it_PRP is_VBZ plausible_JJ that_IN A-type_JJ MSCs_NNS would_MD be_VB considered_VBN as_IN less_JJR acceptable_JJ than_IN P-type_JJ MSCs_NNS ._.
+The_DT following_JJ sections_NNS will_MD be_VB dedicated_VBN to_TO explanation_NN of_IN the_DT methodology_NN of_IN our_PRP$ experiment_NN ._.
+Presentation_NN of_IN the_DT results_NNS and_CC discussion_NN will_MD then_RB follow_VB ._.
+3.2_CD Participants_NNS Seventy_CD Korean_JJ native_JJ speakers_NNS -LRB-_-LRB- age_NN range_NN =_SYM 21_CD ~_NN 45_CD -RRB-_-RRB- residing_VBG in_IN and_CC near_IN Seoul_NNP ,_, who_WP were_VBD either_CC current_JJ university_NN students_NNS or_CC graduates_NNS of_IN universities_NNS in_IN Korea_NNP ,_, participated_VBD in_IN the_DT experiment_NN ._.
+3.3_CD Task_NNP ,_, Materials_NNPS &_CC Procedures_NNPS The_DT main_JJ task_NN used_VBN in_IN the_DT experiment_NN was_VBD an_DT acceptability_NN judgment_NN task_NN using_VBG Magnitude_NNP Estimation_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- in_IN which_WDT the_DT participants_NNS were_VBD asked_VBN to_TO draw_VB different_JJ lengths_NNS of_IN lines_NNS to_TO indicate_VB the_DT naturalness_NN -LRB-_-LRB- acceptability_NN -RRB-_-RRB- of_IN a_DT given_VBN sentence_NN -LRB-_-LRB- after_IN reading_VBG the_DT sentence_NN -RRB-_-RRB- .6_CD Test_NN materials_NNS were_VBD composed_VBN of_IN 80_CD Korean_JJ sentences_NNS :_: There_EX were_VBD 40_CD target_NN MSC_NNP sentences_NNS divided_VBN into_IN 20_CD P-type_JJ MSCs_NNS and_CC 20_CD A-type_JJ MSCs_NNS ._.
+The_DT other_JJ 40_CD sentences_NNS were_VBD SSCs_NNS -LRB-_-LRB- single_JJ subject_JJ constructions_NNS -RRB-_-RRB- ,_, which_WDT were_VBD identical_JJ to_TO the_DT 40_CD target_NN MSCs_NNS except_IN for_IN having_VBG a_DT single_JJ subject_NN ._.
+This_DT was_VBD done_VBN to_TO compare_VB the_DT acceptability_NN ratings_NNS of_IN SSC_NNP sentences_NNS and_CC related_VBN MSC_NNP sentences_NNS ._.
+Examples_NNS of_IN the_DT experimental_JJ sentences_NNS are_VBP shown_VBN in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 8a_FW -RRB-_-RRB- shows_VBZ an_DT example_NN of_IN P-type_JJ MSC_NNP ,_, whereas_IN -LRB-_-LRB- 8b_JJ -RRB-_-RRB- shows_VBZ an_DT example_NN of_IN A-type_JJ MSC_NNP ._.
+-LRB-_-LRB- 8c_JJ ,_, d_LS -RRB-_-RRB- are_VBP the_DT examples_NNS of_IN SSC_NNP sentences_NNS that_WDT are_VBP the_DT counterparts_NNS of_IN -LRB-_-LRB- 8a_FW ,_, b_NN -RRB-_-RRB- ._.
+3_CD 3.1_CD Research_NNP Method_NNP Research_NNP Questions_NNPS and_CC Hypothesis_NNPS We_PRP conducted_VBD an_DT experimental_JJ study_NN investigating_VBG Korean_JJ native_JJ speakers_NNS '_POS acceptability_NN of_IN P-type_JJ and_CC A-type_JJ MSCs_NNS ,_, as_RB well_RB as_IN the_DT differences_NNS in_IN acceptability_NN between_IN MSCs_NNPS and_CC closely_RB related_JJ SSCs_NNS ._.
+The_DT research_NN question_NN and_CC hypothesis_NN of_IN this_DT study_NN are_VBP as_IN follows_VBZ :_: Research_NNP Question_NNP :_: Between_IN the_DT Possessor_NNP -_: type_NN -LRB-_-LRB- P-type_JJ -RRB-_-RRB- and_CC the_DT Adjunct-type_JJ -LRB-_-LRB- A-type_JJ -RRB-_-RRB- MSCs_NNPS ,_, which_WDT type_NN is_VBZ more_RBR acceptable_JJ ?_.
+Hypothesis_NNPS :_: Korean_JJ speakers_NNS will_MD regard_VB P-type_JJ MSCs_NNS as_IN more_JJR acceptable_JJ than_IN A-type_JJ MSCs_NNS ._.
+Our_PRP$ hypothesis_NN was_VBD based_VBN on_IN Lee_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- results_NNS ._.
+This_DT hypothesis_NN is_VBZ also_RB not_RB improbable_JJ given_VBN the_DT theoretical_JJ analyses_NNS reviewed_VBN earlier_RBR :_: While_IN P-type_JJ MSCs_NNS have_VBP been_VBN treated_VBN in_IN terms_NNS of_IN PR_NNP ,_, A-type_JJ MSCs_NNS have_VBP been_VBN treated_VBN mostly_RB as_IN having_VBG a_DT focused_VBN -LRB-_-LRB- or_CC topic-like_JJ -RRB-_-RRB- initial_JJ NP_NNP ._.
+Since_IN interpreting_VBG focused/topical_JJ NPs_NNS in_IN a_DT sentence_NN -LRB-_-LRB- 8_CD -RRB-_-RRB- a._FW b._FW c._FW d._FW Cheli-ka_FW apeci-ka_FW Cheli-nom_JJ father-nom_NN `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ father_NN is_VBZ rich_JJ ._. '_''
+Chicago-ka_JJ kenmwultul-i_JJ nop-ta_JJ Chicago-nom_NN buildings-nom_NN high-decl_JJ `_`` In_IN Chicago_NNP ,_, buildings_NNS are_VBP tall_JJ ._. '_''
+Cheli-uy_JJ apeci-ka_JJ Cheli-gen_JJ father-nom_NN `_`` Cheli_NNP 's_POS father_NN is_VBZ rich_JJ ._. '_''
+Chicago-uy_JJ kenmwultul-i_JJ Chicago-gen/loc_JJ buildings-nom_NN high-decl_JJ `_`` Chicago_NNP 's_POS buildings_NNS are_VBP tall_JJ ._. '_''
+pwuca-ita_NN ._.
+rich-decl_JJ pwuca-ita_NN ._.
+rich-decl_JJ nop-ta_NN 6_CD For_IN more_JJR information_NN about_IN the_DT Magnitude_NNP Estimation_NNP task_NN used_VBN in_IN this_DT experiment_NN and_CC its_PRP$ rationale_NN ,_, see_VBP Kim_NNP ,_, Lee_NNP and_CC Kim_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- ._.
+Participants_NNS were_VBD first_JJ given_VBN a_DT brief_JJ questionnaire_NN about_IN biographical_JJ information_NN such_JJ as_IN age_NN ,_, gender_NN and_CC dialect_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- together_RB with_IN a_DT consent_NN form_NN ._.
+They_PRP were_VBD then_RB asked_VBN to_TO take_VB the_DT main_JJ task_NN ._.
+In_IN the_DT main_JJ task_NN ,_, participants_NNS were_VBD required_VBN to_TO draw_VB a_DT line_NN for_IN each_DT sentence_NN ,_, according_VBG to_TO the_DT degree_NN of_IN acceptability/naturalness_NN of_IN the_DT given_VBN sentence_NN ._.
+3.4_CD Statistical_NNP Analysis_NNP After_IN the_DT data_NNS collection_NN ,_, normality_NN tests_NNS were_VBD first_JJ performed_VBN in_IN order_NN to_TO check_VB if_IN the_DT values_NNS followed_VBD normal_JJ distribution_NN ,_, so_RB as_IN to_TO determine_VB the_DT applicability_NN of_IN parametric_NN tests_NNS ._.
+If_IN the_DT distributions_NNS of_IN the_DT data_NNS follow_VBP normal_JJ distribution_NN ,_, parametric_NN tests_NNS are_VBP applicable_JJ ,_, such_JJ as_IN a_DT t-test_JJ ,_, an_DT ANOVA_NNP ,_, or_CC -LRB-_-LRB- ordinary_JJ -RRB-_-RRB- linear_JJ regression_NN tests_NNS ._.
+However_RB ,_, if_IN the_DT distributions_NNS do_VBP not_RB follow_VB normal_JJ distribution_NN ,_, non-parametric_JJ tests_NNS must_MD be_VB applied_VBN such_JJ as_IN a_DT Wilcoxon_NNP test_NN ,_, a_DT Friedman_NNP test_NN ,_, or_CC generalized_VBN linear_JJ regression_NN tests_NNS ._.
+When_WRB normality_NN tests_NNS were_VBD performed_VBN ,_, it_PRP was_VBD found_VBN that_IN most_JJS of_IN the_DT data_NNS sets_NNS did_VBD not_RB follow_VB normal_JJ distribution_NN ._.
+Some_DT were_VBD positively_RB skewed_VBN ,_, and_CC others_NNS had_VBD a_DT slightly_RB bimodal_JJ distribution_NN ._.
+Thus_RB ,_, a_DT non-parametric_JJ test_NN --_: a_DT generalized_VBN linear_JJ regression_NN test_NN --_: was_VBD performed_VBN with_IN a_DT Gaussian_JJ distribution_NN ,_, in_IN order_NN to_TO examine_VB how_WRB the_DT Possessor/Adjunct_NNP distinctions_NNS affected_VBD the_DT acceptability_NN of_IN sentences_NNS ._.
+4_CD Results_NNS 4.1_CD Descriptive_JJ Analysis_NN In_IN our_PRP$ data_NN set_NN ,_, two_CD factors_NNS tested_VBN -LRB-_-LRB- SSC/MSC_NNP and_CC Possessor/Adjunct_NNP -RRB-_-RRB- ._.
+SentenceType_NNP is_VBZ the_DT variable_JJ which_WDT indicates_VBZ whether_IN the_DT sentence_NN is_VBZ a_DT Single_NNP Subject_NNP Construction_NNP -LRB-_-LRB- SSC_NNP -RRB-_-RRB- or_CC a_DT Multiple_NNP Subject_NNP Construction_NNP -LRB-_-LRB- MSC_NNP -RRB-_-RRB- ,_, and_CC ConstType_NNP is_VBZ the_DT variable_JJ which_WDT indicates_VBZ whether_IN the_DT sentence_NN corresponds_VBZ to_TO a_DT Possessor_NNP type_NN -LRB-_-LRB- P-type_JJ -RRB-_-RRB- or_CC an_DT Adjunct_NNP type_NN -LRB-_-LRB- A-type_JJ -RRB-_-RRB- ._.
+We_PRP first_RB compared_VBD the_DT acceptability_NN of_IN SSC_NNP with_IN that_DT of_IN MSC_NNP ._.
+Figure_NN 1_CD below_IN illustrates_VBZ the_DT degree_NN of_IN acceptability_NN of_IN SSCs_NNS and_CC MSCs_NNS ._.
+Figure_NN 1_CD ._.
+Bar_NN Plots_NNS for_IN the_DT SSC_NNP vs._FW MSC_NNP Figure_NNP 1_CD demonstrates_VBZ that_IN the_DT mean_JJ values_NNS for_IN SSCs_NNS are_VBP much_RB higher_JJR than_IN those_DT of_IN MSCs_NNS ._.
+That_DT is_VBZ ,_, the_DT participants_NNS considered_VBN MSCs_NNS less_RBR acceptable_JJ than_IN SSCs_NNS ._.
+Secondly_RB ,_, we_PRP compared_VBD the_DT acceptability_NN of_IN P_NNP -_: type_NN MSCs_NNS with_IN that_DT of_IN A-type_JJ MSCs_NNS ._.
+The_DT pattern_NN of_IN results_NNS is_VBZ shown_VBN in_IN Figure_NN 2_CD ._.
+Figure_NN 2_CD ._.
+Bar_NN Plots_NNS for_IN the_DT P-type_JJ vs._NN A-type_JJ MSC_NNP As_IN shown_VBN in_IN this_DT figure_NN ,_, among_IN the_DT MSC_NNP sentences_NNS ,_, A-type_JJ MSCs_NNS received_VBD higher_JJR acceptability_NN than_IN P_SYM -_: type_NN MSCs_NNS ._.
+This_DT pattern_NN of_IN results_NNS is_VBZ different_JJ from_IN Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+4.2_CD Inferential_NNP Analysis_NNP In_IN order_NN to_TO examine_VB how_WRB two_CD factors_NNS -LRB-_-LRB- SentenceType_NNP and_CC ConstType_NNP -RRB-_-RRB- affected_VBD the_DT acceptability_NN of_IN sentences_NNS ,_, a_DT generalized_VBN regression_NN test_NN was_VBD performed_VBN ._.
+The_DT following_VBG table_NN illustrates_VBZ the_DT results_NNS ._.
+Table_NNP 2_CD ._.
+Results_NNS of_IN Regression_NNP Tests_NNP As_IN this_DT table_NN shows_VBZ ,_, both_DT factors_NNS -LRB-_-LRB- SentenceType_NNP and_CC ConstType_NNP -RRB-_-RRB- significantly_RB influenced_VBD the_DT acceptability_NN of_IN the_DT sentences_NNS -LRB-_-LRB- p_SYM <_SYM .001_CD ,_, highly_RB significant_JJ -RRB-_-RRB- ._.
+There_EX is_VBZ also_RB an_DT interaction_NN between_IN two_CD factors_NNS ,_, as_IN the_DT p-value_NN of_IN SentenceType_NNP :_: ConstType_NNP indicates_VBZ -LRB-_-LRB- p_SYM <_SYM .001_CD -RRB-_-RRB- ._.
+To_TO graphically_RB examine_VB the_DT effects_NNS of_IN the_DT factors_NNS and_CC their_PRP$ interactions_NNS ,_, the_DT effect_NN plots_NNS were_VBD drawn_VBN for_IN the_DT data_NN set_NN ._.
+Figure_NN 3_CD has_VBZ the_DT effect_NN plot_NN for_IN the_DT factor_NN SentenceType_NNP ._.
+Figure_NN 3_CD ._.
+Effect_NN Plot_NN for_IN SentenceType_NNP In_IN this_DT figure_NN ,_, the_DT mean_JJ score_NN of_IN SSCs_NNPS is_VBZ much_RB higher_JJR than_IN that_DT of_IN MSCs_NNS ._.
+Furthermore_RB ,_, 95_CD %_NN CIs_NNS -LRB-_-LRB- Confidence_NN Interval_NNP -RRB-_-RRB- are_VBP clearly_RB distinguished_VBN ._.
+This_DT implies_VBZ that_IN native_JJ speakers_NNS clearly_RB prefer_VBP SSC_NNP to_TO MSC_NNP ._.
+Figure_NN 4_CD has_VBZ the_DT effect_NN plot_NN for_IN the_DT factor_NN ConstType_NNP ._.
+Figure_NN 4_CD ._.
+Effect_NN Plot_NN for_IN ConstType_NNP As_IN shown_VBN earlier_RBR in_IN Figure_NN 2_CD ,_, the_DT average_JJ score_NN of_IN Adjunct_NNP is_VBZ much_RB higher_JJR than_IN that_DT of_IN Possessor_NNP ,_, and_CC the_DT 95_CD %_NN CIs_NNS do_VBP not_RB overlap_VB ,_, suggesting_VBG that_IN native_JJ speakers_NNS prefer_VBP the_DT A-type_JJ MSCs_NNS to_TO P-type_JJ MSCs_NNS ._.
+Figure_NN 5_CD has_VBZ the_DT effect_NN plot_NN for_IN the_DT interactions_NNS between_IN two_CD factors_NNS SentenceType_NNP and_CC ConstType_NNP .7_CD Figure_NN 5_CD ._.
+Effect_NN Plot_NN for_IN SentenceType_NNP :_: ConstType_NNP The_NNP effect_NN plot_NN in_IN this_DT figure_NN demonstrates_VBZ that_IN there_EX is_VBZ an_DT interaction_NN between_IN the_DT two_CD factors_NNS SentenceType_NNP and_CC ConstType_NNP ._.
+If_IN there_EX is_VBZ no_DT interaction_NN between_IN two_CD factors_NNS ,_, the_DT two_CD lines_NNS in_IN MSC_NNP and_CC SSC_NNP have_VBP to_TO be_VB parallel_JJ ._.
+If_IN there_EX is_VBZ an_DT interaction_NN ,_, however_RB ,_, the_DT two_CD lines_NNS will_MD not_RB be_VB parallel_JJ ._.
+Note_VB that_IN the_DT two_CD lines_NNS in_IN Figure_NN 5_CD are_VBP not_RB parallel_VB ._.
+This_DT means_VBZ that_IN there_EX is_VBZ an_DT interaction_NN between_IN two_CD factors_NNS SentenceType_NNP and_CC ConstType_NNP ._.
+In_IN this_DT figure_NN ,_, note_NN that_IN the_DT differences_NNS in_IN MSCs_NNS are_VBP much_RB bigger_JJR than_IN those_DT in_IN SSCs_NNS ._.
+This_DT suggests_VBZ 7Since_NNP the_DT comparison_NN of_IN the_DT two_CD types_NNS of_IN MSCs_NNPS is_VBZ meaningful_JJ in_IN MSC_NNP sentences_NNS rather_RB than_IN SSC_NNP sentences_NNS ,_, we_PRP can_MD focus_VB on_IN the_DT pattern_NN of_IN the_DT results_NNS represented_VBN on_IN the_DT left_JJ side_NN ._.
+Estimate_NNP sd_NN t_NN p_NN -LRB-_-LRB- Intercept_NNP -RRB-_-RRB- 40.058_CD 0.3073_CD 130.364_CD <<_NN <_CD .001_CD SentenceType_NNP -9.634_CD 0.3073_CD -31.353_CD <<_NN <_CD .001_CD ConstType_NNP 3.988_CD 0.3073_CD 12.977_CD <<_NN <_CD .001_CD SentenceType_NNP :_: ConstType_NNP 2.243_CD 0.3073_CD 7.298_CD <<_NN <_CD .001_CD that_IN the_DT Possessor_NNP vs._FW Adjunct_NNP distinction_NN plays_VBZ a_DT more_RBR important_JJ role_NN in_IN determination_NN of_IN the_DT acceptability_NN of_IN MSCs_NNS than_IN SSCs_NNS ._.
+5_CD Discussion_NNP While_IN we_PRP hypothesized_VBD that_IN Korean_JJ native_JJ speakers_NNS would_MD give_VB higher_JJR acceptability_NN scores_NNS for_IN P-type_JJ MSCs_NNS than_IN A-type_JJ MSCs_NNS ,_, based_VBN on_IN Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, the_DT results_NNS did_VBD not_RB support_VB the_DT hypothesis_NN ._.
+Since_IN both_DT Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- and_CC the_DT current_JJ study_NN used_VBD line-drawing_NN Magnitude_NNP Estimation_NNP and_CC were_VBD administered_VBN to_TO similar_JJ groups_NNS of_IN native_JJ speakers_NNS ,_, we_PRP need_VBP to_TO explain_VB the_DT inconsistency_NN in_IN the_DT results_NNS ._.
+We_PRP speculate_VBP that_IN the_DT characteristics_NNS of_IN the_DT experimental_JJ sentences_NNS used_VBN in_IN this_DT study_NN may_MD explain_VB the_DT inconsistency_NN ._.
+And_CC this_DT in_IN turn_NN casts_VBZ doubt_NN the_DT theoretical_JJ utility_NN of_IN classifications_NNS such_JJ as_IN P_NNP vs._CC A-type_JJ MSCs_NNS ._.
+First_RB ,_, a_DT close_JJ look_NN at_IN the_DT test_NN sentences_NNS suggests_VBZ that_IN many_JJ of_IN the_DT P-type_JJ sentences_NNS used_VBN as_IN stimuli_NNS may_MD not_RB be_VB fully_RB optimal_JJ semantically_RB and_CC pragmatically_RB as_IN MSCs_NNS ,_, whereas_IN many_JJ of_IN the_DT A_NN -_: type_NN sentences_NNS satisfy_VBP such_JJ constraints_NNS ._.
+The_DT contrast_NN between_IN -LRB-_-LRB- 9a_NN -RRB-_-RRB- a_DT P-type_JJ MSC_NNP and_CC -LRB-_-LRB- 9c_CD -RRB-_-RRB- an_DT A_NN -_: type_NN MSC_NNP is_VBZ illustrative_JJ ._.
+becomes_VBZ clear_JJ when_WRB -LRB-_-LRB- 9a_NNS -RRB-_-RRB- is_VBZ compared_VBN to_TO -LRB-_-LRB- 9b_CD -RRB-_-RRB- ,_, where_WRB the_DT SP_NNP `_`` -LRB-_-LRB- someone_NN 's_POS -RRB-_-RRB- height_NN is_VBZ tall_JJ '_'' ,_, can_MD be_VB understood_VBN easily_RB as_IN a_DT characteristic_JJ property_NN of_IN an_DT individual_NN ._.
+Notice_NNP that_IN the_DT difference_NN between_IN -LRB-_-LRB- 9a_NN -RRB-_-RRB- and_CC -LRB-_-LRB- 9b_CD -RRB-_-RRB- ,_, which_WDT are_VBP both_DT P-type_JJ MSCs_NNS ,_, is_VBZ the_DT nature_NN of_IN the_DT possession_NN relationship_NN between_IN the_DT MS_NNP and_CC GS_NNP ._.
+In_IN -LRB-_-LRB- 9b_NN -RRB-_-RRB- ,_, it_PRP is_VBZ inalienable_JJ possession_NN ,_, while_IN in_IN -LRB-_-LRB- 9a_NN -RRB-_-RRB- it_PRP is_VBZ an_DT alienable_JJ relation_NN ._.
+Because_IN of_IN the_DT characteristic_JJ property_NN condition_NN on_IN SPs_NNP ,_, optimal_JJ P-type_JJ MSCs_NNS are_VBP those_DT with_IN an_DT inalienable_JJ possession_NN relation_NN between_IN the_DT MS_NNP and_CC the_DT GS_NNP ._.
+However_RB ,_, most_RBS P-type_JJ MSCs_NNS used_VBN in_IN the_DT experiment_NN had_VBD an_DT alienable_JJ possessor_NN relation_NN ,_, which_WDT possibly_RB reduced_VBD the_DT felicity_NN of_IN P-type_JJ MSCs_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT P-type_JJ stimuli_NNS used_VBN in_IN Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- contained_VBD mostly_RB inalienable_JJ possession_NN ,_, which_WDT probably_RB contributed_VBD to_TO the_DT increased_VBN felicity_NN of_IN the_DT MSCs_NNPS overall_RB ._.
+We_PRP suspect_VBP this_DT is_VBZ the_DT reason_NN why_WRB our_PRP$ subjects_NNS gave_VBD lower_JJR ratings_NNS to_TO P-type_JJ MSCs_NNS ,_, compared_VBN to_TO Lee_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- subjects_NNS ._.
+By_IN contrast_NN ,_, if_IN we_PRP examine_VBP examples_NNS of_IN A-type_JJ MSCs_NNS in_IN -LRB-_-LRB- 9c_JJ -RRB-_-RRB- ,_, both_CC the_DT MS_NNP and_CC the_DT SP_NNP satisfy_VB the_DT interpretive_JJ conditions_NNS easily_RB ._.
+The_DT MS_NNP Chicago_NNP is_VBZ more_RBR referentially_JJ salient_NN than_IN the_DT GS_NNP `_`` building_NN '_'' ._.
+The_DT SP_NNP may_MD be_VB considered_VBN a_DT characterizing_VBG property_NN of_IN MS_NNP :_: `_`` having_VBG lots_NNS of_IN buildings_NNS -LRB-_-LRB- and_CC hence_RB ,_, a_DT large_JJ ,_, metropolitan_JJ city_NN -RRB-_-RRB- '_'' could_MD be_VB construed_VBN as_IN a_DT characteristic_JJ property_NN of_IN cities_NNS ._.
+Many_JJ of_IN our_PRP$ A-type_JJ sentences_NNS had_VBD a_DT salient_JJ MSs_NNP and_CC characterizing_VBG SPs_NNP as_IN in_IN -LRB-_-LRB- 9c_JJ -RRB-_-RRB- ._.
+Therefore_RB ,_, this_DT could_MD have_VB contributed_VBN to_TO participants_NNS '_POS higher_JJR ratings_NNS of_IN naturalness_NN of_IN the_DT MSC_NNP sentences_NNS ._.
+Also_RB ,_, we_PRP should_MD note_VB that_IN in_IN some_DT cases_NNS the_DT boundary_NN between_IN the_DT P-type_JJ and_CC A-type_JJ MSC_NNP seems_VBZ not_RB very_RB clear_JJ ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- ._.
+Though_IN the_DT basic_JJ structure_NN looks_VBZ the_DT same_JJ between_IN -LRB-_-LRB- 10a_FW -RRB-_-RRB- and_CC -LRB-_-LRB- 10c_JJ -RRB-_-RRB- ,_, with_IN the_DT same_JJ MS_NNP and_CC characteristic_JJ SPs_NNS ,_, the_DT relation_NN between_IN the_DT two_CD NPs_NNS --_: as_IN shown_VBN in_IN the_DT contrast_NN between_IN -LRB-_-LRB- 10a_CD ,_, b_NN -RRB-_-RRB- and_CC -LRB-_-LRB- 10c_CD ,_, d_LS -RRB-_-RRB- -_: can_MD make_VB different_JJ type_NN of_IN MSCs_NNS ._.
+While_IN -LRB-_-LRB- 10a_FW -RRB-_-RRB- represents_VBZ A_DT -_: type_NN MSC_NNP ,_, -LRB-_-LRB- 10c_JJ -RRB-_-RRB- stands_VBZ for_IN P-type_JJ MSC_NNP ,_, respectively_RB ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- a._IN Cheli-ka_JJ Cheli-nom_JJ b._NN Cheli-ka_JJ khi-ka_FW Cheli-nom_JJ height-nom_NN `_`` It_PRP is_VBZ Cheli_NNP whose_WP$ height_NN is_VBZ tall_JJ ._. '_''
+c._SYM Chicago-ka_FW kenmwultul-i_FW nop-ta_FW Chicago-nom_NN buildings-nom_NN high-decl_JJ `_`` In_IN Chicago_NNP ,_, buildings_NNS are_VBP high_JJ ._. '_''
+Recall_VB that_IN an_DT optimal_JJ MSC_NNP has_VBZ a_DT characteristic_JJ property-denoting_NN SP_NNP and_CC a_DT newsworthy_JJ MS_NNP ,_, as_IN Kim_NNP -LRB-_-LRB- 2015_CD -RRB-_-RRB- demonstrated_VBD experimentally_RB ._.
+Let_VB us_PRP look_VB at_IN -LRB-_-LRB- 9a_NN -RRB-_-RRB- ,_, which_WDT was_VBD used_VBN in_IN the_DT experiment_NN as_IN an_DT example_NN of_IN MSC_NNP ._.
+In_IN this_DT MSC_NNP ,_, the_DT newsworthiness_NN condition_NN is_VBZ met_VBN ,_, since_IN the_DT MS_NNP is_VBZ referentially_RB more_RBR salient_JJ than_IN GS_NNP -LRB-_-LRB- MS_NNP is_VBZ a_DT name_NN and_CC GS_NNP is_VBZ a_DT relational_JJ noun_NN -RRB-_-RRB- ._.
+However_RB ,_, the_DT SP_NNP `_`` -LRB-_-LRB- someone_NN 's_POS -RRB-_-RRB- mother_NN is_VBZ scary_JJ '_'' can_MD not_RB be_VB construed_VBN as_IN expressing_VBG a_DT characteristic_JJ property_NN of_IN MS_NNP Cheli_NNP ,_, and_CC hence_RB ,_, the_DT SP_NNP in_IN this_DT MSC_NNP is_VBZ not_RB optimal_JJ .8_CD This_DT 8_CD If_IN given_VBN a_DT specific_JJ context_NN ,_, this_DT property_NN can_MD characterize_VB an_DT individual_JJ ,_, becoming_VBG what_WP Yoon_NNP -LRB-_-LRB- 2007_CD ,_, 2009_CD ,_, etc._FW -RRB-_-RRB- dub_VBP a_DT characterizing_VBG -LRB-_-LRB- contextually_RB characteristic_JJ -RRB-_-RRB- property_NN ._.
+However_RB ,_, mother-nom_JJ `_`` Cheli_NNP 's_POS mother_NN is_VBZ scary_JJ ._. '_''
+emeni-ka_FW mwusep-ta_FW ._.
+scary-decl_JJ khu-ta_JJ tall-decl_NN -LRB-_-LRB- 10_CD -RRB-_-RRB- a._IN Boston-i_NNP Boston-nom_NNP kwankwangkyayk-i_JJ tourists-nom_NN the_DT sentences_NNS were_VBD not_RB given_VBN with_IN an_DT appropriate_JJ context_NN ,_, so_RB speakers_NNS gave_VBD a_DT rating_NN assuming_VBG a_DT null_JJ context_NN ,_, where_WRB only_RB SPs_NNP denoting_VBG properly_RB characteristic_JJ properties_NNS are_VBP judged_VBN optimal_JJ ._.
+nul_NN pwumpin-ta_NN ._.
+always_RB bustle-decl_JJ `_`` As_IN for_IN Boston_NNP ,_, tourists_NNS bustle_VBP all_PDT the_DT time_NN ._. '_''
+6_CD Conclusion_NNP The_DT current_JJ experimental_JJ study_NN investigated_VBD how_WRB Korean_JJ native_JJ speakers_NNS rate_NN the_DT acceptability_NN of_IN MSCs_NNPS and_CC related_VBN SSCs_NNS ,_, and_CC of_IN two_CD different_JJ types_NNS of_IN MSCs_NNS :_: P-type_JJ MSCs_NNPS vs._FW A-type_JJ MSCs_NNS ._.
+The_DT overall_JJ results_NNS showed_VBD that_IN Korean_JJ native_JJ speakers_NNS regarded_VBN MSCs_NNS less_RBR acceptable_JJ than_IN SSCs_NNS ,_, but_CC clearly_RB better_JJR than_IN ungrammatical_JJ sentences_NNS ._.
+As_IN for_IN the_DT two_CD types_NNS of_IN MSCs_NNS ,_, A-type_JJ MSCs_NNS received_VBD higher_JJR acceptability_NN scores_NNS than_IN P-type_JJ MSCs_NNS ,_, contrary_JJ to_TO our_PRP$ expectations_NNS and_CC the_DT results_NNS of_IN previous_JJ studies_NNS ._.
+We_PRP speculated_VBD that_IN the_DT reason_NN may_MD stem_VB from_IN the_DT fact_NN that_IN many_JJ experimental_JJ P_SYM -_: type_NN MSCs_NNS used_VBN in_IN the_DT current_JJ study_NN did_VBD not_RB satisfy_VB the_DT interpretive_JJ properties_NNS of_IN MSCs_NNS in_IN an_DT optimal_JJ way_NN ,_, which_WDT also_RB allows_VBZ us_PRP to_TO make_VB sense_NN of_IN the_DT differences_NNS between_IN our_PRP$ results_NNS and_CC Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Spectrum_NNP of_IN appropriateness_NN as_IN MSCs_NNS may_MD not_RB be_VB narrow_JJ within_IN each_DT type_NN of_IN MSC_NNP ,_, and_CC this_DT warns_VBZ of_IN possible_JJ danger_NN of_IN making_VBG a_DT categorical_JJ statement_NN about_IN P-type_JJ vs._FW A-type_JJ MSCs_NNS ,_, or_CC taking_VBG this_DT distinction_NN seriously_RB in_IN one_CD 's_POS theoretical_JJ analysis_NN of_IN MSCs_NNS ._.
+A_DT follow-up_JJ study_NN with_IN more_JJR strictly_RB controlled_VBN experimental_JJ sentences_NNS with_IN various_JJ divisions_NNS of_IN properties_NNS that_WDT contribute_VBP to_TO the_DT overall_JJ felicity_NN of_IN MSCs_NNPS is_VBZ necessary_JJ ._.
+Acknowledgments_NNP References_NNP Hee-Rahk_NNP Chae_NNP and_CC Ilkyu_NNP Kim_NNP ._.
+2008_CD ._.
+A_DT Clausal_NNP Predicate_NNP Analysis_NNP of_IN Korean_JJ Multiple_NNP Nominative_NNP Constructions_NNP ._.
+Korean_JJ Journal_NNP of_IN Linguistics_NNPS ,_, 33_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :869_CD -900_CD ._.
+Sun-Ae_JJ Chun_NNP ._.
+1985_CD ._.
+Possessor_NNP Ascension_NNP for_IN Multiple_NNP Case_NNP Sentences_NNS ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS I_PRP :30_CD -39_CD ._.
+Hanshin_NNP Publishing_NNP ,_, Seoul_NNP ._.
+Caroline_NNP Heycock_NNP and_CC Young-suk_NNP Lee_NNP ._.
+1989_CD ._.
+Subjects_NNS and_CC Predication_NN in_IN Korean_JJ and_CC Japanese_JJ ._.
+Language_NN Research_NN ,_, 25_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 755-792_CD ._.
+Ji-Hye_NNP Kim_NNP ._.
+2015_CD ._.
+An_DT Experimental_JJ Study_NN on_IN Interpretive_NNP Properties_NNP of_IN Multiple_NNP Nominative/Subject_NNP Constructions_NNP -LRB-_-LRB- MNCs/MSCs_NNP -RRB-_-RRB- in_IN Korean_JJ ._.
+Linguistic_NNP Research_NNP ,32_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- To_TO appear_VB on_IN August_NNP 30_CD ,_, 2015_CD -RRB-_-RRB- Ji-Hye_NNP Kim_NNP ,_, Yong-hun_NNP Lee_NNP and_CC Eunah_NNP Kim_NNP ._.
+2015_CD ._.
+Obligatory_NNP Control_NNP and_CC Coordinated_NNP Deletion_NNP as_IN Korean_JJ Subject_NNP Diagnostics_NNPS :_: An_DT Experimental_JJ Approach_NNP ._.
+Language_NN and_CC Information_NN ,_, 19_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :75_CD -101_CD ._.
+b._SYM Boston-ey_NN -LRB-_-LRB- -_: nun_NN -RRB-_-RRB- Boston-loc_JJ -LRB-_-LRB- -_: top_NN -RRB-_-RRB- nul_NN pwumpin-ta_NN ._.
+always_RB bustle-decl_JJ `_`` As_IN for_IN Boston_NNP ,_, tourists_NNS bustle_VBP all_PDT the_DT time_NN ._. '_''
+c._FW Boston-i_FW wichi-ka_FW acwu_FW B-nom_FW location-nom_FW very_RB coh-ta_JJ ._.
+good-decl_NN `_`` Boston_NNP has_VBZ a_DT very_RB good_JJ location_NN ._. '_''
+d._IN Boston-uy_JJ Boston-gen_JJ wichi-ka_NN acwu_NN location-nom_NN very_RB coh-ta_JJ ._.
+good-decl_NN `_`` Boston_NNP has_VBZ a_DT very_RB good_JJ location_NN ._. '_''
+These_DT sentences_NNS show_VBP that_IN the_DT boundary_NN between_IN P-type_JJ and_CC A-type_JJ is_VBZ not_RB clear_JJ and_CC that_IN there_EX are_VBP some_DT sentences_NNS which_WDT can_MD be_VB either_RB P-type_JJ MSCs_NNS or_CC A-type_JJ MSCs_NNS ._.
+Likewise_RB ,_, the_DT A-type_JJ MSC_NNP we_PRP used_VBD in_IN the_DT experiment_NN -LRB-_-LRB- cf._FW 9c_FW -RRB-_-RRB- could_MD be_VB interpreted_VBN as_IN both_DT A-type_JJ MSC_NNP -LRB-_-LRB- `_`` In_IN Chicago_NNP ,_, buildings_NNS are_VBP tall_JJ '_'' -RRB-_-RRB- and_CC P-type_JJ MSC_NNP -LRB-_-LRB- `_`` The_DT buildings_NNS of_IN Chicago_NNP are_VBP tall_JJ '_'' -RRB-_-RRB- to_TO some_DT individuals_NNS ._.
+In_IN a_DT way_NN ,_, though_RB ,_, the_DT contradictory_JJ results_NNS of_IN this_DT study_NN and_CC Lee_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- or_CC the_DT difficulty_NN of_IN classifying_VBG an_DT MSC_NNP as_IN P_NNP or_CC A-type_JJ is_VBZ not_RB important_JJ ,_, if_IN we_PRP adopt_VBP the_DT analysis_NN proposed_VBN by_IN Yoon_NNP -LRB-_-LRB- 2004_CD ,_, 2007_CD ,_, 2009_CD ,_, 2015_CD -RRB-_-RRB- and_CC others_NNS -LRB-_-LRB- Chae_NNP &_CC Kim_NNP ,_, 2008_CD ;_: Park_NNP ,_, 2010_CD ;_: Kim_NNP ,_, 2015_CD ,_, etc._FW -RRB-_-RRB- ._.
+This_DT is_VBZ because_IN in_IN this_DT analysis_NN ,_, all_DT MSCs_NNS are_VBP licensed_VBN the_DT same_JJ way_NN ._.
+Classificatory_JJ labels_NNS such_JJ as_IN P-type_JJ ,_, A-type_JJ ,_, or_CC for_IN that_DT matter_NN ,_, sub-types_NNS within_IN a_DT type_NN -LRB-_-LRB- inalienable_JJ vs._NN alienable_JJ P-type_JJ -RRB-_-RRB- are_VBP mere_JJ descriptive_JJ labels_NNS and_CC carry_VB little_JJ theoretical_JJ weight_NN ,_, unlike_IN analyses_NNS that_WDT view_VBP different_JJ MSCs_NNS to_TO be_VB licensed_VBN in_IN different_JJ ways_NNS ._.
+What_WP matters_VBZ is_VBZ whether_IN and_CC how_WRB the_DT MSCs_NNPS come_VBP to_TO satisfy_VB the_DT licensing_NN conditions_NNS --_: in_IN particular_JJ ,_, the_DT interpretive_JJ conditions_NNS ._.
+What_WP we_PRP have_VBP seen_VBN is_VBZ that_IN even_RB within_IN the_DT same_JJ type_NN -LRB-_-LRB- P_SYM -_: type_NN -RRB-_-RRB- ,_, different_JJ MSCs_NNS may_MD satisfy_VB the_DT licensing_NN conditions_NNS in_IN different_JJ ways_NNS ,_, and_CC this_DT is_VBZ what_WP explains_VBZ native_JJ speakers_NNS '_POS judgments_NNS of_IN acceptability_NN of_IN MSCs_NNS ._.
+kwankwangkyayk-i_JJ tourists-nom_NN Ik-Hwan_NNP Lee_NNP ._.
+1987_CD ._.
+Double_RB Subject_NNP Constructions_NNP in_IN GPSG_NNP ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNP II_NNP :287_CD -_: 296_CD ._.
+Yong-hun_JJ Lee_NNP ._.
+2014_CD ._.
+Semantic_NNP Relations_NNPS and_CC Multiple_NNP Case_NNP Constructions_NNP :_: An_DT Experimental_JJ Approach_NNP ._.
+Linguistic_NNP Research_NNP 31_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 213-247_CD ._.
+Byung-Soo_NNP Park_NNP ._.
+1973_CD ._.
+On_IN the_DT Multiple_NNP Subject_NNP Constructions_NNP in_IN Korean_NNP ._.
+Linguistics_NNP ,_, 100_CD :_: 63-76_CD ._.
+Byung-Soo_NNP Park_NNP ._.
+2001_CD ._.
+Constraints_NNS in_IN Multiple_NNP Nominative_NNP Constructions_NNP in_IN Korean_NNP :_: A_NNP Constraint_NNP -_: based_VBN Lexicalist_NNP Approach_NNP ._.
+The_DT Journal_NNP of_IN Linguistic_NNP Science_NNP ,_, 20:147_CD -190_CD ._.
+Chongwon_NNP Park_NNP ._.
+2010_CD ._.
+The_DT Role_NN of_IN Metonymy_NNP in_IN the_DT Interpretation_NN of_IN Korean_JJ Multiple_NNP Subject_NNP Constructions_NNP ._.
+Language_NNP Sciences_NNPS ,_, 33_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 206-228_CD ._.
+Byong-Rae_NNP Ryu_NNP ._.
+2010_CD ._.
+Licensing_NN Nominals_NNS in_IN the_DT Multiple_NNP Nominative_NNP Constructions_NNP in_IN Korean_NNP :_: A_NNP Mereological_NNP Perspective_NNP ._.
+Proceedings_NNP of_IN the_DT 24th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Computation_NNP -LRB-_-LRB- PACLIC_NNP 24_CD -RRB-_-RRB- ._.
+Tohoku_NNP University_NNP ,_, Sendai_NNP ,_, Japan_NNP ._. ._.
+Byong-Rae_NNP Ryu_NNP ._.
+2013_CD ._.
+Multiple_JJ Case_NN Marking_NNP Constructions_NNP in_IN Korean_JJ Revisited_NNP ._.
+Language_NN and_CC Information_NN ,_, 17_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :1_CD -27_CD ._.
+Byong-Rae_NNP Ryu_NNP ._.
+2014_CD ._.
+Semantic_JJ Constraints_NNS on_IN Multiple_NNP Case_NNP Marking_NNP in_IN Korean_NNP ._.
+In_IN Doris_NNP Gerland_NNP ,_, Christian_NNP Horn_NNP ,_, Anja_NNP Latrouite_NNP and_CC Albert_NNP Ortmann_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Meaning_VBG and_CC Grammar_NNP of_IN Nouns_NNPS and_CC Verbs_NNPS :77_CD -112_CD ._.
+dup_NN ,_, Düsseldorf_NNP ._.
+Carson_NNP Schütze_NNP ._.
+2001_CD ._.
+On_IN Korean_JJ `_`` Case_NN Stacking_VBG '_'' :_: The_DT Varied_NNP Functions_NNS of_IN the_DT Particles_NNP -_: ka_FW and_CC -_: lul_NN ._.
+The_DT Linguistic_NNP Review_NNP ,_, 18:193_CD -232_CD ._.
+Shou-Hsin_NNP Teng_NNP ._.
+1974_CD ._.
+Double_RB Nominatives_NNP in_IN Chinese_NNP ._.
+Language_NN ,_, 50_CD :_: 455-473_CD ._.
+James_NNP Hye-Suk_NNP Yoon_NNP ._.
+2004_CD ._.
+Non-nominative_JJ -LRB-_-LRB- Major_NNP -RRB-_-RRB- Subjects_NNS and_CC Case-stacking_NN in_IN Korean_JJ ._.
+In_IN Peri_NNP Bhaskararao_NNP and_CC Karumuri_NNP VenkataSubbarao_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Non-nominative_JJ Subjects_NNS ,_, volume_NN 2:265_CD -314_CD ._.
+Mouton_NNP de_NNP Gruyter_NNP ,_, Berlin_NNP ._.
+James_NNP Hye-SukYoon_NNP ._.
+2007_CD ._.
+Raising_NNP of_IN Major_NNP Arguments_NNP in_IN Korean_NNP and_CC Japanese_NNP ._.
+Natural_JJ Language_NN and_CC Linguistic_NNP Theory_NNP ,_, 25:615_CD -653_CD ._.
+James_NNP Hye-Suk_NNP Yoon_NNP ._.
+2009_CD ._.
+The_DT Distribution_NN of_IN Subject_NNP Properties_NNP in_IN Multiple_NNP Subject_NNP Constructions_NNP ._.
+Proceedings_NNP of_IN Japanese/Korean_NNP Linguistics_NNP ,_, 64-83_CD ._.
+CSLI_NNP ,_, Stanford_NNP ,_, CA_NNP ._.
+James_NNP Hye-Suk_NNP Yoon_NNP ._.
+2015_CD ._.
+Double_RB Nominative_JJ and_CC Double_RB Accusative_JJ Constructions_NNP ._.
+In_IN Lucien_NNP Brown_NNP and_CC Jaehoon_NNP Yeon_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, The_DT Handbook_NNP of_IN Korean_JJ Linguistics_NNPS ,_, First_NNP Edition_NNP ._.
+79-97_CD ._.
+John_NNP Wiley_NNP &_CC Sons_NNP ,_, Inc._NNP ._.
+Jong-Yurl_NNP Yoon_NNP ._.
+1989_CD ._.
+On_IN the_DT Multiple_NNP -_: ka_FW and_CC -_: lul_NN Constructions_NNP in_IN Korean_NNP ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS III_NNP :383_CD -394_CD ._.
+Hanshin_NNP Publishing_NNP Company_NNP ,_, Seoul_NNP ._.
+Cheong_NNP Youn_NNP ._.
+1990_CD ._.
+A_DT Relational_NNP Analysis_NNP of_IN Korean_JJ Multiple_NNP Nominative_NNP Constructions_NNP ._.
+Ph.D_JJ dissertation_NN ,_, State_NNP University_NNP of_IN New_NNP York_NNP at_IN Buffalo_NNP ._.

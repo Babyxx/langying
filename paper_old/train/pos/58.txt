@@ -1,0 +1,241 @@
+1_CD Abstract_JJ A_DT learner_NN corpus_NN is_VBZ a_DT useful_JJ resource_NN for_IN developing_VBG automatic_JJ assessment_NN techniques_NNS for_IN implementation_NN in_IN a_DT computer-assisted_JJ language_NN learning_VBG system_NN ._.
+However_RB ,_, presently_RB ,_, learner_JJR corpora_NN are_VBP only_RB helpful_JJ in_IN terms_NNS of_IN evaluating_VBG the_DT accuracy_NN of_IN learner_NN output_NN -LRB-_-LRB- speaking_NN and_CC writing_NN -RRB-_-RRB- ._.
+Therefore_RB ,_, the_DT present_JJ study_NN proposes_VBZ a_DT learner_NN corpus_NN annotated_VBN with_IN evaluation_NN results_NNS regarding_VBG the_DT accuracy_NN and_CC fluency_NN of_IN performance_NN in_IN speaking_NN -LRB-_-LRB- output_NN -RRB-_-RRB- and_CC listening_VBG -LRB-_-LRB- input_NN -RRB-_-RRB- ._.
+Introduction_NNP Takehiko_NNP Yoshimi_NNP Ryukoku_NNP University_NNP 1-5_CD Yokotani_NNP ,_, Seta_NNP ,_, Otsu_NNP ,_, Shiga_NNP ,_, Japan_NNP 520-7729_CD is_VBZ true_JJ that_IN a_DT proficient_JJ learner_NN uses_VBZ a_DT target_NN language_NN accurately_RB ;_: however_RB ,_, on_IN the_DT other_JJ hand_NN ,_, a_DT trade-off_NN is_VBZ often_RB observed_JJ ,_, as_IN a_DT learner_NN speaks_VBZ grammatically_RB correct_JJ sentences_NNS -LRB-_-LRB- high_JJ accuracy_NN -RRB-_-RRB- ,_, but_CC does_VBZ so_RB at_IN an_DT unnaturally_RB slow_JJ speech_NN rate_NN -LRB-_-LRB- low_JJ fluency_NN -RRB-_-RRB- -LRB-_-LRB- Brand_NN and_CC Götz_NNP 2011_CD ,_, Chang_NNP 2012_CD -RRB-_-RRB- ._.
+Another_DT limitation_NN is_VBZ typically_RB seen_VBN in_IN the_DT target_NN skill_NN ._.
+Most_JJS previous_JJ learner_NN corpora_NN cover_NN output_NN skills_NNS in_IN spoken_VBN or_CC written_VBN language_NN ._.
+From_IN the_DT viewpoint_NN of_IN communicative_JJ competence_NN in_IN spoken_VBN language_NN ,_, learners_NNS need_VBP to_TO be_VB proficient_JJ not_RB only_RB in_IN speaking_NN -LRB-_-LRB- output_NN -RRB-_-RRB- ,_, but_CC also_RB in_IN listening_VBG -LRB-_-LRB- input_NN -RRB-_-RRB- ._.
+Although_IN speaking_VBG proficiency_NN is_VBZ well_RB correlated_VBN with_IN listening_VBG proficiency_NN ,_, a_DT gap_NN between_IN these_DT proficiencies_NNS is_VBZ also_RB known_VBN to_TO exist_VB -LRB-_-LRB- Liao_NNP et_FW al._FW 2010_CD ,_, Liu_NNP and_CC Costanzo_NNP 2013_CD -RRB-_-RRB- ,_, as_IN a_DT learner_NN may_MD comprehend_VB some_DT sentences_NNS containing_VBG lexical_JJ and_CC syntactic_JJ items_NNS that_WDT are_VBP difficult_JJ for_IN them_PRP to_TO actually_RB articulate_VB ._.
+Because_IN previous_JJ learner_NN corpora_NN have_VBP been_VBN limited_VBN in_IN terms_NNS of_IN speaking_NN ,_, a_DT spoken_VBN learner_NN corpus_NN that_WDT demonstrates_VBZ accuracy_NN and_CC fluency_NN in_IN speaking_NN and_CC listening_NN is_VBZ needed_VBN ._.
+The_DT present_JJ study_NN proposes_VBZ to_TO build_VB a_DT spoken_VBN learner_NN corpus_NN by_IN annotating_VBG relevant_JJ information_NN on_IN sentences_NNS that_WDT learners_VBZ spoke_VBD and_CC listened_VBD to_TO ,_, respectively_RB ._.
+Another_DT limitation_NN is_VBZ seen_VBN in_IN the_DT scope_NN of_IN corpus_NN data_NNS analysis_NN ._.
+Although_IN the_DT learner_NN corpus_NN of_IN Kotani_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- addressed_VBD listening_VBG ,_, it_PRP was_VBD only_RB capable_JJ of_IN providing_VBG listening_VBG comprehension_NN data_NNS for_IN analysis_NN at_IN the_DT text_NN level_NN ,_, because_IN that_DT was_VBD the_DT level_NN at_IN which_WDT comprehension_NN was_VBD examined_VBN ._.
+However_RB ,_, identifying_VBG which_WDT linguistic_JJ properties_NNS affect_VBP listening_VBG comprehension_NN through_IN text-level_JJ analysis_NN is_VBZ difficult_JJ ._.
+To_TO identify_VB learners_NNS '_POS linguistic_JJ Design_NN of_IN a_DT Learner_NNP Corpus_NNP for_IN Listening_NNP and_CC Speaking_VBG Performance_NNP The_DT linguistic_JJ properties_NNS of_IN learners_NNS of_IN English_NNP as_IN a_DT foreign_JJ language_NN -LRB-_-LRB- EFL_NNP -RRB-_-RRB- ,_, which_WDT are_VBP different_JJ from_IN those_DT of_IN native_JJ speakers_NNS ,_, have_VBP been_VBN identified_VBN through_IN the_DT analysis_NN of_IN output_NN compiled_VBN in_IN learner_NN corpora_NN -LRB-_-LRB- Sugiura_NNP et_FW al._FW 2007_CD ,_, Friginal_NNP et_FW al._FW 2013_CD ,_, Barron_NNP and_CC Black_NNP 2014_CD -RRB-_-RRB- ._.
+These_DT properties_NNS have_VBP been_VBN used_VBN to_TO statistically_RB classify_VB learners_NNS '_POS output_NN into_IN a_DT range_NN of_IN proficiency_NN levels_NNS -LRB-_-LRB- Thewissen_NNP 2013_CD -RRB-_-RRB- ._.
+Thus_RB ,_, a_DT learner_NN corpus_NN is_VBZ a_DT useful_JJ linguistic_JJ resource_NN for_IN developing_VBG assessment_NN techniques_NNS that_WDT are_VBP implementable_JJ in_IN a_DT computer-assisted_JJ language_NN learning_NN -LRB-_-LRB- CALL_NN -RRB-_-RRB- system_NN ._.
+Although_IN the_DT contribution_NN of_IN learner_NN corpora_NN is_VBZ well_RB acknowledged_JJ -LRB-_-LRB- Granger_NNP 2009_CD -RRB-_-RRB- ,_, previous_JJ learner_NN corpora_NN are_VBP limited_VBN in_IN that_DT learners_NNS '_POS outputs_NNS have_VBP only_RB been_VBN examined_VBN in_IN terms_NNS of_IN linguistic_JJ accuracy_NN ._.
+As_IN noted_VBN by_IN Housen_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, learners_NNS '_POS performance_NN should_MD be_VB analyzed_VBN in_IN terms_NNS of_IN both_DT accuracy_NN and_CC fluency_NN ._.
+On_IN the_DT one_CD hand_NN ,_, it_PRP problem_NN areas_NNS ,_, language_NN use_NN in_IN local_JJ domains_NNS such_JJ as_IN sentences_NNS needs_VBZ to_TO be_VB analyzed_VBN ,_, similar_JJ to_TO machine_NN translation_NN evaluation_NN at_IN the_DT sentence_NN level_NN -LRB-_-LRB- Gamon_NNP et_FW al._FW 2005_CD ,_, Stanojević_NNP and_CC Sima’an_NNP 2014_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, the_DT present_JJ study_NN proposes_VBZ to_TO annotate_VB listening_VBG comprehension_NN data_NNS for_IN individual_JJ sentences_NNS ,_, which_WDT is_VBZ expected_VBN to_TO offer_VB a_DT finer_NN -_: grained_VBN analysis_NN for_IN the_DT identification_NN of_IN learners_NNS '_POS linguistic_JJ problem_NN areas_NNS ._.
+2_CD Related_VBN Learner_NNP Corpora_NNP According_VBG to_TO Izumi_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- ,_, most_JJS learner_JJR corpora_NN have_VBP covered_VBN written_VBN but_CC not_RB spoken_VBN language_NN ;_: therefore_RB ,_, they_PRP proposed_VBD a_DT speaking_NN corpus_NN for_IN EFL_NNP learners_NNS ._.
+However_RB ,_, their_PRP$ corpus_NN did_VBD not_RB cover_VB listening_VBG ._.
+As_IN Prince_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- suggested_VBD ,_, the_DT lack_NN of_IN a_DT listening_VBG corpus_NN for_IN EFL_NNP learners_NNS might_MD be_VB due_JJ to_TO the_DT difficulty_NN of_IN compiling_VBG data_NNS that_WDT demonstrate_VBP how_WRB learners_NNS listen_VBP to_TO sentences_NNS ._.
+However_RB ,_, Luo_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- and_CC Kotani_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- identified_VBD several_JJ issues_NNS regarding_VBG listening_VBG corpora_NN for_IN EFL_NNP learners_NNS ._.
+The_DT objective_NN of_IN Izumi_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- was_VBD to_TO construct_VB a_DT model_NN of_IN the_DT developmental_JJ stages_NNS of_IN speaking_VBG ability_NN among_IN EFL_NNP learners_NNS that_WDT could_MD also_RB be_VB used_VBN to_TO develop_VB techniques_NNS for_IN automatically_RB identifying_VBG errors_NNS ._.
+Their_PRP$ learner_NN corpus_NN was_VBD compiled_VBN using_VBG interviews_NNS with_IN 1,200_CD EFL_NNP learners_NNS classified_VBD into_IN nine_CD levels_NNS according_VBG to_TO the_DT Standard_NNP Speaking_VBG Test_NN ,_, which_WDT evaluates_VBZ oral_JJ proficiency_NN ._.
+In_IN their_PRP$ study_NN ,_, learners_NNS performed_VBD an_DT interview-response_JJ exercise_NN in_IN which_WDT learners_NNS started_VBD and_CC finished_VBD with_IN an_DT informal_JJ discussion_NN on_IN general_JJ topics_NNS ,_, such_JJ as_IN the_DT interviewees_NNS '_POS job_NN and_CC hobbies_NNS ;_: between_IN these_DT informal_JJ chats_NNS ,_, they_PRP performed_VBD three_CD task-based_JJ activities_NNS :_: picture_NN description_NN ,_, role-playing_NN ,_, and_CC storytelling_NN ._.
+Their_PRP$ corpus_NN was_VBD then_RB annotated_VBN with_IN errors_NNS in_IN relation_NN to_TO sentence_NN generation_NN ,_, but_CC not_RB listening_VBG comprehension_NN ._.
+The_DT objective_NN of_IN Luo_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- was_VBD to_TO develop_VB an_DT automatic_JJ assessment_NN technique_NN for_IN phonetic_JJ recognition_NN ._.
+Their_PRP$ learner_NN corpus_NN was_VBD composed_VBN of_IN data_NNS from_IN 32_CD EFL_NNP learners_NNS classified_VBD into_IN three_CD levels_NNS according_VBG to_TO Test_NN of_IN English_NNP for_IN International_NNP Communication_NNP -LRB-_-LRB- TOEIC_NNP -RRB-_-RRB- scores_NNS ._.
+In_IN their_PRP$ study_NN ,_, learners_NNS performed_VBD an_DT exercise_NN in_IN which_WDT they_PRP repeated_VBD 14_CD sentences_NNS articulated_VBN by_IN a_DT native-speaking_JJ English_NNP teacher_NN ._.
+In_IN addition_NN to_TO phonetic_JJ recognition_NN ,_, listening_VBG comprehension_NN was_VBD also_RB examined_VBN at_IN the_DT text_NN level_NN ._.
+Comprehension_NN questions_NNS were_VBD provided_VBN twice_RB :_: once_RB when_WRB learners_NNS finished_VBD listening_VBG to_TO the_DT material_NN for_IN the_DT first_JJ time_NN ,_, and_CC again_RB after_IN they_PRP listened_VBD to_TO the_DT material_NN repeatedly_RB until_IN they_PRP felt_VBD they_PRP had_VBD reached_VBN full_JJ phonetic_JJ recognition_NN ._.
+The_DT objective_NN of_IN Kotani_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- was_VBD to_TO create_VB a_DT linguistic_JJ resource_NN for_IN analysis_NN of_IN pronunciation_NN at_IN the_DT sentence_NN level_NN and_CC listening_VBG comprehension_NN at_IN the_DT text_NN level_NN ._.
+Their_PRP$ learner_NN corpus_NN was_VBD composed_VBN of_IN data_NNS from_IN 30_CD native_JJ English_JJ speakers_NNS and_CC 90_CD EFL_NNP learners_NNS classified_VBD into_IN three_CD levels_NNS according_VBG to_TO TOEIC_NNP scores_NNS ._.
+In_IN their_PRP$ study_NN ,_, native_JJ speakers_NNS and_CC learners_NNS performed_VBD reading_VBG aloud_RB and_CC listening_VBG comprehension_NN exercises_NNS ._.
+In_IN the_DT former_JJ ,_, native_JJ speakers_NNS and_CC learners_NNS read_VBP 80_CD sentences_NNS from_IN a_DT set_NN of_IN four_CD texts_NNS aloud_RB ._.
+In_IN the_DT latter_JJ ,_, they_PRP listened_VBD to_TO 80_CD sentences_NNS from_IN another_DT set_NN of_IN four_CD texts_NNS and_CC answered_VBN five_CD comprehension_NN questions_NNS for_IN each_DT one_CD ._.
+3_CD Listening_VBG and_CC Speaking_VBG Corpus_NNP 3.1_CD Objective_NNP The_DT objective_NN of_IN our_PRP$ learner_NN corpus_NN is_VBZ to_TO serve_VB as_IN linguistic_JJ resource_NN for_IN the_DT development_NN of_IN techniques_NNS that_WDT can_MD automatically_RB assess_VB performance_NN ,_, as_RB well_RB as_IN material_NN for_IN listening_VBG and_CC speaking_VBG exercises_NNS ;_: this_DT is_VBZ described_VBN in_IN greater_JJR detail_NN in_IN Section_NN 4_CD ._.
+The_DT target_NN skills_NNS and_CC exercises_NNS for_IN compiling_VBG corpus_NN data_NNS are_VBP summarized_VBN in_IN Table_NNP 1_CD ._.
+Our_PRP$ learner_NN corpus_NN demonstrates_VBZ learners_NNS '_POS performance_NN in_IN relation_NN to_TO listening_VBG and_CC speaking_VBG skills_NNS ._.
+Listening_VBG is_VBZ divided_VBN into_IN phonetic_JJ recognition_NN and_CC comprehension_NN ,_, while_IN speaking_NN is_VBZ divided_VBN into_IN pronunciation_NN and_CC sentence_NN generation_NN ._.
+Listening_VBG data_NNS -LRB-_-LRB- phonetic_JJ recognition_NN and_CC comprehension_NN -RRB-_-RRB- are_VBP compiled_VBN in_IN a_DT dictation_NN exercise_NN ,_, while_IN those_DT of_IN pronunciation_NN and_CC sentence_NN generation_NN are_VBP compiled_VBN in_IN reading_VBG aloud_RB and_CC question-response_JJ exercises_NNS ,_, respectively_RB ._.
+Compared_VBN with_IN previous_JJ learner_NN corpora_NN -LRB-_-LRB- Izumi_NNP et_FW al._FW 2004_CD ,_, Luo_NNP et_FW al._FW 2010_CD ,_, Kotani_NNP et_FW al._FW 2015_CD -RRB-_-RRB- ,_, our_PRP$ corpus_NN covers_VBZ more_RBR skills_NNS ,_, as_IN shown_VBN in_IN Table_NNP 2_CD ._.
+The_DT letter_NN ``_`` X_NNP ''_'' indicates_VBZ the_DT presence_NN of_IN relevant_JJ data_NNS in_IN a_DT learner_NN corpus_NN ._.
+Skill_NN Sub-skill_NN Exercise_NNP Listening_NNP Speaking_VBG Phonetic_JJ recognition_NN Comprehension_NNP Pronunciation_NNP Sentence_NNP generation_NN Dictation_NNP Reading_VBG aloud_RB Question-response_JJ represented_VBN in_IN terms_NNS of_IN speech_NN rate_NN and_CC ease_NN of_IN processing_NN ._.
+Accuracy_NNP Fluency_NNP Phonetic_NNP recognition_NN Evaluator_NNP '_POS s_PRP evaluation_NN Material_NNP speech_NN rate_NN &_CC Ease_NNP of_IN processing_VBG Comprehension_NNP Learner_NNP 's_POS evaluation_NN Material_NNP speech_NN rate_NN &_CC Ease_NNP of_IN processing_VBG Pronunciation_NNP Evaluator_NNP '_POS s_PRP evaluation_NN Learner_NNP speech_NN rate_NN &_CC Ease_VB of_IN processing_NN Sentence_NN generation_NN Evaluator_NNP '_POS s_PRP evaluation_NN Learner_NNP speech_NN rate_NN &_CC Ease_NNP of_IN processing_VBG Table_NNP 1_CD :_: Target_NNP performance_NN for_IN EFL_NNP learners_NNS Table_NNP 2_CD :_: Comparison_NN with_IN existing_VBG corpora_NN Whereas_IN the_DT previous_JJ corpora_NN were_VBD only_RB capable_JJ of_IN providing_VBG comprehension_NN data_NNS for_IN analysis_NN at_IN the_DT text_NN level_NN ,_, our_PRP$ corpus_NN provides_VBZ data_NNS for_IN analysis_NN at_IN the_DT sentence_NN level_NN ,_, which_WDT offers_VBZ a_DT finer-grained_JJ analysis_NN for_IN the_DT identification_NN of_IN learners_NNS '_POS linguistic_JJ problem_NN areas_NNS ._.
+3.2_CD Data_NNS to_TO be_VB Compiled_VBN Our_PRP$ corpus_NN consists_VBZ of_IN three-layer_JJ annotation_NN data_NNS and_CC phonetic_JJ data_NNS for_IN speech_NN sounds_NNS ._.
+The_DT first_JJ layer_NN consists_VBZ of_IN text_NN data_NNS -LRB-_-LRB- txt_NN -RRB-_-RRB- in_IN the_DT form_NN of_IN transcribed_VBN speech_NN sounds_NNS ,_, and_CC visual_JJ representation_NN data_NNS -LRB-_-LRB- prapic_JJ -RRB-_-RRB- such_JJ as_IN spectrograms_NNS produced_VBN by_IN the_DT Praat_NNP phonetic_JJ analysis_NN program_NN -LRB-_-LRB- Boersma_NNP and_CC Weenink_NNP 2013_CD -RRB-_-RRB- ._.
+The_DT second_JJ layer_NN consists_VBZ of_IN text_NN analysis_NN involving_VBG tagging_NN and_CC dependency_NN relation_NN by_IN the_DT Stanford_NNP parser_NN -LRB-_-LRB- de_FW Marneffe_FW et_FW al._FW 2006_CD -RRB-_-RRB- ,_, as_RB well_RB as_IN analysis_NN of_IN descriptive_JJ information_NN such_JJ as_IN word_NN length_NN ,_, syntactic_JJ pattern_NN density_NN ,_, word_NN information_NN and_CC readability_NN provided_VBN by_IN a_DT computer_NN tool_NN called_VBN Coh-Metrix_NNP -LRB-_-LRB- McNamara_NNP et_FW al._FW 2014_CD -RRB-_-RRB- ._.
+This_DT layer_NN also_RB consists_VBZ of_IN phonetic_JJ analysis_NN regarding_VBG pitch_NN ,_, intensity_NN ,_, and_CC formant_NN contour_NN ,_, as_RB well_RB as_IN visible_JJ pulses_NNS -LRB-_-LRB- Boersma_NNP and_CC Weeink_NNP 2013_CD -RRB-_-RRB- ._.
+The_DT third_JJ layer_NN consists_VBZ of_IN evaluation_NN results_NNS of_IN learners_NNS '_POS performance_NN ._.
+Corpus_NNP data_NNS should_MD cover_VB accuracy_NN and_CC fluency_NN in_IN phonetic_JJ recognition_NN ,_, comprehension_NN ,_, pronunciation_NN ,_, and_CC sentence_NN generation_NN ,_, as_IN shown_VBN in_IN Table_NNP 3_CD ._.
+Accuracy_NN is_VBZ represented_VBN in_IN terms_NNS of_IN a_DT manual_NN evaluation_NN score_NN ,_, while_IN fluency_NN is_VBZ Table_NNP 3_CD :_: Corpus_NNP data_NNS regarding_VBG accuracy_NN and_CC fluency_NN data_NNS The_DT accuracy_NN of_IN phonetic_JJ recognition_NN is_VBZ evaluated_VBN using_VBG phonetic_JJ recognition_NN scores_NNS ._.
+These_DT scores_NNS are_VBP calculated_VBN as_IN the_DT rate_NN of_IN correctly_RB repeated_VBN words_NNS per_IN total_JJ number_NN of_IN words_NNS in_IN a_DT sentence/chunk_NN ._.
+The_DT success/failure_NN of_IN phonetic_JJ recognition_NN for_IN each_DT word_NN is_VBZ manually_RB evaluated_VBN by_IN native-speaking_JJ English_JJ teachers_NNS on_IN a_DT binary_JJ scale_NN -LRB-_-LRB- correct_JJ or_CC incorrect_JJ -RRB-_-RRB- ._.
+The_DT accuracy_NN of_IN comprehension_NN is_VBZ self-evaluated_JJ by_IN learners_NNS on_IN a_DT binary_JJ scale_NN -LRB-_-LRB- comprehensible_JJ or_CC incomprehensible_NN -RRB-_-RRB- ._.
+The_DT validity_NN of_IN this_DT method_NN ,_, which_WDT makes_VBZ the_DT evaluation_NN of_IN sentence-by_NN -_: sentence_NN comprehension_NN possible_JJ ,_, has_VBZ been_VBN acknowledged_VBN -LRB-_-LRB- Ross_NNP 1998_CD -RRB-_-RRB- ._.
+The_DT accuracy_NN of_IN both_DT pronunciation_NN and_CC sentence_NN generation_NN are_VBP evaluated_VBN in_IN terms_NNS of_IN linguistic_JJ properties_NNS by_IN native-speaking_JJ English_JJ teachers_NNS ._.
+Accuracy_NN regarding_VBG linguistic_JJ properties_NNS is_VBZ evaluated_VBN based_VBN on_IN a_DT 5-point_JJ Likert_NN scale_NN -LRB-_-LRB- Poor_NNP ,_, Fair_NNP ,_, A_DT verage_NN ,_, Good_JJ ,_, Excellent_JJ -RRB-_-RRB- ._.
+Linguistic_JJ properties_NNS reported_VBD as_IN common_JJ errors_NNS made_VBN by_IN EFL_NNP learners_NNS -LRB-_-LRB- Bryant_NNP 1984_CD -RRB-_-RRB- are_VBP summarized_VBN in_IN Table_NNP 4_CD ._.
+The_DT fluencies_NNS of_IN phonetic_JJ recognition_NN and_CC comprehension_NN are_VBP also_RB subjectively_RB evaluated_VBN on_IN a_DT 5-point_JJ scale_NN for_IN ease_NN of_IN processing_NN ._.
+These_DT fluencies_NNS are_VBP also_RB evaluated_VBN in_IN consideration_NN of_IN the_DT speech_NN rate_NN that_WDT learners_VBZ actually_RB hear_VBP ._.
+The_DT speech_NN rate_NN is_VBZ calculated_VBN as_IN the_DT number_NN of_IN words_NNS articulated_VBN in_IN a_DT minute_NN of_IN speech_NN time_NN ._.
+As_IN learners_NNS continue_VBP listening_VBG until_IN they_PRP fully_RB understand_VBP the_DT material_NN ,_, listening_VBG fluency_NN is_VBZ also_RB evaluated_VBN in_IN consideration_NN of_IN the_DT number_NN of_IN repetitions_NNS ._.
+The_DT fluencies_NNS of_IN pronunciation_NN and_CC sentence_NN generation_NN are_VBP evaluated_VBN based_VBN on_IN speech_NN rate_NN and_CC Izumi_NNP Luo_NNP Kotani_NNP Ours_NNP Phonetic_NNP recognition_NN --_: X_NNP --_: X_NNP Sentence_NNP comprehension_NN --_: --_: --_: X_NNP Text_NNP comprehension_NN --_: X_NNP X_NNP X_NNP Pronunciation_NNP X_NNP X_NNP X_NNP X_NNP Sentence_NNP generation_NN X_NNP --_: --_: X_NNP ease_NN of_IN processing_NN among_IN learners_NNS ._.
+The_DT speech_NN rate_NN is_VBZ calculated_VBN based_VBN on_IN the_DT speech_NN time_NN required_VBN for_IN articulation_NN ._.
+However_RB ,_, the_DT speech_NN time_NN for_IN sentence_NN generation_NN also_RB includes_VBZ the_DT time_NN during_IN which_WDT questions_NNS are_VBP asked_VBN to_TO learners_NNS ,_, because_IN learners_NNS start_VBP to_TO consider_VB their_PRP$ response_NN at_IN this_DT time_NN ._.
+Ease_VB of_IN processing_NN among_IN learners_NNS is_VBZ subjectively_RB evaluated_VBN on_IN a_DT 5-point_JJ scale_NN ._.
+3.3_CD Learners_NNPS We_PRP plan_VBP to_TO compile_VB our_PRP$ learner_NN corpus_NN using_VBG data_NNS from_IN 120_CD university_NN EFL_NNP learners_NNS classified_VBD into_IN four_CD levels_NNS according_VBG to_TO TOEIC_NNP listening_VBG scores_NNS -LRB-_-LRB- range_NN :_: 5-495_CD -RRB-_-RRB- on_IN the_DT following_VBG scale_NN -LRB-_-LRB- Liao_NNP 2010_CD -RRB-_-RRB- :_: beginner_NN level_NN -LRB-_-LRB- 150-245_CD -RRB-_-RRB- ;_: intermediate_JJ level_NN -LRB-_-LRB- 250_CD -_: 345_CD -RRB-_-RRB- ;_: advanced_VBN level_NN -LRB-_-LRB- 350-425_CD -RRB-_-RRB- ;_: and_CC advanced_VBD -_: high_JJ level_NN -LRB-_-LRB- 430-495_CD -RRB-_-RRB- ._.
+EFL_NNP learners_NNS are_VBP divided_VBN equally_RB among_IN each_DT level_NN with_IN respect_NN to_TO the_DT number_NN of_IN learners_NNS -LRB-_-LRB- N_NNP =_SYM 30_CD -RRB-_-RRB- ._.
+3.4_CD T_NNP asks_VBZ In_IN the_DT experiment_NN ,_, EFL_NNP learners_NNS are_VBP first_JJ asked_VBD to_TO perform_VB a_DT dictation_NN exercise_NN in_IN which_WDT they_PRP listen_VBP to_TO materials_NNS unit-by-unit_NN and_CC then_RB write_VB down_RP what_WP they_PRP hear_VBP ._.
+After_IN completing_VBG each_DT unit_NN ,_, learners_NNS subjectively_RB evaluate_VBP the_DT ease_NN of_IN phonetic_JJ recognition_NN and_CC comprehension_NN on_IN 5-point_JJ and_CC binary_JJ scales_NNS ,_, respectively_RB ._.
+After_IN learners_NNS listen_VBP to_TO the_DT material_NN the_DT first_JJ time_NN ,_, they_PRP listen_VBP again_RB repeatedly_RB until_IN they_PRP are_VBP confident_JJ they_PRP have_VBP achieved_VBN full_JJ comprehension_NN ._.
+The_DT second_JJ exercise_NN is_VBZ a_DT reading_NN aloud_RB exercise_NN in_IN which_WDT they_PRP read_VBP the_DT same_JJ texts_NNS from_IN the_DT listening_VBG materials_NNS aloud_RB ,_, sentence-by-sentence_NN ._.
+After_IN reading_VBG each_DT sentence_NN ,_, they_PRP subjectively_RB evaluate_VBP the_DT ease_NN of_IN pronunciation_NN on_IN a_DT 5-point_JJ scale_NN ._.
+The_DT third_JJ exercise_NN is_VBZ a_DT question-response_JJ exercise_NN in_IN which_WDT they_PRP answer_VBP five_CD general_JJ questions_NNS regarding_VBG the_DT listening_VBG material_NN ._.
+After_IN providing_VBG their_PRP$ answers_NNS ,_, they_PRP evaluate_VBP the_DT ease_NN of_IN sentence_NN generation_NN on_IN a_DT 5-point_JJ scale_NN ._.
+3.5_CD Materials_NNPS Since_IN the_DT target_NN of_IN this_DT project_NN includes_VBZ beginner-level_JJ learners_NNS ,_, the_DT listening_VBG task_NN should_MD be_VB fairly_RB easy_JJ to_TO complete_VB ._.
+Therefore_RB ,_, listening_VBG material_NN is_VBZ obtained_VBN from_IN the_DT VOA_NNP -LRB-_-LRB- Voice_NNP of_IN America_NNP -RRB-_-RRB- Learning_NNP English_NNP site_NN -LRB-_-LRB- http://learningenglish.voa_JJ news.com_NN -RRB-_-RRB- ._.
+This_DT online_JJ resource_NN was_VBD chosen_VBN due_JJ to_TO the_DT limited_JJ vocabulary_NN -LRB-_-LRB- 1,500_CD words_NNS -RRB-_-RRB- ,_, short_JJ sentences_NNS ,_, and_CC slower_JJR than_IN natural_JJ speech_NN rate_NN in_IN the_DT material_NN -LRB-_-LRB- VOA_NNP Special_JJ English_NNP 2009_CD -RRB-_-RRB- ._.
+Four_CD reports_NNS are_VBP chosen_VBN from_IN the_DT Level_NNP 1_CD -LRB-_-LRB- the_DT easiest_JJS among_IN the_DT three_CD levels_NNS -RRB-_-RRB- in_IN order_NN for_IN learners_NNS at_IN the_DT beginner_NN level_NN to_TO complete_VB the_DT tasks_NNS ._.
+The_DT topic_NN of_IN the_DT reports_NNS is_VBZ education_NN ,_, which_WDT is_VBZ a_DT familiar_JJ topic_NN for_IN university_NN students_NNS ._.
+This_DT allows_VBZ Domain_NNP Class_NNP Instance_NNP Pronunciation_NNP Consonant_NNP *_SYM /_SYM ð_SYM /_FW for_IN /_CD t_SYM /_CD in_IN Thames_NNP V_NNP owel_NN *_SYM /_FW I_PRP /_VBP for_IN /_CD ai_VBP /_CD in_IN bite_NN Silent_JJ consonant_JJ *_SYM /_SYM saig_FW /_FW for_IN /_CD sai_FW /_FW in_IN sigh_NN Unstressed_VBN by_IN schwa_NN *_SYM /_SYM me-mo-ry_JJ /_NN for_IN /_CD mem_NN -_: -LRB-_-LRB- o_NN -RRB-_-RRB- ry_SYM /_FW Stress_NN in_IN word_NN *_SYM /_FW tikét_FW /_FW for_IN /_CD tíket_IN /_CD in_IN ticket_NN Stress_NN in_IN sentence_NN *_SYM ``_`` the_DT project_NN ''_'' for_IN ``_`` the_DT project_NN ''_'' V_SYM owel_SYM -_: elision_NN *_SYM /_SYM cho-co-late_JJ /_NN for_IN /_CD choc-late_JJ /_NN Consonant_NNP -_: elision_NN *_SYM /_SYM un-known_JJ /_NN for_IN /_CD u_SYM -_: known_VBN /_CD Sentence_NN generation_NN Word-form_JJ *_SYM chock_NN for_IN check_NN Inflection_NN -_: form_NN *_SYM runned_VBN for_IN ran_VBD Agreement_NN in_IN pronoun_NN *_SYM he_PRP for_IN she_PRP Agreement_NN with_IN a_DT modifier_NN *_SYM each_DT cars_NNS for_IN each_DT car_NN Agreement_NN between_IN subject_JJ and_CC verb_NN *_SYM he_PRP study_VB for_IN he_PRP studies_NNS Inflectional_JJ agreement_NN *_SYM has_VBZ study_NN for_IN has_VBZ studied_VBN Case_NNP form_NN *_SYM him_PRP for_IN he_PRP Determiner_NNP *_SYM boy_NN for_IN a_DT boy_NN Preposition_NNP *_SYM look_VB him_PRP for_IN look_NN at_IN him_PRP Verbal_JJ object_NN *_SYM saw_VBD for_IN saw_NN it_PRP Determiner_SYM -_: choice_NN *_SYM a_DT boy_NN for_IN the_DT boy_NN Tense_NNP *_SYM is_VBZ for_IN was_VBD Aspect_NNP *_SYM is_VBZ having_VBG for_IN has_VBZ Negation_NNP *_SYM think_VBP that_IN ..._: not_RB for_IN don_VBP '_'' t_JJ think_NN ..._: Word-choice_JJ *_SYM see_VB for_IN watch_NN Table_NNP 4_CD :_: Linguistic_JJ properties_NNS differences_NNS in_IN learners_NNS '_POS background_NN knowledge_NN on_IN speaking_NN and_CC listening_VBG to_TO be_VB minimized_VBN ,_, in_IN contrast_NN to_TO specific_JJ news_NN events_NNS ._.
+Both_DT male_JJ and_CC female_JJ voices_NNS are_VBP used_VBN for_IN the_DT reports_NNS ._.
+Two_CD reports_NNS each_DT are_VBP recorded_VBN in_IN a_DT male_NN and_CC female_JJ voice_NN in_IN order_NN to_TO minimize_VB any_DT influence_NN from_IN gender_NN ._.
+Each_DT report_NN is_VBZ composed_VBN of_IN less_JJR than_IN 400_CD words_NNS ._.
+The_DT linguistic_JJ properties_NNS of_IN the_DT material_NN ,_, including_VBG the_DT length_NN of_IN each_DT audio_JJ clip_NN -LRB-_-LRB- sec_FW -RRB-_-RRB- ,_, the_DT number_NN of_IN sentences_NNS ,_, the_DT number_NN of_IN token_JJ -LRB-_-LRB- words_NNS -RRB-_-RRB- ,_, the_DT number_NN of_IN word_NN types_NNS ,_, and_CC the_DT speech_NN rate_NN ,_, are_VBP summarized_VBN in_IN Table_NNP 5_CD ._.
+They_PRP were_VBD allowed_VBN to_TO listen_VB to_TO the_DT report_NN three_CD times_NNS ._.
+Although_IN 21_CD learners_NNS participated_VBD ,_, data_NNS from_IN one_CD learner_NN were_VBD excluded_VBN because_IN that_DT learner_NN did_VBD not_RB complete_VB the_DT latter_JJ half_NN of_IN the_DT exercise_NN ._.
+Henceforth_NNP ,_, the_DT data_NNS analyzed_VBD in_IN this_DT paper_NN were_VBD compiled_VBN from_IN 20_CD learners_NNS ._.
+The_DT success/failure_NN of_IN the_DT dictation_NN was_VBD evaluated_VBN for_IN each_DT word_NN ,_, as_IN shown_VBN in_IN Table_NNP 6_CD ._.
+The_DT word_NN ID_NN shows_VBZ both_CC the_DT sentence_NN and_CC the_DT word_NN number_NN ,_, and_CC thus_RB <s1.1>_JJ refers_VBZ to_TO the_DT first_JJ word_NN in_IN the_DT first_JJ sentence_NN ._.
+The_DT spoken_VBN words_NNS illustrate_VBP what_WP learners_NNS listened_VBD to_TO ._.
+Here_RB ,_, all_PDT the_DT words_NNS ,_, even_RB proper_JJ nouns_NNS such_JJ as_IN ``_`` VOA_NNP ,_, ''_'' are_VBP lowercase_JJ ,_, because_IN capitalization_NN was_VBD not_RB taken_VBN into_IN consideration_NN during_IN evaluation_NN ._.
+The_DT response_NN rate_NN shows_VBZ the_DT proportion_NN of_IN learners_NNS who_WP wrote_VBD down_RP something_NN for_IN a_DT spoken_VBN word_NN ._.
+When_WRB a_DT learner_NN wrote_VBD something_NN down_RB for_IN a_DT spoken_VBN word_NN ,_, a_DT response_NN score_NN of_IN 1_CD was_VBD assigned_VBN ._.
+On_IN the_DT other_JJ hand_NN ,_, when_WRB a_DT learner_NN wrote_VBD nothing_NN ,_, a_DT response_NN score_NN of_IN 0_CD was_VBD assigned_VBN ._.
+The_DT correct_JJ rate_NN shows_VBZ the_DT proportion_NN of_IN learners_NNS who_WP correctly_RB dictated_VBD a_DT spoken_VBN word_NN ._.
+When_WRB the_DT dictation_NN of_IN a_DT spoken_VBN word_NN was_VBD correct_JJ ,_, a_DT correct_JJ score_NN of_IN 1_CD was_VBD assigned_VBN ._.
+On_IN the_DT other_JJ hand_NN ,_, when_WRB dictation_NN of_IN a_DT spoken_VBN word_NN was_VBD incorrect_JJ ,_, a_DT correct_JJ score_NN of_IN 0_CD was_VBD assigned_VBN ._.
+Report_NNP A_NNP B_NNP C_NNP D_NNP Time_NNP 237_CD 234_CD 232_CD 220_CD Sentence_NN 25_CD 25_CD 15_CD 15_CD Token_NNP 363_CD 349_CD 348_CD 353_CD Type_NN 196_CD 182_CD 195_CD 187_CD Speech_NN rate_NN 91.9_CD 89.5_CD 90.0_CD 96.3_CD 4_CD Table_NNP 5_CD :_: Linguistic_JJ properties_NNS of_IN VOA_NNP texts_NNS Reliability_NN of_IN the_DT task_NN Whether_IN learners_NNS could_MD complete_VB the_DT exercises_NNS ,_, especially_RB the_DT dictation_NN exercises_NNS ,_, remained_VBD unclear_JJ ;_: therefore_RB ,_, we_PRP confirmed_VBD the_DT validity_NN of_IN the_DT listening_VBG material_NN before_IN compiling_VBG corpus_NN data_NNS ._.
+Even_RB though_IN learners_NNS do_VBP not_RB have_VB to_TO dictate_VB all_DT sentences_NNS correctly_RB ,_, they_PRP do_VBP need_VB to_TO make_VB an_DT attempt_NN ._.
+If_IN the_DT chosen_VBN material_NN is_VBZ too_RB difficult_JJ ,_, learners_NNS dictate_VBP nothing_NN ,_, thereby_RB resulting_VBG in_IN corpus_NN data_NNS that_WDT fail_VBP to_TO demonstrate_VB how_WRB English_JJ sounds_NNS are_VBP recognized_VBN by_IN learners_NNS ._.
+Therefore_RB ,_, a_DT preliminary_JJ experiment_NN examining_VBG whether_IN learners_NNS were_VBD able_JJ to_TO write_VB down_RP some_DT words_NNS in_IN a_DT sentence_NN was_VBD conducted_VBN to_TO confirm_VB the_DT appropriateness_NN of_IN VOA_NNP Learning_NNP English_NNP as_IN a_DT resource_NN ._.
+In_IN addition_NN ,_, in_IN order_NN to_TO evaluate_VB learners_NNS '_POS listening_VBG ability_NN ,_, the_DT corpus_NN data_NNS should_MD include_VB both_DT recognizable_JJ and_CC unrecognizable_JJ words_NNS ;_: therefore_RB ,_, this_DT experiment_NN examined_VBD the_DT accuracy_NN of_IN the_DT dictation_NN results_NNS ._.
+Participants_NNS were_VBD 21_CD university_NN EFL_NNP learners_NNS with_IN beginner_NN -_: to_TO intermediate-level_JJ English_JJ proficiency_NN -LRB-_-LRB- Test_NN of_IN English_NNP as_IN a_DT Foreign_JJ Language_NN Institutional_JJ Testing_NNP Program_NNP scores_NNS :_: 383-463_CD ;_: average_JJ score_NN =_SYM 431.3_CD -LRB-_-LRB- standard_JJ deviation_NN =_SYM 25.0_CD -RRB-_-RRB- ._.
+The_DT dictation_NN exercise_NN carried_VBD out_RP was_VBD that_IN in_IN Report_NNP A_NNP ,_, as_IN shown_VBN in_IN Table_NNP 5_CD ._.
+They_PRP listened_VBD to_TO and_CC transcribed_VBD the_DT report_NN sentence-by-sentence_NN ._.
+Table_NNP 6_CD :_: Response_NNP and_CC correct_JJ rates_NNS for_IN the_DT dictation_NN exercise_NN Word_NN ID_NNP Spoken_NNP word_NN Response_NNP rate_NN Correct_JJ rate_NN s1_CD .1_CD from_IN 1.00_CD 1.00_CD s1_CD .2_CD voa_NN 1.00_CD 0.15_CD s1_CD .3_CD learning_VBG 1.00_CD 1.00_CD s1_CD .4_CD english_JJ 0.95_CD 0.95_CD s1_CD .5_CD this_DT 1.00_CD 1.00_CD s1_CD .6_CD is_VBZ 1.00_CD 1.00_CD s1_CD .7_CD the_DT 0.80_CD 0.65_CD s1_CD .8_CD education_NN 1.00_CD 1.00_CD s19_CD .1_CD for_IN 1.00_CD 0.80_CD s19_CD .2_CD voa_NN 0.95_CD 0.15_CD s19_CD .3_CD learning_VBG 1.00_CD 0.80_CD s19_CD .4_CD english_JJ 0.95_CD 0.95_CD s19_CD .5_CD i_FW 'm_VBP 1.00_CD 0.75_CD s19_CD .6_CD mario_NN 0.75_CD 0.55_CD s19_CD .7_CD ritter_NN 0.70_CD 0.00_CD The_DT descriptive_JJ statistics_NNS show_VBP that_IN the_DT response_NN rate_NN ranged_VBD from_IN 0.05_CD to_TO 1.00_CD -LRB-_-LRB- Table_NNP 7_CD -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, every_DT word_NN received_VBD a_DT response_NN by_IN at_IN least_JJS one_CD learner_NN ._.
+In_IN addition_NN ,_, approximately_RB 80_CD %_NN of_IN the_DT words_NNS -LRB-_-LRB- -LRB-_-LRB- 68_CD +35_CD +24_CD +25_CD +21_CD +11_CD +17_CD -RRB-_-RRB- /_SYM 267_CD -RRB-_-RRB- achieved_VBD high_JJ response_NN rates_NNS -LRB-_-LRB- <_CD 0.70_CD -RRB-_-RRB- ,_, and_CC the_DT greatest_JJS frequency_NN -LRB-_-LRB- N_NNP =_SYM 68_CD -RRB-_-RRB- was_VBD found_VBN for_IN a_DT response_NN rate_NN of_IN 1.00_CD -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+These_DT results_NNS suggest_VBP that_IN the_DT use_NN of_IN listening_VBG material_NN from_IN VOA_NNP Learning_NNP English_NNP is_VBZ appropriate_JJ and_CC allows_VBZ adequate_JJ collection_NN of_IN learners_NNS '_POS dictation_NN data_NNS ._.
+Table_NNP 7_CD :_: Descriptive_JJ statics_NNS for_IN response_NN and_CC correct_JJ rates_NNS easy_JJ or_CC too_RB difficult_JJ for_IN dictation_NN ._.
+Hence_RB ,_, listening_VBG material_NN from_IN VOA_NNP Learning_NNP English_NNP allows_VBZ the_DT collection_NN of_IN both_DT correct_JJ and_CC incorrect_JJ dictation_NN data_NNS ,_, thereby_RB suggesting_VBG the_DT appropriateness_NN of_IN using_VBG VOA_NNP Learning_NNP English_NNP as_IN listening_VBG material_NN in_IN compiling_VBG corpus_NN data_NNS ._.
+20_CD 18_CD 16_CD 14_CD 12_CD 10_CD 8_CD 6_CD 4_CD 2_CD 0_CD 18_CD 18_CD 18_CD 16_CD 13_CD 11_CD 13_CD 13_CD 12_CD 1212_CD 14_CD 1414_CD 14_CD 12_CD 12_CD 9_CD 88_CD 6_CD Correct_JJ rate_NN Response_NNP rate_NN Correct_VB rate_NN Total_JJ number_NN of_IN words_NNS 267_CD 267_CD Minimum_NNP 0.05_CD 0.00_CD Maximum_NNP 1.00_CD 1.00_CD Mean_NNP 0.78_CD 0.54_CD Standard_NNP Deviation_NNP 0.24_CD 0.31_CD 80_CD 70_CD 60_CD 50_CD 40_CD 30_CD 20_CD 10_CD 0_CD 68_CD 35_CD 2524_CD 21_CD 17_CD 77 691111_CD 01332_CD 444_CD 5_CD Response_NNP rate_NN Figure_NN 1_CD :_: Frequency_NN of_IN the_DT response_NN rate_NN The_DT descriptive_JJ statistics_NNS also_RB show_VBP that_IN the_DT correct_JJ rate_NN ranged_VBD from_IN 0.00_CD to_TO 1.00_CD ._.
+In_IN addition_NN ,_, as_IN shown_VBN in_IN Figure_NN 2_CD ,_, the_DT correct_JJ rate_NN was_VBD evenly_RB distributed_VBN ._.
+That_DT is_VBZ ,_, no_DT word_NN was_VBD shown_VBN to_TO be_VB too_RB Figure_NN 2_CD :_: Frequency_NN of_IN the_DT correct_JJ rate_NN Regarding_VBG minimum_NN and_CC maximum_NN values_NNS in_IN the_DT response_NN and_CC correct_JJ rates_NNS ,_, the_DT minimum_NN response_NN rate_NN of_IN 0.05_CD was_VBD only_RB found_VBN for_IN the_DT word_NN <s15.6>_CD ,_, which_WDT is_VBZ bolded_VBN here_RB :_: ``_`` Georgetown_NNP University_NNP labor_NN economist_NN Anthony_NNP Carnevale_NNP says_VBZ ..._: ''_'' This_DT word_NN is_VBZ a_DT proper_JJ noun_NN ,_, and_CC thus_RB it_PRP seems_VBZ unfamiliar_JJ to_TO the_DT learners_NNS ._.
+This_DT unfamiliarity_NN seems_VBZ to_TO decrease_VB its_PRP$ associated_VBN response_NN rate_NN ._.
+The_DT minimum_NN correct_JJ rate_NN of_IN 0.0_CD was_VBD found_VBN for_IN 13_CD words_NNS ._.
+Among_IN these_DT incorrectly_RB recognized_VBN words_NNS ,_, an_DT interesting_JJ example_NN is_VBZ the_DT word_NN <s7.1>_CD ,_, which_WDT is_VBZ bolded_VBN here_RB :_: ``_`` Universities_NNS say_VBP decreasing_VBG financial_JJ support_NN ..._: ''_'' This_DT word_NN should_MD be_VB frequently_RB used_VBN by_IN learners_NNS ,_, and_CC particularly_RB familiar_JJ with_IN the_DT university_NN learners_NNS in_IN this_DT experiment_NN ._.
+This_DT suggests_VBZ that_IN word_NN familiarity_NN is_VBZ not_RB related_VBN to_TO a_DT low_JJ correct_JJ rate_NN ._.
+Upon_IN further_JJ analysis_NN ,_, we_PRP found_VBD that_IN most_JJS learners_NNS dictated_VBD the_DT plural_JJ noun_NN ``_`` universities_NNS ''_'' as_IN a_DT singular_JJ noun_NN -LRB-_-LRB- ``_`` university_NN ''_'' -RRB-_-RRB- ._.
+The_DT plural_JJ morpheme_NN is_VBZ pronounced_JJ unclearly_JJ ,_, as_IN illustrated_VBN by_IN the_DT dotted_JJ line_NN in_IN Figure_NN 0.00_CD 0.10_CD 0.20_CD 0.30_CD 0.40_CD 0.50_CD 0.60_CD 0.70_CD 0.80_CD 0.90_CD 1.00_CD Number_NN of_IN instances_NNS 0.00_CD 0.10_CD 0.20_CD 0.30_CD 0.40_CD 0.50_CD 0.60_CD 0.70_CD 0.80_CD 0.90_CD 1.00_CD Number_NN of_IN instances_NNS 3_LS ._.
+Hence_RB ,_, the_DT presence_NN of_IN this_DT morpheme_NN should_MD be_VB made_VBN apparent_JJ due_JJ to_TO the_DT fact_NN that_IN the_DT subsequent_JJ verb_NN ``_`` say_VB ''_'' would_MD not_RB follow_VB the_DT singular_JJ noun_NN ``_`` university_NN ,_, ''_'' or_CC that_IN a_DT singular_JJ noun_NN needs_VBZ a_DT determiner_NN such_JJ as_IN ``_`` a_DT ''_'' or_CC ``_`` the_DT ._. ''_''
+Hence_RB ,_, learners_NNS fail_VBP to_TO recognize_VB this_DT word_NN due_JJ to_TO a_DT lack_NN of_IN syntactic_NN knowledge_NN or_CC the_DT failure_NN to_TO determine_VB syntactic_JJ manipulation_NN ._.
+the_DT individual_JJ learner_NN 's_POS proficiency_NN ,_, which_WDT is_VBZ a_DT rather_RB burdensome_JJ task_NN for_IN language_NN teachers_NNS ._.
+Therefore_RB ,_, automatic_JJ assessment_NN of_IN the_DT materials_NNS '_POS difficulty_NN supports_VBZ both_DT effective_JJ learning_NN and_CC effective_JJ teaching_NN ._.
+Such_JJ automatic_JJ assessment_NN techniques_NNS result_VBP in_IN a_DT by-product_NN that_WDT also_RB improves_VBZ CALL-based_JJ learning_NN ._.
+In_IN developing_VBG these_DT assessment_NN techniques_NNS ,_, statistical_JJ models_NNS will_MD be_VB constructed_VBN for_IN calculating_VBG proficiency-based_JJ optimal_JJ performance_NN ._.
+If_IN a_DT CALL_NN system_NN demonstrated_VBD performance_NN in_IN listening_VBG and_CC speaking_VBG exercises_NNS as_RB well_RB as_IN what_WP would_MD be_VB considered_VBN optimal_JJ performance_NN ,_, learners_NNS would_MD then_RB be_VB able_JJ to_TO assess_VB their_PRP$ performance_NN in_IN terms_NNS of_IN how_WRB it_PRP compares_VBZ with_IN optimal_JJ performance_NN ._.
+This_DT type_NN of_IN self-evaluation_NN would_MD allow_VB learners_NNS to_TO recognize_VB gaps_NNS in_IN their_PRP$ performance_NN ,_, and_CC then_RB to_TO address_VB these_DT gaps_NNS by_IN doing_VBG relevant_JJ practice_NN exercises_NNS until_IN their_PRP$ performance_NN reaches_VBZ or_CC outperforms_VBZ optimal_JJ performance_NN ;_: therefore_RB ,_, this_DT type_NN of_IN system_NN would_MD promote_VB autonomy_NN among_IN learners_NNS ._.
+6_CD Conclusion_NNP The_DT present_JJ paper_NN introduced_VBD the_DT design_NN of_IN a_DT new_JJ learner_NN corpus_NN for_IN analyzing_VBG the_DT accuracy_NN and_CC fluency_NN of_IN listening_VBG and_CC speaking_VBG ._.
+This_DT design_NN differs_VBZ from_IN existing_VBG designs_NNS with_IN respect_NN to_TO performance_NN targets_NNS for_IN learners_NNS ._.
+In_IN addition_NN ,_, unlike_IN the_DT previous_JJ corpora_NN ,_, our_PRP$ learner_NN corpus_NN offers_VBZ spoken_VBN language_NN analysis_NN at_IN the_DT sentence_NN -_: level_NN ._.
+This_DT proposed_VBN learner_NN corpus_NN is_VBZ expected_VBN to_TO serve_VB as_IN a_DT linguistic_JJ resource_NN for_IN the_DT development_NN of_IN assessment_NN techniques_NNS for_IN both_DT listening_VBG and_CC speaking_VBG exercises_NNS in_IN a_DT CALL_NN system_NN ._.
+Acknowledgement_NN This_DT work_NN was_VBD supported_VBN by_IN JSPS_NNP KAKENHI_NNP Grant_NNP Numbers_NNPS ,_, 22300299_CD ,_, 15H02940_NNP References_NNP Anne_NNP Barron_NNP and_CC Emily_NNP Black_NNP ._.
+2014_CD ._.
+Constructing_VBG small_JJ talk_NN in_IN learner-native_JJ speaker_NN voice-based_JJ telecollaboration_NN :_: A_DT focus_NN on_IN topic_NN management_NN and_CC backchanneling_NN ._.
+System_NNP ,_, 48_CD :_: 112_CD --_: 128_CD ._.
+Paul_NNP Boersma_NNP and_CC David_NNP Weenink_NNP ._.
+2013_CD ._.
+Praat_NNP :_: Doing_VBG Phonetics_NNP by_IN Computer_NNP ._.
+Version_NN 5.3.51_CD ,_, retrieved_VBN 2_CD June_NNP 2013_CD from_IN http://www.praat.org/_NN 5_CD Figure_NN 3_CD :_: Spectrogram_NNP of_IN ``_`` university_NN ''_'' and_CC ``_`` universities_NNS ''_'' Application_NNP uni_FW •_FW ver_FW •_FW si_FW •_FW ty_FW uni_FW •_FW ver_FW •_FW si_FW •_FW ties_NNS An_DT advantage_NN of_IN CALL-based_JJ learning_NN is_VBZ the_DT use_NN of_IN ``_`` authentic_JJ ''_'' online_NN materials_NNS such_JJ as_IN news_NN reports_NNS produced_VBD for_IN native_JJ English_JJ speakers_NNS ,_, but_CC not_RB designed_VBN for_IN language_NN learners_NNS ._.
+It_PRP is_VBZ widely_RB acknowledged_VBN that_IN the_DT use_NN of_IN authentic_JJ materials_NNS improves_VBZ learners_NNS '_POS performance_NN ,_, particularly_RB regarding_VBG practical_JJ communicative_JJ competence_NN ;_: however_RB ,_, the_DT use_NN of_IN authentic_JJ materials_NNS can_MD cause_VB several_JJ problems_NNS ._.
+One_CD such_JJ problem_NN concerns_NNS the_DT assessment_NN of_IN performance_NN among_IN learners_NNS ,_, because_IN unlike_IN textbooks_NNS ,_, authentic_JJ materials_NNS are_VBP not_RB designed_VBN to_TO assess_VB whether_IN a_DT learner_NN 's_POS language_NN use_NN is_VBZ successful_JJ ._.
+Although_IN CALL-based_JJ learning_NN using_VBG authentic_JJ materials_NNS might_MD be_VB effective_JJ without_IN it_PRP ,_, assessment_NN of_IN performance_NN certainly_RB provides_VBZ more_RBR effective_JJ learning_NN because_IN it_PRP enables_VBZ the_DT identification_NN of_IN linguistic_JJ problem_NN areas_NNS among_IN learners_NNS in_IN daily_JJ communication_NN ._.
+Another_DT problem_NN concerns_VBZ the_DT difficulty_NN of_IN authentic_JJ materials_NNS ,_, which_WDT ,_, unlike_IN textbooks_NNS ,_, is_VBZ uncontrolled_JJ ,_, and_CC thus_RB increases_VBZ the_DT chance_NN that_IN a_DT learner_NN may_MD lose_VB motivation_NN due_JJ to_TO materials_NNS that_WDT are_VBP inappropriate_JJ or_CC too_RB difficult_JJ for_IN their_PRP$ proficiency_NN level_NN ._.
+Hence_RB ,_, it_PRP is_VBZ necessary_JJ to_TO first_JJ assess_VBP the_DT difficulty_NN of_IN authentic_JJ materials_NNS ,_, and_CC then_RB to_TO provide_VB materials_NNS that_WDT are_VBP appropriate_JJ for_IN Christiane_NNP Brand_NNP and_CC Sandra_NNP Götz_NNP ._.
+2011_CD ._.
+Fluency_NN versus_CC accuracy_NN in_IN advanced_JJ spoken_VBN learner_NN language_NN :_: A_DT multi-method_JJ approach_NN ._.
+Errors_NNS and_CC Disfluencies_NNS in_IN Spoken_NNP Corpora_NNP ._.
+Special_JJ Issue_NN of_IN International_NNP Journal_NNP of_IN Corpus_NNP Linguistics_NNPS ,_, 16_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 255_CD --_: 275_CD ._.
+William_NNP H._NNP Bryant_NNP ._.
+1984_CD ._.
+Typical_JJ errors_NNS in_IN English_NNP made_VBN by_IN Japanese_JJ ESL_NNP students_NNS ._.
+JALT_NNP -LRB-_-LRB- Japan_NNP Association_NNP of_IN Language_NNP Teachers_NNPS -RRB-_-RRB- Journal_NNP ,_, 6_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 1_CD --_: 18_CD ._.
+Anna_NNP C.-S_NNP ._.
+Chang_NNP ._.
+2012_CD ._.
+Improving_NN reading_NN rate_NN activities_NNS for_IN EFL_NNP students_NNS :_: Timed_JJ reading_NN and_CC repeated_VBN oral_JJ reading_NN ._.
+Reading_VBG in_IN a_DT Foreign_JJ Language_NN ,_, 24_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 56_CD --_: 83_CD ._.
+Eric_NNP Friginal_NNP ,_, Man_NNP Li_NNP ,_, and_CC Sara_NNP C._NNP Weigle_NNP ._.
+2013_CD ._.
+Revisiting_VBG multiple_JJ profiles_NNS of_IN learner_NN compositions_NNS :_: A_DT comparison_NN of_IN highly_RB rated_VBN NS_NNP and_CC NNS_NNP essays_NNS ._.
+Journal_NNP of_IN Second_NNP Language_NNP Writing_VBG ,_, .23_CD :_: 1_CD --_: 16_CD ._.
+Michael_NNP Gamon_NNP ,_, Anthony_NNP Aue_NNP ,_, and_CC Martine_NNP Smets_NNP ._.
+2005_CD ._.
+Sentence-level_JJ MT_NNP evaluation_NN without_IN reference_NN translations_NNS :_: Beyond_NNP language_NN modeling_NN ._.
+In_IN European_NNP Association_NNP for_IN Machine_NNP Translation_NN -LRB-_-LRB- EAMT_NNP -RRB-_-RRB- 2005_CD Conference_NN Proceedings_NNP ,_, pages_NNS 103_CD --_: 111_CD ._.
+Sylviane_NNP Granger_NNP ._.
+2009_CD ._.
+The_DT contribution_NN of_IN learner_NN corpora_NN to_TO second_JJ language_NN acquisition_NN and_CC foreign_JJ language_NN teaching_NN :_: A_DT critical_JJ evaluation_NN ._.
+In_IN K._NNP Aijmer_NNP ._.
+-LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+Corpora_NNP and_CC Language_NNP Teaching_NNP ,_, pages_NNS 13_CD --_: 32_CD ,_, John_NNP Benjamins_NNP ,_, Amsterdam_NNP and_CC Philadelphia_NNP ._.
+Alex_NNP Housen_NNP ,_, Folkert_NNP Kuiken_NNP ,_, and_CC Ineke_NNP Vedder_NNP ._.
+2012_CD ._.
+Complexity_NN ,_, accuracy_NN and_CC fluency_NN :_: Definitions_NNS ,_, measurement_NN and_CC research_NN ._.
+In_IN A._NN Housen_NNP ,_, F._NNP Kuiken_NNP ,_, and_CC I._NN Vedder_NNP ._.
+-LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Dimensions_NNS of_IN L2_NNP Performance_NNP and_CC Proficiency_NNP :_: Complexity_NNP ,_, Accuracy_NNP and_CC Fluency_NNP in_IN SLA_NNP ,_, pages_NNS 1_CD --_: 20_CD ,_, John_NNP Benjamins_NNP ,_, Amsterdam_NNP and_CC Philadelphia_NNP ._.
+Emi_NNP Izumi_NNP ,_, Kiyotaka_NNP Uchimoto_NNP ,_, and_CC Hitoshi_NNP Isahara_NNP ._.
+2004_CD ._.
+The_DT overview_NN of_IN the_DT SST_NNP speech_NN corpus_NN of_IN Japanese_JJ learner_NN English_NNP and_CC evaluation_NN through_IN the_DT experiment_NN on_IN automatic_JJ detection_NN of_IN learners_NNS '_POS errors_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Fourth_JJ International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC-2004_NNP -RRB-_-RRB- ,_, pages_NNS 1435_CD --_: 1438_CD ._.
+Katsunori_NNP Kotani_NNP and_CC Takehiko_NNP Yoshimi_NNP ._.
+2015_CD -LRB-_-LRB- to_TO appear_VB -RRB-_-RRB- ._.
+Application_NN of_IN a_DT corpus_NN to_TO identify_VB gaps_NNS between_IN English_NNP learners_NNS and_CC native_JJ speakers_NNS ._.
+In_IN Proceedings_NNP of_IN Eighth_NNP Workshop_NNP on_IN Building_NNP and_CC Using_VBG Comparable_JJ Corpora_NNP -LRB-_-LRB- BUCC_NNP -RRB-_-RRB- ._.
+Chi-Wen_NNP Liao_NNP ._.
+2010_CD ._.
+TOEIC_NNP listening_VBG and_CC reading_VBG test_NN scale_NN anchoring_VBG study_NN ._.
+TOEIC_NNP Compendium_NNP ,_, 5_CD :_: 1_CD --_: 9_CD ._.
+Chi-Wen_NNP Liao_NNP ,_, Yanxuan_NNP Qu_NNP ,_, and_CC Rick_NNP Morgan_NNP ._.
+2010_CD ._.
+The_DT relationships_NNS of_IN test_NN scores_NNS measured_VBN by_IN the_DT TOEIC_NNP listening_NN and_CC reading_NN test_NN and_CC TOEIC_NNP speaking_NN and_CC writing_VBG tests_NNS ._.
+TOEIC_NNP Compendium_NNP Study_NNP ,_, 10_CD -LRB-_-LRB- 13_CD -RRB-_-RRB- :_: 1_CD --_: 15_CD ._.
+Jinghua_NNP Liu_NNP and_CC Kate_NNP Costanzo_NNP ._.
+2013_CD ._.
+The_DT relationship_NN among_IN TOEIC_NNP listening_VBG ,_, reading_VBG ,_, speaking_VBG ,_, and_CC writing_VBG skills_NNS ._.
+In_IN D._NNP E._NNP Powers_NNP ._.
+-LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+The_DT Research_NNP Foundation_NNP for_IN the_DT TOEIC_NNP Tests_NNPS :_: A_DT Compendium_NN of_IN Studies_NNPS ,_, Volume_NN II_NNP ,_, pages_NNS 1_CD --_: 25_CD ,_, Educational_NNP Testing_NNP Service_NNP ,_, Princeton_NNP ,_, NJ_NNP ._.
+Dean_NNP Luo_NNP ,_, Y_NNP utaka_FW Y_NNP amauchi_NNS ,_, and_CC Nobuaki_NNP Minematsu_NNP ._.
+2010_CD ._.
+Speech_NN analysis_NN for_IN automatic_JJ evaluation_NN of_IN shadowing_VBG ._.
+In_IN Proceedings_NNP of_IN Speech_NNP and_CC Language_NNP Technology_NNP in_IN Education_NNP -LRB-_-LRB- SLaTE_NNP -RRB-_-RRB- ._.
+Danielle_NNP S._NNP McNamara_NNP ,_, Arthur_NNP C._NNP Graesser_NNP ,_, Philip_NNP M._NNP McCarthy_NNP ,_, and_CC Zhigang_NNP Cai_NNP ._.
+2014_CD ._.
+Automated_VBN Evaluation_NN of_IN Text_NN and_CC Discourse_NN with_IN Coh-Metrix_NNP ._.
+Cambridge_NNP University_NNP Press_NNP ,_, Cambridge_NNP ,_, M.A._NNP Marie-Catherine_NNP de_IN Marneffe_NNP ,_, Bill_NNP MacCartney_NNP and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2006_CD ._.
+Generating_NNP typed_VBD dependency_NN parses_VBZ from_IN phrase_NN structure_NN parses_VBZ ._.
+In_IN Proceedings_NNP of_IN the_DT Sixth_NNP International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC-2006_NNP -RRB-_-RRB- ,_, pages_NNS 449_CD --_: 454_CD ._.
+Peter_NNP Prince_NNP ._.
+2014_CD ._.
+Listening_VBG comprehension_NN :_: Processing_NNP demands_NNS and_CC assessment_NN issues_NNS ._.
+In_IN P._NNP Leclercq_NNP ,_, A._NN Edmonds_NNP ,_, and_CC H._NNP Hilton_NNP ._.
+-LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+Measuring_VBG L2_CD Proficiency_NNP :_: Perspectives_NNS from_IN SLA_NNP ,_, pages_NNS 93_CD --_: 108_CD ,_, Multilingual_NNP Matters_NNS ,_, Clevedon_NNP ._.
+Steven_NNP Ross_NNP ._.
+1998_CD ._.
+Self-assessment_NN in_IN second_JJ language_NN testing_NN :_: A_DT meta-analysis_NN and_CC analysis_NN of_IN experiential_JJ factors_NNS ._.
+Language_NN Testing_NNP ,_, 15_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 1_CD --_: 20_CD ._.
+Miloš_NNP Stanojević_NNP and_CC Khalil_NNP Sima’an_NNP ._.
+2014_CD ._.
+Fitting_JJ sentence_NN level_NN translation_NN evaluation_NN with_IN many_JJ dense_JJ features_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 202_CD --_: 206_CD ._.
+Masatoshi_NNP Sugiura_NNP ,_, Masumi_NNP Narita_NNP ,_, Tomomi_NNP Ishida_NNP ,_, Tatsuya_NNP Sakaue_NNP ,_, Remi_NNP Murao_NNP ,_, and_CC Kyoko_NNP Muraki_NNP ._.
+2007_CD ._.
+A_DT discriminant_JJ analysis_NN of_IN non-native_JJ speakers_NNS and_CC native_JJ speakers_NNS of_IN English_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 2007_CD Corpus_NNP Linguistics_NNPS Conference_NNP ._.
+Jennifer_NNP Thewissen_NNP ._.
+2013_CD ._.
+Capturing_VBG L2_JJ accuracy_NN developmental_JJ patterns_NNS :_: Insights_NNPS from_IN an_DT error_NN -_: tagged_VBD EFL_NNP learner_NN corpus_NN ._.
+The_DT Modern_NNP Language_NNP Journal_NNP ,_, 97_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 77_CD --_: 101_CD ._.
+VOA_NNP Special_JJ English_NNP ._.
+2009_CD ._.
+Word_NN Book_NN ._.
+Voice_NNP of_IN America_NNP ,_, Washington_NNP ,_, DC_NNP ._.

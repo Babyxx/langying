@@ -1,0 +1,370 @@
+Measuring_VBG Popularity_NN of_IN Machine-Generated_NNP Sentences_NNS Using_VBG Term_NNP Count_NNP ,_, Document_NNP Frequency_NNP ,_, and_CC Dependency_NNP Language_NNP Model_NNP Abstract_NNP We_PRP investigated_VBD the_DT notion_NN of_IN ``_`` popularity_NN ''_'' for_IN machine-generated_JJ sentences_NNS ._.
+We_PRP defined_VBD a_DT popular_JJ sentence_NN as_IN one_CD that_WDT contains_VBZ words_NNS that_WDT are_VBP frequently_RB used_VBN ,_, appear_VBP in_IN many_JJ docu_NN -_: ments_NNS ,_, and_CC contain_VBP frequent_JJ dependencies_NNS ._.
+We_PRP measured_VBD the_DT popularity_NN of_IN sentences_NNS based_VBN on_IN three_CD components_NNS :_: content_JJ morpheme_NN count_NN ,_, document_NN frequency_NN ,_, and_CC dependency_NN relation_NN -_: ships_NNS ._.
+To_TO consider_VB the_DT characteristics_NNS of_IN agglu_NN -_: tinative_JJ language_NN ,_, we_PRP used_VBD content_JJ morpheme_JJ frequency_NN instead_RB of_IN term_NN frequency_NN ._.
+The_DT key_JJ component_NN in_IN our_PRP$ method_NN is_VBZ that_IN we_PRP use_VBP the_DT product_NN of_IN content_JJ morpheme_NN count_NN and_CC doc_NN -_: ument_NN frequency_NN to_TO measure_VB word_NN popular_JJ -_: ity_NN ,_, and_CC apply_VB language_NN models_NNS based_VBN on_IN de_FW -_: pendency_NN relationships_NNS to_TO consider_VB popularity_NN from_IN the_DT context_NN of_IN words_NNS ._.
+We_PRP verify_VBP that_IN our_PRP$ method_NN accurately_RB reflects_VBZ popularity_NN by_IN us_PRP -_: ing_VBG Pearson_NNP correlations_NNS ._.
+Human_NNP evaluation_NN shows_VBZ that_IN our_PRP$ method_NN has_VBZ a_DT high_JJ correlation_NN with_IN human_JJ judgments_NNS ._.
+1_CD Introduction_NNP Natural_NNP language_NN generation_NN is_VBZ widely_RB used_VBN in_IN va_NN -_: riety_NN of_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- appli_SYM -_: cations_NNS ._.
+These_DT include_VBP paraphrasing_NN ,_, question_VBP an_DT -_: swering_VBG systems_NNS ,_, and_CC Machine_NN Translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- ._.
+To_TO improve_VB the_DT quality_NN of_IN generated_VBN sentences_NNS ,_, arrang_NN -_: ing_NN effective_JJ evaluation_NN criteria_NNS is_VBZ critical_JJ -LRB-_-LRB- Callison_NNP -_: Burch_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+Numerous_JJ previous_JJ studies_NNS have_VBP aimed_VBN to_TO eval_VB -_: uate_VB the_DT quality_NN of_IN sentences_NNS ._.
+The_DT most_RBS frequently_RB used_VBN evaluation_NN technique_NN is_VBZ asking_VBG judges_NNS to_TO score_VB those_DT sentences_NNS ._.
+Unlike_IN computer_NN algorithms_NNS ,_, hu_SYM -_: mans_NNS can_MD notice_VB very_RB delicate_JJ differences_NNS and_CC per_IN -_: ceive_JJ various_JJ characteristics_NNS in_IN natural_JJ language_NN sentences_NNS ._.
+Conventional_JJ wisdom_NN holds_VBZ that_IN hu_SYM -_: man_NN judgments_NNS represent_VBP the_DT gold_JJ standard_NN ;_: how_WRB -_: ever_RB ,_, they_PRP are_VBP prohibitively_RB expensive_JJ and_CC time_NN -_: consuming_NN to_TO obtain_VB ._.
+Because_IN of_IN the_DT high_JJ cost_NN of_IN manual_NN evaluation_NN ,_, au_SYM -_: tomatic_JJ evaluation_NN techniques_NNS are_VBP increasingly_RB used_VBN ._.
+These_DT include_VBP very_RB popular_JJ techniques_NNS that_WDT mea_SYM -_: sure_JJ meaning_NN adequacy_NN and_CC lexical_JJ similarity_NN ,_, such_JJ as_IN BLEU_NNP -LRB-_-LRB- Papineni_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ,_, METEOR_NNP -LRB-_-LRB- Baner_NNP -_: jee_NN and_CC Lavie_NNP ,_, 2005_CD -RRB-_-RRB- ,_, and_CC TER_NNP plus_CC -LRB-_-LRB- Snover_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Additionally_RB ,_, a_DT distinctive_JJ characteristic_NN of_IN auto_NN evaluation_NN techniques_NNS is_VBZ that_IN they_PRP can_MD be_VB ap_SYM -_: plied_VBD not_RB only_RB to_TO performance_NN verification_NN ,_, but_CC also_RB to_TO the_DT generation_NN stage_NN of_IN NLP_NNP applications_NNS ._.
+Al_NNP -_: though_IN these_DT techniques_NNS can_MD make_VB experiments_NNS eas_SYM -_: ier_NN and_CC accelerate_VB progress_NN in_IN a_DT research_NN area_NN ,_, they_PRP employ_VBP fewer_JJR evaluation_NN criteria_NNS than_IN humans_NNS ._.
+In_IN general_JJ ,_, previous_JJ research_NN efforts_NNS have_VBP focused_VBN on_IN ``_`` technical_JJ qualities_NNS ''_'' such_JJ as_IN meaning_NN and_CC gram_NN -_: mar._FW ._.
+However_RB ,_, customer_NN satisfaction_NN is_VBZ sometimes_RB determined_VBN more_JJR by_IN ``_`` functional_JJ quality_NN ''_'' -LRB-_-LRB- how_WRB the_DT service_NN work_NN was_VBD delivered_VBN -RRB-_-RRB- than_IN by_IN ``_`` technical_JJ qual_NN -_: ity_NN ''_'' -LRB-_-LRB- the_DT quality_NN of_IN the_DT work_NN performed_VBN -RRB-_-RRB- -LRB-_-LRB- Mittal_NNP and_CC Lassar_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Especially_RB ,_, Casalo_NNP ́_CD et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- showed_VBD that_IN the_DT customers_NNS '_POS loyalty_NN and_CC satisfaction_NN are_VBP affected_VBN by_IN their_PRP$ past_JJ frequent_JJ experiences_NNS ._.
+We_PRP focused_VBD on_IN this_DT aspect_NN and_CC propose_VB a_DT new_JJ criterion_NN ,_, popularity_NN ,_, to_TO consider_VB the_DT functional_JJ quality_NN of_IN sen_NN -_: tences_NNS ._.
+We_PRP define_VBP a_DT popular_JJ sentence_NN as_IN one_CD that_WDT con_VBP -_: tains_NNS words_NNS that_WDT are_VBP frequently_RB used_VBN ,_, appear_VBP in_IN many_JJ documents_NNS ,_, and_CC contain_VBP frequent_JJ dependencies_NNS ._.
+Us_NNP -_: ing_NN this_DT definition_NN ,_, we_PRP aim_VBP to_TO measure_VB the_DT popularity_NN of_IN sentences_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP investigate_VBP the_DT notion_NN of_IN ``_`` popu_NN -_: larity_NN ''_'' for_IN machine-generated_JJ sentences_NNS ._.
+We_PRP mea_SYM -_: sured_VBN popularity_NN of_IN sentences_NNS with_IN an_DT automatic_JJ method_NN that_WDT can_MD be_VB applied_VBN to_TO the_DT generation_NN stage_NN of_IN MT_NNP or_CC paraphrasing_VBG ._.
+Because_IN it_PRP is_VBZ a_DT subjective_JJ evaluation_NN ,_, measuring_VBG the_DT popularity_NN of_IN sentences_NNS is_VBZ a_DT difficult_JJ task_NN ._.
+We_PRP defined_VBD a_DT popular_JJ sentence_NN as_IN one_CD that_WDT contains_VBZ words_NNS that_WDT are_VBP frequently_RB used_VBN ,_, appear_VBP in_IN many_JJ documents_NNS ,_, and_CC contain_VBP frequent_JJ dependen_NN -_: cies_NNS ._.
+Subsequently_RB ,_, we_PRP began_VBD our_PRP$ analysis_NN by_IN calcu_NN -_: lating_NN Term_NNP Frequency_NNP -LRB-_-LRB- TF_NNP -RRB-_-RRB- ._.
+To_TO reflect_VB the_DT charac_NN -_: teristics_NNS of_IN agglutinative_JJ languages_NNS ,_, we_PRP apply_VBP a_DT mor_NN -_: pheme_NN analysis_NN during_IN language_NN resources_NNS genera_SYM -_: tion_NN ._.
+As_IN a_DT result_NN ,_, we_PRP obtain_VBP a_DT Content_NN Morpheme_NNP Count_NNP -LRB-_-LRB- CMC_NNP -RRB-_-RRB- ._.
+To_TO complement_VB areas_NNS CMC_NNP can_MD not_RB cover_VB -LRB-_-LRB- words_NNS that_WDT have_VBP abnormally_RB high_JJ CMC_NNP -RRB-_-RRB- ,_, we_PRP apply_VBP morpheme-based_JJ Document_NNP Frequency_NN -LRB-_-LRB- DF_NNP -RRB-_-RRB- ._.
+Lastly_RB ,_, to_TO consider_VB popularity_NN came_VBD from_IN contex_NN -_: tual_JJ information_NN ,_, we_PRP apply_VBP a_DT dependency_NN relation_NN -_: ship_NN language_NN model_NN ._.
+We_PRP verify_VBP our_PRP$ method_NN by_IN an_DT -_: alyzing_VBG Pearson_NNP correlations_NNS between_IN human_JJ judg_NN -_: ments_NNS ;_: human_JJ evaluation_NN shows_VBZ that_IN our_PRP$ method_NN has_VBZ a_DT high_JJ correlation_NN with_IN human_JJ judgments_NNS ._.
+And_CC our_PRP$ method_NN shows_VBZ the_DT potential_NN for_IN measuring_VBG popular_JJ -_: ity_NN by_IN involving_VBG the_DT contextual_JJ information_NN ._.
+The_DT remainder_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN fol_NN -_: lows_NNS ._.
+Section_NN 2_CD presents_NNS related_VBN works_NNS in_IN the_DT field_NN of_IN sentence_NN evaluation_NN ._.
+Section_NN 3_CD explains_VBZ the_DT ap_SYM -_: proach_NN to_TO measure_VB the_DT popularity_NN of_IN words_NNS and_CC sen_NN -_: tences_NNS ._.
+In_IN Section_NN 4_CD ,_, we_PRP evaluate_VBP the_DT usefulness_NN of_IN our_PRP$ method_NN ._.
+In_IN section_NN 5_CD ,_, we_PRP analyze_VBP the_DT result_NN of_IN experiment_NN Lastly_NNP ,_, Section_NNP 6_CD concludes_VBZ the_DT paper_NN ._.
+2_CD Related_VBN Works_NNP Manual_NNP evaluation_NN ,_, the_DT most_RBS frequently_RB used_VBN tech_SYM -_: nique_NN ,_, asks_VBZ judges_NNS to_TO score_VB the_DT quality_NN of_IN sentences_NNS ._.
+It_PRP exhibits_VBZ effective_JJ performance_NN ,_, despite_IN its_PRP$ inher_NN -_: ent_NN simplicity_NN ._.
+Callison-Burch_JJ asked_VBD judges_NNS to_TO score_VB fluency_NN and_CC adequacy_NN with_IN a_DT 5-point_JJ Likert_NN scale_NN -LRB-_-LRB- Callison-Burch_JJ et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, and_CC asked_VBD judges_NNS to_TO score_VB meaning_NN and_CC grammar_NN in_IN a_DT subsequent_JJ pa_NN -_: per_IN -LRB-_-LRB- Callison-Burch_JJ ,_, 2008_CD -RRB-_-RRB- ._.
+Similarly_RB ,_, Barzilay_NNP et_FW al._FW asked_VBD judges_NNS to_TO read_VB hand-crafted_JJ and_CC application_NN -_: crafted_VBN paraphrases_NNS with_IN corresponding_JJ meanings_NNS ,_, and_CC to_TO identify_VB which_WDT version_NN was_VBD most_RBS readable_JJ and_CC best_JJS represented_VBN the_DT original_JJ meaning_NN -LRB-_-LRB- Barzilay_NNP and_CC Lee_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+Philip_NNP M._NNP Mc_NNP et_FW al._FW studied_VBN overall_JJ qual_NN -_: ity_NN using_VBG four_CD criteria_NNS -LRB-_-LRB- McCarthy_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Us_NNP -_: ing_VBG these_DT evaluation_NN techniques_NNS ,_, humans_NNS can_MD iden_VB -_: tify_JJ characteristics_NNS that_WDT machines_NNS can_MD not_RB recognize_VB ,_, such_JJ as_IN nuances_NNS and_CC sarcasm_NN ._.
+Overwhelmingly_RB ,_, hu_SYM -_: mans_NNS are_VBP more_RBR sensitive_JJ than_IN computers_NNS in_IN the_DT area_NN of_IN linguistics_NNS ._.
+As_IN a_DT result_NN ,_, manual_NN evaluation_NN pro-_JJ vides_NNS the_DT gold_JJ standard_NN ._.
+However_RB ,_, manual_JJ evalua_NN -_: tion_NN presents_NNS significant_JJ problems_NNS ._.
+It_PRP is_VBZ prohibitively_RB expensive_JJ and_CC time-consuming_JJ to_TO obtain_VB ._.
+To_TO address_VB these_DT limitations_NNS ,_, there_EX have_VBP been_VBN stud_NN -_: ies_NNS involving_VBG automatic_JJ evaluation_NN methods_NNS ._.
+Pap_NN -_: ineni_FW et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Callison-Burch_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- proposed_VBN methods_NNS that_WDT measure_VBP meaning_VBG adequacy_NN based_VBN on_IN an_DT established_JJ standard_NN ._.
+Several_JJ methods_NNS based_VBN on_IN Levenshtein_NNP distance_NN -LRB-_-LRB- Levenshtein_NNP ,_, 1966_CD -RRB-_-RRB- calculate_VBP superficial_JJ similarity_NN by_IN counting_VBG the_DT num_NN -_: ber_NN of_IN edits_NNS required_VBN to_TO make_VB two_CD sentences_NNS identi_SYM -_: cal_NN -LRB-_-LRB- Wagner_NNP and_CC Fischer_NNP ,_, 1974_CD ;_: Snover_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+These_DT methods_NNS can_MD be_VB used_VBN to_TO calculate_VB dissimilar_JJ -_: ity_NN in_IN paraphrasing_NN ._.
+Chen_NNP et_FW al._FW measured_VBN paraphrase_NN changes_NNS with_IN n-gram_JJ -LRB-_-LRB- Chen_NNP and_CC Dolan_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+These_DT automatic_JJ evaluations_NNS also_RB present_VBP a_DT problem_NN --_: the_DT absence_NN of_IN diversity_NN ._.
+There_EX are_VBP many_JJ senses_NNS humans_NNS can_MD detect_VB from_IN sentences_NNS ,_, even_RB if_IN they_PRP are_VBP not_RB pri_SYM -_: mary_JJ factors_NNS such_JJ as_IN meaning_VBG adequacy_NN or_CC grammar_NN ._.
+We_PRP identify_VBP a_DT novel_NN criteria_NNS ,_, popularity_NN ,_, as_IN one_CD of_IN those_DT senses_NNS ,_, based_VBN on_IN the_DT fact_NN that_IN customer_NN satis_NN -_: faction_NN is_VBZ sometimes_RB derived_VBN from_IN functional_JJ quality_NN -LRB-_-LRB- Mittal_NNP and_CC Lassar_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+We_PRP define_VBP the_DT popularity_NN of_IN a_DT sentence_NN using_VBG TF_NNP ,_, DF_NNP and_CC dependency_NN relations_NNS ._.
+TF_NNP ,_, defined_VBN as_IN the_DT number_NN of_IN times_NNS a_DT term_NN appears_VBZ ,_, is_VBZ primarily_RB used_VBN to_TO measure_VB a_DT term_NN 's_POS significance_NN ,_, especially_RB in_IN in_IN -_: formation_NN retrieval_NN and_CC text_NN summarization_NN ._.
+Since_IN Luhn_NNP used_VBD total_JJ TF_NNP as_IN a_DT popularity_NN metric_JJ -LRB-_-LRB- Luhn_NNP ,_, 1957_CD -RRB-_-RRB- ,_, TF_NNP has_VBZ been_VBN frequently_RB used_VBN to_TO measure_VB term_NN weight_NN ,_, and_CC employed_VBN in_IN various_JJ forms_NNS to_TO suit_NN spe_NN -_: cific_JJ purposes_NNS ._.
+Term_NN Frequency-Inversed_NNP Document_NNP Frequency_NNP -LRB-_-LRB- TF-IDF_NNP -RRB-_-RRB- ,_, the_DT most_RBS well-known_JJ varia_NN -_: tion_NN of_IN TF_NNP ,_, is_VBZ used_VBN to_TO identify_VB the_DT most_RBS represen_JJ -_: tative_JJ term_NN in_IN a_DT document_NN -LRB-_-LRB- Salton_NNP and_CC Buckley_NNP ,_, 1988_CD -RRB-_-RRB- ._.
+Most_JJS previous_JJ research_NN using_VBG those_DT variations_NNS has_VBZ focused_VBN on_IN the_DT most_RBS significant_JJ and_CC impressive_JJ terms_NNS ._.
+There_EX has_VBZ been_VBN minimal_JJ research_NN concerned_VBN with_IN commonly_RB used_VBN terms_NNS ._.
+We_PRP measured_VBD popularity_NN of_IN sentences_NNS with_IN these_DT commonly_RB used_VBN terms_NNS that_WDT have_VBP high_JJ TF_NNP and_CC DF_NNP ._.
+3_CD Method_NN In_IN this_DT section_NN ,_, we_PRP explain_VBP the_DT process_NN of_IN language_NN resource_NN generation_NN ,_, and_CC propose_VB a_DT method_NN to_TO mea_NN -_: sure_JJ the_DT popularity_NN of_IN sentences_NNS ._.
+First_RB ,_, we_PRP utilize_VBP morpheme_JJ analysis_NN on_IN the_DT corpus_NN of_IN sentences_NNS ,_, be_VB -_: cause_VB our_PRP$ target_NN language_NN is_VBZ Korean_JJ which_WDT is_VBZ an_DT ag_NN -_: glutinative_JJ languages_NNS ._.
+Next_JJ ,_, we_PRP statistically_RB analyze_VBP each_DT content_NN morpheme_NN occurrence_NN ,_, and_CC then_RB calcu_SYM -_: late_JJ sentence_NN popularity_NN using_VBG these_DT resources_NNS ._.
+3.1_CD Korean_JJ Morpheme_NNP Analysis_NNP We_PRP built_VBD our_PRP$ language_NN resources_NNS -LRB-_-LRB- Content_NN Mor_SYM -_: pheme_NN Count-Document_NNP Frequency_NNP -LRB-_-LRB- CMC-DF_NNP -RRB-_-RRB- and_CC Dependency_NNP Language_NNP Model_NNP -LRB-_-LRB- DLM_NNP -RRB-_-RRB- -RRB-_-RRB- by_IN analyz_NN -_: ing_VBG a_DT massive_JJ corpus_NN of_IN Korean_JJ sentences_NNS statisti_NNS -_: cally_RB ._.
+Because_IN Korean_JJ is_VBZ an_DT agglutinative_JJ language_NN ,_, we_PRP needed_VBD to_TO conduct_VB morpheme_JJ analysis_NN before_IN we_PRP built_VBD those_DT resources_NNS ._.
+In_IN agglutinative_JJ language_NN ,_, words_NNS can_MD be_VB divided_VBN into_IN content_JJ morphemes_NNS and_CC an_DT empty_JJ morpheme_NN ._.
+Content_NN morphemes_NNS contain_VBP the_DT meaning_NN of_IN words_NNS ,_, while_IN empty_JJ morphemes_NNS are_VBP affixed_VBN to_TO the_DT content_NN morpheme_NN to_TO determine_VB its_PRP$ grammatical_JJ role_NN ._.
+For_IN example_NN ,_, in_IN the_DT sentence_NN ``_`` 뉴_FW 욕에_FW 가다_FW ._.
+-LRB-_-LRB- Go_VB to_TO New_NNP York_NNP City_NNP ._. -RRB-_-RRB- ''_''
+,_, a_DT word_NN ``_`` 뉴욕_FW 에_FW ''_'' can_MD be_VB divided_VBN into_IN ``_`` 뉴욕_FW ''_'' and_CC ``_`` 에_FW ''_'' ._.
+A_DT content_JJ morpheme_NN ``_`` 뉴욕_FW ''_'' means_VBZ ``_`` New_NNP York_NNP city_NN ''_'' and_CC an_DT empty_JJ morpheme_NN ``_`` 에_FW ''_'' do_VB the_DT role_NN of_IN a_DT stop_NN word_NN ``_`` to_TO ''_'' ._.
+Because_IN there_EX are_VBP numerous_JJ combinations_NNS of_IN two_CD morpheme_JJ types_NNS ,_, it_PRP is_VBZ not_RB appropriate_JJ to_TO compile_VB statistics_NNS on_IN the_DT words_NNS without_IN morpheme_NN analysis_NN ._.
+Via_NNP this_DT process_NN ,_, we_PRP can_MD disassemble_VB a_DT word_NN into_IN a_DT content_JJ morpheme_NN and_CC empty_JJ morpheme_NN ,_, and_CC ob_SYM -_: tain_VB a_DT statistical_JJ result_NN that_IN accurately_RB represents_VBZ the_DT word_NN ._.
+Postpositions_NNS and_CC endings_NNS ,_, the_DT stop_NN words_NNS of_IN Korean_JJ ,_, are_VBP filtered_VBN in_IN this_DT process_NN ._.
+Additionally_RB ,_, we_PRP conduct_VBP conjunctions_NNS filtering_VBG ,_, most_JJS of_IN stop_NN words_NNS of_IN Korean_JJ are_VBP eliminated_VBN in_IN morpheme_NN analysis_NN and_CC fil_NN -_: tering_NN ._.
+We_PRP used_VBD a_DT Korean_JJ morpheme_NN analyzer_NN mod_NN -_: ule_NN created_VBN by_IN the_DT Electronics_NNP and_CC Telecommunica_NNP -_: tions_NNS Research_NNP Institute_NNP -LRB-_-LRB- ETRI_NNP -RRB-_-RRB- 1_CD ._.
+3.2_CD Measuring_VBG Word_NN Popularity_NN Before_IN calculating_VBG the_DT popularity_NN of_IN sentences_NNS ,_, we_PRP attempt_VBP to_TO measure_VB the_DT popularity_NN of_IN words_NNS ._.
+We_PRP de_FW -_: 1_CD https://www.etri.re.kr/kor/main/main.etri_NNS fined_VBN a_DT popular_JJ word_NN as_IN one_CD with_IN a_DT frequently_RB used_VBN content_JJ morpheme_NN ._.
+The_DT empty_JJ morphemes_NNS are_VBP not_RB considered_VBN ,_, because_IN they_PRP are_VBP stop_VB words_NNS in_IN Korean_JJ ._.
+We_PRP adopt_VBP Content_NN Morpheme_NNP Count_NNP -LRB-_-LRB- CMC_NNP -RRB-_-RRB- ,_, a_DT vari_FW -_: ation_NN of_IN TF_NNP ,_, to_TO measure_VB usage_NN of_IN the_DT content_JJ mor_NN -_: pheme_NN of_IN words_NNS ._.
+CMC_NNP is_VBZ the_DT frequency_NN of_IN a_DT word_NN 's_POS content_JJ morpheme_NN in_IN a_DT set_NN of_IN documents_NNS ._.
+The_DT CMC_NNP of_IN the_DT word_NN w_NN is_VBZ driven_VBN in_IN the_DT following_VBG equations_NNS ._.
+CMCw_NNP =_SYM max_FW -LRB-_-LRB- 0_CD ,_, logb_NN -LRB-_-LRB- w_FW -RRB-_-RRB- -RRB-_-RRB- -LRB-_-LRB- 1_CD -RRB-_-RRB- b_NN -LRB-_-LRB- w_FW -RRB-_-RRB- =_SYM fm_FW ,_, d_LS -LRB-_-LRB- 2_LS -RRB-_-RRB- d_SYM ∈_FW D_NNP In_IN Eq_NNP ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, b_NN -LRB-_-LRB- w_FW -RRB-_-RRB- is_VBZ the_DT qualified_VBN popularity_NN of_IN word_NN w_NN ,_, defined_VBN as_IN the_DT number_NN of_IN content_JJ morphemes_NNS m_NN of_IN word_NN w_NN in_IN entire_JJ documents_NNS D._NNP f_LS is_VBZ the_DT frequency_NN of_IN a_DT particular_JJ content_NN morpheme_NN m_NN in_IN document_NN d_LS ._.
+We_PRP applied_VBD the_DT logarithm_NN in_IN Eq_NNP ._.
+-LRB-_-LRB- 1_CD -RRB-_-RRB- because_IN sim_NN -_: ple_NN frequency_NN measures_NNS have_VBP a_DT tendency_NN to_TO empha_NN -_: size_NN high-frequency_NN terms_NNS ._.
+Furthermore_RB ,_, we_PRP utilize_VBP the_DT max_NN function_NN to_TO handle_VB unseen_JJ morphemes_NNS in_IN the_DT training_NN data_NNS corpus_NN ._.
+B_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM ni_FW =_SYM 1_CD CMCwi_NNP n_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- Using_VBG the_DT average_NN of_IN CMC_NNP ,_, we_PRP measure_VBP the_DT popular_JJ -_: ity_NN B_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- of_IN sentences_NNS with_IN a_DT size_NN of_IN n_NN in_IN Eq_NNP ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+We_PRP use_VBP this_DT score_NN as_IN a_DT baseline_NN ._.
+Unfortunately_RB ,_, CMC_NNP is_VBZ not_RB sufficient_JJ to_TO reflect_VB the_DT popularity_NN of_IN words_NNS ,_, because_IN there_EX are_VBP some_DT cases_NNS it_PRP can_MD not_RB cover_VB ._.
+Technical_NNP terms_NNS or_CC named_VBN entities_NNS frequently_RB occur_VBP only_RB in_IN a_DT few_JJ documents_NNS such_JJ as_IN scientific_JJ articles_NNS or_CC encyclopedia_NN entries_NNS ._.
+In_IN those_DT cases_NNS ,_, a_DT high_JJ CMC_NNP is_VBZ calculated_VBN ,_, even_RB if_IN those_DT words_NNS are_VBP not_RB popular_JJ to_TO the_DT general_JJ pub_NN -_: lic_NN ._.
+For_IN example_NN ,_, the_DT word_NN ``_`` 스타매거진_NN -LRB-_-LRB- star_NN mag_NN -_: azine_NN -RRB-_-RRB- ''_'' occurred_VBD 270_CD times_NNS in_IN only_RB one_CD document_NN -LRB-_-LRB- Korean_JJ Wikipedia_NN contains_VBZ 700,000_CD documents_NNS -RRB-_-RRB- ._.
+Similarly_RB ,_, the_DT word_NN ``_`` 글루코코르티코이드_NN -LRB-_-LRB- gluco_SYM -_: corticoid_NN -RRB-_-RRB- ''_'' occurred_VBD 39_CD times_NNS in_IN only_RB one_CD docu_NN -_: ment_NN -LRB-_-LRB- the_DT common_JJ word_NN ``_`` 카펫_FW -LRB-_-LRB- carpet_NN -RRB-_-RRB- ''_'' occurred_VBD 41_CD times_NNS over_IN 36_CD documents_NNS -RRB-_-RRB- ._.
+The_DT CMCs_NNS of_IN those_DT words_NNS are_VBP relatively_RB high_JJ ,_, but_CC they_PRP are_VBP not_RB popular_JJ terms_NNS to_TO ordinary_JJ people_NNS ._.
+Thus_RB ,_, we_PRP inversely_RB applied_VBD the_DT concept_NN of_IN TF-IDF_NN ._.
+TF-IDF_NN assumes_VBZ that_IN if_IN a_DT term_NN frequently_RB occurs_VBZ in_IN only_RB a_DT few_JJ documents_NNS ,_, the_DT term_NN is_VBZ significant_JJ in_IN those_DT documents_NNS ._.
+Inversely_RB ,_, we_PRP assumed_VBD that_IN if_IN a_DT content_JJ morpheme_NN is_VBZ used_VBN frequently_RB and_CC occurs_VBZ in_IN numer_NN -_: ous_JJ documents_NNS ,_, that_IN morpheme_NN is_VBZ popular_JJ to_TO people_NNS ._.
+We_PRP quantified_VBD the_DT popularity_NN of_IN words_NNS as_IN the_DT number_NN of_IN documents_NNS in_IN which_WDT its_PRP$ content_JJ morpheme_NN occurs_VBZ ._.
+We_PRP calculate_VBP Document_NNP Frequency_NNP -LRB-_-LRB- DF_NNP -RRB-_-RRB- in_IN the_DT fol_NN -_: lowing_VBG equations_NNS ._.
+DFw_NNP =_SYM max_FW -LRB-_-LRB- 0_CD ,_, logc_NN -LRB-_-LRB- w_FW -RRB-_-RRB- -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- c_NN -LRB-_-LRB- w_FW -RRB-_-RRB- =|_FW d_SYM ∈_FW D_NNP :_: m_SYM ∈_FW d_LS |_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- In_IN Eq_NNP ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, c_NN -LRB-_-LRB- w_FW -RRB-_-RRB- is_VBZ the_DT number_NN of_IN documents_NNS d_LS in_IN which_WDT content_JJ morpheme_NN m_NN occurs_VBZ ._.
+Similarly_RB ,_, loga_SYM -_: rithm_NN and_CC max_NN function_NN are_VBP applied_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+Using_VBG the_DT notion_NN of_IN CMC_NNP and_CC DF_NNP ,_, we_PRP defined_VBD the_DT popularity_NN of_IN words_NNS f_LS -LRB-_-LRB- w_NN -RRB-_-RRB- as_IN follows_VBZ in_IN Eq_NNP ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+Lastly_RB ,_, we_PRP measured_VBD the_DT popularity_NN of_IN sentences_NNS by_IN calculating_VBG the_DT average_JJ popularity_NN of_IN words_NNS in_IN sen_NN -_: tences_NNS with_IN a_DT size_NN of_IN n._NN Popularity_NN of_IN sentences_NNS F_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- based_VBN on_IN word_NN popularity_NN is_VBZ represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- f_LS -LRB-_-LRB- w_NN -RRB-_-RRB- =_SYM CMCw_NNP ×_CD DFw_NNP -LRB-_-LRB- 6_CD -RRB-_-RRB- Model_NNP -LRB-_-LRB- DLM_NNP -RRB-_-RRB- ,_, which_WDT reflects_VBZ the_DT conditional_JJ proba_NN -_: bility_NN of_IN words_NNS and_CC its_PRP$ dependency_NN head_NN ._.
+Figure_NN 1_CD :_: Example_NN of_IN dependency_NN analysis_NN in_IN a_DT Korean_JJ sentence_NN ._.
+We_PRP obtained_VBD the_DT probability_NN from_IN a_DT frequency_NN investigation_NN of_IN a_DT word_NN pair_NN after_IN a_DT dependency_NN analysis_NN ._.
+For_IN example_NN ,_, the_DT sentence_NN ``_`` 엠파이어스_FW 테이트빌딩은_FW 뉴욕의_FW 중앙에_FW 위치한다_FW ._.
+-LRB-_-LRB- The_DT Em_NN -_: pire_NNP State_NNP Building_NNP is_VBZ located_VBN in_IN the_DT center_NN of_IN New_NNP York_NNP City_NNP ._. -RRB-_-RRB- ''_''
+can_MD be_VB disassembled_VBN into_IN -LCB-_-LRB- ``_`` 엠파이어_NN 스테이트빌딩은_NN -LRB-_-LRB- The_DT Empire_NNP State_NNP building_NN -RRB-_-RRB- ''_'' →_FW ``_`` 위치한다_FW -LRB-_-LRB- is_VBZ located_VBN -RRB-_-RRB- ''_'' -RCB-_-RRB- ,_, -LCB-_-LRB- ``_`` 뉴욕의_NN -LRB-_-LRB- of_IN New_NNP York_NNP City_NNP -RRB-_-RRB- ''_'' →_FW ``_`` 중앙에_FW -LRB-_-LRB- in_IN the_DT center_NN -RRB-_-RRB- ''_'' -RCB-_-RRB- and_CC -LCB-_-LRB- ``_`` 중앙에_NN -LRB-_-LRB- in_IN the_DT center_NN -RRB-_-RRB- ''_'' →_FW ``_`` 위치한다_FW -LRB-_-LRB- is_VBZ located_VBN -RRB-_-RRB- ''_'' -RCB-_-RRB- ._.
+This_DT pro-_JJ cess_NN is_VBZ represented_VBN in_IN Figure_NN 1_CD ._.
+Then_RB ,_, we_PRP investi_VBP -_: gated_VBD the_DT conditional_JJ probabilities_NNS of_IN those_DT pairs_NNS ._.
+Thus_RB ,_, we_PRP calculate_VBP the_DT conditional_JJ probability_NN of_IN words_NNS pairs_NNS as_IN a_DT unit_NN of_IN DLM_NNP ._.
+In_IN addition_NN ,_, we_PRP ap_SYM -_: plied_VBD morpheme_JJ analysis_NN for_IN the_DT reasons_NNS described_VBN in_IN Section_NN 3.1_CD ._.
+We_PRP used_VBD the_DT dependency_NN analyzer_NN created_VBN by_IN ETRI_NNP ._.
+CMCw_NNP ,_, hw_NN p_NN -LRB-_-LRB- w_FW |_FW hw_FW -RRB-_-RRB- =_SYM CMC_NNP -LRB-_-LRB- 8_CD -RRB-_-RRB- hw_NN Eq_NN ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- represents_VBZ the_DT conditional_JJ probability_NN p_NN -LRB-_-LRB- w_FW |_FW hw_FW -RRB-_-RRB- of_IN word_NN w_NN and_CC its_PRP$ head_NN hw_NN ._.
+CMCw_NNP ,_, hw_NN is_VBZ the_DT number_NN of_IN co-occurrence_NN of_IN w_NN and_CC hw_NN ._.
+DLM_NNP is_VBZ built_VBN by_IN investigating_VBG all_PDT the_DT dependency_NN pairs_NNS of_IN the_DT corpus_NN ._.
+Using_VBG the_DT notion_NN of_IN DLM_NNP ,_, we_PRP defined_VBD the_DT context_NN popularity_NN g_NN -LRB-_-LRB- w_FW -RRB-_-RRB- as_IN product_NN of_IN two_CD words_NNS popularity_NN -LRB-_-LRB- target_NN word_NN and_CC its_PRP$ head_NN -RRB-_-RRB- and_CC their_PRP$ co_SYM -_: occurrence_NN probability_NN ._.
+It_PRP is_VBZ represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- ._.
+g_NN -LRB-_-LRB- w_FW -RRB-_-RRB- =_SYM f_LS -LRB-_-LRB- w_NN -RRB-_-RRB- p_NN -LRB-_-LRB- w_FW |_FW hw_FW -RRB-_-RRB- f_LS -LRB-_-LRB- hw_NN -RRB-_-RRB- -LRB-_-LRB- 9_CD -RRB-_-RRB- To_TO measure_VB sentence_NN popularity_NN with_IN DLM_NNP ,_, we_PRP calculate_VBP the_DT context_NN popularity_NN of_IN all_DT dependency_NN word_NN pairs_NNS ._.
+This_DT process_NN is_VBZ represented_VBN by_IN the_DT for_IN -_: mula_NN in_IN Eq_NNP ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- ._.
+Lastly_RB ,_, to_TO normalize_VB the_DT length_NN n_NN ni_NNS =_SYM 1_CD f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- F_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM n_SYM 3.3_CD Measuring_NNP Context_NNP Popularity_NNP -LRB-_-LRB- 7_CD -RRB-_-RRB- We_PRP measure_VB popularity_NN of_IN sentence_NN using_VBG word_NN pop_NN -_: ularity_NN in_IN the_DT previous_JJ section_NN ._.
+Nevertheless_RB ,_, there_EX is_VBZ another_DT element_NN as_IN important_JJ as_IN word_NN popularity_NN ._.
+The_DT element_NN is_VBZ whether_IN the_DT word_NN is_VBZ suitable_JJ in_IN the_DT context_NN ._.
+For_IN example_NN ,_, we_PRP frequently_RB use_VBP ``_`` powerful_JJ ,_, ''_'' not_RB ``_`` strong_JJ ,_, ''_'' when_WRB discussing_VBG a_DT computer_NN having_VBG substantial_JJ computational_JJ ability_NN ._.
+As_IN an_DT adjective_NN ,_, ``_`` powerful_JJ ''_'' and_CC ``_`` strong_JJ ''_'' have_VBP similar_JJ meanings_NNS and_CC popularity_NN ._.
+The_DT use_NN of_IN ``_`` strong_JJ ''_'' is_VBZ perhaps_RB more_RBR fre_SYM -_: quent_NN than_IN that_DT of_IN ``_`` powerful_JJ ._. ''_''
+However_RB ,_, if_IN we_PRP con_VBP -_: sider_VB the_DT context_NN of_IN a_DT noun_NN ``_`` computer_NN ''_'' joined_VBD with_IN each_DT word_NN ,_, i.e._FW ,_, ``_`` powerful_JJ computer_NN ''_'' and_CC ``_`` strong_JJ computer_NN ''_'' ,_, there_EX will_MD be_VB a_DT significant_JJ difference_NN in_IN popularity_NN of_IN the_DT two_CD phrases_NNS ._.
+To_TO address_VB this_DT aspect_NN ,_, we_PRP observe_VBP a_DT word_NN that_WDT has_VBZ a_DT direct_JJ semantic_JJ relationship_NN with_IN target_NN word_NN ._.
+The_DT word_NN is_VBZ dependency_NN head_NN of_IN target_NN word_NN ._.
+In_IN the_DT sentence_NN ,_, every_DT word_NN -LRB-_-LRB- except_IN the_DT dependency_NN root_NN word_NN -RRB-_-RRB- has_VBZ a_DT dependency_NN head_NN ,_, and_CC it_PRP is_VBZ related_VBN to_TO the_DT head_NN ._.
+We_PRP attempt_VBP to_TO verify_VB the_DT potential_NN that_WDT con_VBP -_: text_NN can_MD influence_VB popularity_NN of_IN sentence_NN with_IN de_FW -_: pendency_NN head_NN ._.
+We_PRP created_VBD a_DT Dependency_NNP Language_NN of_IN sentences_NNS ,_, we_PRP apply_VBP a_DT logarithm_NN and_CC divide_VB it_PRP by_IN the_DT number_NN of_IN dependency_NN relationships_NNS n_VBP −_CD 1_CD ._.
+n_SYM −_SYM 1_CD D_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- p_NN -LRB-_-LRB- w_FW |_FW hwi_FW -RRB-_-RRB- f_LS -LRB-_-LRB- hwi_FW -RRB-_-RRB- -LRB-_-LRB- 10_CD -RRB-_-RRB- 4.1_CD Adoption_NN of_IN Dataset_NNP To_TO build_VB the_DT CMC_NNP ,_, DF_NNP ,_, and_CC DLM_NNP ,_, we_PRP need_VBP an_DT ap_SYM -_: propriate_NN corpus_NN ._.
+When_WRB searching_VBG for_IN a_DT target_NN cor_NN -_: pus_NN ,_, the_DT most_RBS important_JJ considerations_NNS were_VBD vol_SYM -_: ume_NN and_CC ordinariness_NN ._.
+Thus_RB ,_, we_PRP considered_VBD Korean_JJ Wikipedia2_NNP and_CC Modern_NNP Korean_NNP Usage_NNP Frequency_NNP Report_NNP -LRB-_-LRB- MKUFR_NNP -RRB-_-RRB- -LRB-_-LRB- Hansaem_NNP ,_, 2005_CD -RRB-_-RRB- as_IN suitable_JJ data_NNS sources_NNS ._.
+Korean_JJ Wikipedia_NNP is_VBZ the_DT Korean_JJ version_NN of_IN Wikipedia_NNP ,_, the_DT well-known_JJ collaborative_JJ online_NN en_IN -_: cyclopedia_NN ._.
+Because_IN its_PRP$ is_VBZ written_VBN by_IN public_JJ ,_, we_PRP as_IN -_: sume_JJ Korean_JJ Wikipedia_NN contains_VBZ moderately_RB popu_SYM -_: lar_NN terms_NNS ._.
+Korean_JJ Wikipedia_NNP even_RB offers_VBZ a_DT massive_JJ volume_NN --_: more_JJR than_IN 1.7_CD GB_NNP of_IN data_NNS contained_VBN in_IN over_IN 700,000_CD documents_NNS ._.
+MKUFR_NNP is_VBZ the_DT result_NN of_IN research_NN conducted_VBN by_IN the_DT National_NNP Institute_NNP of_IN the_DT Korean_JJ language_NN from_IN 2002_CD through_IN 2005_CD ._.
+They_PRP sur_SYM -_: veyed_VBN TF_NNP in_IN publications_NNS printed_VBN between_IN 1990_CD and_CC 2002_CD ._.
+Using_VBG Korean_JJ Wikipedia_NNP and_CC MKUFR_NNP as_IN a_DT dataset_NN ,_, we_PRP built_VBD the_DT CMC_NNP ,_, DF_NNP ,_, and_CC DLM_NNP ._.
+4.2_CD Human_JJ Evaluation_NNP Setup_NNP We_PRP used_VBD a_DT sentence_NN set_VBN from_IN TREC_NNP 2006_CD QA_NNP data3_CD as_IN test_NN data_NNS ._.
+TREC_NNP -LRB-_-LRB- Text_NNP REtrieval_NNP Conference_NNP -RRB-_-RRB- is_VBZ a_DT conference_NN focusing_VBG on_IN information_NN retrieval_NN areas_NNS ,_, and_CC its_PRP$ dataset_NN is_VBZ widely_RB used_VBN as_IN a_DT standard_NN to_TO eval_VB -_: uate_VB the_DT performance_NN of_IN information_NN retrieval_NN sys_SYM -_: tems_NNS ._.
+We_PRP randomly_RB selected_VBD 250_CD sentences_NNS from_IN the_DT TREC_NNP 2006_CD QA_NNP data_NNS and_CC translated_VBN them_PRP into_IN Ko_NNP -_: rean_NN by_IN human_JJ translators_NNS ._.
+A_DT paraphrase_NN machine_NN ,_, based_VBN on_IN Bannard_NNP and_CC Callison-Burch_NNP 's_POS algorithm_NN -LRB-_-LRB- Bannard_NNP and_CC Callison-Burch_NNP ,_, 2005_CD -RRB-_-RRB- ,_, was_VBD used_VBN to_TO create_VB machine-generated_JJ sentences_NNS from_IN the_DT trans_NNS -_: lated_VBD TREC_NNP questions_NNS ._.
+We_PRP employed_VBD five_CD human_JJ judges_NNS -LRB-_-LRB- J1-5_NN -RRB-_-RRB- to_TO manu_VB -_: ally_NN assess_VBP the_DT popularity_NN of_IN 250_CD machine-generated_JJ sentences_NNS ._.
+The_DT sentences_NNS were_VBD presented_VBN to_TO the_DT judges_NNS in_IN random_JJ order_NN ._.
+Each_DT sentence_NN was_VBD scored_VBN using_VBG a_DT six-point_JJ scale_NN ._.
+The_DT instructions_NNS given_VBN to_TO the_DT judges_NNS were_VBD as_IN follows_VBZ ._.
+Popularity_NN :_: Is_VBZ the_DT sentences_NNS linguistically_RB popular_JJ ?_.
+4.3_CD Inter-judge_NN Correlation_NN Before_IN evaluating_VBG our_PRP$ method_NN ,_, we_PRP used_VBD Pearson_NNP 's_POS correlation_NN coefficient_NN to_TO investigate_VB the_DT correlation_NN between_IN the_DT human_JJ judges_NNS ;_: these_DT results_NNS are_VBP listed_VBN 2_CD https://ko.wikipedia.org_NN 3http_NNS :_: /_SYM /_FW trec.nist.gov_FW /_FW data/qa_FW /_FW i_FW G_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM i_FW -LRB-_-LRB- 11_CD -RRB-_-RRB- n_SYM −_SYM 1_CD log_VBP g_NN -LRB-_-LRB- w_FW -RRB-_-RRB- n_SYM −_SYM 1_CD Additionally_RB ,_, we_PRP can_MD treat_VB the_DT word_NN sense_NN disam_NN -_: biguation_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- problem_NN ,_, too_RB ._.
+For_IN example_NN ,_, in_IN the_DT Korean_JJ language_NN ,_, the_DT meaning_NN of_IN the_DT noun_NN ``_`` 배_FW -LSB-_FW bæ_FW -RSB-_NN ''_'' may_MD be_VB ``_`` pear_NN ''_'' or_CC ``_`` boat_NN ._. ''_''
+When_WRB we_PRP analyze_VBP the_DT cor_NN -_: pus_NN to_TO build_VB CMC_NNP and_CC DF_NNP ,_, both_DT nouns_NNS are_VBP treated_VBN as_IN a_DT single_JJ entity_NN ._.
+This_DT results_NNS in_IN abnormally_RB high_JJ statistical_JJ result_NN scores_NNS ,_, regardless_RB of_IN the_DT actual_JJ fre_NN -_: quency_NN of_IN each_DT meaning_NN ._.
+Using_VBG DLM_NNP ,_, we_PRP can_MD con_VB -_: sider_NN this_DT problem_NN with_IN conditional_JJ probability_NN ._.
+For_IN example_NN ,_, the_DT noun_NN ``_`` 배_FW ''_'' means_VBZ ``_`` pear_NN ''_'' when_WRB its_PRP$ de_FW -_: pendency_NN head_NN is_VBZ eat_VB or_CC squash_VB ,_, and_CC means_VBZ ``_`` boat_NN ''_'' if_IN it_PRP is_VBZ matched_VBN with_IN sail_NN or_CC steer_VB ._.
+We_PRP can_MD infer_VB the_DT meaning_NN and_CC popularity_NN of_IN words_NNS in_IN the_DT context_NN from_IN its_PRP$ dependency_NN head_NN ._.
+3.4_CD Measuring_VBG Total_JJ Popularity_NN We_PRP defined_VBD a_DT popular_JJ sentence_NN as_IN one_CD that_WDT contains_VBZ words_NNS that_WDT are_VBP frequently_RB used_VBN ,_, appear_VBP in_IN many_JJ doc_NN -_: uments_NNS ,_, and_CC contain_VBP frequent_JJ dependencies_NNS ._.
+In_IN Eq_NNP ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- ,_, we_PRP represent_VBP the_DT sentence_NN popularity_NN H_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- by_IN the_DT sum_NN of_IN popularities_NNS from_IN words_NNS F_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- and_CC popu_NN -_: larities_NNS from_IN contexts_NNS G_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- ._.
+In_IN the_DT equation_NN ,_, α_NN and_CC β_NN are_VBP the_DT weights_NNS of_IN both_DT popularities_NNS ._.
+H_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM αF_FW -LRB-_-LRB- s_PRP -RRB-_-RRB- +_SYM βG_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- -LRB-_-LRB- 12_CD -RRB-_-RRB- We_PRP can_MD obtain_VB Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- through_IN substitution_NN of_IN Eq_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 11_CD -RRB-_-RRB- into_IN Eq_NNP ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- ._.
+4_CD To_TO evaluate_VB how_WRB accurately_RB our_PRP$ metric_JJ reflects_VBZ the_DT popularity_NN that_WDT humans_NNS perceive_VBP when_WRB reading_VBG a_DT sen_NN -_: tence_NN ,_, we_PRP designed_VBD an_DT experiment_NN to_TO measure_VB corre_NN -_: lation_NN between_IN human_JJ judgment_NN and_CC popularity_NN ._.
+n_NN f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- n_SYM −_SYM 1_CD log_VBP g_NN -LRB-_-LRB- wi_FW -RRB-_-RRB- H_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM α_FW i_FW =_SYM 1_CD +_CD β_NN i_FW -LRB-_-LRB- 13_CD -RRB-_-RRB- n_FW n_FW −_FW 1_CD Experimental_JJ Setup_NNP J1_NNP J2_NNP J3_NNP J4_NNP J5_NNP J1_NNP 1_CD 0.639_CD 0.722_CD 0.650_CD 0.639_CD J2_NN 0.639_CD 1_CD 0.582_CD 0.496_CD 0.645_CD J3_NN 0.722_CD 0.582_CD 1_CD 0.724_CD 0.638_CD J4_NN 0.650_CD 0.496_CD 0.724_CD 1_CD 0.536_CD J5_NN 0.639_CD 0.645_CD 0.638_CD 0.536_CD 1_CD Table_NNP 1_CD :_: Inter-judge_JJ correlation_NN ._.
+Table_NNP 2_CD :_: Correlation_NN between_IN human_JJ judgment_NN and_CC popu_NN -_: larity_NN of_IN each_DT corpus_NN ._.
+in_IN Table_NNP 1_CD ._.
+Although_IN J4_CD produced_VBD relatively_RB poor_JJ results_NNS ,_, correlations_NNS show_VBP a_DT clear_JJ positive_JJ relation_NN -_: ship_NN between_IN 0.49_CD and_CC 0.72_CD ;_: excepting_VBG J4_NNP 's_POS results_NNS ,_, the_DT correlation_NN improved_VBN to_TO between_IN 0.58_CD and_CC 0.72_CD ._.
+These_DT correlation_NN scores_NNS can_MD be_VB regarded_VBN as_IN fairly_RB high_JJ ,_, considering_VBG that_IN we_PRP used_VBD a_DT six-point_JJ scale_NN and_CC compared_VBN the_DT results_NNS to_TO similar_JJ results_NNS reported_VBN during_IN the_DT paraphrase_NN evaluation_NN -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+These_DT high_JJ correlations_NNS confirm_VBP the_DT effectiveness_NN of_IN our_PRP$ experimental_JJ design_NN and_CC explanation_NN ._.
+We_PRP con_VBP -_: sidered_VBD the_DT reasons_NNS for_IN J4_NN 's_POS relatively_RB poor_JJ score_NN when_WRB analyzing_VBG the_DT results_NNS ._.
+5_CD Experimental_JJ Result_NN 5.1_CD Word_NN Popularity_NN To_TO measure_VB sentence_NN popularity_NN with_IN word_NN popular_JJ -_: ity_NN ,_, we_PRP built_VBD language_NN resources_NNS -LRB-_-LRB- CMC_NNP and_CC DF_NNP -RRB-_-RRB- from_IN each_DT corpus_NN :_: Korean_JJ Wikipedia_NNP and_CC Modern_NNP Korean_NNP usage_NN frequency_NN report_NN ._.
+Using_VBG Eq_NNP ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC Eq_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, we_PRP calculated_VBD the_DT popularity_NN of_IN each_DT sentence_NN ._.
+By_IN comparing_VBG the_DT performance_NN of_IN each_DT corpus_NN ,_, we_PRP aim_VBP to_TO identify_VB the_DT corpus_NN that_IN most_JJS accurately_RB reflects_VBZ public_JJ language_NN usage_NN ._.
+The_DT correlations_NNS between_IN our_PRP$ method_NN and_CC human_JJ judgments_NNS are_VBP listed_VBN in_IN Table_NNP 2_CD ._.
+The_DT results_NNS in_IN Table_NNP 2_CD show_NN ,_, in_IN general_JJ ,_, clear_JJ positive_JJ linear_JJ correlations_NNS ._.
+The_DT row_NN labeled_VBN ``_`` Wiki_NNP ''_'' shows_VBZ the_DT results_NNS based_VBN on_IN the_DT Korean_JJ Wikipedia_NNP corpus_NN ;_: row_NN ``_`` UFR_NNP ''_'' shows_VBZ results_NNS based_VBN on_IN MKUFR_NNP ._.
+In_IN particular_JJ ,_, Wikipedia_NNP rather_RB than_IN MKUFR_NNP shows_VBZ better_JJR performance_NN ,_, and_CC CMC-DF_NNP -LRB-_-LRB- represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- -RRB-_-RRB- shows_VBZ better_JJR performance_NN than_IN CMC_NNP -LRB-_-LRB- Eq_NNP ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- -RRB-_-RRB- only_RB ._.
+We_PRP conclude_VBP that_IN Ko_NNP -_: rean_NN Wikipedia_NN reflects_VBZ public_JJ language_NN usage_NN more_RBR accurately_RB than_IN MKUFR_NNP ._.
+Thus_RB ,_, we_PRP selected_VBD the_DT Wikipedia_NNP corpus_NN as_IN the_DT basis_NN of_IN our_PRP$ DLM_NNP ,_, and_CC con_NN -_: ducted_VBD the_DT experiment_NN described_VBD below_IN ._.
+Figure_NN 2_CD :_: Scatter_VB plot_NN of_IN popularity_NN -LRB-_-LRB- un-optimized_JJ -RRB-_-RRB- versus_CC human_JJ judgment_NN -LRB-_-LRB- avg_NN ._. -RRB-_-RRB- ._.
+5.2_CD Context_NNP Popularity_NNP Through_IN the_DT previous_JJ experiment_NN ,_, we_PRP conclude_VBP that_IN the_DT Wikipedia_NNP corpus_VBZ most_RBS accurately_RB reflects_VBZ pub_NN -_: lic_JJ language_NN usage_NN ._.
+Thus_RB ,_, we_PRP built_VBD a_DT DLM_NNP based_VBN on_IN Wikipedia_NNP ._.
+Using_VBG Eq_NNP ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, we_PRP measured_VBD con_NN -_: text_NN popularity_NN based_VBN on_IN dependency_NN relationships_NNS ._.
+Lastly_RB ,_, we_PRP attempted_VBD to_TO measure_VB popularity_NN by_IN ap_SYM -_: plying_VBG both_DT word_NN popularity_NN and_CC context_NN popular_JJ -_: ity_NN -LRB-_-LRB- this_DT process_NN is_VBZ represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+In_IN the_DT Table_NNP 3_CD ,_, row_NN ``_`` DLM_NNP ''_'' contains_VBZ the_DT results_NNS of_IN ap_SYM -_: plying_VBG context_NN popularity_NN -LRB-_-LRB- represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- -RRB-_-RRB- ;_: row_NN ``_`` Comb_NNP ''_'' contains_VBZ the_DT results_NNS of_IN applying_VBG both_DT word_NN popularity_NN and_CC context_NN popularity_NN -LRB-_-LRB- represented_VBN in_IN Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+Figure_NN 2_CD shows_VBZ the_DT average_NN of_IN human_JJ judgment_NN scores_NNS plotted_VBN against_IN the_DT popularity_NN de_IN -_: rived_VBN from_IN Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+Lastly_RB ,_, the_DT results_NNS in_IN row_NN ``_`` Opt_VB ''_'' show_VB the_DT result_NN of_IN optimization_NN of_IN the_DT weight_NN vari_SYM -_: ables_IN α_NN and_CC β_NN of_IN Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+The_DT optimization_NN pro-_JJ cess_NN will_MD be_VB discussed_VBN in_IN Section_NN 5.3_CD ._.
+An_DT interesting_JJ finding_NN is_VBZ that_IN considering_VBG contexts_NNS alone_RB is_VBZ nega_JJ -_: tively_RB correlated_VBN with_IN human_JJ judgments_NNS ._.
+Neverthe_NNP -_: less_JJR ,_, when_WRB they_PRP are_VBP combined_VBN with_IN word_NN popularity_NN ,_, performance_NN is_VBZ improved_VBN ._.
+The_DT Pearson_NNP correlation_NN between_IN popularity_NN and_CC human_JJ judgment_NN is_VBZ 0.77_CD ._.
+CMC_NNP .45_CD .40_CD .37_CD .39_CD .33_CD .39_CD CMCDF_NNP .58_CD .53_CD .51_CD .50_CD .40_CD .50_CD CMC_NNP .30_CD .28_CD .28_CD .24_CD .19_CD .27_CD CMCDF_NNP .43_CD .37_CD .40_CD .38_CD .27_CD .37_CD UFR_NNP Wiki_NNP J_NNP avg_NN ._.
+J1_CD J2_NNP J3_NNP J4_NNP J5_NNP CMC_NNP .45_CD .40_CD .37_CD .39_CD .33_CD .39_CD CMCDF_NNP .58_CD .53_CD .51_CD .50_CD .40_CD .50_CD DLM_NNP -.20_CD -.23_CD -.17_CD -.15_CD -.17_CD -.22_CD Comb_NNP .66_CD .62_CD .60_CD .56_CD .44_CD .62_CD Opt_NNP .77_CD .69_CD .60_CD .67_CD .45_CD .80_CD Table_NNP 3_CD :_: Correlation_NN between_IN human_JJ judgment_NN and_CC popu_NN -_: larity_NN of_IN different_JJ models_NNS ._.
+5.3_CD Weight_NNP Optimization_NNP To_TO derive_VB optimal_JJ weight_NN parameter_NN α_NN and_CC β_NN in_IN Eq_NNP ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, we_PRP divide_VBP the_DT experiment_NN data_NNS into_IN three_CD sets_NNS :_: training_NN ,_, validation_NN ,_, and_CC test_NN ._.
+We_PRP divided_VBD the_DT exper_NN -_: imentdatausingaratioof3_NN :_: 1_CD :_: 1_LS ._.
+Usingagrid_JJ search_NN ,_, we_PRP identify_VBP the_DT top_JJ ten_CD parameter_NN combi_NNS -_: nations_NNS ._.
+We_PRP set_VBP the_DT scope_NN of_IN each_DT parameter_NN as_IN in_IN -_: teger_NN -LSB-_NNP 0,100_CD -RSB-_NNP ._.
+By_IN applying_VBG those_DT combinations_NNS to_TO the_DT validation_NN set_NN ,_, we_PRP identify_VBP the_DT optimal_JJ parame_NN -_: ter_NN pair_NN ;_: the_DT parameter_NN of_IN CMC-DF_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- is_VBZ 35_CD and_CC that_DT of_IN DLM_NNP -LRB-_-LRB- β_FW -RRB-_-RRB- is_VBZ 65_CD ._.
+We_PRP verified_VBD the_DT performance_NN of_IN our_PRP$ method_NN with_IN test_NN set_VBN using_VBG the_DT optimal_JJ parame_NN -_: ter_NN pair_NN obtained_VBN from_IN the_DT validation_NN set_NN -LRB-_-LRB- α_FW :_: β_VB =_SYM 35_CD :_: 65_CD -RRB-_-RRB- ._.
+5.4_CD Result_NN Analysis_NNP As_IN in_IN the_DT Section_NN 5.1_CD ,_, we_PRP investigated_VBD CMC-DF_NNP 's_POS Pearson_NNP correlation_NN with_IN human_JJ judgments_NNS ._.
+Our_PRP$ ba_SYM -_: sic_JJ concept_NN started_VBD with_IN term_NN frequency_NN ;_: we_PRP built_VBD language_NN resources_NNS -LRB-_-LRB- CMC_NNP -RRB-_-RRB- based_VBN on_IN term_NN frequency_NN ,_, and_CC they_PRP showed_VBD a_DT clear_JJ positive_JJ correlation_NN of_IN 0.45_CD ._.
+In_IN addition_NN ,_, we_PRP suggested_VBD that_IN cases_NNS can_MD not_RB be_VB solved_VBN using_VBG only_RB CMC_NNP ._.
+Thus_RB ,_, we_PRP applied_VBD DF_NNP ,_, and_CC we_PRP obtained_VBD an_DT improved_VBN correlation_NN of_IN 0.58_CD ._.
+To_TO measure_VB popularity_NN stemming_VBG from_IN contex_NN -_: tual_JJ information_NN ,_, we_PRP applied_VBD language_NN modeling_NN based_VBN on_IN dependency_NN relationships_NNS ._.
+Interestingly_RB ,_, DLM_NNP shows_VBZ negative_JJ correlation_NN by_IN itself_PRP ._.
+However_RB ,_, when_WRB combined_VBN with_IN CMC-DF_NNP ,_, it_PRP improves_VBZ corre_NN -_: lation_NN ;_: the_DT Pearson_NNP correlation_NN between_IN the_DT com_NN -_: bined_VBN model_NN -LRB-_-LRB- CMC-DF-DLM_NNP -RRB-_-RRB- and_CC human_JJ judgment_NN is_VBZ 0.66_CD ._.
+We_PRP optimized_VBD the_DT weight_NN parameters_NNS through_IN a_DT grid_NN search_NN and_CC avoid_VB overfitting_NN by_IN dividing_VBG exper_NN -_: iment_NN data_NNS into_IN three_CD categories_NNS :_: training_NN ,_, validation_NN ,_, and_CC test_NN ._.
+The_DT Pearson_NNP correlation_NN between_IN our_PRP$ pop_NN -_: ularity_NN method_NN and_CC human_JJ judgment_NN is_VBZ 0.77_CD ._.
+This_DT correlation_NN is_VBZ quite_RB high_JJ ,_, considering_VBG that_IN the_DT high_JJ -_: est_NN sentence-level_NN Pearson_NNP correlation_NN in_IN the_DT Met_NNP -_: ricMATR_NNP 2008_CD -LRB-_-LRB- Przybocki_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- competition_NN was_VBD 0.68_CD ,_, which_WDT was_VBD achieved_VBN by_IN METEOR_NNP ;_: in_IN con_NN -_: trast_NN ,_, BLEW_VBD showed_VBD a_DT correlation_NN of_IN 0.45_CD ._.
+When_WRB compared_VBN with_IN the_DT results_NNS of_IN PEM_NNP -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ,_, the_DT sentence_NN level_NN correlation_NN is_VBZ also_RB quite_RB high_JJ ._.
+Furthermore_RB ,_, we_PRP calculated_VBD the_DT correlation_NN be_VB -_: tween_VB our_PRP$ method_NN and_CC each_DT judge_NN ._.
+Except_IN for_IN one_CD judge_NN ,_, our_PRP$ method_NN shows_VBZ strong_JJ positive_JJ linear_JJ cor_NN -_: relation_NN with_IN human_JJ judgments_NNS -LRB-_-LRB- between_IN 0.60_CD and_CC 0.80_CD -RRB-_-RRB- ._.
+Although_IN the_DT results_NNS produced_VBN by_IN J4_CD were_VBD rel_SYM -_: atively_RB poor_JJ ,_, they_PRP still_RB resulted_VBD in_IN a_DT clear_JJ positive_JJ cor_NN -_: relation_NN of_IN 0.45_CD ._.
+5.5_CD Characteristics_NNS in_IN Corpora_NNP and_CC Judges_NNPS Table_NNP 2_CD shows_NNS that_IN the_DT CMC-DF_NNP based_VBN on_IN Korean_JJ Wikipedia_NNP exhibit_NN better_JJR performance_NN than_IN those_DT based_VBN on_IN MKUFR_NNP ._.
+The_DT results_NNS from_IN Section_NN 5.1_CD became_VBD our_PRP$ grounds_NNS for_IN concluding_VBG that_DT Korean_JJ Wikipedia_NN reflects_VBZ public_JJ language_NN usage_NN more_RBR ac_SYM -_: curately_RB than_IN MKUFR_NNP ._.
+We_PRP believe_VBP the_DT reasons_NNS are_VBP as_IN follows_VBZ ._.
+•_NNP Wikipedia_NNP is_VBZ written_VBN by_IN the_DT public_NN ._.
+Modern_NNP Korean_NNP usage_NN frequency_NN report_NN is_VBZ based_VBN on_IN publications_NNS written_VBN by_IN experts_NNS such_JJ as_IN writers_NNS ,_, journalists_NNS ,_, novelists_NNS ,_, etc._FW •_FW Wikipedia_NNP is_VBZ written_VBN in_IN real_JJ time_NN ._.
+Modern_NNP Korean_NNP usage_NN frequency_NN report_NN was_VBD created_VBN in_IN 2005_CD and_CC analyzed_VBD publications_NNS printed_VBN between_IN 1990_CD and_CC 2002_CD ._.
+In_IN Table_NNP 1_CD ,_, 2_CD and_CC 3_CD ,_, we_PRP note_VBP that_IN J4_NNP 's_POS results_NNS show_VBP relatively_RB low_JJ correlation_NN with_IN the_DT results_NNS from_IN other_JJ judges_NNS and_CC the_DT results_NNS from_IN our_PRP$ methods_NNS ._.
+To_TO reveal_VB the_DT reason_NN ,_, we_PRP analyzed_VBD their_PRP$ answer_NN sheets_NNS ._.
+Table_NNP 4_CD shows_NNS statistical_JJ characteristic_NN of_IN human_JJ judgments_NNS ._.
+For_IN each_DT judge_NN 's_POS decision_NN ,_, μ_NN is_VBZ the_DT average_JJ score_NN ,_, σ_NN represents_VBZ the_DT standard_JJ deviation_NN ,_, and_CC min_NN and_CC max_NN represent_VBP the_DT lowest_JJS and_CC highest_JJS values_NNS ,_, respectively_RB ,_, in_IN the_DT range_NN of_IN responses_NNS ._.
+The_DT salient_JJ point_NN in_IN Table_NNP 4_CD is_VBZ that_IN J4_CD assigned_VBN scores_NNS in_IN a_DT range_NN of_IN only_RB -LSB-_JJ 2_CD ,_, 5_CD -RSB-_NN while_IN others_NNS used_VBD the_DT entire_JJ scale_NN -LSB-_NN 1_CD ,_, 6_CD -RSB-_NN ._.
+5.6_CD Discussion_NN and_CC Future_NNP Work_NNP As_IN shown_VBN in_IN Table_NNP 2_CD and_CC 3_CD ,_, our_PRP$ method_NN shows_VBZ strong_JJ correlations_NNS with_IN human_JJ judgments_NNS ,_, even_RB in_IN Javg_NNP ._.
+J1_CD J2_NNP J3_NNP J4_NNP J5_NNP μ_VBD 4.11_CD 3.35_CD 4.69_CD 3.74_CD 4.41_CD 3.02_CD σ_NN 0.99_CD 1.21_CD 1.05_CD 1.86_CD 0.91_CD 1.31_CD min_NN 2.00_CD 1_CD 1_CD 1_CD 2_CD 1_CD max_NN 5.83_CD 6_CD 6_CD 6_CD 5_CD 6_CD Table_NNP 4_CD :_: Comparison_NN of_IN statistical_JJ characteristics_NNS of_IN hu_SYM -_: man_NN judgments_NNS ._.
+cases_NNS in_IN which_WDT differences_NNS exist_VBP between_IN individu_NN -_: als_NNS ._.
+Further_RB ,_, there_EX is_VBZ a_DT clear_JJ improvement_NN in_IN corre_NN -_: lation_NN when_WRB the_DT additional_JJ notions_NNS of_IN document_NN fre_NN -_: quency_NN and_CC context_NN are_VBP applied_VBN ._.
+In_IN this_DT experiment_NN ,_, our_PRP$ method_NN showed_VBD the_DT potential_NN for_IN measuring_VBG pop_NN -_: ularity_NN by_IN involving_VBG the_DT contextual_JJ information_NN ;_: so_RB far_RB ,_, we_PRP have_VBP considered_VBN only_RB one_CD word_NN that_WDT has_VBZ di_FW -_: rect_NN semantic_JJ relationship_NN with_IN target_NN word_NN ,_, namely_RB ,_, the_DT dependency_NN head_NN ._.
+The_DT extension_NN of_IN contextual_JJ information_NN will_MD be_VB addressed_VBN in_IN future_JJ works_NNS ._.
+Our_PRP$ method_NN has_VBZ a_DT limitation_NN due_JJ to_TO lexical_JJ fea_NN -_: tures_NNS ._.
+We_PRP can_MD not_RB accommodate_VB syntax-level_JJ popu_NN -_: larity_NN measures_NNS ,_, such_JJ as_IN the_DT order_NN of_IN words_NNS ._.
+Because_IN Korean_JJ is_VBZ affiliated_VBN with_IN agglutinative_JJ languages_NNS ,_, there_EX is_VBZ no_DT grammatical_JJ or_CC semantic_JJ meaning_NN re_SYM -_: lated_VBN to_TO the_DT order_NN of_IN words_NNS ;_: in_IN sentences_NNS ,_, empty_JJ mor_NN -_: phemes_NNS decide_VBP the_DT role_NN of_IN content_JJ morphemes_NNS ._.
+How_WRB -_: ever_RB ,_, for_IN readers_NNS and_CC service_NN consumers_NNS ,_, the_DT order_NN of_IN words_NNS can_MD convey_VB different_JJ impressions_NNS ._.
+This_DT is_VBZ an_DT extension_NN of_IN the_DT characteristics_NNS we_PRP aim_VBP to_TO mea_SYM -_: sure_JJ using_VBG popularity_NN ._.
+These_DT types_NNS of_IN syntactic_JJ fac_NN -_: tors_NNS will_MD be_VB addressed_VBN in_IN future_JJ works_NNS ._.
+J4_CD showed_VBD relatively_RB low_JJ Pearson_NNP correlation_NN per_IN -_: formance_NN ,_, breadth_NN of_IN improvement_NN ,_, and_CC inter-judge_JJ correlation_NN ._.
+To_TO explain_VB these_DT ,_, we_PRP developed_VBD two_CD hy_SYM -_: potheses_NNS ._.
+The_DT first_JJ is_VBZ that_DT J4_NN assigned_VBN scores_NNS in_IN a_DT range_NN of_IN only_RB -LSB-_JJ 2_CD ,_, 5_CD -RSB-_NN while_IN others_NNS used_VBD the_DT entire_JJ scale_NN -LSB-_NNP 1,6_CD -RSB-_NNP ._.
+When_WRB conducting_VBG an_DT experiment_NN using_VBG the_DT Likert_NNP scale_NN ,_, it_PRP is_VBZ common_JJ for_IN judges_NNS to_TO avoid_VB ex_FW -_: treme_NN estimations_NNS ._.
+This_DT can_MD reduce_VB the_DT sensitivity_NN of_IN the_DT results_NNS ._.
+Low_NNP inter-judge_NN correlation_NN supports_VBZ this_DT hypothesis_NN ._.
+The_DT second_JJ is_VBZ that_IN he_PRP had_VBD a_DT differ_VBP -_: ent_JJ standard_NN of_IN popularity_NN ._.
+As_IN mentioned_VBN previously_RB ,_, popularity_NN is_VBZ very_RB subjective_JJ sense_NN ,_, and_CC we_PRP focused_VBD on_IN popularity_NN stemming_VBG from_IN lexical_JJ factors_NNS ._.
+If_IN he_PRP followed_VBD different_JJ rules_NNS than_IN other_JJ judges_NNS ,_, the_DT rela_NN -_: tively_RB low_JJ performance_NN can_MD be_VB explained_VBN ._.
+Low_NNP im_SYM -_: provement_NN breadth_NN per_IN application_NN of_IN additional_JJ fac_SYM -_: tors_NNS supports_VBZ this_DT hypothesis_NN ._.
+In_IN aspects_NNS of_IN application_NN ,_, we_PRP consider_VBP popularity_NN as_IN a_DT method_NN to_TO reflect_VB the_DT style_NN of_IN sentences_NNS pro-_JJ duced_VBN by_IN MT_NNP or_CC paraphrasing_VBG methods_NNS ._.
+Popularity_NN is_VBZ a_DT type_NN of_IN combination_NN of_IN weighted_JJ probabilities_NNS ._.
+This_DT means_VBZ generating_VBG a_DT possibility_NN under_IN a_DT corpus_NN that_WDT accurately_RB reflects_VBZ a_DT target_NN ._.
+In_IN this_DT paper_NN ,_, the_DT tar_NN -_: get_VB of_IN the_DT corpus_NN was_VBD public_JJ language_NN usage_NN ._.
+How_WRB -_: ever_RB ,_, if_IN we_PRP secure_VBP various_JJ corpora_NN that_IN each_DT reflects_VBZ different_JJ targets_NNS ,_, they_PRP can_MD be_VB used_VBN as_IN classifiers_NNS to_TO find_VB the_DT author_NN of_IN the_DT source_NN sentences_NNS ._.
+Further_RB ,_, resources_NNS -LRB-_-LRB- CMC_NNP ,_, DF_NNP ,_, and_CC DLM_NNP -RRB-_-RRB- can_MD be_VB used_VBN for_IN generation_NN module_NN of_IN MT_NNP or_CC paraphrase_NN system_NN to_TO reflect_VB the_DT specificity_NN of_IN the_DT author_NN ._.
+The_DT target_NN of_IN corpus_NN can_MD be_VB time_NN ,_, author_NN ,_, topic_NN ,_, or_CC other_JJ factors_NNS ._.
+For_IN example_NN ,_, assume_VB that_IN we_PRP have_VBP obtained_VBN diverse_JJ corpora_NN from_IN various_JJ authors_NNS ,_, and_CC one_CD of_IN the_DT authors_NNS ,_, ``_`` Murakami_NNP Haruki_NNP ,_, ''_'' writes_VBZ a_DT new_JJ novel_NN ._.
+A_DT MT_NNP system_NN containing_VBG the_DT popularity_NN module_NN and_CC language_NN resources_NNS can_MD identify_VB the_DT novel_NN 's_POS author_NN and_CC apply_VB his_PRP$ style_NN using_VBG the_DT language_NN resources_NNS from_IN the_DT Murakami_NNP 's_POS corpus_NN in_IN generation_NN stage_NN ._.
+6_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP proposed_VBD a_DT novel_NN notion_NN ,_, popu_NN -_: larity_NN ,_, to_TO consider_VB the_DT consumers_NNS '_POS satisfaction_NN from_IN functional_JJ quality_NN ._.
+We_PRP defined_VBD a_DT popular_JJ sentence_NN as_IN one_CD that_WDT contains_VBZ words_NNS that_WDT are_VBP frequently_RB used_VBN ,_, ap_SYM -_: pear_NN in_IN many_JJ documents_NNS ,_, and_CC contain_VBP frequent_JJ de_IN -_: pendencies_NNS ._.
+To_TO measure_VB the_DT popularity_NN ,_, we_PRP began_VBD with_IN term_NN frequency_NN ,_, and_CC then_RB applied_VBD the_DT concepts_NNS of_IN document_NN frequency_NN and_CC context_NN to_TO complement_VB features_NNS that_WDT term_VBP frequency_NN can_MD not_RB cover_VB ._.
+We_PRP con_VBP -_: ducted_VBD a_DT human_JJ evaluation_NN and_CC measured_VBN the_DT popu_NN -_: larity_NN for_IN machine-generated_JJ sentences.In_NNP our_PRP$ exper_NN -_: iment_NN ,_, we_PRP showed_VBD strong_JJ Pearson_NNP correlation_NN coeffi_NN -_: cients_NNS between_IN popularity_NN and_CC human_JJ judgment_NN ._.
+To_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, our_PRP$ method_NN is_VBZ the_DT first_JJ au_SYM -_: tomatic_JJ sentence_NN popularity_NN evaluator_NN based_VBN on_IN term_NN occurrences_NNS and_CC contextual_JJ information_NN ._.
+ACKNOWLEDGMENTS_NNS This_DT work_NN was_VBD supported_VBN by_IN ICT_NNP R&D_NNP program_NN of_IN MSIP/IITP_NNP ._.
+-LSB-_NNP R0101-15-0062_NNP ,_, Development_NNP of_IN Knowledge_NNP Evolutionary_NNP WiseQA_NNP Platform_NNP Tech_NNP -_: nology_NN for_IN Human_NNP Knowledge_NNP Augmented_NNP Ser_NNP -_: vices_NNS -RSB-_NNP Javg_NNP ._.
+J1_CD J2_NNP J3_NNP J4_NNP J5_NNP References_NNP Satanjeev_NNP Banerjee_NNP and_CC Alon_NNP Lavie_NNP ._.
+2005_CD ._.
+Meteor_NNP :_: An_DT automatic_JJ metric_JJ for_IN mt_JJ evaluation_NN with_IN improved_JJ cor_NN -_: relation_NN with_IN human_JJ judgments_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP workshop_NN on_IN intrinsic_JJ and_CC extrinsic_JJ evaluation_NN measures_NNS for_IN machine_NN translation_NN and/or_CC summariza_NN -_: tion_NN ,_, volume_NN 29_CD ,_, pages_NNS 65_CD --_: 72_CD ._.
+Colin_NNP Bannard_NNP and_CC Chris_NNP Callison-Burch_NNP ._.
+2005_CD ._.
+Para_SYM -_: phrasing_NN with_IN bilingual_JJ parallel_JJ corpora_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG on_IN ACL_NNP ,_, pages_NNS 597_CD --_: 604_CD ._.
+Regina_NNP Barzilay_NNP and_CC Lillian_NNP Lee_NNP ._.
+2002_CD ._.
+Bootstrapping_VBG lexical_JJ choice_NN via_IN multiple-sequence_JJ alignment_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL-02_NN conference_NN on_IN EMNLP_NNP -_: Volume_NN 10_CD ,_, pages_NNS 164_CD --_: 171_CD ._.
+Chris_NNP Callison-Burch_NNP ,_, Cameron_NNP Fordyce_NNP ,_, Philipp_NNP Koehn_NNP ,_, Christof_NNP Monz_NNP ,_, and_CC Josh_NNP Schroeder_NNP ._.
+2007_CD ._.
+-LRB-_-LRB- meta_SYM -_: -RRB-_-RRB- evaluation_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Second_JJ Workshop_NNP on_IN StatMT_NNP ,_, pages_NNS 136_CD --_: 158_CD ._.
+Chris_NNP Callison-Burch_NNP ,_, Trevor_NNP Cohn_NNP ,_, and_CC Mirella_NNP Lapata_NNP ._.
+2008_CD ._.
+Parametric_NNP :_: An_DT automatic_JJ evaluation_NN metric_JJ for_IN paraphrasing_VBG ._.
+In_IN Proceedings_NNP of_IN the_DT 22nd_JJ Coling_NN ,_, pages_NNS 97_CD --_: 104_CD ._.
+Chris_NNP Callison-Burch_NNP ._.
+2008_CD ._.
+Syntactic_JJ constraints_NNS on_IN paraphrases_NNS extracted_VBN from_IN parallel_JJ corpora_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Conference_NN on_IN EMNLP_NNP ,_, pages_NNS 196_CD --_: 205_CD ._.
+Luis_NNP Casalo_NNP ́_NN ,_, Carlos_NNP Flavia_NNP ́n_NNP ,_, and_CC Miguel_NNP Guinal_NNP ́ıu_NNP ._.
+2008_CD ._.
+The_DT role_NN of_IN perceived_VBN usability_NN ,_, reputation_NN ,_, satisfac_NN -_: tion_NN and_CC consumer_NN familiarity_NN on_IN the_DT website_NN loyalty_NN formation_NN process_NN ._.
+Computers_NNS in_IN Human_NNP Behavior_NNP ,_, 24_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :325_CD --_: 345_CD ._.
+David_NNP L_NNP Chen_NNP and_CC William_NNP B_NNP Dolan_NNP ._.
+2011_CD ._.
+Collect_VB -_: ing_NN highly_RB parallel_JJ data_NNS for_IN paraphrase_NN evaluation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG on_IN the_DT ACL_NNP ,_, pages_NNS 190_CD --_: 200_CD ._.
+Kim_NNP Hansaem_NNP ._.
+2005_CD ._.
+Modern_NNP korean_JJ usage_NN fre_NN -_: quency_NN report_NN ._.
+https://books.google.co_NN ._.
+kr/books_NNS ?_.
+id_NN =_SYM umhKAQAAIAAJ_NNP ._.
+Vladimir_NNP I_PRP Levenshtein_NNP ._.
+1966_CD ._.
+Binary_JJ codes_NNS capable_JJ of_IN correcting_VBG deletions_NNS ,_, insertions_NNS ,_, and_CC reversals_NNS ._.
+In_IN So_RB -_: viet_FW Physics_NNP Doklady_NNP ,_, volume_NN 10_CD ,_, pages_NNS 707_CD --_: 710_CD ._.
+Chang_NNP Liu_NNP ,_, Daniel_NNP Dahlmeier_NNP ,_, and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2010_CD ._.
+Pem_NNP :_: A_DT paraphrase_NN evaluation_NN metric_JJ exploiting_VBG paral_NN -_: lel_NN texts_NNS ._.
+In_IN Proceedings_NNP of_IN EMNLP_NNP ,_, pages_NNS 923_CD --_: 932_CD ._.
+Hans_NNP Peter_NNP Luhn_NNP ._.
+1957_CD ._.
+A_DT statistical_JJ approach_NN to_TO mech_VB -_: anized_VBN encoding_NN and_CC searching_VBG of_IN literary_JJ information_NN ._.
+IBM_NNP Journal_NNP of_IN Research_NNP and_CC Development_NNP ,_, 1_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :309_CD --_: 317_CD ._.
+Philip_NNP M_NNP McCarthy_NNP ,_, Rebekah_NNP H_NNP Guess_NNP ,_, and_CC Danielle_NNP S_NNP McNamara_NNP ._.
+2009_CD ._.
+The_DT components_NNS of_IN paraphrase_NN evaluations_NNS ._.
+Behavior_NNP Research_NNP Methods_NNPS ,_, 41_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :682_CD --_: 690_CD ._.
+Banwari_NNP Mittal_NNP and_CC Walfried_NNP M_NNP Lassar_NNP ._.
+1998_CD ._.
+Why_WRB do_VBP customers_NNS switch_VB ?_.
+the_DT dynamics_NNS of_IN satisfaction_NN versus_CC loyalty_NN ._.
+Journal_NNP of_IN Services_NNP Marketing_NNP ,_, 12_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :177_CD --_: 194_CD ._.
+Kishore_NNP Papineni_NNP ,_, Salim_NNP Roukos_NNP ,_, Todd_NNP Ward_NNP ,_, and_CC Wei_NNP -_: Jing_NNP Zhu_NNP ._.
+2002_CD ._.
+Bleu_NNP :_: a_DT method_NN for_IN automatic_JJ evalua_NN -_: tion_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ Annual_JJ Meeting_VBG on_IN ACL_NNP ,_, pages_NNS 311_CD --_: 318_CD ._.
+Mark_NNP Przybocki_NNP ,_, Kay_NNP Peterson_NNP ,_, Se_NNP ́bastien_NNP Bronsart_NNP ,_, and_CC Gregory_NNP Sanders_NNP ._.
+2009_CD ._.
+The_DT nist_JJ 2008_CD metrics_NNS for_IN machine_NN translation_NN challenge_NN --_: overview_NN ,_, methodol_NN -_: ogy_NN ,_, metrics_NNS ,_, and_CC results_NNS ._.
+Machine_NN Translation_NN ,_, 23_CD -LRB-_-LRB- 2_LS -_: 3_LS -RRB-_-RRB- :71_CD --_: 103_CD ._.
+Gerard_NNP Salton_NNP and_CC Christopher_NNP Buckley_NNP ._.
+1988_CD ._.
+Term_NN -_: weighting_NN approaches_NNS in_IN automatic_JJ text_NN retrieval_NN ._.
+In_IN -_: formation_NN Processing_NNP &_CC Management_NNP ,_, 24_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :513_CD --_: 523_CD ._.
+Matthew_NNP G_NNP Snover_NNP ,_, Nitin_NNP Madnani_NNP ,_, Bonnie_NNP Dorr_NNP ,_, and_CC Richard_NNP Schwartz_NNP ._.
+2009_CD ._.
+Ter-plus_NN :_: paraphrase_VB ,_, se_FW -_: mantic_NN ,_, and_CC alignment_NN enhancements_NNS to_TO translation_NN edit_VB rate_NN ._.
+Machine_NN Translation_NN ,_, 23_CD -LRB-_-LRB- 2-3_CD -RRB-_-RRB- :117_CD --_: 127_CD ._.
+Robert_NNP A_NNP Wagner_NNP and_CC Michael_NNP J_NNP Fischer_NNP ._.
+1974_CD ._.
+The_DT string-to-string_JJ correction_NN problem_NN ._.
+ACM_NNP -LRB-_-LRB- JACM_NNP -RRB-_-RRB- ,_, 21_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :168_CD --_: 173_CD ._.
+Journal_NNP of_IN the_DT

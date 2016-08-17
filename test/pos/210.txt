@@ -1,0 +1,304 @@
+Stance_NNP Classification_NNP on_IN PTT_NNP Comments_NNS Abstract_JJ With_IN the_DT development_NN of_IN social_JJ media_NNS and_CC online_JJ forums_NNS ,_, users_NNS have_VBP grown_VBN accustomed_JJ to_TO expressing_VBG their_PRP$ agreement_NN and_CC disagreement_NN via_IN short_JJ texts_NNS ._.
+Elements_NNS that_WDT reveal_VBP the_DT user_NN 's_POS stance_NN or_CC subjectivity_NN thus_RB becomes_VBZ an_DT important_JJ resource_NN in_IN identifying_VBG the_DT user_NN 's_POS position_NN on_IN a_DT given_VBN topic_NN ._.
+In_IN the_DT current_JJ study_NN ,_, we_PRP observe_VBP comments_NNS of_IN an_DT online_JJ bulletin_NN board_NN in_IN Taiwan_NNP for_IN how_WRB people_NNS express_VBP their_PRP$ stance_NN when_WRB responding_VBG to_TO other_JJ people_NNS 's_POS post_NN in_IN Chinese_NNP ._.
+A_DT lexicon_NN is_VBZ built_VBN based_VBN on_IN linguistic_JJ analysis_NN and_CC annotation_NN of_IN the_DT data_NNS ._.
+We_PRP performed_VBD binary_JJ classification_NN task_NN using_VBG these_DT linguistic_JJ features_NNS and_CC was_VBD able_JJ to_TO reach_VB an_DT average_NN of_IN 71_CD percent_NN accuracy_NN ._.
+A_DT linguistic_JJ analysis_NN on_IN the_DT confusion_NN caused_VBN in_IN the_DT classification_NN task_NN is_VBZ done_VBN for_IN future_JJ work_NN on_IN better_JJR accuracy_NN for_IN such_JJ task_NN ._.
+1_CD Introduction_NNP The_DT wide_JJ spread_NN of_IN social_JJ media_NNS has_VBZ given_VBN organizations_NNS and_CC individuals_NNS new_JJ channels_NNS to_TO understanding_VBG public_JJ opinion_NN ._.
+Opinions_NNS are_VBP expressed_VBN via_IN public_JJ debate_NN forums_NNS and_CC on_IN various_JJ platforms_NNS ,_, such_JJ as_IN Facebook_NNP ,_, Twitter_NNP ,_, and_CC even_RB Youtube_NNP ._.
+These_DT opinions_NNS reveal_VBP how_WRB users_NNS feel_VBP about_IN an_DT event_NN ,_, a_DT person_NN ,_, or_CC any_DT focus_NN of_IN discussion_NN ._.
+One_CD expression_NN in_IN Taiwan_NNP ,_, 測風向_CD cè_NN fēngxiàng_NN ``_`` to_TO test_VB the_DT direction_NN of_IN the_DT wind_NN ''_'' is_VBZ used_VBN by_IN netizens_NNS when_WRB an_DT article_NN online_NN inquires_VBZ how_WRB the_DT public_JJ feels_VBZ about_IN a_DT topic_NN ._.
+The_DT phrase_NN perfectly_RB demonstrates_VBZ how_WRB online_JJ discussions_NNS reflect_VBP the_DT public_NN 's_POS reaction_NN to_TO certain_JJ event_NN or_CC certain_JJ individual_JJ ,_, often_RB a_DT political_JJ figure_NN ._.
+In_IN Taiwan_NNP ,_, the_DT mass_NN media_NNS often_RB resort_VBP to_TO online_VB forums_NNS as_IN a_DT source_NN of_IN understanding_VBG how_WRB the_DT public_JJ responds_VBZ Shukai_NNP Hsieh_NNP Graduate_NNP Institute_NNP of_IN Linguistics_NNP National_NNP Taiwan_NNP University_NNP shukaihsieh@ntu.edu.tw_NN to_TO political_JJ events_NNS like_IN new_JJ policy_NN and_CC candidates_NNS running_VBG for_IN elections_NNS ._.
+Online_NNP discussion_NN forums_NNS and_CC social_JJ media_NNS give_VBP citizens_NNS an_DT easier_JJR access_NN to_TO information_NN and_CC more_JJR power_NN in_IN shaping_VBG what_WP information_NN or_CC idea_NN gets_VBZ passed_VBN on_RP ._.
+Users_NNS of_IN these_DT online_JJ forums_NNS participate_VB in_IN a_DT process_NN of_IN framing_VBG discussions_NNS and_CC forming_VBG opinions_NNS ._.
+As_IN Walker_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- pointed_VBD out_RP ,_, these_DT debates_NNS involve_VBP not_RB only_RB the_DT expression_NN of_IN opinions_NNS but_CC also_RB the_DT formation_NN of_IN opinions_NNS ._.
+Through_IN posting_VBG articles_NNS online_VBP ,_, users_NNS talk_VBP about_IN their_PRP$ beliefs_NNS on_IN what_WP is_VBZ true_JJ or_CC not_RB ,_, what_WP is_VBZ important_JJ ,_, and_CC what_WP should_MD be_VB done_VBN ._.
+Their_PRP$ shared_VBN opinions_NNS thus_RB stimulate_VBP more_RBR discussions_NNS ._.
+These_DT users_NNS play_VB an_DT important_JJ role_NN on_IN how_WRB the_DT discussions_NNS are_VBP framed_VBN and_CC shape_VB the_DT form_NN of_IN the_DT arguments_NNS ._.
+One_CD characteristics_NNS of_IN these_DT forums_NNS is_VBZ that_IN users_NNS usually_RB have_VBP to_TO express_VB their_PRP$ position_NN in_IN a_DT very_RB short_JJ text_NN ._.
+This_DT implies_VBZ that_IN stance_NN classification_NN on_IN short_JJ text_NN would_MD be_VB different_JJ from_IN identifying_VBG stance_NN on_IN a_DT document_NN level_NN ._.
+Thus_RB ,_, we_PRP find_VBP it_PRP important_JJ to_TO identify_VB ``_`` elements_NNS ''_'' that_WDT reveal_VBP user_NN 's_POS subjectivity_NN in_IN these_DT short_JJ texts_NNS ._.
+Such_JJ resources_NNS would_MD assist_VB in_IN identification_NN or_CC classification_NN of_IN attitudes_NNS and_CC is_VBZ applicable_JJ in_IN all_DT tasks_NNS that_WDT involves_VBZ differentiating_VBG between_IN factual_JJ information_NN and_CC opinionated_JJ utterances_NNS ._.
+In_IN the_DT current_JJ study_NN ,_, we_PRP observe_VBP stance-taking_JJ language_NN and_CC arguing_VBG behavior_NN from_IN online_JJ comments_NNS and_CC from_IN previous_JJ studies_NNS in_IN both_DT English_NNP and_CC Mandarin_NNP ._.
+The_DT hope_NN is_VBZ to_TO provide_VB linguistic_JJ patterns_NNS and_CC analysis_NN that_WDT would_MD assist_VB in_IN automated_JJ classification_NN on_IN stance_NN ._.
+In_IN the_DT following_JJ sections_NNS ,_, we_PRP will_MD introduce_VB previous_JJ works_NNS done_VBN on_IN related_JJ topic_NN of_IN interest_NN ,_, discuss_VB our_PRP$ work_NN on_IN tagging_NN and_CC classifying_VBG PTT_NNP comments_NNS ,_, present_VB the_DT result_NN of_IN our_PRP$ classification_NN task_NN ,_, and_CC an_DT analysis_NN on_IN classification_NN errors_NNS that_WDT could_MD shed_VB light_NN on_IN future_JJ tasks_NNS on_IN short_JJ text_NN stance_NN classification_NN ._.
+2_CD Related_JJ work_NN The_DT importance_NN of_IN social_JJ media_NNS has_VBZ been_VBN captured_VBN in_IN Shirky_NNP 's_POS study_NN on_IN the_DT political_JJ power_NN of_IN social_JJ media_NNS ._.
+He_PRP asserts_VBZ that_IN regular_JJ citizens_NNS ,_, nongovernmental_JJ organizations_NNS ,_, firms_NNS ,_, and_CC governments_NNS are_VBP all_DT actors_NNS in_IN social_JJ media_NNS ._.
+Social_NNP media_NNS has_VBZ become_VBN an_DT active_JJ part_NN in_IN political_JJ movements_NNS all_DT over_IN the_DT world_NN -LRB-_-LRB- Shirky_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+This_DT increasing_VBG importance_NN and_CC the_DT accessibility_NN of_IN online_JJ data_NNS have_VBP triggered_VBN interests_NNS in_IN related_JJ research_NN to_TO achieve_VB automated_JJ methods_NNS in_IN understanding_VBG affections_NNS and_CC opinions_NNS ._.
+Previous_JJ research_NN has_VBZ made_VBN efforts_NNS on_IN differentiating_VBG factual_JJ information_NN from_IN opinionated_VBN information_NN ._.
+Opinionated_VBN information_NN reveals_VBZ a_DT person_NN 's_POS private_JJ states_NNS through_IN the_DT use_NN of_IN subjective_JJ language_NN ._.
+Private_JJ state_NN is_VBZ a_DT term_NN that_WDT covers_VBZ a_DT person_NN 's_POS overall_JJ attitude_NN ,_, including_VBG opinions_NNS ,_, evaluations_NNS ,_, emotions_NNS ,_, and_CC speculations_NNS -LRB-_-LRB- Quirk_NNP et_FW al._FW ,_, 1985_CD -RRB-_-RRB- ._.
+Identifying_VBG these_DT cues_NNS could_MD assist_VB automatic_JJ tasks_NNS on_IN detecting_VBG attitudes_NNS online_JJ by_IN providing_VBG resources_NNS -LRB-_-LRB- Wiebe_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Wiebe_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- extracted_VBN subjective_JJ cues_NNS by_IN combining_VBG manually_RB annotated_VBN subjective_JJ elements_NNS and_CC expanding_VBG it_PRP with_IN collocations_NNS and_CC clustering_VBG method_NN ._.
+Somasundaran_JJ et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- inspected_VBD dialogues_NNS in_IN meetings_NNS to_TO detect_VB arguing_VBG and_CC sentiment_NN ._.
+In_IN the_DT annotated_JJ data_NNS ,_, sentiment_NN includes_VBZ emotions_NNS ,_, evaluations_NNS ,_, judgements_NNS ,_, feelings_NNS ,_, and_CC stances_NNS ._.
+Arguing_VBG refers_VBZ to_TO cues_NNS that_WDT indicate_VBP the_DT speaker_NN 's_POS attempt_NN to_TO convince_VB one_CD another_DT ._.
+The_DT extracted_VBN subjective_JJ cues_NNS are_VBP utilized_VBN in_IN classification_NN of_IN texts_NNS online_VBP for_IN users_NNS '_POS stance_NN ,_, defined_VBN as_IN ``_`` an_DT overall_JJ position_NN held_VBN by_IN a_DT person_NN toward_IN an_DT object_NN ,_, idea_NN ,_, or_CC proposition_NN ''_'' -LRB-_-LRB- Somasundaran_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Stance_NN classification_NN deals_NNS with_IN two_CD sided_VBD debates_NNS and_CC seeks_VBZ an_DT automated_JJ approach_NN to_TO categorization_NN whether_IN a_DT person_NN is_VBZ for_IN or_CC against_IN the_DT topic_NN discussed_VBN -LRB-_-LRB- Hasan_JJ and_CC Ng_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN Somasundaran_NNP and_CC Wiebe_NNP 's_POS study_NN in_IN 2010_CD ,_, they_PRP tested_VBD a_DT combined_VBN feature_NN set_NN of_IN arguing_VBG based_VBN features_NNS and_CC sentiment_NN based_VBN features_NNS ._.
+Arguing_VBG based_VBN features_NNS included_VBD arguing_VBG trigger_NN expressions_NNS and_CC modal_JJ verbs_NNS ._.
+Sentiment_NN lexicon_NN compiled_VBN by_IN Wilson_NNP et_FW al._FW in_IN 2005_CD was_VBD used_VBN as_IN sentiment_NN based_VBN features_NNS ._.
+They_PRP reached_VBD an_DT average_JJ accuracy_NN of_IN 64_CD percent_NN classifying_VBG online_JJ debates_NNS based_VBN on_IN the_DT lexicon_NN ._.
+Anand_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- combined_VBN the_DT feature_NN set_VBN with_IN metalinguistic_JJ features_NNS like_IN word_NN length_NN and_CC number_NN of_IN characters_NNS and_CC approach_NN arguing_VBG language_NN with_IN dependency_NN parsers_NNS that_WDT capture_VBP words_NNS and_CC its_PRP$ modifying_VBG targets_NNS ._.
+An_DT average_JJ accuracy_NN of_IN 65_CD was_VBD reached_VBN ._.
+Hasan_NNP and_CC Ng_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- takes_VBZ into_IN account_NN features_NNS like_IN the_DT author_NN 's_POS position_NN towards_IN other_JJ issues_NNS and_CC the_DT stance_NN of_IN the_DT immediate_JJ preceding_VBG post_NN as_IN predictors_NNS for_IN stance_NN classification_NN and_CC raised_VBD the_DT accuracy_NN up_IN to_TO 74_CD %_NN ._.
+Faulkner_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- incorporated_JJ generalized_VBN stance_NN proposition_NN subtrees_NNS and_CC ``_`` Wikipedia_NNP Link-based_JJ Measure_NN ''_'' to_TO capture_VB the_DT relations_NNS between_IN topics_NNS ._.
+The_DT combined_VBN feature_NN set_NN was_VBD able_JJ to_TO achieve_VB an_DT average_JJ accuracy_NN of_IN 80_CD percent_NN on_IN students_NNS '_POS argumentative_JJ essays_NNS ._.
+Although_IN previous_JJ studies_NNS on_IN stance_NN classification_NN has_VBZ proven_VBN that_IN classifier_NN trained_VBN on_IN unigrams_NNS could_MD be_VB a_DT baseline_NN that_WDT is_VBZ hard_JJ to_TO defeat_VB and_CC that_IN identification_NN on_IN stance_NN could_MD be_VB difficult_JJ for_IN human_JJ annotators_NNS ,_, adjustment_NN according_VBG to_TO the_DT nature_NN of_IN the_DT data_NN set_NN could_MD help_VB improve_VB the_DT results_NNS of_IN the_DT classification_NN ._.
+Previous_JJ studies_NNS have_VBP mainly_RB focused_VBN on_IN document-level_JJ stance_NN -LRB-_-LRB- Faulkner_NNP ,_, 2014_CD -RRB-_-RRB- or_CC online_JJ debate_NN forums_NNS -LRB-_-LRB- Anand_NNP et_FW al._FW ,_, 2011_CD ;_: Hasan_NNP and_CC Ng_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Less_RBR attention_NN has_VBZ been_VBN placed_VBN on_IN short_JJ text_NN comments_NNS ._.
+However_RB ,_, we_PRP believe_VBP subjective_JJ elements_NNS is_VBZ important_JJ in_IN these_DT texts_NNS full_JJ of_IN sarcasm_NN ,_, typing_VBG errors_NNS ,_, and_CC colorful_JJ use_NN of_IN language_NN -LRB-_-LRB- Malouf_NNP and_CC Mullen_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT aim_NN of_IN the_DT current_JJ study_NN is_VBZ to_TO establish_VB related_JJ resources_NNS in_IN Mandarin_NNP from_IN short_JJ text_NN comments_NNS online_JJ and_CC to_TO examine_VB whether_IN these_DT linguistic_JJ cues_NNS assist_VBP in_IN stance_NN classification_NN ._.
+3_CD Methodology_NNP 3.1_CD Data_NNP collection_NN The_DT corpus_NN in_IN the_DT current_JJ study_NN was_VBD collected_VBN from_IN an_DT online_JJ forum_NN used_VBN in_IN Taiwan_NNP ,_, PTT_NNP ._.
+PTT_NNP is_VBZ the_DT most_RBS popular_JJ online_NN bulletin_NN board_NN in_IN Taiwan_NNP -LRB-_-LRB- Shea_NNP ,_, 2006_CD -RRB-_-RRB- ._.
+It_PRP allows_VBZ users_NNS to_TO share_VB their_PRP$ opinion_NN by_IN posting_VBG articles_NNS and_CC responding_VBG to_TO other_JJ 's_POS posts_NNS ._.
+The_DT platform_NN is_VBZ divided_VBN into_IN boards_NNS with_IN different_JJ topics_NNS ._.
+Each_DT board_NN is_VBZ centered_VBN on_IN certain_JJ field_NN of_IN discussion_NN ._.
+For_IN example_NN ,_, the_DT board_NN ``_`` Boy_Girl_NNP ''_'' is_VBZ a_DT board_NN users_NNS discuss_VB relationships_NNS between_IN boys_NNS and_CC girls_NNS ._.
+In_IN PTT_NNP ,_, users_NNS give_VBP response_NN to_TO other_JJ users_NNS '_POS posts_NNS with_IN comments_NNS ._.
+Comments_NNS are_VBP tagged_VBN by_IN the_DT users_NNS with_IN their_PRP$ own_JJ attitude_NN ,_, whether_IN towards_IN the_DT issue_NN discussed_VBN ,_, the_DT author_NN of_IN the_DT post_NN ,_, or_CC previous_JJ responses_NNS comments_NNS left_VBN by_IN other_JJ users_NNS ._.
+Three_CD tags_NNS are_VBP available_JJ ,_, including_VBG ``_`` push_NN ''_'' ,_, ``_`` boo_NN ''_'' ,_, and_CC ``_`` arrow_NN ''_'' ._.
+``_`` Push_VB ''_'' indicates_VBZ that_IN the_DT author_NN has_VBZ a_DT positive_JJ attitude_NN towards_IN either_CC the_DT original_JJ post_NN or_CC previous_JJ comments_NNS ;_: ``_`` boo_NN ''_'' is_VBZ used_VBN when_WRB expressing_VBG a_DT negative_JJ or_CC opposing_JJ view_NN ;_: ``_`` arrow_NN ''_'' is_VBZ used_VBN when_WRB no_DT certain_JJ attitude_NN is_VBZ chosen_VBN ._.
+The_DT data_NNS collected_VBN are_VBP extracted_VBN from_IN three_CD boards_NNS that_WDT are_VBP popular_JJ on_IN PTT_NNP ,_, including_VBG ``_`` Gossiping_NNP ''_'' ,_, ``_`` Boy_Girl_NNP ''_'' ,_, and_CC ``_`` WomenTalk_NNP ''_'' ._.
+The_DT boards_NNS are_VBP chosen_VBN with_IN consideration_NN to_TO the_DT amount_NN of_IN data_NNS and_CC to_TO the_DT nature_NN of_IN discussion_NN ._.
+Some_DT of_IN the_DT boards_NNS ,_, though_IN popular_JJ enough_RB ,_, may_MD only_RB allow_VB ``_`` push_NN ''_'' and_CC ``_`` arrow_NN ''_'' comments_NNS or_CC may_MD not_RB be_VB discussion-oriented_JJ ._.
+In_IN order_NN to_TO identify_VB the_DT patterns_NNS used_VBN in_IN push_NN comments_NNS and_CC boo_NN comments_NNS ,_, boards_NNS with_IN more_JJR opinionated_JJ discussions_NNS are_VBP preferred_VBN ._.
+Each_DT line_NN of_IN comment_NN in_IN PTT_NNP is_VBZ limited_VBN to_TO 27_CD Chinese_JJ characters_NNS ._.
+Comments_NNS that_WDT exceeds_VBZ 27_CD characters_NNS would_MD be_VB shown_VBN in_IN a_DT second_JJ line_NN with_IN an_DT automatically_RB assigned_VBN ``_`` arrow_NN ''_'' at_IN the_DT beginning_NN of_IN the_DT line_NN ._.
+As_IN a_DT result_NN ,_, for_IN comments_NNS that_WDT lasts_VBZ more_JJR than_IN one_CD line_NN ,_, only_RB the_DT beginning_VBG line_NN would_MD be_VB shown_VBN with_IN the_DT original_JJ tag_NN while_IN the_DT rest_NN of_IN the_DT lines_NNS would_MD begin_VB with_IN an_DT arrow_NN ._.
+Since_IN comments_NNS are_VBP extracted_VBN line_NN by_IN line_NN with_IN its_PRP$ tag_NN at_IN the_DT beginning_NN of_IN each_DT line_NN and_CC categorized_VBN as_IN such_JJ ,_, we_PRP can_MD not_RB distinguish_VB comments_NNS tagged_VBN with_IN ``_`` arrows_NNS ''_'' by_IN the_DT original_JJ user_NN from_IN comments_NNS that_WDT exceeds_VBZ one_CD line_NN ._.
+In_IN order_NN to_TO avoid_VB confusion_NN between_IN opinionated_JJ comments_NNS over_IN one_CD line_NN and_CC neutral_JJ comments_NNS that_WDT are_VBP originally_RB tagged_VBN with_IN arrows_NNS ,_, the_DT current_JJ study_NN extracts_VBZ only_RB comments_NNS that_WDT are_VBP tagged_VBN with_IN ``_`` push_NN ''_'' and_CC ``_`` boo_NN ''_'' and_CC focus_VB on_IN binary_JJ classification_NN on_IN opinionated_JJ sentences_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT details_NNS of_IN the_DT corpus_NN used_VBN in_IN the_DT study_NN ._.
+Number_NN of_IN comments_NNS Number_NNP of_IN tokens_NNS Number_NNP of_IN token_JJ types_NNS Gossiping_VBG -LRB-_-LRB- 6_CD months_NNS -RRB-_-RRB- Push_VBP 3786034_CD 28341656_CD 11538420_CD Boo_NNP 1222735_CD 9000728_CD 493926_CD Boy_Girl_NNP -LRB-_-LRB- 12_CD months_NNS -RRB-_-RRB- Push_VBP 998327_CD 10006638_CD 462780_CD Boo_NNP 53376_CD 508778_CD 66186_CD WomenTalk_NNP -LRB-_-LRB- 12_CD months_NNS -RRB-_-RRB- Push_VBP 167473_CD 1655771_CD 121794_CD Boo_NNP 36381_CD 354672_CD 47904_CD 3.2_CD Annotation_NN criteria_NNS Since_IN comments_NNS on_IN these_DT forums_NNS are_VBP used_VBN as_IN a_DT way_NN for_IN users_NNS to_TO express_VB their_PRP$ opinion_NN ,_, to_TO oppose_VB to_TO others_NNS '_POS ideas_NNS ,_, and_CC to_TO justify_VB their_PRP$ reasons_NNS for_IN believing_VBG in_IN or_CC not_RB believing_VBG in_IN something_NN -LRB-_-LRB- Wilson_NNP and_CC Wiebe_NNP ,_, 2005_CD ;_: Wilson_NNP ,_, 2008_CD ;_: Somasundaran_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, the_DT lexicon_NN used_VBN in_IN the_DT classifier_NN is_VBZ compiled_VBN with_IN a_DT set_NN of_IN categories_NNS that_WDT are_VBP related_VBN to_TO stance-taking_JJ and_CC arguing_VBG ._.
+Following_VBG previous_JJ studies_NNS ,_, we_PRP look_VBP for_IN linguistic_JJ cues_NNS that_WDT indicate_VBP the_DT author_NN 's_POS opinion_NN or_CC position_NN on_IN the_DT discussed_VBN topic_NN ._.
+The_DT following_VBG are_VBP categories_NNS included_VBD in_IN the_DT annotation_NN ._.
+In_IN the_DT tagging_VBG process_NN ,_, the_DT identified_VBN ``_`` element_NN ''_'' is_VBZ not_RB restricted_VBN to_TO the_DT word_NN level_NN ._.
+Considering_VBG the_DT fact_NN that_IN subjectivity_NN is_VBZ often_RB revealed_VBN in_IN a_DT common_JJ phrase_NN or_CC expression_NN ,_, function_NN words_NNS are_VBP also_RB included_VBN in_IN the_DT tagged_VBN set_NN ._.
+For_IN example_NN ,_, expression_NN like_IN 最好是_CD zuìhǎoshì_NN ``_`` it_PRP 'd_MD better_RB be_VB ''_'' is_VBZ treated_VBN as_IN an_DT element_NN used_VBN to_TO reject_VB other_JJ people_NNS 's_POS opinion_NN ._.
+3.2.1_CD Arguing_VBG cues_NNS Phrases_NNS and_CC syntactic_JJ patterns_NNS that_WDT are_VBP indicative_JJ of_IN opinionated_JJ sentences_NNS are_VBP manually_RB identified_VBN from_IN 5000_CD random_JJ comments_NNS tagged_VBN with_IN push_NN and_CC boo_NN ,_, individually_RB ._.
+Reynolds_NNP and_CC Wang_NNP 's_POS -LRB-_-LRB- 2014_CD -RRB-_-RRB- categorized_VBN comments_NNS on_IN PTT_NNP into_IN 9_CD categories_NNS ,_, including_VBG questions_NNS ,_, reply_NN ,_, clarification_NN ,_, interpretation_NN ,_, etc._FW ._.
+We_PRP narrowed_VBD the_DT categories_NNS down_IN to_TO 6_CD categories_NNS ,_, including_VBG question_NN -_: answering_NN ,_, confirmation_NN ,_, counterargument_NN ,_, clarification_NN ,_, suggestion_NN ,_, and_CC encouragement_NN ._.
+Expressions_NNS that_WDT carry_VBP one_CD of_IN these_DT six_CD functions_NNS would_MD be_VB included_VBN as_IN an_DT arguing_VBG cue_NN ._.
+The_DT annotated_JJ outcome_NN is_VBZ combined_VBN with_IN the_DT sixteen_CD categories_NNS of_IN arguing_VBG cues_NNS in_IN MPQA_NNP opinion_NN corpus_NN -LRB-_-LRB- Wiebe_NNP et_FW al._FW ,_, 2005_CD ;_: Somasundaran_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- as_IN features_NNS for_IN arguing_VBG cues_NNS ._.
+Table_NNP 1_CD ._.
+Corpus_NNP information_NN Neutral_NNP question_NN answering_VBG usually_RB happens_VBZ when_WRB users_NNS enquire_VBP information_NN on_IN something_NN and_CC is_VBZ often_RB non-opinionated_JJ ._.
+It_PRP often_RB contains_VBZ only_RB a_DT proper_JJ noun_NN and_CC with_IN no_DT specific_JJ cues_NNS ._.
+Sometimes_RB users_NNS would_MD include_VB example-giving_NN as_IN part_NN of_IN their_PRP$ answer_NN ._.
+Markers_NNS used_VBN at_IN such_JJ circumstances_NNS would_MD include_VB phrase_NN like_IN 像_CD 是_CD xiàngshì_NN ``_`` like_JJ ''_'' ._.
+Confirmation_NN contains_VBZ expressions_NNS used_VBN to_TO agree_VB with_IN previous_JJ propositions_NNS ,_, such_JJ as_IN 同意_CD tóngyì_CD ``_`` agree_VBP ''_'' ._.
+Counterargument_NN is_VBZ used_VBN when_WRB the_DT user_NN opposes_VBZ to_TO or_CC challenges_NNS either_CC the_DT original_JJ post_NN or_CC previous_JJ comments_NNS ._.
+An_DT example_NN cue_NN of_IN counterargument_NN would_MD be_VB 你怎麼知道_CD nǐ_JJ zěnme_NN zhīdào_NN ``_`` how_WRB do_VBP you_PRP know_VB ''_'' ._.
+Clarification_NN is_VBZ used_VBN when_WRB the_DT focus_NN of_IN the_DT comments_NNS shifts_NNS from_IN one_CD part_NN to_TO another_DT and_CC is_VBZ sometimes_RB used_VBN for_IN similar_JJ purpose_NN as_IN a_DT counterargument_NN ._.
+An_DT example_NN of_IN a_DT comment_NN used_VBN to_TO clarify_VB is_VBZ shown_VBN in_IN example_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- below_RB ,_, with_IN the_DT arguing_VBG cue_NN underlined_VBD ._.
+meaning_VBG that_IN it_PRP can_MD subjective_JJ in_IN a_DT certain_JJ context_NN ._.
+Most_JJS of_IN the_DT words_NNS included_VBD are_VBP noun_NN phrases_NNS and_CC verb_NN phrases_NNS that_WDT are_VBP evaluative_JJ ,_, including_VBG both_DT explicit_JJ subjective_JJ elements_NNS and_CC expressive_JJ subjective_JJ elements_NNS -LRB-_-LRB- Wiebe_NNP et_FW al._FW ,_, 2005_CD ;_: Wilson_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+Criticism_NN and_CC appraisal_NN are_VBP given_VBN as_IN tags_NNS to_TO each_DT of_IN the_DT phrases_NNS ,_, indicating_VBG positive_JJ and_CC negative_JJ evaluation_NN ._.
+Explicit_JJ subjective_JJ elements_NNS refer_VBP to_TO phrases_NNS that_WDT explicitly_RB show_VBP the_DT attitude_NN of_IN the_DT speaker_NN ,_, such_JJ as_IN 討厭_CD tǎoyàn_JJ ``_`` hate_NN ''_'' and_CC 反對_CD fǎnduì_JJ ``_`` against_IN ''_'' ._.
+Expressive_JJ subjective_JJ elements_NNS refer_VBP to_TO expressions_NNS that_WDT reveal_VBP one_CD 's_POS attitude_NN without_IN explicitly_RB naming_VBG that_IN attitude_NN ._.
+For_IN example_NN ,_, in_IN the_DT sentence_NN ``_`` the_DT report_NN is_VBZ full_JJ of_IN absurdities_NNS ''_'' ,_, the_DT phrase_NN full_JJ of_IN absurdities_NNS is_VBZ used_VBN to_TO express_VB negative_JJ evaluation_NN on_IN the_DT report_NN -LRB-_-LRB- Wiebe_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+In_IN this_DT category_NN ,_, expressive_JJ subjective_JJ elements_NNS are_VBP considered_VBN more_RBR interesting_JJ because_IN some_DT of_IN the_DT words_NNS might_MD not_RB be_VB negative_JJ when_WRB it_PRP occurs_VBZ individually_RB or_CC in_IN other_JJ contexts_NNS ._.
+However_RB ,_, users_NNS on_IN PTT_NNP form_VBP their_PRP$ habitual_JJ use_NN of_IN language_NN to_TO express_VB their_PRP$ attitudes_NNS towards_IN something_NN without_IN directly_RB giving_VBG an_DT evaluation_NN ._.
+For_IN example_NN ,_, the_DT original_JJ definition_NN of_IN the_DT word_NN 公主_CD gōngzhǔ_NN ``_`` princess_NN ''_'' refers_VBZ to_TO a_DT member_NN in_IN the_DT royal_NN family_NN ,_, but_CC in_IN PTT_NNP ,_, it_PRP is_VBZ a_DT negative_JJ evaluation_NN which_WDT refers_VBZ to_TO girls_NNS who_WP rely_VBP on_IN their_PRP$ boyfriends_NNS to_TO take_VB perfect_JJ care_NN of_IN them_PRP ,_, cater_VBP to_TO their_PRP$ every_DT need_NN ,_, and_CC gets_VBZ mad_JJ over_IN trivial_JJ matters_NNS ._.
+These_DT expressions_NNS involve_VBP users_NNS '_POS world_NN knowledge_NN and_CC is_VBZ often_RB used_VBN in_IN sarcasm_NN and_CC irony_NN -LRB-_-LRB- Wiebe_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Identifying_VBG these_DT elements_NNS would_MD help_VB us_PRP identify_VB whether_IN a_DT comment_NN or_CC an_DT evaluation_NN towards_IN the_DT posted_VBN article_NN contains_VBZ positive_JJ or_CC negative_JJ attitude_NN ._.
+3.2.3_CD Metadiscourse_NNP markers_NNS Metadiscourse_NNP has_VBZ been_VBN included_VBN in_IN previous_JJ studies_NNS -LRB-_-LRB- Vande_NNP Kopple_NNP ,_, 1985_CD ;_: Hyland_NNP ,_, 1998_CD ;_: Hyland_NNP ,_, 2002_CD ;_: Hyland_NNP and_CC Tse_NNP ,_, 2004_CD ;_: Dafouz_NNP -_: Milne_NNP ,_, 2008_CD -RRB-_-RRB- as_IN a_DT crucial_JJ part_NN of_IN persuasive_JJ writing_NN ._.
+It_PRP reveals_VBZ the_DT author_NN 's_POS strategic_JJ arrangement_NN of_IN the_DT text_NN base_NN on_IN his_PRP$ intention_NN to_TO persuade_VB and_CC his_PRP$ understanding_NN of_IN the_DT potential_JJ readers_NNS ._.
+According_VBG to_TO Halliday_NNP -LRB-_-LRB- 1973_CD -RRB-_-RRB- ,_, the_DT three_CD macrofunctions_NNS of_IN language_NN include_VBP ideational_JJ function_NN ,_, interpersonal_JJ function_NN ,_, and_CC textual_JJ function_NN ._.
+The_DT categorization_NN of_IN metadiscourse_NN markers_NNS corresponds_VBZ to_TO two_CD of_IN the_DT three_CD functions_NNS ,_, interpersonal_JJ and_CC textual_JJ ._.
+Textual_JJ metadiscourse_NN refers_VBZ to_TO the_DT structure_NN of_IN the_DT -LRB-_-LRB- 1_LS -RRB-_-RRB- 你_SYM 爸爸_FW nǐ_FW bàba_FW your_PRP$ father_NN 錢奴_NN ,_, qián_JJ nú_NN ,_, 這樣是_CD zhèyàngshì_NN this_DT is_VBZ 不是_CD bùshì_NN miser_NN 企業家_CD ..._: qǐyèjiā_JJ entrepreneur_NN ``_`` Your_PRP$ father_NN is_VBZ a_DT miser_NN ,_, not_RB an_DT entrepreneur_NN ._. ''_''
+Suggestion_NNP is_VBZ used_VBN when_WRB the_DT user_NN provides_VBZ a_DT solution_NN or_CC advice_NN for_IN the_DT poster_NN or_CC other_JJ users_NNS ._.
+It_PRP is_VBZ similar_JJ to_TO neutral_JJ question_NN answering_VBG but_CC it_PRP usually_RB involves_VBZ more_RBR personal_JJ point_NN of_IN view_NN ._.
+A_DT typical_JJ cue_NN in_IN this_DT category_NN would_MD be_VB 建_CD 議_CD jiànyì_NN ``_`` suggest_VBP ''_'' ._.
+Encouragement_NN refers_VBZ to_TO the_DT expressions_NNS of_IN sympathy_NN and_CC support_NN ,_, which_WDT is_VBZ very_RB common_JJ on_IN some_DT boards_NNS ._.
+Users_NNS may_MD use_VB cues_NNS like_IN 拍拍_CD pāipāi_NNS ``_`` patting_NN ''_'' or_CC 加油_CD jiāyóu_JJ ``_`` cheer_VB up_RP ''_'' to_TO show_VB their_PRP$ understanding_NN of_IN what_WP the_DT poster_NN is_VBZ going_VBG through_RB ._.
+3.2.2_CD Subjective_JJ elements_NNS Following_VBG previous_JJ studies_NNS ,_, words_NNS that_WDT are_VBP indicative_JJ of_IN the_DT author_NN 's_POS stance_NN on_IN the_DT discussed_VBN topic_NN are_VBP included_VBN in_IN the_DT lexicon_NN ._.
+Our_PRP$ definition_NN of_IN subjective_JJ elements_NNS is_VBZ similar_JJ to_TO the_DT one_CD brought_VBD up_RP by_IN Wiebe_NNP in_IN 1994_CD ,_, which_WDT identifies_VBZ a_DT subjective_JJ element_NN as_IN an_DT element_NN that_WDT is_VBZ potentially_RB subjective_JJ ,_, not_RB text_NN ._.
+How_WRB the_DT author_NN arranges_VBZ his_PRP$ text_NN might_MD affect_VB the_DT readability_NN persuasiveness_NN of_IN the_DT text_NN ._.
+Interpersonal_JJ metadiscourse_NN ,_, on_IN the_DT other_JJ hand_NN ,_, refers_VBZ to_TO how_WRB the_DT author_NN positions_NNS himself_PRP in_IN the_DT text_NN and_CC how_WRB he_PRP includes_VBZ his_PRP$ readers_NNS ._.
+Following_VBG Hyland_NNP 's_POS study_NN -LRB-_-LRB- 1998_CD -RRB-_-RRB- ,_, ten_CD categories_NNS are_VBP included_VBN as_IN metadiscourse_NN markers_NNS :_: logical_JJ connectives_NNS ,_, frame_NN markers_NNS ,_, endophoric_JJ markers_NNS ,_, evidentials_NNS ,_, code_NN glosses_NNS ,_, hedges_NNS ,_, emphatics_NNS ,_, attitude_NN markers_NNS ,_, relational_JJ markers_NNS ,_, and_CC person_NN markers_NNS ._.
+Examples_NNS and_CC definition_NN of_IN each_DT category_NN is_VBZ given_VBN in_IN the_DT following_VBG table_NN ._.
+Textual_NNP Metadiscourse_NNP Logical_JJ connectives_NNS Express_NNP semantic_JJ relation_NN between_IN main_JJ clauses_NNS 所以suǒyǐ_VBP `_`` therefore_RB '_'' Frame_NN markers_NNS Explicitly_RB refer_VBP to_TO discourse_NN acts_NNS or_CC text_NN stages_NNS 先xiān_VBP `_`` first_RB '_'' Endophoric_JJ markers_NNS Refer_VBP to_TO information_NN in_IN other_JJ parts_NNS of_IN the_DT text_NN 我剛才說的_CD wǒ_NN gāngcái_NNS shuō_VBP de_IN `_`` what_WP I_PRP just_RB said_VBD '_'' Evendentials_NNP Refer_NNP to_TO source_NN of_IN information_NN from_IN other_JJ texts_NNS 指出_VBP zhǐchū_NN `_`` pointed_VBD out_RP -LRB-_-LRB- in_IN the_DT show_NN -RRB-_-RRB- '_'' Code_NNP glosses_VBZ Help_NN readers_NNS grasp_VBP meanings_NNS of_IN identical_JJ material_NN 換言之_CD huànyánzhī_NNP `_`` in_IN other_JJ words_NNS '_POS Interpersonal_NNP Metadiscourse_NNP Hedges_NNP Withhold_NNP writer_NN 's_POS full_JJ commitment_NN to_TO statements_NNS 可能_VBP kěnéng_VBG `_`` possibly_RB '_'' Emphatics_NNPS Emphasize_VBP force_NN or_CC writer_NN 's_POS certainty_NN in_IN message_NN 絕對juéduì_NN `_`` definitely_RB '_'' Attitude_NN markers_NNS Express_NNP writer_NN 's_POS attitude_NN to_TO prepositional_JJ content_JJ 同意_NN tóngyì_NN `_`` agree_VB '_'' Relational_JJ markers_NNS Explicitly_RB refer_VBP to_TO or_CC build_VB relationship_NN with_IN reader_NN 你_CD nǐ_JJ `_`` you_PRP '_'' Person_NN markers_NNS Explicit_JJ reference_NN to_TO author_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 我們_SYM wǒmen_NNS `_`` we_PRP '_'' During_IN the_DT annotation_NN process_NN ,_, we_PRP find_VBP that_IN there_EX may_MD be_VB overlapping_VBG categories_NNS for_IN arguing_VBG and_CC for_IN metadiscourse_NN ._.
+One_CD element_NN could_MD also_RB have_VB more_JJR than_IN one_CD function_NN in_IN comments_NNS ._.
+Our_PRP$ approach_NN is_VBZ to_TO keep_VB all_DT categorization_NN as_IN part_NN of_IN the_DT resources_NNS ._.
+Examples_NNS showing_VBG the_DT arrangement_NN of_IN the_DT data_NNS can_MD be_VB found_VBN in_IN Table_NNP 3_CD ._.
+The_DT second_JJ column_NN shows_VBZ its_PRP$ category_NN in_IN metadiscourse_NN ,_, and_CC the_DT third_JJ column_NN shows_VBZ its_PRP$ category_NN in_IN MPQA_NNP arguing_VBG lexicon_NN ._.
+The_DT fourth_JJ column_NN shows_VBZ its_PRP$ category_NN in_IN the_DT six_CD types_NNS of_IN comments_NNS ._.
+The_DT fifth_JJ column_NN shows_VBZ its_PRP$ annotated_JJ prior_JJ subjectivity_NN ,_, which_WDT is_VBZ the_DT polarity_NN of_IN the_DT word_NN when_WRB it_PRP stands_VBZ alone_RB ._.
+The_DT last_JJ column_NN show_VB its_PRP$ polarity_NN in_IN the_DT extracted_VBN corpus_NN ,_, which_WDT is_VBZ acquired_VBN by_IN comparing_VBG the_DT element_NN 's_POS relative_JJ frequency_NN in_IN push_NN and_CC boo_NN comments_NNS ._.
+The_DT combined_VBN annotated_JJ lexicon_NN includes_VBZ a_DT total_NN of_IN 4582_CD entries_NNS ._.
+Table_NNP 2_CD ._.
+Categories_NNS of_IN Metadiscourse_NNP Markers_NNPS entry_NN metadiscourse_NN arguing_VBG commenting_VBG prior_RB sub_JJ calculated_JJ sub_NN 感覺_CD assessment_NN question-answering_NN ;_: encouragement_NN neu_NN pos_VBZ 不然_CD logical_JJ connectives_NNS conditional_JJ counterargument_NN ;_: suggestion_NN neu_NN pos_VBZ 當然_CD emphatics_NNS emphasis_NN confirmation_NN ;_: counterargument_NN neu_NN pos_VBZ 好像_CD hedges_NNS counterargument_NN neu_NN pos_VBZ 3.3_CD Building_NN the_DT classifier_NN Table_NNP 3_CD ._.
+Examples_NNS of_IN the_DT subjective_JJ lexicon_NN identifying_VBG the_DT stance_NN of_IN comments_NNS ._.
+In_IN the_DT current_JJ study_NN ,_, three_CD sets_NNS of_IN features_NNS are_VBP used_VBN in_IN building_VBG the_DT classifier_NN ._.
+The_DT first_JJ set_NN of_IN features_NNS The_DT combined_VBN lexicon_NN is_VBZ used_VBN as_IN feature_NN set_VBN for_IN contains_VBZ subjective_JJ elements_NNS acquired_VBN through_IN manually_RB annotating_VBG the_DT data_NNS ._.
+For_IN subjective_JJ elements_NNS ,_, we_PRP assume_VBP negative_JJ evaluation_NN reflects_VBZ negative_JJ attitudes_NNS that_WDT more_RBR likely_JJ occur_VBP in_IN boo_NN comments_NNS while_IN positive_JJ evaluation_NN is_VBZ associated_VBN with_IN push_NN comments_NNS ._.
+The_DT second_JJ set_NN of_IN features_NNS includes_VBZ the_DT C_NNP -_: LIWC_NNP wordlist_NN of_IN positive_JJ and_CC negative_JJ emotions_NNS -LRB-_-LRB- Huang_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN this_DT set_NN ,_, positive_JJ emotion_NN words_NNS are_VBP associated_VBN with_IN push_NN comments_NNS while_IN negative_JJ emotions_NNS are_VBP associated_VBN with_IN boo_NN comments_NNS ._.
+As_IN for_IN the_DT rest_NN of_IN the_DT cues_NNS ,_, which_WDT may_MD occur_VB in_IN both_DT positive_JJ and_CC negative_JJ context_NN ,_, we_PRP use_VBP relative_JJ frequency_NN as_IN a_DT way_NN of_IN deciding_VBG whether_IN it_PRP is_VBZ representative_JJ for_IN a_DT certain_JJ position_NN or_CC not_RB ._.
+Using_VBG the_DT following_VBG calculations_NNS ,_, if_IN the_DT number_NN is_VBZ higher_JJR than_IN 0.70_CD ,_, the_DT expression_NN -LRB-_-LRB- which_WDT could_MD be_VB a_DT subjective_JJ element_NN ,_, an_DT entity_NN ,_, or_CC even_RB a_DT disclaimer_NN -RRB-_-RRB- would_MD be_VB judged_VBN as_IN a_DT feature_NN for_IN identifying_VBG that_IN particular_JJ stance_NN ._.
+Relative_JJ frequency_NN of_IN the_DT segment_NN in_IN boo/push_JJ comments_NNS Relative_JJ frequency_NN of_IN the_DT segment_NN in_IN all_DT comments_NNS The_DT calculation_NN is_VBZ done_VBN after_IN all_DT of_IN the_DT scarce_JJ words_NNS are_VBP removed_VBN from_IN the_DT data_NNS ._.
+We_PRP used_VBD the_DT third_JJ quantile_NN of_IN frequency_NN as_IN the_DT threshold_NN for_IN scarce_JJ words_NNS ._.
+Thus_RB ,_, in_IN all_DT three_CD sets_NNS of_IN data_NNS ,_, words_NNS that_WDT occur_VBP only_RB once_RB are_VBP removed_VBN ._.
+Relative_JJ frequency_NN of_IN data_NNS from_IN each_DT board_NN is_VBZ calculated_VBN individually_RB ._.
+The_DT combined_VBN wordlist_NN is_VBZ then_RB used_VBN as_IN features_NNS for_IN an_DT SVM_NNP classifier1_NNS ._.
+4_CD Result_NN and_CC discussion_NN In_IN order_NN to_TO make_VB a_DT comparison_NN ,_, a_DT baseline_NN was_VBD done_VBN using_VBG segmented_JJ words_NNS as_IN features_NNS for_IN the_DT SVM_NNP classifier_NN ._.
+The_DT feature_NN set_VBN raises_VBZ the_DT accuracy_NN on_IN WomenTalk_NNP from_IN 55_CD percent_NN to_TO 75_CD percent_NN ._.
+The_DT classification_NN on_IN Boy_Girl_NNP data_NNS also_RB improved_VBN by_IN 13_CD percent_NN ._.
+What_WP 's_VBZ worth_JJ noticing_VBG is_VBZ that_IN the_DT 1_CD The_DT classifier_NN used_VBN here_RB is_VBZ released_VBN by_IN CLiPS_NNS ,_, Computational_NNP Linguistics_NNPS and_CC Psycholinguistics_NNP Research_NNP Center_NNP and_CC is_VBZ available_JJ on_IN http://www.clips.ua.ac.be/pages/pattern_NN -_: vector_NN #classification_NN accuracy_NN of_IN Gossiping_NNP data_NNS dropped_VBD by_IN 2_CD percent_NN ._.
+Table_NNP 3_CD shows_VBZ the_DT results_NNS of_IN the_DT classifier_NN ._.
+Table_NNP 3_CD ._.
+Results_NNS using_VBG the_DT combined_VBN feature_NN set_VBN The_DT numbers_NNS show_VBP that_IN the_DT feature_NN set_NN can_MD successfully_RB assist_VB in_IN the_DT classification_NN of_IN texts_NNS in_IN Boy_Girl_NNP and_CC WomenTalk_NNP ._.
+However_RB ,_, the_DT accuracy_NN of_IN classification_NN on_IN Gossiping_NNP data_NNS perform_VBP two_CD percent_NN lower_JJR than_IN baseline_NN ._.
+There_EX are_VBP a_DT few_JJ possibilities_NNS to_TO why_WRB there_EX would_MD be_VB a_DT difference_NN between_IN these_DT three_CD sets_NNS of_IN data_NNS ._.
+1_LS ._.
+The_DT degree_NN of_IN diversity_NN of_IN the_DT topics_NNS The_DT three_CD boards_NNS ,_, though_IN all_DT discussion_NN oriented_VBN ,_, involves_VBZ the_DT exchange_NN of_IN information_NN in_IN different_JJ topics_NNS ._.
+For_IN Boy_Girl_NNP board_NN ,_, most_JJS of_IN the_DT topic_NN is_VBZ centered_VBN on_IN romantic_JJ relationships_NNS ._.
+As_IN for_IN WomenTalk_NNP board_NN ,_, most_JJS of_IN the_DT discussions_NNS focus_VB on_IN things_NNS that_WDT girls_NNS care_VBP about_RB ,_, such_JJ as_IN products_NNS for_IN women_NNS ,_, boyfriends_NNS ,_, etc._FW ._.
+These_DT two_CD boards_NNS might_MD have_VB a_DT clearer_JJR group_NN of_IN users_NNS than_IN Gossiping_NNP ,_, where_WRB all_DT kinds_NNS of_IN questions_NNS could_MD be_VB relevant_JJ ._.
+The_DT topics_NNS cover_VBP from_IN debates_NNS on_IN international_JJ political_JJ events_NNS to_TO opinions_NNS on_IN superhero_NN characters_NNS ._.
+In_IN previous_JJ studies_NNS in_IN English_NNP -LRB-_-LRB- Hasan_NNP and_CC Ng_NNP ,_, 2013_CD ;_: Hasan_NNP and_CC Ng_NNP ,_, 2014_CD ;_: Faulkner_NNP ,_, 2014_CD -RRB-_-RRB- ,_, domains_NNS are_VBP usually_RB selected_VBN and_CC separated_VBN so_RB that_IN the_DT classification_NN is_VBZ performed_VBN on_IN one_CD central_JJ idea_NN ,_, such_JJ as_IN gay_JJ rights_NNS or_CC death_NN penalty_NN ._.
+The_DT variety_NN of_IN topics_NNS might_MD be_VB a_DT reason_NN why_WRB classification_NN on_IN Gossiping_NNP data_NNS is_VBZ less_RBR accurate_JJ than_IN the_DT others_NNS ._.
+2_LS ._.
+Different_JJ language_NN use_NN due_JJ to_TO the_DT different_JJ culture_NN of_IN the_DT board_NN Since_IN each_DT board_NN on_IN PTT_NNP has_VBZ its_PRP$ own_JJ purpose_NN of_IN discussion_NN ,_, every_DT board_NN attracts_VBZ different_JJ group_NN of_IN users_NNS and_CC forms_NNS its_PRP$ unique_JJ ``_`` culture_NN ''_'' ._.
+In_IN general_JJ ,_, speakers_NNS on_IN Gossiping_VBG board_NN is_VBZ more_RBR direct_JJ and_CC more_RBR quick_JJ to_TO criticize_VB than_IN users_NNS on_IN the_DT other_JJ two_CD boards_NNS ,_, as_IN indicated_VBN by_IN the_DT different_JJ proportions_NNS of_IN push_NN comments_NNS and_CC boo_NN comments_NNS in_IN the_DT three_CD boards_NNS ._.
+The_DT difference_NN might_MD suggest_VB that_IN boo_NN comments_NNS on_IN WomenTalk_NNP and_CC Boy_Girl_NNP would_MD Baseline_VB SVM_NNP Classifier_NNP Gossiping_NNP 0.69_CD 0.67_CD Boy_Girl_NNP 0.57_CD 0.70_CD WomenTalk_NNP 0.55_CD 0.75_CD Average_JJ 0.60_CD 0.71_CD have_VBP a_DT higher_JJR degree_NN of_IN disagreement_NN than_IN the_DT ones_NNS on_IN Gossiping_NNP ,_, which_WDT makes_VBZ it_PRP harder_JJR to_TO differentiate_VB push_NN and_CC boo_NN comments_NNS on_IN Gossiping_NNP ._.
+Other_JJ than_IN possible_JJ differences_NNS among_IN the_DT boards_NNS ,_, error_NN analysis_NN is_VBZ also_RB done_VBN by_IN randomly_RB selecting_VBG comments_NNS that_WDT are_VBP mistakenly_RB tagged_VBN by_IN the_DT classifier_NN ._.
+The_DT result_NN shows_VBZ that_IN the_DT following_VBG mistakes_NNS are_VBP most_RBS common_JJ ._.
+1_LS ._.
+Context_NN dependent_JJ comments_NNS Since_IN comments_NNS on_IN PTT_NNP are_VBP usually_RB left_VBN very_RB short_JJ so_IN that_IN people_NNS can_MD grasp_VB the_DT idea_NN at_IN a_DT quick_JJ glance_NN ,_, a_DT lot_NN of_IN words_NNS are_VBP often_RB omitted_VBN in_IN comments_NNS ._.
+The_DT other_JJ users_NNS would_MD have_VB to_TO judge_VB the_DT stance_NN of_IN the_DT comment_NN by_IN combing_VBG the_DT information_NN they_PRP get_VBP from_IN the_DT original_JJ post_NN and_CC the_DT self-tagged_JJ stance_NN ._.
+Thus_RB ,_, two_CD kinds_NNS of_IN confusion_NN might_MD arise_VB when_WRB we_PRP have_VBP to_TO judge_VB the_DT stance_NN of_IN the_DT comment_NN without_IN its_PRP$ context_NN ,_, including_VBG the_DT original_JJ post_NN and_CC previous_JJ comments_NNS ._.
+First_NNP type_NN of_IN error_NN occurs_VBZ when_WRB the_DT target_NN of_IN the_DT comment_NN is_VBZ not_RB the_DT original_JJ poster_NN but_CC the_DT person_NN or_CC event_NN of_IN which_WDT the_DT poster_NN is_VBZ attacking_VBG ._.
+For_IN example_NN ,_, when_WRB a_DT boyfriend_NN complains_VBZ about_IN his_PRP$ girlfriend_NN who_WP always_RB threatens_VBZ to_TO break_VB up_RP with_IN him_PRP whenever_WRB they_PRP have_VBP a_DT fight_NN ,_, other_JJ users_NNS might_MD leave_VB comments_NNS criticizing_VBG that_IN girlfriend_NN ._.
+But_CC since_IN they_PRP agree_VBP with_IN the_DT original_JJ poster_NN 's_POS position_NN ,_, which_WDT is_VBZ a_DT negative_JJ attitude_NN towards_IN the_DT girlfriend_NN 's_POS behavior_NN ,_, the_DT tags_NNS they_PRP give_VBP to_TO their_PRP$ comments_NNS are_VBP usually_RB ``_`` push_NN ''_'' ._.
+For_IN our_PRP$ classifier_NN ,_, this_DT would_MD cause_VB confusion_NN because_IN the_DT linguistic_JJ behavior_NN corresponds_VBZ to_TO negative_JJ evaluation_NN ,_, which_WDT is_VBZ usually_RB associated_VBN with_IN ``_`` boo_NN ''_'' comments_NNS ._.
+As_IN a_DT result_NN ,_, these_DT comments_NNS would_MD be_VB categorized_VBN as_IN ``_`` boo_NN ''_'' comments_NNS ._.
+The_DT following_NN is_VBZ an_DT example_NN of_IN this_DT type_NN of_IN error_NN ._.
+Confusion_NN may_MD result_VB because_IN the_DT target_NN of_IN the_DT comment_NN could_MD be_VB the_DT person_NN the_DT original_JJ post_NN was_VBD criticizing_VBG or_CC it_PRP could_MD be_VB the_DT original_JJ poster_NN him/herself_NN ._.
+That_DT target_NN could_MD only_RB be_VB identified_VBN with_IN consideration_NN of_IN what_WP was_VBD originally_RB written_VBN in_IN the_DT post_NN ._.
+The_DT second_JJ type_NN of_IN error_NN involves_VBZ comments_NNS that_WDT are_VBP very_RB short_JJ and_CC give_VB very_RB little_JJ clue_NN on_IN their_PRP$ stance_NN ._.
+The_DT expressions_NNS that_WDT occur_VBP in_IN these_DT comments_NNS can_MD be_VB either_RB positive_JJ or_CC negative_JJ ,_, depending_VBG on_IN the_DT speaker_NN 's_POS intention_NN ._.
+An_DT example_NN of_IN this_DT type_NN of_IN expression_NN would_MD be_VB 天啊_CD tiān_IN a_DT ``_`` Oh_UH my_PRP$ goodness_NN ''_'' ,_, which_WDT could_MD be_VB used_VBN to_TO express_VB surprise_NN in_IN both_DT positive_JJ or_CC negative_JJ context_NN ._.
+Since_IN we_PRP can_MD not_RB examine_VB ``_`` how_WRB ''_'' the_DT user_NN says_VBZ it_PRP in_IN his/her_JJ mind_NN and_CC can_MD only_RB rely_VB on_IN the_DT relative_JJ frequency_NN of_IN these_DT phrases_NNS in_IN comments_NNS ,_, it_PRP also_RB results_VBZ in_IN confusion_NN ._.
+2_LS ._.
+Sarcastic_JJ comments_NNS It_PRP is_VBZ not_RB uncommon_JJ for_IN users_NNS to_TO use_VB sarcasm_NN to_TO express_VB their_PRP$ stance_NN online_NN ._.
+On_IN PTT_NNP ,_, users_NNS might_MD use_VB very_RB positive_JJ sentences_NNS and_CC give_VB it_PRP a_DT negative_JJ tag_NN to_TO indicate_VB that_IN the_DT comment_NN was_VBD sarcastic_JJ ._.
+These_DT negative_JJ comments_NNS might_MD be_VB mistaken_VBN by_IN the_DT classifier_NN as_IN ``_`` push_NN ''_'' comments_NNS ._.
+The_DT following_VBG example_NN illustrates_VBZ how_WRB a_DT negative_JJ comment_NN might_MD be_VB mistakenly_RB tagged_VBN as_IN ``_`` push_NN ''_'' comment_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- 當了_FW 鄉民_FW 這麼_FW 多_FW dāngle_FW xiāngmín_FW zhème_FW duō_FW be_VB PTT.user_NN this_DT many_JJ 年_CD ,_, 我終於_CD 搶到_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 很_SYM 不_SYM hěn_SYM bù_FW very_RB not_RB 婚前_VB hūnqián_JJ so_RB touched_VBN before.marriage_NN already_RB say_VB 後_FW 怎樣怎樣_FW hòu_FW zěnyàngzěnyàng_FW 喜歡_FW 那種_FW xǐhuān_FW nàzhǒng_FW like_IN those.kind_JJ 就在說離婚_NN jiùzài_NNS shuō_VBP líhūn_JJ divorce_NN 的人_FW de_FW rén_FW after_IN how_WRB DE_NNP ``_`` I_PRP really_RB do_VBP n't_RB like_VB those_DT people_NNS who_WP already_RB starts_VBZ talking_VBG about_IN what_WP would_MD happen_VB when_WRB they_PRP get_VBP a_DT divorce_NN before_IN even_RB getting_VBG married_JJ ''_'' In_IN example_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, the_DT comment_NN expresses_VBZ a_DT negative_JJ attitude_NN towards_IN people_NNS who_WP appears_VBZ to_TO be_VB planning_VBG their_PRP$ divorce_NN before_IN even_RB getting_VBG married_JJ ._.
+people_NNS nián_JJ wǒ_NN year_NN I_PRP 頭噓_VBP tóu_JJ xū_IN first.booLE_NNP ``_`` After_IN being_VBG a_DT PTT_NNP user_NN for_IN so_RB many_JJ years_NNS ,_, I_PRP am_VBP finally_RB the_DT first_JJ one_CD to_TO leave_VB a_DT boo_NN comment_NN in_IN an_DT article_NN !_.
+I_PRP am_VBP so_RB touched_VBN ._. ''_''
+The_DT comment_NN includes_VBZ the_DT emotion_NN 好感動_CD hǎo_NN gǎndòng_NN ``_`` so_RB touched_VBN ''_'' ,_, which_WDT appears_VBZ to_TO be_VB a_DT positive_JJ emotion_NN ._.
+But_CC human_JJ readers_NNS would_MD be_VB able_JJ to_TO tell_VB that_IN the_DT comment_NN was_VBD sarcastic_JJ because_IN of_IN the_DT mention_NN of_IN 頭噓_CD tóuxū_NN ,_, which_WDT is_VBZ used_VBN in_IN PTT_NNP to_TO refer_VB to_TO the_DT first_JJ boo_NN comment_NN in_IN an_DT article_NN ._.
+Thus_RB ,_, this_DT comment_NN was_VBD tagged_VBN with_IN ``_`` push_NN ''_'' by_IN the_DT classifier_NN ._.
+3_LS ._.
+Intentionally_RB vague_JJ comments_NNS On_IN PTT_NNP ,_, in_IN order_NN to_TO avoid_VB directly_RB referring_VBG to_TO a_DT person_NN name_NN or_CC avoid_VB directly_RB saying_VBG swear_VB words_NNS zhōngyú_VB qiǎngdào_NN finally_RB get_VB 了好_CD 感動_CD le_DT hǎo_NN gǎndòng_NN or_CC negative_JJ expressions_NNS ,_, users_NNS sometimes_RB use_VBP characters_NNS that_WDT have_VBP similar_JJ pronunciation_NN or_CC similar_JJ form_NN to_TO replace_VB the_DT original_JJ characters_NNS ._.
+These_DT would_MD result_VB in_IN segmentation_NN errors_NNS and_CC it_PRP would_MD be_VB very_RB difficult_JJ to_TO categorize_VB because_IN each_DT user_NN might_MD has_VBZ his/her_VBN own_JJ choice_NN of_IN characters_NNS and_CC there_EX is_VBZ n't_RB an_DT exhaustive_JJ list_NN of_IN such_JJ words_NNS ._.
+They_PRP may_MD also_RB use_VB underlines_NNS or_CC spaces_NNS to_TO replace_VB the_DT original_JJ negative_JJ expressions_NNS when_WRB the_DT rest_NN of_IN the_DT sentence_NN makes_VBZ it_PRP clear_JJ what_WP the_DT word_NN should_MD be_VB in_IN that_DT position_NN ._.
+This_DT omission_NN would_MD also_RB make_VB it_PRP harder_JJR to_TO categorize_VB the_DT comment_NN ._.
+Example_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- includes_VBZ the_DT phrase_NN 甘_SYM 吟_SYM 釀_SYM gānyínniàng_NN ,_, which_WDT does_VBZ not_RB exist_VB in_IN Chinese_JJ vocabulary_NN but_CC the_DT sounds_NNS of_IN these_DT words_NNS are_VBP similar_JJ to_TO the_DT swear_VBP words_NNS 幹拎娘_VBP gànlīnniáng_VBG ``_`` you_PRP mother_NN fucker_NN ''_'' ._.
+The_DT person_NN who_WP left_VBD this_DT comment_NN chose_VBD to_TO use_VB these_DT words_NNS instead_RB of_IN the_DT conventional_JJ characters_NNS ._.
+Other_JJ users_NNS ,_, when_WRB reading_VBG this_DT comment_NN ,_, would_MD still_RB be_VB able_JJ to_TO judge_VB what_WP the_DT comment_NN intends_VBZ to_TO express_VB ._.
+However_RB ,_, the_DT classifier_NN might_MD judge_VB this_DT new_JJ ``_`` word_NN ''_'' to_TO be_VB a_DT proper_JJ noun_NN and_CC this_DT may_MD cause_VB some_DT mistakes_NNS ._.
+In_IN example_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, the_DT underlined_VBD part_NN is_VBZ an_DT omission_NN of_IN the_DT original_JJ word_NN 中二_CD zhōng_NN èr_NN ._.
+This_DT term_NN is_VBZ used_VBN as_IN a_DT negative_JJ representation_NN for_IN juvenile_JJ behavior_NN and_CC mindset_NN common_JJ among_IN teenagers_NNS ._.
+The_DT word_NN could_MD not_RB be_VB identified_VBN by_IN the_DT classifier_NN because_IN the_DT omission_NN results_NNS in_IN segmentation_NN error_NN ._.
+Sometimes_RB it_PRP is_VBZ very_RB difficult_JJ to_TO identify_VB why_WRB the_DT original_JJ poster_NN would_MD choose_VB certain_JJ tag_NN ._.
+This_DT could_MD be_VB a_DT result_NN of_IN the_DT user_NN 's_POS own_JJ tagging_VBG mistake_NN ,_, or_CC it_PRP could_MD also_RB be_VB individual_JJ differences_NNS ._.
+In_IN example_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, the_DT comment_NN was_VBD tagged_VBN with_IN ``_`` boo_NN ''_'' while_IN the_DT beginning_NN of_IN the_DT sentence_NN is_VBZ the_DT word_NN push_NN ._.
+Both_DT the_DT classifier_NN and_CC human_JJ readers_NNS would_MD consider_VB this_DT sentence_NN to_TO be_VB a_DT push_NN comment_NN rather_RB than_IN a_DT boo_NN comment_NN ._.
+This_DT could_MD be_VB a_DT result_NN of_IN the_DT user_NN 's_POS own_JJ tagging_NN error_NN ._.
+Thus_RB would_MD not_RB be_VB considered_VBN a_DT very_RB important_JJ issue_NN in_IN the_DT current_JJ study_NN ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- 甘吟釀_FW gānyínniàng_FW gānyínniàng_FW 噓_FW ~_FW ~_FW ~_FW xū_FW boo_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- 圍巾_FW 醜_FW wéijīn_FW chǒu_FW scarf_NN ugly_JJ __CD ___SYM 的_SYM 欠_FW de_FW qiàn_FW DE_FW asking.for_FW 原_FW PO_FW yuán_FW PO_FW original_JJ poster_NN 二結案_CD èr_FW jié_FW `_`` àn_VB two_CD case.close_JJ -LRB-_-LRB- underline_VB -RRB-_-RRB- The_DT other_JJ type_NN of_IN vague_JJ comments_NNS are_VBP produced_VBN because_IN of_IN the_DT structure_NN of_IN PTT_NNP comments_NNS ,_, users_NNS sometimes_RB try_VBP to_TO complete_VB other_JJ people_NNS 's_POS comments_NNS by_IN positioning_NN their_PRP$ comments_NNS at_IN certain_JJ position_NN ._.
+These_DT comments_NNS would_MD only_RB make_VB sense_NN when_WRB processed_VBN in_IN combination_NN with_IN the_DT rest_NN of_IN the_DT comments_NNS ,_, also_RB known_VBN as_IN ``_`` floors_NNS ''_'' on_IN PTT_NNP ._.
+4_LS ._.
+Others_NNS -LRB-_-LRB- 6_CD -RRB-_-RRB- 推_SYM tuī_FW tóubìshì_FW nǚyǒu_FW push_NN coin-op_NN girlfriend_NN ``_`` I_PRP agree_VBP with_IN coin-operated_JJ girlfriend_NN ''_'' To_TO further_RBR improve_VB the_DT classifier_NN ,_, the_DT following_VBG approaches_NNS could_MD be_VB taken_VBN into_IN consideration_NN ._.
+According_VBG to_TO Riloff_NNP and_CC Wiebe_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ,_, it_PRP is_VBZ important_JJ to_TO incorporate_VB large_JJ amount_NN of_IN data_NNS because_IN infrequent_JJ words_NNS can_MD sometimes_RB be_VB strong_JJ subjective_JJ clue_NN ._.
+Thus_RB ,_, it_PRP might_MD be_VB helpful_JJ to_TO expand_VB the_DT coverage_NN of_IN annotated_JJ data_NNS ._.
+Context_NN of_IN the_DT comments_NNS should_MD also_RB be_VB taken_VBN into_IN account_NN ._.
+If_IN the_DT classifier_NN is_VBZ able_JJ to_TO capture_VB the_DT relationship_NN between_IN the_DT target_NN and_CC the_DT comment_NN being_VBG given_VBN ,_, the_DT errors_NNS caused_VBN by_IN context_NN dependent_JJ comments_NNS could_MD be_VB solved_VBN ._.
+5_CD Conclusion_NNP The_NNP purpose_NN of_IN this_DT study_NN is_VBZ to_TO compile_VB lexical_JJ resources_NNS in_IN Mandarin_NNP on_IN arguing_VBG and_CC stance_NN -_: taking_VBG and_CC to_TO test_VB the_DT applicability_NN of_IN these_DT resources_NNS in_IN machine_NN training_NN on_IN stance_NN classification_NN ._.
+We_PRP explored_VBD related_JJ linguistic_JJ categories_NNS on_IN how_WRB users_NNS express_VB their_PRP$ stance_NN in_IN online_JJ comments_NNS and_CC established_VBN three_CD sets_NNS of_IN features_NNS that_IN we_PRP believe_VBP reveals_VBZ speaker_NN 's_POS subjectivity_NN ._.
+An_DT experiment_NN on_IN classifying_VBG online_JJ comments_NNS shows_VBZ that_IN the_DT annotated_JJ wordlist_NN could_MD assist_VB in_IN the_DT classification_NN by_IN raising_VBG up_RP to_TO 20_CD percent_NN of_IN accuracy_NN ._.
+In_IN order_NN to_TO further_JJ improve_VB automatic_JJ classification_NN ,_, an_DT analysis_NN on_IN the_DT errors_NNS of_IN our_PRP$ classification_NN task_NN in_IN provided_VBN ._.
+Possible_JJ linguistic_JJ issues_NNS such_JJ as_IN identifying_VBG the_DT targets_NNS of_IN the_DT comments_NNS ,_, the_DT overall_JJ culture_NN on_IN the_DT boards_NNS discussed_VBN ,_, sarcastic_JJ comments_NNS ,_, and_CC problems_NNS resulting_VBG from_IN vague_JJ comments_NNS requires_VBZ further_JJ studies_NNS ._.
+投幣式_SYM 女友_FW References_NNPS Anand_NNP ,_, P._NNP ;_: Walker_NNP ,_, M._NNP ;_: Abbott_NNP ,_, R._NNP ;_: Tree_NNP ,_, J._NNP E._NNP F._NNP ;_: Bowmani_NNP ,_, R._NNP &_CC Minor_NNP ,_, M._NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Cats_NNS rule_NN and_CC dogs_NNS drool_VBP !_.
+:_: Classifying_VBG stance_NN in_IN online_JJ debate_NN ._.
+Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Computational_NNP Approaches_NNPS to_TO Subjectivity_NNP and_CC Sentiment_NN Analysis_NN ,_, 1-9_CD ._.
+Dafouz-Milne_NNP ,_, E._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+The_DT pragmatic_JJ role_NN of_IN textual_JJ and_CC interpersonal_JJ metadiscourse_NN marker_NN in_IN the_DT construction_NN and_CC attainment_NN of_IN persuasion_NN :_: A_DT cross_NN -_: linguistic_JJ study_NN of_IN newspaper_NN discourse_NN ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 40_CD ,_, 95-113_CD ._.
+Faulkner_NNP ,_, A._NN -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Automated_VBN classification_NN of_IN stance_NN in_IN student_NN essays_NNS :_: An_DT approach_NN using_VBG stance_NN target_NN information_NN and_CC the_DT Wikipedia_NNP link-based_JJ measure_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 27th_JJ International_NNP Florida_NNP Artificial_NNP Intelligence_NNP Research_NNP Society_NNP Conference_NNP ,_, 174-179_CD ._.
+Halliday_NNP ,_, M._NNP A._NNP K._NNP -LRB-_-LRB- 1973_CD -RRB-_-RRB- ._.
+Explorations_NNS in_IN the_DT functions_NNS of_IN language_NN ._.
+London_NNP :_: Edward_NNP Arnold_NNP ._.
+Hasan_NNP ,_, K._NNP S._NNP &_CC Ng_NNP ,_, V._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Stance_NN classification_NN of_IN ideological_JJ debates_NNS :_: Data_NNP ,_, models_NNS ,_, features_NNS ,_, and_CC constraints_NNS ._.
+Proceedings_NNP of_IN International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, 1348_CD -_: 1356_CD ._.
+Hasan_NNP ,_, K._NNP S._NNP &_CC Ng_NNP ,_, V._NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Why_WRB are_VBP you_PRP taking_VBG this_DT stance_NN ?_.
+Identifying_VBG and_CC classifying_VBG reasons_NNS in_IN ideological_JJ debates_NNS ._.
+Proceedings_NNP of_IN the_DT Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, 751-762_CD ._.
+Hyland_NNP ,_, K._NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ._.
+Persuasion_NN and_CC context_NN :_: The_DT pragmatics_NNS of_IN academic_JJ metadiscourse_NN ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 30_CD ,_, 437-455_CD ._.
+Hyland_NNP ,_, K._NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Authority_NNP and_CC invisibility_NN :_: Authorial_JJ identity_NN in_IN academic_JJ writing_NN ._.
+Journal_NNP of_IN Pragmatics_NNPS ,_, 34_CD ,_, 1091-1112_CD ._.
+Hyland_NNP ,_, K._NNP &_CC Tse_NNP ,_, P._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+Metadiscourse_NNP in_IN academic_JJ writing_NN :_: A_DT reappraisal_NN ._.
+Applied_NNP Linguistics_NNP ,_, 25_CD ,_, 156-177_CD ._.
+Malouf_NNP ,_, R._NNP ,_, &_CC Mullen_NNP ,_, T._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Taking_VBG Sides_NNS :_: User_NNP Classification_NNP for_IN Informal_NNP Online_NNP Political_NNP Discourse_NNP ._.
+Internet_NNP Research_NNP ,_, 18_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 177-190_CD ._.
+Quirk_NNP ,_, R._NNP ;_: Greenbaum_NNP ,_, S._NNP ;_: Leech_NNP ,_, G._NNP &_CC Svartvik_NNP ,_, J._NNP -LRB-_-LRB- 1985_CD -RRB-_-RRB- ._.
+A_DT comprehensive_JJ grammar_NN of_IN the_DT English_NNP language_NN ._.
+New_NNP York_NNP :_: Longman_NNP ._.
+Reynolds_NNP ,_, B._NNP L._NNP &_CC Wang_NNP ,_, S._NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+An_DT investigation_NN of_IN the_DT role_NN of_IN article_NN commendation_NN and_CC criticism_NN in_IN Taiwanese_JJ university_NN students_NNS '_POS heavy_JJ BBS_NNP usage_NN ._.
+Computers_NNS and_CC Education_NNP ,_, 78_CD ,_, 210-226_CD ._.
+Riloff_NNP ,_, E._NNP &_CC Wiebe_NNP ,_, J._NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Learning_NNP extraction_NN patterns_NNS for_IN subjective_JJ expressions_NNS ._.
+Proceedings_NNP of_IN the_DT Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, 105-112_CD ._.
+Shea_NNP ,_, D._NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- ._.
+What_WP is_VBZ PTT_NNP ?_.
+Retrieved_VBN from_IN http://www.ptt.cc/index/html_NNP Shirky_NNP ,_, C._NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+The_DT political_JJ power_NN of_IN social_JJ media_NNS :_: Technology_NNP ,_, the_DT public_JJ sphere_NN ,_, and_CC political_JJ change_NN ._.
+Foreign_NNP Affairs_NNP ,_, 90_CD ,_, 28-41_CD ._.
+Somasundaran_NNP ,_, S._NNP ;_: Namata_NNP ,_, G._NNP ;_: Wiebe_NNP ,_, J._NNP &_CC Getoor_NNP ,_, L._NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+Supervised_VBN and_CC unsupervised_JJ methods_NNS in_IN employing_VBG discourse_NN relations_NNS for_IN improving_VBG opinion_NN polarity_NN classification_NN ._.
+Proceedings_NNP of_IN the_DT Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, 170-179_CD ._.
+Somasundaran_NNP ,_, S._NNP ;_: Ruppenhofer_NNP ,_, J._NNP &_CC Wiebe_NNP ,_, J._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Detecting_VBG arguing_VBG and_CC sentiment_NN in_IN meetings_NNS ._.
+Proceedings_NNP of_IN the_DT SIGdial_NNP Workshop_NNP on_IN Discourse_NNP and_CC Dialogue_NNP ._.
+Somasundaran_NNP ,_, S._NNP &_CC Wiebe_NNP ,_, J._NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ._.
+Recognizing_VBG stances_NNS in_IN ideological_JJ on-line_JJ debates_NNS ._.
+Proceedings_NNP of_IN the_DT NAACL_NNP HLT_NNP Workshop_NNP on_IN Computational_NNP Approaches_NNPS to_TO Analysis_NNP and_CC Generation_NNP of_IN Emotion_NNP in_IN Text_NNP ,_, 116-124_CD ._.
+Vande_NNP Kopple_NNP ,_, W._NNP J._NNP -LRB-_-LRB- 1985_CD -RRB-_-RRB- ._.
+Some_DT exploratory_JJ discourse_NN on_IN metadiscourse_NN ._.
+College_NNP Composition_NNP and_CC Communication_NNP ,_, 36_CD ,_, 82-93_CD ._.
+Walker_NNP ,_, M._NNP A._NNP ;_: Anand_NNP ,_, P._NNP ;_: Abbott_NNP ,_, R._NNP &_CC Grant_NNP ,_, R._NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Stance_NN classification_NN using_VBG dialogic_NN properties_NNS of_IN persuasion_NN ._.
+Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS ,_, 592-596_CD ._.
+Wiebe_NNP ,_, J._NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- ._.
+Tracking_NNP point_NN of_IN view_NN in_IN narrative_NN ._.
+Computational_NNP Linguistics_NNP ,_, 20_CD ,_, 233-287_CD ._.
+Wiebe_NNP ,_, J._NNP ;_: Wilson_NNP ,_, T._NNP ;_: Bruce_NNP ,_, R._NNP ;_: Bell_NNP ,_, M._NNP &_CC Martin_NNP ,_, M._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+Learning_NNP subjective_JJ language_NN ._.
+Computational_NNP Linguistics_NNP ,_, 30_CD ,_, 277-308_CD ._.
+Wiebe_NNP ,_, J._NNP ;_: Wilson_NNP ,_, T._NNP &_CC Cardie_NNP ,_, C._NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Annotating_VBG expressions_NNS of_IN opinions_NNS and_CC emotions_NNS in_IN language_NN ._.
+Language_NN Resources_NNPS and_CC Evaluation_NNP ,_, 39_CD ,_, 165-210_CD ._.
+Wilson_NNP ,_, T._NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Annotating_VBG subjective_JJ content_NN in_IN meetings_NNS ._.
+Proceedings_NNP of_IN LREC_NNP ._.
+Wilson_NNP ,_, T._NNP ;_: Hoffmann_NNP ,_, P._NNP ;_: Somasundaran_NNP ,_, S._NNP ;_: Kessler_NNP ,_, J._NNP ;_: Wiebe_NNP ,_, J._NNP ;_: Choi_NNP ,_, Y._NNP ;_: Cardie_NNP ,_, C._NNP ;_: Riloff_NNP ,_, E._NNP &_CC Patwardhan_NNP ,_, S._NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Opinion_NN finder_NN :_: A_DT system_NN for_IN subjectivity_NN analysis_NN ._.
+Proceedings_NNP of_IN HLT/EMNLP_NNP Demonstration_NNP Abstracts_NNPS ,_, 34-35_CD ._.
+黃金蘭_CD 、_CD Chung_NNP ,_, C._NNP K._NNP 、_NNP Hui_NNP ,_, N._NNP 、_FW 林以正_FW 、_FW 謝亦泰_FW 、_FW 程威詮_FW 、_FW Lam_NNP ,_, B._NNP 、_NNP Bond_NNP ._.
+M._NNP ,_, 及_NNP Pennebaker_NNP ,_, J._NNP W._NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- :_: 中文版語文探索與字詞計算字典之_CD 建立_CD 。_NN 中華心理學刊_CD ,54,185_CD -201_CD 。_NN

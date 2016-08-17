@@ -1,0 +1,353 @@
+The_DT Cross-modal_JJ Representation_NN of_IN Metaphors_NNP Abstract_NNP This_DT study_NN investigates_VBZ the_DT habitual_JJ expressions_NNS of_IN metaphors_NNS in_IN language_NN and_CC gesture_NN and_CC the_DT collaboration_NN of_IN these_DT two_CD modalities_NNS in_IN conveying_VBG metaphors_NNS ._.
+This_DT study_NN examined_VBD 247_CD metaphoric_JJ expressions_NNS in_IN Mandarin_NNP conversations_NNS ._.
+The_DT data_NN includes_VBZ 110_CD -LRB-_-LRB- 44.5_CD %_NN -RRB-_-RRB- metaphors_NNS being_VBG conveyed_VBN concurrently_RB by_IN speech_NN and_CC gesture_NN as_RB well_RB as_IN 137_CD -LRB-_-LRB- 55.5_CD %_NN -RRB-_-RRB- metaphors_NNS being_VBG conveyed_VBN in_IN gesture_NN exclusively_RB ._.
+Results_NNS show_VBP that_IN Entity_NNP metaphor_NN is_VBZ the_DT most_RBS frequent_JJ one_CD expressed_VBN in_IN daily_JJ conversations_NNS ._.
+The_DT cooperation_NN of_IN language_NN and_CC gesture_NN enables_VBZ us_PRP to_TO evaluate_VB the_DT various_JJ hypotheses_NNS of_IN speech-gesture_JJ production_NN ._.
+Results_NNS from_IN this_DT study_NN tend_VB to_TO support_VB the_DT Interface_NNP Hypothesis_NNP ,_, which_WDT suggests_VBZ that_IN gestures_NNS are_VBP generated_VBN from_IN an_DT interface_NN representation_NN between_IN speaking_NN and_CC spatio_NN -_: motoric_JJ thought_NN ._.
+1_CD Introduction_NNP The_NNP thought_VBD that_IN metaphor_NN is_VBZ not_RB restricted_VBN to_TO the_DT realm_NN of_IN literature_NN has_VBZ been_VBN widely_RB accepted_VBN since_IN Lakoff_NNP and_CC Johnson_NNP 's_POS study_NN of_IN conceptual_JJ metaphor_NN in_IN 1980_CD ._.
+In_IN Lakoff_NNP and_CC Johnson_NNP 's_POS framework_NN ,_, the_DT word_NN metaphor_NN refers_VBZ to_TO the_DT ``_`` metaphorical_JJ concept_NN ''_'' in_IN thought_NN and_CC is_VBZ presented_VBN in_IN a_DT form_NN with_IN small_JJ capital_NN letters_NNS ,_, for_IN example_NN ,_, LOVE_NNP IS_VBZ A_DT JOURNEY_NN -LRB-_-LRB- Lakoff_NNP &_CC Johnson_NNP ,_, 1980_CD :_: 6_CD -RRB-_-RRB- ._.
+Metaphor_NN can_MD be_VB conceived_VBN as_IN a_DT conceptual_JJ mapping_NN from_IN one_CD domain_NN to_TO another_DT domain_NN -LRB-_-LRB- Lakoff_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+The_DT Conceptual_NNP Metaphor_NNP Theory_NNP maintains_VBZ four_CD significant_JJ views_NNS about_IN metaphors_NNS :_: metaphor_NN is_VBZ in_IN thoughts_NNS ;_: metaphor_NN is_VBZ based_VBN on_IN the_DT Kawai_NNP Chui_NNP Department_NNP of_IN English_NNP National_NNP Chengchi_NNP University_NNP kawai@nccu.edu.tw_NNP correlations_NNS or_CC the_DT structural_JJ similarity_NN between_IN two_CD domains_NNS ;_: metaphor_NN helps_VBZ to_TO structure_VB our_PRP$ ordinary_JJ conceptual_JJ system_NN ;_: and_CC metaphor_NN can_MD be_VB grounded_VBN in_IN the_DT body_NN or_CC socio-cultural_JJ experiences_NNS ._.
+According_VBG to_TO Lakoff_NNP and_CC Johnson_NNP -LRB-_-LRB- 1980_CD -RRB-_-RRB- ,_, language_NN is_VBZ an_DT essential_JJ modality_NN for_IN us_PRP to_TO understand_VB the_DT metaphors_NNS ._.
+Although_IN we_PRP are_VBP not_RB usually_RB aware_JJ of_IN our_PRP$ conceptual_JJ system_NN ,_, we_PRP can_MD explore_VB the_DT system_NN by_IN studying_VBG language_NN ,_, since_IN communication_NN shares_NNS the_DT same_JJ system_NN we_PRP use_VBP in_IN thinking_NN -LRB-_-LRB- Lakoff_NNP &_CC Johnson_NNP ,_, 1980_CD -RRB-_-RRB- ._.
+Because_IN metaphors_NNS are_VBP conceptual_JJ ,_, language_NN is_VBZ not_RB the_DT exclusive_JJ realization_NN of_IN metaphors_NNS ._.
+In_IN the_DT past_JJ studies_NNS -LRB-_-LRB- Cienki_NNP ,_, 2008_CD ;_: Cienki_NNP &_CC Müller_NNP ,_, 2008_CD ;_: Müller_NNP ,_, 2008_CD ;_: Gibbs_NNP ,_, 2008_CD -RRB-_-RRB- ,_, gesture_NN is_VBZ regarded_VBN as_IN an_DT independent_JJ non-verbal_JJ modality_NN where_WRB we_PRP may_MD find_VB the_DT metaphorical_JJ expressions_NNS ._.
+McNeill_NNP -LRB-_-LRB- 1992_CD :_: 14_CD -RRB-_-RRB- states_VBZ that_IN metaphoric_JJ gestures_NNS are_VBP ``_`` like_IN iconic_JJ gestures_NNS in_IN that_IN they_PRP are_VBP pictorial_JJ ,_, but_CC the_DT pictorial_JJ content_NN presents_VBZ an_DT abstract_JJ idea_NN rather_RB than_IN a_DT concrete_JJ object_NN or_CC event_NN ..._: -LSB-_NNP and_CC -RSB-_NNP presents_VBZ an_DT image_NN of_IN the_DT invisible_JJ --_: an_DT image_NN of_IN an_DT abstraction_NN ''_'' ._.
+A_DT gestural_JJ study_NN may_MD also_RB help_VB to_TO enhance_VB the_DT cognitive_JJ reality_NN of_IN metaphors_NNS ._.
+Therefore_RB ,_, the_DT present_JJ study_NN collects_VBZ metaphoric_JJ expressions_NNS from_IN conversational_JJ data_NNS ,_, which_WDT allow_VBP us_PRP to_TO see_VB the_DT cross-modal_JJ manifestations_NNS of_IN metaphors_NNS ._.
+Previous_JJ research_NN on_IN metaphors_NNS in_IN language_NN -LRB-_-LRB- Lakoff_NNP &_CC Johnson_NNP ,_, 1980_CD ;_: Lakoff_NNP ,_, 1993_CD ;_: Kövecses_NNP ,_, 2002_CD -RRB-_-RRB- and_CC gesture_NN -LRB-_-LRB- McNeill_NNP ,_, 1992_CD ;_: Cienki_NNP ,_, 2008_CD ;_: Müller_NNP ,_, 2008_CD ;_: Chui_NNP ,_, 2011_CD ,_, 2013_CD -RRB-_-RRB- have_VBP offered_VBN insightful_JJ thoughts_NNS and_CC visible_JJ evidence_NN about_IN conceptual_JJ metaphor_NN ,_, such_JJ as_IN the_DT common_JJ source_NN -_: domain_NN and_CC target-domain_JJ concepts_NNS ,_, the_DT correspondences_NNS between_IN two_CD domains_NNS ,_, the_DT profiles_NNS of_IN metaphors_NNS ,_, and_CC the_DT embodiment_NN of_IN metaphors_NNS ._.
+Nevertheless_RB ,_, most_JJS of_IN them_PRP only_RB take_VBP account_NN of_IN qualitative_JJ analysis_NN ._.
+This_DT study_NN would_MD like_VB to_TO explore_VB the_DT metaphoric_JJ expressions_NNS from_IN a_DT quantitative_JJ perspective_NN so_IN that_IN we_PRP can_MD have_VB reliable_JJ information_NN about_IN the_DT habitual_JJ expressions_NNS of_IN metaphors_NNS as_RB well_RB as_IN the_DT synchronization_NN and_CC collaboration_NN of_IN linguistic_JJ and_CC gestural_JJ modality_NN ._.
+In_IN addition_NN ,_, there_EX are_VBP three_CD hypotheses_NNS about_IN the_DT production_NN process_NN of_IN speech_NN and_CC gesture_NN :_: the_DT Free_NNP Imagery_NNP Hypothesis_NNP -LRB-_-LRB- Krauss_NNP et_FW al._FW ,_, 1996_CD ,_, 2000_CD ;_: de_FW Ruiter_FW ,_, 2000_CD -RRB-_-RRB- ,_, the_DT Lexical_NNP Semantic_NNP Hypothesis_NNP -LRB-_-LRB- Schegloff_NNP ,_, 1984_CD ;_: Butterworth_NNP &_CC Hadar_NNP ,_, 1989_CD -RRB-_-RRB- ,_, and_CC the_DT Interface_NNP Hypothesis_NNP -LRB-_-LRB- Kita_NNP &_CC Ö_NNP yzürek_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+The_DT first_JJ hypothesis_NN maintains_VBZ that_IN gestures_NNS are_VBP independent_JJ from_IN the_DT content_NN of_IN speech_NN and_CC that_IN gestures_NNS are_VBP produced_VBN before_IN the_DT formulation_NN of_IN speech_NN ._.
+The_DT second_JJ one_CD suggests_VBZ that_IN gestures_NNS are_VBP generated_VBN from_IN the_DT semantics_NNS of_IN lexical_JJ items_NNS ._.
+The_DT third_JJ one_CD sustains_VBZ that_IN the_DT information_NN in_IN gesture_NN originates_VBZ from_IN the_DT representations_NNS based_VBN on_IN the_DT on-line_JJ interaction_NN of_IN spatial_JJ thinking_NN and_CC speaking_NN ._.
+Kita_NNP and_CC Ö_NNP yzürek_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- have_VBP conducted_VBN research_NN on_IN the_DT cross_NN -_: linguistic_JJ expressions_NNS of_IN motion_NN events_NNS to_TO look_VB at_IN the_DT three_CD hypotheses_NNS ._.
+They_PRP focused_VBD on_IN the_DT informational_JJ coordination_NN between_IN iconic_JJ gestures_NNS and_CC their_PRP$ corresponding_JJ lexical_JJ affiliates_NNS ._.
+Likewise_RB ,_, the_DT present_JJ study_NN investigates_VBZ the_DT relationship_NN between_IN language_NN and_CC gesture_NN ,_, but_CC we_PRP will_MD discuss_VB the_DT hypotheses_NNS from_IN the_DT perspective_NN of_IN metaphorical_JJ expressions_NNS ._.
+To_TO discuss_VB -LRB-_-LRB- i_FW -RRB-_-RRB- people_NNS 's_POS habitual_JJ expressions_NNS of_IN metaphors_NNS to_TO conceptualize_VB concepts_NNS in_IN daily_JJ communication_NN ,_, and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- the_DT collaboration_NN of_IN language_NN and_CC gesture_NN in_IN expressing_VBG metaphors_NNS with_IN regard_NN to_TO the_DT hypothesis_NN of_IN speech-gesture_JJ production_NN ,_, this_DT study_NN address_NN the_DT following_VBG questions_NNS ._.
+What_WP are_VBP the_DT metaphor_NN types_NNS people_NNS usually_RB convey_VBP in_IN daily_JJ communication_NN ?_.
+What_WP is_VBZ the_DT temporal_JJ patterning_NN of_IN speech_NN and_CC gesture_NN in_IN presenting_VBG metaphors_NNS ?_.
+What_WP is_VBZ the_DT relevant_JJ linguistic_JJ unit_NN accompanying_VBG the_DT metaphoric_JJ gesture_NN ?_.
+2_CD Data_NNP The_NNP linguistic_JJ data_NNS used_VBN in_IN this_DT study_NN is_VBZ taken_VBN from_IN the_DT NCCU_NNP Corpus_NNP of_IN Spoken_NNP Chinese1_NNP -LRB-_-LRB- Chui_NNP &_CC Lai_NNP 2008_CD -RRB-_-RRB- ._.
+Its_PRP$ sub-corpus_NN of_IN spoken_VBN Mandarin_NNP includes_VBZ daily_JJ face-to-face_JJ conversations_NNS collected_VBN 1_CD The_DT website_NN of_IN the_DT NCCU_NNP Corpus_NNP of_IN Spoken_NNP Chinese_NNP is_VBZ http://spokenchinesecorpus.nccu.edu.tw/_JJ since_IN 2006_CD ._.
+The_DT participants_NNS in_IN the_DT conversations_NNS were_VBD familiar_JJ with_IN each_DT other_JJ and_CC felt_VBD free_JJ to_TO talk_VB about_IN any_DT topics_NNS in_IN front_NN of_IN a_DT visible_JJ camera_NN ._.
+From_IN each_DT conversation_NN ,_, a_DT stretch_NN -LRB-_-LRB- about_IN twenty_CD to_TO forty_CD minutes_NNS -RRB-_-RRB- was_VBD selected_VBN for_IN transcription_NN ._.
+The_DT linguistic_JJ data_NNS used_VBN in_IN this_DT study_NN come_VBN from_IN twenty-six_CD conversations_NNS in_IN the_DT sub-corpus_NN of_IN spoken_VBN Mandarin_NNP ,_, and_CC these_DT conversations_NNS totally_RB take_VBP about_RB nine_CD hours_NNS and_CC fifty_CD seconds_NNS ._.
+The_DT gestural_JJ data_NNS relevant_JJ for_IN this_DT study_NN are_VBP obtained_VBN from_IN the_DT gesture_NN analysis_NN of_IN the_DT twenty-six_CD transcribed_VBN conversations_NNS ._.
+Since_IN this_DT study_NN has_VBZ interest_NN in_IN the_DT collaboration_NN of_IN language_NN and_CC gesture_NN in_IN expressing_VBG metaphorical_JJ concepts_NNS ,_, metaphors_NNS occurring_VBG alone_RB in_IN speech_NN were_VBD excluded_VBN ._.
+This_DT study_NN focuses_VBZ on_IN the_DT metaphors_NNS concurrently_RB manifested_VBN in_IN speech_NN and_CC gesture_NN -LRB-_-LRB- `_`` language-gesture_NN '_'' or_CC `_`` L-G_NNP '_'' -RRB-_-RRB- as_RB well_RB as_IN the_DT metaphors_NNS merely_RB realized_VBD in_IN gesture_NN -LRB-_-LRB- `_`` gesture_NN -_: only_RB '_'' or_CC `_`` G-only_JJ '_'' ,_, i.e._FW ,_, a_DT concept_NN is_VBZ metaphorically_RB expressed_VBN in_IN gesture_NN but_CC literally_RB conveyed_VBN in_IN speech_NN -RRB-_-RRB- ._.
+There_EX are_VBP totally_RB 247_CD metaphors_NNS examined_VBD in_IN this_DT study_NN ._.
+These_DT metaphors_NNS are_VBP divided_VBN into_IN two_CD main_JJ groups_NNS :_: the_DT L-G_NNP group_NN and_CC the_DT G-only_JJ group_NN ._.
+The_DT L-G_NNP group_NN contains_VBZ 110_CD -LRB-_-LRB- 44.5_CD %_NN -RRB-_-RRB- metaphoric_JJ expressions_NNS ;_: the_DT G-only_JJ group_NN involves_VBZ 137_CD -LRB-_-LRB- 55.5_CD %_NN -RRB-_-RRB- metaphors_NNS ._.
+3_CD The_DT Habitual_JJ Expressions_NNS of_IN Metaphors_NNS This_DT study_NN sorts_NNS the_DT metaphoric_JJ expressions_NNS by_IN different_JJ metaphor_NN types_NNS to_TO discuss_VB people_NNS 's_POS habitual_JJ expression_NN of_IN metaphor_NN in_IN daily_JJ conversation_NN ._.
+Several_JJ metaphor_NN types_NNS have_VBP been_VBN proposed_VBN in_IN the_DT past_JJ studies_NNS -LRB-_-LRB- Reddy_NNP ,_, 1979_CD ;_: Lakoff_NNP &_CC Johnson_NNP ,_, 1980_CD ,_, 1999_CD ;_: McNeill_NNP ,_, 1992_CD ;_: Lakoff_NNP ,_, 1993_CD ;_: Talmy_NNP ,_, 1996_CD ;_: Gibbs_NNP ,_, 2005_CD ,_, 2006_CD -RRB-_-RRB- ._.
+Based_VBN on_IN the_DT past_JJ research_NN ,_, this_DT study_NN recognizes_VBZ nine_CD kinds_NNS of_IN metaphors_NNS to_TO analyze_VB both_DT the_DT linguistic_JJ and_CC gestural_JJ data_NNS :_: body-part_JJ metaphor_NN ,_, causation_NN metaphor_NN ,_, conduit_NN metaphor_NN ,_, container_NN metaphor_NN ,_, entity_NN metaphor_NN ,_, fictive-motion_JJ metaphor_NN ,_, orientation_NN metaphor_NN ,_, personification_NN metaphor_NN ,_, and_CC complex_JJ metaphor_NN ._.
+3.1_CD Classification_NN of_IN Metaphor_NNP Types_NNP Except_IN for_IN the_DT body-part_JJ metaphor_NN and_CC the_DT personification_NN metaphor_NN ,_, the_DT other_JJ kinds_NNS of_IN metaphors_NNS are_VBP produced_VBN from_IN the_DT current_JJ data_NNS ._.
+The_DT following_NN shows_VBZ the_DT definitions_NNS of_IN these_DT metaphors_NNS and_CC the_DT representative_NN instances_NNS obtained_VBN from_IN the_DT data_NNS examined_VBD ._.
+The_DT causation_NN metaphor_NN treats_VBZ causes_NNS as_IN forces_NNS and_CC causations/changes_NNS as_IN movements_NNS -LRB-_-LRB- Lakoff_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+The_DT concept_NN of_IN causation_NN is_VBZ metaphorically_RB understood_VBN as_IN a_DT physical_JJ force_NN resulting_VBG in_IN motion_NN or_CC change_NN of_IN something_NN ._.
+Lakoff_NNP and_CC Johnson_NNP -LRB-_-LRB- 1999_CD :_: 184_CD -RRB-_-RRB- proposed_VBN that_IN bring_VB ,_, drive_NN ,_, pull_VB ,_, push_VB ,_, throw_VB are_VBP all_DT verbs_NNS of_IN forced_JJ movement_NN and_CC they_PRP can_MD be_VB used_VBN to_TO indicate_VB abstract_JJ causation_NN ._.
+This_DT study_NN finds_VBZ an_DT instance_NN of_IN the_DT causation_NN metaphor_NN PSYCHOLOGICAL_NNP COMPELLING_NNP IS_VBZ PUSHING_NNP in_IN the_DT G-only_JJ group_NN as_IN shown_VBN in_IN Example_NNP 1_CD ._.
+The_DT speaker_NN literally_RB expresses_VBZ the_DT psychological_JJ operation_NN with_IN the_DT verb_NN bī_NN `_`` compel_VB '_'' ._.
+Simultaneously_RB ,_, her_PRP$ hands_NNS forcefully_RB push_VBP forward_RB -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+The_DT speaker_NN does_VBZ not_RB physically_RB push_VB her_PRP$ boyfriend_NN ,_, yet_RB a_DT physical_JJ force_NN is_VBZ utilized_VBN to_TO conceptualize_VB a_DT psychological_JJ force_NN to_TO cause_VB someone_NN to_TO carry_VB out_RP a_DT certain_JJ action_NN ._.
+depicts_VBZ the_DT imagery_NN of_IN transferring_VBG something_NN toward_IN herself_PRP twice_RB by_IN her_PRP$ hand_NN movement_NN -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+This_DT gesture_NN does_VBZ not_RB refer_VB to_TO the_DT physical_JJ action_NN of_IN sending_VBG but_CC the_DT abstract_JJ concept_NN of_IN offering_VBG knowledge_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- F_NN :_: ._. ._.
+jiù_SYM jiāo_FW de_FW yĭjīng_FW guànshū_FW wŏmen_FW hĕn_FW duō_FW le_FW `_`` -LRB-_-LRB- They_PRP -RRB-_-RRB- teach_VB and_CC give_VB us_PRP much_RB knowledge_NN ._. '_''
+-LRB-_-LRB- 1_LS -RRB-_-RRB- F1_CD :_: ._. ._.
+nà_FW wŏ_FW jiù_FW yìzhíbī_FW tā_FW `_`` Then_RB I_PRP keep_VBP compelling_JJ him_PRP ._. '_''
+Figure_NN 2_CD ._.
+PROVIDING_VBG KNOWLEDGE_NN IS_VBZ TRANSFERRING_NNP OBJECTS_NNS in_IN gesture_NN The_DT container_NN metaphor_NN is_VBZ the_DT metaphor_NN in_IN which_WDT its_PRP$ target_NN domain_NN is_VBZ conceived_VBN in_IN terms_NNS of_IN a_DT container_NN with_IN a_DT bounded_VBN surface_NN and_CC in-out_JJ orientation_NN ._.
+In_IN Example_NN 3_CD ,_, the_DT container_NN metaphor_NN A_DT BASIN_NNP IS_VBZ A_DT CONTAINER_NNP is_VBZ realized_VBN by_IN both_DT language_NN and_CC gesture_NN ._.
+Figure_NN 1_CD ._.
+PSYCHOLOGICAL_JJ COMPELLING_JJ IS_VBZ PUSHING_NNP in_IN gesture_NN The_DT conduit_NN metaphor_NN conceptualizes_VBZ human_JJ communication_NN as_IN a_DT conduit_NN which_WDT can_MD physically_RB transfer_VB our_PRP$ thoughts_NNS or_CC feelings_NNS -LRB-_-LRB- Reddy_NNP ,_, 1979_CD -RRB-_-RRB- ._.
+This_DT kind_NN of_IN metaphor_NN involves_VBZ an_DT important_JJ mechanism_NN in_IN which_WDT communication_NN is_VBZ seen_VBN as_IN the_DT action_NN of_IN sending_VBG ._.
+Example_NN 2_CD is_VBZ an_DT instance_NN of_IN the_DT conduit_NN metaphor_NN PROVIDING_NNP KNOWLEDGE_NNP IS_VBZ TRANSFERRING_NNP OBJECTS_NNS which_WDT conveyed_VBD in_IN both_DT language_NN and_CC gesture_NN ._.
+The_DT speaker_NN uses_VBZ the_DT verb_NN guànshū_NN `_`` transport_NN '_'' which_WDT indicates_VBZ that_IN the_DT process_NN of_IN providing_VBG knowledge_NN is_VBZ metaphorically_RB conceived_VBN as_IN sending_VBG discrete_JJ entities_NNS ._.
+She_PRP also_RB Figure_NN 3_CD ._.
+A_DT BASIN_NNP IS_VBZ A_DT CONTAINER_NNP in_IN gesture_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- F_NN :_: ._. ._.
+táibĕi_JJ dìshìdīwā_NN ._. ._.
+péndìzuāng_VBG shuĭ_JJ `_`` Taipei_NNP is_VBZ in_IN the_DT low-lying_JJ area_NN ._. ._.
+the_DT basin_NN is_VBZ filled_VBN with_IN water_NN ._. '_''
+A_DT bounded_VBN surface_NN is_VBZ imposed_VBN to_TO a_DT land_NN area_NN without_IN a_DT physical_JJ or_CC delineated_JJ boundary_NN ._.
+The_DT utterance_NN péndì_NN zuāng_VBG shuĭ_JJ `_`` basin_NN is_VBZ filled_VBN with_IN water_NN '_'' shows_VBZ that_IN a_DT basin_NN is_VBZ seen_VBN as_IN a_DT container_NN ._.
+The_DT physical_JJ land_NN area_NN is_VBZ provided_VBN with_IN artificial_JJ boundary_NN which_WDT enables_VBZ the_DT land_NN to_TO have_VB the_DT function_NN of_IN a_DT container_NN to_TO keep_VB liquid_NN in_IN its_PRP$ interior_NN ._.
+The_DT metaphor_NN is_VBZ also_RB expressed_VBN by_IN the_DT downward_JJ movement_NN of_IN the_DT speaker_NN 's_POS hands_NNS which_WDT depicts_VBZ the_DT image_NN of_IN pouring_VBG water_NN into_IN a_DT container_NN -LRB-_-LRB- Figure_NN 3_CD -RRB-_-RRB- and_CC shows_VBZ the_DT in-out_JJ orientation_NN about_IN the_DT concept_NN of_IN CONTAINER_NNP ._.
+The_DT entity_NN metaphor_NN conceptualizes_VBZ a_DT target_NN domain_NN in_IN terms_NNS of_IN discrete_JJ object_NN or_CC substances_NNS ._.
+In_IN Example_NN 4_CD ,_, the_DT entity_NN metaphor_NN SPEECH_NNP CONTENT_NNP IS_VBZ AN_DT OBJECT_NNP is_VBZ manifested_VBN in_IN both_DT language_NN and_CC gesture_NN ._.
+The_DT term_NN yìxiē_NN `_`` some_DT '_'' quantify_VBP the_DT speech_NN content_NN ,_, showing_VBG that_IN SPEECH_NNP CONTENT_NNP is_VBZ verbally_RB conveyed_VBN as_IN an_DT object_NN ._.
+In_IN gesture_NN ,_, the_DT speaker_NN 's_POS right_JJ open_JJ palm_NN turns_VBZ up_RP with_IN slightly_RB curled_VBN fingers_NNS to_TO represent_VB SPEECH_NNP CONTENT_NNP as_IN a_DT discrete_JJ object_NN held_VBN in_IN her_PRP$ hand_NN -LRB-_-LRB- Figure_NN 4_CD -RRB-_-RRB- ._.
+speaker_NN states_NNS that_IN a_DT teacher_NN 's_POS speech_NN content_NN always_RB changes_VBZ abruptly_RB ._.
+The_DT speech_NN content_NN of_IN a_DT talk_NN does_VBZ not_RB really_RB move_VB ;_: it_PRP is_VBZ conceptualized_VBN in_IN terms_NNS of_IN fictive_JJ motion_NN when_WRB the_DT speaker_NN utters_VBZ the_DT verb_NN tiào_IN `_`` jump_NN '_'' ._.
+Simultaneously_RB ,_, the_DT speaker_NN 's_POS one_CD hand_NN moves_NNS to_TO upper_JJ left_NN or_CC upper_JJ right_JJ position_NN as_IN the_DT other_JJ hand_NN moves_NNS to_TO the_DT center_NN position_NN for_IN three_CD times_NNS -LRB-_-LRB- Figure_NN 5_CD -RRB-_-RRB- ._.
+The_DT gestural_JJ imagery_NN of_IN the_DT movement_NN to_TO different_JJ spaces_NNS metaphorically_RB represents_VBZ the_DT abstract_JJ concept_NN SHIFT_NNP OF_IN THE_DT SPEECH_NN CONTENT_NN via_IN MOTION_NNP ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- F_NN :_: ._. ._.
+zhèbiān_NNP jiăng_NNP yòu_VBD tiào_JJ nàbiān_NN ._. ._.
+tiào_IN nàbiān_NN ._. ._.
+tiào_IN nàbiān_JJ `_`` -LRB-_-LRB- He_PRP -RRB-_-RRB- talked_VBD about_IN this_DT and_CC -LRB-_-LRB- the_DT speech_NN content_NN -RRB-_-RRB- shifts_NNS to_TO there_RB ,_, shifts_NNS to_TO there_RB ,_, and_CC shifts_NNS to_TO there_RB ._. '_''
+-LRB-_-LRB- 4_LS -RRB-_-RRB- F1_CD :_: ._. ._.
+jiù_FW nĭ_FW kĕnéng_FW jiăng_FW yìxiē_FW shémo_FW dōngxī_FW `_`` You_PRP may_MD say_VB something_NN ._. '_''
+Figure_NN 4_CD ._.
+SPEECH_NN CONTENT_NN IS_VBZ AN_DT OBJECT_NNP in_IN gesture_NN The_DT fictive-motion_JJ metaphor_NN refers_VBZ to_TO the_DT metaphor_NN in_IN which_WDT static_JJ things_NNS or_CC abstract_JJ concepts_NNS are_VBP conceived_VBN in_IN terms_NNS of_IN dynamic_JJ motions_NNS ._.
+Such_JJ motion_NN is_VBZ called_VBN ``_`` fictive_JJ motion_NN ''_'' -LRB-_-LRB- Talmy_NNP ,_, 1996_CD -RRB-_-RRB- ,_, since_IN it_PRP does_VBZ not_RB have_VB physical_JJ occurrences_NNS ._.
+Example_NN 5_CD presents_VBZ the_DT fictive-motion_JJ metaphor_NN THE_DT SHIFT_NN OF_IN SPEECH_NNP CONTENT_NNP IS_VBZ A_DT MOTION_NN in_IN both_DT language_NN and_CC gesture_NN ._.
+The_DT Figure_NN 5_CD ._.
+THE_DT SHIFT_NN OF_IN SPEECH_NNP CONTENT_NNP IS_VBZ A_DT MOTION_NN in_IN gesture_NN The_DT orientation_NN metaphor_NN is_VBZ the_DT metaphor_NN in_IN which_WDT a_DT target_NN domain_NN concept_NN is_VBZ conceptualized_VBN in_IN terms_NNS of_IN spatial_JJ concepts_NNS ,_, including_VBG spatial_JJ orientations_NNS ,_, path_NN ,_, location_NN ,_, etc._FW ._.
+Example_NN 6_CD shows_VBZ the_DT orientation_NN metaphor_NN AFTERNOON_NNP IS_VBZ DOWN_NNP in_IN both_DT language_NN and_CC gesture_NN ._.
+The_DT speaker_NN utters_NNS xiàwŭ_VBP `_`` afternoon_NN '_'' in_IN speech_NN ,_, and_CC the_DT spatial_JJ term_NN xià_NN `_`` down_RB '_'' show_VBP that_IN up-down_JJ orientation_NN is_VBZ used_VBN to_TO refer_VB to_TO the_DT abstract_JJ concept_NN TIME_NNP ._.
+Simultaneously_RB ,_, the_DT speaker_NN 's_POS left_JJ fingers_NNS points_NNS down_RB to_TO metaphorically_RB present_VB the_DT concept_NN of_IN AFTERNOON_NNP -LRB-_-LRB- Figure_NNP 6_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- F1_CD :_: ._. ._.
+xiàwŭ_JJ dōushì_NN ..._: déduó_SYM nà_FW yíge_FW mā_FW `_`` Are_VBP the_DT classes_NNS in_IN the_DT afternoon_NN taught_VBN by_IN that_DT German_JJ ?_. '_''
+Figure_NN 6_CD ._.
+AFTERNOON_NNP IS_VBZ DOWN_NNP in_IN gesture_NN The_DT complex_JJ metaphor_NN refers_VBZ to_TO the_DT metaphor_NN which_WDT has_VBZ no_DT direct_JJ and_CC independent_JJ correlation_NN to_TO our_PRP$ sensory-motor_NN experiences_NNS ._.
+However_RB ,_, we_PRP still_RB need_VBP the_DT knowledge_NN of_IN our_PRP$ bodily_NN experience_NN or_CC socio-cultural_JJ practices_NNS to_TO comprehend_VB such_JJ metaphor_NN ._.
+Example_NN 7_CD includes_VBZ the_DT expression_NN of_IN the_DT complex_JJ metaphor_NN CHOOSING_NNP PASSENGERS_NNPS IS_VBZ PICKING_NNP OBJECTS_NNS in_IN both_DT speech_NN and_CC gesture_NN ._.
+center_NN position_NN twice_RB -LRB-_-LRB- Figure_NN 7_CD -RRB-_-RRB- ._.
+Such_JJ a_DT gesture_NN represents_VBZ the_DT idea_NN of_IN CHOOSING_VBG PASSENGERS_NNS as_IN the_DT imagery_NN of_IN picking_VBG objects_NNS ._.
+The_DT physical_JJ activity_NN of_IN picking_VBG objects_NNS is_VBZ the_DT socio-cultural_JJ practice_NN we_PRP perform_VBP in_IN ordinary_JJ life_NN ,_, and_CC it_PRP provides_VBZ the_DT basis_NN for_IN the_DT complex_JJ metaphor_NN in_IN this_DT case_NN ._.
+3.2_CD The_DT Cross-Model_NNP Manifestation_NNP of_IN Metaphors_NNP Distribution_NN of_IN the_DT metaphor_NN types_NNS in_IN Mandarin_NNP conversations_NNS is_VBZ presented_VBN in_IN Table_NNP 1_CD ._.
+In_IN the_DT L-G_NNP group_NN ,_, six_CD metaphor_NN types_NNS are_VBP found_VBN ._.
+A_DT large_JJ number_NN of_IN the_DT expressions_NNS belong_VBP to_TO entity_NN metaphor_NN -LRB-_-LRB- 71.9_CD %_NN -RRB-_-RRB- ._.
+Orientation_NNP metaphor_NN accounts_NNS for_IN 21.8_CD %_NN ._.
+Fictive-motion_JJ metaphor_NN ,_, container_NN metaphor_NN ,_, conduit_NN metaphor_NN ,_, and_CC complex_JJ metaphor_NN comprise_VBP less_JJR than_IN 10_CD %_NN of_IN the_DT metaphors_NNS in_IN language_NN and_CC gesture_NN ._.
+Within_IN the_DT G-only_JJ group_NN ,_, four_CD metaphor_NN types_NNS are_VBP found_VBN ._.
+Entity_NN metaphor_NN is_VBZ the_DT overwhelming_JJ majority_NN -LRB-_-LRB- 82.5_CD %_NN -RRB-_-RRB- ,_, and_CC orientation_NN metaphor_NN takes_VBZ the_DT second_JJ place_NN -LRB-_-LRB- 13.9_CD %_NN -RRB-_-RRB- ._.
+Causation_NN metaphor_NN and_CC complex_JJ metaphor_NN just_RB account_NN for_IN a_DT small_JJ portion_NN of_IN metaphors_NNS in_IN G-only_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- F_NN :_: ._. ._.
+dāng_JJ jìchéngchē_NN ._. ._.
+jiăn_JJ sānge_NN kèrén_NN `_`` -LRB-_-LRB- We_PRP are_VBP -RRB-_-RRB- the_DT taxi_NN driver_NN and_CC choose_VB three_CD passengers_NNS '_POS Metaphor_NN type_NN Orientation_NNP metaphor_NN Container_NNP metaphor_NN Causation_NNP metaphor_NN Group_NNP Total_NNP L-G_NNP G-Only_NNP Entity_NNP metaphor_NN 79_CD 71.9_CD %_NN 113_CD 82.5_CD %_NN 192_CD 77.8_CD %_NN Fictive-motion_JJ metaphor_NN 3_CD 2.7_CD %_NN 0_CD 0.0_CD %_NN 3_CD 1.2_CD %_NN Conduit_NN metaphor_NN 1_CD 0.9_CD %_NN 0_CD 0.0_CD %_NN 1_CD 0.4_CD %_NN Complex_JJ metaphor_NN 1_CD 0.9_CD %_NN 4_CD 2.9_CD %_NN 5_CD 2.0_CD %_NN Figure_NN 7_CD ._.
+CHOOSING_VBG PASSENGERS_NNPS IS_VBZ PICKING_NNP OBJECTS_NNS in_IN gesture_NN The_DT speaker_NN and_CC her_PRP$ friend_NN plan_NN to_TO attend_VB a_DT conference_NN by_IN car_NN and_CC mention_VB that_IN they_PRP can_MD choose_VB three_CD slender_JJ girls_NNS to_TO go_VB with_IN them_PRP ._.
+She_PRP utters_VBZ jiăn_JJ sānge_NN kèrén_NN `_`` pick_NN three_CD passengers_NNS '_POS to_TO describe_VB the_DT mental_JJ process_NN of_IN choosing_VBG people_NNS to_TO go_VB with_IN them_PRP ._.
+At_IN the_DT same_JJ time_NN ,_, the_DT speaker_NN 's_POS right_JJ index_NN finger_NN and_CC thumb_NN make_VBP a_DT pinch_NN and_CC move_NN from_IN the_DT rather_RB right_JJ position_NN to_TO her_PRP$ left_JJ hand_NN at_IN the_DT Total_JJ 24_CD 21.8_CD %_NN 19_CD 13.9_CD %_NN 43_CD 17.4_CD %_NN 2_CD 1.8_CD %_NN 0_CD 0.0_CD %_NN 2_CD 0.8_CD %_NN 0_CD 0.0_CD %_NN 1_CD 0.7_CD %_NN 1_CD 0.4_CD %_NN 110_CD 100_CD %_NN 137_CD 100_CD %_NN 247_CD 100_CD %_NN Table_NNP 1_CD ._.
+Types_NNS of_IN metaphors_NNS in_IN Mandarin_NNP conversations_NNS In_IN both_DT the_DT L-G_NNP and_CC the_DT G-only_JJ groups_NNS ,_, entity_NN metaphor_NN is_VBZ the_DT one_CD that_WDT people_NNS use_VBP more_JJR commonly_RB to_TO conceptualize_VB metaphoric_JJ thoughts_NNS ._.
+When_WRB we_PRP conceive_VBP concepts_NNS in_IN terms_NNS of_IN entity_NN metaphor_NN ,_, we_PRP are_VBP able_JJ to_TO ``_`` refer_VB to_TO them_PRP ,_, categorize_VBP them_PRP ,_, group_NN them_PRP ,_, and_CC quantify_VB them_PRP --_: and_CC ,_, by_IN this_DT means_VBZ ,_, reason_NN about_IN them_PRP ''_'' -LRB-_-LRB- Lakoff_NNP &_CC Johnson_NNP ,_, 1980_CD :_: 25_CD -RRB-_-RRB- ._.
+Entity_NN metaphors_NNS serve_VBP various_JJ purposes_NNS ,_, so_IN they_PRP are_VBP widely_RB used_VBN in_IN everyday_JJ life_NN ._.
+The_DT Chi_NNP -_: square_JJ test_NN shows_VBZ that_IN the_DT difference_NN between_IN the_DT L-G_NNP and_CC the_DT G-only_JJ groups_NNS is_VBZ statistically_RB significant_JJ regarding_VBG the_DT metaphor_NN types_NNS -LRB-_-LRB- χ2_CD =_SYM 12.601_CD ,_, df_FW =_SYM 6_CD ,_, p_VBP =_SYM 0.049_CD -RRB-_-RRB- ._.
+Entity_NN metaphors_NNS are_VBP prone_JJ to_TO occur_VB in_IN the_DT G-only_JJ group_NN rather_RB than_IN the_DT L-G_NNP group_NN .2_CD No_DT causation_NN metaphor_NN is_VBZ realized_VBN by_IN the_DT metaphor_NN in_IN the_DT L-G_NNP group_NN ._.
+Results_NNS from_IN current_JJ data_NNS agree_VBP with_IN one_CD of_IN McNeill_NNP 's_POS -LRB-_-LRB- 1992_CD -RRB-_-RRB- claims_VBZ in_IN his_PRP$ study_NN on_IN metaphoric_JJ gestures_NNS in_IN narratives_NNS ._.
+He_PRP asserted_VBD that_IN entity_NN metaphor_NN and_CC orientation_NN metaphor_NN are_VBP ``_`` instantly_RB available_JJ ''_'' -LRB-_-LRB- McNeill_NNP ,_, 1992_CD :_: 163_CD -RRB-_-RRB- ._.
+3_CD He_PRP also_RB stated_VBD that_IN Chinese_JJ lacks_VBZ the_DT gestures_NNS in_IN which_WDT abstract_JJ ideas_NNS are_VBP represented_VBN as_IN bounded_VBN and_CC supported_VBN objects_NNS ._.
+Nevertheless_RB ,_, this_DT study_NN denies_VBZ such_PDT a_DT view_NN ._.
+The_DT gestural_JJ imagery_NN to_TO represent_VB ideas_NNS as_IN the_DT bounded_VBN objects_NNS held_VBN in_IN hand_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- is_VBZ not_RB rare_JJ in_IN the_DT current_JJ data_NNS ._.
+This_DT kind_NN of_IN gestural_JJ expression_NN is_VBZ classified_VBN as_IN the_DT entity_NN metaphor_NN in_IN this_DT study_NN ._.
+Within_IN the_DT entity_NN metaphors_NNS ,_, 73.4_CD %_NN -LRB-_-LRB- 141_CD out_IN of_IN the_DT total_NN of_IN 192_CD entity_NN metaphors_NNS -RRB-_-RRB- of_IN them_PRP involve_VBP the_DT gestural_JJ representation_NN of_IN a_DT bounded_VBN object_NN supported_VBN in_IN hand_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ._.
+The_DT finding_NN based_VBN on_IN the_DT current_JJ data_NNS then_RB opposes_VBZ McNeill_NNP 's_POS assertion_NN that_IN the_DT image_NN of_IN a_DT bounded_VBN and_CC supported_VBN object_NN is_VBZ not_RB a_DT major_JJ source_NN of_IN metaphoric_JJ expressions_NNS in_IN Chinese_JJ culture_NN ._.
+4_LS The_DT Collaboration_NNP of_IN Language_NNP and_CC Gesture_NNP in_IN Metaphoric_NNP Expressions_NNPS Different_NNP theoretical_JJ hypotheses_NNS about_IN the_DT production_NN of_IN speech_NN and_CC gesture_NN --_: the_DT Free_NNP Imagery_NNP Hypothesis_NNP ,_, the_DT Lexical_NNP Semantic_NNP Hypothesis_NNP ,_, and_CC the_DT Interface_NNP Hypothesis_NNP --_: are_VBP proposed_VBN in_IN previous_JJ studies_NNS ._.
+According_VBG to_TO the_DT Free_NNP Imagery_NNP Hypothesis_NNP ,_, the_DT content_NN of_IN speech_NN will_MD not_RB affect_VB what_WP is_VBZ encoded_VBN in_IN gesture_NN ._.
+All_PDT the_DT data_NNS examined_VBD in_IN this_DT study_NN ,_, however_RB ,_, involve_VB the_DT gestures_NNS that_WDT are_VBP affiliated_VBN with_IN corresponding_JJ lexicons_NNS ._.
+The_DT referent_NN of_IN a_DT metaphoric_JJ gesture_NN is_VBZ 2_CD The_DT standardized_JJ residuals_NNS for_IN entity_NN metaphor_NN are_VBP -2.0_CD in_IN the_DT L-G_NNP group_NN and_CC 2.0_CD in_IN the_DT G-only_JJ group_NN ._.
+3_CD McNeill_NNP 's_POS -LRB-_-LRB- 1992_CD :_: 163_CD -RRB-_-RRB- original_JJ words_NNS are_VBP ``_`` -LSB-_JJ c_NN -RSB-_NNP onduit_NN and_CC spatial_JJ metaphors_NNS are_VBP instantly_RB available_JJ ._. ''_''
+The_DT conduit_NN metaphor_NN defined_VBN by_IN McNeill_NNP is_VBZ parallel_JJ to_TO the_DT entity_NN metaphor_NN in_IN this_DT study_NN ,_, since_IN his_PRP$ definition_NN did_VBD not_RB involve_VB the_DT important_JJ feature_NN of_IN the_DT conduit_NN metaphor_NN --_: the_DT process_NN of_IN sending_VBG ._.
+His_PRP$ spatial_JJ metaphor_NN is_VBZ called_VBN orientation_NN metaphor_NN in_IN this_DT paper_NN ._.
+not_RB the_DT concrete_JJ imagery_NN but_CC the_DT abstract_JJ concept_NN that_WDT is_VBZ also_RB conveyed_VBN in_IN the_DT accompanying_VBG speech_NN ._.
+While_IN the_DT Free_NNP Imagery_NNP Hypothesis_NNP provides_VBZ a_DT view_NN about_IN the_DT production_NN process_NN of_IN speech_NN and_CC gesture_NN ,_, this_DT hypothesis_NN is_VBZ not_RB suitable_JJ for_IN discussing_VBG the_DT findings_NNS based_VBN on_IN the_DT analysis_NN taken_VBN in_IN this_DT study_NN ._.
+Therefore_RB ,_, the_DT present_JJ study_NN put_VBD emphasis_NN on_IN the_DT Lexical_NNP Semantic_NNP Hypothesis_NNP and_CC the_DT Interface_NNP Hypothesis_NNP ._.
+To_TO begin_VB with_IN ,_, the_DT temporal_JJ patterning_NN of_IN speech_NN and_CC gesture_NN in_IN conveying_VBG metaphors_NNS is_VBZ discussed_VBN to_TO evaluate_VB the_DT theoretical_JJ hypotheses_NNS ._.
+The_DT Lexical_NNP Semantic_NNP Hypothesis_NNP suggests_VBZ gestures_NNS are_VBP generated_VBN from_IN the_DT semantics_NNS of_IN the_DT lexical_JJ items_NNS ._.
+If_IN a_DT person_NN has_VBZ difficulty_NN to_TO produce_VB a_DT word_NN for_IN a_DT concept_NN in_IN language_NN ,_, the_DT production_NN of_IN gesture_NN may_MD help_VB he/she_VB to_TO search_VB a_DT lexical_JJ item_NN for_IN such_JJ a_DT concept_NN ._.
+Hence_RB ,_, it_PRP is_VBZ claimed_VBN that_IN a_DT gesture_NN usually_RB precedes_VBZ the_DT lexical_JJ component_NN it_PRP depicts_VBZ ._.
+The_DT Interface_NNP Hypothesis_NNP ,_, on_IN the_DT other_JJ hand_NN ,_, suggests_VBZ that_IN gestures_NNS are_VBP generated_VBN from_IN the_DT interactions_NNS between_IN speaking_NN and_CC spatial_JJ thinking_NN ._.
+In_IN McNeill_NNP 's_POS -LRB-_-LRB- 1985_CD ;_: 1992_CD -RRB-_-RRB- framework_NN ,_, he_PRP proposed_VBD that_IN a_DT gesture_NN lines_NNS up_RB in_IN time_NN with_IN the_DT equivalent_JJ linguistic_JJ unit_NN in_IN speech_NN ._.
+The_DT temporal_JJ synchronization_NN shows_VBZ that_IN speech_NN and_CC gesture_NN belong_VBP to_TO the_DT same_JJ psychological_JJ structure_NN and_CC share_NN a_DT computational_JJ stage_NN ._.
+In_IN order_NN to_TO examine_VB the_DT temporal_JJ relationship_NN between_IN speech_NN and_CC gesture_NN in_IN expressing_VBG metaphor_NN ,_, this_DT study_NN focuses_VBZ on_IN the_DT stroke_NN phase_NN which_WDT is_VBZ the_DT relevant_JJ part_NN to_TO conveying_VBG information_NN in_IN a_DT gesture_NN .4_CD There_EX are_VBP three_CD kinds_NNS of_IN temporal_JJ patterning_NN of_IN speech_NN and_CC gestures_NNS :_: the_DT synchronizing_VBG gesture_NN -LRB-_-LRB- i.e._FW ,_, the_DT stroke_NN synchronizes_VBZ with_IN the_DT associated_VBN words_NNS -RRB-_-RRB- ,_, the_DT preceding_VBG gesture_NN -LRB-_-LRB- i.e._FW ,_, the_DT stroke_NN comes_VBZ before_IN the_DT associated_VBN words_NNS -RRB-_-RRB- ,_, and_CC the_DT following_VBG gesture_NN -LRB-_-LRB- i.e._FW ,_, the_DT stroke_NN comes_VBZ after_IN the_DT associated_VBN words_NNS -RRB-_-RRB- ._.
+The_DT distribution_NN of_IN each_DT kind_NN of_IN gesture_NN is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+In_IN each_DT group_NN ,_, synchronizing_VBG gestures_NNS comprise_VBP the_DT majority_NN -LRB-_-LRB- 84.5_CD %_NN in_IN the_DT L-G_NNP group_NN and_CC 84.7_CD %_NN in_IN the_DT G-only_JJ group_NN -RRB-_-RRB- ._.
+The_DT current_JJ data_NNS also_RB contains_VBZ several_JJ instances_NNS of_IN preceding_VBG gestures_NNS -LRB-_-LRB- 12.7_CD %_NN in_IN 4_CD According_VBG to_TO McNeill_NNP -LRB-_-LRB- 1992_CD :_: 83_CD -RRB-_-RRB- ,_, there_EX are_VBP three_CD phases_NNS of_IN gesture_NN :_: -LRB-_-LRB- i_FW -RRB-_-RRB- the_DT preparation_NN phase_NN in_IN which_WDT the_DT limb_NN moves_VBZ from_IN its_PRP$ rest_NN position_NN to_TO gesture_NN space_NN ,_, -LRB-_-LRB- ii_FW -RRB-_-RRB- the_DT stroke_NN phase_NN which_WDT express_VBP the_DT meaning_NN of_IN the_DT gesture_NN ,_, and_CC -LRB-_-LRB- iii_FW -RRB-_-RRB- the_DT retraction_NN phase_NN in_IN which_WDT the_DT limb_NN returns_NNS to_TO a_DT rest_NN position_NN ._.
+Both_DT the_DT preparation_NN and_CC the_DT retraction_NN phases_NNS are_VBP optional_JJ ,_, but_CC the_DT stroke_NN phase_NN is_VBZ obligatory_JJ ._.
+the_DT L-G_NNP group_NN and_CC 15.3_CD %_NN in_IN the_DT G-only_JJ group_NN -RRB-_-RRB- ._.
+The_DT following_VBG gestures_NNS are_VBP not_RB common_JJ in_IN each_DT group_NN of_IN metaphoric_JJ expressions_NNS -LRB-_-LRB- 2.7_CD %_NN in_IN the_DT L-G_NNP group_NN and_CC 0.0_CD %_NN in_IN the_DT G-only_JJ group_NN -RRB-_-RRB- ._.
+The_DT Chi_NNP -_: square_JJ test_NN shows_VBZ that_IN the_DT differences_NNS between_IN the_DT L-G_NNP group_NN and_CC the_DT G-only_JJ group_NN are_VBP statistically_RB insignificant_JJ -LRB-_-LRB- χ2_CD =_SYM 4.028_CD ,_, df_FW =_SYM 2_CD ,_, p_VBP =_SYM 0.133_CD -RRB-_-RRB- ,_, and_CC results_NNS from_IN the_DT two_CD groups_NNS of_IN metaphors_NNS are_VBP combined_VBN and_CC discussed_VBN together_RB ._.
+-LRB-_-LRB- Butterworth_NNP &_CC Hadar_NNP ,_, 1989_CD -RRB-_-RRB- ._.
+In_IN contrast_NN ,_, the_DT Interface_NNP Hypothesis_NNP proposes_VBZ the_DT relevant_JJ linguistic_JJ unit_NN to_TO affect_VB the_DT content_NN of_IN a_DT gesture_NN can_MD be_VB a_DT unit_NN larger_JJR than_IN a_DT single_JJ word_NN ._.
+This_DT hypothesis_NN suggests_VBZ that_IN gestures_NNS are_VBP involved_VBN in_IN the_DT process_NN of_IN arranging_VBG the_DT spatio-motoric_JJ imagery_NN into_IN informational_JJ units_NNS suitable_JJ for_IN speech_NN production_NN -LRB-_-LRB- Kita_NNP &_CC Öyzürek_NNP 2003_CD -RRB-_-RRB- ._.
+The_DT informational_JJ unit_NN suitable_JJ for_IN speech_NN formulation_NN is_VBZ what_WDT can_MD be_VB encoded_VBN in_IN a_DT clause_NN in_IN language_NN ._.
+The_DT present_JJ study_NN sorts_NNS the_DT relating_VBG speech_NN of_IN the_DT metaphoric_JJ gestures_NNS into_IN words_NNS or_CC phrases_NNS ._.
+A_DT word_NN refers_VBZ to_TO the_DT realization_NN of_IN a_DT lexeme_NN -LRB-_-LRB- Katamba_NNP &_CC Stonham_NNP ,_, 2006_CD -RRB-_-RRB- ,_, such_JJ as_IN xiàwŭ_JJ `_`` afternoon_NN '_'' in_IN Example_NNP 6_CD ._.
+A_DT phrase_NN is_VBZ a_DT group_NN of_IN words_NNS ,_, such_JJ as_IN tiào_JJ nàbiān_JJ `_`` jump_NN there_RB '_'' in_IN Example_NNP 5_CD ._.
+Table_NNP 3_CD shows_VBZ the_DT linguistic_JJ unit_NN of_IN the_DT corresponding_JJ lexical_JJ affiliates_NNS of_IN the_DT metaphoric_JJ gestures_NNS examined_VBD in_IN the_DT present_JJ study_NN ._.
+Temporal_JJ patterning_NN Preceding_VBG gesture_NN Total_NNP Group_NNP L-G_NNP G-Only_NNP Total_NNP Synchronizing_VBG gesture_NN 93_CD 84.5_CD %_NN 116_CD 84.7_CD %_NN 209_CD 84.6_CD %_NN 14_CD 12.7_CD %_NN 21_CD 15.3_CD %_NN 35_CD 14.2_CD %_NN Following_VBG gesture_NN 3_CD 2.7_CD %_NN 0_CD 0.0_CD %_NN 3_CD 1.2_CD %_NN 110_CD 100_CD %_NN 137_CD 100_CD %_NN 247_CD 100_CD %_NN Table_NNP 2_CD ._.
+Temporal_JJ patterning_NN of_IN speech_NN and_CC gestures_NNS The_DT temporal_JJ patterning_NN that_WDT speech_NN accompanies_VBZ synchronizing_VBG gestures_NNS is_VBZ quite_RB common_JJ in_IN conveying_VBG metaphors_NNS ._.
+Since_IN speech_NN plays_VBZ an_DT important_JJ role_NN in_IN interpreting_VBG idiosyncratic_JJ gestures_NNS ,_, speech_NN and_CC gesture_NN should_MD be_VB in_IN close_JJ temporal_JJ synchrony_NN ._.
+Among_IN the_DT 247_CD metaphoric_JJ expressions_NNS ,_, 84.6_CD %_NN of_IN them_PRP include_VBP metaphoric_JJ gestures_NNS synchronized_VBN with_IN their_PRP$ linguistic_JJ referent_NN ._.
+Only_RB 14.2_CD %_NN of_IN them_PRP comprise_VBP metaphoric_JJ gestures_NNS produced_VBN before_IN their_PRP$ associated_VBN speech_NN ._.
+A_DT small_JJ proportion_NN -LRB-_-LRB- 1.2_CD %_NN -RRB-_-RRB- of_IN metaphoric_JJ gestures_NNS is_VBZ even_RB performed_VBN after_IN the_DT related_JJ speech_NN ._.
+Results_NNS show_VBP that_IN gestures_NNS commonly_RB synchronize_VBP with_IN their_PRP$ associated_VBN speech_NN in_IN expressing_VBG metaphors_NNS ,_, and_CC support_VB the_DT Interface_NNP Hypothesis_NNPS more_RBR ._.
+Next_JJ ,_, the_DT relevant_JJ linguistic_JJ unit_NN accompanying_VBG the_DT metaphoric_JJ gesture_NN is_VBZ examined_VBN ._.
+The_DT Lexical_NNP Semantic_NNP Hypothesis_NNP stands_VBZ for_IN the_DT view_NN that_IN the_DT relevant_JJ linguistic_JJ unit_NN to_TO affect_VB the_DT content_NN of_IN a_DT gesture_NN is_VBZ a_DT single_JJ word_NN ,_, because_IN gesture_NN can_MD help_VB lexical_JJ search_NN ._.
+If_IN a_DT person_NN has_VBZ difficulty_NN to_TO find_VB a_DT lexical_JJ item_NN for_IN a_DT concept_NN ,_, he/she_NN may_MD produce_VB a_DT gesture_NN to_TO represent_VB the_DT idea_NN ._.
+The_DT production_NN of_IN such_PDT a_DT gesture_NN then_RB helps_VBZ the_DT person_NN utter_JJ the_DT word_NN for_IN that_DT concept_NN in_IN language_NN ._.
+Thus_RB ,_, gestures_NNS are_VBP thought_VBN to_TO be_VB dominated_VBN by_IN the_DT computational_JJ stage_NN in_IN which_WDT a_DT lexical_JJ item_NN is_VBZ selected_VBN from_IN a_DT semantically_RB organized_VBN lexicon_NN Linguistic_NNP unit_NN Word_NN Total_JJ L-G_NNP Group_NNP Total_NNP G-Only_NNP 99_CD 90.0_CD %_NN 105_CD 76.7_CD %_NN 204_CD 82.6_CD %_NN 110_CD 100_CD %_NN 137_CD 100_CD %_NN 247_CD 100_CD %_NN Phrase_NN 11_CD 10.0_CD %_NN 32_CD 23.3_CD %_NN 43_CD 17.4_CD %_NN Table_NNP 3_CD ._.
+Linguistic_JJ units_NNS of_IN the_DT lexical_JJ affiliates_NNS Results_NNS concerning_VBG the_DT two_CD groups_NNS of_IN metaphors_NNS are_VBP discussed_VBN together_RB ._.
+Within_IN the_DT 247_CD metaphoric_JJ expressions_NNS ,_, the_DT majority_NN of_IN the_DT lexical_JJ affiliates_NNS associated_VBN with_IN the_DT gestures_NNS are_VBP single_JJ words_NNS -LRB-_-LRB- 82.6_CD %_NN -RRB-_-RRB- ._.
+Phrases_NNS comprise_VBP 17.4_CD %_NN of_IN the_DT lexical_JJ affiliates_NNS accompanying_VBG the_DT gestures_NNS ._.
+A_DT substantial_JJ portion_NN of_IN the_DT lexical_JJ affiliates_NNS are_VBP phrases_NNS ._.
+This_DT finding_NN is_VBZ in_IN opposition_NN to_TO the_DT claim_NN of_IN Lexical_NNP Semantic_NNP Hypothesis_NNP but_CC supports_VBZ the_DT Interface_NNP Hypothesis_NNP ._.
+Example_NN 5_CD is_VBZ an_DT instance_NN where_WRB the_DT grammatical_JJ unit_NN of_IN the_DT lexical_JJ affiliate_NN is_VBZ a_DT phrase_NN ._.
+The_DT speaker_NN manifests_VBZ SHIFT_NNP OF_IN THE_DT SPEECH_NN CONTENT_NN in_IN terms_NNS of_IN fictive_JJ motion_NN when_WRB he_PRP utters_VBZ tiào_JJ nàbiān_NN ._.
+Accompanying_VBG the_DT phrase_NN tiào_IN nàbiān_JJ `_`` jump_NN there_RB '_'' ,_, his_PRP$ gesture_NN depicts_VBZ the_DT imagery_NN of_IN the_DT motion_NN to_TO different_JJ places_NNS ._.
+The_DT gesture_NN not_RB only_RB depicts_VBZ the_DT manner_NN verb_NN tiào_NN but_CC also_RB the_DT trajectories_NNS to_TO the_DT different_JJ places_NNS which_WDT are_VBP expressed_VBN by_IN nàbiān_NN in_IN language_NN ._.
+In_IN this_DT case_NN ,_, the_DT information_NN encoded_VBD in_IN the_DT gesture_NN corresponds_VBZ to_TO the_DT unit_NN lager_NN than_IN a_DT single_JJ word_NN ._.
+Contrasting_VBG to_TO the_DT prediction_NN of_IN the_DT Lexical_NNP Semantic_NNP Hypothesis_NNP ,_, the_DT relevant_JJ unit_NN to_TO influence_VB the_DT content_NN of_IN a_DT gesture_NN is_VBZ not_RB obligatory_JJ to_TO be_VB a_DT lexical_JJ item_NN -LRB-_-LRB- a_DT word_NN -RRB-_-RRB- ._.
+Furthermore_RB ,_, the_DT informational_JJ coordination_NN between_IN language_NN and_CC gesture_NN allow_VBP us_PRP to_TO discuss_VB the_DT theoretical_JJ hypotheses_NNS as_RB well_RB ._.
+In_IN the_DT Lexical_NNP Semantic_NNP Hypothesis_NNP ,_, gestures_NNS are_VBP generated_VBN from_IN the_DT semantics_NNS of_IN the_DT lexical_JJ items_NNS in_IN the_DT corresponding_JJ speech_NN -LRB-_-LRB- Schegloff_NNP ,_, 1984_CD ;_: Butterworth_NNP &_CC Hadar_NNP ,_, 1989_CD -RRB-_-RRB- ._.
+Thus_RB ,_, this_DT hypothesis_NN predicts_VBZ that_IN gestures_NNS do_VBP not_RB convey_VB the_DT information_NN which_WDT is_VBZ not_RB encoded_VBN in_IN the_DT accompanying_VBG speech_NN ._.
+The_DT Interface_NNP Hypothesis_NNP suggests_VBZ that_IN gestures_NNS are_VBP generated_VBN from_IN the_DT imagery_NN representations_NNS which_WDT interact_VBP on-line_JJ with_IN the_DT linguistic_JJ representations_NNS -LRB-_-LRB- Kita_NNP &_CC Ö_NNP yzürek_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+The_DT Interface_NNP Hypothesis_NNP then_RB predicts_VBZ that_IN gesture_NN may_MD encode_VB the_DT information_NN conveyed_VBN in_IN speech_NN or_CC the_DT information_NN which_WDT is_VBZ not_RB included_VBN in_IN speech_NN ._.
+This_DT study_NN examined_VBD two_CD groups_NNS of_IN metaphors_NNS :_: metaphors_NNS realized_VBN in_IN both_DT language_NN and_CC gesture_NN ,_, and_CC metaphors_NNS realized_VBN in_IN gesture_NN exclusively_RB ._.
+In_IN the_DT G-only_JJ group_NN ,_, a_DT concept_NN is_VBZ metaphorically_RB expressed_VBN in_IN gesture_NN but_CC literally_RB conveyed_VBN in_IN speech_NN ._.
+Language_NN merely_RB conveys_VBZ the_DT target-domain_JJ concept_NN ;_: on_IN the_DT other_JJ hand_NN ,_, the_DT source-domain_JJ concept_NN is_VBZ conveyed_VBN in_IN gesture_NN even_RB though_IN this_DT information_NN is_VBZ not_RB included_VBN in_IN speech_NN ._.
+In_IN such_JJ kind_NN of_IN expressions_NNS ,_, linguistic_JJ and_CC gestural_JJ modalities_NNS encode_VBP different_JJ semantic_JJ contents_NNS which_WDT are_VBP relevant_JJ for_IN realizing_VBG the_DT metaphorical_JJ thought_NN ._.
+Concerning_VBG the_DT current_JJ data_NNS ,_, the_DT gesture_NN -_: only_RB metaphors_NNS comprise_VBP over_IN a_DT half_NN of_IN all_PDT the_DT metaphoric_JJ expressions_NNS -LRB-_-LRB- 55.5_CD %_NN -RRB-_-RRB- and_CC provide_VB considerable_JJ amount_NN of_IN evidence_NN for_IN the_DT Interface_NNP Hypothesis_NNP ,_, which_WDT suggests_VBZ language_NN and_CC gesture_NN can_MD convey_VB different_JJ information_NN ._.
+5_CD Conclusion_NN This_DT study_NN examined_VBD the_DT linguistic_JJ and_CC gestural_JJ manifestations_NNS of_IN conceptual_JJ metaphors_NNS in_IN conversational_JJ discourse_NN ._.
+Different_JJ metaphor_NN types_NNS were_VBD classified_VBN and_CC their_PRP$ frequency_NN was_VBD count_NN to_TO discuss_VB the_DT habitual_JJ use_NN of_IN metaphoric_JJ expressions_NNS ._.
+In_IN both_DT the_DT L-G_NNP and_CC G-only_JJ groups_NNS ,_, entity_NN metaphor_NN is_VBZ the_DT common_JJ metaphor_NN types_NNS to_TO be_VB expressed_VBN in_IN daily_JJ communication_NN ._.
+Understanding_NN abstract_JJ concepts_NNS in_IN terms_NNS of_IN objects_NNS then_RB allow_VBP us_PRP to_TO project_VB various_JJ experiences_NNS of_IN object_NN to_TO the_DT concepts_NNS ._.
+Thus_RB ,_, it_PRP is_VBZ likely_JJ that_IN entity_NN metaphor_NN is_VBZ frequently_RB used_VBN to_TO conceive_VB abstract_JJ concepts_NNS ._.
+Also_RB ,_, this_DT study_NN based_VBN on_IN cross-modal_JJ data_NNS discusses_VBZ the_DT collaboration_NN of_IN speech_NN and_CC gesture_NN ,_, which_WDT enables_VBZ us_PRP to_TO look_VB at_IN the_DT hypotheses_NNS of_IN speech-gesture_JJ productions_NNS ._.
+The_DT findings_NNS from_IN the_DT present_JJ study_NN support_NN the_DT view_NN of_IN the_DT Interface_NNP Hypothesis_NNP --_: gestures_NNS are_VBP produced_VBN from_IN an_DT interface_NN between_IN linguistic_JJ and_CC spatio-motoric_JJ information_NN ._.
+The_DT investigation_NN of_IN the_DT cross-modal_JJ expressions_NNS of_IN metaphors_NNS can_MD be_VB extended_VBN in_IN future_JJ study_NN to_TO explore_VB issues_NNS which_WDT are_VBP not_RB discussed_VBN in_IN this_DT study_NN ._.
+The_DT first_JJ issue_NN is_VBZ how_WRB metaphors_NNS are_VBP embodied_VBN in_IN daily_JJ experiences_NNS ._.
+In_IN the_DT past_JJ studies_NNS ,_, the_DT notion_NN of_IN image_NN schema_NN have_VBP been_VBN introduced_VBN to_TO the_DT research_NN on_IN metaphors_NNS -LRB-_-LRB- c.f._FW ,_, Johnson_NNP 1987_CD ;_: Lakoff_NNP 1987_CD -RRB-_-RRB- ._.
+Image_NN schemas_NNS ,_, the_DT recurring_VBG dynamic_JJ patterns_NNS of_IN our_PRP$ sensory-motor_NN experience_NN ,_, are_VBP seen_VBN as_IN the_DT primary_JJ sources_NNS of_IN metaphors_NNS ._.
+To_TO see_VB the_DT common_JJ experiential_JJ bases_NNS of_IN metaphors_NNS ,_, the_DT source-domain_JJ concepts_NNS can_MD be_VB analyzed_VBN on_IN the_DT basis_NN of_IN different_JJ image_NN schemas_NNS ._.
+The_DT second_JJ issue_NN is_VBZ associated_VBN with_IN the_DT semantic_JJ coordination_NN of_IN speech_NN and_CC gesture_NN ._.
+This_DT study_NN does_VBZ not_RB put_VB emphasis_NN on_IN the_DT details_NNS about_IN what_WP information_NN is_VBZ profiled_VBN in_IN the_DT metaphoric_JJ expressions_NNS across_IN modalities_NNS ._.
+When_WRB language_NN and_CC gesture_NN manifest_JJ the_DT same_JJ type_NN of_IN metaphors_NNS ,_, the_DT two_CD modalities_NNS may_MD profile_VB different_JJ aspects_NNS of_IN the_DT same_JJ concept_NN ._.
+In_IN the_DT current_JJ data_NNS ,_, we_PRP can_MD find_VB the_DT instances_NNS of_IN such_PDT an_DT expression_NN ._.
+A_DT speaker_NN utters_VBZ néngliàng_JJ nàmo_NN dài_FW `_`` the_DT power_NN is_VBZ so_RB big_JJ '_'' to_TO represent_VB POWER_NN with_IN the_DT entity_NN metaphor_NN POWER_NNP IS_VBZ OBJECT_NNP ._.
+The_DT size_NN of_IN an_DT object_NN -LRB-_-LRB- i.e._FW the_DT strength_NN of_IN the_DT power_NN -RRB-_-RRB- is_VBZ profiled_VBN in_IN language_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT speaker_NN 's_POS left_VBN palm_NN faces_VBZ up_RP as_IN if_IN he_PRP held_VBD an_DT object_NN ._.
+The_DT speaker_NN 's_POS manual_NN representation_NN merely_RB focuses_VBZ on_IN the_DT boundary_NN of_IN an_DT object_NN without_IN referring_VBG to_TO the_DT size_NN ._.
+In_IN this_DT case_NN ,_, the_DT information_NN encoded_VBD in_IN speech_NN is_VBZ not_RB equivalent_JJ to_TO the_DT information_NN encoded_VBD in_IN gesture_NN ._.
+To_TO explore_VB how_WRB language_NN and_CC gesture_NN cooperate_VBP to_TO convey_VB metaphors_NNS ,_, we_PRP need_VBP to_TO consider_VB not_RB only_RB the_DT metaphor_NN types_NNS but_CC also_RB the_DT profiled_VBN aspect_NN in_IN the_DT two_CD modalities_NNS in_IN the_DT future_NN ._.
+References_NNS Butterworth_NNP ,_, Brain_NNP &_CC Hadar_NNP ,_, U._NNP 1989_CD ._.
+Gesture_NN ,_, speech_NN ,_, and_CC computational_JJ stages_NNS :_: A_DT reply_NN to_TO McNeill_NNP ._.
+Psychological_JJ Review_NNP ,_, 96_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 168-174_CD ._.
+Chui_NNP ,_, Kawai_NNP ._.
+2011_CD ._.
+Conceptual_JJ metaphors_NNS in_IN gesture_NN ._.
+Cognitive_NNP Linguistics_NNP ,_, 22_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 437-458_CD ._.
+Chui_NNP ,_, Kawai_NNP ._.
+2013_CD ._.
+Gesture_NN and_CC embodiment_NN in_IN Chinese_JJ discourse_NN ._.
+Journal_NNP of_IN Chinese_NNPS Linguistics_NNPS ,_, 41_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 52_CD -_: 63_CD ._.
+Chui_NNP ,_, Kawai_NNP &_CC Huei-ling_NNP Lai_NNP ._.
+2008_CD ._.
+The_DT NCCU_NNP corpus_NN of_IN spoken_VBN Chinese_NNPS :_: Mandarin_NNP ,_, Hakka_NNP ,_, and_CC Southern_NNP Min_NNP ._.
+Taiwan_NNP Journal_NNP of_IN Linguistics_NNPS ,_, 6_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 119-144_CD ._.
+Cienki_NNP ,_, Alan_NNP ._.
+2008_CD ._.
+Why_WRB study_NN metaphor_NN and_CC gesture_NN ._.
+In_IN Alan_NNP Cienki_NNP &_CC Cornelia_NNP Müller_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Metaphor_NNP and_CC Gesture_NNP ,_, 5-25_CD ._.
+Amsterdam/Philadelphia_NNP :_: John_NNP Benjamins_NNP ._.
+Cienki_NNP ,_, Alan_NNP ._.
+&_CC Cornelia_NNP Müller_NNP ._.
+2008_CD ._.
+Metaphor_NN ,_, gesture_NN ,_, and_CC thought_VBD ._.
+In_IN Raymond_NNP W._NNP Gibbs_NNP ,_, Jr._NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, The_DT Cambridge_NNP Handbook_NNP of_IN Metaphor_NNP and_CC Thought_NNP ,_, 483-501_CD ._.
+New_NNP York_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+de_IN Ruiter_NNP ,_, Jan_NNP Peter_NNP ._.
+2000_CD ._.
+The_DT production_NN of_IN gesture_NN and_CC speech_NN ._.
+In_IN David_NNP McNeill_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Language_NN and_CC gesture_NN ,_, 284-311_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Gibbs_NNP ,_, Jr._NNP ._.
+Raymond_NNP W._NNP 2005_CD ._.
+Embodiment_NNP in_IN metaphorical_JJ imagination_NN ._.
+In_IN Diane_NNP Pecher_NNP &_CC Rolf_NNP A._NNP Zwaan_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Grounding_VBG Cognition_NNP :_: The_NNP Role_NNP of_IN Perception_NNP and_CC Action_NNP in_IN Memory_NN ,_, Language_NN ,_, and_CC Thinking_NNP ,_, 65-92_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Gibbs_NNP ,_, Jr._NNP ._.
+Raymond_NNP W._NNP 2006_CD ._.
+Embodiment_NNP and_CC Cognitive_NNP Science_NNP ._.
+New_NNP York_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Gibbs_NNP ,_, Jr._NNP ._.
+Raymond_NNP W._NNP 2008_CD ._.
+Metaphor_NN and_CC thought_NN :_: the_DT state_NN of_IN the_DT art_NN ._.
+In_IN Raymond_NNP W._NNP Gibbs_NNP ,_, Jr._NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, The_DT Cambridge_NNP Handbook_NNP of_IN Metaphor_NNP and_CC Thought_NNP ,_, 3-13_CD ._.
+New_NNP York_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Johnson_NNP ,_, Mark_NNP ._.
+1987_CD ._.
+The_DT Body_NNP in_IN the_DT Mind_NNP :_: The_DT Bodily_NNP Basis_NNP of_IN Meaning_NNP ,_, Imagination_NNP ,_, and_CC Reason_NNP ._.
+Chicago_NNP ;_: London_NNP :_: The_NNP University_NNP of_IN Chicago_NNP Press_NNP ._.
+Katamba_NNP ,_, Francis_NNP &_CC John_NNP Stonham_NNP ._.
+2006_CD ._.
+Morphology_NNP ._.
+New_NNP York_NNP :_: Palgrave_NNP Macmillan_NNP ._.
+Kita_NNP ,_, Sotaro_NNP and_CC Asli_NNP Ö_NNP zyürekb_NNP ._.
+2003_CD ._.
+What_WP does_VBZ cross_VB -_: linguistic_JJ variation_NN in_IN semantic_JJ coordination_NN of_IN speech_NN and_CC gesture_NN reveal_VB ?_.
+:_: Evidence_NN for_IN an_DT interface_NN representation_NN of_IN spatial_JJ thinking_NN and_CC speaking_NN ._.
+Journal_NNP of_IN Memory_NN and_CC Language_NN ,_, 48_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 16-32_CD ._.
+Kövecses_NNP ,_, Zoltán_NNP ._.
+2002_CD ._.
+Metaphor_NN :_: A_DT Practical_NNP Introduction_NNP ._.
+New_NNP York_NNP :_: Oxford_NNP University_NNP Press_NNP ._.
+Krauss_NNP ,_, Robert_NNP M._NNP ,_, Yihsiu_NNP Chen_NNP ,_, &_CC Purnima_NNP Chawla_NNP ._.
+1996_CD ._.
+Nonverbal_JJ behavior_NN and_CC nonverbal_JJ communication_NN :_: What_WP do_VBP conversational_JJ hand_NN gestures_NNS tell_VBP us_PRP ?_.
+In_IN Mark_NNP P._NNP Zanna_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Advances_NNS in_IN Experimental_JJ Social_NNP Psychology_NNP ,_, 389-450_CD ._.
+San_NNP Diego_NNP :_: Academic_NNP Press_NNP ._.
+Krauss_NNP ,_, Robert_NNP M._NNP ,_, Yihsiu_NNP Chen_NNP ,_, &_CC Rebecca_NNP F._NNP Gottesman_NNP ._.
+2000_CD ._.
+Lexical_JJ gestures_NNS and_CC lexical_JJ access_NN :_: A_DT process_NN model_NN ._.
+In_IN David_NNP McNeill_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Language_NN and_CC Gesture_NN ,_, 261-283_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Lakoff_NNP ,_, George_NNP ._.
+1987_CD ._.
+Women_NNS ,_, Fire_NNP ,_, and_CC Dangerous_NNP Things_NNS :_: What_WP Categories_NNPS Reveal_NNP About_IN the_DT Mind_NNP ._.
+Chicago_NNP :_: University_NNP of_IN Chicago_NNP Press_NNP ._.
+Lakoff_NNP ,_, George_NNP ._.
+1993_CD ._.
+The_DT contemporary_JJ theory_NN of_IN metaphor_NN ._.
+In_IN Andrew_NNP ._.
+Ortony_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Metaphor_NNP and_CC Thought_NNP -LRB-_-LRB- 2nd_JJ ed_VBN ._. -RRB-_-RRB-
+,_, 202-251_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Lakoff_NNP ,_, George_NNP &_CC Mark_NNP Johnson_NNP ._.
+1980_CD ._.
+Metaphors_NNS We_PRP Live_JJ By_IN ._.
+Chicago_NNP :_: University_NNP of_IN Chicago_NNP Press_NNP ._.
+Lakoff_NNP ,_, George_NNP &_CC Mark_NNP Johnson_NNP ._.
+1999_CD ._.
+Philosophy_NN in_IN the_DT Flesh_NN :_: The_DT Embodied_NNP Mind_NNP and_CC its_PRP$ Challenge_NNP to_TO Western_JJ Thought_NNP ._.
+New_NNP York_NNP :_: Basic_JJ Books_NNS ._.
+McNeill_NNP ,_, David_NNP ._.
+1985_CD ._.
+So_IN you_PRP think_VBP gestures_NNS are_VBP nonverbal_JJ ?_.
+Psychological_JJ Review_NNP ,_, 92_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 350-371_CD ._.
+McNeill_NNP ,_, David_NNP ._.
+1992_CD ._.
+Hand_NN and_CC Mind_NNP :_: What_WP Gesture_NNP Reveal_NNP About_IN Thought_NNP ._.
+Chicago_NNP :_: University_NNP of_IN Chicago_NNP Press_NNP ._.
+Müller_NNP ,_, Cornelia_NNP ._.
+2008_CD ._.
+What_WP gestures_NNS reveal_VBP about_IN nature_NN of_IN metaphor_NN ._.
+In_IN Alan_NNP Cienki_NNP &_CC Cornelia_NNP Müller_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Metaphor_NNP and_CC Gesture_NNP ,_, 219-245_CD ._.
+Amsterdam/Philadelphia_NNP :_: John_NNP Benjamins_NNP ._.
+Reddy_NNP ,_, Michael_NNP J._NNP 1979_CD ._.
+The_DT conduit_NN metaphor_NN :_: A_DT case_NN of_IN frame_NN conflict_NN in_IN our_PRP$ language_NN about_RB language_NN ._.
+In_IN Andrew_NNP Ortony_NNP -LRB-_-LRB- ed_VBN ._. -RRB-_-RRB-
+,_, Metaphor_NNP and_CC Thought_NNP ,_, 164_CD -_: 189_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Schegloff_NNP ,_, Emanuel_NNP A._NNP 1984_CD ._.
+On_IN some_DT gestures_NNS '_POS relation_NN to_TO speech_NN ._.
+In_IN J._NNP Maxwell_NNP Atkinson_NNP &_CC John_NNP Heritage_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Structures_NNS of_IN Social_NNP Action_NNP :_: Studies_NNP in_IN Conversational_NNP Analysis_NNP ,_, 266-296_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Talmy_NNP ,_, Leonard_NNP ._.
+1996_CD ._.
+Fictive_JJ motion_NN and_CC change_NN in_IN language_NN and_CC perception_NN ._.
+In_IN Paul_NNP Bloom_NNP ,_, Mary_NNP A._NNP Peterson_NNP ,_, Lynn_NNP Nadel_NNP ,_, &_CC Merrill_NNP F._NNP Garrett_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Language_NN and_CC Space_NNP ,_, 211-276_CD ._.
+Cambridge_NNP :_: MIT_NNP Press_NNP ._.

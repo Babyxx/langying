@@ -1,0 +1,312 @@
+Translation_NN of_IN Unseen_NNP Bigrams_NNPS by_IN Analogy_NNP Using_VBG an_DT SVM_NNP Classifier_NNP 2-7_CD Hibikino_NNP ,_, Wakamatsu-ku_NN ,_, Kitakyushu_NNP ,_, Fukuoka_NNP 808-0135_CD ,_, Japan_NNP -LCB-_-LRB- oko_NN ips@ruri.,_NN lulv90@ruri.,_CD yves.lepage_NN @_IN -RCB-_-RRB- waseda.jp_JJ Abstract_NNP Detecting_VBG language_NN divergences_NNS and_CC predict_VBP -_: ing_VBG possible_JJ sub-translations_NNS is_VBZ one_CD of_IN the_DT most_RBS essential_JJ issues_NNS in_IN machine_NN translation_NN ._.
+Since_IN the_DT existence_NN of_IN translation_NN divergences_NNS ,_, it_PRP is_VBZ impractical_JJ to_TO straightforward_JJ translate_VBP from_IN source_NN sentence_NN into_IN target_NN sentence_NN while_IN keeping_VBG the_DT high_JJ degree_NN of_IN accuracy_NN and_CC with_IN -_: out_RP additional_JJ information_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP investigate_VBP the_DT problem_NN from_IN an_DT emerging_VBG and_CC special_JJ point_NN of_IN view_NN :_: bigrams_NNS and_CC the_DT cor_NN -_: responding_VBG translations_NNS ._.
+We_PRP first_RB profile_VBP cor_SYM -_: pora_NN and_CC explore_VB the_DT constituents_NNS of_IN bigrams_NNS in_IN the_DT source_NN language_NN ._.
+Then_RB we_PRP translate_VBP un_SYM -_: seen_VBN bigrams_NNS based_VBN on_IN proportional_JJ analogy_NN and_CC filter_NN the_DT outputs_NNS using_VBG an_DT Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- classifier_NN ._.
+The_DT experiment_NN re_SYM -_: sults_NNS also_RB show_VBP that_IN even_RB a_DT small_JJ set_NN of_IN features_NNS from_IN analogous_JJ can_MD provide_VB meaningful_JJ infor_NN -_: mation_NN in_IN translating_VBG by_IN analogy_NN ._.
+1_CD Introduction_NNP Over_IN the_DT last_JJ decade_NN ,_, phrase-based_JJ statistical_JJ ma_NN -_: chine_NN translation_NN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- systems_NNS have_VBP demonstrated_VBN that_IN they_PRP can_MD produce_VB reasonable_JJ qual_NN -_: ity_NN when_WRB ample_JJ training_NN data_NNS is_VBZ available_JJ ,_, especially_RB for_IN language_NN pairs_NNS with_IN similar_JJ word_NN order_NN ._.
+How_WRB -_: ever_RB ,_, the_DT PB-SMT_NNP model_NN has_VBZ not_RB yet_RB been_VBN capable_JJ of_IN satisfying_VBG the_DT various_JJ translation_NN tasks_NNS for_IN very_RB dif_SYM -_: ferent_JJ languages_NNS -LRB-_-LRB- Isozaki_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT existence_NN of_IN translation_NN divergences_NNS makes_VBZ the_DT straightforward_JJ transfer_NN from_IN source_NN sentences_NNS into_IN target_NN sentences_NNS hard_RB ._.
+Though_IN many_JJ previous_JJ pieces_NNS of_IN work_NN -LRB-_-LRB- Dorr_NNP ,_, 1994_CD ;_: Habash_NNP et_FW al._FW ,_, 2002_CD ;_: Dorr_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- have_VBP at_IN -_: tempted_VBN to_TO take_VB account_NN for_IN divergences_NNS and_CC to_TO deal_VB with_IN this_DT linguistic_JJ problem_NN using_VBG various_JJ translation_NN approaches_NNS ._.
+This_DT paper_NN further_RBR inquires_VBZ the_DT topic_NN ._.
+Since_IN sentence_NN consists_VBZ of_IN bigrams_NNS ,_, instead_RB of_IN analysing_VBG the_DT syntactic_JJ structures_NNS of_IN the_DT whole_JJ sen_NN -_: tence_NN or_CC part_NN of_IN the_DT sentence_NN as_IN in_IN -LRB-_-LRB- Ding_NNP and_CC Palmer_NNP ,_, 2005_CD -RRB-_-RRB- ,_, we_PRP explore_VBP the_DT possibilities_NNS of_IN translating_VBG un_SYM -_: seen_VBN bigrams_NNS based_VBN on_IN an_DT analogy_NN learning_VBG method_NN ._.
+We_PRP investigate_VBP the_DT coverage_NN of_IN translated_VBN bigrams_NNS in_IN the_DT test_NN set_NN and_CC inspect_VB the_DT probability_NN of_IN translat_NN -_: ing_VBG a_DT bigram_NN using_VBG analogy_NN ._.
+Analogical_JJ learning_NN has_VBZ been_VBN investigated_VBN by_IN several_JJ authors_NNS ._.
+To_TO cite_VB a_DT few_JJ ,_, Lepage_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- showed_VBD that_IN proportional_JJ anal_JJ -_: ogy_NN can_MD capture_VB some_DT syntactic_NN and_CC lexical_JJ struc_NN -_: tures_NNS across_IN languages_NNS ._.
+Langlais_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- in_IN -_: vestigated_VBD the_DT more_RBR specific_JJ task_NN of_IN translating_VBG un_SYM -_: seen_VBN words_NNS ._.
+Bayoudh_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- explored_VBN generat_NN -_: ing_VBG new_JJ learning_VBG examples_NNS from_IN very_RB scarce_JJ original_JJ learning_NN data_NNS using_VBG analogy_NN to_TO train_VB an_DT SVM_NNP classi_NNS -_: fier_NN ._.
+Dandapat_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- performed_VBN transliteration_NN by_IN analogical_JJ learning_NN for_IN English-to-Hindi_NNP ._.
+In_IN the_DT issue_NN of_IN translation_NN using_VBG analogy_NN ,_, one_CD of_IN the_DT main_JJ drawbacks_NNS should_MD be_VB addressed_VBN is_VBZ the_DT prob_NN -_: lem_NN of_IN ''_'' over-generative_JJ ''_'' ._.
+Analogy_NNP is_VBZ able_JJ to_TO cap_NN -_: ture_NN the_DT most_RBS divergences_NNS of_IN translation_NN in_IN the_DT most_RBS cases_NNS ,_, yet_CC it_PRP generates_VBZ a_DT great_JJ number_NN of_IN solutions_NNS that_WDT are_VBP ungrammatical_JJ and_CC incorrect_JJ ._.
+In_IN this_DT pa_NN -_: per_IN ,_, we_PRP propose_VBP to_TO translate_VB useen_NN bigrams_NNS as_IN re_NN -_: constructing_VBG with_IN the_DT principle_NN of_IN analogy_NN learning_NN ._.
+In_IN machine_NN learning_NN ,_, SVMs_NNS have_VBP been_VBN shown_VBN that_IN it_PRP is_VBZ efficient_JJ in_IN performing_VBG a_DT non-linear_JJ classifica_NN -_: tion_NN ._.
+By_IN specifying_VBG features_NNS used_VBN in_IN experiment_NN ,_, we_PRP employ_VBP an_DT SVM_NNP classifier_NN to_TO fast_JJ filter_NN the_DT solutions_NNS output_NN by_IN the_DT analogy_NN solver_NN ._.
+The_DT final_JJ goal_NN of_IN this_DT research_NN is_VBZ to_TO explore_VB the_DT possibility_NN of_IN translation_NN using_VBG analogy_NN and_CC point_NN out_IN a_DT feasible_JJ way_NN to_TO solve_VB the_DT problem_NN of_IN ''_'' over-generative_JJ ''_'' ._.
+The_DT remainder_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN fol_NN -_: lows_NNS :_: Section_NN 2_CD describes_VBZ basic_JJ notions_NNS in_IN alignment_NN and_CC analogy_NN ._.
+In_IN Section_NN 3_CD ,_, we_PRP explore_VBP the_DT classifica_NN -_: tion_NN of_IN bigrams_NNS and_CC their_PRP$ contributions_NNS to_TO the_DT whole_JJ corpus_NN and_CC report_VB some_DT profiling_NN results_NNS ._.
+Section_NN 4_CD presents_VBZ our_PRP$ approach_NN ,_, depending_VBG on_IN the_DT analogous_JJ ,_, and_CC describes_VBZ how_WRB to_TO processing_VBG the_DT data_NNS and_CC ex_FW -_: tract_NN examples_NNS for_IN training_VBG an_DT SVM_NNP classifier_NN ._.
+We_PRP also_RB evaluate_VBP the_DT result_NN using_VBG the_DT some_DT standard_JJ mea_NN -_: sures_NNS ._.
+Finally_RB ,_, in_IN Section_NN 5_CD ,_, conclusions_NNS and_CC per_IN -_: spectives_NNS are_VBP presented_VBN ._.
+2_CD Basic_JJ notions_NNS 2.1_CD Alignment_NNP classification_NN In_IN this_DT section_NN ,_, from_IN a_DT theoretical_JJ point_NN of_IN view_NN ,_, we_PRP study_VBP the_DT categories_NNS of_IN word_NN alignment_NN in_IN translat_NN -_: ing_NN ._.
+Given_VBN a_DT sentence_NN ,_, various_JJ alignments_NNS of_IN bi_SYM -_: gram_NN exist_VBP ._.
+The_DT following_NN is_VBZ an_DT example_NN of_IN non_NN -_: monotonic_JJ alignments_NNS where_WRB alignment_NN links_NNS are_VBP crossing_VBG between_IN parallel_JJ sentences_NNS -LRB-_-LRB- Japanese_JJ and_CC English_JJ -RRB-_-RRB- :_: e_LS :_: He1_JJ saw2_CD a_DT cat3_NN with_IN a_DT long4_JJ tail5_NNS ._.
+j_NN :_: Kare_NNP ha1_CD nagai4_JJ sippo_NN no5_CD neko_NN wo3_CD mita2_NN ._.
+e_SYM ̃_FW :_: He_PRP long_RB tail_NN of_IN cat_NN saw_VBD In_IN this_DT example_NN ,_, e_LS means_VBZ an_DT original_JJ English_JJ sen_NN -_: tence_NN in_IN parallel_JJ texts_NNS ,_, j_NN means_VBZ a_DT Japanese_JJ sentence_NN ,_, and_CC e_SYM ̃_FW means_VBZ an_DT amended_VBN English_JJ sentence_NN which_WDT is_VBZ better_RBR for_IN translation_NN parameter_NN training_NN with_IN j_NN ._.
+The_DT phrases_NNS with_IN the_DT same_JJ index_NN are_VBP aligned_VBN ._.
+Based_VBN on_IN these_DT two_CD sentences_NNS ,_, different_JJ categories_NNS of_IN align_NN -_: ments_NNS have_VBP been_VBN identified_VBN ._.
+For_IN each_DT category_NN ,_, ex_FW -_: amples_NNS are_VBP given_VBN :_: According_VBG to_TO whether_IN the_DT translation_NN is_VBZ continu_JJ -_: ous_NN or_CC not_RB ,_, we_PRP divide_VBP the_DT alignments_NNS into_IN 2_CD cate_NN -_: gories_NNS :_: 1_LS ._.
+both_DT the_DT n-gram_NN and_CC its_PRP$ translation_NN in_IN the_DT target_NN language_NN are_VBP continuous_JJ ._.
+2_LS ._.
+the_DT translation_NN in_IN the_DT target_NN language_NN contains_VBZ gaps_NNS because_IN of_IN syntac_NN -_: tic_JJ divergence_NN -LRB-_-LRB- Dorr_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+We_PRP define_VBP ''_'' -LSB-_NNP X_NNP -RSB-_NNP ''_'' to_TO stand_VB for_IN gaps_NNS in_IN the_DT target_NN side_NN as_IN denoted_VBN by_IN -LRB-_-LRB- Chi_NNP -_: ang_NN ,_, 2005_CD -RRB-_-RRB- in_IN syntax-based_JJ MT_NNP and_CC we_PRP can_MD have_VB the_DT following_VBG classifications_NNS :_: •_CD Continuous_NNP Alignment_NNP --_: Bigram-to-ngram_NN the_DT translation_NN in_IN the_DT target_NN language_NN is_VBZ continuous_JJ ngram_NN ,_, e.g._FW ,_, cat_NN with_IN no_DT neko_NN -LRB-_-LRB- 2_CD -RRB-_-RRB- Figure_NN 1_CD :_: Various_JJ Alignments_NNS found_VBN in_IN the_DT experiment_NN corpus_NN ,_, ''_'' -LSB-_NNP X_NNP -RSB-_NNP ''_'' stands_VBZ gaps_NNS between_IN words_NNS ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- long_RB tail_NN to_TO nagai_VB sippo_NN ._.
+--_: Bigram-to-unigram_NN the_DT bigram_NN corre_NN -_: sponds_NNS to_TO a_DT unigram_NN ,_, e.g._FW ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- a_DT cat_NN to_TO neko_NN ._.
+--_: Crossing-N-gram_NNP the_DT translation_NN is_VBZ con_JJ -_: tinuous_JJ ,_, but_CC in_IN a_DT different_JJ order_NN ,_, e.g._FW ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- cat_NN with_IN to_TO no_DT neko_NN ._.
+•_NNP Discontinuous_NNP Alignment_NNP --_: Bigram-to-N-gram-with-gaps_NNP a_DT large_JJ number_NN of_IN translations_NNS in_IN the_DT target_NN language_NN are_VBP not_RB continuous_JJ ._.
+This_DT is_VBZ a_DT common_JJ phenomenon_NN is_VBZ illustrated_VBN by_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- ._.
+he_PRP saw_VBD to_TO kara_VB wa_NN -LSB-_NN X_NNP -RSB-_NNP mita_NN ._.
+--_: Crossing-N-gram-with-gaps_NNP the_DT bigram_NN was_VBD aligned_VBN with_IN dis-continuous_JJ words_NNS with_IN gaps_NNS in_IN the_DT middle_NN ,_, at_IN same_JJ time_NN ,_, the_DT translation_NN is_VBZ in_IN a_DT different_JJ order_NN ,_, e.g._FW ,_, -LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+sipo_IN no_DT neko_NN to_TO cat_NN -LSB-_NN X_NNP -RSB-_NNP tail_NN ._.
+2.2_CD Proportional_JJ analogy_NN In_IN this_DT section_NN ,_, we_PRP describe_VBP employing_VBG analogy_NN to_TO deal_VB with_IN diverse_JJ alignments_NNS for_IN bigram_NN translation_NN ._.
+We_PRP follow_VBP -LRB-_-LRB- Turney_NNP ,_, 2006_CD -RRB-_-RRB- to_TO describe_VB the_DT basic_JJ no_DT -_: tions_NNS of_IN proportional_JJ analogy_NN used_VBN in_IN this_DT work_NN ._.
+Ver_SYM -_: bal_NN analogies_NNS are_VBP often_RB written_VBN A_DT :_: B_NNP :_: :_: C_NNP :_: D_NNP ._.
+They_PRP meaning_VBG A_DT is_VBZ to_TO B_NNP as_IN C_NNP is_VBZ to_TO D._NNP For_IN example_NN :_: annual_JJ :_: annual_JJ :_: :_: the_DT taxes_NNS :_: the_DT statis_NN -_: taxes_NNS statistics_NNS tics_NNS The_DT above_IN example_NN can_MD be_VB understood_VBN as_IN follows_VBZ :_: we_PRP reconstruct_VBP an_DT unseen_JJ bigram_NN annual_JJ taxes_NNS by_IN a_DT long_JJ tail_NN nagai_NNS sipo_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- he_PRP saw_VBD kare_JJ ha_NN -LSB-_NN X_NNP -RSB-_NNP mita_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- a_DT cat_NN neko_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- cat_NN -LSB-_NN X_NNP -RSB-_NNP tail_NN sipo_VB no_DT neko_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- triple_RB of_IN known_VBN bigrams_NNS ._.
+All_PDT the_DT elements_NNS in_IN the_DT un_NN -_: seen_VBN bigram_NN is_VBZ taken_VBN by_IN similarity_NN from_IN the_DT second_JJ -LRB-_-LRB- annual_JJ statistics_NNS -RRB-_-RRB- and_CC third_JJ -LRB-_-LRB- the_DT taxes_NNS -RRB-_-RRB- known_VBN bi_SYM -_: grams_NNS and_CC put_VB together_RB by_IN difference_NN with_IN the_DT fourth_JJ known_JJ bigram_NN -LRB-_-LRB- the_DT statistics_NNS -RRB-_-RRB- ._.
+The_DT definition_NN of_IN pro-_JJ portional_JJ analogy_NN that_IN we_PRP use_VBP in_IN this_DT paper_NN is_VBZ drawn_VBN from_IN -LRB-_-LRB- Lepage_NNP ,_, 1998_CD -RRB-_-RRB- and_CC we_PRP focus_VBP in_IN this_DT study_NN on_IN formal_JJ proportional_JJ analogies_NNS ._.
+A_DT 4-tuple_JJ of_IN n-grams_NNS A_DT ,_, B_NNP ,_, C_NNP and_CC D_NNP is_VBZ said_VBN to_TO be_VB a_DT proportional_JJ analogy_NN if_IN the_DT following_VBG 3_CD constraints_NNS are_VBP verified_VBN ._.
+The_DT lengths_NNS of_IN the_DT n-grams_NNS may_MD be_VB different_JJ ,_, but_CC should_MD meet_VB the_DT following_VBG constraints_NNS :_: 1_LS ._.
+|_CD A_DT |_NN a_DT +_JJ |_NN D_NNP |_VBD a_DT =_SYM |_FW C_$ |_CD a_DT +_NN |_NN B_NNP |_VBD a_DT ,_, ∀_VBP a_DT 2_CD ._.
+d_LS -LRB-_-LRB- A_DT ,_, B_NNP -RRB-_-RRB- =d_NN -LRB-_-LRB- C_NNP ,_, D_NNP -RRB-_-RRB- 3_LS ._.
+d_LS -LRB-_-LRB- A_DT ,_, C_NNP -RRB-_-RRB- =d_NN -LRB-_-LRB- B_NNP ,_, D_NNP -RRB-_-RRB- where_WRB d_LS is_VBZ the_DT edit_NN distance_NN that_WDT counts_VBZ the_DT minimal_JJ number_NN of_IN insertions_NNS and_CC deletions_NNS that_WDT are_VBP necessary_JJ to_TO transform_VB a_DT string_NN into_IN another_DT string_NN ._.
+|_CD A_DT |_NN a_DT is_VBZ the_DT number_NN of_IN occurrences_NNS of_IN the_DT word_NN a_DT in_IN the_DT n-gram_JJ A_DT ._.
+This_DT approach_NN still_RB works_VBZ well_RB on_IN different_JJ length_NN of_IN n-grams_NNS in_IN fact_NN ._.
+However_RB ,_, this_DT method_NN is_VBZ a_DT nec_NN -_: essary_JJ condition_NN but_CC not_RB sufficient_JJ when_WRB applying_VBG to_TO translation_NN issue_NN ._.
+As_IN for_IN bilingual_JJ translation_NN using_VBG analogy_NN ,_, De_NNP -_: noual_JJ et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- presented_VBD a_DT parallelopiped_JJ view_NN on_IN translating_VBG unknown_JJ words_NNS using_VBG analogy_NN ,_, we_PRP expand_VBP it_PRP to_TO bigrams_NNS -LRB-_-LRB- see_VB Figure_NN 2_CD -RRB-_-RRB- ._.
+Suppose_VB that_IN we_PRP want_VBP to_TO translate_VB the_DT following_VBG bigram_NN -LRB-_-LRB- English_NNP -RRB-_-RRB- :_: annual_JJ taxes_NNS into_IN French_JJ ,_, in_IN order_NN to_TO translate_VB the_DT unknown_JJ bigram_NN ,_, bilingual_JJ proportional_JJ analogy_NN re_SYM -_: quires_VBZ a_DT triple_JJ of_IN source_NN bigrams_NNS and_CC corresponding_JJ translations_NNS ._.
+This_DT procedure_NN can_MD be_VB splitted_VBN into_IN 2_CD steps_NNS :_: source_NN annual_JJ statistics_NNS input_NN :_: annual_JJ taxes_NNS the_DT statistics_NNS the_DT taxes_NNS target_NN éléments_VBZ annuels_JJ output_NN :_: impôts_NNS annuels_NNS les_FW éléments_FW les_FW impôts_FW 1_CD ._.
+2_LS ._.
+2.3_CD reconstruct_VBP unseen_JJ bigram_NN with_IN a_DT triple_JJ of_IN source_NN bigrams_NNS translate_VBP using_VBG analogy_NN Bigram_NNP reconstruction_NN annual_JJ taxes_NNS is_VBZ reconstructed_VBN with_IN different_JJ n-grams_NNS extracted_VBN from_IN the_DT training_NN corpus_NN ._.
+Beside_IN these_DT 5_CD Patterns_NNS ,_, analogy_NN in_IN general_NN can_MD capture_VB other_JJ vari_NNS -_: ous_JJ patterns_NNS in_IN natural_JJ language_NN ._.
+We_PRP restrict_VBP to_TO Pattern_VB 1_CD in_IN reconstructing_VBG of_IN source_NN bigrams_NNS because_IN this_DT Pattern_NN contains_VBZ more_JJR informa_NN -_: tion_NN of_IN context_NN and_CC crossing-language_JJ alignment_NN ._.
+On_IN the_DT contrary_NN ,_, we_PRP allow_VBP all_DT Patterns_NNS in_IN the_DT target_NN side_NN as_IN we_PRP want_VBP to_TO collect_VB as_RB many_JJ translations_NNS as_IN possi_NNS -_: ble_NN ._.
+2.4_CD Translation_NN by_IN analogy_NN The_DT problem_NN that_IN we_PRP define_VBP is_VBZ ,_, given_VBN an_DT unseen_JJ bi_SYM -_: gram_NN A_DT in_IN the_DT source_NN languages_NNS ,_, supposing_VBG we_PRP have_VBP known_VBN an_DT alignment_NN between_IN n-gram_JJ and_CC its_PRP$ trans_NNS -_: lation_NN which_WDT is_VBZ represented_VBN by_IN a_DT ,_, we_PRP want_VBP to_TO find_VB the_DT appropriate_JJ template_NN Ti_NNP ,_, to_TO adapt_VB the_DT synchronous_JJ analogy_NN and_CC finally_RB generate_VB the_DT target_NN A_DT ̃_NN ′_NN success_NN -_: fully_RB ._.
+We_PRP formalize_VBP analogical_JJ deduction_NN as_IN follow_VB -_: ing_NN :_: Given_VBN a_DT bigram_NN ,_, it_PRP can_MD be_VB reconstructed_VBN using_VBG other_JJ n-grams_NNS via_IN different_JJ reconstruction_NN patterns_NNS ._.
+For_IN instance_NN ,_, we_PRP can_MD rebuild_VB the_DT bigram_NN :_: annual_JJ taxes_NNS in_IN following_VBG several_JJ ways_NNS :_: Pattern1_NNP :_: ab_NN :_: ac_NN :_: :_: db_NN :_: dc_VB Figure_NN 2_CD :_: View_NNP of_IN the_DT harmonization_NN parallelopiped_VBD :_: four_CD terms_NNS in_IN each_DT language_NN form_NN a_DT monolingual_JJ proportional_JJ analogy_NN ._.
+annual_JJ :_: annual_JJ statistics_NNS :_: :_: the_DT taxes_NNS :_: the_DT statis_NN -_: tics_NNS :_: statistics_NNS :_: the_DT :_: the_DT statis_NN -_: tics_NNS annual_JJ income_NN statistics_NNS taxes_NNS Pattern2_NNP :_: ab_NN :_: b_NN :_: :_: ac_NN :_: c_NN annual_JJ :_: taxes_NNS :_: :_: annual_JJ taxes_NNS statistics_NNS Pattern3_NN :_: ab_NN :_: a_DT :_: :_: db_VB :d_JJ annual_JJ :_: annual_JJ :_: :_: the_DT taxes_NNS taxes_NNS Pattern4_NNP :_: ab_NN :_: db_NN :_: :_: ac_NN :_: dc_JJ annual_JJ taxes_NNS Pattern_NN 5_CD :_: annual_JJ taxes_NNS :_: :_: the_DT taxes_NNS :_: :_: annual_JJ statistics_NNS ab_NN :_: aeb_NN :_: :_: ac_NN :_: aec_JJ annual_JJ income_NN taxes_NNS annual_JJ :_: :_: statistics_NNS :_: A_DT :_: Bi_NNS :_: :_: Cj_NNP :_: x_LS -LRB-_-LRB- 1_LS -RRB-_-RRB- Assume_VB the_DT previous_JJ analogical_JJ equation_NN has_VBZ a_DT so_RB -_: lution_NN x_LS ._.
+We_PRP define_VBP the_DT case_NN when_WRB x_LS belongs_VBZ to_TO the_DT training_NN set_VBN as_IN ''_'' reconstructible_NN ''_'' ._.
+φ_NN -LRB-_-LRB- ._. -RRB-_-RRB-
+is_VBZ the_DT trans_NNS -_: automatic_JJ aligners_NNS ._.
+From_IN a_DT bigram_NN A_DT and_CC its_PRP$ trans_NNS -_: lation_NN A_DT ′_NN ,_, for_IN each_DT elements_NNS in_IN source_NN side_NN and_CC with_IN all_DT relevant_JJ of_IN bigrams_NNS B_NNP ,_, C_NNP from_IN the_DT source_NN part_NN of_IN the_DT bicorpus_NN ,_, if_IN there_EX also_RB exists_VBZ the_DT translations_NNS B_NNP ′_CD ,_, C_NNP ′_CD ,_, we_PRP can_MD reduce_VB the_DT remaining_VBG D_NNP and_CC D_NNP ′_CD which_WDT is_VBZ described_VBN as_IN following_VBG formula_NN :_: -LRB-_-LRB- A_DT ,_, A_DT ′_NN -RRB-_-RRB- :_: -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- :_: :_: -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- ⇒_NN -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- If_IN finally_RB we_PRP find_VBP D_NNP and_CC D_NNP ′_CD at_IN the_DT end_NN of_IN this_DT equation_NN are_VBP linked_VBN ,_, we_PRP consider_VBP that_IN from_IN A_DT it_PRP can_MD arrive_VB to_TO A_DT ′_NN successfully_RB ._.
+3_NNP Data_NNP profiling_VBG We_PRP first_RB profile_VBP the_DT test_NN set_VBN by_IN exploring_VBG the_DT propor_NN -_: tion_NN of_IN unseen_JJ bigrams_NNS in_IN the_DT source_NN language_NN ._.
+Then_RB we_PRP investigate_VBP the_DT reconstructiblility/bidirectional_JJ reconstructibility_NN of_IN unseen_JJ bigrams_NNS in_IN the_DT source_NN language_NN ._.
+Finally_RB ,_, we_PRP estimate_VBP the_DT maximum_NN of_IN at_IN -_: tested_VBN translation_NN bigrams_NNS using_VBG this_DT analogy-based_JJ approach_NN ._.
+3.1_CD Data_NNP preprocessing_NN We_PRP use_VBP the_DT Europarl_NNP Corpora1_NNP -LRB-_-LRB- Koehn_NNP ,_, 2005_CD -RRB-_-RRB- to_TO pre_VB -_: pare_VB the_DT classification_NN examples_NNS used_VBN to_TO train_VB and_CC test_VB the_DT SVM_NNP classifier_NN ._.
+We_PRP split_VBD the_DT corpus_NN into_IN two_CD parts_NNS :_: a_DT training_NN set_NN and_CC a_DT test_NN set_NN ._.
+A_DT set_NN of_IN 100,000_CD sentences_NNS which_WDT lengths_NNS less_JJR than_IN 30_CD with_IN the_DT French_JJ translation_NN are_VBP extracted_VBN as_IN the_DT training_NN set_NN ._.
+We_PRP also_RB sample_NN a_DT set_NN of_IN 10,000_CD sentences_NNS from_IN the_DT remain_VBP -_: ing_NN corpus_VBZ not_RB contained_VBN in_IN training_NN set_VBN as_IN the_DT test_NN set_NN ._.
+This_DT corpus_VBZ only_RB offers_VBZ aligned_VBN texts_NNS ,_, however_RB ,_, it_PRP does_VBZ not_RB provide_VB word_NN alignment_NN information_NN for_IN each_DT language_NN pair_NN ._.
+Table_NNP 1_CD shows_VBZ some_DT statistic_NN of_IN bigrams_NNS and_CC the_DT proportion_NN of_IN unseen_JJ bigrams_NNS in_IN the_DT experiment_NN data_NNS ._.
+3.2_CD Word-to-word_JJ alignment_NN Before_IN reconstructing_VBG ,_, we_PRP preprocess_VBP to_TO obtain_VB word-to-word_JJ alignments_NNS ._.
+Our_PRP$ work_NN is_VBZ based_VBN on_IN the_DT dominant_JJ method_NN to_TO obtain_VB word_NN alignment_NN ,_, which_WDT trained_VBN from_IN the_DT Expectation_NNP Maximization_NNP -LRB-_-LRB- EM_NNP -RRB-_-RRB- al_SYM -_: gorithm_NN ._.
+To_TO extract_VB the_DT word_NN alignment_NN ,_, EM_NNP algo_NNP -_: rithm_NN will_MD be_VB utilized_VBN to_TO train_VB the_DT bilingual_JJ corpus_NN for_IN several_JJ iterations_NNS ,_, and_CC then_RB phrase_NN pairs_NNS that_WDT are_VBP con_JJ -_: sistent_NN with_IN this_DT word_NN alignment_NN will_MD be_VB extracted_VBN ._.
+We_PRP align_VBP the_DT words_NNS automatically_RB relying_VBG on_IN the_DT 1_CD http://www.statmt.org/europarl/archives.html#v3_CD en_IN :_: annual_JJ taxes_NNS impˆots_NNS annuels_NNS fr_NN :_: x_SYM /_FW A_DT :_: Bi_NNS :_: :_: Cj_NNP :_: x_LS annual_JJ statistics_NNS ́el_VBP ́ements_NNS annuels_NNS y_VBP /_FW y_FW :_: Bm_NN ′_NN :_: :_: Cn_VB ′_NN :_: Dk_NNP ′_IN the_DT taxes_NNS les_FW impˆots_FW the_DT statistics_NNS les_FW ́el_FW ́ements_FW Figure_NN 3_CD :_: Bilingual_JJ analogical_JJ reduction_NN for_IN the_DT bigram_NN fromtheinputannualtaxes_NNS -LRB-_-LRB- English_NNP -RRB-_-RRB- totheoutputimpoˆts_NNS annuels_NNS -LRB-_-LRB- French_NNP -RRB-_-RRB- ,_, the_DT related_JJ analogous_JJ and_CC its_PRP$ translation_NN are_VBP indicated_VBN in_IN the_DT figure_NN ._.
+lation_NN function_NN ,_, bidirectional_JJ analogical_JJ deduction_NN also_RB requires_VBZ to_TO repeat_VB this_DT operation_NN with_IN all_DT target_NN translations_NNS corresponding_JJ to_TO the_DT source_NN bigrams_NNS in_IN the_DT opposite_JJ direction_NN ._.
+In_IN other_JJ words_NNS ,_, satisfies_VBZ fol_SYM -_: lowing_VBG equation_NN :_: ∃_CD -LRB-_-LRB- Bm_NN ′_NN ,_, Cn_NNP ′_CD ,_, Dk_NNP ′_CD -RRB-_-RRB- ∈_SYM φ_FW -LRB-_-LRB- Bi_FW -RRB-_-RRB- ×_SYM φ_FW -LRB-_-LRB- Ci_FW -RRB-_-RRB- ×_SYM φ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ∃_SYM y/y_FW :_: Bm_NN ′_NN :_: :_: Cn_VB ′_NN :_: Dk_NNP ′_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- We_PRP define_VBP ''_'' bidirectional_JJ reconstructible_NN ''_'' as_IN when_WRB input_NN an_DT unseen_JJ bigram_NN and_CC finally_RB it_PRP outputs_VBZ the_DT solution_NN as_IN y_NN ._.
+In_IN this_DT model_NN ,_, a_DT stands_NNS alignment_NN between_IN source_NN language_NN bigram_NN and_CC its_PRP$ translation_NN in_IN target_NN language_NN ,_, a_DT ⇔_NN -LRB-_-LRB- X_NNP ,_, X_NNP ′_CD -RRB-_-RRB- ,_, if_IN the_DT alignment_NN -LRB-_-LRB- A_DT ,_, y_NN -RRB-_-RRB- appears_VBZ in_IN the_DT test_NN set_NN -LRB-_-LRB- as_IN ∃_FW y_FW ∈_FW φ_FW -LRB-_-LRB- A_NNP -RRB-_-RRB- -RRB-_-RRB- ,_, we_PRP recognize_VBP the_DT output_NN as_IN the_DT translation_NN ,_, called_VBN ''_'' at_IN -_: tested_VBN translation_NN ''_'' ._.
+The_DT Figure_NN 3_CD describes_VBZ this_DT procedure_NN and_CC Figure_NN 4_CD shows_VBZ the_DT details_NNS about_IN constituents_NNS of_IN bigrams_NNS ._.
+Since_IN the_DT proceeding_NN of_IN the_DT whole_JJ produce_NN of_IN ana_NN -_: logical_JJ derivation_NN is_VBZ very_RB time-consuming_JJ ,_, in_IN order_NN to_TO evaluate_VB the_DT ceiling_NN coverage_NN of_IN ''_'' attested_VBD trans_NNS -_: lation_NN ''_'' ,_, we_PRP conduct_VBP the_DT synchronous_JJ parsing_NN for_IN fast_JJ obtaining_VBG the_DT examples_NNS ._.
+It_PRP is_VBZ easy_JJ to_TO obtain_VB the_DT align_NN -_: ments_NNS between_IN A_DT and_CC A_DT ′_NN in_IN the_DT test_NN set_VBN with_IN some_DT source_NN target_NN bigrams_NNS unreconstructible_JJ ¬_NN found_VBD alignment_NN attested_VBD translation_NN BR_NNP =_SYM bidirectional_JJ reconstructible_JJ known_VBN found_VBN alignment_NN unseen_JJ reconstructible_JJ Figure_NN 4_CD :_: Logic_NNP binary_JJ tree_NN for_IN the_DT problem_NN of_IN analogy_NN and_CC bidirectional_JJ analogy_NN in_IN the_DT source_NN language_NN ,_, ''_'' not_RB found_VBN alignment_NN ''_'' means_VBZ the_DT known_VBN bigrams_NNS that_WDT have_VBP not_RB been_VBN aligned_VBN in_IN the_DT training_NN set_NN ._.
+BR_NNP ¬_NNP attested_VBD translation_NN ¬_SYM BR_SYM bigrams_NNS proportion_NN Test_NN aligned_VBN unaligned_JJ 63,537_CD 5,063_CD 92.68_CD %_NN 7.38_CD %_NN Training_VBG aligned_VBN unaligned_JJ 320,983_CD 24,401_CD 92.94_CD %_NN 7.06_CD %_NN English_JJ French_JJ Test_NN sentences_NNS words_NNS avg_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- stdev_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- bigrams_NNS -LRB-_-LRB- unique_JJ -RRB-_-RRB- 10k_CD 177,890_CD 17.79_CD ±_NN 6.24_CD 68,600_CD 10k_CD 202,418_CD 20.24_CD ±_NN 7.17_CD 73,126_CD Training_VBG sentences_NNS words_NNS avg_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- stdev_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- bigrams_NNS -LRB-_-LRB- unique_JJ -RRB-_-RRB- 100k_CD 1,780,128_CD 17.80_CD ±_IN 6.25_CD 345,384_CD 100k_CD 2,027,369_CD 20.27_CD ±_NN 7.16_CD 336,995_CD Unseen_NNP bigrams_NNS Proportion_NNP 22,078_CD 32.18_CD %_NN 23,251_CD 31.80_CD %_NN bigrams_NNS proportion_NN known_VBN ¬_CD found_VBD alignment_NN found_VBD alignment_NN 995_CD 1.45_CD %_NN 45,527_CD 66.37_CD %_NN unseen_JJ reconstructible_JJ unreconstructible_JJ 20,056_CD 29.14_CD %_NN 2,022_CD 2.95_CD %_NN Total_JJ 68,600_CD 100.00_CD %_NN Table_NNP 1_CD :_: Statistics_NNS on_IN the_DT English-French_NNP parallel_NN corpus_NN used_VBN for_IN the_DT training_NN and_CC test_NN sets_NNS ,_, it_PRP also_RB indicates_VBZ the_DT statistics_NNS of_IN unseen_JJ bigrams_NNS in_IN the_DT test_NN set_NN ._.
+Table_NNP 2_CD :_: Statistics_NNS on_IN the_DT aligned_VBN and_CC unaligned_JJ bigrams_NNS in_IN data_NNS ,_, it_PRP also_RB indicates_VBZ GIZA_NNP +_CD +_NN can_MD not_RB align_VB all_DT words_NNS in_IN the_DT source_NN language_NN after_RB grow-diag-final-and_JJ ._.
+Table_NNP 3_CD :_: Distribution_NN of_IN bigrams_NNS ,_, e.g._FW ,_, unaligned_JJ and_CC aligned_VBN in_IN the_DT training_NN data_NNS ._.
+More_JJR than_IN 90_CD %_NN of_IN unseen_JJ bigrams_NNS can_MD be_VB reconstructed_VBN ._.
+GIZA_NNP +_SYM +2_CD -LRB-_-LRB- Ochet_NNP al._NNP ,_, 2003_CD -RRB-_-RRB- implementation_NN of_IN the_DT IBM_NNP Models_NNPS in_IN Moses_NNP toolkit_NN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ,_, 3.3_CD Reconstructiblity_NNP running_VBG the_DT algorithm_NN in_IN both_DT directions_NNS ,_, source_NN to_TO target_VB and_CC target_VB to_TO source_NN ._.
+The_DT heuristics_NNS applied_VBD to_TO obtain_VB a_DT symmetrized_VBN alignment_NN in_IN this_DT step_NN is_VBZ grow-diag-final-and_JJ ,_, it_PRP starts_VBZ with_IN the_DT intersection_NN of_IN directional_JJ word_NN align_NN -_: ments_NNS and_CC enrich_VB it_PRP with_IN alignment_NN points_NNS from_IN the_DT union_NN ._.
+We_PRP employ_VBP this_DT algorithm_NN to_TO obtained_VBN align_SYM -_: ment_NN ,_, and_CC from_IN that_IN we_PRP extract_VBP the_DT continuous_JJ bi_SYM -_: grams_NNS and_CC their_PRP$ aligned_VBN targets_NNS directly_RB from_IN the_DT alignment_NN files_NNS ._.
+At_IN same_JJ time_NN ,_, an_DT aligned_VBN test_NN set_NN was_VBD build_VB as_IN the_DT golden_JJ reference_NN using_VBG the_DT same_JJ ap_NN -_: proach_NN ._. ''_''
+aligned_VBN ''_'' means_VBZ it_PRP is_VBZ aligned_VBN by_IN GIZA_NNP +_CD +_NN ._.
+Though_IN the_DT most_JJS of_IN bigrams_NNS are_VBP reconstructible_JJ ,_, not_RB all_DT bigrams_NNS belonging_VBG to_TO this_DT set_NN can_MD really_RB generate_VB a_DT solution_NN -LRB-_-LRB- case_NN of_IN BR_NNP -RRB-_-RRB- as_IN same_JJ as_IN the_DT aligned_VBN trans_NNS -_: lations_NNS in_IN the_DT target_NN language_NN ._.
+That_DT is_VBZ a_DT quiet_JJ inter_NN -_: esting_NN and_CC rifeness_NN phenomenon_NN in_IN the_DT most_RBS cases_NNS -LRB-_-LRB- case_NN of_IN ¬_CD BR_NNP -RRB-_-RRB- ._.
+We_PRP implement_VBP bilingual_JJ synchro_NN -_: nizing_VBG parsing_NN to_TO quickly_RB search_VB the_DT reusable_JJ and_CC useful_JJ templates_NNS -LRB-_-LRB- case_NN of_IN attested_JJ translation_NN -RRB-_-RRB- ._.
+As_IN the_DT matter_NN of_IN fact_NN ,_, though_IN not_RB all_DT final_JJ solution_NN are_VBP acceptable_JJ ,_, we_PRP are_VBP aiming_VBG at_IN to_TO bound_VBN the_DT mount_VB of_IN successful_JJ analogy_NN in_IN total_NN ._.
+The_DT statistics_NNS are_VBP pro-_JJ vided_VBN in_IN the_DT following_NN ._.
+2_CD http://www.statmt.org/moses/giza/GIZA++.html_NNP Negative_JJ Examples_NNS TemplatesTs_NNS :_: -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- Input_NN :_: Output_NN :_: ref_NN :_: joint_JJ development_NN de_IN ́battues_NNS -LSB-_JJ X_NNP -RSB-_NNP codes_NNS de_IN ́veloppement_NN communautaire_NN joint_JJ talks_NNS de_IN ́battues_NNS -LSB-_JJ X_NNP -RSB-_NNP pourparlers_VBZ the_DT development_NN des_FW codes_NNS the_DT talks_NNS des_FW pourparlers_FW Input_NNP :_: Output_NN :_: ref_NN :_: rates_NNS within_IN des_FW taux_FW -LSB-_FW X_NNP -RSB-_NNP au_IN sein_NN -LSB-_NN X_NNP -RSB-_NNP des_NNP taux_NNP de_IN -LSB-_NNP X_NNP -RSB-_NNP au_NN sein_NN de_IN rates_NNS will_MD des_FW taux_FW -LSB-_FW X_NNP -RSB-_NNP permettra_NN areas_NNS within_IN domaines_NNS -LSB-_NNP X_NNP -RSB-_NNP au_IN sein_NN areas_NNS will_MD domaines_NNS permettra_VB Input_NNP :_: Output_NN :_: ref_NN :_: military_JJ security_NN -LSB-_NNP X_NNP -RSB-_NNP de_IN se_FW ́curite_FW ́_FW -LSB-_FW X_NNP -RSB-_NNP militaires_VBZ militaires_NNS -LSB-_NNP X_NNP -RSB-_NNP se_FW ́curite_FW ́_FW military_JJ interests_NNS inte_VBP ́reˆts_NNS -LSB-_JJ X_NNP -RSB-_NNP militaires_VBZ our_PRP$ security_NN nos_VBZ -LSB-_NNP X_NNP -RSB-_NNP de_IN se_FW ́curite_FW ́_FW our_PRP$ interests_NNS nos_RB inte_VBP ́reˆts_NNS Input_NNP :_: Output_NN :_: ref_NN :_: common_JJ set_NN limites_NNS communes_NNS une_FW se_FW ́rie_FW common_JJ institutions_NNS institutions_NNS communes_NNS the_DT set_NN les_FW limites_FW the_DT institutions_NNS les_FW institutions_NNS Positive_JJ Examples_NNS TemplatesTs_NNS :_: -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- Input_NN :_: Output_NN :_: ref_NN :_: this_DT renegotiation_NN cette_NN rene_NN ́gociation_JJ cette_NN rene_NN ́gociation_NN this_DT transition_NN cette_NN transition_NN the_DT renegotiation_NN la_DT rene_NN ́gociation_NN the_DT transition_NN la_NNP transition_NN Input_NNP :_: Output_NN :_: ref_NN :_: accounts_NNS procedure_NN proce_NN ́dure_VBD -LSB-_NNP X_NNP -RSB-_NNP comptes_NNS proce_VBP ́dure_JJ -LSB-_NN X_NNP -RSB-_NNP comptes_VBZ accounts_NNS for_IN comptes_NNS de_IN voting_VBG procedure_NN proce_NN ́dure_VBD -LSB-_NNP X_NNP -RSB-_NNP vote_NN voting_NN for_IN vote_NN de_IN Input_NNP :_: Output_NN :_: ref_NN :_: efficient_JJ legal_JJ judiciaire_NN -LSB-_NNP X_NNP -RSB-_NNP efficace_NN judiciaire_NN -LSB-_NNP X_NNP -RSB-_NNP efficace_NN efficient_JJ european_JJ europe_NN ́en_NN efficace_NN of_IN legal_JJ judiciaire_NN -LSB-_NNP X_NNP -RSB-_NNP de_IN of_IN european_JJ europe_NN ́en_FW de_FW Input_NNP :_: Output_NN :_: ref_NN :_: bold_JJ measures_NNS des_FW mesures_FW audacieuses_FW des_FW mesures_FW audacieuses_FW bold_JJ proposals_NNS des_FW propositions_NNS audacieuses_NNS various_JJ measures_NNS diverses_VBZ mesurese_JJ various_JJ proposals_NNS diverses_VBZ propositions_NNS Table5_NNS :_: Samplesofbigramsandrelatedanalogicaltemplates_NNS ,_, according_VBG -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- ,_, thetranslation_NN A_DT ′_NN is_VBZ produced_VBN ._.
+Both_DT positive_JJ and_CC negative_JJ examples_NNS are_VBP presented_VBN in_IN the_DT table_NN ._.
+-LRB-_-LRB- A_DT ,_, A_DT ′_NN -RRB-_-RRB- as_RB well_RB as_IN relative_JJ features_NNS from_IN analogical_JJ templatesof_NN -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- ._.
+3.4.1_CD Features_NNS For_IN classifying_VBG the_DT outputs_NNS as_IN correct_JJ translation_NN Table_NNP 4_CD :_: Distribution_NN of_IN bigrams_NNS ,_, e.g._FW ,_, attested_VBD translation_NN or_CC not_RB ,_, the_DT software_NN LIBSVM3_NNP -LRB-_-LRB- Chang_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- reconstructible_JJ BR_NNP attested_VBD unattested_JJ total_JJ ¬_NN BR_NNP bigrams_VBZ 7,659_CD 10,347_CD 18,006_CD 2,050_CD proportion_NN 11.16_CD %_NN 15.09_CD %_NN 26.25_CD %_NN 2.99_CD %_NN and_CC unattested_JJ translation_NN using_VBG analogy_NN ,_, it_PRP means_VBZ more_JJR than_IN 3/4_CD -LRB-_-LRB- 66.37_CD %_NN +11.16_CD %_NN -RRB-_-RRB- of_IN bigrams_NNS are_VBP attested_VBN trans_NNS -_: lation_NN only_RB referring_VBG to_TO the_DT training_NN data_NNS ._.
+3.4_CD SVM_NNP Classifier_NNP in_IN used_VBN ,_, which_WDT is_VBZ an_DT integrated_JJ software_NN comes_VBZ with_IN scripts_NNS that_WDT automate_VBP normalization_NN of_IN the_DT features_NNS and_CC optimization_NN of_IN the_DT γ_NN and_CC C_NNP parameters_NNS ._.
+We_PRP still_RB need_VBP to_TO restrict_VB the_DT features_NNS to_TO feed_VB it_PRP for_IN training_NN ._.
+•_NNP Independent_NNP Features_VBZ Lexical_NNP Weighting_NNP :_: the_DT direct_JJ lexical_JJ weight_NN -_: ing_VBG Plex_NNP -LRB-_-LRB- e_LS |_FW f_LS -RRB-_-RRB- and_CC inverse_JJ lexical_JJ weighting_NN Plex_NNP -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- for_IN -LRB-_-LRB- A_DT ,_, A_DT ′_NN -RRB-_-RRB- ._.
+Given_VBN a_DT word_NN alignment_NN a_DT ,_, we_PRP apply_VBP the_DT formula_NN of_IN IBM_NNP Model_NNP 1_CD to_TO compute_VB the_DT lexical_JJ translation_NN probability_NN of_IN a_DT phrase_NN e_LS given_VBN the_DT foreign_JJ phrase_NN f_LS as_IN -LRB-_-LRB- Koehn_NNP Since_IN the_DT proportional_JJ analogy_NN for_IN translation_NN map_NN -_: ping_NN is_VBZ the_DT necessary_JJ condition_NN but_CC not_RB sufficient_JJ ,_, identifying_VBG the_DT correct_JJ translation_NN via_IN proportional_JJ analogy_NN with_IN some_DT machine_NN learning_VBG approaches_NNS is_VBZ very_RB necessary_JJ ._.
+In_IN the_DT following_NN ,_, we_PRP will_MD de_FW -_: scribe_NN how_WRB we_PRP collect_VBP the_DT examples_NNS and_CC from_IN them_PRP to_TO extract_VB the_DT features_NNS to_TO train_VB the_DT SVM_NNP classifier_NN ._.
+It_PRP implements_VBZ the_DT estimating-processing_NN by_IN using_VBG the_DT specified_VBN features_NNS :_: independent_JJ features_NNS from_IN 3https_NNS :_: /_SYM /_SYM www.csie.ntu.edu.tw_SYM /_SYM cjlin/libsvm_SYM /_FW et_FW al._FW ,_, 2003_CD -RRB-_-RRB- :_: Length_NNP :_: the_DT lengths_NNS of_IN Bm_NNP ′_CD ,_, Cn_NNP ′_CD and_CC D_NNP ′_CD in_IN words_NNS ,_, ''_'' -LSB-_NNP X_NNP -RSB-_NNP ''_'' should_MD not_RB be_VB recognized_VBN as_IN a_DT word_NN ,_, because_IN it_PRP can_MD be_VB ε_NN ._.
+Frequency_NN :_: the_DT occurrences_NNS of_IN Bi_NNP ,_, Cj_NNP and_CC D_NNP and_CC same_JJ to_TO targets_NNS ._.
+Dice_NNP 's_POS coefficient_NN :_: Dice_NNP coefficient_NN mea_NN -_: sures_VBZ the_DT presence/absence_NN of_IN data_NNS between_IN to_TO phrases_NNS ,_, where_WRB |_NN X_NNP |_CD and_CC |_CD Y_NNP |_NN are_VBP the_DT number_NN of_IN words_NNS in_IN set_NN X_NNP and_CC Y_NNP ,_, respectively_RB ,_, and_CC |_NN X_NNP ∩_CD Y_NNP |_NN is_VBZ the_DT number_NN of_IN words_NNS shared_VBN by_IN the_DT two_CD set_NN ._.
+We_PRP import_VBP the_DT following_VBG formula_NN to_TO compute_VB the_DT score_NN of_IN Dice_NNP coefficient_NN among_IN B_NNP ′_CD ,_, C_NNP ′_CD and_CC D_NNP ′_CD ,_, e.g._FW :_: Dice_NNP -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- =_SYM 2_CD |_CD X_NNP ∩_CD Y_NNP |_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- |_NN X_NNP |_VBD +_CD |_CD Y_NNP |_CD MutualInformation_NNP :_: This_DT measures_VBZ the_DT co_NN -_: occurrence_NN phrases_NNS mutual_JJ dependence_NN ._.
+x_LS stands_VBZ the_DT word_NN in_IN source_NN bigram_NN and_CC y_NN stands_VBZ the_DT word_NN in_IN the_DT solution_NN of_IN analogy_NN ._.
+p_NN -LRB-_-LRB- x_LS ,_, y_NN -RRB-_-RRB- is_VBZ the_DT word-to-word_JJ translation_NN probability_NN ._.
+p_NN -LRB-_-LRB- ._. -RRB-_-RRB-
+is_VBZ the_DT probability_NN distribution_NN function_NN ._.
+I_PRP -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- =_SYM p_FW -LRB-_-LRB- x_LS ,_, y_NN -RRB-_-RRB- log_VBP p_NN -LRB-_-LRB- x_LS ,_, y_NN -RRB-_-RRB- -LRB-_-LRB- 8_CD -RRB-_-RRB- x_LS ,_, y_JJ p_NN -LRB-_-LRB- x_LS -RRB-_-RRB- p_NN -LRB-_-LRB- y_FW -RRB-_-RRB- 3.4.2_CD Problem_NNP formulation_NN As_IN we_PRP treat_VBP verifying_VBG analogy_NN output_NN as_IN a_DT binary_JJ classification_NN problem_NN ,_, we_PRP obtained_VBD various_JJ outputs_NNS from_IN analogy_NN engine_NN for_IN each_DT bigram_NN ._.
+φ_NN -LRB-_-LRB- ._. -RRB-_-RRB-
+is_VBZ the_DT translation_NN function_NN ,_, we_PRP label_VBP the_DT training_NN examples_NNS as_IN in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: 1_CD ,_, if_IN A_DT ′_FW ∈_FW φ_FW -LRB-_-LRB- A_NNP -RRB-_-RRB- y_VBP =_SYM 0_CD ,_, ifA_NNP ′_VBD ∈_CD /_CD φ_NN -LRB-_-LRB- A_NNP -RRB-_-RRB- -LRB-_-LRB- 9_CD -RRB-_-RRB- Each_DT instance_NN is_VBZ associated_VBN with_IN a_DT set_NN of_IN features_NNS that_WDT have_VBP been_VBN discussed_VBN in_IN the_DT previous_JJ section_NN ._.
+3.4.3_CD Experimental_JJ settings_NNS The_DT bilingual-crossing_JJ examples_NNS are_VBP generated_VBN by_IN the_DT previous_JJ script_NN depends_VBZ on_IN the_DT alignment_NN output_NN by_IN GIZA_NNP +_CD +_NN ._.
+During_IN training_NN of_IN the_DT SVM_NNP classifier_NN ,_, positive_JJ and_CC negative_JJ instances_NNS of_IN examples_NNS are_VBP gen_SYM -_: erated_VBN from_IN the_DT subset_NN of_IN attested_JJ translation_NN and_CC un_NN -_: usable_JJ templates_NNS in_IN the_DT middle_NN of_IN analogy_NN proceed_VBP -_: ing_NN ._.
+We_PRP also_RB build_VBP a_DT test_NN set_VBN to_TO validate_VB the_DT accuracy_NN of_IN such_PDT a_DT classifier_NN ._.
+I1_CD Plex_NNP -LRB-_-LRB- e_LS |_FW f_LS ,_, a_DT -RRB-_-RRB- =_SYM w_FW -LRB-_-LRB- ei_FW |_FW fj_FW -RRB-_-RRB- i_FW =_SYM 1_CD -LCB-_-LRB- j_NN |_NN -LRB-_-LRB- i_FW ,_, j_VBN -RRB-_-RRB- ∈_VBP a_DT -RCB-_-RRB- ∀_CD -LRB-_-LRB- i_FW ,_, j_VBN -RRB-_-RRB- ∈_VBP a_DT -LRB-_-LRB- 4_LS -RRB-_-RRB- Here_RB ,_, we_PRP compute_VBP the_DT score_NN as_IN the_DT following_JJ equation_NN without_IN the_DT word_NN alignment_NN :_: 1_CD I_PRP Plex_VBP -LRB-_-LRB- e_LS |_FW f_LS -RRB-_-RRB- =_SYM I_PRP i_FW =_SYM 1_CD log_VBP max_FW -LCB-_-LRB- w_NN -LRB-_-LRB- ei_FW |_FW fj_FW -RRB-_-RRB- -RCB-_-RRB- -LCB-_-LRB- j_FW |_FW ∀_FW -LRB-_-LRB- i_FW ,_, j_VBN -RRB-_-RRB- ∈_VBP a_DT -RCB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- Length_NNP :_: the_DT lengths_NNS of_IN A_DT ′_NN in_IN words_NNS ,_, '_'' -LSB-_NNP X_NNP -RSB-_NNP '_POS should_MD not_RB be_VB recognized_VBN as_IN a_DT word_NN ,_, because_IN it_PRP can_MD be_VB ε_NN ._.
+Frequency_NN :_: we_PRP compile_VBP the_DT data_NNS with_IN the_DT suffix_NN array_NN for_IN fast_JJ searching_VBG -LRB-_-LRB- Lopez_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+We_PRP calculate_VBP the_DT frequency_NN of_IN occurrence_NN for_IN each_DT n-gram_JJ generated_VBN by_IN analogy_NN in_IN French_JJ -LRB-_-LRB- with/without_JJ gaps_NNS -RRB-_-RRB- ._.
+The_DT complete_JJ French_JJ sub_NN -_: set_NN of_IN Europarl_NNP corpus_NN is_VBZ used_VBN as_IN the_DT reference_NN ._.
+Table_NNP 6_CD :_: Statistics_NNS on_IN the_DT French_JJ monolingual_JJ corpus_NN used_VBN as_IN reference_NN ._.
+MutualInformation_NNP :_: It_PRP is_VBZ considered_VBN as_IN the_DT most_RBS widely_RB used_VBN measure_NN in_IN extraction_NN of_IN col_NN -_: locations_NNS ._.
+We_PRP only_RB compute_VBP the_DT score_NN only_RB for_IN A_DT ′_FW as_IN following_VBG :_: Reference_NNP -LRB-_-LRB- French_NNP -RRB-_-RRB- sentences_NNS words_NNS avg_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- stdev_NN ._.
+-LRB-_-LRB- words/sentence_NN -RRB-_-RRB- 386,237_CD 12,175,424_CD 31.52_CD ±_NN 6.24_CD I_PRP -LRB-_-LRB- X_NNP -RRB-_-RRB- =_SYM log_VB •_CD Relative_JJ Features_NNS p_VBP -LRB-_-LRB- w1_CD ,_, w2_CD ,_, ._. ._.
+,_, wm_NN -RRB-_-RRB- mi_FW =_SYM 1_CD p_NN -LRB-_-LRB- wi_FW -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- LexicalWeight_NNP :_: the_DT lexical_JJ weightings_NNS of_IN -LRB-_-LRB- Bi_FW ,_, Bm_NNP ′_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Cj_NNP ,_, Cn_NNP ′_CD -RRB-_-RRB- and_CC -LRB-_-LRB- D_NNP ,_, D_NNP ′_CD -RRB-_-RRB- in_IN both_DT direc_FW -_: tions_NNS -LRB-_-LRB- direct_JJ lexical_JJ weighting_NN Plex_NNP -LRB-_-LRB- e_LS |_FW f_LS -RRB-_-RRB- and_CC in_IN -_: verse_NN phrase_NN translation_NN probabilities_NNS Plex_NNP -LRB-_-LRB- f_LS |_FW e_LS -RRB-_-RRB- ._.
+Blue_NNP triangles_NNS stand_VBP positive_JJ examples_NNS and_CC red_JJ circles_NNS stand_VBP negative_JJ examples_NNS ._.
+We_PRP found_VBD that_IN the_DT output_NN with_IN the_DT balanced_JJ template_NN in_IN lexi_NNS -_: cal_JJ weighting_NN does_VBZ not_RB mean_VB it_PRP has_VBZ the_DT larger_JJR probability_NN to_TO be_VB a_DT positive_JJ examples_NNS ._.
+Negative_JJ Positive_JJ Total_JJ Test_NN 1k_CD 1k_CD 2k_JJ Training_NN 5k_CD 5k_CD 10k_CD Table_NNP 7_CD :_: Size_NN of_IN the_DT examples_NNS used_VBN as_IN the_DT test_NN set_NN and_CC training_NN set_VBN in_IN the_DT experiment_NN ._.
+3.4.4_CD Evaluation_NN To_TO test_VB the_DT performance_NN of_IN our_PRP$ approach_NN we_PRP focus_VBP on_IN the_DT accuracy_NN of_IN the_DT results_NNS ._.
+We_PRP first_RB sample_NN 2k_JJ ex_FW -_: amples_NNS as_IN test_NN data_NNS -LRB-_-LRB- as_IN in_IN Table_NNP 7_CD -RRB-_-RRB- ._.
+During_IN training_VBG the_DT SVM_NNP classifier_NN determines_VBZ a_DT maximum_NN margin_NN hyperplane_NN between_IN the_DT positive_JJ and_CC negative_JJ exam_NN -_: ples_NNS ._.
+We_PRP measure_VBP the_DT quality_NN of_IN the_DT classification_NN by_IN precision_NN and_CC recall_NN ._.
+Let_VB C_NNP be_VB the_DT set_NN of_IN output_NN pre_NN -_: dictions_NNS ._.
+We_PRP standardly_RB define_VBP precision_NN P_NNP ,_, recall_VBP R_NNP and_CC F-measure_NNP as_IN in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- :_: the_DT analogous_JJ information_NN has_VBZ the_DT positive_JJ effects_NNS on_IN classification_NN ._.
+Though_IN the_DT accuracy_NN is_VBZ not_RB as_RB high_JJ as_IN we_PRP ex_FW -_: pected_VBN ,_, there_EX are_VBP some_DT reason_NN can_MD explain_VB it_PRP ,_, first_RB ,_, even_RB the_DT alignment_NN output_NN by_IN GIZA_NNP +_CD +_NN is_VBZ still_RB so_RB far_RB from_IN completely_RB correct_JJ ,_, and_CC second_JJ ,_, the_DT used_VBN fea_NN -_: tures_NNS are_VBP very_RB simple_JJ ._.
+Moreover_RB ,_, without_IN the_DT con_NN -_: textual_JJ information_NN ,_, this_DT result_NN should_MD be_VB acceptable_JJ ._.
+The_DT results_NNS suggest_VBP lexical_JJ weighting_NN and_CC mutual_JJ in_IN -_: formation_NN contribute_VBP most_RBS to_TO identifying_VBG the_DT correct_JJ translation_NN ._.
+Another_DT should_MD be_VB addressed_VBN that_IN bigrams_NNS trans_NNS -_: lation_NN is_VBZ the_DT most_RBS difficult_JJ in_IN analogy-based_JJ machine_NN translation_NN ._.
+If_IN a_DT bigram_NN is_VBZ attested_VBN translation_NN ,_, un_SYM -_: questionable_JJ ,_, it_PRP will_MD help_VB the_DT longer_RBR n-grams_JJ transla_NN -_: tion_NN ._.
+The_DT future_JJ works_NNS should_MD focus_VB on_IN identifying_VBG the_DT proper_JJ longer_RBR chunk/phrase_JJ translations_NNS using_VBG the_DT similar_JJ approach_NN ._.
+Acknowledgments_NNS This_DT work_NN is_VBZ supported_VBN in_IN part_NN by_IN China_NNP Schol_NNP -_: arship_NN Council_NNP -LRB-_-LRB- CSC_NNP -RRB-_-RRB- under_IN the_DT CSC_NNP Grant_NNP No._NN 201406890026_CD is_VBZ acknowledged_VBN ._.
+We_PRP also_RB thank_VBP the_DT anonymous_JJ reviewers_NNS for_IN their_PRP$ insightful_JJ com_NN -_: ments_NNS ._.
+References_NNS Dice_VBP ,_, L.R._NNP 1945_CD ._.
+Measures_NNS of_IN the_DT amount_NN of_IN ecologic_JJ association_NN between_IN species_NNS ._.
+Ecology_NNP ,_, Vol_NNP .26_CD ,_, No._NN 3_CD ,_, pp._SYM 297_CD --_: 302_CD ._.
+Bonnie_NNP J._NNP Dorr_NNP ._.
+1994_CD ._.
+Machine_NN translation_NN divergences_NNS :_: A_DT formal_JJ description_NN and_CC proposed_VBD solution_NN ._.
+Compu_NNP -_: tational_JJ Linguistics_NNP .20.4_CD :_: pp._VB 597_CD --_: 633_CD ._.
+Philippe_NNP Langlais_NNP and_CC Alexandre_NNP Patry_NNP 2007_CD ._.
+Trans_NNP -_: lating_NN unknown_JJ Words_NNS by_IN Analogical_NNP Learning_NNP ._.
+In_IN EMNLP/CoNLL_NNP '_POS 07_CD ,_, pages_NNS 877_CD --_: 886_CD ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ._.
+Sandipan_NNP Dandapat_NNP ,_, Sara_NNP Morrissey_NNP ,_, Sudip_NNP Kumar_NNP Naskar_NNP ,_, and_CC Harold_NNP Somers_NNP ._.
+2010_CD ._.
+Mitigating_JJ prob_NN -_: lems_NNS in_IN analogy-based_JJ ebmt_NN with_IN smt_NN and_CC vice_NN versa_RB :_: a_DT case_NN study_NN with_IN named_VBN entity_NN transliteration_NN ._.
+In_IN 24th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP Information_NNP and_CC Computation_NNP -LRB-_-LRB- PACLIC_NNP '_POS 10_CD -RRB-_-RRB- ,_, pages_NNS 365_CD --_: 372_CD ,_, Sendai_NNP ,_, Japan_NNP ._.
+Ron_NNP Bekkerman_NNP and_CC James_NNP Allan_NNP ._.
+Using_VBG bigrams_NNS in_IN text_NN categorization_NN ._.
+Department_NNP of_IN Computer_NNP Science_NNP ,_, University_NNP of_IN Massachusetts_NNP ,_, Amherst_NNP 1003_CD -LRB-_-LRB- 2004_CD -RRB-_-RRB- :_: 1_LS -_: 2_LS ._.
+P_NNP =_SYM Ctp_NNP ,_, R_NNP =_SYM Ctp_NNP +_NNP Cfp_NNP Ctp_NNP Ctp_NNP +_NNP Cfn_NNP ,_, F_NN =_SYM 2PR_CD P_NNP +_CD R_NNP -LRB-_-LRB- 10_CD -RRB-_-RRB- It_PRP should_MD be_VB noted_VBN that_IN the_DT number_NN of_IN examples_NNS for_IN training_NN are_VBP different_JJ for_IN the_DT systems_NNS of_IN differ_VBP -_: ent_NN language_NN pairs_NNS ._.
+Because_IN we_PRP are_VBP interested_JJ in_IN the_DT possibilities_NNS of_IN found_VBN translation_NN ,_, we_PRP used_VBD the_DT stan_NN -_: dard_NN accuracy_NN measure_NN to_TO evaluate_VB the_DT performance_NN of_IN classifier_NN on_IN the_DT test_NN set_NN :_: Ctp_NNP +_NNP Ctn_NNP accuracy_NN =_SYM C_$ -LRB-_-LRB- 11_CD -RRB-_-RRB- where_WRB Ctp_NNP is_VBZ the_DT counts_NNS of_IN true-positive_JJ and_CC Ctn_NNP is_VBZ the_DT counts_NNS of_IN true-negative_JJ ._.
+C_NNP is_VBZ the_DT total_JJ counts_NNS of_IN candidates_NNS ._.
+We_PRP show_VBP the_DT details_NNS of_IN evaluation_NN scores_NNS in_IN Table_NNP 8_CD ._.
+4_CD Conclusion_NN and_CC Future_NNP works_VBZ In_IN this_DT paper_NN we_PRP have_VBP performed_VBN an_DT investigation_NN on_IN translating_VBG unseen_JJ bigrams_NNS in_IN MT_NNP by_IN employing_VBG an_DT analogy-based_JJ method_NN empirically_RB ,_, which_WDT has_VBZ never_RB been_VBN explored_VBN ._.
+We_PRP investigated_VBD the_DT maximum_NN pos_SYM -_: sible_NN coverage_NN of_IN bilingual_JJ reconstructible_JJ bigrams_NNS in_IN the_DT test_NN and_CC the_DT probabilities_NNS when_WRB a_DT bigram_NN is_VBZ at_IN -_: tested_VBN translation_NN by_IN using_VBG the_DT analogy_NN ._.
+As_IN can_MD be_VB noticed_VBN from_IN the_DT presented_VBN results_NNS ,_, af_SYM -_: ter_NN importing_VBG the_DT features_NNS of_IN templates_NNS which_WDT are_VBP used_VBN in_IN analogy_NN diveration_NN ,_, the_DT performance_NN of_IN SVM_NNP classifier_NN improves_VBZ ._.
+In_IN other_JJ words_NNS ,_, it_PRP means_VBZ that_IN Features_VBZ Used_VBN Precision_NNP Recall_VB F-measure_JJ Accuracy_NNP Independent_NNP Features_VBZ Length_NNP LexicalWeight_NNP Freq_NNP MutualInfo_NNP Length_NNP +_VBD LexicalWeight_NNP +_NNP Freq_NNP +_NNP MutualInfo_NNP 65.51_CD %_NN 68.32_CD %_NN 82.76_CD %_NN 62.74_CD %_NN 69.92_CD %_NN 71.60_CD %_NN 81.11_CD %_NN 2.40_CD %_NN 86.90_CD %_NN 78.92_CD %_NN 68.42_CD %_NN 74.47_CD %_NN 4.66_CD %_NN 72.87_CD %_NN 74.15_CD %_NN 66.95_CD %_NN 71.75_CD %_NN 50.95_CD %_NN 67.65_CD %_NN 72.48_CD %_NN Relative_JJ Features_NNS Length_NNP LexicalWeight_NNP Freq_NNP Dice_NNP MutualInfo_NNP Length_NNP +_VBD LexicalWeight_NNP +_NNP Freq_NNP +_NNP MutualInfo_NNP 65.64_CD %_NN 72.60_CD %_NN 64.97_CD %_NN 71.60_CD %_NN 71.90_CD %_NN 21.50_CD %_NN 65.52_CD %_NN 72.20_CD %_NN 63.28_CD %_NN 85.30_CD %_NN 62.74_CD %_NN 86.90_CD %_NN 68.95_CD %_NN 68.13_CD %_NN 33.10_CD %_NN 68.70_CD %_NN 72.66_CD %_NN 72.87_CD %_NN 67.30_CD %_NN 66.50_CD %_NN 56.55_CD %_NN 67.10_CD %_NN 67.90_CD %_NN 67.65_CD %_NN Independent_JJ Features_NNS +_VBP Relative_JJ Features_NNS Length_NNP LexicalWeight_NNP Dice_NNP +_NNP Length_NNP LexicalWeight_NNP +_NNP Length_NNP LexicalWeight_NNP +_NNP Length_NNP +_VBD Dice_NNP LexicalWeight_NNP +_NNP Length_NNP +_VBD Freq_NNP +_NNP MutualInfo_NNP LexicalWeight_NNP +_NNP Length_NNP +_VBD Dice_NNP +_NNP Freq_NNP +_NNP MutualInfo_NNP 65.54_CD %_NN 73.40_CD %_NN 68.71_CD %_NN 79.70_CD %_NN 65.10_CD %_NN 58.20_CD %_NN 63.18_CD %_NN 80.15_CD %_NN 70.01_CD %_NN 85.80_CD %_NN 71.83_CD %_NN 86.20_CD %_NN 73.32_CD %_NN 87.33_CD %_NN 69.25_CD %_NN 73.80_CD %_NN 61.46_CD %_NN 70.66_CD %_NN 77.10_CD %_NN 78.36_CD %_NN 79.71_CD %_NN 67.40_CD %_NN 71.70_CD %_NN 63.50_CD %_NN 66.73_CD %_NN 74.52_CD %_NN 76.20_CD %_NN 77.78_CD %_NN Table_NNP 8_CD :_: Classifier_NNP 's_POS performance_NN on_IN identification_NN the_DT successes_NNS of_IN bigram_NN translation_NN ._.
+Dekai_NNP Wu_NNP ._.
+1997_CD ._.
+Stochastic_NNP inversion_NN transduction_NN grammars_NNS and_CC bilingual_JJ parsing_NN of_IN parallel_JJ corpora_NN ._.
+Computational_JJ linguistics_NNS .23.3_CD :_: pp._VB 377_CD --_: 403_CD ._.
+Yves_NNP Lepage_NNP ._.
+1998_CD ._.
+Solving_VBG analogies_NNS on_IN words_NNS :_: an_DT algorithm_NN ._.
+Proceedings_NNP of_IN the_DT 36th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS and_CC 17th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics-Volume_NNP 1_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Philip_NNP Resnik_NNP ,_, Douglas_NNP Oard_NNP and_CC Gina_NNP Levow_NNP ._.
+2001_CD ._.
+Im_SYM -_: proved_VBD cross-language_JJ retrieval_NN using_VBG backoff_NN transla_NN -_: tion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Proceedings_NNP of_IN the_DT First_NNP International_NNP Conference_NNP on_IN Human_NNP Language_NNP Tech_NNP -_: nology_NN Research_NN -LRB-_-LRB- HLT_NNP -RRB-_-RRB- ._.
+Nizar_NNP Habash_NNP and_CC Bonnie_NNP Dorr_NNP ._.
+2002_CD ._.
+Handling_VBG transla_NN -_: tion_NN divergences_NNS :_: Combining_VBG statistical_JJ and_CC symbolic_JJ techniques_NNS in_IN generation-heavy_JJ machine_NN translation_NN ._.
+Springer_NNP Berlin_NNP Heidelberg_NNP ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT system_NN -_: atic_JJ comparison_NN of_IN various_JJ statistical_JJ alignment_NN mod_NN -_: els_NNS ._.
+Computational_JJ linguistics29_NNS .1_CD ,_, pp._SYM 19_CD --_: 51_CD ._.
+Arul_NNP Menezes_NNP and_CC Stephen_NNP D._NNP Richardson_NNP ._.
+2003_CD ._.
+A_DT best-first_JJ alignment_NN algorithm_NN for_IN automatic_JJ extrac_NN -_: tion_NN of_IN transfer_NN mappings_NNS from_IN bilingua_NN corpora_NN ._.
+Re_NNP -_: cent_NN advances_NNS in_IN example-based_JJ machine_NN translation_NN ._.
+Springer_NNP Netherlands_NNP ._.
+pp._NNP 421_CD --_: 442_CD ._.
+Bonnie_NNP Dorr_NNP ,_, Necip_NNP Fazil_NNP Ayan_NNP and_CC Nizar_NNP Habash_NNP ._.
+2004_CD ._.
+Divergence_NN Unraveling_NN for_IN Word_NNP Alignment_NNP of_IN Parallel_JJ Corpora_NNP ._.
+Natural_JJ Language_NN Engineering_NNP ,_, 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, pp._FW 1_CD --_: 17_CD ._.
+Philipp_NNP Koehn_NNP ,_, Franz_NNP Josef_NNP Och_NNP and_CC Daniel_NNP Marcu_NNP 2003_CD ._.
+Statistical_NNP phrase-based_JJ translation_NN ._.
+Proceedings_NNP of_IN the_DT 2003_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP on_IN Hu_NNP -_: man_NN Language_NN Technology-Volume_NNP 1_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP Michel_NNP Simard_NNP ,_, Nicola_NNP Cancedda_NNP ,_, Bruno_NNP Cavestro_NNP ,_, Marc_NNP Dymetman_NNP ,_, Eric_NNP Gaussier_NNP ,_, Cyril_NNP Goutte_NNP ,_, Kenji_NNP Ya_NNP -_: mada_NN ,_, Philippe_NNP Langlais_NNP and_CC Arne_NNP Mauser_NNP ._.
+2005_CD ._.
+Translating_VBG with_IN non-contiguous_JJ phrases_NNS In_IN Proceed_NNP -_: ings_NNS of_IN the_DT Human_NNP Language_NNP Technology_NNP Conference_NNP and_CC Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- HLT-EMNLP_NNP -RRB-_-RRB- ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 755_CD --_: 762_CD ._.
+Chris_NNP Callison-Burch_NNP ,_, Colin_NNP Bannard_NNP and_CC Josh_NNP Schroeder_NNP ._.
+2005_CD ._.
+Scaling_VBG phrase-based_JJ statistical_JJ machine_NN trans_NNS -_: lation_NN to_TO larger_JJR corpora_NN and_CC longer_JJR phrases_NNS ._.
+Proceed_SYM -_: ings_NNS of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics_NNPS ._.
+Yuan_NNP Ding_NNP and_CC Martha_NNP Palmer_NNP ._.
+2005_CD ._.
+Machine_NN trans_NNS -_: lation_NN using_VBG probabilistic_JJ synchronous_JJ dependency_NN in_IN -_: sertion_NN grammars_NNS ._.
+Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Peter_NNP D._NNP Turney_NNP and_CC Michael_NNP L._NNP Littman_NNP ._.
+2005_CD ._.
+Corpus_NNP -_: based_VBN learning_NN of_IN analogies_NNS and_CC semantic_JJ relations_NNS ._.
+Machine_NN Learning60.1-3_NN -LRB-_-LRB- 2005_CD -RRB-_-RRB- :_: pp._VB 251_CD --_: 278_CD ._.
+Philipp_NNP Koehn_NNP ._.
+2005_CD ._.
+Europarl_NNP :_: A_DT parallel_JJ corpus_NN for_IN statistical_JJ machine_NN translation_NN ._.
+MT_NNP summit_NN ._.
+Vol_NNP ._.
+5_CD J._NNP M._NNP Crego_NNP ,_, M._NNP R._NNP Costa-Jussa_NNP ,_, J._NNP B._NNP Marin_NNP ̃o_NN and_CC J._NNP A._NNP Fonollosa_NNP ._.
+2005_CD ._.
+N-gram-based_JJ versus_IN phrasebased_JJ statistical_JJ machine_NN translation_NN In_IN Proceedings_NNP of_IN the_DT International_NNP Workshop_NNP on_IN Spoken_NNP Language_NNP Technol_NNP -_: ogy_NN -LRB-_-LRB- IWSLT_NNP '_POS 05_CD -RRB-_-RRB- ._.
+Josep_NNP M._NNP Crego_NNP ,_, Jose_NNP ́_CD B._NNP Marin_NNP ̃o_NN and_CC Adria_NNP `_`` de_FW Gispert_NNP ._.
+2005_CD ._.
+An_DT Ngram-based_JJ statistical_JJ machine_NN transla_NN -_: tion_NN decoder_NN ._.
+Proc_NNP ._.
+of_IN the_DT 9th_JJ European_JJ Confer_NNP -_: ence_NN on_IN Speech_NNP Communication_NNP and_CC Technology_NNP -LRB-_-LRB- In_IN -_: terspeech_NN '_'' 05_CD -RRB-_-RRB- ._.
+David_NNP Chiang_NNP ._.
+2005_CD ._.
+A_DT hierarchical_JJ phrase-based_JJ model_NN for_IN statistical_JJ machine_NN translation_NN Proceedings_NNP of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics.Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS Peter_NNP D._NNP Turney_NNP 2006_CD ._.
+Similarity_NN of_IN semantic_JJ relations_NNS Computational_NNP Linguistics_NNP .32_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: pp._VB 379_CD --_: 416_CD ._.
+Adam_NNP Lopez_NNP and_CC Philip_NNP Resnik_NNP ._.
+2006_CD ._.
+Word-based_JJ alignment_NN ,_, phrase-based_JJ translation_NN :_: What_WP 's_VBZ the_DT link_NN ._.
+Proc_NNP ._.
+of_IN AMTA_NNP ._.
+Etienne_NNP Denoual_NNP ._.
+2007_CD ._.
+Analogical_JJ translation_NN of_IN unknown_JJ words_NNS in_IN a_DT statistical_JJ machine_NN translation_NN framework_NN ._.
+Proceedings_NNP of_IN Machine_NNP Translation_NN Sum_NNP -_: mit_NN XI_NNP ._.
+Copenhagen_NNP Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Richard_NNP Zens_NNP ,_, et_FW al._FW 2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 45th_JJ Annual_JJ Meeting_VBG of_IN the_DT ACL_NNP on_IN Interactive_NNP Poster_NNP and_CC Demonstration_NNP Sessions_NNP ._.
+Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, pp._NNP 177_CD --_: 180_CD Sabri_NNP Bayoudh_NNP ,_, Harold_NNP Mouche_NNP `_`` re_VB ,_, Laurent_NNP Miclet_NNP and_CC E._NNP Anquetil_NNP ._.
+2007_CD ._.
+Learning_NNP a_DT classifier_NN with_IN very_RB few_JJ examples_NNS :_: analogy_NN based_VBN and_CC knowledge_NN based_VBN gener_NN -_: ation_NN of_IN new_JJ examples_NNS for_IN character_NN recognition_NN ._.
+Ma_NNP -_: chine_NN Learning_NNP :_: ECML_NNP 2007_CD ,_, pp._SYM 527_CD --_: 534_CD ._.
+Adam_NNP Lopez_NNP ._.
+2007_CD ._.
+Hierarchical_JJ Phrase-Based_NNP Transla_NNP -_: tion_NN with_IN Suffix_NNP Arrays_NNP ._.
+EMNLP-CoNLL_NNP ,_, pp._NNP 976_CD --_: 985_CD Peter_NNP D_NNP Turney_NNP ._.
+2008_CD ._.
+A_DT uniform_JJ approach_NN to_TO analo_NN -_: gies_NNS ,_, synonyms_NNS ,_, antonyms_NNS ,_, and_CC associations_NNS ._.
+Proceed_SYM -_: ings_NNS of_IN the_DT 22nd_JJ International_NNP Conference_NNP on_IN Compu_NNP -_: tational_JJ Linguistics_NNP -LRB-_-LRB- Coling_NNP 2008_CD -RRB-_-RRB- ,_, pp._FW 527_CD --_: 534_CD ._.
+Maike_NNP Erdmann_NNP ,_, Kotaro_NNP Nakayama_NNP ,_, Takahiro_NNP Hara_NNP and_CC Shojiro_NNP Nishio_NNP ._.
+2009_CD ._.
+Using_VBG an_DT SVM_NNP Classifier_NNP to_TO Improve_VB the_DT Extraction_NNP of_IN Bilingual_NNP Terminology_NNP from_IN Wikipedia_NNP ._.
+User-Contributed_NNP Knowledge_NNP and_CC Artifi_NNP -_: cial_JJ Intelligence_NNP :_: An_DT Evolving_VBG Synergy_NNP ,_, pp._NNP 15_CD ._.
+Yves_NNP Lepage_NNP and_CC Etienne_NNP Denoual_NNP ._.
+2005_CD ._.
+The_DT `_`` purest_JJS '_'' EBMT_NNP system_NN ever_RB built_VBN :_: no_DT variables_NNS ,_, no_DT templates_NNS ,_, no_DT training_NN ,_, examples_NNS ,_, just_RB examples_NNS ,_, only_RB examples_NNS ._.
+Proceedings_NNP of_IN the_DT MT_NNP Summit_NNP X_NNP ,_, Second_NNP Workshop_NNP on_IN Example-Based_NNP Machine_NNP Translation_NN ,_, pp._IN 81_CD --_: 90_CD ._.
+Yves_NNP Lepage_NNP ,_, Julien_NNP Gosme_NNP and_CC Adrien_NNP Lardilleux_NNP ._.
+2010_CD ._.
+The_DT structure_NN of_IN unseen_JJ trigrams_NNS and_CC its_PRP$ appli_NNS -_: cation_NN to_TO language_NN models_NNS :_: A_DT first_JJ investigation_NN ._.
+Uni_SYM -_: versal_JJ Communication_NNP Symposium_NNP -LRB-_-LRB- IUCS_NNP -RRB-_-RRB- ,_, 2010_CD 4th_JJ Hideki_NNP Isozaki_NNP ,_, Tsutomu_NNP Hirao_NNP ,_, Kevin_NNP Duh_NNP ,_, Katsuhito_NNP Sudoh_NNP ,_, and_CC Hajime_NNP Tsukada_NNP ._.
+2010_CD ._.
+Automatic_NNP evalu_SYM -_: ation_NN of_IN translation_NN quality_NN for_IN distant_JJ language_NN pairs_NNS ._.
+Proceedings_NNP of_IN the_DT 2010_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NNP Processing_NNP Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+pp._NNP 944_CD --_: 952_CD ._.
+Ahmet_NNP Aker_NNP ,_, Yang_NNP Feng_NNP and_CC Robert_NNP J._NNP Gaizauskas_NNP ._.
+2012_CD ._.
+Automatic_NNP Bilingual_NNP Phrase_NNP Extraction_NNP from_IN Compa_NNP -_: rable_JJ Corpora_NNP ._.
+COLING_NNP ._.
+pp._NNP 23_CD --_: 32_CD ._.
+Chang_NNP ,_, C._NNP C._NNP ,_, and_CC C._NNP J._NNP Lin_NNP ._.
+2012_CD ._.
+LIBSVM_NNP :_: a_DT library_NN for_IN support_NN vector_NN machines_NNS ._.
+ACM_JJ transactions_NNS on_IN in_IN -_: telligent_NN systems_NNS and_CC technology_NN ._.
+2_CD :_: 27_CD :_: 1-27_CD :_: 27_CD ._.
+International_NNP ._.
+IEEE_NNP ._.
+pp._NNP 944_CD --_: 952_CD ._.

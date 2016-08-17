@@ -1,0 +1,251 @@
+Distant-supervised_JJ Language_NN Model_NNP for_IN Detecting_NNP Emotional_NNP Upsurge_NNP on_IN Twitter_NNP Abstract_NNP Event-specific_JJ twitter_NN streams_NNS often_RB reveal_VBP sudden_JJ spikes_NNS triggered_VBN by_IN users_NNS '_POS upsurge_NN of_IN emotions_NNS to_TO crucial_JJ moments_NNS in_IN the_DT real_JJ world_NN ._.
+Although_IN upsurge_NN of_IN emotion_NN is_VBZ usually_RB identi_SYM -_: fied_VBN by_IN a_DT sudden_JJ rise_NN in_IN the_DT number_NN of_IN tweets_NNS ,_, the_DT detection_NN for_IN diverse_JJ event_NN streams_NNS is_VBZ not_RB a_DT trivial_JJ task_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT new_JJ method_NN to_TO extract_VB spiking_VBG tweets_NNS with_IN up_RB -_: surge_NN of_IN emotions_NNS based_VBN on_IN characteristic_JJ ex_FW -_: pressions_NNS used_VBN in_IN tweets_NNS ._.
+The_DT core_NN part_NN of_IN our_PRP$ method_NN is_VBZ to_TO use_VB a_DT distant-supervised_JJ language_NN model_NN -LRB-_-LRB- Spike_NNP LM_NNP -RRB-_-RRB- built_VBN from_IN tweets_NNS in_IN spikes_NNS to_TO capture_VB such_JJ expressions_NNS ._.
+We_PRP investigate_VBP the_DT performance_NN of_IN detecting_VBG emotional_JJ spik_NN -_: ing_NN tweets_NNS using_VBG language_NN models_NNS including_VBG Spike_NNP LM_NNP ._.
+Our_PRP$ experimental_JJ results_NNS show_VBP that_IN the_DT natural_JJ language_NN expressions_NNS used_VBN in_IN emo_NN -_: tional_JJ upsurge_NN fit_NN specifically_RB well_RB to_TO Spike_NNP LM_NNP ._.
+1_CD Introduction_NNP Twitter_NNP is_VBZ one_CD of_IN the_DT most_RBS popular_JJ micro-blogging_NN platforms_NNS in_IN recent_JJ days_NNS ._.
+There_EX are_VBP over_IN 500_CD mil_SYM -_: lion_NN tweets_NNS posted_VBD per_IN day1_CD including_VBG real-world_JJ events_NNS described_VBN on_IN Twitter_NNP which_WDT range_VBP from_IN short_JJ and_CC daily_JJ life_NN events_NNS -LRB-_-LRB- e.g._FW falling_VBG to_TO the_DT ground_NN -RRB-_-RRB- to_TO long_RB and_CC widely-broadcasted_JJ events_NNS -LRB-_-LRB- e.g._FW a_DT match_NN in_IN World_NNP Cup_NNP -RRB-_-RRB- ._.
+Such_JJ tweets_NNS are_VBP good_JJ sources_NNS to_TO detect_VB users_NNS '_POS reactions_NNS toward_IN real-world_JJ events_NNS ._.
+∗_CD This_DT work_NN was_VBD done_VBN while_IN the_DT first_JJ author_NN was_VBD at_IN the_DT Uni_NNP -_: versity_NN of_IN Tokyo_NNP and_CC National_NNP Institute_NNP of_IN Informatics_NNPS ._.
+The_DT first_JJ author_NN is_VBZ currently_RB at_IN Amazon_NNP Japan_NNP K.K._NNP 1_CD https://blog.twitter.com/2013/new-tweets-per-second_JJ -_: record-and-how_NN -LCB-_-LRB- yokono_NN ,_, pascual_NN ,_, aizawa_NN -RCB-_-RRB- @nii_FW ._.
+ac.jp_NNP Figure_NNP 1_CD :_: The_DT number_NN of_IN tweets_NNS per_IN minute_NN -LRB-_-LRB- TPM_NNP -RRB-_-RRB- during_IN Japan_NNP vs._CC Cameroon_NNP for_IN hashtags_NNS related_VBN to_TO World_NNP Cup_NNP 2010_CD ._.
+People_NNS behave_VBP unusually_RB when_WRB they_PRP encounter_VB ex_FW -_: citing_VBG moments_NNS in_IN an_DT event_NN ,_, for_IN example_NN ,_, yell_VB out_RP or_CC dance_NN with_IN each_DT other_JJ after_IN their_PRP$ favorite_JJ soccer_NN team_NN scores_NNS a_DT goal_NN ._.
+On_IN Twitter_NNP ,_, this_DT action_NN is_VBZ often_RB re_SYM -_: flected_VBN by_IN a_DT large_JJ number_NN of_IN posts_NNS within_IN a_DT short_JJ time_NN period_NN ._.
+When_WRB Japan_NNP scored_VBD a_DT goal_NN against_IN Cameroon_NNP in_IN World_NNP Cup_NNP 2010_CD ,_, there_EX were_VBD a_DT maximum_NN of_IN 2_CD ,_, 940_CD tweets_NNS per_IN second_JJ -LRB-_-LRB- TPS_NNP -RRB-_-RRB- ,_, which_WDT marked_VBD the_DT record_NN TPS_NNP for_IN goals_NNS at_IN that_DT time_NN .2_CD It_PRP is_VBZ significantly_RB larger_JJR than_IN the_DT average_NN of_IN 750_CD TPS_NNP .2_CD In_IN this_DT paper_NN ,_, we_PRP call_VBP such_JJ bursty_JJ traffic_NN as_IN ``_`` numerical_JJ spikes_NNS ''_'' ._.
+Figure_NN 1_CD shows_VBZ the_DT number_NN of_IN tweets_NNS per_IN minute_NN during_IN the_DT match_NN of_IN Cameroon_NNP vs._IN Japan_NNP ,_, and_CC Table_NNP 1_CD shows_VBZ the_DT examples_NNS of_IN tweets_NNS sampled_VBN from_IN both_DT numeri_FW -_: cal_JJ spikes_NNS and_CC other_JJ parts_NNS ._.
+Detecting_VBG emotional_JJ upsurge_NN is_VBZ important_JJ for_IN both_DT extracting_VBG emerging_VBG important_JJ real-world_JJ events_NNS and_CC important_JJ moments_NNS of_IN them_PRP ._.
+We_PRP call_VBP an_DT upsurge_NN that_WDT are_VBP caused_VBN by_IN Twitter_NNP users_NNS '_POS emotional_JJ spike_NN as_IN 2_CD https://blog.twitter.com/2010/big-goals-big-game-big_JJ -_: records_NNS Moment_NNP Example_NNP of_IN a_DT Tweet_NNP English_NNP Translation_NN Emotional_NNP Upsurge_NNP Japan_NNP won_VBD the_DT match_NN Japan_NNP scored_VBD a_DT goal_NN やったああああああああ_NN Huraaaaaaaaaaaay_NNP ああああああああああ_NNP ああ_CD #jpn_JJ #worldcup_NN #_# 2010wc_CD コ_CD ーーーーーーーーーーー_NN ーーーーーーーーー_CD ル_NN !_.
+#_# 2010wc_CD Goooooooooooooal_NNP !!!!!!!!_NNP Non_NNP -_: emotional_JJ Upsurge_NNP 50_CD mins_NNS after_IN the_DT match_NN 興奮してると見せかけ_IN て感動しすき_CD てす_CD っと泣_FW いてました_FW 。_FW いや興奮は_FW してるけと_FW 信し_FW てたか_FW ら割と冷静て_FW いられる_FW #_# 2010wc_CD I_PRP look_VBP excited_JJ but_CC actually_RB I_PRP have_VBP been_VBN crying_VBG from_IN being_VBG moved_VBN ._.
+Well_RB ,_, I_PRP have_VBP been_VBN ex_FW -_: cited_VBD but_CC I_PRP believed_VBD that_IN Japan_NNP will_MD win_VB so_RB I_PRP am_VBP quite_RB calm_JJ ._.
+``_`` emotional_JJ upsurge_NN ''_'' ._.
+Emotional_JJ upsurge_NN do_VBP overlap_VB with_IN numerical_JJ spikes_NNS ,_, but_CC it_PRP does_VBZ include_VB moments_NNS that_WDT are_VBP not_RB numerical_JJ spikes_NNS ._.
+For_IN example_NN ,_, Lana_NNP -_: gan_NN and_CC Smeaton_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- reported_VBD that_IN emotional_JJ up_IN -_: surge_NN overlaps_VBZ with_IN numerical_JJ spikes_NNS and_CC those_DT are_VBP useful_JJ for_IN tagging_VBG key_JJ moments_NNS in_IN sports_NNS matches_VBZ ._.
+However_RB ,_, detecting_VBG numerical_JJ spikes_NNS on_IN Twitter_NNP be_VB -_: comes_VBZ difficult_JJ when_WRB a_DT target_NN event_NN is_VBZ not_RB pre-defined_JJ or_CC rarely_RB tweeted_VBN by_IN Twitter_NNP users_NNS because_IN the_DT num_NN -_: ber_FW event-related_JJ tweets_NNS per_IN unit_NN time_NN is_VBZ not_RB directly_RB computable_JJ ._.
+In_IN such_JJ cases_NNS ,_, detecting_VBG upsurge_NN of_IN emotions_NNS becomes_VBZ crucial_JJ ._.
+One_CD characteristics_NNS of_IN tweets_NNS is_VBZ that_IN expressions_NNS used_VBN in_IN tweets_NNS entail_VBP many_JJ linguistic_JJ phenomena_NNS ._.
+For_IN example_NN ,_, Brody_NNP and_CC Diakopoulos_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ana_SYM -_: lyzed_VBN occurrences_NNS of_IN character_NN repetitions_NNS in_IN words_NNS from_IN a_DT sentiment_NN dictionary_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP as_IN -_: sume_NN that_IN such_JJ variations_NNS of_IN language_NN expressions_NNS are_VBP caused_VBN by_IN real-world_JJ events_NNS ._.
+Table_NNP 1_CD shows_NNS that_IN a_DT character_NN repetition_NN -LRB-_-LRB- `_`` Goooal_NNP '_'' ,_, `_`` Huraaay_NNP '_'' -RRB-_-RRB- oc_SYM -_: curs_NNS in_IN tweets_NNS during_IN emotional_JJ upsurge_NN rather_RB than_IN their_PRP$ canonical_JJ form_NN -LRB-_-LRB- `_`` Goal_NN '_'' ,_, `_`` Hurray_NNP '_'' -RRB-_-RRB- ._.
+In_IN contrast_NN ,_, a_DT character_NN repetition_NN does_VBZ not_RB frequently_RB occur_VBP in_IN tweets_NNS during_IN non-emotional_JJ upsurge_NN ._.
+However_RB ,_, to_TO our_PRP$ knowledge_NN ,_, there_EX has_VBZ not_RB been_VBN an_DT attempt_NN to_TO cap_NN -_: ture_NN emotional_JJ upsurge_NN using_VBG the_DT linguistic_JJ charac_NN -_: teristics_NNS of_IN tweets_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP specifically_RB investigate_VBP a_DT method_NN to_TO detect_VB emotional_JJ upsurge_NN in_IN real-world_JJ events_NNS us_PRP -_: ing_VBG characteristic_JJ expressions_NNS in_IN a_DT Japanese_JJ tweet_NN ._.
+Our_PRP$ contribution_NN is_VBZ that_IN a_DT spiking_VBG tweet_NN language_NN model_NN ,_, which_WDT we_PRP constructed_VBD automatically_RB from_IN ex_FW -_: isting_VBG tweet_NN dataset_NN ,_, captures_VBZ characteristic_JJ expres_NNS -_: sions_NNS well_RB and_CC it_PRP is_VBZ an_DT effective_JJ approach_NN for_IN detect_VB -_: ing_VBG emotional_JJ upsurge_NN ._.
+2_CD Related_JJ Work_NN Our_PRP$ idea_NN is_VBZ related_VBN to_TO many_JJ previous_JJ works_NNS on_IN Twit_NN -_: ter_NN including_VBG the_DT investigation_NN toward_IN non-standard_JJ languages_NNS used_VBN on_IN Twitter_NNP ,_, and_CC various_JJ applications_NNS tackled_VBD using_VBG language_NN models_NNS ._.
+The_DT nature_NN of_IN using_VBG non-standard_JJ languages_NNS in_IN -_: cluding_VBG word_NN lengthening_VBG in_IN tweets_NNS largely_RB differ_VBP from_IN other_JJ corpus_NN -LRB-_-LRB- Eisenstein_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+As_IN further_JJ mentioned_VBN by_IN Eisenstein_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, these_DT languages_NNS are_VBP affected_VBN by_IN many_JJ factors_NNS including_VBG the_DT 140_CD charac_NN -_: ters_NNS length_NN limit_NN of_IN tweets_NNS ,_, social_JJ factors_NNS -LRB-_-LRB- e.g._FW age_NN -LRB-_-LRB- Rosenthal_NNP and_CC McKeown_NNP ,_, 2011_CD -RRB-_-RRB- -RRB-_-RRB- ,_, location_NN -LRB-_-LRB- Wing_NN and_CC Baldridge_NNP ,_, 2011_CD -RRB-_-RRB- ,_, input_NN devices_NNS -LRB-_-LRB- Gouws_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- of_IN an_DT author_NN of_IN a_DT tweet_NN ._.
+Word_NN lengthening_NN is_VBZ known_VBN to_TO be_VB useful_JJ for_IN sentiment_NN analysis_NN -LRB-_-LRB- Brody_NNP and_CC Diakopoulos_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+One_CD way_NN to_TO model_VB these_DT expressions_NNS is_VBZ to_TO use_VB language_NN models_NNS and_CC many_JJ studies_NNS successfully_RB captured_VBN various_JJ characteristics_NNS of_IN tweets_NNS using_VBG language_NN model_NN ._.
+There_EX are_VBP lots_NNS of_IN applications_NNS for_IN language_NN mod_NN -_: els_NNS built_VBN from_IN tweets_NNS or_CC web_NN texts_NNS ._.
+According_VBG to_TO Liu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, distant-supervised_JJ language_NN mod_NN -_: Table_NNP 1_CD :_: Example_NN of_IN tweets_NNS from_IN spikes_NNS and_CC non-spikes_NNS ._.
+els_NNS are_VBP useful_JJ for_IN sentiment_NN analysis_NN of_IN tweets_NNS ._.
+Neu_NNP -_: big_JJ and_CC Duh_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- showed_VBD that_IN for_IN 26_CD languages_NNS used_VBN on_IN Twitter_NNP ,_, entropy_NN of_IN content_NN in_IN a_DT retweet_NN ,_, the_DT Twitter_NNP version_NN of_IN e-mail_NN forward_RB ,_, is_VBZ signifi_SYM -_: cantly_RB higher_JJR than_IN non-retweeted_JJ tweets_NNS ._.
+Danescu_NNP -_: Niculescu-Mizil_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- reported_VBD that_IN users_NNS '_POS career_NN in_IN an_DT online_JJ community_NN correlates_VBZ with_IN the_DT cross_NN entropy_NN between_IN each_DT user_NN 's_POS posts_NNS and_CC the_DT lan_NN -_: guage_NN used_VBN in_IN the_DT whole_JJ community_NN ._.
+Lin_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN multiple_JJ language_NN models_NNS built_VBN from_IN each_DT hashtag_NN to_TO track_VB broad_JJ topics_NNS ._.
+These_DT researches_VBZ show_NN that_IN language_NN model_NN is_VBZ a_DT powerful_JJ method_NN to_TO use_VB on_IN various_JJ applications_NNS ._.
+To_TO our_PRP$ knowledge_NN ,_, there_EX is_VBZ no_DT prior_JJ research_NN focused_VBD on_IN languages_NNS used_VBN in_IN emotional_JJ spiking_VBG tweets_NNS ._.
+Many_JJ tasks_NNS on_IN Twitter_NNP including_VBG burst_NN detec_NN -_: tion_NN -LRB-_-LRB- Kleinberg_NNP ,_, 2003_CD ;_: Diao_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, first_JJ story_NN detection_NN -LRB-_-LRB- Petrovic_NNP ́_CD et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ,_, and_CC topic_NN tracking_NN -LRB-_-LRB- Lau_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- failed_VBD to_TO effectively_RB incorporate_VB the_DT textual_JJ characteristics_NNS of_IN tweets_NNS and_CC regard_VB it_PRP is_VBZ out_IN of_IN their_PRP$ scope_NN ._.
+Being_VBG able_JJ to_TO characterize_VB tweets_NNS from_IN emotional_JJ upsurge_NN would_MD open_VB a_DT window_NN to_TO the_DT identification_NN of_IN real-world_JJ events_NNS that_WDT emotionally_RB influence_VBP Twitter_NNP users_NNS ._.
+If_IN the_DT perplexity_NN of_IN target_NN tweets_NNS is_VBZ small_JJ ,_, we_PRP could_MD then_RB assert_VB that_IN they_PRP are_VBP likely_JJ to_TO have_VB come_VBN from_IN the_DT emotional_JJ tweet_NN model_NN ._.
+3.2_CD Building_NNP Language_NNP Models_NNP Since_IN we_PRP can_MD obtain_VB a_DT large_JJ number_NN of_IN tweets_NNS ,_, we_PRP build_VBP tweet_JJ language_NN models_NNS such_JJ that_IN the_DT language_NN model_NN is_VBZ not_RB biased_VBN by_IN a_DT particular_JJ topic_NN ._.
+Given_VBN a_DT tweet_NN t_NN with_IN l_NN characters_NNS ,_, let_VB ti_FW be_VB a_DT character_NN in_IN a_DT tweet_NN ._.
+The_DT probability_NN of_IN t_NN in_IN an_DT n-gram_JJ language_NN model_NN is_VBZ calculated_VBN by_IN the_DT following_VBG formula_NN :_: ∏_CD l_NN i_FW =_SYM 1_CD We_PRP use_VBP SRILM_NNP -LRB-_-LRB- Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- with_IN Katz_NNP back-off_JJ smoothing_NN -LRB-_-LRB- Katz_NNP ,_, 1987_CD -RRB-_-RRB- to_TO build_VB language_NN models_NNS ._.
+We_PRP build_VBP a_DT character_NN n-gram_JJ language_NN model_NN fol_SYM -_: lowing_VBG Neubig_NNP and_CC Duh_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+To_TO build_VB a_DT word_NN n-gram_JJ language_NN model_NN ,_, word_NN segmentation_NN is_VBZ nec_SYM -_: essary_NN to_TO build_VB a_DT word_NN n-gram_JJ language_NN model_NN since_IN Japanese_NNP is_VBZ an_DT unsegmented_JJ language_NN ._.
+However_RB ,_, various_JJ studies_NNS reported_VBD that_IN tokenization_NN in_IN unseg_JJ -_: mented_VBN languages_NNS on_IN Twitter_NNP is_VBZ not_RB reliable_JJ enough_JJ due_JJ to_TO the_DT spelling_NN variations_NNS and_CC unknown_JJ words_NNS -LRB-_-LRB- Wang_NNP and_CC Kan_NNP ,_, 2013_CD ;_: Kaji_NNP and_CC Kitsuregawa_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+We_PRP set_VBP the_DT value_NN of_IN n_NN for_IN a_DT character_NN n-gram_JJ lan_NN -_: guage_NN model_NN to_TO 7_CD ._.
+This_DT is_VBZ because_IN when_WRB we_PRP con_VBP -_: sider_NN n-grams_NNS with_IN n_JJ >_NN 5_CD ,_, the_DT number_NN of_IN n-grams_JJ decreases_VBZ which_WDT shows_VBZ that_IN the_DT language_NN model_NN suf_SYM -_: fers_NNS from_IN the_DT sparsity_NN problem_NN ._.
+However_RB ,_, as_IN reported_VBN by_IN Brody_NNP and_CC Diakopoulos_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, word_NN lengthen_VB -_: ing_NN -LRB-_-LRB- e.g._FW coool_FW -RRB-_-RRB- is_VBZ a_DT common_JJ phenomenon_NN on_IN Twit_NN -_: ter_NN ._.
+To_TO accurately_RB capture_VB those_DT phenomenon_NN ,_, we_PRP tried_VBD to_TO use_VB as_RB long_JJ n-gram_NN as_IN possible_JJ and_CC make_VB it_PRP to_TO 7-gram_JJ ._.
+3.3_CD Perplexity_NN To_TO quantify_VB the_DT difference_NN between_IN tweets_NNS during_IN emotional_JJ upsurge_NN and_CC non-emotional_JJ upsurge_NN ,_, we_PRP used_VBD perplexity_NN ,_, a_DT measurement_NN of_IN information_NN -_: theoretic_JJ distance_NN between_IN a_DT language_NN model_NN and_CC a_DT document_NN ._.
+In_IN this_DT method_NN ,_, it_PRP is_VBZ used_VBN as_IN the_DT similar_JJ -_: ity_NN between_IN a_DT language_NN model_NN and_CC a_DT set_NN of_IN tweets_NNS ._.
+Perplexity_NN P_NN P_NN of_IN a_DT tweet_NN set_VBN T_NNP which_WDT consists_VBZ of_IN N_NNP number_NN of_IN 7-grams_NNS Ti_NNP is_VBZ defined_VBN as_IN the_DT following_NN :_: PP_NNP -LRB-_-LRB- T_NNP -RRB-_-RRB- =_SYM 3_CD 3.1_CD Language_NN Model-based_JJ Detection_NNP of_IN Emotional_NNP Upsurge_NNP Outline_NNP of_IN the_DT Proposed_NNP Method_NNP The_NNP motivation_NN of_IN using_VBG characteristic_JJ expressions_NNS used_VBN in_IN tweets_NNS to_TO detect_VB emotional_JJ upsurge_NN is_VBZ there_EX are_VBP various_JJ ways_NNS to_TO express_VB users_NNS '_POS feelings_NNS ._.
+In_IN the_DT past_JJ investigations_NNS -LRB-_-LRB- for_IN example_NN -LRB-_-LRB- Schro_NNP ̈der_NN ,_, 2001_CD -RRB-_-RRB- -RRB-_-RRB- ,_, the_DT emotion_NN of_IN a_DT human_JJ speaker_NN reflected_VBN by_IN the_DT tone_NN or_CC the_DT pitch_NN of_IN speaker_NN 's_POS voice_NN ._.
+On_IN Twitter_NNP ,_, Brody_NNP and_CC Diakopoulos_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- reported_VBD that_IN word_NN length_NN -_: ening_VBG in_IN written_VBN words_NNS is_VBZ used_VBN to_TO express_VB the_DT dif_NN -_: ference_NN in_IN such_JJ user_NN 's_POS voice_NN ,_, which_WDT is_VBZ affected_VBN from_IN user_NN 's_POS sentiments_NNS ._.
+As_IN shown_VBN earlier_RBR in_IN Table_NNP 1_CD ,_, we_PRP assume_VBP that_IN the_DT language_NN used_VBN in_IN tweets_NNS can_MD express_VB difference_NN in_IN pitch_NN or_CC tone_NN of_IN voice_NN as_IN a_DT written_VBN text_NN in_IN tweets_NNS ._.
+Therefore_RB ,_, we_PRP aim_VBP to_TO capture_VB such_JJ differ_VBP -_: ence_NN in_IN voice-reflected_JJ tweets_NNS using_VBG language_NN mod_NN -_: els_NNS ._.
+In_IN our_PRP$ approach_NN ,_, we_PRP further_RB apply_VB a_DT distant_JJ super_JJ -_: vision_NN framework_NN where_WRB the_DT perplexity_NN is_VBZ calculated_VBN using_VBG a_DT language_NN model_NN obtained_VBN from_IN tweets_NNS in_IN nu_SYM -_: merical_JJ spikes_NNS with_IN some_DT heuristic_JJ filtering_VBG strategy_NN ._.
+-LRB-_-LRB- -RRB-_-RRB- 1_CD 1N_CD P_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- =_SYM P_NNP -LRB-_-LRB- ti_FW |_FW ti_FW −_FW 1_CD ,_, ..._: ,_, ti_FW −_FW n_FW +1_FW -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- ∏_CD P_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- t_SYM ∈_CD T_NNP Hashtag_NNP Details_NNP Date_NNP and_CC Time_NNP Num_NNP ._.
+of_IN Tweets_NNP Num_NNP ._.
+of_IN EUT_NNP #aibou_NNP #hanshin_NNP #ACV_NNP #agqr_NNP #figureskate_NNP #momoclo_NNP Name_NN of_IN a_DT TV_NN drama_NN Name_NN of_IN a_DT base_NN -_: ball_NN team_NN Name_NN of_IN an_DT on_IN -_: line_NN game_NN Name_NN of_IN a_DT radio_NN show_NN Figure_NN skating_NN Name_NN of_IN a_DT mu_NN -_: sic_JJ artist_NN 2012-03-21T10_NNP :31_CD -_: 14:06_CD 2012-04-20T08_NNP :39_CD -_: 12:54_CD 2012-02-13T12_NN :08_CD -_: 15:41_CD 2012-02-15T11_NNP :39_CD -_: 14:08_CD 2012-04-20T10_NNP :00_CD -_: 12:20_CD 2012-02-11T15_NNP :36_CD -_: 17:21_CD 20,681_CD 6,176_CD 1,562_CD 13,434_CD 1,410_CD 1,823_CD 42_CD 44_CD 9_CD 86_CD 37_CD 63_CD Table_NNP 2_CD :_: Statistics_NNS of_IN six_CD hashtags_NNS ,_, its_PRP$ respective_JJ target_NN intervals_NNS and_CC with_IN the_DT number_NN of_IN manually_RB annotated_VBN emotionally_RB upsurging_VBG timestamps_NNS -LRB-_-LRB- EUT_NNP -RRB-_-RRB- ._.
+All_DT time_NN are_VBP UTC_NNP +0_CD ._.
+We_PRP follow_VBP Danescu-Niculescu-Mizil_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC use_VB perplexity_NN ,_, which_WDT is_VBZ equivalent_JJ to_TO the_DT cross_NN -_: entropy_NN of_IN two_CD empirical_JJ distributions_NNS ,_, as_IN similar_JJ -_: ity_NN measure_NN between_IN a_DT set_NN of_IN tweets_NNS and_CC a_DT language_NN model_NN ._.
+A_DT set_NN of_IN tweets_NNS having_VBG low_JJ perplexity_NN means_VBZ tweets_NNS are_VBP close_JJ to_TO the_DT language_NN model_NN ._.
+Moreover_RB ,_, we_PRP assume_VBP that_IN the_DT minimum_NN duration_NN of_IN an_DT event_NN is_VBZ a_DT minute_NN ._.
+Therefore_RB ,_, we_PRP aggregate_JJ stream_NN of_IN tweets_NNS from_IN the_DT same_JJ minute_NN into_IN one_CD set_NN of_IN tweets_NNS and_CC compute_VB the_DT perplexity_NN of_IN it_PRP ._.
+4_CD Tweet_NNP Dataset_NNP Construction_NNP The_NNP dataset_NN we_PRP use_VBP in_IN this_DT paper_NN is_VBZ extracted_VBN from_IN Japanese_JJ tweets_NNS gathered_VBN by_IN Gnip3_NNP during_IN 5_CD con_NN -_: secutive_NN periods_NNS such_JJ as_IN 1_CD -RRB-_-RRB- 2012-02-09_CD to_TO 2012-02_CD -_: 17_CD ,_, 2_CD -RRB-_-RRB- 2012-03-21_CD to_TO 2012-03-22_CD ,_, 3_CD -RRB-_-RRB- 2012-04-20_CD to_TO 2012-04-21_CD ,_, 4_CD -RRB-_-RRB- 2012-05-18_CD to_TO 2012-05-19_CD and_CC 5_CD -RRB-_-RRB- 2012-05-25_CD to_TO 2012-05-26_CD ._.
+The_DT dataset_NN has_VBZ a_DT total_NN of_IN 413_CD ,_, 008_CD ,_, 939_CD tweets_NNS with_IN 527_CD ,_, 661_CD unique_JJ hash_NN -_: tags_NNS ._.
+We_PRP construct_VBP four_CD separate_JJ sub-datasets_NNS each_DT of_IN which_WDT is_VBZ used_VBN for_IN different_JJ purpose_NN :_: evaluating_VBG the_DT performance_NN of_IN detecting_VBG upsurge_NN of_IN emotion_NN ,_, build_VB -_: ing_VBG a_DT language_NN model_NN ._.
+Since_IN our_PRP$ research_NN focuses_VBZ on_IN users_NNS '_POS reactions_NNS to_TO events_NNS ,_, we_PRP filtered_VBD out_RP tweets_NNS from_IN bots4_CD -LRB-_-LRB- Twitter_NN accounts_NNS that_WDT automatically_RB pro-_JJ 3_CD http://gnip.com/_NN 4Bots_NNS typically_RB tweet_VBP from_IN particular_JJ Twitter_NNP clients_NNS ;_: thus_RB ,_, by_IN looking_VBG at_IN sampled_VBN data_NNS ,_, we_PRP chose_VBD to_TO use_VB tweets_NNS from_IN the_DT top_JJ 43_CD Twitter_NN clients_NNS in_IN terms_NNS of_IN frequency_NN ._.
+These_DT are_VBP not_RB bots_NNS and_CC covered_VBN over_IN 90_CD %_NN of_IN the_DT tweets_NNS that_IN we_PRP sampled_VBD for_IN 3_CD days_NNS ._.
+duce_NN tweets_NNS according_VBG to_TO a_DT program_NN -RRB-_-RRB- and_CC tweets_NNS that_WDT include_VBP the_DT characters_NNS `_`` RT_NNP '_'' ,_, which_WDT indicates_VBZ a_DT retweet_NN ._.
+For_IN constructing_VBG the_DT language_NN models_NNS and_CC the_DT evaluation_NN data_NNS ,_, we_PRP regarded_VBD the_DT Twitter_NNP specific_JJ elements_NNS such_JJ as_IN hashtags_NNS ,_, users_NNS -LRB-_-LRB- e.g._FW @Obama_FW -RRB-_-RRB- ,_, hyperlinks_NNS as_IN one_CD character_NN ._.
+Dataset_NNP Used_VBD for_IN Evaluating_VBG Language_NN Models_NNS To_TO build_VB a_DT golden_JJ dataset_NN of_IN emotionally_RB upsurg_NN -_: ing_NN timestamps_NNS ,_, we_PRP first_RB extract_VB hashtags_NNS which_WDT con_VBP -_: sist_NN of_IN both_DT emotional_JJ upsurge_NN and_CC non-emotional_JJ upsurge_NN from_IN various_JJ genres_NNS ._.
+First_RB ,_, we_PRP selected_VBD six_CD hashtags_NNS and_CC we_PRP set_VBD a_DT target_NN interval_NN for_IN each_DT hash_NN -_: tag_NN as_IN consecutive_JJ periods_NNS with_IN the_DT number_NN of_IN tweets_NNS ≥_VBP 10_CD together_RB with_IN 20_CD minutes_NNS before_IN and_CC after_IN the_DT periods_NNS ._.
+Next_JJ ,_, we_PRP randomly_RB sample_NN 90_CD minutes_NNS from_IN the_DT target_NN interval_NN of_IN each_DT hashtag_NN and_CC aggregated_JJ tweets_NNS from_IN the_DT same_JJ minute_NN as_IN one_CD tweet_NN set_NN ._.
+An_DT annota_NN -_: tor_NN looks_VBZ at_IN all_DT of_IN the_DT tweets_NNS from_IN the_DT same_JJ minute_NN and_CC annotate_VB whether_IN each_DT timestamp_NN is_VBZ an_DT emo_NN -_: tional_JJ upsurge_NN or_CC not_RB ._.
+As_IN a_DT result_NN ,_, 42_CD timestamps_NNS in_IN #aibou_NN ,_, 44_CD timestamps_NNS in_IN #hanshin_NN ,_, 9_CD timestamps_NNS in_IN #ACV_NNP ,_, 37_CD timestamps_NNS in_IN #figureskate_NN ,_, 86_CD times_NNS -_: tamps_NNS in_IN #agqr_NN and_CC 63_CD timestamps_NNS in_IN #momoclo_NN are_VBP annotated_VBN as_IN emotionally_RB upsurging_VBG timestamps_NNS ._.
+Ta_SYM -_: ble_NN 2_CD shows_VBZ the_DT details_NNS of_IN the_DT six_CD hashtags_NNS and_CC the_DT target_NN respective_JJ interval_NN we_PRP used_VBD ._.
+Dataset_NNP used_VBD for_IN Building_NNP Spike_NNP LM_NNP In_IN order_NN to_TO construct_VB a_DT spiking_VBG tweet_NN language_NN model_NN -LRB-_-LRB- Spike_NNP LM_NNP -RRB-_-RRB- ,_, we_PRP gather_VBP 1_CD ,_, 197_CD ,_, 935_CD tweets_NNS from_IN all_DT hashtags_NNS which_WDT exceed_VBP 50_CD TPM_NNP ._.
+We_PRP filter_NN out_IN hashtags_NNS including_VBG the_DT word_NN ``_`` follow_VB ''_'' or_CC ``_`` Fol_SYM -_: low_JJ ''_'' due_JJ to_TO the_DT large_JJ number_NN of_IN Twitter-specific_JJ hashtags_NNS ._.
+Moreover_RB ,_, we_PRP also_RB exclude_VBP the_DT six_CD hash_NN -_: tags_NNS described_VBN in_IN Table_NNP 2_CD ._.
+Dataset_NNP used_VBD for_IN Building_NNP Surpervised_NNP LM_NNP The_NNP limitation_NN of_IN the_DT Spike_NNP LM_NNP is_VBZ that_IN we_PRP can_MD -_: not_RB avoid_VB including_VBG tweets_NNS not_RB from_IN emotional_JJ up_IN -_: surge_NN ._.
+We_PRP build_VBP a_DT fully_RB supervised_VBN spike_JJ language_NN model_NN -LRB-_-LRB- Supervised_VBN LM_NNP -RRB-_-RRB- to_TO observe_VB whether_IN clean_JJ but_CC much_RB low_JJ number_NN of_IN tweets_NNS will_MD perform_VB better_JJR than_IN the_DT language_NN model_NN built_VBN from_IN less_JJR cleaned_VBN but_CC more_JJR number_NN of_IN tweets_NNS ._.
+In_IN order_NN to_TO filter_NN out_RP hash_NN -_: tags_NNS that_WDT include_VBP non-emotional_JJ numerical_JJ spikes_NNS ,_, we_PRP used_VBD manually_RB annotated_VBN emotionally_RB upsurg_SYM -_: ing_NN timestamps_NNS -LRB-_-LRB- EUT_NNP -RRB-_-RRB- shown_VBN in_IN Table_NNP 2_CD ,_, and_CC con_NN -_: structed_VBN Supervised_VBN LM_NNP excluding_VBG the_DT hashtags_NNS used_VBN for_IN testing_NN ._.
+Dataset_NNP used_VBD to_TO Evaluate_VB Detecting_VBG Numerical_NNP Spikes_NNP using_VBG Spike_NNP LM_NNP Since_IN numerical_JJ spikes_NNS has_VBZ some_DT overlaps_NNS with_IN emotional_JJ upsurge_NN ,_, we_PRP analyze_VBP if_IN Spike_NNP LM_NNP can_MD also_RB detect_VB numerical_JJ spikes_NNS ._.
+To_TO analyze_VB the_DT detection_NN of_IN numerical_JJ spikes_NNS using_VBG Spike_NNP LM_NNP ,_, we_PRP construct_VBP a_DT tweet_JJ set_NN containing_VBG 300_CD tweets_NNS from_IN each_DT hashtag_NN in_IN Table_NNP 2_CD ._.
+The_DT tweet_JJ set_NN consist_VBP of_IN one_CD tweet_NN set_NN of_IN 150_CD tweets_NNS sampled_VBN from_IN numerical_JJ spikes_NNS and_CC another_DT tweet_NN set_NN of_IN 150_CD tweets_NNS sampled_VBN from_IN non_SYM -_: numerical_JJ spikes_NNS .5_CD We_PRP compute_VBP the_DT perplexity_NN of_IN a_DT tweet_JJ set_NN rather_RB than_IN to_TO individual_JJ tweets_NNS to_TO get_VB a_DT re_NN -_: liable_JJ perplexity_NN ._.
+5_CD Evaluation_NN of_IN Language_NNP Models_NNPS We_PRP evaluate_VBP how_WRB well_RB does_VBZ Spike_NNP LM_NNP detect_VB nu_SYM -_: merical_JJ spikes_NNS and_CC then_RB compare_VB the_DT performance_NN of_IN detecting_VBG emotional_JJ upsurge_NN against_IN Supervised_VBN LM_NNP and_CC Kleinberg_NNP 's_POS algorithm_NN ._.
+5To_JJ avoid_VB test_NN sets_NNS being_VBG biased_VBN from_IN one_CD incident_NN ,_, we_PRP con_VBP -_: structed_VBD the_DT test_NN sets_VBZ as_IN the_DT following_JJ steps_NNS :_: 1_LS -RRB-_-RRB- Split_NNP the_DT target_NN interval_NN into_IN 3_CD sub-intervals_NNS ._.
+2_LS -RRB-_-RRB- For_IN each_DT sub-interval_JJ ,_, gather_VB the_DT tweets_NNS from_IN the_DT most_RBS tweeted_JJ minutes_NNS until_IN the_DT total_NN of_IN number_NN of_IN tweets_NNS reaches_VBZ 50_CD ._.
+3_LS -RRB-_-RRB- If_IN the_DT number_NN of_IN tweets_NNS during_IN the_DT min_NN -_: utes_NNS exceeds_VBZ 50_CD ,_, randomly_RB sample_NN 50_CD ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Num_NNP ._.
+of_IN TPM_NNP -LRB-_-LRB- b_NN -RRB-_-RRB- Spike_NNP LM_NNP Figure_NNP 2_CD :_: Number_NN of_IN tweets_NNS in_IN #momoclo_NN hashtag_NN shown_VBN together_RB with_IN the_DT perplexity_NN between_IN the_DT three_CD language_NN models_NNS ._.
+The_DT blue_JJ box_NN represents_VBZ an_DT example_NN of_IN a_DT spike_NN ._.
+5.1_CD Evaluation_NN of_IN Detecting_VBG Numerical_NNP Spikes_NNP using_VBG Spike_NNP LM_NNP We_PRP first_RB evaluate_VBP the_DT effectiveness_NN of_IN capturing_VBG nu_SYM -_: merical_JJ spikes_NNS on_IN Spike_NNP LM_NNP ._.
+Figure_NN 2_CD shows_VBZ the_DT per_FW -_: plexity_NN of_IN spiking_VBG timestamps_NNS are_VBP actually_RB low_JJ com_NN -_: pared_VBN to_TO other_JJ timestamps_NNS ._.
+As_IN a_DT quantitative_JJ com_NN -_: parison_NN ,_, we_PRP sampled_VBD 300_CD tweets_NNS from_IN each_DT hash_NN -_: tag_NN and_CC calculate_VB the_DT perplexity_NN of_IN both_DT numerical_JJ spiking_NN and_CC non-numerical_JJ spiking_NN tweet_NN sets_VBZ using_VBG Spike_NNP LM_NNP as_IN mentioned_VBN earlier_RBR in_IN Section_NNP 4_CD ._.
+Table_NNP 3_CD shows_NNS that_WDT for_IN all_PDT the_DT six_CD hashtags_NNS ,_, there_EX is_VBZ a_DT signifi_NN -_: cant_NN difference_NN between_IN the_DT perplexity_NN of_IN numerical_JJ spiking_NN and_CC non-numerical_JJ spiking_NN tweets_NNS according_VBG to_TO the_DT Wilcoxon_NNP signed-rank_JJ test_NN -LRB-_-LRB- p_SYM <_SYM 0.02_CD -RRB-_-RRB- ._.
+There_EX -_: fore_NN ,_, Spike_NNP LM_NNP is_VBZ useful_JJ for_IN detecting_VBG tweets_NNS from_IN numerical_JJ spikes_NNS ._.
+Next_JJ ,_, we_PRP evaluate_VBP the_DT performance_NN of_IN detecting_VBG emotional_JJ upsurge_NN from_IN tweet_NN sets_NNS aggregated_VBN by_IN its_PRP$ timestamps_NNS using_VBG language_NN models_NNS ._.
+We_PRP use_VBP the_DT manually_RB annotated_VBN ground_NN truth_NN emotional_JJ upsurge_NN for_IN evaluation_NN ._.
+5.2_CD Evaluation_NN of_IN Detecting_VBG Emotional_JJ Upsurge_NN To_TO evaluate_VB which_WDT language_NN model_NN best_RB detect_VB emo_NN -_: tional_JJ upsurge_NN ,_, we_PRP derive_VBP precision_NN ,_, recall_NN and_CC F1_SYM -_: score_NN for_IN each_DT language_NN model_NN by_IN incrementing_VBG the_DT perplexity_NN decision_NN threshold_NN one_CD by_IN one_CD ._.
+Specifi_NNP -_: Hashtag_NNP PP_NNP -LRB-_-LRB- S_NNP -RRB-_-RRB- PP_NNP -LRB-_-LRB- NS_NNP -RRB-_-RRB- PP_NNP -LRB-_-LRB- NS_NNP -RRB-_-RRB- -_: PP_NNP -LRB-_-LRB- S_NNP -RRB-_-RRB- #aibou_FW #hanshin_FW #ACV_FW #agqr_FW #figureskate_FW #momoclo_FW 22.027_CD 30.705_CD 43.116_CD 9.938_CD 27.505_CD 23.261_CD 27.735_CD 63.416_CD 52.647_CD 23.134_CD 39.176_CD 39.283_CD 5.708_CD 32.711_CD 9.531_CD 13.196_CD 11.671_CD 16.022_CD Hashtag_NNP Spike_NNP LM_NNP Sup_NNP LM_NNP Kleinberg_NNP #aibou_NNP #hanshin_NNP #ACV_NNP #agqr_NNP #figureskate_NNP #momoclo_NNP .656_CD .707_CD .571_CD 1.00_CD .643_CD .527_CD .655_CD .642_CD .500_CD 1.00_CD .595_CD .817_CD .667_CD .508_CD .400_CD .491_CD .500_CD .615_CD Table_NNP 3_CD :_: Perplexity_NN of_IN sampled_VBN set_NN of_IN tweets_NNS constructed_VBN from_IN numerical_JJ spikes_NNS -LRB-_-LRB- S_NNP -RRB-_-RRB- and_CC non-numerical_JJ spikes_NNS -LRB-_-LRB- NS_NNP -RRB-_-RRB- computed_VBD using_VBG Spike_NNP LM_NNP ._.
+Table_NNP 4_CD :_: The_DT best_JJS F1-score_NN of_IN detecting_VBG annotated_JJ emo_NN -_: tional_JJ upsurge_NN for_IN Spike_NNP LM_NNP ,_, Supervised_VBN LM_NNP -LRB-_-LRB- Sup_NNP LM_NNP -RRB-_-RRB- and_CC Kleinberg_NNP 's_POS algorithm_NN ._.
+a_DT stream_NN of_IN documents_NNS as_IN a_DT two-state_JJ finite_JJ state_NN au_SYM -_: tomata_NN Bs_NNS ,_, γ_NN with_IN the_DT scaling_VBG parameter_NN s_VBZ and_CC the_DT transition_NN cost_NN parameter_NN γ_NN ._.
+The_DT states_NNS are_VBP assumed_VBN to_TO be_VB in_IN either_CC the_DT burst_NN state_NN or_CC the_DT non-burst_JJ state_NN ._.
+We_PRP further_RB choose_VB the_DT optimal_JJ state_NN sequence_NN that_WDT requires_VBZ minimum_JJ cost_NN among_IN all_DT possible_JJ state_NN se_FW -_: quences_NNS ._.
+As_IN a_DT result_NN ,_, we_PRP detect_VBP which_WDT timestamps_NNS are_VBP in_IN a_DT burst_NN states_NNS and_CC which_WDT timestamps_NNS are_VBP not_RB ._.
+The_DT two_CD parameters_NNS of_IN the_DT algorithm_NN is_VBZ set_VBN accord_NN -_: ing_NN to_TO the_DT result_NN from_IN the_DT preliminary_JJ experiment_NN to_TO detect_VB numerical_JJ spikes_NNS based_VBN on_IN mean_NN and_CC standard_JJ deviation_NN with_IN sufficiently_RB high_JJ F1-scores_NNS ._.
+Specifi_NNP -_: cally_RB ,_, the_DT parameters_NNS γ_NN and_CC s_PRP are_VBP set_VBN to_TO γ_VB =_SYM 1_CD and_CC s_VBZ =_SYM 2_CD ._.
+Evaluation_NN Result_NN Table_NNP 4_CD shows_VBZ the_DT result_NN of_IN detecting_VBG emotional_JJ upsurge_NN for_IN the_DT two_CD language_NN models_NNS and_CC Klein_NNP -_: berg_NN 's_POS algorithm_NN ._.
+Figure_NN 3_CD shows_VBZ the_DT precision_NN -_: recall_NN curve_NN for_IN the_DT two_CD language_NN models_NNS we_PRP built_VBD ._.
+According_VBG to_TO this_DT figure_NN ,_, Spike_NNP LM_NNP performs_VBZ well_RB among_IN the_DT majority_NN of_IN the_DT test_NN hashtags_NNS when_WRB com_NN -_: pared_VBN to_TO Supervised_VBN LM_NNP ._.
+Furthermore_RB ,_, the_DT figure_NN shows_VBZ that_IN the_DT precision_NN of_IN Spike_NNP LM_NNP does_VBZ not_RB drop_VB when_WRB we_PRP increase_VBP the_DT decision_NN threshold_NN ._.
+We_PRP observe_VBP that_IN if_IN a_DT language_NN model_NN contains_VBZ hashtags_NNS with_IN similar_JJ emotional_JJ upsurge_NN to_TO the_DT test_NN hashtags_NNS ,_, the_DT performance_NN of_IN detecting_VBG emotional_JJ upsurge_NN tend_VBP to_TO get_VB better_JJR ._.
+This_DT is_VBZ obvious_JJ for_IN Super_NNP -_: vised_VBN LM_NNP performing_VBG well_RB on_IN #momoclo_NN hashtag_NN be_VB -_: cause_NN when_WRB testing_NN on_IN this_DT hashtag_NN ,_, Supervised_VBN LM_NNP is_VBZ built_VBN from_IN the_DT rest_NN of_IN five_CD target_NN hashtags_NNS includ_SYM -_: ing_NN #agar_NN and_CC the_DT suffix_NN of_IN the_DT emotionally_RB upsurging_VBG tweets_NNS from_IN #momoclo_NN are_VBP similar_JJ to_TO that_DT of_IN #agqr_NN ._.
+Specifically_RB ,_, those_DT tweets_NNS include_VBP lots_NNS of_IN ``_`` w_NN ''_'' s_PRP which_WDT Figure_NNP 3_CD :_: Precision-Recall_NNP curve_NN for_IN #figureskate_JJ data_NNS ._.
+cally_RB ,_, if_IN the_DT perplexity_NN of_IN a_DT set_NN of_IN tweets_NNS from_IN one_CD timestamp_NN is_VBZ lower_JJR than_IN a_DT decision_NN threshold_NN ,_, we_PRP predict_VBP as_IN a_DT timestamp_NN of_IN emotional_JJ upsurge_NN and_CC vice_NN versa_RB ._.
+We_PRP eventually_RB use_VBP the_DT best_JJS F1-score_NN among_IN the_DT various_JJ decision_NN thresholds_NNS to_TO evaluate_VB which_WDT language_NN model_NN best_JJS fits_VBZ to_TO modeling_NN emo_NN -_: tional_JJ upsurge_NN ._.
+Baseline_NNP System_NNP We_PRP employ_VBP Kleinberg_NNP 's_POS burst_NN detection_NN algorithm_NN -LRB-_-LRB- Kleinberg_NNP ,_, 2003_CD -RRB-_-RRB- as_IN a_DT baseline_NN method_NN ._.
+This_DT method_NN assumes_VBZ that_IN all_DT numerical_JJ spikes_NNS or_CC bursts_NNS are_VBP emotional_JJ upsurge_NN and_CC all_DT non-numerical_JJ spikes_NNS or_CC non-bursts_NNS are_VBP not_RB emotional_JJ upsurge_NN ._.
+Klein_NNP -_: berg_NN 's_POS burst_NN detection_NN algorithm_NN modeled_VBD a_DT burst_NN of_IN is_VBZ an_DT Internet_NNP slang_NN meaning_NN ``_`` lol_NN -LRB-_-LRB- laugh_NN out_IN loud_JJ -RRB-_-RRB- ''_'' in_IN English_NNP ._.
+Note_VB that_IN the_DT effect_NN of_IN #agqr_NN is_VBZ magni_SYM -_: fied_VBN on_IN Supervised_VBN LM_NNP since_IN most_JJS of_IN the_DT annotated_JJ timestamps_NNS are_VBP annotated_VBN as_IN emotional_JJ upsurge_NN in_IN #agqr_JJ .6_CD ThisalsoexplainswhySpikeLMperforms_NNS better_JJR than_IN Supervised_VBN LM_NNP on_IN five_CD hashtags_NNS because_IN Spike_NNP LM_NNP is_VBZ more_RBR likely_JJ to_TO include_VB emotional_JJ up_IN -_: surge_NN from_IN hashtags_NNS similar_JJ to_TO the_DT six_CD hashtags_NNS ._.
+One_CD of_IN the_DT challenges_NNS is_VBZ to_TO detect_VB emotional_JJ up_IN -_: surge_NN with_IN relatively_RB low_JJ number_NN of_IN tweets_NNS because_IN of_IN the_DT existence_NN of_IN noisy_JJ tweets_NNS ._.
+Example_NN of_IN noisy_JJ tweets_NNS are_VBP the_DT tweets_NNS from_IN Twitter_NNP accounts_VBZ that_IN only_RB post_NN about_IN news_NN ._.
+Table_NNP 5_CD shows_VBZ an_DT emotional_JJ spike_NN including_VBG such_JJ noisy_JJ tweets_NNS ,_, which_WDT scored_VBD 42.095_CD as_IN the_DT perplexity_NN ._.
+This_DT spike_NN includes_VBZ 7_CD tweets_NNS from_IN #figureskate_JJ hashtag_NN ._.
+This_DT is_VBZ relatively_RB low_JJ since_IN the_DT number_NN of_IN tweets_NNS per_IN timestamp_NN in_IN sampled_VBN #fig_SYM -_: ureskate_NN tweets_NNS range_VBP from_IN 2_CD to_TO 50_CD ._.
+Among_IN the_DT 7_CD tweets_NNS ,_, 2_CD tweets_NNS are_VBP from_IN a_DT Twitter_NNP account_NN which_WDT only_RB tweets_VBZ about_IN news_NN ,_, which_WDT does_VBZ not_RB reflect_VB emo_NN -_: tional_JJ upsurge_NN of_IN a_DT Twitter_NNP user_NN ._.
+Spike_NNP LM_NNP is_VBZ ro_NN -_: bust_NN to_TO such_JJ noisy_JJ 2_CD tweets_NNS from_IN the_DT account_NN which_WDT only_RB tweets_VBZ about_IN news_NN when_WRB computing_VBG the_DT per_FW -_: plexity_NN of_IN that_DT timestamp_NN ._.
+However_RB ,_, Supervised_VBN LM_NNP is_VBZ largely_RB affected_VBN by_IN such_JJ noisy_JJ tweets_NNS because_IN Su_NNP -_: pervised_VBN LM_NNP is_VBZ built_VBN from_IN less_JJR noisy_JJ tweets_NNS com_NN -_: pared_VBN to_TO Spike_NNP LM_NNP and_CC it_PRP end_VB up_RP with_IN high_JJ perplex_NN -_: ity_NN ._.
+Spike_NNP LM_NNP detects_VBZ such_JJ emotional_JJ upsurge_NN which_WDT can_MD be_VB used_VBN to_TO extract_VB emotional_JJ upsurge_NN from_IN vari_SYM -_: ous_JJ domains_NNS on_IN Twitter_NNP ._.
+6_CD Discussion_NNP We_PRP further_RBR investigate_VB the_DT impact_NN of_IN the_DT tweet_NN set_VBN size_NN on_IN the_DT reliability_NN of_IN the_DT perplexity_NN estimation_NN us_PRP -_: ing_NN language_NN models_NNS ._.
+Perplexity_NN is_VBZ known_VBN to_TO be_VB af_SYM -_: fected_VBN by_IN the_DT amount_NN of_IN text_NN used_VBN for_IN the_DT calculation_NN -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 1992_CD -RRB-_-RRB- ._.
+We_PRP analyzed_VBD the_DT impact_NN using_VBG the_DT most_RBS tweeted_JJ minute_NN in_IN the_DT hashtag_NN #aibou_NN ._.
+Fig_SYM -_: ure_NN 4_CD shows_VBZ the_DT transition_NN of_IN perplexity_NN according_VBG to_TO the_DT number_NN tweets_NNS used_VBN to_TO calculate_VB the_DT perplexity_NN in_IN the_DT hashtag_NN #aibou_NN ._.
+As_IN a_DT result_NN ,_, after_IN the_DT number_NN of_IN tweets_NNS from_IN the_DT same_JJ minute_NN exceeds_VBZ 11_CD ,_, the_DT differ_VBP -_: ence_NN between_IN the_DT minimum_NN and_CC the_DT maximum_NN per_IN -_: plexity_NN became_VBD less_JJR than_IN 3_CD ._.
+This_DT result_NN shows_VBZ that_IN the_DT perplexity_NN does_VBZ not_RB largely_RB rely_VB on_IN the_DT number_NN of_IN tweets_NNS from_IN the_DT same_JJ timestamp_NN and_CC implies_VBZ that_IN 6Therefore_NNP ,_, both_DT language_NN models_NNS score_VBP 1.0_CD on_IN #agqr_NN ._.
+Figure_NN 4_CD :_: Perplexity_NN computed_VBN with_IN various_JJ number_NN of_IN tweets_NNS from_IN the_DT most_RBS tweeted_JJ minute_NN in_IN #aibou_NN ._.
+Spike_NNP LM_NNP can_MD be_VB used_VBN to_TO detect_VB emotional_JJ upsurge_NN with_IN low_JJ number_NN of_IN tweets_NNS ._.
+7_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP showed_VBD that_IN sequences_NNS of_IN tweet_NN characters_NNS in_IN emotional_JJ spiking_VBG tweets_NNS are_VBP more_RBR sim_SYM -_: ilar_NN to_TO that_DT of_IN tweets_NNS modeled_VBN by_IN Spike_NNP LM_NNP ._.
+By_IN calculating_VBG the_DT perplexity_NN between_IN Spike_NNP LM_NNP and_CC sampled_VBD tweets_NNS from_IN numerical_JJ spikes_NNS and_CC non_SYM -_: numerical_JJ spikes_NNS among_IN multiple_JJ hashtags_NNS ,_, tweets_NNS from_IN numerical_JJ spikes_NNS had_VBD lower_JJR perplexity_NN than_IN tweets_NNS from_IN non-numerical_JJ spikes_NNS ._.
+Furthermore_RB ,_, Spike_NNP LM_NNP scored_VBD the_DT highest_JJS F1-scores_NNS for_IN detect_VBP -_: ing_VBG emotional_JJ upsurge_NN in_IN over_IN half_NN of_IN the_DT hashtags_NNS we_PRP examined_VBD ._.
+In_IN conclusion_NN ,_, our_PRP$ method_NN detects_VBZ tweets_NNS that_WDT include_VBP Twitter_NNP users_NNS '_POS upsurge_NN of_IN emo_NN -_: tions_NNS ,_, without_IN largely_RB depending_VBG on_IN the_DT number_NN of_IN tweets_NNS per_IN minute_NN by_IN seeking_VBG for_IN tweets_NNS modeled_VBN by_IN Spike_NNP LM_NNP ._.
+As_IN a_DT future_JJ task_NN ,_, we_PRP plan_VBP to_TO investigate_VB three_CD fur_NN -_: ther_NN points_NNS :_: 1_LS -RRB-_-RRB- Applying_VBG our_PRP$ method_NN to_TO other_JJ events_NNS tweeted_VBN on_IN Twitter_NNP ,_, 2_CD -RRB-_-RRB- classification_NN of_IN emotional_JJ up_IN -_: surge_NN and_CC non-emotional_JJ upsurge_NN on_IN the_DT tweet_JJ level_NN since_IN we_PRP only_RB investigated_VBD on_IN a_DT tweet_JJ set_NN level_NN ,_, and_CC 3_CD -RRB-_-RRB- Test_NN it_PRP on_IN languages_NNS other_JJ than_IN Japanese_JJ ._.
+Further_JJ studies_NNS are_VBP necessary_JJ to_TO capture_VB emotional_JJ spiking_VBG tweets_NNS on_IN Twitter_NNP ._.
+Acknowledgments_NNS This_DT work_NN was_VBD supported_VBN by_IN JSPS_NNP KAKENHI_NNP Grant_NNP Number_NNP 22240007_CD ._.
+The_DT authors_NNS would_MD like_VB to_TO thank_VB the_DT anonymous_JJ reviewers_NNS for_IN their_PRP$ constructive_JJ com_NN -_: ments_NNS ._.
+1_CD 26_CD 56 86 116 151_CD 186 221 256 291_CD 326 361 396_CD Num_NNP ._.
+of_IN tweets_NNS perplexity_NN 20_CD 40_CD 60_CD 80_CD Tweets_NNP English_NNP Translation_NN シ_SYM ュヘ_FW 様シ_FW ュヘ_FW 様!うわあああん大好きい_FW い!衣装しっかりいいい_FW #figureskate_FW シ_FW ュヘ_FW ール様のマトリックス_FW -LRB-_-LRB- Happy_JJ Emoti_NNP -_: con_NN -RRB-_-RRB- #figureskate_FW 男子シンク_FW ルの結果て_FW す_FW 。_FW →_FW URL_NNP #fig_SYM -_: ureskate_NN 高橋大輔選手か_CD 圧巻の演技を見せ_CD 、_NN 世界王者_CD ・_CD チャンを破り1位に_CD 。_SYM 日本チー_FW ムとしてもトッフ_FW のまま_FW 、_FW 最終日を迎えま_FW す_FW 。_FW #figureskate_FW Joubert_FW !_.
+Joubert_NNP !_.
+Ahhhhhhh_NNP ,_, I_PRP love_VBP him_PRP !_.
+His_PRP$ outfitsssss_NN Joubert_NNP 's_POS Matrix_NNP -LRB-_-LRB- Happy_JJ Emoticon_NNP -RRB-_-RRB- This_DT is_VBZ the_DT result_NN of_IN the_DT mens_NNS '_POS figure_NN skat_NN -_: ing_VBG competition_NN ._.
+→_CD URL_NNP Daisuke_NNP Takashi_NNP showed_VBD an_DT amazing_JJ performance_NN and_CC he_PRP be_VB -_: came_VBD the_DT number_NN one_CD after_IN beating_VBG the_DT world_NN champion_NN Chan_NNP ._.
+He_PRP is_VBZ also_RB the_DT number_NN one_CD as_IN part_NN of_IN the_DT Japan_NNP team_NN and_CC reach_VB the_DT final_JJ day_NN ._.
+Table_NNP 5_CD :_: An_DT example_NN of_IN detected_VBN emotional_JJ upsurge_NN with_IN low_JJ number_NN of_IN tweets_NNS per_IN minute_NN ._.
+References_NNS Jey_NNP Han_NNP Lau_NNP ,_, Nigel_NNP Collier_NNP ,_, and_CC Timothy_NNP Baldwin_NNP ._.
+2012_CD ._.
+Samuel_NNP Brody_NNP and_CC Nicholas_NNP Diakopoulos_NNP ._.
+2011_CD ._.
+Cooooooooooooooollllllllllllll_NNP !!!!!!!!!!!!!!_NNP using_VBG word_NN lengthening_VBG to_TO detect_VB sentiment_NN in_IN microblogs_NNS ._.
+In_IN EMNLP_NNP ,_, pages_NNS 562_CD --_: 570_CD ._.
+Peter_NNP F_NN Brown_NNP ,_, Peter_NNP V_NNP Desouza_NNP ,_, Robert_NNP L_NNP Mercer_NNP ,_, Vin_NNP -_: cent_NN J_NNP Della_NNP Pietra_NNP ,_, and_CC Jenifer_NNP C_NNP Lai_NNP ._.
+1992_CD ._.
+Class_NN -_: based_VBN n-gram_JJ models_NNS of_IN natural_JJ language_NN ._.
+Computa_NNP -_: tional_JJ linguistics_NNS ,_, 18_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :467_CD --_: 479_CD ._.
+Cristian_NNP Danescu-Niculescu-Mizil_NNP ,_, Robert_NNP West_NNP ,_, Dan_NNP Ju_NNP -_: rafsky_NN ,_, Jure_NNP Leskovec_NNP ,_, and_CC Christopher_NNP Potts_NNP ._.
+2013_CD ._.
+No_DT country_NN for_IN old_JJ members_NNS :_: User_NN lifecycle_NN and_CC lin_NN -_: guistic_JJ change_NN in_IN online_JJ communities_NNS ._.
+In_IN WWW_NNP ,_, pages_NNS 307_CD --_: 318_CD ._.
+Qiming_NNP Diao_NNP ,_, Jing_NNP Jiang_NNP ,_, Feida_NNP Zhu_NNP ,_, and_CC Ee-Peng_NNP Lim_NNP ._.
+2012_CD ._.
+Finding_VBG bursty_JJ topics_NNS from_IN microblogs_NNS ._.
+In_IN ACL_NNP ,_, pages_NNS 536_CD --_: 544_CD ._.
+Jacob_NNP Eisenstein_NNP ._.
+2013_CD ._.
+What_WP to_TO do_VB about_RB bad_JJ language_NN on_IN the_DT internet_NN ._.
+In_IN NAACL-HLT_NNP ,_, pages_NNS 359_CD --_: 369_CD ._.
+Stephan_NNP Gouws_NNP ,_, Donald_NNP Metzler_NNP ,_, Congxing_NNP Cai_NNP ,_, and_CC Ed_NNP -_: uard_NN Hovy_NNP ._.
+2011_CD ._.
+Contextual_JJ bearing_NN on_IN linguistic_JJ variation_NN in_IN social_JJ media_NNS ._.
+In_IN Proc_NNP ._.
+of_IN the_DT Workshop_NNP on_IN Language_NN in_IN Social_NNP Media_NNP -LRB-_-LRB- LSM_NNP 2011_CD -RRB-_-RRB- ,_, pages_NNS 20_CD --_: 29_CD ._.
+Nobuhiro_NNP Kaji_NNP and_CC Masaru_NNP Kitsuregawa_NNP ._.
+2014_CD ._.
+Accurate_JJ word_NN segmentation_NN and_CC pos_NNS tagging_VBG for_IN japanese_JJ mi_SYM -_: croblogs_NNS :_: Corpus_NNP annotation_NN and_CC joint_JJ modeling_NN with_IN lexical_JJ normalization_NN ._.
+In_IN EMNLP_NNP ,_, pages_NNS 99_CD --_: 109_CD ._.
+Slava_NNP M._NNP Katz_NNP ._.
+1987_CD ._.
+Estimation_NN of_IN probabilities_NNS from_IN sparse_JJ data_NNS for_IN the_DT language_NN model_NN component_NN of_IN a_DT speech_NN recognizer_NN ._.
+In_IN IEEE_NNP Transactions_NNS on_IN Acous_NNP -_: tics_NNS ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, pages_NNS 400_CD --_: 401_CD ._.
+Jon_NNP Kleinberg_NNP ._.
+2003_CD ._.
+Bursty_NNP and_CC hierarchical_JJ structure_NN in_IN streams_NNS ._.
+Data_NNP Mining_NNP and_CC Knowledge_NNP Discovery_NNP ,_, 7_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :373_CD --_: 397_CD ._.
+James_NNP Lanagan_NNP and_CC Alan_NNP F_NN Smeaton_NNP ._.
+2011_CD ._.
+Using_VBG twit_NN -_: ter_NN to_TO detect_VB and_CC tag_VB important_JJ events_NNS in_IN live_JJ sports_NNS ._.
+Artificial_JJ Intelligence_NNP ,_, pages_NNS 542_CD --_: 545_CD ._.
+On-line_JJ trend_NN analysis_NN with_IN topic_NN models_NNS :_: #twitter_JJ trends_NNS detection_NN topic_NN model_NN online_NN ._.
+In_IN COLING_NNP ,_, pages_NNS 1519_CD --_: 1534_CD ._.
+Jimmy_NNP Lin_NNP ,_, Rion_NNP Snow_NNP ,_, and_CC William_NNP Morgan_NNP ._.
+2011_CD ._.
+Smoothing_VBG techniques_NNS for_IN adaptive_JJ online_JJ language_NN models_NNS :_: Topic_NN tracking_NN in_IN tweet_NN streams_NNS ._.
+In_IN KDD_NNP ,_, pages_NNS 422_CD --_: 429_CD ._.
+ACM_NNP ._.
+Kun-Lin_NNP Liu_NNP ,_, Wu-Jun_NNP Li_NNP ,_, and_CC Minyi_NNP Guo_NNP ._.
+2012_CD ._.
+Emoti_SYM -_: con_NN smoothed_VBD language_NN models_NNS for_IN twitter_NN sentiment_NN analysis_NN ._.
+In_IN AAAI_NNP ,_, pages_NNS 1678_CD --_: 1684_CD ._.
+Graham_NNP Neubig_NNP and_CC Kevin_NNP Duh_NNP ._.
+2013_CD ._.
+How_WRB much_JJ is_VBZ said_VBN in_IN a_DT tweet_NN ?_.
+a_DT multilingual_JJ ,_, information-theoretic_JJ perspective_NN ._.
+In_IN AAAI_NNP Spring_NNP Symposium_NNP on_IN Analyzing_NNP Microtext_NNP ,_, pages_NNS 32_CD --_: 39_CD ._.
+Sasˇa_NNP Petrovic_NNP ́_NNP ,_, Miles_NNP Osborne_NNP ,_, and_CC Victor_NNP Lavrenko_NNP ._.
+2010_CD ._.
+Streaming_VBG first_JJ story_NN detection_NN with_IN application_NN to_TO twitter_NN ._.
+In_IN HLT-NAACL_NNP ,_, pages_NNS 181_CD --_: 189_CD ._.
+Sara_NNP Rosenthal_NNP and_CC Kathleen_NNP McKeown_NNP ._.
+2011_CD ._.
+Age_NNP pre_SYM -_: diction_NN in_IN blogs_NNS :_: A_DT study_NN of_IN style_NN ,_, content_NN ,_, and_CC online_JJ behavior_NN in_IN pre_NN -_: and_CC post-social_JJ media_NNS generations_NNS ._.
+In_IN ACL-HLT_NNP ,_, pages_NNS 763_CD --_: 772_CD ._.
+Marc_NNP Schro_NNP ̈der_NN ._.
+2001_CD ._.
+Emotional_JJ speech_NN synthesis_NN :_: a_DT review_NN ._.
+In_IN Paul_NNP Dalsgaard_NNP ,_, Brge_NNP Lindberg_NNP ,_, Henrik_NNP Benner_NNP ,_, and_CC Zheng-Hua_NNP Tan_NNP ,_, editors_NNS ,_, INTERSPEECH_NNP ,_, pages_NNS 561_CD --_: 564_CD ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+SRILM-an_JJ extensible_JJ language_NN modeling_NN toolkit_NN ._.
+In_IN Proc_NNP ._.
+of_IN International_NNP Conference_NNP on_IN Spoken_NNP Language_NNP Processing_NNP ,_, pages_NNS 901_CD --_: 904_CD ._.
+Aobo_NNP Wang_NNP and_CC Min-Yen_NNP Kan._NNP 2013_CD ._.
+Mining_NNP informal_JJ language_NN from_IN chinese_JJ microtext_NN :_: Joint_NNP word_NN recogni_NN -_: tion_NN and_CC segmentation_NN ._.
+In_IN ACL_NNP ,_, pages_NNS 731_CD --_: 741_CD ._.
+Benjamin_NNP Wing_NNP and_CC Jason_NNP Baldridge_NNP ._.
+2011_CD ._.
+Simple_NN su_SYM -_: pervised_VBN document_NN geolocation_NN with_IN geodesic_JJ grids_NNS ._.
+In_IN ACL-HLT_NNP ,_, pages_NNS 955_CD --_: 964_CD ._.

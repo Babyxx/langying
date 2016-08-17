@@ -1,0 +1,226 @@
+Identifying_VBG Prepositional_JJ Phrases_NNS in_IN Chinese_JJ Patent_NN Texts_NNS with_IN Rule-based_JJ and_CC CRF_NNP Methods_NNPS Abstract_NNP Identification_NNP of_IN prepositional_JJ phrases_NNS -LRB-_-LRB- PP_NNP -RRB-_-RRB- has_VBZ been_VBN an_DT issue_NN in_IN the_DT field_NN of_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, towards_IN Chinese_NNP patent_NN texts_NNS ,_, we_PRP present_VBP a_DT rule-based_JJ method_NN and_CC a_DT CRF-based_JJ method_NN to_TO identify_VB the_DT PPs_NNP ._.
+In_IN the_DT rule-based_JJ method_NN ,_, according_VBG to_TO the_DT special_JJ features_NNS and_CC expressions_NNS of_IN PPs_NNP ,_, we_PRP manually_RB write_VB targeted_JJ formal_JJ identification_NN rules_NNS ;_: in_IN the_DT CRF_NNP approach_NN ,_, after_IN labelling_VBG the_DT sentences_NNS with_IN features_NNS ,_, a_DT typical_JJ CRF_NNP toolkit_NN is_VBZ exploited_VBN to_TO train_VB the_DT model_NN for_IN identifying_VBG PPs_NNP ._.
+We_PRP then_RB conduct_VB some_DT experiments_NNS to_TO test_VB the_DT performance_NN of_IN the_DT two_CD methods_NNS ,_, and_CC final_JJ precision_NN rates_NNS are_VBP over_IN 90_CD %_NN ,_, indicating_VBG the_DT proposed_VBN methods_NNS are_VBP effective_JJ and_CC feasible_JJ ._.
+1_CD Introduction_NNP In_IN recent_JJ years_NNS ,_, patent_NN text_NN information_NN processing_NN -LRB-_-LRB- such_JJ as_IN patent_NN machine_NN translation_NN -RRB-_-RRB- has_VBZ gradually_RB become_VBN an_DT important_JJ application_NN field_NN of_IN natural_JJ language_NN processing_NN -LRB-_-LRB- NLP_NNP -RRB-_-RRB- ,_, and_CC has_VBZ aroused_VBN widespread_JJ attention_NN ._.
+Prepositional_JJ phrases_NNS -LRB-_-LRB- PPs_NNP -RRB-_-RRB- ,_, as_IN an_DT important_JJ type_NN of_IN phrase_NN ,_, are_VBP widely_RB distributed_VBN in_IN Chinese_JJ patent_NN text_NN ,_, in_IN which_WDT the_DT vast_JJ majority_NN serve_VBP as_IN adverbial_JJ components_NNS ._.
+According_VBG to_TO -LRB-_-LRB- Li_NNP ,_, et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, in_IN a_DT random_JJ sample_NN of_IN 500_CD Chinese_JJ patent_NN sentences_NNS ,_, the_DT number_NN of_IN sentences_NNS containing_VBG PPs_NNP are_VBP 226_CD ,_, accounting_VBG for_IN 45.2_CD %_NN of_IN the_DT total_JJ sample_NN ,_, indicating_VBG the_DT high_JJ proportion_NN of_IN PPs_NNP ._.
+In_IN the_DT sentence_NN S_NNP =_SYM W1_CD ,_, W2_CD ,_, W3_CD ..._: ._.
+Wn_NNP ,_, assuming_VBG the_DT string_NN Wi_NNP ,_, Wi_NNP +1_CD ..._: ._.
+Wj_NNP is_VBZ the_DT PP_NNP to_TO be_VB identified_VBN ,_, the_DT main_JJ task_NN of_IN identifying_VBG PP_NNP is_VBZ to_TO recognize_VB the_DT word_NN Wi_NNP and_CC Wj_NNP as_IN left_JJ and_CC right_JJ boundaries_NNS of_IN PP_NNP ,_, and_CC identify_VB the_DT whole_JJ string_NN as_IN PP_NNP chunk_NN ._.
+Since_IN Wi_NNP is_VBZ the_DT preposition_NN itself_PRP ,_, thus_RB the_DT key_JJ issue_NN is_VBZ to_TO determine_VB the_DT position_NN of_IN Wj_NNP ._.
+There_EX exists_VBZ some_DT following_JJ difficulties_NNS in_IN identifying_VBG PP_NNP of_IN Chinese_NNP patent_NN texts_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Different_JJ with_IN other_JJ domain_NN texts_NNS ,_, PPs_NNP in_IN the_DT patent_NN texts_NNS are_VBP much_RB longer_RBR ,_, with_IN more_JJR characters_NNS ._.
+According_VBG to_TO -LRB-_-LRB- Gan_NNP ,_, et_FW al._FW ,_, 2005_CD ;_: Hu_NNP ,_, 2015_CD -RRB-_-RRB- ,_, the_DT average_JJ length_NN of_IN PPs_NNP in_IN news_NN texts_NNS has_VBZ 4.9_CD characters_NNS ,_, while_IN 12.3_CD characters_NNS in_IN patent_NN texts_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, PPs_NNP tend_VB to_TO have_VB much_RB more_RBR complex_JJ structures_NNS ,_, which_WDT can_MD be_VB composed_VBN of_IN prepositions_NNS and_CC various_JJ kinds_NNS of_IN phrases_NNS ,_, or_CC even_RB clauses_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Prepositions_NNPS in_IN Chinese_NNPS are_VBP usually_RB multi_NNS -_: category_NN words_NNS ,_, they_PRP can_MD also_RB serve_VB as_IN nouns_NNS ,_, quantifiers_NNS ,_, adjectives_NNS ,_, conjunctions_NNS and_CC verbs_NNS in_IN different_JJ contexts_NNS ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Several_JJ parallel_NN or_CC nested_VBN PPs_NNP can_MD appear_VB in_IN the_DT same_JJ sentence_NN ._.
+Here_RB is_VBZ an_DT example_NN sentence_NN in_IN the_DT patent_NN texts_NNS :_: 本发明_CD -LSB-_NNP PP1_NNP 在条件允许的情况下_NNP -RSB-_NNP -LSB-_NNP PP2_NNP 通过_CD -LSB-_NNP PP3_NNP 为不同区域_CD -RSB-_NNP 提供预测信息_CD -RSB-_NNP 而提出了许_CD 多更加准确的结果_CD 。_NN -LRB-_-LRB- The_DT invention_NN has_VBZ proposed_VBN more_JJR accurate_JJ results_NNS -LSB-_NNP PP1_NNP under_IN the_DT permitted_VBN condition_NN -RSB-_NNP -LCB-_-LRB- PP2_NN by_IN providing_VBG forecast_NN information_NN -LSB-_NNP PP3_NNP for_IN various_JJ regions_NNS ._. -RSB-_NN -RCB-_-RRB- -RRB-_-RRB-
+As_IN shown_VBN ,_, two_CD parallel_JJ PP1_NNP and_CC PP2_NNP appear_VBP together_RB in_IN the_DT same_JJ sentence_NN ,_, where_WRB PP2_NNP also_RB includes_VBZ a_DT nested_JJ PP3_NN ._.
+Note_VB that_DT ,_, correct_JJ identification_NN of_IN PPs_NNP is_VBZ significant_JJ to_TO many_JJ tasks_NNS and_CC applications_NNS in_IN NLP_NNP ._.
+Take_VB patent_NN machine_NN translation_NN for_IN example_NN ,_, PPs_NNP have_VBP direct_JJ impacts_NNS on_IN a_DT plurality_NN of_IN processing_VBG modules_NNS such_JJ as_IN source_NN language_NN parsing_NN ,_, transformation_NN and_CC word_NN reordering_NN ._.
+Considering_VBG the_DT wide_JJ distribution_NN of_IN PPs_NNP and_CC significance_NN of_IN correct_JJ identification_NN ,_, we_PRP propose_VBP a_DT rule-based_JJ method_NN and_CC Conditional_JJ Random_NNP Field_NNP -LRB-_-LRB- CRF_NNP -RRB-_-RRB- method_NN to_TO recognize_VB the_DT PPs_NNP ._.
+Although_IN facing_VBG difficulties_NNS ,_, patent_NN text_NN processing_NN still_RB have_VB its_PRP$ advantages_NNS :_: from_IN words_NNS to_TO sentences_NNS ,_, patent_NN texts_NNS possess_VBP kinds_NNS of_IN common_JJ and_CC fixed_JJ structures_NNS and_CC expressions_NNS ,_, which_WDT are_VBP more_RBR suitable_JJ for_IN rule_NN -_: based_VBN approach_NN to_TO describe_VB and_CC process_VB ._.
+That_DT 's_VBZ why_WRB we_PRP try_VBP to_TO use_VB the_DT rule-based_JJ approach_NN to_TO identify_VB the_DT special_JJ PP_NNP chunks_NNS ._.
+We_PRP test_NN and_CC compare_VB the_DT performances_NNS of_IN the_DT two_CD approaches_NNS by_IN designing_VBG some_DT experiments_NNS ._.
+Final_JJ precision_NN rates_NNS were_VBD over_IN 90_CD %_NN ,_, indicating_VBG that_IN the_DT approaches_NNS perform_VBP well_RB in_IN our_PRP$ task_NN ._.
+The_DT rest_NN of_IN the_DT paper_NN are_VBP organized_VBN as_IN follow_VB :_: Section_NNP 2_CD discusses_VBZ some_DT related_JJ work_NN ._.
+Section_NN 3_CD introduces_VBZ some_DT structural_JJ and_CC semantic_JJ analysis_NN of_IN PP_NNP in_IN Chinese_NNP patent_NN texts_NNS ._.
+Section_NN 4_CD and_CC 5_CD present_JJ the_DT rule-based_JJ and_CC CRF_NNP methods_NNS ._.
+Section_NN 6_CD conducts_VBZ some_DT experiments_NNS and_CC analysis_NN ,_, and_CC the_DT last_JJ section_NN comes_VBZ with_IN the_DT conclusion_NN and_CC future_JJ work_NN ._.
+2_CD Related_JJ Work_NN Identification_NN of_IN Chinese_JJ prepositional_JJ phrases_NNS has_VBZ been_VBN an_DT issue_NN in_IN the_DT field_NN of_IN Chinese_JJ language_NN processing_NN ._.
+Many_JJ effective_JJ methods_NNS ,_, including_VBG rule-based_JJ and_CC statistical_JJ approaches_NNS ,_, were_VBD proposed_VBN in_IN past_JJ several_JJ years_NNS ._.
+-LRB-_-LRB- Zhu_NNP ,_, 2013_CD ;_: Hu_NNP ,_, 2015_CD -RRB-_-RRB- studied_VBD the_DT identification_NN of_IN PPs_NNP towards_IN Chinese-English_NNP patent_NN machine_NN translation_NN by_IN using_VBG a_DT rule-based_JJ method_NN ._.
+-LRB-_-LRB- Yu_NNP ,_, 2006_CD -RRB-_-RRB- applied_VBD the_DT Maximum_NNP Entropy_NNP Model_NNP to_TO the_DT task_NN of_IN identifying_VBG PPs_NNP ._.
+Based_VBN on_IN Hidden_NNP Markov_NNP Model_NNP ,_, -LRB-_-LRB- Xi_NNP ,_, et_FW al._FW ,_, 2007_CD -RRB-_-RRB- presented_VBD a_DT novel_NN method_NN to_TO identify_VB PP_NNP chunks_NNS with_IN dependency_NN grammar_NN ,_, achieving_VBG good_JJ performance_NN ._.
+-LRB-_-LRB- Jian_JJ ,_, et_FW al._FW ,_, 2009_CD -RRB-_-RRB- tried_VBD to_TO identify_VB PP_NNP from_IN two_CD directions_NNS -LRB-_-LRB- left-right_JJ and_CC right-left_JJ -RRB-_-RRB- by_IN using_VBG the_DT classical_JJ SVM_NNP classifier_NN ._.
+As_IN a_DT powerful_JJ sequence_NN modeling_NN framework_NN that_WDT combines_VBZ the_DT advantages_NNS of_IN both_DT generative_JJ model_NN and_CC classification_NN model_NN ,_, CRF_NNP was_VBD first_JJ introduced_VBN into_IN language_NN processing_NN in_IN -LRB-_-LRB- Lafferty_NNP ,_, et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ._.
+Since_IN then_RB ,_, the_DT model_NN has_VBZ been_VBN successfully_RB applied_VBN to_TO various_JJ NLP_NNP tasks_NNS such_JJ as_IN word_NN segmentation_NN -LRB-_-LRB- Tseng_NNP ,_, et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, Semantic_JJ Role_NNP Labelling_NNP -LRB-_-LRB- Cohn_NNP and_CC Blunsom_NNP ,_, 2005_CD -RRB-_-RRB- and_CC parsing_NN -LRB-_-LRB- Finkel_NNP ,_, et_FW al._FW ,_, 2008_CD ;_: Yoshimasa_NNP ,_, et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- Hu_NNP ,_, 2008_CD ;_: Song_NN ,_, 2011_CD and_CC Zhang_NNP ,_, 2013_CD -RRB-_-RRB- proposed_VBN linear-CRF_JJ models_NNS to_TO identify_VB PPs_NNP in_IN Chinese_NNP news_NN corpus_NN ,_, aiming_VBG to_TO identify_VB the_DT nested_VBN PPs_NNP ._.
+Note_VB that_DT ,_, most_JJS previous_JJ works_NNS focus_VB on_IN identifying_VBG PPs_NNP in_IN news_NN corpus_NN ,_, there_EX exists_VBZ few_JJ research_NN in_IN other_JJ domains_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP want_VBP to_TO study_VB some_DT unique_JJ features_NNS of_IN PP_NNP chunks_NNS in_IN Chinese_JJ patent_NN texts_NNS ,_, and_CC try_VB to_TO identify_VB them_PRP with_IN two_CD different_JJ approaches_NNS ._.
+3_CD Structural_NNP Analysis_NNP of_IN PP_NNP In_IN this_DT part_NN ,_, we_PRP need_VBP to_TO introduce_VB some_DT structural_JJ and_CC semantic_JJ analysis_NN of_IN PP_NNP in_IN Chinese_NNP patent_NN texts_NNS ,_, which_WDT are_VBP the_DT basis_NN of_IN the_DT rule-based_JJ method_NN in_IN the_DT following_JJ sections_NNS ._.
+3.1_CD Types_NNP of_IN Prepositions_NNPS After_IN analyzing_VBG considerable_JJ Chinese_JJ patent_NN texts_NNS ,_, we_PRP divide_VBP the_DT prepositions_NNS into_IN two_CD basic_JJ types_NNS ._.
+Some_DT prepositions_NNS ,_, such_JJ as_IN ``_`` 把_FW -LRB-_-LRB- BA_NNP -RRB-_-RRB- ''_'' ,_, ``_`` 由_FW -LRB-_-LRB- YOU_PRP -RRB-_-RRB- ''_'' ,_, ``_`` 将_FW -LRB-_-LRB- JIANG_NNP -RRB-_-RRB- ''_'' and_CC ``_`` 被_FW -LRB-_-LRB- BEI_NNP -RRB-_-RRB- ''_'' ,_, usually_RB introduce_VBP semantic_JJ components_NNS like_IN agent_NN ,_, patient_NN in_IN the_DT sentence_NN ,_, these_DT can_MD be_VB marked_VBN as_IN P0_CD ;_: Other_JJ prepositions_NNS which_WDT can_MD lead_VB the_DT time_NN ,_, manner_NN etc._NN are_VBP marked_VBN as_IN P1_NNP ,_, including_VBG ``_`` 按_FW /_FW 按照_FW /_FW 根据_FW -LRB-_-LRB- according_VBG to_TO -RRB-_-RRB- ''_'' ,_, ``_`` 通过_FW -LRB-_-LRB- by/through_JJ -RRB-_-RRB- ''_'' and_CC so_RB on_IN ._.
+A_DT significant_JJ difference_NN between_IN the_DT two_CD types_NNS is_VBZ ,_, components_NNS behind_IN the_DT P0_NNP prepositions_NNS must_MD be_VB NPs_NNP ,_, while_IN components_NNS behind_IN P1_NN are_VBP not_RB just_RB limited_VBN to_TO NPs_NNP ,_, and_CC they_PRP can_MD be_VB other_JJ kinds_NNS of_IN phrases_NNS or_CC even_RB clauses_NNS ._.
+Generally_RB ,_, the_DT number_NN of_IN P1_NNP is_VBZ much_RB more_JJR than_IN that_DT of_IN P0_NN ._.
+3.2_CD Boundaries_NNS of_IN PP_NNP PP_NNP chunk_NN has_VBZ left_VBN and_CC right_JJ boundary_NN words_NNS ,_, and_CC the_DT left_VBN boundary_NN is_VBZ preposition_NN ._.
+Some_DT right_JJ boundary_NN words_NNS often_RB appear_VBP together_RB with_IN some_DT specific_JJ prepositions_NNS ,_, forming_VBG fixed_VBN collocation_NN structures_NNS ._.
+For_IN example_NN ,_, in_IN the_DT strings_NNS ``_`` 当_FW ..._: ._.
+时_NN -LRB-_-LRB- when_WRB ..._: ._. -RRB-_-RRB- ''_''
+and_CC ``_`` 在_FW ..._: ._.
+中_NN -LRB-_-LRB- in_IN ..._: ._. -RRB-_-RRB- ''_''
+,_, the_DT word_NN ``_`` 时_FW ''_'' is_VBZ the_DT collocation_NN of_IN preposition_NN ``_`` 当_FW ''_'' ,_, and_CC the_DT word_NN ``_`` 中_FW ''_'' is_VBZ the_DT collocation_NN of_IN preposition_NN ``_`` 在_FW ''_'' ._.
+Such_JJ PPs_NNS with_IN collocation_NN structures_NNS are_VBP called_VBN explicit_JJ PP_NNP ._.
+Clearly_RB ,_, prepositions_NNS in_IN explicit_JJ PP_NNP usually_RB belong_VBP to_TO P1_CD type_NN ,_, correspondingly_RB ,_, the_DT right_JJ boundary_NN words_NNS can_MD be_VB marked_VBN as_IN P1H_NNP ._.
+On_IN the_DT contrary_NN ,_, implicit_JJ PP_NNP ,_, refer_VBP to_TO those_DT PPs_NNP whose_WP$ right_JJ boundary_NN words_NNS have_VBP no_DT specific_JJ linguistic_NN features_NNS and_CC can_MD not_RB form_VB collocation_NN with_IN the_DT prepositions_NNS ._.
+The_DT number_NN of_IN implicit_JJ PPs_NNS are_VBP also_RB much_RB more_JJR than_IN that_DT of_IN explicit_JJ ones_NNS ._.
+3.3_CD Positions_NNS of_IN PP_NNP PP_NNP in_IN Chinese_NNP usually_RB located_VBN between_IN the_DT subject_JJ and_CC core_JJ predicate_NN ,_, forming_VBG the_DT ``_`` -LRB-_-LRB- NP_NNP -RRB-_-RRB- +_VBP PP_NNP +_NNP VP_NNP ''_'' format_NN ,_, which_WDT is_VBZ the_DT most_RBS common_JJ form_NN ._.
+Meanwhile_RB ,_, in_IN order_NN to_TO highlight_VB the_DT prepositional_JJ phrases_NNS ,_, PP_NNP can_MD also_RB be_VB separated_VBN from_IN subject_JJ and_CC predicate_VB by_IN commas_NNS ,_, alone_RB as_IN an_DT independent_JJ structural_JJ unit_NN ,_, forming_VBG ``_`` PP_NNP +_NNP ,_, +_NN -LRB-_-LRB- NP_NNP -RRB-_-RRB- +_VBP VP_NNP ''_'' format_NN ._.
+Both_DT the_DT two_CD structures_NNS have_VBP something_NN in_IN common_JJ :_: Subjects_NNS in_IN the_DT sentences_NNS can_MD sometimes_RB be_VB omitted_VBN ;_: several_JJ parallel_JJ PPs_NNP can_MD exist_VB simultaneously_RB ;_: and_CC the_DT PPs_NNP can_MD be_VB either_RB explicit_JJ or_CC implicit_JJ ._.
+But_CC the_DT difference_NN is_VBZ that_IN prepositions_NNS in_IN first_JJ format_NN can_MD be_VB either_RB P0_CD or_CC P1_CD type_NN ,_, while_IN prepositions_NNS of_IN the_DT second_JJ format_NN generally_RB can_MD only_RB be_VB P1_JJ type_NN ,_, because_IN PPs_NNP introduced_VBN by_IN P0_CD type_NN have_VBP much_RB closer_JJR relationship_NN with_IN the_DT predicate_NN structures_NNS and_CC can_MD not_RB be_VB separated_VBN from_IN them_PRP ._.
+3.4_CD Syntactic_JJ levels_NNS of_IN PP_NNP For_IN the_DT sake_NN of_IN parsing_NN ,_, it_PRP is_VBZ necessary_JJ to_TO distinguish_VB the_DT PPs_NNP according_VBG to_TO their_PRP$ syntactic_JJ levels_NNS in_IN the_DT sentences_NNS ._.
+We_PRP define_VBP two_CD levels_NNS :_: LEVEL1_NNP and_CC LEVEL2_NNP ._.
+From_IN the_DT point_NN of_IN syntax_NN tree_NN ,_, the_DT level_NN of_IN PP_NNP ,_, whose_WP$ upper_JJ node_NN is_VBZ the_DT root_NN node_NN of_IN sentence_NN ,_, should_MD belong_VB to_TO LEVEL1_NNP ,_, indicating_VBG that_IN PPs_NNP are_VBP direct_JJ components_NNS of_IN the_DT sentences_NNS ;_: and_CC level_NN of_IN other_JJ PPs_NNP ,_, whose_WP$ nodes_NNS are_VBP non-terminals_JJ ,_, should_MD belong_VB to_TO LEVEL2_NNP ._.
+In_IN the_DT example_NN sentence_NN of_IN section_NN 1_CD ,_, for_IN instance_NN ,_, the_DT levels_NNS of_IN PP1_NNP and_CC PP2_NNP are_VBP LEVEL1_NNP ,_, and_CC PP3_NNP belongs_VBZ to_TO LEVEL2_NNP ._.
+4_CD Rule-based_JJ Method_NNP Based_VBD on_IN the_DT Chinese_JJ patent_NN corpus_VBZ provided_VBN by_IN State_NNP Intelligent_NNP Property_NNP Office_NNP of_IN China_NNP -LRB-_-LRB- SIPO_NNP -RRB-_-RRB- ,_, we_PRP build_VBP a_DT considerable_JJ knowledge_NN base_NN and_CC artificially_RB write_VB numerous_JJ formal_JJ rules_NNS ._.
+In_IN the_DT knowledge_NN base_NN ,_, all_DT words_NNS extracted_VBN from_IN the_DT texts_NNS are_VBP labelled_VBN with_IN several_JJ syntactic_NN and_CC semantic_JJ attributes_NNS ._.
+According_VBG to_TO the_DT P0_NNP and_CC P1_NNP types_NNS of_IN preposition_NN ,_, different_JJ rules_NNS are_VBP specially_RB designed_VBN to_TO identify_VB the_DT PPs_NNP ._.
+After_IN integrating_VBG the_DT knowledge_NN base_NN and_CC rules_NNS into_IN the_DT system_NN ,_, the_DT rules_NNS can_MD use_VB information_NN shown_VBN in_IN the_DT knowledge_NN base_NN ._.
+We_PRP will_MD discuss_VB the_DT identification_NN progress_NN by_IN selecting_VBG some_DT rules_NNS and_CC examples_NNS ._.
+4.1_CD Identifying_NNP PP_NNP Introduced_VBN by_IN P0_CD As_IN mentioned_VBN ,_, PPs_NNP introduced_VBN by_IN prepositions_NNS of_IN P0_NN types_NNS have_VBP direct_JJ relationship_NN with_IN the_DT predicate_NN structure_NN ._.
+We_PRP have_VBP found_VBN that_IN such_JJ PPs_NNS always_RB appear_VBP with_IN two-valence_JJ or_CC three-valence_JJ verbs_NNS ._.
+Thus_RB in_IN the_DT rules_NNS ,_, it_PRP is_VBZ necessary_JJ to_TO take_VB the_DT valence_NN attributes_NNS of_IN verb_NN into_IN consideration_NN to_TO help_VB identify_VB the_DT PPs_NNP ._.
+The_DT valence_NN attributes_NNS have_VBP already_RB been_VBN labelled_VBN in_IN the_DT knowledge_NN base_NN ._.
+Rule1_NNP :_: -LRB-_-LRB- 0_CD -RRB-_-RRB- -LCB-_-LRB- CHN_NNP -LSB-_NNP 与_CD -RSB-_NNP -RCB-_-RRB- +_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- NP_NNP +_NNP -LRB-_-LRB- f_LS -RRB-_-RRB- -LCB-_-LRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- Verb_NNP &_CC Valence_NNP -LSB-_NNP 2_CD -RSB-_NNP &_CC END_NNP %_NN -RCB-_-RRB- =_SYM >_FW -LRB-_-LRB- PP_NNP ,0,1_CD -RRB-_-RRB- &_CC PUT_NNP -LRB-_-LRB- PP_NNP ,_, LEVEL_NNP ,1_CD -RRB-_-RRB- Rule2_NN :_: -LRB-_-LRB- 0_CD -RRB-_-RRB- -LCB-_-LRB- CHN_NNP -LSB-_NNP 与_CD -RSB-_NNP -RCB-_-RRB- +_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- NP_NNP +_NNP -LRB-_-LRB- f_LS -RRB-_-RRB- -LCB-_-LRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- Verb_NNP &_CC Valence_NNP -LSB-_NNP 2_CD -RSB-_NNP -RCB-_-RRB- +_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- CHN_NNP -LSB-_NNP 的_CD -RSB-_NNP =_SYM >_FW -LRB-_-LRB- PP_NNP ,0,1_CD -RRB-_-RRB- &_CC PUT_NNP -LRB-_-LRB- PP_NNP ,_, LEVEL_NNP ,2_CD -RRB-_-RRB- The_DT meaning_NN of_IN rule_NN 1_CD is_VBZ that_IN ,_, if_IN there_EX exists_VBZ a_DT two-valence_JJ verb_NN behind_IN the_DT Chinese_JJ character_NN -LRB-_-LRB- CHN_NNP -RRB-_-RRB- ``_`` 与_FW -LRB-_-LRB- with_IN -RRB-_-RRB- ''_'' ,_, and_CC located_VBN at_IN the_DT end_NN of_IN the_DT sentence_NN -LRB-_-LRB- END_CD %_NN -RRB-_-RRB- ,_, then_RB the_DT string_NN from_IN node_NN -LRB-_-LRB- 0_CD -RRB-_-RRB- to_TO node_VB -LRB-_-LRB- 1_LS -RRB-_-RRB- will_MD be_VB identified_VBN as_IN PP_NNP ,_, and_CC its_PRP$ level_NN should_MD be_VB LEVEL1_NNP ._.
+Rule2_NN is_VBZ similar_JJ to_TO rule1_VB ,_, but_CC since_IN the_DT verb_NN is_VBZ followed_VBN by_IN the_DT common_JJ auxiliary_JJ word_NN ``_`` 的_FW -LRB-_-LRB- DE_NNP -RRB-_-RRB- ''_'' ,_, the_DT PP_NNP is_VBZ just_RB a_DT modifier_NN ,_, and_CC its_PRP$ level_NN will_MD be_VB LEVEL2_JJ instead_RB of_IN LEVEL1_NNP ._.
+E.g._NNP 1_CD :_: 本发明的结果可以_CD -LSB-_NNP PP_NNP 与样本指数_NNP -RSB-_NNP 匹_CD 配_CD 。_NN -LRB-_-LRB- The_DT results_NNS of_IN the_DT present_JJ invention_NN can_MD be_VB matched_VBN -LSB-_NNP PP_NNP with_IN the_DT sample_NN index_NN -RSB-_NNP ._. -RRB-_-RRB-
+E.g._NNP 2_CD :_: -LSB-_NNP NP_NNP -LSB-_NNP PP_NNP 与样本指数_NNP -RSB-_NNP 匹配的结果_CD -RSB-_NNP 表明了_CD 实验的有效性_CD 。_NN -LRB-_-LRB- The_DT results_NNS matched_VBD -LSB-_NNP PP_NNP with_IN the_DT sample_NN index_NN -RSB-_NNP has_VBZ proved_VBN the_DT effectiveness_NN of_IN the_DT experiment_NN ._. -RRB-_-RRB-
+4.2_CD Identifying_NNP PP_NNP Introduced_VBN by_IN P1_NNP PPs_NNP introduced_VBN by_IN P1_NNP actually_RB include_VBP explicit_JJ and_CC implicit_JJ PPs_NNP ._.
+For_IN explicit_JJ PPs_NNP ,_, since_IN the_DT left_NN and_CC right_JJ boundary_NN words_NNS are_VBP collocation_NN ,_, they_PRP can_MD be_VB labelled_VBN with_IN special_JJ marks_NNS in_IN the_DT knowledge_NN base_NN and_CC can_MD be_VB first_JJ identified_VBN ._.
+As_IN a_DT result_NN ,_, after_IN identifying_VBG them_PRP as_IN the_DT boundary_NN words_NNS of_IN PP_NNP ,_, the_DT whole_JJ PP_NNP chunk_NN will_MD be_VB recognized_VBN easily_RB ._.
+Rule3_NNP :_: -LRB-_-LRB- 0_CD -RRB-_-RRB- CHN_NNP -LSB-_NNP 当_CD -RSB-_NNP +_NN -LRB-_-LRB- f_LS -RRB-_-RRB- -LCB-_-LRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- CHN_NNP -LSB-_NNP 时_CD -RSB-_NNP -RCB-_-RRB- =_SYM >_FW -LRB-_-LRB- PP_NNP ,0,1_CD -RRB-_-RRB- $_$ The_DT rule_NN means_VBZ that_IN ,_, if_IN the_DT character_NN ``_`` 时_FW ''_'' is_VBZ located_VBN behind_IN the_DT character_NN ``_`` 当_FW ''_'' in_IN the_DT same_JJ sentence_NN ,_, then_RB the_DT string_NN between_IN the_DT two_CD characters_NNS will_MD be_VB identified_VBN as_IN PP_NNP chunk_NN ._.
+E.g._NNP 3_CD :_: -LSB-_NNP PP_NNP 当产品的性能超过一定阈值时_NNP -RSB-_NNP 可_CD 以出现下图所示的现象_CD 。_NN -LRB-_-LRB- The_DT phenomenon_NN ,_, as_IN shown_VBN in_IN the_DT following_VBG figure_NN ,_, can_MD occur_VB -LSB-_NNP PP_NNP when_WRB the_DT performance_NN of_IN products_NNS exceeds_VBZ a_DT certain_JJ threshold_NN -RSB-_NNP ._. -RRB-_-RRB-
+For_IN implicit_JJ PPs_NNP ,_, since_IN the_DT right_JJ boundary_NN words_NNS are_VBP not_RB collocations_NNS of_IN the_DT preposition_NN and_CC have_VBP no_DT specific_JJ features_NNS ,_, it_PRP is_VBZ much_JJ difficult_JJ to_TO determine_VB the_DT proper_JJ positions_NNS of_IN the_DT right_JJ boundaries_NNS ._.
+However_RB ,_, we_PRP can_MD employ_VB other_JJ contextual_JJ information_NN and_CC expressions_NNS to_TO help_VB recognize_VB them_PRP ._.
+For_IN example_NN ,_, in_IN many_JJ patent_NN sentences_NNS ,_, PPs_NNS are_VBP usually_RB followed_VBN by_IN some_DT special_JJ conjunctions_NNS such_JJ as_IN ``_`` 以_FW -LRB-_-LRB- Yi_NNP -RRB-_-RRB- ,_, 来_FW -LRB-_-LRB- Lai_NNP -RRB-_-RRB- and_CC 而_CD -LRB-_-LRB- Er_NN -RRB-_-RRB- ''_'' ._.
+In_IN this_DT case_NN ,_, the_DT word_NN in_IN front_NN of_IN the_DT conjunction_NN will_MD be_VB identified_VBN as_RB right_JJ boundary_NN ._.
+In_IN another_DT case_NN ,_, as_IN mentioned_VBN above_IN ,_, if_IN the_DT PP_NNP is_VBZ separated_VBN by_IN comma_NN ,_, then_RB it_PRP is_VBZ clearly_RB that_IN the_DT comma_NN can_MD be_VB used_VBN to_TO identify_VB the_DT PP_NNP chunk_NN ._.
+Rule4_NNP :_: -LRB-_-LRB- 0_CD -RRB-_-RRB- -LCB-_-LRB- CHN_NNP -LSB-_NNP 通过_CD ,_, 经由_CD ,_, 经过_CD ,_, 基于_CD ,_, 根据_CD ,_, 藉由_CD -RSB-_NN -RCB-_-RRB- +_NN -LRB-_-LRB- f_LS -RRB-_-RRB- -LCB-_-LRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- CHN_NNP -LSB-_NNP 以_CD ,_, 而_CD ,_, 来_CD -RSB-_NN -RCB-_-RRB- +_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- !_.
+CHK_NNP -LSB-_NNP ,_, -RSB-_NNP =_SYM >_FW -LRB-_-LRB- ABK_NNP ,0,2_CD -RSB-_NNP &_CC PUT_NNP -LRB-_-LRB- PP_NNP ,_, LEVEL_NNP ,1_CD -RRB-_-RRB- Rule5_NNS :_: -LRB-_-LRB- 0_CD -RRB-_-RRB- P1_CD +_NN -LRB-_-LRB- f_LS -RRB-_-RRB- -LCB-_-LRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- CHN_NNP -LSB-_NNP ,_, -RSB-_NNP -RCB-_-RRB- =_SYM >_FW -LRB-_-LRB- ABK_NNP ,0,1_CD -RSB-_NNP &_CC PUT_NNP -LRB-_-LRB- PP_NNP ,_, LEVEL_NNP ,1_CD -RRB-_-RRB- Rule4_JJ indicates_VBZ that_IN if_IN there_EX exists_VBZ Chinese_JJ conjunctions_NNS behind_IN the_DT prepositions_NNS at_IN node_NN 0_CD ,_, then_RB the_DT whole_JJ string_NN before_IN the_DT conjunctions_NNS -LRB-_-LRB- not_RB included_VBN -RRB-_-RRB- will_MD be_VB recognized_VBN as_IN PP_NNP chunk_NN -LRB-_-LRB- ABK_NNP -RRB-_-RRB- ._.
+Rule5_NNS means_VBZ that_IN the_DT string_NN ,_, which_WDT begins_VBZ with_IN the_DT preposition_NN of_IN P1_CD type_NN and_CC ends_VBZ with_IN the_DT comma_NN ,_, will_MD be_VB recognized_VBN as_IN PP_NNP chunk_NN ._.
+E.g._NNP 4_CD :_: -LSB-_NNP PP1_NNP 根据本发明的实施例_CD -RSB-_NNP ,_, 可_CD -LSB-_NNP PP2_NNP 通_CD 过提供动态图像_CD -RSB-_NNP 来扩大方法的应用范围_CD 。_NN -LRB-_-LRB- -LSB-_NNP PP1_NNP According_VBG to_TO the_DT embodiment_NN of_IN the_DT present_JJ invention_NN -RSB-_NNP ,_, the_DT scope_NN of_IN application_NN of_IN the_DT method_NN can_MD be_VB expanded_VBN -LSB-_NNP PP2_CD by_IN providing_VBG a_DT dynamic_JJ image_NN -RSB-_NNP ._. -RRB-_-RRB-
+Sum_VB up_RP ,_, the_DT identification_NN rules_NNS try_VBP to_TO take_VB full_JJ advantages_NNS of_IN the_DT boundary_NN words_NNS and_CC contextual_JJ information_NN around_IN to_TO identify_VB PPs_NNP ._.
+The_DT targeted_JJ rules_NNS only_RB need_VBP to_TO pay_VB attention_NN to_TO local_JJ rather_RB than_IN global_JJ information_NN in_IN the_DT sentence_NN ,_, thus_RB they_PRP are_VBP more_RBR efficient_JJ and_CC effective_JJ ._.
+5_CD CRF_NNP Method_NNP In_IN this_DT paper_NN ,_, we_PRP will_MD use_VB the_DT CRF_NNP +_CD +_JJ toolkit_NN -LRB-_-LRB- V0_CD .53_CD -RRB-_-RRB- 1_CD to_TO train_VB the_DT model_NN for_IN identifying_VBG the_DT PP_NNP chunks_NNS and_CC test_NN the_DT effects_NNS of_IN the_DT method_NN ._.
+5.1_CD Sequential_NNP Labelling_NNP Chunking_NNP based_VBN on_IN CRF_NNP method_NN is_VBZ usually_RB recognized_VBN as_IN sequential_JJ labelling_JJ issue_NN ._.
+Input_NN X_NNP is_VBZ a_DT data_NN sequence_NN to_TO be_VB labelled_VBN ,_, and_CC Output_NN Y_NN is_VBZ a_DT corresponding_JJ labelled_JJ sequence_NN ,_, which_WDT is_VBZ taken_VBN from_IN a_DT specific_JJ tag_NN set_NN ._.
+We_PRP adopt_VBP the_DT B-I-E-O_NNP scheme_NN as_IN tag_NN sets_NNS to_TO label_VB PP_NNP chunks_NNS in_IN the_DT sentence_NN ._.
+B-I-E_JJ refers_VBZ to_TO Beginning_VBG ,_, Intermediate_NNP and_CC End_NNP elements_NNS of_IN PP_NNP structure_NN ,_, and_CC O_NNP for_IN Outsides_NNP of_IN the_DT chunk_NN ._.
+5.2_CD Features_NNS After_IN analyzing_VBG the_DT structural_JJ and_CC linguistic_JJ features_NNS of_IN patent_NN sentences_NNS in_IN the_DT corpus_NN ,_, we_PRP defined_VBD following_VBG five_CD effective_JJ and_CC representative_JJ features_NNS for_IN the_DT model_NN ._.
+Each_DT feature_NN ,_, as_IN shown_VBN below_IN ,_, is_VBZ composed_VBN of_IN feature_NN name_NN and_CC its_PRP$ value_NN ._.
+Feature_NNP Token_NNP POS_NNP Candidate_NNP left_VBD boundary_NN -LRB-_-LRB- CLB_NNP -RRB-_-RRB- Candidate_NNP right_JJ boundary_NN -LRB-_-LRB- CRB_NNP -RRB-_-RRB- Candidate_NNP last_JJ word_NN -LRB-_-LRB- CLW_NNP -RRB-_-RRB- Value_NNP Each_DT token_JJ in_IN the_DT sentence_NN ._.
+Marks_NNP only_RB one_CD proper_JJ POS_NNP of_IN each_DT word_NN and_CC punctuations_NNS -LRB-_-LRB- marked_VBN as_IN ``_`` punc_NN ''_'' -RRB-_-RRB- according_VBG to_TO context_NN in_IN the_DT sentence_NN ._.
+From_IN the_DT current_JJ position_NN of_IN each_DT word_NN ,_, find_VB forward_RB to_TO find_VB the_DT preposition_NN ._.
+If_IN the_DT preposition_NN exists_VBZ ,_, the_DT value_NN is_VBZ the_DT preposition_NN itself_PRP ;_: otherwise_RB marks_VBZ ``_`` N_NNP ''_'' ._.
+If_IN current_JJ word_NN can_MD be_VB RBW_NNP of_IN PP_NNP ,_, marks_VBZ ``_`` Y_NNP ''_'' ;_: otherwise_RB ``_`` N_NNP ''_'' ._.
+The_DT word_NN behind_IN the_DT RB_NNP ,_, which_WDT is_VBZ also_RB helpful_JJ in_IN the_DT identification_NN ,_, is_VBZ defined_VBN as_IN last_JJ word_NN -LRB-_-LRB- LW_NNP -RRB-_-RRB- ._.
+If_IN 1_CD http://crfpp.googlecode.com/_NN current_JJ word_NN is_VBZ LW_NNP ,_, then_RB marks_VBZ ``_`` Y_NNP ''_'' ;_: otherwise_RB ``_`` N_NNP ''_'' ._.
+Table_NNP 1_CD ._.
+Feature_NN Sets_NNS of_IN the_DT CRF_NNP Model_NNP After_IN word_NN segmentation_NN ,_, we_PRP manually_RB label_VBP each_DT sentence_NN sequence_NN including_VBG PP_NNP chunks_NNS with_IN above_JJ features.Table2_NN shows_VBZ a_DT tagged_VBN sequence_NN example_NN ._.
+P_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- R_NN -LRB-_-LRB- %_NN -RRB-_-RRB- F1_CD -LRB-_-LRB- %_NN -RRB-_-RRB- Rule-based_JJ 96.86_CD 74.67_CD 84.33_CD CRF_NNP 92.65_CD 90.07_CD 91.33_CD Table_NNP 3_CD ._.
+Experimental_JJ Results_NNS of_IN the_DT Two_CD Methods_NNPS In_IN order_NN to_TO observe_VB the_DT effects_NNS that_IN the_DT two_CD methods_NNS identified_VBN different_JJ individual_JJ prepositions_NNS ,_, we_PRP further_RB tested_VBD identification_NN precision_NN and_CC recall_NN rates_NNS of_IN 10_CD most_RBS frequently_RB appeared_VBD prepositions_NNS in_IN the_DT test_NN set_NN ._.
+Following_VBG table_NN and_CC line_NN chart_NN showed_VBD the_DT results_NNS ._.
+Words_NNS POS_VBP CLB_NNP CRB_NNP CLW_NNP Tag_NNP Set_NNP 本_FW 发明_FW 通过_FW 采用_FW 先进_FW 技术_FW 而_FW 提高_FW Table_NNP 2_CD ._.
+A_DT Tagged_VBN Sentence_NNP Example_NNP The_NNP first_JJ five_CD columns_NNS are_VBP designed_VBN features_NNS ,_, and_CC the_DT last_JJ column_NN represents_VBZ tag_NN set_NN of_IN the_DT sequences_NNS ._.
+According_VBG to_TO the_DT format_NN of_IN the_DT CRF_NNP toolkit_NN ,_, each_DT column_NN is_VBZ separated_VBN by_IN a_DT separator_NN ,_, and_CC each_DT sentence_NN sequence_NN is_VBZ separated_VBN by_IN a_DT line_NN break_NN ._.
+6_CD Experiments_NNS In_IN this_DT section_NN ,_, we_PRP conducted_VBD some_DT experiments_NNS to_TO test_VB the_DT performance_NN of_IN the_DT two_CD methods_NNS mentioned_VBN above_IN ,_, and_CC compared_VBD their_PRP$ results_NNS ._.
+Precision_NN rate_NN -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, Recall_VB rate_NN -LRB-_-LRB- R_NN -RRB-_-RRB- and_CC F1_CD are_VBP three_CD evaluation_NN metrics_NNS of_IN the_DT experiments_NNS ._.
+6.1_CD Data_NNP 1000_CD sentences_NNS containing_VBG PPs_NNP ,_, which_WDT were_VBD randomly_RB selected_VBN from_IN the_DT patent_NN corpus_VBZ provided_VBN by_IN SIPO_NNP ,_, were_VBD considered_VBN as_IN test_NN set_NN of_IN the_DT methods_NNS ._.
+In_IN the_DT CRF_NNP test_NN ,_, we_PRP chose_VBD another_DT different_JJ 5000_CD sentences_NNS as_IN training_NN set_VBN from_IN the_DT same_JJ corpus_NN to_TO train_VB the_DT model_NN in_IN the_DT toolkit_NN ._.
+6.2_CD Results_NNS The_DT experimental_JJ results_NNS of_IN the_DT two_CD methods_NNS are_VBP shown_VBN in_IN the_DT following_VBG table_NN ._.
+nN_NNP N_NNP prep_VBD 通过_CD N_NNP v_IN 通过_CD N_NNP a_DT 通过_NN N_NNP n_SYM 通过_FW Y_FW N_NNP O_NNP N_NNP B_NNP N_NNP I_PRP N_NNP I_PRP N_NNP E_NNP Y_NNP O_NNP N_NNP O_NNP N_NNP O_NNP N_NNP O_NNP RB_NNP Method_NNP CRF_NNP P_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- 95.63_CD 95.95_CD 86.84_CD 69.57_CD 70.00_CD 87.50_CD 88.89_CD 80.00_CD 100_CD 75.00_CD Method_NN R_NN -LRB-_-LRB- %_NN -RRB-_-RRB- 95.63_CD 95.95_CD 86.84_CD 66.67_CD 63.63_CD 87.50_CD 88.89_CD 70.59_CD 100_CD 60.00_CD conj_NN 通过_NN N_NNP v_VBD 通过_CD N_NNP 生产力_CD n_NN 通过_CD N_NNP 。_CD punc_NN 通过_CD N_NNP No_NNP ._.
+Prep_NNP ._.
+P_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- 1_CD 在_CD -LRB-_-LRB- ZAI_NNP -RRB-_-RRB- 100_CD 2_CD 将_NN -LRB-_-LRB- JIANG_NNP -RRB-_-RRB- 100_CD 3_CD 通过_NN 100_CD -LRB-_-LRB- TONGGUO_NNP -RRB-_-RRB- 4_CD 由_NN -LRB-_-LRB- YOU_PRP -RRB-_-RRB- 90.67_CD 5_CD 从_NN -LRB-_-LRB- CONG_NNP -RRB-_-RRB- 94.74_CD 6_CD 当_NN -LRB-_-LRB- DANG_NNP -RRB-_-RRB- 100_CD 7_CD 与_NN -LRB-_-LRB- YU_NNP -RRB-_-RRB- 92.6_CD 8_CD 对_NN -LRB-_-LRB- DUI_NNP -RRB-_-RRB- 91.37_CD 9_CD 对于_NN -LRB-_-LRB- DUIYU_NNP -RRB-_-RRB- 100_CD 10_CD 向_NN -LRB-_-LRB- XIANG_NNP -RRB-_-RRB- 96.12_CD R_NN -LRB-_-LRB- %_NN -RRB-_-RRB- 90.19_CD 61.67_CD 52.27_CD 68.00_CD 85.71_CD 90.48_CD 25.00_CD 70.59_CD 93.75_CD 55.56_CD Table_NNP 4_CD ._.
+Identification_NN Results_NNS of_IN 10_CD Most_JJS Frequently_RB Appeared_VBN Prepositions_NNS -LRB-_-LRB- in_IN descending_VBG order_NN -RRB-_-RRB- Figure_NN 1_CD ._.
+Line_NNP Chart_NNP of_IN Identification_NNP Results_NNS 6.3_CD Analysis_NNP As_IN shown_VBN in_IN Table_NNP 3_CD ,_, the_DT overall_JJ precision_NN rates_NNS of_IN the_DT two_CD methods_NNS reached_VBN over_IN 90_CD %_NN ,_, indicating_VBG that_IN the_DT methods_NNS are_VBP feasible_JJ and_CC effective_JJ for_IN identifying_VBG prepositional_JJ phrases_NNS ,_, showing_VBG a_DT good_JJ performance_NN ._.
+Precision_NN of_IN rule-based_JJ method_NN were_VBD higher_JJR than_IN those_DT of_IN CRF_NNP in_IN the_DT overall_JJ test_NN and_CC identification_NN of_IN 10_CD prepositions_NNS ._.
+Identification_NN precision_NN of_IN some_DT individual_JJ prepositions_NNS even_RB reached_VBD 100_CD %_NN ,_, indicating_VBG that_IN the_DT rules_NNS can_MD describe_VB the_DT linguistic_JJ information_NN of_IN PPs_NNP more_RBR accurately_RB ,_, especially_RB for_IN those_DT PP_NNP chunks_NNS with_IN long_JJ distance_NN and_CC collocations_NNS ._.
+However_RB ,_, recall_VBP rates_NNS of_IN rule-based_JJ method_NN were_VBD much_RB lower_JJR than_IN CRF_NNP ,_, which_WDT were_VBD also_RB clearly_RB reflected_VBN in_IN the_DT line_NN chart_NN ,_, there_EX exists_VBZ significant_JJ differences_NNS between_IN the_DT recall_NN rates_NNS of_IN various_JJ prepositions_NNS ,_, what_WP 's_VBZ more_JJR ,_, fluctuation_NN ranges_NNS of_IN recall_NN rates_NNS of_IN rule-based_JJ method_NN were_VBD greater_JJR than_IN CRF_NNP ._.
+From_IN the_DT results_NNS ,_, we_PRP can_MD come_VB to_TO the_DT conclusion_NN that_IN ,_, as_IN a_DT statistical_JJ approach_NN ,_, CRF_NNP method_NN does_VBZ have_VB better_JJR stability_NN and_CC adaptability_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT recall_NN rates_NNS were_VBD lower_JJR than_IN precision_NN rates_NNS in_IN the_DT two_CD approaches_NNS ._.
+And_CC ,_, fluctuation_NN ranges_NNS between_IN precision_NN and_CC recall_NN of_IN rule-based_JJ method_NN were_VBD greater_JJR than_IN CRF_NNP ._.
+These_DT are_VBP inevitable_JJ results_NNS of_IN rule-based_JJ approaches_NNS in_IN NLP_NNP ._.
+Despite_IN the_DT methods_NNS performed_VBD well_RB ,_, we_PRP still_RB found_VBD some_DT reasons_NNS accounting_VBG for_IN error_NN identification_NN after_IN analyzing_VBG the_DT experimental_JJ results_NNS ._.
+For_IN the_DT rule-based_JJ method_NN ,_, the_DT reasons_NNS included_VBD :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Because_IN of_IN the_DT performance_NN of_IN the_DT current_JJ system_NN itself_PRP ,_, sometimes_RB it_PRP has_VBZ difficulties_NNS in_IN processing_VBG sentences_NNS with_IN much_RB longer_JJR and_CC complex_JJ structures_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Word_NN segmentation_NN ambiguities_NNS resulted_VBD in_IN error_NN identification_NN ._.
+For_IN example_NN ,_, in_IN the_DT sentence_NN ``_`` -LSB-_NNP PP_NNP 将来自前一步骤的溶液_NNP -RSB-_NNP 加入_CD 到实验装置中_CD 。_NN ''_'' -LRB-_-LRB- The_DT solution_NN from_IN the_DT previous_JJ step_NN was_VBD added_VBN to_TO the_DT test_NN device_NN ._. -RRB-_-RRB-
+,_, the_DT word_NN ``_`` 来_FW 自_FW -LRB-_-LRB- from_IN -RRB-_-RRB- ''_'' was_VBD behind_IN the_DT preposition_NN ``_`` 将_FW -LRB-_-LRB- Jiang_NNP -RRB-_-RRB- ''_'' ,_, since_IN the_DT word_NN ``_`` 将来_FW ''_'' is_VBZ already_RB in_IN the_DT word_NN list_NN ,_, the_DT system_NN will_MD first_RB segment_NN the_DT word_NN ``_`` 将来_FW ''_'' from_IN the_DT sentence_NN ,_, thus_RB the_DT monosyllabic_JJ word_NN ``_`` 将_FW -LRB-_-LRB- Jiang_NNP -RRB-_-RRB- ''_'' can_MD not_RB be_VB identified_VBN as_IN preposition_NN ,_, as_IN a_DT result_NN ,_, the_DT PP_NNP chunk_NN will_MD not_RB be_VB identified_VBN at_IN last_JJ ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- In_IN some_DT cases_NNS ,_, it_PRP is_VBZ harder_RBR for_IN the_DT system_NN to_TO recognize_VB ambiguous_JJ strings_NNS caused_VBN by_IN multi-category_JJ prepositions_NNS ._.
+For_IN example_NN ,_, in_IN the_DT sentence_NN ``_`` 应用程序可以使用_CD SIM_NNP 工具包_CD 接口与移动设备通信_CD ''_'' -LRB-_-LRB- The_DT applications_NNS can_MD use_VB the_DT SIM_NNP toolkit_NN interface_NN to_TO communicate_VB with_IN mobile_JJ devices_NNS ._. -RRB-_-RRB-
+,_, the_DT preposition_NN ``_`` 与_FW -LRB-_-LRB- YU_NNP ,_, with_IN -RRB-_-RRB- ''_'' can_MD also_RB serve_VB as_IN conjunction_NN -LRB-_-LRB- equivalent_JJ to_TO the_DT word_NN ``_`` and_CC ''_'' in_IN English_NNP -RRB-_-RRB- in_IN Chinese_NNP ._.
+Thus_RB ,_, when_WRB chunking_VBG the_DT sentence_NN ,_, the_DT string_NN ``_`` 与移_FW 动设备_FW -LRB-_-LRB- with_IN mobile_JJ devices_NNS -RRB-_-RRB- ''_'' may_MD not_RB be_VB identified_VBN as_IN PP_NNP chunk_NN ,_, instead_RB ,_, the_DT string_NN ``_`` SIM_NNP 工具包接口与移动设备_CD ''_'' is_VBZ recognized_VBN as_IN NP_NNP -LRB-_-LRB- the_DT SIM_NNP toolkit_NN interface_NN and_CC mobile_JJ devices_NNS -RRB-_-RRB- ._.
+For_IN the_DT CRF_NNP method_NN ,_, the_DT possible_JJ reasons_NNS included_VBD :_: 7_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- Some_DT prepositions_NNS had_VBD little_JJ or_CC no_DT occurrences_NNS in_IN the_DT training_NN set_NN ,_, and_CC CRF_NNP model_NN can_MD not_RB study_VB the_DT features_NNS of_IN these_DT prepositions_NNS ,_, thus_RB it_PRP is_VBZ difficult_JJ to_TO identify_VB them_PRP correctly_RB when_WRB they_PRP appear_VBP in_IN the_DT test_NN set_NN ._.
+Some_DT strings_NNS led_VBN by_IN the_DT prepositions_NNS were_VBD ambiguous_JJ ._.
+Under_IN this_DT condition_NN ,_, it_PRP was_VBD not_RB easy_JJ to_TO determine_VB the_DT right_JJ boundaries_NNS of_IN PP_NNP chunks_NNS ._.
+For_IN example_NN ,_, in_IN the_DT sentence_NN ``_`` 通过_FW 本发明的墨水着色剂可以有效地使实验产_FW 品沉淀_FW ''_'' ,_, the_DT italic_JJ noun_NN ``_`` 墨水_FW -LRB-_-LRB- ink_NN -RRB-_-RRB- ''_'' is_VBZ followed_VBN by_IN another_DT noun_NN ``_`` 着_FW 色_FW 剂_FW -LRB-_-LRB- colorants_NNS -RRB-_-RRB- ''_'' ,_, it_PRP is_VBZ not_RB really_RB clear_JJ which_WDT noun_NN should_MD actually_RB be_VB right_JJ boundary_NN of_IN the_DT PP_NNP chunk_NN ._.
+If_IN the_DT two_CD nouns_NNS represent_VBP a_DT compound_NN noun_NN ,_, then_RB the_DT boundary_NN should_MD be_VB the_DT second_JJ noun_NN ;_: but_CC if_IN they_PRP are_VBP independent_JJ of_IN each_DT other_JJ ,_, then_RB the_DT boundary_NN should_MD be_VB the_DT first_JJ noun_NN ,_, and_CC the_DT second_JJ noun_NN will_MD serve_VB as_IN subject_NN of_IN the_DT sentence_NN ._.
+The_DT model_NN is_VBZ quite_RB sensitive_JJ to_TO features_NNS in_IN the_DT sequences_NNS ,_, during_IN the_DT label_NN process_NN ,_, error_NN and_CC improper_JJ manually_RB tagged_VBN information_NN is_VBZ inevitable_JJ ,_, which_WDT can_MD also_RB result_VB in_IN error_NN identifications_NNS ._.
+Conclusion_NN and_CC Future_NNP Work_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- In_IN this_DT paper_NN ,_, we_PRP proposed_VBD a_DT rule-based_JJ and_CC CRF_NNP method_NN for_IN identifying_VBG PP_NNP chunks_NNS in_IN Chinese_JJ patent_NN texts_NNS ._.
+In_IN the_DT rule-based_JJ method_NN ,_, we_PRP built_VBD the_DT knowledge_NN base_NN and_CC designed_VBN various_JJ targeted_JJ rules_NNS for_IN different_JJ types_NNS of_IN PPs_NNP ,_, in_IN the_DT CRF_NNP method_NN ,_, we_PRP employed_VBD the_DT effective_JJ CRF_NNP toolkit_NN to_TO train_VB the_DT identification_NN models_NNS by_IN labelling_VBG the_DT sentences_NNS with_IN several_JJ features_NNS ._.
+We_PRP also_RB conducted_VBD several_JJ tests_NNS to_TO justify_VB the_DT performance_NN of_IN the_DT two_CD approaches_NNS and_CC compared_VBN the_DT experimental_JJ results_NNS ._.
+Which_WDT have_VBP proved_VBN the_DT methods_NNS performed_VBD well_RB in_IN identifying_VBG the_DT PPs_NNP ,_, although_IN there_EX still_RB existed_VBD some_DT error_NN identifications_NNS ._.
+In_IN the_DT future_NN ,_, we_PRP will_MD try_VB to_TO combine_VB the_DT two_CD method_NN together_RB ,_, and_CC pay_VB more_JJR attention_NN to_TO the_DT reasons_NNS resulting_VBG in_IN the_DT error_NN identification_NN ,_, hoping_VBG to_TO improve_VB the_DT performance_NN further_RBR ._.
+Acknowledgments_NNS This_DT work_NN was_VBD supported_VBN by_IN the_DT National_NNP Hi-Tech_NNP Research_NNP and_CC Development_NNP Program_NNP of_IN China_NNP -LRB-_-LRB- 2012AA011104_NNP -RRB-_-RRB- ,_, we_PRP also_RB want_VBP to_TO express_VB our_PRP$ sincere_JJ thanks_NNS to_TO the_DT anonymous_JJ reviewers_NNS of_IN this_DT article_NN ._.
+References_NNS Guizhe_NNP Song_NN ._.
+2011_CD ._.
+Research_NN on_IN Identification_NN of_IN Chinese_JJ Preposition_NNP Phrases_NNPS ._.
+Guodong_NNP Zhou_NNP ,_, Jian_NNP Su_NNP and_CC Tongguan_NNP Tey_NNP ._.
+2000_CD ._.
+Hybrid_JJ Text_NNP Chunking_NNP ._.
+In_IN :_: Proceeding_VBG of_IN CoNLL2000_NNP and_CC LLL_NNP ,_, 163-165_CD ._.
+Hongqiao_NNP Li_NNP ,_, Chang-Ning_NNP Huang_NNP ,_, Jianfeng_NNP Gao_NNP and_CC Xiaozhong_NNP Fan_NNP ._.
+2004_CD ._.
+Chinese_JJ Chunking_VBG with_IN another_DT Type_NN of_IN Spec_NNP ._.
+In_IN :_: Proceeding_VBG of_IN 42nd_NNP Association_NNP for_IN Computational_NNP Linguistics_NNP SIGHAN_NNP workshop_NN ,_, 41-48_CD ._.
+Hongzheng_NNP Li_NNP ,_, Yun_NNP Zhu_NNP ,_, Yang_NNP Yang_NNP and_CC Yaohong_NNP Jin_NNP ._.
+2014_CD ._.
+Reordering_NN Adverbial_NNP Chunks_NNP in_IN Chinese_NNP -_: English_NNP Patent_NNP Machine_NNP Translation_NN ._.
+In_IN :_: Proceedings_NNP of_IN 2014_CD 3rd_CD International_NNP Conference_NNP on_IN Cloud_NNP Computing_NNP and_CC Intelligence_NNP Systems_NNPS ,_, 375-379_CD ._.
+Jenny_NNP Rose_NNP Finkel_NNP ,_, Alex_NNP Kleeman_NNP and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2008_CD ._.
+Efficient_JJ ,_, Feature-based_JJ ,_, Condi_NNP -_: tional_JJ Random_NNP Field_NNP Parsing_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: HLT_NNP ,_, 959-967_CD ._.
+Jianqing_VBG Xi_NNP and_CC Qiang_NNP Luo_NNP ._.
+2009_CD ._.
+Research_NNP on_IN Au_NNP -_: tomatic_JJ Identification_NN for_IN Chinese_JJ Prepositional_NNP Phrase_NNP Based_VBD on_IN HMM_NNP ._.
+Computer_NNP Engineering_NNP ,_, 33_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :172_CD -173,182_CD ._.
+Jie_NNP Zhang_NNP ._.
+2013_CD ._.
+Research_NN on_IN Chinese_JJ Prepositional_NNP Phrase_NNP Identification_NNP based_VBN on_IN Multi-Layer_NNP Conditional_NNP Random_NNP Fields_NNPS ._.
+Juntao_NNP Yu_NNP ._.
+2006_CD ._.
+Identification_NN of_IN Preposition_NNP Phrases_NNP Based_VBD on_IN Maximum_NNP Entropy_NNP Model_NNP ._.
+Junwei_NNP Gan_NNP and_CC Degen_NNP Huang_NNP ._.
+2005_CD ._.
+Automatic_NNP Identification_NNP of_IN Preposition_NNP Phrases_NNP in_IN Chinese_NNP ._.
+Journal_NNP of_IN Chinese_NNP Information_NNP Processing_NNP ,_, 19_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :17_CD -23_CD ._.
+Lafferty_NNP J._NNP ,_, Mccallum_NNP A._NN and_CC Pereira_NNP F._NNP 2001_CD ._.
+Conditional_JJ random_JJ fields_NNS :_: probabilistic_JJ models_NNS for_IN segmenting_VBG and_CC labeling_VBG sequence_NN data_NNS ._.
+In_IN :_: Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ._.
+282-289_CD ._.
+Mengjie_NNP Liang_NNP ,_, Yu_NNP Song_NN ,_, Yingjie_NNP Han_NNP and_CC Hongying_NNP Zan_NNP ._.
+2013_CD ._.
+Automatic_NNP Annotation_NNP Research_NNP on_IN Preposition_NNP Usage_NNP Based_VBD on_IN Sorting_VBG Rules_NNS ._.
+Journal_NNP of_IN Henan_NNP Normal_NNP University_NNP -LRB-_-LRB- Natural_NNP Science_NNP Edition_NNP -RRB-_-RRB- ,_, 41_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :152_CD -155_CD ._.
+Ping_VBG Jian_NNP and_CC Chengqing_NNP Zong_NNP ._.
+2009_CD ._.
+A_DT New_NNP Approach_NNP to_TO Identifying_NNP Chinese_NNP Maximal_NNP Phrases_NNP Using_VBG Bidirectional_NNP Labelling_NNP ._.
+CAAI_NNP Transaction_NN on_IN Intelligence_NNP Systems_NNPS ,_, 4_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :406_CD -413_CD ._.
+Renfen_NNP Hu_NNP ._.
+2015_CD ._.
+on_IN the_DT Methods_NNS of_IN Auto-Identifying_NNP Prepositional_NNP Phrases_NNP in_IN Chinese-English_NNP Patent_NNP Machine_NNP Translation_NN ._.
+Applied_NNP Linguistics_NNP ,_, -LRB-_-LRB- 1_LS -RRB-_-RRB- :136_SYM -_: 144_CD ._.
+Silei_NNP Hu_NNP ._.
+2008_CD ._.
+Automatic_NNP Identification_NNP of_IN Chinese_NNP Prepositional_NNP Phrase_NNP Based_VBD on_IN CRF_NNP ._.
+Trevor_NNP Cohn_NNP and_CC Philip_NNP Blunsom_NNP ._.
+2005_CD ._.
+Semantic_JJ Role_NN Labelling_VBG with_IN Tree_NNP Conditional_NNP Random_NNP Fields_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 9th_JJ Conference_NN on_IN Computational_NNP Natural_NNP Language_NNP Learning_NNP -LRB-_-LRB- CoNLL_NNP -RRB-_-RRB- ,_, 169_CD --_: 172_CD ._.
+Huihsin_NNP Tseng_NNP ,_, Pichuan_NNP Chang_NNP ,_, Galen_NNP Andrew_NNP ,_, Daniel_NNP Jurafsky_NNP and_CC Christopher_NNP Manning_NNP ._.
+2005_CD ._.
+A_DT Conditional_JJ Random_NNP Field_NNP Word_NNP Segmenter_NNP for_IN SIGHAN_NNP Bakeoff_NNP 2005_CD ._.
+In_IN Proceedings_NNP of_IN the_DT fourth_JJ SIGHAN_NNP workshop_NN on_IN Chinese_JJ language_NN Processing_NNP ._.
+Wenliang_NNP Chen_NNP ,_, Yujie_NNP Zhang_NNP and_CC Hitoshi_NNP Isahara_NNP ._.
+2006_CD ._.
+An_DT Empirical_JJ Study_NN of_IN Chinese_JJ Chunking_NN ._.
+In_IN :_: Proceeding_VBG of_IN the_DT COLING/ACL_NNP 2006_CD ,_, 97_CD --_: 104_CD ._.
+Yoshimasa_NNP Tsuruoka_NNP ,_, Jun_NNP '_POS ichi_JJ Tsujii_NNP and_CC Sophia_NNP An_DT -_: aniadou_NN ._.
+2009_CD ._.
+Fast_NNP Full_NNP Parsing_NNP by_IN Linear-Chain_NNP Conditional_NNP Random_NNP Fields_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 12th_JJ Conference_NN of_IN the_DT European_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 790_CD --_: 798_CD ._.
+Yun_NNP Zhu_NNP and_CC Yaohong_NNP Jin_NNP ._.
+2012_CD ._.
+A_DT Chinese-English_JJ Patent_NNP Machine_NN Translation_NN System_NNP based_VBN on_IN the_DT Theory_NNP of_IN Hierarchical_NNP Network_NNP of_IN Concepts_NNPS ._.
+The_DT Journal_NNP of_IN China_NNP Universities_NNS of_IN Posts_NNS and_CC Tele_NNP -_: communications_NNS ,_, 19_CD -LRB-_-LRB- Suppl_NN ._.
+2_LS -RRB-_-RRB- :_: 140-146_CD ._.

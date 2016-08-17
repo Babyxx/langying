@@ -1,0 +1,310 @@
+Degree_NN Variables_NNS by_IN Choose_VBP Degree_NN in_IN Izyooni_NNP `_`` Than_IN '_'' -_: Clauses_NNS Abstract_NNP Clausal_NNP izyooni_FW `_`` than_IN '_'' -_: comparatives_NNS in_IN Japanese_JJ allow_VBP izyooni_FW `_`` than_IN '_'' -_: clauses_NNS with_IN their_PRP$ degree_NN positons_NNS filled_VBN ._.
+I_PRP consider_VBP them_PRP a_DT degree_NN version_NN of_IN Internally_RB Headed_VBN Relative_JJ Clauses_NNS -LRB-_-LRB- IHRCs_NNS -RRB-_-RRB- ._.
+In_IN this_DT preliminary_JJ study_NN ,_, I_PRP adopt_VBP Gross_NNP and_CC Landman_NNP 's_POS -LRB-_-LRB- 2012_CD -RRB-_-RRB- Choose_VBP Role_NN analysis_NN of_IN IHRCs_NNS in_IN Japanese_JJ and_CC propose_VB a_DT similar_JJ functional_JJ category_NN Choose_VBP Degree_NN ,_, which_WDT ``_`` re-opens_VBZ ''_'' a_DT degree_NN variable_JJ position_NN for_IN ``_`` closed_JJ ''_'' izyooni-clauses_NNS ._.
+This_DT makes_VBZ it_PRP possible_JJ for_IN once_RB closed_VBN izyooni-clauses_NNS to_TO denote_VB a_DT set_NN of_IN degrees_NNS ._.
+1_CD Introduction_NNP Japanese_NNP comparatives_NNS have_VBP recently_RB attracted_VBN wide_JJ attention_NN in_IN syntax_NN and_CC semantics_NNS ._.
+Most_JJS of_IN the_DT previous_JJ works_NNS are_VBP concerned_VBN with_IN yorimo_NN `_`` than_IN '_'' -_: comparatives_NNS ._.
+However_RB ,_, there_EX is_VBZ another_DT `_`` than_IN '_'' -_: comparative_JJ in_IN Japanese_JJ ,_, as_IN illustrated_VBN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+Comparatives_NNS of_IN this_DT type_NN are_VBP called_VBN izyooni_FW `_`` than_IN '_'' -_: comparatives_NNS ._.
+Interestingly_RB ,_, izyooni-comparatives_NNS have_VBP the_DT implication_NN that_IN the_DT given_VBN degrees_NNS in_IN the_DT embedded_VBN clauses_NNS are_VBP ``_`` large_JJ ''_'' -LRB-_-LRB- Hayashishita_NNP 2007_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, -LRB-_-LRB- 1_LS -RRB-_-RRB- implies_VBZ that_IN Mary_NNP is_VBZ smart_JJ ._.
+Consequently_RB ,_, Susan_NNP in_IN the_DT matrix_NN clause_NN is_VBZ considered_VBN to_TO be_VB smart_JJ as_RB well_RB ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- Suusan_JJ wa_NN -LSB-_NNP Mary_NNP Susan_NNP Top_NNP Mary_NNP -_: izyooni_FW kasikoi_FW ._.
+ga_NN kasikoi_NNS -RSB-_NNP Nom_NNP smart_JJ toda@tku.ac.jp_NN than_IN smart_JJ `_`` Susan_NNP is_VBZ smarter_RBR than_IN Mary_NNP is_VBZ ._. '_''
+-LRB-_-LRB- Implication_NN :_: Mary_NNP is_VBZ smart_JJ ._. -RRB-_-RRB-
+Such_JJ implication_NN is_VBZ not_RB observed_VBN in_IN the_DT yorimo_NN counterpart_NN nor_CC in_IN the_DT English_NNP equivalent_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- with_IN yorimo_NN is_VBZ even_RB ungrammatical_JJ .1_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- *_SYM Suusan_NNP Susan_NNP wa_NNP -LSB-_NNP Mary_NNP ga_NNP kasikoi_FW -RSB-_NNP smart_JJ Top_NNP Mary_NNP Nom_NNP -_: yorimo_NN kasikoi_NNS ._.
+than_IN smart_JJ `_`` Susan_NNP is_VBZ smarter_RBR than_IN Mary_NNP is_VBZ ._. '_''
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Susan_NNP is_VBZ smarter_RBR than_IN Mary_NNP is_VBZ ._.
+-LRB-_-LRB- Not_RB implied_VBN :_: Mary_NNP is_VBZ smart_JJ ._. -RRB-_-RRB-
+For_IN the_DT purpose_NN of_IN our_PRP$ discussion_NN ,_, I_PRP will_MD call_VB the_DT degree_NN implication_NN of_IN izyooni-comparatives_NNS a_DT ``_`` positive_JJ implication_NN ._. ''_''
+This_DT is_VBZ because_IN the_DT implication_NN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- is_VBZ intuitively_RB the_DT same_JJ as_IN the_DT interpretation_NN of_IN its_PRP$ corresponding_JJ positive_JJ sentence_NN given_VBN in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, where_WRB the_DT null_JJ POS_NNP operator_NN induces_VBZ the_DT interpretation_NN that_WDT Mary_NNP 's_POS degree_NN of_IN smartness_NN is_VBZ large_JJ ._.
+The_DT truth_NN conditions_NNS of_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- are_VBP given_VBN in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- ._.
+1_CD As_IN for_IN why_WRB -LRB-_-LRB- 2_LS -RRB-_-RRB- is_VBZ ungrammatical_JJ ,_, the_DT arguments_NNS are_VBP not_RB settled_VBN yet_RB ._.
+See_VB Snyder_NNP et_FW al._FW -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, Beck_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- ,_, Kennedy_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, and_CC Sudo_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, among_IN others_NNS ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- Mary_NNP ga_NNP POS_NNP kasikoi_FW ._.
+Mary_NNP Nom_NNP smart_JJ `_`` Maryissmart_NNP ._. '_''
+-LRB-_-LRB- 5_CD -RRB-_-RRB- POS_NNP g_NN =_SYM P_NNP D_NNP <_CD d_LS ,_, t_IN >_CD d_SYM -LSB-_NNP P_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- d_SYM >_SYM dstandard_NN in_IN c_NN -RSB-_NNP -LRB-_-LRB- 6_CD -RRB-_-RRB- d_SYM -LSB-_NNP Mary_NNP is_VBZ d-smart_JJ d_SYM >_SYM dstandard_NN in_IN c_NN -RSB-_NNP I_PRP assume_VBP that_IN the_DT positive_JJ implication_NN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- comes_VBZ from_IN the_DT POS_NNP operator_NN that_WDT occupies_VBZ the_DT degree_NN variable_JJ position_NN of_IN kasikoi_FW `_`` smart_JJ '_'' in_IN the_DT izyooni-clause_NN ._.
+This_DT may_MD sound_VB odd_JJ ._.
+Normally_RB ,_, such_JJ degree_NN positions_NNS are_VBP abstracted_JJ over_IN and_CC occupied_VBN by_IN a_DT degree_NN variable_JJ d._NN Therefore_RB ,_, the_DT position_NN can_MD not_RB be_VB filled_VBN by_IN POS_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- is_VBZ the_DT LF_NNP structure_NN of_IN the_DT English_NNP example_NN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- ._.
+The_DT degree_NN variable_JJ position_NN of_IN the_DT than-clause_NN is_VBZ occupied_VBN by_IN d2_CD ,_, which_WDT is_VBZ bound_VBN by_IN an_DT operator_NN ._.
+Note_VB that_IN I_PRP assume_VBP than_IN in_IN this_DT case_NN is_VBZ semantically_RB null_JJ and_CC indicate_VBP it_PRP with_IN ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- Clausal_JJ than-comparatives_NNS in_IN English_JJ 3_CD DegP_NN 2_CD <_CD d_LS ,_, t_IN >_CD 216_CD -_: er_SYM <_FW dt_FW <_FW dt_FW ,_, t_IN >_CD 2_CD Susan_NNP is_VBZ d1-smart_JJ than_IN CP_NNP <_CD d_LS ,_, t_IN >_CD 2_CD Op2_NN 6_CD Mary_NNP is_VBZ d2-smart_JJ However_RB ,_, notice_NN that_IN Japanese_NNP is_VBZ known_VBN to_TO have_VB ``_`` closed_VBN ''_'' relative_JJ clauses_NNS ,_, namely_RB ,_, Internally_RB Headed_VBN Relative_JJ Clauses_NNS -LRB-_-LRB- IHRCs_NNS -RRB-_-RRB- ._.
+Consider_VB the_DT example_NN in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ._.
+It_PRP intuitively_RB means_VBZ that_IN Taro_NNP brought_VBD cookies_NNS that_IN Yoko_NNP put_VBD in_IN the_DT refrigerator_NN ._.
+However_RB ,_, the_DT object_NN position_NN of_IN ireteoita_JJ `_`` put_VB '_'' in_IN the_DT embedded_VBN clause_NN is_VBZ overtly_RB filled_VBN by_IN kukkii_FW `_`` cookies_NNS ._. '_''
+lit_VBN ._.
+`_`` Taro_NN brought_VBD -LSB-_NNP Yoko_NNP put_VBD at_IN least_JJS three_CD cookies_NNS in_IN the_DT refrigerator_NN -RSB-_NNP -_: NM_NNP to_TO the_DT party_NN ._. '_''
+-LRB-_-LRB- Yoko_NNP put_VBD at_IN least_JJS three_CD cookies_NNS in_IN the_DT refrigerator_NN ,_, and_CC Taro_NNP brought_VBD them_PRP to_TO the_DT party_NN ._. -RRB-_-RRB-
+-LRB-_-LRB- Grosu_NNP and_CC Landman_NNP 2012_CD -RRB-_-RRB- Then_RB ,_, izyooni-clauses_NNS with_IN filled_VBN degree_NN positions_NNS can_MD be_VB captured_VBN as_IN a_DT degree_NN version_NN of_IN IHRCs_NNS ._.
+If_IN so_RB ,_, some_DT analyses_NNS of_IN IHRC_NNP can_MD apply_VB to_TO closed_JJ izyooni-comparatives_NNS ._.
+The_DT IHRC_NNP construction_NN is_VBZ a_DT popular_JJ topic_NN in_IN syntax/semantics_NNS studies_NNS of_IN Japanese_JJ ._.
+One_CD such_JJ study_NN is_VBZ Grosu_NNP and_CC Landman_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+They_PRP propose_VBP a_DT functional_JJ category_NN Choose_VBP Role_NN -LRB-_-LRB- ChR_NNP -RRB-_-RRB- ,_, which_WDT ``_`` re-opens_VBZ ''_'' an_DT individual_JJ variable_JJ position_NN for_IN a_DT closed_JJ proposition_NN ._.
+I_PRP propose_VBP a_DT similar_JJ functional_JJ category_NN Choose_VB Degree_NNP -LRB-_-LRB- ChD_NNP -RRB-_-RRB- ,_, which_WDT re-opens_VBZ a_DT degree_NN variable_JJ position_NN for_IN a_DT closed_JJ izyooni-clause_NN ._.
+This_DT straightforwardly_RB explains_VBZ how_WRB -LRB-_-LRB- 1_LS -RRB-_-RRB- is_VBZ made_VBN possible_JJ with_IN the_DT positive_JJ implication_NN :_: The_DT original_JJ degree_NN position_NN of_IN kasikoi_FW `_`` smart_JJ '_'' is_VBZ occupied_VBN by_IN the_DT POS_NNP operator_NN ,_, and_CC abstraction_NN over_IN degree_NN takes_VBZ place_NN due_JJ to_TO the_DT newly_RB created_VBN degree_NN variable_JJ position_NN by_IN ChD_NNP ._.
+The_DT LF_NNP of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- is_VBZ roughly_RB schematized_VBN as_IN -LRB-_-LRB- 9_CD -RRB-_-RRB- ,_, where_WRB d3_NN is_VBZ the_DT degree_NN variable_JJ position_NN created_VBN by_IN ChD_NNP ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- Clausal_JJ izyooni-comparatives_NNS in_IN Japanese_JJ with_IN ``_`` closed_JJ ''_'' izyooni-clauses_NNS 3_CD DegP_NN 2_CD <_CD d_LS ,_, t_IN >_CD 216_CD -_: er_FW dt_FW <_FW dt_FW ,_, t_IN >_CD 2_CD Susan_NNP is_VBZ d1-smart_JJ izyooni_FW CP_FW <_FW d_LS ,_, t_IN >_CD `_`` than_IN '_'' 2_CD Op3_NN 6_CD Mary_NNP is_VBZ POS-smart_JJ d3_CD The_DT organization_NN of_IN this_DT paper_NN is_VBZ as_IN follows_VBZ ._.
+Section_NN 2_CD introduces_VBZ another_DT example_NN of_IN izyooni_NNS -_: comparatives_NNS ,_, in_IN which_WDT the_DT degree_NN argument_NN position_NN of_IN the_DT izyooni-clause_NN is_VBZ filled_VBN with_IN an_DT overt_JJ degree_NN item_NN ._.
+In_IN Section_NN 3_CD ,_, I_PRP review_VBP Grosu_NNP and_CC Landman_NNP 's_POS -LRB-_-LRB- 2012_CD -RRB-_-RRB- ChR_JJ analysis_NN of_IN IHRCs_NNP in_IN Japanese_NNP ._.
+Then_RB ,_, I_PRP propose_VBP a_DT similar_JJ functional_JJ category_NN ChD_NNP and_CC show_VB how_WRB it_PRP accounts_VBZ for_IN izyooni-comparatives_NNS with_IN filled_VBN degree_NN positions_NNS ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- Taroo_NNP wa_NN -LSB-_NNP CP_NNP Yoko_NNP ga_JJ Taroo_NNP Top_NNP Yoko_NNP Nom_NNP refrigerator_NN in_IN kukkiii_NN o_NN sukunakutomo_NN mittu_NN cookie_NN Acc_NNP at.least_NNP three.CL_NNP ireteoia_NN -RSB-_NNP noi_FW o_FW paatii_FW ni_FW mottekita_FW ._.
+put_VBN NM_NNP Acc_NNP party_NN to_TO brought_VBN reezooko_NN ni_NNS Section_NN 4_CD discusses_VBZ how_WRB our_PRP$ analysis_NN of_IN ChD_NNP differs_VBZ from_IN previous_JJ studies_NNS of_IN izyooni_NNS -_: comparatives_NNS ._.
+2_LS Izyooni-Clauses_NNPS with_IN Filled_NNP Degree_NNP Positions_NNPS As_IN already_RB mentioned_VBN ,_, I_PRP assume_VBP that_IN the_DT positive_JJ implication_NN of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, repeated_VBN below_IN in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- ,_, comes_VBZ from_IN an_DT invisible_JJ POS_NNP operator_NN that_WDT occupies_VBZ the_DT degree_NN position_NN of_IN kasikoi_FW `_`` smart_JJ '_'' in_IN the_DT izyooni_NNS -_: clause_NN ._.
+of_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- can_MD be_VB hard_JJ to_TO see_VB because_IN Japanese_JJ does_VBZ not_RB employ_VB overt_JJ comparative_JJ morphemes_NNS like_VBP --_: er_NN in_IN English_NNP ._.
+I_PRP assume_VBP there_EX is_VBZ a_DT null_JJ comparative_JJ operator_NN in_IN Japanese_JJ ._.
+The_DT point_NN of_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- is_VBZ that_IN the_DT length_NN of_IN `_`` that_WDT paper_NN '_'' is_VBZ overtly_RB shown_VBN as_IN `_`` 2_CD pages_NNS more_RBR -LRB-_-LRB- than_IN a_DT given_VBN standard_NN -RRB-_-RRB- ._. '_''
+To_TO my_PRP$ knowledge_NN ,_, this_DT the_DT best_JJS example_NN of_IN overt_JJ degree_NN item_NN in_IN Japanese_JJ ._.
+Now_RB consider_VB -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+Its_PRP$ izyooni-clause_NN is_VBZ identical_JJ to_TO -LRB-_-LRB- 12_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- means_VBZ that_IN `_`` this_DT paper_NN '_'' in_IN the_DT matrix_NN clause_NN is_VBZ longer_RBR than_IN `_`` that_WDT paper_NN '_'' in_IN the_DT embedded_VBN clause_NN ,_, which_WDT is_VBZ `_`` 2_CD pages_NNS more_RBR '_'' than_IN a_DT contextually_RB given_VBN standard_NN ._.
+-LRB-_-LRB- 13_CD -RRB-_-RRB- Kono_NNP peepaa_NN wa_NN -LSB-_NNP ano_NN peepaa_NN ga_NN this_DT paper_NN Top_NNP that_IN paper_NN Nom_NNP 2_CD peeji_FW nagai_FW -RSB-_SYM -_: izyooni_FW nagai_FW ._.
+2_CD page_NN longer_JJR than_IN long_JJ lit_VBN ._.
+`_`` This_DT paper_NN is_VBZ longer_RBR than_IN -LSB-_JJ that_IN paper_NN is_VBZ 2_CD pages_NNS longer_RBR -LRB-_-LRB- than_IN a_DT given_VBN page_NN limit_NN -RRB-_-RRB- ._. -RSB-_NN '_''
+In_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, the_DT standard_NN of_IN comparison_NN for_IN the_DT embedded_VBN comparative_JJ sentence_NN is_VBZ implicit_JJ ,_, as_IN indicated_VBN in_IN parentheses_NNS in_IN the_DT translation_NN ._.
+If_IN one_CD does_VBZ not_RB mind_VB a_DT more_RBR complex_JJ sentence_NN ,_, it_PRP is_VBZ possible_JJ to_TO have_VB it_PRP overtly_RB ._.
+-LRB-_-LRB- 14_CD -RRB-_-RRB- has_VBZ the_DT extra_JJ than_IN phrase_NN `_`` than_IN the_DT page_NN limit_NN '_'' within_IN the_DT izyooni_NNS -_: clause_NN ._.
+The_DT length_NN of_IN `_`` that_WDT paper_NN '_'' is_VBZ overtly_RB shown_VBN as_IN `_`` 2_CD pages_NNS more_RBR than_IN the_DT page_NN limit_NN ._. '_''
+-LRB-_-LRB- 14_CD -RRB-_-RRB- Kono_NNP peepaa_NN wa_NN -LSB-_NNP ano_NN peepaa_NN ga_NN this_DT paper_NN Top_NNP that_IN paper_NN Nom_NNP maisuu_FW -LSB-_NNP seigenn_NN yorimo_NN -RSB-_NN 2_CD peeji_FW nagai_FW -RSB-_NNP -LRB-_-LRB- 10_CD -RRB-_-RRB- Suusan_JJ wa_NN -LSB-_NNP Mary_NNP ga_NNP POS_NNP Susan_NNP Top_NNP Mary_NNP Nom_NNP -_: izyooni_FW kasikoi_FW ._.
+than_IN smart_JJ `_`` Susan_NNP is_VBZ smarter_RBR than_IN Mary_NNP is_VBZ ._. '_''
+-LRB-_-LRB- Implication_NN :_: Mary_NNP is_VBZ smart_JJ ._. -RRB-_-RRB-
+kasikoi_FW -RSB-_NNP smart_JJ If_IN this_DT assumption_NN is_VBZ correct_JJ ,_, it_PRP is_VBZ predicted_VBN that_IN the_DT degree_NN position_NN can_MD be_VB filled_VBN by_IN items_NNS other_JJ than_IN the_DT POS_NNP operator_NN ,_, including_VBG overt_JJ ones_NNS ._.
+This_DT prediction_NN is_VBZ borne_VBN out_RP ._.
+In_IN order_NN to_TO show_VB the_DT relevant_JJ data_NNS ,_, I_PRP will_MD take_VB several_JJ steps_NNS ._.
+It_PRP is_VBZ known_VBN that_IN some_DT dimensional_JJ adjectives_NNS take_VBP overt_JJ measure_NN phrases_NNS ._.
+For_IN instance_NN ,_, in_IN the_DT English_JJ sentence_NN in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, 10_CD pages_NNS occupies_VBZ the_DT degree_NN position_NN of_IN long_RB ,_, and_CC it_PRP represents_VBZ the_DT whole_JJ length_NN of_IN the_DT paper_NN ._.
+-LRB-_-LRB- 11_CD -RRB-_-RRB- This_DT paper_NN is_VBZ 10_CD pages_NNS long_RB ._.
+Japanese_JJ nagai_NNS `_`` long_RB '_'' also_RB takes_VBZ a_DT measure_NN phrase_NN ,_, e.g._FW ,_, 2_CD peeji_NNS `_`` two_CD pages_NNS ,_, '_'' as_IN shown_VBN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- is_VBZ what_WP will_MD appear_VB in_IN the_DT complement_VBP of_IN izyooni_NNS shortly_RB ._.
+2_CD page_NN long_RB lit_VBD ._.
+`_`` This_DT paper_NN is_VBZ longer_RBR than_IN -LSB-_JJ that_IN paper_NN is_VBZ 2_CD pages_NNS longer_RBR than_IN the_DT page_NN limit_NN ._. -RSB-_NN '_''
+It_PRP should_MD be_VB noted_VBN that_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 14_CD -RRB-_-RRB- are_VBP complicated_VBN ,_, and_CC not_RB every_DT speaker_NN is_VBZ comfortable_JJ with_IN them_PRP ._.
+There_EX are_VBP variations_NNS in_IN acceptability_NN among_IN speakers_NNS ._.
+The_DT language_NN consultants_NNS in_IN this_DT study_NN judged_VBD the_DT sentences_NNS acceptable_JJ or_CC at_IN least_JJS marginally_RB acceptable_JJ ._.
+The_DT reason_NN for_IN the_DT variation_NN in_IN acceptability_NN is_VBZ not_RB clear_JJ at_IN this_DT point_NN ._.
+However_RB ,_, the_DT difference_NN between_IN such_JJ izyooni-comparatives_NNS and_CC the_DT corresponding_JJ English_JJ sentences_NNS is_VBZ very_RB clear_JJ ._.
+In_IN English_NNP ,_, than-clauses_NNS with_IN filled_VBN degree_NN positions_NNS are_VBP never_RB acceptable_JJ ._.
+-LRB-_-LRB- 12_CD -RRB-_-RRB- Ano_NNP that_IN peepaa_NN wa_NN 2_CD peeji_FW nagai_FW ._.
+paper_NN `_`` That_DT paper_NN is_VBZ 2_CD pages_NNS longer_RBR ._. '_''
+Top_JJ 2_CD page_NN long_RB Not_RB :_: `_`` That_DT paper_NN is_VBZ 2_CD pages_NNS long_RB ._. '_''
+However_RB ,_, -LRB-_-LRB- 12_CD -RRB-_-RRB- does_VBZ NOT_RB mean_JJ `_`` That_DT paper_NN is_VBZ 2_CD pages_NNS long_RB ._. '_''
+It_PRP rather_RB has_VBZ the_DT comparative_JJ interpretation_NN `_`` That_DT paper_NN is_VBZ 2_CD pages_NNS longer_RBR -LRB-_-LRB- than_IN a_DT given_VBN standard_NN -RRB-_-RRB- ._. '_''
+It_PRP is_VBZ known_VBN that_IN measure_NN phrases_NNS for_IN Japanese_JJ dimensional_JJ adjectives_NNS always_RB represent_VBP differential_JJ degrees_NNS ._.
+-LRB-_-LRB- Snyder_NNP et_FW al._FW 1995_CD ,_, Beck_NNP et_FW al._FW 2007_CD ,_, a.o._VBN -RRB-_-RRB- The_DT comparative_JJ semantics_NNS page_NN limit_NN than_IN -_: izyooni_FW nagai_FW ._.
+than_IN long_JJ The_DT problem_NN of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- is_VBZ their_PRP$ meanings_NNS should_MD not_RB be_VB calculable_JJ due_JJ to_TO type_NN mismatch_NN ,_, contrary_JJ to_TO our_PRP$ intuitions_NNS ._.
+In_IN both_DT -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, the_DT degree_NN position_NN in_IN the_DT izyooni-clause_NN is_VBZ filled_VBN ._.
+To_TO be_VB more_RBR precise_JJ ,_, it_PRP is_VBZ filled_VBN in_IN different_JJ ways_NNS in_IN LF_NNP ._.
+In_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- ,_, the_DT null_JJ POS_NNP operator_NN occupies_VBZ the_DT degree_NN argument_NN position_NN ._.
+In_IN -LRB-_-LRB- 16_CD -RRB-_-RRB- ,_, the_DT embedded_VBN izyooni_NNS -_: clause_NN itself_PRP is_VBZ a_DT comparative_JJ sentence_NN ._.
+Thus_RB ,_, the_DT degree_NN argument_NN position_NN of_IN nagai_NNS `_`` long_RB '_'' is_VBZ bound_VBN by_IN DegP_NN within_IN the_DT izyooni-clause_NN ._.
+The_DT point_NN is_VBZ that_IN in_IN both_DT cases_NNS ,_, the_DT izyooni-clauses_NNS are_VBP closed_VBN and_CC they_PRP denote_VBP type_NN <t>_NN ._.
+-LRB-_-LRB- 15_CD -RRB-_-RRB- LF_NN of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: Type_NN mismatch_NN It_PRP requires_VBZ the_DT first_JJ argument_NN to_TO be_VB type_NN <_NN d_LS ,_, t_SYM >_FW ._.
+However_RB the_DT complement_VB of_IN izyooni_FW denotes_FW <t>_FW in_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 16_CD -RRB-_-RRB- ._.
+Despite_IN this_DT type_NN mismatch_NN ,_, -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- are_VBP intuitively_RB well_RB formed_VBN ._.
+How_WRB does_VBZ this_DT happen_VB ?_.
+In_IN the_DT next_JJ section_NN ,_, I_PRP will_MD propose_VB a_DT functional_JJ category_NN of_IN ChD_NNP that_WDT creates_VBZ an_DT additional_JJ degree_NN variable_JJ position_NN of_IN type_NN <d>_NN ._.
+3_CD Choose_VBP Degree_NNP The_DT problem_NN we_PRP saw_VBD in_IN the_DT previous_JJ section_NN is_VBZ that_IN the_DT izyooni-clauses_NNS are_VBP ``_`` closed_VBD ''_'' and_CC appear_VB to_TO be_VB type_NN <t>_NN ._.
+This_DT is_VBZ a_DT rare_JJ phenomenon_NN for_IN clausal_JJ than-comparatives_NNS ._.
+However_RB ,_, it_PRP is_VBZ rather_RB a_DT familiar_JJ phenomenon_NN in_IN IHRC_NNP constructions_NNS in_IN Japanese_JJ and_CC other_JJ languages_NNS ._.
+Relative_JJ clauses_NNS are_VBP normally_RB a_DT set_NN of_IN individuals_NNS ._.
+However_RB ,_, in_IN the_DT IHRC_NNP construction_NN in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- ,_, repeated_VBN from_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, all_PDT the_DT argument_NN positions_NNS are_VBP filled_VBN ,_, including_VBG the_DT object_NN position_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT sentence_NN is_VBZ ``_`` closed_VBN ''_'' and_CC appears_VBZ to_TO be_VB type_NN <t>_NN ._.
+-LRB-_-LRB- 18_CD -RRB-_-RRB- Taroo_NNP wa_NN -LSB-_NNP CP_NNP Yoko_NNP ga_JJ reezooko_NN ni_NNS Taroo_NNP Top_NNP Yoko_NNP Nom_NNP refrigerator_NN in_IN kukkiii_NN o_NN sukunakutomo_NN mittu_NN cookie_NN Acc_NNP at.least_NNP three.CL_NNP ireteoia_NN -RSB-_NNP noi_FW o_FW paatii_FW ni_FW mottekita_FW ._.
+put_VBN NM_NNP Acc_NNP party_NN to_TO brought_VBN lit_VBN ._.
+`_`` Taro_NN brought_VBD -LSB-_NNP Yoko_NNP put_VBD at_IN least_JJS three_CD cookies_NNS in_IN the_DT refrigerator_NN -RSB-_NN to_TO the_DT party_NN ._. '_''
+-LRB-_-LRB- Yoko_NNP put_VBD at_IN least_JJS three_CD cookies_NNS in_IN the_DT refrigerator_NN ,_, and_CC Taro_NNP brought_VBD them_PRP to_TO the_DT party_NN ._. -RRB-_-RRB-
+-LRB-_-LRB- Grosu_NNP and_CC Landman_NNP 2012_CD -RRB-_-RRB- There_EX has_VBZ been_VBN a_DT proposal_NN to_TO solve_VB the_DT problem_NN ._.
+Then_RB ,_, let_VB us_PRP apply_VB it_PRP to_TO izyooni-comparatives_NNS ._.
+In_IN this_DT section_NN ,_, I_PRP will_MD review_VB how_WRB Grosu_NNP and_CC Landman_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- analyze_VBP -LRB-_-LRB- 18_CD -RRB-_-RRB- ._.
+They_PRP propose_VBP a_DT functional_JJ category_NN ChR_NNP that_IN re-opens_VBZ an_DT individual_JJ degree_NN variable_JJ position_NN for_IN the_DT closed_JJ IHRC_NNP ._.
+Then_RB ,_, I_PRP propose_VBP a_DT similar_JJ functional_JJ category_NN ChD_NNP ,_, which_WDT creates_VBZ a_DT degree_NN variable_JJ position_NN for_IN a_DT closed_JJ izyooni-clause_NN ._.
+3.1_CD Gross_NNP and_CC Landman_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- Grosu_NNP and_CC Landman_NNP 's_POS -LRB-_-LRB- 2012_CD -RRB-_-RRB- definition_NN of_IN ChR_NNP is_VBZ given_VBN in_IN -LRB-_-LRB- 19_CD -RRB-_-RRB- ._.
+ChR_NNP is_VBZ a_DT functional_JJ category_NN that_WDT -LRB-_-LRB- 16_CD -RRB-_-RRB- 3_CD <_CD d_LS ,_, t_IN >_CD DegP_NN 2_CD 21_CD <t>_SYM -_: er_SYM <_FW dt_FW <_FW dt_FW ,_, t_IN >_CD 2_CD 6_CD izyooni_NNS <t>_VBP Susan_NNP is_VBZ d1-smart_JJ `_`` than_IN '_'' 6_CD Mary_NNP is_VBZ POS-smart_JJ LF_NNP of_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- :_: Type_NN mismatch_NN 3_CD <_CD d_LS ,_, t_IN >_CD DegPi_NNP 3_CD <t>_JJ 216_CD -_: er_SYM <_FW dt_FW <_FW dt_FW ,_, t_IN >_CD 2_CD This_DT paper_NN is_VBZ d1-long_JJ izyooni_FW <_FW t_FW >_FW `_`` than_IN '_'' 2_CD <_CD d_LS ,_, t_IN >_CD DegP_NN 2_CD 226_CD 2_CD pages_NNS -_: er_FW That_WDT paper_NN is_VBZ d2-long_JJ Type_NN mismatch_NN is_VBZ already_RB obvious_JJ in_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 16_CD -RRB-_-RRB- ._.
+Following_VBG the_DT standard_JJ assumption_NN of_IN comparative_JJ operator_NN -LRB-_-LRB- von_NNP Stechow_NNP 1984_CD a.o._NN -RRB-_-RRB- ,_, I_PRP assume_VBP that_IN the_DT Japanese_JJ null_JJ comparative_JJ operator_NN -_: er_NN is_VBZ type_NN <_CD dt_NN <_CD dt_NN ,_, t_IN >>_CD ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 17_CD -RRB-_-RRB- .2_CD -LRB-_-LRB- 17_CD -RRB-_-RRB- -_: er_FW g_FW =_SYM D1_CD <_CD d_LS ,_, t_IN >_CD D2_CD <_NN d_LS ,_, t_SYM >_FW ._.
+max_NN -LRB-_-LRB- D2_CD -RRB-_-RRB- >_CD max_NN -LRB-_-LRB- D1_CD -RRB-_-RRB- 2_CD I_PRP also_RB assume_VBP that_IN izyooni_NNS is_VBZ semantically_RB null_JJ ,_, and_CC represent_VBP it_PRP with_IN in_IN LF_NNP structures_NNS ._.
+takes_VBZ E_NNP ,_, a_DT set_NN of_IN events_NNS that_WDT is_VBZ provided_VBN by_IN the_DT VP_NNP as_IN its_PRP$ sister_NN ._.
+The_DT role_NN of_IN ChR_NNP is_VBZ to_TO create_VB an_DT additional_JJ individual_JJ variable_JJ position_NN for_IN a_DT closed_JJ sentence_NN ._.
+CE_NNP is_VBZ the_DT Role_NNP Choice_NNP function_NN that_WDT chooses_VBZ an_DT argument_NN of_IN event_NN e_LS and_CC gives_VBZ an_DT individual_JJ variable_JJ position_NN x_LS for_IN the_DT chosen_VBN argument_NN ._.
+Then_RB ,_, operator_NN movement_NN takes_VBZ place_NN from_IN the_DT newly_RB created_VBN positon_NN of_IN x._NN -LRB-_-LRB- 19_CD -RRB-_-RRB- ChR_NNP g_NN =_SYM E_NNP x_LS e._FW E_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- CE_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_LS -LRB-_-LRB- Grosu_NNP and_CC Landman_NNP 2012_CD :_: 169_CD -RRB-_-RRB- The_DT derivation_NN a_DT hypothetic_JJ IHRC_NNP proceeds_NNS as_IN follows_VBZ ._.
+Suppose_VB is_VBZ a_DT denotation_NN of_IN E._NNP -LRB-_-LRB- 20_CD -RRB-_-RRB- a._IN ChR_NNP takes_VBZ :_: x_LS e._FW -LRB-_-LRB- e_LS -RRB-_-RRB- C_$ -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_LS b._FW -LRB-_-LRB- 20a_JJ -RRB-_-RRB- takes_VBZ a_DT degree_NN variable_JJ created_VBN by_IN operator_NN movement_NN :_: e._FW -LRB-_-LRB- e_LS -RRB-_-RRB- C_$ -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_LS c._FW Existential_NNP closure_NN of_IN event_NN :_: e_SYM -LSB-_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- C_$ -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_SYM -RSB-_NNP d._NNP Lambda_NNP abstraction_NN over_IN x_LS by_IN the_DT operator_NN movement_NN :_: x._FW e_SYM -LSB-_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- C_$ -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_SYM -RSB-_NNP -LRB-_-LRB- Grosu_NNP and_CC Landman_NNP 2012_CD :_: 169_CD --_: 170_CD -RRB-_-RRB- For_IN example_NN ,_, the_DT IHRC_NNP of_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- is_VBZ analyzed_VBN as_IN follows_VBZ ._.
+CE_NN picks_VBZ the_DT theme_NN of_IN the_DT putting_VBG event_NN ,_, i.e._FW ,_, cookies_NNS ,_, and_CC gives_VBZ an_DT extra_JJ variable_JJ position_NN x_LS ._.
+When_WRB operator_NN movement_NN takes_VBZ place_NN from_IN the_DT position_NN of_IN x_LS to_TO SpecCP_NNP ,_, the_DT clause_NN denotes_VBZ a_DT set_NN of_IN x_LS ._.
+This_DT is_VBZ simply_RB put_VBN as_RB in_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- ,_, and_CC the_DT denotation_NN of_IN -LRB-_-LRB- 21_CD -RRB-_-RRB- is_VBZ in_IN -LRB-_-LRB- 22_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 21_CD -RRB-_-RRB- -LSB-_NNP CP_NNP Opi_NNP -LSB-_NNP TP_NNP Yoko_NNP put_VBD at_IN least_JJS three_CD cookies_NNS xi_VBP -RSB-_JJ -RSB-_NN -LRB-_-LRB- 22_CD -RRB-_-RRB- x._FW e_SYM -LSB-_NNP PUT_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- Ag_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM Yoko_NNP Th_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- *_SYM COOKIE_NNP Th_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- 3_CD Into_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM -LRB-_-LRB- FR_NNP -RRB-_-RRB- Th_NNP -LRB-_-LRB- e_LS -RRB-_-RRB- =_SYM x_SYM -RSB-_NNP -LRB-_-LRB- Grosu_NNP and_CC Landman_NNP 2012_CD :_: 180_CD -RRB-_-RRB- Gross_NNP and_CC Landman_NNP 's_POS -LRB-_-LRB- 2012_CD -RRB-_-RRB- event-based_JJ analysis_NN is_VBZ meant_VBN to_TO capture_VB their_PRP$ observation_NN that_IN possible_JJ internal_JJ heads_NNS are_VBP limited_VBN to_TO ``_`` a_DT participant_NN in_IN an_DT eventuality_NN associated_VBN with_IN the_DT entire_JJ relative_JJ clause_NN and_CC does_VBZ not_RB permit_VB an_DT account_NN of_IN data_NNS in_IN which_WDT the_DT internal_JJ head_NN is_VBZ more_RBR deeply_RB embedded_VBN nor_CC of_IN the_DT sensitivity_NN of_IN such_JJ embedding_VBG to_TO island_NN constraints_NNS ''_'' -LRB-_-LRB- p._FW 164_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, it_PRP correctly_RB rules_VBZ out_RP -LRB-_-LRB- 23_CD -RRB-_-RRB- ,_, where_WRB the_DT intended_JJ internal_JJ head_NN `_`` new_JJ hypothesis_NN '_'' does_VBZ not_RB participate_VB in_IN the_DT praising_VBG event_NN of_IN the_DT IHRC_NNP ._.
+Also_RB ,_, the_DT newly_RB created_VBN variable_JJ position_NN x_LS is_VBZ in_IN an_DT island_NN ,_, as_IN shown_VBN in_IN the_DT scheme_NN in_IN -LRB-_-LRB- 24_CD -RRB-_-RRB- ,_, which_WDT causes_VBZ an_DT island_NN violation_NN ._.
+-LRB-_-LRB- 23_CD -RRB-_-RRB- *_SYM Mary_NNP ga_NNP -LSB-_NNP John_NNP ga_JJ -LSB-_NNP atarasii_NN kasetui_NN Mary_NNP Nom_NNP John_NNP Nom_NNP new_JJ hypothesis_NN o_NN teiansita_NN gakusee_NN -RSB-_NNP o_NN homete_NN ita_NN noi_FW -RSB-_NNP Acc_NNP proposed_VBD student_NN Acc_NNP praise_NN had_VBD NM_NNP no_DT kekkan_NN o_NN sitekisita_NN ._.
+Gen_NNP defective_JJ Acc_NNP pointed.out_NN `_`` John_NNP praised_VBD the_DT student_NN who_WP proposed_VBD a_DT new_JJ hypothesis_NN ,_, and_CC Mary_NNP pointed_VBD out_RP a_DT defect_NN in_IN it_PRP ._. '_''
+-LRB-_-LRB- 24_CD -RRB-_-RRB- -LSB-_NNP CP_NNP Opi_NNP -LSB-_NNP TP_NNP John_NNP praised_VBD -LSB-_NNP DP_NNP the_DT student_NN who_WP proposed_VBD a_DT new_JJ hypothesis_NN xi_IN -RSB-_NNP -RSB-_NNP -RSB-_NNP In_IN the_DT next_JJ subsection_NN ,_, I_PRP will_MD propose_VB a_DT degree_NN version_NN of_IN ChR_NNP ._.
+3.2_CD Creating_VBG a_DT Degree_NNP Variable_NNP Position_NNP We_PRP will_MD alter_VB ChR_NNP in_IN order_NN to_TO account_VB for_IN izyooni_NNS -_: comparatives_NNS ._.
+Our_PRP$ goal_NN is_VBZ to_TO propose_VB a_DT functional_JJ category_NN that_WDT re-opens_VBZ a_DT degree_NN variable_JJ position_NN ._.
+In_IN doing_VBG so_RB ,_, we_PRP need_VBP to_TO come_VB up_RP with_IN non-event_JJ semantics_NNS ,_, because_IN many_JJ izyooni-comparatives_NNS ,_, including_VBG -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, are_VBP not_RB eventive_JJ ._.
+I_PRP propose_VBP the_DT functional_JJ category_NN Choose_VBP Degree_NN or_CC ChD_NNP in_IN -LRB-_-LRB- 25_CD -RRB-_-RRB- that_WDT plays_VBZ a_DT similar_JJ role_NN to_TO that_DT of_IN ChR_NNP ._.
+ChD_NNP takes_VBZ S_NNP ,_, a_DT set_NN of_IN situations_NNS ,_, as_IN its_PRP$ sister_NN and_CC creates_VBZ an_DT additional_JJ degree_NN variable_JJ position_NN ._.
+CS_NNP is_VBZ the_DT Predicate_NNP Choice_NNP function_NN that_WDT chooses_VBZ a_DT degree_NN predicate_NN in_IN situation_NN s_VBZ and_CC gives_VBZ a_DT degree_NN variable_JJ position_NN d_LS for_IN the_DT chosen_VBN degree_NN predicate_NN ._.
+-LRB-_-LRB- 25_CD -RRB-_-RRB- ChD_NNP g_NNP =_SYM S_NNP d_LS s._FW S_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- CS_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d_LS The_DT derivation_NN of_IN a_DT hypothetical_JJ izyooni-clause_NN is_VBZ given_VBN in_IN -LRB-_-LRB- 26_CD -RRB-_-RRB- ._.
+The_DT process_NN is_VBZ essentially_RB the_DT same_JJ as_IN we_PRP saw_VBD in_IN -LRB-_-LRB- 20_CD -RRB-_-RRB- ._.
+Suppose_VB is_VBZ a_DT denotation_NN of_IN S._NNP -LRB-_-LRB- 26_CD -RRB-_-RRB- a._FW ChD_FW takes_VBZ :_: d_LS s._FW -LRB-_-LRB- s_PRP -RRB-_-RRB- C_$ -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d_LS b._FW -LRB-_-LRB- 26a_JJ -RRB-_-RRB- takes_VBZ a_DT degree_NN variable_JJ created_VBN by_IN operator_NN movement_NN :_: s._NN -LRB-_-LRB- s_PRP -RRB-_-RRB- C_$ -LRB-_-LRB- s_PRP -RRB-_-RRB- =d_FW c._FW Existential_NNP closure_NN of_IN situation_NN :_: s_PRP -LSB-_JJ -LRB-_-LRB- s_PRP -RRB-_-RRB- C_$ -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d_SYM -RSB-_NNP d._NNP Lambda_NNP abstraction_NN over_IN d_LS by_IN the_DT operator_NN movement_NN :_: d._VB s_PRP -LSB-_JJ -LRB-_-LRB- s_PRP -RRB-_-RRB- C_$ -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d_SYM -RSB-_NNP Let_VB us_PRP consider_VB how_WRB to_TO analyze_VB -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+Their_PRP$ LF_NNP structures_NNS are_VBP given_VBN in_IN -LRB-_-LRB- 27_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 28_CD -RRB-_-RRB- ,_, respectively_RB ._.
+Unfortunately_RB ,_, it_PRP is_VBZ not_RB clear_JJ at_IN this_DT point_NN exactly_RB where_WRB ChD_NNP is_VBZ located_VBN ._.
+I_PRP tentatively_RB place_VBP it_PRP above_IN the_DT embedded_VBN clauses_NNS .3_CD Note_NN that_IN the_DT proposition_NN is_VBZ now_RB type_NN <_CD s_PRP ,_, t_IN >_CD due_JJ to_TO the_DT situation_NN semantics_NNS ._.
+Accordingly_RB ,_, the_DT semantic_JJ type_NN of_IN the_DT null_JJ comparative_JJ operator_NN is_VBZ <<_CD d_LS ,_, st_IN >_CD ,_, <<_CD d_LS ,_, st_IN >_CD ,_, <_CD s_PRP ,_, t_IN >>_CD >_NN ._.
+The_DT point_NN is_VBZ that_IN the_DT complement_VBP of_IN each_DT izyooni_FW denotes_VBZ a_DT set_NN of_IN degrees_NNS of_IN type_NN <_CD d_LS ,_, st_IN >_NN ._.
+There_EX is_VBZ no_DT type_NN mismatch_NN any_DT more_JJR ._.
+-LRB-_-LRB- 27_CD -RRB-_-RRB- LF_NN of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- 3_CD <_CD s_PRP ,_, t_IN >_CD s_PRP 3_CD <_CD d_LS ,_, st_IN >_CD DegP_NN 2_CD 216_CD -LRB-_-LRB- 28_CD -RRB-_-RRB- LF_NN of_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- -_: er_SYM 2_CD <<_CD d_LS ,_, st_IN >_CD ,_, <<_CD d.st_JJ >_NN ,_, <st>_JJ >>_NN izyooni_NNS ChD_VBP 6_CD Mary_NNP is_VBZ POS-smarts_NNP &_CC CS_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d3_CD The_DT truth_NN conditions_NNS of_IN the_DT sentences_NNS are_VBP expected_VBN to_TO be_VB roughly_RB as_IN follows_VBZ in_IN -LRB-_-LRB- 29_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 30_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 29_CD -RRB-_-RRB- s_PRP -LSB-_NNP max_NN -LRB-_-LRB- d1_FW ._.
+Susan_NNP is_VBZ d1-smart_JJ in_IN s_PRP -RRB-_-RRB- >_CD max_NN -LRB-_-LRB- d3_FW ._.
+d_SYM -LSB-_NNP Mary_NNP is_VBZ d-smart_JJ in_IN s_PRP d_SYM >_SYM dstandard_NN in_IN c_NN -RSB-_NNP Mary_NNP 's_POS smartness_NN in_IN s_PRP =_SYM d3_CD -RRB-_-RRB- -RSB-_NN -LRB-_-LRB- 30_CD -RRB-_-RRB- s_PRP -LSB-_NNP max_NN -LRB-_-LRB- d1_FW ._.
+This_DT paper_NN is_VBZ d1-long_JJ in_IN s_PRP -RRB-_-RRB- >_CD max_NN -LRB-_-LRB- d3_FW ._.
+That_DT paper_NN is_VBZ 2_CD pages_NNS longer_RBR than_IN a_DT given_VBN page_NN limit_NN in_IN s_PRP The_DT length_NN of_IN that_DT paper_NN in_IN s_PRP =_SYM d3_CD -RRB-_-RRB- -RSB-_NN In_IN summary_NN ,_, ChD_NNP somehow_RB accounts_VBZ for_IN the_DT two_CD examples_NNS with_IN filled_VBN izyooni-clauses_NNS ._.
+However_RB ,_, the_DT analysis_NN above_IN is_VBZ still_RB preliminary_JJ ,_, and_CC there_EX are_VBP many_JJ gaps_NNS left_VBD between_IN the_DT LFs_NNP and_CC the_DT truth_NN conditions_NNS ._.
+Especially_RB ,_, it_PRP is_VBZ not_RB clear_JJ at_IN this_DT point_NN exactly_RB how_WRB CS_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- provides_VBZ the_DT degree_NN we_PRP want_VBP ._.
+I_PRP will_MD leave_VB these_DT details_NNS for_IN further_JJ research_NN ._.
+4_CD In_IN Relation_NN to_TO Other_JJ Analyses_NNS What_WP are_VBP the_DT advantages_NNS of_IN ChD_NNP compared_VBN to_TO other_JJ analyses_NNS of_IN izyooni-comparatives_NNS ?_.
+To_TO my_PRP$ knowledge_NN ,_, there_EX are_VBP three_CD previous_JJ studies_NNS of_IN izyooni-comparatives_NNS ._.
+In_IN this_DT section_NN ,_, I_PRP briefly_RB review_VBP them_PRP and_CC discuss_VB how_WRB our_PRP$ analysis_NN of_IN ChD_NNP is_VBZ different_JJ from_IN them_PRP ._.
+The_DT parallelism_NN between_IN izyooni-comparatives_NNS and_CC IHRC_NNP constructions_NNS has_VBZ already_RB been_VBN pointed_VBN out_RP by_IN Oda_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Oda_NNP attempts_VBZ to_TO capture_VB the_DT parallelism_NN by_IN applying_VBG Shimoyama_NNP 's_POS -LRB-_-LRB- 1999_CD -RRB-_-RRB- E_NN -_: Susan_NNP is_VBZ d1-smarts_JJ <_CD d_LS ,_, st_IN >_CD 2_CD <_CD t_IN >_CD Op3_NN 2_CD `_`` than_IN '_'' s_PRP 3_CD <_CD s_PRP ,_, t_SYM >_SYM 3_CD <_CD d_LS ,_, st_IN >_CD DegPi_NNP 3_CD 316_CD -_: er_SYM <<_FW d_LS ,_, st_IN >_CD ,_, <<_CD d.st_JJ >_NN ,_, <st>_JJ >>_NN 2_CD This_DT paper_NN is_VBZ d1-longs_JJ izyooni_NNS <_VBP d_LS ,_, st_IN >_CD `_`` than_IN '_'' 2_CD Op3_NN 2_CD ChD_NNP 2_CD <_CD d_LS ,_, st_IN >_CD DegP_NN 2_CD 226_CD 2_CD pages_NNS -_: er_FW That_WDT paper_NN is_VBZ d2-longs_JJ &_CC CS_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- =_SYM d3_SYM 3_CD Also_RB ,_, it_PRP is_VBZ not_RB clear_JJ exactly_RB where_WRB the_DT newly_RB created_VBN variables_NNS are_VBP located_VBN in_IN the_DT LF_NNP structures_NNS ._.
+The_DT same_JJ question_NN arises_VBZ for_IN variables_NNS created_VBN by_IN ChR_NNP ._.
+type_NN analysis_NN of_IN IHRC_NNP constructions_NNS to_TO izyooni_NNS -_: comparatives_NNS ._.
+4_CD The_DT E-type_NN analysis_NN heavily_RB depends_VBZ on_IN discourse_NN ._.
+Without_IN having_VBG much_RB syntactic_JJ constraints_NNS ,_, it_PRP is_VBZ very_RB flexible_JJ and_CC it_PRP accounts_VBZ for_IN many_JJ peculiar_JJ behaviors_NNS of_IN izyooni_NNS -_: comparatives_NNS ._.
+At_IN the_DT same_JJ time_NN ,_, it_PRP suffers_VBZ from_IN the_DT same_JJ problem_NN that_WDT Shimoyama_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- does_VBZ ,_, namely_RB ,_, overgeneration_NN ._.
+A_DT big_JJ advantage_NN of_IN our_PRP$ ChD_NNP analysis_NN over_IN that_DT of_IN Oda_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- is_VBZ that_IN it_PRP captures_VBZ island_NN effects_NNS in_IN izyooni-clauses_JJ observed_VBN by_IN Hayashishita_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT judgments_NNS about_IN island_NN effects_NNS in_IN izyooni-clauses_NNS are_VBP not_RB settled_VBN yet_RB -LRB-_-LRB- Kubota_NNP 2012_CD -RRB-_-RRB- ._.
+More_RBR careful_JJ observation_NN is_VBZ needed_VBN before_IN we_PRP reach_VBP any_DT conclusion_NN ._.
+5_CD Another_DT advantage_NN is_VBZ that_IN our_PRP$ ChD_NNP analysis_NN less_RBR discourse_NN dependent_JJ than_IN the_DT E-type_JJ analysis_NN ,_, because_IN the_DT situation_NN variable_JJ s_PRP serves_VBZ as_IN an_DT anchor_VB and_CC prevent_VB some_DT overgeneration_NN ._.
+However_RB ,_, ChD_NNP analysis_NN still_RB depend_VB on_IN discourse_NN ._.
+For_IN instance_NN ,_, in_IN -LRB-_-LRB- 25_CD -RRB-_-RRB- CS_NNP chooses_VBZ a_DT degree_NN predicate_NN in_IN situation_NN s_VBZ ._.
+The_DT choice_NN depends_VBZ on_IN the_DT discourse_NN ._.
+At_IN this_DT moment_NN it_PRP is_VBZ not_RB clear_JJ how_WRB CS_NNP behaves_VBZ when_WRB there_EX are_VBP more_JJR than_IN one_CD degree_NN predicates_VBZ in_IN its_PRP$ scope_NN ._.
+Hayashishita_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- and_CC Kubota_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- are_VBP based_VBN on_IN more_JJR traditional_JJ semantics_NNS of_IN than_IN -_: comparatives_NNS ._.
+The_DT parallelism_NN between_IN izyooni_NNS -_: comparatives_NNS and_CC IHRCs_NNS discussed_VBN in_IN this_DT paper_NN is_VBZ not_RB the_DT scope_NN of_IN their_PRP$ analyses_NNS ._.
+Their_PRP$ primary_JJ goal_NN is_VBZ to_TO account_VB for_IN the_DT positive_JJ implication_NN of_IN izyooni-comparatives_NNS ._.
+Hayashishita_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- assumes_VBZ that_IN the_DT positive_JJ implication_NN comes_VBZ from_IN the_DT null_JJ POS_NNP operator_NN in_IN izyooni-clauses_NNS ._.
+This_DT is_VBZ the_DT same_JJ as_IN we_PRP assume_VBP for_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+Instead_RB of_IN creating_VBG an_DT additional_JJ variable_JJ position_NN ,_, however_RB ,_, Hayashishita_NNP assumes_VBZ that_IN Japanese_JJ POS_NN accommodates_VBZ a_DT differential_JJ degree_NN position_NN ,_, from_IN which_WDT operator_NN movement_NN takes_VBZ place_NN ._.
+The_DT same_JJ thing_NN happens_VBZ in_IN the_DT matrix_NN clause_NN ._.
+Thus_RB ,_, izyooni-comparatives_NNS are_VBP a_DT comparison_NN of_IN two_CD differential_JJ degrees_NNS ._.
+Based_VBN on_IN Hayashishita_NNP 's_POS framework_NN ,_, the_DT LF_NNP of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- would_MD be_VB as_RB in_IN -LRB-_-LRB- 31_CD -RRB-_-RRB- ._.
+Note_VB 4_CD Shimoyama_NNP 's_POS -LRB-_-LRB- 1999_CD -RRB-_-RRB- E-type_JJ analysis_NN is_VBZ developed_VBN from_IN Hoshi_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ._.
+Shimoyama_NNP argues_VBZ against_IN the_DT raising_VBG analysis_NN of_IN IHRCs_NNS advocated_VBN by_IN Ito_NNP -LRB-_-LRB- 1986_CD -RRB-_-RRB- and_CC others_NNS ._.
+5_CD Interestingly_RB ,_, there_EX is_VBZ similar_JJ variation_NN in_IN acceptability_NN about_IN the_DT island_NN effect_NN on_IN IHRC_NNP constructions_NNS in_IN Japanese_JJ -LRB-_-LRB- Watanabe_NNP 1992_CD ,_, Grosu_NNP and_CC Landman_NNP 2012_CD -RRB-_-RRB- ._.
+This_DT is_VBZ another_DT parallelism_NN between_IN izyooni-comparatives_NNS and_CC IHRC_NNP constructions_NNS in_IN Japanese_JJ ._.
+that_IN Hayashishita_NNP assumes_VBZ that_IN izyooni_NNS plays_VBZ the_DT role_NN of_IN --_: er_NN in_IN English_NNP ._.
+-LRB-_-LRB- 31_CD -RRB-_-RRB- LF_NN of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- by_IN Hayashishita_NNP 3_CD DegP_NN 2_CD <_CD d_LS ,_, t_SYM >_SYM 216_CD izyooni_FW <_FW dt_FW <_FW dt_FW ,_, t_IN >_CD CP_NNP <_CD d_LS ,_, t_IN >_CD Susan_NNP is_VBZ d1-POS_JJ smart_JJ 2_CD Op2_NN 6_CD Mary_NNP is_VBZ d2-POS_JJ smart_JJ The_DT truth_NN conditions_NNS of_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- would_MD be_VB roughly_RB as_RB in_IN -LRB-_-LRB- 32_CD -RRB-_-RRB- ._.
+POS_NNP is_VBZ translated_VBN as_IN `_`` d-degree_JJ larger_JJR than_IN the_DT contextually_RB given_VBN standard_NN in_IN context_NN c._NN '_'' Put_VB simply_RB ,_, the_DT positive_JJ implication_NN is_VBZ entailed_VBN as_IN part_NN of_IN the_DT truth_NN conditions_NNS ._.
+-LRB-_-LRB- 32_CD -RRB-_-RRB- max_NN -LRB-_-LRB- d1_FW ._.
+Susan_NNP is_VBZ d1-smarter_JJ than_IN dstanard_NN in_IN c_NN -RRB-_-RRB- >_CD max_NN -LRB-_-LRB- d2_FW ._.
+Mary_NNP is_VBZ d2_SYM -_: smarter_RBR than_IN dstanard_NN in_IN c_NN -RRB-_-RRB- At_IN least_JJS two_CD major_JJ issues_NNS arise_VB ._.
+First_RB ,_, it_PRP is_VBZ not_RB clear_JJ how_WRB this_DT analysis_NN accounts_NNS for_IN cases_NNS like_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ,_, where_WRB the_DT relevant_JJ degree_NN position_NN is_VBZ filled_VBN by_IN an_DT overt_JJ item_NN ,_, not_RB by_IN the_DT POS_NNP operator_NN ._.
+Second_NNP ,_, POS_NNP normally_RB represents_VBZ a_DT ``_`` vague_JJ ''_'' degree_NN cross_NN -_: linguistically_RB -LRB-_-LRB- Kennedy_NNP 2007_CD -RRB-_-RRB- ._.
+However_RB ,_, Hayashishita_NNP 's_POS POS_NNP is_VBZ not_RB vague_JJ as_IN it_PRP provides_VBZ a_DT measurable_JJ differential_JJ degree_NN ._.
+This_DT can_MD be_VB quite_RB controversial_JJ ._.
+Kubota_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- argues_VBZ that_IN the_DT positive_JJ implication_NN in_IN izyooni-clauses_NNS is_VBZ a_DT presupposition_NN rather_RB than_IN an_DT entailment_NN ._.
+He_PRP proposes_VBZ the_DT lexical_JJ entry_NN of_IN izyooni_NNS for_IN clausal_JJ izyooni-comparatives_NNS as_IN in_IN -LRB-_-LRB- 33_CD -RRB-_-RRB- ._.
+Izyooni_NNP serves_VBZ as_IN a_DT comparative_JJ operator_NN ,_, and_CC also_RB it_PRP requires_VBZ degree_NN presupposition_NN for_IN izyooni-comparatives_NNS ._.
+Here_RB ,_, w0_NN represents_VBZ the_DT actual_JJ world_NN ._.
+Therefore_RB ,_, the_DT degree_NN in_IN the_DT embedded_VBN clause_NN needs_VBZ to_TO be_VB larger_JJR than_IN a_DT given_VBN standard_NN in_IN the_DT real_JJ world_NN ._.
+If_IN not_RB ,_, it_PRP would_MD be_VB a_DT presupposition_NN failure_NN ._.
+This_DT brings_VBZ the_DT effect_NN of_IN the_DT positive_JJ implication_NN ._.
+Note_VB that_IN he_PRP adopts_VBZ the_DT function-based_JJ analysis_NN of_IN gradable_JJ adjectives_NNS proposed_VBN by_IN Kennedy_NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- ,_, which_WDT treats_VBZ adjectives_NNS as_IN denoting_VBG functions_NNS from_IN individuals_NNS to_TO degrees_NNS ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- would_MD be_VB analyzed_VBN as_IN in_IN -LRB-_-LRB- 34_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 33_CD -RRB-_-RRB- izyooni_FW g_FW =_SYM x_LS y_FW w._FW -LRB-_-LRB- y_JJ -RRB-_-RRB- -LRB-_-LRB- w_NN -RRB-_-RRB- >_NN -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- w0_CD -RRB-_-RRB- -LRB-_-LRB- defined_VBN only_RB if_IN -LRB-_-LRB- x_LS -RRB-_-RRB- -LRB-_-LRB- w0_CD -RRB-_-RRB- stnd_NN -LRB-_-LRB- -RRB-_-RRB- -RRB-_-RRB- -LRB-_-LRB- Kubota_NNP 2012_CD :_: 42_CD -RRB-_-RRB- -LRB-_-LRB- 34_CD -RRB-_-RRB- smart_JJ -LRB-_-LRB- Susan_NNP -RRB-_-RRB- -LRB-_-LRB- w_NN -RRB-_-RRB- >_RB smart_JJ -LRB-_-LRB- Mary_NNP -RRB-_-RRB- -LRB-_-LRB- w0_CD -RRB-_-RRB- -LRB-_-LRB- defined_VBN only_RB if_IN smart_JJ -LRB-_-LRB- Mary_NNP -RRB-_-RRB- -LRB-_-LRB- w0_CD -RRB-_-RRB- stnd_NN -LRB-_-LRB- smart_JJ -RRB-_-RRB- -RRB-_-RRB- A_DT major_JJ challenge_NN for_IN Kuroda_NNP is_VBZ how_WRB to_TO deal_VB with_IN the_DT data_NNS with_IN overtly_RB filled_VBN degree_NN positions_NNS ,_, like_IN -LRB-_-LRB- 13_CD -RRB-_-RRB- ._.
+Another_DT challenge_NN comes_VBZ from_IN Kubota_NNP 's_POS assumption_NN that_IN the_DT positive_JJ implication_NN is_VBZ encoded_VBN in_IN izyooni-comparatives_NNS per_IN se_FW ._.
+There_EX is_VBZ an_DT interesting_JJ fact_NN that_IN suggests_VBZ that_IN the_DT positive_JJ implication_NN is_VBZ closely_RB related_VBN to_TO gradable_JJ predicates_NNS rather_RB than_IN the_DT whole_JJ izyooni-construction_NN ._.
+Consider_VB the_DT contrast_NN between_IN -LRB-_-LRB- 35_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 36_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 35_CD -RRB-_-RRB- does_VBZ not_RB employ_VB a_DT gradable_JJ adjective_NN or_CC exhibit_NN positive_JJ implication_NN ._.
+However_RB ,_, the_DT positive_JJ implication_NN appears_VBZ once_RB takusanno_JJ `_`` many_JJ '_'' is_VBZ added_VBN in_IN the_DT matrix_NN clause_NN ,_, as_IN shown_VBN in_IN -LRB-_-LRB- 36_CD -RRB-_-RRB- ._.
+Note_VB that_IN I_PRP assume_VBP that_IN there_EX is_VBZ an_DT elided_JJ takusanno_NN `_`` many_JJ '_'' in_IN the_DT izyooni-clause_NN in_IN -LRB-_-LRB- 36_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 35_CD -RRB-_-RRB- Suusan_JJ wa_NN -LSB-_NNP Mary_NNP ga_NNP tabeta_NNP -RSB-_NNP -_: izyooni_FW Susan_NNP Top_NNP Mary_NNP Nom_NNP ate_VBD than_IN orenji_FW o_FW tabeta_FW ._.
+orange_NN Acc_NNP ate_VBD `_`` Susan_NNP ate_VBD more_RBR oranges_NNS than_IN Mary_NNP did_VBD ._. '_''
+-LRB-_-LRB- Not_RB implied_VBN :_: Mary_NNP ate_VBD many_JJ oranges_NNS ._. -RRB-_-RRB-
+5_CD Conclusion_NN and_CC Issues_NNS for_IN Further_JJ Research_NN I_PRP proposed_VBD a_DT lexical_JJ category_NN ChD_NNP that_IN re-opens_VBZ a_DT variable_JJ degree_NN position_NN for_IN a_DT closed_JJ izyooni-clause_NN ._.
+This_DT approach_NN successfully_RB captures_VBZ the_DT parallelism_NN between_IN izyooni-comparatives_NNS and_CC IHRCs_NNS ,_, namely_RB ,_, closed_VBD embedded_VBN clauses_NNS .6_CD However_RB ,_, many_JJ details_NNS remain_VBP to_TO be_VB worked_VBN out_RP ._.
+A_DT question_NN for_IN the_DT bigger_JJR picture_NN is_VBZ the_DT distribution_NN of_IN ChD_NNP ._.
+It_PRP remains_VBZ to_TO be_VB seen_VBN whether_IN or_CC not_RB ChD_NNP applies_VBZ to_TO other_JJ degree_NN constructions_NNS in_IN Japanese_JJ ._.
+Grosu_NNP and_CC Landman_NNP also_RB raise_VBP questions_NNS regarding_VBG cross_NN -_: and_CC intra-linguistic_JJ distribution_NN of_IN ChR_NNP ._.
+Further_JJ comparison_NN between_IN ChR_NNP and_CC ChD_NNP may_MD give_VB us_PRP some_DT insights_NNS ._.
+Eventually_RB ,_, we_PRP may_MD want_VB to_TO integrate_VB ChD_NNP into_IN ChR_NNP if_IN it_PRP is_VBZ at_IN all_DT possible_JJ ._.
+ChD_NNP is_VBZ a_DT degree_NN version_NN of_IN ChR_NNP ;_: thus_RB ,_, the_DT common_JJ threads_NNS between_IN ChD_NNP and_CC ChR_NNP are_VBP obvious_JJ ._.
+Acknowledgments_NNS I_PRP thank_VBP the_DT anonymous_JJ reviewers_NNS of_IN PACLIC29_NNP for_IN their_PRP$ helpful_JJ comments_NNS ._.
+I_PRP also_RB thank_VBP the_DT anonymous_JJ reviewers_NNS of_IN JK23_NNP in_IN 2013_CD ._.
+They_PRP are_VBP the_DT ones_NNS who_WP recommended_VBD me_PRP to_TO adopt_VB Grosu_NNP and_CC Landman_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+All_DT remaining_JJ errors_NNS are_VBP my_PRP$ own_JJ ._.
+References_NNP Beck_NNP ,_, Sigrid_NNP ,_, Toshiko_NNP Oda_NNP ,_, and_CC Koji_NNP Sugisaki_NNP ._.
+2004_CD ._.
+Parametric_NNP Variation_NNP in_IN the_DT Semantics_NNS of_IN Comparison_NNP :_: Japanese_JJ vs._FW English_NNP ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNP 13:289_CD --_: 344_CD ._.
+Grosu_NNP ,_, Alexander_NNP and_CC Fred_NNP Landman_NNP ._.
+2012_CD ._.
+A_DT Quantificational_JJ Discourse_NN approach_NN to_TO Japanese_JJ and_CC Korean_JJ Internally_RB Headed_VBN Relatives_NNS ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNP 21:159_CD --_: 196_CD ._.
+Hayashishita_NNP ,_, J.-R_NNP ._.
+2007_CD ._.
+Izyoo_NNP -LRB-_-LRB- ni_FW -RRB-_-RRB- -_: and_CC Gurai_NNP -_: Comparatives_NNS :_: Comparison_NNP of_IN Deviation_NNP in_IN Japanese_NNP ._.
+Gengo_NNP Kenkyu_NNP 132:77_CD --_: 109_CD ._.
+Heim_NNP ,_, Irene_NNP and_CC Angelika_NNP Kratzer_NNP ._.
+1999_CD ._.
+Semantics_NNS in_IN Generative_NNP Grammar_NNP ._.
+Oxford_NNP :_: Blackwell_NNP ._.
+Hoshi_NNP ,_, Koji_NNP ._.
+1995_CD ._.
+Structural_JJ and_CC Interpretive_NNP Aspects_NNP of_IN Head-Internal_NNP and_CC Head-External_NNP Relative_NNP 6_CD An_DT anonymous_JJ reviewer_NN of_IN PACLIC_NNP 29_CD pointed_VBD out_RP that_IN IHRCs_NNS are_VBP relatively_RB rare_JJ in_IN modern_JJ Japanese_NNS ._.
+-LRB-_-LRB- S_NNP -RRB-_-RRB- he_PRP also_RB pointed_VBD out_RP that_IN correlative_NN --_: ni_JJ turete_NN may_MD undergo_VB a_DT similar_JJ analysis_NN ._.
+Thus_RB it_PRP might_MD be_VB better_JJR to_TO treat_VB comparative_JJ and_CC correlative_JJ sentences_NNS in_IN Japanese_JJ within_IN the_DT same_JJ and_CC independent_JJ framework_NN ._.
+-LRB-_-LRB- 36_CD -RRB-_-RRB- Suusan_JJ wa_NN -LSB-_NNP Mary_NNP ga_NNP Susan_NNP Top_NNP Mary_NNP Nom_NNP ate_VBD than_IN takusanno_NN aorenji_FW o_FW tabeta_FW ._.
+many_JJ orange_NN Acc_NNP ate_VBD `_`` Susan_NNP ate_VBD more_RBR oranges_NNS than_IN Mary_NNP did_VBD ._. '_''
+-LRB-_-LRB- Implication_NN :_: Mary_NNP ate_VBD many_JJ oranges_NNS ._. -RRB-_-RRB-
+Kubota_NNP 's_POS -LRB-_-LRB- 34_CD -RRB-_-RRB- would_MD predict_VB -LRB-_-LRB- 35_CD -RRB-_-RRB- to_TO have_VB degree_NN presupposition_NN ,_, or_CC he_PRP would_MD need_VB to_TO provide_VB a_DT different_JJ izyooni_NN without_IN degree_NN presupposition_NN ._.
+In_IN contrast_NN ,_, other_JJ analyses_NNS are_VBP somewhat_RB compatible_JJ with_IN the_DT lack_NN of_IN positive_JJ implication_NN in_IN -LRB-_-LRB- 35_CD -RRB-_-RRB- ._.
+For_IN Hayashishita_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, there_EX is_VBZ no_DT gradable_JJ predicate_NN that_WDT would_MD host_VB his_PRP$ non-vague_JJ POS_NNP -_: operator_NN in_IN izyooni-clauses_NNS ._.
+For_IN Oda_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, E-type_JJ anaphora_NN pragmatically_RB picks_VBZ degrees_NNS without_IN implication_NN ._.
+Our_PRP$ ChD_NNP simply_RB does_VBZ not_RB apply_VB to_TO -LRB-_-LRB- 35_CD -RRB-_-RRB- because_IN its_PRP$ izyooni-clause_NN is_VBZ not_RB closed_VBN ._.
+___SYM tabeta_IN -RSB-_NNP -_: izyooni_FW Clauses_NNPS ._.
+Doctoral_JJ dissertation_NN ,_, University_NNP of_IN Rochester_NNP ._.
+Ito_NNP ,_, Junko_NNP ._.
+1986_CD ._.
+Head-Movement_NNP at_IN LF_NNP and_CC PF_NNP ._.
+University_NNP of_IN Massachusetts_NNP Occasional_NNP Papers_NNP in_IN Linguistics_NNP 11:109_CD --_: 138_CD ._.
+Kennedy_NNP ,_, Christopher_NNP ._.
+1999_CD ._.
+Projecting_VBG the_DT adjective_NN :_: The_DT syntax_NN and_CC semantics_NNS of_IN gradability_NN and_CC comparison_NN ._.
+New_NNP York_NNP :_: Garland_NNP Press_NNP ._.
+Kennedy_NNP ,_, Christopher_NNP ._.
+2007_CD ._.
+Vagueness_NN and_CC grammar_NN :_: the_DT semantics_NNS of_IN relative_JJ and_CC absolute_JJ gradable_JJ adjectives_NNS ._.
+Linguistics_NNPS and_CC Philosophy_NNP 30:1_CD --_: 45_CD ._.
+Kennedy_NNP ,_, Christopher_NNP ._.
+2009_CD ._.
+Modes_NNS of_IN comparison_NN ._.
+Papers_NNP from_IN the_DT 43rd_CD Annual_JJ Meeting_VBG of_IN the_DT Chicago_NNP Linguistic_NNP Society_NNP :_: 141_CD --_: 165_CD ._.
+Kubota_NNP ,_, Yusuke_NNP ._.
+2012_CD ._.
+The_DT Presuppositional_NNP Nature_NNP of_IN Izyoo_NNP -LRB-_-LRB- -_: ni_NNS -RRB-_-RRB- and_CC Gurai_NNP Comparatives_NNPS :_: A_DT Note_NN on_IN Hayashishita_NNP 2007_CD ._.
+Gengo_NNP Kenkyu_NNP 141:33_CD --_: 46_CD ._.
+Oda_NNP ,_, Toshiko_NNP ._.
+2014_CD ._.
+E-type_NN Anaphora_NNP in_IN Izyooni_NNP -LRB-_-LRB- than_IN -RRB-_-RRB- -_: comparatives_NNS ._.
+Paper_NNP presented_VBD at_IN the_DT JK_NNP 23_CD ._.
+Shimoyama_NNP ,_, Junko_NNP ._.
+1999_CD ._.
+Internally_RB Headed_VBN Relative_JJ Clauses_NNS in_IN Japanese_JJ and_CC E-Type_JJ Anaphora_NNP ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNP 8:147_CD --_: 182_CD ._.
+Snyder_NNP ,_, William_NNP ,_, Kenneth_NNP Wexler_NNP ,_, and_CC Dolon_NNP Das_NNP ._.
+1995_CD ._.
+The_DT syntactic_JJ representation_NN of_IN degree_NN and_CC quantity_NN :_: Perspectives_NNS from_IN Japanese_JJ and_CC child_NN English_NNP ._.
+Proceedings_NNP of_IN 31st_CD West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNPS :_: 581_CD --_: 596_CD ._.
+Sudo_NNP ,_, Yasutada_NNP ._.
+2014_CD ._.
+Hidden_NNP Degree_NNP Nominals_NNP in_IN Japanese_NNP Clausal_NNP Comparatives_NNPS ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNP 24:1_CD --_: 51_CD ._.
+von_NNP Stechow_NNP ,_, Arnim_NNP ._.
+1984_CD ._.
+Comparing_VBG Semantic_JJ Theories_NNS of_IN Comparison_NNP ._.
+Journal_NNP of_IN Semantics_NNP 3:1_CD --_: 77_CD ._.
+Watanabe_NNP ,_, Akira_NNP ._.
+1992_CD ._.
+Subjacency_NNP and_CC S-structure_NNP movement_NN of_IN wh-in-situ_NN ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNPS 1_CD :_: 255_CD --_: 291_CD ._.

@@ -1,0 +1,332 @@
+Learning_NNP under_IN Covariate_NNP Shift_NNP for_IN Domain_NNP Adaptation_NNP for_IN Word_NNP Sense_NN Disambiguation_NNP Abstract_NNP We_PRP show_VBP that_IN domain_NN adaptation_NN for_IN word_NN sense_NN disambiguation_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- satisfies_VBZ the_DT as_RB -_: sumption_NN of_IN covariate_JJ shift_NN ,_, and_CC then_RB solve_VB it_PRP by_IN learning_VBG under_IN covariate_JJ shift_NN ._.
+Learning_NNP under_IN covariate_JJ shift_NN has_VBZ two_CD key_JJ points_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- calculation_NN of_IN the_DT weight_NN of_IN an_DT instance_NN and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- weighted_JJ learning_NN ._.
+For_IN the_DT first_JJ point_NN ,_, we_PRP em_SYM -_: ploy_NN unconstrained_JJ least_JJS squares_NNS importance_NN fitting_JJ -LRB-_-LRB- uLSIF_NNP -RRB-_-RRB- ,_, which_WDT models_NNS the_DT probability_NN density_NN ratio_NN of_IN the_DT source_NN domain_NN against_IN a_DT target_NN domain_NN directly_RB ._.
+Additionally_RB ,_, we_PRP pro-_JJ pose_VBP weight_NN only_RB to_TO the_DT particular_JJ instance_NN and_CC using_VBG a_DT linear_JJ kernel_NN rather_RB than_IN a_DT Gaussian_JJ kernel_NN in_IN uLSIF_NNP ._.
+For_IN the_DT second_JJ point_NN ,_, we_PRP em_SYM -_: ploy_NN a_DT support_NN vector_NN machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- rather_RB than_IN the_DT maximum_NN entropy_NN method_NN -LRB-_-LRB- ME_NNP -RRB-_-RRB- that_WDT is_VBZ commonly_RB employed_VBN in_IN weighted_JJ learning_NN ._.
+Three_CD corpora_NN in_IN the_DT Balanced_NNP Corpus_NNP of_IN Con_NN -_: temporary_JJ Written_VBN Japanese_JJ -LRB-_-LRB- BCCWJ_NNP -RRB-_-RRB- and_CC 16_CD target_NN words_NNS were_VBD used_VBN in_IN our_PRP$ experiment_NN ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN the_DT proposed_VBN method_NN demonstrates_VBZ the_DT highest_JJS average_JJ pre_NN -_: cision_NN ._.
+1_CD Introduction_NNP Supervised_VBN learning_VBG methods_NNS have_VBP been_VBN used_VBN in_IN many_JJ natural_JJ language_NN processing_NN tasks_NNS ._.
+In_IN super_JJ -_: vised_VBN learning_NN ,_, we_PRP create_VBP training_NN data_NNS for_IN the_DT target_NN task_NN from_IN corpus_NN A_DT and_CC learn_VB a_DT classifier_NN from_IN the_DT training_NN data_NNS ._.
+This_DT classifier_NN performs_VBZ well_RB for_IN test_NN data_NNS in_IN corpus_NN A_DT ;_: however_RB ,_, it_PRP does_VBZ not_RB perform_VB well_RB for_IN test_NN data_NNS in_IN corpus_NN B_NNP ,_, which_WDT is_VBZ different_JJ from_IN cor_SYM -_: pus_NN A_DT ._.
+This_DT is_VBZ the_DT problem_NN of_IN domain_NN adaptation1_CD ._.
+In_IN this_DT paper_NN ,_, we_PRP deal_VBP with_IN domain_NN adaptation_NN for_IN word_NN sense_NN disambiguation_NN -LRB-_-LRB- WSD_NNP -RRB-_-RRB- ._.
+WSD_NNP identifies_VBZ the_DT sense_NN c_NN ∈_CD C_NNP of_IN an_DT ambiguous_JJ word_NN w_NN in_IN a_DT sentence_NN x_LS ._.
+This_DT problem_NN can_MD be_VB solved_VBN by_IN the_DT following_JJ equation_NN :_: arg_NN max_FW P_FW -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ._.
+c_NN ∈_CD C_NNP The_DT above_JJ equation_NN can_MD be_VB solved_VBN using_VBG supervised_JJ learning_NN ._.
+However_RB ,_, the_DT domain_NN adaptation_NN problem_NN occurs_VBZ in_IN a_DT real_JJ task_NN ._.
+In_IN domain_NN adaptation_NN ,_, Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- can_MD be_VB derived_VBN from_IN source_NN domain_NN S_NNP ;_: therefore_RB ,_, we_PRP must_MD estimate_VB Pt_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- in_IN the_DT target_NN domain_NN T_NNP us_PRP -_: ing_VBG Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- and_CC other_JJ data_NNS ._.
+Note_VB that_IN the_DT sense_NN c_NN of_IN the_DT word_NN w_NN in_IN sentence_NN x_LS is_VBZ not_RB changed_VBN if_IN sentence_NN x_LS appears_VBZ in_IN any_DT domain_NN corpus_NN ,_, i.e._FW ,_, P_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- does_VBZ not_RB depend_VB on_IN a_DT domain_NN ._.
+As_IN a_DT result_NN ,_, Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- =_SYM Pt_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ._.
+Therefore_RB ,_, it_PRP seems_VBZ that_IN we_PRP do_VBP not_RB need_VB to_TO estimate_VB Pt_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- because_IN we_PRP have_VBP Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ._.
+How_WRB -_: ever_RB ,_, this_DT is_VBZ wrong_JJ because_IN Ps_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ̸_CD =_SYM Pt_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+The_DT following_VBG assumption_NN is_VBZ referred_VBN to_TO as_IN the_DT covariate_JJ shift_NN :_: Ps_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- ̸_CD =_SYM Pt_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- =_SYM Pt_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ._.
+In_IN other_JJ words_NNS ,_, the_DT domain_NN adaptation_NN for_IN WSD_NNP satisfies_VBZ the_DT assumption_NN of_IN the_DT covariate_JJ shift_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP solve_VBP domain_NN adaptation_NN for_IN WSD_NNP by_IN learning_VBG under_IN covariate_JJ shift_NN ._.
+Briefly_RB ,_, learning_VBG under_IN covariate_JJ shift_NN is_VBZ a_DT learning_VBG method_NN through_IN weighted_JJ training_NN data_NNS ._.
+Thus_RB ,_, it_PRP has_VBZ 1_CD ing_NN -LRB-_-LRB- Kamishima_NNP ,_, 2010_CD -RRB-_-RRB- in_IN part_NN of_IN machine_NN learning_NN ._.
+Domain_NN adaptation_NN is_VBZ considered_VBN as_IN a_DT type_NN of_IN transfer_NN learn_VBP -_: two_CD key_JJ points_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- calculation_NN of_IN the_DT weight_NN of_IN an_DT instance_NN and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- weighted_JJ learning_NN ._.
+For_IN the_DT first_JJ point_NN ,_, the_DT probability_NN density_NN ratio_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM Pt_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD Ps_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- is_VBZ used_VBN theoretically_RB as_IN the_DT weight_NN of_IN the_DT instance_NN x_LS ._.
+There_EX are_VBP two_CD techniques_NNS for_IN calculating_VBG the_DT probability_NN density_NN ratio_NN ._.
+The_DT first_JJ is_VBZ modeling_NN PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- and_CC PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- and_CC then_RB tak_SYM -_: ing_VBG the_DT ratio_NN between_IN them_PRP ._.
+The_DT second_JJ is_VBZ model_NN -_: ing_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- directly_RB ._.
+Several_JJ studies_NNS have_VBP examined_VBN the_DT former_JJ method_NN -LRB-_-LRB- Jiang_NNP and_CC Zhai_NNP ,_, 2007_CD -RRB-_-RRB- -LRB-_-LRB- Saiki_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+However_RB ,_, to_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, the_DT latter_JJ approach_NN has_VBZ not_RB been_VBN attempted_VBN in_IN NLP_NNP research_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP adopt_VBP unconstrained_JJ least_JJS squares_NNS importance_NN fitting_JJ -LRB-_-LRB- uLSIF_NNP -RRB-_-RRB- as_IN the_DT second_JJ cal_NN -_: culation_NN -LRB-_-LRB- Kanamori_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Actually_RB ,_, there_EX are_VBP many_JJ methods_NNS to_TO calculate_VB probability_NN density_NN ratio_NN -LRB-_-LRB- Sugiyama_NNP and_CC Kawanabe_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP uLSIF_NNP because_IN it_PRP shows_VBZ good_JJ performance_NN and_CC quick_JJ calculation_NN time_NN ._.
+uLSIF_NNP models_NNS w_VBP -LRB-_-LRB- x_LS -RRB-_-RRB- with_IN the_DT sum_NN of_IN Nt_NN pieces_NNS of_IN basis_NN functions_NNS ψl_VBP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, where_WRB Nt_NNP is_VBZ the_DT number_NN of_IN target_NN data_NNS ._.
+PN_NNP →_NNP PB_NNP ,_, and_CC PB_NNP →_CD OC_NNP giving_VBG a_DT total_NN of_IN 96_CD -LRB-_-LRB- =_SYM 16_CD ×_NN 6_CD -RRB-_-RRB- domain_NN adaptation_NN tasks_NNS ._.
+Consequently_RB ,_, the_DT effects_NNS of_IN the_DT proposed_VBN method_NN are_VBP confirmed_VBN ._.
+2_CD Related_JJ Work_NN Generally_RB ,_, methods_NNS for_IN domain_NN adaptation_NN can_MD be_VB divided_VBN into_IN instances-based_JJ method_NN and_CC features_NNS -_: based_VBN method_NN -LRB-_-LRB- Pan_NNP and_CC Yang_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT instances_NNS -_: based_VBN method_NN is_VBZ a_DT learning_NN method_NN that_WDT gives_VBZ weight_NN to_TO an_DT instance_NN of_IN training_NN data_NNS ._.
+Learning_NNP under_IN co_SYM -_: variate_JJ shift_NN is_VBZ typical_JJ method_NN for_IN this_DT type_NN ._.
+The_DT features-based_JJ method_NN is_VBZ a_DT method_NN that_WDT maps_NNS the_DT source_NN and_CC target_NN features_NNS spaces_NNS to_TO a_DT common_JJ fea_NN -_: tures_NNS space_NN to_TO maintain_VB the_DT important_JJ characteristics_NNS in_IN each_DT domain_NN by_IN reducing_VBG the_DT difference_NN between_IN domains_NNS ._.
+The_DT paper_NN -LRB-_-LRB- Blitzer_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- proposed_VBD the_DT dimension_NN reduction_NN method_NN called_VBN structural_JJ correspondence_NN learning_NN -LRB-_-LRB- SCL_NNP -RRB-_-RRB- ._.
+The_DT paper_NN -LRB-_-LRB- Pan_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- evaluated_VBD the_DT distance_NN between_IN the_DT spaces_NNS mapped_VBD in_IN the_DT source_NN domain_NN and_CC the_DT spaces_NNS mapped_VBD in_IN the_DT target_NN domain_NN by_IN maximum_JJ mean_JJ discrep_NN -_: ancy_NN -LRB-_-LRB- MMD_NNP -RRB-_-RRB- ._.
+They_PRP proposed_VBD a_DT conversion_NN method_NN to_TO minimize_VB the_DT distance_NN called_VBN MMD_NNP embedding_VBG -LRB-_-LRB- MMDE_NNP -RRB-_-RRB- ._.
+Moreover_RB ,_, the_DT paper_NN -LRB-_-LRB- Pan_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- im_SYM -_: proved_VBD MMDE_NNP and_CC proposed_VBD a_DT novel_NN method_NN called_VBN transfer_NN component_NN analysis_NN -LRB-_-LRB- TCA_NNP -RRB-_-RRB- ._.
+Adding_VBG weight_NN to_TO features_NNS is_VBZ a_DT features-based_JJ method_NN ._.
+The_DT paper_NN -LRB-_-LRB- Daume_NNP ́_CD III_NNP ,_, Hal_NNP ,_, 2007_CD -RRB-_-RRB- offered_VBD a_DT weighting_NN sys_SYM -_: tem_NN for_IN features_NNS ._.
+In_IN this_DT study_NN ,_, vector_NN xs_NNS of_IN the_DT training_NN data_NNS in_IN the_DT source_NN domain_NN is_VBZ mapped_VBN to_TO an_DT augmented_VBN input_NN space_NN -LRB-_-LRB- xs_NNS ,_, xs_NNS ,_, 0_CD -RRB-_-RRB- ,_, and_CC xt_NN is_VBZ mapped_VBN to_TO an_DT augmented_VBN input_NN space_NN -LRB-_-LRB- 0_CD ,_, xt_NN ,_, xt_VBN -RRB-_-RRB- ._.
+The_DT classifier_NN that_WDT learned_VBD from_IN the_DT augmented_JJ vec_NN -_: tors_NNS solves_VBZ the_DT classification_NN problem_NN by_IN the_DT usual_JJ method_NN ._.
+Daume_NNP ́_NNP 's_POS method_NN assumes_VBZ that_IN an_DT effect_NN can_MD be_VB determined_VBN by_IN overlapping_VBG the_DT characteristics_NNS that_WDT are_VBP common_JJ to_TO the_DT source_NN and_CC target_NN domains_NNS ._.
+The_DT domain_NN adaptation_NN problem_NN is_VBZ considered_VBN a_DT data-sparse_JJ problem_NN ._.
+Self-training_VBG and_CC semi_SYM -_: supervised_JJ learning_NN -LRB-_-LRB- Chapelle_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- and_CC ac_SYM -_: tive_JJ learning_NN -LRB-_-LRB- Settles_NNP ,_, 2010_CD -RRB-_-RRB- -LRB-_-LRB- Rai_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- are_VBP useful_JJ for_IN domain_NN adaptation_NN ._.
+At_IN last_JJ ,_, we_PRP introduce_VBP researches_VBZ on_IN domain_NN adap_SYM -_: tation_NN for_IN WSD_NNP ._.
+We_PRP assume_VBP that_IN Pt_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- =_SYM Ps_NNS -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ,_, but_CC the_DT assumption_NN Pt_NNP -LRB-_-LRB- x_LS |_CD c_NN -RRB-_-RRB- =_SYM Ps_NNS -LRB-_-LRB- x_LS |_CD c_NN -RRB-_-RRB- is_VBZ also_RB pos_SYM -_: sible_NN ._.
+Under_IN this_DT assumption_NN ,_, we_PRP can_MD solve_VB do_VB -_: main_JJ adaptation_NN for_IN WSD_NNP by_IN estimating_VBG Pt_NNP -LRB-_-LRB- c_NN -RRB-_-RRB- ._.
+Ac_SYM -_: Nt_NN l_NN =_SYM 1_CD Generally_RB ,_, a_DT Gaussian_JJ kernel_NN is_VBZ used_VBN as_IN the_DT basis_NN function_NN ._.
+However_RB ,_, in_IN this_DT case_NN ,_, the_DT width_NN σ_NN of_IN the_DT Gaussian_NNP kernel_NN becomes_VBZ an_DT additional_JJ parameter_NN ._.
+Therefore_RB ,_, we_PRP suggest_VBP using_VBG a_DT linear_JJ kernel_NN to_TO drop_VB this_DT parameter_NN σ_NN ._.
+For_IN the_DT second_JJ point_NN ,_, the_DT maximum_NN entropy_NN method_NN -LRB-_-LRB- ME_NNP -RRB-_-RRB- is_VBZ commonly_RB employed_VBN in_IN weighted_JJ learning_NN ._.
+However_RB ,_, in_IN domain_NN adaptation_NN for_IN WSD_NNP ,_, the_DT number_NN of_IN instances_NNS is_VBZ generally_RB small_JJ ._.
+For_IN this_DT reason_NN ,_, we_PRP do_VBP not_RB use_VB a_DT weighted_JJ ME_NNP but_CC a_DT weighted_JJ support_NN vector_NN machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ._.
+Furthermore_RB ,_, three_CD rough_JJ heaviness_NN values_NNS are_VBP ap_SYM -_: plied_VBD to_TO the_DT weighted_JJ SVM_NNP for_IN comparison_NN ,_, i.e._FW ,_, a_DT small_JJ weight_NN 0.1_CD ,_, a_DT normal_JJ weight_NN 1.1_CD ,_, and_CC a_DT large_JJ weight_NN 2.1_CD ,_, rather_RB than_IN a_DT detailed_JJ weight_NN for_IN each_DT case_NN ._.
+In_IN the_DT experiment_NN ,_, we_PRP use_VBP three_CD domains_NNS ,_, i.e._FW ,_, OC_NNP -LRB-_-LRB- Yahoo_NNP !_.
+Answer_NN -RRB-_-RRB- ,_, PB_NNP -LRB-_-LRB- books_NNS -RRB-_-RRB- and_CC PN_NNP -LRB-_-LRB- newspa_NN -_: per_IN -RRB-_-RRB- in_IN the_DT Balanced_NNP Corpus_NNP of_IN Contemporary_NNP Writ_NNP -_: ten_CD Japanese_JJ -LRB-_-LRB- BCCWJ_NNP -LRB-_-LRB- Maekawa_NNP ,_, 2007_CD -RRB-_-RRB- -RRB-_-RRB- and_CC 16_CD target_NN words_NNS that_WDT appear_VBP frequently_RB in_IN these_DT three_CD domains_NNS ._.
+There_EX are_VBP six_CD types_NNS of_IN domain_NN adapta_NN -_: tion_SYM -_: OC_NNP →_NNP PB_NNP ,_, PB_NNP →_CD PN_NNP ,_, PN_NNP →_CD OC_NNP ,_, OC_NNP →_CD PN_NNP ,_, w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM αlψl_FW -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+tually_RB ,_, the_DT papers_NNS -LRB-_-LRB- Chan_NNP and_CC Ng_NNP ,_, 2006_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Chan_NNP and_CC Ng_NNP ,_, 2005_CD -RRB-_-RRB- estimated_VBN Pt_NNP -LRB-_-LRB- c_NN -RRB-_-RRB- by_IN using_VBG EM_NNP algo_SYM -_: rithm_NN to_TO do_VB it.The_NNP papers_NNS -LRB-_-LRB- Komiya_NNP and_CC Okumura_NNP ,_, 2012a_CD -RRB-_-RRB- ,_, -LRB-_-LRB- Komiya_NNP and_CC Okumura_NNP ,_, 2011_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Komiya_NNP and_CC Okumura_NNP ,_, 2012b_CD -RRB-_-RRB- changed_VBD the_DT learning_VBG method_NN by_IN the_DT combination_NN of_IN source_NN domain_NN ,_, target_NN domain_NN and_CC target_NN word_NN ._.
+These_DT studies_NNS are_VBP a_DT kind_NN of_IN ensem_NN -_: ble_NN learning_NN ._.
+In_IN those_DT learning_VBG methods_NNS ,_, only_RB the_DT weight_NN that_WDT is_VBZ applied_VBN to_TO data_NNS in_IN source_NN and_CC target_NN domain_NN is_VBZ different_JJ ._.
+3_CD Domain_NNP Adaptation_NNP under_IN Covariate_NNP Shift_NNP In_IN this_DT section_NN ,_, we_PRP show_VBP that_IN weighted_JJ learning_NN can_MD solve_VB a_DT domain_NN adaptation_NN problem_NN under_IN assump_NN -_: tion_NN of_IN covariate_JJ shift_NN ._.
+We_PRP define_VBP the_DT loss_NN function_NN as_IN l_NN -LRB-_-LRB- x_LS ,_, c_NN ,_, d_LS -RRB-_-RRB- where_WRB x_LS ,_, c_NN and_CC d_LS denote_VBP an_DT instance_NN ,_, the_DT class_NN of_IN x_LS and_CC a_DT clas_NNS -_: sifier_JJR respectively_RB ._.
+Thus_RB ,_, expected_JJ loss_NN function_NN L0_NNP in_IN our_PRP$ task_NN is_VBZ expressed_VBN as_IN the_DT following_NN :_: L0_CD =_SYM l_NN -LRB-_-LRB- x_LS ,_, c_NN ,_, d_LS -RRB-_-RRB- PT_NNP -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- ._.
+x_LS ,_, c_NN Through_IN the_DT assumption_NN of_IN covariate_JJ shift_NN ,_, we_PRP ob_SYM -_: tain_VB the_DT following_NN :_: P_NNP -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- P_NN -LRB-_-LRB- x_LS -RRB-_-RRB- P_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- P_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- T_NNP =_SYM TT_NNP =_SYM T._NNP PS_NNP -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- PS_NNP -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- Now_RB ,_, w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+It_PRP establishes_VBZ as_IN fol_NN -_: Consider_VB a_DT classification_NN based_VBN on_IN a_DT posterior_JJ probability_NN maximizing_VBG estimation_NN ._.
+d_LS -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM arg_IN max_FW PT_FW -LRB-_-LRB- c_NN |_NN x_LS -RRB-_-RRB- ._.
+c_NN Additionally_RB ,_, adapt_VB a_DT logarithmic_JJ loss_NN as_IN a_DT loss_NN func_NN -_: tion_NN ._.
+Eq_NN ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- turn_VBP into_IN the_DT following_NN :_: L1_CD =_SYM −_CD N_NNP i_FW =_SYM 1_CD w_NN -LRB-_-LRB- xi_FW -RRB-_-RRB- log_VBP PT_NNP -LRB-_-LRB- ci_FW |_FW xi_FW -RRB-_-RRB- ._.
+In_IN case_NN of_IN adopting_VBG an_DT approach_NN using_VBG a_DT model_NN of_IN PT_NNP -LRB-_-LRB- c_NN |_NN x_LS ,_, λ_NN -RRB-_-RRB- in_IN order_NN to_TO solve_VB the_DT classification_NN problem_NN ,_, we_PRP find_VBP the_DT parameter_NN λ_NN maximizing_VBG the_DT weighted_JJ log-likelihood_NN L_NNP -LRB-_-LRB- λ_FW -RRB-_-RRB- of_IN the_DT following_VBG weighted_VBN by_IN the_DT probability_NN density_NN ratio_NN in_IN covari_NN -_: ate_VBD shift_NN ._.
+N_NNP L_NNP -LRB-_-LRB- λ_FW -RRB-_-RRB- =_SYM w_FW -LRB-_-LRB- xi_FW -RRB-_-RRB- log_VBP PT_NNP -LRB-_-LRB- ci_FW |_FW xi_FW ,_, λ_NN -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- i_FW =_SYM 1_CD For_IN above_JJ problem_NN ,_, Maximum_NNP Entropy_NNP Method_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- is_VBZ commonly_RB used_VBN as_IN a_DT model_NN ._.
+1_CD M_NNP PT_NNP -LRB-_-LRB- c_NN |_NN x_LS ,_, λ_NN -RRB-_-RRB- =_SYM Z_NN -LRB-_-LRB- x_LS ,_, λ_NN -RRB-_-RRB- exp_NN λjfj_NN -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- ,_, j_FW =_SYM 1_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- where_WRB x_LS =_SYM -LRB-_-LRB- x1_CD ,_, x2_CD ,_, ·_CD ·_CD ·_NN ,_, xM_NNP -RRB-_-RRB- ._.
+The_DT function_NN fj_NN -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- is_VBZ a_DT feature_NN function_NN ._.
+It_PRP returns_VBZ xj_RB when_WRB the_DT true_JJ class_NN is_VBZ defined_VBN c_NN ,_, and_CC it_PRP returns_VBZ 0_CD in_IN other_JJ cases_NNS ._.
+Z_NN -LRB-_-LRB- x_LS ,_, λ_NN -RRB-_-RRB- is_VBZ a_DT normalization_NN term_NN ._.
+Hence_RB ,_, we_PRP obtain_VBP lows_NNS :_: M_NNP L0_NNP =_SYM -LCB-_-LRB- -LRB-_-LRB- xi_FW ,_, ci_FW -RRB-_-RRB- -RCB-_-RRB- Ni_NNP =_SYM 1_CD denotes_NNS the_DT training_NN Z_NN -LRB-_-LRB- x_LS ,_, λ_NN -RRB-_-RRB- =_SYM exp_FW λjfj_FW -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- ,_, -LRB-_-LRB- 4_CD -RRB-_-RRB- c_NN ∈_CD C_NNP j_NN =_SYM 1_CD where_WRB λ_FW =_SYM -LRB-_-LRB- λ1_CD ,_, λ2_CD ,_, ·_CD ·_CD ·_NN ,_, λM_NNP -RRB-_-RRB- is_VBZ a_DT vector_NN of_IN weight_NN parameters_NNS for_IN features_NNS ._.
+4_CD Weight_NNP through_IN Probability_NNP Density_NNP Ratio_NNP There_EX are_VBP two_CD kinds_NNS of_IN approaches_NNS estimating_VBG the_DT probability_NN density_NN ratio_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+The_DT first_JJ approach_NN is_VBZ estimating_VBG each_DT PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- and_CC PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, and_CC take_VB their_PRP$ ratio_NN ._.
+The_DT second_JJ approach_NN is_VBZ modeling_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, directly_RB ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP unconstrained_JJ least-squares_NNS importance_NN fitting_JJ -LRB-_-LRB- uLSIF_NNP -RRB-_-RRB- proposed_VBN in_IN -LRB-_-LRB- Kanamori_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- as_IN the_DT second_JJ approach_NN ._.
+w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- l_NN -LRB-_-LRB- x_LS ,_, c_NN ,_, d_LS -RRB-_-RRB- PS_NNP -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- ._.
+Using_VBG empirical_JJ distribution_NN as_IN a_DT substitute_NN for_IN D_NNP =_SYM PS_NNP -LRB-_-LRB- x_LS ,_, c_NN -RRB-_-RRB- ,_, the_DT following_VBG holds_VBZ 1_CD N_NNP L0_NNP ≈_CD N_NNP data_NNS ._.
+x_LS ,_, c_NN i_FW =_SYM 1_CD w_NN -LRB-_-LRB- xi_FW -RRB-_-RRB- l_NN -LRB-_-LRB- xi_FW ,_, ci_FW ,_, d_LS -RRB-_-RRB- ._.
+In_IN terms_NNS of_IN expected_JJ loss_NN minimization_NN ,_, find_VB d_LS mini_SYM -_: mizing_VBG the_DT following_JJ equation_NN L1_CD to_TO solve_VB the_DT prob_NN -_: lem_NN of_IN covariate_JJ shift_NN ._.
+L1_CD =_SYM N_NNP i_FW =_SYM 1_CD w_NN -LRB-_-LRB- xi_FW -RRB-_-RRB- l_NN -LRB-_-LRB- xi_FW ,_, ci_FW ,_, d_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- 4.1_CD uLSIF_NNP =_SYM Nt_NNP Ns_NNPS 1_CD αlαl_NN ′_NN 1_CD ψl_NN -LRB-_-LRB- xsi_FW -RRB-_-RRB- ψl_SYM ′_FW -LRB-_-LRB- xsi_FW -RRB-_-RRB- -LCB-_-LRB- xs_NNS -RCB-_-RRB- Ns_NNS and_CC -LCB-_-LRB- xt_NN -RCB-_-RRB- Nt_NN i_FW i_FW =_SYM 1_CD i_FW i_FW =_SYM 1_CD 2_CD ′_CD Ns_NNS l_NN ,_, l_NN =_SYM 1_CD i_FW =_SYM 1_CD denote_VBP a_DT source_NN data_NNS and_CC a_DT tar_NN -_: get_VB data_NNS ,_, respectively_RB ._.
+In_IN uLSIF_NNP ,_, the_DT probability_NN den_NN -_: Nt_NN Nt_NN −_SYM α_FW l_NN 1_CD ψ_NN l_NN -LRB-_-LRB- x_LS tj_FW -RRB-_-RRB- sity_NN ratio_NN is_VBZ modeled_VBN as_IN the_DT following_NN :_: Nt_NN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM αlψl_FW -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM α_FW ·_FW ψ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, l_NN =_SYM 1_CD where_WRB α_FW =_SYM -LRB-_-LRB- α1_CD ,_, α2_CD ,_, ·_CD ·_CD ·_NN ,_, αNt_NNP -RRB-_-RRB- ,_, ψ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM -LRB-_-LRB- ψ1_CD -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, ψ2_FW -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, ·_FW ·_FW ·_FW ,_, ψb_NN -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- ._.
+and_CC αl_JJ >_NN 0_CD ._.
+Here_RB ,_, ψl_NN -LRB-_-LRB- x_LS -RRB-_-RRB- is_VBZ a_DT basis_NN function_NN which_WDT is_VBZ mapping_VBG from_IN the_DT source_NN data_NNS to_TO the_DT positive_JJ real_JJ number_NN ._.
+In_IN uLSIF_NNP ,_, actually_RB ,_, the_DT parameter_NN α_NN is_VBZ estimated_VBN after_IN building_VBG the_DT basis_NN function_NN ψ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+However_RB ,_, for_IN the_DT convenience_NN of_IN description_NN ,_, we_PRP firstly_RB explain_VBP the_DT estimation_NN of_IN α_NN ._.
+wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- denotes_VBZ a_DT model_NN of_IN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+In_IN order_NN to_TO estimate_VB parameter_NN αl_NN ,_, we_PRP find_VBP αˆ_JJ minimiz_NN -_: ing_VBG a_DT mean_JJ square_JJ error_NN J0_NN -LRB-_-LRB- α_FW -RRB-_-RRB- between_IN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- and_CC wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+By_IN taking_VBG account_NN of_IN w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- /_CD PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ,_, J0_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- can_MD be_VB transformed_VBN as_IN follows_VBZ :_: 1_CD J0_CD -LRB-_-LRB- α_NN -RRB-_-RRB- =_SYM 2_CD -LRB-_-LRB- wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- −_FW w_FW -LRB-_-LRB- x_LS -RRB-_-RRB- -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_FW l_NN =_SYM 1_CD Nt_NN j_NN =_SYM 1_CD =_SYM 1αTH_SYM α_SYM −_FW h_FW Tα_FW ,_, -LRB-_-LRB- 5_CD -RRB-_-RRB- 2_CD where_WRB H_NNP denotes_VBZ Nt_NNP ×_FW Nt_NNP matrix_NN ,_, and_CC H_NNP l_NN ,_, l_NN ′_NN -LRB-_-LRB- the_DT -LRB-_-LRB- l_NN ,_, l_NN ′_NN -RRB-_-RRB- element_NN of_IN Hˆ_NNP -RRB-_-RRB- is_VBZ defined_VBN as_IN follows_VBZ :_: Ns_NNS H_NNP l_NN ,_, l_NN ′_CD =_SYM 1_CD ψl_NN -LRB-_-LRB- xsi_FW -RRB-_-RRB- ψl_SYM ′_FW -LRB-_-LRB- xsi_FW -RRB-_-RRB- Furthermore_RB ,_, h_VBP denotes_NNS Nt-dimensional_JJ vector_NN ,_, and_CC the_DT element_NN of_IN the_DT l-th_JJ dimension_NN h_NN l_NN is_VBZ defined_VBN as_IN follows_VBZ :_: As_IN the_DT result_NN ,_, we_PRP can_MD obtain_VB the_DT αˆ_NN minimizing_VBG J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- by_IN solving_VBG the_DT following_JJ problem_NN :_: Ns_NNS i_FW =_SYM 1_CD Nt_NN h_NN =_SYM 1_CD ψ_NN -LRB-_-LRB- x_LS t_VBN -RRB-_-RRB- ._.
+l_NN Nt_NNP l_NN j_NN j_NN =_SYM 1_CD 1_CD 1λ_CD =_SYM wˆ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_FW min_FW αTH_FW α_FW −_FW h_FW Tα_FW +_FW αTα_FW ._.
+Here_RB ,_, we_PRP must_MD note_VB that_IN the_DT parameter_NN λ_NN is_VBZ added_VBN ._.
+The_DT above_JJ minimization_NN problem_NN is_VBZ unconstrained_JJ convex_NN quadratic_JJ programming_NN problem_NN without_IN a_DT constrained_VBN condition_NN ,_, so_RB that_IN we_PRP obtain_VB a_DT global_JJ so_RB -_: lution_NN :_: α_SYM ̃_FW =_SYM -LRB-_-LRB- H_NNP +_CD λINt_NNP -RRB-_-RRB- −_SYM 1h_CD T._NNP -LRB-_-LRB- 6_CD -RRB-_-RRB- Lastly_RB ,_, conduct_VB the_DT following_VBG adjustment_NN to_TO satisfy_VB the_DT condition_NN α_SYM >_SYM 0_CD :_: -LRB-_-LRB- -LRB-_-LRB- max_FW -LRB-_-LRB- 0_CD ,_, α_SYM ̃_FW -RRB-_-RRB- ,_, max_FW -LRB-_-LRB- 0_CD ,_, α_SYM ̃_FW -RRB-_-RRB- ,_, ·_FW ·_FW ·_FW ,_, max_NN -LRB-_-LRB- 0_CD ,_, α_SYM ̃_FW -RRB-_-RRB- -RRB-_-RRB- 1_CD 2_CD Nt_NNP max_NN -LRB-_-LRB- 0Nt_JJ ,_, α_JJ ̃_NN -RRB-_-RRB- ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- In_IN genaral_NN ,_, a_DT Gaussian_JJ kernel_NN is_VBZ used_VBN as_IN the_DT basis_NN function_NN ._.
+1_CD =_SYM 2_CD +2_CD w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_SYM 2_CD 22_CD −_NN wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- dx_SYM 1_CD wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_SYM −_SYM wˆ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- dx_SYM 1_CD +2_CD w_NN -LRB-_-LRB- x_LS -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_NN ._.
+Since_IN the_DT third_JJ term_NN is_VBZ constant_JJ ,_, so_IN it_PRP is_VBZ independent_JJ on_IN minimizing_VBG J0_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- ._.
+Therefore_RB ,_, minimizing_VBG J0_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- means_VBZ minimizing_VBG the_DT following_VBG J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- ._.
+1_CD J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- =_SYM 2_CD wˆ_NN -LRB-_-LRB- x_LS -RRB-_-RRB- 2PS_NNS -LRB-_-LRB- x_LS -RRB-_-RRB- dx_SYM −_SYM wˆ_FW -LRB-_-LRB- x_LS -RRB-_-RRB- PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- dx_NN ._.
+By_IN approximating_VBG PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- and_CC PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- by_IN empirical_JJ distributions_NNS ,_, J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- is_VBZ transformed_VBN as_IN the_DT following_VBG α_NN =_SYM =_SYM ψl_FW -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM K_NNP -LRB-_-LRB- x_LS ,_, xtl_NN -RRB-_-RRB- =_SYM exp_FW σ2_FW J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- :_: Under_IN this_DT situation_NN ,_, remaining_VBG parameters_NNS to_TO be_VB 1_CD s21_CD t_NN determined_VBN are_VBP the_DT regularization_NN term_NN λ_NN and_CC a_DT width_NN Ns_VBZ Nt_NN J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- =_SYM 2_CD N_NNP w_NN -LRB-_-LRB- x_LS i_FW -RRB-_-RRB- −_CD N_NNP w_NN -LRB-_-LRB- x_LS j_FW -RRB-_-RRB- of_IN the_DT Gaussian_NNP kernel_NN σ_NN to_TO obtain_VB the_DT probability_NN |_VBD |_CD x_SYM −_FW xt_FW |_FW |_FW 2_CD −_CD l_NN ._.
+s_PRP i_FW =_SYM 1_CD t_NN j_NN =_SYM 1_CD density_NN ratio_NN ._.
+These_DT parameters_NNS are_VBP found_VBN by_IN a_DT cross_NN -_: validation_NN of_IN a_DT grid_NN search_NN ._.
+First_RB ,_, split_VBD each_DT source_NN and_CC target_NN data_NNS into_IN R_NN pieces_NNS of_IN subset_NN with_IN no_DT in_IN -_: tersection_NN ._.
+Secondly_RB ,_, exclude_VBP the_DT r-th_JJ subset_NN from_IN these_DT subsets_NNS ,_, and_CC bind_NN the_DT rest_NN ._.
+These_DT data_NNS are_VBP re_SYM -_: garded_VBN as_IN a_DT new_JJ source_NN and_CC target_NN domain_NN ._.
+Now_RB ,_, set_VBN Here_RB ,_, we_PRP assign_VBP the_DT rough_JJ weight_NN to_TO the_DT instance_NN according_VBG to_TO the_DT estimated_VBN probability_NN density_NN ratio_NN ._.
+The_DT rough_JJ weight_NN has_VBZ 3_CD kinds_NNS of_IN value_NN :_: 0.1_CD ,_, 1.1_CD and_CC 2.1_CD ._.
+The_DT set_NN of_IN the_DT estimated_VBN probability_NN density_NN ratio_NN is_VBZ expressed_VBN as_IN W_NNP =_SYM -LCB-_-LRB- wi_NNS -RCB-_-RRB- Ni_NNP =_SYM 1_CD ._.
+The_DT wi_NN is_VBZ normalized_VBN by_IN the_DT following_NN :_: W_NNP ,_, respectively_RB ._.
+Assuming_VBG that_DT W_NNP follows_VBZ a_DT normal_JJ distribution_NN ,_, wi_NN is_VBZ defined_VBN as_IN 2.1_CD when_WRB wi_NN is_VBZ greater_JJR than_IN 0.84_CD ,_, wi_NN is_VBZ defined_VBN as_IN 0.1_CD when_WRB wi_NN is_VBZ smaller_JJR than_IN -0.84_CD ,_, and_CC in_IN the_DT other_JJ cases_NNS ,_, wi_NN is_VBZ defined_VBN as_IN 1.1_CD ._.
+The_DT points_NNS ,_, 0.84_CD and_CC -0.84_CD ,_, are_VBP 20_CD %_NN top_NN and_CC lower_JJR quantile_NN points_NNS of_IN normal_JJ distribution_NN ,_, respectively_RB ._.
+5_CD SVM_NNP for_IN weighted_JJ learning_NN Learning_NNP under_IN covariate_JJ shift_NN means_VBZ the_DT weighted_JJ learning_NN using_VBG the_DT probability_NN density_NN ratio_NN ._.
+Af_SYM -_: ter_NN assigning_VBG weight_NN to_TO each_DT instance_NN ,_, we_PRP apply_VBP the_DT weighted_JJ learning_NN method_NN ._.
+Conventionally_RB we_PRP use_VBP ME_NNP and_CC logistic_JJ regression_NN as_IN the_DT the_DT weighted_JJ learn_VBP -_: ing_VBG method_NN ._.
+However_RB ,_, a_DT method_NN based_VBN on_IN a_DT loss_NN function_NN is_VBZ also_RB available_JJ ,_, as_IN can_MD be_VB seen_VBN from_IN the_DT Eq_NNP ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP the_DT method_NN of_IN SVM_NNP for_IN imbalanced_JJ data_NNS -LRB-_-LRB- Tang_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Through_IN the_DT training_NN data_NNS -LCB-_-LRB- -LRB-_-LRB- xi_FW ,_, yi_FW -RRB-_-RRB- -RCB-_-RRB- Ni_NNP =_SYM 1_CD -LRB-_-LRB- xi_FW ∈_FW Rd_NN ,_, yi_FW ∈_FW -LCB-_-LRB- 1_CD ,_, −_CD 1_CD -RCB-_-RRB- -RRB-_-RRB- ,_, SVM_NNP is_VBZ constructed_VBN by_IN estimating_VBG parameters_NNS w_VB ,_, b_NN ,_, and_CC ζ_NN in_IN the_DT following_NN :_: N_NNP min_NN 1wTw_NNP +_NNP C_NNP ζi_FW ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- ζi_FW ≥_FW 0_CD ._.
+In_IN the_DT above_JJ formula_NN ,_, we_PRP can_MD use_VB the_DT weighted_JJ SVM_NNP by_IN using_VBG w_NN -LRB-_-LRB- xi_FW -RRB-_-RRB- C_$ instead_RB of_IN C_NNP -LRB-_-LRB- Cortes_NNP and_CC Vapnik_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+6_CD Experiment_NN In_IN this_DT paper_NN ,_, we_PRP chose_VBD three_CD domains_NNS ,_, OC_NNP -LRB-_-LRB- Yahoo_NNP !_.
+Answer_NN -RRB-_-RRB- ,_, PB_NNP -LRB-_-LRB- books_NNS -RRB-_-RRB- ,_, and_CC PN_NNP -LRB-_-LRB- newspaper_NN -RRB-_-RRB- in_IN the_DT BCCWJ_NNP ,_, and_CC 16_CD target_NN words_NNS with_IN enough_JJ frequency_NN certain_JJ values_NNS to_TO λ_VB and_CC σ_VB ,_, and_CC obtain_VB α_NN with_IN Eq_NNP ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- -LRB-_-LRB- r_LS -RRB-_-RRB- and_CC Eq_NNP ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, and_CC find_VB J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- with_IN Eq_NNP ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- ._.
+Calcu_SYM -_: -LRB-_-LRB- r_LS -RRB-_-RRB- w_SYM −_SYM μ_SYM ′_FW i_FW late_JJ R_NN pieces_NNS of_IN values_NNS of_IN J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- by_IN varying_VBG the_DT value_NN r_NN from_IN 1_CD to_TO R_NNP ,_, and_CC regard_VB the_DT average_JJ value_NN of_IN wi_FW =_SYM σ_FW ,_, where_WRB μ_NN and_CC σ2_NN denote_VBP the_DT mean_NN and_CC the_DT variance_NN of_IN them_PRP as_IN J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- for_IN λ_NN and_CC σ_NN ._.
+Next_JJ ,_, estimate_NN λ_NN and_CC σ_NN minimizing_VBG J_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- obtained_VBN with_IN the_DT above_JJ procedure_NN by_IN changing_VBG the_DT values_NNS of_IN λ_NN and_CC σ_NN ._.
+These_DT values_NNS are_VBP denoted_VBN by_IN λˆ_NN and_CC σˆ_NN ,_, respectively_RB ._.
+4.2_CD Use_NN of_IN Linear_NNP Kernel_NNP instead_RB of_IN Gaussian_NNP Kernel_NNP In_IN this_DT paper_NN ,_, we_PRP use_VBP linear_JJ kernel_NN as_IN the_DT basis_NN func_NN -_: tion_NN in_IN uLSIF_NNP instead_RB of_IN the_DT Gaussian_NNP kernel_NN ._.
+By_IN this_DT use_NN ,_, we_PRP can_MD drop_VB the_DT parameter_NN σ_NN ._.
+Generally_RB ,_, a_DT kernel_NN function_NN is_VBZ to_TO map_VB to_TO non_VB -_: linear_JJ high-dimensional_JJ space_NN ._.
+However_RB ,_, in_IN our_PRP$ tasks_NNS ,_, the_DT number_NN of_IN features_NNS is_VBZ larger_JJR than_IN the_DT num_NN -_: ber_NN of_IN instances_NNS ,_, so_RB that_IN there_EX is_VBZ no_DT need_NN to_TO map_VB to_TO the_DT high-dimensional_JJ space_NN ._.
+In_IN this_DT case_NN ,_, calculation_NN to_TO adjust_VB the_DT parameter_NN is_VBZ easier_JJR than_IN using_VBG Gaussian_NNP kernel_NN ._.
+ψ_FW l_NN -LRB-_-LRB- x_LS -RRB-_-RRB- =_SYM K_NNP -LRB-_-LRB- x_LS ,_, x_LS tl_FW -RRB-_-RRB- =_SYM x_LS ·_FW x_LS tl_FW ._.
+4.3_CD Weight_NNP of_IN Particular_NNP Instances_NNP In_IN our_PRP$ task_NN ,_, that_WDT is_VBZ domain_NN adaptations_NNS of_IN WSD_NNP ,_, we_PRP must_MD construct_VB the_DT model_NN of_IN the_DT probability_NN density_NN for_IN each_DT target_NN word_NN ._.
+Additionally_RB ,_, the_DT number_NN of_IN in_IN -_: stances_NNS of_IN the_DT target_NN word_NN is_VBZ too_RB small_JJ compared_VBN to_TO the_DT number_NN of_IN the_DT feature_NN dimension_NN in_IN both_DT source_NN and_CC target_NN domain_NN ._.
+Therefore_RB ,_, an_DT estimated_VBN proba_NN -_: bility_NN density_NN ratio_NN tends_VBZ to_TO be_VB smaller_JJR than_IN the_DT true_JJ value_NN ,_, so_RB that_IN some_DT approaches_NNS to_TO close_VB the_DT esti_NNS -_: mated_VBN probability_NN density_NN ratio_NN to_TO 1_CD have_VBP been_VBN pro-_JJ posed_VBN ._.
+Sugiyama_NNP translated_VBN to_TO the_DT weight_NN w_NN to_TO the_DT weight_NN wp_NN -LRB-_-LRB- 0_CD <_CD p_SYM <_SYM 1_LS -RRB-_-RRB- -LRB-_-LRB- Sugiyama_NNP ,_, 2006_CD -RRB-_-RRB- ,_, and_CC Ya_NNP -_: mada_NN proposed_VBD the_DT relative_JJ probability_NN density_NN ratio_NN -LRB-_-LRB- Yamada_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- :_: PT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- ._.
+αPT_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- +_NN -LRB-_-LRB- 1_CD −_CD α_NN -RRB-_-RRB- PS_NNP -LRB-_-LRB- x_LS -RRB-_-RRB- These_DT methods_NNS have_VBP an_DT effect_NN to_TO close_VB the_DT original_JJ probability_NN density_NN ratio_NN to_TO 1_CD ._.
+w_NN ,_, b_NN ,_, 2_CD i_FW =_SYM 1_CD yi_NNS -LRB-_-LRB- wTφ_NNP -LRB-_-LRB- xi_FW -RRB-_-RRB- +_JJ b_NN -RRB-_-RRB- ≥_SYM 1_CD −_CD ζi_NNS ,_, Now_RB ,_, Table_NNP 1_CD :_: Target_NNP words_NNS word_NN dictionary_NN #_# of_IN senses_NNS OC_NNP freq_NN ._.
+of_IN word_NN OC_NNP #_# of_IN senses_NNS PB_NNP freq_NN ._.
+of_IN word_NN PB_NNP #_# of_IN senses_NNS PN_NNP freq_NN ._.
+of_IN word_NN PN_NNP #_# of_IN senses_NNS iu_VBP -LRB-_-LRB- 言う_CD -RRB-_-RRB- 3_CD 666_CD 2_CD 1114_CD 2_CD 363_CD 2_CD ireru_NN -LRB-_-LRB- 入れる_FW -RRB-_-RRB- 3_CD 73_CD 2_CD 56_CD 3_CD 32_CD 2_CD kaku_NN -LRB-_-LRB- 書く_FW -RRB-_-RRB- 2_CD 99_CD 2_CD 62_CD 2_CD 27_CD 2_CD kiku_NN -LRB-_-LRB- 聞く_FW -RRB-_-RRB- 3_CD 124_CD 2_CD 123_CD 2_CD 52_CD 2_CD kodomo_NN -LRB-_-LRB- 子供_FW -RRB-_-RRB- 2_CD 77_CD 2_CD 93_CD 2_CD 29_CD 2_CD jikan_NN -LRB-_-LRB- 時間_FW -RRB-_-RRB- 4_CD 53_CD 2_CD 74_CD 2_CD 59_CD 2_CD jibun_NN -LRB-_-LRB- 自分_FW -RRB-_-RRB- 2_CD 128_CD 2_CD 308_CD 2_CD 71_CD 2_CD deru_NN -LRB-_-LRB- 出る_FW -RRB-_-RRB- 3_CD 131_CD 3_CD 152_CD 3_CD 89_CD 3_CD toru_NN -LRB-_-LRB- 取る_FW -RRB-_-RRB- 8_CD 61_CD 7_CD 81_CD 7_CD 43_CD 7_CD baai_NNS -LRB-_-LRB- 場合_CD -RRB-_-RRB- 2_CD 126_CD 2_CD 137_CD 2_CD 73_CD 2_CD hairu_NN -LRB-_-LRB- 入る_FW -RRB-_-RRB- 3_CD 68_CD 4_CD 118_CD 4_CD 65_CD 3_CD mae_NN -LRB-_-LRB- 前_FW -RRB-_-RRB- 3_CD 105_CD 3_CD 160_CD 2_CD 106_CD 4_CD miru_NN -LRB-_-LRB- 見る_FW -RRB-_-RRB- 6_CD 262_CD 5_CD 273_CD 6_CD 87_CD 3_CD motsu_NN -LRB-_-LRB- 持つ_FW -RRB-_-RRB- 4_CD 62_CD 4_CD 153_CD 3_CD 59_CD 3_CD yaru_NN -LRB-_-LRB- やる_FW -RRB-_-RRB- 5_CD 117_CD 3_CD 156_CD 4_CD 27_CD 2_CD yuku_NN -LRB-_-LRB- ゆく_FW -RRB-_-RRB- 2_CD 219_CD 2_CD 133_CD 2_CD 27_CD 2_CD average_JJ 3.44_CD 148.19_CD 2.94_CD 199.56_CD 3.00_CD 75.56_CD 2.69_CD in_IN all_DT three_CD domains_NNS ._.
+Now_RB ,_, we_PRP have_VBP six_CD types_NNS of_IN do_VBP -_: main_JJ adaptation_NN :_: OC_NNP →_NNP PB_NNP ,_, PB_NNP →_CD PN_NNP ,_, PN_NNP →_CD OC_NNP ,_, OC_NNP →_CD PN_NNP ,_, PN_NNP →_NNP PB_NNP ,_, and_CC PB_NNP →_CD OC_NNP ._.
+Therefore_RB ,_, to_TO -_: tally_NN 96_CD -LRB-_-LRB- =_SYM 6_CD ×_CD 16_CD -RRB-_-RRB- kinds_NNS of_IN domain_NN adaptation_NN tasks_NNS is_VBZ set_VBN ._.
+Table_NNP 1_CD indicates_VBZ information_NN of_IN the_DT target_NN word_NN ,_, the_DT number_NN of_IN senses_NNS registered_VBN in_IN the_DT dictionary_NN ,_, and_CC the_DT number_NN of_IN senses_NNS and_CC the_DT frequency_NN in_IN each_DT corpus_NN 2_CD ._.
+Here_RB ,_, we_PRP explain_VBP how_WRB to_TO evaluate_VB a_DT domain_NN adap_SYM -_: tation_NN method_NN for_IN our_PRP$ tasks_NNS ._.
+First_RB ,_, by_IN using_VBG a_DT domain_NN adaptation_NN method_NN -LRB-_-LRB- named_VBN as_IN Mtd-A_NNP -RRB-_-RRB- ,_, a_DT classifier_NN for_IN a_DT target_NN word_NN wi_NNS in_IN a_DT domain_NN adaptain_NN S_NNP →_CD T_NNP is_VBZ obtained_VBN ._.
+We_PRP can_MD get_VB the_DT precision_NN p_NN -LRB-_-LRB- ST_NNP -RRB-_-RRB- of_IN this_DT clas_NNS -_: wi_SYM sifier_JJR under_IN this_DT setting_NN ._.
+Thus_RB ,_, given_VBN domain_NN adap_SYM -_: tain_NN S_NNP →_CD T_NNP ,_, we_PRP can_MD get_VB the_DT average_JJ precision_NN p_NN -LRB-_-LRB- ST_NNP -RRB-_-RRB- for_IN the_DT 16_CD target_NN words_NNS -LRB-_-LRB- w1_CD ,_, w2_CD ,_, ·_CD ·_CD ·_NN ,_, w16_CD -RRB-_-RRB- ._.
+By_IN this_DT p_NN -LRB-_-LRB- ST_NNP -RRB-_-RRB- ,_, we_PRP evalutate_VBP the_DT method_NN Mtd-A_NNP for_IN the_DT do_VBP -_: main_JJ adaptain_JJ S_NNP →_CD T_NNP ._.
+We_PRP have_VBP 6_CD types_NNS of_IN S_NNP →_CD T_NNP ,_, so_RB 6_CD p_NN -LRB-_-LRB- S_NNP T_NNP -RRB-_-RRB- are_VBP obtained_VBN ._.
+We_PRP evaluate_VBP the_DT method_NN Mtd-A_NN by_IN taking_VBG average_NN of_IN 6_CD p_NN -LRB-_-LRB- ST_NNP -RRB-_-RRB- ._.
+The_DT method_NN Mtd-A_NNP is_VBZ composed_VBN of_IN two_CD ap_SYM -_: proaches_NNS ,_, a_DT method_NN of_IN calculating_VBG the_DT probability_NN 2_CD The_DT word_NN ``_`` 入る_FW -LRB-_-LRB- hairu_NN -RRB-_-RRB- ''_'' has_VBZ three_CD senses_NNS in_IN the_DT dictionary_NN ,_, but_CC there_EX are_VBP four_CD senses_NNS in_IN OC_NNP and_CC PB_NNP ._.
+This_DT is_VBZ because_IN our_PRP$ used_JJ sense_NN tagged_VBD corpus_NN accepts_VBZ new_JJ senses_NNS ._.
+density_NN ratio_NN and_CC type_NN of_IN the_DT weighted_JJ learning_NN ._.
+In_IN this_DT paper_NN ,_, 10_CD kinds_NNS of_IN method_NN are_VBP examined_VBN ._.
+Base_NNP -_: M_NNP and_CC Base-S_NNP ,_, are_VBP approaches_NNS without_IN uLSIF_NNP ._.
+The_DT characters_NNS ,_, ``_`` M_NNP ''_'' and_CC ``_`` S_NNP ''_'' ,_, mean_VB ME_NNP and_CC SVM_NNP ,_, re_SYM -_: spectively_RB ._.
+The_DT other_JJ techniques_NNS are_VBP with_IN uLSIF_NNP ._.
+The_DT letters_NNS ,_, ``_`` G_NNP ''_'' and_CC ``_`` L_NNP ''_'' signify_VB the_DT Gaussian_NNP ker_SYM -_: nel_NN and_CC the_DT linear_JJ kernel_NN used_VBN in_IN uLSIF_NNP ,_, respectively_RB ._.
+In_IN addition_NN ,_, in_IN Ours_NNP -_: *_SYM -_: *_SYM ,_, convert_VBP weight_NN into_IN three_CD types_NNS of_IN weight_NN -LRB-_-LRB- 0.1_CD ,_, 1.1_CD ,_, and_CC 2.1_CD -RRB-_-RRB- depending_VBG on_IN the_DT probability_NN density_NN ratio_NN calculated_VBN with_IN uLSIF_NNP ._.
+Our_PRP$ proposed_VBN method_NN is_VBZ expressed_VBN as_IN ``_`` Ours-L-S_JJ ''_'' ._.
+Results_NNS of_IN the_DT experiments_NNS are_VBP shown_VBN in_IN Table_NNP ._.
+2_LS ._.
+As_IN the_DT result_NN ,_, relationships_NNS ,_, Base-M_NNP <_CD Base-S_NNP ,_, Mtd-G-M_NNP <_CD Mtd-G-S_NNP ,_, Mtd-L-M_NNP <_CD Mtd-L-S_NNP ,_, Ours-G-M_NNP <_CD Ours-G-S_NNP ,_, and_CC Ours-L-M_NNP <_CD Ours-L-S_NNP are_VBP satisfied_JJ ._.
+It_PRP is_VBZ found_VBN that_IN SVM_NNP is_VBZ more_RBR effective_JJ than_IN ME_NNP ._.
+Additionally_RB ,_, relations_NNS ,_, Mtd-G-M_NNP <_CD Mtd-L-M_NNP ,_, Mtd-G-S_NNP =_SYM Mtd-L-S_NNPS ,_, ans_VBZ Ours-G-S_NNP <_CD Mtd-L-S_NNP are_VBP established_VBN ._.
+The_DT results_NNS of_IN Ours-G-M_NNP and_CC Ours-L-M_NNP are_VBP almost_RB the_DT same_JJ ._.
+Therefore_RB ,_, the_DT linear_JJ kernel_NN has_VBZ better_JJR effectiveness_NN than_IN the_DT Gaussian_NNP kernel_NN ._.
+The_DT proposed_VBN method_NN Ours-L-S_NNP in_IN this_DT paper_NN has_VBZ the_DT highest_JJS average_JJ accuracy_NN rate_NN ._.
+In_IN each_DT domain_NN adaptation_NN ,_, it_PRP shows_VBZ the_DT highest_JJS accuracy_NN rate_NN ,_, excluding_VBG PN_NNP →_CD PB_NNP ._.
+Here_RB ,_, we_PRP must_MD note_VB that_IN the_DT difference_NN between_IN our_PRP$ proposed_VBN method_NN -LRB-_-LRB- Ours-L-S_JJ -RRB-_-RRB- and_CC the_DT baseline_NN -LRB-_-LRB- Base-S_JJ -RRB-_-RRB- is_VBZ slight_JJ ,_, and_CC we_PRP could_MD not_RB get_VB statistical_JJ sig_NN -_: Table_NNP 2_CD :_: Experimental_JJ results_NNS -LRB-_-LRB- average_JJ precisions_NNS -RRB-_-RRB- OC_SYM →_FW PB_FW PB_FW →_FW PN_FW PN_FW →_FW OC_FW OC_FW →_FW PN_FW PN_FW →_FW PB_FW PB_FW →_FW OC_NNP Average_NNP Base-M_NNP 0.7163_CD 0.7700_CD 0.6920_CD 0.6778_CD 0.7474_CD 0.6991_CD 0.7171_CD Base-S_JJ 0.7141_CD 0.7676_CD 0.6907_CD 0.6880_CD 0.7452_CD 0.7011_CD 0.7178_CD Mtd-G-M_NNP 0.7008_CD 0.7289_CD 0.6854_CD 0.6840_CD 0.7110_CD 0.6760_CD 0.6977_CD Mtd-G-S_NNP 0.7143_CD 0.7692_CD 0.6903_CD 0.6900_CD 0.7455_CD 0.7034_CD 0.7189_CD Mtd-L-M_NNP 0.7145_CD 0.7339_CD 0.6907_CD 0.6887_CD 0.7144_CD 0.7008_CD 0.7055_CD Mtd-L-S_NNP 0.7134_CD 0.7699_CD 0.6905_CD 0.6898_CD 0.7450_CD 0.7045_CD 0.7189_CD Ours-G-M_NNP 0.7145_CD 0.7670_CD 0.6907_CD 0.6787_CD 0.7446_CD 0.7008_CD 0.7160_CD Ours-G-S_NNP 0.7129_CD 0.7707_CD 0.6911_CD 0.6884_CD 0.7451_CD 0.7021_CD 0.7184_CD Ours-L-M_NNP 0.7145_CD 0.7665_CD 0.6907_CD 0.6787_CD 0.7445_CD 0.7008_CD 0.7159_CD Ours-L-S_NNP -LRB-_-LRB- Proposed_NNP Method_NNP -RRB-_-RRB- 0.7197_CD 0.7723_CD 0.6971_CD 0.6936_CD 0.7416_CD 0.7062_CD 0.7218_CD nificance_NN ._.
+However_RB ,_, without_IN taking_VBG account_NN on_IN the_DT PN_NNP domain_NN ,_, our_PRP$ proposed_VBN method_NN is_VBZ statistical_JJ significant_JJ for_IN the_DT baseline_NN ._.
+Further_RB the_DT use_NN of_IN weighted_JJ SVM_NNP is_VBZ also_RB sig_NN -_: nificant_NN for_IN the_DT use_NN of_IN weighted_JJ ME_NNP ._.
+From_IN these_DT points_NNS ,_, our_PRP$ proposed_VBN method_NN has_VBZ its_PRP$ value_NN ._.
+7_CD Discussion_NNP 7.1_CD Effectiveness_NNP of_IN Small_NNP and_CC Large_JJ Weights_NNS Our_PRP$ proposed_VBN method_NN converts_VBZ the_DT weight_NN estimated_VBN by_IN uLSIF_NNP to_TO 0.1_CD ,_, 1.1_CD or_CC 2.1_CD according_VBG to_TO the_DT volume_NN of_IN the_DT weight_NN ._.
+In_IN this_DT section_NN ,_, we_PRP investigate_VBP which_WDT is_VBZ effective_JJ small_JJ weight_NN 0.1_CD or_CC large_JJ weight_NN 2.1_CD ._.
+To_TO do_VB it_PRP ,_, we_PRP modify_VBP our_PRP$ proposed_VBN method_NN by_IN following_VBG two_CD cases_NNS :_: -LRB-_-LRB- case_NN .1_CD -RRB-_-RRB- In_IN our_PRP$ method_NN ,_, we_PRP change_VBP the_DT weight_NN 2.1_CD to_TO the_DT normal_JJ weight_NN 1.1_CD ,_, and_CC other_JJ weights_NNS are_VBP not_RB changed_VBN ._.
+-LRB-_-LRB- case_NN 2_CD -RRB-_-RRB- In_IN our_PRP$ method_NN ,_, we_PRP change_VBP the_DT weight_NN 0.1_CD to_TO the_DT normal_JJ weight_NN 1.1_CD ,_, and_CC other_JJ weights_NNS are_VBP not_RB changed_VBN ._.
+We_PRP conducted_VBD experiments_NNS of_IN the_DT above_JJ two_CD modifi_NNS -_: cation_NN ._.
+The_DT result_NN is_VBZ shown_VBN in_IN Table_NNP 3_CD ._.
+``_`` Ours-L-S-small_NNP ''_'' and_CC ``_`` Ours-L-S-large_NNP ''_'' in_IN Table_NNP 3_CD denote_VBP -LRB-_-LRB- case_NN 1_CD -RRB-_-RRB- and_CC -LRB-_-LRB- case_NN 2_CD -RRB-_-RRB- ,_, respectively_RB ._.
+This_DT result_NN shows_VBZ that_IN small_JJ weight_NN 0.1_CD is_VBZ more_RBR effec_SYM -_: tive_NN than_IN large_JJ weight_NN 2.1_CD in_IN our_PRP$ proposed_VBN method_NN ,_, be_VB -_: cause_VB the_DT -LRB-_-LRB- case_NN 2_CD -RRB-_-RRB- is_VBZ worse_JJR than_IN baseline_NN but_CC the_DT -LRB-_-LRB- case_NN 1_CD -RRB-_-RRB- is_VBZ better_JJR than_IN baseline_NN ._.
+However_RB ,_, our_PRP$ proposed_VBN method_NN is_VBZ better_JJR than_IN the_DT -LRB-_-LRB- case_NN 1_CD -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, the_DT use_NN of_IN both_DT weights_NNS is_VBZ more_RBR effective_JJ than_IN only_RB small_JJ weight_NN or_CC only_RB large_JJ weight_NN ._.
+7.2_CD Deletion_NN of_IN Misleading_NNP Data_NNP In_IN the_DT previous_JJ section_NN ,_, we_PRP mentioned_VBD that_IN small_JJ weight_NN is_VBZ effective_JJ ,_, that_DT is_VBZ ,_, it_PRP is_VBZ effective_JJ to_TO decrease_VB the_DT weight_NN of_IN unimportant_JJ training_NN data_NNS in_IN our_PRP$ task_NN ._.
+The_DT reason_NN comes_VBZ from_IN that_IN there_EX are_VBP misleading_VBG data_NNS in_IN the_DT training_NN data_NNS ._.
+Misleading_JJ data_NNS is_VBZ a_DT prob_NN -_: lem_NN of_IN domain_NN adaptation_NN ._.
+In_IN domain_NN adaptation_NN ,_, Table_NNP 3_CD :_: Importance_NN of_IN instances_NNS some_DT data_NNS in_IN training_NN data_NNS decrease_VBP the_DT precision_NN of_IN the_DT classifier_NN ._.
+These_DT data_NNS is_VBZ called_VBN misleading_JJ data_NNS -LRB-_-LRB- Jiang_NNP and_CC Zhai_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+In_IN this_DT section_NN ,_, we_PRP discuss_VBP the_DT relation_NN of_IN our_PRP$ proposed_VBN method_NN and_CC misleading_JJ data_NNS ._.
+First_RB ,_, we_PRP confirm_VBP the_DT presence_NN of_IN misleading_JJ data_NNS in_IN training_NN data_NNS ._.
+To_TO do_VB it_PRP ,_, Yoshida_NNP -LRB-_-LRB- Yoshida_NNP and_CC Shinnou_NNP ,_, 2014_CD -RRB-_-RRB- checked_VBD each_DT training_NN data_NN is_VBZ misleading_VBG data_NNS or_CC not_RB one_CD by_IN one_CD ._.
+Here_RB ,_, we_PRP introduce_VBP the_DT above_JJ Yoshida_NNP 's_POS method_NN ._.
+In_IN the_DT domain_NN adaptation_NN from_IN the_DT source_NN domain_NN S_NNP to_TO the_DT target_NN domain_NN T_NNP ,_, labeled_VBN data_NNS D_NNP in_IN S_NNP of_IN the_DT target_NN word_NN w_NN exits_NNS ._.
+First_RB ,_, we_PRP measure_VBP the_DT precision_NN p0_NN for_IN T_NN by_IN the_DT classifier_NN learned_VBD through_IN D._NNP Sec_NNP -_: ond_NN ,_, we_PRP remove_VBP a_DT data_NN x_LS from_IN D_NNP and_CC measure_VB the_DT precision_NN p1_NN for_IN T_NN by_IN the_DT classifier_NN learned_VBD through_IN D_NNP −_CD x_LS ._.
+In_IN the_DT case_NN of_IN p1_CD >_CD p0_NN ,_, the_DT data_NNS x_LS is_VBZ regarded_VBN as_IN the_DT misleading_JJ data_NNS ._.
+We_PRP apply_VBP this_DT procedure_NN for_IN all_DT data_NNS in_IN D_NNP to_TO find_VB the_DT misleading_JJ data_NNS of_IN the_DT target_NN word_NN w_NN in_IN the_DT domain_NN adaptation_NN from_IN S_NNP to_TO T_NNP ._.
+The_DT result_NN of_IN the_DT number_NN of_IN misleading_JJ data_NNS is_VBZ shown_VBN in_IN Table_NNP 4_CD ._.
+The_DT number_NN in_IN parentheses_NNS is_VBZ the_DT total_JJ num_NN -_: ber_NN of_IN the_DT training_NN data_NNS ._.
+Note_VB that_IN this_DT method_NN uses_VBZ lables_VBZ in_IN T_NNP ,_, so_IN it_PRP can_MD not_RB detect_VB misleading_JJ data_NNS ._.
+This_DT Average_JJ Base-S_NN 0.7178_CD Ours-L-S_NNP 0.7218_CD Ours-L-S-small_NNP -LRB-_-LRB- only_RB small_JJ weight_NN ,_, case_NN 1_CD -RRB-_-RRB- 0.7183_CD Ours-L-S-large_NNP -LRB-_-LRB- only_RB large_JJ weight_NN ,_, case_NN 2_CD -RRB-_-RRB- 0.7176_CD Table_NNP 4_CD :_: Number_NN of_IN the_DT misleading_JJ data_NNS word_NN OC_NNP →_NNP PB_NNP PB_NNP →_NNP PN_NNP PN_NNP →_NNP OC_NNP OC_NNP →_NNP PN_NNP PN_NNP →_NNP PB_NNP PB_NNP →_CD OC_NNP iu_NN -LRB-_-LRB- 言う_FW -RRB-_-RRB- 159_CD -LRB-_-LRB- 666_CD -RRB-_-RRB- 75_CD -LRB-_-LRB- 1114_CD -RRB-_-RRB- 82_CD -LRB-_-LRB- 363_CD -RRB-_-RRB- 158_CD -LRB-_-LRB- 666_CD -RRB-_-RRB- 35_CD -LRB-_-LRB- 363_CD -RRB-_-RRB- 127_CD -LRB-_-LRB- 1114_CD -RRB-_-RRB- ireru_NN -LRB-_-LRB- 入れる_FW -RRB-_-RRB- 6_CD -LRB-_-LRB- 73_CD -RRB-_-RRB- 15_CD -LRB-_-LRB- 56_CD -RRB-_-RRB- 3_CD -LRB-_-LRB- 32_CD -RRB-_-RRB- 28_CD -LRB-_-LRB- 73_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 32_CD -RRB-_-RRB- 19_CD -LRB-_-LRB- 56_CD -RRB-_-RRB- kaku_NN -LRB-_-LRB- 書く_FW -RRB-_-RRB- 21_CD -LRB-_-LRB- 99_CD -RRB-_-RRB- 2_CD -LRB-_-LRB- 62_CD -RRB-_-RRB- 12_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 39_CD -LRB-_-LRB- 99_CD -RRB-_-RRB- 15_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 62_CD -RRB-_-RRB- kiku_NN -LRB-_-LRB- 聞く_FW -RRB-_-RRB- 26_CD -LRB-_-LRB- 124_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 123_CD -RRB-_-RRB- 4_CD -LRB-_-LRB- 52_CD -RRB-_-RRB- 21_CD -LRB-_-LRB- 124_CD -RRB-_-RRB- 27_CD -LRB-_-LRB- 52_CD -RRB-_-RRB- 26_CD -LRB-_-LRB- 123_CD -RRB-_-RRB- kodomo_NN -LRB-_-LRB- 子供_FW -RRB-_-RRB- 5_CD -LRB-_-LRB- 77_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 93_CD -RRB-_-RRB- 12_CD -LRB-_-LRB- 29_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 77_CD -RRB-_-RRB- 13_CD -LRB-_-LRB- 29_CD -RRB-_-RRB- 12_CD -LRB-_-LRB- 93_CD -RRB-_-RRB- jikan_NN -LRB-_-LRB- 時間_FW -RRB-_-RRB- 1_CD -LRB-_-LRB- 53_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 74_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 59_CD -RRB-_-RRB- 8_CD -LRB-_-LRB- 53_CD -RRB-_-RRB- 5_CD -LRB-_-LRB- 59_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 74_CD -RRB-_-RRB- jibun_NN -LRB-_-LRB- 自分_FW -RRB-_-RRB- 13_CD -LRB-_-LRB- 128_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 308_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 71_CD -RRB-_-RRB- 25_CD -LRB-_-LRB- 128_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 71_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 308_CD -RRB-_-RRB- deru_NN -LRB-_-LRB- 出る_FW -RRB-_-RRB- 14_CD -LRB-_-LRB- 131_CD -RRB-_-RRB- 32_CD -LRB-_-LRB- 152_CD -RRB-_-RRB- 22_CD -LRB-_-LRB- 89_CD -RRB-_-RRB- 10_CD -LRB-_-LRB- 131_CD -RRB-_-RRB- 10_CD -LRB-_-LRB- 89_CD -RRB-_-RRB- 39_CD -LRB-_-LRB- 152_CD -RRB-_-RRB- toru_NN -LRB-_-LRB- 取る_FW -RRB-_-RRB- 6_CD -LRB-_-LRB- 61_CD -RRB-_-RRB- 18_CD -LRB-_-LRB- 81_CD -RRB-_-RRB- 12_CD -LRB-_-LRB- 43_CD -RRB-_-RRB- 5_CD -LRB-_-LRB- 61_CD -RRB-_-RRB- 22_CD -LRB-_-LRB- 43_CD -RRB-_-RRB- 10_CD -LRB-_-LRB- 81_CD -RRB-_-RRB- baai_NNS -LRB-_-LRB- 場合_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 126_CD -RRB-_-RRB- 13_CD -LRB-_-LRB- 137_CD -RRB-_-RRB- 14_CD -LRB-_-LRB- 73_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 126_CD -RRB-_-RRB- 9_CD -LRB-_-LRB- 73_CD -RRB-_-RRB- 7_CD -LRB-_-LRB- 137_CD -RRB-_-RRB- hairu_NN -LRB-_-LRB- 入る_FW -RRB-_-RRB- 36_CD -LRB-_-LRB- 68_CD -RRB-_-RRB- 27_CD -LRB-_-LRB- 118_CD -RRB-_-RRB- 27_CD -LRB-_-LRB- 65_CD -RRB-_-RRB- 11_CD -LRB-_-LRB- 68_CD -RRB-_-RRB- 42_CD -LRB-_-LRB- 65_CD -RRB-_-RRB- 38_CD -LRB-_-LRB- 118_CD -RRB-_-RRB- mae_NN -LRB-_-LRB- 前_FW -RRB-_-RRB- 8_CD -LRB-_-LRB- 105_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 160_CD -RRB-_-RRB- 15_CD -LRB-_-LRB- 106_CD -RRB-_-RRB- 5_CD -LRB-_-LRB- 105_CD -RRB-_-RRB- 2_CD -LRB-_-LRB- 106_CD -RRB-_-RRB- 10_CD -LRB-_-LRB- 160_CD -RRB-_-RRB- miru_NN -LRB-_-LRB- 見る_FW -RRB-_-RRB- 10_CD -LRB-_-LRB- 262_CD -RRB-_-RRB- 12_CD -LRB-_-LRB- 273_CD -RRB-_-RRB- 8_CD -LRB-_-LRB- 87_CD -RRB-_-RRB- 3_CD -LRB-_-LRB- 262_CD -RRB-_-RRB- 28_CD -LRB-_-LRB- 87_CD -RRB-_-RRB- 3_CD -LRB-_-LRB- 273_CD -RRB-_-RRB- motsu_NN -LRB-_-LRB- 持つ_FW -RRB-_-RRB- 8_CD -LRB-_-LRB- 62_CD -RRB-_-RRB- 11_CD -LRB-_-LRB- 153_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 59_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 62_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 59_CD -RRB-_-RRB- 2_CD -LRB-_-LRB- 153_CD -RRB-_-RRB- yaru_NN -LRB-_-LRB- やる_FW -RRB-_-RRB- 0_CD -LRB-_-LRB- 117_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 156_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 117_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 156_CD -RRB-_-RRB- yuku_NN -LRB-_-LRB- ゆく_FW -RRB-_-RRB- 17_CD -LRB-_-LRB- 219_CD -RRB-_-RRB- 1_CD -LRB-_-LRB- 133_CD -RRB-_-RRB- 3_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 0_CD -LRB-_-LRB- 219_CD -RRB-_-RRB- 3_CD -LRB-_-LRB- 27_CD -RRB-_-RRB- 15_CD -LRB-_-LRB- 133_CD -RRB-_-RRB- Table_NNP 5_CD :_: Deletion_NN of_IN the_DT misleading_JJ data_NNS OC_NNP →_CD PB_NNP PB_NNP →_NNP PN_NNP PN_NNP →_NNP OC_NNP OC_NNP →_NNP PN_NNP PN_NNP →_NNP PB_NNP PB_NNP →_NNP OC_NNP Average_NNP Base-S_NNP 0.7141_CD 0.7676_CD 0.6907_CD 0.6880_CD 0.7452_CD 0.7011_CD 0.7178_CD Ours-L-S_NNP 0.7197_CD 0.7723_CD 0.6971_CD 0.6936_CD 0.7416_CD 0.7062_CD 0.7218_CD Mislead_NNP 0.7459_CD 0.7927_CD 0.7450_CD 0.7213_CD 0.7869_CD 0.7334_CD 0.7542_CD Mislead2_NNP 0.7117_CD 0.7627_CD 0.6833_CD 0.6920_CD 0.7399_CD 0.6984_CD 0.7146_CD method_NN is_VBZ just_RB to_TO confirm_VB the_DT presence_NN of_IN misleading_JJ data_NNS ._.
+The_DT result_NN of_IN SVM_NNP using_VBG the_DT training_NN data_NNS without_IN misleading_JJ data_NNS is_VBZ shown_VBN in_IN Table_NNP 5_CD ._.
+``_`` Mislead_VB ''_'' in_IN Table_NNP 5_CD denotes_VBZ the_DT average_JJ accuracy_NN rate_NN ._.
+This_DT re_SYM -_: sult_NN is_VBZ highest_JJS in_IN our_PRP$ experiments_NNS ._.
+To_TO remove_VB of_IN the_DT misleading_JJ data_NN is_VBZ to_TO assign_VB the_DT weight_NN of_IN the_DT data_NNS to_TO 0_CD ._.
+Therefore_RB ,_, it_PRP is_VBZ possible_JJ to_TO improve_VB the_DT precision_NN by_IN just_RB adjusting_VBG the_DT weight_NN ._.
+Now_RB ,_, we_PRP conduct_VBP the_DT experiment_NN that_IN the_DT data_NNS with_IN quite_RB small_JJ probability_NN density_NN ratio_NN is_VBZ regarded_VBN as_IN the_DT misleading_JJ data_NNS whose_WP$ weight_NN is_VBZ 0_CD ._.
+The_DT ``_`` Mis_NNP -_: lead2_CD ''_'' in_IN Table_NNP 5_CD shows_VBZ the_DT result_NN ._.
+However_RB ,_, this_DT approach_NN is_VBZ not_RB effective_JJ ._.
+Probably_RB ,_, we_PRP can_MD not_RB de_IN -_: tect_VB the_DT misleading_JJ data_NNS using_VBG only_RB the_DT probability_NN density_NN ratio_NN ._.
+The_DT method_NN to_TO detect_VB misleading_JJ data_NNS is_VBZ our_PRP$ future_JJ work_NN ._.
+8_CD Conclusion_NN We_PRP have_VBP solved_VBN domain_NN adaptation_NN for_IN WSD_NNP by_IN learning_VBG under_IN covariate_JJ shift_NN ._.
+This_DT learning_NN has_VBZ two_CD key_JJ points_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- calculation_NN of_IN the_DT weight_NN of_IN an_DT in_IN -_: stance_NN and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- weighted_JJ learning_NN ._.
+For_IN the_DT first_JJ point_NN ,_, we_PRP used_VBD uLSIF_NNP and_CC improved_VBD it_PRP by_IN weighting_NN only_RB the_DT particular_JJ instances_NNS and_CC by_IN using_VBG a_DT linear_JJ rather_RB than_IN a_DT Gaussian_JJ kernel_NN in_IN uLSIF_NNP ._.
+For_IN the_DT second_JJ point_NN ,_, we_PRP used_VBD a_DT weighted_JJ SVM_NNP rather_RB than_IN the_DT com_NN -_: monly_RB used_VBN weighted_JJ ME_NNP ._.
+Three_CD corpora_NN in_IN BCCWJ_NNP and_CC 16_CD target_NN words_NNS -LRB-_-LRB- 96_CD domain_NN adaptation_NN tasks_NNS -RRB-_-RRB- were_VBD used_VBN in_IN our_PRP$ experi_NNS -_: ment_NN ._.
+This_DT experimental_JJ results_NNS show_VBP that_IN the_DT pro-_JJ posed_VBN method_NN demonstrates_VBZ the_DT highest_JJS average_JJ pre_NN -_: cision_NN ._.
+The_DT proposed_VBN method_NN is_VBZ statistically_RB signifi_JJ -_: cant_NN for_IN the_DT baseline_NN without_IN considering_VBG the_DT PN_NNP do_VBP -_: main_JJ ._.
+In_IN addition_NN ,_, the_DT use_NN of_IN the_DT weighted_JJ SVM_NNP is_VBZ significant_JJ for_IN the_DT weighted_JJ ME_NNP ._.
+In_IN future_NN ,_, we_PRP will_MD investigate_VB why_WRB weighted_JJ learn_VBP -_: ing_NN does_VBZ not_RB work_VB well_RB for_IN the_DT PN_NNP →_CD PB_NNP domain_NN adaptation_NN ._.
+References_NNS John_NNP Blitzer_NNP ,_, Ryan_NNP McDonald_NNP ,_, and_CC Fernando_NNP Pereira_NNP ._.
+2006_CD ._.
+Domain_NN adaptation_NN with_IN structural_JJ correspon_NN -_: dence_NN learning_NN ._.
+In_IN EMNLP-2006_NNP ,_, pages_NNS 120_CD --_: 128_CD ._.
+Yee_NNP Seng_NNP Chan_NNP and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2005_CD ._.
+Word_NN sense_NN disambiguation_NN with_IN distribution_NN estimation_NN ._.
+IJCAI_NNP -_: 05_CD ._.
+Yee_NNP Seng_NNP Chan_NNP and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2006_CD ._.
+Estimating_VBG class_NN priors_NNS in_IN domain_NN adaptation_NN for_IN word_NN sense_NN dis_SYM -_: ambiguation_NN ._.
+In_IN COLING-ACL-2006_NNP ,_, pages_NNS 89_CD --_: 96_CD ._.
+Olivier_NNP Chapelle_NNP ,_, Bernhard_NNP Scho_NNP ̈lkopf_NNP ,_, Alexander_NNP Zien_NNP ,_, et_FW al._FW 2006_CD ._.
+Semi-supervised_JJ learning_NN ,_, volume_NN 2_CD ._.
+MIT_NNP press_NN Cambridge_NNP ._.
+Corinna_NNP Cortes_NNP and_CC Vladimir_NNP Vapnik_NNP ._.
+1995_CD ._.
+Support_NN -_: vector_NN networks_NNS ._.
+Machine_NN learning_NN ,_, 20_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :273_CD --_: 297_CD ._.
+Daume_NNP ́_CD III_NNP ,_, Hal_NNP ._.
+2007_CD ._.
+Frustratingly_RB Easy_NNP Domain_NNP Adap_NNP -_: tation_NN ._.
+In_IN ACL-2007_NNP ,_, pages_NNS 256_CD --_: 263_CD ._.
+Jing_VBG Jiang_NNP and_CC Chengxiang_NNP Zhai_NNP ._.
+2007_CD ._.
+Instance_NN weight_NN -_: ing_NN for_IN domain_NN adaptation_NN in_IN nlp_NN ._.
+In_IN ACL-2007_NNP ,_, pages_NNS 264_CD --_: 271_CD ._.
+Toshihiro_NNP Kamishima_NNP ._.
+2010_CD ._.
+Transfer_NN learning_NN -LRB-_-LRB- in_IN japanese_JJ -RRB-_-RRB- ._.
+The_DT Japanese_JJ Society_NNP for_IN Artificial_NNP Intel_NNP -_: ligence_NN ,_, 25_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :572_CD --_: 580_CD ._.
+Takafumi_NNP Kanamori_NNP ,_, Shohei_NNP Hido_NNP ,_, and_CC Masashi_NNP Sugiyama_NNP ._.
+2009_CD ._.
+A_DT least-squares_JJ approach_NN to_TO direct_VB importance_NN estimation_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 10:1391_CD --_: 1445_CD ._.
+Kanako_NNP Komiya_NNP and_CC Manabu_NNP Okumura_NNP ._.
+2011_CD ._.
+Auto_NN -_: matic_JJ Determination_NN of_IN a_DT Domain_NNP Adaptation_NNP Method_NNP for_IN Word_NNP Sense_NN Disambiguation_NNP using_VBG Decision_NNP Tree_NNP Learning_NNP ._.
+In_IN IJCNLP-2011_NNP ,_, pages_NNS 1107_CD --_: 1115_CD ._.
+Kanako_NNP Komiya_NNP and_CC Manabu_NNP Okumura_NNP ._.
+2012a_NNS ._.
+Au_SYM -_: tomatic_JJ Domain_NNP Adaptation_NNP for_IN Word_NNP Sense_NN Disam_NNP -_: biguation_NN Based_VBN on_IN Comparison_NNP of_IN Multiple_NNP Classi_NNP -_: fiers_NNS ._.
+In_IN PACLIC-2012_NN ,_, pages_NNS 75_CD --_: 85_CD ._.
+Kanako_NNP Komiya_NNP and_CC Manabu_NNP Okumura_NNP ._.
+2012b_JJ ._.
+Auto_NN -_: matic_NN selection_NN of_IN domain_NN adaptation_NN method_NN for_IN wsd_NN using_VBG decision_NN tree_NN learning_VBG -LRB-_-LRB- in_IN japanese_JJ -RRB-_-RRB- ._.
+Journal_NNP of_IN NLP_NNP ,_, 19_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :143_CD --_: 166_CD ._.
+Kikuo_NNP Maekawa_NNP ._.
+2007_CD ._.
+Design_NN of_IN a_DT Balanced_JJ Corpus_NNP of_IN Contemporary_NNP Written_VBD Japanese_JJ ._.
+In_IN Symposium_NNP on_IN Large-Scale_NNP Knowledge_NNP Resources_NNP -LRB-_-LRB- LKR2007_NNP -RRB-_-RRB- ,_, pages_NNS 55_CD --_: 58_CD ._.
+Sinno_NNP Jialin_NNP Pan_NNP and_CC Qiang_NNP Yang_NNP ._.
+2010_CD ._.
+A_DT survey_NN on_IN transfer_NN learning_NN ._.
+Knowledge_NN and_CC Data_NNP Engineering_NNP ,_, IEEE_NNP Transactions_NNS on_IN ,_, 22_CD -LRB-_-LRB- 10_CD -RRB-_-RRB- :1345_CD --_: 1359_CD ._.
+Sinno_NNP Jialin_NNP Pan_NNP ,_, James_NNP T_NNP Kwok_NNP ,_, and_CC Qiang_NNP Yang_NNP ._.
+2008_CD ._.
+Transfer_NN learning_NN via_IN dimensionality_NN reduction_NN ._.
+In_IN AAAI_NNP ,_, volume_NN 8_CD ,_, pages_NNS 677_CD --_: 682_CD ._.
+Sinno_NNP Jialin_NNP Pan_NNP ,_, Ivor_NNP W_NNP Tsang_NNP ,_, James_NNP T_NNP Kwok_NNP ,_, and_CC Qiang_NNP Yang_NNP ._.
+2011_CD ._.
+Domain_NN adaptation_NN via_IN transfer_NN component_NN analysis_NN ._.
+Neural_NNP Networks_NNP ,_, IEEE_NNP Transac_NNP -_: tions_NNS on_IN ,_, 22_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :199_CD --_: 210_CD ._.
+Piyush_NNP Rai_NNP ,_, Avishek_NNP Saha_NNP ,_, Hal_NNP Daume_NNP ́_CD III_NNP ,_, and_CC Suresh_NNP Venkatasubramanian_NNP ._.
+2010_CD ._.
+Domain_NN adaptation_NN meets_VBZ active_JJ learning_NN ._.
+In_IN NAACL_NNP HLT_NNP 2010_CD Workshop_NNP on_IN Active_NNP Learning_NNP for_IN Natural_NNP Language_NNP Processing_NNP ,_, pages_NNS 27_CD --_: 32_CD ._.
+Yosuke_NNP Saiki_NNP ,_, Hiroya_NNP Takamura_NNP ,_, and_CC Manabu_NNP Okumura_NNP ._.
+2008_CD ._.
+Domain_NN adaptation_NN in_IN sentiment_NN classification_NN by_IN instance_NN weighting_NN -LRB-_-LRB- in_IN japanese_JJ -RRB-_-RRB- ._.
+IPSJ_NNP SIG_NNP Techni_NNP -_: cal_NN Report_NNP ._.
+SIG-NL_NNP Report_NNP ,_, 2008_CD -LRB-_-LRB- 33_CD -RRB-_-RRB- :61_CD --_: 67_CD ._.
+Burr_NNP Settles_NNP ._.
+2010_CD ._.
+Active_JJ learning_VBG literature_NN survey_NN ._.
+University_NNP of_IN Wisconsin_NNP ,_, Madison_NNP ._.
+Masashi_NNP Sugiyama_NNP and_CC Motoaki_NNP Kawanabe_NNP ._.
+2011_CD ._.
+Ma_NNP -_: chine_NN Learning_NNP in_IN Non-Stationary_NNP Environments_NNP :_: In_IN -_: troduction_NN to_TO Covariate_NNP Shift_NNP Adaptation_NNP ._.
+MIT_NNP Press_NNP ._.
+Masashi_NNP Sugiyama_NNP ._.
+2006_CD ._.
+Supervised_VBN learning_VBG under_IN co_SYM -_: vairant_JJ shift_NN -LRB-_-LRB- in_IN japanese_JJ -RRB-_-RRB- ._.
+Japanese_JJ Neural_NNP Net_NN -_: work_NN Society_NNP ,_, 13_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :111_CD --_: 118_CD ._.
+Yuchun_NNP Tang_NNP ,_, Yan-Qing_NNP Zhang_NNP ,_, Nitesh_NNP V_NNP Chawla_NNP ,_, and_CC Sven_NNP Krasser_NNP ._.
+2009_CD ._.
+SVMs_NNS modeling_NN for_IN highly_RB im_SYM -_: balanced_JJ classification_NN ._.
+Systems_NNP ,_, Man_NNP ,_, and_CC Cyber_NNP -_: netics_NNS ,_, Part_NNP B_NNP :_: Cybernetics_NNS ,_, IEEE_NNP Transactions_NNS on_IN ,_, 39_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :281_CD --_: 288_CD ._.
+Makoto_NNP Yamada_NNP ,_, Taiji_NNP Suzuki_NNP ,_, Takafumi_NNP Kanamori_NNP ,_, Hi_NNP -_: rotaka_FW Hachiya_NNP ,_, and_CC Masashi_NNP Sugiyama_NNP ._.
+2011_CD ._.
+Rel_SYM -_: ative_JJ density-ratio_JJ estimation_NN for_IN robust_JJ distribution_NN comparison_NN ._.
+Neural_NNP Computation_NNP ,_, 25_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :1370_CD --_: 1370_CD ._.
+Hiromu_NNP Yoshida_NNP and_CC Hiroyuki_NNP Shinnou_NNP ._.
+2014_CD ._.
+Detec_NNP -_: tion_NN of_IN misleading_JJ data_NNS by_IN outlier_NN detection_NN methods_NNS -LRB-_-LRB- in_IN japanese_JJ -RRB-_-RRB- ._.
+In_IN The_DT 5th_JJ Japanese_JJ Corpus_NNP Linguistics_NNPS Workshop_NNP ,_, pages_NNS 49_CD --_: 56_CD ._.

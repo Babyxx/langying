@@ -1,0 +1,340 @@
+Japanese_JJ Sentiment_NN Classification_NN with_IN Stacked_NNP Denoising_NNP Auto-Encoder_NNP using_VBG Distributed_VBN Word_NNP Representation_NNP Abstract_NNP Traditional_JJ sentiment_NN classification_NN methods_NNS often_RB require_VBP polarity_NN dictionaries_NNS or_CC crafted_VBN features_NNS to_TO utilize_VB machine_NN learning_NN ._.
+How_WRB -_: ever_RB ,_, those_DT approaches_NNS incur_VBP high_JJ costs_NNS in_IN the_DT making_NN of_IN dictionaries_NNS and/or_CC features_NNS ,_, which_WDT hinder_VBP generalization_NN of_IN tasks_NNS ._.
+Ex_SYM -_: amples_NNS of_IN these_DT approaches_NNS include_VBP an_DT ap_SYM -_: proach_NN that_IN uses_VBZ a_DT polarity_NN dictionary_NN that_WDT can_MD -_: not_RB handle_VB unknown_JJ or_CC newly_RB invented_VBD words_NNS and_CC another_DT approach_NN that_WDT uses_VBZ a_DT complex_JJ model_NN with_IN 13_CD types_NNS of_IN feature_NN templates_NNS ._.
+We_PRP propose_VBP a_DT novel_NN high_JJ performance_NN sentiment_NN classification_NN method_NN with_IN stacked_VBN denoising_VBG auto-encoders_NNS that_WDT uses_VBZ distributed_VBN word_NN rep_NN -_: resentation_NN instead_RB of_IN building_VBG dictionaries_NNS or_CC utilizing_VBG engineering_NN features_NNS ._.
+The_DT results_NNS of_IN experiments_NNS conducted_VBN indicate_VBP that_IN our_PRP$ model_NN achieves_VBZ state-of-the-art_JJ performance_NN in_IN Japanese_JJ sentiment_NN classification_NN tasks_NNS ._.
+1_CD Introduction_NNP As_IN the_DT popularity_NN of_IN social_JJ media_NNS continues_VBZ to_TO rise_VB ,_, serious_JJ attention_NN is_VBZ being_VBG given_VBN to_TO review_VB informa_NN -_: tion_NN nowadays_RB ._.
+Reviews_NNS with_IN positive/negative_JJ rat_NN -_: ings_NNS ,_, in_IN particular_JJ ,_, help_NN -LRB-_-LRB- potential_JJ -RRB-_-RRB- customers_NNS with_IN product_NN comparisons_NNS and_CC to_TO make_VB purchasing_VBG deci_SYM -_: sions_NNS ._.
+Consequently_RB ,_, automatic_JJ classification_NN of_IN the_DT polarities_NNS -LRB-_-LRB- such_JJ as_IN positive_JJ and_CC negative_JJ -RRB-_-RRB- of_IN reviews_NNS is_VBZ extremely_RB important_JJ ._.
+Traditional_JJ approaches_NNS to_TO sentiment_NN analysis_NN uti_SYM -_: lize_NN polarity_NN dictionaries_NNS or_CC classification_NN rules_NNS ._.
+Al_NNP -_: though_IN these_DT approaches_NNS are_VBP fairly_RB accurate_JJ ,_, they_PRP depend_VBP on_IN languages_NNS that_WDT may_MD require_VB significant_JJ amounts_NNS of_IN manual_NN labor_NN ._.
+Further_RB ,_, dictionary-based_JJ methods_NNS have_VBP difficulty_NN dealing_VBG with_IN new_JJ or_CC un_SYM -_: known_VBN words_NNS ._.
+Mamoru_NNP Komachi_NNP Graduate_NNP School_NNP of_IN System_NNP Design_NNP Tokyo_NNP Metropolitan_NNP University_NNP komachi@tmu.ac.jp_NNP Machine_NNP learning-based_JJ methods_NNS are_VBP widely_RB adopted_VBN in_IN sentiment_NN classification_NN in_IN order_NN to_TO miti_NNS -_: gate_NN the_DT problems_NNS associated_VBN with_IN the_DT making_NN of_IN dic_JJ -_: tionaries_NNS and/or_CC rules_NNS ._.
+One_CD of_IN the_DT most_JJS basic_JJ features_NNS used_VBN in_IN machine_NN learning-based_JJ sentiment_NN classifi_NNS -_: cation_NN is_VBZ the_DT bag-of-words_NNS feature_VBP -LRB-_-LRB- Wang_NNP and_CC Man_NNP -_: ning_NN ,_, 2012_CD ;_: Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+In_IN machine_NN learning_NN -_: based_VBN frameworks_NNS ,_, the_DT weights_NNS of_IN words_NNS are_VBP auto_NN -_: matically_RB learned_VBN from_IN a_DT training_NN corpus_VBZ instead_RB of_IN being_VBG manually_RB assigned_VBN ._.
+However_RB ,_, the_DT bag-of-words_NNS feature_VBP can_MD not_RB take_VB syntactic_JJ structures_NNS into_IN account_NN ._.
+This_DT leads_VBZ to_TO mis_SYM -_: takes_VBZ such_JJ as_IN ``_`` a_DT great_JJ design_NN but_CC inconvenient_JJ ''_'' and_CC ``_`` inconvenient_JJ but_CC a_DT great_JJ design_NN ''_'' being_VBG deemed_VBN to_TO have_VB the_DT same_JJ meaning_NN ,_, even_RB though_IN their_PRP$ nu_SYM -_: ances_NNS are_VBP different_JJ ;_: the_DT former_JJ is_VBZ somewhat_RB nega_JJ -_: tive_JJ whereas_IN the_DT latter_NN is_VBZ slightly_RB positive_JJ ._.
+To_TO solve_VB this_DT syntactic_NN problem_NN ,_, Nakagawa_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- pro-_JJ posed_VBD a_DT sentiment_NN analysis_NN model_NN that_WDT used_VBD depen_SYM -_: dency_NN trees_NNS with_IN polarities_NNS assigned_VBN to_TO their_PRP$ subtrees_NNS ._.
+However_RB ,_, their_PRP$ proposed_VBN model_NN requires_VBZ specialized_VBN knowledge_NN to_TO design_VB complicated_JJ feature_NN templates_NNS ._.
+In_IN this_DT study_NN ,_, we_PRP propose_VBP an_DT approach_NN that_WDT uses_VBZ distributed_VBN word_NN representation_NN to_TO overcome_VB the_DT first_JJ problem_NN and_CC deep_JJ neural_JJ networks_NNS to_TO alleviate_VB the_DT second_JJ problem_NN ._.
+The_DT former_JJ is_VBZ an_DT unsupervised_JJ method_NN capable_JJ of_IN representing_VBG a_DT word_NN 's_POS meaning_NN without_IN using_VBG hand-tagged_JJ resources_NNS such_JJ as_IN a_DT po_NN -_: larity_NN dictionary_NN ._.
+In_IN addition_NN ,_, it_PRP is_VBZ robust_JJ to_TO the_DT data_NNS sparseness_NN problem_NN ._.
+The_DT latter_JJ is_VBZ a_DT highly_RB expressive_JJ model_NN that_WDT does_VBZ not_RB utilize_VB complex_JJ engineering_NN fea_NN -_: tures_NNS or_CC models_NNS ._.
+Our_PRP$ research_NN makes_VBZ the_DT following_VBG two_CD main_JJ con_NN -_: tributions_NNS :_: 2_CD •_CD •_NN We_PRP show_VBP that_IN distributed_VBN word_NN representation_NN learned_VBD from_IN a_DT large-scale_JJ corpus_NN and_CC multi_NNS -_: ple_NN layers_NNS -LRB-_-LRB- more_JJR than_IN three_CD layers_NNS -RRB-_-RRB- contributes_VBZ significantly_RB to_TO classification_NN accuracy_NN in_IN senti_NNS -_: ment_NN classification_NN tasks_NNS ._.
+We_PRP achieve_VBP state-of-the-art_JJ performance_NN in_IN Japanese_JJ sentiment_NN classification_NN tasks_NNS without_IN designing_VBG complex_JJ features_NNS and_CC models_NNS ._.
+Related_VBN Works_NNP to_TO create_VB multiple_JJ feature_NN templates_NNS ._.
+In_IN contrast_NN ,_, our_PRP$ model_NN is_VBZ quite_RB simple_JJ and_CC does_VBZ not_RB require_VB the_DT engi_NN -_: neering_NN of_IN such_JJ features_NNS ._.
+2.2_CD Deep_JJ learning_VBG One_CD of_IN the_DT great_JJ advantages_NNS of_IN deep_JJ learning_NN is_VBZ that_IN it_PRP reduces_VBZ the_DT need_NN to_TO hand-design_NN features_NNS ._.
+In_IN -_: stead_NN ,_, it_PRP automatically_RB extracts_VBZ hierarchical_JJ features_NNS and_CC enhances_VBZ the_DT end-to-end_JJ classification_NN perfor_NN -_: mance_NN learned_VBD through_IN backpropagation_NN ._.
+As_IN a_DT con_NN -_: sequence_NN ,_, it_PRP avoids_VBZ the_DT engineering_NN of_IN task-specific_JJ ad-hoc_JJ features_NNS using_VBG copious_JJ amounts_NNS of_IN prior_JJ knowledge_NN ._.
+Further_RB ,_, it_PRP sometimes_RB surpasses_VBZ human_JJ -_: level_NN performance_NN -LRB-_-LRB- He_PRP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+Two_CD of_IN the_DT most_RBS actively_RB studied_VBN areas_NNS in_IN deep_JJ learning_NN for_IN NLP_NNP ap_SYM -_: plications_NNS are_VBP representation_NN learning_NN and_CC deep_JJ neu_NN -_: ral_NN networks_NNS ._.
+Representation_NN learning_NN Several_JJ studies_NNS have_VBP at_IN -_: tempted_VBN to_TO model_VB natural_JJ language_NN texts_NNS using_VBG deep_JJ architectures_NNS ._.
+Distributed_VBN word_NN representations_NNS ,_, or_CC word_NN embeddings_NNS ,_, represent_VBP words_NNS as_IN vectors_NNS ._.
+Dis_SYM -_: tributed_JJ representations_NNS of_IN word_NN vectors_NNS are_VBP not_RB sparse_JJ but_CC dense_JJ vectors_NNS that_WDT can_MD express_VB the_DT mean_NN -_: ing_NN of_IN words_NNS ._.
+Sentiment_NN classification_NN tasks_NNS are_VBP sig_NN -_: nificantly_RB influenced_VBN by_IN the_DT data_NNS sparseness_NN prob_SYM -_: lem_NN ._.
+As_IN a_DT result_NN ,_, distributed_VBN word_NN representation_NN is_VBZ more_RBR suitable_JJ than_IN traditional_JJ 1-of-K_JJ representation_NN ,_, which_WDT only_RB treats_VBZ words_NNS as_IN symbols_NNS ._.
+In_IN our_PRP$ proposed_VBN method_NN ,_, to_TO learn_VB the_DT word_NN embed_VBD -_: dings_NNS ,_, we_PRP employ_VBP a_DT state-of-the-art_JJ word_NN embedding_VBG technique_NN called_VBN word2vec_CD -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013b_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ,_, which_WDT we_PRP discuss_VBP in_IN Sec_NNP -_: tion_NN 3.1_CD ._.
+Although_IN several_JJ word_NN embedding_VBG tech_SYM -_: niques_NNS currently_RB exist_VBP -LRB-_-LRB- Collobert_NNP and_CC Weston_NNP ,_, 2008_CD ;_: Pennington_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, word2vec_FW is_VBZ one_CD of_IN the_DT most_RBS computationally_RB efficient_JJ and_CC is_VBZ considered_VBN to_TO be_VB state-of-the-art_JJ ._.
+Collobert_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- presented_VBD a_DT model_NN that_WDT learns_VBZ word_NN embedding_VBG by_IN jointly_RB per_IN -_: forming_VBG multi-task_JJ learning_NN using_VBG a_DT deep_JJ convolu_NN -_: tional_JJ architecture_NN ._.
+Their_PRP$ method_NN is_VBZ considered_VBN to_TO be_VB state-of-the-art_JJ as_RB well_RB ,_, but_CC it_PRP is_VBZ not_RB readily_RB applica_SYM -_: ble_NN to_TO Japanese_NNP ._.
+Multi-layer_JJR neural_JJ networks_NNS A_DT stacked_VBN denois_SYM -_: ing_NN auto-encoder_NN -LRB-_-LRB- SdA_NNP -RRB-_-RRB- is_VBZ a_DT deep_JJ neural_JJ network_NN that_WDT extends_VBZ a_DT stacked_VBN auto-encoder_NN -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- with_IN denoising_VBG auto-encoders_NNS -LRB-_-LRB- dA_NNP -RRB-_-RRB- ._.
+Stacking_VBG multi_NNS -_: ple_NN layers_NNS and_CC introducing_VBG noise_NN to_TO the_DT input_NN layer_NN In_IN this_DT section_NN ,_, we_PRP discuss_VBP related_JJ works_NNS from_IN two_CD areas_NNS :_: sentiment_NN classification_NN and_CC deep_JJ learn_VBP -_: ing_NN -LRB-_-LRB- distributed_VBN word_NN representation_NN and_CC multi-layer_JJ neural_JJ networks_NNS -RRB-_-RRB- ._.
+2.1_CD Sentiment_NN classification_NN Sentiment_NN classification_NN has_VBZ been_VBN researched_VBN ex_FW -_: tensively_RB in_IN the_DT past_JJ decade_NN ._.
+Most_JJS of_IN the_DT previ_NNS -_: ous_JJ approaches_NNS in_IN this_DT area_NN rely_VBP on_IN either_DT time_NN -_: consuming_NN hand-tagged_JJ dictionaries_NNS or_CC knowledge_NN -_: intensive_JJ complex_JJ models_NNS ._.
+Ikeda_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- proposed_VBD a_DT method_NN that_WDT clas_SYM -_: sifies_NNS polarities_NNS by_IN learning_VBG them_PRP within_IN a_DT window_NN around_IN a_DT word_NN ._.
+Their_PRP$ proposed_VBN method_NN works_VBZ well_RB with_IN words_NNS registered_VBN in_IN a_DT dictionary_NN ._.
+However_RB ,_, building_VBG a_DT polarity_NN dictionary_NN is_VBZ expensive_JJ and_CC their_PRP$ approach_NN is_VBZ not_RB able_JJ to_TO cope_VB with_IN unknown_JJ words_NNS ._.
+In_IN contrast_NN ,_, our_PRP$ proposed_VBN approach_NN does_VBZ not_RB use_VB a_DT po_NN -_: larity_NN dictionary_NN and_CC works_VBZ robustly_RB even_RB when_WRB there_EX are_VBP infrequent_JJ words_NNS in_IN the_DT test_NN data_NNS ._.
+In_IN a_DT similar_JJ manner_NN ,_, Choi_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- proposed_VBD a_DT method_NN in_IN which_WDT rules_NNS are_VBP manually_RB built_VBN up_RP and_CC po_SYM -_: larities_NNS are_VBP classified_VBN considering_VBG dependency_NN struc_NN -_: tures_NNS ._.
+However_RB ,_, the_DT rules_NNS are_VBP based_VBN on_IN English_NNP ,_, which_WDT can_MD not_RB be_VB applied_VBN directly_RB to_TO other_JJ languages_NNS ._.
+This_DT is_VBZ unlike_IN our_PRP$ method_NN ,_, which_WDT does_VBZ not_RB employ_VB any_DT language-specific_JJ rules_NNS ._.
+Nakagawa_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- proposed_VBD a_DT supervised_JJ model_NN that_WDT uses_VBZ a_DT dependency_NN tree_NN with_IN polarity_NN as_IN -_: signed_VBN to_TO each_DT subtree_NN as_IN hidden_JJ variables_NNS ._.
+The_DT pro-_JJ posed_VBN approach_NN further_RBR classifies_VBZ sentiment_NN polari_NN -_: ties_NNS in_IN English_NNP and_CC Japanese_JJ sentences_NNS with_IN Condi_NNP -_: tional_JJ Random_NNP Field_NNP -LRB-_-LRB- CRF_NNP -RRB-_-RRB- ,_, considering_VBG the_DT interac_NN -_: tions_NNS between_IN the_DT hidden_JJ variables_NNS ._.
+The_DT dependency_NN information_NN enables_VBZ them_PRP to_TO take_VB syntactic_JJ structures_NNS into_IN account_NN in_IN order_NN to_TO model_VB polarity_NN flip_VB ._.
+How_WRB -_: ever_RB ,_, their_PRP$ proposed_VBN method_NN is_VBZ so_RB complex_JJ that_IN it_PRP has_VBZ adds_VBZ high_JJ generalization_NN ability_NN to_TO auto-encoders_NNS ._.
+This_DT method_NN is_VBZ used_VBN in_IN speech_NN recognition_NN -LRB-_-LRB- Dahl_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, image_NN processing_NN -LRB-_-LRB- Xie_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- and_CC domain_NN adaptation_NN -LRB-_-LRB- Chen_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ;_: further_RB ,_, it_PRP ex_FW -_: hibits_NNS high_JJ representation_NN ability_NN ._.
+Glorot_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN SdAs_NNS to_TO perform_VB domain_NN adaptation_NN in_IN sentiment_NN analysis_NN ._.
+After_IN learning_VBG sen_SYM -_: timent_NN classification_NN in_IN four_CD domains_NNS of_IN the_DT reviews_NNS of_IN products_NNS on_IN Amazon_NNP ,_, they_PRP tested_VBD each_DT model_NN with_IN different_JJ domains_NNS ._.
+Although_IN the_DT task_NN and_CC method_NN are_VBP similar_JJ to_TO those_DT of_IN our_PRP$ proposed_VBN approach_NN ,_, they_PRP only_RB use_VBP the_DT most_RBS frequent_JJ verbs_NNS as_IN input_NN ._.
+Dos_NNP Santos_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- and_CC Tang_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- researched_VBD sentiment_NN classification_NN of_IN microblogs_NNS such_JJ as_IN Twitter_NNP using_VBG the_DT distributed_VBN representation_NN learned_VBN by_IN the_DT methods_NNS of_IN Collobert_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- and_CC Mikolov_NNP et_FW al._FW -LRB-_-LRB- 2013b_CD ;_: 2013a_NNS -RRB-_-RRB- ._.
+Those_DT two_CD tasks_NNS are_VBP the_DT same_JJ task_NN as_IN ours_JJ ,_, but_CC the_DT former_JJ generats_NNS sentence_NN vectors_NNS using_VBG string-based_JJ convolution_NN net_NN -_: works_NNS while_IN the_DT latter_JJ utilizes_VBZ a_DT model_NN that_WDT treats_VBZ the_DT distributed_VBN word_NN representation_NN itself_PRP as_IN polari_NNS -_: ties_NNS ._.
+Our_PRP$ proposed_VBN approach_NN makes_VBZ sentence_NN vectors_NNS by_IN simply_RB averaging_VBG the_DT distributed_VBN word_NN represen_NN -_: tation_NN ,_, yet_RB achieves_VBZ state-of-the-art_JJ performance_NN in_IN Japanese_JJ sentiment_NN classification_NN tasks_NNS ._.
+Kim_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- classified_VBD the_DT polarities_NNS of_IN sentences_NNS using_VBG convolutional_JJ neural_JJ networks_NNS ._.
+He_PRP built_VBD a_DT sim_NN -_: ple_NN CNN_NNP with_IN one_CD layer_NN of_IN convolution_NN ,_, whereas_IN our_PRP$ model_NN uses_VBZ multiple_JJ hidden_JJ layers_NNS ._.
+Socher_NNP et_FW al._FW -LRB-_-LRB- 2011_CD ;_: 2013_CD -RRB-_-RRB- placed_VBN common_JJ auto_NN -_: encoders_NNS recursively_RB -LRB-_-LRB- recursive_JJ neural_JJ networks_NNS -RRB-_-RRB- and_CC concatenated_VBN input_NN vectors_NNS to_TO take_VB syntactic_NN in_IN -_: formation_NN such_JJ as_IN the_DT order_NN of_IN words_NNS into_IN account_NN ._.
+In_IN addition_NN ,_, they_PRP arranged_VBD auto-encoders_NNS -LRB-_-LRB- AEs_NNS -RRB-_-RRB- to_TO syn_SYM -_: tactic_NN trees_NNS to_TO represent_VB the_DT polarities_NNS of_IN each_DT phrase_NN ._.
+Recursive_JJ neural_JJ networks_NNS construct_VBP sentence_NN vec_NN -_: tors_NNS differently_RB from_IN our_PRP$ approach_NN ._.
+Compared_VBN to_TO their_PRP$ model_NN ,_, our_PRP$ distributed_VBN sentence_NN representation_NN is_VBZ quite_RB simple_JJ yet_RB effective_JJ for_IN Japanese_JJ sentiment_NN classification_NN ._.
+3_CD Sentiment_NN Classification_NN with_IN Stacked_NNP Denoising_NNP Auto-Encoder_NNP using_VBG Distributed_VBN Word_NNP Representation_NNP In_IN this_DT study_NN ,_, we_PRP treated_VBD the_DT task_NN of_IN classifying_VBG the_DT polarity_NN of_IN a_DT sentence_NN as_IN a_DT binary_JJ classification_NN ._.
+Our_PRP$ proposed_VBN approach_NN makes_VBZ a_DT sentence_NN vector_NN from_IN the_DT input_NN sentence_NN ,_, and_CC then_RB inputs_NNS the_DT sen_NN -_: tence_NN vector_NN to_TO a_DT classifier_NN ._.
+The_DT sentence_NN vector_NN is_VBZ computed_VBN from_IN the_DT average_NN of_IN word_NN vectors_NNS in_IN the_DT sentence_NN ,_, based_VBN on_IN distributed_VBN word_NN representation_NN ._.
+In_IN Section_NN 3.1_CD we_PRP introduce_VBP distributed_VBN represen_SYM -_: tation_NN of_IN words_NNS and_CC sentences_NNS ,_, and_CC in_IN Section_NN 3.2_CD we_PRP explain_VBP multi-layer_JJ neural_JJ networks_NNS ._.
+3.1_CD Distributed_VBN representation_NN 1-of-K_NN representation_NN is_VBZ a_DT traditional_JJ word_NN vector_NN representation_NN for_IN making_VBG bag-of-words_NNS ._.
+The_DT di_FW -_: mension_NN of_IN a_DT word_NN vector_NN in_IN 1-of-K_NNP is_VBZ the_DT same_JJ as_IN the_DT size_NN of_IN the_DT vocabulary_NN ,_, and_CC the_DT elements_NNS of_IN a_DT dimension_NN correspond_VBP to_TO words_NNS ._.
+1-of-K_JJ treats_VBZ dif_NN -_: ferent_JJ words_NNS as_IN discrete_JJ symbols_NNS ._.
+However_RB ,_, 1-of-K_JJ representation_NN fails_VBZ to_TO model_VB the_DT shared_VBN meanings_NNS of_IN words_NNS ._.
+For_IN example_NN ,_, the_DT word_NN vectors_NNS ``_`` dog_NN ''_'' and_CC ``_`` cat_NN ''_'' should_MD share_VB ``_`` animal_NN ''_'' or_CC ``_`` pet_NN ''_'' meanings_NNS to_TO a_DT certain_JJ degree_NN ,_, but_CC 1-of-K_NNP representation_NN is_VBZ not_RB able_JJ to_TO capture_VB this_DT similarity_NN ._.
+Consequently_RB ,_, we_PRP propose_VBP distributed_VBN word_NN representation_NN ._.
+The_DT task_NN of_IN learning_VBG distributed_VBN representation_NN is_VBZ called_VBN representation_NN learning_NN and_CC has_VBZ been_VBN of_IN sig_NN -_: nificant_JJ interest_NN in_IN the_DT NLP_NNP literature_NN in_IN the_DT last_JJ few_JJ years_NNS ._.
+Distributed_VBN word_NN representation_NN learns_VBZ a_DT low_JJ -_: dimension_NN dense_JJ vector_NN for_IN a_DT word_NN from_IN a_DT large_JJ -_: scale_NN text_NN corpus_VBZ to_TO capture_VB the_DT word_NN 's_POS features_NNS from_IN its_PRP$ context_NN ._.
+3.1.1_CD Distributed_VBN word_NN representation_NN Let_VB the_DT number_NN of_IN vocabularies_NNS be_VB |_JJ V_NNP |_NN ,_, the_DT dimen_NNS -_: sion_NN of_IN a_DT vector_NN representing_VBG words_NNS be_VB d_LS ,_, 1-of-K_JJ vec_NN -_: tor_NN be_VB b_NN ∈_CD R_NNP |_CD V_NNP |_NN and_CC the_DT matrix_NN of_IN all_DT word_NN vectors_NNS be_VB L_NNP ∈_CD Rd_NN ×_CD |_CD V_NNP |_NN ._.
+The_DT kth_NN target_NN word_NN vector_NN wk_NN is_VBZ consequently_RB represented_VBN as_IN in_IN Equation_NN 1_CD ._.
+wk_JJ =_SYM Lbk_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- Continuous_JJ Bag-of-Words_NNS -LRB-_-LRB- CBOW_NNP -RRB-_-RRB- and_CC Skip_SYM -_: gram_NN models_NNS in_IN word2vec_CD -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013b_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- have_VBP attracted_VBN tremendous_JJ attention_NN as_IN a_DT result_NN of_IN their_PRP$ effectiveness_NN and_CC effi_SYM -_: ciency_NN ._.
+The_DT former_JJ is_VBZ a_DT model_NN that_WDT predicts_VBZ the_DT tar_NN -_: get_VB word_NN using_VBG contexts_NNS around_IN the_DT word_NN ,_, whereas_IN the_DT latter_NN is_VBZ a_DT model_NN that_WDT predicts_VBZ the_DT surround_VBP -_: ing_VBG context_NN from_IN the_DT target_NN word_NN ._.
+According_VBG to_TO Mikolov_NNP 's_POS work_NN ,_, skip-gram_NN shows_NNS higher_JJR accuracy_NN than_IN CBOW1_CD ._.
+Therefore_RB ,_, we_PRP used_VBD skip-gram_NN in_IN our_PRP$ experiments_NNS ._.
+1We_JJ carried_VBD out_RP a_DT preliminary_JJ experiment_NN using_VBG CBOW_NNP representation_NN and_CC found_VBD that_IN skip-gram_NN considerably_RB outper_SYM -_: Figure_NN 1_CD :_: The_DT sentence_NN vector_NN construction_NN method_NN ._.
+3.1.2_CD Distributed_VBN sentence_NN representation_NN In_IN our_PRP$ approach_NN ,_, we_PRP construct_VBP a_DT sentence_NN matrix_NN S_NNP ∈_CD R_NNP |_CD M_NNP |_CD ×_CD d_LS from_IN the_DT corpus_NN containing_VBG |_CD M_NNP |_CD sen_SYM -_: tences_NNS ._.
+First_RB ,_, we_PRP describe_VBP how_WRB to_TO create_VB a_DT sentence_NN vector_NN from_IN word_NN vectors_NNS ._.
+The_DT ith_NN -LRB-_-LRB- 1_CD ≤_CD i_FW ≤_FW M_NNP -RRB-_-RRB- input_NN sentence_NN composed_VBN of_IN |_CD N_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- |_JJ words_NNS is_VBZ used_VBN to_TO make_VB a_DT sentence_NN vector_NN S_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- ∈_CD Rd_NN with_IN the_DT word_NN vectors_NNS ._.
+The_DT jth_NN -LRB-_-LRB- 1_CD ≤_CD j_NN ≤_CD d_LS -RRB-_-RRB- element_NN of_IN sentence_NN vec_NN -_: tor_NN S_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- is_VBZ calculated_VBN by_IN averaging_VBG the_DT correspond_VB -_: ing_NN element_NN of_IN the_DT word_NN vectors_NNS in_IN the_DT sentence_NN as_IN expressed_VBN in_IN Equation_NN 2_CD -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+Figure_NN 2_CD :_: The_DT learning_VBG process_NN of_IN a_DT four_CD layer_NN stacked_VBD denoising_VBG auto-encoder_NN ._.
+decode_VB function_NN that_IN calculates_VBZ an_DT output_NN layer_NN from_IN the_DT hidden_JJ layer_NN is_VBZ shown_VBN in_IN Equation_NN 5_CD below_IN ._.
+-LRB-_-LRB- i_FW -RRB-_-RRB- Sj_NNP N_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- 1_CD ∑_CD -LRB-_-LRB- i_FW -RRB-_-RRB- s_PRP -LRB-_-LRB- ∗_CD -RRB-_-RRB- represents_VBZ nonlinear_JJ functions_NNS such_JJ as_IN tanh_NN or_CC sigmoid_NN ,_, W_NNP ,_, W_NNP ′_CD are_VBP weight_NN matrices_NNS and_CC b_NN ,_, b_NN ′_NN are_VBP bias_NN terms_NNS ,_, respectively_RB ._.
+The_DT parameters_NNS of_IN auto-encoders_NNS are_VBP learned_VBN by_IN minimizing_VBG the_DT following_JJ loss_NN functions_NNS ._.
+The_DT loss_NN function_NN measures_VBZ the_DT difference_NN between_IN input_NN vec_NN -_: tor_NN x_LS and_CC output_NN vector_NN z_SYM using_VBG the_DT cross_NN entropy_NN -LRB-_-LRB- Equation_NN 6_CD -RRB-_-RRB- ._.
+We_PRP use_VBP Stochastic_NNP Gradient_NNP Descent_NNP -LRB-_-LRB- SGD_NNP -RRB-_-RRB- to_TO minimize_VB the_DT loss_NN function_NN ._.
+∑_CD d_LS LH_NNP -LRB-_-LRB- x_LS ,_, z_SYM -RRB-_-RRB- =_SYM −_SYM -LSB-_NNP xk_NN logzk_NN +_NN -LRB-_-LRB- 1_CD −_CD xk_NN -RRB-_-RRB- log_VBP -LRB-_-LRB- 1_CD −_CD zk_NN -RRB-_-RRB- -RSB-_JJ wn_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- Finally_RB ,_, the_DT sentence_NN matrix_NN S_NNP is_VBZ defined_VBN by_IN Equa_NNP -_: =_SYM N_NNP -LRB-_-LRB- i_FW -RRB-_-RRB- S_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- T_NNP y_NNP =_SYM s_PRP -LRB-_-LRB- W_NNP x_LS +_CD b_NN -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- ′_SYM ′_FW z_SYM =_SYM s_PRP -LRB-_-LRB- W_NNP y_VBD +_CD b_NN -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- tion_NN 3_CD ._.
+S_NNP =_SYM 3.2_CD Auto-Encoder_NNP n_NN =_SYM 1_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- T_NNP S_NNP k_NN =_SYM 1_CD Denoising_NNP Auto-Encoder_NNP ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- S_NNP -LRB-_-LRB- M_NNP -RRB-_-RRB- T_NNP -LRB-_-LRB- 6_CD -RRB-_-RRB- An_DT auto-encoder_NN is_VBZ an_DT unsupervised_JJ learning_NN method_NN devised_VBN by_IN Hinton_NNP and_CC Salakhutdinov_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- that_WDT uses_VBZ neural_JJ networks_NNS ._.
+It_PRP learns_VBZ shared_VBN features_NNS of_IN the_DT input_NN at_IN the_DT hidden_JJ layer_NN ._.
+By_IN restricting_VBG the_DT dimen_NNS -_: sion_NN of_IN the_DT hidden_JJ layer_NN to_TO be_VB smaller_JJR than_IN that_DT of_IN an_DT input_NN layer_NN ,_, it_PRP reduces_VBZ the_DT dimension_NN of_IN the_DT input_NN layer_NN ._.
+The_DT encode_NN function_NN that_WDT calculates_VBZ a_DT hidden_JJ layer_NN from_IN an_DT input_NN is_VBZ shown_VBN in_IN Equation_NN 4_CD ,_, and_CC the_DT formed_VBN it_PRP ._.
+Therefore_RB ,_, we_PRP present_VBP only_RB the_DT experiments_NNS con_VBP -_: ducted_VBN using_VBG skip-gram_NN in_IN this_DT paper_NN ._.
+Regularization_NN is_VBZ usually_RB used_VBN in_IN the_DT loss_NN func_NN -_: tion_NN in_IN traditional_JJ multi-layer_JJ perceptrons_NNS ._.
+Denois_SYM -_: ing_NN techniques_NNS play_VBP the_DT same_JJ role_NN as_IN regularization_NN in_IN auto-encoders_NNS ._.
+A_DT denoising_VBG auto-encoder_NN is_VBZ a_DT stochastic_JJ exten_NN -_: sion_NN of_IN a_DT regular_JJ auto-encoder_NN that_WDT adds_VBZ noise_NN ran_VBD -_: domly_RB to_TO the_DT input_NN during_IN training_NN to_TO obtain_VB higher_JJR generalization_NN ability_NN ._.
+Because_IN the_DT loss_NN function_NN of_IN denoising_VBG auto-encoders_NNS evaluates_VBZ the_DT input_NN without_IN adding_VBG noise_NN ,_, denoising_VBG auto-encoders_NNS can_MD be_VB ex_FW -_: pected_VBN to_TO extract_VB better_JJR representations_NNS than_IN auto_NN -_: encoders_NNS -LRB-_-LRB- Vincent_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+DropOut_NN -LRB-_-LRB- Hinton_NNP 3.2.1_CD et_FW al._FW ,_, 2012_CD -RRB-_-RRB- achieves_VBZ similar_JJ regularization_NN objec_NN -_: tives_NNS by_IN ignoring_VBG the_DT hidden_JJ nodes_NNS ,_, not_RB input_NN ,_, with_IN a_DT uniform_JJ probability_NN ._.
+3.2.2_CD Stacked_NNP Denoising_NNP Auto-Encoder_NNP A_NNP stacked_VBD denoising_VBG auto-encoder_NN piles_NNS dAs_VBP into_IN multiple_JJ layers_NNS and_CC improves_VBZ representation_NN ability_NN ._.
+The_DT deeper_JJR the_DT layers_NNS go_VBP ,_, the_DT more_JJR abstract_JJ features_NNS will_MD be_VB extracted_VBN -LRB-_-LRB- Vincent_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT train_NN -_: ing_NN procedure_NN used_VBN for_IN SdAs_NNS comprises_VBZ two_CD steps_NNS ._.
+Initially_RB ,_, dAs_NNS are_VBP used_VBN to_TO pre-train_VB each_DT layer_NN via_IN unsupervised_JJ learning_NN ,_, after_IN which_WDT the_DT entire_JJ neu_NN -_: ral_NN network_NN is_VBZ fine-tuned_JJ via_IN supervised_JJ learning_NN ._.
+In_IN the_DT pre-training_JJ phase_NN ,_, feature_NN extraction_NN is_VBZ carried_VBN out_RP by_IN the_DT dAs_NNS from_IN input_NN Ai_NNP ,_, and_CC the_DT extracted_VBN hidden_JJ representation_NN is_VBZ treated_VBN as_IN the_DT input_NN to_TO the_DT next_JJ hidden_JJ layer_NN ._.
+After_IN the_DT final_JJ pre-training_JJ pro-_JJ cess_NN ,_, the_DT last_JJ hidden_JJ layer_NN is_VBZ classified_VBN with_IN softmax_NN and_CC the_DT resulting_VBG vector_NN is_VBZ passed_VBN to_TO the_DT output_NN layer_NN ._.
+The_DT fine-tuning_NN phase_NN backpropagates_VBZ supervision_NN to_TO each_DT layer_NN to_TO update_VB weight_NN matrices_NNS -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+In_IN Figure_NN 2_CD ,_, the_DT input_NN vector_NN is_VBZ obtained_VBN from_IN Equation_NN 2_CD and_CC dA1_NNP is_VBZ applied_VBN with_IN the_DT weight_NN ma_SYM -_: trix_NN of_IN the_DT first_JJ layer_NN W1_CD to_TO calculate_VB the_DT first_JJ hid_VBD -_: den_NN layer_NN ._.
+Note_VB that_IN the_DT numbers_NNS of_IN hidden_JJ layers_NNS and_CC hidden_VBN nodes_NNS are_VBP hyperparameters_NNS ._.
+We_PRP define_VBP ni_NNS to_TO be_VB the_DT number_NN of_IN hidden_JJ nodes_NNS of_IN the_DT ith_NN layer_NN ._.
+Therefore_RB ,_, using_VBG Equation_NN 4_CD the_DT dimension_NN of_IN weight_NN matrix_NN W1_CD will_MD be_VB n1_CD ×_CD d._NN Similarly_RB ,_, the_DT weight_NN ma_SYM -_: trices_VBZ up_RP to_TO the_DT l_NN −_NN 1th_JJ layer_NN will_MD be_VB Wi_JJ ∈_SYM Rni_FW ×_FW ni_FW −_FW 1_CD -LRB-_-LRB- i_FW >_FW 2_LS -RRB-_-RRB- ._.
+At_IN the_DT final_JJ lth_NN layer_NN ,_, we_PRP need_VBP to_TO convert_VB the_DT dimension_NN of_IN the_DT hidden_JJ layer_NN into_IN dlabel_NN ,_, the_DT dimen_NNS -_: sion_NN of_IN the_DT label_NN ,_, so_IN the_DT dimension_NN of_IN weight_NN matrix_NN Wl_NNP should_MD become_VB dlabel_NN ×_NN nl_NN −_NN 1_CD ._.
+4_CD Experiments_NNS 4.1_CD Methods_NNS To_TO demonstrate_VB the_DT effectiveness_NN of_IN a_DT nonlinear_JJ SdA_NNP ,_, we_PRP compared_VBD it_PRP with_IN a_DT linear_JJ classifier_NN -LRB-_-LRB- logistic_JJ re_SYM -_: gression_NN ,_, LogRes-w2v_NNP -RRB-_-RRB- .2_CD In_IN addition_NN ,_, to_TO investigate_VB the_DT usefulness_NN of_IN distributed_VBN word_NN representation_NN ,_, we_PRP compared_VBD methods_NNS using_VBG bag-of-features_NNS -LRB-_-LRB- LogRes_SYM -_: BoF_NNP ,_, SdA-BoF_NNP -RRB-_-RRB- ._.
+We_PRP constructed_VBD sentence_NN vectors_NNS S_NNP ∈_CD R_NNP |_CD V_NNP |_NN with_IN 1-of-K_JJ representation_NN in_IN the_DT same_JJ manner_NN as_IN Equation_NN 2_CD ,_, and_CC performed_VBD dimension_NN 2Both_NNP SdA_NNP and_CC logistic_JJ regression_NN were_VBD implemented_VBN using_VBG Theano_NNP version_NN 0.6.0_CD ._.
+reduction_NN to_TO d_LS =_SYM 200_CD using_VBG Principal_NN Component_NNP Analysis_NNP -LRB-_-LRB- PCA_NNP -RRB-_-RRB- .3_CD We_PRP introduce_VBP a_DT weak_JJ baseline_NN -LRB-_-LRB- most_RBS frequent_JJ sense_NN -RRB-_-RRB- and_CC a_DT strong_JJ baseline_NN -LRB-_-LRB- state-of-the-art_JJ -RRB-_-RRB- ._.
+The_DT latter_JJ is_VBZ a_DT method_NN by_IN Nakagawa_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, which_WDT uses_VBZ the_DT same_JJ corpus_NN ._.
+MFS_NNP ._.
+The_DT most_RBS frequent_JJ sense_NN baseline_NN ._.
+It_PRP always_RB selects_VBZ the_DT most_RBS frequent_JJ choice_NN -LRB-_-LRB- in_IN this_DT case_NN ,_, negative_JJ -RRB-_-RRB- ._.
+Tree-CRF_NNP ._.
+The_DT state-of-the-art_JJ baseline_NN with_IN hidden_JJ variables_NNS learned_VBN by_IN tree-structured_JJ CRF_NNP -LRB-_-LRB- Nakagawa_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+LogRes-BoF_NN ._.
+Performs_VBZ sentiment_NN classification_NN us_PRP -_: ing_VBG bag-of-features_NNS with_IN a_DT linear_JJ classifier_NN -LRB-_-LRB- lo_SYM -_: gistic_JJ regression_NN -RRB-_-RRB- ._.
+SdA-BoF_NN ._.
+Classifies_VBZ polarity_NN with_IN the_DT same_JJ input_NN vectors_NNS as_IN LogRes-BoF_NNP ._.
+LogRes-w2v_NN ._.
+Classifies_VBZ polarity_NN with_IN a_DT linear_JJ clas_NNS -_: sifier_NN -LRB-_-LRB- logistic_JJ regression_NN -RRB-_-RRB- using_VBG the_DT sentence_NN vector_NN computed_VBN by_IN distributed_VBN word_NN represen_NN -_: tation_NN ._.
+Our_PRP$ proposed_VBN method_NN that_IN classifies_VBZ po_SYM -_: larity_NN with_IN a_DT SdA_NNP using_VBG the_DT same_JJ input_NN as_IN LogRes-w2v_NN ._.
+SdA-w2v-neg_NN ._.
+Similar_JJ to_TO Nakagawa_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, we_PRP pre-processed_VBD negation_NN before_IN creating_VBG dis_SYM -_: tributed_JJ word_NN representation_NN as_IN in_IN SdA-w2v_NN ._.
+We_PRP adjusted_VBD the_DT noise_NN rate_NN ,_, the_DT numbers_NNS of_IN hidden_JJ layers_NNS and_CC hidden_VBN nodes_NNS ,_, as_IN follows_VBZ ._.
+To_TO demonstrate_VB the_DT denoising_JJ efficiency_NN ,_, we_PRP var_SYM -_: ied_VBD the_DT noise_NN rate_NN -LRB-_-LRB- 0_CD %_NN ,_, 10_CD %_NN ,_, 20_CD %_NN ,_, 30_CD %_NN ,_, 40_CD %_NN and_CC 50_CD %_NN -RRB-_-RRB- for_IN SdAs_NNS ._.
+We_PRP then_RB performed_VBD denoising_JJ by_IN zeroing_VBG a_DT vector_NN with_IN binomial_JJ distribution_NN at_IN a_DT spec_NN -_: ified_VBN rate_NN ._.
+To_TO show_VB the_DT effect_NN of_IN stacking_VBG ,_, we_PRP increased_VBD the_DT number_NN of_IN hidden_JJ layers_NNS -LRB-_-LRB- from_IN 1_CD to_TO 6_CD -RRB-_-RRB- ._.
+To_TO examine_VB the_DT representation_NN ability_NN of_IN the_DT net_NN -_: work_NN ,_, we_PRP varied_VBD the_DT number_NN of_IN hidden_JJ nodes_NNS -LRB-_-LRB- 100_CD ,_, 300_CD ,_, 500_CD ,_, and_CC 700_CD -RRB-_-RRB- ._.
+3We_RB used_VBN scikit-learn_JJ version_NN 0.10_CD ._.
+SdA-w2v_NN ._.
+Table_NNP 1_CD :_: Accuracies_NNS of_IN SdA_NNP models_NNS with_IN different_JJ hyper_JJ -_: parameters_NNS ._.
+Parameters_NNS Accuracy_NNP Noise_NNP rate_NN 0_CD %_NN 10_CD %_NN 20_CD %_NN 30_CD %_NN 40_CD %_NN 50_CD %_NN 81.1_CD %_NN 81.5_CD %_NN 81.4_CD %_NN 80.9_CD %_NN 81.1_CD %_NN 81.6_CD %_NN Number_NN of_IN hidden_JJ layers_NNS 1_CD 2_CD 3_CD 4_CD 5_CD 6_CD 80.6_CD %_NN 80.4_CD %_NN 81.1_CD %_NN 81.6_CD %_NN 81.4_CD %_NN 81.1_CD %_NN Number_NN of_IN hidden_JJ nodes_NNS 100 300 500 700_CD 81.1_CD %_NN 81.2_CD %_NN 81.3_CD %_NN 81.2_CD %_NN Figure_NN 3_CD :_: Accuracy_NNP of_IN each_DT method_NN with_IN standard_JJ error_NN ._.
+4.2_CD Corpus_NNP and_CC tools_NNS We_PRP obtained_VBD distributed_VBN word_NN representations_NNS us_PRP -_: ing_VBG word2vec4_CD with_IN Skip-gram_NN -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013b_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013a_JJ -RRB-_-RRB- ._.
+We_PRP used_VBD Japanese_JJ Wikipedia_NNP 's_POS dump_NN data_NNS -LRB-_-LRB- 2014.11_CD -RRB-_-RRB- to_TO learn_VB the_DT 200_CD dimension_NN distributed_VBN representation_NN with_IN word2vec_CD after_IN word-segmentation_NN with_IN MeCab_NNP 5_CD ._.
+The_DT vocab_NN -_: ulary_NN of_IN the_DT models_NNS contains_VBZ 426,782_CD words_NNS -LRB-_-LRB- without_IN processing_VBG negation_NN -RRB-_-RRB- and_CC 431,782_CD words_NNS -LRB-_-LRB- with_IN pro-_JJ cessing_NN negation_NN -RRB-_-RRB- ._.
+The_DT corpus_NN used_VBN in_IN the_DT experiment_NN was_VBD the_DT Japanese_JJ section_NN of_IN NTCIR-6_NNP OPINION_NNP -LRB-_-LRB- Seki_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+The_DT data_NNS used_VBN in_IN our_PRP$ research_NN were_VBD the_DT sen_NN -_: tences_NNS from_IN The_DT Mainichi_NNP Newspaper_NNP and_CC The_DT Japan_NNP News_NNP articles_NNS with_IN polarities_NNS annotated_VBN by_IN three_CD an_DT -_: notators_NNS ._.
+For_IN each_DT sentence_NN ,_, we_PRP took_VBD the_DT union_NN of_IN the_DT annotations_NNS of_IN the_DT three_CD annotators_NNS ._.
+When_WRB the_DT anno_NN -_: tations_NNS were_VBD split_VBN to_TO both_DT positive_JJ and_CC negative_JJ ,_, we_PRP always_RB used_VBD the_DT annotation_NN of_IN the_DT specific_JJ annotator_NN ._.
+The_DT resulting_VBG corpus_NN contained_VBD 2,599_CD sentences_NNS ._.
+The_DT positive_JJ instances_NNS comprised_VBN 765_CD sentences_NNS whereas_IN the_DT negative_JJ instances_NNS comprised_VBN 1,830_CD sentences_NNS ._.
+Although_IN a_DT neutral_JJ polarity_NN existed_VBD ,_, we_PRP ignored_VBD it_PRP because_IN our_PRP$ task_NN is_VBZ binary_JJ classification_NN ._.
+We_PRP performed_VBD 10-fold_JJ cross_NN validation_NN with_IN 10_CD threads_NNS of_IN parallel_JJ processing_NN and_CC evaluated_VBD the_DT per_FW -_: formance_NN of_IN binary_JJ classification_NN with_IN accuracy_NN ._.
+4.3_CD Results_NNS First_RB ,_, Figure_NN 3_CD shows_VBZ the_DT accuracy_NN and_CC standard_JJ er_SYM -_: rors_NNS of_IN each_DT method_NN for_IN the_DT NTCIR-6_NNP corpus_NN ._.
+It_PRP can_MD be_VB clearly_RB seen_VBN that_IN our_PRP$ method_NN is_VBZ superior_JJ 4_CD https://code.google.com/p/word2vec/_CD 5MeCab_NNP version-0_CD .996_CD ,_, IPADic_NNP version-2_CD .7.0_CD to_TO all_DT baselines_NNS ,_, including_VBG the_DT state-of-the-art_JJ Nak_NNP -_: agawa_NN et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- 's_POS method_NN by_IN up_RB to_TO 11.3_CD points_NNS ._.
+This_DT result_NN shows_VBZ that_IN the_DT distributed_VBN word_NN represen_NN -_: tation_NN is_VBZ sufficiently_RB effective_JJ on_IN the_DT Japanese_JJ sen_NN -_: timent_NN classification_NN task_NN ,_, even_RB though_IN only_RB a_DT sim_NN -_: ple_NN word_NN embedding_VBG model_NN ,_, not_RB a_DT complex_JJ tuned_VBN representation_NN learning_VBG model_NN such_JJ as_IN dos_NNS Santos_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- 's_POS ,_, is_VBZ used_VBN ._.
+Note_VB that_IN the_DT parameters_NNS of_IN the_DT SdAs_NNS above_IN are_VBP the_DT best_JJS combination_NN of_IN noise_NN rate_NN ,_, number_NN of_IN hid_VBN -_: den_NN layers_NNS ,_, and_CC number_NN of_IN hidden_JJ nodes_NNS -LRB-_-LRB- noise_NN rate_NN :_: 10_CD %_NN ,_, four_CD layers_NNS ,_, and_CC 500_CD dimensions_NNS -RRB-_-RRB- ._.
+6_CD Table_NNP 1_CD contrasts_VBZ the_DT various_JJ hyperparameters_NNS ._.
+We_PRP changed_VBD one_CD parameter_NN at_IN a_DT time_NN ,_, while_IN leaving_VBG all_DT other_JJ parameters_NNS fixed_VBN ._.
+The_DT upper_JJ row_NN compares_VBZ the_DT accuracy_NN of_IN the_DT system_NN with_IN changing_VBG noise_NN rate_NN ._.
+The_DT best_JJS result_NN was_VBD obtained_VBN when_WRB the_DT noise_NN rate_NN was_VBD set_VBN to_TO 50_CD %_NN ._.
+Compared_VBN with_IN the_DT standard_JJ stacked_VBN auto-encoder_NN -LRB-_-LRB- noise_NN rate_NN :_: 0_CD %_NN ,_, accuracy_NN :_: 81.1_CD %_NN -RRB-_-RRB- ,_, an_DT SdA_NNP with_IN a_DT noise_NN rate_NN of_IN 50_CD %_NN exhibits_NNS better_RBR accu_SYM -_: racy_JJ -LRB-_-LRB- 81.6_CD %_NN -RRB-_-RRB- ._.
+In_IN the_DT middle_NN of_IN the_DT table_NN ,_, we_PRP changed_VBD the_DT number_NN of_IN hidden_JJ layers_NNS ._.
+It_PRP turned_VBD out_RP that_IN ,_, the_DT classifier_NN worked_VBD best_JJS with_IN four_CD layers_NNS ._.
+As_IN can_MD be_VB seen_VBN ,_, the_DT stacked_VBN auto-encoder_NN is_VBZ superior_JJ to_TO the_DT un_NN -_: stacked_VBD one_CD by_IN 1.0_CD accuracy_NN point_NN ._.
+At_IN the_DT bottom_NN of_IN the_DT table_NN ,_, we_PRP changed_VBD the_DT dimension_NN of_IN hidden_JJ nodes_NNS ._.
+We_PRP changed_VBD hidden_JJ nodes_NNS in_IN intervals_NNS of_IN 200_CD dimensions_NNS ,_, but_CC the_DT accuracy_NN only_RB fluctuated_VBD by_IN ±_CD 0.1_CD point_NN ._.
+The_DT accuracy_NN was_VBD highest_JJS when_WRB the_DT di_FW -_: mension_NN was_VBD 500_CD ._.
+6We_JJ carried_VBD out_RP 10-fold_JJ cross_NN validation_NN without_IN using_VBG the_DT development_NN set_NN ._.
+Figure_NN 4_CD :_: Learning_NNP time_NN with_IN varying_VBG numbers_NNS of_IN hid_VBN -_: den_NN layers_NNS ._.
+Figure_NN 5_CD :_: Learning_NNP time_NN with_IN varying_VBG dimensions_NNS of_IN hidden_JJ nodes_NNS ._.
+5_CD Discussion_NNP In_IN this_DT section_NN ,_, we_PRP discuss_VBP the_DT results_NNS of_IN the_DT models_NNS -LRB-_-LRB- Figure_NN 3_CD -RRB-_-RRB- ,_, parameter_NN tuning_NN -LRB-_-LRB- Table_NNP 1_CD -RRB-_-RRB- ,_, and_CC examples_NNS -LRB-_-LRB- Table_NNP 2_CD -RRB-_-RRB- ._.
+5.1_CD Methods_NNS BoF_NNP vs._FW Distributed_VBN word_NN representation_NN ._.
+When_WRB the_DT model_NN was_VBD fixed_VBN to_TO a_DT linear_JJ classifier_NN -LRB-_-LRB- lo_SYM -_: gistic_JJ regression_NN -RRB-_-RRB- ,_, the_DT accuracies_NNS with_IN Bag_NN -_: of-Features_NNS and_CC distributed_VBN word_NN representa_NN -_: tion_NN were_VBD 70.8_CD %_NN and_CC 79.5_CD %_NN ,_, respectively_RB ._.
+In_IN contrast_NN ,_, using_VBG an_DT SdA_NNP ,_, the_DT result_NN for_IN Bag_NN -_: of-Features_NNS was_VBD 76.9_CD %_NN and_CC that_IN of_IN distributed_VBN word_NN representation_NN was_VBD 81.7_CD %_NN ._.
+Considering_VBG these_DT outcomes_NNS ,_, it_PRP can_MD be_VB seen_VBN that_IN a_DT 4.8_CD to_TO 8.7_CD point_NN increase_NN in_IN accuracy_NN occurred_VBD when_WRB dis_SYM -_: tributed_JJ word_NN representation_NN was_VBD used_VBN ._.
+Hence_RB ,_, the_DT contribution_NN of_IN distributed_VBN word_NN representa_NN -_: tion_NN is_VBZ the_DT largest_JJS among_IN the_DT different_JJ experi_NN -_: mental_JJ settings_NNS ._.
+Linear_JJ classifier_NN vs._IN SdA_NNP ._.
+The_DT accuracies_NNS of_IN lo_SYM -_: gistic_JJ regression_NN and_CC SdAs_NNS with_IN the_DT same_JJ word_NN vectors_NNS made_VBN from_IN Bag-of-Features_NNPS were_VBD 70.8_CD %_NN and_CC 76.9_CD %_NN ,_, respectively_RB ._.
+With_IN dis_SYM -_: tributed_JJ word_NN representation_NN ,_, the_DT accuracy_NN of_IN the_DT linear_JJ classifier_NN was_VBD 79.6_CD %_NN and_CC that_IN of_IN SdA_NNP was_VBD 81.7_CD %_NN ._.
+Thus_RB ,_, a_DT 2.2_CD to_TO 6.1_CD point_NN improve_VB -_: ment_NN was_VBD obtained_VBN using_VBG SdAs_NNS over_IN a_DT tradi_NN -_: tional_JJ linear_JJ classifier_NN ._.
+Negation_NN handling_NN ._.
+As_IN can_MD be_VB seen_VBN in_IN Figure_NN 3_CD ,_, the_DT accuracy_NN of_IN SdA-w2v-neg_JJ decreased_VBN by_IN 0.8_CD point_NN compared_VBN with_IN SdA-w2v_NN ._.
+This_DT differs_VBZ from_IN Nakagawa_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- 's_POS report_NN ._.
+The_DT reason_NN for_IN this_DT phenomenon_NN may_MD be_VB the_DT data_NNS sparseness_NN problem_NN caused_VBN by_IN the_DT negation_NN pro-_JJ cess_NN ._.
+We_PRP checked_VBD the_DT number_NN of_IN negations_NNS in_IN the_DT corpus_NN and_CC found_VBD that_IN the_DT numbers_NNS of_IN types_NNS and_CC tokens_NNS are_VBP 326_CD -LRB-_-LRB- 3.8_CD %_NN -RRB-_-RRB- and_CC 1,239_CD -LRB-_-LRB- 1.0_CD %_NN -RRB-_-RRB- ,_, respectively_RB ._.
+Thus_RB ,_, the_DT negation_NN process_NN may_MD have_VB little_JJ influence_NN on_IN the_DT accuracy_NN ._.
+5.2_CD Parameters_NNPS Figures_NNS 4_CD and_CC 5_CD show_VBP the_DT total_JJ training_NN time_NN obtained_VBN with_IN 10_CD parallel_JJ processes_NNS by_IN changing_VBG the_DT numbers_NNS of_IN hidden_JJ layers_NNS and_CC hidden_VBN nodes_NNS ._.
+Figure_NN 4_CD shows_NNS that_IN the_DT training_NN time_NN grew_VBD grad_SYM -_: ually_RB as_IN the_DT number_NN of_IN hidden_JJ layers_NNS increased_VBD ._.
+In_IN contrast_NN ,_, Figure_NN 5_CD shows_NNS that_IN the_DT training_NN time_NN dou_SYM -_: bled_VBD when_WRB the_DT number_NN of_IN hidden_JJ nodes_NNS was_VBD in_IN -_: creased_VBN by_IN 200_CD ._.
+These_DT results_NNS originate_VBP from_IN the_DT structure_NN of_IN SdAs_NNS ._.
+The_DT nodes_NNS of_IN the_DT two_CD adjacent_JJ hidden_JJ layers_NNS are_VBP fully_RB connected_VBN ._.
+Hence_RB ,_, if_IN the_DT network_NN has_VBZ l_NN layers_NNS and_CC n_NN dimensional_JJ nodes_NNS ,_, the_DT number_NN of_IN connections_NNS will_MD be_VB l_NN ×_FW n_FW ×_FW n_FW =_SYM ln2_FW ._.
+That_DT indicates_VBZ the_DT relationship_NN between_IN the_DT number_NN of_IN layers_NNS and_CC connections_NNS is_VBZ linear_JJ ,_, but_CC the_DT number_NN of_IN connections_NNS grows_VBZ exponentially_RB with_IN the_DT num_NN -_: ber_NN of_IN nodes_NNS ._.
+Consequently_RB ,_, a_DT small_JJ increase_NN in_IN the_DT number_NN of_IN nodes_NNS results_NNS in_IN a_DT long_JJ training_NN time_NN ._.
+In_IN contrast_NN ,_, as_IN can_MD be_VB seen_VBN from_IN Table_NNP 1_CD ,_, the_DT number_NN of_IN nodes_NNS has_VBZ little_JJ or_CC no_DT effect_NN on_IN accuracy_NN ,_, whereas_IN changing_VBG the_DT number_NN of_IN layers_NNS helps_VBZ to_TO improve_VB the_DT performance_NN ._.
+5.3_CD Examples_NNS Several_JJ examples_NNS are_VBP presented_VBN in_IN Table_NNP 2_CD ._.
+The_DT val_NN -_: ues_NNS P_NNP and_CC N_NNP represent_VBP the_DT prediction_NN of_IN positive_JJ and_CC negative_JJ ,_, respectively_RB ._.
+Looking_VBG at_IN the_DT top_NN of_IN the_DT correct_JJ answer_NN ,_, it_PRP can_MD be_VB seen_VBN that_IN our_PRP$ model_NN classified_VBN polarity_NN robustly_RB Table_NNP 2_CD :_: Correct_VB and_CC incorrect_JJ examples_NNS ._.
+BoF_NNP ,_, LR_NNP ,_, AE_NNP ,_, Neg_NNP ,_, SdA_NNP and_CC Gold_NNP represent_VBP Bag-of-Features_NNP ,_, LogRes_NNP ,_, Auto-Encoder_NNP -LRB-_-LRB- one_CD layer_NN SdA_NNP without_IN stacking_VBG -RRB-_-RRB- ,_, Negation_NNP Processed_NNP ,_, Proposal_NNP and_CC the_DT Gold_NNP answer_NN ,_, respectively_RB ._.
+Correct_VB examples_NNS BoF_NNP LR_NNP AE_NNP Neg_NNP SdA_NNP Gold_NNP Examples_NNS N_NNP N_NNP N_NNP P_NNP N_NNP N_NNP N_NNP N_NNP P_NNP P_NNP P_NNP P_NNP 同25日の毎日新聞との単独会見て_CD は_CD ,_, 貧困率なと_CD の細かい数字を挙_CD け_NN て10年間の政権の成果を強調し_CD フシ_FW モリス_FW ムはヘ_FW ルー全土に根_FW 付いている_FW と胸を張った_FW ._.
+In_IN the_DT exclusive_JJ interview_NN with_IN The_DT Mainichi_NNP Newspaper_NNP in_IN the_DT same_JJ month_NN on_IN the_DT 25th_JJ ,_, he_PRP lined_VBD up_RP small_JJ numbers_NNS such_JJ as_IN poverty_NN rate_NN and_CC stressed_VBD the_DT result_NN of_IN the_DT regime_NN in_IN the_DT decade_NN ,_, thrusting_VBG out_RP his_PRP$ chest_NN say_VBP -_: ing_VBG ``_`` Fujimorism_NNP is_VBZ rooted_VBN in_IN Peru_NNP throughout_IN ''_'' ._.
+牛て_CD 成功したクローン技術を人へ応用するのは難しいことて_CD はない_NN ._.
+It_PRP is_VBZ not_RB difficult_JJ to_TO adapt_VB the_DT clone_NN technology_NN succeed_VB with_IN cows_NNS to_TO hu_SYM -_: mans_NNS ._.
+Incorrect_JJ examples_NNS BoF_NNP LR_NNP AE_NNP Neg_NNP SdA_NNP Gold_NNP Examples_NNS N_NNP N_NNP P_NNP N_NNP N_NNP N_NNP N_NNP N_NNP N_NNP N_NNP N_NNP P_NNP P_NNP N_NNP N_NNP N_NNP P_NNP P_NNP もう少し配慮した書き方か_CD あったかなとも思う_CD と反省を口にした_NN ._.
+He_PRP regrets_VBZ ``_`` there_EX must_MD be_VB other_JJ ways_NNS of_IN writing_VBG that_DT should_MD be_VB more_RBR thoughtful_JJ ''_'' ._.
+教育省の談話は_CD 歴史教科書は歴史の真相を反映すへ_CD きて_NN あり_NN ,_, そう_CD してこそ若い世代に正しい歴史観をもたせ_NN ,_, 悲劇の再演を防止て_CD き_CD る_NN と批判した_NN ._.
+In_IN the_DT discourse_NN of_IN Ministry_NNP of_IN Education_NNP ,_, he_PRP criticized_VBD ``_`` History_NN textbooks_NNS should_MD reflect_VB the_DT truth_NN of_IN history_NN ,_, and_CC only_RB that_WDT can_MD make_VB the_DT younger_JJR to_TO have_VB the_DT correct_JJ view_NN of_IN history_NN so_IN that_IN it_PRP can_MD prevent_VB to_TO playing_VBG the_DT tragedy_NN again_RB ''_'' ._.
+同市は圧力に屈せす_NNP ,_, この宣言を守り抜いてもらいたい_NNP ._.
+I_PRP would_MD like_VB him_PRP not_RB to_TO yield_VB to_TO the_DT pressure_NN and_CC to_TO keep_VB his_PRP$ declaration_NN to_TO the_DT end_NN ._.
+against_IN the_DT data_NNS sparseness_NN problem_NN ,_, such_JJ as_IN with_IN the_DT coined_VBN word_NN ``_`` フシ_FW モリス_FW ム_FW -LRB-_-LRB- Fujimorism_NNP -RRB-_-RRB- ''_'' with_IN which_WDT the_DT BoF_NNP model_NN is_VBZ weak_JJ ._.
+Further_RB ,_, linear_JJ clas_NNS -_: sifiers_NNS and_CC the_DT unstacked_JJ AE_NNP fail_VBP to_TO handle_VB double_JJ negative_JJ sentences_NNS such_JJ as_IN at_IN the_DT bottom_NN ._.
+Regard_NN -_: less_JJR of_IN the_DT difficulties_NNS ,_, our_PRP$ model_NN copes_VBZ well_RB with_IN the_DT situation_NN ._.
+Moving_VBG on_IN to_TO the_DT wrong_JJ answers_NNS ,_, it_PRP can_MD be_VB seen_VBN that_IN our_PRP$ proposed_VBN model_NN made_VBN human-like_JJ mistakes_NNS ._.
+For_IN example_NN ,_, it_PRP mistook_VBD the_DT top_JJ one_CD containing_VBG the_DT word_NN ``_`` 反省_FW -LRB-_-LRB- thinking_VBG over_RP ,_, reflection_NN ,_, regret_NN -RRB-_-RRB- ,_, ''_'' but_CC it_PRP is_VBZ an_DT ambiguous_JJ sentence_NN that_WDT might_MD be_VB labeled_VBN as_IN positive_JJ ._.
+Similarly_RB ,_, it_PRP failed_VBD to_TO classify_VB the_DT middle_JJ sentence_NN containing_VBG the_DT phrase_NN ``_`` 悲劇の再演を防止_CD する_NN -LRB-_-LRB- prevent_VB to_TO replay_NN the_DT tragedy_NN -RRB-_-RRB- ,_, ''_'' which_WDT ends_VBZ with_IN ``_`` 批判した_FW -LRB-_-LRB- criticize_VB -RRB-_-RRB- ._. ''_''
+The_DT annotations_NNS of_IN the_DT above_JJ two_CD examples_NNS were_VBD divided_VBN into_IN both_DT positive_JJ and_CC negative7_JJ ._.
+At_IN the_DT bottom_NN ,_, the_DT proposed_VBN method_NN did_VBD not_RB successfully_RB identify_VB the_DT polarity_NN flipping_VBG with_IN the_DT phrase_NN ``_`` 圧力に屈せす_NN -LRB-_-LRB- not_RB yield_VB to_TO the_DT pres_NNS -_: sure_JJ -RRB-_-RRB- ._. ''_''
+Because_IN the_DT model_NN with_IN negation_NN handling_VBG 7As_NNS explained_VBD in_IN Section_NN 4.2_CD ,_, we_PRP arbitrarily_RB determined_VBD the_DT polarity_NN of_IN a_DT sentence_NN when_WRB the_DT annotations_NNS were_VBD split_VBN ._.
+answered_VBN it_PRP correctly_RB ,_, there_EX remains_VBZ much_JJ room_NN for_IN improvement_NN on_IN how_WRB to_TO deal_VB with_IN interactions_NNS be_VB -_: tween_NN syntax_NN and_CC semantics_NNS -LRB-_-LRB- Tai_NNP et_FW al._FW ,_, 2015_CD ;_: Socher_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+6_CD Conclusion_NN In_IN this_DT study_NN ,_, we_PRP presented_VBD a_DT high_JJ performance_NN Japanese_JJ sentiment_NN classification_NN method_NN that_WDT uses_VBZ distributed_VBN word_NN representation_NN learned_VBD from_IN a_DT large_JJ -_: scale_NN corpus_NN with_IN word2vec_CD and_CC a_DT stacked_VBN denois_SYM -_: ing_NN auto-encoder_NN ._.
+The_DT proposed_VBN method_NN requires_VBZ no_DT dictionaries_NNS ,_, complex_JJ models_NNS ,_, or_CC the_DT engineering_NN of_IN numerous_JJ features_NNS ._.
+Consequently_RB ,_, it_PRP can_MD easily_RB be_VB adapted_VBN to_TO other_JJ tasks_NNS and_CC domains_NNS without_IN the_DT need_NN for_IN advanced_JJ knowledge_NN from_IN experts_NNS ._.
+In_IN addition_NN ,_, due_JJ to_TO the_DT nature_NN of_IN learning_VBG with_IN vectors_NNS ,_, our_PRP$ sys_SYM -_: tem_NN does_VBZ not_RB depend_VB on_IN languages_NNS ._.
+As_IN our_PRP$ future_JJ works_NNS ,_, we_PRP will_MD try_VB to_TO create_VB the_DT distributed_VBN sentence_NN representation_NN using_VBG the_DT Recur_NNP -_: rent_VB Neural_NNP Networks_NNP -LRB-_-LRB- Irsoy_NNP and_CC Cardie_NNP ,_, 2014_CD -RRB-_-RRB- and_CC Recursive_NNP Neural_NNP Networks_NNP -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2011_CD ;_: Socher_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- to_TO capture_VB global_JJ information_NN ._.
+References_NNS Yoshua_NNP Bengio_NNP ,_, Pascal_NNP Lamblin_NNP ,_, Dan_NNP Popovici_NNP ,_, and_CC Hugo_NNP Larochelle_NNP ._.
+2007_CD ._.
+Greedy_JJ layer-wise_JJ training_NN of_IN deep_JJ networks_NNS ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Process_NNP -_: ing_NNP Systems_NNPS ,_, pages_NNS 153_CD --_: 160_CD ._.
+Minmin_NNP Chen_NNP ,_, Zhixiang_NNP Xu_NNP ,_, Kilian_NNP Weinberger_NNP ,_, and_CC Fei_NNP Sha_NNP ._.
+2012_CD ._.
+Marginalized_VBN denoising_VBG autoencoders_NNS for_IN domain_NN adaptation_NN ._.
+In_IN Proceedings_NNP of_IN The_DT 29th_JJ In_IN -_: ternational_JJ Conference_NN on_IN Machine_NN Learning_NNP ,_, pages_NNS 767_CD --_: 774_CD ._.
+Yejin_NNP Choi_NNP and_CC Claire_NNP Cardie_NNP ._.
+2008_CD ._.
+Learning_NNP with_IN com_NN -_: positional_JJ semantics_NNS as_IN structural_JJ inference_NN for_IN sub_NN -_: sentential_NN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2008_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 793_CD --_: 801_CD ._.
+Ronan_NNP Collobert_NNP and_CC Jason_NNP Weston_NNP ._.
+2008_CD ._.
+A_DT unified_VBN ar_SYM -_: chitecture_NN for_IN natural_JJ language_NN processing_NN :_: Deep_JJ neu_NN -_: ral_NN networks_NNS with_IN multitask_JJ learning_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 25th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, pages_NNS 160_CD --_: 167_CD ._.
+George_NNP E_NNP Dahl_NNP ,_, Dong_NNP Yu_NNP ,_, Li_NNP Deng_NNP ,_, and_CC Alex_NNP Acero_NNP ._.
+2011_CD ._.
+Context-dependent_JJ pre-trained_JJ deep_JJ neural_NN net_NN -_: works_NNS for_IN large-vocabulary_JJ speech_NN recognition_NN ._.
+In_IN Au_SYM -_: dio_NN ,_, Speech_NNP ,_, and_CC Language_NNP Processing_NNP ,_, IEEE_NNP Trans_NNP -_: actions_NNS ,_, volume_NN 20_CD ,_, pages_NNS 30_CD --_: 42_CD ._.
+Cıcero_NNP Nogueira_NNP dos_VBZ Santos_NNP and_CC Maıra_NNP Gatti_NNP ._.
+2014_CD ._.
+Deep_JJ convolutional_JJ neural_NN networks_NNS for_IN sentiment_NN analysis_NN of_IN short_JJ texts_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 25th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 69_CD --_: 78_CD ._.
+Xavier_NNP Glorot_NNP ,_, Antoine_NNP Bordes_NNP ,_, and_CC Yoshua_NNP Bengio_NNP ._.
+2011_CD ._.
+Domain_NN adaptation_NN for_IN large-scale_JJ sentiment_NN classification_NN :_: A_DT deep_JJ learning_NN approach_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 28th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, pages_NNS 513_CD --_: 520_CD ._.
+Kaiming_VBG He_PRP ,_, Xiangyu_NNP Zhang_NNP ,_, Shaoqing_NNP Ren_NNP ,_, and_CC Jian_NNP Sun_NNP ._.
+2015_CD ._.
+Delving_VBG deep_RB into_IN rectifiers_NNS :_: Surpassing_VBG human-level_JJ performance_NN on_IN imagenet_NN classification_NN ._.
+CoRR_NNP ,_, abs/1502_CD .01852_CD ._.
+Geoffrey_NNP E._NNP Hinton_NNP and_CC Ruslan_NNP R._NNP Salakhutdinov_NNP ._.
+2006_CD ._.
+Reducing_VBG the_DT dimensionality_NN of_IN data_NNS with_IN neural_JJ net_NN -_: works_NNS ._.
+Science_NN ,_, 313_CD -LRB-_-LRB- 5786_CD -RRB-_-RRB- :504_CD --_: 507_CD ._.
+Geoffrey_NNP E._NNP Hinton_NNP ,_, Nitish_NNP Srivastava_NNP ,_, Alex_NNP Krizhevsky_NNP ,_, Ilya_NNP Sutskever_NNP ,_, and_CC Ruslan_NNP R_NNP Salakhutdinov_NNP ._.
+2012_CD ._.
+Improving_NN neural_NN networks_NNS by_IN preventing_VBG co_SYM -_: adaptation_NN of_IN feature_NN detectors_NNS ._.
+arXiv_JJ preprint_NN arXiv_NNP :1207.0580_CD ._.
+Daisuke_NNP Ikeda_NNP ,_, Hiroya_NNP Takamura_NNP ,_, Lev-Arie_NNP Ratinov_NNP ,_, and_CC Manabu_NNP Okumura_NNP ._.
+2008_CD ._.
+Learning_NNP to_TO shift_VB the_DT po_NN -_: larity_NN of_IN words_NNS for_IN sentiment_NN classification_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 3rd_CD International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, pages_NNS 296_CD --_: 303_CD ._.
+Ozan_NNP Irsoy_NNP and_CC Claire_NNP Cardie_NNP ._.
+2014_CD ._.
+Opinion_NN mining_NN with_IN deep_JJ recurrent_JJ neural_JJ networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Nat_NNP -_: ural_JJ Language_NN Processing_NNP ,_, pages_NNS 720_CD --_: 728_CD ._.
+Yoon_NNP Kim_NNP ._.
+2014_CD ._.
+Convolutional_JJ neural_JJ networks_NNS for_IN sen_NN -_: tence_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 1746_CD --_: 1751_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP Corrado_NNP ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013a_NNS ._.
+Efficient_JJ estimation_NN of_IN word_NN representa_NN -_: tions_NNS in_IN vector_NN space_NN ._.
+In_IN International_NNP Conference_NNP on_IN Learning_NNP Representations_NNPS Workshop_NNP ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP S_NNP Cor_NNP -_: rado_NN ,_, and_CC Jeff_NNP Dean_NNP ._.
+2013b_JJ ._.
+Distributed_VBN represen_NN -_: tations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ composition_NN -_: ality_NN ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS 26_CD ,_, pages_NNS 3111_CD --_: 3119_CD ._.
+Tetsuji_NNP Nakagawa_NNP ,_, Kentaro_NNP Inui_NNP ,_, and_CC Sadao_NNP Kurohashi_NNP ._.
+2010_CD ._.
+Dependency_NN tree-based_JJ sentiment_NN classifica_NN -_: tion_NN using_VBG crfs_NNS with_IN hidden_JJ variables_NNS ._.
+In_IN Proceedings_NNP of_IN Human_NNP Language_NNP Technologies_NNPS :_: The_DT 2010_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 786_CD --_: 794_CD ._.
+Bo_NNP Pang_NNP ,_, Lee_NNP Lillian_NNP ,_, and_CC Vaithyanathan_NNP Shivakumar_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+:_: sentiment_NN classification_NN using_VBG ma_SYM -_: chine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 79_CD --_: 86_CD ._.
+Jeffrey_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP D_NNP Manning_NNP ._.
+2014_CD ._.
+GloVe_NN :_: Global_NNP vectors_NNS for_IN word_NN rep_NN -_: resentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Empiricial_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP ,_, pages_NNS 1532_CD --_: 1543_CD ._.
+Yohei_NNP Seki_NNP ,_, David_NNP Kirk_NNP Evans_NNP ,_, Lun-Wei_NNP Ku_NNP ,_, Hsin-Hsi_NNP Chen_NNP ,_, Noriko_NNP Kando_NNP ,_, and_CC Chin-Yew_NNP Lin_NNP ._.
+2007_CD ._.
+Overview_NNP of_IN opinion_NN analysis_NN pilot_NN task_NN at_IN NTCIR-6_NNP ._.
+In_IN Proceedings_NNP of_IN NTCIR-6_NNP Workshop_NNP Meeting_VBG ,_, pages_NNS 265_CD --_: 278_CD ._.
+Richard_NNP Socher_NNP ,_, Jeffrey_NNP Pennington_NNP ,_, Eric_NNP H._NNP Huang_NNP ,_, An_DT -_: drew_VBD Y._NNP Ng_NNP ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2011_CD ._.
+Semi-supervised_JJ recursive_JJ autoencoders_NNS for_IN predicting_VBG sentiment_NN distributions_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2011_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Lan_SYM -_: guage_NN Processing_NNP ,_, pages_NNS 151_CD --_: 161_CD ._.
+Richard_NNP Socher_NNP ,_, Alex_NNP Perelygin_NNP ,_, Jean_NNP Wu_NNP ,_, Jason_NNP Chuang_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, Andrew_NNP Y._NNP Ng_NNP ,_, and_CC Christo_NNP -_: pher_NN Potts_NNP ._.
+2013_CD ._.
+Recursive_JJ deep_JJ models_NNS for_IN semantic_JJ compositionality_NN over_IN a_DT sentiment_NN treebank_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 2013_CD Conference_NN on_IN Empirical_NNP Meth_NNP -_: ods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 1631_CD --_: 1642_CD ._.
+Sheng_NNP Kai_NNP Tai_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC D._NNP Christopher_NNP Man_NNP -_: ning_NN ._.
+2015_CD ._.
+Improved_VBN semantic_JJ representations_NNS from_IN tree-structured_JJ long_JJ short-term_JJ memory_NN networks_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 53rd_CD Annual_JJ Meeting_VBG of_IN the_DT Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNPS and_CC the_DT 7th_JJ Inter_NNP -_: national_JJ Joint_NNP Conference_NN on_IN Natural_JJ Language_NN Pro-_JJ cessing_NN ,_, pages_NNS 1556_CD --_: 1566_CD ._.
+Duyu_NNP Tang_NNP ,_, Furu_NNP Wei_NNP ,_, Nan_NNP Yang_NNP ,_, Ming_NNP Zhou_NNP ,_, Ting_NNP Liu_NNP ,_, and_CC Bing_NNP Qin_NNP ._.
+2014_CD ._.
+Learning_NNP sentiment-specific_JJ word_NN embedding_VBG for_IN twitter_NN sentiment_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, volume_NN 1_CD ,_, pages_NNS 1555_CD --_: 1565_CD ._.
+Pascal_NNP Vincent_NNP ,_, Hugo_NNP Larochelle_NNP ,_, Yoshua_NNP Bengio_NNP ,_, and_CC Pierre-Antoine_NNP Manzagol_NNP ._.
+2008_CD ._.
+Extracting_VBG and_CC com_NN -_: posing_VBG robust_JJ features_NNS with_IN denoising_VBG autoencoders_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 25th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, pages_NNS 1096_CD --_: 1103_CD ._.
+Pascal_NNP Vincent_NNP ,_, Hugo_NNP Larochelle_NNP ,_, Isabelle_NNP Lajoie_NNP ,_, Yoshua_NNP Bengio_NNP ,_, and_CC Pierre-Antoine_NNP Manzagol_NNP ._.
+2010_CD ._.
+Stacked_VBN denoising_VBG autoencoders_NNS :_: Learning_NNP useful_JJ representa_NN -_: tions_NNS in_IN a_DT deep_JJ network_NN with_IN a_DT local_JJ denoising_NN cri_NN -_: terion_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 11:3371_CD --_: 3408_CD ._.
+Sida_NNP Wang_NNP and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2012_CD ._.
+Base_NNP -_: lines_NNS and_CC bigrams_NNS :_: Simple_NN ,_, good_JJ sentiment_NN and_CC topic_NN classification_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ,_, pages_NNS 90_CD --_: 94_CD ._.
+Junyuan_NNP Xie_NNP ,_, Linli_NNP Xu_NNP ,_, and_CC Enhong_NNP Chen_NNP ._.
+2012_CD ._.
+Image_NN denoising_NN and_CC inpainting_VBG with_IN deep_JJ neural_JJ networks_NNS ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Sys_NNP -_: tems_NNS 25_CD ,_, pages_NNS 341_CD --_: 349_CD ._.

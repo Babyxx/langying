@@ -1,0 +1,327 @@
+1_CD Before_IN we_PRP look_VBP into_IN the_DT relationship_NN between_IN writing_NN and_CC reading_NN ,_, it_PRP is_VBZ necessary_JJ to_TO provide_VB a_DT brief_JJ overview_NN of_IN Chinese_JJ orthography_NN ._.
+There_EX are_VBP three_CD tiers_NNS in_IN the_DT orthographic_JJ structure_NN of_IN a_DT Chinese_JJ character_NN :_: stroke_NN ,_, radical_JJ ,_, and_CC character_NN -LRB-_-LRB- Shen_NNP and_CC Ke_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+Usually_RB ,_, several_JJ strokes_NNS function_VBP as_IN building_NN blocks_NNS to_TO construct_VB a_DT radical_JJ ,_, and_CC one_CD or_CC more_JJR radicals_NNS are_VBP used_VBN to_TO form_VB a_DT character_NN ._.
+There_EX are_VBP generally_RB two_CD kinds_NNS of_IN Chinese_JJ characters_NNS :_: integral_JJ and_CC compound_NN -LRB-_-LRB- Shen_NNP and_CC Ke_NNP ,_, 2007_CD ;_: Wang_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+The_DT former_JJ are_VBP composed_VBN using_VBG one_CD radical_JJ only_RB ,_, while_IN the_DT latter_JJ consist_VBP of_IN two_CD or_CC more_JJR radicals_NNS ._.
+For_IN example_NN ,_, 女_NN -LRB-_-LRB- nǚ_FW -RRB-_-RRB- means_VBZ female_JJ and_CC 马_NN -LRB-_-LRB- mǎ_FW -RRB-_-RRB- denotes_VBZ the_DT meaning_NN of_IN a_DT horse_NN ._.
+When_WRB these_DT two_CD integral_JJ characters_NNS serve_VBP as_IN left_VBN and_CC the_DT right_JJ radicals_NNS ,_, their_PRP$ combination_NN becomes_VBZ a_DT compound_NN character_NN 妈_NN -LRB-_-LRB- mā_FW -RRB-_-RRB- meaning_NN mother_NN ._.
+A_DT compound_NN character_NN usually_RB has_VBZ a_DT semantic_JJ radical_JJ -LRB-_-LRB- i.e._FW ,_, 女_CD meaning_NN female_NN in_IN the_DT character_NN of_IN 妈_NN -RRB-_-RRB- that_WDT denotes_VBZ the_DT meaning_NN of_IN that_DT character_NN and_CC a_DT phonetic_JJ radical_JJ -LRB-_-LRB- 马_CD pronounced_VBD as_IN mǎ_NN -RRB-_-RRB- that_WDT provides_VBZ insights_NNS into_IN the_DT pronunciation_NN of_IN the_DT compound_NN character_NN ._.
+Although_IN the_DT Chinese_JJ writing_NN system_NN has_VBZ a_DT pictographic_JJ origin_NN ,_, it_PRP also_RB has_VBZ a_DT Romanised_NNP form_NN --_: pinyin_NN --_: to_TO represent_VB its_PRP$ phonology_NN -LRB-_-LRB- Shen_NNP and_CC Ke_NNP ,_, 2007_CD ;_: Bassetti_NNP ,_, 2005_CD ;_: Wang_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+Each_DT Chinese_JJ character_NN can_MD be_VB transcribed_VBN into_IN pinyin_NN including_VBG onset_NN ,_, rime_NN and_CC tone_NN -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+As_IN shown_VBN in_IN Table_NNP 1_CD below_IN ,_, 女is_FW represented_VBN by_IN pinyin_NN nǚ_NN ._.
+`_`` n_NN '_'' is_VBZ the_DT onset_NN ,_, `_`` ǚ_FW '_'' is_VBZ the_DT rime_NN and_CC the_DT symbol_NN above_IN it_PRP indicates_VBZ the_DT tone_NN of_IN this_DT character_NN ._.
+Abstract_JJ This_DT paper_NN describes_VBZ two_CD experiments_NNS that_WDT explore_VBP the_DT potential_JJ role_NN of_IN Chinese_JJ character_NN writing_VBG on_IN their_PRP$ visual_JJ recognition_NN ._.
+Taken_VBN together_RB ,_, the_DT results_NNS suggest_VBP that_IN drawing_VBG Chinese_JJ characters_NNS privileges_NNS them_PRP in_IN memory_NN in_IN a_DT way_NN that_IN facilitates_VBZ their_PRP$ subsequent_JJ visual_JJ recognition_NN ._.
+This_DT is_VBZ true_JJ even_RB when_WRB the_DT congruency_NN of_IN the_DT recognition_NN response_NN and_CC other_JJ potential_JJ confounds_NNS are_VBP controlled_VBN for_IN ._.
+Introduction_NN 2_CD With_IN China_NNP 's_POS rapid_JJ economic_JJ rise_NN ,_, the_DT Chinese_JJ language_NN is_VBZ becoming_VBG more_JJR of_IN a_DT practical_JJ and_CC attractive_JJ subject_NN for_IN university_NN students_NNS across_IN the_DT world_NN ._.
+There_EX has_VBZ ,_, consequently_RB ,_, been_VBN an_DT increase_NN in_IN the_DT popularity_NN of_IN learning_VBG Chinese_JJ as_IN a_DT foreign_JJ language_NN -LRB-_-LRB- henceforth_NN ,_, CFL_NNP -RRB-_-RRB- ._.
+According_VBG to_TO a_DT report_NN in_IN the_DT Financial_NNP Times_NNP -LRB-_-LRB- Pignal_NNP ,_, 2011_CD -RRB-_-RRB- ,_, only_RB one_CD in_IN 300_CD elementary_JJ schools_NNS include_VBP Chinese_JJ in_IN their_PRP$ curriculum_NN ,_, while_IN one_CD in_IN every_DT 30_CD was_VBD teaching_VBG Chinese_JJ language_NN by_IN 2008_CD in_IN the_DT US_NNP ._.
+In_IN the_DT UK_NNP ,_, the_DT number_NN of_IN CFL_NNP learners_NNS in_IN higher_JJR education_NN institutions_NNS increased_VBN by_IN 125_CD %_NN between_IN 1996_CD and_CC 2007_CD -LRB-_-LRB- Hu_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+Despite_IN the_DT growing_VBG demand_NN to_TO learn_VB Chinese_JJ ,_, there_EX have_VBP been_VBN general_JJ concerns_NNS regarding_VBG the_DT difficulties_NNS of_IN studying_VBG the_DT language_NN ._.
+Since_IN the_DT Chinese_JJ writing_NN system_NN is_VBZ logographic_JJ in_IN nature_NN ,_, it_PRP is_VBZ significantly_RB different_JJ from_IN any_DT European_JJ languages_NNS that_WDT use_VBP Roman-derived_JJ alphabets_NNS ._.
+For_IN this_DT reason_NN ,_, one_CD of_IN the_DT main_JJ challenges_NNS for_IN CFL_NNP learners_NNS is_VBZ to_TO learn_VB Chinese_JJ characters_NNS -LRB-_-LRB- Shen_NNP ,_, 2004_CD :_: 168_CD ;_: Wang_NNP et_FW al._FW ,_, 2003_CD ;_: Everson_NNP ,_, 1998_CD :_: 196_CD -RRB-_-RRB- ._.
+integral_JJ character_NN /_NN semantic_JJ radical_JJ integral_JJ character_NN /_NN phonetic_JJ radical_JJ compound_NN character_NN 女_SYM 马_SYM 妈_FW Pinyin_FW nǚ_FW mǎ_FW mā_FW English_NNP female_JJ horse_NN mother_NN Table_NNP 1_CD ._.
+An_DT example_NN of_IN a_DT Chinese_JJ compound_NN character_NN The_DT sharply_RB contrasting_VBG differences_NNS between_IN the_DT phonology_NN and_CC orthography_NN of_IN Chinese_JJ present_NN a_DT challenge_NN to_TO adult_NN CFL_NNP learners_NNS who_WP have_VBP an_DT alphabetic_JJ first_JJ language_NN ._.
+Due_JJ to_TO familiarity_NN with_IN alphabetic-like_JJ phonological_JJ representation_NN of_IN Chinese_JJ ,_, they_PRP tend_VBP to_TO develop_VB an_DT unbalanced_JJ acquisition_NN of_IN phonology_NN and_CC orthography_NN ._.
+Typically_RB ,_, this_DT involves_VBZ a_DT faster_RBR acquisition_NN of_IN phonology_NN than_IN orthography_NN -LRB-_-LRB- Everson_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Indeed_RB ,_, it_PRP is_VBZ very_RB common_JJ for_IN CFL_NNP beginners_NNS to_TO go_VB through_IN a_DT mapping_NN exercise_NN in_IN their_PRP$ mind_NN between_IN the_DT logographic_JJ characters_NNS and_CC alphabet-like_JJ phonology_NN ,_, as_RB well_RB as_IN semantics_NNS ,_, in_IN reading_NN ._.
+In_IN other_JJ words_NNS ,_, they_PRP attempt_VBP to_TO associate_VB form_NN with_IN sound_NN and_CC meaning_NN when_WRB learning_VBG to_TO read_VB -LRB-_-LRB- Cao_NNP et_FW al._FW ,_, 2013a_CD ;_: Xu_NNP et_FW al._FW ,_, 2013_CD ;_: Shen_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Despite_IN the_DT complexity_NN of_IN orthographic_JJ representation_NN in_IN Chinese_JJ reading_NN ,_, CFL_NNP language_NN classroom_NN traditionally_RB pays_VBZ little_JJ attention_NN to_TO supporting_VBG adult_NN learners_NNS facing_VBG difficulties_NNS arising_VBG with_IN Chinese_JJ reading_NN -LRB-_-LRB- Chang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+There_EX have_VBP been_VBN three_CD different_JJ curricula_NNS used_VBN in_IN CFL_NNP classrooms_NNS in_IN general_JJ -LRB-_-LRB- Zhang_NNP and_CC Lu_NNP ,_, 2014_CD ;_: He_PRP and_CC Jiao_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT `_`` unity_NN type_NN '_'' encourages_VBZ CFL_NNP beginning_VBG learners_NNS to_TO develop_VB all_DT four_CD language_NN skills_NNS -LRB-_-LRB- i.e._FW ,_, listening_VBG ,_, speaking_VBG ,_, reading_VBG and_CC writing_VBG -RRB-_-RRB- at_IN the_DT same_JJ time_NN ._.
+In_IN order_NN to_TO achieve_VB the_DT same_JJ proficiency_NN in_IN four_CD skills_NNS ,_, far_RB more_JJR lecture_NN hours_NNS have_VBP to_TO be_VB spent_VBN on_IN learning_VBG to_TO write_VB ._.
+The_DT second_JJ one_CD is_VBZ the_DT `_`` delay_NN '_'' type_NN ,_, which_WDT simply_RB delays_VBZ learning_VBG to_TO read_VB and_CC write_VB ._.
+This_DT curriculum_NN disadvantages_VBZ CFL_NNP ab_IN initio_NN learners_NNS in_IN a_DT way_NN that_IN they_PRP are_VBP unable_JJ to_TO read_VB or_CC write_VB Chinese_JJ after_IN a_DT certain_JJ period_NN of_IN studying_VBG ._.
+The_DT `_`` lag_NN '_'' curriculum_NN emphasises_VBZ listening_VBG and_CC speaking_VBG while_IN some_DT Chinese_JJ writing_NN --_: but_CC not_RB everything_NN that_WDT CFL_NNP beginners_NNS have_VBP acquired_VBN in_IN oral/aural_JJ skills_NNS --_: is_VBZ taught_VBN at_IN the_DT early_JJ stage_NN ._.
+However_RB ,_, this_DT may_MD lead_VB to_TO a_DT discrepancy_NN between_IN listening/speaking_VBG and_CC reading/writing_VBG skills_NNS at_IN a_DT later_JJ stage_NN ._.
+Therefore_RB ,_, the_DT choice_NN of_IN curriculum_NN depends_VBZ on_IN when_WRB it_PRP may_MD be_VB best_RB to_TO introduce_VB reading_NN and_CC writing_VBG skills_NNS to_TO adult_NN CFL_NNP beginners_NNS ._.
+The_DT current_JJ study_NN investigated_VBD whether_IN orthographic_JJ knowledge_NN acquired_VBN through_IN writing_VBG significantly_RB contributed_VBN to_TO reading_VBG development_NN in_IN a_DT group_NN of_IN Irish_JJ adult_NN beginning_VBG CFL_NNP learners_NNS all_DT of_IN whom_WP had_VBD an_DT alphabetic-first_JJ language_NN background_NN ._.
+3_CD Writing-on-reading_NN in_IN Chinese_JJ As_IN pointed_VBN out_RP by_IN Guan_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, the_DT phonological_JJ representations_NNS of_IN words_NNS are_VBP usually_RB strengthened_VBN when_WRB learning_VBG to_TO read_VB an_DT alphabetic_JJ writing_NN system_NN ._.
+This_DT is_VBZ based_VBN on_IN the_DT assumption_NN that_IN `_`` orthographic_JJ knowledge_NN is_VBZ intimately_RB tied_VBN to_TO the_DT phonological_JJ constituent_NN of_IN a_DT word_NN '_'' -LRB-_-LRB- Guan_NNP et_FW al._FW ,_, 2011_CD ;_: see_VB also_RB Cao_NNP et_FW al._FW ,_, 2013b_JJ -RRB-_-RRB- ._.
+Since_IN alphabetic_JJ writing_NN is_VBZ based_VBN on_IN a_DT number_NN of_IN orthographic_JJ units_NNS -LRB-_-LRB- i.e._FW letters_NNS -RRB-_-RRB- that_WDT can_MD be_VB mapped_VBN onto_IN phonemes_NNS and_CC recombined_VBN to_TO form_VB written_VBN words_NNS ,_, reading_VBG proficiency_NN depends_VBZ on_IN success_NN in_IN establishing_VBG the_DT phonological_JJ connections_NNS to_TO orthography_NN -LRB-_-LRB- Cao_NNP et_FW al._FW ,_, 2013b_CD ;_: Tan_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+In_IN this_DT case_NN ,_, alphabetic_JJ reading_NN can_MD be_VB helped_VBN by_IN learning_VBG orthographic_JJ representations_NNS ,_, which_WDT in_IN turn_NN contribute_VBP to_TO the_DT development_NN of_IN writing_VBG skills_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT contribution_NN of_IN writing_VBG to_TO reading_VBG development_NN may_MD be_VB moderate_JJ in_IN English_NNP or_CC any_DT alphabetic_JJ languages_NNS compared_VBN to_TO Chinese_NNP -LRB-_-LRB- Cao_NNP et_FW al._FW ,_, 2013b_CD ;_: Guan_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Orthographic_JJ knowledge_NN of_IN Chinese_JJ does_VBZ not_RB correspond_VB to_TO systematic_JJ phonological_JJ representations_NNS ,_, since_IN the_DT language_NN uses_VBZ a_DT logographic_JJ writing_NN system_NN ._.
+There_EX is_VBZ little_JJ or_CC no_DT systematic_JJ grapheme-phoneme_NN correspondence_NN in_IN Chinese_JJ script_NN -LRB-_-LRB- Xu_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Specifically_RB ,_, the_DT basic_JJ Chinese_JJ writing_VBG units_NNS -LRB-_-LRB- i.e._FW ,_, strokes_NNS -RRB-_-RRB- are_VBP not_RB mapped_VBN to_TO phonemes_NNS -LRB-_-LRB- Guan_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Although_IN a_DT phonetic_JJ radical_JJ of_IN a_DT compound_NN character_NN can_MD be_VB connected_VBN to_TO the_DT phonological_JJ awareness_NN of_IN this_DT character_NN in_IN Chinese_NNP ,_, the_DT connection_NN is_VBZ much_RB less_JJR intimate_JJ than_IN in_IN alphabetic_JJ languages_NNS -LRB-_-LRB- Cao_NNP et_FW al._FW 2013b_FW -RRB-_-RRB- ._.
+As_IN can_MD be_VB seen_VBN in_IN the_DT example_NN of_IN the_DT character_NN `_`` 妈_NN '_'' ,_, the_DT connection_NN of_IN the_DT phonetic_JJ radical_JJ `_`` 马_FW '_'' -LRB-_-LRB- mǎ_FW -RRB-_-RRB- is_VBZ associated_VBN with_IN the_DT phonological_JJ representation_NN of_IN `_`` 妈_FW '_'' -LRB-_-LRB- mā_FW -RRB-_-RRB- at_IN the_DT syllabic_JJ level_NN rather_RB than_IN the_DT phoneme_NN level_NN ._.
+The_DT same_JJ can_MD be_VB applied_VBN to_TO `_`` 吗_VB '_'' -LRB-_-LRB- ma_FW ,_, being_VBG used_VBN at_IN the_DT end_NN of_IN a_DT sentence_NN functioned_VBD as_IN a_DT question_NN mark_NN -RRB-_-RRB- ,_, `_`` 骂_FW '_'' -LRB-_-LRB- mɑ̀_FW ,_, meaning_VBG to_TO scold_VB -RRB-_-RRB- ,_, but_CC not_RB to_TO a_DT number_NN of_IN other_JJ characters_NNS such_JJ as_IN `_`` 驾_FW '_'' -LRB-_-LRB- jiɑ̀_FW ,_, meaning_VBG to_TO drive_VB a_DT horse_NN -RRB-_-RRB- ,_, `_`` 驴_FW '_'' -LRB-_-LRB- lǘ_FW ,_, meaning_VBG donkeys_NNS -RRB-_-RRB- ._.
+Therefore_RB ,_, the_DT grapheme-phoneme_JJ correspondences_NNS are_VBP not_RB reliable_JJ in_IN Chinese_JJ -LRB-_-LRB- Shu_NNP ,_, et_FW al._FW 2003_CD -RRB-_-RRB- ._.
+In_IN addition_NN ,_, Chinese_JJ consists_VBZ of_IN a_DT large_JJ number_NN of_IN homophones_NNS ,_, which_WDT allows_VBZ a_DT syllable_JJ to_TO correspond_VB to_TO many_JJ different_JJ characters_NNS with_IN various_JJ meanings_NNS ._.
+Therefore_RB ,_, phonological_JJ information_NN is_VBZ unlikely_JJ to_TO be_VB as_IN reliable_JJ as_IN the_DT orthographic_JJ form_NN of_IN a_DT character_NN in_IN reading_VBG comprehension_NN -LRB-_-LRB- Cao_NNP et_FW al._FW 2013a_FW ;_: Tan_NNP et_NNP al._IN 2005_CD -RRB-_-RRB- ._.
+For_IN this_DT reason_NN ,_, in_IN comparison_NN to_TO alphabetic_JJ representations_NNS ,_, orthographic_JJ rather_RB than_IN phonological_JJ awareness_NN might_MD be_VB a_DT more_RBR effective_JJ factor_NN in_IN Chinese_JJ reading_NN achievement_NN ._.
+Consequently_RB ,_, writing_VBG characters_NNS could_MD be_VB a_DT more_RBR critical_JJ component_NN of_IN learning_VBG to_TO read_VB ._.
+In_IN a_DT study_NN of_IN Chinese_JJ children_NNS 's_POS reading_NN ,_, Tan_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- found_VBD that_IN the_DT writing_VBG performance_NN of_IN beginning_VBG readers_NNS is_VBZ strongly_RB associated_VBN with_IN their_PRP$ reading_NN skills_NNS ._.
+In_IN other_JJ words_NNS ,_, for_IN native_JJ speakers_NNS who_WP are_VBP exposed_VBN to_TO Chinese_JJ in_IN daily_JJ life_NN and_CC so_RB have_VB developed_VBN phonology-to-semantics_JJ link_NN before_IN formal_JJ schooling_NN ,_, their_PRP$ development_NN in_IN writing_VBG serves_VBZ as_IN a_DT more_JJR significant_JJ contributing_VBG factor_NN to_TO their_PRP$ reading_NN fluency_NN than_IN phonological_JJ awareness_NN ._.
+Another_DT study_NN of_IN Chinese_JJ children_NNS -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- found_VBD that_IN a_DT significant_JJ contributing_VBG factor_NN in_IN reading_VBG proficiency_NN was_VBD morphological_JJ awareness_NN ._.
+At_IN the_DT character_NN level_NN ,_, a_DT single_JJ character_NN usually_RB represents_VBZ a_DT single_JJ morpheme_NN and_CC a_DT character_NN usually_RB needs_VBZ to_TO combine_VB with_IN another_DT one_CD to_TO form_VB a_DT word_NN ._.
+Therefore_RB ,_, it_PRP is_VBZ essential_JJ for_IN Chinese_JJ learners_NNS to_TO be_VB able_JJ to_TO recognise_VB a_DT character_NN and_CC activate_VB the_DT morphological_JJ knowledge_NN from_IN the_DT visual_JJ input_NN in_IN order_NN to_TO go_VB from_IN comprehension_NN of_IN a_DT word_NN ,_, to_TO a_DT phrase_NN ,_, and_CC then_RB to_TO sentences_NNS and_CC texts_NNS ._.
+For_IN this_DT reason_NN ,_, writing_VBG a_DT character_NN ,_, rather_RB than_IN pronouncing_VBG it_PRP ,_, is_VBZ more_RBR likely_JJ to_TO play_VB an_DT effective_JJ role_NN in_IN developing_VBG learners_NNS '_POS morphological_JJ knowledge_NN and_CC consequently_RB in_IN learning_VBG to_TO read_VB Chinese_JJ -LRB-_-LRB- Packard_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Apart_RB from_IN research_NN on_IN native_JJ Chinese_JJ speakers_NNS ,_, Guan_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- conducted_VBN a_DT study_NN of_IN adult_NN CFL_NNP learners_NNS and_CC found_VBD that_IN handwriting_NN characters_NNS ,_, instead_RB of_IN pinyin-typing_NN or_CC reading-only_JJ conditions_NNS ,_, produced_VBD greater_JJR accuracy_NN in_IN subsequent_JJ lexical_JJ decision_NN and_CC semantic_JJ tasks_NNS ._.
+In_IN addition_NN ,_, Chinese_JJ writing_NN is_VBZ different_JJ from_IN alphabetic_JJ writing_NN since_IN the_DT Chinese_JJ characters_NNS `_`` are_VBP packed_VBN into_IN a_DT square_JJ configuration_NN ,_, possessing_VBG a_DT high_JJ ,_, nonlinear_JJ visual_JJ complexity_NN '_'' -LRB-_-LRB- Tan_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Guan_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- pointed_VBD out_RP that_IN Chinese_JJ orthography_NN `_`` involves_VBZ the_DT coupling_NN of_IN writing_VBG related_JJ visual_JJ and_CC motor_NN systems_NNS '_POS ._.
+This_DT coupling_NN may_MD help_VB establish_VB the_DT spatial_JJ configuration_NN of_IN strokes_NNS and_CC radicals_NNS ,_, which_WDT along_IN with_IN a_DT temporal_JJ sequence_NN of_IN motor_NN movements_NNS associated_VBN with_IN stroke_NN composition_NN ,_, completely_RB defines_VBZ the_DT shape_NN of_IN the_DT character_NN -LRB-_-LRB- Cao_NNP et_FW al._FW ,_, 2013b_CD ;_: Guan_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, significant_JJ spatial_JJ analysis_NN is_VBZ intrinsic_JJ and_CC highly_RB organised_VBN motor_NN activity_NN is_VBZ involved_VBN in_IN writing_VBG a_DT Chinese_JJ character_NN -LRB-_-LRB- Tan_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Cao_NNP et_FW al._FW -LRB-_-LRB- 2013b_JJ -RRB-_-RRB- state_NN that_IN writing_VBG Chinese_JJ characters_NNS might_MD facilitate_VB the_DT development_NN of_IN a_DT visual-spatial_JJ memory_NN ,_, which_WDT also_RB has_VBZ a_DT motor_NN memory_NN trace_VBP ._.
+Since_IN motor_NN memories_NNS can_MD last_VB for_IN a_DT very_RB long_JJ period_NN of_IN time_NN -LRB-_-LRB- Shadmehr_NNP and_CC Holcomb_NNP ,_, 1997_CD -RRB-_-RRB- ,_, this_DT writing-related_JJ motor_NN information_NN can_MD be_VB additional_JJ assistance_NN for_IN the_DT activation_NN of_IN visual_JJ information_NN in_IN the_DT process_NN of_IN Chinese_JJ character_NN recognition_NN ._.
+In_IN other_JJ words_NNS ,_, handwriting_NN may_MD pair_VB the_DT movement_NN patterns_NNS ,_, usually_RB stroke_NN sequencing_NN through_IN well-practiced_JJ writing_NN -LRB-_-LRB- Parkinson_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ,_, with_IN the_DT language_NN stimuli_NNS ,_, namely_RB characters_NNS ._.
+This_DT pairing-up_NN can_MD help_VB establish_VB long-lasting_JJ motor_NN memories_NNS of_IN Chinese_JJ characters_NNS which_WDT are_VBP exploited_VBN in_IN the_DT orthographic_JJ recognition_NN process_NN ._.
+This_DT language_NN -_: specific_JJ proposal_NN is_VBZ based_VBN on_IN the_DT concept_NN of_IN `_`` embodied_VBN cognition_NN '_'' ._.
+That_DT is_VBZ to_TO say_VB ,_, a_DT person_NN must_MD `_`` internally_RB ``_`` run_VB ''_'' or_CC ``_`` simulate_VB ''_'' the_DT corresponding_JJ production_NN process_NN '_'' when_WRB understanding_VBG a_DT physical_JJ stimulus_NN -LRB-_-LRB- Bi_FW et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+In_IN the_DT case_NN of_IN writing-on-reading_NN in_IN Chinese_NNP ,_, learners_NNS might_MD automatically_RB activate_VB the_DT corresponding_JJ motor_NN programs_NNS for_IN writing_VBG characters_NNS ,_, which_WDT in_IN turn_NN in_IN reading_VBG them_PRP ._.
+The_DT study_NN by_IN Tan_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- gives_VBZ supporting_JJ evidence_NN that_IN motor_NN programming_NN contributes_VBZ to_TO the_DT formation_NN of_IN long-term_JJ motor_NN memory_NN of_IN characters_NNS amongst_IN Chinese_JJ children_NNS ._.
+Most_JJS relevant_JJ to_TO the_DT current_JJ study_NN ,_, Cao_NNP et_FW al._FW -LRB-_-LRB- 2013b_JJ -RRB-_-RRB- has_VBZ shown_VBN that_IN character-writing_JJ training_NN plays_VBZ a_DT crucial_JJ role_NN in_IN learning_VBG the_DT visual-spatial_JJ aspects_NNS of_IN characters_NNS among_IN adult_NN CFL_NNP learners_NNS ._.
+That_DT is_VBZ to_TO say_VB ,_, handwriting_NN can_MD establish_VB more_RBR precise_JJ visual_JJ -_: orthographic_JJ representations_NNS and_CC therefore_RB contribute_VBP to_TO orthographic_JJ recognition_NN in_IN adult_NN CFL_NNP beginners_NNS -LRB-_-LRB- Cao_NNP et_FW al._FW ,_, 2013b_CD ;_: Guan_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT positive_JJ effect_NN of_IN writing_VBG on_IN reading_NN appears_VBZ to_TO be_VB supported_VBN by_IN results_NNS from_IN native_JJ Chinese_JJ speakers_NNS and_CC CFL_NNP adult_NN learners_NNS ._.
+Nevertheless_RB ,_, the_DT results_NNS from_IN studies_NNS showing_VBG this_DT effect_NN have_VBP tended_VBN to_TO be_VB inconsistent_JJ ._.
+For_IN example_NN ,_, Cao_NNP et_FW al._FW -LRB-_-LRB- 2013a_JJ -RRB-_-RRB- demonstrated_VBD that_IN both_DT handwriting_NN and_CC visual_JJ chunking_NN can_MD produce_VB orthographic_JJ enhancement_NN among_IN adult_NN CFL_NNP learners_NNS ._.
+While_IN training_NN on_IN writing_NN is_VBZ effective_JJ for_IN early_JJ visual_JJ attention_NN ,_, visual_JJ chunking_NN ,_, the_DT decomposition_NN of_IN a_DT character_NN into_IN orthographic_JJ `_`` chunks_NNS '_POS such_JJ as_IN radicals_NNS ,_, can_MD also_RB be_VB useful_JJ for_IN recognition_NN ._.
+The_DT findings_NNS from_IN Bi_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- challenged_VBD the_DT writing-on-reading_JJ hypothesis_NN in_IN Chinese_NNP ._.
+A_DT brain-damaged_JJ Chinese_JJ patient_NN ,_, who_WP was_VBD impaired_VBN in_IN accessing_VBG orthographic_JJ representations_NNS and_CC had_VBD poor_JJ orthographic_JJ awareness_NN and_CC little_JJ graphic/stroke_NN motor_NN programs_NNS knowledge_NN ,_, was_VBD able_JJ to_TO match_VB characters_NNS to_TO meaning-related_JJ pictures_NNS and_CC reading_VBG them_PRP aloud_RB ._.
+Writing_VBG ,_, therefore_RB ,_, although_IN important_JJ ,_, may_MD not_RB be_VB an_DT essential_JJ factor_NN in_IN Chinese_JJ reading_NN ._.
+Chang_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- suggested_VBD that_IN handwriting_NN was_VBD only_RB mildly_RB effective_JJ in_IN reading_NN by_IN adopting_VBG certain_JJ types_NNS of_IN teaching_NN methods_NNS in_IN a_DT real_JJ classroom_NN ._.
+The_DT experiment_NN on_IN a_DT group_NN of_IN Chinese_JJ children_NNS -LRB-_-LRB- Tan_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- also_RB suggests_VBZ a_DT complex_JJ role_NN played_VBN by_IN phonological_JJ information_NN in_IN Chinese_JJ children_NNS 's_POS reading_VBG performance_NN ._.
+Instead_RB of_IN no_DT effect_NN ,_, there_EX is_VBZ a_DT minor_JJ contribution_NN of_IN phonological_JJ awareness_NN to_TO Chinese_JJ reading_NN ability_NN ._.
+Moreover_RB ,_, concerns_NNS have_VBP been_VBN raised_VBN about_IN the_DT usefulness_NN of_IN handwriting_NN characters_NNS in_IN an_DT era_NN of_IN increasing_VBG reliance_NN on_IN electronic_JJ communication_NN -LRB-_-LRB- Zhang_NNP and_CC Lu_NNP ,_, 2014_CD ;_: Allen_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+It_PRP might_MD be_VB an_DT inefficient_JJ use_NN of_IN learners_NNS '_POS time_NN to_TO practice_VB handwriting_NN as_IN it_PRP is_VBZ common_JJ to_TO type_NN the_DT pinyin_NN of_IN a_DT character_NN and_CC subsequently_RB select_VB the_DT intended_JJ character_NN from_IN a_DT list_NN of_IN computer-generated_JJ possibilities_NNS ._.
+Furthermore_RB ,_, with_IN regard_NN to_TO theories_NNS of_IN embodied_VBN cognition_NN ,_, typing_VBG can_MD also_RB be_VB considered_VBN as_IN a_DT process_NN of_IN associating_VBG a_DT pointing_VBG movement_NN on_IN keyboards_NNS to_TO form_VB a_DT character_NN ,_, though_IN this_DT `_`` visuomotor_NN association_NN involved_VBN in_IN typewriting_VBG should_MD -LSB-_NNP ..._: -RSB-_NNP have_VBP little_JJ contribution_NN to_TO its_PRP$ visual_JJ recognition_NN '_'' -LRB-_-LRB- Longcamp_NNP et_FW al._FW ,_, 2008_CD :_: 803_CD -RRB-_-RRB- ._.
+Tan_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- examined_VBD Chinese_JJ children_NNS 's_POS reading_VBG development_NN by_IN comparing_VBG the_DT reading_NN performance_NN of_IN frequent_JJ users_NNS of_IN pinyin_NN -_: typing_VBG on_IN e-devices_NNS with_IN those_DT spending_VBG more_JJR time_NN on_IN handwriting_NN ._.
+Interestingly_RB ,_, they_PRP discovered_VBD that_DT children_NNS 's_POS reading_VBG scores_NNS were_VBD negatively_RB correlated_VBN with_IN the_DT use_NN of_IN the_DT pinyin_NN input_NN method_NN ,_, while_IN the_DT reading_NN performance_NN was_VBD significantly_RB positively_RB correlated_VBN with_IN handwriting_NN ._.
+As_IN a_DT result_NN ,_, their_PRP$ study_NN suggests_VBZ that_IN heavy_JJ utilisation_NN of_IN the_DT pinyin_NN input_NN method_NN and_CC e-tools_NNS may_MD interfere_VB with_IN the_DT learning_NN of_IN visual-spatial_JJ properties_NNS of_IN characters_NNS ,_, at_IN least_JJS among_IN Chinese_JJ children_NNS ._.
+4_CD Present_JJ study_NN The_DT current_JJ study_NN investigated_VBD the_DT performance_NN of_IN a_DT group_NN of_IN CFL_NNP beginners_NNS to_TO examine_VB the_DT effectiveness_NN of_IN training_NN in_IN character_NN writing_VBG on_IN subsequent_JJ character_NN recognition_NN ._.
+Apart_RB from_IN character_NN handwriting_NN ,_, participants_NNS '_POS training_NN also_RB incorporated_VBD a_DT pinyin_NN writing_VBG task_NN ._.
+The_DT point_NN of_IN this_DT task_NN was_VBD to_TO act_VB as_IN a_DT control_NN ;_: both_DT pinyin_NN and_CC character_NN drawing_NN involve_VBP motor_NN movements_NNS ,_, both_DT are_VBP effortful_JJ in_IN rather_RB similar_JJ ways_NNS ._.
+So_RB if_IN there_EX were_VBD an_DT effect_NN due_JJ character_NN drawing_VBG as_IN opposed_VBN to_TO pinyin_VB transcription_NN ,_, it_PRP should_MD be_VB related_VBN to_TO the_DT inherent_JJ features_NNS of_IN character_NN writing_NN ._.
+5_CD Experiment_NN 1_CD :_: Method_NNP 5.1_CD Participants_NNS Eighteen_CD CFL_NNP learners_NNS ,_, students_NNS from_IN the_DT first_JJ author_NN 's_POS university_NN ,_, took_VBD part_NN in_IN this_DT experiment_NN ._.
+They_PRP were_VBD all_DT speakers_NNS of_IN English_NNP as_IN a_DT first_JJ language_NN and_CC none_NN had_VBD received_VBN any_DT instruction_NN in_IN Chinese_NNP ._.
+Heritage_NNP learners_NNS were_VBD excluded_VBN from_IN the_DT experiment_NN ._.
+5.2_CD Materials_NNPS and_CC Procedure_NNP The_NNP training_NN session_NN consisted_VBN in_IN learning_VBG 30_CD integral_JJ characters_NNS ._.
+Their_PRP$ frequency_NN of_IN occurrence_NN in_IN a_DT modern_JJ Chinese_JJ corpus_NN comprising_VBG over_IN 193_CD million_CD words_NNS ranged_VBD from_IN 29,968_CD to_TO 3,083,707_CD with_IN an_DT average_NN of_IN 645,355_CD -LRB-_-LRB- Jun_NN Da_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+The_DT stroke_NN count_NN for_IN the_DT characters_NNS ranged_VBD from_IN 1_CD through_IN 7_CD with_IN a_DT median_NN of_IN 4_CD ._.
+During_IN the_DT experiment_NN ,_, participants_NNS were_VBD seated_VBN in_IN front_NN of_IN a_DT desktop_NN computer_NN ._.
+The_DT PsychoPy_NNP presentation_NN software_NN system_NN -LRB-_-LRB- Pierce_NNP ,_, 2007_CD -RRB-_-RRB- was_VBD used_VBN to_TO display_VB the_DT materials_NNS and_CC to_TO record_VB participant_NN responses_NNS ._.
+Following_VBG an_DT initial_JJ presentation_NN of_IN a_DT prompt_JJ character_NN -LRB-_-LRB- ``_`` +_NN ''_'' -RRB-_-RRB- ,_, there_EX was_VBD a_DT 5-second_JJ exposure_NN of_IN both_DT a_DT character_NN 's_POS form_NN and_CC its_PRP$ sound_NN -LRB-_-LRB- a_DT female_NN native_JJ speaker_NN spoke_VBD the_DT character_NN -RRB-_-RRB- ._.
+The_DT screen_NN then_RB displayed_VBD either_CC a_DT large_JJ C_NNP ,_, instructing_VBG the_DT participant_NN to_TO draw_VB the_DT displayed_VBN character_NN ,_, or_CC a_DT large_JJ P_NNP ,_, instructing_VBG them_PRP to_TO write_VB the_DT pinyin_NN representation_NN of_IN the_DT sound_NN ._.
+Fifty_CD percent_NN of_IN the_DT time_NN ,_, the_DT training_NN response_NN was_VBD to_TO write_VB pinyin_NN and_CC 50_CD %_NN of_IN the_DT time_NN the_DT participant_NN had_VBD to_TO draw_VB the_DT character_NN ._.
+Choice_NN of_IN response_NN mode_NN and_CC sequencing_NN of_IN the_DT characters_NNS was_VBD random_JJ and_CC the_DT usual_JJ counterbalancing_NN measures_NNS were_VBD taken_VBN ._.
+Each_DT participant_NN was_VBD required_VBN to_TO make_VB three_CD passes_NNS through_IN the_DT training_NN set_NN of_IN characters_NNS ._.
+After_IN training_NN ,_, participants_NNS were_VBD asked_VBN to_TO do_VB a_DT recognition_NN test_NN ._.
+In_IN this_DT task_NN ,_, participants_NNS were_VBD presented_VBN with_IN a_DT single_JJ character_NN and_CC had_VBD to_TO decide_VB whether_IN or_CC not_RB they_PRP had_VBD encountered_VBN it_PRP during_IN training_NN ._.
+The_DT 30_CD training_NN characters_NNS were_VBD randomly_RB combined_VBN with_IN 30_CD distractors_NNS matched_VBN on_IN frequency_NN and_CC stroke_NN complexity_NN ._.
+The_DT participant_NN pressed_VBD a_DT key_NN to_TO indicate_VB whether_IN or_CC not_RB they_PRP had_VBD seen_VBN the_DT character_NN during_IN training_NN ._.
+See_VB Figure_NN 1_CD for_IN a_DT schematic_JJ representation_NN of_IN the_DT procedure_NN in_IN Experiment_NN 1_CD ._.
+Figure_NN 1_CD :_: Schematic_JJ representation_NN of_IN training_NN and_CC testing_NN modes_NNS in_IN Experiment_NN 1_CD ._.
+6_CD Experiment_NN 1_CD :_: Results_NNS and_CC Discussion_NNP Figure_NNP 2_CD :_: Correct_VB recognition_NN of_IN Chinese_JJ characters_NNS as_IN a_DT function_NN of_IN learning_VBG mode_NN :_: character_NN drawing_VBG vs._FW pinyin_FW transcription_NN ._.
+Participants_NNS recognition_NN task_NN 81_CD %_NN of_IN the_DT time_NN ._.
+Recognition_NN data_NNS was_VBD analysed_VBN using_VBG a_DT linear_JJ mixed_JJ model_NN logistic_JJ regression_NN -LRB-_-LRB- Jaeger_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT dependent_JJ measure_NN was_VBD the_DT correctness_NN of_IN the_DT recognition_NN decision_NN ,_, the_DT fixed_JJ factor_NN was_VBD mode_NN of_IN training_NN ,_, and_CC the_DT random_JJ factors_NNS were_VBD participant_NN and_CC character_NN ._.
+The_DT probability_NN of_IN correctly_RB responding_VBG was_VBD significantly_RB affected_VBN by_IN the_DT mode_NN of_IN learning_NN of_IN the_DT character_NN -LRB-_-LRB- see_VB Figure_NN 2_CD -RRB-_-RRB- ._.
+If_IN participants_NNS had_VBD been_VBN trained_VBN to_TO draw_VB it_PRP as_IN opposed_VBN to_TO transcribe_VB its_PRP$ pinyin_NN ,_, there_EX was_VBD a_DT significant_JJ improvement_NN in_IN correct_JJ recognition_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 3.21_CD ;_: p_SYM <_SYM 0.001_CD -RRB-_-RRB- ._.
+Now_RB ,_, it_PRP is_VBZ possible_JJ that_IN this_DT character-drawing_NN advantage_NN may_MD have_VB been_VBN due_JJ simply_RB to_TO the_DT character_NN training_NN mode_NN causing_VBG participants_NNS to_TO pay_VB more_JJR attention_NN overall_JJ to_TO the_DT character_NN 's_POS orthography_NN ._.
+It_PRP could_MD be_VB that_IN the_DT drawing_VBG task_NN involved_VBD a_DT greater_JJR depth_NN of_IN processing_NN -LRB-_-LRB- Craik_NNP and_CC Tulving_NNP ,_, 1977_CD -RRB-_-RRB- or_CC a_DT more_RBR elaborate_JJ encoding_NN -LRB-_-LRB- Bransford_NNP et_FW al._FW ,_, 1979_CD -RRB-_-RRB- ._.
+Moreover_RB ,_, the_DT response_NN task_NN in_IN Experiment_NN 1_CD could_MD be_VB considered_VBN congruent_JJ to_TO the_DT character_NN drawing_VBG training_NN mode_NN ,_, since_IN both_DT training_NN and_CC testing_NN focused_VBD on_IN the_DT orthography_NN of_IN the_DT character_NN ._.
+This_DT congruency_NN could_MD have_VB potentially_RB biased_VBN the_DT results_NNS to_TO favour_VB character_NN drawing_VBG as_IN a_DT learning_VBG mode_NN ._.
+Experiment_NN responded_VBD correctly_RB to_TO the_DT 2_CD was_VBD designed_VBN to_TO control_VB for_IN this_DT and_CC other_JJ potential_JJ confounds_NNS ._.
+7_CD Experiment_NN 2_CD :_: Method_NNP 7.1_CD Participants_NNS An_DT additional_JJ 22_CD participants_NNS were_VBD recruited_VBN from_IN a_DT pool_NN of_IN CFL_NNP students_NNS who_WP had_VBD completed_VBN seven_CD weeks_NNS -LRB-_-LRB- approximately_RB 45_CD hours_NNS -RRB-_-RRB- of_IN previous_JJ instruction_NN in_IN Chinese_JJ in_IN the_DT first-year_JJ Chinese_JJ language_NN course_NN at_IN both_DT authors_NNS '_POS universities_NNS ._.
+Heritage_NNP learners_NNS and_CC learners_NNS whose_WP$ native_JJ language_NN was_VBD other_JJ than_IN English_JJ were_VBD excluded_VBN from_IN the_DT experiment_NN ._.
+The_DT 22_CD participants_NNS reported_VBD having_VBG no_DT substantial_JJ experience_NN learning_VBG Chinese_JJ prior_RB to_TO enrolling_VBG in_IN their_PRP$ current_JJ language_NN programme_NN ._.
+They_PRP were_VBD all_DT taught_VBN from_IN a_DT similar_JJ curriculum_NN employing_VBG the_DT same_JJ textbook_NN and_CC instruction_NN ._.
+Listening_VBG and_CC speaking_VBG skills_NNS were_VBD developed_VBN simultaneously_RB with_IN reading_NN and_CC writing_VBG skills_NNS ._.
+Copying_NNP characters_NNS was_VBD regularly_RB assigned_VBN as_IN homework_NN ._.
+Writing_VBG characters_NNS or_CC pinyin_NN from_IN memory_NN was_VBD also_RB required_VBN for_IN dictation_NN quizzes_NNS ._.
+Before_IN taking_VBG part_NN in_IN this_DT experiment_NN ,_, the_DT participants_NNS had_VBD prior_RB knowledge_NN of_IN pinyin_NN ,_, general_JJ rules_NNS of_IN stroke_NN order_NN ,_, and_CC knowledge_NN of_IN approximately_RB 200_CD characters_NNS ._.
+Consequently_RB ,_, the_DT effect_NN of_IN prior_JJ exposure_NN to_TO certain_JJ characters_NNS used_VBN in_IN the_DT current_JJ experiment_NN was_VBD controlled_VBN for_IN statistically_RB in_IN the_DT data_NNS analyses_NNS ._.
+7.2_CD Materials_NNPS and_CC Procedure_NNP The_NNP training_NN phase_NN of_IN the_DT second_JJ experiment_NN was_VBD identical_JJ to_TO that_DT of_IN Experiment_NN 1_CD ._.
+Thirty-two_CD integral_JJ characters_NNS were_VBD used_VBN in_IN the_DT training_NN session_NN ._.
+Among_IN these_DT characters_NNS ,_, half_DT were_VBD novel_NN and_CC half_NN had_VBD been_VBN taught_VBN to_TO the_DT participants_NNS in_IN class_NN ._.
+The_DT stroke_NN count_NN for_IN the_DT characters_NNS ranged_VBD from_IN 1_CD through_IN 7_CD ,_, with_IN a_DT median_NN of_IN 4_CD ._.
+Based_VBN on_IN the_DT participants_NNS '_POS existing_VBG knowledge_NN of_IN Chinese_JJ characters_NNS ,_, ._.
+During_IN the_DT testing_NN phase_NN of_IN Experiment_NN 2_CD ,_, the_DT stimuli_NNS were_VBD presented_VBN to_TO the_DT participants_NNS either_CC as_IN a_DT character_NN or_CC as_IN a_DT sound_NN ._.
+Participants_NNS had_VBD to_TO decide_VB whether_IN a_DT stimulus_NN shown_VBN on_IN a_DT screen_NN or_CC played_VBN to_TO them_PRP as_IN audio_NN was_VBD one_CD of_IN those_DT taught_VBN to_TO them_PRP in_IN the_DT training_NN session_NN ._.
+They_PRP were_VBD asked_VBN to_TO make_VB a_DT decision_NN quickly_RB and_CC accurately_RB by_IN pressing_VBG one_CD of_IN the_DT keys_NNS on_IN the_DT keyboard_NN to_TO indicate_VB their_PRP$ decision_NN ._.
+The_DT structure_NN of_IN the_DT presentation_NN of_IN the_DT materials_NNS was_VBD designed_VBN such_JJ that_IN for_IN half_NN of_IN the_DT test_NN items_NNS ,_, the_DT mode_NN of_IN presentation_NN was_VBD congruent_JJ with_IN the_DT mode_NN in_IN which_WDT the_DT item_NN had_VBD been_VBN learned_VBN ._.
+By_IN manipulating_VBG the_DT congruency_NN of_IN training_NN and_CC testing_NN modes_NNS it_PRP was_VBD hoped_VBN to_TO control_VB for_IN any_DT biases_NNS that_WDT might_MD have_VB affected_VBN the_DT interpretation_NN of_IN the_DT results_NNS from_IN Experiment_NN 1_CD ._.
+Figure_NN 3_CD :_: Schematic_JJ representation_NN of_IN training_NN and_CC testing_NN in_IN Experiment_NN 2_CD ._.
+Note_VB that_IN the_DT training_NN phase_NN was_VBD identical_JJ to_TO that_DT of_IN Experiment_NN 1_CD ._.
+Recognition_NN data_NNS was_VBD again_RB analysed_VBN using_VBG linear_JJ mixed_JJ model_NN logistic_JJ regression_NN -LRB-_-LRB- Jaeger_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT dependent_JJ measure_NN was_VBD the_DT correctness_NN of_IN the_DT recognition_NN decision_NN ,_, the_DT fixed_VBN factors_NNS were_VBD mode_NN of_IN training_NN -LRB-_-LRB- character_NN drawing_VBG vs._FW pinyin_FW transcription_NN -RRB-_-RRB- ,_, congruency_NN of_IN recognition_NN ,_, and_CC whether_IN the_DT participant_NN had_VBD learned_VBN the_DT character_NN in_IN class_NN ._.
+A_DT congruent_JJ recognition_NN item_NN involved_VBD the_DT presentation_NN of_IN the_DT character_NN during_IN training_NN and_CC the_DT soliciting_VBG of_IN a_DT response_NN during_IN testing_NN in_IN the_DT same_JJ modality_NN -LRB-_-LRB- e.g._FW ,_, character_NN drawing_NN in_IN training_NN followed_VBN by_IN character_NN recognition_NN as_IN the_DT test_NN -RRB-_-RRB- ._.
+The_DT number_NN of_IN strokes_NNS comprising_VBG each_DT character_NN was_VBD entered_VBN into_IN the_DT model_NN as_IN a_DT covariate_NN to_TO determine_VB if_IN the_DT stroke_NN count_NN had_VBD an_DT effect_NN on_IN correct_JJ responding_VBG ._.
+Table_NNP 2_CD presents_VBZ the_DT results_NNS of_IN the_DT regression_NN analysis_NN ._.
+Note_VB that_IN the_DT fixed_VBN factors_NNS -LRB-_-LRB- learn_VB ,_, train_NN ,_, and_CC test_NN -RRB-_-RRB- are_VBP coded_VBN as_IN contrasts_VBZ that_IN test_NN the_DT difference_NN in_IN probability_NN of_IN responding_VBG for_IN the_DT two_CD none_NN of_IN the_DT characters_NNS presented_VBN had_VBD more_RBR than_IN one_CD possible_JJ pronunciation_NN ._.
+In_IN addition_NN ,_, no_DT two_CD characters_NNS were_VBD selected_VBN which_WDT had_VBD the_DT same_JJ possible_JJ pronunciation_NN levels_NNS of_IN each_DT factor_NN ._.
+The_DT direction_NN of_IN the_DT contrast_NN is_VBZ indicated_VBN by_IN the_DT labels_NNS :_: y-n_JJ ,_, p-c_JJ ,_, and_CC ic-c_JJ ._.
+These_DT represent_VBP ,_, respectively_RB ,_, ``_`` yes_UH -_: no_UH ''_'' ,_, ``_`` pinyin_NN -_: character_NN ''_'' ,_, and_CC ``_`` incongruent_JJ -_: congruent_JJ ''_'' ._.
+Another_DT effect_NN of_IN note_NN is_VBZ the_DT marginally_RB significant_JJ three-way_JJ interaction_NN between_IN prior_JJ learning_NN ,_, training_NN mode_NN ,_, and_CC testing_NN mode_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 1.77_CD ;_: p_VB =_SYM 0.08_CD -RRB-_-RRB- ._.
+The_DT source_NN of_IN this_DT effect_NN is_VBZ that_IN the_DT training-by_NN -_: testing_NN interaction_NN just_RB discussed_VBN is_VBZ eliminated_VBN for_IN those_DT items_NNS to_TO which_WDT participants_NNS had_VBD some_DT prior_JJ exposure_NN in_IN class_NN ._.
+Effectively_RB ,_, the_DT participants_NNS respond_VBP significantly_RB more_RBR accurately_RB to_TO the_DT learned_VBN characters_NNS ,_, giving_VBG rise_NN to_TO a_DT ceiling_NN effect_NN in_IN performance_NN ._.
+Figure_NN 4_CD :_: Correct_VB recognition_NN Chinese_JJ characters_NNS as_IN a_DT function_NN of_IN congruency_NN of_IN learning_VBG and_CC testing_VBG modes_NNS ._.
+8_CD General_NNP discussion_NN While_IN the_DT overall_JJ effect_NN of_IN congruency_NN is_VBZ close_JJ to_TO significance_NN ,_, with_IN congruent_JJ training_NN and_CC responding_VBG providing_VBG a_DT recognition_NN advantage_NN ,_, congruency_NN alone_RB can_MD not_RB account_VB for_IN the_DT significant_JJ advantage_NN that_WDT training_NN in_IN character_NN writing_NN has_VBZ for_IN character_NN recognition_NN ._.
+The_DT congruency-by-training_NN interaction_NN in_IN Experiment_NN 2_CD suggests_VBZ that_IN even_RB when_WRB one_CD controls_NNS for_IN different_JJ response_NN modes_NNS ,_, learning_VBG to_TO write_VB the_DT character_NN rather_RB than_IN its_PRP$ pinyin_NN has_VBZ an_DT overall_JJ stronger_JJR positive_JJ effect_NN on_IN visual_JJ recognition_NN ._.
+Moreover_RB ,_, aural_JJ recognition_NN appears_VBZ to_TO be_VB less_JJR sensitive_JJ to_TO congruency_NN than_IN visual_JJ recognition_NN ._.
+If_IN anything_NN ,_, we_PRP see_VBP a_DT trend_NN towards_IN an_DT inverted_JJ congruency_NN effect_NN in_IN the_DT case_NN of_IN pinyin_NN training_NN and_CC aural_JJ recognition_NN ._.
+The_DT basis_NN for_IN this_DT interaction_NN is_VBZ not_RB entirely_RB clear_JJ ._.
+However_RB ,_, within_IN a_DT neuronal_JJ embodiment_NN estimate_NN SE_NNP z_SYM pr_NN -LRB-_-LRB- >_FW |_FW z_SYM |_FW -RRB-_-RRB- intercept_VB -2.260_CD 0.165_CD -13.69_CD <_NN 0.001_CD strokes_NNS -0.004_CD 0.060_CD -0.063_CD 0.950_CD learn_VBP :_: y-n_JJ -0.882_CD 0.255_CD -3.460_CD <_NN 0.001_CD train_NN :p_SYM -_: c_NN -0.277_CD 0.246_CD -1.125_CD 0.261_CD test_NN :_: ic-c_JJ 0.533_CD 0.273_CD 1.954_CD 0.051_CD learn_VBP x_LS train_NN -0.562_CD 0.496_CD -1.134_CD 0.257_CD learn_VBP x_LS test_NN 0.162_CD 0.507_CD 0.320_CD 0.749_CD train_NN x_LS test_NN -1.539_CD 0.493_CD -3.125_CD 0.002_CD learn_VBP x_LS train_NN x_LS test_NN 1.755_CD 0.992_CD 1.770_CD 0.078_CD Table_NNP 2_CD :_: Estimates_NNS from_IN the_DT logistic_JJ LMM_NNP predicting_VBG correct_JJ responses_NNS on_IN the_DT basis_NN of_IN stroke_NN count_NN ,_, learning_VBG mode_NN ,_, testing_NN congruency_NN ,_, prior_RB learning_VBG in_IN class_NN ,_, and_CC the_DT interactions_NNS between_IN the_DT last_JJ three_CD terms_NNS ._.
+The_DT overall_JJ correct_JJ recognition_NN rate_NN was_VBD just_RB over_IN 85_CD %_NN ._.
+The_DT results_NNS presented_VBN in_IN Table_NNP 2_CD indicate_VBP that_IN stroke_NN count_NN and_CC training_NN mode_NN had_VBD no_DT significant_JJ effect_NN on_IN correct_JJ responding_VBG ._.
+However_RB ,_, having_VBG already_RB encountered_VBD a_DT character_NN in_IN class_NN had_VBD ,_, as_IN one_CD would_MD hope_VB ,_, a_DT significant_JJ effect_NN on_IN recognition_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 3.46_CD ;_: p_SYM <_SYM 0.001_CD -RRB-_-RRB- ._.
+The_DT overall_JJ effect_NN of_IN congruency_NN marginally_RB improved_VBD recognition_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 1.954_CD ;_: p_VB =_SYM 0.05_CD -RRB-_-RRB- ._.
+There_EX was_VBD ,_, however_RB ,_, a_DT significant_JJ interaction_NN between_IN congruency_NN and_CC training_NN mode_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 6.7_CD ;_: p_SYM <_SYM 0.001_CD -RRB-_-RRB- ._.
+This_DT interaction_NN is_VBZ graphed_VBN in_IN Figure_NN 2_CD and_CC suggests_VBZ that_IN congruency_NN plays_VBZ a_DT greater_JJR role_NN in_IN improving_VBG performance_NN when_WRB participants_NNS had_VBD to_TO draw_VB the_DT character_NN during_IN training_NN rather_RB than_IN transcribe_VB its_PRP$ pinyin_NN form_NN ._.
+In_IN fact_NN ,_, planned_VBN comparisons_NNS reveal_VBP that_IN the_DT source_NN of_IN the_DT significant_JJ training-by-testing_NN interaction_NN is_VBZ the_DT difference_NN between_IN congruent_JJ and_CC incongruent_JJ conditions_NNS in_IN the_DT character_NN drawing_VBG condition_NN -LRB-_-LRB- |_FW z_SYM |_FW =_SYM 3.822_CD ;_: p_SYM <_SYM 0.001_CD -RRB-_-RRB- ._.
+This_DT can_MD also_RB be_VB seen_VBN in_IN the_DT relative_JJ differences_NNS in_IN the_DT congruency_NN effect_NN between_IN training_NN modes_NNS in_IN Figure_NN 4_CD ._.
+account_NN -LRB-_-LRB- e.g._FW ,_, Pulvermueller_NNP ,_, 2013_CD -RRB-_-RRB- ,_, we_PRP could_MD argue_VB that_IN it_PRP is_VBZ due_JJ to_TO differences_NNS in_IN the_DT neural_JJ encoding_NN of_IN the_DT two_CD modes_NNS of_IN training_NN ._.
+In_IN the_DT case_NN of_IN the_DT character_NN training_NN mode_NN ,_, the_DT participant_NN goes_VBZ straight_RB from_IN the_DT visual_JJ representation_NN to_TO a_DT motor_NN encoding_NN of_IN the_DT character_NN ._.
+There_EX is_VBZ ,_, therefore_RB ,_, potential_JJ for_IN reciprocal_JJ connections_NNS to_TO be_VB reinforced_VBN between_IN motor_NN and_CC visual_JJ representations_NNS ,_, allowing_VBG visual_JJ representations_NNS to_TO evoke_VB motor_NN ones_NNS ,_, and_CC vice_NN versa_RB -LRB-_-LRB- e.g._FW ,_, Garagnani_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+However_RB ,_, in_IN the_DT case_NN of_IN the_DT pinyin_NN encoding_NN ,_, there_EX is_VBZ an_DT intermediate_JJ step_NN involved_VBN --_: the_DT sound_NN has_VBZ to_TO be_VB converted_VBN to_TO the_DT abstract_JJ pinyin_NN code_NN ,_, which_WDT in_IN turn_NN is_VBZ mapped_VBN to_TO a_DT motor_NN programme_NN involved_VBN in_IN writing_VBG the_DT pinyin_NN ._.
+This_DT affords_VBZ the_DT establishment_NN of_IN reciprocal_JJ connections_NNS between_IN pinyin_NN and_CC its_PRP$ motor_NN encoding_NN ,_, but_CC NOT_NNP between_IN the_DT perceived_VBN sound_NN and_CC these_DT motor_NN encodings_NNS ._.
+This_DT lack_NN of_IN direct_JJ support_NN from_IN the_DT motor_NN level_NN in_IN the_DT case_NN of_IN the_DT aural_JJ test_NN may_MD disadvantage_NN recognition_NN of_IN the_DT spoken_VBN character_NN ._.
+A_DT schematic_JJ representation_NN of_IN this_DT account_NN is_VBZ given_VBN in_IN Figure_NN 5_CD ._.
+Figure_NN 5_CD :_: Schematic_JJ representation_NN of_IN the_DT putative_JJ neural_JJ encoding_NN processes_VBZ underlying_VBG the_DT two_CD training_NN modes_NNS in_IN both_DT experiments_NNS ._.
+Returning_VBG to_TO the_DT initial_JJ motivation_NN for_IN carrying_VBG out_RP this_DT series_NN of_IN experiments_NNS ,_, which_WDT was_VBD to_TO understand_VB what_WP impact_NN character_NN drawing_NN has_VBZ on_IN recognition_NN in_IN Chinese_NNP ,_, the_DT results_NNS of_IN the_DT two_CD experiments_NNS described_VBN here_RB support_VB the_DT hypothesis_NN that_WDT character_NN drawing_NN is_VBZ helpful_JJ in_IN the_DT visual_JJ recognition_NN of_IN Chinese_JJ characters_NNS ._.
+It_PRP is_VBZ argued_VBN here_RB that_IN the_DT reason_NN for_IN this_DT is_VBZ that_IN the_DT motor_NN programs_NNS entrained_VBN during_IN the_DT learning_VBG phase_NN of_IN the_DT experiments_NNS act_VBP to_TO enhance_VB recognition_NN memory_NN ._.
+This_DT form_NN of_IN memory_NN support_NN ,_, however_RB ,_, is_VBZ not_RB available_JJ for_IN the_DT pinyin_NN learning_VBG phase_NN -LRB-_-LRB- see_VB Figure_NN 5_CD -RRB-_-RRB- ._.
+Generalising_VBG this_DT finding_NN beyond_IN the_DT experimental_JJ paradigm_NN to_TO the_DT broader_JJR topic_NN of_IN reading_NN ,_, we_PRP can_MD argue_VB that_IN readers_NNS who_WP draw_VBP characters_NNS as_IN opposed_VBN to_TO pinyin_VB build_VB a_DT memory_NN reserve_NN for_IN characters_NNS that_WDT can_MD be_VB used_VBN to_TO augment_VB their_PRP$ subsequent_JJ retrieval_NN and_CC recognition_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, readers_NNS who_WP rely_VBP more_JJR extensively_RB on_IN pinyin_NN input_NN will_MD not_RB have_VB this_DT memory_NN support_NN to_TO draw_VB upon_IN ._.
+9_CD Conclusion_NN The_DT result_NN of_IN the_DT current_JJ study_NN contributes_VBZ to_TO the_DT debate_NN regarding_VBG the_DT optimum_JJ curriculum_NN design_NN for_IN the_DT CFL_NNP classroom_NN ._.
+For_IN example_NN ,_, it_PRP suggests_VBZ that_IN `_`` delay_NN '_'' or_CC `_`` lag_NN '_'' curricula_NNS ,_, which_WDT strongly_RB focus_VB on_IN listening_VBG and_CC speaking_VBG in_IN the_DT early_JJ stages_NNS of_IN learning_VBG may_MD not_RB be_VB optimal_JJ for_IN CFL_NNP learners_NNS in_IN helping_VBG them_PRP develop_VB their_PRP$ knowledge_NN of_IN the_DT relationship_NN between_IN character_NN and_CC sound_NN ._.
+However_RB ,_, to_TO definitively_RB address_VB this_DT issue_NN there_EX would_MD need_VB to_TO be_VB a_DT ``_`` lag_NN ''_'' condition_NN incorporated_VBN into_IN the_DT training_NN regime_NN ._.
+Although_IN the_DT study_NN may_MD be_VB interpreted_VBN as_IN showing_VBG support_NN for_IN curricula_NNS that_WDT prioritise_VBP writing_VBG over_IN other_JJ language_NN skills_NNS ,_, the_DT results_NNS actually_RB show_VBP that_IN learning_VBG both_CC the_DT character_NN and_CC its_PRP$ pinyin_NN simultaneously_RB does_VBZ not_RB negatively_RB affect_VB character_NN recognition_NN ._.
+Therefore_RB ,_, some_DT sort_NN of_IN combination_NN of_IN sound_NN and_CC character_NN training_NN ,_, as_IN exemplified_VBN in_IN the_DT training_NN paradigm_NN used_VBN here_RB -LRB-_-LRB- see_VB Figure_NN 5_CD -RRB-_-RRB- ,_, may_MD turn_VB out_RP to_TO be_VB best_JJS ._.
+The_DT current_JJ study_NN has_VBZ several_JJ limitations_NNS that_WDT would_MD need_VB to_TO be_VB addressed_VBN in_IN future_JJ research_NN ._.
+For_IN example_NN ,_, the_DT corpus_NN of_IN Chinese_JJ characters_NNS we_PRP used_VBD consisted_VBN only_RB of_IN integral_JJ characters_NNS and_CC was_VBD focused_VBN on_IN their_PRP$ short-term_JJ recall_NN rather_RB than_IN the_DT acquisition_NN of_IN their_PRP$ meaning_NN or_CC long-term_JJ retention_NN in_IN context_NN ._.
+Nonetheless_RB ,_, we_PRP hope_VBP our_PRP$ study_NN will_MD motivate_VB future_JJ research_NN to_TO further_JJ investigate_VB the_DT effect_NN of_IN character_NN writing_VBG on_IN reading_VBG comprehension_NN in_IN Chinese_JJ language_NN amongst_IN CFL_NNP learners_NNS ._.
+Acknowledgements_NNS The_DT research_NN was_VBD supported_VBN by_IN the_DT Quality_NNP Improvement_NNP &_CC Development_NNP Fund_NNP of_IN Dublin_NNP City_NNP University_NNP ._.
+The_DT authors_NNS thank_VBP Zhouxiang_NNP Lu_NNP for_IN his_PRP$ help_NN with_IN data_NNS collection_NN and_CC three_CD reviewers_NNS for_IN their_PRP$ comments_NNS on_IN an_DT earlier_JJR draft_NN of_IN the_DT paper_NN ._.
+References_NNS Aho_NNP ,_, Alfred_NNP V._NNP ,_, &_CC Ullman_NNP ,_, Jeffrey_NNP D._NNP -LRB-_-LRB- 1972_CD -RRB-_-RRB- ._.
+The_DT Theory_NNP of_IN Parsing_NNP ,_, Translation_NN and_CC Compiling_NNP ,_, volume_NN 1_CD ._.
+Prentice-Hall_NNP ,_, Englewood_NNP Cliffs_NNPS ,_, NJ_NNP ._.
+Bassetti_NNP ,_, Benedetta_NNP ._.
+-LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Effects_NNPS of_IN writing_VBG systems_NNS on_IN second_JJ language_NN awareness_NN :_: Word_NN awareness_NN in_IN English_NNP learners_NNS of_IN Chinese_JJ as_IN a_DT foreign_JJ language_NN ._.
+In_IN Vivian_NNP Cook_NNP &_CC Benedetta_NNP Bassetti_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Second_JJ Language_NN Writing_VBG Systems_NNPS :_: Second_JJ Language_NNP Acquisition_NNP -LRB-_-LRB- Vol_NNP ._.
+11_CD -RRB-_-RRB- ,_, 335_CD --_: 356_CD ._.
+Clevedon_NNP ,_, UK_NNP :_: Multilingual_NNP Matters_NNS Ltd._NNP ._.
+Bi_NNP ,_, Yanchao_NNP ,_, Han_NNP ,_, Zaihua_NNP ,_, &_CC Zhang_NNP ,_, Yumei_NNP ._.
+-LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+Reading_VBG does_VBZ not_RB depend_VB on_IN writing_NN ,_, even_RB in_IN Chinese_NNP ._.
+Neuropsychologia_NNP ,_, 47_CD ,_, 1193_CD --_: 1199_CD ._.
+Bransford_NNP ,_, John_NNP D._NNP ,_, Franks_NNP ,_, J._NNP J._NNP ,_, Morris_NNP ,_, C.D._NNP ,_, &_CC Stein_NNP ,_, B.S._NNP -LRB-_-LRB- 1979_CD -RRB-_-RRB- ._.
+Some_DT general_JJ constraints_NNS on_IN learning_NN and_CC memory_NN research_NN ._.
+In_IN L._NNP S._NNP Cermak_NNP &_CC F._NNP I._NNP M._NNP Craik_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Levels_NNP of_IN processing_NN in_IN human_JJ memory_NN -LRB-_-LRB- pp._FW 331_CD --_: 354_CD -RRB-_-RRB- ._.
+Hillsdale_NNP ,_, NJ_NNP :_: Lawrence_NNP Erlbaum_NNP Associates_NNPS ._.
+Cao_NNP ,_, Fan_NNP ,_, Rickles_NNP ,_, Ben_NNP ,_, Vu_NNP ,_, Marianne_NNP ,_, Zhu_NNP ,_, Ziheng_NNP ,_, Chan_NNP ,_, Dereck_NNP Ho_NNP Lung_NNP ,_, Harris_NNP ,_, Lindsay_NNP N._NNP ,_, Stafura_NNP ,_, Joseph_NNP ,_, Xu_NNP ,_, Yi_NNP &_CC Perfetti_NNP ,_, Charles_NNP A._NNP 2013a_NNP ._.
+Early_RB stage_NN visual-orthographic_JJ processes_NNS predict_VBP long-term_JJ retention_NN of_IN word_NN form_NN and_CC meaning_NN :_: a_DT visual_JJ encoding_NN training_NN study_NN ._.
+Journal_NNP of_IN Neurolinguistics_NNP ,_, 26_CD ,_, 440_CD --_: 461_CD ._.
+Cao_NNP ,_, Fan_NNP ,_, Vu_NNP ,_, Marianne_NNP ,_, Ho_NNP ,_, Dereck_NNP ,_, Chan_NNP ,_, Lung_NNP ,_, Lawrence_NNP ,_, Jason_NNP M._NNP ,_, Harris_NNP ,_, Lindsay_NNP N._NNP ,_, Guan_NNP ,_, Qun_NNP ,_, Xu_NNP ,_, Yi_NNP ,_, &_CC Perfetti_NNP ,_, Charles_NNP A._NN -LRB-_-LRB- 2013b_JJ -RRB-_-RRB- ._.
+Writing_VBG affects_VBZ the_DT brain_NN network_NN of_IN reading_NN in_IN Chinese_NNPS :_: a_DT functional_JJ magnetic_JJ resonance_NN imaging_NN study_NN ._.
+Human_JJ Brain_NN Mapping_NN ,_, 34_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, 1670_CD --_: 1684_CD ._.
+Chan_NNP ,_, Carol_NNP K._NNP K._NNP ,_, &_CC Siegel_NNP ,_, Linda_NNP S._NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Phonological_JJ processing_NN in_IN reading_VBG Chinese_JJ among_IN normally_RB achieving_VBG and_CC poor_JJ readers_NNS ._.
+Journal_NNP of_IN Experimental_NNP Child_NNP Psychology_NNP ,_, 80_CD ,_, 23_CD --_: 43_CD ._.
+Chang_NNP ,_, Li-Yun_NNP ,_, Xu_NNP ,_, Yi_NNP ,_, Perfetti_NNP ,_, Charles_NNP A._NN ,_, Zhang_NNP ,_, Juan_NNP ,_, &_CC Chen_NNP Hsueh-Chih_NNP ._.
+-LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Supporting_VBG orthographic_JJ learning_NN at_IN the_DT beginning_NN stage_NN of_IN learning_VBG to_TO read_VB Chinese_JJ as_IN a_DT second_JJ language_NN ._.
+International_NNP Journal_NNP of_IN Disability_NNP ,_, Development_NNP and_CC Education_NNP ,_, 61_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 288_CD --_: 305_CD ._.
+Craik_NNP ,_, Fergus_NNP I._NNP M._NNP ,_, &_CC Tulving_NNP ,_, Endel_NNP ._.
+-LRB-_-LRB- 1975_CD -RRB-_-RRB- ._.
+Depth_NN of_IN processing_NN and_CC the_DT retention_NN of_IN words_NNS in_IN episodic_JJ memory_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, 104_CD ,_, 268_CD --_: 294_CD ._.
+Everson_NNP ,_, Michael_NNP E._NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- ._.
+Word_NN recognition_NN among_IN learners_NNS of_IN Chinese_JJ as_IN a_DT foreign_JJ language_NN :_: Investigating_VBG the_DT relationship_NN between_IN naming_VBG and_CC knowing_VBG ._.
+The_DT Modern_NNP Language_NNP Journal_NNP ,_, 82_CD -LRB-_-LRB- ii_FW -RRB-_-RRB- ,_, 194_CD --_: 204_CD ._.
+Garagnani_NNP ,_, Max_NNP ,_, Wennekers_NNP ,_, Thomas_NNP ,_, &_CC Pulvermueller_NNP ,_, Friedemann_NNP ._.
+-LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+A_DT neuroanatomically_JJ grounded_VBN Hebbian-learning_NN model_NN of_IN attention-language_JJ interactions_NNS in_IN the_DT human_JJ brain_NN ._.
+European_JJ Journal_NNP of_IN Neuroscience_NNP ,_, 27_CD ,_, 492_CD --_: 513_CD ._.
+Guan_NNP ,_, Connie_NNP Qun_NNP ,_, Ying_NNP Liu_NNP ,_, Derek_NNP Ho_NNP Leung_NNP Chan_NNP ,_, Feifei_NNP Ye_NNP ,_, &_CC Charles_NNP A._NNP Perfetti_NNP ._.
+-LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Writing_VBG strengthens_VBZ orthography_NN and_CC alphabetic-coding_JJ strengthens_VBZ phonology_NN in_IN learning_VBG to_TO read_VB Chinese_JJ ._.
+Journal_NNP of_IN Educational_NNP Psychology_NNP ,_, 103_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 509_CD --_: 522_CD ._.
+Hu_NNP ,_, Bo_NNP ._.
+-LRB-_-LRB- 2010_CD -RRB-_-RRB- ._.
+The_DT challenges_NNS of_IN Chinese_NNPS :_: a_DT preliminary_JJ study_NN of_IN UK_NNP learners_NNS '_POS perceptions_NNS of_IN difficulty_NN ._.
+Language_NN Learning_NNP Journal_NNP ,_, 38_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 99_CD --_: 118_CD ._.
+Ho_NNP ,_, Connie_NNP Suk-Han_NNP ,_, &_CC Bryant_NNP ,_, Peter_NNP ._.
+-LRB-_-LRB- 1997_CD -RRB-_-RRB- ._.
+Learning_NNP to_TO read_VB Chinese_JJ beyond_IN the_DT logographic_JJ phase_NN ._.
+Reading_VBG Research_NNP Quarterly_JJ ,_, 32_CD ,_, 276_CD --_: 289_CD ._.
+Jaeger_NNP ,_, T._NNP Florian_NNP ._.
+-LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Categorical_JJ data_NNS analysis_NN :_: away_RB from_IN ANOVAs_NNS -LRB-_-LRB- transformation_NN or_CC not_RB -RRB-_-RRB- and_CC towards_IN logit_NN mixed_JJ models_NNS ._.
+Journal_NNP of_IN Memory_NN and_CC Language_NN ,_, 59_CD ,_, 434_CD --_: 446_CD ._.
+Jun_NN ,_, Da_NNP ._.
+-LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+Chinese_JJ Text_NN Computing_NNP ._.
+Accessed_NNP July_NNP 28_CD 2015_CD :_: http://lingua.mtsu.edu/chinese_SYM -_: computing/statistics/char_NN /_CD search.php_NN Li_NNP ,_, Wenling._NNP ,_, Anderson_NNP ,_, Richard_NNP C._NNP ,_, Nagy_NNP ,_, William_NNP ,_, &_CC Zhang_NNP ,_, Houcan_NNP ._.
+-LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+Facets_NNS of_IN metalinguistic_JJ awareness_NN that_WDT contribute_VBP to_TO Chinese_JJ literacy_NN ._.
+In_IN W._NNP L._NNP Li_NNP ,_, J._NNP S._NNP Gaffney_NNP ,_, &_CC J._NNP L._NNP Packard_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Chinese_JJ Children_NNP 's_POS Reading_VBG Acquisition_NNP -LRB-_-LRB- pp._NNP 87_CD --_: 106_CD -RRB-_-RRB- ._.
+Dordreeht_NNP ,_, The_DT Netherlands_NNPS :_: Kluwer_NNP Academic_NNP Publishers_NNPS ._.
+Longcamp_NNP ,_, Marieke_NNP ,_, Boucard_NNP ,_, Celine_NNP ,_, Gilhodes_NNP ,_, Jean_NNP -_: Claude_NNP ,_, Anton_NNP ,_, Jean-Luc_NNP ,_, Roth_NNP ,_, Muriel_NNP ,_, Nazarian_NNP ,_, Bruno_NNP ,_, &_CC Velay_NNP ,_, Jean-Luc_NNP ._.
+-LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Learning_NNP through_IN hand_NN -_: or_CC typewriting_VBG influences_NNS visual_JJ recognition_NN of_IN new_JJ graphic_JJ shapes_NNS :_: behavioural_JJ and_CC functional_JJ imaging_NN evidence_NN ._.
+Journal_NNP of_IN Cognitive_NNP Neuroscience_NNP ,_, 20_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, 802_CD --_: 815_CD ._.
+Packard_NNP ,_, Jerome_NNP L._NNP ,_, Chen_NNP ,_, Xi_NNP ,_, Li_NNP ,_, Wenling_NNP ,_, Wu_NNP ,_, Xinchun_NNP ,_, Gaffney_NNP ,_, Janet_NNP S._NNP ,_, Li_NNP ,_, Hong_NNP ,_, &_CC Anderson_NNP ,_, Richard_NNP C._NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- ._.
+Explicit_JJ instruction_NN in_IN orthographic_JJ structure_NN and_CC word_NN morphology_NN helps_VBZ Chinese_JJ children_NNS learn_VBP to_TO write_VB characters_NNS ._.
+Reading_VBG and_CC Writing_VBG ,_, 19_CD ,_, 457_CD --_: 487_CD ._.
+Parkinson_NNP ,_, Jim_NNP ,_, Dyson_NNP ,_, Benjamin_NNP J._NNP ,_, &_CC Khurana_NNP ,_, Beena_NNP ._.
+-LRB-_-LRB- 2010_CD -RRB-_-RRB- ._.
+Line_NN by_IN line_NN :_: the_DT ERP_NNP correlates_VBZ of_IN stroke_NN order_NN priming_VBG in_IN letters_NNS ._.
+Experimental_JJ Brain_NNP Research_NNP ,_, 201_CD ,_, 575_CD --_: 586_CD ._.
+Peirce_NNP ,_, Jonathan_NNP W._NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- PsychoPy_SYM -_: Psychophysics_NNPS software_NN in_IN Python_NNP ._.
+J_NNP Neurosci_NNP Methods_NNPS ,_, 162_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- ,_, 8_CD --_: 13_CD ._.
+Pignal_NNP ,_, Stanley_NNP ._.
+-LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Mandarin_NNP has_VBZ the_DT edge_NN in_IN Europe_NNP 's_POS classrooms_NNS ._.
+Financial_NNP Times_NNP 16_CD October_NNP ._.
+Accessed_NNP November_NNP 13_CD 2014_CD :_: http://www.ft.com/intl/cms/s/0/73c7e4c8-e527-11e0_JJ -_: bdb8-00144feabdc0_NN ._.
+html_NN #axzz_NN 3Iy4gVvob_NNP Pulvermueller_NNP ,_, F._NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+How_WRB neurons_NNS make_VBP meaning_NN :_: brain_NN mechanisms_NNS for_IN embodied_VBN and_CC abstract_JJ -_: symbolic_JJ semantics_NNS ._.
+Trends_NNS in_IN Cognitive_NNP Sciences_NNPS ,_, 17_CD ,_, 458-470_CD ._.
+Shadmehr_NNP ,_, Reza_NNP ,_, &_CC Holcomb_NNP ,_, Henry_NNP H._NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ._.
+Neural_JJ correlates_NNS of_IN motor_NN memory_NN consolidation_NN ._.
+Science_NN ,_, 277_CD ,_, 821_CD --_: 825_CD ._.
+Shen_NNP ,_, Helen_NNP H._NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+Level_NNP of_IN cognitive_JJ processing_NN :_: Effects_NNPS on_IN character_NN learning_NN among_IN non-native_JJ learners_NNS of_IN Chinese_JJ as_IN a_DT foreign_JJ language_NN ._.
+Language_NN and_CC Education_NNP ,_, 18_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 167_CD --_: 182_CD ._.
+Shen_NNP ,_, Helen_NNP H._NNP ,_, &_CC Ke_NNP ,_, Chuanren_NNP ._.
+-LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+Radical_NNP awareness_NN and_CC word_NN acquisition_NN among_IN non-native_JJ learners_NNS of_IN Chinese_JJ ._.
+The_DT Modern_NNP Language_NNP Journal_NNP ,_, 91_CD -LRB-_-LRB- i_FW -RRB-_-RRB- ,_, 97_CD --_: 111_CD ._.
+Shu_NNP ,_, Hua_NNP ,_, Anderson_NNP ,_, Richard_NNP C._NNP ,_, &_CC Wu_NNP ,_, Ningning_NNP ._.
+-LRB-_-LRB- 2000_CD -RRB-_-RRB- ._.
+Phonetic_JJ awareness_NN :_: knowledge_NN on_IN orthography-phonology_JJ relationships_NNS in_IN character_NN acquisition_NN of_IN Chinese_JJ children_NNS ._.
+Journal_NNP of_IN Educational_NNP Psychology_NNP ,_, 92_CD ,_, 56_CD --_: 62_CD ._.
+Shu_NNP ,_, Hua_NNP ,_, Meng_NNP ,_, Xiangzhi_NNP ,_, &_CC Lai_NNP ,_, Alice_NNP Cheng_NNP ._.
+-LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Lexical_JJ representation_NN and_CC processing_NN in_IN Chinese_JJ -_: speaking_VBG poor_JJ readers_NNS ._.
+In_IN C._NNP McBride-Chang_NNP ,_, &_CC Hsuan-Chih_NNP Chen_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB-
+,_, Reading_VBG Development_NNP in_IN Chinese_NNP Children_NNP -LRB-_-LRB- pp._FW 199_CD --_: 214_CD -RRB-_-RRB- ._.
+Westport_NNP ,_, CT_NNP :_: Greenwood_NNP Publishing_NNP Group_NNP ._.
+Tan_NNP ,_, Li_NNP Hai_NNP ,_, Spinks_NNP ,_, John_NNP A._NNP ,_, Eden_NNP ,_, Guinevere_NNP F._NNP ,_, Perfetti_NNP ,_, Charles_NNP A._NN ,_, &_CC Siok_NNP ,_, Wai_NNP Ting_NNP ._.
+-LRB-_-LRB- 2005_CD -RRB-_-RRB- ._.
+Reading_VBG depends_VBZ on_IN writing_VBG ,_, in_IN Chinese_NNP ._.
+Proceedings_NNP of_IN the_DT National_NNP Academy_NNP of_IN Sciences_NNPS USA_NNP ,_, 102_CD ,_, 8781_CD --_: 8785_CD ._.
+Tan_NNP ,_, Li_NNP Hai_NNP ,_, Xu_NNP ,_, Min_NNP ,_, Chang_NNP ,_, Chun_NNP Qi_NNP ,_, &_CC Siok_NNP ,_, Wai_NNP Ting_NNP ._.
+-LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+China_NNP 's_POS language_NN input_NN system_NN in_IN the_DT digital_JJ age_NN affects_VBZ children_NNS 's_POS reading_VBG development_NN ._.
+Psychological_JJ Cognitive_NNP Sciences_NNPS ,_, 110_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 1119_CD --_: 1123_CD ._.
+Wang_NNP ,_, Min_NNP ,_, Perfetti_NNP ,_, Charles_NNP A._NN ,_, &_CC Liu_NNP ,_, Ying_NNP ._.
+-LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+Alphabetic_JJ readers_NNS quickly_RB acquire_VB orthographic_JJ structure_NN in_IN learning_VBG to_TO read_VB Chinese_JJ ._.
+Scientific_NNP Studies_NNP of_IN Reading_VBG ,_, 7_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 183_CD --_: 208_CD ._.
+Wang_NNP ,_, Min_NNP ,_, Liu_NNP ,_, Ying_NNP ,_, &_CC Perfetti_NNP ,_, Charles_NNP A._NN -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT implicit_JJ and_CC explicit_JJ learning_NN of_IN orthographic_JJ structure_NN and_CC function_NN of_IN a_DT new_JJ writing_NN system_NN ._.
+Scientific_NNP Studies_NNP of_IN Reading_VBG ,_, 8_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- ,_, 357_CD --_: 379_CD ._.
+Xu_NNP ,_, Yi_NNP ,_, Chang_NNP ,_, Li-Yun_NNP ,_, Zhang_NNP ,_, Juan_NNP ,_, &_CC Perfetti_NNP ,_, Charles_NNP A._NN -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+Reading_VBG ,_, writing_VBG ,_, and_CC animation_NN in_IN character_NN learning_NN in_IN Chinese_JJ as_IN a_DT foreign_JJ language_NN ._.
+Foreign_NNP Language_NNP Annals_NNP ,_, 46_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, 423_CD --_: 444_CD ._.
+Zhang_NNP ,_, Qi_NNP ,_, &_CC Lu_NNP ,_, Zhouxiang_NNP ._.
+-LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+The_DT writing_NN of_IN Chinese_JJ characters_NNS by_IN CFL_NNP learners_NNS :_: can_MD writing_VBG on_IN Facebook_NNP and_CC using_VBG machine_NN translation_NN help_NN ?_.
+Language_NN Learning_NNP in_IN Higher_JJR Education_NN ,_, 4_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 441_CD --_: 467_CD ._.

@@ -1,0 +1,345 @@
+Fast_NNP and_CC Large-scale_JJ Unsupervised_JJ Relation_NN Extraction_NNP Abstract_NNP A_NNP common_JJ approach_NN to_TO unsupervised_JJ relation_NN extraction_NN builds_VBZ clusters_NNS of_IN patterns_NNS express_VBP -_: ing_VBG the_DT same_JJ relation_NN ._.
+In_IN order_NN to_TO obtain_VB clus_SYM -_: ters_NNS of_IN relational_JJ patterns_NNS of_IN good_JJ quality_NN ,_, we_PRP have_VBP two_CD major_JJ challenges_NNS :_: the_DT semantic_JJ rep_NN -_: resentation_NN of_IN relational_JJ patterns_NNS and_CC the_DT scal_JJ -_: ability_NN to_TO large_JJ data_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP ex_FW -_: plore_NN various_JJ methods_NNS for_IN modeling_NN the_DT mean_NN -_: ing_NN of_IN a_DT pattern_NN and_CC for_IN computing_VBG the_DT similar_JJ -_: ity_NN of_IN patterns_NNS mined_VBN from_IN huge_JJ data_NNS ._.
+In_IN order_NN to_TO achieve_VB this_DT goal_NN ,_, we_PRP apply_VBP algorithms_NNS for_IN approximate_JJ frequency_NN counting_NN and_CC efficient_JJ dimension_NN reduction_NN to_TO unsupervised_JJ relation_NN extraction_NN ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN approximate_JJ frequency_NN counting_NN and_CC dimen_NNS -_: sion_NN reduction_NN not_RB only_RB speeds_VBZ up_RP similarity_NN computation_NN but_CC also_RB improves_VBZ the_DT quality_NN of_IN pattern_NN vectors_NNS ._.
+1_CD Introduction_NNP Semantic_NNP relations_NNS between_IN entities_NNS are_VBP essential_JJ for_IN many_JJ NLP_NNP applications_NNS such_JJ as_IN question_NN an_DT -_: swering_NN ,_, textual_JJ inference_NN and_CC information_NN extrac_NN -_: tion_NN -LRB-_-LRB- Ravichandran_NNP and_CC Hovy_NNP ,_, 2002_CD ;_: Szpektor_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, it_PRP is_VBZ important_JJ to_TO build_VB a_DT compre_NN -_: hensive_NN knowledge_NN base_NN consisting_VBG of_IN instances_NNS of_IN semantic_JJ relations_NNS -LRB-_-LRB- e.g._FW ,_, authorOf_NNP -RRB-_-RRB- such_JJ as_IN authorOf_NNP ⟨_NNP Franz_NNP Kafka_NNP ,_, The_DT Metamorphosis_NNP ⟩_NN ._.
+To_TO recognize_VB these_DT instances_NNS in_IN a_DT corpus_NN ,_, we_PRP need_VBP to_TO obtain_VB pat_NN -_: terns_NNS -LRB-_-LRB- e.g._FW ,_, ``_`` X_NNP write_VB Y_NNP ''_'' -RRB-_-RRB- that_WDT signal_VBP instances_NNS of_IN the_DT semantic_JJ relations_NNS ._.
+For_IN a_DT long_JJ time_NN ,_, many_JJ researches_VBZ have_VBP targeted_VBN at_IN extracting_VBG instances_NNS and_CC patterns_NNS of_IN specific_JJ rela_NN -_: tions_NNS -LRB-_-LRB- Riloff_NNP ,_, 1996_CD ;_: Pantel_NNP and_CC Pennacchiotti_NNP ,_, 2006_CD ;_: De_NNP Saeger_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+In_IN recent_JJ years_NNS ,_, to_TO acquire_VB a_DT wider_JJR range_NN knowledge_NN ,_, Open_NNP Information_NNP Extrac_NNP -_: tion_NN -LRB-_-LRB- Open_NNP IE_NNP -RRB-_-RRB- has_VBZ received_VBN much_JJ attention_NN -LRB-_-LRB- Banko_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+Open_NNP IE_NNP identifies_VBZ relational_JJ patterns_NNS and_CC instances_NNS automatically_RB without_IN predefined_VBN tar_NN -_: get_VB relations_NNS -LRB-_-LRB- Banko_NNP et_FW al._FW ,_, 2007_CD ;_: Wu_NNP and_CC Weld_NNP ,_, 2010_CD ;_: Fader_NNP et_FW al._FW ,_, 2011_CD ;_: Mausam_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN other_JJ words_NNS ,_, Open_NNP IE_NNP acquires_VBZ knowledge_NN to_TO han_SYM -_: dle_RB open_JJ domains_NNS ._.
+In_IN Open_NNP IE_NNP paradigm_NN ,_, it_PRP is_VBZ nec_SYM -_: essary_NN to_TO enumerate_VB semantic_JJ relations_NNS in_IN open_JJ do_VBP -_: mains_NNS and_CC to_TO learn_VB mappings_NNS between_IN surface_NN pat_NN -_: terns_NNS and_CC semantic_JJ relations_NNS ._.
+This_DT task_NN is_VBZ called_VBN unsupervised_JJ relation_NN extraction_NN -LRB-_-LRB- Hasegawa_NNP et_FW al._FW ,_, 2004_CD ;_: Shinyama_NNP and_CC Sekine_NNP ,_, 2006_CD ;_: Rosenfeld_NNP and_CC Feldman_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+A_DT common_JJ approach_NN to_TO unsupervised_JJ relation_NN ex_FW -_: traction_NN builds_VBZ clusters_NNS of_IN patterns_NNS that_WDT represent_VBP the_DT same_JJ relation_NN -LRB-_-LRB- Hasegawa_NNP et_FW al._FW ,_, 2004_CD ;_: Shinyama_NNP and_CC Sekine_NNP ,_, 2006_CD ;_: Yao_NNP et_FW al._FW ,_, 2011_CD ;_: Min_NNP et_FW al._FW ,_, 2012_CD ;_: Rosenfeld_NNP and_CC Feldman_NNP ,_, 2007_CD ;_: Nakashole_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN brief_NN ,_, each_DT cluster_NN includes_VBZ patterns_NNS corre_SYM -_: sponding_VBG to_TO a_DT semantic_JJ relation_NN ._.
+For_IN example_NN ,_, con_NN -_: sider_JJR three_CD patterns_NNS ,_, ``_`` X_NNP write_VB Y_NNP ''_'' ,_, ``_`` X_NNP is_VBZ author_NN of_IN Y_NNP ''_'' and_CC ``_`` X_NNP is_VBZ located_VBN in_IN Y_NNP ''_'' ._.
+When_WRB we_PRP group_VBP these_DT patterns_NNS into_IN clusters_NNS representing_VBG the_DT same_JJ relation_NN ,_, patterns_NNS ``_`` X_NNP write_VB Y_NNP ''_'' and_CC ``_`` X_NNP is_VBZ author_NN of_IN Y_NNP ''_'' form_NN a_DT cluster_NN representing_VBG the_DT relation_NN authorOf_NNP ,_, and_CC the_DT pattern_NN ``_`` X_NNP is_VBZ located_VBN in_IN Y_NNP ''_'' does_VBZ a_DT cluster_NN for_IN locate_VB -_: dIn_NNP ._.
+In_IN order_NN to_TO obtain_VB these_DT clusters_NNS ,_, we_PRP need_VBP to_TO know_VB the_DT similarity_NN between_IN patterns_NNS ._.
+The_DT better_JJR we_PRP model_VBP the_DT similarity_NN of_IN patterns_NNS ,_, the_DT better_JJR a_DT cluster_NN -_: ing_NN result_NN correspond_VBP to_TO semantic_JJ relations_NNS ._.
+Thus_RB ,_, the_DT similarity_NN computation_NN between_IN patterns_NNS is_VBZ cru_SYM -_: cial_JJ for_IN unsupervised_JJ relation_NN extraction_NN ._.
+We_PRP have_VBP two_CD major_JJ challenges_NNS in_IN computing_VBG the_DT similarity_NN of_IN patterns_NNS ._.
+First_RB ,_, it_PRP is_VBZ not_RB clear_JJ how_WRB to_TO represent_VB the_DT semantic_JJ meaning_NN of_IN a_DT relational_JJ pat_NN -_: tern_NN ._.
+Previous_JJ studies_NNS define_VBP a_DT feature_NN space_NN for_IN pat_NN -_: terns_NNS ,_, and_CC express_VB the_DT meaning_NN of_IN patterns_NNS by_IN using_VBG such_JJ as_IN the_DT co-occurrence_NN statistics_NNS between_IN a_DT pat_NN -_: tern_NN and_CC an_DT entity_NN pair_NN ,_, e.g._FW ,_, co-occurrence_JJ frequency_NN and_CC pointwise_NN mutual_JJ information_NN -LRB-_-LRB- PMI_NNP -RRB-_-RRB- -LRB-_-LRB- Lin_NNP and_CC Pantel_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+Some_DT studies_NNS employed_VBN vector_NN repre_NN -_: sentations_NNS of_IN a_DT fixed_VBN dimension_NN ,_, e.g._FW ,_, Principal_NN Com_NNP -_: ponent_NN Analysis_NN -LRB-_-LRB- PCA_NNP -RRB-_-RRB- -LRB-_-LRB- Collins_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- and_CC La_NNP -_: tent_NN Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Yao_NNP et_FW al._FW ,_, 2011_CD ;_: Riedel_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT previous_JJ work_NN did_VBD not_RB compare_VB the_DT effectiveness_NN of_IN these_DT represen_NN -_: tations_NNS when_WRB applied_VBN to_TO a_DT collection_NN of_IN large-scaled_JJ unstructured_JJ texts_NNS ._.
+Second_NNP ,_, we_PRP need_VBP design_NN a_DT method_NN scalable_JJ to_TO a_DT large_JJ data_NNS ._.
+In_IN Open_NNP IE_NNP ,_, we_PRP utilize_VBP a_DT large_JJ amount_NN of_IN data_NNS in_IN order_NN to_TO improve_VB the_DT quality_NN of_IN unsupervised_JJ relation_NN extraction_NN ._.
+For_IN this_DT reason_NN ,_, we_PRP can_MD not_RB use_VB a_DT complex_JJ and_CC inefficient_JJ algorithm_NN that_WDT consumes_VBZ the_DT computation_NN time_NN and_CC memory_NN storage_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP explore_VBP methods_NNS for_IN computing_VBG pattern_NN similarity_NN of_IN good_JJ quality_NN that_WDT are_VBP scalable_JJ to_TO huge_JJ data_NNS ,_, for_IN example_NN ,_, with_IN several_JJ billion_CD sentences_NNS ._.
+In_IN order_NN to_TO achieve_VB this_DT goal_NN ,_, we_PRP utilize_VBP approximate_JJ frequency_NN counting_NN and_CC dimension_NN reduction_NN ._.
+Our_PRP$ contributions_NNS are_VBP threefold_RB ._.
+•_CD We_PRP build_VBP a_DT system_NN for_IN unsupervised_JJ relation_NN ex_FW -_: traction_NN that_WDT is_VBZ practical_JJ and_CC scalable_JJ to_TO large_JJ data_NNS ._.
+•_CD Even_RB though_IN the_DT proposed_VBN system_NN introduces_VBZ approximations_NNS ,_, we_PRP demonstrate_VBP that_IN the_DT sys_NNS -_: tem_NN exhibits_VBZ the_DT performance_NN comparable_JJ to_TO the_DT one_CD without_IN approximations_NNS ._.
+•_CD Comparing_VBG several_JJ representations_NNS of_IN pattern_NN vectors_NNS ,_, we_PRP discuss_VBP a_DT reasonable_JJ design_NN for_IN rep_NN -_: resenting_VBG the_DT meaning_NN of_IN a_DT pattern_NN ._.
+2_CD Methods_NNS 2.1_CD Overview_NNP As_IN mentioned_VBN in_IN Section_NN 1_CD ,_, semantic_JJ representations_NNS of_IN relational_JJ patterns_NNS is_VBZ key_JJ to_TO unsupervised_JJ rela_NN -_: tion_NN extraction_NN ._.
+Based_VBN on_IN the_DT distributional_JJ hypoth_NN -_: esis_NN -LRB-_-LRB- Harris_NNP ,_, 1954_CD -RRB-_-RRB- ,_, we_PRP model_VBP the_DT meaning_NN of_IN a_DT re_NN -_: lational_JJ pattern_NN with_IN a_DT distribution_NN of_IN entity_NN pairs_NNS co_SYM -_: occurring_VBG with_IN the_DT pattern_NN ._.
+For_IN example_NN ,_, the_DT mean_NN -_: ing_NN of_IN a_DT relational_JJ pattern_NN ``_`` X_NNP write_VB Y_NNP ''_'' is_VBZ represented_VBN by_IN the_DT distribution_NN of_IN the_DT entity_NN pairs_NNS that_WDT fills_VBZ the_DT variables_NNS -LRB-_-LRB- X_NNP ,_, Y_NNP -RRB-_-RRB- in_IN a_DT corpus_NN ._.
+By_IN using_VBG vector_NN repre_NN -_: sentations_NNS of_IN relational_JJ patterns_NNS ,_, we_PRP can_MD compute_VB the_DT semantic_JJ similarity_NN of_IN two_CD relational_JJ patterns_NNS ;_: for_IN ex_FW -_: ample_JJ ,_, we_PRP can_MD infer_VB that_IN the_DT patterns_NNS ``_`` X_NNP write_VB Y_NNP ''_'' and_CC ``_`` X_NNP is_VBZ author_NN of_IN Y_NNP ''_'' present_VB the_DT similar_JJ meaning_NN if_IN the_DT distribution_NN of_IN entity_NN pairs_NNS for_IN the_DT pattern_NN ``_`` X_NNP write_VB Y_NNP ''_'' is_VBZ similar_JJ to_TO that_DT for_IN the_DT pattern_NN ``_`` X_NNP is_VBZ author_NN of_IN Y_NNP ''_'' ._.
+Researchers_NNS have_VBP explored_VBN various_JJ approaches_NNS to_TO vector_NN representations_NNS of_IN relational_JJ patterns_NNS -LRB-_-LRB- Lin_NNP and_CC Pantel_NNP ,_, 2001_CD ;_: Rosenfeld_NNP and_CC Feldman_NNP ,_, 2007_CD ;_: Yao_NNP et_FW al._FW ,_, 2011_CD ;_: Riedel_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+The_DT simplest_JJS ap_SYM -_: proach_NN is_VBZ to_TO define_VB a_DT vector_NN of_IN a_DT relational_JJ pattern_NN in_IN which_WDT an_DT element_NN in_IN the_DT vector_NN presents_VBZ the_DT co_NN -_: occurrence_NN frequency_NN between_IN a_DT pattern_NN and_CC an_DT en_IN -_: tity_NN pair_NN ._.
+However_RB ,_, the_DT use_NN of_IN raw_JJ frequency_NN counts_NNS may_MD be_VB inappropriate_JJ when_WRB some_DT entity_NN pairs_NNS co_SYM -_: occur_VBP with_IN a_DT number_NN of_IN patterns_NNS ._.
+A_DT solution_NN to_TO this_DT problem_NN is_VBZ to_TO use_VB a_DT refined_VBN co-occurrence_NN measure_NN such_JJ as_IN PMI_NNP -LRB-_-LRB- Lin_NNP and_CC Pantel_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+In_IN addition_NN ,_, we_PRP may_MD compress_VB a_DT vector_NN representation_NN with_IN a_DT dimen_NN -_: sionality_NN reduction_NN method_NN such_JJ as_IN PCA_NNP because_IN pattern_NN vectors_NNS tend_VBP to_TO be_VB sparse_JJ and_CC high_JJ dimen_NNS -_: sional_JJ -LRB-_-LRB- Yao_NNP et_FW al._FW ,_, 2011_CD ;_: Riedel_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Meanwhile_RB ,_, it_PRP may_MD be_VB difficult_JJ to_TO implement_VB the_DT above_JJ procedures_NNS that_WDT can_MD handle_VB a_DT large_JJ amount_NN of_IN data_NNS ._.
+Consider_VB the_DT situation_NN where_WRB we_PRP find_VBP 1.1_CD million_CD entity_NN pairs_NNS and_CC 0.7_CD million_CD relational_JJ pat_NN -_: terns_NNS from_IN a_DT corpus_NN with_IN 15_CD billion_CD sentences_NNS ._.
+Even_RB though_IN the_DT vector_NN space_NN is_VBZ sparse_JJ ,_, we_PRP need_VBP to_TO keep_VB a_DT huge_JJ number_NN of_IN frequency_NN counts_VBZ that_DT record_NN co_SYM -_: occurrences_NNS of_IN the_DT entity_NN pairs_NNS and_CC relational_JJ patterns_NNS in_IN the_DT corpus_NN ._.
+In_IN order_NN to_TO acquire_VB pattern_NN vectors_NNS from_IN a_DT large_JJ amount_NN of_IN data_NNS ,_, we_PRP explore_VBP two_CD approaches_NNS in_IN this_DT study_NN ._.
+One_CD approach_NN is_VBZ to_TO apply_VB an_DT algorithm_NN for_IN ap_SYM -_: proximate_JJ counting_VBG so_RB that_IN we_PRP can_MD discard_VB unimpor_NN -_: tant_JJ information_NN in_IN preparing_VBG pattern_NN vectors_NNS ._.
+An_DT -_: other_JJ approach_NN is_VBZ to_TO utilize_VB distributed_VBN representa_SYM -_: tions_NNS of_IN words_NNS so_IN that_IN we_PRP can_MD work_VB on_IN a_DT semantic_JJ space_NN of_IN a_DT fixed_VBN and_CC compact_JJ size_NN ._.
+In_IN short_RB ,_, the_DT for_IN -_: mer_NN approach_NN reduces_VBZ the_DT memory_NN usage_NN for_IN com_NN -_: puting_NN statistics_NNS ,_, whereas_IN the_DT latter_JJ compresses_VBZ the_DT vector_NN space_NN beforehand_RB ._.
+Figure_NN 1_CD :_: Overview_NNP of_IN the_DT system_NN for_IN unsupervised_JJ relation_NN extraction_NN Figure_NN 1_CD illustrates_VBZ the_DT overview_NN of_IN the_DT system_NN of_IN unsupervised_JJ relation_NN extraction_NN presented_VBN in_IN this_DT paper_NN ._.
+We_PRP extract_VBP a_DT collection_NN of_IN triples_NNS each_DT of_IN which_WDT consists_VBZ of_IN an_DT entity_NN pair_NN and_CC a_DT relational_JJ pat_NN -_: tern_NN -LRB-_-LRB- Section_NN 2.2_CD -RRB-_-RRB- ._.
+Because_IN this_DT step_NN may_MD extract_VB meaningless_JJ triples_NNS ,_, we_PRP identify_VBP entity_NN pairs_NNS and_CC re_SYM -_: lational_JJ patterns_NNS occurring_VBG frequently_RB in_IN the_DT corpus_NN ._.
+We_PRP compute_VBP co-occurrence_NN statistics_NNS of_IN entity_NN pairs_NNS and_CC relational_JJ patterns_NNS to_TO obtain_VB pattern_NN vectors_NNS ._.
+Sec_SYM -_: tion_NN 2.3_CD describes_VBZ this_DT process_NN ,_, followed_VBN by_IN an_DT on_IN -_: line_NN variant_NN of_IN PCA_NNP in_IN Section_NNP 2.4_CD ._.
+Furthermore_RB ,_, we_PRP present_VBP two_CD approaches_NNS that_WDT improve_VBP the_DT scalability_NN to_TO large_JJ data_NNS in_IN Section_NN 2.5_CD ._.
+2.2_CD Extracting_VBG triples_NNS In_IN this_DT study_NN ,_, we_PRP define_VBP a_DT triple_JJ as_IN a_DT combination_NN of_IN an_DT entity_NN pair_NN and_CC a_DT relational_JJ pattern_NN that_WDT con_VBP -_: nects_VBZ the_DT two_CD entities_NNS ._.
+In_IN order_NN to_TO extract_VB meaningful_JJ triples_NNS from_IN a_DT corpus_NN ,_, we_PRP mine_VBP a_DT set_NN of_IN entities_NNS and_CC relational_JJ patterns_NNS in_IN an_DT unsupervised_JJ fashion_NN ._.
+2.2.1_CD Extracting_VBG entities_NNS We_PRP define_VBP an_DT entity_NN mention_NN as_IN a_DT sequence_NN of_IN nouns_NNS ._.
+Because_IN quite_RB entity_NN mentions_VBZ consist_VBP of_IN two_CD or_CC more_JJR nouns_NNS -LRB-_-LRB- e.g._FW ,_, ``_`` Roadside_NNP station_NN ''_'' and_CC ``_`` Franz_NNP Kafka_NNP ''_'' -RRB-_-RRB- ,_, we_PRP adapt_VBP a_DT simple_JJ statistical_JJ method_NN -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- to_TO recognize_VB noun_NN phrases_NNS ._.
+Equation_NN 1_CD com_NN -_: putes_NNS the_DT score_NN of_IN a_DT noun_NN bigram_NN wiwj_NN ,_, score_NN -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- =_SYM cor_NN -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- ∗_SYM dis_FW -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- ,_, -LRB-_-LRB- 1_CD -RRB-_-RRB- gram_NN wi_FW wj_FW ._.
+The_DT parameter_NN δ_NN is_VBZ a_DT constant_JJ value_NN to_TO remove_VB infrequent_JJ noun_NN sequences_NNS ._.
+Consequently_RB ,_, cor_NN -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- represents_VBZ the_DT degree_NN of_IN the_DT connection_NN between_IN wi_NN and_CC wj_NN ._.
+However_RB ,_, cor_NN -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- becomes_VBZ undesirably_RB large_JJ if_IN either_DT f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- or_CC f_LS -LRB-_-LRB- wj_NN -RRB-_-RRB- is_VBZ small_JJ ._.
+We_PRP introduce_VBP the_DT function_NN dis_NN -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- to_TO `_`` discount_NN '_'' such_JJ sequences_NNS ._.
+We_PRP form_VBP noun_NN phrases_NNS whose_WP$ scores_NNS are_VBP greater_JJR than_IN a_DT threshold_NN ._.
+In_IN order_NN to_TO obtain_VB noun_NN phrases_NNS longer_RBR than_IN two_CD words_NNS ,_, we_PRP run_VBP the_DT procedure_NN four_CD times_NNS ,_, decreasing_VBG the_DT threshold_NN value1_NN ._.
+In_IN this_DT way_NN ,_, we_PRP can_MD find_VB ,_, for_IN example_NN ,_, ``_`` Franz_NNP Kafka_NNP ''_'' as_IN an_DT en_FW -_: tity_NN in_IN the_DT first_JJ run_NN and_CC ``_`` Franz_NNP Kafka_NNP works_VBZ ''_'' in_IN the_DT second_JJ run_NN ._.
+After_IN identifying_VBG a_DT set_NN of_IN noun_NN phrases_NNS ,_, we_PRP count_VBP the_DT frequency_NN of_IN the_DT noun_NN phrases_NNS in_IN the_DT corpus_NN ,_, and_CC extract_VB noun_NN phrases_NNS occurring_VBG no_RB less_JJR than_IN 1,000_CD times_NNS as_IN a_DT set_NN of_IN entities_NNS ._.
+2.2.2_CD Extracting_VBG entity_NN pairs_NNS After_IN determining_VBG a_DT set_NN of_IN entities_NNS ,_, we_PRP discover_VBP en_IN -_: tity_NN pairs_NNS that_WDT may_MD have_VB semantic_JJ relationships_NNS in_IN or_CC -_: der_NN to_TO locate_VB relational_JJ patterns_NNS ._.
+In_IN this_DT study_NN ,_, we_PRP extract_VBP a_DT pair_NN of_IN entities_NNS if_IN the_DT entities_NNS co-occur_NN in_IN more_JJR than_IN 5,000_CD sentences_NNS ._.
+We_PRP denote_VBP the_DT set_NN of_IN en_IN -_: tity_NN pairs_NNS extracted_VBN by_IN this_DT procedure_NN E._NNP 2.2.3_CD Extracting_VBG patterns_NNS As_IN a_DT relational_JJ pattern_NN ,_, this_DT study_NN employs_VBZ the_DT short_JJ -_: est_NN path_NN between_IN two_CD entities_NNS in_IN a_DT dependency_NN tree_NN ,_, following_VBG the_DT previous_JJ work_NN -LRB-_-LRB- Wu_NNP and_CC Weld_NNP ,_, 2010_CD ;_: Mausam_NNP et_FW al._FW ,_, 2012_CD ;_: Akbik_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Here_RB ,_, we_PRP introduce_VBP a_DT restriction_NN that_IN a_DT relational_JJ pattern_NN must_MD include_VB a_DT predicate_NN in_IN order_NN to_TO reject_VB semantically_RB -_: 1The_JJ threshold_NN values_NNS are_VBP 10_CD -LRB-_-LRB- first_JJ time_NN -RRB-_-RRB- ,_, 5_CD -LRB-_-LRB- second_JJ time_NN -RRB-_-RRB- ,_, and_CC 0_CD -LRB-_-LRB- third_JJ and_CC fourth_JJ times_NNS -RRB-_-RRB- ._.
+f_LS -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- −_SYM δ_FW cor_FW -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- =_SYM log_VB f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- ×_FW f_LS -LRB-_-LRB- wj_NN -RRB-_-RRB- ,_, dis_FW -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- =_SYM f_LS -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- min_NN -LCB-_-LRB- f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- ,_, f_LS -LRB-_-LRB- wj_NN -RRB-_-RRB- -RCB-_-RRB- f_LS -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- +1_CD min_NN -LCB-_-LRB- f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- ,_, f_LS -LRB-_-LRB- wj_NN -RRB-_-RRB- -RCB-_-RRB- +1_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- non-scalable_JJ method_NN Extracting_VBG entity_NN pairs_NNS Extracting_VBG triples_NNS Exact_JJ co-occurrence_NN counting_VBG 1.1_CD million_CD entity_NN pars_NNS One_CD million_CD entities_NNS large_JJ corpus_NN -LRB-_-LRB- 15_CD billion_CD sentences_NNS -RRB-_-RRB- 1.5_CD billion_CD triples_NNS 0.7_CD million_CD patterns_NNS Extracting_VBG entities_NNS Extracting_VBG patterns_NNS Approximate_NNP co_SYM -_: occurrence_NN counting_VBG Dimension_NNP reduction_NN Similarity_NN calculation_NN Obtaining_VBG word_NN vectors_NNS Building_VBG vectors_NNS from_IN word_NN vectors_NNS scalable_JJ methods_NNS Here_RB ,_, f_LS -LRB-_-LRB- wi_FW -RRB-_-RRB- denotes_VBZ the_DT frequency_NN of_IN the_DT noun_NN wi_NN ,_, and_CC f_LS -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- does_VBZ the_DT frequency_NN of_IN the_DT noun_NN bi_SYM -_: prep_in_NN nsubj_NN Kafka_NNP wrote_VBD The_DT Metamorphosis_NNP in_IN Germany_NNP ._.
+entity_NN nsubj_NN prep_in_NN X_NNP wrote_VBD Y_NNP Figure_NNP 2_CD :_: Example_NN of_IN parsed_JJ sentence_NN and_CC extracting_VBG pat_NN -_: terns_NNS ambiguous_JJ patterns_NNS such_JJ as_IN ``_`` X_NNP of_IN Y_NNP ''_'' ._.
+Addition_NN -_: ally_NN ,_, we_PRP convert_VBP an_DT entity_NN into_IN a_DT variable_JJ -LRB-_-LRB- i.e._FW ,_, X_NNP or_CC Y_NNP -RRB-_-RRB- ._.
+Consider_VB the_DT sentence_NN shown_VBN in_IN Figure_NN 2_CD as_IN an_DT example_NN ._.
+An_DT arrow_NN between_IN words_NNS expresses_VBZ a_DT dependency_NN relationship_NN ._.
+This_DT sentence_NN contains_VBZ three_CD entities_NNS :_: ``_`` Kafka_NNP ''_'' ,_, ``_`` The_DT Metamorphosis_NNP ''_'' and_CC ``_`` German_JJ ''_'' ._.
+Therefore_RB ,_, we_PRP obtain_VBP three_CD patterns_NNS ,_, ``_`` X_NNP tity_NN pair_NN e_SYM ∈_FW E._NNP PMI_NNP refines_VBZ the_DT strength_NN of_IN co_NN -_: occurrences_NNS with_IN this_DT equation_NN ,_, nsubj_NN dobj_NN X_NNP wrote_VBD Y_NNP dobj_NN prep_in_NN X_NNP wrote_VBD Y_NNP Σi_NNP ∈_CD P_NNP f_LS -LRB-_-LRB- i_FW ,_, e_LS -RRB-_-RRB- Σj_SYM ∈_FW Ef_FW -LRB-_-LRB- p_NN ,_, j_NN -RRB-_-RRB- MM_NNP -LRB-_-LRB- 4_LS -RRB-_-RRB- dobj_JJ det_NN nsubj_NN dobj_NN nsubj_NN prep_NN in_IN dis_NN -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- is_VBZ defined_VBN similarly_RB to_TO Equation_NN 3_CD ._.
+In_IN PMI_NNP setting_NN ,_, we_PRP set_VBP zero_CD to_TO the_DT value_NN for_IN an_DT entity_NN pair_NN e_LS if_IN PMI_NNP -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- <_SYM 0_CD ._.
+2.4_CD Dimensionality_NN reduction_NN for_IN pattern_NN vectors_NNS The_DT vector_NN space_NN defined_VBN in_IN Section_NN 2.3_CD is_VBZ extremely_RB high_JJ dimensional_JJ and_CC sparse_JJ ,_, encoding_VBG all_DT entity_NN pairs_NNS as_IN separate_JJ dimensions_NNS ._.
+The_DT space_NN may_MD be_VB too_RB sparse_JJ to_TO represent_VB the_DT semantic_JJ meaning_NN of_IN re_NN -_: lational_JJ patterns_NNS ;_: for_IN example_NN ,_, entity_NN pairs_NNS -LRB-_-LRB- ``_`` Franz_NNP Kafka_NNP ''_'' ,_, ``_`` the_DT Metamorphosis_NNP ''_'' -RRB-_-RRB- and_CC -LRB-_-LRB- ``_`` Kafka_NNP ''_'' ,_, ``_`` the_DT Metamorphosis_NNP ''_'' -RRB-_-RRB- present_JJ two_CD different_JJ dimension_NN even_RB though_IN ``_`` Franz_NNP Kafka_NNP ''_'' and_CC ``_`` Kafka_NNP ''_'' refer_VBP to_TO the_DT same_JJ person_NN ._.
+In_IN addition_NN ,_, we_PRP need_VBP an_DT associative_JJ ar_NN -_: ray_NN to_TO compute_VB the_DT similarity_NN of_IN two_CD sparse_JJ vectors_NNS ._.
+In_IN order_NN to_TO map_VB the_DT sparse_JJ and_CC high_JJ dimensional_JJ space_NN into_IN a_DT dense_JJ and_CC compact_JJ space_NN ,_, we_PRP use_VBP Prin_NNP -_: cipal_JJ Component_NNP Analysis_NNP -LRB-_-LRB- PCA_NNP -RRB-_-RRB- ._.
+In_IN essence_NN ,_, PCA_NNP is_VBZ a_DT statistical_JJ procedure_NN that_WDT finds_VBZ principal_JJ compo_NN -_: nents_NNS and_CC scores_NNS of_IN a_DT matrix_NN ._.
+PCA_NNP is_VBZ closely_RB related_VBN to_TO Singular_JJ Value_NNP Decomposition_NNP -LRB-_-LRB- SVD_NNP -RRB-_-RRB- ,_, which_WDT fac_SYM -_: tors_NNS an_DT m_NN ×_FW n_FW matrix_FW A_DT with_IN ,_, A_DT =_SYM UΣVt_NNP ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- Here_RB ,_, U_NNP is_VBZ an_DT m_NN ×_CD m_NN orthogonal_JJ matrix_NN ,_, V_NNP is_VBZ an_DT n_NN ×_CD n_NN orthogonal_JJ matrix_NN and_CC Σ_NNP is_VBZ an_DT m_NN ×_CD n_NN diago_NN -_: nal_NN matrix_NN storing_VBG singular_JJ values_NNS ._.
+Each_DT column_NN of_IN V_NNP corresponds_VBZ to_TO a_DT principal_JJ component_NN ,_, and_CC each_DT column_NN of_IN UΣ_NNP corresponds_VBZ to_TO a_DT score_NN of_IN a_DT principal_JJ component_NN of_IN A._NN However_RB ,_, a_DT full_JJ SVD_NNP requires_VBZ heavy_JJ computa_NN -_: tions_NNS while_IN we_PRP only_RB need_VBP principal_JJ components_NNS cor_SYM -_: responding_VBG to_TO the_DT top_JJ r_NN singular_JJ values_NNS of_IN A_DT ._.
+This_DT hinders_VBZ the_DT scalability_NN of_IN the_DT system_NN ,_, which_WDT obtains_VBZ a_DT huge_JJ co-occurrence_NN matrix_NN between_IN patterns_NNS and_CC entity_NN pairs_NNS ._.
+We_PRP solve_VBP this_DT issue_NN by_IN using_VBG the_DT ran_VBD -_: domized_VBN algorithm_NN proposed_VBN by_IN Halko_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+←_SYM −_SYM −_SYM −_FW wrote_VBD −_CD −_SYM →_FW Y_FW ''_'' ,_, ``_`` X_NNP ←_CD −_CD −_NN −_NN wrote_VBD −_CD −_SYM −_SYM −_SYM →_FW Y_FW ''_'' dobj_JJ prep_NN in_IN 2_CD and_CC ``_`` X_NNP ←_CD −_CD −_NN wrote_VBD −_CD −_SYM −_SYM −_SYM →_FW Y_FW ''_'' ._.
+Counting_VBG the_DT fre_NN -_: quency_NN of_IN a_DT pattern_NN ,_, we_PRP extract_VBP one_CD appearing_VBG no_DT less_JJR than_IN 1,500_CD times_NNS in_IN the_DT corpus_NN ._.
+We_PRP denote_VBP the_DT set_NN of_IN relation_NN patterns_NNS P_NNP hereafter_NN ._.
+2.3_CD Building_NN pattern_NN vectors_NNS We_PRP define_VBP a_DT vector_NN of_IN a_DT relational_JJ pattern_NN as_IN the_DT dis_FW -_: tribution_NN of_IN entity_NN pairs_NNS co-occurring_VBG with_IN the_DT pat_NN -_: tern_NN ._.
+Processing_NNP the_DT whole_JJ collection_NN of_IN the_DT corpus_NN ,_, we_PRP extract_VBP mentions_VBZ of_IN triples_NNS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- ,_, p_SYM ∈_FW P_FW ,_, e_SYM ∈_FW E._NNP For_IN example_NN ,_, we_PRP obtain_VB a_DT triple_JJ ,_, p_JJ =_SYM e_LS =_SYM nsubj_FW dobj_FW X_NNP ←_FW −_FW −_FW −_FW wrote_VBD −_CD −_CD →_CD Y_NNP ,_, ⟨_CD ``_`` Franz_NNP Kafka_NNP ''_'' ,_, ``_`` The_DT Metamorphosis_NNP ''_'' ⟩_NN ,_, from_IN the_DT sentence_NN ``_`` Franz_NNP Kafka_NNP wrote_VBD The_DT Meta_NNP -_: morphosis_NN ._. ''_''
+The_DT meaning_NN of_IN the_DT pattern_NN p_NN is_VBZ rep_NN -_: resented_VBN by_IN the_DT distribution_NN of_IN the_DT entity_NN pairs_NNS co_SYM -_: occurring_VBG with_IN the_DT pattern_NN ._.
+In_IN this_DT study_NN ,_, we_PRP compare_VBP two_CD statistical_JJ measures_NNS of_IN co-occurrence_NN :_: the_DT raw_JJ frequency_NN -LRB-_-LRB- FREQ_NNP -RRB-_-RRB- and_CC PMI_NNP -LRB-_-LRB- PMI_NNP -RRB-_-RRB- ._.
+In_IN FREQ_NNP setting_NN ,_, a_DT relational_JJ pattern_NN p_NN is_VBZ represented_VBN by_IN a_DT vector_NN whose_WP$ elements_NNS present_VBP the_DT frequency_NN of_IN co-occurrences_NNS f_LS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- of_IN every_DT en_FW -_: 2In_JJ the_DT experiments_NNS ,_, we_PRP use_VBP a_DT collection_NN of_IN Japanese_JJ Web_NN pages_NNS ._.
+However_RB ,_, we_PRP explain_VBP the_DT procedure_NN with_IN an_DT English_JJ sen_NN -_: tence_NN because_IN the_DT procedure_NN for_IN extracting_VBG patterns_NNS is_VBZ universal_JJ to_TO other_JJ languages_NNS ._.
+PMI_NNP -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- =_SYM log_VB f_LS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- M_NNP ×_SYM dis_FW -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- ._.
+Here_RB ,_, f_LS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- presents_VBZ the_DT frequency_NN of_IN co_NN -_: occurrences_NNS between_IN a_DT pattern_NN p_NN and_CC an_DT entity_NN pair_NN e_LS ;_: and_CC M_NNP =_SYM ∑_CD P_NNP ∑_CD E_NNP f_LS -LRB-_-LRB- i_FW ,_, j_VBN -RRB-_-RRB- ._.
+The_DT discount_NN factor_NN ij_NN Algorithm_NNP 1_CD Space_NNP saving_VBG for_IN each_DT pattern_NN Input_NNP :_: N_NNP :_: counter_NN size_NN for_IN each_DT pattern_NN Input_NNP :_: D_NNP :_: asetoftriples_NNS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- greatly_RB influence_VB the_DT similarity_NN computation_NN ._.
+In_IN other_JJ words_NNS ,_, it_PRP may_MD be_VB enough_RB to_TO find_VB top-k_JJ entity_NN pairs_NNS with_IN larger_JJR counts_NNS of_IN co-occurrences_NNS for_IN each_DT pattern_NN ,_, and_CC to_TO ignore_VB other_JJ entity_NN pairs_NNS with_IN smaller_JJR counts_NNS ._.
+The_DT task_NN of_IN finding_VBG top-k_JJ frequent_JJ items_NNS has_VBZ been_VBN studied_VBN extensively_RB as_IN approximate_JJ counting_VBG algorithms_NNS ._.
+We_PRP employ_VBP Space_NNP Saving_NNP -LRB-_-LRB- Metwally_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, which_WDT is_VBZ the_DT most_RBS efficient_JJ algorithm_NN to_TO obtain_VB top-k_JJ frequent_JJ items_NNS ._.
+Algorithm_NNP 1_CD outlines_VBZ the_DT Space_NNP Sav_NNP -_: ing_NN algorithm_NN adapted_VBD for_IN counting_VBG frequencies_NNS of_IN co-occurrences_NNS ._.
+The_DT space_NN saving_VBG algorithm_NN main_JJ -_: tains_NNS at_IN most_JJS N_NNP counters_NNS of_IN co-occurrences_NNS for_IN each_DT pattern_NN p._NN For_IN each_DT triple_JJ -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- ,_, where_WRB p_NN and_CC e_LS present_VB a_DT pat_NN -_: tern_NN and_CC an_DT entity_NN pair_NN ,_, respectively_RB ,_, the_DT algorithm_NN checks_NNS if_IN the_DT co-occurrence_NN count_NN for_IN the_DT triple_JJ -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- is_VBZ available_JJ or_CC not_RB ._.
+If_IN it_PRP is_VBZ available_JJ -LRB-_-LRB- Line_NNP 5_CD -RRB-_-RRB- ,_, we_PRP in_IN -_: crement_NN the_DT counter_NN as_IN usual_JJ -LRB-_-LRB- Line_NNP 6_CD -RRB-_-RRB- ._.
+If_IN it_PRP is_VBZ unavail_JJ -_: able_JJ but_CC the_DT number_NN of_IN counters_NNS kept_VBD for_IN the_DT pattern_NN is_VBZ less_JJR than_IN N_NNP -LRB-_-LRB- Line_NNP 7_CD -RRB-_-RRB- ,_, we_PRP initialize_VBP the_DT counter_NN with_IN one_CD -LRB-_-LRB- Lines_NNPS 8_CD and_CC 9_CD -RRB-_-RRB- ._.
+If_IN the_DT count_NN is_VBZ unavailable_JJ and_CC if_IN the_DT pattern_NN has_VBZ already_RB maintained_VBN N_NNP counters_NNS ,_, the_DT algorithm_NN removes_VBZ a_DT counter_NN cp_NN ,_, i_FW with_IN the_DT least_JJS value_NN ,_, and_CC creates_VBZ a_DT new_JJ counter_NN for_IN the_DT entity_NN pair_NN e_LS with_IN the_DT approximated_VBN count_NN cp_NN ,_, i_FW +_FW 1_CD -LRB-_-LRB- Lines_NNP 11_CD --_: 13_CD -RRB-_-RRB- ._.
+This_DT algorithm_NN has_VBZ the_DT nice_JJ property_NN that_IN the_DT error_NN of_IN the_DT frequency_NN count_NN of_IN a_DT frequent_JJ triple_JJ is_VBZ within_IN a_DT range_NN specified_VBN by_IN the_DT number_NN of_IN counters_NNS N_NNP ._.
+In_IN ad_NN -_: dition_NN ,_, Metwally_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- describes_VBZ a_DT data_NN struc_NN -_: ture_NN for_IN finding_VBG the_DT least_JJS frequent_JJ triple_JJ efficiently_RB in_IN Line_NNP 11_CD ._.
+We_PRP can_MD obtain_VB the_DT frequency_NN counts_VBZ of_IN the_DT top-k_JJ frequent_JJ triples_NNS if_IN we_PRP set_VBD the_DT number_NN of_IN counters_NNS N_NNP much_RB larger_JJR than_IN k_NN ._.
+In_IN this_DT way_NN ,_, we_PRP can_MD find_VB the_DT frequency_NN count_NN of_IN the_DT top-k_JJ frequent_JJ triple_JJ f_LS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- approximately_RB ,_, and_CC assume_VB frequency_NN counts_NNS of_IN other_JJ triples_NNS zero_CD ._.
+2.5.2_CD Building_NN pattern_NN vectors_NNS from_IN word_NN vectors_NNS A_DT number_NN of_IN NLP_NNP researchers_NNS explored_VBD approaches_NNS to_TO representing_VBG the_DT meaning_NN of_IN a_DT word_NN with_IN fixed_JJ -_: length_NN vectors_NNS -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN particular_JJ ,_, word2vec4_JJ ,_, an_DT implementation_NN of_IN Mikolov_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, received_VBD much_JJ attention_NN in_IN the_DT NLP_NNP community_NN ._.
+4_LS https://code.google.com/p/word2vec/_CD Output_NN :_: 1_CD :_: 2_CD :_: 3_CD :_: 4_CD :_: 5_CD :_: 6_CD :_: 7_CD :_: 8_CD :_: 9_CD :_: 10_CD :_: 11_CD :_: 12_CD :_: 13_CD :_: 14_CD :_: 15_CD :_: for_IN cp_NN ,_, e_LS :_: counter_NN for_IN each_DT pattern_NN p_NN all_DT -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- ∈_FW D_NNP do_VBP if_IN Tp_NN does_VBZ not_RB exist_VB then_RB Tp_NNP ←_CD ∅_CD end_NN if_IN ife_NN ∈_CD Tp_NNP then_RB cp_VBP ,_, e_SYM ←_FW cp_FW ,_, e_LS +_SYM 1_CD else_RB if_IN |_CD Tp_NNP |_CD <_CD N_NNP then_RB Tp_NNP ←_CD T_NNP ∪_CD -LCB-_-LRB- e_LS -RCB-_-RRB- cp_NN ,_, e_SYM ←_SYM 1_CD else_JJ i_FW ←_FW argmini_FW ∈_FW Tp_FW cp_FW ,_, i_FW cp_FW ,_, e_SYM ←_FW cp_FW ,_, i_FW +_FW 1_CD Tp_NNP ←_CD T_NNP ∪_CD -LCB-_-LRB- e_LS -RCB-_-RRB- \_RB -LCB-_-LRB- i_FW -RCB-_-RRB- end_NN if_IN endfor_NN The_DT goal_NN of_IN this_DT algorithm_NN is_VBZ to_TO find_VB an_DT r_NN ×_CD n_NN matrix_NN B_NNP storing_VBG the_DT compressed_VBN information_NN of_IN the_DT rows_NNS of_IN A_DT ._.
+We_PRP first_RB draw_VBP an_DT n_NN ×_CD r_NN Gaussian_JJ random_JJ matrix_NN Ω_NNP ._.
+Next_JJ ,_, we_PRP derive_VBP the_DT m_NN ×_CD r_NN matrix_FW Y_FW =_SYM AΩ_NNP ._.
+We_PRP next_JJ construct_VBP an_DT m_NN ×_CD r_NN matrix_NN Q_NNP whose_WP$ columns_NNS form_VBP an_DT orthonormal_JJ basis_NN for_IN the_DT range_NN of_IN Y._NNP Here_RB ,_, QQtA_NNP ≈_CD A_DT is_VBZ satisfied_JJ ._.
+Finally_RB ,_, we_PRP obtain_VBP the_DT ma_NN -_: trix_NN B_NNP =_SYM QtA_NNP ,_, in_IN which_WDT Qt_NNP compresses_VBZ the_DT rows_NNS of_IN A_DT ._.
+We_PRP compute_VBP principal_JJ component_NN scores_NNS for_IN r_NN di_FW -_: mensions_NNS by_IN applying_VBG SVD_NNP to_TO B_NNP ._.
+The_DT computation_NN is_VBZ easy_JJ because_IN r_NN ≪_CD m_NN ._.
+In_IN this_DT study_NN ,_, we_PRP used_VBD redsvd3_CD ,_, an_DT implementation_NN of_IN Halko_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+We_PRP represents_VBZ the_DT meaning_NN of_IN a_DT pattern_NN with_IN the_DT scores_NNS of_IN r_NN principle_NN components_NNS ._.
+2.5_CD Improving_NN the_DT scalability_NN to_TO large_JJ data_NNS As_IN described_VBN previously_RB ,_, it_PRP may_MD be_VB difficult_JJ and_CC inef_NN -_: ficient_NN to_TO count_VB the_DT exact_JJ numbers_NNS of_IN co-occurrences_NNS from_IN a_DT large_JJ amount_NN of_IN data_NNS ._.
+In_IN this_DT study_NN ,_, we_PRP ex_FW -_: plore_VB two_CD approaches_NNS :_: approximate_JJ counting_NN -LRB-_-LRB- Sec_SYM -_: tion_NN 2.5.1_CD -RRB-_-RRB- and_CC distributed_VBN representations_NNS of_IN words_NNS -LRB-_-LRB- Section_NN 2.5.2_CD -RRB-_-RRB- ._.
+2.5.1_CD Approximate_NNP counting_VBG We_PRP may_MD probably_RB not_RB need_VB exact_JJ counts_NNS of_IN co_NN -_: occurrences_NNS for_IN representing_VBG pattern_NN vectors_NNS because_IN a_DT small_JJ amount_NN of_IN elements_NNS in_IN a_DT pattern_NN vector_NN 3_CD https://code.google.com/p/redsvd/wiki/_NNP English_NNP Switching_VBG our_PRP$ attention_NN to_TO the_DT pattern_NN feature_NN vec_SYM -_: tor_NN ,_, our_PRP$ goal_NN is_VBZ to_TO express_VB the_DT semantic_JJ meaning_NN of_IN a_DT relational_JJ pattern_NN with_IN a_DT distribution_NN of_IN entity_NN pairs_NNS ._.
+Here_RB ,_, we_PRP explore_VBP the_DT use_NN of_IN low-dimensional_JJ word_NN vectors_NNS learned_VBN by_IN word2vec_CD from_IN the_DT large_JJ corpus_NN :_: the_DT meaning_NN of_IN a_DT pattern_NN is_VBZ represented_VBN by_IN the_DT distri_NN -_: bution_NN of_IN entity_NN vectors_NNS ._.
+Thus_RB ,_, we_PRP obtain_VBP the_DT vector_NN representation_NN of_IN a_DT relational_JJ pattern_NN p_NN ,_, -LRB-_-LRB- 6_CD -RRB-_-RRB- Here_RB ,_, ve0_JJ denotes_NNS the_DT vector_NN for_IN an_DT entity_NN e0_CD in_IN the_DT entitypaire_NN ,_, andve1_JJ doesthevectorforanotheren_NN -_: tity_NN e1_CD in_IN the_DT pair_NN e._NN 3_CD Experiments_NNS 3.1_CD Data_NNP For_IN our_PRP$ experimental_JJ corpus_NN ,_, we_PRP collected_VBD 15_CD bil_NN -_: lion_NN Japanese_JJ sentences_NNS by_IN crawling_VBG web_NN pages_NNS ._.
+To_TO remove_VB noise_NN such_JJ as_IN spam_NN and_CC non-Japanese_JJ sen_NN -_: tences_NNS ,_, we_PRP apply_VBP a_DT filter_NN that_WDT checks_VBZ the_DT length_NN of_IN a_DT sentence_NN ,_, determines_VBZ whether_IN the_DT sentence_NN contains_VBZ a_DT specific_JJ character_NN in_IN Japanese_JJ -LRB-_-LRB- hiragana_NNS -RRB-_-RRB- ,_, and_CC then_RB checks_NNS the_DT number_NN of_IN symbols_NNS ._.
+As_IN a_DT result_NN of_IN fil_NN -_: tering_NN ,_, we_PRP obtained_VBD 6.3_CD billion_CD sentences_NNS ._.
+We_PRP then_RB parsed_VBD these_DT sentences_NNS using_VBG Cabocha5_NNP ,_, a_DT Japanese_JJ dependency_NN parser_NN ._.
+For_IN preprocessing_NN ,_, we_PRP extracted_VBD 1_CD million_CD entities_NNS ,_, 1.1_CD million_CD entity_NN pairs_NNS ,_, and_CC 0.7_CD million_CD patterns_NNS ._.
+Finally_RB ,_, we_PRP extracted_VBD about_RB 1.5_CD bil_NN -_: lion_NN triples_NNS from_IN the_DT corpus_NN ._.
+We_PRP then_RB manually_RB checked_VBD some_DT of_IN the_DT pattern_NN pairs_NNS extracted_VBN from_IN Wikipedia_NNP that_WDT were_VBD also_RB con_JJ -_: tained_VBN within_IN the_DT 6.3_CD billion_CD sentence_NN corpus_NN ._.
+Specif_NNP -_: ically_RB ,_, we_PRP first_RB extracted_VBD frequent_JJ patterns_NNS from_IN some_DT domains_NNS in_IN Wikipedia_NNP for_IN obtaining_VBG the_DT patterns_NNS rep_NN -_: resenting_VBG a_DT specific_JJ relation_NN ._.
+We_PRP selected_VBD patterns_NNS re_VB -_: ferring_VBG to_TO an_DT illness_NN ,_, an_DT author_NN ,_, and_CC an_DT architecture_NN as_IN target_NN domains_NNS ._.
+Next_JJ ,_, we_PRP gathered_VBD patterns_NNS sharing_VBG many_JJ entity_NN pairs_NNS because_IN these_DT patterns_NNS may_MD rep_NN -_: resent_VBP the_DT same_JJ relation_NN ._.
+We_PRP obtained_VBD 527_CD patterns_NNS and_CC 4,531_CD pattern_NN pairs_NNS ._.
+Four_CD annotators_NNS classified_VBN these_DT pairs_NNS into_IN the_DT same_JJ relation_NN or_CC not_RB ._.
+We_PRP then_RB randomly_RB sampled_VBN 90_CD pairs_NNS and_CC found_VBD an_DT average_NN of_IN 0.63_CD for_IN the_DT Cohen_NNP 's_POS kappa_NN value_NN for_IN two_CD annotators_NNS ._.
+We_PRP annotated_VBD the_DT 4,531_CD pairs_NNS by_IN two_CD or_CC more_JJR anno_NN -_: tators_NNS ._.
+Therefore_RB ,_, if_IN two_CD or_CC more_JJR annotators_NNS labeled_VBN 5_CD https://code.google.com/p/cabocha/_NN a_DT pair_NN with_IN the_DT same_JJ relation_NN ,_, we_PRP regarded_VBD the_DT pair_NN as_IN the_DT same_JJ relation_NN ._.
+Finally_RB ,_, we_PRP acquired_VBD 720_CD pairs_NNS ex_FW -_: pressing_VBG the_DT same_JJ relation_NN ._.
+We_PRP applied_VBD each_DT method_NN to_TO 4,531_CD pairs_NNS and_CC we_PRP identified_VBD patterns_NNS with_IN higher_JJR than_IN threshold_NN ._.
+We_PRP investigated_VBD whether_IN the_DT pair_NN is_VBZ included_VBN in_IN the_DT same_JJ relation_NN pairs_NNS ._.
+3.2_CD Experimental_JJ settings_NNS We_PRP evaluated_VBD the_DT quality_NN of_IN pattern_NN vectors_NNS build_VBP by_IN the_DT proposed_VBN approaches_NNS on_IN the_DT similarity_NN calcula_NN -_: tion_NN ._.
+Concretely_RB ,_, we_PRP investigated_VBD the_DT impact_NN on_IN ac_SYM -_: curacy_NN and_CC computation_NN time_NN ._.
+For_IN the_DT evaluation_NN ,_, we_PRP computed_VBD the_DT cosine_NN similarity_NN based_VBN on_IN the_DT feature_NN vectors_NNS obtained_VBN by_IN each_DT method_NN ._.
+We_PRP compared_VBD the_DT following_VBG methods_NNS ._.
+Exact_JJ counting_NN -LRB-_-LRB- baseline_NN -RRB-_-RRB- :_: We_PRP counted_VBD the_DT co_NN -_: occurrence_NN frequency_NN between_IN an_DT entity_NN pair_NN and_CC a_DT pattern_NN in_IN triples_NNS using_VBG a_DT machine_NN with_IN 256GB_CD of_IN memory_NN -LRB-_-LRB- EXACT-FREQ_NNP -RRB-_-RRB- ._.
+In_IN addition_NN ,_, we_PRP calcu_VBP -_: lated_VBN PMI_NNP defined_VBN in_IN equation_NN 4_CD based_VBN on_IN the_DT co_NN -_: occurrence_NN frequency_NN -LRB-_-LRB- EXACT-PMI_NNP -RRB-_-RRB- ._.
+Exact_JJ counting_VBG +_NN PCA_NNP :_: Using_VBG PCA_NNP ,_, we_PRP converted_VBD EXACT-FREQ_NNP and_CC EXACT-PMI_NNP into_IN the_DT fixed_VBN di_FW -_: mensional_JJ vector_NN EXACT-FREQ_NNP +_NNP PCA_NNP and_CC EXACT_NNP -_: PMI+PCA_NNP ._.
+We_PRP determined_VBD the_DT number_NN of_IN dimen_NNS -_: sions_NNS as_IN 1,024_CD based_VBN on_IN comparisons6_NN between_IN 256_CD ,_, 512_CD ,_, 1,024_CD ,_, and_CC 2,048_CD ._.
+Approximate_JJ counting_NN :_: We_PRP counted_VBD the_DT co_NN -_: occurrence_NN frequency_NN using_VBG approximate_JJ counting_VBG explained_VBD in_IN Section_NN 2.5.1_CD -LRB-_-LRB- APPROX-FREQ_NN -RRB-_-RRB- ._.
+The_DT counter_NN size_NN N_NNP was_VBD 10,240_CD and_CC we_PRP used_VBD the_DT top_JJ 5,120_CD frequent_JJ entity_NN pairs_NNS as_IN a_DT feature_NN ._.
+Moreover_RB ,_, we_PRP obtained_VBD PMI_NNP based_VBN on_IN the_DT result_NN of_IN approximate_JJ counting_NN -LRB-_-LRB- APPROX-PMI_NNP -RRB-_-RRB- ._.
+Approximate_JJ counting_VBG +_NN PCA_NNP :_: Using_VBG PCA_NNP ,_, we_PRP converted_VBD APPROX-FREQ_NNP and_CC APPROX-PMI_NNP into_IN the_DT fixed_VBN dimensional_JJ vector_NN APPROX-FREQ_NNP +_NNP PCA_NNP and_CC APPROX-PMI_NNP +_VBP PCA_NNP ._.
+Similar_JJ to_TO Exact_JJ counting_VBG +_NN PCA_NNP ,_, we_PRP selected_VBD the_DT dimension_NN of_IN feature_NN vectors_NNS as_IN 1,024_CD ._.
+Exact_JJ counting_VBG +_SYM word2vec_CD :_: We_PRP obtained_VBD pat_SYM -_: tern_NN feature_NN vectors_NNS using_VBG the_DT result_NN of_IN word2vec_CD -LRB-_-LRB- EXACT-FREQ_JJ +_NN WORD2VEC_NNP -RRB-_-RRB- ._.
+Moreover_RB ,_, instead_RB of_IN calculating_VBG the_DT feature_NN vector_NN by_IN co-occurrence_JJ frequency_NN ,_, we_PRP weight_VBP the_DT entity_NN vector_NN with_IN PMI_NNP 6The_JJ result_NN of_IN 1,024_CD dimensional_JJ vector_NN is_VBZ close_JJ to_TO the_DT one_CD of_IN 2,048_CD ._.
+We_PRP selected_VBD 1,024_CD since_IN the_DT smaller_JJR the_DT number_NN of_IN feature_NN dimensions_NNS are_VBP ,_, the_DT faster_RBR we_PRP calculate_VBP similarity_NN ._.
+∑_SYM -LSB-_NNP v_SYM -RSB-_NNP p_NN =_SYM f_LS -LRB-_-LRB- p_NN ,_, e_LS -RRB-_-RRB- e0_FW ._.
+e_SYM ∈_FW E_NNP ve1_CD Figure_NN 3_CD :_: Precision_NN and_CC recall_NN of_IN each_DT method_NN -LRB-_-LRB- EXACT-PMI_JJ +_NN WORD2VEC_NNP -RRB-_-RRB- ._.
+We_PRP trained_VBD word2vec_CD using_VBG all_DT entities_NNS ,_, verbs_NNS ,_, and_CC adverbs_NNS in_IN the_DT corpus_NN on_IN four_CD AMD_NNP Opteron_NNP 6174_CD processors_NNS -LRB-_-LRB- 12-core_CD ,_, 2.2_CD GHz_NNP -RRB-_-RRB- ._.
+It_PRP took_VBD about_RB 130_CD hours_NNS to_TO train_VB word2vec_CD -LRB-_-LRB- the_DT number_NN of_IN threads_NNS was_VBD 42_CD and_CC window_NN size_NN was_VBD 5_CD -RRB-_-RRB- ._.
+Similar_JJ to_TO PCA_NNP ,_, we_PRP selected_VBD the_DT dimension_NN of_IN each_DT word_NN vector_NN as_IN 512_CD :_: namely_RB ,_, the_DT dimension_NN of_IN pattern_NN vectors_NNS was_VBD 1,024_CD because_IN of_IN concatenating_NN ._.
+3.3_CD Evaluating_VBG accuracy_NN of_IN each_DT method_NN Figure_NN 3_CD shows_VBZ the_DT precision_NN and_CC recall_NN of_IN each_DT method_NN ._.
+We_PRP illustrated_VBD this_DT graph_NN by_IN changing_VBG the_DT threshold_NN value_NN ._.
+We_PRP focus_VBP attention_NN on_IN the_DT difference_NN between_IN exact_JJ counting_NN and_CC approximate_JJ count_NN -_: ing_NN ._.
+These_DT results_NNS of_IN EXACT-FREQ_NNP and_CC APPROX_NNP -_: FREQ_NNP were_VBD about_IN the_DT same_JJ ._.
+On_IN the_DT other_JJ hand_NN ,_, APPROX-PMI_NNP outperformed_VBD EXACT-PMI_NNP in_IN most_JJS areas_NNS ._.
+These_DT results_NNS demonstrated_VBD that_IN approximate_JJ counting_NN is_VBZ enough_RB to_TO compute_VB co-occurrence_NN fre_NN -_: quency_NN between_IN a_DT pattern_NN and_CC an_DT entity_NN pair_NN ._.
+The_DT results_NNS also_RB suggest_VBP that_IN approximate_JJ counting_VBG pos_SYM -_: sibly_NN improves_VBZ the_DT performance_NN ._.
+Comparing_VBG the_DT results_NNS with_IN PCA_NNP and_CC without_IN PCA_NNP ,_, the_DT figure_NN shows_VBZ that_IN PCA_NNP does_VBZ not_RB always_RB improve_VB the_DT performance_NN ._.
+However_RB ,_, APPROX_NNP -_: PMI+PCA_NNP achieved_VBD the_DT best_JJS performance_NN in_IN most_JJS areas_NNS ._.
+For_IN computation_JJ time_NN ,_, we_PRP verify_VBP that_IN PCA_NNP is_VBZ important_JJ in_IN this_DT aspect_NN ._.
+In_IN contrast_NN ,_, feature_NN vectors_NNS based_VBN on_IN word2vec_JJ worsened_VBD the_DT performance_NN against_IN not_RB only_RB approxi_SYM -_: mate_NN counting_VBG but_CC also_RB exact_JJ counting_NN ._.
+Although_IN we_PRP expected_VBD that_IN the_DT vector_NN formed_VBN by_IN word2vec_CD was_VBD appropriate_JJ for_IN representing_VBG the_DT meaning_NN of_IN a_DT pat_NN -_: tern_NN ,_, EXACT-FREQ_NNP +_NNP WORD2VEC_NNP was_VBD worse_JJR than_IN all_PDT the_DT other_JJ methods_NNS in_IN Figure_NN 3_CD ._.
+We_PRP suspect_VBP that_IN this_DT Table_NNP 1_CD :_: Similarity_NN calculation_NN time_NN of_IN each_DT method_NN with_IN one_CD thread_NN result_NN was_VBD caused_VBN by_IN separating_VBG entity_NN pairs_NNS into_IN en_IN -_: tities_NNS in_IN feature_NN generation_NN ._.
+Concretely_RB ,_, for_IN obtaining_VBG pattern_NN feature_NN vectors_NNS using_VBG word2vec_CD ,_, we_PRP concate_VBP -_: nate_VB the_DT sum_NN of_IN vectors_NNS assigned_VBN to_TO one_CD side_NN of_IN entity_NN pairs_NNS and_CC the_DT ones_NNS assigned_VBN to_TO the_DT other_JJ side_NN ._.
+There_EX -_: fore_NN ,_, there_EX is_VBZ a_DT possibility_NN that_IN we_PRP obtain_VB pattern_NN pairs_NNS with_IN a_DT high_JJ similarity_NN when_WRB both_DT of_IN the_DT patterns_NNS con_VBP -_: tain_NN one_CD of_IN the_DT same_JJ entity_NN types_NNS ._.
+In_IN other_JJ words_NNS ,_, we_PRP need_VBP to_TO encode_VB not_RB entities_NNS separately_RB but_CC maintain_VBP -_: ing_VBG entity_NN pair_NN as_IN a_DT pattern_NN feature_NN vector_NN ._.
+From_IN Figure_NN 3_CD ,_, approximate_JJ counting_NN is_VBZ effective_JJ for_IN the_DT similarity_NN calculation_NN ._.
+In_IN addition_NN ,_, PCA_NNP is_VBZ useful_JJ for_IN representing_VBG the_DT meaning_NN of_IN a_DT pattern_NN in_IN the_DT compact_JJ space_NN ._.
+3.4_CD Evaluating_VBG computation_NN time_NN Table_NNP 1_CD demonstrates_VBZ the_DT similarity_NN calculation_NN time_NN of_IN EXACT-PMI_NNP ,_, APPROX-PMI_NNP and_CC APPROX_NNP -_: PMI+PCA_NNP for_IN processing_VBG 10k_JJ patterns_NNS ,_, 100k_JJ pat_NN -_: terns_NNS ,_, and_CC 664k_JJ patterns_NNS -LRB-_-LRB- the_DT maximum_NN -RRB-_-RRB- ._.
+We_PRP ex_FW -_: ecuted_VBD a_DT program_NN written_VBN in_IN C++_NNP on_IN four_CD AMD_NNP Opteron_NNP 6174_CD processors_NNS -LRB-_-LRB- 12-core_CD ,_, 2.2_CD GHz_NNP -RRB-_-RRB- with_IN 256GB_CD of_IN the_DT memory_NN ._.
+We_PRP measured_VBD the_DT calculation_NN time_NN using_VBG a_DT single_JJ thread_NN ._.
+Note_VB that_DT ,_, we_PRP split_VBD the_DT calculation_NN targets_NNS and_CC predicted_VBD computation_NN time_NN based_VBN on_IN the_DT result_NN of_IN division_NN and_CC split_VBD number_NN ,_, be_VB -_: cause_NN much_JJ time_NN is_VBZ required_VBN to_TO complete_VB the_DT calcu_NN -_: lation_NN for_IN 100k_CD and_CC 664k_CD patterns_NNS ._.
+For_IN 100k_CD pat_NN -_: terns_NNS ,_, we_PRP split_VBD the_DT calculation_NN targets_VBZ into_IN 48_CD groups_NNS ._.
+For_IN 664k_JJ pattern_NN ,_, we_PRP split_VBD the_DT calculation_NN targets_VBZ into_IN 4,096_CD groups_NNS ._.
+APPROX-PMI_NN executed_VBD quicker_JJR than_IN EXACT_NNP -_: PMI_NNP because_IN APPROX-PMI_NNP decreased_VBD the_DT num_NN -_: ber_NN of_IN non-zero_JJ features_NNS for_IN each_DT pattern_NN ._.
+Nev_NNP -_: ertheless_JJ ,_, APPROX-PMI_JJ took_VBD a_DT large_JJ amount_NN of_IN time_NN for_IN the_DT similarity_NN calculation_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT computation_NN time_NN of_IN APPROX-PMI_NNP +_NNP PCA_NNP was_VBD much_RB smaller_JJR than_IN that_DT of_IN EXACT-PMI_NNP and_CC APPROX-PMI_NNP ._.
+As_IN a_DT result_NN ,_, it_PRP is_VBZ necessary_JJ to_TO reduce_VB the_DT amount_NN of_IN dimensions_NNS because_IN APPROX-PMI_NNP Method_NNP EXACT-PMI_NNP APPROX-PMI_NNP APPROX-PMI_NNP +_VBZ PCA_NNP 10k_FW 100k_FW 55m_FW 121hr_FW 38m_FW 110hr_FW 4m_FW 7hr_FW all_DT -LRB-_-LRB- 664k_JJ -RRB-_-RRB- 8,499_CD hr_NN 7,441_CD hr_NN 785hr_NN would_MD take_VB 7,441_CD hours_NNS -LRB-_-LRB- about_IN a_DT year_NN -RRB-_-RRB- to_TO calculate_VB all_DT pattern_NN similarity_NN with_IN one_CD thread_NN ._.
+We_PRP conclude_VBP that_IN it_PRP is_VBZ necessary_JJ to_TO prepare_VB low_JJ dimensional_JJ fea_NN -_: ture_NN vectors_NNS using_VBG dimension_NN reduction_NN or_CC word_NN vec_NN -_: tors_NNS for_IN completing_VBG similarity_NN calculation_NN in_IN a_DT realis_NN -_: tic_JJ time_NN ._.
+4_LS Related_VBN work_NN Unsupervised_JJ relation_NN extraction_NN poses_VBZ three_CD major_JJ challenges_NNS :_: extraction_NN of_IN relation_NN instances_NNS ,_, repre_NN -_: senting_VBG the_DT meaning_NN of_IN relational_JJ patterns_NNS ,_, and_CC ef_SYM -_: ficient_NN similarity_NN computation_NN ._.
+A_DT great_JJ number_NN of_IN studies_NNS proposed_VBN methods_NNS for_IN extracting_VBG relation_NN in_IN -_: stances_NNS -LRB-_-LRB- Wu_NNP and_CC Weld_NNP ,_, 2010_CD ;_: Fader_NNP et_FW al._FW ,_, 2011_CD ;_: Fader_NNP et_FW al._FW ,_, 2011_CD ;_: Akbik_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+We_PRP do_VBP not_RB describe_VB the_DT detail_NN of_IN these_DT studies_NNS ,_, which_WDT are_VBP out_IN of_IN the_DT scope_NN of_IN this_DT paper_NN ._.
+Previous_JJ studies_NNS explored_VBN various_JJ approaches_NNS to_TO represent_VB the_DT meaning_NN of_IN relational_JJ patterns_NNS -LRB-_-LRB- Lin_NNP and_CC Pantel_NNP ,_, 2001_CD ;_: Yao_NNP et_FW al._FW ,_, 2012_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Lin_NNP and_CC Pantel_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- used_VBN co-occurrence_NN statistics_NNS of_IN PMI_NNP between_IN an_DT entity_NN and_CC a_DT relational_JJ pattern_NN ._.
+Even_RB though_IN the_DT goal_NN of_IN their_PRP$ research_NN is_VBZ not_RB on_IN re_SYM -_: lation_NN extraction_NN but_CC on_IN paraphrase_NN -LRB-_-LRB- inference_NN rule_NN -RRB-_-RRB- discovery_NN ,_, the_DT work_NN had_VBD a_DT great_JJ impact_NN to_TO the_DT re_NN -_: search_NN on_IN unsupervised_JJ relation_NN extraction_NN ._.
+Yao_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- modeled_VBN sentence_NN themes_NNS and_CC document_NN themes_NNS by_IN using_VBG LDA_NNP ,_, and_CC represented_VBD the_DT mean_NN -_: ing_NN of_IN a_DT pattern_NN with_IN the_DT themes_NNS together_RB with_IN the_DT co-occurrence_NN statistics_NNS between_IN patterns_NNS and_CC enti_NNS -_: ties_NNS ._.
+Recently_RB ,_, methods_NNS inspired_VBN by_IN neural_JJ language_NN modeling_NN received_VBD much_JJ attentions_NNS for_IN representa_NN -_: tion_NN learning_NN -LRB-_-LRB- Bengio_NNP et_FW al._FW ,_, 2003_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2010_CD ;_: Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN this_DT study_NN ,_, we_PRP com_NN -_: pared_VBD the_DT raw_JJ frequency_NN counts_NNS ,_, PMI_NNP ,_, and_CC word_NN em_SYM -_: beddings_NNS -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN order_NN to_TO achieve_VB efficient_JJ similarity_NN computa_NN -_: tion_NN ,_, some_DT researchers_NNS used_VBN entity_NN types_NNS ,_, for_IN exam_NN -_: ple_NN ,_, ``_`` Franz_NNP Kafka_NNP ''_'' as_IN a_DT co-referent_NN of_IN writer_NN -LRB-_-LRB- Min_NNP et_FW al._FW ,_, 2012_CD ;_: Nakashole_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Min_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- obtained_VBN entity_NN types_NNS by_IN clustering_VBG enti_NNS -_: ties_NNS in_IN a_DT corpus_NN ._.
+When_WRB computing_VBG the_DT similarity_NN val_NN -_: ues_NNS of_IN patterns_NNS ,_, they_PRP restricted_VBD target_NN pattern_NN pairs_NNS to_TO the_DT ones_NNS sharing_VBG the_DT same_JJ entity_NN types_NNS ._.
+In_IN this_DT way_NN ,_, they_PRP reduced_VBD the_DT number_NN of_IN similarity_NN compu_NN -_: tations_NNS ._.
+Nakashole_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- also_RB reduced_VBD the_DT number_NN of_IN similarity_NN computations_NNS by_IN using_VBG entity_NN types_NNS obtained_VBN from_IN existing_VBG knowledge_NN bases_NNS such_JJ as_IN Yago_NNP -LRB-_-LRB- Suchanek_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- and_CC Freebase_NNP -LRB-_-LRB- Bol_NNP -_: lacker_NN et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+However_RB ,_, it_PRP is_VBZ not_RB so_RB straightfor_JJ -_: ward_NN to_TO determine_VB the_DT semantic_JJ type_NN of_IN an_DT entity_NN in_IN advance_NN because_IN the_DT semantic_JJ type_NN may_MD depends_VBZ on_IN the_DT context_NN ._.
+For_IN example_NN ,_, ``_`` Woody_NNP Allen_NNP ''_'' stands_VBZ for_IN an_DT actor_NN ,_, a_DT movie_NN director_NN ,_, or_CC a_DT writer_NN depending_VBG on_IN the_DT context_NN ._.
+Therefore_RB ,_, we_PRP think_VBP it_PRP is_VBZ also_RB important_JJ to_TO reduce_VB the_DT computation_NN time_NN for_IN pattern_NN similar_JJ -_: ities_NNS by_IN simplifying_VBG the_DT semantic_JJ representation_NN of_IN relational_JJ patterns_NNS ._.
+The_DT closest_JJS work_NN to_TO ours_PRP is_VBZ probably_RB Goyal_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Their_PRP$ paper_NN proposes_VBZ to_TO use_VB algorithms_NNS of_IN count-min_JJ sketch_NN -LRB-_-LRB- approximate_JJ counting_NN -RRB-_-RRB- and_CC ap_SYM -_: proximate_JJ nearest_JJS neighbor_NN search_NN for_IN NLP_NNP tasks_NNS ._.
+They_PRP applied_VBD these_DT techniques_NNS for_IN obtaining_VBG feature_NN vectors_NNS ,_, reducing_VBG the_DT dimension_NN of_IN the_DT vector_NN space_NN ,_, and_CC searching_VBG similar_JJ items_NNS to_TO a_DT query_NN ._.
+Even_RB though_IN they_PRP demonstrated_VBD the_DT efficiency_NN of_IN the_DT algorithms_NNS ,_, they_PRP did_VBD not_RB demonstrate_VB the_DT effectiveness_NN of_IN the_DT ap_NN -_: proach_NN in_IN a_DT specific_JJ NLP_NNP task_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP presented_VBD several_JJ approaches_NNS to_TO unsupervised_JJ relation_NN extraction_NN on_IN a_DT large_JJ amount_NN of_IN data_NNS ._.
+In_IN order_NN to_TO handle_VB large_JJ data_NNS ,_, we_PRP ex_FW -_: plored_VBN three_CD approaches_NNS :_: dimension_NN reduction_NN ,_, ap_SYM -_: proximate_JJ counting_NN ,_, and_CC vector_NN representations_NNS of_IN words_NNS ._.
+The_DT experimental_JJ results_NNS showed_VBD that_IN ap_SYM -_: proximate_JJ frequency_NN counting_NN and_CC dimension_NN reduc_NN -_: tion_NN not_RB only_RB speeds_VBZ up_RP similarity_NN computation_NN but_CC also_RB improved_VBD the_DT quality_NN of_IN pattern_NN vectors_NNS ._.
+The_DT use_NN of_IN vector_NN representation_NN of_IN words_NNS did_VBD not_RB show_VB an_DT improvement_NN ._.
+This_DT is_VBZ probably_RB because_IN we_PRP need_VBP to_TO learn_VB a_DT vector_NN representation_NN specialized_VBN for_IN patterns_NNS that_WDT encode_VBP the_DT distributions_NNS of_IN entity_NN pairs_NNS ._.
+A_DT future_JJ direction_NN of_IN this_DT research_NN is_VBZ to_TO es_SYM -_: tablish_VB a_DT method_NN to_TO learn_VB the_DT representations_NNS of_IN pat_NN -_: terns_NNS jointly_RB with_IN the_DT representations_NNS of_IN words_NNS ._.
+Fur_NNP -_: thermore_NN ,_, it_PRP would_MD be_VB interesting_JJ to_TO incorporate_VB the_DT meaning_NN of_IN constituent_JJ words_NNS of_IN a_DT pattern_NN into_IN the_DT representation_NN ._.
+Acknowledgments_NNS This_DT work_NN was_VBD supported_VBN by_IN JSPS_NNP KAKENHI_NNP Grant_NNP Numbers_NNPS 26_CD ·_NN 5820_CD ,_, 15H05318_CD and_CC Japan_NNP Science_NNP and_CC Technology_NNP Agency_NNP -LRB-_-LRB- JST_NNP -RRB-_-RRB- ._.
+References_NNP Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL2004_NNP -RRB-_-RRB- ,_, pages_NNS 415_CD --_: 422_CD ._.
+Dekang_NNP Lin_NNP and_CC Patrick_NNP Pantel_NNP ._.
+2001_CD ._.
+Dirt_NN -_: discovery_NN of_IN inference_NN rules_NNS from_IN text_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Seventh_NNP ACM_NNP SIGKDD_NNP International_NNP Conference_NNP on_IN Knowledge_NNP Discovery_NNP and_CC Data_NNP Mining_NNP -LRB-_-LRB- KDD2001_NNP -RRB-_-RRB- ,_, pages_NNS 323_CD --_: 328_CD ._.
+Mausam_NNP ,_, Michael_NNP Schmitz_NNP ,_, Robert_NNP Bart_NNP ,_, Stephen_NNP Soder_NNP -_: land_NN ,_, and_CC Oren_NNP Etzioni_NNP ._.
+2012_CD ._.
+Open_NNP language_NN learn_VBP -_: ing_NN for_IN information_NN extraction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD Joint_NNP Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP and_CC Computational_NNP Natural_NNP Language_NNP Learning_NNP -LRB-_-LRB- EMNLP2012_NNP -RRB-_-RRB- ,_, pages_NNS 523_CD --_: 534_CD ._.
+Ahmed_NNP Metwally_NNP ,_, Divyakant_NNP Agrawal_NNP ,_, and_CC Amr_NNP El_NNP Ab_NNP -_: badi_NN ._.
+2005_CD ._.
+Efficient_JJ computation_NN of_IN frequent_JJ and_CC top-k_JJ elements_NNS in_IN data_NNS streams_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 10th_JJ International_NNP Conference_NNP on_IN Database_NNP The_NNP -_: ory_NN -LRB-_-LRB- ICDT2005_CD -RRB-_-RRB- ,_, pages_NNS 398_CD --_: 412_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Martin_NNP Karafia_NNP ́t_NN ,_, Lukas_NNP Burget_NNP ,_, Jan_NNP Cer_NNP -_: nocky_JJ ́_NN ,_, and_CC Sanjeev_NNP Khudanpur_NNP ._.
+2010_CD ._.
+Recurrent_JJ neural_JJ network_NN based_VBN language_NN model_NN ._.
+In_IN INTER_NNP -_: SPEECH_NNP ,_, pages_NNS 1045_CD --_: 1048_CD ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Gregory_NNP S._NNP Corrado_NNP ,_, and_CC Jeffrey_NNP Dean_NNP ._.
+2013_CD ._.
+Distributed_VBN rep_NN -_: resentations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ compo_NN -_: sitionality_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Neural_NNP Informa_NNP -_: tion_NN Processing_NNP Systems_NNP Conference_NNP and_CC Workshops_NNP -LRB-_-LRB- NIPS2013_NNP -RRB-_-RRB- ,_, pages_NNS 3111_CD --_: 3119_CD ._.
+Bonan_NNP Min_NNP ,_, Shuming_NNP Shi_NNP ,_, Ralph_NNP Grishman_NNP ,_, and_CC Chin_NNP -_: Yew_NNP Lin_NNP ._.
+2012_CD ._.
+Ensemble_NN semantics_NNS for_IN large_JJ -_: scale_NN unsupervised_JJ relation_NN extraction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD Joint_NNP Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP and_CC Computational_NNP Natural_NNP Language_NNP Learning_NNP -LRB-_-LRB- EMNLP-CoNLL2012_NNP -RRB-_-RRB- ,_, pages_NNS 1027_CD --_: 1037_CD ._.
+Ndapandula_NNP Nakashole_NNP ,_, Gerhard_NNP Weikum_NNP ,_, and_CC Fabian_NNP Suchanek_NNP ._.
+2012_CD ._.
+Patty_NNP :_: A_NNP taxonomy_NN of_IN relational_JJ patterns_NNS with_IN semantic_JJ types_NNS ._.
+In_IN 2012_CD Joint_NNP Confer_NNP -_: ence_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Pro-_JJ cessing_NN and_CC Computational_NNP Natural_NNP Language_NNP Learn_NNP -_: ing_NN -LRB-_-LRB- EMNLP-CoNLL2012_NN -RRB-_-RRB- ,_, pages_NNS 1135_CD --_: 1145_CD ._.
+Patrick_NNP Pantel_NNP and_CC Marco_NNP Pennacchiotti_NNP ._.
+2006_CD ._.
+Espresso_NN :_: Leveraging_VBG generic_JJ patterns_NNS for_IN automatically_RB harvest_NN -_: ing_NN semantic_JJ relations_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Computational_NNP Linguis_NNP -_: tics_NNS and_CC the_DT 44th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL2006_NNP -RRB-_-RRB- ,_, pages_NNS 113_CD --_: 120_CD ._.
+Deepak_NNP Ravichandran_NNP and_CC Eduard_NNP Hovy_NNP ._.
+2002_CD ._.
+Learning_NNP surface_NN text_NN patterns_NNS for_IN a_DT question_NN answering_VBG system_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ Annual_JJ Meeting_VBG on_IN Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL2002_NNP -RRB-_-RRB- ,_, pages_NNS 41_CD --_: 47_CD ._.
+Alan_NNP Akbik_NNP ,_, Larysa_NNP Visengeriyeva_NNP ,_, Priska_NNP Herger_NNP ,_, Holmer_NNP Hemsen_NNP ,_, and_CC Alexander_NNP Lo_NNP ̈ser_NN ._.
+2012_CD ._.
+Un_SYM -_: supervised_JJ discovery_NN of_IN relations_NNS and_CC discriminative_JJ extraction_NN patterns_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 24th_JJ In_IN -_: ternational_JJ Conference_NN on_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- COLING2012_NNP -RRB-_-RRB- ,_, pages_NNS 17_CD --_: 32_CD ._.
+Michele_NNP Banko_NNP ,_, Michael_NNP J_NNP Cafarella_NNP ,_, Stephen_NNP Soderland_NNP ,_, Matt_NNP Broadhead_NNP ,_, and_CC Oren_NNP Etzioni_NNP ._.
+2007_CD ._.
+Open_NNP infor_NN -_: mation_NN extraction_NN from_IN the_DT web_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 20th_JJ International_NNP Joint_NNP Conference_NNP on_IN Artifical_NNP Intel_NNP -_: ligence_NN -LRB-_-LRB- IJCAI2007_NNP -RRB-_-RRB- ,_, pages_NNS 2670_CD --_: 2676_CD ._.
+Yoshua_NNP Bengio_NNP ,_, Re_NNP ́jean_JJ Ducharme_NNP ,_, Pascal_NNP Vincent_NNP ,_, and_CC Christian_NNP Janvin_NNP ._.
+2003_CD ._.
+A_DT neural_JJ probabilistic_JJ lan_NN -_: guage_NN model_NN ._.
+3:1137_CD --_: 1155_CD ._.
+Kurt_NNP Bollacker_NNP ,_, Colin_NNP Evans_NNP ,_, Praveen_NNP Paritosh_NNP ,_, Tim_NNP Sturge_NNP ,_, and_CC Jamie_NNP Taylor_NNP ._.
+2008_CD ._.
+Freebase_NN :_: A_DT col_NN -_: laboratively_RB created_VBN graph_NN database_NN for_IN structuring_VBG hu_SYM -_: man_NN knowledge_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2008_CD ACM_NNP SIGMOD_NNP International_NNP Conference_NNP on_IN Management_NNP of_IN Data_NNP -LRB-_-LRB- SIGMOD_NNP '_POS 08_CD -RRB-_-RRB- ,_, pages_NNS 1247_CD --_: 1250_CD ._.
+Michael_NNP Collins_NNP ,_, Sanjoy_NNP Dasgupta_NNP ,_, and_CC Robert_NNP E._NNP Schapire_NNP ._.
+2002_CD ._.
+A_DT generalization_NN of_IN principal_JJ com_NN -_: ponents_NNS analysis_NN to_TO the_DT exponential_JJ family_NN ._.
+In_IN Ad_NNP -_: vances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS 14_CD -LRB-_-LRB- NIPS2002_NN -RRB-_-RRB- ,_, pages_NNS 617_CD --_: 624_CD ._.
+Stijn_NNP De_NNP Saeger_NNP ,_, Kentaro_NNP Torisawa_NNP ,_, Jun_NNP '_POS ichi_JJ Kazama_NNP ,_, Kow_NNP Kuroda_NNP ,_, and_CC Masaki_NNP Murata_NNP ._.
+2009_CD ._.
+Large_JJ scale_NN relation_NN acquisition_NN using_VBG class_NN dependent_JJ patterns_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2009_CD Ninth_NNP IEEE_NNP International_NNP Conference_NNP on_IN Data_NNP Mining_NNP -LRB-_-LRB- ICDM2009_NNP -RRB-_-RRB- ,_, pages_NNS 764_CD --_: 769_CD ._.
+Anthony_NNP Fader_NNP ,_, Stephen_NNP Soderland_NNP ,_, and_CC Oren_NNP Etzioni_NNP ._.
+2011_CD ._.
+Identifying_VBG relations_NNS for_IN open_JJ information_NN ex_FW -_: traction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2011_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP2011_NNP -RRB-_-RRB- ,_, pages_NNS 1535_CD --_: 1545_CD ._.
+Amit_NNP Goyal_NNP ,_, Hal_NNP Daume_NNP ́_NNP ,_, III_NNP ,_, and_CC Raul_NNP Guerra_NNP ._.
+2012_CD ._.
+Fast_NNP large-scale_JJ approximate_JJ graph_NN construction_NN for_IN nlp_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2012_CD Joint_NNP Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Process_NNP -_: ing_NN and_CC Computational_NNP Natural_NNP Language_NNP Learning_NNP -LRB-_-LRB- EMNLP-CoNLL2012_NNP -RRB-_-RRB- ,_, pages_NNS 1069_CD --_: 1080_CD ._.
+Nathan_NNP Halko_NNP ,_, Per_IN Gunnar_NNP Martinsson_NNP ,_, and_CC Joel_NNP A._NNP Tropp_NNP ._.
+2011_CD ._.
+Finding_VBG structure_NN with_IN randomness_NN :_: Probabilistic_NNP algorithms_NNS for_IN constructing_VBG approximate_JJ matrix_NN decompositions_NNS ._.
+SIAM_NNP Review_NNP ,_, 53_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :217_CD --_: 288_CD ._.
+Zellig_NNP Harris_NNP ._.
+1954_CD ._.
+Distributional_JJ structure_NN ._.
+Word_NN ,_, 10_CD -LRB-_-LRB- 23_CD -RRB-_-RRB- :146_CD --_: 162_CD ._.
+Takaaki_NNP Hasegawa_NNP ,_, Satoshi_NNP Sekine_NNP ,_, and_CC Ralph_NNP Grishman_NNP ._.
+2004_CD ._.
+Discovering_VBG relations_NNS among_IN named_VBN entities_NNS from_IN large_JJ corpora_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 42nd_NNP Annual_JJ Sebastian_NNP Riedel_NNP ,_, Limin_NNP Yao_NNP ,_, Andrew_NNP McCallum_NNP ,_, and_CC Benjamin_NNP M._NNP Marlin_NNP ._.
+2013_CD ._.
+Relation_NN extraction_NN with_IN matrix_NN factorization_NN and_CC universal_JJ schemas_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Main_NNP Conference_NNP on_IN Human_NNP Language_NNP Technology_NNP Conference_NNP of_IN the_DT North_JJ American_JJ Chap_NNP -_: ter_NN of_IN the_DT Association_NNP of_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- HLT-NAACL2013_NNP -RRB-_-RRB- ,_, pages_NNS 74_CD --_: 84_CD ._.
+Ellen_NNP Riloff_NNP ._.
+1996_CD ._.
+Automatically_RB generating_VBG extraction_NN patterns_NNS from_IN untagged_JJ text_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 13th_JJ National_NNP Conference_NNP on_IN Artificial_NNP Intelligence_NNP -_: Volume_NN 2_CD -LRB-_-LRB- AAAI96_NNP -RRB-_-RRB- ,_, pages_NNS 1044_CD --_: 1049_CD ._.
+Benjamin_NNP Rosenfeld_NNP and_CC Ronen_NNP Feldman_NNP ._.
+2007_CD ._.
+Clus_SYM -_: tering_VBG for_IN unsupervised_JJ relation_NN identification_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Sixteenth_NNP ACM_NNP Conference_NNP on_IN Con_NN -_: ference_NN on_IN Information_NN and_CC Knowledge_NNP Management_NNP -LRB-_-LRB- CIKM2007_NNP -RRB-_-RRB- ,_, pages_NNS 411_CD --_: 418_CD ._.
+Yusuke_NNP Shinyama_NNP and_CC Satoshi_NNP Sekine_NNP ._.
+2006_CD ._.
+Preemp_NNP -_: tive_JJ information_NN extraction_NN using_VBG unrestricted_JJ relation_NN discovery_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Main_NNP Conference_NNP on_IN Human_NNP Language_NNP Technology_NNP Conference_NNP of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP of_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- HLT-NAACL2006_NNP -RRB-_-RRB- ,_, pages_NNS 304_CD --_: 311_CD ._.
+Fabian_NNP M._NNP Suchanek_NNP ,_, Gjergji_NNP Kasneci_NNP ,_, and_CC Gerhard_NNP Weikum_NNP ._.
+2007_CD ._.
+Yago_NNP :_: A_NNP core_NN of_IN semantic_JJ knowledge_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ International_NNP Conference_NNP on_IN World_NNP Wide_NNP Web_NNP -LRB-_-LRB- WWW_NNP 2007_CD -RRB-_-RRB- ,_, pages_NNS 697_CD --_: 706_CD ._.
+Idan_NNP Szpektor_NNP ,_, Hristo_NNP Tanev_NNP ,_, Ido_NNP Dagan_NNP ,_, and_CC Bonaventura_NNP Coppola_NNP ._.
+2004_CD ._.
+Scaling_VBG web-based_JJ acquisition_NN of_IN en_IN -_: tailment_NN relations_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2004_CD Confer_NNP -_: ence_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Pro-_JJ cessing_NN -LRB-_-LRB- EMNLP2004_CD -RRB-_-RRB- ,_, pages_NNS 41_CD --_: 48_CD ._.
+Fei_NNP Wu_NNP and_CC Daniel_NNP S._NNP Weld_NNP ._.
+2010_CD ._.
+Open_NNP information_NN extraction_NN using_VBG wikipedia_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 48th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL2010_NNP -RRB-_-RRB- ,_, pages_NNS 118_CD --_: 127_CD ._.
+Limin_NNP Yao_NNP ,_, Aria_NNP Haghighi_NNP ,_, Sebastian_NNP Riedel_NNP ,_, and_CC Andrew_NNP McCallum_NNP ._.
+2011_CD ._.
+Structured_VBN relation_NN discovery_NN using_VBG generative_JJ models_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 2011_CD Confer_NNP -_: ence_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Pro-_JJ cessing_NN -LRB-_-LRB- EMNLP2011_CD -RRB-_-RRB- ,_, pages_NNS 1456_CD --_: 1466_CD ._.
+Limin_NNP Yao_NNP ,_, Sebastian_NNP Riedel_NNP ,_, and_CC Andrew_NNP McCallum_NNP ._.
+2012_CD ._.
+Unsupervised_JJ relation_NN discovery_NN with_IN sense_NN dis_SYM -_: ambiguation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL2012_NNP -RRB-_-RRB- ,_, pages_NNS 712_CD --_: 720_CD ._.

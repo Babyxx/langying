@@ -1,0 +1,298 @@
+Machine_NN Translation_NN Experiments_NNS on_IN PADIC_NNP :_: A_NNP Parallel_JJ Arabic_NNP DIalect_NNP Corpus_NNP Mourad_NNP Abbas_NNP Abstract_NNP We_PRP present_VBP in_IN this_DT paper_NN PADIC_NNP ,_, a_DT Parallel_JJ Arabic_NNP DIalect_NNP Corpus_NNP we_PRP built_VBD from_IN scratch_NN ,_, then_RB we_PRP conducted_VBD experiments_NNS on_IN cross_NN -_: dialect_NN Arabic_NNP machine_NN translation_NN ._.
+PADIC_NNP is_VBZ composed_VBN of_IN dialects_NNS from_IN both_DT the_DT Maghreb_NNP and_CC the_DT Middle-East_NNP ._.
+Each_DT dialect_NN has_VBZ been_VBN aligned_VBN with_IN Modern_NNP Standard_NNP Arabic_NNP -LRB-_-LRB- MSA_NNP -RRB-_-RRB- ._.
+Three_CD dialects_NNS from_IN Maghreb_NNP are_VBP concerned_VBN by_IN this_DT study_NN :_: two_CD from_IN Algeria_NNP ,_, one_CD from_IN Tunisia_NNP ,_, and_CC two_CD dialects_NNS from_IN the_DT Middle_NN -_: East_NNP -LRB-_-LRB- Syria_NNP and_CC Palestine_NNP -RRB-_-RRB- ._.
+PADIC_NNP has_VBZ been_VBN built_VBN from_IN scratch_NN because_IN the_DT lack_NN of_IN dialect_NN resources_NNS ._.
+In_IN fact_NN ,_, Arabic_NNP dialects_NNS in_IN Arab_JJ world_NN in_IN general_JJ are_VBP used_VBN in_IN daily_JJ life_NN con_NN -_: versations_NNS but_CC they_PRP are_VBP not_RB written_VBN ._.
+At_IN the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, PADIC_NNP ,_, up_RB to_TO now_RB ,_, is_VBZ the_DT largest_JJS corpus_NN in_IN the_DT community_NN work_NN -_: ing_NN on_IN dialects_NNS and_CC especially_RB those_DT concern_NN -_: ing_VBG Maghreb_NNP ._.
+PADIC_NNP is_VBZ composed_VBN of_IN 6400_CD sentences_NNS for_IN each_DT of_IN the_DT 5_CD concerned_JJ dialects_NNS and_CC MSA_NNP ._.
+We_PRP conducted_VBD cross-lingual_JJ ma_SYM -_: chine_NN translation_NN experiments_NNS between_IN all_PDT the_DT language_NN pairs_NNS ._.
+For_IN translating_VBG to_TO MSA_NNP we_PRP in_IN -_: terpolated_VBD the_DT corresponding_JJ Language_NN Model_NNP -LRB-_-LRB- LM_NNP -RRB-_-RRB- with_IN a_DT large_JJ Arabic_NNP corpus_NN based_VBN LM_NNP ._.
+We_PRP also_RB studied_VBD the_DT impact_NN of_IN language_NN model_NN smoothing_VBG techniques_NNS on_IN the_DT results_NNS of_IN ma_NN -_: chine_NN translation_NN because_IN this_DT corpus_NN ,_, even_RB it_PRP is_VBZ the_DT largest_JJS one_CD ,_, it_PRP still_RB very_RB small_JJ in_IN com_NN -_: parison_NN to_TO those_DT used_VBN for_IN translation_NN of_IN natural_JJ languages_NNS ._.
+∗_NNP Ecole_NNP Normale_NNP Supe_NNP ́rieure_NNP Bouzareah_NNP ._.
+†_NNP Multimedia_NNP ,_, InfoRmation_NNP systems_NNS and_CC Advanced_NNP Comput_NNP -_: ing_NN Laboratory_NN ._.
+‡_NNP Centre_NNP de_IN Recherche_NNP Scientifique_NNP et_NNP Technique_NNP pour_VBP le_FW De_NNP ́veloppement_NNP de_IN la_DT Langue_NNP Arabe_NNP ._.
+Kamel_NNP Smaili_NNP Campus_NNP Scientifique_NNP LORIA_NNP Nancy_NNP ,_, France_NNP 1_CD Introduction_NNP Recently_RB ,_, in_IN addition_NN of_IN translating_VBG MSA_NNP -LRB-_-LRB- Modern_NNP Standard_NNP Arabic_NNP -RRB-_-RRB- ,_, a_DT new_JJ challenging_JJ issue_NN emerges_VBZ :_: How_WRB to_TO deal_VB with_IN the_DT translation_NN of_IN Arabic_NNP dialects_NNS ?_.
+Few_JJ years_NNS ago_RB ,_, some_DT works_NNS have_VBP been_VBN proposed_VBN to_TO process_VB Arabic_NNP dialects_NNS and_CC more_JJR specifically_RB those_DT of_IN Middle-East_NNP ._.
+These_DT works_VBZ concerned_JJ building_NN lexicon_NN ,_, analyzing_VBG text_NN morphology_NN ,_, POS_NNP tagging_NN ,_, diacritization_NN ,_, etc_FW ,_, -LRB-_-LRB- Kilany_NNP et_FW al._FW ,_, 2002_CD ;_: Kirchhoff_NNP et_FW al._FW ,_, 2003_CD ;_: Habash_NNP and_CC Rambow_NNP ,_, 2006_CD ;_: Chiang_NNP et_FW al._FW ,_, 2006_CD ;_: Habash_NNP et_FW al._FW ,_, 2013_CD ;_: Elfardy_NNP and_CC Diab_NNP ,_, 2013_CD ;_: Pasha_NNP et_FW al._FW ,_, 2014_CD ;_: Harrat_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+In_IN the_DT context_NN of_IN Machine_NN Translation_NN some_DT Arabic_NNP dialects_NNS have_VBP started_VBN receiving_VBG increasing_VBG attention_NN -LRB-_-LRB- Sawaf_NNP ,_, 2010_CD ;_: Zbib_NNP et_FW al._FW ,_, 2012_CD ;_: Salloum_NNP and_CC Habash_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Number_NN of_IN researchers_NNS have_VBP exploited_VBN the_DT NLP_NNP tools_NNS dedicated_VBN to_TO MSA_NNP to_TO develop_VB their_PRP$ Machine_NN Trans_NNP -_: lation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- systems_NNS for_IN Arabic_NNP dialects_NNS ,_, considered_VBN as_IN under-resourced_JJ languages_NNS ._.
+Ridouane_NN and_CC Karim_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- used_VBN tools_NNS designed_VBN for_IN MSA_NNP and_CC adapted_VBD them_PRP to_TO Moroccan_JJ dialect_NN in_IN order_NN to_TO build_VB a_DT trans_NNS -_: lation_NN system_NN from_IN MSA_NNP to_TO Moroccan_NNP ,_, by_IN combin_NN -_: ing_VBG a_DT rule-based_JJ approach_NN and_CC a_DT statistical_JJ approach_NN ._.
+Sawaf_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- built_VBD a_DT hybrid_JJ AD-English_JJ MT_NNP system_NN that_WDT uses_VBZ a_DT MSA_NNP pivot_NN approach_NN ._.
+In_IN this_DT approach_NN ,_, AD_NNP is_VBZ transferred_VBN into_IN MSA_NNP using_VBG character-based_JJ AD_NNP normalization_NN rules_NNS ._.
+In_IN addition_NN an_DT AD_NN normal_JJ -_: ization_NN decoder_NN that_WDT relies_VBZ on_IN language_NN models_NNS ,_, an_DT AD_NNP morphological_JJ analyzer_NN ,_, and_CC a_DT lexicon_NN were_VBD em_SYM -_: ployed_VBN to_TO achieve_VB the_DT translation_NN task_NN ._.
+Similarly_RB ,_, Sal_NNP -_: loum_NN and_CC Habash_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- presented_VBN Elissa_NNP ,_, an_DT MT_NNP system_NN from_IN AD_NN to_TO MSA_NNP which_WDT employed_VBD a_DT rule_NN -_: based_VBN approach_NN that_WDT relies_VBZ on_IN morphological_JJ analy_NN -_: sis_NN ,_, morphological_JJ transfer_NN rules_NNS and_CC dictionaries_NNS in_IN additiontolanguagemodelstoproduceMSApara_NNP -_: phrases_NNS of_IN dialectal_JJ sentences_NNS ._.
+Elissa_NNP handles_VBZ Lev_NNP -_: antine_NN ,_, Egyptian_JJ ,_, Iraqi_JJ ,_, and_CC to_TO a_DT lesser_JJR degree_NN Gulf_NNP Arabic_NNP ._.
+Zbib_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- used_VBN crowdsourcing_VBG to_TO build_VB Levantine-English_JJ and_CC Egyptian-English_JJ par_NN -_: allel_IN corpora_NN ._.
+They_PRP selected_VBD dialectal_JJ sentences_NNS from_IN a_DT large_JJ corpus_NN of_IN Arabic_NNP web_NN text_NN ,_, and_CC translated_VBD them_PRP using_VBG Amazon_NNP 's_POS Mechanical_NNP Turk_NNP platform_NN ._.
+They_PRP used_VBD this_DT data_NN to_TO build_VB dialectal_JJ Arabic_NNP MT_NNP sys_SYM -_: tems_NNS ,_, and_CC find_VB that_DT small_JJ amounts_NNS of_IN dialectal_JJ data_NNS have_VBP a_DT dramatic_JJ impact_NN on_IN translation_NN quality_NN ._.
+Multidialectal_NNP Arabic_NNP parallel_JJ corpora_NN do_VBP not_RB exist_VB ,_, the_DT first_JJ and_CC the_DT unique_JJ such_JJ corpus_NN was_VBD presented_VBN in_IN -LRB-_-LRB- Bouamor_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ a_DT collection_NN of_IN 2000_CD sentences_NNS in_IN MSA_NNP ,_, Egyptian_NNP ,_, Tunisian_JJ ,_, Jorda_NNP -_: nian_JJ ,_, Palestinian_JJ and_CC Syrian_JJ ,_, in_IN addition_NN to_TO English_NNP ._.
+The_DT sentences_NNS were_VBD selected_VBN from_IN the_DT Egyptian_JJ part_NN of_IN the_DT Egyptian-English_JJ corpus_NN built_VBN by_IN Zbib_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP present_VBP PADIC_NNP ,_, a_DT corpus_NN composed_VBN of_IN 5_CD Arabic_NNP dialects_NNS ,_, each_DT of_IN them_PRP contains_VBZ 6400_CD sen_SYM -_: tences_NNS ._.
+Each_DT dialect_NN is_VBZ aligned_VBN at_IN the_DT sentence_NN level_NN with_IN the_DT four_CD other_JJ dialects_NNS and_CC also_RB with_IN MSA_NNP ._.
+In_IN this_DT paper_NN ,_, we_PRP highlight_VBP machine_NN translation_NN results_NNS obtained_VBN for_IN all_PDT the_DT pairs_NNS of_IN dialects_NNS contained_VBD into_IN PADIC_NNP ._.
+The_DT reminder_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ,_, in_IN section_NN 2_CD we_PRP give_VBP some_DT differences_NNS that_WDT distinguish_VBP MSA_NNP from_IN its_PRP$ dialects_NNS ._.
+Section_NN 3_CD de_FW -_: scribes_NNS the_DT processes_NNS we_PRP used_VBD to_TO build_VB PADIC_NNP ._.
+Fi_SYM -_: nally_RB ,_, we_PRP present_VBP in_IN section_NN 4_CD experiments_NNS of_IN ma_NN -_: chine_NN translation_NN between_IN several_JJ pairs_NNS of_IN dialects_NNS and_CC MSA_NNP ._.
+We_PRP also_RB show_VBP the_DT impact_NN of_IN the_DT smooth_JJ -_: ing_NN techniques_NNS over_IN the_DT BLEU_NNP scores_NNS due_JJ to_TO the_DT size_NN of_IN the_DT training_NN corpora_NN ._.
+2_CD Main_NNP differences_NNS between_IN modern_JJ standard_JJ Arabic_NNP and_CC its_PRP$ dialects_NNS MSA_NNP is_VBZ characterized_VBN by_IN a_DT complex_JJ morphology_NN and_CC a_DT rich_JJ vocabulary_NN ._.
+It_PRP is_VBZ an_DT inflexional_NN and_CC agglutina_NN -_: tive_JJ language_NN ._.
+We_PRP recall_VBP that_IN ,_, compared_VBN to_TO English_NNP ,_, an_DT Arabic_NNP word_NN -LRB-_-LRB- or_CC more_JJR rigorously_RB a_DT lexical_JJ entry_NN -RRB-_-RRB- can_MD sometimes_RB correspond_VB to_TO a_DT whole_JJ English_JJ sen_NN -_: tence_NN ._.
+The_DT differences_NNS that_WDT distinguish_VBP dialects_NNS from_IN MSA_NNP areatthemorphological_JJ ,_, lexicalandsyntacticallev_SYM -_: els_NNS ._.
+Because_IN it_PRP is_VBZ difficult_JJ for_IN a_DT non-Arabic_JJ to_TO under_IN -_: stand_VB these_DT differences_NNS ,_, let_VB us_PRP give_VB some_DT examples_NNS ._.
+InMaghreb_NNP ,_, thephrase_NN ._.
+JoK_NNP AÓ_NNP ''_'' ma_FW ̄nktbsˇ_FW ''_'' -LRB-_-LRB- Idont_NNP write_VB -RRB-_-RRB- is_VBZ the_DT negation_NN of_IN the_DT word_NN I._NN JoK_NNP -LRB-_-LRB- I_PRP write_VBP -RRB-_-RRB- ._.
+While_IN in_IN MSA_NNP ,_, the_DT negation_NN form_NN is_VBZ expressed_VBN by_IN one_CD of_IN the_DT two_CD function_NN wordsB_NNP ''_'' la_NNP ̄_NNP ''_'' or_CC AÓ_NNP ''_'' ma_FW ̄_FW ''_'' ._.
+Consequently_RB ,_, I_PRP do_VBP n't_RB write_VB ._.
+JoK_NNP AÓ_NNP is_VBZ written_VBN as_IN follows_VBZ in_IN MSA_NNP :_: I._NN J_NNP ''_'' @_IN B_NNP ''_'' la_NNP ̄_CD ktb_NN ''_'' ._.
+For_IN the_DT Maghre_NNP -_: bian_JJ dialect_NN ,_, such_JJ as_IN in_IN the_DT previous_JJ example_NN ,_, the_DT morpheme_JJ /_NN sˇ_NN /_NN is_VBZ added_VBN to_TO the_DT end_NN of_IN the_DT stem_NN I._NN JoK_NNP ,_, and_CC the_DT negation_NN marker_NN ''_'' AÓ_NNP ma_FW ̄_FW ''_'' is_VBZ inserted_VBN in_IN the_DT beginning_NN of_IN the_DT phrase1_CD ._.
+Between_IN MSA_NNP and_CC the_DT above_JJ dialect_NN ,_, morphologically_RB ,_, we_PRP have_VBP the_DT same_JJ stem_NN I._NN J_NNP ''_'' ''_'' ktb_FW ''_'' ,_, however_RB for_IN the_DT Maghre_NNP -_: bian_JJ dialects_NNS ,_, the_DT affixes_NNS have_VBP been_VBN changed_VBN and_CC a_DT new_JJ one_NN has_VBZ been_VBN added_VBN ._.
+Lexically_NNP ,_, most_JJS dialec_SYM -_: tal_JJ words_NNS are_VBP taken_VBN from_IN MSA_NNP ,_, however_RB many_JJ for_IN -_: eign_JJ words_NNS -LRB-_-LRB- verbs_NNS and_CC nouns_NNS -RRB-_-RRB- have_VBP been_VBN introduced_VBN in_IN the_DT daily_JJ spoken_VBN communications_NNS ._.
+Maghrebian_JJ dialect_NN speakers_NNS often_RB use_VBP foreign_JJ verbs_NNS with_IN some_DT modifications_NNS ;_: the_DT expressions_NNS :_: AëAg_NNP ._.
+Qå_NNP ''_'' sˇargˇa_SYM ̄ha_FW ̄_FW ''_'' and_CC AîD_NNP k._FW Qå_NNP ''_'' ysˇargˇ_SYM ̄ıha_FW ̄_FW ''_'' for_IN respectively_RB he_PRP charged_VBD it_PRP and_CC he_PRP charges_VBZ it_PRP are_VBP noticed_VBN as_IN two_CD single_JJ words_NNS but_CC in_IN reality_NN are_VBP two_CD sentences_NNS ,_, formed_VBN by_IN concate_NN -_: nating_VBG the_DT morphemes_NNS Aë_VBP /_CD ha_FW ̄_FW /_FW -LRB-_-LRB- the_DT object_NN -RRB-_-RRB- and_CC ø_SYM /_FW y_FW /_FW -LRB-_-LRB- the_DT subject_NN -RRB-_-RRB- to_TO the_DT verb_NN Ag_NN ._.
+Qå_NNP ''_'' sˇargˇ_VB a_DT ̄_NN ''_'' to_TO charge_VB ._.
+Syntactically_RB ,_, the_DT Verb-Subject-Object_NNP order_NN -LRB-_-LRB- VSO_NNP -RRB-_-RRB- is_VBZ common_JJ in_IN MSA_NNP and_CC so_RB is_VBZ -LRB-_-LRB- SVO_NNP -RRB-_-RRB- ,_, but_CC -LRB-_-LRB- OVS_NNP -RRB-_-RRB- and_CC -LRB-_-LRB- OSV_NNP -RRB-_-RRB- are_VBP also_RB correct_JJ even_RB they_PRP are_VBP not_RB widely_RB used_VBN ._.
+Nevertheless_RB ,_, in_IN some_DT dialects_NNS -LRB-_-LRB- SVO_NNP -RRB-_-RRB- is_VBZ more_RBR used_JJ than_IN -LRB-_-LRB- VSO_NNP -RRB-_-RRB- such_JJ as_IN in_IN Levantine_NNP Arabic_NNP ._.
+In_IN other_JJ dialects_NNS as_IN Maghrebian_NNP ,_, -LRB-_-LRB- VSO_NNP -RRB-_-RRB- is_VBZ more_RBR pre_SYM -_: ferred_VBN ._.
+Up_IN to_TO now_RB ,_, no_DT one_NN is_VBZ able_JJ to_TO give_VB an_DT an_DT -_: swer_NN to_TO :_: which_WDT is_VBZ the_DT closest_JJS dialect_NN to_TO MSA_NNP ?_. ._.
+It_PRP is_VBZ then_RB necessary_JJ to_TO go_VB through_IN a_DT comparative_JJ study_NN of_IN these_DT dialects_NNS to_TO objectively_RB answer_VB this_DT question_NN ._.
+In_IN fact_NN ,_, some_DT old_JJ expressions_NNS of_IN classical_JJ Arabic_NNP are_VBP still_RB used_VBN by_IN Maghrebian_NNP people_NNS and_CC no_RB longer_RB used_VBN in_IN the_DT Arabian_NNP Peninsula_NNP ._.
+Inversely_RB ,_, other_JJ aspects_NNS of_IN MSA_NNP are_VBP preserved_VBN in_IN the_DT Arabian_NNP Peninsula_NNP ,_, such_JJ as_IN Tanween_NNP -LRB-_-LRB- to_TO mark_VB indefiniteness_NN -RRB-_-RRB- but_CC not_RB used_VBN in_IN North_NNP Africa_NNP at_IN all_DT ._.
+1_CD The_DT morpheme_NN ''_'' sˇ_NN ''_'' is_VBZ the_DT abridged_JJ dialectal_JJ form_NN of_IN the_DT MSA_NNP word_NN Zú_NNP æ_NN ''_'' sˇay_NN ''_'' ''_'' thing_NN ''_'' ._.
+Ex_NN :_: the_DT origin_NN of_IN the_DT word_NN ._.
+JoK_NNP AÓ_NNP ''_'' ma_FW ̄nktbsˇ_FW ''_'' isZú_NNP æ_NNP I._NNP JoK_NNP AÓforAJ_NNP I._NNP J_NNP ''_'' @B_NNP ''_'' Idont_NNP write_VB anything_NN ''_'' ._.
+Necessity_NN of_IN adopting_VBG writing_VBG rules_NNS MSA_NNP is_VBZ a_DT natural_JJ language_NN with_IN linguistic_JJ rules_NNS and_CC a_DT typographic_JJ system_NN of_IN writing_VBG ,_, dialects_NNS do_VBP not_RB have_VB any_DT standardized_JJ set_NN of_IN rules_NNS ._.
+In_IN fact_NN ,_, there_EX is_VBZ no_DT reason_NN to_TO write_VB dialects_NNS which_WDT are_VBP usually_RB spo_SYM -_: ken_NN in_IN daily_JJ conversations_NNS ._.
+But_CC a_DT new_JJ phenomenon_NN arises_VBZ with_IN social_JJ networks_NNS :_: people_NNS are_VBP free_JJ to_TO write_VB whatever_WDT they_PRP want_VBP and_CC express_VBP their_PRP$ opinions_NNS such_JJ as_IN they_PRP speak_VBP ,_, it_PRP means_VBZ in_IN their_PRP$ dialect_NN ._.
+Accord_NNP -_: ingly_RB ,_, they_PRP write_VBP dialectal_JJ words_NNS just_RB as_IN they_PRP are_VBP pro-_JJ nounced_VBN ._.
+For_IN instance_NN ,_, to_TO write_VB tell_VB him_PRP ,_, one_CD would_MD write_VB it_PRP ,_, just_RB as_IN he_PRP heard_VBD it_PRP :_: ''_'' qu_SYM ̄llu_FW ''_'' ñ_FW Ëñ_FW ̄_FW while_IN the_DT right_JJ expression_NN is_VBZ ''_'' qu_SYM ̄l_FW lu_FW ̄_FW ''_'' ñË_NNP Èñ_NNP ̄_NN -LRB-_-LRB- original_JJ expres_NNS -_: sion_NN in_IN MSA_NNP is_VBZ éË_NNP É_NNP ̄_NN -RRB-_-RRB- ._.
+This_DT freedom_NN of_IN writing_VBG pushed_VBD us_PRP to_TO adopt_VB some_DT writing_VBG rules_NNS for_IN standardizing_VBG our_PRP$ corpus_NN ._.
+In_IN our_PRP$ work_NN each_DT dialectal_JJ word_NN is_VBZ written_VBN by_IN adopting_VBG MSA_NNP rules_NNS ,_, that_DT means_VBZ if_IN a_DT dialectal_JJ word_NN does_VBZ exist_VB in_IN MSA_NNP ,_, it_PRP must_MD be_VB written_VBN such_JJ as_IN in_IN MSA_NNP ,_, oth_NN -_: erwise_VB the_DT word_NN is_VBZ written_VBN as_IN it_PRP is_VBZ uttered_VBN ._.
+In_IN this_DT last_JJ case_NN ,_, we_PRP could_MD extract_VB the_DT phonetic_JJ directly_RB form_NN from_IN its_PRP$ orthographic_JJ representation_NN ,_, which_WDT will_MD be_VB necessary_JJ in_IN the_DT frame_NN of_IN the_DT ultimate_JJ goal_NN of_IN this_DT study_NN which_WDT is_VBZ Speech-To-Speech_JJ translation_NN ._.
+In_IN Arabic_NNP dialects_NNS ,_, some_DT foreign_JJ words_NNS contain_VBP non_NN Arabic_NNP phonemes_NNS ,_, such_JJ as_IN /_CD g_NN /_CD which_WDT could_MD be_VB written_VBN either_RB with_IN /_CD ̈_CD /_CD or_CC /_CD h._NN /_CD such_JJ as_IN for_IN the_DT English_NNP words_NNS English_NNP and_CC Ghana_NNP which_WDT are_VBP respectively_RB written_VBN ø_NN Q_NNP Êm_NNP ._. '_''
+@and_JJ AK_NNP A_NNP ``_`` ._.
+However_RB ,_, the_DT few_JJ dialectal_JJ texts_NNS retrieved_VBN from_IN the_DT web_NN constitute_VBP a_DT big_JJ challenge_NN to_TO researchers_NNS ._.
+This_DT is_VBZ not_RB only_RB because_IN of_IN the_DT non_NN standardization_NN of_IN or_CC -_: thographies_NNS ,_, but_CC also_RB due_JJ to_TO the_DT absence_NN of_IN diacritics_NNS as_IN it_PRP is_VBZ the_DT case_NN for_IN MSA_NNP and_CC all_DT its_PRP$ dialects_NNS -LRB-_-LRB- Har_SYM -_: rat_NN et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN social_JJ networks_NNS ,_, Arabic_NNP dialects_NNS are_VBP written_VBN in_IN different_JJ ways_NNS ,_, sometimes_RB in_IN Arabic_NNP script_NN ,_, sometimes_RB in_IN Latin_NNP one_CD and_CC in_IN some_DT cases_NNS such_JJ as_IN a_DT mixture_NN of_IN letters_NNS and_CC some_DT specific_JJ num_NN -_: bers_NNS ._.
+For_IN example_NN ,_, the_DT number_NN 3_CD is_VBZ used_VBN to_TO represent_VB the_DT phoneme_NN /_SYM ̈_SYM /_FW because_IN of_IN the_DT similarity_NN between_IN 3_CD and_CC /_CD ̈_CD /_NN ._.
+In_IN Table_NNP 1_CD ,_, we_PRP address_VBP some_DT Arabic_NNP letters_NNS and_CC the_DT adopted_VBN Arabic_NNP numbers_NNS used_VBN to_TO represent_VB them_PRP ._.
+Note_VB the_DT similarity_NN in_IN the_DT form_NN between_IN the_DT letters_NNS and_CC the_DT numbers_NNS ._.
+To_TO illustrate_VB the_DT different_JJ ways_NNS of_IN writing_VBG dialects_NNS in_IN social_JJ networks_NNS ,_, in_IN Table_NNP 2_CD ,_, some_DT examples_NNS of_IN Al_NNP -_: Table_NNP 1_CD :_: Numbers_NNS adopted_VBN to_TO represent_VB some_DT Arabic_NNP let_VB -_: ters_NNS when_WRB Latin_NNP grapheme_NN are_VBP used_VBN to_TO write_VB Arabic_NNP gerian_JJ sentences_NNS are_VBP given_VBN ._.
+3_CD Building_NN a_DT parallel_JJ corpus_NN It_PRP is_VBZ well_RB known_VBN that_IN parallel_JJ corpora_NN are_VBP the_DT foun_NN -_: dation_NN stone_NN of_IN several_JJ natural_JJ language_NN processing_NN tasks_NNS ,_, particularly_RB cross-language_JJ applications_NNS such_JJ as_IN machine_NN translation_NN ,_, bilingual_JJ lexicon_NN extraction_NN and_CC multilingual_JJ information_NN retrieval_NN ._.
+Building_NN this_DT kind_NN of_IN resources_NNS is_VBZ a_DT challenging_JJ task_NN espe_NN -_: cially_RB when_WRB it_PRP deals_VBZ with_IN under-resourced_JJ languages_NNS -LRB-_-LRB- Skadin_NNP ̧a_FW et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+The_DT problem_NN is_VBZ much_JJ deeper_JJR with_IN the_DT Arabic_NNP dialects_NNS which_WDT are_VBP used_VBN by_IN a_DT huge_JJ number_NN of_IN people_NNS only_RB in_IN daily_JJ oral_JJ communication_NN ._.
+Moreover_RB ,_, they_PRP are_VBP not_RB taught_VBN in_IN schools_NNS and_CC are_VBP absent_JJ from_IN formal_JJ written_VBN communications_NNS ._.
+This_DT makes_VBZ building_NN dialectal_JJ resources_NNS automatically_RB al_SYM -_: most_RBS impossible_JJ ._.
+The_DT few_JJ available_JJ texts_NNS in_IN social_JJ networks_NNS ,_, usually_RB produced_VBN by_IN less_JJR educated_VBN Arab_JJ people_NNS are_VBP not_RB homogeneous_JJ and_CC suffer_VBP from_IN the_DT va_NN -_: rieties_NNS in_IN orthography_NN ,_, due_JJ to_TO the_DT absence_NN of_IN writing_VBG rules_NNS ._.
+In_IN addition_NN ,_, some_DT Arabic_NNP dialects_NNS are_VBP writ_SYM -_: ten_CD by_IN using_VBG Latin_NNP graphemes_NNS by_IN a_DT slice_NN of_IN Ara_NNP -_: bic_NN societies_NNS ._.
+The_DT reason_NN is_VBZ that_IN Arabic_NNP language_NN was_VBD not_RB widely_RB supported_VBN by_IN devices_NNS ._.
+Consequently_RB ,_, Arab_JJ people_NNS have_VBP been_VBN used_VBN to_TO this_DT situation_NN by_IN us_PRP -_: ing_VBG Latin_JJ graphemes_NNS ._.
+For_IN all_PDT the_DT aforementioned_JJ reasons_NNS ,_, crawling_VBG the_DT web_NN is_VBZ not_RB a_DT solution_NN to_TO build_VB a_DT parallel_JJ corpus_NN ,_, thus_RB ,_, we_PRP decided_VBD to_TO build_VB it_PRP from_IN scratch_NN ._.
+PADIC_NNP :_: A_NNP New_NNP Parallel_JJ Arabic_NNP Dialect_NNP Corpus_NNP The_NNP approach_NN we_PRP used_VBD to_TO build_VB PADIC_NNP is_VBZ almost_RB sim_SYM -_: ilar_NN to_TO that_DT of_IN Bouamor_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- except_IN that_DT in_IN our_PRP$ case_NN ,_, we_PRP started_VBD from_IN scratch_NN and_CC we_PRP are_VBP still_RB working_VBG on_IN the_DT development_NN of_IN all_PDT the_DT necessary_JJ tools_NNS ._.
+We_PRP should_MD note_VB that_IN the_DT particularity_NN of_IN our_PRP$ corpus_NN is_VBZ that_IN it_PRP is_VBZ composed_VBN also_RB of_IN Maghrebian_JJ di_FW -_: alects_NNS that_WDT present_VBP difficulties_NNS to_TO collect_VB and_CC process_VB since_IN they_PRP are_VBP mixture_NN of_IN several_JJ languages_NNS -LRB-_-LRB- Arabic_NNP ,_, Example_NNP Arabic_NNP number_NN Arabic_NNP letter_NN tbarra3_CD 3_CD /_SYM ̈_SYM /_SYM fra7_CD 7_CD /_FW h_FW /_FW sou9_FW 9_CD /_NN /_CD Table_NNP 2_CD :_: Different_JJ ways_NNS of_IN writing_VBG dialects_NNS on_IN Facebook_NNP ._.
+Cases_NNS of_IN writing_VBG dialects_NNS Dialectal_JJ sentences_NNS Equivalent_NNP in_IN English_NNP Written_VBN with_IN Arabic_NNP letters_NNS A_DT Kñk_NNP 1⁄4@P_NNP @_SYM ð_FW How_WRB do_VBP you_PRP do_VB my_PRP$ brother_NN ?_.
+Written_VBN only_RB with_IN Latin_NNP letters_NNS Wachrak_NNP khouya_NN ?_.
+How_WRB do_VBP you_PRP do_VB my_PRP$ brother_NN ?_.
+Written_VBN with_IN a_DT mixture_NN of_IN Latin_NNP letters_NNS and_CC Arabic_NNP numbers_NNS rabi_VBP ya7fedek_CD God_NNP protect_VB you_PRP A_DT sentence_NN that_WDT contain_VBP both_DT Arabic_NNP and_CC French_JJ words_NNS Et_VBP bien_JJ hakda_NN rak_NN f9edt_CD '_'' houm_JJ les_FW deux_FW So_IN you_PRP have_VBP lost_VBN both_DT of_IN them_PRP French_JJ ,_, Berber_NNP ,_, ..._: -RRB-_-RRB- ._.
+Also_RB ,_, because_IN they_PRP are_VBP not_RB much_JJ used_VBN on_IN the_DT Web_NNP and_CC when_WRB it_PRP is_VBZ the_DT case_NN ,_, people_NNS use_VBP generally_RB Latin_JJ script_NN for_IN writing_VBG ,_, as_IN we_PRP mentioned_VBD it_PRP in_IN section_NN 2_CD ._.
+A_DT preliminary_JJ study_NN of_IN the_DT PADIC_NNP corpus_NN was_VBD given_VBN in_IN -LRB-_-LRB- Harrat_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+The_DT goal_NN of_IN this_DT work_NN is_VBZ to_TO focus_VB more_RBR on_IN Statistical_NNP Machine_NNP Translation_NN ex_FW -_: periments_NNS from_IN MSA_NNP to_TO dialectal_JJ Arabic_NNP and_CC vice_NN versa_RB ._.
+This_DT work_NN in_IN turn_NN is_VBZ part_NN of_IN a_DT big_JJ and_CC challeng_NN -_: ing_NN project_NN ,_, a_DT Speech_NN to_TO Speech_NNP Translation_NN system_NN that_IN we_PRP are_VBP working_VBG on_IN ._.
+Challenging_VBG not_RB only_RB be_VB -_: cause_NN speech_NN recognition_NN and_CC speech_NN synthesis_NN are_VBP involved_VBN ,_, but_CC also_RB because_IN of_IN the_DT lack_NN of_IN dialectal_JJ Arabic_NNP parallel_NN corpora_NN ._.
+Five_CD dialects_NNS ,_, in_IN addition_NN to_TO MSA_NNP ,_, are_VBP concerned_VBN by_IN this_DT study_NN :_: Annaba_NNP 's_POS dialect_NN -LRB-_-LRB- ANB_NNP -RRB-_-RRB- ,_, spoken_VBN in_IN the_DT east_JJ of_IN Algeria_NNP ,_, Algiers_NNP 's_POS dialect_NN -LRB-_-LRB- ALG_NNP -RRB-_-RRB- ,_, used_VBN in_IN the_DT capital_NN of_IN Algeria_NNP ,_, Sfax_NNP 's_POS dialect_NN -LRB-_-LRB- TUN_NNP -RRB-_-RRB- spoken_VBN in_IN the_DT south_NN of_IN Tunisia_NNP ,_, Syrian_JJ and_CC Palestinian_JJ dialects_NNS -LRB-_-LRB- SYR_NNP -RRB-_-RRB- and_CC -LRB-_-LRB- PAL_NNP -RRB-_-RRB- which_WDT are_VBP spoken_VBN in_IN Damascus_NNP and_CC Gaza_NNP respectively_RB ._.
+2_CD ANB_NNP corpus_NN was_VBD created_VBN by_IN recording_VBG different_JJ con_NN -_: versations_NNS from_IN every_DT day_NN life_NN ,_, whereas_IN ,_, for_IN ALG_NNP ,_, we_PRP used_VBD the_DT recordings_NNS corresponding_JJ to_TO movies_NNS and_CC TV_NN shows_NNS which_WDT are_VBP often_RB expressed_VBN in_IN the_DT dialect_NN of_IN Algiers_NNP ._.
+Then_RB we_PRP transcribed_VBD both_DT of_IN them_PRP by_IN hand_NN ._.
+To_TO increase_VB the_DT size_NN of_IN the_DT two_CD corpora_NN ,_, we_PRP translated_VBD each_DT of_IN them_PRP into_IN the_DT other_JJ ._.
+Afterwards_RB ,_, these_DT two_CD corpora_NN have_VBP been_VBN translated_VBN into_IN MSA_NNP ._.
+MSA_NNP was_VBD then_RB used_VBN as_IN a_DT pivot_NN language_NN to_TO get_VB other_JJ dialectal_JJ corpora_NN ._.
+To_TO do_VB that_DT ,_, we_PRP translated_VBD the_DT MSA_NNP corpus_NN to_TO TUN_NNP ,_, SYR_NNP and_CC PAL_NNP ._.
+The_DT Tunisian_JJ corpus_NN 2The_JJ only_RB argument_NN in_IN the_DT choice_NN of_IN these_DT dialects_NNS and_CC not_RB others_NNS is_VBZ that_IN the_DT authors_NNS of_IN this_DT paper_NN are_VBP from_IN Algeria_NNP and_CC Tunisia_NNP and_CC for_IN the_DT two_CD others_NNS we_PRP asked_VBD kindly_RB colleagues_NNS from_IN Syria_NNP and_CC Gaza_NNP to_TO help_VB us_PRP to_TO translate_VB a_DT MSA_NNP corpus_VBZ into_IN these_DT two_CD dialects_NNS without_IN any_DT financial_JJ compensation_NN ._.
+Translating_VBG the_DT corpus_NN into_IN Moroccan_JJ dialect_NN is_VBZ under_IN work_NN ._.
+was_VBD produced_VBN by_IN 20_CD native_JJ speakers_NNS ._.
+Each_DT one_NN was_VBD responsible_JJ of_IN translating_VBG almost_RB 320_CD sentences_NNS from_IN MSA_NNP to_TO TUN_NNP ._.
+Speakers_NNS have_VBP very_RB slight_JJ differences_NNS in_IN their_PRP$ spoken_VBN languages_NNS ._.
+All_DT of_IN them_PRP are_VBP from_IN the_DT south_NN of_IN Tunisia_NNP where_WRB people_NNS tend_VBP to_TO use_VB Arabic_NNP words_NNS rather_RB than_IN French_JJ words_NNS as_IN it_PRP is_VBZ the_DT case_NN in_IN the_DT north_NN of_IN the_DT country_NN ._.
+In_IN fact_NN ,_, the_DT dialect_NN used_VBN in_IN the_DT south_NN is_VBZ closer_JJR to_TO MSA_NNP than_IN that_DT used_VBN in_IN the_DT north_NN of_IN Tunisia_NNP ._.
+Syrian_JJ and_CC Palestinian_JJ corpora_NN were_VBD created_VBN in_IN the_DT same_JJ way_NN by_IN respectively_RB two_CD native_JJ speak_VBP -_: ers_NNS ._.
+Finally_RB ,_, we_PRP get_VBP a_DT multi-dialectal_JJ parallel_NN cor_NN -_: pus_NN PADIC_NNP composed_VBN of_IN the_DT five_CD aforementioned_JJ di_FW -_: alects_NNS ,_, in_IN addition_NN to_TO MSA_NNP ._.
+PADIC_NNP is_VBZ made_VBN of_IN 6400_CD parallel_JJ sentences_NNS ,_, for_IN which_WDT we_PRP present_VBP some_DT statis_NN -_: tics_NNS in_IN Table_NNP 3_CD ._.
+Table_NNP 3_CD :_: PADIC_NNP statistics_NNS The_DT MSA_NNP part_NN contains_VBZ 40906_CD words_NNS including_VBG 9131_CD different_JJ words_NNS ._.
+PADIC_NN includes_VBZ an_DT average_NN of_IN 37500_CD words_NNS for_IN one_CD a_DT dialect_NN with_IN a_DT vocabulary_NN which_WDT does_VBZ not_RB exceed_VB 10250_CD words_NNS ._.
+The_DT average_JJ number_NN of_IN words_NNS in_IN a_DT dialectal_JJ sentence_NN is_VBZ of_IN 6_CD while_IN it_PRP is_VBZ of_IN 7_CD for_IN MSA_NNP ._.
+The_DT shortest_JJS sentence_NN in_IN the_DT cor_NN -_: pus_NN is_VBZ composed_VBN of_IN 4_CD words_NNS and_CC the_DT longest_JJS one_CD con_NN -_: tains_NNS 25_CD words_NNS ._.
+We_PRP give_VBP in_IN Table_NNP 4_CD examples_NNS of_IN parallel_JJ sentences_NNS from_IN PADIC_NNP ._.
+Even_RB if_IN we_PRP do_VBP not_RB read_VB Arabic_NNP at_IN all_DT ,_, we_PRP can_MD notice_VB that_IN some_DT words_NNS have_VBP the_DT same_JJ form_NN in_IN several_JJ dialects_NNS ,_, while_IN others_NNS are_VBP completely_RB dif_SYM -_: Corpus_NNP #Distinct_NNP words_NNS #Words_NNP ALG_NNP 8966_CD 38707_CD ANB_NNP 9060_CD 38428_CD TUN_NNP 10215_CD 36648_CD SYR_NNP 9825_CD 37259_CD PAL_NNP 9196_CD 39286_CD MSA_NNP 9131_CD 40906_CD Table_NNP 4_CD :_: Examples_NNS of_IN parallel_JJ sentences_NNS from_IN PADIC_NNP Lang_NNP ._.
+Sentence_NN ALG_NNP ANB_NNP TUN_NNP SYR_NNP PAL_NNP MSA_NNP EN_IN ú_NNP GAJ_NNP k_NN Èñ_NNP #_# AëA_NNP K_NNP AÓ_NNP é_FW ``_`` ðP_NNP H_NNP AÓA_NNP K_NNP @_IN H_NNP P_NNP ñk_NN ._.
+``_`` ø_FW QÔ_FW Èñ_FW #_# AëA_NNP KAÓJ_NNP oË@úÎ«HAÓA_NNP K@IJ.®«_NNP ø_NNP QÔ_NNP ``_`` Èñ_NNP #_# AëA_NNP K_NNP AÓ_NNP èñÊgH_NNP AÓA_NNP K@I_NNP K_NNP Y_NNP ``_`` AëA_NNP K_NNP AÓ_NNP øQÔ_NNP ``_`` èñÊg_NNP ÐAK_NNP @_IN I_PRP Ó_VBP ._.
+ø_SYM QÔ_NNP ``_`` Èñ_NNP #_# AëA_NNP Ag_NNP Ó_NNP é_FW Ê_NNP JÔg_NNP ._.
+ÐA_NNP K_NNP @_IN I_PRP ̄_VBP ø_SYM QÔ_NNP ``_`` Èñ_NNP #_# AëA_NNP @_SYM á_SYM Ë_SYM é_FW Ê_FW JÔg_FW ._.
+ÐA_NNP K_NNP @_IN I_PRP Ó_VBP @_IN I_PRP spent_VBD beautiful_JJ days_NNS I_PRP will_MD never_RB forget_VB throughout_IN my_PRP$ life_NN ._.
+ALG_NNP ANB_NNP TUN_NNP SYR_NNP PAL_NNP MSA_NNP EN_IN AK.AK_NNP ._.
+©_SYM Ó_NNP A_NNP ``_`` ð_FW AK.B_FW ú_FW G_NNP @P_NNP é_VBD <_CD Ë_NNP YÒmÌ_NNP '_POS @_IN AK_NNP P@X_NNP á_IN Ó_NNP I.K_NNP Q_NNP ̄_CD PA_NNP cents_NNS J_NNP ._.
+Ë_NNP @_SYM Ygð_SYM ú_SYM ̄_FW I_PRP ÓYg_VBP AK.AK_NNP ._.
+©_SYM Ó_NNP A_NNP ``_`` ð_FW é_FW j_FW JÊÓ_FW ø_FW PñÓ_FW @_SYM é_FW <_FW Ë_FW YÒmÌ_NNP '_POS @_IN AK_NNP P@X_NNP á_IN Ó_NNP I.K_NNP Q_NNP ̄_CD PA_NNP cents_NNS J_NNP ._.
+Ë_NNP @_SYM Ygð_SYM ú_SYM ̄_FW I_PRP ÓYg_VBP AK.AK_NNP ._.
+©_SYM Ó_NNP A_NNP ``_`` ð_FW é_FW JëAK_FW ._.
+ø_SYM PñÓ_NNP @_SYM é_FW <_FW Ë_FW YÒmÌ'@P@YË@_NNP á_IN Ó_NNP I.K_NNP Q_NNP ̄_CD PA_NNP cents_NNS J_NNP ._.
+ú_IN ̄_CD I_PRP ÓYg_VBP ú_JJ Îë_NNP @_SYM ©_SYM Ó_NNP A_NNP ``_`` ð_FW èQå_FW JÓ_FW ø_FW PñÓ_FW @_SYM é_FW <_FW Ë_FW YÒmÌ_NNP '_POS @_SYM ú_FW æ_FW J_NNP K._NNP á_IN Ó_NNP I.K_NNP Q_NNP ̄_SYM ù_FW ®_FW Öß_FW ._.
+I_PRP Êa_VBP J_NNP @_SYM øñK_NNP @_SYM ©_SYM Ó_NNP A_NNP ``_`` ð_FW èQå_FW J_NNP JÓ_NNP øPñÓ_NNP @_SYM é_FW <_FW Ë_FW YÒmÌ_NNP '_POS @_SYM úæ_FW JK_FW á_FW Ó_FW é_FW JKQ_FW ®_FW Ë_FW @_SYM H_NNP AJ_NNP ®_VBD ÖÏ_NNP @_SYM á_FW Ó_FW Yg@ð_FW ú_FW ̄_FW I_PRP Êa_VBP J_NNP @_IN ._. ._. ._.
+ø_SYM @YE_SYM ̈_FW @_SYM ð_SYM ©_SYM Ó_NNP ``_`` @_SYM ð_SYM èQå_NNP J_NNP JÓ_NNP ø_NNP PñÓ_NNP @_SYM é_FW <_FW Ë_FW YÒmÌ_NNP '_POS @_SYM ú_FW æ_FW J_NNP K._NNP á_IN Ó_NNP é_FW J.K_NNP Q_NNP ®_VBD Ë_NNP @_IN H_NNP A_NNP J_NNP ®_VBD ÖÏ_NNP @_IN Yg_NNP @_SYM ú_SYM ̄_FW I_PRP ÊÔ_VBP ``_`` I_PRP worked_VBD in_IN a_DT hospital_NN near_IN my_PRP$ home_NN ._.
+Praise_NN be_VB to_TO God_NNP ,_, everything_NN is_VBZ fine_JJ and_CC I_PRP live_VBP with_IN my_PRP$ parents_NNS ferent_JJ ._.
+4_CD Experiments_NNS on_IN Machine_NN Translation_NN of_IN Arabic_NNP dialects_NNS In_IN the_DT following_NN ,_, we_PRP present_VBP several_JJ experiments_NNS in_IN machine_NN translation_NN in_IN both_DT sides_NNS between_IN all_PDT the_DT combinations_NNS of_IN dialect_NN pairs_NNS ._.
+We_PRP conduct_VBP also_RB ex_FW -_: periments_NNS of_IN machine_NN translation_NN between_IN these_DT di_FW -_: alects_NNS and_CC MSA_NNP also_RB in_IN both_DT sides_NNS ._.
+All_PDT the_DT MT_NNP systems_NNS we_PRP used_VBD are_VBP phrase-based_JJ -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- with_IN default_NN settings_NNS :_: bidirec_SYM -_: tional_JJ phrase_NN and_CC lexical_JJ translation_NN probabilities_NNS ,_, distortion_NN model_NN ,_, a_DT word_NN and_CC a_DT phrase_NN penalty_NN and_CC a_DT trigram_NN language_NN model_NN ._.
+We_PRP have_VBP not_RB used_VBN a_DT larger_JJR language_NN model_NN because_IN PADIC_NNP is_VBZ not_RB suitable_JJ for_IN large_JJ ngrams_NNS ._.
+We_PRP used_VBD GIZA_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- for_IN alignment_NN and_CC SRILM_NNP toolkit_NN -LRB-_-LRB- Stolcke_NNP ,_, 2002_CD -RRB-_-RRB- to_TO compute_VB trigram_NN language_NN models_NNS ._.
+Since_IN the_DT parallel_JJ corpus_NN is_VBZ small_JJ ,_, we_PRP experimented_VBD the_DT Kneser-Ney_NNP and_CC Witten-Bell_NNP smoothing_NN techniques_NNS hoping_VBG to_TO identify_VB the_DT one_CD which_WDT best_JJS fits_NNS ._.
+The_DT re_SYM -_: sults_NNS conducted_VBN on_IN a_DT test_NN set_NN of_IN 500_CD sentences_NNS are_VBP presented_VBN in_IN terms_NNS of_IN BLEU_NNP ,_, TER_NNP and_CC METEOR_NNP in_IN Tables_NNP 5_CD ,_, 6_CD and_CC 7_CD respectively_RB ._.
+Because_IN it_PRP is_VBZ difficult_JJ to_TO increase_VB the_DT size_NN of_IN PADIC_NNP ,_, we_PRP decided_VBD to_TO interpolate_VB the_DT correspond_VB -_: ing_NN language_NN models_NNS by_IN larger_JJR Arabic_NNP corpora_NN when_WRB the_DT target_NN language_NN is_VBZ MSA_NNP ._.
+For_IN this_DT purpose_NN ,_, we_PRP used_VBD two_CD MSA_NNP corpora_NN :_: Tashkeela3_NNP and_CC LDC_NNP Ara_NNP -_: bic_NN Treebank_NNP -LRB-_-LRB- Part3_NNP ,_, V1_NNP .0_CD -RRB-_-RRB- -LRB-_-LRB- Maamouri_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+Unfortunately_RB ,_, the_DT results_NNS of_IN the_DT interpolation_NN did_VBD not_RB outperform_VB those_DT of_IN Table_NNP 5_CD ._.
+5_CD Discussion_NNP 5.1_CD Impact_NN of_IN the_DT smoothing_NN techniques_NNS on_IN BLEU_NNP Several_JJ conclusions_NNS can_MD be_VB presented_VBN regarding_VBG re_SYM -_: sults_NNS of_IN the_DT Table_NNP 5_CD ._.
+First_NNP of_IN all_DT ,_, for_IN a_DT small_JJ par_NN -_: allel_IN corpus_NN ,_, it_PRP seems_VBZ that_IN the_DT smoothing_NN technique_NN has_VBZ an_DT impact_NN on_IN the_DT BLEU_NNP scores_NNS ._.
+A_DT difference_NN of_IN almost_RB 2_CD points_NNS has_VBZ been_VBN observed_VBN for_IN translating_VBG from_IN ANB_NNP to_TO ALG_NNP ._.
+But_CC ,_, we_PRP can_MD not_RB generalize_VB by_IN affirming_VBG that_IN one_CD smoothing_NN technique_NN is_VBZ definitely_RB better_JJR than_IN another_DT ._.
+We_PRP have_VBP not_RB calculated_VBN the_DT sig_NN -_: nificance_NN of_IN this_DT difference_NN because_IN our_PRP$ corpus_NN is_VBZ too_RB small_JJ ,_, consequently_RB we_PRP can_MD not_RB have_VB several_JJ small_JJ test_NN corpora_NN in_IN order_NN to_TO perform_VB significance_NN tests_NNS ._.
+In_IN order_NN to_TO have_VB an_DT idea_NN about_IN the_DT impact_NN of_IN the_DT smooth_JJ -_: ing_NN technique_NN on_IN the_DT results_NNS and_CC to_TO have_VB a_DT scale_NN com_NN -_: parison_NN of_IN the_DT BLEU_NNP for_IN small_JJ corpora_NN we_PRP did_VBD some_DT 3A_CD collection_NN of_IN classical_JJ Arabic_NNP books_NNS from_IN an_DT on_IN -_: line_NN library_NN available_JJ on_IN http://sourceforge.net/_NN project/tashkeela_NN Table_NNP 5_CD :_: BLEU_NNP score_NN of_IN Machine_NN Translation_NN on_IN different_JJ pairs_NNS of_IN languages_NNS using_VBG two_CD smoothing_NN techniques_NNS Target_NNP ALG_NNP ANB_NNP TUN_NNP SYR_NNP PAL_NNP MSA_NNP Source_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP ALG_NNP -_: -_: 61.06_CD 60.81_CD 9.67_CD 9.36_CD 7.29_CD 7.95_CD 10.61_CD 10.14_CD 15.1_CD 14.64_CD ANB_NNP 67.31_CD 65.55_CD -_: -_: 9.08_CD 8.64_CD 7.52_CD 7.95_CD 10.12_CD 9.84_CD 14.44_CD 13.95_CD TUN_NNP 9.89_CD 9.48_CD 9.34_CD 9.01_CD -_: -_: 13.05_CD 12.93_CD 22.55_CD 22.21_CD 25.99_CD 25.21_CD SYR_NNP 7.57_CD 7.50_CD 7.50_CD 7.64_CD 13.67_CD 13.23_CD -_: -_: 26.60_CD 25.74_CD 24.14_CD 22.96_CD PAL_NNP 11.28_CD 10.67_CD 9.53_CD 9.15_CD 17.93_CD 16.64_CD 23.29_CD 23.07_CD -_: -_: 40.48_CD 39.76_CD MSA_NNP 13.55_CD 13.05_CD 12.54_CD 11.72_CD 20.03_CD 20.44_CD 21.38_CD 20.32_CD 42.46_CD 41.37_CD -_: -_: Table_NNP 6_CD :_: TER_NNP score_NN -LRB-_-LRB- in_IN %_NN -RRB-_-RRB- of_IN Machine_NN Translation_NN on_IN different_JJ pairs_NNS of_IN languages_NNS using_VBG two_CD smoothing_NN techniques_NNS Target_NNP ALG_NNP ANB_NNP TUN_NNP SYR_NNP PAL_NNP MSA_NNP Source_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP ALG_NNP -_: -_: 21.41_CD 21.75_CD 75.17_CD 76.37_CD 79.54_CD 79.51_CD 69.63_CD 70.75_CD 65.63_CD 66.85_CD ANB_NNP 17.12_CD 17.81_CD -_: -_: 74.83_CD 75.62_CD 79.13_CD 79.13_CD 69.10_CD 70.26_CD 67.40_CD 68.47_CD TUN_NNP 71.10_CD 71.76_CD 73.13_CD 73.71_CD -_: -_: 66.03_CD 66.55_CD 51.20_CD 51.57_CD 50.85_CD 51.30_CD SYR_NNP 76.89_CD 77.67_CD 76.89_CD 77.67_CD 66.54_CD 67.91_CD -_: -_: 32.28_CD 33.24_CD 52.81_CD 53.59_CD PAL_NNP 71.43_CD 72.51_CD 72.25_CD 73.47_CD 58.51_CD 59.65_CD 32.44_CD 33.86_CD -_: -_: 36.74_CD 36.87_CD MSA_NNP 67.02_CD 67.91_CD 68.94_CD 70.16_CD 57.18_CD 57.28_CD 56.60_CD 57.08_CD 34.00_CD 34.66_CD -_: -_: Table_NNP 7_CD :_: METEOR_NNP score_NN of_IN Machine_NN Translation_NN on_IN different_JJ pairs_NNS of_IN languages_NNS using_VBG two_CD smoothing_NN techniques_NNS Target_NNP ALG_NNP ANB_NNP TUN_NNP SYR_NNP PAL_NNP MSA_NNP Source_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP KN_NNP WB_NNP ALG_NNP -_: -_: 0.452_CD 0.450_CD 0.181_CD 0.178_CD 0.161_CD 0.164_CD 0.202_CD 0.199_CD 0.222_CD 0.218_CD ANB_NNP 0.472_CD 0.464_CD -_: -_: 0.172_CD 0.172_CD 0.156_CD 0.159_CD 0.196_CD 0.194_CD 0.200_CD 0.200_CD TUN_NNP 0.186_CD 0.183_CD 0.182_CD 0.182_CD -_: -_: 0.203_CD 0.203_CD 0.261_CD 0.260_CD 0.268_CD 0.266_CD SYR_NNP 0.155_CD 0.154_CD 0.159_CD 0.157_CD 0.195_CD 0.190_CD -_: -_: 0.359_CD 0.356_CD 0.259_CD 0.256_CD PAL_NNP 0.189_CD 0.185_CD 0.187_CD 0.183_CD 0.229_CD 0.225_CD 0.365_CD 0.360_CD -_: -_: 0.341_CD 0.339_CD MSA_NNP 0.205_CD 0.203_CD 0.201_CD 0.199_CD 0.242_CD 0.245_CD 0.247_CD 0.247_CD 0.359_CD 0.356_CD -_: -_: experiments_NNS on_IN a_DT small_JJ parallel_JJ Arabic-English_JJ cor_NN -_: pus_NN extracted_VBN from_IN WMT_NNP ._.
+We_PRP took_VBD small_JJ corpora_NN in_IN order_NN to_TO be_VB approximatively_RB in_IN the_DT same_JJ context_NN such_JJ as_IN with_IN PADIC_NNP ._.
+We_PRP used_VBD several_JJ small_JJ training_NN par_NN -_: allel_IN corpora_NN of_IN 20K_NNP ,_, 50K_NNP ,_, 120K_NNP and_CC 150K_NNP par_NN -_: allel_IN sentences_NNS which_WDT will_MD be_VB denoted_VBN respectively_RB S2_NNP ,_, S5_NNP ,_, S12_NNP and_CC S15_NNP ._.
+For_IN each_DT training_NN corpus_NN we_PRP performed_VBD 20_CD experiments_NNS on_IN 20_CD different_JJ small_JJ test_NN corpora_NN -LRB-_-LRB- 500_CD sentences_NNS such_JJ as_IN for_IN the_DT dialects_NNS -RRB-_-RRB- ._.
+The_DT results_NNS are_VBP presented_VBN in_IN Table_NNP 8_CD ._.
+In_IN Table_NNP 8_CD ,_, Min_NNP ,_, Max_NNP ,_, E_NNP -LSB-_NNP X_NNP -RSB-_NNP ,_, σ2_CD represent_VBP respec_NN -_: tively_RB the_DT minimum_NN ,_, maximum_NN ,_, mean_VB and_CC variance_VB of_IN the_DT corresponding_JJ distribution_NN of_IN BLEU_NNP accord_NN -_: ing_NN to_TO the_DT used_VBN smoothing_NN technique_NN ._.
+While_IN σXY_NNP and_CC p-value_JJ correspond_VBP respectively_RB to_TO the_DT covari_NN -_: ance_NN and_CC the_DT p-value_NN of_IN the_DT two_CD distributions_NNS ._.
+The_DT statistical_JJ test_NN used_VBN is_VBZ T-test_JJ after_IN checking_VBG that_IN the_DT two_CD distributions_NNS follow_VBP a_DT Gaussian_JJ law_NN ._.
+The_DT hy_SYM -_: pothesis_NN H0_NNP is_VBZ that_IN the_DT two_CD distributions_NNS are_VBP similar_JJ -LRB-_-LRB- in_IN terms_NNS of_IN mean_NN -RRB-_-RRB- ._.
+According_VBG to_TO these_DT different_JJ results_NNS ,_, it_PRP seems_VBZ that_IN the_DT results_NNS obtained_VBN by_IN the_DT first_JJ or_CC the_DT second_JJ smooth_JJ -_: ing_NN techniques_NNS are_VBP not_RB distinguishable_JJ since_IN for_IN each_DT training_NN corpus_NN and_CC for_IN 20_CD different_JJ tests_NNS ,_, the_DT re_SYM -_: sults_NNS are_VBP equivalent_JJ in_IN terms_NNS of_IN minimum_NN ,_, maximum_NN ,_, mean_VB and_CC variance_VB BLEU_NNP values_NNS ._.
+Furthermore_RB ,_, the_DT covariance_NN is_VBZ positive_JJ for_IN all_PDT the_DT experiments_NNS which_WDT would_MD mean_VB that_IN the_DT two_CD distributions_NNS are_VBP linearly_RB dependent_JJ ._.
+The_DT p-value_JJ whatever_WDT the_DT training_NN cor_NN -_: pus_NN is_VBZ greater_JJR than_IN the_DT α_JJ risk_NN set_VBN to_TO 0.05_CD which_WDT means_VBZ that_IN there_EX is_VBZ at_IN least_JJS a_DT risk_NN of_IN 33_CD %_NN to_TO accept_VB the_DT alter_VB -_: native_JJ hypothesis_NN H1_NNP ._.
+In_IN conclusion_NN ,_, unfortunately_RB even_RB if_IN there_EX is_VBZ a_DT difference_NN between_IN the_DT results_NNS of_IN BLEU_NNP according_VBG to_TO the_DT used_VBN smoothing_NN techniques_NNS ,_, the_DT difference_NN is_VBZ not_RB significant_JJ ._.
+5.2_CD Cross-translation_JJ results_NNS comparison_NN High_NNP score_NN of_IN translation_NN has_VBZ been_VBN achieved_VBN between_IN ANB_NNP and_CC ALG_NNP in_IN both_DT sides_NNS ._.
+This_DT result_NN is_VBZ natu_SYM -_: ral_NN since_IN these_DT two_CD dialects_NNS are_VBP spoken_VBN in_IN the_DT same_JJ country_NN and_CC share_NN up_RB to_TO 60_CD %_NN of_IN words_NNS ._.
+Almost_RB the_DT same_JJ observation_NN is_VBZ made_VBN for_IN the_DT pair_NN SYR_NNP and_CC PAL_NNP since_IN these_DT two_CD dialects_NNS belong_VBP to_TO the_DT same_JJ language_NN family_NN -LRB-_-LRB- Levantine_JJ -RRB-_-RRB- ._.
+Another_DT interesting_JJ and_CC expected_JJ result_NN is_VBZ BLEU_NNP score_NN between_IN MSA_NNP and_CC dialects_NNS ._.
+In_IN fact_NN ,_, the_DT high_JJ -_: est_NN one_CD is_VBZ related_VBN to_TO PAL_NNP -LRB-_-LRB- for_IN both_DT sides_NNS -RRB-_-RRB- showing_VBG that_IN this_DT dialect_NN is_VBZ the_DT closest_JJS to_TO MSA_NNP ._.
+Most_JJS surpris_SYM -_: ing_NN results_NNS are_VBP those_DT relative_JJ to_TO SYR_NNP and_CC TUN_NNP ._.
+It_PRP seems_VBZ that_IN it_PRP is_VBZ easier_JJR to_TO translate_VB TUN_NNP to_TO MSA_NNP than_IN SYR_NNP to_TO MSA_NNP ._.
+Also_RB ,_, translating_VBG from_IN MSA_NNP to_TO TUN_NNP gives_VBZ better_JJR results_NNS than_IN from_IN MSA_NNP to_TO the_DT Algerian_NNP dialects_NNS ._.
+In_IN the_DT symmetric_JJ side_NN of_IN translation_NN we_PRP get_VBP the_DT same_JJ scale_NN of_IN results_NNS ._.
+This_DT definitely_RB shows_VBZ the_DT closeness_NN of_IN TUN_NNP dialect_NN to_TO MSA_NNP in_IN comparison_NN to_TO the_DT Algerian_NNP dialects_NNS ._.
+The_DT same_JJ conclusions_NNS can_MD be_VB inferred_VBN from_IN the_DT results_NNS in_IN terms_NNS of_IN TER_NNP or_CC ME_NNP -_: TEOR_NNP ._.
+Also_RB ,_, it_PRP seems_VBZ that_IN the_DT smoothing_NN technique_NN has_VBZ no_DT impact_NN on_IN both_DT scores_NNS ._.
+The_DT differences_NNS are_VBP almost_RB negligible_JJ ._.
+We_PRP can_MD notice_VB that_IN the_DT values_NNS of_IN BLEU_NNP are_VBP weak_JJ in_IN comparison_NN to_TO what_WP the_DT community_NN get_VBP usually_RB for_IN large_JJ training_NN corpora_NN ._.
+This_DT is_VBZ obviously_RB due_JJ to_TO the_DT weak_JJ size_NN of_IN the_DT training_NN corpora_NN ._.
+But_CC when_WRB we_PRP com_NN -_: pare_VB the_DT scale_NN values_NNS of_IN BLEU_NNP for_IN dialects_NNS to_TO those_DT achieved_VBN for_IN English-Arabic_NNP -LRB-_-LRB- Table_NNP 8_CD -RRB-_-RRB- which_WDT have_VBP been_VBN performed_VBN with_IN small_JJ training_NN corpus_NN ,_, we_PRP no_DT -_: tice_NN that_IN those_DT obtained_VBN for_IN dialects_NNS are_VBP higher_JJR ._.
+This_DT is_VBZ probably_RB due_JJ to_TO the_DT fact_NN that_IN ,_, even_RB if_IN dialects_NNS are_VBP very_RB different_JJ ,_, nevertheless_RB there_EX is_VBZ a_DT strong_JJ rela_NN -_: tionship_NN between_IN them_PRP ._.
+For_IN instance_NN the_DT experiment_NN performed_VBN on_IN the_DT corpus_NN S2_NN ,_, the_DT smallest_JJS value_NN of_IN BLEU_NNP is_VBZ 4.25_CD and_CC the_DT highest_JJS is_VBZ 9.56_CD while_IN for_IN the_DT worst_JJS results_NNS of_IN translation_NN -LRB-_-LRB- from_IN Syrian_JJ to_TO Algerian_NNP -RRB-_-RRB- the_DT minimum_JJ value_NN is_VBZ 7.57_CD ._.
+Knowing_VBG that_DT for_IN this_DT comparison_NN ,_, the_DT training_NN corpus_VBZ S2_NNP -LRB-_-LRB- English-Arabic_NNP -RRB-_-RRB- is_VBZ 3_CD times_NNS larger_JJR than_IN the_DT one_CD used_VBN for_IN the_DT dialect_NN ._.
+6_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP first_RB presented_VBD PADIC_NNP a_DT parallel_JJ corpus_NN containing_VBG five_CD dialects_NNS from_IN Maghreb_NNP and_CC middle-east_JJ ._.
+PADIC_NNP has_VBZ been_VBN built_VBN from_IN scratch_NN because_IN there_EX is_VBZ no_DT standard_JJ resources_NNS due_JJ to_TO the_DT kind_NN of_IN theses_NNS languages_NNS which_WDT are_VBP only_RB used_VBN for_IN conversations_NNS and_CC not_RB for_IN writing_VBG ._.
+Then_RB ,_, we_PRP presented_VBD experiments_NNS on_IN cross-dialectal_JJ Arabic_NNP machine_NN translation_NN ._.
+In_IN the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, this_DT is_VBZ the_DT first_JJ work_NN on_IN machine_NN translation_NN of_IN dialects_NNS from_IN both_DT Maghreb_NNP and_CC Middle-East_NNP and_CC also_RB the_DT largest_JJS existing_VBG parallel_JJ Arabic_NNP dialect_NN corpora_NN ._.
+On_IN the_DT limited_JJ corpora_NN of_IN 6400_CD parallel_JJ sentences_NNS we_PRP built_VBD ,_, we_PRP achieved_VBD some_DT interesting_JJ results_NNS ._.
+Due_JJ to_TO the_DT small_JJ size_NN of_IN the_DT corpus_NN ,_, we_PRP analyzed_VBD the_DT impact_NN of_IN the_DT language_NN model_NN on_IN the_DT process_NN Table_NNP 8_CD :_: Statistics_NNS on_IN machine_NN translation_NN with_IN small_JJ training_NN corpus_NN and_CC by_IN varying_VBG the_DT smoothing_NN techniques_NNS of_IN the_DT language_NN model_NN ._.
+KN_NNP σ2_CD WB_NNP σ2_CD Corpus_NNP Min_NNP Max_NNP E_NNP -LSB-_NNP X_NNP -RSB-_NNP Min_NNP Max_NNP E_NNP -LSB-_NNP X_NNP -RSB-_NNP σXY_NNP p-value_JJ S2_NNP 4.25_CD 9.56_CD 6.64_CD 2.47_CD 4.1_CD 8.97_CD 6.43_CD 2.23_CD 2.33_CD 0.33_CD S5_NNP 5.15_CD 11.75_CD 8.15_CD 3.26_CD 5.18_CD 11.32_CD 7.99_CD 2.92_CD 3.16_CD 0.35_CD S12_NNP 5.94_CD 14.38_CD 9.58_CD 4.62_CD 5.95_CD 14.13_CD 9.35_CD 4.32_CD 4.45_CD 0.36_CD S15_NNP 6.13_CD 14.39_CD 9.91_CD 4.85_CD 6.19_CD 14.27_CD 9.74_CD 4.72_CD 4.75_CD 0.39_CD of_IN machine_NN translation_NN by_IN varying_VBG the_DT smoothing_NN techniques_NNS and_CC by_IN interpolating_VBG it_PRP with_IN a_DT larger_JJR one_CD trained_VBN on_RP well_RB known_VBN corpora_NN ._.
+Unfortunately_RB the_DT results_NNS are_VBP not_RB significant_JJ even_RB if_IN in_IN some_DT cases_NNS we_PRP get_VBP some_DT improvements_NNS ._.
+The_DT best_JJS results_NNS of_IN translation_NN are_VBP achieved_VBN between_IN the_DT dialects_NNS of_IN Algeria_NNP ._.
+This_DT is_VBZ not_RB a_DT surprising_JJ result_NN since_IN they_PRP share_VBP a_DT large_JJ part_NN of_IN the_DT vocabulary_NN ._.
+And_CC even_RB if_IN the_DT size_NN of_IN the_DT training_NN corpus_NN is_VBZ weak_JJ ,_, we_PRP noticed_VBD that_IN the_DT BLEU_NNP is_VBZ very_RB high_JJ ._.
+The_DT perfor_NN -_: mance_NN of_IN machine_NN translation_NN between_IN Palestinian_JJ and_CC Syrian_JJ are_VBP relatively_RB high_JJ in_IN accordance_NN to_TO the_DT size_NN of_IN the_DT corpus_NN ._.
+This_DT could_MD be_VB explained_VBN by_IN the_DT closeness_NN of_IN the_DT two_CD regions_NNS ._.
+The_DT worst_JJS result_NN is_VBZ achieved_VBN between_IN Syrian_JJ and_CC Algerian_NNP dialects_NNS which_WDT are_VBP ,_, in_IN fact_NN ,_, very_RB different_JJ since_IN the_DT Algerian_NNP borrowed_VBD a_DT lot_NN of_IN French_JJ words_NNS which_WDT do_VBP not_RB exist_VB obviously_RB in_IN the_DT Syrian_JJ dialect_NN ._.
+Concerning_VBG MSA_NNP ,_, the_DT best_JJS results_NNS of_IN machine_NN translation_NN have_VBP been_VBN achieved_VBN with_IN Palestinian_JJ dialect_NN ._.
+This_DT means_VBZ that_IN the_DT two_CD languages_NNS are_VBP very_RB close_RB since_IN they_PRP share_VBP a_DT large_JJ number_NN of_IN words_NNS ._.
+Our_PRP$ future_JJ work_NN consists_VBZ in_IN extending_VBG PADIC_NNP to_TO other_JJ dialects_NNS such_JJ as_IN Moroccan_JJ in_IN order_NN to_TO have_VB the_DT dialects_NNS of_IN the_DT three_CD countries_NNS of_IN Maghreb_NNP and_CC then_RB we_PRP will_MD work_VB on_IN using_VBG the_DT large_JJ existing_VBG corpora_NN of_IN MSA_NNP to_TO rewrite_VB part_NN of_IN them_PRP into_IN dialects_NNS ._.
+Acknowledgement_NN This_DT work_NN has_VBZ been_VBN sup_SYM -_: ported_VBN by_IN PNR_NNP -LRB-_-LRB- Projet_NNP National_NNP de_NNP Recherche_NNP of_IN Al_NNP -_: gerian_JJ research_NN Ministry_NNP -RRB-_-RRB- ._.
+References_NNS Houda_NNP Bouamor_NNP ,_, Nizar_NNP Habash_NNP ,_, and_CC Kemal_NNP Oflazer_NNP ._.
+2014_CD ._.
+A_DT Multidialectal_NNP Parallel_JJ Corpus_NNP of_IN Arabic_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Language_NNP Resources_NNPS and_CC Evalua_NNP -_: tion_NN Conference_NN ,_, LREC-2014_NN ,_, pages_NNS 1240_CD --_: 1245_CD ._.
+David_NNP Chiang_NNP ,_, Mona_NNP Diab_NNP ,_, Nizar_NNP Habash_NNP ,_, Owen_NNP Ram_NNP -_: bow_NN ,_, and_CC Safiullah_NNP Shareef_NNP ._.
+2006_CD ._.
+Parsing_VBG Arabic_NNP Dialects_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT European_JJ Chapter_NN of_IN ACL_NNP -LRB-_-LRB- EACL_NNP -RRB-_-RRB- ._.
+Heba_NNP Elfardy_NNP and_CC Mona_NNP Diab_NNP ._.
+2013_CD ._.
+Sentence_NN Level_NNP Di_NNP -_: alect_IN Identification_NN in_IN Arabic_NNP ._.
+In_IN ACL_NNP -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, pages_NNS 456_CD --_: 461_CD ._.
+Nizar_NNP Habash_NNP and_CC Owen_NNP Rambow_NNP ._.
+2006_CD ._.
+Magead_NNP :_: A_NNP Morphological_NNP Analyzer_NNP and_CC Generator_NNP for_IN the_DT Ara_NNP -_: bic_NN Dialects_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNPS and_CC 44th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 681_CD --_: 688_CD ._.
+Nizar_NNP Habash_NNP ,_, Ryan_NNP Roth_NNP ,_, Owen_NNP Rambow_NNP ,_, Ramy_NNP Eskan_NNP -_: der_NN ,_, and_CC Nadi_NNP Tomeh_NNP ._.
+2013_CD ._.
+Morphological_JJ analysis_NN and_CC disambiguation_NN for_IN dialectal_JJ arabic_JJ ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN NAACL-HLT_NNP ,_, pages_NNS 426_CD --_: 432_CD ,_, Atlanta_NNP ,_, Geor_NNP -_: gia_NN ._.
+Salima_NNP Harrat_NNP ,_, Mourad_NNP Abbas_NNP ,_, Karima_NNP Meftouh_NNP ,_, and_CC Kamel_NNP Smaili_NNP ._.
+2013_CD ._.
+Diacritics_NNS restoration_NN for_IN arabic_JJ dialect_NN texts_NNS ._.
+In_IN Proceedings_NNP of_IN 14th_JJ Annual_JJ Confer_NNP -_: ence_NN of_IN the_DT International_NNP Communication_NNP Association_NNP -LRB-_-LRB- Interspeech_NNP -RRB-_-RRB- ,_, pages_NNS 125_CD --_: 132_CD ._.
+Salima_NNP Harrat_NNP ,_, Karima_NNP Meftouh_NNP ,_, Mourad_NNP Abbas_NNP ,_, and_CC Kamel_NNP Smaili_NNP ._.
+2014_CD ._.
+Building_NNP resources_NNS for_IN algerian_JJ arabic_JJ dialects_NNS ._.
+In_IN Proceedings_NNP of_IN 15th_JJ Annual_JJ Confer_NNP -_: ence_NN of_IN the_DT International_NNP Communication_NNP Association_NNP -LRB-_-LRB- Interspeech_NNP -RRB-_-RRB- ,_, pages_NNS 2123_CD --_: 2127_CD ._.
+Salima_NNP Harrat_NNP ,_, Karima_NNP Meftouh_NNP ,_, Mourad_NNP Abbas_NNP ,_, Salma_NNP Jamoussi_NNP ,_, and_CC Kamel_NNP Smaili_NNP ._.
+2015_CD ._.
+Cross-dialectal_JJ arabic_JJ processing_NN ._.
+In_IN Computational_NNP Linguistics_NNPS and_CC Intelligent_NNP Text_NNP Processing_NNP ,_, 16th_JJ International_NNP Confer_NNP -_: ence_NN ,_, CICLing_VBG 2015_CD proceeding_NN ,_, part_NN 1_CD ,_, pages_NNS 620_CD --_: 632_CD ,_, April_NNP ._.
+Hanaa_NNP Kilany_NNP ,_, H._NNP Gadalla_NNP ,_, Howaida_NNP Arram_NNP ,_, A._NN Yacoub_NNP ,_, Alaa_NNP El-Habashi_NNP ,_, and_CC C._NNP McLemore_NNP ._.
+2002_CD ._.
+Egyptian_JJ Colloquial_NNP Arabic_NNP Lexicon_NNP ._.
+In_IN LDC_NNP catalog_NN number_NN LDC99L22_NNP ._.
+Katrin_NNP Kirchhoff_NNP ,_, Jeff_NNP Bilmes_NNP ,_, Sourin_NNP Das_NNP ,_, Nicolae_NNP Duta_NNP ,_, Melissa_NNP Egan_NNP ,_, Gang_NN Ji_NNP ,_, Feng_NNP He_PRP ,_, John_NNP Hopkins_NNP ,_, Daben_NNP Liu_NNP ,_, Mohamed_NNP Noamany_NNP ,_, Pat_NNP Schone_NNP ,_, Richard_NNP Schwartz_NNP ,_, and_CC Dimitra_NNP Vergyri_NNP ._.
+2003_CD ._.
+Novel_NN Ap_SYM -_: proaches_NNS to_TO Arabic_NNP Speech_NNP Recognition_NNP :_: Report_NNP from_IN the_DT 2002_CD Johns-Hopkins_NNP Summer_NNP Workshop_NNP ._.
+In_IN Proc_NNP ._.
+IEEE_NNP Intl._NNP ._.
+Conf_NNP ._.
+on_IN Acoustics_NNP ,_, Speech_NNP ,_, and_CC Signal_NNP Pro-_NNP cessing_NN ,_, pages_NNS 344_CD --_: 347_CD ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP ._.
+Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Richard_NNP Zens_NNP ,_, Chris_NNP Dyer_NNP ,_, Ondrej_NNP Bojar_NNP ,_, Alexandra_NNP Con_NN -_: stantin_NN ,_, and_CC Evan_NNP Herbst_NNP ._.
+2007_CD ._.
+Moses_NNP :_: Open_NNP Source_NNP Toolkit_NNP for_IN Statistical_NNP Machine_NNP Translation_NN ._.
+Proceed_SYM -_: ings_NNS of_IN the_DT Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP ,_, demonstation_NN session_NN ,_, pages_NNS 177_CD --_: 180_CD ._.
+Mohamed_NNP Maamouri_NNP ,_, Ann_NNP Bies_NNP ,_, Tim_NNP Buckwalter_NNP ,_, and_CC Hubert_NNP Jin_NNP ._.
+2004_CD ._.
+Arabic_NNP treebank_NN :_: Part_NNP 3_CD v_SYM 1.0_CD ._.
+In_IN Linguistic_NNP Data_NNP Consortium_NNP ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT Systematic_JJ Comparison_NN of_IN Various_JJ Statistical_NNP Alignment_NNP Models_NNPS ._.
+Computational_NNP Linguistics_NNP ,_, Volume_NN 29_CD ,_, No_DT 1_CD ,_, pages_NNS 19_CD --_: 51_CD ._.
+Arfath_NNP Pasha_NNP ,_, Mohamed_NNP Al-Badrashiny_NNP ,_, Ramy_NNP Kholy_NNP Ahmed_NNP El_NNP Eskander_NNP ,_, Mona_NNP Diab_NNP ,_, Nizar_NNP Habash_NNP ,_, Manoj_NNP Pooleery_NNP ,_, Owen_NNP Rambow_NNP ,_, and_CC Ryan_NNP Roth_NNP ._.
+2014_CD ._.
+Madamira_NNP :_: A_NNP fast_RB ,_, comprehensive_JJ tool_NN for_IN morphological_JJ analysis_NN and_CC disambiguation_NN of_IN arabic_JJ ._.
+In_IN LREC_NNP 2014_CD ,_, Language_NNP Resources_NNPS and_CC Evaluation_NNP Conference_NNP ,_, Reykjavik_NNP ,_, Iceland_NNP ._.
+Tachicart_NNP Ridouane_NNP and_CC Bouzoubaa_NNP Karim_NNP ._.
+2014_CD ._.
+A_DT hy_SYM -_: brid_NN approach_NN to_TO translate_VB moroccan_JJ arabic_JJ dialect_NN ._.
+In_IN SITA_NNP '_POS 14_CD ,_, 9th_CD International_NNP Conference_NNP on_IN Intelligent_NNP Systems_NNPS ._.
+Wael_NNP ._.
+Salloum_NNP and_CC Nizar_NNP ._.
+Habash_NNP ._.
+2012_CD ._.
+Elissa_NNP :_: A_NNP dialectal_JJ to_TO standard_JJ arabic_JJ machine_NN translation_NN sys_SYM -_: tem_NN ._.
+In_IN Coling_VBG '_'' 2012_CD ,_, 24th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 385_CD --_: 392_CD ._.
+Wael_NNP Salloum_NNP and_CC Nizar_NNP Habash_NNP ._.
+2013_CD ._.
+Dialectal_NNP Ara_NNP -_: bic_NN to_TO English_NNP Machine_NNP Translation_NN :_: Pivoting_VBG through_IN Modern_NNP Standard_NNP Arabic_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Lan_NNP -_: guage_NN Technologies_NNPS ,_, NAACL_NNP HLT_NNP 13_CD ,_, pages_NNS 348_CD --_: 358_CD ._.
+Hassan_NNP ._.
+Sawaf_NNP ._.
+2010_CD ._.
+Arabic_NNP dialect_NN handling_NN in_IN hybrid_JJ machine_NN translation_NN ._.
+In_IN AMTA_NNP '_POS 2010_CD ,_, 9th_CD Conf_NNP ._.
+of_IN the_DT Association_NNP for_IN Machine_NNP Translation_NN in_IN the_DT Americas_NNPS ._.
+Inguna_NNP Skadin_NNP ̧a_NN ,_, Ahmet_NNP Aker_NNP ,_, Voula_NNP Giouli_NNP ,_, Dan_NNP Tufis_NNP ,_, Robert_NNP Gaizauskas_NNP ,_, Madara_NNP Mierin_NNP ̧a_NN ,_, and_CC Nikos_NNP Mas_NNP -_: tropavlos_NNS ._.
+2010_CD ._.
+A_DT Collection_NNP of_IN Comparable_JJ Corpora_NNP for_IN Under-resourced_JJ Languages_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 2010_CD Conference_NN on_IN Human_NNP Language_NNP Technologies_NNPS --_: The_DT Baltic_NNP Perspective_NNP :_: Proceedings_NNP of_IN the_DT Fourth_JJ In_IN -_: ternational_JJ Conference_NN Baltic_NNP HLT_NNP 2010_CD ,_, pages_NNS 161_CD --_: 168_CD ._.
+Andreas_NNP Stolcke_NNP ._.
+2002_CD ._.
+Srilm_NNP --_: an_DT Extensible_NNP Language_NNP Modeling_NNP Toolkit_NNP ._.
+In_IN ICSLP_NNP ,_, pages_NNS 901_CD --_: 904_CD ,_, Denver_NNP ,_, USA_NNP ._.
+Rabih_NNP Zbib_NNP ,_, Erika_NNP Malchiodi_NNP ,_, Devlin_NNP Jacob_NNP ,_, David_NNP Stallard_NNP ,_, Spyros_NNP Matsoukas_NNP ,_, Richard_NNP Schwartz_NNP ,_, John_NNP Makhoul_NNP ,_, Omar_NNP Zaidan_NNP ,_, and_CC Chris_NNP Callison-Burch_NNP ._.
+2012_CD ._.
+Machine_NN Translation_NN of_IN Arabic_NNP Dialects_NNPS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 2012_CD Conference_NN of_IN the_DT North_NNP Amer_NNP -_: ican_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies_NNPS ,_, NAACL_NNP HLT_NNP 12_CD ,_, pages_NNS 49_CD --_: 59_CD ._.

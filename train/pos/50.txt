@@ -1,0 +1,359 @@
+A_DT Comparative_NNP Study_NNP on_IN Mandarin_NNP and_CC Cantonese_NNP Resultative_NNP Verb_NNP Compounds_NNP Abstract_NNP This_DT paper_NN explores_VBZ the_DT conditions_NNS where_WRB Mandarin_NNP RVCs_NNPS can_MD be_VB preserved_VBN in_IN their_PRP$ Cantonese_JJ counterparts_NNS ._.
+Six_CD types_NNS of_IN Mandarin_NNP RVCs_NNPS --_: ergatives_NNS ,_, unergatives_NNS ,_, accusatives_NNS ,_, causatives_NNS ,_, pseudo-passives_NNS and_CC object_NN -_: fronting_NN --_: have_VBP been_VBN examined_VBN ._.
+Modifications_NNS have_VBP been_VBN made_VBN for_IN certain_JJ kinds_NNS of_IN RVCs_NNS that_WDT are_VBP usually_RB misclassified_VBN ._.
+The_DT analysis_NN has_VBZ been_VBN done_VBN at_IN both_DT the_DT lexical_JJ and_CC syntactic_JJ levels_NNS ._.
+At_IN the_DT lexical_JJ level_NN ,_, the_DT concept_NN of_IN `_`` strong_JJ resultative_NN '_'' and_CC `_`` weak_JJ resultative_NN '_'' has_VBZ been_VBN adduced_VBN to_TO support_VB the_DT idea_NN that_WDT indirect_JJ causation_NN can_MD not_RB be_VB expressed_VBN by_IN RVC_NNP in_IN Cantonese_NNP ._.
+At_IN the_DT syntactic_JJ level_NN ,_, the_DT presentations_NNS of_IN the_DT same_JJ RVCs_NNS falling_VBG into_IN different_JJ sentence_NN types_NNS are_VBP illustrated_VBN ._.
+Since_IN the_DT structure_NN of_IN Mandarin_NNP RVCs_NNPS are_VBP often_RB restricted_VBN in_IN Cantonese_NNP ,_, three_CD substitutive_JJ constructions_NNS have_VBP been_VBN introduced_VBN for_IN presenting_VBG the_DT same_JJ resultatives_NNS in_IN Cantonese_NNP ._.
+1_CD Introduction_NNP Resultative_NNP verb_NN compound_NN -LRB-_-LRB- RVC_NNP -RRB-_-RRB- has_VBZ been_VBN a_DT well-ventilated_JJ topic_NN in_IN Modern_NNP Chinese_NNP linguistics_NNS due_JJ to_TO its_PRP$ ubiquitous_JJ occurrence_NN in_IN Chinese_JJ especially_RB Mandarin_NNP ._.
+A_DT resultative_JJ verb_NN compound_NN in_IN Chinese_NNP is_VBZ composed_VBN of_IN two_CD elements_NNS ,_, with_IN the_DT second_JJ element_NN -LRB-_-LRB- V2_CD -RRB-_-RRB- denoting_VBG the_DT result_NN of_IN the_DT action_NN indicated_VBN by_IN the_DT first_JJ element_NN -LRB-_-LRB- V1_CD -RRB-_-RRB- -LRB-_-LRB- Thompson_NNP 1973_CD ,_, Lu_NNP 1977_CD ,_, Li_NNP and_CC Thompson_NNP 1981_CD ,_, Sophia_NNP Yat_NNP Mei_NNP Lee_NNP Department_NNP of_IN Chinese_NNPS and_CC Bilingual_NNP Studies_NNPS The_DT Hong_NNP Kong_NNP Polytechnic_NNP University_NNP Hong_NNP Kong_NNP ym.lee@polyu.edu.hk_NNP Shi_NNP 2002_CD -RRB-_-RRB- 1_CD ._.
+As_IN one_CD of_IN the_DT main_JJ varieties_NNS of_IN Chinese_JJ ,_, Cantonese_JJ seems_VBZ to_TO be_VB closely-related_JJ to_TO Mandarin_NNP ._.
+There_EX are_VBP ,_, however_RB ,_, some_DT remarkable_JJ differences_NNS between_IN them_PRP in_IN terms_NNS of_IN the_DT usage_NN ._.
+An_DT example_NN of_IN Mandarin_NNP RVC_NNP construction_NN is_VBZ shown_VBN in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, with_IN a_DT syntactically_RB parallel_JJ yet_RB ill-formed_JJ sentence_NN in_IN Cantonese_NNP illustrated_VBD in_IN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- 我_SYM 1_CD ._.
+SG_NNP 跑丟-了_NNP 車票_NNP run_VBP lost-ASP_JJ ticket_NN `_`` I_PRP lost_VBD the_DT ticket_NN as_IN I_PRP ran_VBD ._. '_''
+-LRB-_-LRB- 2_LS -RRB-_-RRB- *_SYM 我_SYM 1_CD ._.
+SG_NNP 跑跌-咗_VBD 張_CD 車飛_CD run_NN lost-ASP_JJ CL_NN ticket_NN Since_IN RVCs_NNS in_IN Cantonese_NN are_VBP found_VBN to_TO be_VB less_RBR productive_JJ than_IN they_PRP are_VBP in_IN Mandarin_NNP ,_, most_JJS of_IN the_DT previous_JJ works_NNS have_VBP been_VBN dedicated_VBN to_TO the_DT study_NN of_IN Mandarin_NNP Chinese_NNP ,_, neglecting_VBG numerous_JJ concerns_NNS regarding_VBG Cantonese_JJ RVCs_NNS ._.
+Under_IN what_WP circumstances_NNS can_MD the_DT Mandarin_NNP RVCs_NNPS be_VB preserved_VBN in_IN their_PRP$ Cantonese_JJ counterparts_NNS ?_.
+What_WP are_VBP the_DT factors_NNS of_IN prohibition_NN of_IN RVCs_NNS in_IN Cantonese_NN ?_.
+What_WP methods_NNS will_MD be_VB used_VBN when_WRB RVCs_NNS are_VBP not_RB allowed_VBN in_IN the_DT corresponding_JJ sentences_NNS in_IN Cantonese_NN ?_.
+These_DT are_VBP the_DT questions_NNS that_WDT motivate_VBP the_DT current_JJ research_NN ._.
+In_IN this_DT study_NN ,_, we_PRP attempt_VBP to_TO provide_VB a_DT systematic_JJ pattern_NN of_IN how_WRB resultatives_NNS are_VBP presented_VBN when_WRB the_DT corresponding_JJ Mandarin_NNP RVCs_NNPS are_VBP not_RB allowed_VBN in_IN 1_CD Since_IN `_`` V1_NN '_'' and_CC `_`` V2_NN '_'' are_VBP widely_RB used_VBN as_IN the_DT first_JJ and_CC the_DT second_JJ predicates_NNS of_IN RVCs_NNS in_IN previous_JJ studies_NNS ,_, these_DT terms_NNS are_VBP adopted_VBN in_IN this_DT paper_NN ._.
+Cantonese_NN ,_, by_IN examining_VBG six_CD types_NNS of_IN Mandarin_NNP RVCs_NNPS ,_, namely_RB ergatives_NNS ,_, unergatives_NNS ,_, accusatives_NNS ,_, causatives_NNS ,_, pseudo-passives_NNS ,_, and_CC object-fronting_NN ._.
+2_CD Related_JJ Work_NN With_IN regard_NN to_TO Chinese_JJ RVCs_NNS ,_, numerous_JJ studies_NNS have_VBP examined_VBN them_PRP concerning_VBG the_DT headedness_NN ._.
+There_EX are_VBP four_CD approaches_NNS proposed_VBN :_: a_DT -RRB-_-RRB- V1_CD being_VBG the_DT head_NN -LRB-_-LRB- Li_NNP 1990_CD ,_, 1995_CD ,_, Cheng_NNP &_CC Huang_NNP 1994_CD ,_, Wang_NNP 2001_CD -RRB-_-RRB- ,_, b_NN -RRB-_-RRB- V2_NN being_VBG the_DT head_NN -LRB-_-LRB- Tai_NNP 2003_CD -RRB-_-RRB- ,_, c_NN -RRB-_-RRB- neither_CC V1_CD nor_CC V2_CD being_VBG the_DT head_NN -LRB-_-LRB- Huang_NNP &_CC Lin_NNP 1992_CD -RRB-_-RRB- ,_, and_CC d_LS -RRB-_-RRB- both_DT V1_CD and_CC V2_CD being_VBG the_DT heads_NNS -LRB-_-LRB- Gu_NNP 1992_CD -RRB-_-RRB- ._.
+The_DT formation_NN of_IN RVCs_NNS also_RB intrigued_VBD many_JJ researchers_NNS ._.
+Li_NNP -LRB-_-LRB- 1990_CD ,_, 1995_CD -RRB-_-RRB- suggested_VBD that_IN RVCs_NNS are_VBP formed_VBN in_IN the_DT lexicon_NN ._.
+Gu_NNP -LRB-_-LRB- 1992_CD -RRB-_-RRB- further_RBR pointed_VBD out_RP that_IN they_PRP are_VBP occasionally_RB formed_VBN in_IN the_DT lexicon_NN through_IN theta-identification_NN ._.
+Huang_NNP -LRB-_-LRB- 1992_CD -RRB-_-RRB- proposed_VBD that_IN they_PRP are_VBP derived_VBN syntactically_RB ._.
+While_IN most_JJS previous_JJ studies_NNS focus_VBP on_IN Mandarin_NNP Chinese_NNP ,_, little_JJ work_NN has_VBZ been_VBN done_VBN in_IN investigating_VBG Cantonese_NNP RVCs_NNP ._.
+Cheng_NNP et_FW al._FW -LRB-_-LRB- 1997_CD -RRB-_-RRB- compared_VBN the_DT properties_NNS of_IN verbal_JJ compounds_NNS in_IN Cantonese_NNP ,_, Mandarin_NNP ,_, and_CC Taiwanese_JJ ,_, proposing_VBG that_IN Cantonese_NNP and_CC Mandarin_NNP are_VBP similarly_RB formed_VBN in_IN the_DT lexicon_NN ,_, whereas_IN Taiwanese_JJ is_VBZ formed_VBN in_IN the_DT syntax_NN ._.
+Chow_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- investigated_VBD the_DT interface_NN between_IN the_DT semantic_JJ and_CC syntactic_JJ realizations_NNS of_IN RVCs_NNS in_IN Mandarin_NNP and_CC Cantonese_NNP ,_, suggesting_VBG that_IN most_JJS RVCs_NNS in_IN Mandarin_NNP have_VBP parallel_JJ syntactic_JJ realizations_NNS with_IN their_PRP$ corresponding_JJ Cantonese_JJ sentences_NNS ._.
+However_RB ,_, the_DT prevailing_VBG use_NN of_IN ill_JJ -_: formed_VBN Cantonese_NNP RVCs_NNP produced_VBN by_IN non-native_JJ speakers_NNS will_MD be_VB unexplained_JJ if_IN RVCs_NNS in_IN Mandarin_NNP and_CC Cantonese_NNP share_VBP the_DT same_JJ structure_NN ._.
+3_CD Types_NNS of_IN RVC_NNP Constructions_NNP Drawing_VBG on_IN the_DT insight_NN of_IN earlier_JJR works_NNS ,_, particularly_RB Cheng_NNP &_CC Huang_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- and_CC Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, this_DT study_NN classifies_VBZ RVCs_NNS into_IN six_CD types_NNS ,_, namely_RB ergatives_NNS ,_, unergatives_NNS ,_, accusatives_NNS ,_, causatives_NNS ,_, pseudo-passives_NNS and_CC object-fronting_NN ._.
+It_PRP should_MD be_VB noted_VBN that_IN it_PRP is_VBZ possible_JJ for_IN the_DT same_JJ RVC_NNP to_TO fall_VB into_IN different_JJ types_NNS due_JJ to_TO the_DT transitivity2_NN and_CC canonicality3_NN of_IN the_DT RVC_NNP ._.
+2_CD Transitivity_NNP is_VBZ a_DT property_NN of_IN the_DT RVC_NNP that_WDT indicates_VBZ if_IN the_DT RVC_NNP can_MD take_VB objects_NNS or_CC not_RB 3_CD Canonicality_NNP concerns_NNS with_IN the_DT ordinary_JJ word_NN order_NN of_IN a_DT language_NN ._.
+For_IN example_NN ,_, a_DT Chinese_JJ canonical_JJ sentence_NN order_NN would_MD be_VB :_: ``_`` SUBJ_NNP +_CD V_NNP +_NN -LRB-_-LRB- OBJ_NNP -RRB-_-RRB- ''_'' ,_, of_IN which_WDT the_DT subject_NN is_VBZ the_DT AGENT_NNP ._.
+3.1_CD Ergatives_NNS Ergatives_NNS are_VBP intransitive_JJ verbs_NNS that_WDT contain_VBP only_RB one_CD argument_NN ._.
+V1_CD of_IN an_DT ergative_NN is_VBZ a_DT non-active_JJ verb_NN that_WDT indicates_VBZ a_DT state_NN or_CC a_DT passive_JJ action_NN ._.
+A_DT THEME_NN /_NN EXPERIENCER_NNP /_CD CAUSER_NNP is_VBZ selected_VBN obligatorily_RB by_IN a_DT non-active_JJ RVC_NNP -LRB-_-LRB- Cheng_NNP &_CC Huang_NNP 1994_CD -RRB-_-RRB- ._.
+V1_CD and_CC V2_CD are_VBP referring_VBG to_TO the_DT same_JJ entity_NN which_WDT occupies_VBZ the_DT subject_JJ position_NN of_IN the_DT sentence_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- 他_SYM 嚇呆-了_CD 3_CD ._.
+SG_NNP scared_VBD stupefy-ASP_NNP `_`` He_PRP is_VBZ shocked_VBN ._. '_''
+3.2_CD Unergatives_NNP Unergatives_NNP involve_VBP an_DT intransitive_JJ frame_NN ._.
+They_PRP contain_VBP AGENTS_NNP as_IN the_DT grammatical_JJ subjects_NNS who_WP take_VBP the_DT actions_NNS denoted_VBN in_IN V1_NNP and_CC eventually_RB undergo_VB changes_NNS of_IN state_NN -LRB-_-LRB- Cheng_NNP &_CC Huang_NNP 1994_CD ,_, Huang_NNP 2008_CD -RRB-_-RRB- ._.
+The_DT subject_NN is_VBZ the_DT AGENT_NNP of_IN V1_NNP and_CC the_DT EXPERIENCER_NNP /_CD THEME_NN of_IN V2_NN ._.
+V1_CD and_CC V2_CD are_VBP referring_VBG to_TO the_DT same_JJ entity_NN ,_, as_IN in_IN -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: -LRB-_-LRB- 4_LS -RRB-_-RRB- 張三_SYM Zhangsan_NNP 吃飽-了_NN eat_VBP full-ASP_NNP `_`` Zhangsan_NNP ate_VBD and_CC he_PRP is_VBZ full_JJ ._. '_''
+3.3_CD Accusatives_NNP Accusative_NNP predicates4_CD ,_, consisted_VBN of_IN active_JJ V1_NNP and_CC state-denoting_JJ V2_NN ,_, are_VBP transitive_JJ verbs_NNS that_WDT obligatorily_RB take_VBP two_CD theta_JJ roles_NNS including_VBG an_DT AGENT_NN and_CC a_DT THEME_NN ._.
+The_DT AGENT_NNP role_NN is_VBZ assigned_VBN to_TO the_DT subject_JJ whereas_IN the_DT THEME_NN role_NN is_VBZ appointed_VBN to_TO the_DT object_NN ._.
+As_IN the_DT accusative_JJ RVCs_NNS may_MD differ_VB in_IN their_PRP$ referential_JJ properties_NNS ,_, accusative_JJ RVCs_NNS can_MD be_VB divided_VBN into_IN two_CD types_NNS ,_, namely_RB co_SYM -_: referential_JJ and_CC cross-referential_JJ ._.
+Co-referential_JJ Accusatives_NNP The_DT grammatical_JJ subject_NN must_MD be_VB the_DT logical_JJ subject_NN of_IN both_DT V1_CD and_CC V2_CD but_CC the_DT grammatical_JJ object_NN may_MD have_VB three_CD types_NNS ,_, we_PRP name_VBP them_PRP Type_NN 1_CD ,_, 2_CD and_CC 3_CD ._.
+According_VBG to_TO Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, it_PRP can_MD be_VB -LRB-_-LRB- a_DT -RRB-_-RRB- the_DT logical_JJ object_NN of_IN the_DT whole_JJ RVC_NNP -LRB-_-LRB- Type_NNP 1_CD -RRB-_-RRB- ,_, -LRB-_-LRB- b_NN -RRB-_-RRB- the_DT logical_JJ object_NN of_IN V1_NNP -LRB-_-LRB- Type_NN 2_CD -RRB-_-RRB- or_CC -LRB-_-LRB- c_NN -RRB-_-RRB- the_DT logical_JJ object_NN of_IN V2_NNP -LRB-_-LRB- Type_NN 3_LS -RRB-_-RRB- ._.
+The_DT typical_JJ examples_NNS of_IN the_DT three_CD types_NNS are_VBP shown_VBN as_IN in_IN -LRB-_-LRB- 5_CD -RRB-_-RRB- --_: -LRB-_-LRB- 7_CD -RRB-_-RRB- :_: 4_CD `_`` Accusatives_NNS '_POS is_VBZ termed_VBN `_`` transitives_NNS '_'' in_IN the_DT work_NN of_IN Cheng_NNP &_CC Huang_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- 他_SYM 看懂-了_CD 說明書_CD -LRB-_-LRB- Wang_NNP 2001_CD :_: 66_CD -RRB-_-RRB- 3_LS ._.
+SG_NNP read_VBD understand-ASP_NNP user_NN guide_NN `_`` He_PRP read_VBD the_DT user_NN guide_NN and_CC understood_VBD it_PRP ._. '_''
+Co-referential_JJ Type_NN 1_CD Causatives_NNS ``_`` Type_NN 1_CD causative_NN ''_'' is_VBZ derived_VBN from_IN a_DT canonical_JJ sentence_NN -LRB-_-LRB- i.e._FW accusatives_FW -RRB-_-RRB- simply_RB by_IN switching_VBG the_DT positions_NNS of_IN the_DT subject_JJ and_CC object_NN ._.
+The_DT subject_NN is_VBZ the_DT CAUSER_NNP which_WDT is_VBZ the_DT THEME_NN before_IN the_DT deriving_VBG from_IN accusatives_NNS ._.
+In_IN Type_NN 1_CD causative_NN ,_, V1_CD denotes_NNS an_DT activity_NN taken_VBN by_IN the_DT object_NN and_CC the_DT subject_NN is_VBZ the_DT logical_JJ object_NN of_IN V1_NNP as_IN in_IN 大餐吃膩_CD 了夫人_CD -LRB-_-LRB- Wang_NNP 2001_CD :_: 63_CD -RRB-_-RRB- `_`` The_DT woman_NN was_VBD sick_JJ of_IN having_VBG the_DT big_JJ meal_NN ._. '_''
+Type_NN 2_CD Causatives_NNS ``_`` Type_NN 2_CD causative_NN ''_'' is_VBZ sentences_NNS with_IN the_DT original_JJ AGENTs_NNS becoming_VBG the_DT CAUSERs_NNS ._.
+This_DT can_MD be_VB done_VBN by_IN verbs_NNS that_WDT can_MD either_RB be_VB an_DT active_JJ verb_NN or_CC an_DT state-denoting_JJ verb_NN such_JJ as_IN 嚇_CD `_`` scare_NN '_'' ,_, 氣_CD `_`` irritate_VB '_'' ._.
+For_IN example_NN ,_, in_IN 他嚇呆了我_CD `_`` he_PRP scared_VBD me_PRP '_'' ,_, the_DT subject_JJ ``_`` 他_FW ''_'' is_VBZ regarded_VBN as_IN the_DT AGENT_NNP who_WP takes_VBZ the_DT action_NN of_IN scaring_VBG the_DT object_NN ``_`` 我_FW ''_'' ._.
+It_PRP can_MD also_RB be_VB understood_VBN as_IN ``_`` He_PRP caused_VBD me_PRP to_TO be_VB scared_VBN ''_'' ._.
+The_DT latter_JJ one_CD will_MD be_VB referred_VBN to_TO in_IN causatives_NNS ._.
+Thus_RB ,_, the_DT statement_NN ``_`` V1_NNP and_CC V2_NNP are_VBP cross-referential_JJ ''_'' suggested_VBN by_IN Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- is_VBZ incorrect_JJ ._.
+It_PRP is_VBZ proposed_VBN that_IN Type_NN 2_CD causative_JJ RVCs_NNS are_VBP object-oriented_JJ -LRB-_-LRB- i.e._FW co-referential_JJ -RRB-_-RRB- with_IN an_DT active_JJ V1_NN used_VBN in_IN a_DT non-active_JJ sense_NN ._.
+Since_IN the_DT property_NN of_IN the_DT V1_NNP contains_VBZ two_CD readings_NNS ,_, this_DT kind_NN of_IN sentence_NN involves_VBZ structural_JJ ambiguities_NNS ._.
+Type_NN 3_CD Causatives_NNS ``_`` Type_NN 3_CD causative_NN ''_'' is_VBZ combined_VBN with_IN Type_NN 2_CD in_IN the_DT work_NN of_IN Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+They_PRP are_VBP ,_, however_RB ,_, different_JJ in_IN their_PRP$ semantic_JJ patterns_NNS ._.
+Thus_RB ,_, we_PRP propose_VBP ``_`` Type_NN 3_CD causatives_NNS ''_'' as_IN one_CD of_IN the_DT new_JJ sub-category_NN in_IN causatives_NNS ._.
+``_`` Type_NN 3_CD causative_NN ''_'' is_VBZ a_DT sentence_NN containing_VBG an_DT independent_JJ CAUSER_NNP ,_, meaning_VBG that_IN the_DT CAUSER_NNP -LRB-_-LRB- i.e._FW the_DT subject_NN -RRB-_-RRB- has_VBZ no_DT logical_JJ connection_NN with_IN the_DT predicates_NNS ._.
+Both_DT predicates_VBZ refer_VBP to_TO the_DT same_JJ entity_NN which_WDT is_VBZ the_DT object_NN ,_, with_IN V1_CD being_VBG an_DT intransitive_JJ verb_NN ._.
+For_IN example_NN ,_, 夢裡_CD 的那件事哭醒了他_CD `_`` He_PRP woke_VBD up_RP in_IN tears_NNS for_IN the_DT event_NN he_PRP dreamt_VBD -LRB-_-LRB- in_IN his_PRP$ dream_NN -RRB-_-RRB- ._. '_''
+Type_NN 4_CD Causatives_NNS ``_`` Type_NN 4_CD causative_NN ''_'' contains_VBZ a_DT suppressed_VBN AGENT_NN of_IN the_DT action_NN stated_VBN in_IN V1_NNP ._.
+The_DT subject_NN is_VBZ the_DT logical_JJ object_NN of_IN V1_NN while_IN the_DT object_NN is_VBZ a_DT body_NN part_NN of_IN the_DT one_NN who_WP takes_VBZ the_DT action_NN denoted_VBN by_IN V1_NNP ._.
+For_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- 張三_SYM Zhangsan_NNP play_NN tired-ASP_JJ basketball_NN 打累-了_NN 籃球_CD `_`` Zhangsan_NNP played_VBD basketball_NN -LRB-_-LRB- for_IN a_DT long_JJ time_NN -RRB-_-RRB- and_CC then_RB he_PRP became_VBD tired_JJ ._. '_''
+-LRB-_-LRB- 7_CD -RRB-_-RRB- 大黑_FW 跑贏-了_FW 對手_FW -LRB-_-LRB- Wang_NNP 2001_CD :_: 66_CD -RRB-_-RRB- Dahei_NNP run_VBP win-ASP_JJ competitor_NN `_`` Dahei_NNP won_VBD in_IN a_DT running_VBG competition_NN ._. '_''
+Cross-referential_JJ Accusatives_NNP The_DT grammatical_JJ subject_NN must_MD be_VB the_DT logical_JJ subject_NN of_IN V1_CD but_CC the_DT grammatical_JJ object_NN may_MD also_RB have_VB three_CD types_NNS ,_, we_PRP name_VBP them_PRP Type_VB 4_CD ,_, 5_CD and_CC 6_CD ._.
+If_IN there_EX are_VBP only_RB two_CD arguments_NNS in_IN the_DT sentence_NN ,_, the_DT grammatical_JJ object_NN can_MD be_VB -LRB-_-LRB- a_DT -RRB-_-RRB- the_DT logical_JJ object_NN of_IN V1_NNP and_CC the_DT logical_JJ subject_NN of_IN V2_NNP -LRB-_-LRB- Type_NN 4_LS -RRB-_-RRB- or_CC -LRB-_-LRB- b_NN -RRB-_-RRB- the_DT logical_JJ subject_NN of_IN V2_NNP -LRB-_-LRB- Type_NN 5_CD -RRB-_-RRB- ._.
+If_IN there_EX are_VBP three_CD arguments_NNS ,_, the_DT direct_JJ object_NN must_MD be_VB the_DT logical_JJ object_NN of_IN both_DT the_DT V1_NNP and_CC V2_NNP -LRB-_-LRB- Type_NN 6_CD -RRB-_-RRB- ._.
+They_PRP are_VBP demonstrated_VBN as_IN in_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- -_: -LRB-_-LRB- 10_CD -RRB-_-RRB- :_: -LRB-_-LRB- 8_CD -RRB-_-RRB- 她_SYM 擦乾-了_CD 眼淚_NN 3_CD ._.
+SG_NNP wipedry-ASP_NNP tears_NNS `_`` She_PRP dried_VBD her_PRP$ eyes_NNS ._. '_''
+-LRB-_-LRB- 9_CD -RRB-_-RRB- 他_SYM 咬碎-了_CD 牙齒_NN 3_CD ._.
+SG_NNP bite_VB broken-ASP_JJ tooth_NN `_`` He_PRP broke_VBD his_PRP$ tooth_NN by_IN biting_VBG something_NN ._. '_''
+-LRB-_-LRB- 10_CD -RRB-_-RRB- 老師_FW 教會_FW 我_FW 游泳_FW teacher_NN teach_VB know_VB 1_CD ._.
+SG_NNP swim_VB `_`` The_DT teacher_NN taught_VBD me_PRP how_WRB to_TO swim_VB ._. '_''
+3.4_CD Causatives_NNPS Causatives_NNPS are_VBP transitive_JJ verbs_NNS whose_WP$ grammatical_JJ subject_NN is_VBZ a_DT cause_NN in_IN terms_NNS of_IN thematic_JJ relations_NNS ._.
+The_DT event_NN structure_NN proposed_VBN by_IN Cheng_NNP &_CC Huang_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- is_VBZ shown_VBN in_IN -LRB-_-LRB- 11_CD -RRB-_-RRB- :_: -LRB-_-LRB- 11_CD -RRB-_-RRB- -LSB-_JJ RV_NN V1Non-active_JJ -LSB-_NNP V2State_NNP /_CD Change-of-State_NNP -RSB-_NNP -RSB-_NNP <_CD Causer_NNP ,_, Theme_NNP /_NNP Experiencer_NNP /_NNP Causee_NNP >_NNP According_VBG to_TO Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ,_, there_EX are_VBP three_CD semantic_JJ patterns_NNS of_IN causatives_NNS ,_, of_IN which_WDT one_CD of_IN them_PRP needs_VBZ to_TO be_VB revised_VBN ._.
+In_IN this_DT paper_NN ,_, all_DT patterns_NNS are_VBP renamed_VBN and_CC two_CD new_JJ patterns_NNS are_VBP introduced_VBN ._.
+example_NN ,_, 那些資料看花了眼睛_CD ,_, `_`` The_DT information_NN made_VBN -LRB-_-LRB- his_PRP$ -RRB-_-RRB- eyes_NNS blurred_VBN -LRB-_-LRB- from_IN reading_VBG it_PRP -RRB-_-RRB- ._. '_''
+Cross-referential_JJ Type_NN 5_CD Causatives_NNS ``_`` Type_NN 5_CD causative_NN ''_'' is_VBZ a_DT sentence_NN with_IN three_CD arguments_NNS in_IN its_PRP$ deep_JJ structure_NN ._.
+Only_RB two_CD of_IN them_PRP appear_VBP on_IN the_DT surface_NN and_CC the_DT V1_NNP AGENT_NNP is_VBZ covert_JJ ._.
+The_DT grammatical_JJ subject_NN is_VBZ the_DT logical_JJ object_NN of_IN V1_NNP ,_, while_IN V2_NNP denotes_VBZ the_DT state_NN which_WDT is_VBZ object-oriented_JJ ._.
+Consider_VB :_: 這首歌唱哭了觀眾_CD `_`` The_DT audiences_NNS were_VBD moved_VBN by_IN the_DT song_NN '_'' ._.
+3.5_CD Pseudo-Passives_NNP ``_`` Pseudo-passives_NNS ''_'' ,_, termed_VBD ``_`` surface_NN ergatives_NNS ''_'' ,_, show_VBP the_DT pattern_NN of_IN ergativity_NN ._.
+They_PRP indeed_RB differ_VBP in_IN their_PRP$ properties_NNS as_IN pseudo-passives_NNS entail_VBP the_DT existence_NN of_IN some_DT implicit_JJ agent_NN that_WDT pure_JJ ergatives_NNS do_VBP not_RB ._.
+Pseudo-passive_NN can_MD be_VB divided_VBN into_IN two_CD types_NNS ,_, namely_RB ``_`` 1-argument_JJ pseudo-passive_NN ''_'' as_IN in_IN 桌子擦乾了_CD `_`` The_DT table_NN is_VBZ wiped_VBN dry_JJ '_'' and_CC ``_`` 2_LS -_: argument_NN pseudo-passive_JJ ''_'' as_IN in_IN 花瓶擺錯了地方_CD -LRB-_-LRB- Wang_NNP 2001_CD :_: 70_CD -RRB-_-RRB- `_`` Someone_NN put_VBD the_DT vase_NN in_IN a_DT wrong_JJ place_NN '_'' ._.
+The_DT latter_JJ is_VBZ often_RB neglected_VBN by_IN many_JJ linguists_NNS and_CC was_VBD misclassified_VBN as_IN ``_`` object_NN -_: fronting_NN ''_'' in_IN Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+Due_JJ to_TO its_PRP$ cross_NN -_: referentiality_NN ,_, we_PRP re-categorize_JJ and_CC name_VB it_PRP ``_`` 2_LS -_: argument_NN pseudo-passive_JJ ''_'' ._.
+The_DT sole_JJ difference_NN between_IN ``_`` 2-argument_JJ pseudo-passives_NNS ''_'' and_CC ``_`` 1_LS -_: argument_NN pseudo-passives_NNS ''_'' is_VBZ that_IN the_DT former_JJ contains_VBZ two_CD arguments_NNS while_IN the_DT latter_JJ comprises_VBZ only_RB one_CD argument_NN on_IN the_DT surface_NN ._.
+They_PRP both_DT have_VBP a_DT suppressed_VBN agent_NN in_IN their_PRP$ deep_JJ structures_NNS ._.
+3.6_CD Object-Fronting_NNP Similar_JJ to_TO pseudo-passives_NNS ,_, the_DT logical_JJ object_NN of_IN ``_`` object-fronting_JJ ''_'' is_VBZ in_IN the_DT subject_JJ position_NN ._.
+Therefore_RB ,_, many_JJ often_RB confuse_VB ``_`` object-fronting_JJ ''_'' with_IN ``_`` pseudo-passive_JJ ''_'' ._.
+Although_IN it_PRP has_VBZ been_VBN mentioned_VBN in_IN some_DT works_NNS before_RB ,_, the_DT distinguishability_NN is_VBZ not_RB accurately_RB proposed_VBN ._.
+We_PRP clearly_RB distinguish_VBP ``_`` object-fronting_JJ ''_'' from_IN ``_`` pseudo_NN -_: passives_NNS ''_'' by_IN examining_VBG the_DT passivizability_NN of_IN the_DT sentences_NNS ._.
+This_DT is_VBZ demonstrated_VBN as_IN in_IN -LRB-_-LRB- 12_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 13_CD -RRB-_-RRB- :_: Pseudo-passives_NNS :_: -LRB-_-LRB- 12_CD -RRB-_-RRB- a._IN 飯_CD 吃完-了_CD rice_NN eat_VBP finish-ASP_NNP `_`` The_DT rice_NN was_VBD eaten_VBN up_RP ._. '_''
+b._FW 飯_FW 被_FW 他_FW 吃完-了_FW -LRB-_-LRB- Thompson_NNP 1973_CD :_: 367_CD -RRB-_-RRB- rice_NN by_IN 3_CD ._.
+SG_NNP eat_VBP all-ASP_JJ `_`` The_DT rice_NN was_VBD eaten_VBN up_RP by_IN him_PRP ._. '_''
+Object-fronting_NN :_: -LRB-_-LRB- 13_CD -RRB-_-RRB- a._IN 飯_CD 吃飽-了_CD rice_NN eat_VBP full-ASP_NNP `_`` -LRB-_-LRB- Someone_NN -RRB-_-RRB- has_VBZ had_VBN enough_JJ rice_NN ._. '_''
+b._SYM *_SYM 飯_SYM 被_SYM 他_SYM 吃飽-了_CD -LRB-_-LRB- Thompson_NNP 1973_CD :_: 367_CD -RRB-_-RRB- rice_NN by_IN 3_CD ._.
+SG_NNP eat_VBP full-ASP_JJ 4_CD Comparison_NN between_IN Mandarin_NNP and_CC Cantonese_NNP While_IN some_DT researchers_NNS suggest_VBP that_IN almost_RB all_DT resultative_JJ constructions_NNS in_IN Mandarin_NNP have_VBP a_DT parallel_JJ structure_NN with_IN their_PRP$ corresponding_JJ Cantonese_JJ sentences_NNS ,_, we_PRP find_VBP that_DT sentences_NNS containing_VBG different_JJ types_NNS of_IN RVCs_NNS in_IN Mandarin_NNP may_MD use_VB various_JJ methods_NNS in_IN re-producing_JJ corresponding_JJ sentences_NNS in_IN Cantonese_NNP ._.
+As_IN observed_VBN ,_, some_DT RVCs_NNS could_MD be_VB preserved_VBN in_IN Cantonese_NN while_IN some_DT were_VBD restricted_VBN and_CC presented_VBN by_IN means_NNS of_IN V-dou3_NNP -LRB-_-LRB- V-到_NNP -RRB-_-RRB- ,_, V-copying_JJ and_CC `_`` gau2-dou3_JJ '_'' -LRB-_-LRB- 攪到_CD -RRB-_-RRB- constructions_NNS ._.
+Although_IN the_DT selection_NN process_NN seems_VBZ to_TO be_VB arbitrary_JJ ,_, it_PRP is_VBZ believed_VBN that_IN there_EX must_MD be_VB a_DT rule_NN governing_VBG the_DT interpretation_NN process_NN for_IN the_DT sentences_NNS to_TO be_VB produced_VBN in_IN a_DT correct_JJ and_CC natural_JJ way_NN ._.
+Moreover_RB ,_, it_PRP should_MD be_VB noted_VBN that_IN it_PRP is_VBZ possible_JJ for_IN the_DT same_JJ RVC_NNP in_IN Mandarin_NNP to_TO be_VB categorized_VBN into_IN different_JJ types_NNS due_JJ to_TO the_DT transitivity_NN and_CC canonicality_NN of_IN the_DT RVC_NNP ._.
+For_IN examples_NNS ,_, 他寫累了_CD `_`` He_PRP wrote_VBD himself_PRP tired_VBD '_'' is_VBZ an_DT unergative_JJ ,_, 他寫累_CD 了論文_CD `_`` He_PRP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN '_'' is_VBZ an_DT accusative_JJ ,_, and_CC 論文寫累了他_CD `_`` He_PRP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN '_'' is_VBZ a_DT causative_JJ ._.
+The_DT same_JJ RVC_NNP 寫累_CD `_`` write-tired_JJ '_'' falls_VBZ into_IN different_JJ categories_NNS ._.
+The_DT alternation_NN in_IN the_DT examples_NNS of_IN unergative_JJ and_CC accusative_JJ shows_NNS that_WDT canonical_JJ intransitive_JJ RVC_NNP can_MD be_VB presented_VBN in_IN a_DT canonical_JJ transitive_JJ way_NN ._.
+It_PRP is_VBZ also_RB instantiated_VBN in_IN the_DT examples_NNS of_IN accusative_JJ and_CC causative_JJ that_IN RVC_NNP may_MD have_VB both_DT canonical_JJ and_CC non-canonical_JJ transitive_JJ use_NN ._.
+Thus_RB ,_, whether_IN or_CC not_RB sentence_NN types_NNS affect_VBP the_DT presentation_NN of_IN the_DT sentences_NNS in_IN Cantonese_NNP will_MD be_VB investigated_VBN in_IN Section_NN 4.2_CD ._.
+4.1_CD At_IN the_DT Lexical_NNP Level_NNP There_EX are_VBP four_CD ways_NNS for_IN the_DT resultatives_NNS to_TO be_VB expressed_VBN in_IN Cantonese_NNP ,_, namely_RB RVC_NNP ,_, V-dou3_NNP -LRB-_-LRB- V_SYM -_: 到_NN -RRB-_-RRB- ,_, V-copying_JJ and_CC `_`` gau2-dou3_JJ '_'' -LRB-_-LRB- 攪_FW 到_FW -RRB-_-RRB- constructions_NNS ._.
+Similar_JJ to_TO Cantonese_VB ,_, RVCs_NNS and_CC V_SYM -_: de_FW -LRB-_-LRB- V-得_NNP -RRB-_-RRB- /_SYM V-dao_NNP -LRB-_-LRB- V-到_NNP -RRB-_-RRB- constructions_NNS are_VBP the_DT most_RBS common_JJ ways_NNS of_IN presenting_VBG resultatives_NNS in_IN Mandarin_NNP ._.
+Consider_VB -LRB-_-LRB- 14_CD -RRB-_-RRB- :_: -LRB-_-LRB- 14_CD -RRB-_-RRB- a._IN 他_CD 踢破-了_CD 鞋子_NN 3_CD ._.
+SG_NNP kick_NN broken-ASP_NN shoes_NNS `_`` He_PRP has_VBZ ruined_VBN his_PRP$ shoes_NNS ._. '_''
+b._FW 他_FW 踢-到_FW /_FW 得_FW 鞋子_FW 破-了_FW 3_LS ._.
+SG_NNP kick-dao/de_NN shoes_NNS broken-ASP_JJ b.他_NN 的_CD 眼睛哭-得紅-了_NN 3_CD ._.
+SG_NNP POSS_NNP eye_NN cry-de_NN red-ASP_NNP `_`` He_PRP cried_VBD and_CC his_PRP$ eyes_NNS turned_VBD red_JJ as_IN a_DT result_NN ._. '_''
+c._SYM *_SYM 佢_SYM 對_SYM 眼_SYM 喊紅-咗_CD 3_CD ._.
+SG_NNP CL_NNP eye_NN cry_NN red-ASP_NNP d.佢對眼喊_SYM -_: 到_SYM 紅-咗_SYM 3_LS ._.
+SG_NNP CL_NNP eye_NN cry-dou3_JJ red-ASP_JJ `_`` He_PRP cried_VBD and_CC his_PRP$ eyes_NNS turned_VBD red_JJ as_IN a_DT result_NN ._. '_''
+As_IN shown_VBN in_IN -LRB-_-LRB- 15a_FW -RRB-_-RRB- and_CC -LRB-_-LRB- 15b_CD -RRB-_-RRB- ,_, RVCs_NNS and_CC V_SYM -_: dou3_JJ /_NN V-de_NN in_IN Mandarin_NNP are_VBP interchangeable_JJ whereas_IN RVCs_NNS and_CC V-dou3_NN are_VBP not_RB in_IN Cantonese_NN sometimes_RB as_IN in_IN -LRB-_-LRB- 15c_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 15d_CD -RRB-_-RRB- ._.
+Two_CD questions_NNS are_VBP raised_VBN here_RB :_: -LRB-_-LRB- a_DT -RRB-_-RRB- How_WRB should_MD one_CD explain_VBP why_WRB -LRB-_-LRB- 14c_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 14d_CD -RRB-_-RRB- are_VBP interchangeable_JJ while_IN -LRB-_-LRB- 15c_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 15d_CD -RRB-_-RRB- are_VBP not_RB ?_.
+,_, and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- Do_VBP the_DT sentences_NNS -LRB-_-LRB- 14c_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 14d_CD -RRB-_-RRB- ,_, presented_VBN by_IN different_JJ methods_NNS ,_, possess_VBP the_DT same_JJ meaning_NN ?_.
+Such_JJ incompatibility_NN could_MD confuse_VB Cantonese_NNP learners_NNS on_IN the_DT usage_NN of_IN RVCs_NNS and_CC V-dou3_NN ._.
+Misbelieving_VBG the_DT two_CD Chinese_JJ varieties_NNS are_VBP the_DT same_JJ ,_, learners_NNS might_MD produce_VB ill_JJ -_: formed_VBN sentences_NNS like_IN -LRB-_-LRB- 15c_JJ -RRB-_-RRB- on_IN the_DT basis_NN of_IN their_PRP$ prior_JJ knowledge_NN in_IN Mandarin_NNP RVCs_NNPS ._.
+Thus_RB ,_, a_DT rule_NN governing_VBG the_DT alternation_NN of_IN RVCs_NNS and_CC V-dou3_NN in_IN Cantonese_NNP must_MD be_VB proposed_VBN to_TO avoid_VB ungrammaticality_NN ._.
+``_`` Strong_JJ resultatives_NNS ''_'' vs._IN ``_`` weak_JJ resultatives_NNS ''_'' According_VBG to_TO Washio_NNP -LRB-_-LRB- 1997:7_CD ,_, 1999_CD :_: 685-686_CD -RRB-_-RRB- ,_, ``_`` resultatives_NNS in_IN which_WDT the_DT meaning_NN of_IN the_DT verb_NN and_CC the_DT meaning_NN of_IN the_DT adjective_NN are_VBP completely_RB independent_JJ of_IN each_DT other_JJ will_MD be_VB referred_VBN to_TO as_IN STRONG_JJ resultatives_NNS ''_'' ._.
+For_IN example_NN ,_, 張三跑丟了_CD 車票_CD `_`` Zhangsan_NNP has_VBZ lost_VBN his_PRP$ ticket_NN '_'' is_VBZ a_DT strong_JJ resultative_NN since_IN that_DT Zhang-san_NN has_VBZ lost_VBN something_NN is_VBZ not_RB implicated_VBN by_IN the_DT running_VBG event_NN ._.
+Combined_VBN with_IN Washio_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ,_, we_PRP define_VBP WEAK_JJ resultatives_NNS as_IN resultatives_NNS in_IN which_WDT the_DT result_NN denoted_VBN by_IN V2_NNP is_VBZ either_CC the_DT purpose_NN or_CC the_DT conventional_JJ result_NN of_IN the_DT action_NN stated_VBN in_IN V1_NNP ._.
+There_EX are_VBP two_CD types_NNS of_IN weak_JJ resultatives_NNS ._.
+The_DT first_JJ type_NN is_VBZ that_IN the_DT result_NN -LRB-_-LRB- V2_CD -RRB-_-RRB- entailed_VBN in_IN V2_NNP -LRB-_-LRB- i.e._FW 短_FW `_`` short_JJ '_'' -RRB-_-RRB- is_VBZ repeating_VBG what_WP the_DT V1_NNP already_RB contain_VBP in_IN its_PRP$ semantics_NNS ._.
+For_IN example_NN ,_, 他剪短了頭髮_CD `_`` He_PRP had_VBD a_DT haircut_NN '_'' ._.
+The_DT second_JJ type_NN is_VBZ that_IN the_DT ``_`` restricted_VBN ''_'' result_NN -LRB-_-LRB- V2_CD -RRB-_-RRB- can_MD be_VB inferred_VBN `_`` He_PRP has_VBZ ruined_VBN his_PRP$ shoes_NNS ._. '_''
+踢爛-咗_JJ `_`` He_PRP has_VBZ ruined_VBN his_PRP$ shoes_NNS ._. '_''
+佢_SYM 踢-到_FW 對鞋_FW 爛-咗_FW c._FW 佢_FW 3_LS ._.
+SG_NNP kick_NN broken-ASP_NNP 對_CD 鞋_CD CL_NNP shoes_NNS d._VBP 3_CD ._.
+SG_NNP kick-dou3_CD CL_NNP shoes_NNS broken-ASP_NNP `_`` He_PRP has_VBZ ruined_VBN his_PRP$ shoes_NNS ._. '_''
+In_IN -LRB-_-LRB- 14_CD -RRB-_-RRB- ,_, -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- are_VBP in_IN Mandarin_NNP ,_, while_IN -LRB-_-LRB- c_NN -RRB-_-RRB- and_CC -LRB-_-LRB- d_LS -RRB-_-RRB- are_VBP in_IN Cantonese_NNP ._.
+RVC_NNP and_CC V-dou3_NNP are_VBP interchangeable_JJ in_IN both_DT Mandarin_NNP and_CC Cantonese_NNP as_IN shown_VBN in_IN these_DT examples_NNS ._.
+It_PRP should_MD also_RB be_VB noted_VBN that_IN ``_`` V-dou3_NN ''_'' in_IN Mandarin_NNP can_MD also_RB be_VB substituted_VBN by_IN ``_`` V-de_JJ ''_'' ._.
+In_IN Mandarin_NNP ,_, ``_`` V-de_JJ ''_'' marks_NNS either_CC a_DT degree_NN complement_VBP or_CC a_DT state_NN complement_VBP whereas_IN ``_`` V-de_JJ ''_'' in_IN Cantonese_NNP can_MD only_RB be_VB used_VBN in_IN marking_VBG degree_NN complement_VBP and_CC ``_`` V-dou3_NN ''_'' is_VBZ used_VBN to_TO mark_VB state_NN complement_VBP ._.
+Thus_RB ,_, it_PRP can_MD be_VB concluded_VBN that_IN V-de_NNP in_IN Mandarin_NNP corresponds_VBZ to_TO V-dou3_NNP in_IN Cantonese_NNP ._.
+The_DT morpheme_FW de_FW 得_FW in_IN ``_`` V-de_JJ ''_'' is_VBZ regarded_VBN as_IN a_DT dummy_NN de_IN which_WDT makes_VBZ no_DT difference_NN between_IN the_DT semantic_JJ meaning_NN of_IN the_DT same_JJ sentence_NN presented_VBN by_IN RVCs_NNS -LRB-_-LRB- Huang_NNP 1992_CD ,_, Sybesma_NNP 1999_CD ,_, Tang_NNP 2002_CD -RRB-_-RRB- ._.
+This_DT practice_NN may_MD be_VB true_JJ in_IN Mandarin_NNP but_CC it_PRP is_VBZ not_RB the_DT case_NN in_IN Cantonese_NNP ._.
+The_DT alternation_NN between_IN RVCs_NNS and_CC V-dou3_NN in_IN these_DT two_CD Chinese_JJ varieties_NNS are_VBP different_JJ ._.
+Consider_VB -LRB-_-LRB- 15_CD -RRB-_-RRB- :_: -LRB-_-LRB- 15_CD -RRB-_-RRB- a._IN 他_CD 的_CD 眼睛_NN 哭紅-了_NN 3_CD ._.
+SG_NNP POSS_NNP eye_NN cry_NN red-ASP_NNP `_`` He_PRP cried_VBD and_CC his_PRP$ eyes_NNS turned_VBD red_JJ as_IN a_DT result_NN ._. '_''
+by_IN the_DT logical_JJ object_NN ._.
+For_IN example_NN ,_, in_IN 我跑贏了比_CD 賽_CD `_`` I_PRP won_VBD the_DT running_VBG competition_NN '_'' ,_, the_DT result_NN can_MD only_RB be_VB ``_`` win_VB ''_'' ,_, ``_`` lose_VB ''_'' or_CC ``_`` draw_NN ''_'' as_IN restricted_VBN by_IN the_DT logical_JJ object_NN competition_NN ._.
+``_`` RVC_NNP ''_'' vs._IN ``_`` V-dou3_NN ''_'' Constructions_NNP By_IN examining_VBG different_JJ RVCs_NNS ,_, we_PRP observe_VBP that_IN it_PRP is_VBZ ordinarily_RB possible_JJ for_IN RVCs_NNS to_TO be_VB substituted_VBN freely_RB by_IN V-dou3_NNP in_IN Cantonese_NNP as_IN in_IN ergatives_NNS ,_, unergatives_NNS ,_, accusatives_NNS -LRB-_-LRB- Type_NN 3_CD ,_, 4_CD ,_, 5_CD -RRB-_-RRB- ,_, pseudo_NN -_: passives_NNS and_CC object-fronting_NN ._.
+It_PRP is_VBZ ,_, therefore_RB ,_, important_JJ to_TO know_VB under_IN what_WP circumstances_NNS that_WDT RVCs_NNPS and_CC V-dou3_NNP are_VBP not_RB interchangeable_JJ ._.
+We_PRP will_MD investigate_VB those_DT resultatives_NNS that_WDT can_MD never_RB appear_VB as_IN a_DT RVC_NNP -LRB-_-LRB- V1_NNP and_CC V2_NNP are_VBP adjacent_JJ -RRB-_-RRB- and_CC the_DT RVC_NNP that_IN dou3_CD 到_NN can_MD never_RB be_VB inserted_VBN ,_, under_IN all_DT six_CD types_NNS of_IN sentences_NNS in_IN Cantonese_NNP ._.
+First_NNP of_IN all_DT ,_, it_PRP is_VBZ not_RB the_DT properties_NNS of_IN V2_NN that_IN determines_VBZ the_DT methods_NNS but_CC the_DT semantic_JJ relations_NNS between_IN V1_NNP and_CC V2_NNP that_IN matter_NN ._.
+Resultatives_NNS with_IN a_DT verbal_JJ V2_NN such_JJ as_IN *_SYM 唱喊_CD -LRB-_-LRB- 唱哭_NN -RRB-_-RRB- `_`` sing-cry_JJ '_'' 、_SYM *_SYM 聽_SYM 瞓_CD -LRB-_-LRB- 聽睡_NN -RRB-_-RRB- `_`` listen-asleep_NN '_'' and_CC *_SYM 跑跌_CD -LRB-_-LRB- 跑丟_NN -RRB-_-RRB- `_`` run_NN -_: lose_VB '_'' are_VBP prohibited_VBN ._.
+Those_DT V2_NNP are_VBP obviously_RB indicating_VBG another_DT activity_NN which_WDT should_MD be_VB regarded_VBN as_IN ``_`` strong_JJ resultatives_NNS ''_'' ._.
+However_RB ,_, even_RB RVCs_NNS with_IN an_DT adjectival_JJ V2_NN are_VBP not_RB allowed_VBN to_TO appear_VB in_IN a_DT RVC_NNP pattern_NN in_IN Cantonese_NNP ,_, such_JJ as_IN *_SYM 寫_SYM 攰_CD -LRB-_-LRB- 寫累_NN -RRB-_-RRB- `_`` write-tired_JJ '_'' 、_SYM *_SYM 跑攰_CD -LRB-_-LRB- 跑累_NN -RRB-_-RRB- `_`` run_NN -_: tired_VBN '_'' 、_SYM *_SYM 追攰_CD -LRB-_-LRB- 追累_NN -RRB-_-RRB- `_`` chase-tired_JJ '_'' 、_SYM *_SYM 喊紅_CD -LRB-_-LRB- 哭紅_NN -RRB-_-RRB- `_`` cry-red_JJ '_'' 、_SYM *_SYM 睇花_CD -LRB-_-LRB- 看花_NN -RRB-_-RRB- `_`` read-blurred_JJ '_'' 、_SYM *_SYM 聽怕_CD -LRB-_-LRB- 聽怕_NN -RRB-_-RRB- `_`` listen-afraid_NN '_'' etc._FW ._.
+In_IN Cantonese_NNP ,_, RVC_NNP -_: pattern_NN is_VBZ not_RB used_VBN when_WRB the_DT result_NN -LRB-_-LRB- V2_CD -RRB-_-RRB- is_VBZ not_RB unique_JJ to_TO a_DT particular_JJ action_NN ._.
+For_IN example_NN ,_, the_DT result_NN 累_CD `_`` tired_JJ '_'' can_MD be_VB triggered_VBN by_IN many_JJ action_NN such_JJ as_IN 寫_CD `_`` write_VB '_'' ,_, 跑_CD `_`` run_VB '_'' and_CC 追_CD `_`` chase_VB '_'' as_IN shown_VBN in_IN the_DT examples_NNS ,_, these_DT examples_NNS in_IN RVC-patterns_NNS are_VBP therefore_RB prohibited_VBN ._.
+However_RB ,_, it_PRP is_VBZ not_RB applicate_JJ to_TO the_DT cases_NNS of_IN Mandarin_NNP RVCs_NNPS ._.
+Without_IN the_DT aid_NN of_IN the_DT logical_JJ objects_NNS ,_, unergatives_NNS select_VBP the_DT presentation_NN method_NN based_VBN on_IN the_DT uniqueness_NN of_IN V2_CD to_TO V1_CD ._.
+For_IN example_NN ,_, in_IN 我_CD 飽了_CD `_`` I_PRP 'm_VBP full_JJ '_'' ,_, the_DT action_NN 吃_SYM /_SYM 食_FW `_`` eat_VB '_'' is_VBZ probably_RB predictable_JJ simply_RB because_IN the_DT adjectival_JJ predicate_NN 飽_NN ought_MD to_TO be_VB fulfilled_VBN by_IN the_DT eating_NN event_NN ._.
+Thus_RB ,_, the_DT weak_JJ resultative_NN can_MD be_VB re-structured_JJ in_IN a_DT RVC_NNP -_: pattern_NN as_IN 我食飽喇_CD in_IN Cantonese_NNP ._.
+Apart_RB from_IN those_DT V-dou3-only_JJ compounds_NNS ,_, there_EX are_VBP some_DT RVC-only_JJ compounds_NNS such_JJ as_IN 我跑_CD 贏咗場比賽_CD `_`` I_PRP won_VBD the_DT running_VBG competition_NN '_'' and_CC 我訓醒喇_CD `_`` I_PRP woke_VBD up_RP '_'' ._.
+In_IN the_DT two_CD examples_NNS mentioned_VBN here_RB ,_, the_DT Cantonese_NNP morpheme_NN dou3_CD 到_NN is_VBZ not_RB allowed_VBN to_TO be_VB inserted_VBN in_IN between_IN the_DT two_CD predicates_NNS in_IN Cantonese_NNP ._.
+As_IN V1_CD and_CC V2_CD are_VBP closely_RB related_VBN in_IN semantics_NNS ,_, this_DT kind_NN of_IN RVC_NNP should_MD be_VB considered_VBN a_DT ``_`` weak_JJ resultative_NN ''_'' ._.
+To_TO sum_VB up_RP ,_, the_DT concept_NN of_IN ``_`` strong_JJ /_NN weak_JJ resultative_NN ''_'' is_VBZ critical_JJ to_TO the_DT method_NN selection_NN ._.
+There_EX are_VBP three_CD factors_NNS determining_VBG whether_IN RVCs_NNS and_CC V-dou3_NN is_VBZ interchangeable_JJ ._.
+Firstly_RB ,_, ``_`` weak_JJ resultatives_NNS ''_'' in_IN Cantonese_NNP may_MD be_VB presented_VBN by_IN means_NNS of_IN RVC_NNP or_CC V-dou3_NNP whereas_IN ``_`` strong_JJ resultatives_NNS ''_'' can_MD only_RB be_VB demonstrated_VBN in_IN V-dou3_JJ constructions_NNS ._.
+It_PRP should_MD be_VB noted_VBN that_IN if_IN a_DT resultative_JJ compound_NN is_VBZ presented_VBN as_IN an_DT RVC_NNP ,_, that_IN compound_NN must_MD be_VB regarded_VBN as_IN a_DT ``_`` weak_JJ resultative_NN ''_'' only_RB ._.
+However_RB ,_, a_DT weak_JJ resultative_NN is_VBZ not_RB necessarily_RB a_DT RVC_NNP ._.
+Secondly_RB ,_, when_WRB more_JJR than_IN two_CD arguments_NNS are_VBP found_VBN in_IN a_DT sentence_NN -LRB-_-LRB- i.e._FW Type_NN 6_CD accusative_JJ -RRB-_-RRB- ,_, only_RB RVC-patterns_NNS can_MD be_VB allowed_VBN ._.
+Lastly_RB ,_, non-canonical_JJ sentences_NNS -LRB-_-LRB- i.e._FW all_DT types_NNS of_IN causatives_NNS -RRB-_-RRB- can_MD only_RB be_VB presented_VBN in_IN V-dou3_JJ constructions_NNS ._.
+Exceptional_JJ cases_NNS Without_IN the_DT presence_NN of_IN an_DT active_JJ verb_NN ,_, ergatives_NNS with_IN both_DT V1_CD and_CC V2_CD denoting_VBG states_NNS should_MD not_RB be_VB categorized_VBN as_IN ``_`` weak_JJ resultative_NN ''_'' ._.
+However_RB ,_, they_PRP can_MD still_RB be_VB presented_VBN in_IN both_DT RVCs_NNS and_CC V-dou3_NN constructions_NNS in_IN Cantonese_NNP ._.
+For_IN examples_NNS ,_, 佢嚇呆_SYM 咗_SYM /_SYM 佢嚇到呆咗_CD -LRB-_-LRB- 嚇呆_NN -RRB-_-RRB- `_`` He_PRP is_VBZ shocked_VBN '_'' ._.
+``_`` V-copying_JJ ''_'' Constructions_NNP 項_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- and_CC 趙_CD -LRB-_-LRB- 2001_CD -RRB-_-RRB- propose_VBP that_IN V-copying_JJ is_VBZ used_VBN to_TO stress_VB the_DT action_NN taken_VBN or_CC the_DT unexpected_JJ result_NN ._.
+張_NN -LRB-_-LRB- 2002_CD -RRB-_-RRB- suggests_VBZ that_IN the_DT construction_NN is_VBZ used_VBN to_TO give_VB expression_NN to_TO long-distance_JJ cause_NN and_CC effect_NN ._.
+V-copying_JJ construction_NN is_VBZ not_RB permitted_VBN normally_RB if_IN V1_CD and_CC V2_CD are_VBP semantically-closed_JJ ._.
+If_IN RVC_NNP is_VBZ not_RB allowed_VBN in_IN Cantonese_NNP ,_, V-copying_JJ construction_NN is_VBZ used_VBN to_TO stress_VB the_DT long_JJ distance_NN of_IN the_DT cause_NN and_CC result_NN ._.
+If_IN RVC_NNP is_VBZ allowed_VBN in_IN Cantonese_NNP ,_, V-copying_JJ construction_NN is_VBZ then_RB used_VBN to_TO emphasize_VB the_DT unexpected_JJ result_NN denoted_VBN by_IN V2_NNP ._.
+It_PRP is_VBZ found_VBN that_IN V-copying_JJ construction_NN can_MD only_RB be_VB used_VBN if_IN the_DT object_NN is_VBZ the_DT logical_JJ object_NN of_IN V1_CD in_IN canonical_JJ sentences_NNS -LRB-_-LRB- i.e._FW Type_FW 1_CD ,_, 2_CD and_CC 4_CD accusatives_NNS -RRB-_-RRB- ._.
+For_IN Type_NN 1_CD and_CC 2_CD ,_, some_DT of_IN them_PRP may_MD be_VB presented_VBN in_IN the_DT form_NN of_IN RVC_NNP in_IN Cantonese_NNP if_IN the_DT RVC_NNP is_VBZ a_DT weak_JJ one_CD ._.
+For_IN Type_NN 4_CD ,_, it_PRP is_VBZ possible_JJ for_IN them_PRP to_TO be_VB presented_VBN in_IN V-dou3_NN and_CC RVC_NNP ._.
+``_`` Gau2-dou3_NN ''_'' Constructions_NNP ``_`` Gau2-dou3_NN ''_'' construction_NN is_VBZ only_RB used_VBN for_IN Type_NN 2_CD and_CC Type_NN 3_CD causatives_NNS ._.
+For_IN Type_NN 2_CD ,_, this_DT construction_NN is_VBZ used_VBN to_TO separate_VB the_DT CAUSER_NNP from_IN the_DT predicate_NN and_CC object_NN so_RB as_IN to_TO avoid_VB ambiguity_NN ._.
+For_IN Type_NN 3_CD ,_, since_IN the_DT SUBJ_NNP of_IN the_DT sentence_NN is_VBZ an_DT independent_JJ causer_NN that_WDT can_MD neither_RB be_VB the_DT logical_JJ object_NN of_IN V1_CD nor_CC V2_CD ,_, ``_`` gau2-dou3_JJ ''_'' appears_VBZ to_TO indicate_VB that_DT causer_NN and_CC predicate_NN are_VBP not_RB closely_RB related_VBN ._.
+``_`` Gau2-dou3_NN ''_'' -LRB-_-LRB- 攪到_CD -RRB-_-RRB- is_VBZ actually_RB equal_JJ to_TO ``_`` ling6_VB ''_'' -LRB-_-LRB- 令_CD -RRB-_-RRB- in_IN Cantonese_NNP ,_, but_CC the_DT former_JJ is_VBZ more_RBR frequently_RB used_VBN by_IN Cantonese_NNP speakers_NNS ._.
+4.2_CD At_IN the_DT Syntactic_NNP Level_NNP It_PRP is_VBZ common_JJ to_TO have_VB the_DT same_JJ RVCs_NNS belonging_VBG to_TO different_JJ sentence_NN types_NNS ,_, and_CC therefore_RB ,_, analyzing_VBG RVCs_NNS at_IN the_DT syntactic_JJ level_NN could_MD be_VB prominent_JJ in_IN uncovering_VBG the_DT logic_NN behind_IN ._.
+In_IN this_DT section_NN ,_, we_PRP will_MD analyze_VB the_DT method_NN selected_VBN for_IN the_DT same_JJ RVC_NNP in_IN different_JJ sentence_NN types_NNS ._.
+``_`` Accusatives_NNS ''_'' and_CC ``_`` Causatives_NNS ''_'' Both_DT accusatives_NNS and_CC causatives_NNS have_VBP all_DT these_DT three_CD elements_NNS :_: subject_JJ ,_, verb_NN and_CC object_NN in_IN each_DT of_IN their_PRP$ sentences_NNS ._.
+The_DT same_JJ RVC_NN sometimes_RB belongs_VBZ to_TO both_DT of_IN them_PRP as_IN shown_VBN in_IN -LRB-_-LRB- 16_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 17_CD -RRB-_-RRB- ._.
+Accusatives_NNP :_: -LRB-_-LRB- 16_CD -RRB-_-RRB- a._FW 張三_FW 寫累-了_FW 論文_FW Zhangsan_FW write_VB tired-ASP_JJ essay_NN `_`` Zhangsan_NNP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN ._. '_''
+b.張三_IN 寫論文_CD 寫-到_CD 好攰_NN Zhangsan_NNP writeessaywrite-dou3verytired_JJ `_`` Zhangsan_NNP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN ._. '_''
+Causatives_NNS :_: c._FW 論文_FW 寫累-了_FW 張三_FW essay_NN write_VB tired-ASP_JJ Zhangsan_NNP `_`` Zhangsan_NNP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN ._. '_''
+d.篇論文寫_SYM -_: 到_SYM 張三_SYM 好攰_FW CL_FW essay_NN write-dou3_JJ Zhangsan_NNP very_RB tired_JJ `_`` Zhangsan_NNP is_VBZ tired_VBN for_IN he_PRP has_VBZ been_VBN writing_VBG his_PRP$ essay_NN ._. '_''
+In_IN -LRB-_-LRB- 16_CD -RRB-_-RRB- ,_, -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- c_NN -RRB-_-RRB- are_VBP Mandarin_NNP examples_NNS whereas_IN -LRB-_-LRB- b_NN -RRB-_-RRB- and_CC -LRB-_-LRB- d_LS -RRB-_-RRB- are_VBP Cantonese_NNP ._.
+As_IN we_PRP can_MD see_VB in_IN -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- c_NN -RRB-_-RRB- ,_, the_DT only_JJ difference_NN between_IN accusatives_NNS and_CC causatives_NNS in_IN Mandarin_NNP is_VBZ the_DT word_NN order_NN of_IN the_DT sentences_NNS ._.
+The_DT subject_JJ and_CC the_DT object_NN in_IN -LRB-_-LRB- a_DT -RRB-_-RRB- switched_VBD their_PRP$ positions_NNS as_IN in_IN -LRB-_-LRB- c_NN -RRB-_-RRB- ._.
+The_DT co_NN -_: referential_JJ RVC_NNP ``_`` 寫累_FW ''_'' should_MD be_VB regarded_VBN as_IN a_DT strong_JJ resultative_NN since_IN 累_CD `_`` tired_JJ '_'' is_VBZ a_DT state_NN that_WDT takes_VBZ a_DT long_JJ period_NN of_IN time_NN to_TO achieve_VB ._.
+RVC_NNP pattern_NN is_VBZ therefore_RB not_RB used_VBN in_IN Cantonese_NNP corresponding_JJ sentences_NNS ._.
+Different_JJ methods_NNS are_VBP selected_VBN for_IN accusatives_NNS and_CC causatives_NNS ._.
+V-copying_JJ is_VBZ used_VBN in_IN accusatives_NNS while_IN V-dou3_JJ construction_NN is_VBZ used_VBN in_IN causatives_NNS ._.
+In_IN -LRB-_-LRB- 16a_FW -RRB-_-RRB- and_CC -LRB-_-LRB- 16b_CD -RRB-_-RRB- ,_, the_DT AGENTs_NNS are_VBP in_IN the_DT subject_JJ positions_NNS ._.
+-LRB-_-LRB- 16b_CD -RRB-_-RRB- is_VBZ re-structured_JJ as_IN ``_`` 張_FW 三寫論文_FW ''_'' ,_, with_IN the_DT complement_VBP ``_`` 寫到好攰_FW ''_'' added_VBD to_TO indicate_VB the_DT state_NN of_IN the_DT AGENT_NNP ._.
+In_IN -LRB-_-LRB- 16c_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 16d_CD -RRB-_-RRB- ,_, the_DT THEMEs_NNS are_VBP in_IN the_DT subject_JJ positions_NNS ._.
+Since_IN V-copying_JJ construction_NN can_MD only_RB deal_VB with_IN canonical_JJ sentences_NNS ,_, adopting_VBG it_PRP in_IN causative_NN would_MD end_VB up_RP producing_VBG an_DT ill-formed_JJ sentence_NN as_IN ``_`` *_SYM 篇論_SYM 文寫張三寫到好攰_CD ''_'' ._.
+Thus_RB ,_, if_IN the_DT same_JJ RVCs_NNS belong_VBP to_TO both_DT causatives_NNS and_CC accusatives_NNS while_IN predicates_NNS of_IN each_DT RVC_NNP are_VBP not_RB semantically_RB related_VBN ,_, V-copying_JJ is_VBZ used_VBN in_IN accusatives_NNS while_IN V_NNP -_: dou3_NN is_VBZ used_VBN in_IN causatives_NNS ._.
+If_IN a_DT Mandarin_NNP RVC_NNP belonging_VBG to_TO causatives_NNS and_CC accusatives_NNS is_VBZ a_DT weak_JJ one_CD ,_, would_MD different_JJ methods_NNS be_VB used_VBN in_IN Cantonese_NNP ?_.
+Consider_VB -LRB-_-LRB- 17_CD -RRB-_-RRB- ,_, where_WRB -LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- d_LS -RRB-_-RRB- are_VBP in_IN Mandarin_NNP ,_, and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- ,_, -LRB-_-LRB- c_NN -RRB-_-RRB- and_CC -LRB-_-LRB- e_LS -RRB-_-RRB- are_VBP in_IN Cantonese_NNP :_: Accusatives_NNS :_: -LRB-_-LRB- 17_CD -RRB-_-RRB- a._IN 他_CD 吃膩-了_NN 蛋糕_CD eat_VBP bored-ASP_JJ cake_NN 3_CD ._.
+SG_NNP `_`` He_PRP was_VBD sick_JJ of_IN eating_VBG the_DT cake_NN ._. '_''
+b._FW 佢_FW 食厭-咗_FW 蛋糕_FW 3_LS ._.
+SG_NNP eat_VBP bored-ASP_JJ cake_NN `_`` He_PRP was_VBD sick_JJ of_IN eating_VBG the_DT cake_NN ._. '_''
+c.佢_JJ 食蛋糕食-到厭_NN 3_CD ._.
+SG_NNP eat_VBP cake_NN eat-dou3_JJ bored_JJ `_`` He_PRP was_VBD sick_JJ of_IN eating_VBG the_DT cake_NN ._. '_''
+Causatives_NNS :_: d._FW 那_FW 個_FW 蛋糕_FW 吃膩-了_FW 他_FW That_WDT CL_NNP cake_NN eat_VBP bored-ASP_NN 3_CD ._.
+SG_NNP `_`` He_PRP was_VBD sick_JJ of_IN eating_VBG the_DT cake_NN ._. '_''
+e.個蛋糕食_SYM -_: 到_SYM 佢_SYM 厭-咗_FW CL_FW cake_NN eat-dou3_JJ 3_CD ._.
+SG_NNP bored-ASP_NNP `_`` He_PRP was_VBD sick_JJ of_IN eating_VBG the_DT cake_NN ._. '_''
+In_IN -LRB-_-LRB- 17_CD -RRB-_-RRB- ,_, ``_`` 吃膩_FW ''_'' is_VBZ a_DT weak_JJ resultative_NN since_IN the_DT result_NN can_MD be_VB predicted_VBN if_IN we_PRP have_VBP ``_`` SUBJ_FW +_FW V1_FW ____FW +_FW OBJ_FW ''_'' -LRB-_-LRB- 他吃_FW ____FW 了蛋糕_FW -RRB-_-RRB- ._.
+Since_IN 吃_NN and_CC 膩_NN are_VBP semantically_RB related_VBN ,_, its_PRP$ RVC_NNP pattern_NN is_VBZ preserved_VBN in_IN a_DT Cantonese_JJ accusative_JJ sentence_NN as_IN in_IN -LRB-_-LRB- 17b_JJ -RRB-_-RRB- ._.
+V_SYM -_: copying_NN construction_NN is_VBZ also_RB accepted_VBN as_IN in_IN -LRB-_-LRB- 17c_JJ -RRB-_-RRB- ._.
+It_PRP should_MD be_VB noted_VBN that_IN -LRB-_-LRB- 17b_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 17c_JJ -RRB-_-RRB- have_VBP different_JJ readings_NNS where_WRB -LRB-_-LRB- 17b_CD -RRB-_-RRB- is_VBZ simply_RB making_VBG a_DT statement_NN while_IN -LRB-_-LRB- 17c_JJ -RRB-_-RRB- is_VBZ to_TO stress_VB the_DT boredom_NN of_IN eating_VBG that_DT cake_NN which_WDT is_VBZ an_DT unexpected_JJ state_NN ._.
+It_PRP can_MD be_VB concluded_VBN that_IN even_RB if_IN the_DT RVC_NNP is_VBZ a_DT weak_JJ resultative_NN ,_, causative_JJ RVCs_NNS in_IN Cantonese_NN are_VBP not_RB allowed_VBN due_JJ to_TO the_DT non-canonical_JJ word_NN order_NN ._.
+``_`` Unergatives_NNS ''_'' ,_, ``_`` Accusatives_NNP ''_'' ,_, ``_`` Causatives_NNS ''_'' and_CC ``_`` Object-fronting_JJ ''_'' As_IN mentioned_VBN in_IN Section_NN 4_CD ,_, the_DT same_JJ RVC_NNP in_IN Mandarin_NNP may_MD belong_VB to_TO different_JJ types_NNS due_JJ to_TO the_DT transitivity_NN and_CC canonicality_NN ._.
+吃膩_CD `_`` eat-bored_JJ '_'' is_VBZ found_VBN to_TO be_VB fell_VBN into_IN the_DT categories_NNS of_IN ``_`` unergatives_NNS ''_'' ,_, ``_`` accusatives_NNS ''_'' ,_, ``_`` causatives_NNS ''_'' ,_, and_CC ``_`` object-fronting_JJ ''_'' ._.
+The_DT structures_NNS of_IN their_PRP$ corresponding_JJ sentences_NNS in_IN Cantonese_NN are_VBP shown_VBN below_IN :_: observed_VBD that_IN only_RB accusatives_VBZ use_NN V-copying_JJ construction_NN instead_RB of_IN V-dou3_JJ construction_NN ._.
+Hence_RB ,_, it_PRP is_VBZ assumed_VBN that_IN V-copying_JJ construction_NN can_MD only_RB be_VB used_VBN in_IN a_DT canonical_JJ sentence_NN which_WDT has_VBZ at_IN least_JJS two_CD arguments_NNS on_IN the_DT surface_NN of_IN the_DT sentence_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP introduced_VBD different_JJ types_NNS of_IN resultative_JJ verb_NN compounds_NNS ,_, re-defined_VBD the_DT properties_NNS of_IN ergatives_NNS ,_, re-categorized_VBN the_DT accusatives_NNS based_VBN on_IN their_PRP$ referentiality_NN ,_, and_CC proposed_VBD to_TO add_VB two_CD new_JJ sub-types_NNS -LRB-_-LRB- i.e._FW Type_NN 3_CD and_CC Type_NN 5_CD -RRB-_-RRB- to_TO causatives_NNS and_CC clearly_RB distinguished_JJ object-fronting_JJ constructions_NNS from_IN pseudo-passives_NNS based_VBN on_IN the_DT frameworks_NNS of_IN Cheng_NNP &_CC Huang_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- and_CC Wang_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- ._.
+We_PRP also_RB discussed_VBD how_WRB the_DT presentation_NN of_IN RVCs_NNPS is_VBZ affected_VBN at_IN the_DT lexical_JJ level_NN and_CC syntactic_JJ level_NN ._.
+V-de_JJ and_CC V-dao_JJ have_VBP been_VBN proved_VBN to_TO be_VB equal_JJ in_IN certain_JJ situations_NNS ._.
+RVC_NNP and_CC V-dou3_NNP /_CD V-de_NN are_VBP always_RB interchangeable_JJ in_IN Mandarin_NNP ,_, while_IN they_PRP are_VBP sometimes_RB restricted_VBN in_IN Cantonese_NNP ._.
+Thus_RB ,_, V-dou3_NNP in_IN Cantonese_NNP should_MD not_RB be_VB deemed_VBN as_IN a_DT dummy_NN like_IN V-de_NNP in_IN Mandarin_NNP ._.
+Other_JJ methods_NNS used_VBN to_TO present_VB resultatives_NNS in_IN Cantonese_NNP ,_, namely_RB V-copying_JJ and_CC ``_`` gau2-dou3_JJ ''_'' constructions_NNS ,_, are_VBP introduced_VBN as_RB well_RB ._.
+The_DT method-selection_NN for_IN each_DT sentence_NN type_NN is_VBZ also_RB suggested_VBN ._.
+The_DT analyses_NNS of_IN the_DT factors_NNS affecting_VBG the_DT method-selection_NN are_VBP illustrated_VBN at_IN both_DT the_DT lexical_JJ and_CC syntactic_JJ levels_NNS with_IN the_DT help_NN of_IN the_DT concepts_NNS of_IN `_`` strong_JJ resultative_NN '_'' and_CC `_`` weak_JJ resultative_NN '_'' -LRB-_-LRB- not_RB applicable_JJ to_TO ergatives_NNS and_CC causatives_NNS -RRB-_-RRB- ._.
+Ubiquitously_RB found_VBN in_IN Chinese_NNP ,_, `_`` V-R_JJ compounding_NN is_VBZ a_DT rich_JJ source_NN of_IN new_JJ verbs_NNS in_IN Mandarin_NNP Chinese_NNP ..._: '_'' -LRB-_-LRB- Lin_NNP 1998_CD -RRB-_-RRB- ._.
+This_DT work_NN is_VBZ meant_VBN to_TO provide_VB a_DT systematic_JJ way_NN of_IN how_WRB resultatives_NNS are_VBP presented_VBN in_IN Cantonese_NN to_TO the_DT non_NN -_: native_JJ speakers_NNS of_IN Cantonese_NNP ,_, especially_RB those_DT of_IN a_DT Mandarin-speaking_JJ background_NN ._.
+Acknowledgments_NNS This_DT work_NN is_VBZ supported_VBN by_IN an_DT Early_JJ Career_NNP Scheme_NNP -LRB-_-LRB- ESC_NNP -RRB-_-RRB- sponsored_VBN by_IN the_DT Research_NNP Grants_NNPS Council_NNP of_IN Hong_NNP Kong_NNP -LRB-_-LRB- Project_NNP No._NN 559313_CD -RRB-_-RRB- ._.
+Mandarin_NNP Cantonese_NNP Unergatives_NNP :_: -LRB-_-LRB- 18_CD -RRB-_-RRB- 他吃膩了_FW a._FW 佢食厭咗喇_FW b._FW 佢食到厭喇_FW Accusatives_NNPS :_: -LRB-_-LRB- 19_CD -RRB-_-RRB- 他吃膩了這款_SYM 蛋糕_FW a._FW 佢食厭咗呢款蛋糕喇_FW b._FW 佢食呢款蛋糕食到厭_FW 喇_FW Causatives_NNPS :_: -LRB-_-LRB- 20_CD -RRB-_-RRB- 這款蛋糕吃膩_CD 了他_CD a._IN *_SYM 呢款蛋糕食厭咗佢喇_CD b._NN 呢款蛋糕食到佢厭喇_CD Object-fronting_NN :_: -LRB-_-LRB- 21_CD -RRB-_-RRB- 這款蛋糕吃膩_CD 了_CD a._IN 呢款蛋糕食厭咗喇_CD b._NN 呢款蛋糕食到厭喇_CD As_IN shown_VBN in_IN -LRB-_-LRB- 18_CD -RRB-_-RRB- -_: -LRB-_-LRB- 21_CD -RRB-_-RRB- ,_, the_DT weak_JJ resultative_JJ 吃_NN 膩_CD `_`` eat-bored_JJ '_'' is_VBZ allowed_VBN in_IN unergatives_NNS ,_, accusatives_NNS and_CC object-fronting_JJ since_IN RVCs_NNS are_VBP not_RB allowed_VBN in_IN causatives_NNS ._.
+However_RB ,_, RVC-patterns_NNS in_IN causatives_NNS are_VBP strictly_RB prohibited_VBN ._.
+It_PRP is_VBZ also_RB References_NNPS Cheng_NNP ,_, Lai-Shen_NNP Lisa_NNP and_CC Huang_NNP ,_, Cheng-Teh_NNP James_NNP ._.
+1994_CD ._.
+On_IN the_DT Argument_NNP Structure_NNP of_IN Resultative_NNP Compounds_NNPS ._.
+In_IN Matthew_NNP Y._NNP Chen_NNP and_CC Ovid_NNP J._NNP L._NNP Tzeng_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, In_IN Honor_NNP of_IN William_NNP S.-Y_NNP ._.
+Wang_NNP :_: Interdisciplinary_NNP Studies_NNPS in_IN Language_NN and_CC Language_NN Change_NNP ._.
+187-221_CD ._.
+Taipei_NNP ,_, Taiwan_NNP :_: Pyramid_NN ._.
+Cheng_NNP ,_, L._NNP ,_, Huang_NNP ,_, C._NNP T._NNP J._NNP ,_, Li_NNP ,_, Y._NNP H._NNP A._NN ,_, and_CC Tang_NNP ,_, C._NNP C._NNP J._NNP 1997_CD ._.
+Causative_NNP Compounds_NNPS across_IN Chinese_NNPS dialects_NNS :_: A_DT study_NN of_IN Cantonese_NNP ,_, Mandarin_NNP and_CC Taiwanese.Chinese_NNP Languages_NNPS and_CC Linguistics_NNPS ,_, 4_CD ,_, 199-224_CD ._.
+Chow_NNP ,_, Pui-lun_NN ._.
+2012_CD ._.
+The_DT syntax-semantics_JJ interface_NN of_IN resultative_JJ constructions_NNS in_IN Mandarin_NNP Chinese_NNP and_CC Cantonese_NNP ._.
+M.Phil_NNP Thesis_NNP ,_, The_NNP University_NNP of_IN Hong_NNP Kong_NNP ._.
+Gu_NNP ,_, Yang_NNP ._.
+1992_CD ._.
+The_DT Syntax_NNP of_IN Resultative_NNP and_CC Causative_NNP Compounds_NNP in_IN Chinese_NNP ._.
+Ph.D._NNP ._.
+Dissertation_NNP ,_, Cornell_NNP University_NNP ._.
+Gu_NNP ,_, Yang_NNP and_CC Virginia_NNP Yip_NNP ._.
+2004_CD ._.
+On_IN the_DT Cantonese_NNP Resultative_NNP Predicate_NNP V-can_NNP *_SYM ._.
+Concentric_NNP :_: Studies_NNP in_IN Linguistics_NNP ,_, 30.2_CD :_: 35-67_CD ._.
+Huang_NNP ,_, Cheng-Teh_NNP James_NNP ._.
+1992_CD ._.
+Complex_JJ Predicates_NNPS in_IN Control_NNP ._.
+In_IN R._NNP K._NNP Larson_NNP ,_, S._NNP Iatridou_NNP ,_, U._NNP Lahiri_NNP and_CC J._NNP Higginbotham_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Control_NNP and_CC Grammar_NNP ._.
+Springer_NNP Netherlands_NNP ._.
+109-147_CD ._.
+Huang_NNP ,_, Chu-ren_JJ and_CC Lin_NNP ,_, Fu-wen_NN ._.
+1992_CD ._.
+Composite_NNP event_NN structure_NN and_CC complex_JJ predicates_NNS :_: A_DT template-based_JJ approach_NN to_TO argument_NN selection_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 3rd_JJ annual_JJ meetings_NNS of_IN the_DT Formal_NNP Linguistics_NNP Society_NNP of_IN Mid_NNP -_: America_NNP ._.
+Huang_NNP ,_, Han-chun_NN ._.
+2008_CD ._.
+Resultative_NNP Verb_NNP Compounds_NNP in_IN Mandarin_NNP Chinese_NNPS :_: A_DT Constructional_NNP Approach_NNP ._.
+Ph.D._NNP ._.
+Dissertation_NNP ._.
+National_NNP Tsing_NNP Hua_NNP University_NNP ._.
+Kaufmann_NNP ,_, Ingrid_NNP &_CC Dieter_NNP Wunderlich_NNP ._.
+1998_CD ._.
+Cross_NNP -_: linguistic_JJ patterns_NNS of_IN resultatives_NNS ._.
+Working_VBG papers_NNS of_IN the_DT SFB282_NNP `_`` Theorie_NNP des_NNP Lexikins_NNP '_POS 109_CD ._.
+Univeristy_NNP of_IN Düsseldorf_NNP ._.
+Keung_NNP ,_, Sau-ching_JJ ._.
+2007_CD ._.
+The_DT development_NN of_IN resultative_JJ and_CC directional_JJ verb_NN compounds_NNS in_IN Cantonese-speaking_JJ preschool_JJ children_NNS ._.
+M.Phil_NNP Thesis_NNP ,_, The_NNP University_NNP of_IN Hong_NNP Kong_NNP ._.
+Li_NNP ,_, Charles_NNP N._NNP and_CC Thompson_NNP ,_, Sandra_NNP A._NNP 1981_CD ._.
+Mandarin_NNP Chinese_NNPS :_: A_DT Functional_JJ Reference_NNP Grammar_NNP ._.
+Berkeley_NNP :_: University_NNP of_IN California_NNP Press_NNP ._.
+Li_NNP ,_, Kin-ling_NNP Michelle_NNP ._.
+2002_CD ._.
+On_IN Cantonese_JJ causative_JJ constructions_NNS :_: iconicity_NN ,_, grammaticalization_NN and_CC semantic_JJ structures_NNS ._.
+M.Phil_NNP Thesis_NNP ,_, The_NNP University_NNP of_IN Hong_NNP Kong_NNP ._.
+Li_NNP ,_, Ya-fei_JJ ._.
+1990_CD ._.
+On_IN VV_NNP compounds_NNS in_IN Chinese_NNP ._.
+Natural_JJ Language_NN &_CC Linguistic_NNP Theory_NNP ,_, 8:2_CD ,_, 177-207_CD ._.
+Li_NNP ,_, Ya-fei_JJ ._.
+1995_CD ._.
+The_DT thematic_JJ hierarchy_NN and_CC causativity_NN ._.
+Natural_JJ Language_NN &_CC Linguistic_NNP Theory_NNP ,_, 13_CD ,_, 255-282_CD ._.
+Lin_NNP ,_, Fu-wen_NN ._.
+1989_CD ._.
+The_DT Verb-Complement_NNP -LRB-_-LRB- V-R_NNP -RRB-_-RRB- Compounds_NNPS in_IN Mandarin_NNP Chinese_NNP ._.
+In_IN Huang_NNP ,_, Chu-ren_JJ and_CC Chen_NNP ,_, Keh_NNP -_: jiann_NN -LRB-_-LRB- eds_FW -RRB-_-RRB- ,_, Proceedings_NNP of_IN ROCLING_NNP II_NNP ._.
+Taipei_NNP :_: Academia_NNP Sinica_NNP ._.
+253-276_CD ._.
+Lu_NNP ,_, Hsiao-tung_NNP John_NNP ._.
+1977_CD ._.
+Resultative_NNP verb_NN compounds_NNS vs._FW directional_JJ verb_NN compounds_NNS in_IN Mandarin_NNP ._.
+Journal_NNP of_IN Chinese_NNPS Linguistics_NNPS 5_CD :_: 276-313_CD ._.
+Shi_NNP ,_, Yu-zhi_JJ ._.
+2002_CD ._.
+The_DT resultative_JJ construction_NN in_IN modern_JJ Chinese_NNPS ._.
+In_IN The_DT Establishment_NN of_IN Modern_NNP Chinese_NNP Grammar_NNP :_: The_DT Formation_NN of_IN the_DT Resultative_NNP Construction_NNP and_CC its_PRP$ Effects_NNPS ._.
+Amsterdam_NNP ,_, Philadelphia_NNP :_: John_NNP Benjamins_NNP Publishing_NNP ._.
+Sybesma_NNP ,_, Rint_NNP ._.
+1999_CD ._.
+The_DT Mandarin_NNP VP_NNP ._.
+Dordrecht_NNP :_: Kluwer_NNP Academic_NNP Publishers_NNPS ._.
+Thompson_NNP ,_, Sandra_NNP Annear_NNP ._.
+1973_CD ._.
+Resultative_NNP verb_NN compounds_NNS in_IN Mandarin_NNP Chinese_NNPS :_: a_DT case_NN for_IN lexical_JJ rules_NNS ._.
+Language_NN 49_CD :_: 361-379_CD ._.
+Tai_NNP ,_, James_NNP H-Y_NNP ._.
+2003_CD ._.
+Cognitive_JJ relativism_NN :_: resultative_JJ construction_NN in_IN Chinese_NNP ._.
+Language_NN and_CC Linguistics_NNPS 4_CD :_: 301_CD -_: 316_CD ._.
+Tang_NNP Ting-Chi_NNP ._.
+2002_CD ._.
+The_DT Causative-Inchoative_NNP Alternation_NNP in_IN Chinese_NNP Compound_NN Verbs_NNS ._.
+Language_NN and_CC Linguistics_NNP 3:3_CD ,_, 615-644_CD ._.
+Wang_NNP ,_, Ling-ling_NN ._.
+2001_CD ._.
+A_DT Study_NN of_IN Resultative_NNP Constructions_NNP in_IN Mandarin_NNP Chinese_NNP ._.
+Ph.D._NNP ._.
+Dissertation_NNP ,_, The_DT Hong_NNP Kong_NNP Polytechnic_NNP University_NNP ._.
+Washio_NNP ,_, Ryuichi_NNP ._.
+1997_CD ._.
+Resultatives_NNP ,_, compositionality_NN and_CC language_NN variation_NN ._.
+Journal_NNP of_IN East_NNP Asian_NNP Linguistics_NNPS 6_CD :_: 1_LS -_: 49_CD ._.
+Washio_NNP ,_, Ryuichi_NNP ._.
+1999_CD ._.
+Some_DT comparative_JJ notes_NNS on_IN resultatives_NNS ._.
+In_IN Masatake_NNP Muraki_NNP and_CC Enoch_NNP Iwamoto_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Linguistics_NNPS :_: In_IN Search_NN of_IN the_DT Human_NNP Mind_NNP ._.
+674-707_CD ._.
+Tokyo_NNP :_: Kaitakusha_NNP ._.
+沈陽_CD 、_CD 魏航_NN :_: 動結式中動作_CD V1_CD 和結果_FW V2_FW 隱現的句法_FW 和語義條件_FW 。_FW 對外漢語研究_FW ,2011_FW 年_FW 00_FW 期_FW 。_FW 項開喜_FW :_: 漢語重動句式的功能研究_CD 。_CD 中國語文_CD 1997_CD 年第_NN 4_CD 期_NN :_: 260-267_CD 。_CD 趙新_NN :_: 試論重動句的功能_CD 。_CD 語言研究_CD 。_NN 2001_CD 年第_CD 46_CD 期_NN 。_CD 張旺熹_NN :_: 重動結構的遠距離因果關係動因_CD 。_SYM 載徐烈_SYM 炯_SYM 、_SYM 邵敬敏主編_CD 漢語語法研究的新拓展_NN -LRB-_-LRB- 一_FW -RRB-_-RRB- ,_, 杭_FW 州_FW :_: 浙江教育出版社_CD ,2002_CD 年_NN 。_NN

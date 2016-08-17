@@ -1,0 +1,218 @@
+A_DT Constrained_VBN version_NN of_IN Latent_NNP Dirichlet_NNP Allocation_NNP Abstract_NNP Text_NNP clustering_NN is_VBZ an_DT important_JJ area_NN of_IN research_NN which_WDT has_VBZ tremendously_RB grown_VBN in_IN importance_NN over_IN the_DT past_JJ few_JJ years_NNS ._.
+Extracting_VBG the_DT under_JJ -_: lying_VBG hidden_JJ topics_NNS or_CC concepts_NNS from_IN unstruc_JJ -_: tured_VBN text_NN is_VBZ known_VBN as_IN topic_NN modeling_NN ._.
+In_IN this_DT paper_NN we_PRP first_RB use_VBP the_DT popular_JJ Latent_NNP Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- for_IN identifying_VBG the_DT underly_JJ -_: ing_NN topics_NNS from_IN a_DT set_NN of_IN text_NN documents_NNS ._.
+Next_IN we_PRP improve_VBP the_DT performance_NN of_IN LDA_NNP by_IN in_IN -_: serting_VBG constraints_NNS into_IN it_PRP ._.
+We_PRP propose_VBP an_DT im_NN -_: provement_NN over_IN an_DT existing_VBG constrained_VBN LDA_NNP method_NN ,_, which_WDT uses_VBZ domain_NN knowledge_NN in_IN the_DT form_NN of_IN must_MD link_VB and_CC can_MD not_RB link_VB constraints_NNS for_IN improved_VBN performance_NN ._.
+The_DT improvement_NN is_VBZ in_IN introducing_VBG a_DT -RRB-_-RRB- non_JJ linearity_NN in_IN the_DT change_NN of_IN importance_NN of_IN constraints_NNS ,_, and_CC b_NN -RRB-_-RRB- the_DT re_NN -_: inforcement_NN learning_VBG concept_NN which_WDT both_DT en_IN -_: courages_NNS satisfaction_NN of_IN constraints_NNS and_CC also_RB takes_VBZ care_NN of_IN violation_NN of_IN constraints_NNS ._.
+Through_IN examples_NNS in_IN two_CD different_JJ domains_NNS ,_, namely_RB fi_SYM -_: nance_NN and_CC medicine_NN ,_, we_PRP show_VBP here_RB in_IN terms_NNS of_IN normalized_JJ mutual_JJ information_NN that_IN the_DT pro-_JJ posed_VBN method_NN gives_VBZ an_DT improved_JJ performance_NN for_IN clustering_VBG text_NN documents_NNS ._.
+1_CD Introduction_NNP Topic_NNP modeling_NN from_IN text_NN data_NNS is_VBZ one_CD of_IN the_DT most_RBS important_JJ areas_NNS in_IN the_DT domain_NN of_IN text_NN mining_NN ._.
+Topic_NN modeling_NN helps_VBZ in_IN identifying_VBG the_DT underlying_VBG topics_NNS or_CC concepts_NNS from_IN the_DT text_NN ._.
+Latent_NN Dirichlet_NNP Alloca_NNP -_: tion_NN -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- is_VBZ one_CD of_IN the_DT most_RBS popular_JJ topic_NN modeling_NN methods_NNS which_WDT is_VBZ an_DT unsu_JJ -_: pervised_JJ method_NN ._.
+Constrained_VBN clustering_NN is_VBZ semi_JJ su_SYM -_: pervised_JJ clustering_NN where_WRB constraints_NNS are_VBP used_VBN to_TO im_SYM -_: prove_VB the_DT performance_NN of_IN the_DT unsupervised_JJ method_NN ._.
+Second_JJ Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN In_IN constrained_VBN clustering_VBG the_DT user_NN may_MD provide_VB do_VB -_: main_JJ knowledge_NN to_TO direct_VB the_DT clustering_NN process_NN ._.
+For_IN example_NN a_DT set_NN of_IN financial_JJ news_NN stories_NNS can_MD be_VB grouped_VBN according_VBG to_TO the_DT type_NN of_IN news_NN ''_'' Initial_JJ Pub_NN -_: lic_NN Offering_VBG ''_'' or_CC ''_'' Mergers_NNPS and_CC Acquisitions_NNPS ''_'' etc._FW ._.
+The_DT same_JJ set_NN of_IN news_NN stories_NNS may_MD be_VB grouped_VBN accord_NN -_: ing_NN to_TO the_DT sectors_NNS like_IN ''_'' Information_NNP Technology_NNP ''_'' or_CC ''_'' Banks_NNS ''_'' etc._FW ._.
+Additional_JJ domain_NN knowledge_NN is_VBZ a_DT means_NN to_TO direct_VB the_DT clustering_NN process_NN in_IN the_DT desired_VBN direction_NN ._.
+The_DT domain_NN knowledge_NN can_MD be_VB given_VBN ei_SYM -_: ther_NN in_IN the_DT form_NN of_IN labeled_VBN objects_NNS or_CC in_IN the_DT form_NN of_IN Must_MD Link_VB -LRB-_-LRB- ML_NNP -RRB-_-RRB- and_CC Can_MD not_RB Link_VB -LRB-_-LRB- CL_NNP -RRB-_-RRB- constraints_NNS ._.
+ML_NNP -LRB-_-LRB- CL_NNP -RRB-_-RRB- constraints_NNS specify_VBP that_IN a_DT pair_NN of_IN words_NNS be_VB -_: long_RB to_TO the_DT same_JJ topic_NN -LRB-_-LRB- belong_VB to_TO two_CD different_JJ top_NN -_: ics_FW -RRB-_-RRB- -LRB-_-LRB- Zhai_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+There_EX has_VBZ been_VBN research_NN on_IN incorporating_VBG domain_NN knowledge_NN into_IN the_DT LDA_NNP model_NN in_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, Andrzejewski_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, Petterson_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, Andrzejewski_NNP and_CC Zhu_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, Wilson_NNP and_CC Chew_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, Xie_NNP et_FW al._FW -LRB-_-LRB- 2015_CD -RRB-_-RRB- etc._FW 2_CD Latent_NNP Dirichlet_NNP Allocation_NNP Latent_NNP Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- is_VBZ one_CD of_IN most_JJS popular_JJ methods_NNS in_IN the_DT area_NN of_IN topic_NN modeling_NN ._.
+The_DT main_JJ idea_NN of_IN LDA_NNP is_VBZ that_IN the_DT documents_NNS are_VBP probabilistic_JJ mixture_NN of_IN topics_NNS ,_, where_WRB topics_NNS are_VBP defined_VBN to_TO be_VB distribution_NN over_IN words_NNS ._.
+The_DT probability_NN model_NN for_IN the_DT LDA_NNP is_VBZ given_VBN below_IN ._.
+wi_FW |_FW zi_FW ,_, φ_NN -LRB-_-LRB- zi_FW -RRB-_-RRB- ∼_CD Discrete_NNP -LRB-_-LRB- φ_FW -LRB-_-LRB- zi_FW -RRB-_-RRB- -RRB-_-RRB- φ_SYM ∼_SYM Dirichlet_NNP -LRB-_-LRB- β_FW -RRB-_-RRB- zi_FW |_FW θ_FW -LRB-_-LRB- di_FW -RRB-_-RRB- ∼_CD Discrete_NNP -LRB-_-LRB- θ_FW -LRB-_-LRB- di_FW -RRB-_-RRB- -RRB-_-RRB- θ_SYM ∼_SYM Dirichlet_NNP -LRB-_-LRB- α_FW -RRB-_-RRB- Here_RB di_FW denotes_FW the_DT document_NN where_WRB the_DT ith_NN term_NN belongs_VBZ to_TO ,_, φ_NN is_VBZ the_DT topic-word_JJ distribution_NN and_CC θ_NN is_VBZ the_DT document-topic_JJ distribution_NN ,_, α_NN and_CC β_NN are_VBP hyper_JJ parameters_NNS ,_, specifying_VBG the_DT nature_NN of_IN the_DT priors_NNS on_IN θ_NN and_CC φ_NN ,_, zi_FW the_DT latent_NN variable_JJ which_WDT denotes_VBZ the_DT topic_NN from_IN which_WDT the_DT ith_NN term_NN wi_NN is_VBZ drawn.The_NNP in_IN -_: put_VB to_TO LDA_NNP model_NN is_VBZ the_DT term-document_NN matrix_NN and_CC outputs_NNS are_VBP the_DT document-topic_JJ and_CC topic-word_JJ ma_NN -_: trix_NN ._.
+Applying_VBG Bayes_NNP theorem_NN we_PRP can_MD get_VB -LRB-_-LRB- Griffiths_NNP ,_, 2002_CD -RRB-_-RRB- P_NN -LRB-_-LRB- zi_FW =_SYM j_FW |_FW z_SYM −_FW i_FW ,_, w_NN -RRB-_-RRB- ∝_CD P_NNP -LRB-_-LRB- wi_FW |_FW zi_FW =_SYM j_FW ,_, z_SYM −_FW i_FW ,_, w_SYM −_FW i_FW -RRB-_-RRB- P_NNP -LRB-_-LRB- zi_FW =_SYM j_FW |_FW z_SYM −_FW i_FW -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- here_RB zi_FW =_SYM j_FW means_VBZ the_DT assignment_NN of_IN the_DT ith_NN term_NN in_IN a_DT document_NN to_TO topic_NN j_NN ,_, z_SYM −_FW i_FW denotes_VBZ the_DT assignment_NN of_IN all_DT zk_NN except_IN i._NNP Griffiths_NNP and_CC Steyvers_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- propose_VBP a_DT statistical_JJ inference_NN algorithm_NN using_VBG Gibbs_NNP sampling_VBG for_IN LDA_NNP ._.
+The_DT notations_NNS used_VBN in_IN this_DT paper_NN are_VBP same_JJ as_IN Griffiths_NNP and_CC Steyvers_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+The_DT first_JJ step_NN for_IN learning_VBG the_DT topic-word_JJ dis_NN -_: tribution_NN and_CC document-topic_JJ distribution_NN is_VBZ ,_, scan_VB -_: ning_VBG through_IN each_DT document_NN and_CC randomly_RB assign_VB -_: ing_NN each_DT term_NN in_IN the_DT document_NN to_TO one_CD of_IN the_DT topics_NNS in_IN 1_CD ,_, 2_CD ,_, ..._: ,_, T_NNP ._.
+This_DT random_JJ assignment_NN gives_VBZ the_DT start_NN -_: ing_NN topic_NN representations_NNS of_IN all_PDT the_DT documents_NNS and_CC word_NN distributions_NNS of_IN all_PDT the_DT topics_NNS ._.
+The_DT main_JJ step_NN here_RB is_VBZ updating_VBG the_DT topic_NN for_IN each_DT term_NN in_IN each_DT doc_NN -_: ument_NN ._.
+When_WRB the_DT topic_NN assignment_NN of_IN the_DT current_JJ term_NN is_VBZ updated_VBN it_PRP is_VBZ assumed_VBN that_IN the_DT topic_NN assign_VB -_: ments_NNS for_IN all_PDT the_DT other_JJ terms_NNS except_IN for_IN the_DT current_JJ term_NN in_IN question_NN are_VBP correct_JJ ._.
+Topic_NN for_IN each_DT term_NN in_IN each_DT document_NN is_VBZ updated_VBN according_VBG to_TO the_DT proba_NN -_: bilities_NNS calculated_VBN using_VBG equation_NN 2_CD ._.
+It_PRP is_VBZ shown_VBN in_IN Griffiths_NNP and_CC Steyvers_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- that_WDT from_IN equation_NN 1_CD we_PRP can_MD derive_VB equation_NN 2_CD ._.
+total_JJ number_NN of_IN terms_NNS in_IN document_NN di_FW excluding_VBG the_DT current_JJ ith_NN term_NN in_IN question_NN ,_, W_NNP is_VBZ the_DT total_JJ number_NN of_IN word_NN types_NNS ,_, T_NNP is_VBZ number_NN of_IN topics_NNS ._.
+After_IN N_NNP itera_NN -_: tions_NNS the_DT document_NN topic_NN distribution_NN and_CC topic-word_JJ distribution_NN are_VBP estimated_VBN as_IN the_DT equations_NNS below_IN ._.
+3_CD LDA_NNP is_VBZ an_DT unsupervised_JJ method_NN ._.
+It_PRP does_VBZ not_RB use_VB any_DT domain_NN knowledge_NN for_IN identifying_VBG the_DT topics_NNS ._.
+Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- proposed_VBD a_DT constrained_VBN LDA_NNP method_NN ,_, which_WDT incorporates_VBZ domain_NN knowledge_NN into_IN LDA_NNP ._.
+The_DT constrained_VBN LDA_NNP suggested_VBD by_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- includes_VBZ a_DT multiplier_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- in_IN the_DT right_JJ hand_NN side_NN of_IN equation_NN 2_CD ._.
+P_NNP -LRB-_-LRB- zi_FW =_SYM j_FW |_FW z_SYM −_FW i_FW ,_, w_NN -RRB-_-RRB- ∝_FW q_FW -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- n_SYM −_FW i_FW ,_, j_VBP +_SYM β_FW n_FW -LRB-_-LRB- w_NN -RRB-_-RRB- +_SYM β_SYM φˆw_FW =_SYM j_FW -LRB-_-LRB- 3_LS -RRB-_-RRB- j_FW n_FW •_FW j_FW +_FW Wβ_FW ˆd_FW n_FW -LRB-_-LRB- d_LS -RRB-_-RRB- +_SYM α_SYM θ_FW =_SYM j_FW -LRB-_-LRB- 4_LS -RRB-_-RRB- j_FW n_FW •_FW j_FW +_FW Tα_FW Constrained_VBN Latent_NNP Dirichlet_NNP Allocation_NNP -LRB-_-LRB- wi_FW -RRB-_-RRB- n_NN -LRB-_-LRB- •_FW -RRB-_-RRB- +_SYM Wβ_FW ndi_FW +_FW Tα_FW -LRB-_-LRB- di_FW -RRB-_-RRB- n_SYM −_FW i_FW ,_, j_FW +_FW α_FW -LRB-_-LRB- 5_CD -RRB-_-RRB- P_NN -LRB-_-LRB- zi_FW =_SYM j_FW |_FW z_SYM −_FW i_FW ,_, w_NN -RRB-_-RRB- ∝_NN -LRB-_-LRB- wi_FW -RRB-_-RRB- n_NN -LRB-_-LRB- wi_FW -RRB-_-RRB- +_SYM β_FW n_FW -LRB-_-LRB- di_FW -RRB-_-RRB- +_SYM α_SYM −_FW i_FW ,_, j_SYM −_FW i_FW ,_, j_NN n_NN -LRB-_-LRB- •_FW -RRB-_-RRB- +_SYM Wβ_FW ndi_FW +_FW Tα_FW −_FW i_FW ,_, j_SYM −_FW i_FW ,_, •_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT idea_NN is_VBZ to_TO increase_VB the_DT probability_NN of_IN the_DT ith_NN term_NN in_IN any_DT topic_NN j_NN ,_, if_IN there_EX are_VBP other_JJ terms_NNS belong_VBP -_: ing_NN to_TO that_DT topic_NN ,_, that_WDT have_VBP a_DT ML_NNP constraint_NN with_IN this_DT term_NN ._.
+Similarly_RB decrease_VB the_DT probability_NN ,_, if_IN there_EX are_VBP terms_NNS belonging_VBG to_TO topic_NN j_NN that_IN the_DT current_JJ term_NN is_VBZ linked_VBN to_TO by_IN CL_NNP constraints_NNS ._.
+The_DT constrained_VBN LDA_NNP method_NN suggested_VBD in_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- re_SYM -_: vises_VBZ the_DT topic_NN updating_VBG probabilities_NNS by_IN a_DT multiplier_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- ._.
+Suppose_VB the_DT ith_NN term_NN wi_NN has_VBZ ML_NNP con_NN -_: straint_NN with_IN terms_NNS M1_NNP ,_, M2_NNP and_CC CL_NNP constraint_NN with_IN terms_NNS C1_NNP and_CC C2_NNP ._.
+The_DT topics_NNS for_IN these_DT terms_NNS M1_NNP ,_, M2_NNP ,_, C1_NNP ,_, C2_NNP are_VBP found_VBN out_RP from_IN the_DT last_JJ assignment_NN from_IN the_DT LDA_NNP method_NN ._.
+Every_DT time_NN there_EX is_VBZ a_DT must_MD link_VB term_NN which_WDT belongs_VBZ to_TO topic_NN j_NN ,_, q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- is_VBZ in_IN -_: creased_VBN and_CC every_DT time_NN there_EX is_VBZ a_DT can_MD not_RB link_VB term_NN which_WDT belongs_VBZ to_TO topic_NN j_NN ,_, q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- is_VBZ decreased_VBN ._.
+In_IN this_DT paper_NN we_PRP carry_VBP the_DT idea_NN proposed_VBN by_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- one_CD step_NN further_RBR and_CC introduce_VB non_JJ lin_NN -_: earity_NN into_IN the_DT change_NN in_IN importance_NN of_IN the_DT multiplier_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- ._.
+As_IN more_JJR and_CC more_JJR must_MD linked_VBN terms_NNS come_VBP the_DT value_NN of_IN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- increases_NNS by_IN higher_JJR Here_RB n_SYM −_FW i_FW ,_, j_JJ denotes_NNS the_DT number_NN of_IN times_NNS word_NN wi_NN has_VBZ been_VBN assigned_VBN to_TO topic_NN j_NN excluding_VBG the_DT current_JJ ith_NN term_NN ,_, n_NN -LRB-_-LRB- di_FW -RRB-_-RRB- denotes_VBZ the_DT number_NN of_IN times_NNS a_DT term_NN −_CD i_FW ,_, j_NN from_IN document_NN di_FW has_VBZ been_VBN assigned_VBN to_TO topic_NN j_NN ex_FW -_: cluding_VBG the_DT current_JJ ith_NN term_NN ,_, n_NN -LRB-_-LRB- •_FW -RRB-_-RRB- denotes_VBZ the_DT total_JJ −_CD i_FW ,_, j_JJ number_NN of_IN times_NNS any_DT term_NN has_VBZ been_VBN assigned_VBN to_TO topic_NN j_NN excluding_VBG the_DT current_JJ assignment_NN zi_NNS ,_, ndi_NN is_VBZ the_DT −_CD i_FW ,_, •_SYM −_FW i_FW ,_, j_SYM −_FW i_FW ,_, •_CD 1_CD ._.
+2_LS ._.
+3_LS ._.
+4_LS ._.
+5_CD ._.
+6_CD ._.
+7_CD ._.
+8_CD ._.
+9_CD ._.
+10_CD ._.
+11_CD ._.
+12_CD ._.
+13_CD ._.
+14_CD ._.
+15_CD ._.
+16_CD ._.
+17_CD ._.
+18_CD ._.
+19_CD ._.
+20_CD ._.
+21_CD ._.
+22_CD ._.
+23_CD ._.
+24_CD ._.
+25_CD ._.
+26_CD ._.
+27_CD ._.
+28_CD ._.
+29_CD ._.
+30_CD ._. -RCB-_-RRB-
+Table_NNP 1_CD :_: Algorithm_NNP for_IN updating_VBG q_NN -LRB-_-LRB- zi_FW ,_, j_VBN -RRB-_-RRB- values_NNS in_IN cLDA2_NN 2_CD ._.
+and_CC higher_JJR values_NNS ._.
+In_IN the_DT two_CD algorithms_NNS proposed_VBN here_RB ,_, -LCB-_-LRB- q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- |_FW j_FW =_SYM 1,2_CD ,_, ..._: ,_, T_NNP -RCB-_-RRB- is_VBZ increased_VBN or_CC decreased_VBN in_IN a_DT different_JJ way_NN than_IN suggested_VBN by_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+The_DT methods_NNS suggested_VBD in_IN this_DT paper_NN are_VBP named_VBN as_IN cLDA2_NN 1_CD and_CC cLDA2_NNP 2_CD and_CC the_DT con_NN -_: strained_VBN LDA_NNP method_NN proposed_VBN in_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- is_VBZ named_VBN as_IN cLDA1_NNP ._.
+The_DT notations_NNS used_VBN here_RB are_VBP as_IN follows_VBZ ._.
+The_DT constraint_NN sets_VBZ ML_NNP and_CC CL_NNP contain_VBP the_DT set_NN of_IN must_MD link_VB and_CC can_MD not_RB link_VB constraints_NNS ._.
+The_DT input_NN array_NN Z_NN contains_VBZ the_DT last_JJ topic_NN assignments_NNS ob_SYM -_: tained_VBN from_IN LDA_NNP ._.
+SM_NNP and_CC SC_NNP denote_VBP the_DT set_NN of_IN ML_NNP and_CC CL_NNP constraints_NNS respectively_RB where_WRB one_CD term_NN is_VBZ ′_CD wi_NNS ._.
+The_DT function_NN m_NN -LRB-_-LRB- l_NN -RRB-_-RRB- and_CC m_NN -LRB-_-LRB- l_NN -RRB-_-RRB- denote_VBP the_DT first_JJ and_CC second_JJ terms_NNS of_IN the_DT lth_NN ML_NNP constraint_NN ._.
+The_DT functions_NNS c_NN -LRB-_-LRB- l_NN -RRB-_-RRB- and_CC c_NN ′_NN -LRB-_-LRB- l_NN -RRB-_-RRB- denote_VBP the_DT first_JJ and_CC second_JJ terms_NNS of_IN the_DT lth_NN CL_NNP constraint_NN ._.
+The_DT variable_JJ otherTerm_NNP con_NN -_: tains_NNS the_DT other_JJ term_NN in_IN the_DT lth_NN ML_NNP constraint_NN associ_NN -_: ated_VBN with_IN the_DT term_NN wi_NN ,_, and_CC the_DT array_NN topicsML_NNP con_NN -_: tains_NNS all_PDT the_DT topics_NNS associated_VBN with_IN otherTerm_NNP ._.
+Here_RB weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- is_VBZ the_DT weight_NN that_WDT wi_VBP should_MD belong_VB to_TO topic_NN j_NN and_CC all_DT weightML_NNP values_NNS are_VBP initialized_VBN at_IN 1_CD -LRB-_-LRB- see_VB step4_CD in_IN Table_NNP ._.
+1_LS -RRB-_-RRB- ._.
+The_DT multiplier_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- is_VBZ initialized_VBN at_IN 1_CD ._.
+Let_VB us_PRP assume_VB word_NN wi_NN is_VBZ associated_VBN with_IN M1_CD and_CC M2_CD by_IN ML_NNP and_CC with_IN C1_CD and_CC C2_CD with_IN CL_NNP constraints_NNS ._.
+The_DT topics_NNS assigned_VBN to_TO M1_CD and_CC M2_CD by_IN LDA_NNP are_VBP found_VBN out_RP ._.
+Say_VB the_DT topic_NN 1_CD is_VBZ assigned_VBN twice_RB and_CC topic_NN 2_CD is_VBZ assigned_VBN thrice_RB to_TO M1_CD ._.
+Now_RB the_DT weightML_NNP -LRB-_-LRB- wi_FW ,_, 1_CD -RRB-_-RRB- will_MD be_VB multiplied_VBN by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- 2_CD and_CC weightML_NNP -LRB-_-LRB- wi_FW ,_, 2_LS -RRB-_-RRB- will_MD be_VB multiplied_VBN by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- 3_CD -LRB-_-LRB- see_VB step_NN 14_CD in_IN Table_NNP ._.
+1_LS -RRB-_-RRB- ._.
+Next_IN the_DT topic_NN allocations_NNS for_IN M2_NN will_MD be_VB considered_VBN and_CC similarly_RB weightML_NNP will_MD be_VB adjusted_VBN ._.
+The_DT method_NN proposed_VBN in_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- instead_RB of_IN multiplying_VBG it_PRP by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- adds_VBZ λ_JJ to_TO it_PRP ._.
+λ_NN must_MD be_VB within_IN 0_CD to_TO 1_CD ._.
+Similarly_RB C1_CD and_CC C2_CD are_VBP also_RB considered_VBN but_CC here_RB rather_RB than_IN multi_NNS -_: plying_VBG weightCL_NNP by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- we_PRP divide_VBP it_PRP by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- -LRB-_-LRB- see_VB step24_CD in_IN Table_NNP ._.
+1_LS -RRB-_-RRB- ._.
+This_DT algorithm_NN is_VBZ named_VBN cLDA2_NNP 1_CD ._.
+In_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- instead_RB of_IN dividing_VBG it_PRP by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ,_, subtracts_VBZ -LRB-_-LRB- 1_CD −_CD λ_NN -RRB-_-RRB- from_IN it_PRP ._.
+The_DT aim_NN of_IN the_DT change_NN suggested_VBD in_IN our_PRP$ method_NN is_VBZ to_TO introduce_VB non_JJ linearity_NN into_IN the_DT change_NN in_IN the_DT importance_NN of_IN con_NN -_: straints_NNS ._.
+In_IN case_NN of_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- this_DT change_NN is_VBZ linear_JJ ._.
+We_PRP are_VBP assuming_VBG here_RB if_IN there_EX are_VBP no_DT must_MD linked_VBN terms_NNS for_IN topic1_CD ,_, one_CD must_MD linked_VBN term_NN for_IN topic2_CD and_CC two_CD must_MD linked_VBN term_NN for_IN topic3_CD ,_, then_RB ,_, topic_NN 3_CD should_MD get_VB the_DT highest_JJS importance_NN and_CC the_DT change_NN in_IN importance_NN of_IN topic3_NN over_IN topic2_NN should_MD be_VB higher_JJR than_IN topic2_CD over_IN topic1_CD ._.
+Apart_RB from_IN the_DT change_NN mentioned_VBN in_IN cLDA2_NN 1_CD we_PRP further_RB suggest_VBP a_DT change_NN using_VBG the_DT concept_NN of_IN rein_NN -_: forcement_NN ._.
+Here_RB whenever_WRB any_DT must_MD linked_VBN object_NN is_VBZ assigned_VBN to_TO some_DT topic_NN other_JJ than_IN j_NN ,_, q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- is_VBZ decreased_VBN ._.
+Here_RB violation_NN of_IN constraints_NNS is_VBZ penal_JJ -_: ized_VBN ._.
+So_RB whenever_WRB M1_NNP is_VBZ not_RB assigned_VBN to_TO topic_NN j_NN ,_, weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- is_VBZ multiplied_VBN by_IN 1_CD /_CD -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ρ_NN ._.
+The_DT Input_NNP :_: wi_NNS ,_, Z_NNP ,_, λ_NN ,_, constraint_NN set_VBN ML_NNP and_CC CL_NNP ;_: Output_NN :_: q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- |_CD -LCB-_-LRB- j_NN =_SYM 1,2_CD ,_, ..._: ,_, T_NNP -RCB-_-RRB- ;_: Initial_JJ all_DT q_NN -LRB-_-LRB- zi_FW =_SYM j_FW |_FW -LCB-_-LRB- j_NN =_SYM 1,2_CD ,_, ..._: ,_, T_NNP -RCB-_-RRB- to_TO 1_CD Initial_JJ all_DT weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- to_TO 1_CD ,_, ∀_CD j_NN Initial_JJ all_DT weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- to_TO 1_CD ,_, ∀_CD j_NN for_IN each_DT j_NN ∈_CD T_NNP -LCB-_-LRB- SM_NNP ←_CD -LCB-_-LRB- l_NN |_NN m_NN -LRB-_-LRB- l_NN -RRB-_-RRB- =_SYM wi_FW -RCB-_-RRB- ∪_CD -LCB-_-LRB- l_NN |_NN m_SYM ′_FW -LRB-_-LRB- l_NN -RRB-_-RRB- =_SYM wi_FW -RCB-_-RRB- SC_NNP ←_CD -LCB-_-LRB- l_NN |_NN c_NN -LRB-_-LRB- l_NN -RRB-_-RRB- =_SYM wi_FW -RCB-_-RRB- ∪_CD -LCB-_-LRB- l_NN |_CD c_NN ′_NN -LRB-_-LRB- l_NN -RRB-_-RRB- =_SYM wi_FW -RCB-_-RRB- for_IN each_DT l_NN ∈_CD SM_NNP -LCB-_-LRB- otherT_NNP erm_FW ←_FW -LCB-_-LRB- m_NN -LRB-_-LRB- l_NN -RRB-_-RRB- ∪_FW m_FW ′_FW -LRB-_-LRB- l_NN -RRB-_-RRB- -RCB-_-RRB- \_CD -LCB-_-LRB- wi_NN -RCB-_-RRB- topicsM_NNP L_NNP ←_CD topics_NNS -LRB-_-LRB- otherT_NNP erm_FW -RRB-_-RRB- f_LS or_CC each_DT t_SYM ∈_SYM topicsM_NNP L_NNP -LCB-_-LRB- if_IN -LRB-_-LRB- topicsML_JJ -LSB-_NNP t_NN -RSB-_NNP =_SYM =_SYM j_VBN -RRB-_-RRB- -LCB-_-LRB- weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- =_SYM -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ×_SYM weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- -RCB-_-RRB- else_RB -LCB-_-LRB- weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- =_SYM -LRB-_-LRB- 1_CD /_CD -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ρ_NN -RRB-_-RRB- ×_SYM weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- -RCB-_-RRB- -RCB-_-RRB- -RCB-_-RRB- for_IN each_DT l_NN ∈_CD SC_NNP -LCB-_-LRB- otherT_NNP erm_FW ←_FW -LCB-_-LRB- c_NN -LRB-_-LRB- l_NN -RRB-_-RRB- ∪_CD c_NN ′_NN -LRB-_-LRB- l_NN -RRB-_-RRB- -RCB-_-RRB- \_CD -LCB-_-LRB- wi_NN -RCB-_-RRB- topicsCL_NNP ←_CD topics_NNS -LRB-_-LRB- otherT_NNP erm_FW -RRB-_-RRB- f_LS or_CC each_DT t_SYM ∈_SYM topicsC_NNP L_NNP -LCB-_-LRB- if_IN -LRB-_-LRB- topicsCL_JJ -LSB-_NNP t_NN -RSB-_NNP =_SYM =_SYM j_VBN -RRB-_-RRB- -LCB-_-LRB- weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- =_SYM -LRB-_-LRB- 1_CD /_CD -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- -RRB-_-RRB- ×_SYM weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- -RCB-_-RRB- else_RB -LCB-_-LRB- weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- =_SYM -LRB-_-LRB- -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ρ_NN -RRB-_-RRB- ×_SYM weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- -RCB-_-RRB- -RCB-_-RRB- -RCB-_-RRB- q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- =_SYM q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- ×_SYM weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- ×_SYM weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- constant_JJ ρ_NN must_MD be_VB within_IN 0_CD to_TO 1_CD ._.
+The_DT idea_NN behind_IN this_DT is_VBZ to_TO lower_VB weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- ,_, whenever_WRB M1_NNP be_VB -_: longs_NNS to_TO some_DT topic_NN other_JJ than_IN j._JJ Basically_RB when_WRB -_: ever_RB a_DT must_MD linked_VBN object_NN belongs_VBZ to_TO topic_NN j_IN we_PRP re_SYM -_: ward_NN topic_NN j_NN and_CC whenever_WRB a_DT must_MD linked_VBN object_NN be_VB -_: longs_NNS to_TO some_DT other_JJ topic_NN we_PRP penalize_VBP topic_NN j._NN Sim_NNP -_: ilarly_JJ whenever_WRB C1_NNP belongs_VBZ to_TO some_DT other_JJ topic_NN ,_, weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- is_VBZ increased_VBN by_IN multiplying_VBG with_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ρ_NN ._.
+This_DT algorithm_NN is_VBZ named_VBN cLDA2_NNP 2_CD and_CC it_PRP is_VBZ described_VBN in_IN Table_NNP 1_CD ._.
+If_IN we_PRP remove_VBP steps_NNS 16_CD and_CC 26_CD from_IN cLDA2_JJ 2_CD it_PRP becomes_VBZ cLDA2_NN 1_CD ._.
+If_IN wi_NN is_VBZ not_RB associated_VBN with_IN any_DT term_NN by_IN any_DT ML_NNP or_CC CL_NNP con_NN -_: straint_NN weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- remains_VBZ at_IN 1_CD for_IN all_PDT the_DT top_NN -_: ics_FW ._.
+Once_RB the_DT weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- and_CC weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- are_VBP found_VBN the_DT q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- are_VBP calculated_VBN by_IN multiply_VBP -_: ing_VBG with_IN weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- and_CC weightCL_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- ._.
+Next_IN the_DT q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- values_NNS are_VBP normalized_VBN and_CC relaxed_VBN us_PRP -_: ing_VBG relaxation_NN factor_NN η_NN in_IN a_DT way_NN similar_JJ to_TO Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- ._.
+Normalization_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- =_SYM -LRB-_-LRB- q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- −_CD min_NN -RRB-_-RRB- /_NN -LRB-_-LRB- max_FW −_FW min_FW -RRB-_-RRB- Relaxation_NN q_NN -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- =_SYM q_VB -LRB-_-LRB- zi_FW =_SYM j_VBN -RRB-_-RRB- ∗_SYM η_SYM +1_CD −_CD η_NN Here_RB we_PRP explain_VBP with_IN an_DT example_NN why_WRB cLDA2_NNP 1_CD and_CC cLDA2_NNP 2_CD should_MD work_VB better_JJR than_IN cLDA1_JJ ._.
+The_DT algorithms_NNS cLDA2_VBP 1_CD and_CC cLDA2_NNP 2_CD multiply_VBP weightML_NNP -LRB-_-LRB- wi_FW ,_, j_VBN -RRB-_-RRB- at_IN each_DT step_NN by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ._.
+Let_VB us_PRP consider_VB a_DT simple_JJ three_CD topic_NN situation_NN ._.
+If_IN term1_CD and_CC term2_CD are_VBP linked_VBN by_IN a_DT ML_NNP constraint_NN and_CC term_NN 1_CD does_VBZ not_RB belong_VB to_TO topic_NN 1_CD ,_, belongs_VBZ to_TO topic_NN 2_CD once_RB and_CC topic_NN 3_CD twice_RB ._.
+Now_RB while_IN calculating_VBG the_DT probabil_NN -_: ity_NN of_IN term2_CD belonging_VBG to_TO different_JJ topics_NNS we_PRP take_VBP into_IN account_NN the_DT presence_NN of_IN constraints_NNS ._.
+So_IN the_DT probability_NN of_IN term2_CD belonging_VBG to_TO topic_NN 2_CD should_MD go_VB high_JJ and_CC topic_NN 3_CD should_MD go_VB higher_RBR ._.
+So_IN the_DT multiplier_NN weightML_NNP should_MD be_VB 1_CD for_IN topic_NN 1_CD ,_, -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- for_IN topic2_CD and_CC -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- 2_CD for_IN topic3_CD in_IN case_NN of_IN cLDA2_NN 1_CD ._.
+After_IN normalization_NN the_DT values_NNS become_VBP 0_CD ,_, 1_CD /_CD -LRB-_-LRB- λ_FW +_FW 2_LS -RRB-_-RRB- and_CC 1_CD for_IN topic1_CD ,_, topic2_CD and_CC topic3_CD respectively_RB ._.
+In_IN case_NN of_IN cLDA1_JJ instead_RB of_IN multiplying_VBG by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- adds_VBZ λ_NN ._.
+So_IN the_DT weightML_NNP values_NNS become_VBP 0_CD ,_, λ_NN ,_, 2λ_CD for_IN topic1_CD ,_, topic2_CD and_CC topic3_CD respectively_RB ._.
+After_IN normalization_NN the_DT values_NNS become_VBP 0,0.5_CD and_CC 1_CD respectively_RB ._.
+As_IN we_PRP can_MD see_VB λ_NN is_VBZ a_DT value_NN greater_JJR than_IN 0_CD ,_, 1_CD /_CD -LRB-_-LRB- λ_FW +_FW 2_LS -RRB-_-RRB- is_VBZ less_JJR than_IN 0.5_CD ._.
+So_IN the_DT difference_NN in_IN the_DT weights_NNS between_IN topic3_CD -LRB-_-LRB- topic_NN with_IN highest_JJS multiplier_NN -RRB-_-RRB- and_CC topic_NN 2_CD -LRB-_-LRB- topic_NN with_IN the_DT second_JJ highest_JJS multiplier_NN -RRB-_-RRB- is_VBZ higher_JJR for_IN cLDA2_NN 1_CD over_IN cLDA1_NNP ._.
+So_RB constraints_NNS are_VBP sat_VBN -_: isfied_VBN in_IN a_DT better_JJR manner_NN in_IN case_NN of_IN cLDA2_NN 1_CD than_IN cLDA1_JJ ._.
+Next_JJ let_VB us_PRP consider_VB the_DT situation_NN with_IN the_DT CL_NNP con_NN -_: straints_NNS ._.
+Say_VB term1_CD and_CC term2_CD are_VBP linked_VBN by_IN a_DT CL_NNP constraint_NN and_CC term_NN 1_CD belongs_VBZ to_TO topic2_VB once_RB and_CC topic3_VB twice_RB ._.
+So_IN the_DT probability_NN of_IN term_NN 2_CD belong_VBP -_: ing_NN to_TO topic_NN 2_CD should_MD go_VB low_JJ and_CC topic_NN 3_CD should_MD go_VB lower_RBR ._.
+In_IN case_NN of_IN cLDA2_NN 1_CD the_DT weightCL_NNP val_NN -_: ues_NNS become_VBP 1_CD ,_, 1_CD /_CD -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- and_CC 1_CD /_CD -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- 2_CD for_IN topic1_CD ,_, topic2_CD ,_, and_CC topic3_CD respectively_RB ._.
+After_IN normalization_NN the_DT weights_NNS are_VBP 1_CD ,_, 1_CD /_CD -LRB-_-LRB- λ_FW +_FW 2_LS -RRB-_-RRB- and_CC 0_CD respectively_RB ._.
+In_IN case_NN of_IN cLDA1_NNP at_IN each_DT step_NN instead_RB of_IN dividing_VBG by_IN -LRB-_-LRB- 1_CD +_CD λ_NN -RRB-_-RRB- ,_, -LRB-_-LRB- 1_CD −_CD λ_NN -RRB-_-RRB- is_VBZ subtracted_VBN ._.
+So_IN the_DT weights_NNS are_VBP 0_CD ,_, −_CD -LRB-_-LRB- 1_CD −_CD λ_NN -RRB-_-RRB- and_CC −_CD 2_CD -LRB-_-LRB- 1_CD −_CD λ_NN -RRB-_-RRB- respectively_RB ._.
+After_IN normal_JJ -_: ization_NN the_DT values_NNS become_VBP 1_CD ,_, 0.5_CD and_CC 0_CD respectively_RB ._.
+Here_RB also_RB we_PRP can_MD see_VB that_IN the_DT difference_NN between_IN the_DT weights_NNS between_IN the_DT topic_NN with_IN the_DT highest_JJS mul_SYM -_: tiplier_NN -LRB-_-LRB- i.e_FW topic_NN 1_CD -RRB-_-RRB- and_CC the_DT topic_NN with_IN next_JJ highest_JJS multiplier_NN -LRB-_-LRB- i.e_FW topic_NN 2_CD -RRB-_-RRB- is_VBZ higher_JJR in_IN case_NN of_IN cLDA2_NN 1_CD over_IN cLDA1_NNP ._.
+So_RB constraints_NNS are_VBP satisfied_VBN in_IN a_DT better_JJR manner_NN in_IN case_NN of_IN cLDA2_NN 1_CD than_IN cLDA1_JJ ._.
+4_CD Empirical_JJ Evaluation_NN Two_CD datasets_NNS are_VBP chosen_VBN for_IN this_DT study_NN ._.
+The_DT first_JJ one_CD is_VBZ titles_NNS of_IN financial_JJ news_NN stories_NNS downloaded_VBN from_IN Yahoo_NNP Finance_NNP website_NN belonging_VBG to_TO the_DT four_CD cate_NN -_: gories_NNS -LRB-_-LRB- earnings_NNS ,_, IPO_NNP ,_, up/downgrade_NN ,_, mergers_NNS and_CC acquisitions_NNS -RRB-_-RRB- ._.
+The_DT numbers_NNS of_IN documents_NNS in_IN the_DT cat_NN -_: egories_NNS are_VBP 50_CD ,_, 49_CD ,_, 53_CD ,_, and_CC 55_CD respectively_RB ._.
+The_DT doc_NN -_: ument_NN term_NN matrix_NN is_VBZ of_IN dimension_NN 207_CD X_NNP 732_CD ._.
+The_DT second_JJ dataset_NN is_VBZ a_DT set_NN of_IN paper_NN titles_NNS downloaded_VBN from_IN MEDLINE_NNP ._.
+The_DT dataset_NN consists_VBZ of_IN total_JJ 203_CD documents_NNS belonging_VBG to_TO three_CD categories_NNS human_JJ ,_, an_DT -_: imals_NNS and_CC yeast_NN ._.
+There_EX are_VBP 66_CD ,_, 68_CD ,_, 69_CD documents_NNS respectively_RB ._.
+The_DT dimension_NN of_IN the_DT document_NN term_NN matrix_NN for_IN this_DT dataset_NN is_VBZ 203_CD X_NNP 176_CD ._.
+For_IN both_DT the_DT datasets_NNS clusters_NNS are_VBP not_RB well_RB separated_JJ which_WDT in_IN -_: creases_NNS the_DT difficulty_NN of_IN the_DT problem_NN ._.
+The_DT outputs_NNS from_IN the_DT constrained_VBN LDA_NNP are_VBP the_DT document_NN topic_NN distribution_NN and_CC topic_NN word_NN distribu_NN -_: tion_NN ._.
+From_IN the_DT document_NN topic_NN distribution_NN we_PRP ob_SYM -_: tain_VB the_DT topic_NN probabilities_NNS for_IN each_DT document_NN ._.
+We_PRP assign_VBP each_DT document_NN to_TO that_DT topic_NN for_IN which_WDT the_DT probability_NN is_VBZ highest_JJS ._.
+The_DT normalized_JJ mutual_JJ information_NN -LRB-_-LRB- NMI_NNP -RRB-_-RRB- -LRB-_-LRB- Strehl_NNP et_FW al._FW ,_, 2000_CD -RRB-_-RRB- between_IN the_DT category_NN labels_NNS and_CC topic_NN assignments_NNS of_IN the_DT documents_NNS from_IN the_DT algorithm_NN is_VBZ used_VBN as_IN the_DT evaluation_NN metric_JJ ._.
+NMI_NNP measures_VBZ how_WRB closely_RB the_DT algorithm_NN is_VBZ able_JJ to_TO model_VB the_DT underlying_VBG category_NN distribution_NN of_IN labels_NNS ._.
+The_DT higher_JJR ,_, the_DT better_JJR ._.
+NMI_NNP lies_VBZ between_IN 0_CD to_TO 1_CD ._.
+The_DT constraints_NNS given_VBN are_VBP as_IN follows_VBZ ._.
+For_IN the_DT Ya_NNP -_: hoo_NN Finance_NNP dataset_VBD the_DT four_CD words_NNS earnings_NNS ,_, IPO_NNP ,_, downgrade_NN ,_, mergers_NNS were_VBD selected_VBN from_IN the_DT four_CD categories_NNS respectively_RB ._.
+Two_CD other_JJ words_NNS moodys_NNS from_IN the_DT up/downgrade_NN category_NN and_CC acquire_VB from_IN the_DT mergers_NNS and_CC acquisitions_NNS category_NN were_VBD also_RB cho_SYM -_: sen._NN So_IN we_PRP have_VBP 13_CD CL_NNP and_CC 2_CD ML_NNP constraints_NNS ._.
+In_IN this_DT way_NN from_IN the_DT other_JJ dataset_NN MEDLINE_NNP all_DT total_JJ seven_CD words_NNS were_VBD selected_VBN from_IN the_DT three_CD categories_NNS and_CC 16_CD CL_NNP and_CC 4_CD ML_NNP constraints_NNS were_VBD formed_VBN ._.
+Here_RB since_IN domain_NN expert_NN has_VBZ to_TO pick_VB up_RP the_DT words_NNS the_DT number_NN of_IN constraints_NNS is_VBZ limited_VBN ._.
+The_DT output_NN NMI_NNP values_NNS are_VBP plotted_VBN in_IN Fig._NNP 1_CD ._.
+For_IN the_DT sake_NN of_IN comparison_NN the_DT output_NN from_IN the_DT method_NN proposed_VBN in_IN Andrzejewski_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- has_VBZ also_RB been_VBN included_VBN ._.
+The_DT algorithm_NN proposed_VBN in_IN Andrzejewski_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- is_VBZ based_VBN on_IN Dirichlet_NNP forest_NN priors_NNS and_CC has_VBZ been_VBN termed_VBN DF_NNP LDA_NNP here_RB in_IN this_DT paper_NN ._.
+For_IN all_PDT the_DT experiments_NNS the_DT param_NN -_: eter_FW ρ_FW in_IN cLDA2_NN 2_CD was_VBD chosen_VBN to_TO be_VB 0.4_CD for_IN both_DT the_DT datasets_NNS ._.
+Further_JJ research_NN can_MD be_VB directed_VBN towards_IN finding_VBG an_DT optimum_JJ value_NN for_IN ρ_NN ._.
+For_IN cLDA1_NNP the_DT parameter_NN λ_NN gives_VBZ the_DT relative_JJ im_NN -_: portance_NN of_IN CL_NNP and_CC ML_NNP constraints_NNS ._.
+While_IN exper_NN -_: imenting_VBG with_IN varying_VBG the_DT number_NN of_IN clusters_NNS the_DT λ_NN has_VBZ been_VBN fixed_VBN at_IN 0.5_CD ,_, to_TO put_VB equal_JJ importance_NN to_TO both_DT CL_NNP and_CC ML_NNP constraints.The_NNP relaxation_NN parameter_NN η_NN signifies_VBZ the_DT strength_NN of_IN the_DT constraints_NNS ._.
+Since_IN con_NN -_: straints_NNS are_VBP chosen_VBN manually_RB the_DT constraints_NNS are_VBP of_IN good_JJ quality_NN ,_, so_IN the_DT value_NN of_IN η_NN has_VBZ been_VBN fixed_VBN at_IN 0.9_CD ._.
+It_PRP can_MD be_VB observed_VBN from_IN the_DT results_NNS in_IN Fig._NNP 1_CD ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- and_CC -LRB-_-LRB- b_NN -RRB-_-RRB- that_WDT cLDA2_VBP 1_CD and_CC cLDA2_NNP 2_CD both_DT have_VBP per_IN -_: formed_VBN better_JJR than_IN cLDA1_JJ and_CC LDA_NNP ._.
+We_PRP also_RB ran_VBD the_DT algorithms_NNS varying_VBG the_DT number_NN of_IN clusters_NNS ,_, with_IN λ_JJ =_SYM 0.1_CD and_CC λ_CD =_SYM 0.9_CD ._.
+The_DT results_NNS were_VBD found_VBN to_TO be_VB similar_JJ i.e._FW cLDA2_FW 1_CD and_CC cLDA2_NNP 2_CD worked_VBD better_JJR than_IN both_DT LDA_NNP and_CC cLDA1_NNP in_IN most_JJS of_IN the_DT cases_NNS ._.
+Next_IN we_PRP ran_VBD the_DT experiments_NNS varying_VBG the_DT parame_NN -_: ter_SYM λ_FW from_IN 0.1_CD to_TO 1_CD in_IN steps_NNS of_IN 0.1_CD ._.
+In_IN this_DT case_NN the_DT number_NN of_IN clusters_NNS is_VBZ fixed_VBN at_IN the_DT actual_JJ number_NN of_IN categories_NNS i.e._FW 4_CD and_CC 3_CD for_IN Yahoo_NNP Finance_NNP and_CC MED_NNP -_: LINE_NNP respectively_RB ._.
+The_DT parameter_NN η_NN has_VBZ been_VBN fixed_VBN at_IN 0.9_CD ._.
+Results_NNS given_VBN in_IN Fig._NNP 1_CD ._.
+-LRB-_-LRB- c_NN -RRB-_-RRB- and_CC -LRB-_-LRB- d_LS -RRB-_-RRB- ._.
+Further_RB the_DT NMI_NNP values_NNS are_VBP plotted_VBN with_IN varying_VBG the_DT relaxation_NN parameter_NN η_NN in_IN Fig._NNP 1_CD ._.
+-LRB-_-LRB- e_LS -RRB-_-RRB- and_CC -LRB-_-LRB- f_LS -RRB-_-RRB- ,_, keeping_VBG λ_NN fixed_VBN at_IN 0.5_CD and_CC number_NN of_IN clusters_NNS fixed_VBN at_IN 4_CD and_CC 3_CD for_IN Yahoo_NNP Finance_NNP and_CC MEDLINE_NNP respec_FW -_: tively_RB ._.
+The_DT parameter_NN η_NN signifies_VBZ the_DT strength_NN of_IN the_DT constraints_NNS ._.
+It_PRP can_MD be_VB observed_VBN in_IN most_JJS of_IN the_DT cases_NNS cLDA2_VBP 1_CD and_CC cLDA2_NNP 2_CD are_VBP better_JJR than_IN cLDA1_JJ ._.
+Figure_NN 1_CD :_: NMI_NNP for_IN -LRB-_-LRB- a_DT -RRB-_-RRB- Yahoo_NNP Finance_NNP ,_, -LRB-_-LRB- b_NN -RRB-_-RRB- MEDLINE_NNP with_IN varying_VBG number_NN of_IN clusters_NNS -LRB-_-LRB- k_NN -RRB-_-RRB- ._.
+NMI_NNP for_IN -LRB-_-LRB- c_NN -RRB-_-RRB- Yahoo_NNP Fi_NNP -_: nance_NN -LRB-_-LRB- k_NN =_SYM 4_LS -RRB-_-RRB- -LRB-_-LRB- d_LS -RRB-_-RRB- MEDLINE_NNP -LRB-_-LRB- k_NN =_SYM 3_LS -RRB-_-RRB- with_IN varying_VBG parame_NN -_: ter_SYM λ_FW ._.
+NMI_NNP for_IN e_LS -RRB-_-RRB- Yahoo_NNP Finance_NNP and_CC f_LS -RRB-_-RRB- MEDLINE_NNP with_IN varying_VBG parameter_NN η_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN we_PRP propose_VBP two_CD modified_VBN versions_NNS of_IN the_DT constrained_VBN LDA_NNP -LRB-_-LRB- Zhai_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- method_NN and_CC show_NN experimentally_RB that_IN they_PRP work_VBP better_JJR than_IN the_DT existing_VBG constrained_VBN LDA_NNP methods_NNS proposed_VBN in_IN Zhai_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- and_CC Andrzejewski_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+References_NNS Alexander_NNP Strehl_NNP ,_, Joydeep_NNP Ghosh_NNP and_CC Raymond_NNP Mooney_NNP ._.
+2000_CD ._.
+Impact_NN of_IN similarity_NN measures_NNS on_IN web-page_JJ clustering_NN ._.
+Workshop_NNP on_IN Artificial_NNP Intelligence_NNP for_IN Web_NNP Search_NNP ,_, 58-64_CD Andrew_NNP T._NNP Wilson_NNP and_CC Peter_NNP A._NNP Chew_NNP ._.
+2010_CD ._.
+Term_NN weighting_NN schemes_NNS for_IN Latent_NNP Dirichlet_NNP Allocation_NNP ._.
+Human_NNP Language_NNP Technologies_NNPS :_: The_DT 2010_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 465-473_CD David_NNP Andrzejewski_NNP and_CC Xiaojin_NNP Zhu_NNP ._.
+2009_CD ._.
+La_NNP -_: tent_NN Dirichlet_NNP Allocation_NNP with_IN Topic-in-Set_NNP Knowl_NNP -_: edge_NN ._.
+Proceedings_NNP of_IN the_DT NAACL_NNP HLT_NNP Workshop_NNP on_IN Semi-Supervised_NNP Learning_NNP for_IN Natural_NNP Language_NNP Pro-_JJ cessing_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, David_NNP Andrzejewski_NNP ,_, Xiaojin_NNP Zhu_NNP and_CC Mark_NNP Craven_NNP ._.
+2009_CD ._.
+Incorporating_VBG domain_NN knowledge_NN into_IN topic_NN modeling_NN via_IN Dirichlet_NNP forest_NN priors_NNS ._.
+Proceedings_NNP of_IN the_DT 26th_JJ Annual_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP ,_, 25-32_CD David_NNP M._NNP Blei_NNP ,_, Andrew_NNP Y._NNP Ng_NNP ,_, and_CC Michael_NNP I._NNP Jordan_NNP ._.
+2003_CD ._.
+Latent_NN Dirichlet_NNP Allocation_NNP ._.
+The_DT Journal_NNP of_IN Ma_NNP -_: chine_NN Learning_NNP Research_NNP ,_, 3_CD :_: 993_CD --_: 1022_CD ._.
+James_NNP Petterson_NNP ,_, Alex_NNP Smola_NNP ,_, Tiberio_NNP Caetano_NNP ,_, Wray_NNP Buntine_NNP and_CC Shravan_NNP Narayanamurthy_NNP ._.
+2010_CD ._.
+Word_NN Features_NNS for_IN Latent_NNP Dirichlet_NNP Allocation_NNP ._.
+Ad_NN -_: vances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS ,_, 1921-1929_CD Thomas_NNP L._NNP Griffiths_NNP ,_, Mark_NNP Steyvers_NNP ._.
+2004_CD ._.
+Finding_VBG Sci_NNP -_: entific_JJ Topics_NNS ._.
+Proceedings_NNP of_IN the_DT National_NNP Academy_NNP of_IN Sciences_NNPS of_IN the_DT United_NNP States_NNPS of_IN America_NNP ,_, 101_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 5228_CD --_: 5235_CD ._.
+Tom_NNP Griffiths_NNP ._.
+2002_CD ._.
+Gibbs_NNP Sampling_NNP in_IN the_DT Generative_NNP model_NN of_IN Latent_NNP Dirichlet_NNP Allocation_NNP ._.
+Pengtao_NNP Xie_NNP ,_, Diyi_NNP Yang_NNP ,_, and_CC Eric_NNP P._NNP Xang_NNP ._.
+2015_CD ._.
+In_IN -_: corporating_VBG Word_NN Correlation_NN Knowledge_NN into_IN Topic_NNP Modeling_NNP ._.
+The_DT 2015_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computa_NNP -_: tional_JJ Linguistics._NNP ,_, 1921-1929_CD Zhongwu_NNP Zhai_NNP ,_, Bing_NNP Liu_NNP ,_, Hua_NNP Xu_NNP and_CC Pefia_NNP Jia_NNP ._.
+2011_CD ._.
+Constrained_VBN LDA_NNP for_IN grouping_VBG product_NN features_NNS in_IN opinion_NN mining_NN ._.
+Advances_NNS in_IN Knowledge_NNP Discovery_NNP and_CC Data_NNP Mining_NNP ,_, 448-459_CD ._.
+Springer_NNP Berlin_NNP Heidel_NNP -_: berg_NN ._.

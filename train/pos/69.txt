@@ -1,0 +1,411 @@
+1_CD Abstract_NNP This_DT paper_NN took_VBD an_DT experimental_JJ approach_NN and_CC examined_VBD island_NN constraints_NNS in_IN Korean_JJ ._.
+Among_IN many_JJ island_NN constraints_NNS ,_, this_DT study_NN took_VBD a_DT Complex_JJ NP_NNP island_NN constraint_NN ,_, and_CC the_DT experiment_NN was_VBD designed_VBN with_IN 3_CD related_JJ factors_NNS :_: presence_NN vs._IN absence_NN of_IN island_NN ,_, matrix_NN clause_NN vs._IN embedded_VBN clause_NN ,_, and_CC scrambling_VBG ._.
+The_DT analysis_NN results_NNS illustrated_VBD that_IN the_DT presence/absence_NN of_IN complex_JJ NP_NNP island_NN did_VBD not_RB play_VB a_DT role_NN by_IN itself_PRP in_IN Korean_JJ but_CC that_IN it_PRP made_VBD distinctions_NNS through_IN the_DT interactions_NNS with_IN other_JJ factor_NN such_JJ as_IN matrix_NN vs._IN embedded_VBN clause_NN ._.
+Introduction_NNP Yeonkyung_NNP Park_NNP Hannam_NNP University_NNP 70_CD Hannamro_NNP ,_, Daedeok-gu_NNP Daejeon_NNP 306-791_CD ,_, Korea_NNP withbyk@hanmail.net_NNP In_IN order_NN to_TO answer_VB these_DT questions_NNS ,_, this_DT paper_NN took_VBD an_DT experimental_JJ approach_NN and_CC examined_VBD the_DT island_NN properties_NNS in_IN Korean_JJ ._.
+The_DT target_NN sentences_NNS were_VBD constructed_VBN with_IN three_CD factors_NNS ,_, and_CC native_JJ speakers_NNS '_POS intuition_NN was_VBD measured_VBN with_IN Magnitude_NNP Estimation_NNP -LRB-_-LRB- ME_NNP -RRB-_-RRB- ._.
+After_IN the_DT experiment_NN ,_, all_PDT the_DT data_NNS for_IN the_DT target_NN sentences_NNS were_VBD extracted_VBN and_CC they_PRP were_VBD statistically_RB analyzed_VBN with_IN R._NNP Through_IN the_DT analysis_NN ,_, it_PRP was_VBD found_VBN that_IN that_IN the_DT presence/absence_NN of_IN Complex_JJ NP_NNP island_NN did_VBD not_RB play_VB a_DT role_NN by_IN itself_PRP in_IN Korean_JJ but_CC that_IN it_PRP made_VBD distinctions_NNS through_IN the_DT interactions_NNS with_IN other_JJ factor_NN such_JJ as_IN matrix_NN vs._IN embedded_VBN clause_NN ._.
+These_DT examples_NNS provided_VBD an_DT account_NN for_IN why_WRB there_EX have_VBP been_VBN so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN Korean_JJ ._.
+This_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN Section_NN 2_CD ,_, previous_JJ studies_NNS were_VBD reviewed_VBN especially_RB focused_VBN on_IN the_DT experimental_JJ approaches_NNS ._.
+Section_NN 3_CD includes_VBZ the_DT accounts_NNS for_IN experimental_JJ design_NN -LRB-_-LRB- research_NN materials_NNS and_CC research_NN methods_NNS -RRB-_-RRB- ,_, and_CC Section_NNP 4_CD enumerates_VBZ the_DT analysis_NN results_NNS ._.
+Section_NN 5_CD contains_VBZ discussions_NNS ,_, and_CC Section_NNP 6_CD summarizes_VBZ this_DT paper_NN ._.
+Complex-NP_NNP Islands_NNP in_IN Korean_NNP :_: An_DT Experimental_JJ Approach_NNP Since_IN Ross_NNP 's_POS identifications_NNS of_IN island_NN constraints_NNS in_IN English_NNP -LRB-_-LRB- Ross_NNP ,_, 1967_CD -RRB-_-RRB- ,_, there_EX have_VBP been_VBN a_DT lot_NN of_IN debates_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN other_JJ languages_NNS ._.
+For_IN example_NN ,_, Nishigauchi_NNP -LRB-_-LRB- 1990_CD -RRB-_-RRB- and_CC Watanabe_NNP -LRB-_-LRB- 1992_CD -RRB-_-RRB- claimed_VBD that_IN there_EX were_VBD island_NN constraints_NNS in_IN Japanese_JJ ,_, but_CC Ishihara_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- mentioned_VBD that_IN this_DT language_NN had_VBD no_DT island_NN constraint_NN ._.
+Likewise_RB ,_, there_EX have_VBP been_VBN controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN Korean_JJ ._.
+Some_DT have_VBP argued_VBN for_IN the_DT presence_NN of_IN island_NN effects_NNS -LRB-_-LRB- Lee_NNP 1982_CD ,_, Han_NNP 1992_CD ,_, Hong_NNP 2004_CD -RRB-_-RRB- ,_, while_IN others_NNS have_VBP argued_VBN against_IN it_PRP -LRB-_-LRB- Sohn_NNP 1980_CD ,_, Kang_NNP 1986_CD ,_, Suh_NNP 1987_CD ,_, Hwang_NNP 2007_CD -RRB-_-RRB- ._.
+This_DT paper_NN investigated_VBD the_DT island_NN constraints_NNS in_IN Korean_JJ ._.
+Our_PRP$ questions_NNS were_VBD -LRB-_-LRB- i_FW -RRB-_-RRB- if_IN Korean_NNP also_RB has_VBZ the_DT Complex_JJ NP_NNP island_NN constraints_NNS and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- if_IN there_EX are_VBP ,_, why_WRB there_EX have_VBP been_VBN so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS ._.
+2_CD 2.1_CD Previous_JJ Studies_NNP Island_NNP Effects_NNPS in_IN Korean_JJ Since_IN Ross_NNP -LRB-_-LRB- 1967_CD -RRB-_-RRB- identified_VBD the_DT island_NN constraints_NNS in_IN English_NNP ,_, there_EX have_VBP been_VBN lots_NNS of_IN studies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN other_JJ languages_NNS ._.
+Those_DT studies_NNS primarily_RB focused_VBD on_IN examining_VBG if_IN the_DT island_NN constraints_NNS exist_VBP in_IN their_PRP$ languages_NNS and_CC why_WRB the_DT language_NN escaped_VBD the_DT island_NN constraints_NNS when_WRB the_DT language_NN did_VBD not_RB demonstrate_VB the_DT island_NN phenomena_NNS ._.
+Korean_JJ is_VBZ no_DT exception_NN ._.
+There_EX have_VBP been_VBN lots_NNS of_IN studies_NNS on_IN the_DT island_NN constraints_NNS in_IN Korean_JJ ._.
+Earlier_RBR studies_NNS were_VBD primarily_RB focused_VBN on_IN the_DT basic_JJ island_NN properties_NNS in_IN Korean_JJ ._.
+Choi_NNP -LRB-_-LRB- 1989_CD -RRB-_-RRB- tried_VBD to_TO explain_VB the_DT island_NN phenomena_NNS with_IN LF_SYM -_: movements_NNS ._.
+Song_NN -LRB-_-LRB- 1995_CD -RRB-_-RRB- investigated_VBD the_DT relationship_NN between_IN the_DT island_NN constraints_NNS and_CC wh-in-situ_JJ property_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, Lee_NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- studied_VBN negative_JJ islands_NNS in_IN Korean_JJ ._.
+There_EX are_VBP two_CD opposite_JJ positions_NNS in_IN the_DT previous_JJ approaches_NNS ._.
+Some_DT claimed_VBD that_IN Korean_JJ has_VBZ island_NN constraints_NNS -LRB-_-LRB- Lee_NNP 1982_CD ;_: Han_NNP 1992_CD ;_: Hong_NNP 2004_CD ;_: Park_NNP ,_, 2001_CD ,_, 2009_CD -RRB-_-RRB- ._.
+Hong_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- proposed_VBN 2_CD diagnostics_NNS for_IN syntactic_JJ movements_NNS :_: island_NN and_CC intervention_NN effects_NNS ._.
+The_DT study_NN mentioned_VBD that_IN Korean_JJ has_VBZ an_DT island_NN effects_NNS and_CC that_IN no_DT intervention_NN effects_NNS were_VBD observed_VBN in_IN the_DT wh-movements_NNS ._.
+Park_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- and_CC Park_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- examined_VBD sluicing_NN constructions_NNS in_IN Korean_JJ ._.
+Through_IN the_DT investigation_NN ,_, it_PRP was_VBD found_VBN that_IN matrix_NN sluicing_NN in_IN Korean_JJ was_VBD island-sensitive_JJ ._.
+The_DT study_NN argued_VBD that_IN the_DT island_NN sensitivity_NN arose_VBD because_IN the_DT wh-phrase_JJ did_VBD not_RB move_VB to_TO CP_NNP in_IN overt_JJ syntax_NN ._.
+Park_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- also_RB proposed_VBN accounts_NNS -LRB-_-LRB- 2_CD -RRB-_-RRB- for_IN the_DT contrast_NN between_IN matrix_NN sluicing_NN and_CC fragment_NN answers_NNS in_IN Korean_JJ with_IN respect_NN to_TO island_NN sensitivity_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, other_JJ scholars_NNS claimed_VBD that_IN car_NN ?_.
+there_EX is_VBZ no_DT island_NN effect_NN in_IN Korean_JJ -LRB-_-LRB- Sohn_NNP ,_, 1980_CD ;_: Kang_NNP ,_, 1986_CD ;_: Suh_NNP ,_, 1987_CD ;_: Hwang_NNP ,_, 2007_CD ;_: Chung_NNP ,_, 2005_CD ;_: Yoon_NNP ,_, 2011_CD ,_, 2012_CD ;_: Kim_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Chung_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- mentioned_VBD that_IN Korean_JJ ettehkey_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- did_VBD -LRB-_-LRB- 3_LS -RRB-_-RRB- not_RB show_VB island_NN effects_NNS ._.
+Given_VBN the_DT revised_VBN nominal_JJ analysis_NN ,_, the_DT scope_NN of_IN ettehkey_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- in_IN Korean_NNP had_VBD to_TO be_VB licensed_VBN via_IN binding_JJ ,_, since_IN there_EX was_VBD no_DT island_NN effect_NN ._.
+Yoon_NNP -LRB-_-LRB- 2011_CD ,_, 2012_CD -RRB-_-RRB- identified_VBN two_CD novel_JJ environments_NNS where_WRB wh_SYM -_: phrases_NNS showed_VBD no_DT island_NN effects_NNS :_: the_DT declarative_JJ intervention_NN context_NN and_CC the_DT embedded_VBN context_NN ._.
+Then_RB ,_, the_DT question_NN was_VBD why_WRB the_DT in-situ_NN wh_SYM -_: -LRB-_-LRB- 4_LS -RRB-_-RRB- phrases_NNS were_VBD not_RB identical_JJ to_TO the_DT standard_JJ wh_NN -_: phrases_NNS in_IN English_NNP ._.
+The_DT study_NN also_RB mentioned_VBD that_IN the_DT standard_JJ wh-island_JJ effects_NNS corresponded_VBD to_TO the_DT misinterpretation_NN judgment_NN and_CC argued_VBD for_IN it_PRP by_IN showing_VBG that_IN there_EX was_VBD a_DT strong_JJ correlation_NN between_IN the_DT wh-islands_NNS and_CC the_DT possibility_NN that_WDT wh-in-situ_JJ questions_NNS would_MD be_VB misinterpreted_VBN as_IN Yes/No-questions_NNS ._.
+Kim_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- investigated_VBD wh_SYM -_: islands_NNS in_IN the_DT relative_JJ clauses_NNS ._.
+The_DT study_NN claimed_VBD that_IN the_DT fact_NN that_IN Korean_JJ escaped_VBD the_DT island_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- constraint_NN can_MD be_VB explained_VBN by_IN a_DT semantico_NN -_: pragmatic_JJ constraint_NN ,_, which_WDT is_VBZ based_VBN on_IN the_DT notion_NN of_IN coherence_NN and_CC the_DT construction-specific_JJ factors_NNS that_WDT cause_VBP processing_VBG difficulty_NN ._.
+2.2_CD Experimental_JJ Approaches_NNS to_TO Islands_NNP Recently_RB ,_, as_IN computer_NN technology_NN and_CC statistics_NNS develop_VBP ,_, many_JJ researchers_NNS have_VBP had_VBN an_DT interest_NN in_IN measuring_VBG native_JJ speakers_NNS '_POS intuition_NN on_IN d_LS ._.
+What_WP do_VBP you_PRP wonder_VB whether_IN John_NNP bought_VBD ___CD ?_.
+Complex_JJ NP_NNP islands_NNS a._VBP Who_WP ___VBP claimed_VBN that_IN John_NNP bought_VBD a_DT car_NN ?_.
+b_NN ._.
+What_WP did_VBD you_PRP claim_VBP that_IN John_NNP bought_VBD ___CD ?_.
+c._FW Who_WP ___VBP made_VBN the_DT claim_NN that_IN John_NNP bought_VBD a_DT car_NN ?_.
+d_LS ._.
+What_WP did_VBD you_PRP make_VBP the_DT claim_NN that_IN John_NNP bought_VBD ___CD ?_.
+Subject_JJ islands_NNS a._VBP Who_WP ___VBP thinks_VBZ the_DT speech_NN interrupted_VBD the_DT TV_NN show_NN ?_.
+b_NN ._.
+What_WP do_VBP you_PRP think_VB ___NN interrupted_VBD the_DT TV_NN show_NN ?_.
+c._FW Who_WP ___VBP thinks_VBZ the_DT speech_NN about_IN global_JJ warming_NN interrupted_VBD the_DT TV_NN show_NN ?_.
+d_LS ._.
+What_WP do_VBP you_PRP think_VB the_DT speech_NN about_IN ___CD interrupted_VBD the_DT TV_NN show_NN ?_.
+Adjunct_NNP islands_NNS a._VBP Who_WP ___VBP thinks_VBZ that_IN John_NNP left_VBD his_PRP$ briefcase_NN at_IN the_DT office_NN ?_.
+b_NN ._.
+What_WP do_VBP you_PRP think_VBP that_IN John_NNP left_VBD ___CD at_IN the_DT office_NN ?_.
+c.Who_NNP ___NN laughs_VBZ if_IN John_NNP leaves_VBZ his_PRP$ briefcase_NN at_IN the_DT office_NN ?_.
+d_LS ._.
+What_WP do_VBP you_PRP laugh_NN if_IN John_NNP leaves_VBZ ___NN at_IN the_DT office_NN ?_.
+syntactic_JJ data_NNS objectively_RB and_CC scientifically_RB -LRB-_-LRB- Bard_NNP ,_, Robertson_NNP ,_, and_CC Sorace_NNP ,_, 1996_CD ;_: Schütze_NNP ,_, 1996_CD ;_: Cowart_NNP ,_, 1997_CD ;_: Keller_NNP ,_, 2000_CD -RRB-_-RRB- ._.
+This_DT research_NN method_NN was_VBD also_RB applied_VBN into_IN the_DT study_NN of_IN islands_NNS ,_, and_CC lots_NNS of_IN fruitful_JJ facts_NNS have_VBP been_VBN discovered_VBN through_IN experimental_JJ approaches_NNS ._.
+Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- adopted_VBD an_DT experimental_JJ approachandexaminednativespeakers_NNS '_POS intuition_NN ._.
+They_PRP employed_VBD 2_CD ×_CD 2_CD factor_NN combinations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- and_CC investigated_VBD four_CD types_NNS of_IN island_NN constraints_NNS using_VBG the_DT following_JJ sentences_NNS -LRB-_-LRB- Sprouse_NNP et_FW al._FW ,_, 2012:87_CD -8_CD -RRB-_-RRB- ._.
+Factor_NN Combinations_NNS a._IN NON-ISLAND_NNP |_CD MATRIX_NNP b._NN NON-ISLAND_NNP |_NNP EMBEDDED_NNP c._NN ISLAND_NNP |_CD MATRIX_NNP d._NN ISLAND_NNP |_NN EMBEDDED_NNP Whether_NNP islands_NNS a._VBP Who_WP ___VBP thinks_VBZ that_IN John_NNP bought_VBD a_DT car_NN ?_.
+b_NN ._.
+What_WP do_VBP you_PRP think_VBP that_IN John_NNP bought_VBD ___CD ?_.
+c._FW Who_WP ___NN wonders_NNS whether_IN John_NNP bought_VBD a_DT Along_IN with_IN these_DT target_NN sentences_NNS ,_, they_PRP examined_VBD the_DT intuition_NN of_IN 173_CD native_JJ speakers_NNS ._.
+Through_IN the_DT experiments_NNS ,_, they_PRP obtained_VBD the_DT following_JJ results_NNS -LRB-_-LRB- Sprouse_NNP et_FW al._FW 2012:100_CD -RRB-_-RRB- ._.
+Figure_NN 1_CD ._.
+Analysis_NN Results_NNS in_IN Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- These_DT analysis_NN results_NNS illustrated_VBN -LRB-_-LRB- i_FW -RRB-_-RRB- that_WDT native_JJ speakers_NNS showed_VBD more_RBR acceptability_NN for_IN non_NN -_: island_NN structures_NNS than_IN island_NN structures_NNS both_DT in_IN matrix_NN and_CC embedded_VBD causes_NNS and_CC -LRB-_-LRB- ii_FW -RRB-_-RRB- that_IN the_DT differences_NNS of_IN acceptability_NN became_VBD greater_JJR in_IN embedded_VBN clauses_NNS rather_RB than_IN matrix_NN clauses_NNS ._.
+These_DT observations_NNS demonstrated_VBD that_IN there_EX were_VBD clearly_RB island_NN effects_NNS in_IN English_NNP ._.
+Kim_NNP and_CC Goodall_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- employed_VBN a_DT similar_JJ method_NN in_IN their_PRP$ experiments_NNS and_CC examined_VBD the_DT island_NN constraints_NNS in_IN Korean_JJ ._.
+They_PRP designed_VBD four_CD experiment_NN sets_NNS to_TO test_VB the_DT existence_NN of_IN wh-island_JJ -LRB-_-LRB- whether_IN island_NN -RRB-_-RRB- and_CC adjunct_JJ island_NN effects_NNS in_IN Korean_JJ ._.
+Since_IN Korean_JJ is_VBZ a_DT wh-in-situ_JJ language_NN ,_, another_DT factor_NN -LRB-_-LRB- canonical_JJ order_NN vs._IN scrambled_VBN -RRB-_-RRB- was_VBD taken_VBN into_IN consideration_NN and_CC their_PRP$ experiments_NNS had_VBD a_DT 2_CD ×_NN 2_CD ×_CD 2_CD design_NN :_: Location_NNP of_IN wh-word_JJ -LRB-_-LRB- in_IN matrix_NN vs._IN embedded_VBN clause_NN -RRB-_-RRB- ,_, Embedded_VBN clause_NN type_NN -LRB-_-LRB- non-island_JJ vs._FW island_NN -RRB-_-RRB- and_CC Answer_NNP type_NN -LRB-_-LRB- appropriate_JJ for_IN direct_JJ wh-question_JJ vs._FW yes/no_FW question_NN -RRB-_-RRB- ._.
+They_PRP made_VBD use_NN of_IN question-answer_NN pairs_NNS along_IN with_IN appropriate_JJ contexts_NNS in_IN order_NN to_TO examine_VB native_JJ speakers_NNS '_POS intuition_NN ._.
+They_PRP made_VBD the_DT questions_NNS in_IN the_DT stimuli_NNS ambiguous_JJ so_IN that_IN wh_SYM -_: words_NNS might_MD be_VB interpreted_VBN either_RB as_IN wh-words_NNS or_CC as_IN existential_JJ ,_, as_IN in_IN Hong_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- ._.
+A_DT total_NN of_IN 48_CD native_JJ speakers_NNS participated_VBD in_IN the_DT experiments_NNS and_CC the_DT intuition_NN was_VBD measured_VBN with_IN a_DT 7-point_JJ Likert_NN scale_NN ._.
+The_DT following_JJ figures_NNS showed_VBD us_PRP the_DT analysis_NN results_NNS ._.
+Figure_NN 2_CD ._.
+Canonical_NNP Order_NNP in_IN Korean_JJ Figure_NN 3_CD ._.
+Scrambled_NNP Order_NNP in_IN Korean_JJ They_PRP found_VBD that_IN there_EX were_VBD a_DT significant_JJ interaction_NN between_IN Location_NNP -LRB-_-LRB- matrix_FW or_CC embedded_VBN clause_NN -RRB-_-RRB- and_CC Embedded_VBN clause_NN type_NN -LRB-_-LRB- non-island_JJ or_CC island_NN -RRB-_-RRB- in_IN Exp_NNP ._.
+1_CD and_CC Exp_NNP ._.
+3_CD ,_, but_CC that_IN there_EX was_VBD no_DT such_JJ interaction_NN in_IN Exp_NNP ._.
+2_CD and_CC Exp_NNP ._.
+4_LS ._.
+This_DT implies_VBZ that_IN there_EX is_VBZ an_DT island_NN effect_NN with_IN wh-clauses_NNS -LRB-_-LRB- Exp_NNP ._.
+1_CD and_CC Exp_NNP ._.
+3_LS -RRB-_-RRB- but_CC that_IN no_DT island_NN effect_NN exists_VBZ with_IN adjunct_JJ clauses_NNS -LRB-_-LRB- Exp_NNP ._.
+2_CD and_CC Exp_NNP ._.
+4_LS -RRB-_-RRB- ._.
+Along_IN with_IN these_DT results_NNS ,_, they_PRP obtained_VBD another_DT interesting_JJ observation_NN ._.
+For_IN the_DT ambiguous_JJ questions_NNS contained_VBN in_IN the_DT question_NN -_: answer_NN pairs_NNS ,_, they_PRP observed_VBD that_IN one_CD reading_NN or_CC the_DT other_JJ was_VBD encouraged_VBN ._.
+Furthermore_RB ,_, they_PRP found_VBD that_IN the_DT presence_NN or_CC absence_NN of_IN an_DT appropriate_JJ context_NN made_VBD the_DT wh-reading_JJ pragmatically_RB plausible_JJ or_CC implausible_JJ ,_, even_RB in_IN the_DT cases_NNS where_WRB an_DT island_NN constraint_NN was_VBD violated_VBN ._.
+3_CD ResearchMethod_NNP 3.1_CD Research_NNP Question_NNP and_CC Hypothesis_NNP Among_IN the_DT island_NN constraints_NNS proposed_VBN in_IN Ross_NNP -LRB-_-LRB- 1967_CD -RRB-_-RRB- ,_, this_DT paper_NN tried_VBD to_TO investigate_VB the_DT Complex_JJ NP_NNP island_NN constraint_NN in_IN Korean_JJ ._.
+Our_PRP$ research_NN questions_NNS are_VBP as_IN follows_VBZ ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- Research_NN Questions_NNS a._VBP Is_VBZ there_EX a_DT Complex_JJ NP_NNP island_NN effect_NN in_IN Korean_JJ ?_.
+b_NN ._.
+If_IN there_EX is_VBZ an_DT island_NN effect_NN ,_, why_WRB are_VBP there_RB so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN effects_NNS ?_.
+For_IN these_DT questions_NNS ,_, we_PRP made_VBD the_DT following_VBG hypotheses_NNS ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- Hypothesis_NNPS a_DT ._.
+If_IN there_EX is_VBZ no_DT Complex_JJ NP_NNP island_NN effect_NN in_IN Korean_JJ ,_, the_DT acceptability_NN scores_NNS of_IN all_PDT the_DT types_NNS in_IN the_DT target_NN sentences_NNS will_MD not_RB be_VB distinguishable_JJ from_IN one_CD another_DT ._.
+b_NN ._.
+If_IN there_EX is_VBZ a_DT Complex_JJ NP_NNP island_NN effect_NN in_IN Korean_JJ ,_, the_DT acceptability_NN scores_NNS of_IN all_PDT the_DT types_NNS in_IN the_DT target_NN sentences_NNS may_MD be_VB distinguishable_JJ from_IN one_CD another_DT or_CC the_DT patterns_NNS that_IN the_DT Korean_JJ data_NNS illustrated_VBD may_MD be_VB different_JJ from_IN English_NNP Complex_JJ NP_NNP islands_NNS ._.
+To_TO examine_VB these_DT hypotheses_NNS ,_, an_DT experiment_NN was_VBD designed_VBN as_IN follows_VBZ ._.
+3.2_CD Materials_NNPS In_IN order_NN to_TO closely_RB examine_VB the_DT island_NN constraints_NNS in_IN Korean_JJ ,_, the_DT first_JJ thing_NN to_TO be_VB done_VBN was_VBD to_TO make_VB target_NN sentences_NNS ._.
+This_DT paper_NN basically_RB followed_VBD the_DT factor_NN combinations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- à_FW la_FW Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, but_CC another_DT factor_NN Scrambling_VBG was_VBD also_RB taken_VBN into_IN consideration_NN as_IN in_IN Kim_NNP and_CC Goodall_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, the_DT following_VBG three_CD factors_NNS were_VBD employed_VBN in_IN the_DT experiment_NN :_: Island_NNP constraint_NN -LRB-_-LRB- Absence_NNP vs._FW Presence_NNP -RRB-_-RRB- ,_, Location_NNP of_IN wh-word_JJ -LRB-_-LRB- Matrix_NNP clause_NN vs._IN Embedded_VBN clause_NN -RRB-_-RRB- ,_, and_CC Scrambling_NNP -LRB-_-LRB- Canonical_NNP vs._FW Scrambled_VBN -RRB-_-RRB- ._.
+Since_IN three_CD factors_NNS were_VBD adopted_VBN and_CC each_DT factor_NN had_VBD two_CD values_NNS ,_, the_DT experiment_NN had_VBD a_DT 2_CD ×_NN 2_CD ×_CD 2_CD design_NN ._.
+First_NNP of_IN all_DT ,_, basic_JJ target_NN sentences_NNS were_VBD made_VBN with_IN the_DT sentences_NNS in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC the_DT sentences_NNS in_IN Pearl_NNP and_CC Sprouse_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+The_DT following_JJ sentences_NNS are_VBP basic_JJ target_NN sentences_NNS for_IN Complex_JJ NP_NNP constraints_NNS in_IN Korean_JJ .1_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- a._SYM Nwu-ka_FW Younghee-ka_FW mok.keli-lul_FW Who.NOM_NNP Younghee.NOM_NNP necklace.ACC_NNP ilhepeli-ess-ta-ko_JJ cwucangha-ni_NNS ?_.
+lose.PAST.DECL.COMP_NNP claim.Q_NNP c.Nwu-ka_NNP Younghee-ka_NNP mok.keli-lul_NNP Who.NOM_NNP Younghee.NOM_NNP necklace.ACC_NNP ilhepeli-ess-ta-ko_NN cwucang-ul_NN lose.PAST.DECL.COMP_NNP claim_NN ._. ._.
+ACC_NNP ha-yss-ni_NNS ?_.
+do.PAST.Q_NNP `_`` Who_WP made_VBD a_DT claim_NN that_IN Younghee_NNP lost_VBD the_DT `_`` Who_WP claimed_VBD that_IN Younghee_NNP lost_VBD the_DT necklace_NN ?_. '_''
+b._IN Chelsoo-nun_JJ Younghee-ka_JJ mues-lul_JJ Chelsoo.TOP_NNP Younghee.NOM_NNP what.ACC_NNP ilhepeli-ess-ta-ko_NN /_NN nun_NN cwucangha-ni_NNS ?_.
+lose.PAST.DECL.COMP_NNP claim.Q_NNP `_`` What_WP did_VBD Chelsoo_NNP claim_NN that_WDT Younghee_NNP lost_VBD ?_. '_''
+necklace_NN ?_. '_''
+d._IN Chelsoo-nun_JJ Chelsoo.TOP_NNP what.ACC_NNP ilhepeli-ess-ta-ko_NN lose.PAST.DECL.COMP_NNP claim_NN ._. ._.
+ACC_NNP ha-yss-ni_NNS ?_.
+do.PAST.Q_NNP `_`` What_WP did_VBD Chelsoo_NNP made_VBD a_DT claim_NN that_IN Younghee_NNP lost_VBD ?_. '_''
+Younghee-ka_JJ mues-lul_JJ Younghee.NOM_NNP These_DT corresponding_JJ sentences_NNS in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, and_CC they_PRP contained_VBD the_DT factor_NN combinations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+Four_CD sentences_NNS in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- have_VBP a_DT canonical_JJ order_NN ,_, and_CC the_DT sentences_NNS with_IN scrambled_VBD orders_NNS were_VBD constructed_VBN by_IN interchanging_VBG the_DT subject_NN and_CC object_NN of_IN these_DT basic_JJ target_NN sentences_NNS ._.
+2_CD Along_IN with_IN these_DT target_NN sentences_NNS ,_, the_DT double_JJ number_NN of_IN filler_NN sentences_NNS were_VBD made_VBN ._.
+The_DT half_NN of_IN the_DT filler_NN sentences_NNS -LRB-_-LRB- 8_CD sentences_NNS -RRB-_-RRB- were_VBD constructed_VBN based_VBN on_IN the_DT structure_NN of_IN the_DT target_NN items_NNS ._.
+However_RB ,_, they_PRP was_VBD not_RB related_VBN with_IN the_DT Complex_JJ NP_NNP island_NN constraints_NNS ._.
+The_DT others_NNS of_IN the_DT filler_NN sentences_NNS -LRB-_-LRB- 8_CD sentences_NNS -RRB-_-RRB- were_VBD composed_VBN of_IN the_DT sentences_NNS that_WDT had_VBD no_DT relation_NN with_IN the_DT purpose_NN of_IN the_DT experiment_NN ._.
+Among_IN them_PRP ,_, 4_CD sentences_NNS were_VBD grammatical_JJ one_CD and_CC the_DT others_NNS were_VBD ungrammatical_JJ one_CD ._.
+After_IN all_PDT the_DT target_NN and_CC filler_NN sentences_NNS were_VBD constructed_VBN ,_, a_DT random_JJ numbers_NNS were_VBD generated_VBN with_IN the_DT R_NN function_NN -LRB-_-LRB- from_IN 1_CD to_TO 24_CD ;_: 8_CD target_NN sentences_NNS and_CC 16_CD fillers_NNS -RRB-_-RRB- ,_, and_CC each_DT sentence_NN was_VBD given_VBN the_DT generated_VBN random_JJ numbers_NNS ._.
+Then_RB ,_, the_DT sentences_NNS were_VBD given_VBN to_TO the_DT participants_NNS after_IN the_DT sentences_NNS were_VBD sorted_VBN based_VBN on_IN the_DT random_JJ number_NN ._.
+2_CD A_DT reviewer_NN pointed_VBD out_RP that_IN the_DT sentences_NNS in_IN -LRB-_-LRB- 7c_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 7d_CD -RRB-_-RRB- must_MD contain_VB ilhepeli-ess-ta-nun_NN ,_, not_RB ilhepeli-ess_JJ -_: ta-ko_NN ._.
+In_IN fact_NN ,_, this_DT verb_NN form_NN was_VBD also_RB included_VBN in_IN the_DT data_NNS sets_NNS ,_, since_IN it_PRP is_VBZ desirable_JJ to_TO avoid_VB the_DT lexicalization_NN effects_NNS ._.
+However_RB ,_, the_DT differences_NNS between_IN the_DT sentences_NNS with_IN ilhepeli-ess-ta-nun_NN and_CC those_DT with_IN ilhepeli-ess-ta-ko_NN were_VBD not_RB statistically_RB significant_JJ ._.
+In_IN addition_NN ,_, these_DT two_CD types_NNS of_IN sentences_NNS demonstrated_VBD the_DT same_JJ pattern_NN in_IN Figure_NN 4_CD ._.
+four_CD sentences_NNS match_VBP with_IN the_DT cwucang-ul_NN 1_CD In_IN fact_NN ,_, the_DT basic_JJ target_NN sentences_NNS in_IN the_DT experiment_NN were_VBD constructed_VBN primarily_RB based_VBN on_IN Pearl_NNP and_CC Sprouse_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- and_CC Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, rather_RB than_IN based_VBN on_IN the_DT sentences_NNS in_IN Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, since_IN the_DT Korean_JJ translations_NNS of_IN the_DT sentences_NNS in_IN these_DT studies_NNS were_VBD more_RBR natural_JJ ._.
+3.3_CD Procedure_NNP The_NNP data_NNS for_IN a_DT total_NN of_IN 50_CD native_JJ speakers_NNS were_VBD collected_VBN from_IN the_DT experiment_NN ._.
+All_PDT the_DT participants_NNS -LRB-_-LRB- ages_NNS ranging_VBG between_IN 19_CD and_CC 27_CD -RRB-_-RRB- resided_VBD in_IN and_CC around_IN Daejeon_NNP area_NN ,_, South_NNP Korea_NNP ._.
+They_PRP were_VBD either_RB current_JJ university_NN students_NNS or_CC graduates_NNS of_IN universities_NNS in_IN Korea_NNP ._.
+All_PDT the_DT participants_NNS were_VBD first_JJ asked_VBD to_TO fill_VB out_RP a_DT simple_JJ one-page_JJ survey_NN that_WDT contains_VBZ biographical_JJ information_NN such_JJ as_IN age_NN ,_, gender_NN ,_, and_CC dialect_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ,_, together_RB with_IN the_DT consent_NN form_NN for_IN participating_VBG in_IN the_DT experiment_NN ._.
+Then_RB they_PRP were_VBD asked_VBN to_TO proceed_VB to_TO take_VB the_DT main_JJ task_NN ._.
+The_DT main_JJ task_NN used_VBN in_IN the_DT experiment_NN was_VBD an_DT acceptability_NN judgment_NN task_NN using_VBG Magnitude_NNP Estimation_NNP -LRB-_-LRB- ME_NNP ;_: Lodge_NNP ,_, 1981_CD ;_: Johnson_NNP ,_, 2008_CD -RRB-_-RRB- ,_, not_RB the_DT Likert_NNP scale_NN as_IN in_IN Kim_NNP and_CC Goodall_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+There_EX are_VBP several_JJ reasons_NNS why_WRB this_DT paper_NN took_VBD an_DT ME_NNP in_IN the_DT acceptability_NN judgment_NN task_NN ,_, rather_RB than_IN the_DT Likert_NNP scale_NN .3_CD First_NNP ,_, the_DT Likert_NNP scale_NN has_VBZ limited_VBN resolution_NN ._.
+For_IN example_NN ,_, if_IN native_JJ speakers_NNS may_MD feel_VB that_IN a_DT sentence_NN is_VBZ somewhere_RB between_IN 4_CD and_CC 5_CD -LRB-_-LRB- something_NN like_IN 4.5_CD -RRB-_-RRB- ,_, gradient_NN ratings_NNS are_VBP not_RB available_JJ in_IN the_DT latter_JJ method_NN ._.
+However_RB ,_, the_DT former_JJ permits_NNS as_RB much_JJ resolution_NN as_IN the_DT raters_NNS wish_VBP to_TO employ_VB ._.
+Second_NNP ,_, the_DT latter_JJ method_NN uses_VBZ an_DT ordinal_JJ scale_NN ,_, and_CC there_EX is_VBZ no_DT guarantee_NN that_IN the_DT interval_NN between_IN *_SYM and_CC **_SYM represent_VBP the_DT same_JJ difference_NN of_IN impressions_NNS as_IN that_DT between_IN ?_.
+and_CC ??_NN ._.
+The_DT former_JJ method_NN ,_, on_IN the_DT other_JJ hand_NN ,_, provides_VBZ judgments_NNS on_IN an_DT interval_NN scale_NN for_IN which_WDT averages_NNS -LRB-_-LRB- mean_JJ value_NN ,_, m_NN -RRB-_-RRB- and_CC standard_JJ deviations_NNS -LRB-_-LRB- sd_NN -RRB-_-RRB- can_MD be_VB more_RBR legitimately_RB used_VBN ._.
+Third_NNP ,_, the_DT latter_JJ limits_NNS our_PRP$ ability_NN to_TO compare_VB results_NNS across_IN the_DT experiments_NNS ._.
+The_DT range_NN of_IN acceptability_NN for_IN a_DT set_NN of_IN sentences_NNS has_VBZ to_TO be_VB fitted_VBN to_TO the_DT scale_NN ,_, and_CC what_WP counts_VBZ as_RB ??_NN for_IN one_CD set_NN of_IN sentences_NNS may_MD be_VB quite_RB different_JJ from_IN what_WP counts_VBZ as_RB ??_NN for_IN another_DT set_NN of_IN sentences_NNS ._.
+There_EX are_VBP two_CD types_NNS of_IN ME_NNP methods_NNS :_: numerical_JJ estimates_NNS and_CC line_NN drawing_NN ._.
+However_RB ,_, as_IN Bard_NNP et_FW al._FW -LRB-_-LRB- 1996_CD -RRB-_-RRB- pointed_VBD out_RP ,_, the_DT participants_NNS sometimes_RB think_VBP of_IN numeric_JJ estimates_NNS as_IN something_NN like_IN academic_JJ test_NN scores_NNS ,_, and_CC so_IN they_PRP 3_CD Lee_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- contained_VBD a_DT detailed_JJ discussion_NN on_IN the_DT differences_NNS between_IN ME_NNP and_CC Likert_NNP scales_NNS in_IN the_DT acceptability_NN judgment_NN task_NN -LRB-_-LRB- intuition_NN tests_NNS -RRB-_-RRB- ._.
+Lodge_NNP -LRB-_-LRB- 1981_CD -RRB-_-RRB- mentioned_VBD that_IN this_DT ME_NNP had_VBD several_JJ advantages_NNS over_IN the_DT category_NN scaling_NN -LRB-_-LRB- the_DT Likert_NNP scale_NN -RRB-_-RRB- ._.
+Although_IN there_EX are_VBP some_DT claims_NNS that_IN the_DT Likert_NNP scales_NNS are_VBP available_JJ in_IN the_DT acceptability_NN judgment_NN task_NN ,_, this_DT paper_NN follows_VBZ previous_JJ studies_NNS -LRB-_-LRB- Lodge_NNP ,_, 1981_CD ;_: Johnson_NNP ,_, 2008_CD -RRB-_-RRB- and_CC adopted_VBN ME_NNP in_IN the_DT experiment_NN ._.
+limit_VB their_PRP$ responses_NNS to_TO a_DT somewhat_RB categorical_JJ scale_NN -LRB-_-LRB- e.g._FW 70_CD ,_, 80_CD ,_, 90_CD ,_, 100_CD -RRB-_-RRB- ,_, rather_RB than_IN using_VBG a_DT ratio_NN scale_NN as_IN intended_VBN in_IN the_DT magnitude_NN estimation_NN ._.
+Accordingly_RB ,_, the_DT current_JJ study_NN adopted_VBD a_DT line_NN drawing_VBG method_NN in_IN which_WDT the_DT participants_NNS were_VBD asked_VBN to_TO draw_VB different_JJ lengths_NNS of_IN lines_NNS to_TO indicate_VB the_DT naturalness_NN -LRB-_-LRB- acceptability_NN -RRB-_-RRB- of_IN a_DT given_VBN sentence_NN -LRB-_-LRB- after_IN reading_VBG the_DT sentence_NN -RRB-_-RRB- ._.
+An_DT acceptability_NN judgment_NN task_NN -LRB-_-LRB- also_RB known_VBN as_IN native_JJ speakers_NNS '_POS intuition_NN test_NN -RRB-_-RRB- was_VBD used_VBN in_IN the_DT study_NN since_IN this_DT method_NN is_VBZ known_VBN to_TO be_VB a_DT psychological_JJ experiment_NN which_WDT can_MD be_VB used_VBN to_TO get_VB the_DT subconscious_NN knowledge_NN of_IN native_JJ speakers_NNS in_IN a_DT given_VBN language_NN -LRB-_-LRB- Carnie_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN the_DT main_JJ task_NN ,_, participants_NNS were_VBD required_VBN to_TO draw_VB a_DT line_NN for_IN each_DT sentence_NN ,_, according_VBG to_TO the_DT degree_NN of_IN acceptability/naturalness_NN of_IN the_DT given_VBN sentence_NN ._.
+4_CD 4.1_CD Statistical_NNP Analysis_NNP Normality_NNP Tests_NNP and_CC Regression_NNP After_IN all_PDT the_DT data_NNS were_VBD collected_VBN from_IN acceptability_NN judgment_NN tasks_NNS ,_, the_DT values_NNS were_VBD extracted_VBN for_IN target_NN sentences_NNS by_IN measuring_VBG the_DT length_NN of_IN lines_NNS ._.
+Then_RB ,_, the_DT normality_NN tests_NNS -LRB-_-LRB- Baayen_NNP ,_, 2008_CD ;_: Gries_NNP ,_, 2013_CD -RRB-_-RRB- were_VBD performed_VBN to_TO check_VB whether_IN parametric_NN tests_NNS were_VBD available_JJ or_CC not_RB ._.
+If_IN the_DT distributions_NNS of_IN the_DT data_NNS follow_VBP the_DT normal_JJ distribution_NN ,_, the_DT parametric_NN tests_NNS are_VBP available_JJ ,_, such_JJ as_IN t-tests_NNS ,_, ANOVAs_NNS ,_, or_CC -LRB-_-LRB- ordinary_JJ -RRB-_-RRB- linear_JJ regression_NN tests_NNS ._.
+However_RB ,_, if_IN the_DT distributions_NNS do_VBP not_RB follow_VB the_DT normal_JJ distribution_NN ,_, the_DT non_NN -_: parametric_NN tests_NNS must_MD be_VB applied_VBN such_JJ as_IN Wilcoxon_NNP tests_NNS ,_, Friedman_NNP tests_NNS ,_, or_CC generalized_VBN linear_JJ regression_NN tests_NNS ._.
+When_WRB the_DT normality_NN tests_NNS were_VBD performed_VBN ,_, it_PRP was_VBD found_VBN that_IN all_PDT the_DT data_NNS sets_NNS did_VBD not_RB follow_VB the_DT normal_JJ distribution_NN ._.
+Some_DT were_VBD positively_RB skewed_VBN ,_, and_CC others_NNS showed_VBD a_DT slightly_RB bimodal_JJ distribution_NN ._.
+Accordingly_RB ,_, non-parametric_JJ tests_NNS had_VBD to_TO be_VB applied_VBN in_IN the_DT analysis_NN of_IN our_PRP$ data_NNS ._.
+After_IN the_DT normality_NN tests_NNS ,_, the_DT collected_VBN data_NNS were_VBD descriptively_RB analyzed_VBN ._.
+Then_RB ,_, in_IN order_NN to_TO closely_RB examine_VB how_WRB each_DT factor_NN affects_VBZ the_DT acceptability_NN of_IN the_DT target_NN sentences_NNS ,_, a_DT -LRB-_-LRB- generalized_VBN -RRB-_-RRB- regression_NN test_NN was_VBD performed_VBN ._.
+According_VBG to_TO Agresti_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, a_DT generalized_VBN regression_NN test_NN is_VBZ available_JJ when_WRB the_DT distribution_NN does_VBZ not_RB follow_VB the_DT normal_JJ distribution_NN ._.
+Thus_RB ,_, the_DT test_NN was_VBD adopted_VBN to_TO examine_VB how_WRB each_DT factor_NN affects_VBZ the_DT acceptability_NN of_IN the_DT sentences_NNS ._.
+After_IN we_PRP performed_VBD a_DT regression_NN analysis_NN ,_, it_PRP is_VBZ necessary_JJ to_TO choose_VB the_DT most_RBS appropriate_JJ model_NN among_IN the_DT several_JJ possible_JJ models_NNS ._.
+According_VBG to_TO Gries_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, there_EX are_VBP two_CD types_NNS of_IN model_NN selection_NN parameters_NNS ._.
+One_CD is_VBZ based_VBN on_IN the_DT direction_NN of_IN the_DT analysis_NN and_CC the_DT other_JJ is_VBZ the_DT criterion_NN determining_VBG whether_IN or_CC not_RB a_DT predictor_NN gets_VBZ to_TO be_VB in_IN the_DT model_NN ._.
+On_IN the_DT direction_NN of_IN the_DT analysis_NN ,_, most_JJS analyses_NNS have_VBP adopted_VBN a_DT backward_RB selection_NN ,_, and_CC this_DT paper_NN also_RB took_VBD this_DT method_NN ._.
+There_EX are_VBP two_CD types_NNS of_IN approaches_NNS to_TO the_DT selection_NN of_IN relevant_JJ models_NNS :_: significance-based_JJ approaches_NNS and_CC criterion-based_JJ approaches_NNS ._.
+This_DT paper_NN took_VBD a_DT significance-based_JJ approach_NN ._.
+That_DT is_VBZ ,_, the_DT analysis_NN would_MD start_VB from_IN the_DT maximally_RB saturated_VBN model_NN ,_, and_CC continued_VBD to_TO remove_VB predictors_NNS -LRB-_-LRB- backward_RB -RRB-_-RRB- until_IN the_DT analysis_NN reached_VBD the_DT significant_JJ differences_NNS in_IN the_DT p-value_JJ -LRB-_-LRB- significant-based_JJ -RRB-_-RRB- ._.
+4.2_CD Descriptive_JJ Statistics_NNPS 4.3_CD InferentialStatistics_NNPS Since_IN it_PRP is_VBZ difficult_JJ to_TO visually_RB examine_VB how_WRB the_DT three_CD factors_NNS play_VBP a_DT role_NN in_IN the_DT Complex_JJ NP_NNP islands_NNS in_IN Korean_JJ data_NNS ,_, a_DT -LRB-_-LRB- generalized_VBN -RRB-_-RRB- linear_JJ regression_NN test_NN was_VBD performed_VBN ._.
+4_CD This_DT method_NN was_VBD taken_VBN ,_, since_IN the_DT data_NN set_NN did_VBD not_RB follow_VB the_DT normal_JJ distribution_NN ._.
+The_DT following_VBG table_NN illustrates_VBZ the_DT analysis_NN results_NNS ._.
+Here_RB ,_, the_DT following_VBG abbreviations_NNS were_VBD used_VBN :_: I_PRP for_IN Island_NNP constraint_NN -LRB-_-LRB- Absence_NNP vs._FW Presence_NNP -RRB-_-RRB- ,_, C_NNP -LRB-_-LRB- Clause_NN Type_NN -RRB-_-RRB- for_IN the_DT location_NN of_IN wh-word_JJ -LRB-_-LRB- Matrix_NNP clause_NN vs._IN Embedded_VBN clause_NN -RRB-_-RRB- ,_, and_CC S_NNP for_IN Scrambling_NNP -LRB-_-LRB- Canonical_NNP vs._FW Scrambled_VBN -RRB-_-RRB- ._.
+Estimate_NNP sd_NN t_NN p_NN -LRB-_-LRB- Intercept_NNP -RRB-_-RRB- 114.638_CD 1.236_CD 92.751_CD <<_NN <_CD .001_CD I_PRP 0.988_CD 1.236_CD 0.799_CD .425_CD C_NNP -10.858_CD 1.236_CD -8.785_CD <<_NN <_CD .001_CD S_NNP 6.288_CD 1.236_CD 5.087_CD <<_NN <_CD .001_CD I_PRP :_: C_NNP 3.043_CD 1.236_CD 2.462_CD .014_CD I_PRP :_: S_NNP -0.413_CD 1.236_CD -0.334_CD .739_CD C_NNP :_: S_NNP 6.003_CD 1.236_CD 4.856_CD <<_NN <_CD .001_CD I_PRP :_: C_NNP :_: S_NNP -0.428_CD 1.236_CD -0.346_CD .730_CD Before_IN a_DT regression_NN test_NN was_VBD conducted_VBN ,_, a_DT basic_JJ descriptive_JJ analysis_NN was_VBD performed_VBN to_TO the_DT data_NNS ._.
+Although_IN all_PDT the_DT data_NNS sets_NNS did_VBD not_RB follow_VB the_DT normal_JJ distribution_NN ,_, since_IN the_DT p-values_NNS of_IN the_DT tests_NNS were_VBD marginal_JJ ,_, the_DT mean_JJ values_NNS and_CC their_PRP$ 95_CD %_NN Table_NNP 1_CD ._.
+Regression_NNP Analysis_NNP Results_NNS of_IN the_DT Data_NNP confidence_NN intervals_NNS -LRB-_-LRB- CIs_NNS -RRB-_-RRB- were_VBD adopted_VBN in_IN the_DT descriptive_JJ analysis_NN ._.
+The_DT following_JJ figures_NNS show_VBP us_PRP the_DT overall_JJ tendency_NN of_IN the_DT data_NNS ._.
+As_IN observed_VBN in_IN this_DT table_NN ,_, both_DT factors_NNS C_NNP and_CC S_NNP were_VBD highly_RB significant_JJ -LRB-_-LRB- p_SYM <_SYM .001_CD -RRB-_-RRB- ,_, but_CC the_DT factor_NN I_PRP was_VBD not_RB significant_JJ -LRB-_-LRB- p_JJ =_SYM .425_CD -RRB-_-RRB- ._.
+There_EX were_VBD interactions_NNS between_IN the_DT factors_NNS ._.
+The_DT factor_NN C_NNP has_VBZ a_DT strong_JJ interaction_NN with_IN the_DT factor_NN S_NNP -LRB-_-LRB- p_SYM <_SYM .001_CD -RRB-_-RRB- ,_, but_CC a_DT weak_JJ but_CC significant_JJ interaction_NN with_IN the_DT factor_NN I_PRP -LRB-_-LRB- p_JJ =_SYM .014_CD -RRB-_-RRB- ._.
+All_PDT the_DT other_JJ interactions_NNS -LRB-_-LRB- I_PRP :_: S_NNP and_CC I_PRP :_: C_NNP :_: S_NNP -RRB-_-RRB- were_VBD statistically_RB insignificant_JJ -LRB-_-LRB- p_SYM >_SYM .05_CD -RRB-_-RRB- ._.
+These_DT results_NNS implied_VBD that_IN the_DT factor_NN I_PRP -LRB-_-LRB- the_DT absence_NN vs._FW presence_NN of_IN Complex_JJ NP_NNP island_NN constraint_NN in_IN Korean_JJ -RRB-_-RRB- did_VBD not_RB play_VB a_DT role_NN by_IN itself_PRP ,_, but_CC played_VBD a_DT marginal_JJ role_NN through_IN the_DT interaction_NN with_IN the_DT factor_NN C_NNP ._.
+The_DT factor_NN I_PRP did_VBD not_RB play_VB a_DT role_NN in_IN the_DT other_JJ interactions_NNS -LRB-_-LRB- I_PRP :_: S_NNP and_CC I_PRP :_: C_NNP :_: S_NNP -RRB-_-RRB- ._.
+4.4_CD Analysis_NN with_IN Effect_NN Plots_NNS Since_IN a_DT -LRB-_-LRB- generalized_VBN -RRB-_-RRB- linear_JJ regression_NN test_NN was_VBD performed_VBN ,_, let_VB 's_POS examine_VB how_WRB three_CD factors_NNS and_CC their_PRP$ interactions_NNS influenced_VBD the_DT acceptability_NN of_IN the_DT sentences_NNS ._.
+Figure_NN 5_CD illustrates_VBZ the_DT effect_NN plots_NNS for_IN each_DT factor_NN ._.
+4_CD Someone_NN might_MD ask_VB why_WRB a_DT -LRB-_-LRB- generalized_VBN -RRB-_-RRB- mixed_JJ effect_NN model_NN was_VBD not_RB used_VBN here_RB ,_, as_IN in_IN Sprouse_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+It_PRP may_MD be_VB possible_JJ to_TO use_VB the_DT model_NN ._.
+However_RB ,_, in_IN our_PRP$ experiment_NN ,_, the_DT only_JJ random_JJ factor_NN was_VBD speaker_NN variations_NNS ._.
+Though_IN speaker_NN variation_NN is_VBZ also_RB an_DT important_JJ factor_NN ,_, a_DT generalized_VBN -LRB-_-LRB- fixed_VBN -RRB-_-RRB- linear_JJ regression_NN model_NN was_VBD applied_VBN here_RB to_TO make_VB the_DT statistical_JJ process_NN simple_NN ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Canonical_JJ -LRB-_-LRB- b_NN -RRB-_-RRB- Scrambled_VBD Figure_NN 4_CD ._.
+Descriptive_JJ Analysis_NN of_IN the_DT Data_NNP As_IN you_PRP can_MD observe_VB in_IN these_DT plots_NNS ,_, two_CD lines_NNS in_IN the_DT plots_NNS are_VBP crossed_VBN ._.
+This_DT tendency_NN is_VBZ similar_JJ to_TO that_DT of_IN Exp_NNP ._.
+2_CD -LRB-_-LRB- Figure_NN -RRB-_-RRB- in_IN Kim_NNP and_CC Goodall_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, but_CC it_PRP is_VBZ different_JJ from_IN the_DT Complex_JJ NP_NNP constraints_NNS in_IN English_NNP -LRB-_-LRB- Figure_NNP 1_CD -RRB-_-RRB- ._.
+Note_VB that_IN the_DT 95_CD %_NN CIs_NNS of_IN all_DT of_IN the_DT four_CD pairs_NNS overlap_VBP ._.
+This_DT demonstrates_VBZ that_IN two_CD data_NNS sets_NNS are_VBP not_RB statistically_RB distinguished_JJ ,_, which_WDT implies_VBZ that_IN there_EX is_VBZ no_DT -LRB-_-LRB- Complex_JJ NP_NNP -RRB-_-RRB- island_NN effect_NN in_IN Korean_JJ ._.
+Also_RB note_NN that_IN the_DT scores_NNS for_IN matrix_NN clause_NN in_IN the_DT Scrambled_JJ sentences_NNS are_VBP higher_JJR than_IN the_DT values_NNS for_IN the_DT embedded_VBN sentences_NNS ._.
+This_DT implies_VBZ that_IN the_DT matrix_NN vs._IN embedded_VBN distinctions_NNS play_VBP an_DT important_JJ role_NN also_RB in_IN Korean_JJ ._.
+As_IN observed_VBN in_IN these_DT figures_NNS ,_, the_DT 95_CD %_NN CIs_NNS overlaps_VBZ in_IN the_DT factor_NN Island_NNP ,_, while_IN two_CD groups_NNS are_VBP clearly_RB distinguished_VBN in_IN the_DT other_JJ factors_NNS Clause_NN Type_NN and_CC Scrambling_VBG ._.
+This_DT implies_VBZ that_IN the_DT factor_NN Island_NNP by_IN itself_PRP is_VBZ insignificant_JJ in_IN the_DT Korean_JJ data_NN -LRB-_-LRB- p_FW =_SYM .425_CD -RRB-_-RRB- ,_, while_IN the_DT other_JJ factors_NNS Clause_NN Type_NN and_CC Scrambling_VBG are_VBP statistically_RB significant_JJ in_IN Korean_JJ -LRB-_-LRB- p_SYM <_SYM .001_CD in_IN both_DT factors_NNS -RRB-_-RRB- ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Island_NNP -LRB-_-LRB- c_NN -RRB-_-RRB- Scrambling_VBG -LRB-_-LRB- b_NN -RRB-_-RRB- Clause_NN Type_NNP Figure_NNP 7_CD ._.
+Effect_NN Plot_NN for_IN Island_NNP :_: Scrambling_VBG As_IN observed_VBN in_IN these_DT plots_NNS ,_, two_CD lines_NNS are_VBP nearly_RB parallel_JJ ._.
+This_DT implies_VBZ that_IN there_EX is_VBZ no_DT interaction_NN between_IN two_CD factors_NNS -LRB-_-LRB- p_FW =_SYM .739_CD -RRB-_-RRB- ._.
+The_DT following_JJ plot_NN shows_VBZ us_PRP the_DT interactions_NNS between_IN the_DT factor_NN Clause_NN Type_NN and_CC the_DT factor_NN Scrambling_VBG ._.
+Figure_NN 8_CD ._.
+Effect_NN Plot_NN for_IN Clause_NN Type_NN :_: Scrambling_VBG As_IN observed_VBN in_IN these_DT plots_NNS ,_, two_CD lines_NNS are_VBP not_RB parallel_VB ._.
+Furthermore_RB ,_, the_DT slopes_NNS of_IN two_CD lines_NNS are_VBP clearly_RB different_JJ ._.
+This_DT implies_VBZ that_IN there_EX is_VBZ a_DT strong_JJ interaction_NN between_IN two_CD factors_NNS -LRB-_-LRB- p_SYM <_SYM .001_CD -RRB-_-RRB- ._.
+The_DT last_JJ plot_NN shows_VBZ us_PRP the_DT interactions_NNS among_IN the_DT three_CD factors_NNS :_: Island_NNP ,_, Clause_NN Type_NN ,_, and_CC Scrambling_VBG ._.
+Figure_NN 5_CD ._.
+Effect_NN Plots_NNS for_IN 3_CD Factors_NNS Now_RB ,_, let_VB 's_POS move_VB to_TO the_DT interactions_NNS among_IN the_DT factors_NNS ._.
+The_DT following_JJ plot_NN shows_VBZ the_DT interactions_NNS between_IN the_DT factor_NN Island_NNP and_CC the_DT factor_NN Clause_NN Type_NN ._.
+Figure_NN 6_CD ._.
+Effect_NN Plot_NN for_IN Island_NNP :_: Clause_NN Type_NN If_IN there_EX is_VBZ no_DT interaction_NN between_IN two_CD factors_NNS ,_, the_DT lines_NNS are_VBP parallel_JJ ._.
+If_IN there_EX is_VBZ an_DT interaction_NN between_IN two_CD factors_NNS ,_, however_RB ,_, the_DT lines_NNS are_VBP not_RB parallel_VB ._.
+As_IN observed_VBN in_IN these_DT plots_NNS ,_, two_CD lines_NNS are_VBP not_RB parallel_VB ._.
+This_DT implies_VBZ that_IN there_EX is_VBZ an_DT interaction_NN between_IN two_CD factors_NNS -LRB-_-LRB- p_FW =_SYM .014_CD -RRB-_-RRB- ._.
+The_DT following_JJ plot_NN shows_VBZ us_PRP the_DT interactions_NNS between_IN two_CD factors_NNS Island_NNP and_CC Scrambling_NNP ._.
+Figure_NN 9_CD ._.
+Effect_NN Plot_NN for_IN Interactions_NNS As_IN observed_VBN in_IN these_DT plots_NNS ,_, all_PDT the_DT lines_NNS are_VBP not_RB parallel_VB ._.
+However_RB ,_, the_DT slopes_NNS of_IN the_DT lines_NNS are_VBP not_RB clearly_RB different_JJ ._.
+This_DT implies_VBZ that_IN there_EX is_VBZ little_JJ interaction_NN between_IN two_CD factors_NNS -LRB-_-LRB- p_FW =_SYM .730_CD -RRB-_-RRB- ._.
+5_CD Discussion_NNP Now_RB ,_, let_VB 's_POS see_VB what_WP answers_NNS can_MD be_VB provided_VBN to_TO the_DT research_NN questions_NNS in_IN -LRB-_-LRB- 6_CD -RRB-_-RRB- and_CC Hypothesis_NNP in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- along_IN with_IN the_DT analysis_NN results_NNS ._.
+For_IN the_DT first_JJ question_NN ,_, the_DT analysis_NN results_NNS in_IN Table_NNP 1_CD demonstrated_VBD that_IN Korean_JJ clearly_RB had_VBD a_DT Complex_JJ NP_NNP island_NN constraint_NN ,_, like_IN English_NNP ._.
+These_DT results_NNS experimentally_RB supported_VBD the_DT claims_NNS that_IN Korean_NNP also_RB HAD_VBD island_NN constraints_NNS as_IN in_IN English_NNP -LRB-_-LRB- Lee_NNP 1982_CD ;_: Han_NNP 1992_CD ;_: Hong_NNP 2004_CD ;_: Park_NNP ,_, 2001_CD ,_, 2009_CD -RRB-_-RRB- ,_, though_IN the_DT island_NN types_NNS of_IN this_DT paper_NN was_VBD different_JJ from_IN those_DT of_IN the_DT previous_JJ studies_NNS ._.
+The_DT second_JJ research_NN question_NN is_VBZ related_VBN with_IN two_CD hypotheses_NNS in_IN -LRB-_-LRB- 7_CD -RRB-_-RRB- ._.
+Since_IN it_PRP was_VBD observed_JJ Korean_JJ had_VBD a_DT Complex_JJ NP_NNP island_NN constraint_NN in_IN Table_NNP 1_CD ,_, the_DT hypothesis_NN in_IN -LRB-_-LRB- 7a_FW -RRB-_-RRB- can_MD not_RB be_VB maintained_VBN anymore_RB ._.
+The_DT comparison_NN of_IN the_DT second_JJ graph_NN in_IN Figure_NN 2_CD -LRB-_-LRB- Complex_JJ NP_NNP -RRB-_-RRB- and_CC two_CD graphs_NNS in_IN Figure_NN 4_CD clearly_RB demonstrated_VBD that_IN the_DT general_JJ tendency_NN in_IN Korean_JJ was_VBD different_JJ from_IN that_DT of_IN English_NNP ,_, which_WDT supports_VBZ the_DT second_JJ hypothesis_NN in_IN -LRB-_-LRB- 7b_JJ -RRB-_-RRB- ._.
+As_IN two_CD graphs_NNS in_IN Figure_NN 4_CD demonstrated_VBD ,_, two_CD lines_NNS in_IN the_DT graphs_NNS for_IN Korean_JJ Complex_JJ NP_NNP island_NN were_VBD crossed_VBN ._.
+It_PRP is_VBZ hard_JJ to_TO say_VB that_IN the_DT tendency_NN was_VBD made_VBN by_IN chance_NN ,_, because_IN two_CD lines_NNS were_VBD crossed_VBN in_IN both_DT cases_NNS -LRB-_-LRB- both_DT in_IN Canonical_NNP order_NN and_CC in_IN Scrambled_NNP order_NN -RRB-_-RRB- ._.
+An_DT interesting_JJ fact_NN was_VBD that_IN the_DT sentences_NNS with_IN island_NN structures_NNS had_VBD higher_JJR acceptability_NN than_IN those_DT with_IN non-island_JJ structures_NNS in_IN the_DT matrix_NN clauses_NNS ._.
+It_PRP is_VBZ difficult_JJ to_TO say_VB that_IN the_DT tendency_NN was_VBD made_VBN by_IN chance_NN ,_, because_IN this_DT tendency_NN appeared_VBD in_IN both_DT cases_NNS environments_NNS ._.
+A_DT similar_JJ pattern_NN was_VBD also_RB observed_VBN in_IN the_DT Exp_NNP ._.
+2_CD -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- of_IN Kim_NNP and_CC Goodall_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, the_DT exact_JJ properties_NNS for_IN this_DT tendency_NN have_VBP to_TO be_VB investigated_VBN through_IN the_DT further_JJ research_NN ._.
+From_IN theses_NNS analysis_NN results_NNS ,_, it_PRP is_VBZ possible_JJ to_TO guess_VB why_WRB there_EX have_VBP been_VBN so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN Korean_JJ ._.
+As_IN mentioned_VBN in_IN Section_NN 2.1_CD ,_, some_DT claimed_VBD that_IN Korean_JJ has_VBZ island_NN constraints_NNS -LRB-_-LRB- Lee_NNP 1982_CD ;_: Han_NNP 1992_CD ;_: Hong_NNP 2004_CD ;_: Park_NNP ,_, 2001_CD ,_, 2009_CD -RRB-_-RRB- ,_, and_CC others_NNS claimed_VBD that_IN there_EX is_VBZ no_DT island_NN effect_NN in_IN Korean_JJ -LRB-_-LRB- Sohn_NNP ,_, 1980_CD ;_: Kang_NNP ,_, 1986_CD ;_: Suh_NNP ,_, 1987_CD ;_: Hwang_NNP ,_, 2007_CD ;_: Chung_NNP ,_, 2005_CD ;_: Yoon_NNP ,_, 2011_CD ,_, 2012_CD ;_: Kim_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Our_PRP$ analysis_NN results_NNS provide_VBP a_DT partial_JJ answer_NN why_WRB there_EX have_VBP been_VBN so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN Korean_JJ ._.
+As_IN Table_NNP 1_CD demonstrates_VBZ ,_, the_DT statistical_JJ analysis_NN results_NNS in_IN Table_NNP 1_CD contain_VBP the_DT supporting_VBG evidences_NNS of_IN both_DT claims_NNS ._.
+The_DT p-value_NN of_IN the_DT factor_NN Island_NNP -LRB-_-LRB- p_JJ =_SYM 0.425_CD -RRB-_-RRB- and_CC the_DT effect_NN plot_NN in_IN Figure_NN 8_CD illustrated_VBD that_IN this_DT factor_NN is_VBZ statistically_RB insignificant_JJ ._.
+This_DT implies_VBZ that_IN Korean_JJ may_MD have_VB no_DT Complex_JJ NP_NNP island_NN effects_NNS ._.
+However_RB ,_, the_DT p-value_NN of_IN the_DT interaction_NN between_IN two_CD factors_NNS Island_NNP and_CC Clause_NN Type_NN -LRB-_-LRB- p_FW =_SYM 0.014_CD -RRB-_-RRB- and_CC the_DT effect_NN plot_NN in_IN Figure_NN 6_CD illustrated_VBD that_IN the_DT interaction_NN between_IN these_DT two_CD factors_NNS was_VBD statistically_RB significant_JJ ._.
+This_DT implies_VBZ that_IN Korean_JJ may_MD have_VB Complex_JJ NP_NNP island_NN effects_NNS through_IN the_DT interaction_NN with_IN other_JJ factors_NNS ._.
+That_DT is_VBZ ,_, though_IN the_DT factor_NN Island_NNP itself_PRP does_VBZ not_RB have_VB statistically_RB significant_JJ influence_NN on_IN the_DT acceptability_NN of_IN the_DT Korean_JJ sentences_NNS ,_, if_IN this_DT factor_NN interacts_VBZ with_IN other_JJ factor_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ,_, it_PRP may_MD have_VB a_DT statistically_RB significant_JJ influence_NN ._.
+If_IN no_DT such_JJ interaction_NN exists_VBZ ,_, the_DT factor_NN Island_NNP does_VBZ not_RB have_VB a_DT statistically_RB significant_JJ influence_NN ._.
+Whether_IN the_DT factor_NN has_VBZ an_DT interaction_NN with_IN other_JJ factors_NNS or_CC not_RB depends_VBZ on_IN the_DT environment_NN of_IN corresponding_JJ island_NN constructions_NNS ._.
+These_DT dual_JJ facets_NNS of_IN island_NN properties_NNS of_IN Korean_JJ have_VBP made_VBN so_RB many_JJ controversies_NNS on_IN the_DT existence_NN of_IN island_NN constraints_NNS in_IN Korean_JJ ._.
+6_CD Conclusion_NN In_IN this_DT paper_NN ,_, the_DT Complex_JJ NP_NNP island_NN constraint_NN was_VBD closely_RB examined_VBN in_IN Korean_JJ ._.
+Three_CD elements_NNS -LRB-_-LRB- Island_NNP ,_, Clause_NN Type_NN ,_, and_CC Scrambling_VBG -RRB-_-RRB- were_VBD taken_VBN as_IN factors_NNS which_WDT may_MD influence_VB the_DT acceptability_NN of_IN sentences_NNS in_IN Korean_JJ ,_, and_CC the_DT experiment_NN had_VBD a_DT 2_CD ×_NN 2_CD ×_CD 2_CD design_NN ._.
+Based_VBN on_IN this_DT design_NN ,_, an_DT experiment_NN -LRB-_-LRB- an_DT acceptability_NN judgment_NN task_NN -RRB-_-RRB- was_VBD performed_VBN ,_, where_WRB the_DT data_NNS for_IN 50_CD Korean_JJ native_NN participants_NNS were_VBD collected_VBN ._.
+In_IN the_DT experiment_NN ,_, ME_NNP was_VBD adopted_VBN to_TO measure_VB the_DT acceptability_NN of_IN the_DT native_JJ speakers_NNS ._.
+After_IN the_DT experiments_NNS ,_, all_PDT the_DT values_NNS were_VBD extracted_VBN for_IN target_NN sentences_NNS and_CC they_PRP were_VBD analyzed_VBN with_IN R._NNP Through_IN the_DT experiments_NNS ,_, the_DT following_JJ facts_NNS were_VBD found_VBN ._.
+First_RB ,_, the_DT factor_NN Island_NNP -LRB-_-LRB- the_DT absence_NN vs._FW presence_NN of_IN Complex_JJ NP_NNP island_NN constraint_NN in_IN Korean_JJ -RRB-_-RRB- did_VBD not_RB play_VB a_DT role_NN by_IN itself_PRP ,_, but_CC played_VBD a_DT marginal_JJ role_NN through_IN the_DT interaction_NN with_IN the_DT factor_NN Clause_NN Type_NN -LRB-_-LRB- Matrix_NNP vs._FW Embedded_VBN -RRB-_-RRB- ._.
+Second_NNP ,_, the_DT factors_NNS Clause_NN Type_NN and_CC Scrambling_VBG played_VBN statistically_RB significant_JJ roles_NNS in_IN Korean_JJ and_CC that_IN there_EX is_VBZ a_DT strong_JJ interaction_NN between_IN two_CD factors_NNS ._.
+References_NNS Alan_NNP Agresti_NNP ._.
+2007_CD ._.
+An_DT Introduction_NN to_TO Categorical_NNP Data_NNP Analysis_NNP ._.
+2nd_JJ edition_NN ._.
+Hoboken_NNP ,_, NJ_NNP :_: John_NNP Wiley_NNP &_CC Sons_NNP ._.
+Harald_NNP Baayen_NNP ._.
+2008_CD ._.
+Analyzing_VBG Linguistic_NNP Data_NNPS :_: A_DT Practical_NNP Introduction_NNP to_TO Statistics_NNPS Using_VBG R._NNP Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Ellen_NNP Bard_NNP ,_, Dan_NNP Robertson_NNP ,_, and_CC Antonella_NNP Sorace_NNP ,_, 1996_CD ._.
+Magnitude_NN Estimation_NN of_IN Linguistic_NNP Acceptability_NNP ._.
+Language_NN ,_, 72:32_CD -68_CD ._.
+Andrew_NNP Carnie_NNP ._.
+2012_CD ._.
+Syntax_NNP :_: A_NNP Generative_NNP Introduction_NNP ._.
+3rd_CD Edition_NNP ._.
+Oxford_NNP :_: Blackwell_NNP ._.
+Kiyong_NNP Choi_NNP ._.
+1989_CD ._.
+LF_NNP Movement_NNP :_: the_DT Wh-island_JJ Constraint_NN ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS ,_, 3:213_CD -234_CD ._.
+Daeho_NNP Chung_NNP ._.
+2005_CD ._.
+Why_WRB is_VBZ HOW_NNP in_IN Korean_JJ Insensitive_JJ to_TO Islands_NNP ?_.
+:_: A_DT Revised_VBN Nominal_NNP Analysis_NNP ._.
+Studies_NNS in_IN Modern_NNP Grammar_NNP ,_, 39:115_CD -131_CD ._.
+Wayne_NNP Cowart_NNP ._.
+1997_CD ._.
+Experimental_JJ Syntax_NNP :_: Applying_VBG Objective_NNP Methods_NNPS to_TO Sentence_NNP Judgments_NNP ._.
+Thousands_NNS Oaks_NNP ,_, CA_NNP :_: Sage_NNP Publications_NNP ._.
+Stephan_NNP Th_NNP ._.
+Gries_NNS ._.
+2013_CD ._.
+Statistics_NNS for_IN Linguistics_NNS with_IN R_NN :_: A_DT Practical_NNP Introduction_NNP ._.
+Berlin_NNP :_: Guyter_NNP ._.
+Jong-Im_JJ Han_NNP ._.
+1992_CD ._.
+Syntactic_NNP Movement_NNP Analysis_NNP of_IN Korean_JJ Relativization_NN ._.
+Language_NN Research_NN ,_, 28:335_CD --_: 357_CD ._.
+Sun-Ho_NNP Hong_NNP ._.
+2004_CD ._.
+On_IN the_DT Lack_NN of_IN Syntactic_NNP Effects_NNPS in_IN Korean_JJ WH-Questions_NNS ._.
+The_DT Linguistic_NNP Association_NNP of_IN Korea_NNP Journal_NNP ,_, 12_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :43_CD -57_CD ._.
+Heeju_NNP Hwang_NNP ._.
+2007_CD ._.
+Wh-Phrase_NNP Questions_NNPS and_CC Prosody_NNP in_IN Korean_NNP ._.
+Proceedings_NNP of_IN 17th_JJ Japanese/Korean_NNP Linguistics_NNPS ._.
+Stanford_NNP ,_, CA_NNP :_: CSLI_NNP ._.
+Shinichiro_NNP Ishihara_NNP ._.
+2002_CD ._.
+Invisible_JJ but_CC Audible_NNP Wh_NNP -_: scope_NN Marking_NNP :_: Wh-constructions_NNS and_CC Deaccenting_NNP in_IN Japanese_NNP ._.
+Proceedings_NNP of_IN the_DT Twenty-first_NNP West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNP ,_, 180-193_CD Keith_NNP Johnson_NNP ._.
+2008_CD ._.
+Quantitative_JJ Methods_NNS in_IN Linguistics_NNP ._.
+Oxford_NNP :_: Blackwell_NNP ._.
+Young-Se_JJ Kang_NNP ._.
+1986_CD ._.
+Korean_JJ Syntax_NNP and_CC Universal_NNP Grammar_NNP ._.
+Doctoral_JJ dissertation_NN ,_, Harvard_NNP University_NNP ._.
+Frank_NNP Keller_NNP ._.
+2000_CD ._.
+Gradient_NN in_IN Grammar_NNP :_: Experimental_JJ and_CC Computational_NNP Aspects_NNP of_IN Degrees_NNP of_IN Grammaticality_NNP ._.
+Doctoral_JJ dissertation_NN ._.
+University_NNP of_IN Edinburgh_NNP ._.
+Boyoung_NNP Kim_NNP and_CC Grant_NNP Goodall_NNP ._.
+2014_CD ._.
+An_DT Experimental_JJ Investigation_NN of_IN Island_NNP Effects_NNPS in_IN Korean_NNP ._.
+To_TO appear_VB in_IN Japanese/Korean_NNP Linguistics_NNPS ._.
+Ilkyu_NNP Kim_NNP ._.
+2013_CD ._.
+Rethinking_VBG `_`` Island_NNP Effects_NNPS '_POS in_IN Korean_JJ Relativization_NN ._.
+Language_NNP Sciences_NNPS ,_, 38:59_CD --_: 82_CD Doo-Won_NNP Lee_NNP ._.
+1999_CD ._.
+Remarks_NNS on_IN Negative_JJ Islands_NNPS in_IN Korean_NNP ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS ,_, 8_CD :_: 457-471_CD ._.
+Hyo-Sang_NNP Lee_NNP ._.
+1982_CD ._.
+Asymmetry_NN in_IN Island_NNP Constrains_NNP in_IN Korean_NNP ,_, ms._NNP ,_, University_NNP of_IN California_NNP at_IN Los_NNP Angeles_NNP Yong-hun_NNP Lee_NNP ._.
+2013_CD ._.
+Experimental_JJ Approach_NN to_TO Multiple_NNP Case_NNP Constructions_NNP in_IN Korean_NNP ._.
+Language_NN and_CC Information_NN ,_, 17_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 29-50_CD ._.
+Milton_NNP Lodge_NNP ._.
+1981_CD ._.
+Magnitude_NNP Scaling_NNP :_: Quantitative_JJ Measurement_NNP of_IN Opinions_NNS ._.
+Beverley_NNP Hills_NNP ,_, CA_NNP :_: Sage_NNP Publications_NNP ._.
+Taisuke_NNP Nishigauchi_NNP ._.
+1990_CD ._.
+Quantification_NN in_IN the_DT Theory_NNP of_IN Grammar_NNP ._.
+Dordrecht_NNP :_: Kluwer_NNP Academic_NNP Publishers_NNPS ._.
+Bum-Sik_NNP Park_NNP ._.
+2001_CD ._.
+Island-insensitive_JJ Sluicing_VBG ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS ,_, 9_CD :_: 669-682_CD ._.
+Bum-Sik_NNP Park_NNP ._.
+2009_CD ._.
+Island_NNP Sensitivity_NNP in_IN Ellipsis_NNP and_CC Its_PRP$ Implications_NNS for_IN Movement_NNP ._.
+Studies_NNS in_IN Generative_NNP Grammar_NNP ,_, 19_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :599_SYM -_: 620_CD ._.
+Lisa_NNP Pearl_NNP and_CC Jon_NNP Sprouse_NNP ._.
+2014_CD ._.
+Computational_NNP Models_NNPS of_IN Acquisition_NNP for_IN Island_NNP ._.
+In_IN Sprouse_NNP ,_, Jon_NNP and_CC Norbert_NNP Hornstein_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Experimental_JJ Syntax_NNP and_CC Island_NNP Effects_NNPS ,_, 109-131_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+John_NNP Ross_NNP ._.
+1967_CD ._.
+Constraints_NNS on_IN Variables_NNP in_IN Syntax_NNP ._.
+Doctoral_JJ dissertation_NN ,_, Massachusetts_NNP Institute_NNP of_IN Technology_NNP ._.
+Carson_NNP Schütze_NNP ._.
+1996_CD ._.
+The_DT Empirical_NNP Base_NNP of_IN Linguistics_NNPS :_: Grammaticality_NNP Judgments_NNP and_CC Linguistic_NNP Methodology_NNP ._.
+Chicago_NNP ,_, IL_NNP :_: University_NNP of_IN Chicago_NNP Press_NNP ._.
+Ho-Min_NNP Sohn_NNP ._.
+1980_CD ._.
+Theme-prominence_NN in_IN Korean_JJ ._.
+Korean_JJ Linguistics_NNPS ,_, 2:2_CD -19_CD ._.
+Jae-Gyun_NNP Song_NN ._.
+1995_CD ._.
+Wh-in-situ_NN and_CC Island_NNP Phenomena_NNP in_IN Korean_NNP ._.
+Harvard_NNP Studies_NNPS in_IN Korean_JJ Linguistics_NNPS ,_, 6_CD :_: 402-412_CD ._.
+Sanghoun_NNP Song_NN ,_, Jae-Woong_NNP Choe_NNP ,_, and_CC Eunjeong_NNP Oh_UH ._.
+FAQ_NNP :_: Do_VBP Non-linguists_JJ Share_NN the_DT Same_JJ Intuition_NN as_IN Linguists_NNPS ?_. ._.
+Language_NN Research_NN ._.
+50_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :357_CD -386_CD ._.
+Jon_NNP Sprouse_NNP ,_, Mathews_NNP Wagers_NNP ,_, and_CC Colin_NNP Phillips_NNP ._.
+2012_CD ._.
+A_DT Test_NN of_IN the_DT Relation_NN between_IN Working_NNP Memory_NN Capacity_NN and_CC Syntactic_NNP Island_NNP Effects_NNPS ._.
+Language_NN ,_, 88:82_CD --_: 123_CD Jon_NNP Sprouse_NNP ,_, Matthew_NNP Wagers_NNP ,_, and_CC Colin_NNP Phillips_NNP ._.
+2014_CD ._.
+Deriving_VBG Competing_VBG Predictions_NNS from_IN Grammatical_NNP Approaches_NNPS and_CC Reductionist_NNP Approaches_NNPS to_TO Island_NNP Effects_NNPS ._.
+In_IN Sprouse_NNP ,_, Jon_NNP and_CC Norbert_NNP Hornstein_NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+,_, Experimental_JJ Syntax_NNP and_CC Island_NNP Effects_NNPS ,_, 21-41_CD ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Jon_NNP Sprouse_NNP ,_, Shin_NNP Fukuda_NNP ,_, Hajime_NNP Ono_NNP ,_, and_CC Robert_NNP Kluender_NNP ._.
+2011_CD ._.
+Reverse_VB Island_NNP Effects_NNPS and_CC the_DT Backward_NNP Search_NNP for_IN a_DT Licensor_NNP in_IN Multiple_NNP Wh_NNP -_: questions_NNS ._.
+Syntax_NNP 14:179_CD --_: 203_CD ._.
+Chungmok_NNP Suh_NNP ._.
+1987_CD ._.
+WH-constructions_NNS in_IN Korean_JJ ._.
+Seoul_NNP :_: Top_NNP Press_NNP ._.
+Akira_NNP Watanabe_NNP ._.
+1992_CD ._.
+Wh-in-situ_NNP ,_, Subjacency_NNP ,_, and_CC Chain_NNP Formation_NNP ,_, MIT_NNP Occasional_NNP Papers_NNP in_IN Linguistics_NNP 2_CD ._.
+Cambridge_NNP ,_, MA_NNP :_: MIT_NNP Press_NNP ._.
+Jeong-Me_JJ Yoon_NNP ._.
+2011_CD ._.
+Wh-island_JJ Effects_NNPS of_IN Wh-in_NNP -_: situ_NN Questions_NNS in_IN Korean_JJ ._.
+Studies_NNS in_IN Generative_NNP Grammar_NNP ,_, 21_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 763-778_CD ._.
+Jeong-Me_JJ Yoon_NNP ._.
+2012_CD ._.
+Wh-island_JJ Effects_NNPS in_IN Korean_JJ Wh-in-Situ_NNP Questions_NNPS ._.
+Korean_JJ Journal_NNP of_IN Linguistics_NNPS ,_, 37_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :357_CD -382_CD ._.

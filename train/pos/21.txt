@@ -1,0 +1,189 @@
+Identifying_VBG Location_NNP Mentions_NNPS in_IN Tweets_NNPS :_: An_DT Iterative_JJ Approach_NNP Using_VBG Multiple_NNP Knowledge_NNP Sources_NNS Abstract_NNP This_DT paper_NN describes_VBZ a_DT strategy_NN and_CC results_NNS of_IN a_DT location_NN mining_NN system_NN for_IN Twitter_NNP messages_NNS ._.
+The_DT task_NN of_IN location_NN mining_NN required_VBD us_PRP to_TO identify_VB the_DT location_NN mentions_VBZ in_IN 1003_CD Twit_SYM -_: ter_NN test_NN messages_NNS given_VBN a_DT separate_JJ annotated_JJ training_NN set_NN of_IN 2000_CD messages_NNS ._.
+We_PRP present_VBP an_DT architecture_NN that_WDT uses_VBZ a_DT basic_JJ named_VBN entity_NN rec_NN -_: ognizer_NN in_IN conjunction_NN with_IN various_JJ rule-based_JJ modules_NNS and_CC knowledge_NN infusion_NN to_TO achieve_VB an_DT average_JJ F_NN score_NN of_IN 0.747_CD ._.
+We_PRP used_VBD the_DT pre-trained_JJ Stanford_NNP NER_NNP which_WDT gives_VBZ us_PRP an_DT F_NN score_NN of_IN 0.532_CD and_CC used_VBD an_DT ensemble_NN of_IN other_JJ techniques_NNS to_TO reach_VB the_DT 0.747_CD value_NN ._.
+A_DT major_JJ source_NN of_IN location_NN resolver_NN was_VBD the_DT DBpedia_NNP location_NN list_NN which_WDT was_VBD used_VBN to_TO identify_VB a_DT large_JJ percentage_NN of_IN locations_NNS with_IN an_DT individual_JJ F_NN -_: score_NN of_IN 0.935_CD ._.
+1_CD Introduction_NNP Social_NNP media_NNS has_VBZ become_VBN so_RB ubiquitous_JJ and_CC per_IN -_: vasive_NN in_IN our_PRP$ society_NN that_IN almost_RB all_DT organiza_NN -_: tions_NNS nowadays_RB use_VBP it_PRP for_IN various_JJ types_NNS of_IN strate_NN -_: gic_JJ objectives_NNS such_JJ as_IN marketing_NN ,_, campaigns_NNS ,_, public_JJ -_: ity_NN ,_, information_NN dissemination_NN and_CC information_NN gath_NN -_: ering_VBG ._.
+This_DT has_VBZ resulted_VBN in_IN a_DT flurry_NN of_IN research_NN fo_SYM -_: cused_VBN specifically_RB on_IN processing_NN social_JJ media_NNS texts_NNS because_IN the_DT tools_NNS and_CC techniques_NNS designed_VBN for_IN struc_NN -_: tured_JJ texts_NNS have_VBP been_VBN found_VBN to_TO fail_VB miserably_RB on_IN so_RB -_: cial_JJ media_NNS texts_NNS -LRB-_-LRB- Ritter_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+In_IN order_NN to_TO be_VB able_JJ to_TO harness_VB the_DT enormous_JJ amounts_NNS of_IN informa_NN -_: tion_NN embedded_VBN in_IN social_JJ media_NNS texts_NNS there_EX is_VBZ a_DT need_NN for_IN tools_NNS that_WDT can_MD accurately_RB extract_VB the_DT required_VBN in_IN -_: formation_NN ._.
+In_IN this_DT paper_NN we_PRP present_VBP the_DT results_NNS of_IN Second_JJ Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN testing_VBG an_DT information_NN extraction_NN tool_NN that_WDT focuses_VBZ on_IN identifying_VBG location_NN mentions_VBZ on_IN a_DT very_RB popular_JJ so_IN -_: cial_JJ media_NNS platform_NN ,_, Tweeter_NNP ._.
+Tweeter_NNP is_VBZ a_DT a_DT social_JJ media_NNS platform_NN which_WDT allows_VBZ 140_CD character_NN mes_SYM -_: sages_NNS to_TO be_VB posted_VBN for_IN general_JJ as_RB well_RB as_IN closed_JJ group_NN communication_NN ._.
+It_PRP is_VBZ used_VBN extensively_RB to_TO upload_VB im_SYM -_: mediate_VB news_NN about_IN events_NNS by_IN users_NNS ,_, hence_RB has_VBZ an_DT enormous_JJ potential_NN to_TO be_VB used_VBN as_IN up_RB to_TO the_DT minute_NN information_NN source_NN ._.
+Among_IN the_DT various_JJ types_NNS of_IN in_IN -_: formation_NN that_WDT can_MD be_VB mined_VBN from_IN Twitter_NNP messages_NNS ,_, location_NN mining_NN has_VBZ attracted_VBN attention_NN because_IN of_IN its_PRP$ application_NN in_IN identifying_VBG the_DT geographical_JJ location_NN of_IN a_DT topic_NN in_IN the_DT Tweeter_NNP messages_NNS ._.
+For_IN example_NN tweets_NNS can_MD be_VB used_VBN to_TO extract_VB information_NN on_IN the_DT lo_NN -_: cation_NN of_IN an_DT accident_NN ,_, a_DT natural_JJ disaster_NN ,_, a_DT concert_NN and_CC more_RBR recently_RB ,_, open_JJ invitation_NN parties_NNS gone_VBN out_IN of_IN hand_NN ._.
+Location_NNP mining_NN is_VBZ a_DT special_JJ case_NN of_IN a_DT generic_JJ NLP_NNP task_NN called_VBD Named_VBN Entity_NNP Recognition_NNP -LRB-_-LRB- NER_NNP -RRB-_-RRB- ,_, which_WDT involves_VBZ identifying_VBG and_CC classifying_VBG entities_NNS into_IN person_NN ,_, organization_NN and_CC location_NN type_NN entities_NNS ._.
+In_IN its_PRP$ simplest_JJS form_NN location_NN mentions_VBZ is_VBZ a_DT single_JJ to_TO -_: ken_NN such_JJ as_IN ``_`` Auckland_NNP ''_'' ,_, however_RB it_PRP can_MD also_RB be_VB com_NN -_: pound_NN nouns_NNS such_JJ as_IN ``_`` South_NNP Auckland_NNP ''_'' and_CC even_RB short_JJ phrases_NNS such_JJ as_IN ``_`` South_NNP West_NNP of_IN Auckland_NNP ''_'' ._.
+Location_NNP mentions_VBZ using_VBG single_JJ tokens_NNS can_MD generally_RB be_VB identified_VBN by_IN named_VBN entity_NN recognizers_NNS trained_VBN on_IN appropriate_JJ data_NNS ._.
+A_DT typical_JJ NER_NNP tool_NN such_JJ as_IN the_DT Stanford1_NNP and_CC OpenNLP2_NNP identifies_VBZ single_JJ word_NN based_VBN locations_NNS ._.
+NER_NNP systems_NNS are_VBP typically_RB able_JJ to_TO identify_VB 3_CD classes_NNS of_IN named_VBN entities_NNS -LRB-_-LRB- for_IN example_NN :_: PERSON_NNP ,_, LOCATION_NNP and_CC ORGANIZATION_NNP -RRB-_-RRB- ._.
+In_IN 1http_CD :_: /_SYM /_SYM nlp.stanford.edu/software/CRF-NER.shtml_NN 2_CD http://opennlp.apache.org_NN most_RBS location_NN mining_NN tasks_NNS ,_, we_PRP are_VBP interested_JJ in_IN ex_FW -_: tracting_VBG both_DT geo-locations_NNS as_RB well_RB as_IN points_NNS of_IN in_IN -_: terest_NN -LRB-_-LRB- POI_NNP -RRB-_-RRB- ,_, hence_RB both_DT LOCATION_NNP ORGANIZA_NNP -_: TION_NNP classes_NNS need_VBP to_TO be_VB extracted_VBN from_IN the_DT output_NN of_IN an_DT NER_NNP system_NN ._.
+NER_NNP systems_NNS on_IN their_PRP$ own_JJ have_VBP been_VBN proven_VBN to_TO be_VB ineffective_JJ for_IN location_NN mining_NN from_IN social_JJ media_NNS texts_NNS for_IN two_CD main_JJ reasons_NNS ._.
+1_LS ._.
+The_DT pre-trained_JJ NER_NNP systems_NNS perform_VBP poorly_RB due_JJ to_TO the_DT inherent_JJ noise_NN in_IN social_JJ media_NNS texts_NNS ._.
+To_TO overcome_VB this_DT problem_NN ,_, the_DT authors_NNS in_IN -LRB-_-LRB- Lin_NNP -_: gad_NN et_FW al._FW ,_, 2013_CD -RRB-_-RRB- have_VBP attempted_VBN to_TO retrain_VB ex_FW -_: isting_VBG NER_NNP systems_NNS and_CC have_VBP reported_VBN F-scores_NNS of_IN up_RB to_TO 0.9_CD ._.
+We_PRP use_VBP the_DT common_JJ definition_NN of_IN F-score_NN throughout_IN this_DT paper_NN :_: F_NN =_SYM 2pr_FW p_FW +_FW r_NN where_WRB p_NN is_VBZ the_DT precision_NN and_CC r_NN is_VBZ the_DT recall_NN ._.
+The_DT experiments_NNS have_VBP been_VBN done_VBN with_IN relatively_RB small_JJ datasets_NNS -LRB-_-LRB- 450_CD tweets_NNS -RRB-_-RRB- ,_, hence_RB do_VBP not_RB nec_SYM -_: essarily_NN scale_NN up_RP with_IN large_JJ datasets_NNS ._.
+2_LS ._.
+NER_NNP systems_NNS identify_VBP single_JJ token_JJ locations_NNS ._.
+Locations_NNS embedded_VBN in_IN compound_NN nouns_NNS and_CC short_JJ phrases_NNS either_CC get_VB entirely_RB missed_VBN or_CC need_VB to_TO be_VB backward-constructed_VBN from_IN the_DT tokens_NNS identified_VBN by_IN the_DT NER_NNP system_NN ._.
+The_DT partitioned_JJ nature_NN of_IN location_NN mentions_VBZ in_IN texts_NNS warrants_NNS an_DT ensemble_NN approach_NN to_TO resolve_VB the_DT different_JJ categories_NNS of_IN locations_NNS in_IN tweets_NNS ._.
+This_DT pa_NN -_: per_IN presents_NNS the_DT results_NNS of_IN a_DT location_NN miner_NN that_WDT was_VBD designed_VBN to_TO take_VB part_NN in_IN a_DT location_NN mining_NN com_NN -_: petition_NN in_IN the_DT Australasian_JJ Language_NNP Technology_NNP Workshop_NNP 20143_CD which_WDT required_VBD identification_NN of_IN all_DT forms_NNS of_IN location_NN mentions_VBZ in_IN tweeter_NN messages_NNS ._.
+In_IN addition_NN to_TO the_DT locations_NNS identified_VBN by_IN noun_NN phrases_NNS ,_, the_DT task_NN required_VBD the_DT identification_NN of_IN specific_JJ loca_NN -_: tions_NNS defined_VBN by_IN short_JJ phrases_NNS such_JJ as_IN ``_`` 40km_JJ south_NN of_IN tenterfield2_CD ''_'' and_CC ``_`` 100_CD mi_FW from_IN nations_NNS capital_NN ''_'' ._.
+Our_PRP$ approach_NN is_VBZ using_VBG a_DT parallel_JJ voting_NN architec_NN -_: ture_NN ._.
+It_PRP combines_VBZ several_JJ techniques_NNS including_VBG a_DT NER_NNP system_NN ._.
+We_PRP used_VBD the_DT Conditional_NNP Random_NNP Field_NNP -LRB-_-LRB- CRF_NNP -RRB-_-RRB- based_VBN Stanford_NNP NER_NNP system_NN because_IN this_DT delivers_VBZ the_DT highest_JJS accuracy_NN on_IN Twitter_NNP mes_SYM -_: sages_NNS according_VBG to_TO -LRB-_-LRB- Lingad_JJ et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Lingad_NNP et_NNP 3ALTA2014_NNP :_: http://www.alta.asn.au/events/alta2014/_NNS al._IN -LRB-_-LRB- 2013_CD -RRB-_-RRB- reported_VBD that_IN the_DT retrained_VBN Stanford_NNP NER_NNP achieved_VBD an_DT F-score_NN of_IN 0.902_CD compared_VBN to_TO 0.576_CD for_IN the_DT pre-trained_JJ NER_NNP ._.
+We_PRP have_VBP found_VBN that_IN re-training_VBG the_DT Stanford_NNP NER_NNP with_IN bare_JJ training_NN data_NNS provided_VBN by_IN the_DT organizers_NNS delivered_VBN F_NN scores_NNS around_IN the_DT 0.4_CD mark_NN at_IN token_JJ level_NN compared_VBN to_TO approximately_RB 0.57_CD for_IN the_DT pre-trained_JJ model_NN ._.
+Analysis_NN of_IN the_DT errors_NNS for_IN both_DT models_NNS showed_VBD that_IN due_JJ to_TO loose_JJ capitalization_NN in_IN twitter_NN messages_NNS ,_, a_DT lot_NN of_IN the_DT locations_NNS could_MD not_RB be_VB identified_VBN simply_RB because_IN they_PRP did_VBD not_RB exist_VB in_IN the_DT training_NN data_NNS ._.
+Since_IN the_DT pre-trained_JJ model_NN was_VBD trained_VBN with_IN much_JJ larger_JJR training_NN set_VBD it_PRP could_MD de_FW -_: tect_VB a_DT larger_JJR number_NN of_IN locations_NNS giving_VBG us_PRP a_DT higher_JJR precision_NN value_NN ._.
+We_PRP tried_VBD incremental_JJ training_NN of_IN the_DT Stanford_NNP NER_NNP ,_, however_RB ran_VBD into_IN technical_JJ dif_NN -_: ficulties_NNS with_IN memory_NN and_CC computational_JJ time_NN re_SYM -_: quired_VBN ._.
+Hence_RB ,_, we_PRP adopted_VBD the_DT approach_NN of_IN an_DT en_FW -_: semble_JJ system_NN consisting_VBG of_IN a_DT pre-trained_JJ Stanford_NNP NER_NNP ,_, knowledge_NN infusion_NN ,_, regular_JJ expression_NN iden_SYM -_: tifier_NN and_CC the_DT use_NN of_IN rules_NNS ._.
+Instead_RB of_IN a_DT pipeline_NN archi_NNS -_: tecture_NN with_IN no_DT re-processing_NN we_PRP adopted_VBD a_DT parallel_JJ architecture_NN to_TO cater_VB for_IN the_DT copious_JJ amount_NN of_IN noise_NN in_IN Tweets_NNP ._.
+The_DT parallel_JJ architecture_NN enables_VBZ us_PRP to_TO revisit_VB previous_JJ decisions_NNS and_CC correct_VB them_PRP ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+Sec_SYM -_: tion_NN 2_CD gives_VBZ an_DT overview_NN of_IN related_JJ works_NNS for_IN lo_SYM -_: cation_NN mining_NN in_IN Twitter_NNP messages_NNS as_RB well_RB as_IN some_DT generic_JJ NER_NNP works_NNS ._.
+Section_NN 3_CD describes_VBZ the_DT task_NN de_IN -_: scription_NN followed_VBN by_IN our_PRP$ methodology_NN ._.
+The_DT results_NNS are_VBP detailed_VBN in_IN Section_NN 5_CD and_CC Section_NNP 6_CD concludes_VBZ this_DT paper_NN ._.
+2_CD Related_VBN Works_NNP Location_NNP Mining_NNP is_VBZ a_DT subtask_NN of_IN the_DT more_JJR generic_JJ information_NN extraction_NN task_NN of_IN named_VBN entity_NN recog_NN -_: nition_NN ._.
+This_DT section_NN gives_VBZ an_DT overview_NN of_IN recent_JJ works_NNS specifically_RB in_IN the_DT informal_JJ domain_NN of_IN micro_NN -_: blogging_NN ,_, mostly_RB for_IN ``_`` Twittersphere_NNP ''_'' ._.
+Ritter_NNP et_FW ._.
+al._IN -LRB-_-LRB- 2011_CD -RRB-_-RRB- presented_VBD a_DT NER_NNP system_NN named_VBD T-NER_NNP ,_, which_WDT uses_VBZ Freebase_NNP as_IN an_DT informa_NN -_: tion_NN source_NN to_TO enhance_VB supervision_NN for_IN the_DT Stanford_NNP NER_NNP to_TO classify_VB entities_NNS into_IN 10_CD classes_NNS ,_, one_CD of_IN which_WDT was_VBD geo-location_NN ._.
+Their_PRP$ system_NN achieved_VBD an_DT overall_JJ F-score_NN of_IN 0.66_CD and_CC a_DT geo-location_JJ F_NN score_NN of_IN 0.77_CD ._.
+Li_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- present_RB a_DT random_JJ walk_NN model_NN which_WDT exploits_VBZ the_DT gregarious_JJ properties_NNS associated_VBN with_IN Tweets_NNPS in_IN addition_NN to_TO the_DT textual_JJ content_NN to_TO deter_VB -_: mine_NN the_DT named_VBN entities_NNS ._.
+The_DT gregarious_JJ property_NN is_VBZ based_VBN on_IN named_VBN entities_NNS mentioned_VBD together_RB in_IN me_PRP -_: dia_NN other_JJ than_IN Twitter_NNP ._.
+The_DT authors_NNS used_VBN Microsoft_NNP N-Gram_NNP and_CC Wikipedia_NNP as_IN the_DT corpus_NN to_TO compute_VB the_DT gregarious_JJ property_NN value_NN ._.
+This_DT system_NN attained_VBD an_DT F-score_NN of_IN 0.419_CD on_IN their_PRP$ data_NNS compared_VBN to_TO 0.466_CD for_IN the_DT previously_RB mentioned_VBN system_NN and_CC 0.423_CD for_IN the_DT Stanford_NNP NER_NNP on_IN the_DT same_JJ data_NNS ._.
+The_DT task_NN of_IN location_NN mining_NN specifically_RB from_IN Twitter_NNP messages_NNS has_VBZ attracted_VBN a_DT lot_NN of_IN attention_NN be_VB -_: cause_NN Twitter_NNP is_VBZ current_JJ ,_, up_IN to_TO the_DT minute_NN ,_, hence_RB can_MD be_VB used_VBN for_IN information_NN about_IN uptodate_JJ events_NNS around_IN the_DT globe_NN ._.
+One_CD of_IN its_PRP$ immediate_JJ use_NN is_VBZ for_IN almost_RB real_JJ time_NN disaster_NN detection_NN so_RB that_IN services_NNS can_MD be_VB deployed_VBN as_RB soon_RB as_IN possible_JJ ._.
+There_EX are_VBP mul_SYM -_: tiple_NN other_JJ uses_NNS for_IN Twitter_NNP location_NN mining_NN such_JJ as_IN location_NN based_VBN advertising_NN and_CC geography_NN based_VBN sen_SYM -_: timent_NN mining_NN ._.
+Lingad_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- present_JJ test_NN re_SYM -_: sults_NNS for_IN using_VBG 4_CD off-the-shelf_JJ NER_NNP 's_POS to_TO determine_VB locations_NNS with_IN varying_VBG degrees_NNS of_IN granularity_NN from_IN Country_NN ,_, State_NNP ,_, City_NNP ,_, Area_NNP ,_, Suburb_NNP to_TO Point_NNP of_IN In_NNP -_: terest_NN ._.
+The_DT results_NNS from_IN this_DT paper_NN showed_VBD that_IN the_DT retrained_VBN Stanford_NNP NER_NNP was_VBD the_DT best_JJS performer_NN at_IN 0.872_CD and_CC the_DT standard_JJ Stanford_NNP NER_NNP 4-class_JJ classi_NNS -_: fier_JJR attained_VBD a_DT value_NN of_IN 0.691_CD ._.
+Based_VBN on_IN the_DT results_NNS of_IN this_DT paper_NN we_PRP have_VBP chosen_VBN a_DT NER_NNP for_IN our_PRP$ location_NN miner_NN ._.
+Twitter_NNP messages_NNS may_MD also_RB have_VB meta_JJ data_NNS indi_NN -_: cating_VBG the_DT location_NN from_IN which_WDT a_DT Tweet_NNP was_VBD sent_VBN ._.
+This_DT is_VBZ only_RB present_JJ in_IN Tweets_NNP sent_VBD from_IN mobile_JJ de_IN -_: vices_NNS equipped_VBN with_IN GPS_NNP hardware_NN ._.
+It_PRP is_VBZ interest_NN -_: ing_NN that_IN this_DT feature_NN can_MD be_VB turned_VBN off_RP for_IN privacy_NN reasons_NNS by_IN the_DT user_NN ._.
+Ikawa_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- present_RB a_DT model_NN which_WDT exploits_VBZ the_DT GPS_NNP location_NN as_RB well_RB as_IN the_DT textual_JJ content_NN of_IN the_DT Tweet_NNP ._.
+This_DT model_NN uses_VBZ as_IN -_: sociations_NNS between_IN locations_NNS and_CC relevant_JJ keywords_NNS from_IN past_JJ messages_NNS during_IN training_NN ,_, which_WDT is_VBZ then_RB used_VBN to_TO estimate_VB where_WRB the_DT new_JJ message_NN was_VBD issued_VBN from_IN ._.
+The_DT identified_VBN location_NN is_VBZ then_RB assigned_VBN to_TO a_DT geographical_JJ square_NN and_CC the_DT errors_NNS were_VBD calculated_VBN based_VBN on_IN the_DT distance_NN within_IN 10_CD kilometers_NNS ._.
+The_DT study_NN reports_VBZ a_DT precision_NN value_NN of_IN 0.45_CD with_IN a_DT dataset_NN of_IN 20,535_CD messages_NNS ._.
+A_DT subset_NN of_IN 16,380_CD messages_NNS were_VBD used_VBN for_IN training_NN ._.
+A_DT large_JJ number_NN of_IN errors_NNS oc_SYM -_: curred_VBN based_VBN on_IN the_DT fact_NN that_IN the_DT location_NN mentions_VBZ in_IN the_DT text_NN of_IN the_DT Tweet_NNP might_MD not_RB necessary_JJ corre_NN -_: late_RB with_IN the_DT location_NN of_IN the_DT user_NN ._.
+Mahmud_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- present_RB a_DT system_NN for_IN pre_NN -_: dicting_VBG the_DT home_NN locations_NNS of_IN Twitter_NNP users_NNS ._.
+Un_SYM -_: like_IN the_DT previous_JJ system_NN ,_, this_DT paper_NN uses_VBZ an_DT ensem_NN -_: ble_NN of_IN statistical_JJ and_CC heuristic_JJ classifiers_NNS to_TO predict_VB Google_NNP 's_POS geo-coding_JJ bounding_VBG box_NN for_IN Twitter_NNP cor_SYM -_: responding_VBG to_TO the_DT Twitter_NNP users_NNS ._.
+The_DT paper_NN reports_VBZ accuracies_NNS at_IN various_JJ granularities_NNS which_WDT range_VBP from_IN 0.54_CD to_TO 0.78_CD for_IN recall_NN values_NNS ._.
+Sankaranarayanan_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- present_RB a_DT system_NN which_WDT does_VBZ location_NN mining_NN for_IN a_DT different_JJ purpose_NN ._.
+The_DT object_NN of_IN this_DT work_NN is_VBZ to_TO cluster_NN Twitter_NNP mes_SYM -_: sages_NNS according_VBG to_TO the_DT news_NN content_NN based_VBN on_IN geo_NN -_: graphical_JJ locations_NNS ._.
+This_DT work_NN again_RB uses_VBZ ensemble_NN learning_NN ,_, similar_JJ to_TO our_PRP$ approach_NN ._.
+It_PRP uses_VBZ references_NNS to_TO geographic_JJ locations_NNS in_IN the_DT text_NN ,_, called_VBN toponyms_NNS ,_, to_TO determine_VB the_DT coordinates_VBZ which_WDT then_RB used_VBD to_TO re_VB -_: solve_VB using_VBG various_JJ techniques_NNS such_JJ as_IN NER_NNP ,_, POS_NNP tagging_VBG and_CC a_DT look_NN up_RP database_NN containing_VBG countries_NNS ,_, city_NN ,_, river_NN etc._NN ._.
+In_IN addition_NN to_TO this_DT ,_, the_DT textual_JJ content_NN of_IN the_DT Tweet_NNP is_VBZ extended_VBN using_VBG its_PRP$ metadata_NN about_IN the_DT location_NN of_IN the_DT Tweeter_NNP ._.
+The_DT metadata_JJ information_NN is_VBZ added_VBN as_IN textual_JJ content_NN of_IN the_DT Tweet_NNP which_WDT is_VBZ then_RB treated_VBN similar_JJ to_TO the_DT rest_NN of_IN the_DT message_NN ._.
+The_DT pa_NN -_: per_IN does_VBZ not_RB report_VB any_DT location_NN specific_JJ accuracy_NN ,_, however_RB illustrates_VBZ a_DT different_JJ use_NN for_IN location_NN min_NN -_: ing_NN and_CC the_DT enforces_VBZ the_DT use_NN of_IN ensemble_NN architecture_NN for_IN the_DT purpose_NN ._.
+The_DT authors_NNS in_IN -LRB-_-LRB- e.g._FW ,_, Kinsella_NNP et_FW al._FW ,_, 2011_CD ;_: Li_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- have_VBP done_VBN work_NN on_IN location_NN mining_NN focused_VBD on_IN either_CC the_DT location_NN from_IN where_WRB the_DT Tweet_NNP was_VBD sent_VBN or_CC the_DT geographical_JJ location_NN of_IN the_DT Tweeter_NNP ._.
+Those_DT papers_NNS have_VBP in_IN common_JJ that_IN they_PRP apply_VBP a_DT combi_NN -_: nation_NN of_IN techniques_NNS rather_RB than_IN only_RB one_CD particular_JJ technique_NN ._.
+We_PRP report_VBP in_IN this_DT paper_NN about_IN the_DT results_NNS of_IN a_DT system_NN with_IN a_DT similar_JJ architecture_NN which_WDT uses_VBZ an_DT ensemble_NN of_IN techniques_NNS but_CC the_DT aim_NN is_VBZ slightly_RB differ_VBP -_: ent_NN ._.
+It_PRP is_VBZ focused_VBN on_IN location_NN extraction_NN from_IN text_NN and_CC has_VBZ nothing_NN to_TO do_VB with_IN the_DT location_NN of_IN the_DT Tweeter_NNP or_CC the_DT location_NN from_IN which_WDT the_DT Tweet_NNP was_VBD sent_VBN ._.
+A_DT Tweeter_NNP can_MD tweet_VB about_IN a_DT location_NN without_IN talking_VBG about_IN his_PRP$ or_CC her_PRP$ registered_VBN location_NN or_CC the_DT current_JJ lo_SYM -_: cation_NN ._.
+3_CD Task_NNP Specification_NNP The_NNP training_NN and_CC test_NN sets_NNS used_VBN for_IN this_DT research_NN are_VBP based_VBN on_IN ALTA-20144_NN shared_VBN task_NN ._.
+The_DT training_NN set_VBN consisted_VBN of_IN 2000_CD Twitter_NNP Id_NN 's_POS with_IN identified_VBN loca_NN -_: 4_CD http://www.alta.asn.au/events/sharedtask2014/_CD tions_NNS and_CC the_DT test_NN set_VBN consisted_VBN of_IN another_DT set_NN of_IN 1003_CD Twitter_NNP Id_NN 's_POS for_IN testing_NN ._.
+The_DT overall_JJ goal_NN of_IN the_DT research_NN was_VBD to_TO identify_VB all_DT mentions_VBZ of_IN locations_NNS in_IN the_DT text_NN of_IN a_DT twitter_NN mes_SYM -_: sage_NN ._.
+This_DT includes_VBZ all_DT single_JJ and_CC contiguous_JJ word_NN mentions_VBZ such_JJ as_IN ``_`` guatemala_NN ''_'' and_CC ``_`` new_JJ zealand_NN ''_'' and_CC similar_JJ mentions_VBZ as_IN abbreviations_NNS such_JJ as_IN ``_`` nz_NN ''_'' for_IN New_NNP Zealand_NNP ._.
+The_DT task_NN also_RB required_VBN to_TO identify_VB different_JJ mentions_VBZ referring_VBG the_DT same_JJ location_NN ._.
+The_DT following_JJ examples_NNS give_VBP an_DT overview_NN of_IN the_DT wider_JJR scope_NN of_IN the_DT task_NN ._.
+•_CD ``_`` #eqnz_NN ''_'' -_: location_NN is_VBZ ``_`` eqnz_FW ''_'' In_IN this_DT case_NN we_PRP need_VBP to_TO check_VB for_IN location_NN within_IN strings_NNS ,_, however_RB extract_VB the_DT whole_JJ token_JJ if_IN one_CD is_VBZ found_VBN ._.
+•_CD ``_`` http_NN :_: www.abc.net.au/melbourne/”_SYM -_: loca_SYM -_: tion_NN is_VBZ ``_`` http_VB :_: www.abc.net.au/melbourne/”_NN •_CD ``_`` cork_NN city_NN ..._: textbf_NN #Cork_NNP ''_'' -_: locations_NNS -_: ``_`` cork_NN city_NN cork2_NN ''_'' In_IN this_DT case_NN locations_NNS such_JJ as_IN city_NN had_VBD to_TO be_VB identified_VBN and_CC words_NNS in_IN locations_NNS appearing_VBG more_JJR than_IN once_RB had_VBD to_TO be_VB tagged_VBN with_IN the_DT count_NN ._.
+•_CD ``_`` Morrison_NNP 's_POS Island_NNP -_: S_NNP Terrace_NNP ''_'' -_: location_NN is_VBZ ``_`` morrisons_NNS island_NN s_VBZ terrace_NN ''_'' Punctuations_NNS need_VBP to_TO be_VB removed_VBN leaving_VBG the_DT strings_NNS as_IN they_PRP appear_VBP in_IN the_DT text_NN ._.
+•_CD ``_`` U.S._NNP EPA_NNP on_IN Twitter_NNP ''_'' -_: location_NN is_VBZ ``_`` NONE_NNP ''_'' In_IN this_DT case_NN ``_`` U.S._NNP ''_'' is_VBZ not_RB a_DT location_NN ,_, but_CC a_DT user_NN ._.
+•_CD ``_`` Our_PRP$ house_NN ''_'' -_: location_NN is_VBZ ``_`` our_PRP$ house_NN ''_'' Common_JJ nouns_NNS with_IN possessive_JJ pronouns_NNS need_VBP to_TO be_VB identified_VBN since_IN they_PRP are_VBP specific_JJ locations_NNS ._.
+•_CD ``_`` Southwest_NNP towns_NNS of_IN San_NNP Marcos_NNP ''_'' -_: location_NN is_VBZ ``_`` Southwest_NNP towns_NNS of_IN San_NNP Marcos_NNP ''_'' In_IN this_DT case_NN we_PRP need_VBP to_TO retain_VB the_DT preposition_NN ``_`` of_IN ''_'' ._.
+•_CD ``_`` 60_CD miles_NNS east_JJ starting_VBG from_IN Stamford_NNP CT_NNP ''_'' -_: location_NN is_VBZ ``_`` 60_CD miles_NNS east_JJ Stamford_NNP CT_NNP ''_'' This_DT involves_VBZ removing_VBG the_DT verb_NN and_CC the_DT prepo_NN -_: sition_NN from_IN the_DT location_NN ._.
+4_CD Methodology_NNP The_NNP schematic_JJ representation_NN of_IN the_DT method_NN is_VBZ shown_VBN in_IN Fig._NNP 1_CD ._.
+We_PRP utilized_VBD the_DT parallel_JJ processing_NN strategy_NN with_IN multiple_JJ modules_NNS to_TO identify_VB locations_NNS ._.
+The_DT proposed_VBN location_NN mining_NN architecture_NN is_VBZ di_FW -_: vided_VBN into_IN the_DT following_NN of_IN 9_CD major_JJ modules_NNS ._.
+I_PRP Cleaning_VBG Twitter_NNP text_NN ,_, this_DT module_NN is_VBZ based_VBN on_IN -LRB-_-LRB- Nand_JJ et_FW al._FW ,_, 2014_CD -RRB-_-RRB- in_IN Twitter_NNP text_NN mining_NN that_WDT uses_VBZ Hidden_NNP Markov_NNP Model_NNP -LRB-_-LRB- HMM_NNP -RRB-_-RRB- based_VBN tag_NN -_: ging_NN ._.
+II_NNP Location_NNP mining_NN using_VBG NER_NNP ,_, we_PRP have_VBP inte_SYM -_: grated_VBD the_DT Stanford_NNP NER_NNP toolkit_NN -LRB-_-LRB- Finkel_NNP and_CC Manning_NNP ,_, 2009_CD -RRB-_-RRB- with_IN MUC-3_NN class_NN pre-trained_JJ model_NN to_TO locate_VB cities_NNS and_CC countries_NNS ._.
+III_NNP Phrase_NNP and_CC dictionary_JJ chunking_NN ,_, the_DT module_NN chunks_NNS text_NN based_VBN on_IN a_DT predefined_VBN rule_NN set_NN ._.
+This_DT rule_NN set_VBN uses_NNS LingPipe_JJ library_NN 5_CD ._.
+IV_NNP Regex_NNP Pattern_NNP miner_NN ,_, the_DT module_NN finds_VBZ postal_JJ addresses_NNS and_CC geo_NN coordinates_VBZ such_JJ as_IN longitude_NN and_CC latitude_NN in_IN texts_NNS using_VBG regular_JJ expressions_NNS ._.
+V_NNP Location_NNP abbreviation_NN miner_NN ,_, the_DT module_NN uses_VBZ a_DT location_NN abbreviation_NN lexicon_NN list_NN ._.
+VI_NNP Location_NNP specifier_NN based_VBN identification_NN ,_, we_PRP used_VBD the_DT ALTA_NNP training_NN data_NNS to_TO create_VB a_DT location_NN spec_SYM -_: ifier_JJR list_NN enriched_VBN with_IN a_DT set_NN of_IN location_NN spec_SYM -_: ifiers_NNS extracted_VBN from_IN a_DT thesaurus_NN ._.
+This_DT list_NN is_VBZ used_VBN with_IN a_DT template_NN based_VBN matching_VBG to_TO identify_VB whether_IN an_DT extracted_VBN phrase_NN is_VBZ a_DT location_NN ._.
+This_DT module_NN also_RB selects_VBZ locations_NNS which_WDT are_VBP prepo_SYM -_: sitional_JJ attachments_NNS using_VBG a_DT set_NN of_IN templates_NNS ._.
+VII_NNP DBpedia_NNP based_VBN location_NN mining_NN ,_, this_DT module_NN 6_CD uses_VBZ the_DT most_RBS extensive_JJ knowledge_NN about_IN loca_NN -_: tions_NNS ,_, DBpedia_NNP is_VBZ a_DT Linked_NNP Data_NNP resource_NN which_WDT is_VBZ built_VBN based_VBN on_IN the_DT Wikipedia7_NNP text_NN ._.
+VIII_NNP Merging_NNP module_NN ,_, this_DT module_NN presents_VBZ a_DT more_RBR informative_JJ location_NN as_IN the_DT final_JJ result_NN ._.
+This_DT was_VBD accomplished_VBN using_VBG a_DT text_NN merging_VBG utility_NN that_WDT takes_VBZ the_DT index_NN of_IN the_DT each_DT location_NN mention_NN and_CC merge_VBP them_PRP to_TO the_DT same_JJ order_NN of_IN tokens_NNS appear_VBP -_: ing_NN in_IN the_DT tweet_NN text_NN ._.
+5http_NNS :_: /_SYM /_SYM alias-i_FW ._.
+com/lingpipe/index_NN ._.
+html_NN 6_CD http://dbpedia.org/About_NNP 7http_NNP :_: /_SYM /_SYM en.wikipedia.org/wiki/Main_NNP Page_NNP Figure_NNP 1_CD :_: Schematic_JJ representation_NN of_IN the_DT Twitter_NNP location_NN mining_NN framework_NN IX_CD Results_NNS formatter_NN Formatting_NN of_IN the_DT result_NN as_IN a_DT comma_NN separated_VBD file_NN was_VBD accomplished_VBN by_IN this_DT module_NN ._.
+In_IN essence_NN ,_, the_DT formatter_NN was_VBD based_VBN on_IN the_DT following_VBG four_CD rules_NNS :_: •_CD remove_VB all_DT punctuations_NNS from_IN the_DT phrase_NN •_NN iflocationsarerepeatedinatweet_NN ,_, number_NN them_PRP from_IN the_DT second_JJ occurrence_NN •_CD if_IN there_EX is_VBZ no_DT location_NN for_IN the_DT tweet_NN ,_, then_RB mark_VBP it_PRP as_IN NONE_NNP •_CD lowercase_JJ all_DT extracted_VBN location_NN phrases_NNS The_DT resulting_VBG phrases_NNS were_VBD converted_VBN to_TO a_DT Comma_NN separated_VBD file_NN with_IN two_CD fields_NNS ;_: tweet_NN id_NN and_CC the_DT location_NN phrases_NNS ._.
+5_CD Results_NNS Our_PRP$ location_NN miner_NN achieved_VBD an_DT average_JJ F-score_NN of_IN 0.747_CD ._.
+The_DT F-score_NN was_VBD calculated_VBN based_VBN on_IN the_DT ``_`` bag_NN of_IN words_NNS criteria_NNS ''_'' for_IN each_DT tweet_NN as_IN described_VBN in_IN the_DT Section_NN 3_CD ._.
+If_IN a_DT tweet_NN did_VBD not_RB contain_VB any_DT locations_NNS ,_, the_DT participants_NNS were_VBD required_VBN to_TO label_VB them_PRP with_IN ``_`` NONE_NNP ''_'' ._.
+The_DT overall_JJ results_NNS for_IN the_DT test_NN dataset_NN is_VBZ shown_VBN in_IN Table_NNP 5_CD ._.
+The_DT precision_NN and_CC recall_NN values_NNS were_VBD computed_VBN for_IN individual_JJ Tweets_NNPS ,_, which_WDT were_VBD then_RB averaged_VBN to_TO compute_VB the_DT overall_JJ F-score_NN ._.
+Hence_RB the_DT preci_NNS -_: sion_NN and_CC recall_NN values_NNS for_IN a_DT Tweet_NNP with_IN no_DT location_NN mentions_VBZ was_VBD taken_VBN as_IN 1.0_CD for_IN ``_`` NONE_NNP ''_'' to_TO indicate_VB no_DT location_NN ._.
+Any_DT other_JJ strings_NNS instead_RB of_IN ``_`` NONE_NNP ''_'' were_VBD counted_VBN as_IN false_JJ positives_NNS ._.
+Table_NNP 5_CD shows_NNS that_WDT Test_NNP Data_NNP Property_NNP Value_NNP No_NNP ._.
+of_IN Tweets_NNP 1003_CD No_DT ._.
+of_IN Location_NNP tokens_NNS 3179_CD No_DT ._.
+NONE_NNP Tweets_NNPS 115_CD Av_NNP ._.
+Recall_VB 0.7279_CD Av_NNP ._.
+Precision_NN 0.7905_CD Table_NNP 1_CD :_: Dataset_NNP details_NNS and_CC Results_NNS there_EX were_VBD 115_CD Tweets_NNS -LRB-_-LRB- 11.5_CD %_NN -RRB-_-RRB- with_IN no_DT locations_NNS ._.
+It_PRP should_MD be_VB noted_VBN that_IN this_DT strategy_NN for_IN accuracy_NN ap_SYM -_: proximation_NN will_MD tend_VB to_TO boost_VB the_DT F-score_NN if_IN a_DT large_JJ number_NN of_IN Tweets_NNPS have_VBP no_DT location_NN mentions_VBZ ._.
+Table_NNP 5_CD gives_VBZ the_DT number_NN of_IN the_DT locations_NNS speci_SYM -_: fied_VBN by_IN the_DT individual_JJ modules_NNS of_IN the_DT ensemble_NN sys_SYM -_: tem_NN used_VBN for_IN the_DT task_NN ._.
+The_DT majority_NN of_IN false_JJ nega_NN -_: tives_NNS were_VBD identified_VBN by_IN the_DT Location_NNP Specifier_NNP mod_NN -_: ule_NN which_WDT was_VBD primarily_RB based_VBN around_IN rules_NNS based_VBN on_IN the_DT use_NN of_IN the_DT prepositions_NNS of_IN place_NN such_JJ as_IN ,_, ``_`` at_IN ''_'' ,_, ``_`` on_IN ''_'' and_CC ``_`` in_IN ''_'' ._.
+The_DT DBpedia_NNP miner_NN module_NN was_VBD able_JJ to_TO identify_VB a_DT total_NN of_IN 1867_CD locations_NNS which_WDT is_VBZ even_RB higher_JJR than_IN then_RB the_DT Stanford_NNP NER_NNP module_NN ._.
+DBpe_SYM -_: dia_NN miner_NN has_VBZ achieved_VBN the_DT highest_JJS F_NN -_: score_NN of_IN 0.935_CD compared_VBN to_TO the_DT other_JJ four_CD modules_NNS ._.
+6_CD Conclusions_NNS and_CC Future_NNP Work_NNP This_DT paper_NN showed_VBD the_DT use_NN of_IN an_DT ensemble_NN architec_NN -_: ture_NN to_TO solve_VB the_DT problem_NN of_IN location_NN mention_NN iden_SYM -_: Module_NNP Number_NNP Stanford_NNP 1003_CD NER_NNP Postal_NNP 6_CD Address_NNP Miner_NNP Geo_NNP coor_NNP -_: 8_CD dinate_NN Location_NNP 607_CD Abbre_NNP -_: viation_NN Miner_NNP Location_NNP 202_CD Specifier_NNP DBpedia_NNP 1867_CD Miner_NNP Relative_NNP F_NN Score_NN 0.532_CD 0.167_CD 0.242_CD 0.710_CD 0.884_CD 0.935_CD Absolute_NNP F_NN Score_NN 0.434_CD 0.01_CD 0.02_CD 0.397_CD 0.126_CD 0.682_CD ion_NN on_IN World_NNP Wide_NNP Web_NNP -_: WWW_NNP ’12_CD Companion_NNP ,_, page_NN 687_CD ,_, New_NNP York_NNP ,_, New_NNP York_NNP ,_, USA_NNP ,_, April_NNP ._.
+ACM_NNP Press_NNP ._.
+Sheila_NNP Kinsella_NNP ,_, Vanessa_NNP Murdock_NNP ,_, and_CC Neil_NNP O’Hare_NNP ._.
+2011_CD ._. ''_''
+I_PRP 'm_VBP eating_VBG a_DT sandwich_NN in_IN Glasgow_NNP ''_'' ._.
+In_IN Proceedings_NNP of_IN the_DT 3rd_JJ international_JJ workshop_NN on_IN Search_NNP and_CC mining_VBG user-generated_JJ contents_NNS -_: SMUC_NNP '_POS 11_CD ,_, page_NN 61_CD ,_, New_NNP York_NNP ,_, New_NNP York_NNP ,_, USA_NNP ,_, October_NNP ._.
+ACM_NNP Press_NNP ._.
+Wen_NNP Li_NNP ,_, Pavel_NNP Serdyukov_NNP ,_, Arjen_NNP P._NNP de_IN Vries_NNP ,_, Carsten_NNP Eickhoff_NNP ,_, and_CC Martha_NNP Larson_NNP ._.
+2011_CD ._.
+The_DT where_WRB in_IN the_DT tweet_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 20th_JJ ACM_JJ international_JJ conference_NN on_IN Information_NN and_CC knowledge_NN manage_VBP -_: ment_SYM -_: CIKM_NNP '_POS 11_CD ,_, page_NN 2473_CD ,_, New_NNP York_NNP ,_, New_NNP York_NNP ,_, USA_NNP ,_, October_NNP ._.
+ACM_NNP Press_NNP ._.
+Chenliang_NNP Li_NNP ,_, Jianshu_NNP Weng_NNP ,_, Qi_NNP He_PRP ,_, Yuxia_NNP Yao_NNP ,_, An_DT -_: witaman_NN Datta_NNP ,_, Aixin_NNP Sun_NNP ,_, and_CC Bu-Sung_NNP Lee_NNP ._.
+2012_CD ._.
+TwiNER_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 35th_JJ international_JJ ACM_NNP SIGIR_NNP conference_NN on_IN Research_NNP and_CC development_NN in_IN information_NN retrieval_NN -_: SIGIR_NNP '_POS 12_CD ,_, page_NN 721_CD ,_, New_NNP York_NNP ,_, New_NNP York_NNP ,_, USA_NNP ,_, August_NNP ._.
+ACM_NNP Press_NNP ._.
+John_NNP Lingad_NNP ,_, Sarvnaz_NNP Karimi_NNP ,_, and_CC Jie_NNP Yin_NNP ._.
+2013_CD ._.
+Loca_SYM -_: tion_NN extraction_NN from_IN disaster-related_JJ microblogs_NNS ._.
+Pro-_JJ ceedings_NNS of_IN the_DT 22Nd_NNP International_NNP Conference_NNP on_IN World_NNP Wide_NNP Web_NNP Companion_NNP ,_, pages_NNS 1017_CD --_: 1020_CD ,_, May_NNP ._.
+Jalal_NNP Mahmud_NNP ,_, Jeffrey_NNP Nichols_NNP ,_, and_CC Clemens_NNP Drews_NNP ._.
+2012_CD ._.
+Where_WRB Is_VBZ This_DT Tweet_NNP From_IN ?_.
+Inferring_NNP Home_NNP Locations_NNPS of_IN Twitter_NNP Users_NNPS ._.
+In_IN ICWSM_NNP ._.
+Parma_NNP Nand_NNP ,_, Ramesh_NNP Lal_NNP ,_, and_CC Rivindu_NNP Perera_NNP ._.
+2014_CD ._.
+A_DT HMM_NNP POS_NNP Tagger_NNP for_IN Micro-Blogging_NNP Type_NNP Texts_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 13th_NNP Pacific_NNP Rim_NNP International_NNP Conference_NNP on_IN Artificial_NNP Intelligence_NNP -LRB-_-LRB- PRICAI_NNP 2014_CD -RRB-_-RRB- ._.
+Alan_NNP Ritter_NNP ,_, Sam_NNP Clark_NNP ,_, Mausam_NNP ,_, and_CC Oren_NNP Etzioni_NNP ._.
+2011_CD ._.
+Named_VBN entity_NN recognition_NN in_IN tweets_NNS :_: an_DT experi_NN -_: mental_JJ study_NN ._.
+pages_NNS 1524_CD --_: 1534_CD ,_, July_NNP ._.
+Jagan_NNP Sankaranarayanan_NNP ,_, Hanan_NNP Samet_NNP ,_, Benjamin_NNP E._NNP Teitler_NNP ,_, Michael_NNP D._NNP Lieberman_NNP ,_, and_CC Jon_NNP Sperling_NNP ._.
+2009_CD ._.
+TwitterStand_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 17th_JJ ACM_NNP SIGSPATIAL_NNP International_NNP Conference_NNP on_IN Advances_NNPS in_IN Geographic_NNP Information_NNP Systems_NNP -_: GIS_NNP '_POS 09_CD ,_, page_NN 42_CD ,_, New_NNP York_NNP ,_, New_NNP York_NNP ,_, USA_NNP ,_, November_NNP ._.
+ACM_NNP Press_NNP ._.
+Table_NNP 2_CD :_: The_DT number_NN of_IN locations_NNS resolved_VBN by_IN individual_JJ modules_NNS with_IN respective_JJ F_NN score_NN tification_NN ._.
+We_PRP presented_VBD an_DT ensemble_NN architecture_NN that_WDT uses_VBZ a_DT basic_JJ general_JJ purpose_NN NER_NNP ,_, with_IN a_DT com_NN -_: bination_NN of_IN various_JJ rule_NN based_VBN modules_NNS in_IN conjunc_NN -_: tion_NN with_IN DBpedia_NNP knowledge_NN base_NN to_TO achieve_VB an_DT F_NN -_: score_NN of_IN 0.747_CD ._.
+A_DT critical_JJ aspect_NN of_IN any_DT ensem_NN -_: ble_NN architecture_NN is_VBZ how_WRB to_TO combine_VB the_DT results_NNS at_IN the_DT end_NN ._.
+This_DT was_VBD also_RB illustrated_VBN by_IN the_DT Merger_NNP module_NN which_WDT takes_VBZ outputs_NNS from_IN the_DT various_JJ ensemble_NN mod_NN -_: ules_NNS and_CC combines_VBZ them_PRP into_IN a_DT noun_NN phrase_NN location_NN phrase_NN as_IN was_VBD required_VBN by_IN the_DT shared_VBN task_NN specifica_NN -_: tion_NN ._.
+The_DT design_NN of_IN the_DT architecture_NN enables_VBZ us_PRP to_TO exclude_VB a_DT class_NN of_IN location_NN mentions_VBZ and_CC also_RB to_TO in_IN -_: clude_VB any_DT new_JJ ones_NNS that_IN a_DT task_NN at_IN hand_NN might_MD dic_VB -_: tate_NN ._.
+The_DT final_JJ results_NNS can_MD also_RB be_VB easily_RB modified_VBN to_TO output_NN single_JJ token_JJ locations_NNS or_CC full_JJ noun_NN phrase_NN lo_SYM -_: cations_NNS ._.
+In_IN future_NN we_PRP intend_VBP to_TO further_JJ improve_VB the_DT accuracy_NN and_CC to_TO classify_VB the_DT locations_NNS into_IN types_NNS such_JJ as_IN country_NN ,_, site_NN and_CC address_NN for_IN specific_JJ applications_NNS ._.
+References_NNS Jenny_NNP Rose_NNP Finkel_NNP and_CC Christopher_NNP D_NNP Manning_NNP ._.
+2009_CD ._.
+Joint_NNP Parsing_NNP and_CC Named_VBN Entity_NNP Recognition_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT North_JJ American_NNP Association_NNP of_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- NAACL_NNP 2009_CD -RRB-_-RRB- ._.
+Yohei_NNP Ikawa_NNP ,_, Miki_NNP Enoki_NNP ,_, and_CC Michiaki_NNP Tatsubori_NNP ._.
+2012_CD ._.
+Location_NNP inference_NN using_VBG microblog_NN messages_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 21st_JJ international_JJ conference_NN compan_NN -_:

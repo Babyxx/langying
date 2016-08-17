@@ -1,0 +1,174 @@
+An_DT Improved_VBN Hierarchical_NNP Word_NNP Sequence_NNP Language_NNP Model_NNP Using_VBG Directional_NNP Information_NNP Xiaoyi_NNP Wu_NNP Yuji_NNP Matsumoto_NNP Abstract_NNP For_IN relieving_VBG data_NNS sparsity_NN problem_NN ,_, Hierarchi_NNP -_: cal_JJ Word_NN Sequence_NN -LRB-_-LRB- abbreviated_JJ as_IN HWS_NNP -RRB-_-RRB- lan_SYM -_: guage_NN model_NN ,_, which_WDT uses_VBZ word_NN frequency_NN in_IN -_: formation_NN to_TO convert_VB raw_JJ sentences_NNS into_IN spe_NN -_: cial_JJ n-gram_JJ sequences_NNS ,_, can_MD be_VB viewed_VBN as_IN an_DT effective_JJ alternative_NN to_TO normal_JJ n-gram_JJ method_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP directional_JJ information_NN to_TO make_VB HWS_NNP models_NNS more_RBR syntactically_RB ap_SYM -_: propriate_NN so_IN that_IN higher_JJR performance_NN can_MD be_VB achieved_VBN ._.
+For_IN evaluation_NN ,_, we_PRP perform_VBP intrin_SYM -_: sic_NN and_CC extrinsic_JJ experiments_NNS ,_, both_DT verify_VBP the_DT effectiveness_NN of_IN our_PRP$ improved_VBN model_NN ._.
+1_CD Introduction_NNP Probabilistic_NNP Language_NNP Modeling_NNP is_VBZ a_DT fundamental_JJ research_NN direction_NN of_IN Natural_JJ Language_NN Processing_NNP ._.
+It_PRP is_VBZ widely_RB used_VBN in_IN many_JJ applications_NNS such_JJ as_IN ma_SYM -_: chine_NN translation_NN -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 1990_CD -RRB-_-RRB- ,_, spelling_VBG cor_SYM -_: rection_NN -LRB-_-LRB- Mays_NNP et_FW al._FW ,_, 1991_CD -RRB-_-RRB- ,_, speech_NN recognition_NN -LRB-_-LRB- Ra_SYM -_: biner_NN and_CC Juang_NNP ,_, 1993_CD -RRB-_-RRB- ,_, word_NN prediction_NN -LRB-_-LRB- Bickel_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- and_CC so_RB on_IN ._.
+Most_JJS research_NN about_IN Probabilistic_NNP Language_NNP Mod_NNP -_: eling_NN ,_, such_JJ as_IN back-off_NN -LRB-_-LRB- Katz_NNP ,1987_CD -RRB-_-RRB- ,_, Kneser-Ney_NNP -LRB-_-LRB- Kneser_NNP and_CC Ney_NNP ,_, 1995_CD -RRB-_-RRB- ,_, and_CC modified_VBD Kneser-Ney_NNP -LRB-_-LRB- Chen_NNP and_CC Goodman_NNP ,_, 1999_CD -RRB-_-RRB- ,_, only_RB focus_VB on_IN smooth_JJ -_: ing_NN methods_NNS because_IN they_PRP all_DT take_VBP n-gram_JJ approach_NN -LRB-_-LRB- Shannon_NNP ,_, 1948_CD -RRB-_-RRB- as_IN a_DT default_NN setting_VBG for_IN extracting_VBG word_NN sequences_NNS from_IN a_DT sentence_NN ._.
+Yet_RB even_RB with_IN 30_CD years_NNS worth_IN of_IN newswire_NN text_NN ,_, more_JJR than_IN one_CD third_NN of_IN all_DT trigrams_NNS are_VBP still_RB unseen_JJ -LRB-_-LRB- Allison_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, which_WDT can_MD not_RB be_VB distinguished_VBN accurately_RB even_RB us_PRP -_: ing_VBG a_DT high-performance_JJ smoothing_NN method_NN such_JJ as_IN modified_VBN Kneser-Ney_NNP -LRB-_-LRB- abbreviated_JJ as_IN MKN_NNP -RRB-_-RRB- ._.
+It_PRP is_VBZ Computational_NNP Linguistics_NNP Laboratory_NNP 8916-5_CD Takayama_NNP ,_, Ikoma_NNP ,_, Nara_NNP Japan_NNP matsu@is.naist.jp_NN better_JJR to_TO make_VB these_DT unseen_JJ sequences_NNS actually_RB be_VB observed_VBN rather_RB than_IN to_TO leave_VB them_PRP to_TO smoothing_VBG method_NN directly_RB ._.
+For_IN the_DT purpose_NN of_IN extracting_VBG more_JJR valid_JJ word_NN se_FW -_: quences_NNS and_CC relieving_VBG data_NNS sparsity_NN problem_NN ,_, Wu_NNP and_CC Matsumoto_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- proposed_VBD a_DT heuristic_JJ approach_NN to_TO convert_VB a_DT sentence_NN into_IN a_DT hierarchical_JJ word_NN sequence_NN -LRB-_-LRB- abbreviated_JJ as_IN HWS_NNP -RRB-_-RRB- structure_NN ,_, by_IN which_WDT special_JJ n_SYM -_: grams_NNS can_MD be_VB achieved_VBN ._.
+In_IN this_DT paper_NN ,_, we_PRP improve_VBP HWS_NNP models_NNS by_IN adding_VBG directional_JJ information_NN for_IN achieving_VBG higher_JJR performance_NN ._.
+This_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN Section_NN 2_CD ,_, we_PRP give_VBP a_DT complete_JJ review_NN of_IN the_DT HWS_NNP language_NN model_NN ._.
+We_PRP present_VBP our_PRP$ improved_VBN HWS_NNP model_NN in_IN Section_NN 3_CD ._.
+In_IN Section_NN 4_CD ,_, we_PRP show_VBP the_DT effectiveness_NN of_IN our_PRP$ model_NN by_IN several_JJ experiments_NNS ._.
+Finally_RB ,_, we_PRP summarize_VBP our_PRP$ findings_NNS in_IN Section_NN 5_CD ._.
+2_CD Review_NNP of_IN HWS_NNP Language_NNP Model_NNP The_NNP HWS_NNP language_NN model_NN is_VBZ defined_VBN as_IN follows_VBZ ._.
+Suppose_VB that_IN we_PRP have_VBP a_DT frequency-sorted_JJ vocab_NN -_: ulary_JJ list_NN V_NNP =_SYM -LCB-_-LRB- v1_CD ,_, v2_CD ,_, ..._: ,_, vm_FW -RCB-_-RRB- ,_, C_NNP -LRB-_-LRB- v2_FW -RRB-_-RRB- ≥_CD ..._: ≥_CD C_NNP -LRB-_-LRB- vm_FW -RRB-_-RRB- 1_CD ._.
+According_VBG to_TO V_NNP ,_, S_NNP =_SYM w1_CD ,_, w2_CD ,_, ..._: ,_, wn_NN ,_, used_VBN word_NN wi_NNS ∈_VBP S_NNP -LRB-_-LRB- 1_CD ≤_CD i_FW ≤_FW n_FW -RRB-_-RRB- can_MD lected2_VB for_IN splitting_NN S_NNP into_IN two_CD substrings_NNS SL_NNP =_SYM w1_CD ,_, ..._: ,_, wi_FW −_FW 1_CD and_CC SR_NNP =_SYM wi_SYM +1_CD ,_, ..._: ,_, wn_NN ._.
+Sim_SYM -_: ilarly_RB ,_, for_IN SL_NNP and_CC SR_NNP ,_, wj_NN ∈_NN SL_NNP -LRB-_-LRB- 1_CD ≤_CD j_NN ≤_CD i_FW −_FW 1_LS -RRB-_-RRB- and_CC wk_JJ ∈_NN SR_NNP -LRB-_-LRB- i_FW +1_FW ≤_FW k_NN ≤_CD n_NN -RRB-_-RRB- can_MD also_RB be_VB se_FW -_: lected_VBN ,_, by_IN which_WDT SL_NNP and_CC SR_NNP can_MD be_VB splitted_VBN 1C_NNP -LRB-_-LRB- v_FW -RRB-_-RRB- represents_VBZ the_DT frequency_NN of_IN v_NN in_IN a_DT certain_JJ corpus_NN ._.
+2If_JJ wi_NN appears_VBZ multiple_JJ times_NNS in_IN S_NNP ,_, then_RB select_VB the_DT first_JJ one_CD ._.
+given_VBN the_DT most_RBS frequently_RB be_VB se_FW -_: where_WRB C_NNP -LRB-_-LRB- v1_FW -RRB-_-RRB- ≥_CD any_DT sentence_NN Figure_NN 1_CD :_: A_DT comparison_NN of_IN structures_NNS between_IN HWS_NNP and_CC n-gram_JJ into_IN two_CD smaller_JJR substrings_NNS separately_RB ._.
+Ex_SYM -_: ecuting_VBG this_DT process_NN recursively_RB until_IN all_PDT the_DT substrings_NNS become_VBP empty_JJ strings_NNS ,_, then_RB a_DT tree_NN T_NNP =_SYM -LRB-_-LRB- -LCB-_-LRB- wi_NNS ,_, wj_NN ,_, wk_NN ,_, ..._: -RCB-_-RRB- ,_, -LCB-_-LRB- -LRB-_-LRB- wi_FW ,_, wj_NN -RRB-_-RRB- ,_, -LRB-_-LRB- wi_FW ,_, wk_JJ -RRB-_-RRB- ,_, ..._: -RCB-_-RRB- -RRB-_-RRB- can_MD be_VB generated_VBN ,_, which_WDT is_VBZ defined_VBN as_IN an_DT HWS_NNP structure_NN ._.
+In_IN an_DT HWS_NNP structure_NN T_NNP ,_, assuming_VBG that_IN each_DT node_NN depends_VBZ on_IN its_PRP$ preceding_VBG n-1_JJ parent_NN nodes_NNS ,_, then_RB spe_SYM -_: cial_JJ n-grams_NNS can_MD be_VB trained_VBN ._.
+Such_JJ kind_NN of_IN n-grams_NNS are_VBP defined_VBN as_IN HWS-n-grams_NNS ._.
+The_DT advantage_NN of_IN HWS_NNP models_NNS can_MD be_VB considered_VBN as_IN discontinuity_NN ._.
+Taking_VBG Figure_NN 1_CD as_IN an_DT example_NN ,_, since_IN n-gram_NN model_NN is_VBZ a_DT continuous_JJ language_NN model_NN ,_, in_IN its_PRP$ structure_NN ,_, the_DT second_JJ `_`` as_IN '_'' depends_VBZ on_IN `_`` soon_RB '_'' ,_, while_IN in_IN the_DT HWS_NNP structure_NN ,_, the_DT second_JJ `_`` as_IN '_'' depends_VBZ on_IN the_DT first_JJ `_`` as_IN '_'' ,_, forming_VBG a_DT discontinuous_JJ pattern_NN to_TO generate_VB the_DT word_NN `_`` soon_RB '_'' ,_, which_WDT is_VBZ closer_RBR to_TO our_PRP$ lin_SYM -_: guistic_JJ intuition_NN ._.
+Rather_RB than_IN `_`` as_RB soon_RB ..._: '_'' ,_, taking_VBG `_`` as_IN ..._: as_IN '_'' as_IN a_DT pattern_NN is_VBZ more_RBR reasonable_JJ because_IN `_`` soon_RB '_'' is_VBZ quite_RB easy_JJ to_TO be_VB replaced_VBN by_IN other_JJ words_NNS ,_, such_JJ as_IN `_`` fast_RB '_'' ,_, `_`` high_JJ '_'' ,_, `_`` much_RB '_'' and_CC so_RB on_IN ._.
+Consequently_RB ,_, even_RB using_VBG 4-gram_JJ or_CC 5-gram_JJ ,_, sequences_NNS consist_VBP -_: ing_NN of_IN `_`` soon_RB '_'' and_CC its_PRP$ nearby_JJ words_NNS tend_VBP to_TO be_VB low_JJ -_: frequency_NN because_IN the_DT connection_NN of_IN `_`` as_RB ..._: as_IN '_'' is_VBZ still_RB interrupted_JJ ._.
+On_IN the_DT contrary_NN ,_, the_DT HWS_NNP model_NN ex_FW -_: tracts_NNS sequences_NNS in_IN a_DT discontinuous_JJ way_NN ,_, even_RB `_`` soon_RB '_'' is_VBZ replaced_VBN by_IN another_DT word_NN ,_, the_DT expression_NN `_`` as_IN ..._: as_IN '_'' wo_MD n't_RB be_VB affected_VBN ._.
+This_DT is_VBZ how_WRB the_DT HWS_NNP models_NNS re_SYM -_: lieve_NN the_DT data_NNS sparseness_NN problem_NN ._.
+It_PRP unsupervisedly_JJ construct_VBP a_DT hierarchical_JJ struc_NN -_: ture_NN to_TO adjust_VB the_DT word_NN sequence_NN so_IN that_IN irrele_NN -_: vant_JJ words_NNS can_MD be_VB filtered_VBN out_RP from_IN contexts_NNS and_CC long_JJ distance_NN information_NN can_MD be_VB used_VBN for_IN predict_VBP -_: ing_VBG the_DT next_JJ word_NN ._.
+On_IN this_DT point_NN ,_, it_PRP has_VBZ some_DT -_: thing_NN in_IN common_JJ with_IN structured_JJ language_NN model_NN -LRB-_-LRB- Chelba_NNP ,_, 1997_CD -RRB-_-RRB- ,_, which_WDT firstly_RB introduced_VBD parsing_NN into_IN language_NN modeling_NN ._.
+The_DT significant_JJ difference_NN is_VBZ ,_, structured_JJ language_NN model_NN is_VBZ based_VBN on_IN CFG_NNP parsing_VBG structures_NNS ,_, while_IN HWS_NNP model_NN is_VBZ based_VBN on_IN pattern_NN -_: oriented_VBN structures_NNS ._.
+The_DT experimental_JJ results_NNS reported_VBN by_IN Wu_NNP and_CC Matsumoto_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- indicated_VBD that_IN HWS_NNP model_NN keeps_VBZ better_JJR balance_NN between_IN coverage_NN and_CC usage_NN than_IN nor_CC -_: mal_NN n-gram_NN and_CC skip-gram_NN models_NNS -LRB-_-LRB- Guthrie_NNP ,_, 2006_CD -RRB-_-RRB- ,_, which_WDT means_VBZ that_IN more_JJR valid_JJ sequence_NN patterns_NNS can_MD be_VB extracted_VBN in_IN this_DT approach_NN ._.
+However_RB ,_, the_DT discontinuity_NN of_IN HWS_NNP models_NNS also_RB brings_VBZ a_DT disadvantage_NN ._.
+In_IN normal_JJ n-gram_JJ models_NNS ,_, since_IN the_DT generation_NN of_IN words_NNS is_VBZ one-sided_JJ -LRB-_-LRB- from_IN left_VBN to_TO right_JJ -RRB-_-RRB- ,_, given_VBN any_DT left-hand_JJ context_NN ,_, words_NNS gener_SYM -_: ated_VBN from_IN it_PRP can_MD be_VB considered_VBN as_IN linguistically_RB ap_SYM -_: propriate_NN ._.
+In_IN contrast_NN ,_, HWS_NNP structures_NNS are_VBP essen_SYM -_: tially_RB binary_JJ trees_NNS ,_, which_WDT also_RB generate_VBP words_NNS on_IN the_DT left_JJ side_NN ._.
+However_RB ,_, according_VBG to_TO the_DT definition_NN of_IN HWS-n-grams_NNS ,_, the_DT directional_JJ information_NN are_VBP not_RB taken_VBN into_IN account_NN ,_, which_WDT causes_VBZ a_DT syntactical_JJ prob_NN -_: lem_NN ._.
+Taking_VBG Figure_NN 1_CD as_IN an_DT example_NN ._.
+According_VBG to_TO the_DT structure_NN of_IN HWS_NNP ,_, HWS-3-grams_NNS are_VBP trained_VBN as_IN -LCB-_-LRB- -LRB-_-LRB- ROOT_NN ,_, as_RB ,_, as_IN -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, as_IN ,_, soon_RB -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, as_IN ,_, possible_JJ -RRB-_-RRB- -RCB-_-RRB- ,_, where_WRB `_`` soon_RB '_'' and_CC `_`` possible_JJ '_'' are_VBP generated_VBN from_IN con_NN -_: text_NN -LRB-_-LRB- as_IN ,_, as_IN -RRB-_-RRB- without_IN any_DT distinction_NN ,_, which_WDT means_VBZ ,_, an_DT illegal_JJ sentence_NN such_JJ like_IN `_`` as_IN possible_JJ as_RB soon_RB '_'' can_MD be_VB also_RB generated_VBN from_IN this_DT HWS-3-gram_NN model_NN ._.
+3_CD Directional_JJ HWS_NNP Models_NNPS To_TO solve_VB this_DT problem_NN ,_, we_PRP propose_VBP to_TO use_VB direc_NN -_: tional_JJ information_NN ._.
+As_IN mentioned_VBN previously_RB ,_, since_IN HWS_NNP structures_NNS are_VBP essentially_RB binary_JJ trees_NNS ,_, direc_NN -_: tional_JJ information_NN has_VBZ already_RB been_VBN encoded_VBN when_WRB HWS_NNP structures_NNS are_VBP established_VBN ._.
+Thus_RB ,_, after_IN an_DT HWS_NNP structure_NN being_VBG constructed_VBN ,_, directional_JJ information_NN can_MD be_VB easily_RB attached_VBN to_TO this_DT tree_NN as_IN shown_VBN in_IN Figure_NN 2_CD ._.
+Then_RB ,_, assuming_VBG that_IN each_DT node_NN depends_VBZ on_IN its_PRP$ n-1_JJ preceding_VBG parent_NN nodes_NNS with_IN their_PRP$ directional_JJ information_NN ,_, we_PRP can_MD train_VB a_DT special_JJ n-gram_NN from_IN this_DT binary_JJ tree_NN ._.
+For_IN instance_NN ,_, 3-grams_JJ trained_VBN from_IN this_DT tree_NN are_VBP -LCB-_-LRB- -LRB-_-LRB- ROOT-R_NNP ,_, as-R_NNP ,_, as_IN -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN -_: R_NN ,_, as-L_JJ ,_, soon_RB -RRB-_-RRB- ,_, -LRB-_-LRB- as-R_JJ ,_, as-R_JJ ,_, possible_JJ -RRB-_-RRB- -RCB-_-RRB- ,_, where_WRB syn_SYM -_: tactical_JJ information_NN can_MD be_VB encoded_VBN more_RBR precisely_RB than_IN original_JJ HWS-3-grams_NNS ._.
+For_IN the_DT purpose_NN of_IN dis_SYM -_: tinguishing_VBG our_PRP$ models_NNS from_IN the_DT original_JJ HWS_NNP mod_NN -_: Figure_NN 2_CD :_: An_DT example_NN of_IN HWS_NNP structure_NN with_IN directional_JJ information_NN els_NNS ,_, we_PRP call_VBP n-grams_JJ trained_VBN in_IN our_PRP$ way_NN as_IN DHWS-n_NNP -_: grams_NNS ._.
+In_IN the_DT above_JJ example_NN of_IN DHWS-3-grams_NNS ,_, -LRB-_-LRB- as-R_JJ ,_, as-L_JJ ,_, soon_RB -RRB-_-RRB- indicates_VBZ that_IN `_`` soon_RB '_'' is_VBZ located_VBN between_IN two_CD `_`` as_RB 's_POS ,_, while_IN -LRB-_-LRB- as-R_JJ ,_, as-R_JJ ,_, possible_JJ -RRB-_-RRB- indicates_VBZ that_IN `_`` possible_JJ '_'' is_VBZ located_VBN on_IN the_DT right_JJ side_NN of_IN the_DT second_JJ `_`` as_IN '_'' ._.
+Similarly_RB ,_, if_IN we_PRP use_VBP DHWS-4-grams_NNS or_CC higher_JJR order_NN ones_NNS ,_, the_DT relative_JJ position_NN of_IN each_DT word_NN will_MD be_VB more_RBR specific_JJ ._.
+In_IN other_JJ words_NNS ,_, according_VBG to_TO a_DT DHWS_NNP structure_NN ,_, for_IN each_DT word_NN -LRB-_-LRB- node_JJ -RRB-_-RRB- ,_, its_PRP$ position_NN -LRB-_-LRB- relative_JJ to_TO the_DT whole_JJ sentence_NN -RRB-_-RRB- can_MD be_VB strictly_RB determined_VBN by_IN its_PRP$ preceding_VBG parent_NN nodes_NNS ._.
+The_DT bigger_JJR n_NN is_VBZ ,_, the_DT more_RBR syntactical_JJ information_NN DHWS-n-grams_NNS can_MD reflect_VB ._.
+As_IN for_IN smoothing_VBG methods_NNS for_IN HWS_NNP models_NNS ,_, Wu_NNP and_CC Matsumoto_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- only_RB used_VBD an_DT additive_JJ smoothing_NN ._.
+Although_IN HWS-n-grams_NNS are_VBP trained_VBN in_IN a_DT special_JJ way_NN ,_, they_PRP are_VBP essentially_RB n-grams_JJ be_VB -_: cause_NN each_DT trained_VBN sequence_NN is_VBZ reserved_VBN as_IN a_DT -LRB-_-LRB- n_SYM −_SYM 1_CD length_NN context_NN ,_, word_NN -RRB-_-RRB- tuple_NN as_IN normal_JJ n-grams_NNS ,_, which_WDT makes_VBZ it_PRP possible_JJ to_TO apply_VB MKN_NNP smoothing_NN to_TO HWS_NNP models_NNS ._.
+The_DT main_JJ difference_NN is_VBZ that_IN HWS_NNP models_NNS are_VBP trained_VBN by_IN tree_NN structures_NNS while_IN n-gram_JJ models_NNS in_IN a_DT continuous_JJ way_NN ,_, which_WDT affects_VBZ the_DT count_NN -_: ing_NN of_IN contexts_NNS C_NNP -LRB-_-LRB- wi_FW −_FW 1_LS -RRB-_-RRB- ._.
+i_FW −_FW n_FW +1_FW Taking_VBG Figure_NN 1_CD as_IN an_DT example_NN ._.
+According_VBG to_TO the_DT structure_NN of_IN HWS_NNP ,_, HWS-3-grams_NNS are_VBP trained_VBN as_IN -LCB-_-LRB- -LRB-_-LRB- ROOT_NN ,_, as_RB ,_, as_IN -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, as_IN ,_, soon_RB -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, as_IN ,_, possible_JJ -RRB-_-RRB- -RCB-_-RRB- ,_, while_IN the_DT HWS-2-grams_NNS are_VBP trained_VBN as_IN -LCB-_-LRB- -LRB-_-LRB- ROOT_NN ,_, as_IN -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, as_IN -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, soon_RB -RRB-_-RRB- ,_, -LRB-_-LRB- as_IN ,_, possible_JJ -RRB-_-RRB- -RCB-_-RRB- ._.
+In_IN the_DT HWS_NNP -_: 3-gram_JJ model_NN ,_, as_IN the_DT context_NN of_IN `_`` soon_RB '_'' and_CC `_`` possi_SYM -_: ble_NN '_'' ,_, `_`` as_IN ..._: as_IN '_'' appears_VBZ twice_RB ,_, however_RB ,_, in_IN the_DT HWS_NNP -_: 2-gram_JJ model_NN ,_, C_NNP -LRB-_-LRB- as_IN ,_, as_IN -RRB-_-RRB- is_VBZ counted_VBN only_RB once_RB ._.
+In_IN normal_JJ n-gram_JJ models_NNS ,_, C_NNP -LRB-_-LRB- wi_FW −_FW 1_LS -RRB-_-RRB- can_MD be_VB directly_RB i_FW −_FW n_FW +1_FW Figure_NN 3_CD :_: The_DT interpolation_NN of_IN GLM_NNP model_NN Figure_NN 4_CD :_: A_DT demonstration_NN for_IN applying_VBG GLM_NNP smoothing_VBG to_TO HWS_NNP structure_NN be_VB counted_VBN in_IN the_DT model_NN with_IN the_DT same_JJ order_NN ._.
+Taking_VBG this_DT into_IN account_NN ,_, MKN_NNP smoothing_VBG method_NN can_MD be_VB also_RB applied_VBN to_TO HWS_NNP models_NNS and_CC DHWS_NNP models_NNS ._.
+As_IN an_DT alternative_NN of_IN MKN_NNP smoothing_VBG method_NN ,_, we_PRP can_MD also_RB use_VB GLM_NNP -LRB-_-LRB- Pickhardt_NNP et_FW ._.
+al._RB ,_, 2014_CD -RRB-_-RRB- ._.
+GLM_NNP -LRB-_-LRB- Generalized_NNP Language_NNP Model_NNP -RRB-_-RRB- is_VBZ a_DT combination_NN of_IN skipped_VBN n-grams_NNS and_CC MKN_NNP ,_, which_WDT performs_VBZ well_RB on_IN overcoming_VBG data_NNS sparseness_NN ._.
+GLM_NNP smoothing_VBG con_NN -_: siders_NNS all_DT possible_JJ combinations_NNS of_IN gaps_NNS in_IN a_DT local_JJ context_NN and_CC interpolates_VBZ the_DT higher_JJR order_NN model_NN with_IN all_DT possible_JJ lower_JJR order_NN models_NNS derived_VBN from_IN adding_VBG gaps_NNS in_IN all_DT different_JJ ways_NNS ._.
+As_IN shown_VBN in_IN Figure_NN 3_CD ,_, n_NN stands_NNS for_IN the_DT length_NN of_IN normal_JJ n-grams_NNS for_IN cal_NN -_: culation_NN ,_, k_NN indicates_VBZ the_DT number_NN of_IN words_NNS actually_RB be_VB used_VBN ,_, and_CC the_DT wildcard_NN '_'' '_'' represents_VBZ the_DT skipped_VBN words_NNS in_IN a_DT n-gram_NN ._.
+Since_IN GLM_NNP is_VBZ a_DT generalized_VBN version_NN of_IN MKN_NNP smoothing_NN ,_, it_PRP can_MD also_RB be_VB applied_VBN to_TO HWS_NNP models_NNS -LRB-_-LRB- as_IN shown_VBN in_IN Figure_NN 4_CD -RRB-_-RRB- ._.
+In_IN the_DT following_JJ experiments_NNS ,_, we_PRP will_MD use_VB MKN_NNP and_CC GLM_NNP as_IN smoothing_NN methods_NNS ._.
+To_TO ensure_VB the_DT openness_NN of_IN our_PRP$ research_NN ,_, the_DT source_NN code_NN used_VBN for_IN following_VBG experiments_NNS can_MD be_VB down_RB -_: loaded_JJ .3_CD 3_CD https://github.com/aisophie/HWS_NNS achieved_VBN from_IN its_PRP$ lower_JJR model_NN because_IN they_PRP are_VBP con_JJ -_: tinuous_JJ ,_, but_CC in_IN HWS_NNP models_NNS ,_, C_NNP -LRB-_-LRB- wi_FW −_FW 1_LS -RRB-_-RRB- should_MD be_VB i_FW −_FW n_FW +1_FW counted_VBN as_IN i_FW C_$ -LRB-_-LRB- wi_FW −_FW 1_CD ,_, wj_NN -RRB-_-RRB- ,_, wj_FW ∈_FW -LCB-_-LRB- wi_NNS :_: C_NNP -LRB-_-LRB- wi_FW −_FW n_FW +1_FW -RRB-_-RRB- >_SYM 0_CD -RCB-_-RRB- i_FW −_FW n_FW +1_FW which_WDT means_VBZ that_IN the_DT frequencies_NNS of_IN contexts_NNS should_MD Models_NNPS PP_NNP -LRB-_-LRB- MKN_NNP -RRB-_-RRB- PP_NNP -LRB-_-LRB- GLM_NNP -RRB-_-RRB- C_NNP U_NNP F_NN 2-gram_JJ HWS-2_NN DHWS-2_NN 1244.535_CD 1130.790_CD 920.783_CD -_: -_: -_: 0.479_CD 0.455_CD 0.447_CD 0.081_CD 0.078_CD 0.075_CD 0.139_CD 0.133_CD 0.129_CD 3-gram_JJ HWS-3_NN DHWS-3_NN 1107.430_CD 1065.594_CD 834.680_CD 925.666_CD 873.252_CD 687.605_CD 0.229_CD 0.316_CD 0.298_CD 0.028_CD 0.045_CD 0.041_CD 0.051_CD 0.079_CD 0.072_CD 4-gram_JJ HWS-4_NN DHWS-4_NN 1093.799_CD 1064.444_CD 822.225_CD 861.930_CD 756.100_CD 596.369_CD 0.086_CD 0.240_CD 0.216_CD 0.009_CD 0.030_CD 0.027_CD 0.016_CD 0.054_CD 0.048_CD 4_CD Evaluation_NN 4.1_CD Intrinsic_NNP Evaluation_NNP To_TO test_VB the_DT performance_NN on_IN out-of-domain_JJ data_NNS ,_, we_PRP use_VBP two_CD different_JJ corpus_NN :_: British_NNP National_NNP Corpus_NNP and_CC English_NNP Gigaword_NNP Corpus_NNP ._.
+British_NNP National_NNP Corpus_NNP -LRB-_-LRB- BNC_NNP -RRB-_-RRB- 4_CD is_VBZ a_DT 100_CD mil_NN -_: lion_NN word_NN collection_NN of_IN samples_NNS of_IN written_VBN and_CC spo_SYM -_: ken_NN language_NN from_IN a_DT wide_JJ range_NN of_IN sources_NNS ,_, de_IN -_: signed_VBN to_TO represent_VB a_DT wide_JJ cross-section_NN of_IN British_JJ English_NNP from_IN the_DT later_JJ part_NN of_IN the_DT 20th_JJ century_NN ,_, both_DT spoken_VBN and_CC written_VBN ._.
+In_IN our_PRP$ experiments_NNS ,_, we_PRP ran_VBD -_: domly_RB choose_VB 449,755_CD sentences_NNS -LRB-_-LRB- 10_CD million_CD words_NNS -RRB-_-RRB- as_IN training_NN data_NNS ._.
+English_NNP Gigaword_NNP Corpus_NNP 5_CD consists_VBZ of_IN over_IN 1.7_CD billion_CD words_NNS of_IN English_JJ newswire_NN from_IN 4_CD distinct_JJ international_JJ sources_NNS ._.
+We_PRP randomly_RB choose_VB 44,702_CD sentences_NNS -LRB-_-LRB- 1_CD million_CD words_NNS -RRB-_-RRB- as_IN test_NN data_NNS ._.
+As_IN preprocessing_NN of_IN training_NN data_NNS and_CC test_NN data_NNS ,_, we_PRP use_VBP the_DT tokenizer_NN of_IN NLTK_NNP -LRB-_-LRB- Natural_NNP Language_NNP Toolkit_NNP -RRB-_-RRB- 6_CD to_TO split_VB raw_JJ English_JJ sentences_NNS into_IN words_NNS ._.
+We_PRP also_RB converted_VBD all_DT words_NNS to_TO lowercase_VB ._.
+As_IN intrinsic_JJ evaluation_NN of_IN Language_NN Modeling_NN ,_, perplexity_NN -LRB-_-LRB- Manning_NNP and_CC Schu_NNP ̈tze_VBP ,_, 1999_CD -RRB-_-RRB- is_VBZ the_DT most_RBS common_JJ metric_JJ used_VBN for_IN measuring_VBG the_DT usefulness_NN of_IN a_DT language_NN model_NN ._.
+Wu_NNP and_CC Matsumoto_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- also_RB proposed_VBN to_TO use_VB coverage_NN and_CC usage_NN to_TO evaluate_VB efficiency_NN of_IN lan_NN -_: guage_NN models_NNS ._.
+The_DT authors_NNS defined_VBD the_DT sequences_NNS of_IN training_NN data_NNS as_IN TR_NNP ,_, and_CC unique_JJ sequences_NNS of_IN test_NN data_NNS as_IN TE_NNP ,_, then_RB the_DT coverage_NN is_VBZ calculated_VBN by_IN Equa_NNP -_: tion_NN 1_CD ._.
+coverage_NN =_SYM |_FW TR_FW TE_FW |_FW -LRB-_-LRB- 1_LS -RRB-_-RRB- |_JJ TE_NNP |_NNP Usage_NNP -LRB-_-LRB- Equation_NN 2_CD -RRB-_-RRB- is_VBZ used_VBN to_TO estimate_VB how_WRB much_JJ redundancy_NN contained_VBN in_IN a_DT model_NN and_CC a_DT balanced_JJ measure_NN is_VBZ calculated_VBN by_IN Equation_NN 3_CD ._.
+usage_NN =_SYM |_FW TR_FW TE_FW |_FW -LRB-_-LRB- 2_LS -RRB-_-RRB- |_CD T_NNP R_NNP |_VBD F_NN -_: Score_NN =_SYM 2_CD ×_CD coverage_NN ×_NN usage_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- coverage_NN +_NN usage_NN 4_CD http://www.natcorp.ox.ac.uk_NN 5_CD https://catalog.ldc.upenn.edu/LDC2011T07_NNP 6_CD http://www.nltk.org_NNP Table_NNP 1_CD :_: Performance_NNP of_IN normal_JJ n-gram_JJ models_NNS ,_, HWS_NNP models_NNS and_CC DHWS_NNP models_NNS Based_VBD on_IN above_IN measures_NNS ,_, we_PRP compared_VBD our_PRP$ mod_NN -_: els_NNS with_IN normal_JJ n-gram_JJ models_NNS and_CC the_DT original_JJ HWS_NNP models_NNS ._.
+The_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 1_CD ._.
+According_VBG to_TO this_DT table_NN ,_, for_IN each_DT language_NN model_NN ,_, higher_JJR order_NN one_CD brings_VBZ lower_JJR perplexity_NN ._.
+Besides_IN ,_, contrast_NN to_TO the_DT result_NN reported_VBN by_IN Wu_NNP and_CC Matsumoto_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, after_IN applied_VBN with_IN MKN_NNP smoothing_VBG method_NN ,_, even_RB for_IN higher_JJR order_NN models_NNS such_JJ as_IN 3-grams_NNS and_CC 4-grams_NNS ,_, HWS_NNP models_NNS outperform_VBP normal_JJ n-gram_JJ models_NNS as_RB well_RB ._.
+Furthermore_RB ,_, after_IN taking_VBG direc_NN -_: tional_JJ information_NN into_IN account_NN ,_, DHWS_NNP models_NNS per_IN -_: form_NN even_RB better_JJR than_IN the_DT original_JJ HWS_NNP models_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, in_IN DHWS_NNP models_NNS ,_, since_IN al_SYM -_: most_RBS each_DT word_NN is_VBZ distinguished_VBN as_IN `_`` two_CD words_NNS '_POS -LRB-_-LRB- `_`` -_: L’_NNP and_CC `_`` -_: R_NN '_'' -RRB-_-RRB- ,_, the_DT coverage_NN and_CC usage_NN tend_VBP to_TO be_VB rela_JJ -_: tively_RB lower_JJR than_IN the_DT original_JJ HWS_NNP models_NNS ._.
+But_CC it_PRP is_VBZ worth_JJ because_IN perplexity_NN has_VBZ been_VBN greatly_RB decreased_VBN and_CC syntactical_JJ information_NN can_MD be_VB reflected_VBN better_RBR in_IN this_DT way_NN ._.
+We_PRP also_RB noticed_VBD that_IN for_IN each_DT model_NN -LRB-_-LRB- n_SYM >_SYM 2_LS -RRB-_-RRB- ,_, perplexity_NN is_VBZ greatly_RB reduced_VBN after_IN applying_VBG GLM_NNP smoothing_NN ,_, which_WDT is_VBZ consistent_JJ with_IN the_DT results_NNS re_SYM -_: ported_VBN by_IN Pickhardt_NNP et_FW ._.
+al._IN -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+4.2_CD Extrinsic_NNP Evaluation_NNP Perplexity_NNP is_VBZ not_RB a_DT definite_JJ way_NN of_IN determining_VBG the_DT usefulness_NN of_IN a_DT language_NN model_NN since_IN a_DT language_NN model_NN with_IN low_JJ perplexity_NN may_MD not_RB work_VB equally_RB well_RB in_IN a_DT real_JJ world_NN application_NN ._.
+Thus_RB ,_, we_PRP also_RB per_IN -_: formed_VBN extrinsic_JJ experiments_NNS to_TO evaluate_VB our_PRP$ model_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP the_DT reranking_NN of_IN n-best_JJ trans_NNS -_: lation_NN candidates_NNS to_TO examine_VB how_WRB language_NN models_NNS work_VBP in_IN a_DT statistical_JJ machine_NN translation_NN task_NN ._.
+We_PRP use_VBP the_DT French-English_JJ part_NN of_IN TED_NNP talks_NNS par_NN -_: allel_IN corpus_NN as_IN the_DT experiment_NN dataset_NN ._.
+The_DT training_NN data_NNS contains_VBZ 139761_CD sentence_NN pairs_NNS ,_, while_IN the_DT test_NN Models_NNS -LRB-_-LRB- +_CD Smoothing_NNP -RRB-_-RRB- BLEU_NNP TER_NNP IRSTLM_NNP -LRB-_-LRB- +_SYM MKN_NNP -RRB-_-RRB- SRILM_NNP -LRB-_-LRB- +_SYM MKN_NNP -RRB-_-RRB- 3-gram_JJ -LRB-_-LRB- +_SYM MKN_NNP -RRB-_-RRB- 3-gram_JJ -LRB-_-LRB- +_JJ GLM_NNP -RRB-_-RRB- HWS-3-gram_NNP -LRB-_-LRB- +_SYM MKN_NNP -RRB-_-RRB- HWS-3-gram_NNP -LRB-_-LRB- +_JJ GLM_NNP -RRB-_-RRB- DHWS-3-gram_NNP -LRB-_-LRB- +_SYM MKN_NNP -RRB-_-RRB- DHWS-3-gram_NNP -LRB-_-LRB- +_JJ GLM_NNP -RRB-_-RRB- 31.2_CD 31.3_CD 31.3_CD 31.3_CD 31.2_CD 31.2_CD 31.2_CD 31.3_CD 49.1_CD 48.9_CD 49.1_CD 49.2_CD 48.6_CD 48.7_CD 48.6_CD 48.6_CD data_NNS contains_VBZ 1617_CD sentence_NN pairs_NNS ._.
+For_IN training_NN lan_NN -_: guage_NN models_NNS ,_, we_PRP set_VBP English_JJ as_IN the_DT target_NN language_NN ._.
+As_IN for_IN statistical_JJ machine_NN translation_NN toolkit_NN ,_, we_PRP use_VBP Moses_NNP system7_CD to_TO train_VB the_DT translation_NN model_NN and_CC output_NN 50-best_JJ translation_NN candidates_NNS for_IN each_DT french_JJ sentence_NN of_IN the_DT test_NN data_NNS ._.
+Then_RB we_PRP use_VBP the_DT 139761_CD English_JJ sentences_NNS to_TO train_VB language_NN models_NNS ._.
+With_IN these_DT models_NNS ,_, 50-best_JJ translation_NN candidates_NNS can_MD be_VB reranked_VBN ._.
+According_VBG to_TO these_DT reranking_JJ results_NNS ,_, the_DT performance_NN of_IN machine_NN translation_NN system_NN can_MD be_VB evaluated_VBN ,_, which_WDT also_RB means_VBZ ,_, the_DT language_NN models_NNS can_MD be_VB evaluated_VBN indirectly_RB ._.
+We_PRP use_VBP following_VBG two_CD measures_NNS for_IN evaluating_VBG reranking_JJ results_NNS ._.
+BLEU_NNP -LRB-_-LRB- Papineni_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- :_: BLEU_NNP score_NN mea_NN -_: sures_NNS how_WRB many_JJ words_NNS overlap_VBP in_IN a_DT given_VBN candidate_NN translation_NN when_WRB compared_VBN to_TO a_DT reference_NN transla_NN -_: tion_NN ,_, which_WDT provides_VBZ some_DT insight_NN into_IN how_WRB good_JJ the_DT fluency_NN of_IN the_DT output_NN from_IN an_DT engine_NN will_MD be_VB ._.
+TER_NNP -LRB-_-LRB- Snover_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- :_: TER_NNP score_NN measures_VBZ the_DT number_NN of_IN edits_NNS required_VBN to_TO change_VB a_DT system_NN out_RP -_: put_VB into_IN one_CD of_IN the_DT references_NNS ,_, which_WDT gives_VBZ an_DT indi_NN -_: cation_NN as_IN to_TO how_WRB much_JJ post-editing_NN will_MD be_VB required_VBN on_IN the_DT translated_VBN output_NN of_IN an_DT engine_NN ._.
+As_IN shown_VBN in_IN Table_NNP 2_CD ,_, since_IN the_DT results_NNS performed_VBN by_IN our_PRP$ implementation_NN -LRB-_-LRB- 3-gram_JJ +_NN MKN_NNP -RRB-_-RRB- is_VBZ almost_RB the_DT same_JJ as_IN that_DT performed_VBN by_IN existing_VBG language_NN model_NN toolkits_NNS IRSTLM8_NNP and_CC SRILM9_NNP ,_, we_PRP believe_VBP that_IN our_PRP$ implementation_NN is_VBZ correct_JJ ._.
+Based_VBN on_IN the_DT results_NNS ,_, considering_VBG both_DT BLEU_NNP and_CC TER_NNP score_NN ,_, DHWS_NNP -_: 3-gram_JJ model_NN using_VBG GLM_NNP smoothing_NN outperforms_VBZ other_JJ models_NNS ._.
+5_CD Conclusion_NN We_PRP proposed_VBD an_DT improved_VBN hierarchical_JJ word_NN se_FW -_: quence_NN language_NN model_NN using_VBG directional_JJ informa_NN -_: tion_NN ._.
+With_IN this_DT information_NN ,_, HWS_NNP models_NNS can_MD be_VB build_VB more_JJR syntactically_RB appropriate_JJ while_IN remain_VBP -_: ing_VBG its_PRP$ original_JJ advances_NNS ._.
+Consequently_RB ,_, higher_JJR per_IN -_: formance_NN can_MD be_VB achieved_VBN ,_, both_DT intrinsic_JJ and_CC extrin_NN -_: sic_JJ experiments_NNS confirmed_VBD our_PRP$ thoughts_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP construct_VBP HWS_NNP structures_NNS -LRB-_-LRB- bi_SYM -_: nary_PDT trees_NNS -RRB-_-RRB- based_VBN on_IN its_PRP$ original_JJ heuristic_JJ rule_NN ._.
+It_PRP is_VBZ conceivable_JJ that_IN more_JJR valid_JJ discontinuous_JJ patterns_NNS 7_CD http://www.statmt.org/moses/_NN 8_CD http://sourceforge.net/projects/irstlm/_NN 9_CD http://www.speech.sri.com/projects/srilm/_NN Table_NNP 2_CD :_: Performance_NNP of_IN SMT_NNP system_NN using_VBG different_JJ lan_NN -_: guage_NN models_NNS ._.
+For_IN the_DT settings_NNS of_IN IRSTLM_NNP and_CC SRILM_NNP ,_, we_PRP use_VBP default_NN settings_NNS except_IN for_IN using_VBG modified_VBD Kneser_NNP -_: Ney_NNP as_IN the_DT smoothing_NN method_NN can_MD be_VB extracted_VBN if_IN we_PRP use_VBP word_NN association_NN infor_NN -_: mation_NN to_TO built_VBN HWS_NNP structures_NNS ,_, which_WDT is_VBZ a_DT promis_NN -_: ing_VBG future_JJ study_NN ._.
+References_NNS B._NNP Allison_NNP ,_, D._NNP Guthrie_NNP ,_, L._NNP Guthrie_NNP ,_, W._NNP Liu_NNP ,_, Y._NNP Wilks_NNP ._.
+2005_CD ._.
+Quantifying_VBG the_DT Likelihood_NN of_IN Unseen_NNP Events_NNS :_: A_DT further_JJ look_NN at_IN the_DT data_NNS Sparsity_NN problem_NN ._.
+Awaiting_VBG publication_NN ._.
+S._NNP Bickel_NNP ,_, P._NNP Haider_NNP ,_, and_CC T._NNP Scheffer_NNP ._.
+2005_CD ._.
+Predict_SYM -_: ing_NN sentences_NNS using_VBG n-gram_JJ language_NN models_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT conference_NN on_IN Human_JJ Language_NN Tech_NNP -_: nology_NN and_CC Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, HLT_NNP '_POS 05_CD ,_, pages_NNS 193-200_CD ,_, Stroudsburg_NNP ,_, PA_NNP ,_, USA_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+P._NNP F._NNP Brown_NNP ,_, J._NNP Cocke_NNP ,_, S._NNP A._NNP Pietra_NNP ,_, V._NNP J._NNP Pietra_NNP ,_, F._NNP Je_NNP -_: linek_NN ,_, J._NNP D._NNP Lafferty_NNP ,_, R._NNP L._NNP Mercer_NNP ,_, and_CC P._NNP S._NNP Roossin_NNP ._.
+1990_CD ._.
+A_DT statistical_JJ approach_NN to_TO machine_NN translation_NN ._.
+Computational_JJ linguistics_NNS ,16_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :79_CD -85_CD ._.
+C._NNP Chelba_NNP ._.
+1997_CD ._.
+A_DT Structured_VBN Language_NN Model_NNP ._.
+Pro-_JJ ceedings_NNS of_IN ACL-EACL_NNP ,_, Madrid_NNP ,_, Spain_NNP ,_, 1997_CD ,_, 498_CD -_: 500_CD ._.
+S._NNP F._NNP Chen_NNP and_CC J._NNP Goodman_NNP ._.
+1999_CD ._.
+An_DT empirical_JJ study_NN of_IN smoothing_VBG techniques_NNS for_IN language_NN modeling_NN ._.
+Com_NNP -_: puter_NN Speech_NNP &_CC Language_NNP ,_, 1999_CD ,_, 13_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 359-393_CD ._.
+D._NNP Guthrie_NNP ,_, B._NNP Allison_NNP ,_, W._NNP Liu_NNP ,_, L._NNP Guthrie_NNP ._.
+2006_CD ._.
+A_DT Closer_RBR Look_VB at_IN Skip-gram_NN Modeling_NN ._.
+Proceedings_NNP of_IN the_DT 5th_JJ international_JJ Conference_NN on_IN Language_NN Re_NNP -_: sources_NNS and_CC Evaluation_NN ,_, 2006_CD :_: 1-4_CD ._.
+S._NNP Katz_NNP ._.
+1987_CD ._.
+Estimation_NN of_IN probabilities_NNS from_IN sparse_JJ data_NNS for_IN the_DT language_NN model_NN component_NN of_IN a_DT speech_NN recognizer_NN ._.
+Acoustics_NNS ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, IEEE_NNP Transactions_NNS on_IN ,_, 1987_CD ,_, 35_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: 400-401_CD ._.
+R._NNP Kneser_NNP and_CC H._NNP Ney_NNP ._.
+1995_CD ._.
+Improved_JJ backing-off_NN for_IN m-gram_JJ language_NN modeling_NN ._.
+Acoustics_NNS ,_, Speech_NNP ,_, and_CC Signal_NNP Processing_NNP ,_, 1995_CD ._.
+ICASSP-95._NNP ,_, 1995_CD Interna_NNP -_: tional_JJ Conference_NN on_IN ._.
+IEEE_NNP ,_, 1995_CD ,_, 1_CD :_: 181-184_CD ._.
+C._NNP D._NNP Manning_NNP and_CC H._NNP Schu_NNP ̈tze_NN ._.
+1999_CD ._.
+Foundations_NNS of_IN statistical_JJ natural_JJ language_NN processing_NN ._.
+MIT_NNP Press_NNP ,_, Cambridge_NNP ,_, MA_NNP ,_, USA_NNP ._.
+E._NNP Mays_NNP ,_, F._NNP J._NNP Damerau_NNP ,_, and_CC R._NNP L._NNP Mercer_NNP ._.
+1991_CD ._.
+Context_NN based_VBN spelling_NN correction_NN ._.
+Information_NNP Processing_NNP &_CC Management_NNP ,_, 27_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :517_CD -522_CD ._.
+K._NNP Papineni_NNP ,_, S._NNP Roukos_NNP ,_, T._NNP Ward_NNP ,_, and_CC W.J._NNP Zhu_NNP ._.
+2002_CD ._.
+BLEU_NNP :_: a_DT method_NN for_IN automatic_JJ evaluation_NN of_IN machine_NN translation_NN ._.
+Proceedings_NNP of_IN the_DT 40th_JJ annual_JJ meeting_NN on_IN association_NN for_IN computational_JJ linguistics_NNS ._.
+Associa_SYM -_: tion_NN for_IN Computational_NNP Linguistics_NNP ,_, 2002_CD :_: 311-318_CD ._.
+R._NNP Pickhardt_NNP ,_, T._NNP Gottron_NNP ,_, M._NNP Ko_NNP ̈rner_NN ,_, S._NNP Staab_NNP ._.
+2014_CD ._.
+A_DT Generalized_NNP Language_NNP Model_NNP as_IN the_DT Combination_NN of_IN Skipped_VBN n-grams_NNS and_CC Modified_VBN Kneser-Ney_NNP Smooth_NNP -_: ing_NN ._.
+Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2014_CD ,_, 1145-1154_CD ._.
+L._NNP Rabiner_NNP and_CC B.H._NNP Juang_NNP ._.
+1993_CD ._.
+Fundamentals_NNS of_IN Speech_NNP Recognition_NNP ._.
+Prentice_NNP Hall_NNP ._.
+C._NNP E._NNP Shannon_NNP ._.
+1948_CD ._.
+A_DT Mathematical_NNP Theory_NNP of_IN Com_NNP -_: munication_NN ._.
+The_DT Bell_NNP System_NNP Technical_NNP Journal_NNP ,_, 27_CD :_: 379-423_CD ._.
+M._NNP Snover_NNP ,_, B._NNP Dorr_NNP ,_, R._NNP Schwartz_NNP ,_, L._NNP Micciulla_NNP ,_, and_CC J._NNP Makhoul_NNP ._.
+2006_CD ._.
+A_DT study_NN of_IN translation_NN edit_NN rate_NN with_IN targeted_JJ human_JJ annotation_NN ._.
+Proceedings_NNP of_IN associa_NN -_: tion_NN for_IN machine_NN translation_NN in_IN the_DT Americas_NNPS ,_, 2006_CD :_: 223-231_CD ._.
+X._NNP Wu_NNP and_CC Y._NNP Matsumoto_NNP ._.
+2014_CD ._.
+A_DT Hierarchical_JJ Word_NN Sequence_NNP Language_NNP Model_NNP ._.
+Proceedings_NNP of_IN The_DT 28th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Computation_NNP -LRB-_-LRB- PACLIC_NNP -RRB-_-RRB- ,_, 2014_CD ,_, 489-494_CD ._.

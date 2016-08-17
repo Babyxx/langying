@@ -1,0 +1,305 @@
+Learning_NNP Sentential_NNP Patterns_NNPS of_IN Various_JJ Rhetoric_NN Moves_NNS for_IN Assisted_VBN Academic_NNP Writing_VBG Abstract_JJ We_PRP introduce_VBP a_DT new_JJ method_NN for_IN extracting_VBG rep_NN -_: resentative_JJ sentential_JJ patterns_NNS from_IN a_DT corpus_NN for_IN the_DT purpose_NN of_IN assisting_VBG ESL_NNP learners_NNS in_IN academic_JJ writing_NN ._.
+In_IN our_PRP$ approach_NN ,_, sentences_NNS are_VBP transformed_VBN into_IN patterns_NNS for_IN statistical_JJ analysis_NN and_CC filtering_VBG ,_, and_CC then_RB are_VBP annotated_VBN with_IN relevant_JJ rhetoric_NN moves_NNS ._.
+The_DT method_NN in_IN -_: volves_NNS annotating_VBG every_DT sentence_NN in_IN a_DT given_VBN corpus_NN with_IN part_NN of_IN speech_NN and_CC base_NN phrase_NN information_NN ,_, converting_VBG the_DT sentence_NN into_IN for_IN -_: mulaic_JJ patterns_NNS ,_, and_CC filtering_VBG salient_JJ patterns_NNS for_IN key_JJ content_JJ words_NNS -LRB-_-LRB- verbs_NNS and_CC nouns_NNS -RRB-_-RRB- ._.
+We_PRP display_VBP the_DT patterns_NNS in_IN the_DT interactive_JJ writing_NN environment_NN ,_, WriteAhead_NNP ,_, to_TO prompt_VB the_DT user_NN as_IN they_PRP type_NN away_RB ._.
+1_CD Introduction_NNP The_NNP British_NNP Council_NNP estimated_VBD that_IN roughly_RB a_DT billion_CD people_NNS are_VBP learning_VBG and_CC using_VBG English_JJ around_IN the_DT world_NN -LRB-_-LRB- Graddol_NNP ,_, 1997_CD -RRB-_-RRB- ,_, mostly_RB as_IN a_DT second_JJ language_NN ,_, and_CC the_DT number_NN has_VBZ been_VBN growing_VBG ._.
+For_IN advanced_JJ learners_NNS in_IN university_NN ,_, English_NNP for_IN Academic_NNP Pur_NNP -_: poses_VBZ -LRB-_-LRB- EAP_NNP -RRB-_-RRB- plays_VBZ an_DT important_JJ role_NN in_IN English_NNP Spe_NNP -_: cific_JJ Purposes_NNS -LRB-_-LRB- ESP_NNP -RRB-_-RRB- study_NN ._.
+More_RBR and_CC more_RBR Com_NNP -_: puter_NN Assisted_NNP Language_NNP Learning_NNP -LRB-_-LRB- CALL_NNP -RRB-_-RRB- systems_NNS have_VBP been_VBN developed_VBN to_TO help_VB learners_NNS in_IN academic_JJ writing_NN ,_, including_VBG concordancers_NNS ,_, grammar_NN check_NN -_: ers_NNS ,_, and_CC essay_NN raters_NNS ._.
+Typical_JJ CALL_NN systems_NNS assist_VBP learners_NNS before_IN and_CC after_IN the_DT writing_VBG process_NN by_IN pro-_JJ viding_VBG corpus-based_JJ reference_NN services_NNS ,_, or_CC returning_VBG a_DT grade_NN and_CC corrective_JJ feedback_NN -LRB-_-LRB- e.g._FW ,_, Cambridge_NNP English_NNP Write_NNP &_CC Improve_NNP -RRB-_-RRB- ._.
+However_RB ,_, researchers_NNS have_VBP shown_VBN that_IN non-native_JJ student_NN writers_NNS may_MD have_VB difficulties_NNS in_IN compos_NNS -_: ing_VBG sentences_NNS and_CC lack_VBP knowledge_NN at_IN discourse_NN level_NN -LRB-_-LRB- Hinds_NNP ,_, 1990_CD ;_: Swales_NNP ,_, 1990_CD or_CC Connor_NNP ,1996_CD -RRB-_-RRB- in_IN aca_NN -_: demic_JJ writing_NN ._.
+For_IN example_NN ,_, -LRB-_-LRB- Antony_NNP ,_, 2003_CD -RRB-_-RRB- indi_SYM -_: cated_VBN that_IN many_JJ Japanese_JJ scientists_NNS and_CC engineers_NNS lack_VBP sufficient_JJ knowledge_NN of_IN commonly_RB used_VBN struc_NN -_: tural_JJ patterns_NNS at_IN the_DT discourse_NN level_NN ._.
+The_DT rhetorical_JJ organization_NN has_VBZ been_VBN considered_VBN to_TO be_VB one_CD of_IN the_DT most_RBS effective_JJ strategies_NNS of_IN teach_VBP -_: ing_VBG technical_JJ writing_NN and_CC reading_NN ._.
+The_DT American_NNP National_NNP Standard_NNP Institute_NNP -LRB-_-LRB- ANSI_NNP -RRB-_-RRB- recommends_VBZ ed_SYM -_: itors_NNS or_CC writers_NNS to_TO state_VB the_DT purpose_NN ,_, methods_NNS ,_, results_NNS ,_, and_CC conclusions_NNS in_IN the_DT document_NN -LRB-_-LRB- Weil_NNP ,_, 1970_CD -RRB-_-RRB- ._.
+That_DT is_VBZ ,_, an_DT article_NN usually_RB begins_VBZ with_IN a_DT description_NN of_IN background_NN information_NN ,_, and_CC is_VBZ followed_VBN by_IN the_DT tar_NN -_: get_VB problem_NN ,_, solution_NN to_TO the_DT problem_NN ,_, evaluation_NN of_IN the_DT solution_NN ,_, and_CC conclusion_NN ,_, by_IN analyzing_VBG annotated_JJ dictionary_JJ examples_NNS and_CC automatically_RB tagged_VBD sen_SYM -_: tences_NNS in_IN a_DT corpus_NN ._.
+As_RB will_MD be_VB described_VBN in_IN Section_NN 4_CD ,_, we_PRP used_VBD the_DT information_NN on_IN collocation_NN and_CC syntax_NN -LRB-_-LRB- ICS_NNP -RRB-_-RRB- for_IN example_NN sentences_NNS from_IN online_JJ Macmillan_NNP English_NNP Dictionary_NNP ,_, as_RB well_RB as_IN in_IN the_DT Citeseer_NNP x_LS cor_SYM -_: pus_NN ,_, to_TO develop_VB WriteAhead_NNP ._.
+Along_IN the_DT same_JJ line_NN ,_, the_DT second_JJ edition_NN of_IN the_DT Macmillan_NNP English_NNP Dictio_NNP -_: nary_PDT provides_VBZ a_DT 29-page_JJ Improve_NNP your_PRP$ Writing_VBG Skills_NNS Writing_VBG Section_NN with_IN instruction_NN on_IN how_WRB to_TO write_VB flu_NN -_: ently_RB by_IN :_: adding_VBG information_NN ,_, comparing_VBG and_CC con_NN -_: trasting_NN ,_, exemplifying_VBG ,_, expressing_VBG cause_NN and_CC effect_NN ,_, expressing_VBG personal_JJ opinions_NNS ,_, possibility_NN and_CC cer_NN -_: tainty_NN ,_, introducing_VBG a_DT concession_NN or_CC introducing_VBG top_JJ -_: ics_FW ,_, listing_VBG items_NNS ,_, paraphrasing_VBG or_CC clarifying_VBG ,_, quot_SYM -_: ing_NN and_CC reporting_NN ,_, summarizing_VBG and_CC concluding_VBG ._.
+Although_IN there_EX are_VBP much_JJ information_NN -LRB-_-LRB- such_JJ as_IN dictionary_JJ examples_NNS -RRB-_-RRB- that_WDT could_MD help_VB to_TO write_VB a_DT pa_NN -_: per_IN ,_, learners_NNS may_MD fail_VB to_TO generalize_VB from_IN examples_NNS Figure_NN 1_CD :_: Example_NNP WriteAhead_NNP session_NN where_WRB an_DT user_NN typed_VBD ''_'' pp_NN ''_'' ._.
+and_CC apply_VB to_TO their_PRP$ own_JJ situations_NNS ._.
+Often_RB ,_, there_EX are_VBP too_RB many_JJ examples_NNS to_TO choose_VB from_IN and_CC to_TO adapt_VB to_TO match_VB the_DT need_NN of_IN the_DT learner_NN writers_NNS ._.
+Learn_VB -_: ers_NNS could_MD be_VB more_RBR effectively_RB assisted_VBN with_IN a_DT tool_NN that_WDT provides_VBZ concise_JJ ,_, relevant_JJ ,_, genre-specific_JJ sug_NN -_: gestions_NNS as_IN learners_NNS type_NN away_RB ,_, when_WRB writing_VBG a_DT draft_NN ._.
+In_IN our_PRP$ research_NN ,_, we_PRP automatically_RB extract_VB rhetorical_JJ patterns_NNS to_TO assist_VB learners_NNS in_IN academic_JJ writing_NN ._.
+For_IN example_NN ,_, in_IN Figure_NN 1_CD ,_, the_DT learner_NN has_VBZ already_RB typed_VBN a_DT sentence_NN describing_VBG the_DT background_NN and_CC problem_NN ,_, and_CC then_RB the_DT learner_NN types_NNS the_DT move_NN tag_NN AIM_NNP ._.
+Figure_NN 2_CD shows_VBZ the_DT implementation_NN of_IN WriteA_NNP -_: head_NN in_IN the_DT Google_NNP Doc_NNP environment_NN ._.
+With_IN this_DT Google_NNP Docs_NNP Add-on_NNP ,_, the_DT user_NN can_MD conveniently_RB ac_SYM -_: cess_NN the_DT WriteAhead_NNP functionalities_NNS ,_, as_RB well_RB as_IN com_NN -_: mon_NN editing_NN functions_NNS ._.
+According_VBG to_TO the_DT informa_NN -_: tion_NN ,_, WriteAhead_JJ displays_NNS the_DT appropriate_JJ sentential_NN patterns_NNS and_CC examples_NNS for_IN the_DT ''_'' method_NN ''_'' extracted_VBN from_IN a_DT corpus_NN ,_, to_TO help_VB the_DT learner_NN continue_VBP writing_VBG :_: •_CD Our_PRP$ ALGORITHM_NNP be_VB BASE_VBN on_IN -LRB-_-LRB- Our_PRP$ ap_SYM -_: proach/method_NN is_VBZ based_VBN on_IN -RRB-_-RRB- ,_, •_FW We_PRP ILLUSTRATE_VBP the_DT ALGORITHM_NNP -LRB-_-LRB- We_PRP illustrate_VBP the_DT approach/method/technique_NN -RRB-_-RRB- ,_, •_FW The_DT ALGORITHM_NNP be_VB BASE_VBN on_IN -LRB-_-LRB- The_DT method/approach/model_NN is_VBZ base_NN on_IN -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP present_VBP a_DT prototype_NN system_NN ,_, WriteAhead_NNP ,_, that_IN extracts_VBZ patterns_NNS that_WDT cover_VBP exten_SYM -_: sively_RB most_JJS semantic_JJ categories_NNS in_IN academic_JJ writ_NN -_: ing_NN -LRB-_-LRB- e.g._FW Teufel_NNP ,_, 2000_CD -RRB-_-RRB- from_IN an_DT academic_JJ corpus_NN ._.
+Writing_VBG suggestions_NNS are_VBP given_VBN to_TO assist_VB student_NN writ_NN -_: ers_NNS ._.
+WriteAhead_JJ extracts_NNS these_DT sentential_JJ patterns_NNS and_CC examples_NNS automatically_RB by_IN tagging_VBG and_CC analyz_NN -_: ing_VBG sentences_NNS in_IN a_DT corpus_NN ._.
+As_RB will_MD be_VB described_VBN in_IN Section_NN 3_CD ,_, we_PRP used_VBD the_DT Citeseerx_NNP corpus_NN as_IN our_PRP$ source_NN to_TO extract_VB sentential_JJ patterns_NNS ._.
+These_DT patterns_NNS are_VBP then_RB used_VBN at_IN run-time_NN in_IN WriteAhead_NNP for_IN assisted_VBN writing_NN ._.
+WriteAhead_NN takes_VBZ the_DT move_NN tag_NN the_DT user_NN types_NNS in_IN ,_, and_CC then_RB retrieves_VBZ ,_, and_CC displays_NNS patterns_NNS related_VBN to_TO the_DT tag_NN to_TO help_VB the_DT user_NN write_VB or_CC edit_VB a_DT draft_NN -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+We_PRP present_VBP a_DT new_JJ methodology_NN for_IN automatically_RB deriving_VBG pat_NN -_: terns_NNS ._.
+WriteAhead_NN is_VBZ also_RB the_DT first_JJ interface_NN that_WDT sug_SYM -_: gests_NNS patterns_NNS for_IN learners_NNS while_IN they_PRP type_NN ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+The_DT related_JJ work_NN is_VBZ reviewed_VBN in_IN the_DT next_JJ section_NN ._.
+Then_RB we_PRP present_VBP our_PRP$ method_NN for_IN automatically_RB extracting_VBG sentential_JJ patterns_NNS and_CC examples_NNS -LRB-_-LRB- Section_NN 3_CD -RRB-_-RRB- ._.
+As_IN part_NN of_IN our_PRP$ evaluation_NN ,_, we_PRP measured_VBD the_DT accuracy_NN rate_NN of_IN suggestions_NNS generated_VBN by_IN WriteAhead_NNP using_VBG pub_NN -_: lished_VBN research_NN papers_NNS unrelated_JJ to_TO the_DT training_NN data_NNS -LRB-_-LRB- Section_NN 4_CD -RRB-_-RRB- ._.
+Section_NN 5_CD reports_NNS on_IN the_DT experiment_NN re_SYM -_: sults_NNS and_CC we_PRP summarize_VBP our_PRP$ conclusion_NN in_IN Section_NN 6_CD ._.
+2_CD Related_JJ Work_NN Researchers_NNS have_VBP shown_VBN that_IN non-native_JJ student_NN writers_NNS may_MD have_VB difficulties_NNS in_IN composing_VBG sentences_NNS and_CC lack_VBP knowledge_NN at_IN discourse_NN level_NN -LRB-_-LRB- Connor_NNP ,_, 1996_CD &_CC 1999_CD -RRB-_-RRB- in_IN academic_JJ writing_NN ._.
+English_NNP for_IN Academic_NNP Purposes_NNPS -LRB-_-LRB- EAP_NNP -RRB-_-RRB- plays_VBZ an_DT important_JJ role_NN in_IN Specific_JJ Purposes_NNS -LRB-_-LRB- ESP_NNP -RRB-_-RRB- study_NN ,_, focusing_VBG on_IN English_NNP of_IN academic_JJ writing_NN -LRB-_-LRB- EAW_NNP -RRB-_-RRB- ._.
+EAW_NNP consists_VBZ in_IN numerous_JJ academic_JJ genres_NNS ,_, includ_NN -_: ing_VBG grant_NN proposal_NN -LRB-_-LRB- Connor_NNP ,_, 1999_CD -RRB-_-RRB- ,_, research_NN articles_NNS -LRB-_-LRB- Swales_NNP ,_, 1990_CD -RRB-_-RRB- ,_, and_CC reviews_NNS ,_, which_WDT involve_VBP manual_NN structure_NN analysis_NN in_IN the_DT academic_JJ texts_NNS for_IN teach_VBP -_: ing_VBG academic_JJ writing_NN ._.
+Among_IN them_PRP ,_, research_NN ar_SYM -_: ticles_NNS -LRB-_-LRB- RAs_NNP -RRB-_-RRB- play_VBP the_DT most_RBS significant_JJ role_NN ._.
+In_IN our_PRP$ work_NN ,_, we_PRP use_VBP RAs_NNP as_IN our_PRP$ corpus_NN to_TO generate_VB senten_NN -_: tial_JJ patterns_NNS ,_, which_WDT can_MD assist_VB learners_NNS in_IN academic_JJ writing_NN ._.
+We_PRP also_RB adopt_VB a_DT set_NN of_IN semantic_JJ categories_NNS to_TO generate_VB patterns_NNS ,_, which_WDT were_VBD manually_RB identified_VBN in_IN Teufel_NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- ._.
+2.1_CD Analysis_NN of_IN the_DT Structure_NN of_IN Research_NNP Articles_NNPS More_RBR specifically_RB ,_, we_PRP focus_VBP on_IN the_DT structure_NN of_IN re_NN -_: search_NN articles_NNS ,_, namely_RB ,_, automatically_RB analyzing_VBG the_DT abstracts_NNS based_VBN on_IN series_NN of_IN moves_NNS ._.
+The_DT sentences_NNS are_VBP classified_VBN to_TO match_VB the_DT predefined_VBN structure_NN ._.
+The_DT most_RBS related_JJ body_NN analyzing_VBG research_NN article_NN was_VBD Hill_NNP et_FW al._FW -LRB-_-LRB- 1982_CD -RRB-_-RRB- ._.
+The_DT scheme_NN he_PRP proposed_VBD was_VBD a_DT starting-point_NN for_IN the_DT analysis_NN of_IN the_DT macrostructure_NN of_IN research_NN articles_NNS ._.
+The_DT graphical_JJ illustration_NN of_IN his_PRP$ proposed_VBN structure_NN is_VBZ like_IN an_DT hourglass_NN ._.
+Several_JJ research_NN indicate_VBP that_IN RAs_NNP ,_, defined_VBN by_IN Swales_NNP -LRB-_-LRB- 1990_CD -RRB-_-RRB- ,_, have_VBP a_DT simpler_JJR and_CC more_JJR clear_JJ picture_NN of_IN the_DT organizational_JJ pattern_NN --_: the_DT IMRD_NNP structure_NN :_: Introduction_NNP ,_, Method_NNP ,_, Results_NNS and_CC Discussion_NN ._.
+Ad_NN -_: ditionally_RB ,_, Swales_NNP -LRB-_-LRB- 1981_CD ,_, 1990_CD -RRB-_-RRB- proposed_VBD the_DT CARS_NNS model_NN -LRB-_-LRB- ''_'' Create_VB a_DT Research_NNP Space_NNP ''_'' -RRB-_-RRB- which_WDT describes_VBZ the_DT structure_NN of_IN the_DT typical_JJ introductions_NNS of_IN scientific_JJ articles_NNS according_VBG to_TO prototypical_JJ rhetorical_JJ building_NN plans_NNS ._.
+The_DT unit_NN of_IN analysis_NN is_VBZ the_DT argumentative_JJ move_NN ,_, which_WDT represents_VBZ ''_'' a_DT semantic_JJ unit_NN related_VBN to_TO the_DT writer_NN 's_POS purpose_NN ''_'' ,_, typically_RB ,_, one_CD clause_NN or_CC sentence_NN long_RB ._.
+There_EX is_VBZ a_DT finite_JJ number_NN of_IN such_JJ moves_NNS ,_, and_CC they_PRP are_VBP subdivided_VBN into_IN ''_'' steps_NNS ''_'' ._.
+The_DT model_NN is_VBZ schematically_RB depicted_VBN in_IN Figure_NN 3_CD ._.
+The_DT model_NN has_VBZ been_VBN used_VBN extensively_RB by_IN discourse_NN analysis_NN and_CC re_SYM -_: searchers_NNS in_IN the_DT field_NN of_IN discourse_NN structure_NN ._.
+Many_JJ studies_NNS adopted_VBD his_PRP$ theory_NN to_TO analyze_VB the_DT introduc_NN -_: tion_NN section_NN -LRB-_-LRB- e.g._FW Cooper_NNP ,_, 1985_CD ;_: Hopkins_NNP ,_, 1985_CD ;_: Crookes_NNP ,_, 1986_CD ;_: Samraj_NNP ,_, 2002_CD ,_, 2005_CD -RRB-_-RRB- ._.
+Additionally_RB ,_, Thompson_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- applied_VBD it_PRP to_TO analyze_VB the_DT result_NN section_NN while_IN others_NNS applied_VBD it_PRP to_TO investigate_VB the_DT dis_SYM -_: cussion_NN section_NN -LRB-_-LRB- e.g._FW Hopkins_NNP and_CC Dudley-Evans_NNP ,_, 1994_CD -RRB-_-RRB- ._.
+More_RBR researches_VBZ have_VBP been_VBN done_VBN to_TO study_VB RAs_NNP in_IN recent_JJ years_NNS ._.
+2.2_CD Identifying_NNP Moves_NNS for_IN Text_NNP Classification_NNP In_IN the_DT search_NN area_NN of_IN automatic_JJ analysis_NN of_IN the_DT dis_FW -_: course_NN structure_NN of_IN research_NN articles_NNS ,_, in_IN recent_JJ years_NNS ,_, much_JJ work_NN has_VBZ been_VBN done_VBN viewing_VBG the_DT task_NN as_IN a_DT text_NN classification_NN problem_NN that_WDT determines_VBZ a_DT label_NN -LRB-_-LRB- move_VB name_NN -RRB-_-RRB- for_IN each_DT sentence_NN ._.
+Various_JJ classi_NNS -_: Figure_NN 2_CD :_: WriteAhead_JJ implementation_NN for_IN Google_NNP Doc_NNP ._.
+Figure_NN 3_CD :_: Structure_NN of_IN research_NN article_NN introduction_NN -LRB-_-LRB- Swales_NNP ,_, 1990_CD -RRB-_-RRB- fiers_NNS were_VBD applied_VBN to_TO text_NN categorization_NN ,_, including_VBG Naive_NNP Bayesian_NNP Model_NNP -LRB-_-LRB- NBM_NNP -RRB-_-RRB- -LRB-_-LRB- Teufel_NNP and_CC Moens_NNP ,_, 2002_CD ,_, 2004_CD ,_, 2006_CD ;_: Anthony_NNP 2003_CD -RRB-_-RRB- ,_, Support_NN Vector_NNP Machines_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- -LRB-_-LRB- McKnight_NNP and_CC Arinivasan_NNP ,_, 2003_CD ;_: Shimbo_NNP et_FW al._FW ,_, 2003_CD ;_: Yamamoto_NNP and_CC Takagi_NNP ,_, 2005_CD -RRB-_-RRB- ,_, Hidden_NNP Markov_NNP Model_NNP -LRB-_-LRB- HMM_NNP -RRB-_-RRB- -LRB-_-LRB- Lin_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, and_CC Conditional_NNP Random_NNP Fields_NNPS -LRB-_-LRB- CRFs_NNS -RRB-_-RRB- -LRB-_-LRB- Hirohata_NNP et_FW al._FW 2008_CD -RRB-_-RRB- ._.
+Table_NNP 1_CD summarizes_VBZ these_DT approaches_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT set_NN of_IN labels_NNS commonly_RB used_VBN in_IN most_JJS studies_NNS :_: background_NN -LRB-_-LRB- B_NNP -RRB-_-RRB- ,_, objective_NN -LRB-_-LRB- O_NNP -RRB-_-RRB- ,_, pur_SYM -_: pose_VB -LRB-_-LRB- P_NNP -RRB-_-RRB- ,_, gap_NN -LRB-_-LRB- G_NNP -RRB-_-RRB- ,_, method_NN -LRB-_-LRB- M_NNP -RRB-_-RRB- ,_, result_NN -LRB-_-LRB- R_NN -RRB-_-RRB- ,_, and_CC con_NN -_: clusion_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ._.
+We_PRP did_VBD not_RB compare_VB directly_RB the_DT perfor_NN -_: mances_NNS of_IN these_DT studies_NNS ,_, which_WDT used_VBD a_DT different_JJ set_NN of_IN classification_NN labels_NNS and_CC evaluation_NN data_NNS ._.
+Anthony_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- has_VBZ developed_VBN a_DT system_NN which_WDT could_MD offer_VB a_DT move_NN analysis_NN to_TO assist_VB students_NNS in_IN writ_NN -_: ing_NN and_CC reading_NN ._.
+He_PRP used_VBD the_DT CARS_NNP model_NN to_TO an_DT -_: alyze_IN the_DT abstracts_NNS of_IN RA_NNP ,_, using_VBG hand_NN tagged_VBD RA_NNP abstracts_NNS ._.
+Shimbo_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- presented_VBD an_DT ad_NN -_: vanced_VBN text_NN retrieval_NN system_NN for_IN MEDLINE_NNP that_WDT pro-_JJ vides_NNS zone_NN search_NN specific_JJ sections_NNS in_IN abstracts_NNS ._.
+The_DT system_NN classifies_VBZ sentences_NNS in_IN each_DT Medline_NNP abstract_JJ into_IN four_CD sections_NNS :_: objective_NN ,_, method_NN ,_, results_NNS ,_, and_CC conclusion_NN ._.
+Each_DT sentence_NN is_VBZ represented_VBN by_IN words_NNS ,_, word_NN bigrams_NNS ,_, and_CC contextual_JJ information_NN of_IN the_DT sentences_NNS -LRB-_-LRB- e.g._FW ,_, class_NN of_IN the_DT previous_JJ sentence_NN ,_, rela_NN -_: tive_JJ location_NN of_IN the_DT current_JJ sentence_NN -RRB-_-RRB- ._.
+They_PRP reported_VBD 91.9_CD %_NN accuracy_NN -LRB-_-LRB- per-sentence_JJ basis_NN -RRB-_-RRB- and_CC 51.2_CD %_NN ac_SYM -_: curacy_NN -LRB-_-LRB- per-abstract_JJ basis_NN -RRB-_-RRB- for_IN the_DT classification_NN with_IN the_DT best_JJS feature_NN set_NN for_IN quadratic_JJ SVM_NNP ._.
+Similarly_RB ,_, Yamamoto_NNP and_CC Takagi_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- devel_SYM -_: oped_VBD a_DT system_NN to_TO classify_VB abstract_JJ sentences_NNS into_IN five_CD moves_NNS ,_, background_NN ,_, purpose_NN ,_, method_NN ,_, result_NN ,_, and_CC conclusion_NN ._.
+They_PRP trained_VBD a_DT linear-SVM_JJ classifier_NN with_IN features_NNS of_IN unigram_NN ,_, subject-verb_NN ,_, verb_NN tense_JJ ,_, relative_JJ sentence_NN location_NN ,_, and_CC sentence_NN score_NN ._.
+Hiro_SYM -_: hata_NN et_FW al_FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- presented_VBD another_DT system_NN for_IN Med_NNP -_: line_NN abstracts_NNS into_IN four_CD moves_NNS ._.
+They_PRP trained_VBD a_DT CRF_NNP classifier_NN with_IN features_NNS of_IN n-grams_NNS ,_, sentence_NN loca_NN -_: tion_NN ,_, and_CC features_NNS from_IN previous/next_JJ sentences_NNS ._.
+3_CD Method_NNP Writing_VBG academic_JJ paper_NN by_IN referencing_VBG examples_NNS -LRB-_-LRB- e.g._FW ,_, We_PRP illustrate_VBP the_DT method_NN ..._: -RRB-_-RRB- often_RB does_VBZ not_RB work_VB very_RB well_RB ,_, because_IN learners_NNS may_MD fail_VB to_TO general_JJ -_: ize_NN from_IN examples_NNS and_CC apply_VB them_PRP to_TO their_PRP$ own_JJ situa_NN -_: tions_NNS ._.
+Often_RB ,_, there_EX are_VBP too_RB many_JJ examples_NNS to_TO choose_VB from_IN and_CC to_TO adapt_VB to_TO match_VB the_DT need_NN of_IN the_DT learner_NN writers_NNS ._.
+To_TO help_VB the_DT learner_NN in_IN writing_NN ,_, a_DT promising_JJ approach_NN is_VBZ to_TO extract_VB a_DT set_NN of_IN representative_JJ senten_NN -_: tial_JJ patterns_NNS consisting_VBG of_IN keywords_NNS and_CC categories_NNS that_WDT are_VBP expected_VBN to_TO assist_VB learners_NNS to_TO write_VB better_JJR ._.
+3.1_CD Problem_NNP Statement_NNP We_PRP focus_VB on_IN the_DT extracting_VBG process_NN of_IN sentential_JJ pat_NN -_: terns_NNS for_IN various_JJ rhetoric_NN functions_NNS :_: identifying_VBG a_DT set_NN of_IN candidate_NN patterns_NNS with_IN keywords_NNS and_CC categories_NNS ._.
+These_DT candidate_NN patterns_NNS are_VBP then_RB statistically_RB ana_NN -_: lyzed_VBN ,_, filtered_VBN and_CC finally_RB returned_VBD as_IN the_DT output_NN of_IN the_DT system_NN ._.
+The_DT returned_VBN patterns_NNS can_MD be_VB directly_RB ex_FW -_: amined_VBN by_IN the_DT learner_NN ,_, alternatively_RB they_PRP can_MD be_VB used_VBN to_TO annotate_VB rhetoric_NN moves_NNS ._.
+Thus_RB ,_, it_PRP is_VBZ crucial_JJ that_IN the_DT extracted_VBN patterns_NNS cover_VBP all_DT semantic_JJ categories_NNS of_IN interest_NN ._.
+At_IN the_DT same_JJ time_NN ,_, the_DT set_NN of_IN extracted_VBN patterns_NNS of_IN a_DT semantic_JJ category_NN can_MD not_RB be_VB too_RB large_JJ that_IN it_PRP overwhelms_VBZ the_DT writer_NN or_CC the_DT tagging_VBG process_NN of_IN the_DT subsequent_JJ move_NN ._.
+Therefore_RB ,_, our_PRP$ goal_NN is_VBZ to_TO re_VB -_: turn_VB a_DT reasonable-sized_JJ set_NN of_IN sentential_JJ patterns_NNS that_IN ,_, at_IN the_DT same_JJ time_NN ,_, must_MD cover_VB all_DT rhetoric_NN moves_NNS ._.
+We_PRP now_RB formally_RB state_VBP the_DT problem_NN that_IN we_PRP are_VBP address_NN -_: ing_NN ._.
+Problem_NNP Statement_NNP :_: We_PRP are_VBP given_VBN a_DT raw_JJ corpus_NN CORP_NNP -LRB-_-LRB- e.g._FW ,_, Citeseerx_NNP -RRB-_-RRB- as_RB well_RB as_IN an_DT annotated_JJ cor_NN -_: pus_NN TAGGED-CORP_NNP in_IN a_DT specific_JJ genre_NN and_CC domain_NN ,_, and_CC a_DT list_NN of_IN semantic_JJ categories_NNS -LRB-_-LRB- e.g._FW ,_, PAPER_NNP =_SYM -LCB-_-LRB- paper_NN ,_, article_NN -RCB-_-RRB- ,_, PRESENT_NNP =_SYM -LCB-_-LRB- present_NN ,_, describe_VBP ,_, in_IN -_: troduce_NN -RCB-_-RRB- -RRB-_-RRB- ._.
+Our_PRP$ goal_NN is_VBZ to_TO retrieve_VB a_DT set_NN of_IN tagged_VBN sen_NN -_: tential_JJ patterns_NNS ,_, p1_NN ,_, ..._: ,_, pm_NN ,_, consisting_VBG of_IN keywords_NNS and_CC categories_NNS from_IN CORP._NNP ._.
+For_IN this_DT ,_, we_PRP convert_VBP all_DT sentences_NNS in_IN CORP_NNP and_CC TAGGED-CORP_NNP into_IN can_MD -_: didate_NN patterns_NNS -LRB-_-LRB- e.g._FW ,_, In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP Table_NNP 1_CD :_: Approaches_NNS of_IN previous_JJ studies_NNS Researchers_NNS Macmillan_NNP English_NNP Dictionary_NNP Teufel_NNP and_CC Moens_NNP -LRB-_-LRB- 2002_CD ,_, 2004_CD ,_, 2006_CD -RRB-_-RRB- Anthony_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- McKnight_NNP and_CC Srinivasan_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- Shimbo_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- Yamamoto_NNP and_CC Takagi_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- Wu_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- Lin_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- Hirohata_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- Model_NNP --_: Naive_NNP Bayes_NNP Naive_NNP Bayes_NNP Support_NN Vector_NNP Machine_NNP Support_NN Vector_NNP Machine_NNP Support_NN Vector_NNP Machine_NNP Hidden_NNP Markov_NNP Model_NNP Hidden_NNP Markov_NNP Model_NNP Conditional_NNP Random_NNP Field_NNP Moves_NNS 12_CD moves_NNS +_RB 7_CD moves_NNS +_RB BPGMRC_NNP OMRC_NNP OMRC_NNP BPMRC_NNP BPMRC_NNP OMRC_NNP OMRC_NNP Data_NNP general_JJ writing_NN scientific_JJ papers_NNS scientific_JJ papers_NNS MEDLINE_NNP MEDLINE_NNP MEDLINE_NNP Citeseer_NNP MEDLINE_NNP MEDLINE_NNP *_SYM ADD_NNP ,_, COMPARE_VBP ,_, EXAM_NNP ,_, CAUSE_NNP ,_, OPIONION_NNP ,_, HEDGE_NNP ,_, TOPIC_NN ,_, LIST_NNP ,_, REPHRASE_NNP ,_, REPORT_NNP ,_, SUM-UP_NNP +_NNP AIM_NNP ,_, TEXTUAL_NNP ,_, OWN_NNP ,_, BACKGROUND_NNP ,_, CONTRAST_NNP ,_, BASIS_NNP and_CC OTHER_NNP --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: -_: Procedure_NNP ExtractPatterns_NNP -LRB-_-LRB- Sent_NNP ,_, Categories_NNS ,_, Corpus_NNP -RRB-_-RRB- 1_CD ._.
+ExtractcandidatepatternsfromsentencesinCORP_NNP -LRB-_-LRB- Sec_NNP -_: tion_NN 3.2.1_CD -RRB-_-RRB- 2_CD ._.
+Grouppatternsbysemanticcategoriesinthegivencorpus_NNP -LRB-_-LRB- Section_NNP 3.2.2_CD -RRB-_-RRB- 3_LS ._.
+Generatesententialpatternsbystatisticallyanalyzingand_NNP filtering_VBG candidate_NN patterns_NNS -LRB-_-LRB- Section_NN 3.2.3_CD -RRB-_-RRB- 4_LS ._.
+Outputcharacteristicpatternsforeachcategory_NNP --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: Figure_NN 4_CD :_: Outline_VB of_IN the_DT pattern_NN extraction_NN process_NN WORK_VBP -RRB-_-RRB- ,_, such_JJ that_IN these_DT candidates_NNS can_MD be_VB statisti_NNS -_: cally_RB analyzed_VBD and_CC filtered_VBD to_TO generate_VB common_JJ and_CC representative_JJ patterns_NNS ._.
+In_IN the_DT rest_NN of_IN this_DT section_NN ,_, we_PRP describe_VBP our_PRP$ solu_SYM -_: tion_NN to_TO this_DT problem_NN ._.
+First_RB ,_, we_PRP define_VBP a_DT strategy_NN for_IN transforming_VBG sentences_NNS from_IN academic_JJ corpora_NN into_IN candidate_NN patterns_NNS -LRB-_-LRB- Section_NN 3.2.1_CD -RRB-_-RRB- ._.
+This_DT strategy_NN re_SYM -_: lies_VBZ on_IN a_DT set_NN of_IN candidate_NN patterns_NNS derived_VBN from_IN sen_NN -_: tences_NNS of_IN patterns_NNS -LRB-_-LRB- which_WDT we_PRP will_MD describe_VB in_IN detail_NN in_IN Section_NN 3.2.3_CD -RRB-_-RRB- ._.
+In_IN this_DT section_NN ,_, we_PRP also_RB describe_VBP our_PRP$ method_NN for_IN extracting_VBG the_DT most_RBS representative_JJ of_IN the_DT candidate_NN patterns_NNS for_IN each_DT semantic_JJ category_NN of_IN interest_NN ._.
+Finally_RB ,_, we_PRP show_VBP how_WRB WriteAhead_JJ displays_NNS patterns_NNS at_IN run-time_NN -LRB-_-LRB- Section_NN 3.3_CD -RRB-_-RRB- ._.
+3.2_CD Transforming_VBG Sentences_NNS into_IN Patterns_NNPS We_PRP attempt_VBP to_TO find_VB transformations_NNS from_IN sentences_NNS into_IN patterns_NNS ,_, consisting_VBG of_IN keywords_NNS and_CC categories_NNS expected_VBN to_TO characterize_VB rhetoric_NN moves_NNS in_IN academic_JJ writings_NNS ._.
+Our_PRP$ learning_NN process_NN is_VBZ shown_VBN in_IN Figure_NN 4_CD ._.
+--_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: -_: Procedure_NNP SPs_NNP &_CC Examples_NNS -LRB-_-LRB- Sentences_NNS ,_, Templates_NNS -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- taggedCorpus_NNP =_SYM ChunkParser_NNP -LRB-_-LRB- Sentences_NNS -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- candidates_NNS =_SYM GenPatternCandidate_NNP -LRB-_-LRB- taggedCorpus_NNP -RRB-_-RRB- -LRB-_-LRB- 3_LS -RRB-_-RRB- patternInstances_NNS =_SYM ReplaceTeufel_NNP -LRB-_-LRB- candidates_NNS -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- Pats_NNPS ,_, Categories_NNPS ,_, Instances_NNPS =_SYM GroupByCate_SYM -_: gory_JJ -LRB-_-LRB- patternInstances_NNS -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- Pats_NNPS ,_, Counts_VBZ =_SYM Counter_NNP -LRB-_-LRB- Patterns_NNPS ,_, Instances_NNPS -RRB-_-RRB- -LRB-_-LRB- 6_CD -RRB-_-RRB- Avg_NNP ,_, STD_NNP =_SYM CalStatics_NNPS -LRB-_-LRB- Pats_NNS ,_, Counts_VBZ -RRB-_-RRB- For_IN each_DT Pat_NNP ,_, Count_NNP pair_NN in_IN -LRB-_-LRB- Pats_NNS ,_, Counts_VBZ -RRB-_-RRB- If_IN Count_NN >_CD Avg_NNP +_CD MinSTDThreshold_NNP ×_CD STD_NNP -LRB-_-LRB- 7_CD -RRB-_-RRB- Emit_NNP Tuple_NNP =_SYM -LRB-_-LRB- Word_NN ,_, Pat_NNP ,_, PatTuples_NNP -RRB-_-RRB- -LRB-_-LRB- 8_CD -RRB-_-RRB- Pats_NNPS =_SYM Annotate_NNP -LRB-_-LRB- Word_NNP ,_, Pat_NNP ,_, PatTuples_NNP -RRB-_-RRB- --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: --_: -_: Figure_NN 5_CD :_: Process_NNP for_IN extracting_VBG SPs_NNP and_CC examples_NNS ._.
+3.2.1_CD Extracting_VBG Candidate_NNP Patterns_NNPS ._.
+In_IN the_DT first_JJ stage_NN of_IN the_DT extracting_VBG process_NN -LRB-_-LRB- Step_NN -LRB-_-LRB- 1_CD -RRB-_-RRB- in_IN Figure_NN 5_CD -RRB-_-RRB- ,_, we_PRP tokenize_VBP sentences_NNS in_IN the_DT given_VBN corpus_NN ,_, and_CC assign_VB to_TO each_DT word_NN its_PRP$ syntactic_JJ infor_NN -_: mation_NN including_VBG lemma_NN ,_, part_NN of_IN speech_NN ,_, and_CC phrase_NN group_NN -LRB-_-LRB- represented_VBN using_VBG the_DT B-I-O_JJ notation_NN to_TO mark_VB the_DT beginning_NN ,_, inside_RB ,_, and_CC outside_IN of_IN some_DT phrase_NN group_NN -RRB-_-RRB- ._.
+See_VB Table_NNP 2_CD for_IN an_DT example_NN of_IN tagged_VBN sentence_NN ._.
+In_IN order_NN to_TO identify_VB the_DT head_NN of_IN a_DT phrase_NN ,_, we_PRP convert_VBP the_DT B-I-O_JJ notation_NN to_TO I-H-O_JJ notation_NN with_IN H_NNP denoting_VBG the_DT headword_NN of_IN a_DT phrase_NN ._.
+Using_VBG the_DT I-H-O_NNP nota_NN -_: tion_NN allows_VBZ us_PRP to_TO directly_RB identify_VB the_DT headword_NN of_IN a_DT phrase_NN chunk_NN ._.
+Then_RB ,_, we_PRP convert_VBP every_DT word_NN in_IN a_DT sentence_NN into_IN elements_NNS of_IN a_DT candidate_NN pattern_NN ._.
+The_DT Table_NNP 2_CD :_: A_DT tagged_VBN sentence_NN ,_, pattern_NN elements_NNS for_IN each_DT word_NN ,_, and_CC anchored_VBD pattern_NN candidates_NNS Word_NNP Lemma_NNP In_IN In_IN this_DT this_DT report_NN report_NN ,_, ,_, we_PRP we_PRP propose_VBP propose_VB a_DT a_DT method_NN method_NN POS_NNP B-I-O_NNP I-H-O_NNP Element_NNP IN_IN B-PP_NNP I-PP_NNP in_IN DT_NNP B-NP_NNP H-NP_NNP this_DT NN_NNP I-NP_NNP H-NP_NNP PAPER_NNP ,_, O_NNP O_NNP ,_, PRP_NNP B-NP_NNP I-NP_NNP we_PRP VBP_NNP B-VP_NNP H-VP_NNP PRESENT_NNP DT_NNP B-NP_NNP I-NP_NNP -LRB-_-LRB- -RRB-_-RRB- NN_NNP I-NP_NNP H-NP_NNP WORK_VBP Pattern_NN candidate_NN anchored_VBD at_IN each_DT word_NN -LRB-_-LRB- In_IN -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT PAPER_NN -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT PAPER_NN ,_, -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT PAPER_NN ,_, we_PRP -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP -RRB-_-RRB- -LRB-_-LRB- InthisPAPER_NNP ,_, wePRESENT_NNP -RRB-_-RRB- -LRB-_-LRB- In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP WORK_VBP -RRB-_-RRB- Table_NNP 3_CD :_: Example_NNP Teufel_NNP category_NN of_IN sentential_JJ patterns_NNS For_IN example_NN ,_, in_IN Table_NNP 2_CD ,_, the_DT sentence_NN ''_'' In_IN this_DT pa_NN -_: per_IN ,_, we_PRP propose_VBP a_DT method_NN that_WDT accurately_RB reports_VBZ timing_NN information_NN by_IN accounting_VBG for_IN intrusion_NN in_IN -_: troduced_VBN by_IN monitoring_NN ._. ''_''
+will_MD be_VB transformed_VBN into_IN the_DT candidate_NN pattern_NN ''_'' In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP WORK_VBP ''_'' ._.
+The_DT input_NN to_TO this_DT state_NN is_VBZ a_DT set_NN of_IN sentences_NNS ._.
+These_DT sentences_NNS constitute_VBP the_DT data_NNS for_IN generating_VBG the_DT can_MD -_: didate_NN patterns_NNS ,_, that_WDT can_MD be_VB used_VBN in_IN the_DT next_JJ step_NN ._.
+The_DT output_NN of_IN this_DT stage_NN is_VBZ a_DT set_NN of_IN candidate_NN pat_NN -_: terns_NNS that_WDT can_MD be_VB statistically_RB analyzed_VBN and_CC filter_NN in_IN a_DT later_JJ step_NN ._.
+See_VB Table_NNP 4_CD for_IN example_NN candidate_NN pat_NN -_: terns_NNS extracted_VBN from_IN some_DT sentences_NNS ._.
+3.2.2_CD Grouping_NNP Patterns_NNPS by_IN Categories_NNPS ._.
+In_IN the_DT second_JJ stage_NN of_IN the_DT process_NN -LRB-_-LRB- Step_NN -LRB-_-LRB- 4_LS -RRB-_-RRB- in_IN Fig_NNP -_: ure_NN 5_CD -RRB-_-RRB- ,_, we_PRP filter_NN candidate_NN patterns_NNS to_TO generate_VB rep_NN -_: resentative_JJ patterns_NNS ._.
+Once_RB patterns_NNS and_CC instances_NNS are_VBP generated_VBN ,_, they_PRP are_VBP sorted_VBN and_CC grouped_VBN by_IN category_NN ._.
+Then_RB ,_, we_PRP count_VBP the_DT number_NN of_IN instances_NNS of_IN each_DT pattern_NN within_IN the_DT category_NN -LRB-_-LRB- in_IN Step_NN -LRB-_-LRB- 5_CD -RRB-_-RRB- -RRB-_-RRB- ,_, and_CC the_DT av_SYM -_: erage_NN and_CC standard_JJ deviation_NN of_IN these_DT counts_NNS for_IN each_DT category_NN -LRB-_-LRB- in_IN Step_NN -LRB-_-LRB- 6_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+In_IN Step_NN -LRB-_-LRB- 7_CD -RRB-_-RRB- ,_, we_PRP select_VBP patterns_NNS with_IN an_DT in_IN -_: stance_NN count_NN exceeding_VBG the_DT average_JJ count_NN by_IN Min_NNP -_: STDThreshold_NNP standard_JJ deviation_NN ._.
+Consider_VB the_DT partial_JJ sentence_NN ''_'' In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT method_NN ''_'' Table_NNP 2_CD shows_NNS elements_NNS of_IN each_DT word_NN ,_, pattern_NN candidates_NNS anchored_VBD each_DT word_NN ._.
+Note_VB that_IN the_DT candidate_NN -LRB-_-LRB- e.g._FW ,_, In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP WORK_VBP associated_VBN with_IN the_DT instance_NN of_IN In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT method_NN -RRB-_-RRB- are_VBP valid_JJ pat_NN -_: terns_NNS ._.
+Teufel_NNP category_NN PAPER_NN WORK_VBP PURPOSE_NN DEVELOP_VB PRESENT_NNP EVALUATE_VB Gloss_NN and_CC examples_NNS article_NN ,_, draft_NN ,_, paper_NN ,_, project_NN ,_, report_NN ,_, ..._: analysis_NN ,_, approach_NN ,_, method_NN ,_, ..._: aim_NN ,_, goal_NN ,_, purpose_NN ,_, task_NN ,_, theme_NN ,_, topic_NN ,_, ..._: accomplish_VB ,_, achieve_VB ,_, answer_VB ,_, prove_VB ,_, ..._: describe_VB ,_, introduce_VB ,_, present_JJ ,_, propose_VB ,_, ..._: compare_VB ,_, compete_VB ,_, evaluate_VB ,_, test_NN ,_, ..._: elements_NNS consist_VBP of_IN three_CD types_NNS of_IN information_NN :_: •_CD Semantic_JJ categories_NNS -LRB-_-LRB- See_VB Table_NNP 3_CD -RRB-_-RRB- :_: typical_JJ do_VBP -_: main_JJ specific_JJ concepts_NNS and_CC words_NNS ,_, •_CD Lexical_JJ symbols_NNS :_: a_DT list_NN of_IN common_JJ preposi_NNS -_: tions_NNS ,_, pronouns_NNS ,_, adverbs_NNS ,_, and_CC determinants_NNS ,_, •_CD Noun_NN phrase_NN and_CC verb_NN phrase_NN :_: head_NN words_NNS that_WDT are_VBP not_RB classified_VBN in_IN a_DT category_NN are_VBP repre_NN -_: sented_VBN as_IN something_NN or_CC do_VB ._.
+Note_VB that_DT determinants_NNS -LRB-_-LRB- e.g._FW ,_, the_DT ,_, an_DT ,_, a_DT -RRB-_-RRB- or_CC adjec_SYM -_: tives_NNS need_VBP to_TO be_VB represented_VBN in_IN a_DT pattern_NN ._.
+For_IN those_DT words_NNS ,_, we_PRP add_VBP ''_'' ''_'' -LRB-_-LRB- ignored_VBN -RRB-_-RRB- to_TO the_DT element_NN list_NN ._.
+The_DT ignored_VBN elements_NNS will_MD be_VB deleted_VBN before_IN patterns_NNS are_VBP analyzed_VBN and_CC filtered_VBN -LRB-_-LRB- as_IN shown_VBN in_IN Table_NNP 2_CD -RRB-_-RRB- ._.
+We_PRP de_IN -_: sign_VB the_DT scope_NN of_IN extracted_VBN patterns_NNS ,_, as_IN from_IN the_DT be_VB -_: ginning_NN of_IN the_DT sentence_NN ,_, to_TO the_DT object_NN phrase_NN after_IN the_DT main_JJ verb_NN ._.
+Finally_RB ,_, we_PRP combine_VBP elements_NNS for_IN a_DT sentence_NN to_TO generate_VB pattern_NN candidates_NNS -LRB-_-LRB- Step_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- in_IN Figure_NN 5_CD -RRB-_-RRB- ._.
+Table_NNP 2_CD shows_NNS those_DT elements_NNS associated_VBN with_IN words_NNS and_CC how_WRB they_PRP combine_VBP to_TO form_VB pattern_NN candidates_NNS ._.
+In_IN Step_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, we_PRP use_VBP semantic_JJ categories_NNS to_TO gener_VB -_: alize_JJ words_NNS and_CC generate_VB formulaic_JJ patterns_NNS ._.
+As_RB will_MD be_VB described_VBN in_IN Section_NN 4_CD ,_, we_PRP used_VBD a_DT Teufel_NNP manually_RB analyzed_VBD research_NN article_NN to_TO device_NN a_DT set_NN of_IN categories_NNS of_IN words_NNS -LRB-_-LRB- Teufel_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+Table_NNP 4_CD :_: Ranked_JJ patterns_NNS based_VBN on_IN CORP_NNP and_CC TAGGED-CORP_NNP statistics_NNS AZ_NNP Pattern_NNP Count_NNP Example_NNP In_IN this_DT paper_NN ,_, we_PRP present/propose/introduce_VBP In_IN this_DT paper_NN ,_, we_PRP describe_VBP In_IN this_DT paper_NN we_PRP present/propose/introduce_VBP In_IN this_DT paper_NN we_PRP describe/discuss_VBP The_DT purpose/aim/goal_NN of_IN this_DT paper_NN The_DT aim/purpose_NN of_IN this_DT study_NN In_IN this_DT paper_NN ,_, we_PRP investigate/examine/identify_VBP In_IN this_DT paper_NN ,_, we_PRP analyze_VBP AIM_NNP In_IN this_DT PAPER_NN ,_, we_PRP PROPOSE_VBP AIM_NNP In_IN this_DT PAPER_NN we_PRP PROPOSE_VBP AIM_NNP The_NNP AIM_NNP of_IN this_DT PAPER_NN AIM_NN In_IN this_DT PAPER_NN ,_, we_PRP INVESTIGATE_VBP 3.2.3_CD Ranking_NNP and_CC Annotating_NNP Patterns_NNPS ._.
+In_IN the_DT third_JJ and_CC final_JJ stage_NN -LRB-_-LRB- Step_NN -LRB-_-LRB- 8_CD -RRB-_-RRB- in_IN Figure_NN 5_CD -RRB-_-RRB- ,_, we_PRP count_VBP ,_, sort_NN ,_, and_CC filter_NN patterns_NNS ,_, essentially_RB using_VBG the_DT frequency_NN counts_VBZ from_IN CORP_NNP with_IN the_DT tags_NNS in_IN TAGGED-CORP_NNP -LRB-_-LRB- See_VB Tables_NNPS 4_LS -RRB-_-RRB- ._.
+Figure_NN 5_CD shows_VBZ the_DT algorithm_NN for_IN ranking_VBG a_DT set_NN of_IN corresponding_JJ senten_NN -_: tial_JJ patterns_NNS for_IN all_DT semantic_JJ categories_NNS ._.
+See_VB Table_NNP 6_CD for_IN an_DT example_NN of_IN the_DT move_NN tag_NN AIM_NNP and_CC its_PRP$ corre_NN -_: sponding_VBG sentential_JJ patterns_NNS ._.
+3.3_CD Run-Time_NNP Once_IN the_DT patterns_NNS and_CC examples_NNS are_VBP automatically_RB extracted_VBN for_IN each_DT category_NN in_IN the_DT given_VBN corpus_NN ,_, they_PRP are_VBP stored_VBN and_CC indexed_VBN by_IN category_NN that_WDT can_MD be_VB annotated_VBN with_IN corresponding_JJ rhetoric_NN moves_NNS ._.
+At_IN run-time_NN in_IN a_DT writing_VBG session_NN ,_, WriteAhead_NNP detects_VBZ a_DT rhetoric_NN move_NN tag_NN Move_VBP in_IN the_DT text_NN box_NN ._.
+With_IN the_DT tag_NN as_IN a_DT query_NN ,_, WriteAhead_NNP retrieves_VBZ and_CC sorts_NNS all_DT rele_SYM -_: vant_NN patterns_NNS and_CC examples_NNS -LRB-_-LRB- Pattern_NN and_CC Example_NNP -RRB-_-RRB- by_IN frequency_NN ,_, aiming_VBG to_TO display_VB the_DT most_RBS common_JJ information_NN toward_IN the_DT top_NN ._.
+4_CD Implementation_NN and_CC Setting_VBG In_IN this_DT section_NN ,_, we_PRP describe_VBP the_DT implementation_NN and_CC experiments_NNS of_IN the_DT method_NN presented_VBN in_IN Section_NN 3_CD ._.
+First_RB ,_, we_PRP retrieved_VBD computer_NN science_NN abstracts_NNS from_IN the_DT digital_JJ library_NN website_NN ,_, CiteSeer_NNP -LRB-_-LRB- citeseerx_NN ._.
+ist.psu.edu_NNP ,_, a_DT collection_NN of_IN bibliographies_NNS of_IN scientific_JJ literature_NN in_IN computer_NN science_NN from_IN various_JJ sources_NNS -RRB-_-RRB- ._.
+We_PRP obtained_VBD about_IN four_CD million_CD computer_NN science_NN abstracts_NNS ._.
+Before_IN extracting_VBG patterns_NNS ,_, we_PRP use_VBP GeniaTagger_NNP as_IN a_DT simple_JJ toolkit_NN for_IN analyzing_VBG and_CC parsing_VBG English_JJ sentences_NNS and_CC outputting_VBG the_DT base_NN forms_NNS ,_, part-of-speech_NN tags_NNS ,_, chunk_NN tags_NNS and_CC named_VBN entity_NN tags_NNS ._.
+Tsuruoka_FW et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- develop_VB this_DT tools_NNS ,_, specifically_RB tuned_VBN for_IN biomedical_JJ text_NN ._.
+Then_RB ,_, we_PRP use_VBP this_DT tagger_NN for_IN tagging_VBG sentences_NNS to_TO obtain_VB the_DT part-of-speech_NN tags_NNS ,_, lemma_NN ,_, chunks_NNS for_IN training_VBG the_DT model_NN ._.
+After_IN tagging_VBG ,_, we_PRP applied_VBD our_PRP$ method_NN to_TO extract_VB patterns_NNS from_IN CiteSeer_NNP x_LS ._.
+We_PRP used_VBD manually_RB compiled_VBN semantic_JJ categories_NNS and_CC words_NNS -LRB-_-LRB- Teufel_NNP ,_, 1999_CD -RRB-_-RRB- to_TO generalize_VB word_NN and_CC generate_VB formulaic_JJ patterns_NNS ._.
+There_EX are_VBP 66_CD categories_NNS with_IN some_DT 900_CD nouns_NNS ,_, verbs_NNS ,_, and_CC adjectives_NNS ._.
+For_IN example_NN ,_, in_IN Table_NNP 2_CD ,_, the_DT sentence_NN ''_'' In_IN this_DT pa_NN -_: per_IN ,_, we_PRP propose_VBP a_DT method_NN that_WDT accurately_RB reports_VBZ timing_NN information_NN by_IN accounting_VBG for_IN intrusion_NN in_IN -_: troduced_VBN by_IN monitoring_NN ._. ''_''
+will_MD be_VB transformed_VBN into_IN the_DT candidate_NN pattern_NN ''_'' In_IN this_DT PAPER_NN ,_, we_PRP PRESENT_VBP WORK_VBP ''_'' ._.
+As_RB will_MD be_VB described_VBN in_IN Section_NN 4_CD ,_, we_PRP used_VBD a_DT Teufel_NNP manually_RB analyzed_VBD research_NN article_NN to_TO derive_VB a_DT set_NN of_IN categories_NNS of_IN words_NNS -LRB-_-LRB- Teufel_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+We_PRP also_RB used_VBD the_DT Argumentative_NNP Zoning_NNP corpus_VBZ -LRB-_-LRB- available_JJ at_IN www.cl.cam.ac.uk_JJ /_NN ̃sht25_NNS /_VBP AZ_corpus_NNP ._.
+html_NN -RRB-_-RRB- ,_, created_VBN and_CC annotated_VBN by_IN Teufel_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- and_CC collaborators_NNS ._.
+The_DT dataset_NN con_NN -_: sists_NNS of_IN 80_CD AZ-annotated_JJ conference_NN articles_NNS in_IN the_DT research_NN area_NN of_IN computational_JJ linguistics_NNS ,_, hosted_VBN in_IN the_DT academic_JJ archive_NN of_IN Cmplg_NNP arXiv_NNP ._.
+The_DT set_NN of_IN AZ_NNP tags_NNS include_VBP AIM_NNP -LRB-_-LRB- purpose_NN -RRB-_-RRB- ,_, BAS_NNP -LRB-_-LRB- basis_NN -RRB-_-RRB- ,_, BKG_NNP -LRB-_-LRB- background_NN -RRB-_-RRB- ,_, CTR_NNP -LRB-_-LRB- contrast_NN -RRB-_-RRB- ,_, OTH_NNP -LRB-_-LRB- previous_JJ work_NN -RRB-_-RRB- ,_, OWN_NNP -LRB-_-LRB- own_JJ method_NN and_CC results_NNS -RRB-_-RRB- ,_, TXT_NNP -LRB-_-LRB- tex_SYM -_: tual_JJ references_NNS -RRB-_-RRB- ._.
+To_TO provide_VB user_NN interface_NN for_IN accessing_VBG WriteA_NNP -_: head_NN ,_, we_PRP have_VBP implemented_VBN two_CD versions_NNS of_IN the_DT sys_NNS -_: tem_NN :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- browser-based_JJ proof-of-concept_JJ -LRB-_-LRB- POC_NNP -RRB-_-RRB- in_IN -_: terface_NN and_CC a_DT Google_NNP Docs_NNP add-on_JJ ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- To_TO prove_VB the_DT feasibility_NN of_IN the_DT concept_NN ,_, the_DT browser_NN version_NN -LRB-_-LRB- with_IN -_: 100,607_CD 48,354_CD 20,725_CD 16,872_CD out_IN the_DT common_JJ editing_NN functions_NNS -RRB-_-RRB- was_VBD implemented_VBN in_IN Python_NNP and_CC within_IN the_DT Flask_NNP Web_NNP framework_NN ._.
+We_PRP stored_VBD the_DT suggestions_NNS in_IN JSON_NNP format_NN using_VBG Post_NNP -_: greSQL_NNP for_IN a_DT faster_RBR access_NN ._.
+The_DT WriteAhead_NNP server_NN obtains_VBZ client_NN input_NN from_IN a_DT popular_JJ browser_NN -LRB-_-LRB- Safari_NNP ,_, Chrome_NNP ,_, or_CC Firefox_NNP -RRB-_-RRB- dynamically_RB with_IN AJAX_NNP tech_SYM -_: niques_NNS ._.
+For_IN uninterrupted_JJ service_NN and_CC ease_NN of_IN scal_JJ -_: ing_VBG up_RP ,_, we_PRP chose_VBD to_TO host_VB WriteAhead_NNP on_IN Heroku_NNP ,_, a_DT cloud-platform-as-a-service_JJ -LRB-_-LRB- PaaS_NNP -RRB-_-RRB- site_NN ._.
+The_DT WriteAhead_NNP add-on_JJ for_IN Google_NNP Docs_NNP was_VBD im_SYM -_: plemented_VBN in_IN Google_NNP App_NNP Script_NNP -LRB-_-LRB- GAS_NNP -RRB-_-RRB- with_IN HTML_NNP and_CC JavaScript_NNP ._.
+WriteAhead_JJ add-on_JJ obtains_NNS client_NN input_NN from_IN documents_NNS using_VBG built-in_JJ methods_NNS in_IN GAS_NNP ,_, and_CC obtains_VBZ the_DT suggestions_NNS by_IN sending_VBG re_SYM -_: quests_NNS to_TO the_DT WriteAhead_NNP server_NN through_IN our_PRP$ API_NNP ._.
+To_TO start_VB the_DT add-on_JJ ,_, the_DT user_NN click_NN ''_'' Add-ons_NNS >_VBP WriteA_SYM -_: head_NN >_CD Start_NNP ''_'' after_IN installation_NN ,_, and_CC a_DT sidebar_NN will_MD appear_VB ._.
+The_DT suggested_JJ patterns_NNS and_CC examples_NNS are_VBP shown_VBN in_IN the_DT sidebar_NN ._.
+5_CD Evaluation_NN The_DT proposed_VBN system_NN was_VBD designed_VBN to_TO automatically_RB extract_VB patterns_NNS and_CC examples_NNS for_IN each_DT correspond_VB -_: ing_NN rhetoric_NN move_NN ._.
+A_DT preliminary_JJ evaluation_NN was_VBD done_VBN on_IN a_DT set_NN of_IN real_JJ formula_NN labeled_VBN with_IN moves_NNS ._.
+We_PRP compared_VBD our_PRP$ patterns_NNS with_IN the_DT Teufel_NNP formula_NN and_CC evaluated_VBD the_DT precision_NN in_IN different_JJ experimen_NNS -_: tal_JJ settings_NNS ._.
+In_IN this_DT Section_NN ,_, we_PRP first_RB describe_VBP how_WRB we_PRP compared_VBD patterns_NNS -LRB-_-LRB- Section_NN 4_CD -RRB-_-RRB- ._.
+Then_RB ,_, Section_NNP 5.1_CD introduces_VBZ the_DT evaluation_NN metrics_NNS for_IN evaluating_VBG the_DT experimental_JJ results_NNS ._.
+5.1_CD Evaluation_NN Metrics_NNS The_DT output_NN of_IN our_PRP$ method_NN is_VBZ an_DT automatically_RB tagged_VBN pattern_NN ,_, which_WDT can_MD either_RB be_VB shown_VBN to_TO the_DT user_NN di_FW -_: rectly_RB ,_, or_CC be_VB used_VBN in_IN academic_JJ writing_NN ,_, e.g._FW ,_, in_IN teach_VB -_: ing_VBG academic_JJ writing_NN ,_, teachers_NNS can_MD use_VB those_DT tagged_VBN patterns_NNS to_TO help_VB tag_VB the_DT sentences_NNS in_IN a_DT given_VBN RA_NNP with_IN moves_NNS ._.
+To_TO evaluate_VB our_PRP$ approach_NN ,_, we_PRP compare_VBP our_PRP$ senten_NN -_: tial_JJ patterns_NNS with_IN Teufel_NNP Formula_NNP ._.
+We_PRP extract_VB three_CD categories_NNS PAPER_NN ,_, WORK_VBP ,_, and_CC PRESENT_NNP to_TO in_IN -_: spect_NN that_IN if_IN there_EX are_VBP some_DT patterns_NNS in_IN common_JJ ._.
+We_PRP compare_VBP Teufel_NNP formulas_NNS and_CC our_PRP$ extracted_VBN sentential_JJ patterns_NNS under_IN three_CD specific_JJ categories_NNS ,_, PAPER_NN ,_, WORK_VBP ,_, and_CC PRESENT_NNP ._.
+In_IN PAPER_NNP cate_NN -_: gory_JJ ,_, there_EX are_VBP 76_CD formula_NN and_CC 5_CD patterns_NNS ,_, among_IN these_DT ,_, 18_CD formula_NN and_CC 5_CD patterns_NNS are_VBP in_IN common_JJ ._.
+Similar_JJ in_IN WORK_VBP category_NN ,_, there_EX are_VBP 153_CD formula_NN and_CC 16_CD patterns_NNS ,_, among_IN these_DT ,_, 30_CD formula_NN and_CC 16_CD patterns_NNS are_VBP in_IN common_JJ ._.
+And_CC in_IN PRESENT_NNP cate_NN -_: gory_JJ ,_, there_EX are_VBP 15_CD formula_NN and_CC 13_CD patterns_NNS ,_, among_IN these_DT ,_, 7_CD formula_NN and_CC 5_CD patterns_NNS are_VBP in_IN common_JJ ._.
+In_IN comparison_NN ,_, our_PRP$ sentential_JJ patterns_NNS are_VBP longer_RBR and_CC more_RBR complete_JJ than_IN Teufel_NNP 's_POS original_JJ formulas_NNS serving_VBG as_IN features_NNS for_IN classification_NN ._.
+It_PRP is_VBZ clear_JJ that_IN ,_, our_PRP$ sentential_JJ patterns_NNS tend_VBP to_TO be_VB more_RBR complete_JJ and_CC indicative_JJ of_IN rhetoric_NN moves_NNS ,_, since_IN we_PRP use_VBP the_DT stop_NN -_: ping_NN condition_NN to_TO extract_VB patterns_NNS all_PDT the_DT way_NN up_IN to_TO the_DT object_NN of_IN the_DT main_JJ verb_NN ._.
+As_IN it_PRP turns_VBZ out_RP ,_, the_DT pat_NN -_: terns_NNS generate_VBP by_IN a_DT computer_NN using_VBG a_DT very_RB large_JJ scale_NN academic_JJ corpus_NN are_VBP more_RBR consistent_JJ ,_, complete_JJ ,_, and_CC relevant_JJ to_TO academic_JJ writing_NN ._.
+6_CD Conclusion_NN and_CC Future_NNP Work_NNP Many_JJ avenues_NNS exist_VBP for_IN future_JJ research_NN and_CC improve_VB -_: ment_NN of_IN our_PRP$ system_NN ._.
+For_IN example_NN ,_, the_DT method_NN for_IN extracting_VBG patterns_NNS could_MD be_VB discussed_VBN further_RBR and_CC be_VB evaluated_VBN separately_RB ,_, using_VBG different_JJ formula_NN to_TO cal_NN -_: culate_VB a_DT threshold_NN ,_, and_CC generate_VB different_JJ patterns_NNS ._.
+Additionally_RB ,_, an_DT interesting_JJ direction_NN to_TO explore_VB is_VBZ to_TO expand_VB the_DT word_NN categories_NNS and_CC obtain_VB more_JJR fine_NN -_: grain_NN patterns_NNS ._.
+Yet_RB another_DT direction_NN of_IN this_DT research_NN would_MD be_VB applied_VBN to_TO the_DT model_NN of_IN different_JJ sections_NNS of_IN RAs_NNP ,_, and_CC more_JJR disciplines_NNS ._.
+In_IN summary_NN ,_, we_PRP have_VBP presented_VBN a_DT new_JJ method_NN for_IN extracting_VBG patterns_NNS in_IN a_DT scholar_NN big_JJ dataset_NN for_IN var_NN -_: ious_JJ moves_NNS in_IN academic_JJ writing_NN ._.
+The_DT method_NN in_IN -_: volves_NNS patterns_NNS with_IN all_DT semantic_JJ categories_NNS of_IN in_IN -_: terest_NN ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN our_PRP$ auto_NN -_: matically_RB extracted_VBN patterns_NNS reflect_VBP different_JJ rhetoric_NN moves_NNS and_CC purposes_NNS ._.
+References_NNS Anthony_NNP ,_, Laurence_NNP and_CC Lashkia_NNP ,_, George_NNP V._NNP Mover_NNP :_: A_NNP machine_NN learning_VBG tool_NN to_TO assist_VB in_IN the_DT read_NN -_: ing_NN and_CC writing_NN of_IN technical_JJ papers_NNS ._.
+Transactions_NNS on_IN Professional_NNP Communication_NNP ,_, IEEE_NNP ._.
+Vol_NNP 46,3_CD ,_, pages_NNS 185_CD --_: 193_CD ,_, IEEE_NNP ._.
+Connor_NNP ,_, Ulla_NNP ._.
+1996_CD ._.
+Contrastive_JJ rhetoric_NN :_: Cross-cultural_JJ aspects_NNS of_IN second_JJ language_NN writing_NN ._.
+Cambridge_NNP Uni_NNP -_: versity_NN Press_NNP ._.
+Connor_NNP ,_, Ulla_NNP and_CC Mauranen_NNP ,_, Anna_NNP ._.
+1999_CD ._.
+Linguistic_JJ analysis_NN of_IN grant_NN proposals_NNS :_: European_NNP Union_NNP research_NN 2003_CD ._.
+grants_NNS ._.
+English_NNP for_IN specific_JJ purposes_NNS ._.
+Vol_NNP ._.
+18_CD ,_, 1_CD ,_, pages_NNS 47_CD --_: 62_CD ,_, Elsevier_NNP ._.
+Cooper_NNP ,_, Catherine_NNP ._.
+1985_CD ._.
+Aspects_NNS of_IN article_NN introduc_NN -_: tions_NNS in_IN IEEE_NNP publications_NNS ._.
+Unpublished_JJ master_NN 's_POS the_DT -_: sis_NN ,_, University_NNP of_IN Aston_NNP ,_, Birmingham_NNP ,_, England_NNP ._.
+Crookes_NNP ,_, Graham_NNP ._.
+1986_CD ._.
+Towards_IN a_DT validated_VBN analysis_NN of_IN scientific_JJ text_NN structure_NN ._.
+Applied_NNP linguistics_NNS ,_, Am_VBP Asso_SYM -_: ciation_NN of_IN Applied_NNP Linguistics_NNP ._.
+Vol_NNP ._.
+7_CD ,_, 1_CD ,_, pages_NNS 57_CD --_: 70_CD ._.
+Dudley-Evans_NNP ,_, Tony_NNP ._.
+1994_CD ._.
+Genre_NN analysis_NN :_: An_DT ap_SYM -_: proach_NN to_TO text_NN analysis_NN for_IN ESP_NNP ._.
+Advances_NNS in_IN written_VBN text_NN analysis_NN ._.
+Vol_NNP ._.
+219_CD ,_, page_NN 228_CD ._.
+Graddol_NNP ,_, David_NNP ._.
+1997_CD ._.
+The_DT future_NN of_IN English_NNP ?_.
+:_: A_DT guide_NN to_TO forecasting_VBG the_DT popularity_NN of_IN the_DT English_NNP language_NN in_IN the_DT 21st_JJ century_NN ._.
+British_JJ Council_NNP ._.
+Hill_NNP ,_, Susan_NNP S_NNP and_CC Soppelsa_NNP ,_, Betty_NNP F_NN and_CC West_NNP ,_, Gre_NNP -_: gory_JJ K._NNP 1982_CD ._.
+Teaching_VBG ESL_NNP Students_NNS to_TO Read_VB and_CC Write_VB Experimental-Research_NNP Papers_NNP ._.
+TESOL_NNP quar_NN -_: terly_RB ._.
+Vol_NNP ._.
+16_CD ,_, 3_CD ,_, pages_NNS 333_CD --_: 347_CD ,_, Wiley_NNP Online_NNP Library_NNP ._.
+Hinds_NNS ,_, John_NNP ._.
+1990_CD ._.
+Inductive_NNP ,_, deductive_JJ ,_, quasi_JJ -_: inductive_NN :_: Expository_JJ writing_NN in_IN Japanese_JJ ,_, Korean_JJ ,_, Chinese_JJ ,_, and_CC Thai_NNP ._.
+Coherence_NN in_IN writing_NN :_: Research_NNP and_CC pedagogical_JJ perspectives_NNS ,_, pages_NNS 87_CD --_: 110_CD ._.
+Hirohata_NNP ,_, Kenji_NNP and_CC Okazaki_NNP ,_, Naoaki_NNP and_CC Ananiadou_NNP ,_, Sophia_NNP and_CC Ishizuka_NNP ,_, Mitsuru_NNP and_CC Biocentre_NNP ,_, Manch_NNP -_: ester_NN Interdisciplinary_NNP ._.
+2008_CD ._.
+Identifying_VBG Sections_NNS in_IN Scientific_NNP Abstracts_NNPS using_VBG Conditional_NNP Random_NNP Fields_NNPS ._.
+IJCNLP_NNP ,_, pages_NNS 381_CD --_: 388_CD ._.
+Hopkins_NNP ,_, Andy_NNP ._.
+1985_CD ._.
+An_DT investigation_NN into_IN the_DT orga_NN -_: nizing_VBG and_CC organizational_JJ features_NNS of_IN published_VBN confer_VBP -_: ence_NN papers_NNS ._.
+Unpublished_JJ MA_NNP dissertation_NN ,_, University_NNP of_IN Birmingham_NNP ._.
+opkins_NNS ,_, Andy_NNP and_CC Dudley-Evans_NNP ,_, Tony_NNP ._.
+1988_CD ._.
+A_DT genre_NN -_: based_VBN investigation_NN of_IN the_DT discussion_NN sections_NNS in_IN arti_NNS -_: cles_NNS and_CC dissertations_NNS ._.
+English_NNP for_IN Specific_JJ Purposes_NNS ._.
+Vol_NNP ._.
+7_CD ,_, 2_CD ,_, pages_NNS 113_CD --_: 121_CD ,_, Elsevier_NNP ._.
+Lin_NNP ,_, Jimmy_NNP and_CC Karakos_NNP ,_, Damianos_NNP and_CC Demner_NNP -_: Fushman_NNP ,_, Dina_NNP and_CC Khudanpur_NNP ,_, Sanjeev_NNP ._.
+2006_CD ._.
+lin2006generative_JJ ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 65_CD --_: 72_CD ._.
+McKnight_NNP ,_, Larry_NNP and_CC Srinivasan_NNP ,_, Padmini_NNP ._.
+2003_CD ._.
+Cat_NN -_: egorization_NN of_IN sentence_NN types_NNS in_IN medical_JJ abstracts_NNS ._.
+American_NNP Medical_NNP Informatics_NNP Association_NNP Annual_JJ Symposium_NNP Proceedings_NNP 2003_CD ,_, page_NN 440_CD ._.
+Ruiying_NNP ,_, Yang_NNP and_CC Allison_NNP ,_, Desmond_NNP ._.
+2003_CD ._.
+Research_NNP articles_NNS in_IN applied_VBN linguistics_NNS :_: Moving_VBG from_IN results_NNS to_TO conclusions_NNS ._.
+English_NNP for_IN Specific_JJ Purposes_NNS ._.
+Vol_NNP ._.
+22_CD ,_, 4_CD ,_, pages_NNS 365_CD --_: 385_CD ._.
+Samraj_NNP ,_, Betty_NNP ._.
+2002_CD ._.
+Introductions_NNS in_IN research_NN articles_NNS :_: Variations_NNS across_IN disciplines_NNS ._.
+English_NNP for_IN specific_JJ pur_NN -_: poses_VBZ ._.
+Vol_NNP ._.
+21_CD ,_, 1_CD ,_, pages_NNS 1_CD --_: 17_CD ,_, 2002_CD ._.
+Elsevier_NNP ._.
+Shimbo_NNP ,_, Masashi_NNP and_CC Yamasaki_NNP ,_, Takahiro_NNP and_CC Mat_NNP -_: sumoto_NN ,_, Yuji_NNP ._.
+2003_CD ._.
+Using_VBG sectioning_VBG information_NN for_IN text_NN retrieval_NN :_: a_DT case_NN study_NN with_IN the_DT medline_NN abstracts_NNS ._.
+Proceedings_NNP of_IN Second_NNP International_NNP Workshop_NNP on_IN Ac_NNP -_: tive_JJ Mining_NN -LRB-_-LRB- AM_NNP '_POS 03_CD -RRB-_-RRB- ._.
+Swales_NNP ,_, John_NNP ._.
+1990_CD ._.
+Genre_NN analysis_NN :_: English_NNP in_IN aca_NN -_: demic_JJ and_CC research_NN settings_NNS ._.
+Cambridge_NNP University_NNP Press_NNP ._.
+Teufel_NNP ,_, S._NNP ,_, Carletta_NNP ,_, J._NNP &_CC Moens_NNP ,_, M._NNP 1999_CD ._.
+An_DT annotation_NN scheme_NN for_IN discourse-level_NN argumentation_NN in_IN research_NN articles_NNS ._.
+EACL_NNP ._.
+Teufel_NNP ,_, Simone_NNP ._.
+2000_CD ._.
+Argumentative_JJ zoning_VBG :_: Informa_NNP -_: tion_NN extraction_NN from_IN scientific_JJ text_NN ._.
+Diss_NN ._.
+University_NNP of_IN Edinburgh_NNP ._.
+Teufel_NNP ,_, Simone_NNP and_CC Moens_NNP ,_, Marc_NNP ._.
+2002_CD ._.
+Summariz_NNP -_: ing_VBG scientific_JJ articles_NNS :_: experiments_NNS with_IN relevance_NN and_CC rhetorical_JJ status_NN ._.
+Computational_JJ linguistics_NNS ._.
+Vol_NNP .28_CD ,_, pages_NNS 409_CD --_: 445_CD ._.
+MIT_NNP Press_NNP ._.
+Teufel_NNP ,_, Simone_NNP ._.
+2010_CD ._.
+The_DT Structure_NN of_IN Scientific_NNP Ar_NNP -_: ticles_NNS :_: Applications_NNS to_TO Citation_NNP Indexing_NN and_CC Sum_NN -_: marization_NN -LRB-_-LRB- Center_NNP for_IN the_DT Study_NN of_IN Language_NN and_CC Information-Lecture_NNP Notes_NNP -RRB-_-RRB- ._.
+Center_NNP for_IN the_DT Study_NN of_IN Language_NN and_CC Inf_NNP ._.
+Thompson_NNP ,_, Dorothea_NNP K._NNP 1993_CD ._.
+Arguing_VBG for_IN Experimen_NNP -_: tal_JJ Facts_NNS in_IN Science_NNP A_NNP Study_NNP of_IN Research_NNP Article_NNP Re_NNP -_: sults_NNS Sections_NNS in_IN Biochemistry_NNP ._.
+Written_VBN communica_NN -_: tion_NN ._.
+Vol_NNP ._.
+10_CD ,_, 1_CD ,_, pages_NNS 106_CD --_: 128_CD ,_, Sage_NNP Publications_NNP ._.
+Tsuruoka_NNP ,_, Yoshimasa_NNP and_CC Tateishi_NNP ,_, Yuka_NNP and_CC Kim_NNP ,_, Jin_NNP -_: Dong_NNP and_CC Ohta_NNP ,_, Tomoko_NNP and_CC McNaught_NNP ,_, John_NNP and_CC Ananiadou_NNP ,_, Sophia_NNP and_CC Tsujii_NNP ,_, Junichi_NNP ._.
+2005_CD ._.
+De_NNP -_: veloping_VBG a_DT robust_JJ part-of-speech_NN tagger_NN for_IN biomed_VBN -_: ical_JJ text_NN ._.
+Advances_NNS in_IN informatics_NNS ,_, pages_NNS 382_CD --_: 392_CD ,_, Springer_NNP ._.
+Weil_NNP ,_, Ben_NNP H._NNP 1970_CD ._.
+Standards_NNPS for_IN writing_VBG abstracts_NNS ._.
+Journal_NNP of_IN the_DT American_NNP Society_NNP for_IN Information_NNP Sci_NNP -_: ence_NN ._.
+Vol_NNP ._.
+1_CD ,_, 5_CD ,_, pages_NNS 351_CD --_: 357_CD ,_, Wiley_NNP Online_NNP Library_NNP ._.
+Yamamoto_NNP ,_, Yasunori_NNP and_CC Takagi_NNP ,_, Toshihisa_NNP ._.
+2005_CD ._.
+A_DT sentence_NN classification_NN system_NN for_IN multi_NNS biomedical_JJ lit_VBD -_: erature_FW summarization_NN ._.
+Data_NNP Engineering_NNP Workshops_NNP ,_, 2005_CD ._.
+21st_CD International_NNP Conference_NNP on_IN Biomedical_NNP Data_NNP Engineering_NNP ,_, pages_NNS 1163_CD --_: 1163_CD ,_, IEEE_NNP ._.

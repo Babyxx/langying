@@ -1,0 +1,351 @@
+A_DT Light_NN Rule-based_JJ Approach_NNP to_TO English_NNP Subject-Verb_NNP Agreement_NNP Errors_NNS on_IN the_DT Third_NNP Person_NNP Singular_JJ Forms_NNS Abstract_NNP Verb_NNP errors_NNS are_VBP one_CD of_IN the_DT most_RBS common_JJ gram_NN -_: mar_NN errors_NNS made_VBN by_IN non-native_JJ writers_NNS of_IN En_NNP -_: glish_NN ._.
+This_DT work_NN especially_RB focus_VB on_IN an_DT im_NN -_: portant_NN type_NN of_IN verb_NN usage_NN errors_NNS ,_, subject_JJ -_: verb_NN agreement_NN for_IN the_DT third_JJ person_NN singular_JJ forms_NNS ,_, which_WDT has_VBZ a_DT high_JJ proportion_NN in_IN errors_NNS made_VBN by_IN non-native_JJ English_JJ learners_NNS ._.
+Existing_VBG work_NN has_VBZ not_RB given_VBN a_DT satisfied_JJ solution_NN for_IN this_DT task_NN ,_, in_IN which_WDT those_DT using_VBG supervised_JJ learn_VBP -_: ing_NN method_NN usually_RB fail_VBP to_TO output_NN good_JJ enough_JJ performance_NN ,_, and_CC rule-based_JJ methods_NNS depend_VBP on_IN advanced_JJ linguistic_JJ resources_NNS such_JJ as_IN syn_NN -_: tactic_NN parsers_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT rule_NN -_: based_VBN method_NN to_TO detect_VB and_CC correct_VB the_DT con_NN -_: cerned_JJ errors_NNS ._.
+The_DT proposed_VBN method_NN relies_VBZ on_IN a_DT series_NN of_IN rules_NNS to_TO automatically_RB locate_VB subject_JJ and_CC predicate_VB in_IN four_CD types_NNS of_IN sentences_NNS ._.
+The_DT evaluation_NN shows_VBZ that_IN the_DT proposed_VBN method_NN gives_VBZ state-of-the-art_JJ performance_NN with_IN quite_RB limited_JJ linguistic_JJ resources_NNS ._.
+1_CD Introduction_NNP With_IN the_DT increasing_VBG number_NN of_IN people_NNS all_DT over_IN the_DT world_NN who_WP study_VBP English_JJ as_IN second_JJ language_NN -LRB-_-LRB- ESL_NNP -RRB-_-RRB- ,_, grammatical_JJ errors_NNS in_IN writing_VBG often_RB occur_VBP due_JJ to_TO cul_NN -_: tural_JJ diversity_NN ,_, language_NN habits_NNS ,_, and_CC education_NN back_RB -_: ground_NN ._.
+There_EX has_VBZ been_VBN a_DT substantial_JJ and_CC increasing_VBG need_NN of_IN using_VBG computational_JJ techniques_NNS to_TO improve_VB the_DT writing_VBG ability_NN for_IN second_JJ language_NN learners_NNS ._.
+In_IN addition_NN ,_, such_JJ techniques_NNS and_CC tools_NNS may_MD help_VB find_VB latent_NN writing_VBG errors_NNS in_IN official_JJ documents_NNS as_RB well_RB ._.
+To_TO meet_VB the_DT urgent_JJ need_NN from_IN ESL_NNP ,_, a_DT lot_NN of_IN works_NNS on_IN natural_JJ language_NN processing_NN focus_NN on_IN the_DT task_NN of_IN grammatical_JJ error_NN detection_NN and_CC correction_NN ._.
+Formal_JJ -_: ly_RB ,_, it_PRP is_VBZ a_DT task_NN of_IN automatically_RB detecting_VBG and_CC correct_JJ -_: ing_NN erroneous_JJ word_NN usage_NN and_CC ill-formed_JJ grammati_NNS -_: cal_JJ constructions_NNS in_IN text_NN -LRB-_-LRB- Dahlmeier_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ not_RB a_DT brand_NN new_JJ task_NN in_IN natural_JJ language_NN pro-_JJ cessing_NN ._.
+However_RB ,_, it_PRP has_VBZ been_VBN a_DT challenging_JJ task_NN for_IN several_JJ reasons_NNS ._.
+First_RB ,_, many_JJ of_IN these_DT errors_NNS are_VBP context-sensitive_JJ so_IN that_IN errors_NNS can_MD not_RB be_VB detected_VBN and_CC then_RB corrected_VBN in_IN an_DT isolated_JJ way_NN ._.
+Second_NNP ,_, the_DT relative_JJ frequency_NN of_IN errors_NNS is_VBZ quite_RB low_JJ :_: for_IN a_DT giv_NN -_: en_IN type_NN of_IN mistake_NN ,_, an_DT ESL_NNP writer_NN will_MD typically_RB go_VB wrong_JJ in_IN only_RB a_DT small_JJ proportion_NN of_IN relevant_JJ lan_NN -_: guage_NN structures_NNS ._.
+For_IN example_NN ,_, incorrect_JJ determiner_NN usages_NNS usually_RB occur_VBP in_IN 5_CD %_NN to_TO 10_CD %_NN of_IN noun_NN phras_NNS -_: es_NNS in_IN various_JJ annotated_JJ ESL_NNP corpora_NN -LRB-_-LRB- ?_. -RRB-_-RRB- ._.
+Third_NNP ,_, an_DT ESL_NNP writer_NN may_MD make_VB multiple_JJ mistakes_NNS in_IN a_DT s_PRP -_: ingle_JJ sentence_NN ,_, so_RB that_IN continuous_JJ errors_NNS are_VBP entan_NN -_: gled_VBN ,_, which_WDT let_VBP specific_JJ error_NN locating_VBG and_CC correction_NN become_VBP more_RBR difficult_JJ ._.
+In_IN recent_JJ decades_NNS ,_, existing_VBG studies_NNS on_IN this_DT task_NN have_VBP focused_VBN on_IN errors_NNS in_IN two_CD typical_JJ word_NN cate_NN -_: gories_NNS ,_, article_NN and_CC preposition_NN -LRB-_-LRB- Han_JJ et_FW al._FW ,_, 2006_CD ;_: Fe_NNP -_: lice_NN and_CC Pulman_NNP ,_, 2008_CD ;_: Dahlmeier_NNP and_CC Ng_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+However_RB verb_JJ errors_NNS occur_VBP as_RB often_RB as_IN article_NN and_CC preposition_NN errors_NNS at_IN least_JJS ,_, though_IN there_EX are_VBP few_JJ works_NNS on_IN verb_NN related_JJ errors_NNS ._.
+Two_CD reasons_NNS are_VBP specu_SYM -_: lated_VBN for_IN why_WRB it_PRP is_VBZ difficult_JJ to_TO process_VB verb_NN mistakes_NNS ._.
+First_RB ,_, compared_VBN with_IN articles_NNS and_CC prepositions_NNS ,_, verb_NN -_: s_PRP are_VBP more_RBR difficult_JJ to_TO identify_VB in_IN text_NN ,_, as_IN they_PRP can_MD often_RB be_VB confused_VBN with_IN other_JJ parts_NNS of_IN speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- ,_, and_CC in_IN fact_NN many_JJ existing_VBG processing_NN tools_NNS are_VBP known_VBN to_TO make_VB more_JJR errors_NNS on_IN noisy_JJ ESL_NNP data_NNS -LRB-_-LRB- Nagata_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Second_NNP ,_, verbs_NNS are_VBP more_RBR complicated_JJ lin_NN -_: guistically_RB ._.
+For_IN an_DT English_JJ verb_NN ,_, it_PRP has_VBZ five_CD forms_NNS of_IN inflections_NNS -LRB-_-LRB- see_VB Table_NNP 1_CD -RRB-_-RRB- ._.
+Different_JJ forms_NNS imply_VBP d_SYM -_: ifferent_JJ types_NNS of_IN errors_NNS ,_, even_RB ,_, one_CD type_NN of_IN verb_NN form_NN may_MD lead_VB to_TO multiple_JJ types_NNS of_IN errors_NNS ._.
+Table_NNP 1_CD :_: Five_CD forms_NNS of_IN inflections_NNS of_IN English_NNP verbs_NNS -LRB-_-LRB- Quirk_NNP et_FW al._FW ,_, 1985_CD -RRB-_-RRB- ,_, illustrated_VBN with_IN the_DT verb_NN ``_`` speak_VBP ''_'' ._.
+The_DT base_NN form_NN is_VBZ also_RB used_VBN to_TO construct_VB the_DT infinitive_JJ with_IN ``_`` to_TO ''_'' ._.
+China_NNP is_VBZ a_DT leading_VBG market_NN for_IN ESL_NNP ._.
+According_VBG to_TO a_DT rough_JJ statistics_NNS on_IN essays_NNS written_VBN by_IN Chinese_JJ students_NNS ,_, verb_NN related_JJ errors_NNS have_VBP given_VBN a_DT percent_NN as_RB high_JJ as_IN 15.6_CD %_NN among_IN all_DT grammatical_JJ errors_NNS ,_, in_IN which_WDT subject-verb_JJ agreement_NN errors_NNS on_IN the_DT third_JJ person_NN singular_JJ form_NN cover_NN 21.8_CD %_NN ._.
+Existing_VBG works_NNS paid_VBN little_JJ attention_NN on_IN such_JJ type_NN of_IN errors_NNS ,_, or_CC report_NN unsatisfied_JJ performance_NN -LRB-_-LRB- Rozovskaya_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+That_DT is_VBZ to_TO say_VB ,_, errors_NNS made_VBN by_IN Chinese_JJ students_NNS have_VBP a_DT quite_RB different_JJ type_NN distribution_NN from_IN those_DT by_IN na_TO -_: tive_JJ English_JJ students_NNS ,_, while_IN existing_VBG computational_JJ approach_NN can_MD not_RB well_RB meet_VB the_DT urgent_JJ requirement_NN on_IN grammatical_JJ error_NN detection_NN and_CC correction_NN ._.
+Fur_NNP -_: thermore_NN ,_, the_DT previous_JJ approaches_NNS focus_VB on_IN machine_NN learning_VBG that_IN always_RB needs_VBZ a_DT large_JJ scale_NN of_IN annotated_JJ data_NNS set_VBN available_JJ ._.
+However_RB ,_, being_VBG a_DT machine_NN learn_VBP -_: ing_VBG task_NN ,_, grammatical_JJ error_NN detection_NN and_CC correction_NN is_VBZ very_RB difficult_JJ to_TO receive_VB satisfied_JJ performance_NN as_IN errors_NNS being_VBG negative_JJ samples_NNS has_VBZ too_RB low_JJ a_DT portion_NN in_IN the_DT entire_JJ text_NN for_IN learning_VBG -LRB-_-LRB- on_IN average_NN ,_, 20_CD sen_NN -_: tences_NNS can_MD hold_VB one_CD error_NN -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, to_TO alleviate_VB the_DT drawbacks_NNS of_IN ex_FW -_: isting_NN work_NN ,_, we_PRP propose_VBP a_DT full_JJ rule-based_JJ method_NN to_TO handle_VB this_DT sort_NN of_IN specific_JJ errors_NNS ,_, without_IN any_DT requirement_NN on_IN annotated_JJ data_NNS ._.
+The_DT rule_NN model_NN is_VBZ built_VBN on_IN the_DT English_NNP grammar_NN ._.
+As_IN we_PRP avoid_VBP using_VBG high-level_JJ and_CC time_NN consuming_NN support_NN tools_NNS ,_, typi_SYM -_: cally_RB ,_, parser_NN ,_, only_RB two_CD lexicons_NNS and_CC a_DT part-of-speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- tagger_NN 1_CD -LRB-_-LRB- Toutanova_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- is_VBZ adopted_VBN to_TO provide_VB necessary_JJ word_NN category_NN information_NN ._.
+This_DT 1This_NNP POS_NNP tagger_NN outputs_VBZ a_DT POS_NNP tag_NN set_VBN as_IN the_DT same_JJ defined_VBN by_IN Penn_NNP Treebank_NNP ._.
+makes_VBZ our_PRP$ system_NN can_MD work_VB with_IN least_JJS linguistic_JJ re_SYM -_: source_NN compared_VBN to_TO existing_VBG rule-based_JJ work_NN ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Sec_SYM -_: tion_NN 2_CD discusses_VBZ a_DT few_JJ related_JJ work_NN ._.
+Section_NN 3_CD gives_VBZ detailed_JJ introduction_NN about_IN the_DT proposed_VBN rule-based_JJ method_NN ._.
+The_DT experimental_JJ results_NNS will_MD be_VB presented_VBN and_CC analyzed_VBN in_IN Section_NN 4_CD ,_, and_CC the_DT last_JJ section_NN con_NN -_: cludes_NNS this_DT paper_NN ._.
+2_CD Related_JJ Work_NN Over_IN the_DT past_JJ few_JJ decades_NNS ,_, there_EX are_VBP many_JJ methods_NNS proposed_VBN for_IN grammatical_JJ error_NN detection_NN and_CC cor_NN -_: rection_NN ._.
+Most_JJS of_IN the_DT efforts_NNS so_RB far_RB had_VBD been_VBN focused_VBN on_IN article_NN and_CC preposition_NN usage_NN errors_NNS ,_, as_IN these_DT were_VBD some_DT of_IN the_DT most_RBS common_JJ mistakes_NNS among_IN non_NN -_: native_JJ English_JJ speakers_NNS -LRB-_-LRB- Dalgish_NNP ,_, 1985_CD ;_: Leacock_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+These_DT works_NNS were_VBD generally_RB regarded_VBN as_IN multiclass_JJ classification_NN tasks_NNS -LRB-_-LRB- Izumi_NNP et_FW al._FW ,_, 2003_CD ;_: Han_NNP et_FW al._FW ,_, 2006_CD ;_: Felice_NNP and_CC Pulman_NNP ,_, 2008_CD ;_: Gamon_NNP et_FW al._FW ,_, 2008_CD ;_: Tetreault_NNP et_FW al._FW ,_, 2010_CD ;_: Rozovskaya_NNP and_CC Roth_NNP ,_, 2010b_CD ;_: ?_.
+;_: Dahlmeier_NNP and_CC Ng_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+As_IN for_IN main_JJ techniques_NNS for_IN the_DT task_NN ,_, most_JJS methods_NNS can_MD fall_VB into_IN two_CD basic_JJ categories_NNS ,_, machine_NN learning_NN based_VBN and_CC rule-based_JJ ._.
+The_DT use_NN of_IN machine_NN learning_VBG methods_NNS to_TO tackle_VB this_DT problem_NN had_VBD shown_VBN a_DT promis_NN -_: ing_VBG performance_NN for_IN specific_JJ error_NN types_NNS ._.
+These_DT methods_NNS were_VBD normally_RB created_VBN based_VBN on_IN a_DT large_JJ cor_NN -_: pus_NN of_IN well-formed_JJ native_JJ English_JJ texts_NNS -LRB-_-LRB- Tetreault_NNP and_CC Chodorow_NNP ,_, 2008_CD ;_: Tetreault_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- or_CC an_DT -_: notated_VBD non-native_JJ data_NNS -LRB-_-LRB- Gamon_NNP ,_, 2010_CD ;_: Han_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Additionally_RB ,_, both_DT generative_NN and_CC discrimi_NN -_: native_JJ classifiers_NNS were_VBD widely_RB used_VBN ._.
+Among_IN them_PRP ,_, Maximum_NNP Entropy_NNP -LRB-_-LRB- ?_.
+;_: Sakaguchi_NNP et_FW al._FW ,_, 2012_CD ;_: Quan_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- obtained_VBD a_DT good_JJ result_NN for_IN preposition_NN and_CC article_NN correction_NN using_VBG a_DT large_JJ feature_NN set_NN ._.
+Naive_JJ Bayes_NNP was_VBD also_RB applied_VBN to_TO recognize_VB or_CC correct_VB the_DT errors_NNS in_IN speech_NN or_CC texts_NNS -LRB-_-LRB- Lynch_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN addition_NN ,_, grammar_NN rules_NNS and_CC probabilistic_JJ language_NN model_NN were_VBD used_VBN as_IN a_DT simple_JJ but_CC effective_JJ assistan_NN -_: t_NN for_IN correction_NN of_IN spelling_NN -LRB-_-LRB- Kantrowitz_NNP ,_, 2003_CD -RRB-_-RRB- and_CC grammatical_JJ errors_NNS -LRB-_-LRB- Dahlmeier_NNP et_FW al._FW ,_, 2012_CD ;_: Lynch_NNP et_FW al._FW ,_, 2012_CD ;_: Quan_NNP et_FW al._FW ,_, 2012_CD ;_: Rozovskaya_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+As_IN for_IN rule-based_JJ method_NN ,_, -LRB-_-LRB- Rozovskaya_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- proposed_VBD a_DT linguistically-motivated_JJ approach_NN to_TO verb_NN error_NN correction_NN that_WDT made_VBD use_NN of_IN the_DT notion_NN of_IN verb_NN finiteness_NN to_TO identify_VB triggers_VBZ and_CC types_NNS of_IN Form_NN Example_NN base_NN -LRB-_-LRB- bare_JJ -RRB-_-RRB- speak_VBP base_NN -LRB-_-LRB- infinitive_JJ -RRB-_-RRB- third_JJ person_NN singular_JJ past_NN -_: ing_NN participle_NN -_: ed_VBN participle_NN to_TO speak_VB speaks_VBZ spoke_VBD speaking_VBG spoken_VBN mistakes_NNS ,_, before_IN using_VBG a_DT statistical_JJ machine_NN learn_VBP -_: ing_VBG approach_NN to_TO correct_VB these_DT mistakes_NNS ._.
+In_IN their_PRP$ ap_SYM -_: proach_NN ,_, the_DT knowledge_NN of_IN which_WDT mistakes_NNS should_MD be_VB corrected_VBN or_CC of_IN the_DT mistake_NN type_NN was_VBD not_RB required_VBN ._.
+But_CC their_PRP$ model_NN got_VBD a_DT low_JJ recall_NN ._.
+Recently_RB ,_, researchers_NNS also_RB made_VBD an_DT attempt_NN to_TO in_IN -_: tegrate_NN different_JJ methods_NNS ._.
+-LRB-_-LRB- Rozovskaya_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- presented_VBD a_DT system_NN that_WDT combined_VBD a_DT set_NN of_IN statisti_NNS -_: cal_JJ models_NNS ,_, where_WRB each_DT model_NN specialized_VBN in_IN correc_NN -_: tion_NN one_CD of_IN the_DT five_CD type_NN errors_NNS which_WDT were_VBD article_NN ,_, preposition_NN ,_, noun_NN number_NN ,_, verb_NN form_NN and_CC subject_NN -_: verb_NN agreement_NN ._.
+Their_PRP$ article_NN and_CC preposition_NN mod_NN -_: ules_NNS built_VBN on_IN the_DT elements_NNS of_IN the_DT systems_NNS described_VBN in_IN -LRB-_-LRB- ?_. -RRB-_-RRB- ._.
+-LRB-_-LRB- Gamon_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- mentioned_VBD a_DT model_NN for_IN learn_VBP -_: ing_VBG gerund/infinitive_JJ confusions_NNS and_CC auxiliary_JJ ver_SYM -_: b_NN presence/choice_NN ._.
+-LRB-_-LRB- Lee_NNP and_CC Seneff_NNP ,_, 2008_CD -RRB-_-RRB- pro-_JJ posed_VBD an_DT approach_NN based_VBN on_IN pattern_NN matching_VBG on_IN trees_NNS combined_VBN with_IN word_NN n-gram_JJ counts_NNS for_IN cor_NN -_: recting_VBG agreement_NN misuse_NN and_CC some_DT types_NNS of_IN verb_NN form_NN errors_NNS ._.
+However_RB ,_, they_PRP excluded_VBD tense_JJ mistakes_NNS ._.
+-LRB-_-LRB- Tajirei_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- considered_VBN only_RB tense_JJ mistakes_NNS ._.
+In_IN the_DT above_JJ studies_NNS ,_, it_PRP was_VBD assumed_VBN that_IN the_DT type_NN of_IN mistake_NN that_IN needs_VBZ to_TO be_VB corrected_VBN is_VBZ known_VBN ,_, and_CC irrelevant_JJ verb_NN errors_NNS were_VBD excluded_VBN -LRB-_-LRB- Tajirei_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- addressed_VBD only_RB tense_JJ mistakes_NNS and_CC excluded_VBN from_IN the_DT evaluation_NN other_JJ kinds_NNS of_IN verb_NN errors_NNS ._.
+3_CD Our_PRP$ Approach_NNP Our_PRP$ approach_NN requires_VBZ two_CD lexicons_NNS and_CC a_DT POS_NNP tag_NN -_: ger_NN as_IN the_DT basic_JJ linguistic_JJ resource_NN to_TO perform_VB the_DT task_NN ._.
+As_IN for_IN the_DT POS_NNP tagger_NN ,_, we_PRP use_VBP the_DT POS_NNP tag_NN set_VBD defined_VBN by_IN Penn_NNP treebank_NN ._.
+It_PRP has_VBZ 36_CD POS_NNP tags_NNS ,_, and_CC each_DT has_VBZ a_DT specific_JJ syntactic_NN or_CC even_RB semantic_JJ role_NN ,_, which_WDT is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+The_DT detailed_JJ roles_NNS of_IN these_DT POS_NNP tags_NNS will_MD give_VB basic_JJ criterion_NN to_TO locate_VB subject_JJ and_CC its_PRP$ predicate_NN in_IN a_DT sentence_NN ._.
+As_IN for_IN lexicons_NNS ,_, it_PRP is_VBZ used_VBN to_TO determine_VB if_IN a_DT verb_NN is_VBZ in_IN root_NN form_NN or_CC not_RB ._.
+To_TO judge_VB whether_IN a_DT verb_NN has_VBZ an_DT agreement_NN error_NN ,_, we_PRP build_VBP two_CD dictionaries_NNS ._.
+One_CD consists_VBZ of_IN 2_CD ,_, 677_CD original_JJ verbs_NNS which_WDT are_VBP extracted_VBN from_IN Oxford_NNP Advanced_NNP Learner_NNP 's_POS Dictionary_NNP -LRB-_-LRB- Horn_NNP -_: by_IN et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT other_JJ contains_VBZ all_DT 2_CD ,_, 677_CD verbs_NNS in_IN the_DT third_JJ person_NN singular_JJ form_NN ._.
+We_PRP find_VBP that_IN there_EX is_VBZ not_RB a_DT word_NN which_WDT exists_VBZ in_IN both_DT dictionaries_NNS ,_, so_IN we_PRP can_MD decide_VB whether_IN a_DT verb_NN is_VBZ in_IN the_DT root_NN form_NN or_CC in_IN the_DT third_JJ person_NN form_NN by_IN checking_VBG the_DT verb_NN in_IN which_WDT Table_NNP 2_CD :_: Penn_NNP Treebank_NNP POS_NNP tag_NN set_VBD POS_NNP Tag_NNP Description_NNP CC_NNP Coordinating_NNP conjunction_NN CD_NNP Cardinal_NNP number_NN DT_NNP Determiner_NNP EX_NNP Existential_NNP there_RB FW_NNP Foreign_NNP word_NN IN_IN Preposition_NNP or_CC subordinating_VBG conjunction_NN JJ_NNP Adjective_NNP JJR_NNP Adjective_NNP ,_, comparative_JJ JJS_NNP Adjective_NNP ,_, superlative_JJ LS_NNP List_NN item_NN marker_NN MD_NNP Modal_NNP NN_NNP Noun_NNP ,_, singular_JJ or_CC mass_JJ NNS_NNP Noun_NN ,_, plural_JJ NNP_NNP Proper_JJ noun_NN ,_, singular_JJ NNPS_NNP Proper_JJ noun_NN ,_, plural_JJ PDT_NNP Predeterminer_NNP POS_NNP Possessive_NNP ending_VBG PRP_NNP Personal_NNP pronoun_NN PRP$_NNP Possessive_NNP pronoun_NN RB_NNP Adverb_NNP RBR_NNP Adverb_NNP ,_, comparative_JJ RBS_NNP Adverb_NNP ,_, superlative_JJ RP_NNP Particle_NNP SYM_NNP Symbol_NNP TO_TO to_TO UH_NNP Interjection_NNP VB_NNP Verb_NNP ,_, base_NN form_NN VBD_NNP Verb_NNP ,_, past_JJ tense_JJ VBG_NNP Verb_NNP ,_, gerund_NN or_CC present_JJ participle_NN VBN_NNP Verb_NNP ,_, past_JJ participle_NN VBP_NNP Verb_NNP ,_, non-3rd_JJ person_NN singular_JJ present_JJ VBZ_NNP Verb_NN ,_, 3rd_CD person_NN singular_JJ present_JJ WDT_NNP Wh-determiner_NN WP_NNP Wh-pronoun_NNP WP$_NNP Possessive_NNP wh-pronoun_NN WRB_NNP Wh-adverb_JJ dictionary_NN ._.
+Then_RB the_DT remaining_VBG job_NN is_VBZ to_TO locate_VB the_DT subject_JJ and_CC its_PRP$ predicate_NN ._.
+Linguistically_RB ,_, subject_JJ and_CC predicate_VB can_MD be_VB either_RB syntactic_JJ or_CC semantic_JJ ._.
+The_DT subject_NN in_IN syntax_NN -LRB-_-LRB- grammar_NN -RRB-_-RRB- and_CC semantics_NNS may_MD be_VB the_DT same_JJ in_IN a_DT few_JJ cases_NNS ,_, but_CC different_JJ in_IN the_DT other_JJ -_: s._NN For_IN an_DT interrogative_JJ sentence_NN such_JJ as_IN ``_`` who_WP are_VBP y_SYM -_: ou_NN ?_. ''_''
+,_, ``_`` who_WP ''_'' is_VBZ the_DT true_JJ subject_NN in_IN grammar_NN ,_, however_RB ,_, what_WP we_PRP always_RB need_VBP is_VBZ the_DT semantic_JJ or_CC nominal_JJ sub_NN -_: ject_NN ``_`` you_PRP ''_'' ,_, so_RB that_IN we_PRP can_MD check_VB the_DT agreement_NN be_VB -_: tween_VB ``_`` you_PRP ''_'' and_CC its_PRP$ predicate_NN ``_`` are_VBP ''_'' ._.
+Throughout_IN the_DT entire_JJ paper_NN ,_, our_PRP$ rules_NNS and_CC processing_VBG always_RB take_VB subject_JJ and_CC its_PRP$ predicates_NNS as_IN the_DT semantic_JJ or_CC nominal_JJ ones_NNS ._.
+According_VBG to_TO the_DT different_JJ relative_JJ locations_NNS of_IN subject_JJ and_CC its_PRP$ predicate_NN in_IN sentences_NNS ,_, we_PRP put_VBP all_DT sentences_NNS into_IN four_CD categories_NNS ,_, declarative_JJ ,_, interrog_JJ -_: ative_JJ ,_, subordinate_JJ and_CC ``_`` there_EX be_VB ''_'' sentences_NNS ._.
+These_DT sentence_NN categories_NNS will_MD be_VB effectively_RB determined_VBN through_IN limited_JJ number_NN of_IN rules_NNS on_IN specific_JJ punctu_NN -_: ations_NNS and_CC marker_NN words_NNS ._.
+For_IN declarative_JJ sentences_NNS ,_, subject_NN is_VBZ before_IN its_PRP$ predicate_NN ._.
+For_IN interrogative_JJ sen_NN -_: tences_NNS ,_, there_EX is_VBZ no_DT fixed_VBN location_NN relation_NN between_IN subjects_NNS and_CC its_PRP$ predicates_NNS ._.
+For_IN ``_`` there_EX be_VB ''_'' sentences_NNS ,_, the_DT nominal_JJ subject_NN is_VBZ after_IN the_DT predicate_NN ``_`` be_VB ''_'' ._.
+3.1_CD Declarative_NNP Sentences_NNS For_IN declarative_JJ sentences_NNS ,_, predicate_NN can_MD be_VB easily_RB de_IN -_: termined_VBN by_IN searching_VBG for_IN the_DT first_JJ verb_NN from_IN the_DT be_VB -_: ginning_NN of_IN the_DT sentence_NN ._.
+Because_IN most_JJS of_IN the_DT sub_NN -_: jects_NNS are_VBP either_RB nouns_NNS or_CC pronouns_NNS ,_, we_PRP continue_VBP to_TO scan_VB the_DT sentence_NN from_IN beginning_VBG to_TO the_DT position_NN of_IN the_DT predicate_NN to_TO confirm_VB the_DT subject_NN ._.
+Except_IN the_DT case_NN that_IN the_DT subject_NN is_VBZ ``_`` I_PRP ''_'' whose_WP$ predicate_NN must_MD be_VB ``_`` am_VBP ''_'' ,_, all_PDT the_DT subjects_NNS can_MD be_VB divided_VBN into_IN the_DT third_JJ person_NN singular_JJ and_CC the_DT non-third_JJ person_NN singular_JJ ._.
+For_IN noun_NN ,_, we_PRP regard_VBP the_DT words_NNS with_IN POS_NNP tag_NN ``_`` NN_NNP ''_'' as_IN the_DT third_JJ person_NN singular_JJ and_CC the_DT words_NNS with_IN POS_NNP tag_NN ``_`` NNS_NNP ''_'' as_IN the_DT non-third_JJ person_NN singular_JJ ._.
+For_IN pronoun_NN ,_, we_PRP collect_VBP two_CD lists_NNS -LRB-_-LRB- see_VB Table_NNP 3_CD -RRB-_-RRB- to_TO distinguish_VB whether_IN the_DT subject_NN is_VBZ the_DT third_JJ person_NN singluar_NN ._.
+Note_VB that_IN a_DT person_NN name_NN can_MD also_RB be_VB subject_JJ and_CC we_PRP regard_VBP the_DT name_NN as_IN the_DT third_JJ person_NN singular_JJ ._.
+We_PRP can_MD utilize_VB the_DT POS_NNP tag_NN ``_`` NNP_NNP ''_'' and_CC ``_`` NNPS_NNP ''_'' to_TO locate_VB a_DT person_NN name_NN ._.
+For_IN this_DT case_NN ,_, we_PRP continue_VBP to_TO scan_VB the_DT sen_NN -_: tence_NN from_IN the_DT position_NN of_IN subject_JJ to_TO find_VB a_DT verb_NN ._.
+With_IN the_DT above_JJ processes_NNS ,_, we_PRP will_MD still_RB receive_VB a_DT wrong_JJ result_NN for_IN specific_JJ sentences_NNS with_IN compound_NN subject_NN ._.
+For_IN example_NN ,_, ``_`` Tom_NNP and_CC Jack_NNP come_VBP from_IN America_NNP ._. ''_'' ._.
+So_IN we_PRP need_VBP to_TO add_VB a_DT rule_NN to_TO process_VB these_DT compound_NN subjects_NNS ._.
+The_DT desired_VBN subject_NN can_MD be_VB determined_VBN by_IN checking_VBG if_IN it_PRP is_VBZ after_IN a_DT word_NN and_CC POS_NNP tag_NN combination_NN ,_, ``_`` and_CC CC_NNP ''_'' ,_, which_WDT means_VBZ that_IN the_DT word_NN is_VBZ ``_`` and_CC ''_'' as_IN a_DT conjunction_NN for_IN the_DT case_NN that_IN the_DT subject_NN is_VBZ determined_VBN to_TO be_VB third_JJ person_NN ._.
+Although_IN we_PRP can_MD deal_VB with_IN most_JJS of_IN the_DT sim_NN -_: ple_NN sentences_NNS so_RB far_RB ,_, there_EX are_VBP also_RB many_JJ sentences_NNS which_WDT can_MD not_RB be_VB process_NN according_VBG to_TO these_DT rules_NNS ._.
+Firstly_RB ,_, for_IN the_DT sentences_NNS which_WDT have_VBP a_DT modal_JJ ver_NN -_: b_NN before_IN the_DT predicate_NN ,_, the_DT wanted_JJ verb_NN must_MD be_VB in_IN the_DT original_JJ form_NN no_DT matter_NN the_DT subject_NN is_VBZ third_JJ per_IN -_: son_NN ._.
+We_PRP can_MD identify_VB this_DT case_NN by_IN searching_VBG POS_NNP tag_NN ``_`` MD_NNP ''_'' between_IN the_DT subject_JJ and_CC the_DT verb_NN ._.
+Secondly_RB ,_, there_EX are_VBP often_RB many_JJ compound_NN sen_NN -_: tences_NNS in_IN statement_NN ._.
+For_IN example_NN ,_, 1_CD ._.
+``_`` He_PRP likes_VBZ apple_NN but_CC she_PRP like_IN orange_NN ._. ''_''
+2_LS ._.
+``_`` She_PRP will_MD name_VB him_PRP whatever_WDT she_PRP want_VBP to_TO ._. ''_''
+3_LS ._.
+``_`` I_PRP love_VBP her_PRP$ because_IN she_PRP give_VBP me_PRP life_NN ._. ''_''
+4_LS ._.
+``_`` As_IN we_PRP all_DT know_VBP ,_, human_JJ can_MD not_RB live_VB without_IN water_NN ._. ''_''
+For_IN these_DT cases_NNS ,_, we_PRP divide_VBP the_DT sentences_NNS into_IN t_SYM -_: wo_MD parts_NNS and_CC handle_VB the_DT rest_NN part_NN as_IN declarative_JJ sen_NN -_: tence_NN recursively_RB ._.
+For_IN sentences_NNS like_IN example_NN 1-3_CD ,_, we_PRP build_VBP a_DT list_NN which_WDT consists_VBZ of_IN the_DT words_NNS called_VBN separate_JJ word_NN -LRB-_-LRB- see_VB Table_NNP 4_CD -RRB-_-RRB- ._.
+We_PRP split_VBD the_DT sentences_NNS by_IN means_NNS of_IN finding_VBG the_DT separate_JJ word_NN ._.
+For_IN the_DT sen_NN -_: tences_NNS like_IN example_NN 4_CD ,_, the_DT comma_NN mark_NN is_VBZ used_VBN as_IN the_DT splitting_NN boundary_NN ._.
+We_PRP can_MD utilize_VB the_DT words_NNS called_VBD guided_VBN word_NN -LRB-_-LRB- see_VB Table_NNP 5_CD -RRB-_-RRB- to_TO identify_VB this_DT type_NN of_IN sentences_NNS ._.
+Third_NNP Person_NNP Singular_JJ Non_NNP Third_NNP Person_NNP Singular_JJ He_PRP PRP_VBZ You_PRP PRP_VBP he_PRP PRP_VB you_PRP PRP_VBP She_PRP PRP_VBZ We_PRP PRP_VBP she_PRP PRP_VBZ we_PRP PRP_VBP It_PRP PRP_VBZ They_PRP PRP_VBP it_PRP PRP_NN they_PRP PRP_VBP That_DT DT_NNP These_DT DT_NNP that_WDT WDT_NNP these_DT DT_NNP This_DT DT_NNP Those_DT DT_NNP this_DT DT_NNP those_DT DT_NNP That_WDT WDT_VBD us_PRP PRP_NNP Table_NNP 3_CD :_: Pronouns_NNS of_IN the_DT third_JJ person_NN and_CC none_NN third_JJ per_IN -_: son_NN -LRB-_-LRB- with_IN POS_NNP tags_NNS -RRB-_-RRB- However_RB ,_, for_IN sentences_NNS that_WDT were_VBD led_VBN by_IN a_DT preposi_NN -_: tional_JJ phrase_NN ,_, the_DT rules_NNS proposed_VBN above_IN can_MD not_RB cor_VB -_: rectly_JJ deal_NN with_IN ._.
+Here_RB are_VBP two_CD examples_NNS :_: 1_LS ._.
+``_`` In_IN my_PRP$ view_NN ,_, they_PRP are_VBP right_RB ._. ''_''
+2_LS ._.
+``_`` In_IN the_DT morning_NN ,_, the_DT dogs_NNS are_VBP running_VBG on_IN the_DT road_NN ._. ''_''
+We_PRP will_MD regard_VB the_DT ``_`` view_NN ''_'' and_CC ``_`` morning_NN ''_'' as_IN sub_NN -_: ject_NN according_VBG to_TO the_DT existing_VBG rules_NNS ._.
+But_CC the_DT true_JJ sub_NN -_: jects_NNS are_VBP ``_`` they_PRP ''_'' and_CC ``_`` dogs_NNS ''_'' ._.
+So_RB if_IN there_EX is_VBZ ``_`` In_IN IN_IN ''_'' before_IN the_DT noun_NN ,_, we_PRP will_MD abandon_VB the_DT noun_NN and_CC re_SYM -_: gard_VB the_DT rest_NN of_IN the_DT sentence_NN as_IN a_DT new_JJ sentence_NN for_IN processsing_NN ._.
+3.2_CD Interrogative_NNP Sentences_NNS In_IN English_JJ grammar_NN ,_, questions_NNS mainly_RB contain_VBP four_CD categories_NNS ._.
+They_PRP are_VBP general_JJ question_NN ,_, alternative_JJ question_NN ,_, special_JJ question_NN and_CC tag_NN question_NN ._.
+Here_RB are_VBP four_CD examples_NNS :_: 1_LS ._.
+``_`` Are_VBP you_PRP student_NN ?_. ''_''
+2_LS ._.
+``_`` Can_MD you_PRP speak_VB Chinese_JJ or_CC English_JJ ?_. ''_''
+3_LS ._.
+``_`` Who_WP are_VBP you_PRP ?_. ''_''
+4_LS ._.
+``_`` They_PRP work_VBP hard_RB ,_, do_VBP n't_RB they_PRP ?_. ''_''
+As_IN in_IN general_JJ predicate_NN is_VBZ before_IN subject_NN in_IN most_JJS interrogative_JJ sentences_NNS ,_, we_PRP scan_VBP the_DT sentence_NN from_IN the_DT beginning_NN and_CC regard_VB the_DT first_JJ verb_NN as_IN the_DT predi_NNS -_: cate_NN according_VBG to_TO POS_NNP tag_NN ``_`` VB_NNP ''_'' ._.
+Then_RB we_PRP continue_VBP to_TO scan_VB the_DT sentence_NN until_IN the_DT subject_NN is_VBZ found_VBN ._.
+The_DT rules_NNS are_VBP the_DT same_JJ as_IN those_DT proposed_VBN for_IN declarative_JJ sentences_NNS ._.
+Note_VB that_IN a_DT tag_NN question_NN consists_VBZ of_IN two_CD parts_NNS ,_, a_DT declarative_JJ sentence_NN and_CC a_DT general_JJ question_NN in_IN ab_SYM -_: breviation_NN form_NN ._.
+So_IN we_PRP must_MD divide_VB the_DT disjunctive_JJ question_NN into_IN two_CD parts_NNS and_CC process_NN the_DT first_JJ part_NN as_IN declarative_JJ sentence_NN ._.
+Note_VB that_IN the_DT fourth_JJ symbol_NN from_IN the_DT end_NN is_VBZ a_DT comma_NN in_IN all_DT tag_NN questions_NNS ._.
+We_PRP will_MD make_VB a_DT full_JJ use_NN of_IN this_DT mark_NN to_TO effectively_RB di_FW -_: vide_NN a_DT tag_NN question_NN ._.
+There_EX are_VBP also_RB a_DT few_JJ sentences_NNS that_WDT deserve_VBP our_PRP$ attention_NN ._.
+For_IN instance_NN ,_, 1_CD ._.
+``_`` Whose_JJ jeans_NNS are_VBP they_PRP ?_. ''_''
+2_LS ._.
+``_`` How_WRB many_JJ boys_NNS are_VBP there_RB ?_. ''_'' ._.
+We_PRP can_MD find_VB that_DT subject_NN is_VBZ in_IN front_NN of_IN predicate_NN in_IN these_DT sentences_NNS ,_, so_IN we_PRP can_MD simply_RB regard_VB these_DT sen_SYM -_: tence_NN as_IN declarative_JJ sentences_NNS ._.
+These_DT types_NNS of_IN sen_NN -_: tences_NNS can_MD be_VB found_VBN by_IN checking_VBG if_IN they_PRP start_VBP from_IN words_NNS like_IN ``_`` Whose_NNP JJ_NNP ''_'' ,_, ``_`` How_WRB WRB_NNP many_JJ JJ_NNP ''_'' and_CC ``_`` How_WRB WRB_NNP much_JJ RB_NN ''_'' ._.
+3.3_CD Subordinate_NNP Clause_NN So_RB far_RB ,_, we_PRP have_VBP considered_VBN most_JJS of_IN simple_JJ sentences_NNS ._.
+But_CC there_EX are_VBP many_JJ compound_JJ sentences_NNS with_IN subor_NN -_: dinate_NN clause_NN in_IN real_JJ expression_NN ._.
+We_PRP furthermore_RB di_FW -_: vide_NN the_DT sentences_NNS with_IN subordinate_JJ clause_NN into_IN five_CD categories_NNS ._.
+Here_RB are_VBP five_CD examples_NNS :_: 1_LS ._.
+``_`` The_DT girl_NN who_WP is_VBZ speaking_VBG now_RB comes_VBZ from_IN Japan_NNP ._. ''_''
+2_LS ._.
+``_`` He_PRP gives_VBZ me_PRP a_DT gift_NN which_WDT is_VBZ very_RB beautiful_JJ ._. ''_''
+3_LS ._.
+``_`` What_WP she_PRP wants_VBZ is_VBZ a_DT lovely_JJ doll_NN ._. ''_''
+4_LS ._.
+``_`` The_DT club_NN will_MD give_VB whoever_WP wins_VBZ the_DT competition_NN a_DT prize_NN ._. ''_''
+5_CD ._.
+``_`` She_PRP will_MD give_VB him_PRP whatever_WDT he_PRP wants_VBZ to_TO ._. ''_''
+For_IN the_DT first_JJ and_CC second_JJ categories_NNS ,_, we_PRP need_VBP pay_NN attention_NN to_TO the_DT conjunctions_NNS ``_`` who_WP ''_'' ,_, ``_`` which_WDT ''_'' and_CC ``_`` that_WDT ''_'' ._.
+But_CC the_DT positions_NNS of_IN the_DT conjunctions_NNS are_VBP d_SYM -_: ifferent_NN in_IN first_JJ and_CC second_JJ categories_NNS ._.
+For_IN the_DT sen_NN -_: tence_NN like_IN example_NN 1_CD ,_, we_PRP check_VBP whether_IN there_EX is_VBZ a_DT conjunction_NN between_IN subject_JJ and_CC predicate_VB ._.
+If_IN we_PRP find_VBP the_DT conjunctions_NNS ,_, we_PRP regard_VBP both_DT the_DT first_JJ and_CC the_DT second_JJ verbs_NNS as_IN the_DT predicate_NN with_IN the_DT same_JJ sub_NN -_: ject_NN ._.
+For_IN the_DT second_JJ category_NN ,_, we_PRP check_VBP whether_IN there_EX is_VBZ a_DT conjunction_NN after_IN the_DT predicate_NN ._.
+If_IN the_DT conjunc_NN -_: tion_NN is_VBZ found_VBN ,_, we_PRP will_MD scan_VB the_DT sentence_NN from_IN the_DT po_NN -_: sition_NN of_IN the_DT conjunction_NN to_TO the_DT position_NN of_IN predicate_NN to_TO find_VB the_DT subject_NN of_IN subordinate_JJ clause_NN ._.
+The_DT rules_NNS and_CC treatments_NNS used_VBN to_TO find_VB the_DT subject_NN are_VBP the_DT same_JJ as_IN those_DT proposed_VBN for_IN declarative_JJ sentence_NN ._.
+At_IN last_JJ and_CC CC_NNP but_CC CC_NNP so_IN RB_NNP or_CC CC_NNP because_IN IN_IN nor_CC CC_NNP whatever_WDT WDT_NNP whatever_WDT WPT_NNP whether_IN IN_IN what_WP WP_NNP why_WRB WRB_NNP where_WRB WRB_NNP when_WRB WRB_NNP how_WRB WRB_NNP whose_WP$ WPS_NNP that_IN IN_IN before_IN IN_IN if_IN IN_IN wherever_WRB WPT_NNP Table_NNP 4_CD :_: The_DT separate_JJ words_NNS -LRB-_-LRB- with_IN POS_NNP tags_NNS -RRB-_-RRB- Table_NNP 5_CD :_: The_DT guided_VBN words_NNS -LRB-_-LRB- with_IN POS_NNP tags_NNS -RRB-_-RRB- As_IN IN_IN If_IN IN_IN Although_IN IN_IN When_WRB WRB_NNP So_IN RBfar_NNP RBas_NNP IN_IN we_PRP scan_VBP the_DT sentence_NN from_IN the_DT position_NN of_IN conjunc_NN -_: tion_NN to_TO the_DT end_NN to_TO find_VB the_DT predicate_NN of_IN subordinate_JJ clause_NN ._.
+For_IN a_DT sentence_NN as_IN example_NN 3_CD ,_, we_PRP check_VBP whether_IN the_DT sentence_NN begins_VBZ with_IN ``_`` What_WP WP_NNP ''_'' or_CC ``_`` Whether_NNP IN_IN ''_'' ._.
+If_IN it_PRP is_VBZ ,_, we_PRP regard_VBP the_DT second_JJ verb_NN as_IN the_DT predicate_NN of_IN the_DT subordinate_JJ clause_NN and_CC consid_NN -_: er_VB the_DT subject_NN of_IN the_DT subordinate_JJ clause_NN as_IN the_DT third_JJ person_NN ._.
+If_IN we_PRP find_VBP ``_`` whoever_WP WP_NNP ''_'' after_IN the_DT verb_NN in_IN a_DT sentence_NN ,_, we_PRP will_MD scan_VB the_DT sentence_NN from_IN the_DT posi_NNS -_: tion_NN of_IN ``_`` whoever_WP WP_NNP ''_'' to_TO the_DT end_NN to_TO find_VB the_DT second_JJ predicate_NN and_CC consider_VB its_PRP$ subject_JJ as_IN the_DT third_JJ person_NN ._.
+For_IN the_DT last_JJ category_NN ,_, we_PRP divide_VBP the_DT sentence_NN into_IN two_CD parts_NNS by_IN locating_VBG the_DT word_NN ``_`` whatever_WDT WP_NNP ''_'' and_CC handle_VB both_DT parts_NNS as_IN declarative_JJ sentences_NNS ._.
+3.4_CD ``_`` There_EX be_VB ''_'' Sentences_NNS The_DT semantic_JJ subject_NN of_IN ``_`` there_EX be_VB ''_'' sentence_NN is_VBZ the_DT first_JJ noun_NN right_NN after_IN the_DT verb_NN ``_`` be_VB ''_'' ._.
+Note_VB that_DT sen_NN -_: tences_NNS like_IN ``_`` Here_RB is_VBZ five_CD questions_NNS to_TO be_VB answered_VBN ._. ''_''
+also_RB can_MD be_VB regard_NN as_IN ``_`` there_EX be_VB ''_'' sentences_NNS ._.
+All_PDT these_DT types_NNS of_IN sentences_NNS can_MD be_VB identified_VBN by_IN searching_VBG the_DT leading_VBG words_NNS ``_`` There_EX EX_FW ''_'' and_CC ``_`` Here_RB RB_NN ''_'' ._.
+3.5_CD Additional_JJ Rules_NNS Although_IN most_JJS of_IN the_DT sentences_NNS can_MD be_VB processed_VBN by_IN the_DT proposed_VBN rules_NNS now_RB ,_, there_EX are_VBP still_RB some_DT very_RB spe_JJ -_: cial_JJ cases_NNS that_WDT can_MD not_RB be_VB handled_VBN ._.
+Moreover_RB ,_, the_DT outputs_NNS of_IN POS_NNP tagger_NN are_VBP not_RB exact_JJ completely_RB ._.
+So_IN we_PRP give_VBP a_DT few_JJ additional_JJ rules_NNS to_TO strengthen_VB the_DT mod_NN -_: el_FW ._.
+Firstly_RB ,_, the_DT words_NNS like_IN ``_`` Chinese_JJ ''_'' are_VBP third_JJ person_NN when_WRB they_PRP mean_VBP a_DT language_NN ,_, otherwise_RB ,_, they_PRP are_VBP not_RB ._.
+We_PRP call_VBP these_DT words_NNS language_NN words_NNS ._.
+We_PRP observe_VBP that_IN when_WRB the_DT language_NN word_NN means_VBZ language_NN ,_, there_EX is_VBZ always_RB a_DT word_NN ``_`` language_NN ''_'' in_IN the_DT sentence_NN ._.
+So_IN we_PRP check_VBP whether_IN there_EX is_VBZ ``_`` language_NN ''_'' in_IN the_DT sen_NN -_: tence_NN that_IN contains_VBZ a_DT language_NN word_NN ._.
+If_IN we_PRP find_VBP ``_`` language_NN ''_'' ,_, we_PRP will_MD compulsively_RB modify_VB the_DT corre_NN -_: sponding_VBG word_NN with_IN the_DT an_DT updated_VBN POS_NNP tag_NN ``_`` NN_NNP ''_'' ._.
+Otherwise_RB ,_, we_PRP change_VBP the_DT word_NN with_IN the_DT an_DT updat_NN -_: ed_VBD POS_NNP tag_NN ``_`` NNS_NNP ''_'' ._.
+There_EX is_VBZ also_RB a_DT situation_NN that_IN the_DT subject_NN is_VBZ a_DT gerund_NN sometimes_RB ._.
+We_PRP know_VBP that_IN the_DT gerund_NN can_MD not_RB be_VB a_DT predicate_NN by_IN itself_PRP ._.
+So_IN we_PRP change_VBP all_PDT the_DT gerunds_NNS with_IN the_DT POS_NNP tag_NN ``_`` NN_NNP ''_'' ._.
+Ta_SYM -_: ble_NN 6_CD shows_NNS additional_JJ rules_NNS to_TO fortify_VB the_DT model_NN ._.
+3.6_CD Correction_NNP Because_IN there_EX is_VBZ not_RB a_DT word_NN in_IN both_DT original_JJ form_NN and_CC third_JJ person_NN form_NN and_CC one_CD verb_NN only_RB has_VBZ one_CD third_JJ person_NN form_NN ,_, we_PRP build_VBP a_DT mapping_NN dictionary_NN to_TO map_VB a_DT word_NN from_IN its_PRP$ root_NN form_NN to_TO the_DT third_JJ person_NN singular_JJ form_NN ._.
+Each_DT word_NN that_WDT is_VBZ detected_VBN as_IN error_NN can_MD be_VB restored_VBN by_IN searching_VBG this_DT mapping_NN dictionary_NN ._.
+4_CD Result_NN We_PRP select_VBP 300_CD sentences_NNS with_IN agreement_NN errors_NNS and_CC 3_CD ,_, 000_CD correct_JJ sentences_NNS from_IN essays_NNS written_VBN by_IN Chi_NNP -_: nese_JJ students_NNS as_IN the_DT test_NN data2_NN ._.
+The_DT results_NNS are_VBP eval_JJ -_: uated_VBN by_IN the_DT metrics_NNS ,_, precision_NN P_NNP ,_, recall_VBP R_NN of_IN error_NN detection_NN and_CC correction_NN ,_, and_CC their_PRP$ harmonic_JJ average_JJ F_NN 1_CD score_NN -LRB-_-LRB- Table_NNP 7_CD -RRB-_-RRB- ._.
+As_IN Lee_NNP model_NN -LRB-_-LRB- Lee_NNP and_CC Senef_NNP -_: f_LS ,_, 2008_CD -RRB-_-RRB- can_MD process_VB subject-verb_JJ agreement_NN errors_NNS well_RB ,_, we_PRP compare_VBP their_PRP$ results_NNS with_IN ours_JJ on_IN the_DT same_JJ test_NN data_NNS set3_NN ._.
+Table_NNP 7_CD :_: Results_NNS The_DT comparison_NN in_IN Table_NNP 7_CD shows_NNS that_IN our_PRP$ mod_NN -_: el_FW outperforms_VBZ Lee_NNP model_NN by_IN 6.7_CD %_NN in_IN terms_NNS of_IN F1_CD score_NN ._.
+In_IN addition_NN ,_, the_DT results_NNS of_IN Lee_NNP model_NN were_VBD achieved_VBN by_IN adopting_VBG advanced_JJ parse_NN tree_NN ,_, while_IN we_PRP use_VBP no_DT more_JJR than_IN POS_NNP tags_NNS ._.
+We_PRP also_RB show_VBP the_DT result_NN of_IN Rozovskaya_NNP model_NN -LRB-_-LRB- Rozovskaya_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC UIUC_NNP model_NN -LRB-_-LRB- Ro_SYM -_: zovskaya_NN et_FW al._FW ,_, 2013_CD -RRB-_-RRB- -LRB-_-LRB- see_VB Table_NNP 8_CD and_CC 9_CD -RRB-_-RRB- ._.
+Our_PRP$ mod_NN -_: el_FW is_VBZ significantly_RB better_JJR than_IN theirs_PRP for_IN subject-verb_JJ agreement_NN errors_NNS though_IN their_PRP$ model_NN can_MD deal_VB with_IN various_JJ types_NNS of_IN errors_NNS ._.
+However_RB ,_, it_PRP is_VBZ worth_JJ noting_VBG that_IN their_PRP$ test_NN data_NNS sets_NNS are_VBP different_JJ for_IN all_DT existing_VBG works_NNS and_CC ours_JJ ._.
+Therefore_RB ,_, we_PRP compare_VBP their_PRP$ results_NNS only_RB for_IN reference_NN ._.
+2This_NNS data_NNS set_NN is_VBZ provided_VBN by_IN a_DT leading_VBG English_JJ education_NN company_NN by_IN following_VBG an_DT anonymous_JJ policy_NN ._.
+Due_JJ to_TO commer_VB -_: cial_JJ reason_NN and_CC double_JJ blind_JJ review_NN policy_NN ,_, the_DT company_NN name_NN will_MD not_RB be_VB discovered_VBN during_IN review_NN ._.
+3As_NNS -LRB-_-LRB- Lee_NNP and_CC Seneff_NNP ,_, 2008_CD -RRB-_-RRB- do_VBP not_RB release_VB their_PRP$ data_NNS set_VBN and_CC system_NN implementation_NN ,_, we_PRP have_VBP accurately_RB re-implement_JJ their_PRP$ system_NN to_TO make_VB this_DT comparison_NN ._.
+Model_NNP P_NNP R_NNP F1_NNP Our_PRP$ Model_NNP Identification_NNP 85.0_CD 81.7_CD 83.3_CD Correction_NN 85.0_CD 81.7_CD 83.3_CD Lee_NNP Model_NNP Identification_NNP 82.3_CD 71.6_CD 76.6_CD Correction_NN 82.3_CD 71.6_CD 76.6_CD The_DT case_NN need_NN to_TO be_VB handled_VBN The_DT rules_NNS If_IN there_EX is_VBZ ``_`` Not_RB only_RB ''_'' ._.
+Abandon_VB all_PDT the_DT words_NNS before_IN ``_`` also_RB ''_'' If_IN there_EX is_VBZ ``_`` I_PRP think_VBP ''_'' ._.
+Check_VB whether_IN ``_`` I_PRP think_VBP ''_'' is_VBZ wrong_JJ then_RB abandon_VB ``_`` I_PRP think_VBP ''_'' ._.
+If_IN there_EX is_VBZ ``_`` percent_NN of_IN ''_'' ._.
+Abandon_VB ``_`` percent_NN of_IN ''_'' ._.
+If_IN there_EX is_VBZ ``_`` a_DT lot_NN of_IN ''_'' ._.
+Abandon_VB ``_`` a_DT lot_NN of_IN ''_'' ._.
+If_IN there_EX is_VBZ ``_`` a_DT number_NN of_IN ''_'' ._.
+Abandon_VB ``_`` a_DT number_NN of_IN ''_'' ._.
+Table_NNP 6_CD :_: Additional_JJ rules_NNS Table_NNP 8_CD :_: Results_NNS of_IN Rozovskaya_NNP model_NN Error_NN type_NN Correction_NNP Identification_NNP P_NNP R_NNP F1_NNP P_NNP R_NNP F1_NNP Agreement_NNP Tense_NNP Form_NN 90.62_CD 60.51_CD 81.83_CD 9.70_CD 7.47_CD 16.34_CD 17.52_CD 13.31_CD 27.24_CD 90.62_CD 86.63_CD 83.47_CD 9.70_CD 10.70_CD 16.67_CD 17.52_CD 19.06_CD 27.79_CD Total_JJ 71.94_CD 10.24_CD 17.94_CD 85.81_CD 12.22_CD 21.20_CD 5_CD Conclusion_NNP Verb_NNP errors_NNS are_VBP commonly_RB made_VBN by_IN ESL_NNP writers_NNS but_CC difficult_JJ to_TO process_NN ._.
+Subject-verb_JJ agreement_NN errors_NNS on_IN the_DT third_JJ person_NN singular_JJ form_NN cover_NN 21.8_CD %_NN of_IN the_DT verb_NN errors_NNS according_VBG to_TO statistics_NNS from_IN a_DT typical_JJ ESL_NNP group_NN ._.
+Previous_JJ works_NNS paid_VBD little_JJ attention_NN on_IN such_JJ type_NN of_IN errors_NNS ,_, and_CC report_NN unsatisfied_JJ performance_NN ._.
+Using_VBG quite_RB limited_JJ linguistic_JJ resources_NNS ,_, we_PRP devel_VBP -_: op_VB a_DT rule-based_JJ approach_NN that_WDT gives_VBZ state-of-the-art_JJ performance_NN on_IN detecting_VBG and_CC correcting_VBG the_DT subject_NN -_: verb_NN agreement_NN errors_NNS ._.
+6_CD Acknowledgements_NNP We_PRP appreciate_VBP the_DT anonymous_JJ reviewers_NNS for_IN valuable_JJ comments_NNS and_CC suggestions_NNS on_IN our_PRP$ paper_NN ._.
+This_DT re_SYM -_: search_NN was_VBD supported_VBN by_IN Shanghai_NNP LangYing_NNP Edu_NNP -_: cation_NN Technology_NNP Co._NNP ,_, Ltd._NNP ._.
+References_NNS A_DT S_NNP Hornby_NNP ,_, Sally_NNP Wehmeier_NNP and_CC Michael_NNP Ashby_NNP ._.
+2009_CD ._.
+Oxford_NNP Advanced_NNP Learner_NNP 's_POS Dictionary_NNP ._.
+Oxford_NNP Uni_NNP -_: versity_NN Press_NNP ,_, Oxford_NNP ,_, England_NNP ._.
+Alla_NNP Rozovskaya_NNP and_CC Dan_NNP Roth_NNP ._.
+2010b_JJ ._.
+Training_VBG paradigms_NNS for_IN correcting_VBG errors_NNS in_IN grammar_NN and_CC us_PRP -_: age_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2010_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 154-162_CD ._.
+Alla_NNP Rozovskaya_NNP ,_, Dan_NNP Roth_NNP and_CC Srikumar_NNP Vivek_NNP ._.
+2014_CD ._.
+Correcting_VBG Grammatical_JJ Verb_NN Errors_NNS ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 14th_JJ Conference_NN of_IN the_DT European_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 358-367_CD Alla_NNP Rozovskaya_NNP ,_, Kaiwei_NNP Chang_NNP ,_, Mark_NNP Sammons_NNP and_CC Dan_NNP Roth_NNP ._.
+2013_CD ._.
+The_DT University_NNP of_IN Illinois_NNP System_NNP in_IN the_DT CoNLL-2013_NNP Shared_NNP Task_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Seventeenth_NNP Conference_NN on_IN Computational_NNP Natu_NNP -_: ral_NN Language_NN Learning_NNP :_: Shared_VBD Task_NNP ,_, pp._NNP 13-19_CD Alla_NNP Rozovskaya_NNP ,_, Mark_NNP Sammons_NNP and_CC Dan_NNP Roth_NNP ._.
+2012_CD ._.
+The_DT UI_NNP system_NN in_IN the_DT HOO_NNP 2012_CD shared_VBD task_NN on_IN error_NN correction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Seventh_NNP Workshop_NNP on_IN Building_NNP Educational_NNP Applications_NNS Using_VBG NLP_NNP ,_, pp._NNP 272C280_NNP ._.
+Chang-Ning_NNP Huang_NNP and_CC Hai_NNP Zhao_NNP ._.
+2006_CD ._.
+Which_WDT Is_VBZ Essential_JJ for_IN Chinese_JJ Word_NN Segmentation_NN :_: Character_NN versus_IN Word_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 20th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Computa_NNP -_: tion_NN -LRB-_-LRB- PACLIC-20_NN -RRB-_-RRB- ,_, pp._FW 1-12_FW Claudia_NNP Leacock_NNP ,_, Martin_NNP Chodorow_NNP ,_, Michael_NNP Gamon_NNP and_CC Joel_NNP Tetreault_NNP ._.
+2010_CD ._.
+Automated_NNP Grammatical_NNP Error_NNP Detection_NNP for_IN Language_NNP Learners_NNP ._.
+Morgan_NNP and_CC Clay_NNP -_: pool_NN Publishers_NNPS Models_NNPS P_NNP R_NNP F1_NNP Scores_NNS on_IN the_DT original_JJ annotations_NNS Articles_NNPS +_VBP Prepositions_NNS +_VBP Noun_NN number_NN +_NN Subject-verb_JJ agr_JJ +_NN Verb_NN form_NN -LRB-_-LRB- All_PDT -RRB-_-RRB- 48_CD 48_CD 48_CD 48_CD 46_CD 11_CD 12_CD 21_CD 22_CD 23_CD 18_CD 19_CD 29_CD 30_CD 31_CD Scores_NNS based_VBN on_IN the_DT revised_VBN annotations_NNS All_DT 62_CD 32_CD 42_CD Table_NNP 9_CD :_: Results_NNS of_IN the_DT UIUC_NNP model_NN Daniel_NNP Dahlmeier_NNP and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2011_CD ._.
+Grammati_NNP -_: cal_NN Error_NN Correction_NN with_IN Alternating_NNP Structure_NNP Opti_NNP -_: mization_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Hu_SYM -_: man_NN Language_NNP Technologies_NNP ,_, pp._NNP 915-923_CD Daniel_NNP Dahlmeier_NNP ,_, Hwee_NNP Tou_NNP Ng_NNP and_CC Eric_NNP JUn_NNP Feng_NNP Ng_NNP ._.
+2012_CD ._.
+NUS_NNP at_IN the_DT HOO_NNP 2012_CD Shared_VBD Task_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Seventh_NNP Workshop_NNP on_IN Building_NNP Edu_NNP -_: cational_JJ Applications_NNS Using_VBG NLP_NNP ,_, pp._NNP 216-224_CD Emi_NNP Izumi_NNP ,_, Kiyotaka_NNP Uchimoto_NNP ,_, Toyomi_NNP Saiga_NNP ,_, Thepchai_NNP Supnithi_NNP and_CC Hitoshi_NNP Isahara_NNP ._.
+2003_CD ._.
+Automated_NNP Gram_NNP -_: matical_JJ Error_NNP Detection_NNP for_IN Language_NNP Learners_NNP ._.
+In_IN Proceedings_NNP of_IN 41st_CD Annual_JJ Meeting_VBG of_IN the_DT Associa_NNP -_: tion_NN for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 145-148_CD G._NNP Dalgish_NNP ._.
+1985_CD ._.
+Computer-assisted_JJ ESL_NNP research_NN ._.
+CALICO_NNP Journal_NNP ,_, 2_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- Gerard_NNP Lynch_NNP ,_, Erwan_NNP Moreau_NNP and_CC Carl_NNP Vogel_NNP ._.
+2012_CD ._.
+A_DT Naive_NNP Bayes_NNP classifier_NN for_IN automatic_JJ correction_NN of_IN preposition_NN and_CC determiner_NN errors_NNS in_IN ESL_NNP text_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Seventh_NNP Workshop_NNP on_IN Building_NNP Educa_NNP -_: tional_JJ Applications_NNS Using_VBG NLP_NNP ,_, pp._NNP 257C262_NNP ._.
+Hai_NNP Zhao_NNP and_CC Chunyu_NNP Kit_NNP ._.
+2007_CD ._.
+Incorporating_VBG Glob_SYM -_: al_IN Information_NN into_IN Supervised_VBN Learning_NNP for_IN Chinese_NNP Word_NNP Segmentation_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 10th_JJ Con_NN -_: ference_NN of_IN the_DT Pacific_NNP Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- PACLING-2007_NNP -RRB-_-RRB- ,_, pp._FW 66-74_CD Hai_NNP Zhao_NNP ,_, Chang-Ning_NNP Huang_NNP and_CC Mu_NNP Li_NNP ._.
+2006_CD ._.
+An_DT Im_SYM -_: proved_VBD Chinese_JJ Word_NN Segmentation_NNP System_NNP with_IN Con_NN -_: ditional_JJ Random_NNP Field_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Fifth_NNP SIGHAN_NNP Workshop_NNP on_IN Chinese_NNP Language_NNP Processing_NNP -LRB-_-LRB- SIGHAN-5_NNP -RRB-_-RRB- ,_, pp._FW 162-165_CD Hai_NNP Zhao_NNP ,_, Wenliang_NNP Chen_NNP ,_, Jun_NNP '_POS ichi_JJ Kazama_NNP ,_, Kiyotaka_NNP Uchimoto_NNP ,_, and_CC Kentaro_NNP Torisawa_NNP ._.
+2009_CD ._.
+Multilingual_NNP Dependency_NNP Learning_NNP :_: A_NNP Huge_JJ Feature_NNP Engineering_NNP Method_NNP to_TO Semantic_NNP Dependency_NNP Parsing_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN Thirteenth_NNP Conference_NNP on_IN Computational_NNP Natural_NNP Language_NNP Learning_NNP ,_, pp._NNP 55-60_CD Hai_NNP Zhao_NNP ,_, Xiaotian_NNP Zhang_NNP ,_, and_CC Chunyu_NNP Kit_NNP ._.
+2013_CD ._.
+In_IN -_: tegrative_JJ Semantic_NNP Dependency_NNP Parsing_NNP via_IN Efficien_NNP -_: t_NN Large-scale_JJ Feature_NNP Selection_NNP ._.
+Journal_NNP of_IN Artificial_NNP Intelligence_NNP Research_NNP ,_, Volume_NN 46:203_CD -233_CD Hai_NNP Zhao_NNP ,_, Yan_NNP Song_NN ,_, Chunyu_NNP Kit_NNP ,_, and_CC Guodong_NNP Zhou_NNP ._.
+2009_CD ._.
+Cross_NNP Language_NNP Dependency_NNP Parsing_NNP using_VBG a_DT Bilingual_NNP Lexicon_NNP ._.
+Joint_NNP conference_NN of_IN the_DT 47th_JJ Annu_NNP -_: al_IN Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS and_CC the_DT 4th_JJ International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP of_IN the_DT Asian_JJ Federation_NNP of_IN Natural_NNP Language_NNP Processing_NNP ,_, pp._NNP 55-63_CD Hai_NNP Zhao_NNP ._.
+2009_CD ._.
+Character-Level_NNP Dependencies_NNPS in_IN Chi_NNP -_: nese_NN :_: Usefulness_NNP and_CC Learning_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 12th_JJ Conference_NN of_IN the_DT European_JJ Chapter_NN of_IN the_DT Asso_NNP -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 879-887_CD Jian_NNP Zhang_NNP ,_, Hai_NNP Zhao_NNP ,_, Liqing_NNP Zhang_NNP ,_, and_CC Baoliang_NNP Lu_NNP ._.
+2011_CD ._.
+An_DT Empirical_JJ Comparative_NNP Study_NNP on_IN Two_CD Large_JJ -_: Scale_NNP Hierarchical_NNP Text_NNP Classification_NNP Approaches_NNPS ._.
+In_IN -_: ternational_JJ Journal_NNP Computer_NNP Processing_NNP of_IN Oriental_JJ Language_NN ,_, pp._VBP 309-326_CD Jingyi_NNP Zhang_NNP and_CC Hai_NNP Zhao_NNP ._.
+2013_CD Improving_NN Function_NNP Word_NNP Alignment_NNP with_IN Frequency_NN and_CC Syntactic_NNP Infor_NNP -_: mation_NN ._.
+In_IN Proceedings_NNP of_IN International_NNP Joint_NNP Confer_NNP -_: ence_NN on_IN Artificial_NNP Intelligence-2013_NNP ,_, pp._NNP 2211-2217_CD Joel_NNP R._NNP Tetreault_NNP and_CC Martin_NNP Chodorow_NNP ._.
+2008_CD ._.
+The_DT ups_NNS and_CC downs_NNS of_IN preposition_NN error_NN detection_NN in_IN ESL_NNP writ_SYM -_: ing_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 22nd_JJ International_NNP Confer_NNP -_: ence_NN on_IN Computational_NNP Linguistics_NNP pp._NNP 865-872_CD Joel_NNP Tetreault_NNP ,_, Jennifer_NNP Foster_NNP and_CC Martin_NNP Chodorow_NNP ._.
+2010_CD ._.
+Using_VBG parse_NN features_NNS for_IN preposition_NN selection_NN and_CC error_NN detection_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP 2010_CD Conference_NNP Short_NNP Papers_NNP ,_, pp._NNP 353-358_CD John_NNP Lee_NNP and_CC Stephanie_NNP Seneff_NNP ._.
+2008_CD ._.
+Correcting_VBG Mis_SYM -_: use_NN of_IN Verb_NNP Forms_NNS ._.
+In_IN Proceedings_NNP 46th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistic_NNP -_: s_PRP :_: Human_NNP Language_NNP Technologies_NNP ,_, pp._NNP 175-182_CD Junhui_NNP Li_NNP ,_, Guodong_NNP Zhou_NNP ,_, Hai_NNP Zhao_NNP ,_, Qiaoming_NNP Zhu_NNP ,_, and_CC Peide_NNP Qian_NNP ._.
+2009_CD ._.
+Improving_NN Nominal_JJ SRL_NNP in_IN Chinese_NNP Language_NN with_IN Verbal_JJ SRL_NNP Information_NNP and_CC Automatic_NNP Predicate_NNP Recognition_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pp._NNP 1280-1288_CD Keisuke_NNP Sakaguchi_NNP ,_, Yuta_NNP Hayashibe_NNP ,_, Shuhei_NNP Kondo_NNP ,_, Lis_NNP Kanashiro_NNP ,_, Tomoya_NNP Mizumoto_NNP ,_, Mamoru_NNP Komachi_NNP and_CC Yuji_NNP Matsumoto_NNP ._.
+2012_CD ._.
+NAIST_NNP at_IN the_DT HOO_NNP 2012_CD Shared_VBD Task_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Seventh_NNP Workshop_NNP on_IN Building_NNP Educational_NNP Applications_NNS Using_VBG NLP_NNP ,_, pp._NNP 281C288_NNP ._.
+Kristina_NNP Toutanova_NNP ,_, Dan_NNP Klein_NNP ,_, Christopher_NNP Manning_NNP and_CC Yoram_NNP Singer_NNP ._.
+2003_CD ._.
+Feature-Rich_NNP Part-of-Speech_NNP Tagging_VBG with_IN a_DT Cyclic_NNP Dependency_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 2003_CD Human_NNP Language_NNP Technology_NNP Conference_NNP of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 252-259_CD Li_NNP Quan_NNP ,_, Oleksandr_NNP Kolomiyets_NNP and_CC Marie-Francine_NNP Moens_NNPS ._.
+2012_CD ._.
+KU_NNP Leuven_NNP at_IN HOO-2012_NNP :_: a_DT hybrid_JJ ap_NN -_: proach_NN to_TO detection_NN and_CC correction_NN of_IN determiner_NN and_CC preposition_NN errors_NNS in_IN non-native_JJ English_JJ text_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Seventh_NNP Workshop_NNP on_IN Building_NNP Educa_NNP -_: tional_JJ Applications_NNS Using_VBG NLP_NNP ,_, pp._NNP 263C271_NNP ._.
+Mark_NNP Kantrowitz_NNP ._.
+2003_CD ._.
+Method_NN and_CC apparatus_NN for_IN analyzing_VBG affect_VB and_CC emotion_NN in_IN text_NN ._.
+Patent_NN No._NN 6,622,140_CD ._.
+Michael_NNP Gamon_NNP ,_, Claudia_NNP Leacock_NNP ,_, Chris_NNP Brockett_NNP ,_, William_NNP B._NNP Dolan_NNP ,_, Jianfeng_NNP Gao_NNP ,_, Dmitriy_NNP Belenko_NNP and_CC Alexandre_NNP Klementiev_NNP ._.
+2009_CD ._.
+Using_VBG statistical_JJ tech_NN -_: niques_NNS and_CC web_NN search_NN to_TO correct_VB ESL_NNP errors_NNS ._.
+CAL_SYM -_: ICO_NNP Journal_NNP ,_, Special_JJ Issue_NN on_IN Automatic_NNP Analysis_NNP of_IN Learner_NNP Language_NNP ,_, 26_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :491_CD C511_NNP ._.
+Michael_NNP Gamon_NNP ,_, Jianfeng_NNP Gao_NNP ,_, Chris_NNP Brockett_NNP ,_, Alexan_NNP -_: dre_NN Klementiev_NNP ,_, William_NNP B._NNP Dolan_NNP ,_, Dmitriy_NNP Belenko_NNP and_CC Lucy_NNP Vanderwende_NNP ._.
+2008_CD ._.
+Using_VBG contextual_JJ speller_NN techniques_NNS and_CC language_NN modeling_NN for_IN ESL_NNP er_SYM -_: ror_NN correction_NN ._.
+In_IN Proceedings_NNP of_IN third_JJ Internation_NNP -_: al_IN Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP Proceedings_NNP of_IN the_DT Conference_NN Michael_NNP Gamon_NNP ._.
+2010_CD ._.
+Using_VBG mostly_RB native_JJ data_NNS to_TO cor_SYM -_: rect_JJ errors_NNS in_IN learners_NNS writing_VBG :_: a_DT meta-classifier_NN ap_SYM -_: proach_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2010_CD Annual_JJ Confer_NNP -_: ence_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 163C171_NNP Na-Rae_NNP Han_NNP ,_, Joel_NNP Tetreault_NNP ,_, Soo-Hwa_NNP Lee_NNP and_CC Jin-Young_NNP Ha_NNP ._.
+2010_CD ._.
+Using_VBG an_DT error-annotated_JJ learner_NN corpus_NN to_TO develop_VB an_DT ESL/EFL_NNP error_NN correction_NN system_NN ._.
+In_IN Proceedings_NNP of_IN LREC_NNP ,_, pp._NNP 763C770_NNP Na-Rae_NNP Han_NNP ,_, Martin_NNP Chodorow_NNP and_CC Claudia_NNP Leacock_NNP ._.
+2012_CD ._.
+Detecting_VBG errors_NNS in_IN English_JJ article_NN usage_NN by_IN non-native_JJ speakers_NNS ._.
+Journal_NNP of_IN Natural_NNP Language_NNP Engineering_NNP ,_, pp._NNP 115-129_CD Rachele_NNP De_NNP Felice_NNP and_CC Stephen_NNP G._NNP Puluman_NNP ._.
+2008_CD ._.
+A_DT Classifier-Based_NNP Approach_NNP to_TO Preposition_NNP and_CC Deter_NNP -_: miner_NN Error_NN Correction_NN in_IN L2_NNP English_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 22nd_JJ International_NNP Conference_NNP on_IN Computation_NNP -_: al_IN Linguistics_NNP -LRB-_-LRB- COLING2008_NNP -RRB-_-RRB- ,_, pp._FW 169-176_CD Randolph_NNP Quirk_NNP ,_, Sidney_NNP Greenbaum_NNP ,_, Geoffrey_NNP Leech_NNP and_CC Jan_NNP Svartvik_NNP ._.
+1985_CD ._.
+A_DT Comprehensive_NNP Grammar_NNP of_IN the_DT English_NNP Language_NN ._.
+Longman_NNP ,_, NewYork_NNP Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Baoliang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2015_CD Bilingual_NNP Continuous_NNP -_: Space_NNP Language_NNP Model_NNP Growing_VBG for_IN Statistical_NNP Ma_NNP -_: chine_NN Translation_NN ,_, ._.
+IEEE/ACM_NNP Transactions_NNS on_IN Au_NNP -_: dio_NN ,_, Speech_NNP ,_, and_CC Languange_NNP Processing_NNP ,_, Vol_NNP .23_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- :_: 1209-1220_CD Rui_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, Baoliang_NNP Lu_NNP ,_, Masao_NNP Utiyama_NNP ,_, and_CC Eiichro_NNP Sumita_NNP ._.
+2014_CD ._.
+Neural_NNP Network_NNP Based_VBD Bilin_NNP -_: gual_JJ Language_NN Model_NNP Growing_VBG for_IN Statistical_NNP Machine_NNP Translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Process_NNP -_: ing_NN ,_, pp._FW 189-195_CD Rui_NNP Wang_NNP ,_, Masao_NNP Utiyama_NNP ,_, Isao_NNP Goto_NNP ,_, Eiichro_NNP Sumi_NNP -_: ta_NN ,_, HaiZhao_NNP ,_, and_CC Baoliang_NNP Lu_NNP ._.
+2013_CD ._.
+Convert_VB -_: ing_NN Continuous-Space_NNP Language_NNP Models_NNPS into_IN N-gram_NNP Language_NNP Models_NNP for_IN Statistical_NNP Machine_NNP Translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, pp._NNP 845-850_CD Ryo_NNP Nagata_NNP ,_, Edward_NNP Whittaker_NNP and_CC Vera_NNP Sheinman_NNP ._.
+2011_CD ._.
+Creating_VBG a_DT manually_RB error-tagged_JJ and_CC shallow_JJ -_: parsed_VBN learner_NN corpus_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computation_NNP -_: al_IN Linguistics_NNP :_: Human_NNP Language_NNP Technologies_NNP ,_, pp._NNP 1210-1219_CD Toshikazu_NNP Tajiri_NNP ,_, Mamoru_NNP Komachi_NNP and_CC Yuji_NNP Matsumoto_NNP ._.
+2012_CD ._.
+Tense_JJ and_CC aspect_NN error_NN correction_NN for_IN esl_NN learn_VBP -_: ers_NNS using_VBG global_JJ context_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 50th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 198-202_CD Xiaolin_NNP Wang_NNP ,_, Hai_NNP Zhao_NNP ,_, and_CC Baoliang_NNP Lu_NNP ._.
+2013_CD La_NNP -_: beled_VBD Alignment_NNP for_IN Recognizing_VBG Textual_NNP Entailmen_NNP -_: t._NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, pp._NNP 605-613_CD Xuezhe_NNP Ma_NNP and_CC Hai_NNP Zhao_NNP ._.
+2012_CD ._.
+Fourth-Order_NNP Depen_NNP -_: dency_NN Parsing_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 24th_JJ Internation_NNP -_: al_IN Conference_NN on_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 8-15_CD Zhongye_NNP Jia_NNP ,_, Peilu_NNP Wang_NNP ,_, and_CC Hai_NNP Zhao_NNP ._.
+2013_CD ._.
+Gram_NN -_: matical_NN Error_NN Correction_NN as_IN Multiclass_NNP Classifica_NNP -_: tion_NN with_IN Single_NNP Model_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Sev_NNP -_: enteenth_NN Conference_NN on_IN Computational_NNP Natural_NNP Lan_NNP -_: guage_NN Learning_NNP ,_, pp.74-81_JJ Zhongye_NNP Jia_NNP and_CC Hai_NNP Zhao_NNP ._.
+2014_CD ._.
+A_DT Joint_NNP Graph_NNP Mod_NNP -_: el_NN for_IN Pinyin-to-Chinese_NNP Conversion_NNP with_IN Typo_NNP Cor_NNP -_: rection_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pp._NNP 1512-1523_CD

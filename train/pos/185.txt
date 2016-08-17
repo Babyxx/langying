@@ -1,0 +1,196 @@
+Bidirectional_JJ Long_NNP Short-Term_NNP Memory_NN Networks_NNP for_IN Relation_NNP Classification_NNP Abstract_NNP Relation_NNP classification_NN is_VBZ an_DT important_JJ se_FW -_: mantic_JJ processing_NN ,_, which_WDT has_VBZ achieved_VBN great_JJ attention_NN in_IN recent_JJ years_NNS ._.
+The_DT main_JJ challenge_NN is_VBZ the_DT fact_NN that_IN important_JJ infor_NN -_: mation_NN can_MD appear_VB at_IN any_DT position_NN in_IN the_DT sentence_NN ._.
+Therefore_RB ,_, we_PRP propose_VBP bidirec_SYM -_: tional_JJ long_JJ short-term_JJ memory_NN networks_NNS -LRB-_-LRB- BLSTM_NNP -RRB-_-RRB- to_TO model_VB the_DT sentence_NN with_IN complete_JJ ,_, sequential_JJ information_NN about_IN all_DT words_NNS ._.
+At_IN the_DT same_JJ time_NN ,_, we_PRP also_RB use_VBP fea_SYM -_: tures_NNS derived_VBN from_IN the_DT lexical_JJ resources_NNS such_JJ as_IN WordNet_NNP or_CC NLP_NNP systems_NNS such_JJ as_IN dependency_NN parser_NN and_CC named_VBN entity_NN rec_NN -_: ognizers_NNS -LRB-_-LRB- NER_NNP -RRB-_-RRB- ._.
+The_DT experimental_JJ results_NNS on_IN SemEval-2010_JJ show_NN that_IN BLSTM_NNP -_: based_VBN method_NN only_RB with_IN word_NN embeddings_NNS as_IN input_NN features_NNS is_VBZ sufficient_JJ to_TO achieve_VB state-of-the-art_JJ performance_NN ,_, and_CC import_NN -_: ing_VBG more_JJR features_NNS could_MD further_RBR improve_VB the_DT performance_NN ._.
+1_CD Introduction_NNP The_NNP automatic_JJ classification_NN of_IN semantic_JJ relations_NNS is_VBZ an_DT important_JJ task_NN ,_, which_WDT could_MD offer_VB useful_JJ in_IN -_: formation_NN for_IN many_JJ applications_NNS ,_, such_JJ as_IN question_NN answering_NN ,_, information_NN extraction_NN ,_, the_DT construc_NN -_: tion_NN and_CC completion_NN of_IN semantic_JJ or_CC relational_JJ knowledge_NN base_NN ._.
+In_IN this_DT work_NN ,_, we_PRP focus_VBP on_IN the_DT classification_NN of_IN semantic_JJ relations_NNS between_IN pairs_NNS of_IN nominals_NNS -LRB-_-LRB- Hendrickx_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Given_VBN a_DT sentence_NN S_NNP with_IN annotated_JJ pairs_NNS of_IN nominal_JJ e1_CD and_CC e2_CD ,_, the_DT task_NN is_VBZ to_TO classify_VB which_WDT of_IN the_DT following_VBG nine_CD semantic_JJ re_SYM -_: lations_NNS holds_VBZ between_IN the_DT nominals_NNS :_: Cause-Effect_JJ ,_, Instrument-Agency_NNP ,_, Product-Producer_NNP ,_, Content_NN -_: Container_NNP ,_, Entity-Origin_NNP ,_, Entity-Destination_NNP ,_, Component-Whole_NNP ,_, Member-Collection_NNP ,_, Mes_NNP -_: sage-Topic_JJ ,_, or_CC Other_JJ if_IN it_PRP does_VBZ not_RB belongs_VBZ to_TO any_DT of_IN the_DT nine_CD annotated_JJ relations_NNS ._.
+For_IN example_NN ,_, News_NNP and_CC commotion_NN are_VBP con_JJ -_: nected_NN in_IN a_DT Cause-Effect_JJ relation_NN in_IN the_DT sentence_NN ``_`` The_DT news_NN brought_VBD about_RB a_DT commotion_NN in_IN the_DT of_IN -_: fice_NN ._. ''_''
+In_IN this_DT instance_NN ,_, the_DT relation_NN between_IN news_NN and_CC commotion_NN could_MD be_VB inferred_VBN by_IN the_DT meaning_NN of_IN the_DT two_CD nominals_NNS and_CC the_DT context_NN of_IN ``_`` brought_VBN about_RB ''_'' around_IN them_PRP ._.
+Therefore_RB ,_, how_WRB to_TO grasp_VB and_CC represent_VB the_DT lexical_JJ and_CC context_NN information_NN are_VBP the_DT key_JJ research_NN points_NNS for_IN semantic_JJ relation_NN clas_NNS -_: sification_NN ._.
+Supervised_VBN methods_NNS with_IN carefully_RB handcrafted_VBN features_NNS from_IN lexical_JJ and_CC semantic_JJ resources_NNS have_VBP achieved_VBN high_JJ performance_NN -LRB-_-LRB- Hendrickx_NNP et_FW al._FW ,_, 2010_CD ;_: Rink_NNP and_CC Harabagiu_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT selection_NN of_IN features_NNS and_CC the_DT effective_JJ integration_NN of_IN knowledge_NN sources_NNS into_IN relation_NN classification_NN seem_VBP to_TO be_VB difficult_JJ ._.
+Recently_RB ,_, deep_JJ neural_JJ networks_NNS has_VBZ been_VBN ap_SYM -_: plied_VBN with_IN the_DT aim_NN of_IN reducing_VBG the_DT number_NN of_IN handcrafted_JJ features_NNS ,_, and_CC getting_VBG effective_JJ fea_NN -_: tures_NNS from_IN lexical_JJ and_CC sentence_NN level_NN -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2012_CD ;_: Zeng_NNP et_FW al._FW ,_, 2014_CD ;_: Yu_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Different_JJ from_IN previous_JJ work_NN ,_, we_PRP propose_VBP bi_SYM -_: directional_JJ long_JJ short-term_JJ memory_NN networks_NNS -LRB-_-LRB- BLSTM_NNP -RRB-_-RRB- to_TO solve_VB the_DT relation_NN classification_NN ._.
+For_IN every_DT word_NN in_IN a_DT given_VBN sentence_NN ,_, BLSTM_NNP has_VBZ com_NN -_: plete_NN ,_, sequential_JJ information_NN about_IN all_DT words_NNS be_VB -_: fore_NN and_CC after_IN it_PRP ._.
+Long_NNP distance_NN relationship_NN may_MD be_VB solved_VBN in_IN some_DT extent_NN in_IN this_DT networks_NNS ._.
+At_IN the_DT same_JJ time_NN ,_, we_PRP also_RB use_VBP features_NNS derived_VBN from_IN the_DT lexical_JJ resources_NNS such_JJ as_IN WordNet_NNP or_CC NLP_NNP tools_NNS such_JJ as_IN dependency_NN parser_NN and_CC named_VBN entity_NN rec_NN -_: ognizers_NNS -LRB-_-LRB- NER_NNP -RRB-_-RRB- ._.
+The_DT experimental_JJ results_NNS show_VBP that_IN only_RB using_VBG word_NN embedding_VBG as_IN input_NN features_NNS is_VBZ enough_RB to_TO achieve_VB state-of-the-art_JJ results_NNS ._.
+Im_SYM -_: porting_VBG more_JJR features_NNS could_MD further_RBR improve_VB the_DT performance_NN of_IN the_DT relation_NN classification_NN ._.
+-LCB-_-LRB- dqzheng_NN ,_, xchu_NN -RCB-_-RRB- @mtlab.hit.edu_NN ._.
+cn_NN 2_CD Related_NNP Work_NNP SemEval-2010_NNP task_NN 8_CD focused_VBD on_IN semantic_JJ rela_NN -_: tion_NN classification_NN ,_, it_PRP provides_VBZ a_DT standard_JJ testbed_VBN to_TO evaluate_VB and_CC compare_VB the_DT performance_NN of_IN dif_NN -_: ferent_JJ approaches_NNS ._.
+SVM_NNP -LRB-_-LRB- Rink_NNP and_CC Harabagiu_NNP ,_, 2010_CD -RRB-_-RRB- :_: Using_VBG SVM_NNP classifier_NN and_CC a_DT number_NN of_IN features_NNS derived_VBN from_IN NLP_NNP tools_NNS and_CC many_JJ external_JJ resources_NNS ,_, it_PRP achieves_VBZ the_DT highest_JJS performance_NN among_IN the_DT par_NN -_: ticipating_VBG systems_NNS -LRB-_-LRB- 10_CD teams_NNS ,_, 28_CD runs_NNS -RRB-_-RRB- ._.
+Neural_JJ network_NN has_VBZ got_VBN great_JJ achievement_NN in_IN many_JJ applications_NNS ,_, it_PRP has_VBZ also_RB been_VBN utilized_VBN in_IN re_NN -_: lation_NN classification_NN as_IN shown_VBN in_IN the_DT followings_NNS :_: MV-RNN_NNP -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- :_: They_PRP propose_VBP a_DT recursive_JJ neural_JJ network_NN model_NN to_TO learn_VB compo_NN -_: sitional_JJ vector_NN representations_NNS for_IN phrases_NNS and_CC sentences_NNS of_IN arbitrary_JJ syntactic_NN type_NN and_CC length_NN ._.
+CNN_NNP -LRB-_-LRB- Zeng_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- :_: Sentence_NN level_NN fea_NN -_: tures_NNS are_VBP learned_VBN using_VBG a_DT convolutional_JJ model_NN ,_, and_CC concatenated_VBN with_IN lexical_JJ features_NNS to_TO form_VB the_DT fi_SYM -_: nal_NN extracted_VBN feature_NN vector_NN ._.
+FCM_NNP -LRB-_-LRB- Yu_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- :_: They_PRP decompose_VBP the_DT sentence_NN into_IN substructures_NNS ,_, and_CC extract_VB features_NNS for_IN each_DT substructure_NN ._.
+Finally_RB they_PRP combine_VBP these_DT features_NNS with_IN the_DT embeddings_NNS of_IN words_NNS in_IN this_DT sub_NN -_: structure_NN to_TO form_VB a_DT substructure_NN embedding_NN ._.
+CR-CNN_NNP -LRB-_-LRB- Santos_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- :_: They_PRP propose_VBP network_NN to_TO learn_VB a_DT distributed_VBN vector_NN representa_NN -_: tion_NN for_IN each_DT relation_NN class_NN ._.
+A_DT ranking_JJ loss_NN func_NN -_: tion_NN is_VBZ proposed_VBN to_TO reduce_VB the_DT impact_NN of_IN artificial_JJ classes_NNS ._.
+DepNN_NNP -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- :_: Using_VBG a_DT recursive_JJ neural_JJ network_NN to_TO model_VB the_DT subtrees_NNS ,_, and_CC a_DT con_NN -_: volutional_JJ neural_JJ network_NN to_TO capture_VB the_DT most_RBS im_SYM -_: portant_NN features_NNS on_IN the_DT shortest_JJS path_NN ._.
+From_IN the_DT above_JJ works_NNS ,_, we_PRP can_MD see_VB that_IN many_JJ different_JJ neural_JJ network_NN models_NNS have_VBP been_VBN ap_SYM -_: plied_VBD to_TO solve_VB relation_NN classification_NN recently_RB ._.
+The_DT main_JJ target_NN is_VBZ to_TO learn_VB the_DT effective_JJ features_NNS in_IN lex_NN -_: ical_JJ and_CC sentence_NN level_NN to_TO represent_VB the_DT latent_NN rela_NN -_: tion_NN between_IN the_DT given_VBN nominals_NNS ._.
+Our_PRP$ work_NN has_VBZ the_DT same_JJ target_NN ,_, and_CC we_PRP try_VBP to_TO ap_SYM -_: ply_VB BLSTM_NNP to_TO mine_VB the_DT sentence_NN level_NN features_NNS with_IN its_PRP$ advantage_NN of_IN capturing_VBG long_JJ distance_NN rela_NN -_: tionship_NN in_IN a_DT sentence_NN ._.
+We_PRP also_RB study_VBP the_DT influence_NN of_IN adding_VBG features_NNS obtained_VBN from_IN NLP_NNP tools_NNS and_CC resources_NNS on_IN the_DT final_JJ classification_NN performance_NN ._.
+3_CD Long_NNP Short_NNP Term_NNP Memory_NN The_DT Long_NNP Short_NNP Term_NNP Memory_NN architecture_NN was_VBD proposed_VBN and_CC extended_VBN -LRB-_-LRB- Hochreiter_NNP and_CC Schmid_NNP -_: huber_NN ,_, 1997_CD ;_: Gers_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- with_IN the_DT motiva_NN -_: tion_NN on_IN an_DT analysis_NN of_IN Recurrent_NNP Neural_NNP Nets_NNS -LRB-_-LRB- Hochreiter_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ,_, which_WDT found_VBD that_DT long_JJ time_NN lags_VBZ were_VBD inaccessible_JJ to_TO existing_VBG architec_SYM -_: tures_NNS ,_, because_IN backpropagated_VBN error_NN either_CC blows_NNS up_IN or_CC decays_VBZ exponentially_RB ._.
+A_DT LSTM_NNP layer_NN consists_VBZ of_IN a_DT set_NN of_IN recurrently_RB connected_VBN blocks_NNS ,_, known_VBN as_IN memory_NN blocks_NNS ._.
+Each_DT one_CD contains_VBZ one_CD or_CC more_JJR recurrently_RB connected_JJ memory_NN cells_NNS and_CC three_CD multiplicative_JJ units_NNS -_: the_DT input_NN ,_, output_NN and_CC forget_VB gates_NNS -_: that_IN provide_VBP con_NN -_: tinuous_JJ analogues_NNS of_IN write_VB ,_, read_VB and_CC reset_VB opera_NN -_: tions_NNS for_IN the_DT cells_NNS ._.
+LSTM_NNP has_VBZ achieved_VBN the_DT best_JJS known_VBN results_NNS in_IN handwriting_NN recognition_NN -LRB-_-LRB- Graves_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- and_CC speech_NN recognition_NN -LRB-_-LRB- Graves_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+Fig._NNP 1_CD ._.
+LSTM_NNP memory_NN block_NN with_IN one_CD cell_NN Figure_NN 1_CD shows_NNS one_CD cell_NN of_IN LSTM_NNP memory_NN block_NN ._.
+More_RBR precisely_RB ,_, the_DT input_NN xt_NN to_TO the_DT cells_NNS is_VBZ multiplied_VBN by_IN the_DT activation_NN of_IN the_DT input_NN gate_NN ,_, the_DT output_NN to_TO the_DT net_NN is_VBZ multiplied_VBN by_IN that_DT of_IN the_DT output_NN gate_NN ,_, and_CC the_DT previous_JJ cell_NN values_NNS are_VBP multiplied_VBN by_IN the_DT forget_VB gate_NN ._.
+The_DT net_NN can_MD only_RB interact_VB with_IN the_DT cells_NNS via_IN the_DT gates_NNS ._.
+The_DT basic_JJ idea_NN of_IN bidirectional_JJ LSTM_NNP is_VBZ to_TO pre_VB -_: sent_VBN each_DT training_NN sequence_NN forwards_RB and_CC back_RB -_: wards_NNS to_TO two_CD separate_JJ recurrent_JJ nets_NNS ,_, both_DT of_IN which_WDT are_VBP connected_VBN to_TO the_DT same_JJ output_NN layer_NN ._.
+This_DT means_VBZ that_IN for_IN every_DT point_NN in_IN a_DT given_VBN se_FW -_: quence_NN ,_, the_DT network_NN has_VBZ complete_JJ ,_, sequential_JJ in_IN -_: formation_NN about_IN all_DT points_NNS before_RB and_CC after_IN it_PRP ._.
+The_DT structure_NN of_IN BLSTM_NNP is_VBZ shown_VBN in_IN Figure_NN 2_CD ._.
+Fig._NN 2_CD ._.
+Bidirectional_JJ LSTM_NNP 4_CD Methodology_NNP We_PRP propose_VBP bidirectional_JJ long_JJ short-term_JJ memory_NN networks_NNS -LRB-_-LRB- BLSTM_NNP -RRB-_-RRB- to_TO solve_VB the_DT relation_NN classifi_NN -_: cation_NN ._.
+It_PRP includes_VBZ the_DT following_JJ parts_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Initial_JJ feature_NN extraction_NN :_: extract_VB from_IN the_DT input_NN sentence_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Features_VBZ embedding_NN :_: transform_VB all_DT initial_JJ features_NNS into_IN real-valued_JJ vector_NN representa_NN -_: tion_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- BLSTM-based_JJ sentence_NN level_NN representa_NN -_: tion_NN :_: get_VB high_JJ level_NN feature_NN representation_NN from_IN step_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- Constructing_VBG feature_NN vector_NN :_: get_VB lexical_JJ level_NN and_CC sentence_NN level_NN features_NNS from_IN step_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- and_CC step_VB -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, and_CC concatenate_VBP them_PRP to_TO form_VB the_DT final_JJ feature_NN vector_NN ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- Classifying_VBG :_: feed_NN final_JJ feature_NN vector_NN into_IN a_DT multilayer_JJ perceptron_NN -LRB-_-LRB- MLP_NNP -RRB-_-RRB- and_CC softmax_JJ layer_NN to_TO get_VB the_DT probability_NN distribution_NN of_IN relation_NN labels_NNS ._.
+4.1_CD Initial_JJ Feature_NNP Extraction_NNP Besides_IN word_NN and_CC position_NN features_NNS ,_, we_PRP utilize_VBP NLP_NNP tools_NNS and_CC resources_NNS to_TO get_VB POS_NNP ,_, NER_NNP ,_, de_NNP -_: pendency_NN parse_NN and_CC hypernyms_NNS features_NNS ._.
+We_PRP aim_VBP to_TO grasp_VB more_JJR features_NNS which_WDT may_MD indicate_VB the_DT re_NN -_: lationship_NN of_IN the_DT pair_NN of_IN two_CD nominals_NNS ._.
+All_PDT these_DT features_NNS could_MD be_VB classified_VBN into_IN two_CD types_NNS :_: lexical_JJ features_NNS and_CC relative_JJ position_NN relationship_NN features_NNS ._.
+We_PRP extract_VBP word_NN ,_, POS_NNP ,_, NER_NNP and_CC hypernyms_NNS as_IN lexical_JJ features_NNS ._.
+The_DT WordNet_NNP hypernyms_NNS are_VBP adopted_VBN as_IN MVRNN_NNP -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Three_CD different_JJ relative_JJ position_NN relationship_NN features_NNS are_VBP extracted_VBN and_CC shown_VBN in_IN Figure_NN 3_CD ._.
+In_IN this_DT work_NN we_PRP also_RB utilize_VBP the_DT relative_JJ word_NN position_NN proposed_VBN by_IN Zeng_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ._.
+The_DT po_SYM -_: sition_NN feature_NN -LRB-_-LRB- PF_NNP -RRB-_-RRB- is_VBZ derived_VBN from_IN the_DT relative_JJ dis_NN -_: tances_NNS of_IN the_DT current_JJ word_NN to_TO the_DT target_NN nominals_VBZ e1_CD and_CC e2_CD ._.
+For_IN instance_NN ,_, the_DT word_NN sat_VBD in_IN the_DT sen_NN -_: tence_NN shown_VBN in_IN Figure_NN 3_CD ,_, its_PRP$ relative_JJ distance_NN to_TO the_DT target_NN nominal_JJ cat_NN -LRB-_-LRB- e1_FW -RRB-_-RRB- and_CC mat_NN -LRB-_-LRB- e2_FW -RRB-_-RRB- are_VBP 1_CD and_CC -3_CD ._.
+We_PRP also_RB chose_VBD the_DT Stanford_NNP dependency_NN parser_NN to_TO capture_VB long_JJ distance_NN relationships_NNS between_IN two_CD nominals_NNS in_IN a_DT sentence_NN ._.
+Our_PRP$ dependency_NN fea_NN -_: tures_NNS are_VBP based_VBN on_IN paths_NNS in_IN the_DT dependency_NN tree_NN ._.
+Here_RB ,_, we_PRP extract_VB two_CD types_NNS of_IN features_NNS :_: Relative_JJ dependency_NN features_NNS :_: Relative_JJ root_NN feature_NN :_: r_r_NN -LRB-_-LRB- root_NN node_NN -RRB-_-RRB- ,_, r_c_FW -LRB-_-LRB- child_NN node_NN of_IN root_NN -RRB-_-RRB- ,_, r_o_FW -LRB-_-LRB- others_NNS -RRB-_-RRB- Relative_JJ e1_JJ feature_NN :_: e1_e1_NNS -LRB-_-LRB- e1_FW node_FW -RRB-_-RRB- ,_, e1_c_FW -LRB-_-LRB- child_NN node_NN of_IN e1_CD -RRB-_-RRB- ,_, e1_p_FW -LRB-_-LRB- parent_NN node_NN of_IN e1_CD -RRB-_-RRB- ,_, e1_o_FW -LRB-_-LRB- others_NNS -RRB-_-RRB- Relative_JJ e2_NN feature_NN :_: e2_e2_NNS -LRB-_-LRB- e2_FW node_FW -RRB-_-RRB- ,_, e2_c_FW -LRB-_-LRB- child_NN node_NN of_IN e2_NN -RRB-_-RRB- ,_, e2_p_FW -LRB-_-LRB- parent_NN node_NN of_IN e2_NN -RRB-_-RRB- ,_, e2_o_FW -LRB-_-LRB- others_NNS -RRB-_-RRB- Dep_JJ features_NNS :_: the_DT tag_NN of_IN the_DT current_JJ word_NN to_TO its_PRP$ parent_NN node_NN on_IN the_DT dependency_NN tree_NN The_DT above_IN features_NNS represent_VBP the_DT relationship_NN between_IN the_DT current_JJ word_NN and_CC the_DT target_NN node_NN ,_, in_IN -_: cluding_VBG the_DT root_NN ,_, e1_CD ,_, e2_CD and_CC their_PRP$ parent_NN node_NN ._.
+Fig_SYM -_: ure_NN 4_CD gives_VBZ an_DT example_NN of_IN dependency_NN parser_NN re_SYM -_: sults_NNS ._.
+4.2_CD Fig._NNP 3_CD ._.
+Example_NN of_IN relative_JJ position_NN relationship_NN features_NNS Fig._NNP 4_CD ._.
+Example_NN of_IN dependency_NN parser_NN results_NNS Feature_NNP Embedding_NNP Word_NNP Embedding_NNP is_VBZ to_TO map_VB each_DT word_NN into_IN a_DT real-valued_JJ vector_NN to_TO represent_VB syntactic_NN and_CC se_FW -_: mantic_JJ information_NN about_IN the_DT words_NNS ._.
+Given_VBN an_DT embedding_VBG matrix_NN Wwrd_VBD Rdw_NNP |_CD V_NNP |_NN ,_, where_WRB V_NNP is_VBZ the_DT size_NN of_IN word_NN vocabulary_NN ._.
+Each_DT word_NN w_NN has_VBZ its_PRP$ embedding_NN by_IN using_VBG the_DT matrix-vector_JJ product_NN :_: rw_VB Wwrdvw_NNP where_WRB vw_NN is_VBZ one-hot_JJ represenation_NN ,_, to_TO get_VB one_CD column_NN of_IN the_DT matrix_NN Wwrd_NNP ._.
+The_DT size_NN of_IN the_DT word_NN embedding_VBG dw_NN is_VBZ a_DT hy_SYM -_: perparameter_NN ,_, which_WDT is_VBZ usually_RB set_VBN 50_CD or_CC 100_CD ._.
+For_IN other_JJ kinds_NNS of_IN initial_JJ features_NNS ,_, we_PRP also_RB trans_VBZ -_: form_VB them_PRP into_IN a_DT vector_NN representation_NN rkj_NN ,_, where_WRB j_NN means_VBZ the_DT jth_NN type_NN of_IN feature_NN ,_, the_DT dimension_NN is_VBZ dkj_NN ._.
+The_DT initial_JJ value_NN of_IN the_DT vector_NN is_VBZ random_JJ generated_VBN with_IN the_DT method_NN proposed_VBN by_IN Glorot_NNP and_CC Bengio_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- ._.
+Given_VBN a_DT sentence_NN x_LS =_SYM -LCB-_-LRB- w1_CD ,_, w2_CD ,_, ..._: ,_, wn_JJ -RCB-_-RRB- ,_, all_PDT the_DT initial_JJ feature_NN embeddings_NNS are_VBP concatenated_VBN according_VBG to_TO the_DT following_VBG format_NN to_TO represent_VB each_DT word_NN :_: =[_CD ,_, 1_CD ,_, 2_CD ..._: ,_, -RSB-_NNP where_WRB isthewordembeddingofwordxi_NNS ,_, is_VBZ embedding_VBG of_IN the_DT jth_NN types_NNS of_IN features_NNS ._.
+The_DT parameter_NN m_NN is_VBZ the_DT size_NN of_IN features_NNS ._.
+Its_PRP$ value_NN is_VBZ 6_CD in_IN this_DT paper_NN ,_, because_IN we_PRP choose_VBP the_DT fol_NN -_: lowing_VBG six_CD kinds_NNS of_IN features_NNS :_: POS_NNP ,_, NER_NNP ,_, hyper_JJ -_: nyms_NNS -LRB-_-LRB- WNSYN_NNP -RRB-_-RRB- ,_, position_NN feature_NN -LRB-_-LRB- PF_NNP -RRB-_-RRB- ,_, depend_VBP -_: ency_NN feature_NN -LRB-_-LRB- Dep_NNP -RRB-_-RRB- ,_, relative-dependency_NN feature_NN -LRB-_-LRB- Relative-Dep_NNP -RRB-_-RRB- ._.
+4.3_CD BLSTM-based_JJ Sentence_NN Level_NNP Repre_NNP -_: sentation_NN It_PRP is_VBZ well_RB known_VBN that_IN humans_NNS can_MD exploit_VB longer_JJR context_NN to_TO mine_VB the_DT relationship_NN of_IN two_CD nominals_NNS in_IN a_DT sentence_NN ._.
+LSTM_NNP has_VBZ shown_VBN its_PRP$ merit_NN on_IN cap_NN -_: turing_VBG long_JJ distance_NN relationship_NN in_IN different_JJ fields_NNS ._.
+With_IN this_DT motivation_NN ,_, we_PRP adopt_VBP BLSTM_NNP to_TO get_VB the_DT sentence_NN level_NN representation_NN ._.
+The_DT LSTM_NNP equations_NNS are_VBP given_VBN for_IN a_DT single_JJ memory_NN block_NN ._.
+Input_NNP Gates_NNP :_: =_SYM -LRB-_-LRB- +_FW h_FW h_FW −_FW 1_CD +_CD −_NN 1_CD +_NN -RRB-_-RRB- Forget_VBP Gates_NNP :_: =_SYM -LRB-_-LRB- +_FW h_FW h_FW −_FW 1_CD +_CD −_NN 1_CD +_NN -RRB-_-RRB- Cells_NNPS :_: =_SYM −_SYM 1_CD +_CD tanh_NN -LRB-_-LRB- +_FW h_FW h_FW −_FW 1_CD +_CD -RRB-_-RRB- Output_NN gates_NNS :_: =_SYM -LRB-_-LRB- +_FW h_FW h_FW −_FW 1_CD +_CD +_NN -RRB-_-RRB- output_NN of_IN BLSTM_NNP layer_NN ._.
+As_IN shown_VBN in_IN Figure_NN 5_CD ,_, the_DT matrix_NN got_VBD from_IN BLSTM_NNP could_MD be_VB divided_VBN into_IN A_DT ,_, B_NNP and_CC C_NNP parts_NNS by_IN e1_CD and_CC e2_CD ._.
+Max_NNP pooling_VBG operation_NN is_VBZ adopted_VBN to_TO extract_VB the_DT vector_NN from_IN A_DT and_CC B_NNP parts_NNS ,_, B_NNP and_CC C_NNP parts_NNS respectively_RB ._.
+The_DT vector_NN m1_CD and_CC m2_CD is_VBZ concatenated_VBN to_TO form_VB the_DT sentence_NN level_NN repre_NN -_: sentation_NN ._.
+Cell_NNP Outputs_NNPS :_: h_VB =_SYM tanh_IN Fig._NNP 5_CD ._.
+Constructing_VBG sentence_NN level_NN feature_NN vector_NN The_DT motivation_NN of_IN constructing_VBG sentence_NN level_NN in_IN this_DT way_NN is_VBZ to_TO strengthen_VB the_DT influence_NN of_IN the_DT context_NN between_IN two_CD entities_NNS ,_, which_WDT are_VBP usually_RB contained_VBN more_JJR information_NN for_IN indicating_VBG the_DT re_NN -_: lationship_NN ._.
+4.5_CD Classifying_VBG A_DT multilayer_JJ perceptron_NN -LRB-_-LRB- MLP_NNP -RRB-_-RRB- will_MD be_VB used_VBN for_IN combining_VBG sentence_NN level_NN feature_NN and_CC lexical_JJ fea_NN -_: ture_NN into_IN the_DT final_JJ extracted_VBN feature_NN vector_NN ._.
+Finally_RB ,_, the_DT final_JJ extracted_VBN features_NNS are_VBP fed_VBN into_IN a_DT softmax_JJ classifier_NN to_TO predict_VB the_DT sematic_JJ relation_NN labels_NNS ._.
+5_CD Experiments_NNS 5.1_CD Data_NNP and_CC metrics_NNS Experiments_NNS are_VBP conducted_VBN on_IN the_DT SemEval-2010_NNP task_NN 8_CD dataset_NN -LRB-_-LRB- Hendrickx_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+It_PRP includes_VBZ 8,000_CD training_NN instances_NNS and_CC 2,717_CD test_NN instances_NNS ._.
+There_EX are_VBP 9_CD relation_NN types_NNS ,_, and_CC each_DT type_NN has_VBZ two_CD directions_NNS ._.
+If_IN the_DT instance_NN could_MD not_RB refer_VB to_TO any_DT of_IN 9_CD relation_NN types_NNS ,_, there_EX is_VBZ a_DT type_NN Other_JJ ._.
+We_PRP adopt_VBP the_DT official_JJ evaluation_NN metric_JJ to_TO eval_VB -_: uate_VB our_PRP$ systems_NNS ,_, which_WDT is_VBZ based_VBN on_IN macro-aver_NN -_: aged_VBN F1-score_NN for_IN the_DT nine_CD proper_JJ relations_NNS and_CC others_NNS ._.
+5.2_CD Experiments_NNS setting_VBG The_DT dimension_NN of_IN feature_NN embeddings_NNS used_VBN in_IN the_DT experiments_NNS are_VBP listed_VBN in_IN the_DT following_NN ._.
+Table_NNP 1_CD ._.
+Embedding_VBG dimension_NN where_WRB σ_NN is_VBZ the_DT activation_NN function_NN ,_, and_CC i_FW ,_, f_LS ,_, o_NN and_CC c_NN are_VBP respectively_RB the_DT input_NN gate_NN ,_, forget_VB gate_NN ,_, output_NN gate_NN and_CC memory_NN cell_NN ._.
+As_IN shown_VBN in_IN Figure_NN 2_CD ,_, the_DT network_NN contained_VBD two_CD sub-networks_NNS for_IN the_DT left_NN and_CC right_JJ sequence_NN context_NN ._.
+The_DT outputs_NNS of_IN these_DT subnets_NNS for_IN the_DT ith_NN word_NN are_VBP integrated_VBN in_IN the_DT following_JJ way_NN :_: =[_CD __CD h_NN ,_, __CD ,_, __CD h_NN ,_, __CD h_NN -RSB-_NNP where_WRB F_NN and_CC B_NNP refer_VBP to_TO forward_RB and_CC backward_RB di_FW -_: rections_NNS ._.
+4.4_CD Constructing_VBG Feature_NNP Vector_NNP Inspired_VBN by_IN the_DT work_NN from_IN Zeng_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, we_PRP extract_VBP and_CC concatenate_VBP sentence_NN level_NN features_NNS and_CC lexical_JJ level_NN features_NNS to_TO form_VB the_DT finally_RB ex_FW -_: tracted_VBN feature_NN vector_NN ._.
+Lexical_JJ level_NN features_NNS are_VBP focused_VBN on_IN the_DT two_CD target_NN nominals_NNS e1and_VBD e2_CD ._.
+We_PRP concatenate_VBP the_DT vec_NN -_: tor_NN got_VBD from_IN feature_NN embeddings_NNS and_CC BLSTM_NNP layer_NN to_TO represent_VB the_DT two_CD nominals_NNS as_IN -LSB-_NNP xe1_CD ,_, Fe1_NNP ,_, xe2_CD ,_, Fe2_NNP -RSB-_NNP ._.
+Sentence_NN level_NN features_NNS are_VBP focused_VBN on_IN the_DT con_NN -_: text_NN information_NN ,_, which_WDT are_VBP constructed_VBN from_IN the_DT AB_NNP C_NNP Features_VBZ Embedding_NNP Dimension_NNP WF_NNP 50_CD ,_, 100_CD PF_NN 2_CD *_SYM 5_CD POS_NNP 20_CD NER_NNP 20_CD WNSYN_NNP 20_CD DEP_NNP 20_CD RELATIVE-DEP_NN 3_CD *_SYM 10_CD We_PRP select_VBP two_CD available_JJ trained_JJ word_NN embed_VBD -_: dings_NNS to_TO see_VB its_PRP$ influence_NN to_TO the_DT classification_NN per_IN -_: formance_NN ._.
+One_CD is_VBZ from_IN Turian_JJ et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- ,_, the_DT di_FW -_: mension_NN of_IN word_NN embedding_NN is_VBZ 50_CD ._.
+The_DT other_JJ is_VBZ from_IN Jeffrey_NNP Pennington_NNP et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, the_DT dimen_NNS -_: sion_NN of_IN word_NN embedding_NN is_VBZ 100_CD ._.
+As_IN shown_VBN in_IN the_DT above_JJ ,_, position_NN feature_NN -LRB-_-LRB- PF_NNP -RRB-_-RRB- contains_VBZ two_CD elements_NNS ,_, and_CC relative-dependency_NN feature_NN -LRB-_-LRB- Relative-Dep_NNP -RRB-_-RRB- contains_VBZ three_CD elements_NNS ._.
+Therefore_RB ,_, embedding_VBG dimension_NN of_IN PF_NNP is_VBZ 2_CD *_SYM 5_CD ,_, that_DT of_IN RELATIVE-DEP_NNP is_VBZ 3_CD *_SYM 10_CD ._.
+The_DT BLSTM_NNP layer_NN contains_VBZ 400_CD units_NNS for_IN each_DT direction_NN ,_, and_CC MLP_NNP layer_NN contains_VBZ 1000_CD units_NNS ._.
+5.3_CD Results_NNS and_CC Analysis_NNP Firstly_NNP ,_, we_PRP testify_VBP the_DT performance_NN of_IN proposed_VBN BLSTM-based_JJ method_NN with_IN two_CD feature_NN set_NN ._.
+One_CD only_RB uses_VBZ word_NN embedding_VBG as_IN input_NN ,_, the_DT other_JJ uses_NNS all_DT features_NNS shown_VBN in_IN section_NN 4.1_CD ._.
+We_PRP also_RB list_VBP the_DT results_NNS of_IN CNN_NNP and_CC CR-CNN_NNP methods_NNS as_IN refer_VBP -_: ence_NN ._.
+position_NN features_NNS ._.
+The_DT information_NN of_IN position_NN fea_NN -_: tures_NNS is_VBZ already_RB contained_VBN in_IN BLSTM_NNP networks_NNS ._.
+The_DT whole_NN features_NNS are_VBP considered_VBN from_IN lexical_JJ and_CC sentence_NN level_NN ._.
+The_DT performances_NNS of_IN remov_NN -_: ing_VBG PF_NNP or_CC NER_NNP feature_VBP do_VBP n't_RB change_VB obviously_RB ,_, maybe_RB the_DT information_NN they_PRP contained_VBD is_VBZ repre_NN -_: sented_VBN by_IN other_JJ features_NNS ._.
+Table_NNP 3_CD ._.
+Results_NNS of_IN removing_VBG one_CD kind_NN of_IN feature_NN Finally_RB ,_, we_PRP compare_VBP the_DT results_NNS in_IN different_JJ word_NN embedding_VBG size_NN ._.
+In_IN Table_NNP 4_CD we_PRP give_VBP the_DT re_SYM -_: sult_NN with_IN using_VBG word_NN embedding_NN of_IN size_NN 50_CD ._.
+It_PRP achieves_VBZ a_DT F1_NN of_IN 83.6_CD ,_, about_RB 0.7_CD %_NN less_JJR than_IN that_DT with_IN using_VBG word_NN embedding_NN of_IN size_NN 100_CD ,_, which_WDT shows_VBZ larger_JJR size_NN of_IN dimension_NN of_IN word_NN embed_VBD -_: ding_NN may_MD contain_VB more_JJR information_NN ,_, and_CC it_PRP could_MD improve_VB the_DT performance_NN ._.
+We_PRP also_RB compare_VBP the_DT LSTM_NNP based_VBN method_NN with_IN only_RB one_CD direction_NN such_JJ as_IN forward_RB or_CC backward_RB ._.
+The_DT results_NNS shows_VBZ BLSTM_NNP has_VBZ a_DT slight_JJ advantage_NN over_IN unidirectional_JJ LSTM_NNP ._.
+Compared_VBN with_IN proposed_VBN constructing_VBG sentence_NN level_NN feature_NN vector_NN in_IN figure_NN 5_CD ,_, we_PRP use_VBP Max_NNP pool_NN -_: ing_NN operation_NN directly_RB from_IN A+B+C_NNP parts_NNS ._.
+The_DT re_SYM -_: sult_NN shows_NNS F1_CD of_IN 83.1_CD ,_, which_WDT is_VBZ lower_JJR than_IN our_PRP$ method_NN with_IN F1_CD of_IN 83.6_CD ._.
+It_PRP proves_VBZ that_IN our_PRP$ pro-_JJ posed_VBD method_NN is_VBZ effective_JJ ._.
+Table_NNP 4_CD ._.
+Results_NNS of_IN removing_VBG one_CD kind_NN of_IN feature_NN 6_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP propose_VBP bidirectional_JJ long_JJ short_JJ -_: term_NN memory_NN networks_NNS -LRB-_-LRB- BLSTM_NNP -RRB-_-RRB- to_TO solve_VB the_DT re_NN -_: lation_NN classification_NN ._.
+BLSTM_NNP is_VBZ proposed_VBN to_TO mine_VB the_DT sentence_NN level_NN representation_NN ._.
+The_DT experiment_NN results_NNS show_VBP that_IN only_RB using_VBG word_NN embedding_VBG as_IN input_NN features_NNS is_VBZ enough_RB to_TO achieve_VB state-of-the-art_JJ results_NNS ._.
+Importing_VBG more_JJR features_NNS could_MD further_RBR im_SYM -_: prove_VB the_DT performance_NN of_IN the_DT relation_NN classifica_NN -_: tion_NN ._.
+Removed_VBN Feature_NNP F1_CD PF_NNP 84.2_CD POS_NNP 83.9_CD NER_NNP 84.2_CD WNSYN_NNP 83.2_CD DEP_NNP 83.5_CD Model_NNP Feature_NNP Set_NNP F1_NNP CNN_NNP -LRB-_-LRB- Zeng_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- Only_RB word_NN embeddings_NNS word_NN embeddings_NNS ,_, word_NN posi_SYM -_: tion_NN embeddings_NNS ,_, word_NN pair_NN ,_, words_NNS around_IN word_NN pair_NN ,_, Word_NN -_: Net_JJ 69.7_CD 82.7_CD CR-CNN_NNP -LRB-_-LRB- Santos_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- Only_RB word_NN embeddings_NNS word_NN embeddings_NNS ,_, word_NN posi_SYM -_: tion_NN embeddings_NNS 82.8_CD 84.1_CD BLSTM_NNP Only_RB word_NN embedding_VBG -LRB-_-LRB- 100_CD -RRB-_-RRB- All_DT features_NNS 82.7_CD 84.3_CD Table_NNP 2_CD ._.
+Comparison_NN with_IN previously_RB published_VBN results_NNS In_IN table_NN 2_CD ,_, only_RB using_VBG word_NN embedding_VBG as_IN input_NN features_NNS ,_, BLSTM-based_JJ method_NN achieves_VBZ F1_CD of_IN 82.7_CD ,_, which_WDT is_VBZ similar_JJ to_TO the_DT results_NNS of_IN CNN_NNP with_IN multiple_JJ features_NNS ,_, and_CC CR-CNN_NN with_IN only_JJ word_NN embedding_VBG features_NNS ._.
+However_RB ,_, CR_CNN_NNP use_NN word_NN embeddings_NNS of_IN size_NN 400_CD ,_, our_PRP$ method_NN use_NN word_NN embeddings_NNS of_IN size_NN 100_CD ._.
+It_PRP proves_VBZ that_IN BLSTM-based_JJ method_NN is_VBZ effective_JJ to_TO mine_VB the_DT re_NN -_: lationship_NN between_IN two_CD nominals_NNS ._.
+With_IN more_JJR fea_NN -_: tures_NNS ,_, the_DT performance_NN achieves_VBZ F1_CD of_IN 84.3_CD ,_, which_WDT testifies_VBZ general_JJ features_NNS gotten_VBN from_IN NLP_NNP tools_NNS could_MD improve_VB the_DT classification_NN performance_NN ._.
+Secondly_RB ,_, we_PRP testify_VBP the_DT influence_NN of_IN different_JJ features_NNS for_IN the_DT classification_NN by_IN removing_VBG one_CD type_NN of_IN features_NNS from_IN feature_NN set_VBN in_IN each_DT time_NN ._.
+From_IN Table_NNP 3_CD ,_, we_PRP see_VBP that_IN the_DT performance_NN has_VBZ very_RB slight_JJ change_NN by_IN removing_VBG position_NN and_CC NER_NNP features_NNS ._.
+It_PRP shows_VBZ that_IN BLSTM_NNP has_VBZ better_JJR repre_NN -_: sentation_NN on_IN sentence_NN level_NN relationship_NN without_IN Model_NNP -LRB-_-LRB- word_NN embedding_VBG 50_CD -RRB-_-RRB- F1_CD BLSTM_NNP 83.6_CD Forward-LSTM_NNP 82.1_CD Backward-LSTM_NNP 82.4_CD Single-max_NN model_NN 83.1_CD Reference_NNP Bryan_NNP Rink_NNP and_CC Sanda_NNP Harabagiu_NNP ._.
+2010_CD ._.
+UTD_NNP :_: Classi_NNP -_: fying_VBG Semantic_NNP Relations_NNP by_IN Combining_NNP Lexical_NNP and_CC Semantic_NNP Resources_NNPS ._.
+In_IN Proceedings_NNP of_IN 5th_JJ Interna_NNP -_: tional_JJ Workshop_NNP on_IN Semantic_NNP Evaluation_NNP ,_, pages_NNS 256_CD --_: 259_CD ._.
+Daojian_NNP Zeng_NNP ,_, Kang_NNP Liu_NNP ,_, Siwei_NNP Lai_NNP ,_, Guangyou_NNP Zhou_NNP ,_, and_CC Jun_NNP Zhao_NNP ._.
+2014_CD ._.
+Relation_NN Classification_NN via_IN Convolutional_NNP Deep_NNP Neural_NNP Network_NNP ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 25th_JJ International_NNP Conference_NNP on_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- COLING_NNP -RRB-_-RRB- ,_, pages_NNS 2335_CD --_: 2344_CD ._.
+Iris_NNP Hendrickx_NNP ,_, Su_NNP Nam_NNP Kim_NNP ,_, Zornitsa_NNP Kozareva_NNP ,_, Preslav_NNP Nakov_NNP ,_, Diarmuid_NNP Ó_NNP Séaghdha_NNP ,_, Sebastian_NNP Padó_NNP ,_, Marco_NNP Pennacchiotti_NNP ,_, Lorenza_NNP Romano_NNP ,_, and_CC Stan_NNP Szpakowicz_NNP ._.
+2010_CD ._.
+Semeval-2010_NNP Task_NNP 8_CD :_: Multi-way_JJ Classification_NN of_IN Semantic_NNP Relations_NNP Be_VB -_: tween_NN Pairs_NNP of_IN Nominals_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 5th_JJ International_NNP Workshop_NNP on_IN Semantic_NNP Evaluation_NNP ,_, pages_NNS 33_CD --_: 38_CD ._.
+Richard_NNP Socher_NNP ,_, Brody_NNP Huval_NNP ,_, Christopher_NNP D._NNP Manning_NNP ,_, and_CC Andrew_NNP Y._NNP Ng_NNP ._.
+2012_CD ._.
+Semantic_NNP Compositional_NNP -_: ity_NN through_IN Recursive_JJ Matrix-Vector_NNP Spaces_NNPS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Joint_NNP Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP and_CC Com_NNP -_: putational_JJ Natural_JJ Language_NN Learning_NNP ,_, pages_NNS 1201_CD --_: 1211_CD ._.
+Yang_NNP Liu_NNP ,_, Furu_NNP Wei_NNP ,_, Sujian_NNP Li_NNP ,_, Heng_NNP Ji_NNP ,_, Ming_NNP Zhou_NNP ,_, and_CC Houfeng_NNP Wang_NNP ._.
+2015_CD ._.
+A_DT Dependency-based_JJ Neural_NNP Network_NNP for_IN Relation_NNP Classification_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 53rd_CD Annual_JJ Meeting_VBG of_IN the_DT Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNPS and_CC the_DT 7th_CD In_IN -_: ternational_JJ Joint_NNP Conference_NN on_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- Short_NNP Papers_NNP -RRB-_-RRB- ,_, pages_NNS 285-290_CD ._.
+Cícero_NNP Nogueira_NNP dos_VBZ Santos_NNP ,_, Bing_NNP Xiang_NNP ,_, and_CC Bowen_NNP Zhou_NNP ._.
+2015_CD ._.
+Classifying_VBG Relations_NNS by_IN Ranking_VBG with_IN Convolutional_NNP Neural_NNP Networks_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 53rd_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS and_CC the_DT 7th_NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, pages_NNS 626_CD --_: 634_CD ._.
+Alex_NNP Graves_NNP ,_, Marcus_NNP Liwicki_NNP ,_, Santiago_NNP Fernández_NNP ,_, Roman_NNP Bertolami_NNP ,_, Horst_NNP Bunke_NNP ,_, Jürgen_NNP Schmidhu_NNP -_: ber_NN ._.
+2009_CD ._.
+A_DT Novel_NNP Connectionist_NNP System_NNP for_IN Im_NNP -_: proved_VBD Unconstrained_NNP Handwriting_NNP Recognition_NNP ._.
+IEEE_NNP Transactions_NNS on_IN Pattern_NNP Analysis_NNP and_CC Machine_NNP Intelligence_NNP ,_, 31_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: 855-868_CD ._.
+Alex_NNP Graves_NNP ,_, Abdel-rahman_NNP Mohamed_NNP ,_, and_CC Geoffrey_NNP Hinton_NNP ._.
+2013_CD ._.
+Speech_NN Recognition_NN with_IN Deep_JJ Re_NNP -_: current_JJ Neural_NNP Networks_NNP ._.
+IEEE_NNP International_NNP Con_NN -_: ference_NN on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP -LRB-_-LRB- ICASSP_NNP -RRB-_-RRB- ,_, pages_NNS 6645_CD --_: 6649_CD ._.
+Joseph_NNP Turian_NNP ,_, Lev_NNP Ratinov_NNP ,_, and_CC Yoshua_NNP Bengio_NNP ._.
+2010_CD ._.
+Word_NN Representations_NNS :_: A_DT Simple_NN and_CC General_NNP Method_NNP for_IN Semi-Supervised_NNP Learning_NNP ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 48th_JJ annual_JJ meeting_NN of_IN the_DT association_NN for_IN computational_JJ linguistics_NNS ,_, pages_NNS 384-394_CD ._.
+Jeffrey_NNP Pennington_NNP ,_, Richard_NNP Socher_NNP ,_, and_CC Christopher_NNP Manning_NNP ._.
+2014_CD ._.
+GloVe_NN :_: Global_NNP Vectors_NNP for_IN Word_NNP Representation_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP ,_, pages_NNS 1532-1543_CD ._.
+Xavier_NNP Glorot_NNP and_CC Yoshua_NNP Bengio_NNP ._.
+2010_CD ._.
+Understand_NN -_: ing_VBG the_DT Difficulty_NN of_IN Training_VBG Deep_JJ Feedforward_NNP Neural_NNP Networks_NNP ._.
+International_NNP conference_NN on_IN artifi_NN -_: cial_JJ intelligence_NN and_CC statistics_NNS ,_, pages_NNS 249-256_CD ._.
+Mo_NNP Yu_NNP ,_, Matthew_NNP R._NNP Gormley_NNP ,_, and_CC Mark_NNP Dredze_NNP ._.
+2014_CD ._.
+Factor-based_JJ Compositional_NNP Embedding_NNP Models_NNPS ._.
+In_IN NIPS_NNP Workshop_NNP on_IN Learning_NNP Semantics_NNPS ._.
+Sepp_NNP Hochreiter_NNP and_CC Jürgen_NNP Schmidhuber_NNP ._.
+1997_CD ._.
+Long_NNP Short-Term_NNP Memory_NN ._.
+Neural_NNP Computation_NNP ,_, 9_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :1735_CD --_: 1780_CD ._.
+Sepp_NNP Hochreiter_NNP ,_, Yoshua_NNP Bengio_NNP ,_, Paolo_NNP Frasconi_NNP ,_, and_CC Jürgen_NNP Schmidhuber_NNP ._.
+2001_CD ._.
+Gradient_NNP Flow_NNP in_IN Recur_NNP -_: rent_VB Nets_NNS :_: the_DT Difficulty_NNP of_IN Learning_NNP Long-Term_NNP Dependencies_NNPS ._.
+In_IN Kremer_NNP ,_, S._NNP C.and_NNP Kolen_NNP ,_, J._NNP F._NNP ,_, ed_SYM -_: itors_NNS ,_, A_DT Field_NNP Guide_NNP to_TO Dynamical_NNP Recurrent_NNP Neural_NNP Networks_NNP ._.
+IEEE_NNP Press_NNP ._.
+Felix_NNP A._NNP Gers_NNP ,_, Nicol_NNP N._NNP Schraudolph_NNP ,_, and_CC Jürgen_NNP Schmidhuber_NNP ._.
+2002_CD ._.
+Learning_NNP Precise_NNP Timing_NN with_IN LSTM_NNP Recurrent_NNP Networks_NNP ._.
+Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 3:115_CD --_: 143_CD ._.

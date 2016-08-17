@@ -1,0 +1,162 @@
+RESEARCH_NNP ON_NNP CHINESE_NNP QUESTION_NNP PROCESSING_NNP TOWARD_IN DOMAIN-SPECIFIC_NNP QUESTION_NNP ANSWERING_NNP SYSTEM_NNP Abstract_NNP :_: This_DT paper_NN presents_VBZ a_DT new_JJ thinking_NN on_IN the_DT processing_NN of_IN Chinese_JJ questions_NNS when_WRB the_DT restricted-domain_JJ question_NN answering_VBG system_NN is_VBZ built_VBN ._.
+Chinese_NNP is_VBZ thought_VBN to_TO be_VB one_CD of_IN the_DT most_RBS difficult_JJ languages_NNS to_TO deal_VB with_IN ,_, because_IN the_DT part-of_NN --_: speech_NN of_IN a_DT Chinese_JJ word_NN is_VBZ hard_JJ to_TO judge_VB unless_IN it_PRP 's_VBZ in_IN the_DT context_NN ,_, and_CC also_RB the_DT syntactic_NN structure_NN is_VBZ variable_JJ ._.
+This_DT paper_NN at_IN first_JJ analyses_NNS the_DT characteristics_NNS of_IN the_DT language_NN of_IN Chinese_JJ and_CC then_RB constructs_VBZ the_DT proper_JJ templates_NNS for_IN the_DT question_NN processing_NN ._.
+At_IN last_JJ ,_, a_DT demo_NN restricted-domain_JJ question_NN answering_VBG system_NN is_VBZ built_VBN to_TO check_VB the_DT feasibility_NN and_CC accuracy_NN of_IN the_DT question_NN processing_NN method_NN ._.
+Keywords_NNS :_: domain-specific_JJ question_NN answering_VBG system_NN ,_, Chinese_JJ query_NN processing_NN ,_, Vietnamese_JJ military_JJ ,_, ontological_JJ knowledge_NN base_NN 1_CD Introduction_NNP In_IN the_DT last_JJ decade_NN ,_, the_DT information_NN on_IN the_DT Internet_NNP has_VBZ grown_VBN exponentially_RB ._.
+People_NNS can_MD find_VB whatever_WDT they_PRP want_VBP from_IN the_DT Internet_NNP ,_, but_CC at_IN the_DT same_JJ time_NN ,_, they_PRP ask_VBP for_IN high_JJ quality_NN and_CC relevance_NN of_IN the_DT information_NN ._.
+Under_IN this_DT background_NN ,_, Information_NNP Retrieval_NNP -LRB-_-LRB- IR_NNP -RRB-_-RRB- begins_VBZ to_TO show_VB its_PRP$ potential_JJ value_NN ._.
+Several_JJ big_JJ corporations_NNS have_VBP joined_VBN the_DT research_NN of_IN search_NN engine_NN ,_, such_JJ as_IN Google_NNP ,_, Yahoo_NNP and_CC Baidu_NNP ._.
+Each_DT of_IN them_PRP has_VBZ developed_VBN wide-used_JJ search_NN engine_NN ._.
+As_IN semantic_JJ markup_NN becomes_VBZ ubiquitous_JJ ,_, it_PRP has_VBZ been_VBN possible_JJ to_TO ask_VB the_DT search_NN engine_NN questions_NNS in_IN natural_JJ language_NN ._.
+It_PRP will_MD be_VB more_RBR convenient_JJ than_IN the_DT traditional_JJ search_NN engines_NNS that_WDT based_VBN on_IN keyword_NN retrieval_NN mechanism_NN ._.
+Question_NN answering_NN system_NN -LRB-_-LRB- QA_NNP -RRB-_-RRB- is_VBZ another_DT form_NN of_IN IR_NNP ,_, which_WDT is_VBZ different_JJ from_IN the_DT traditional_JJ search_NN engine_NN ._.
+The_DT technique_NN of_IN traditional_JJ engine_NN is_VBZ based_VBN on_IN keyword_NN matching_NN ._.
+But_CC the_DT key_JJ word_NN only_RB can_MD not_RB explain_VB clearly_RB the_DT user_NN 's_POS intention_NN of_IN search_NN ._.
+Question_NN answering_NN system_NN allows_VBZ the_DT users_NNS to_TO apply_VB natural_JJ language_NN when_WRB they_PRP ask_VBP questions_NNS ,_, so_IN the_DT users_NNS can_MD explain_VB themselves_PRP clearly_RB ._.
+The_DT results_NNS given_VBN by_IN the_DT keyword-based_JJ search_NN engines_NNS are_VBP always_RB websites_NNS or_CC texts_NNS about_IN the_DT keyword_NN ,_, so_IN the_DT users_NNS have_VBP to_TO find_VB what_WP they_PRP want_VBP by_IN reading_VBG these_DT websites_NNS or_CC texts_NNS ._.
+But_CC the_DT answers_NNS give_VBP by_IN QA_NNP are_VBP in_IN natural_JJ language_NN ,_, which_WDT can_MD save_VB a_DT lot_NN of_IN time_NN for_IN the_DT users_NNS ._.
+According_VBG to_TO the_DT domain_NN the_DT QA_NNP concerns_NNS ,_, the_DT question_NN answering_VBG systems_NNS can_MD be_VB divided_VBN into_IN open-domain_JJ question_NN answering_VBG system_NN and_CC restricted-domain_JJ question_NN answering_VBG system_NN ._.
+While_IN according_VBG to_TO the_DT database_NN the_DT system_NN based_VBN on_IN ,_, they_PRP can_MD be_VB roughly_RB divided_VBN into_IN five_CD kinds_NNS :_: Chatbot_NNP ,_, QA_NNP based_VBN on_IN knowledge_NN base_NN ,_, question_NN answering_NN retrieval_NN system_NN ,_, QA_NNP based_VBN on_IN free_JJ text_NN and_CC QA_NNP based_VBN on_IN free_JJ text_NN and_CC knowledge_NN base_NN ._.
+The_DT QA_NNP based_VBN on_IN ontology_NN belongs_VBZ to_TO the_DT QA_NNP based_VBN on_IN knowledge_NN base_NN ._.
+In_IN this_DT paper_NN ,_, a_DT QA_NNP based_VBN on_IN ontology_NN is_VBZ applied_VBN to_TO test_VB the_DT effect_NN of_IN the_DT question_NN processing_NN method_NN which_WDT is_VBZ proposed_VBN here_RB ._.
+2_CD Recent_JJ research_NN Both_DT in_IN China_NNP and_CC overseas_RB now_RB put_VB much_JJ focus_NN on_IN the_DT research_NN on_IN ontology-driven_JJ question_NN answering_VBG system_NN ._.
+The_DT ontology_NN driven_VBN question_NN answering_VBG system_NN has_VBZ several_JJ advantages_NNS when_WRB compared_VBN with_IN the_DT QA_NNP based_VBN on_IN free_JJ text_NN and_CC the_DT question_NN answering_VBG retrieval_NN system_NN ._.
+The_DT semantic_JJ information_NN can_MD be_VB stored_VBN in_IN a_DT structured_JJ knowledge_NN base_NN ._.
+The_DT ontology_NN allows_VBZ the_DT definition_NN of_IN class_NN hierarchies_NNS ,_, object_VBP properties_NNS and_CC relation_NN rules_NNS ,_, such_JJ as_IN ,_, transitivity_NN or_CC functionality_NN -LSB-_NN 2_CD -RSB-_NNP ._.
+In_IN China_NNP ,_, a_DT research_NN group_NN headed_VBN by_IN Cungen_NNP Cao_NNP has_VBZ established_VBN the_DT NKI_NNP question_NN answering_VBG system_NN ._.
+The_DT users_NNS can_MD use_VB natural_JJ language_NN to_TO ask_VB questions_NNS like_IN ``_`` 今天北京的天气如何_NN ''_'' ,_, ``_`` 傣_FW 族有多少人_FW ''_'' ._.
+Yun_NNP Zhao_NNP and_CC Xiaozhong_NNP Fan_NNP ,_, from_IN Beijing_NNP Institute_NNP of_IN Technology_NNP ,_, has_VBZ applied_VBN transition_NN network_NN in_IN the_DT ontology_NN and_CC search_NN for_IN the_DT answers_NNS by_IN reasoning_NN ._.
+In_IN China_NNP ,_, there_EX are_VBP many_JJ other_JJ researches_VBZ focus_NN on_IN the_DT question_NN answering_VBG system_NN based_VBN on_IN ontology_NN ,_, but_CC question_NN processing_NN is_VBZ still_RB one_CD of_IN the_DT most_RBS difficult_JJ part_NN because_IN of_IN the_DT variability_NN of_IN Chinese_NNP ._.
+Beyond_IN China_NNP ,_, many_JJ well-known_JJ question_NN answering_VBG systems_NNS have_VBP been_VBN developed_VBN ,_, such_JJ as_IN AquaLog_NNP ,_, which_WDT is_VBZ a_DT portable_JJ question_NN answering_VBG system_NN taking_VBG queries_NNS expressed_VBN in_IN natural_JJ language_NN and_CC returns_NNS answers_NNS drawn_VBN from_IN the_DT available_JJ ontology-compliant_JJ semantic_JJ markup_NN -LSB-_NN 3_CD -RSB-_NNP ._.
+And_CC QuestIO_NNP system_NN is_VBZ a_DT natural_JJ language_NN interface_NN for_IN accession_NN structured_VBN information_NN ,_, which_WDT is_VBZ domain_NN independent_JJ and_CC easy_JJ to_TO use_VB without_IN chaining_VBG -LSB-_NNP 4_CD -RSB-_NNP ._.
+There_EX are_VBP also_RB many_JJ other_JJ QA_NNP based_VBN on_IN ontology_NN ,_, such_JJ as_IN Shiyan_NNP ,_, QACID_NNP ,_, PowerAqua_NNP ,_, etc._FW 3_CD Sentence_NN patterns_NNS of_IN Chinese_JJ questions_NNS English_JJ and_CC many_JJ other_JJ Indo-European_JJ languages_NNS tend_VBP to_TO remove_VB the_DT interrogative_JJ words_NNS to_TO the_DT Complementizer_NNP Phrase_NNP -LRB-_-LRB- CP_NNP -RRB-_-RRB- ._.
+For_IN example_NN :_: A._NN John_NNP knows_VBZ who_WP likes_VBZ Mary_NNP ._.
+-LRB-_-LRB- 约翰知道谁喜_CD 欢玛丽_CD 。_NN -RRB-_-RRB- B._NNP Who_WP does_VBZ John_NNP think_VBP likes_VBZ Mary_NNP ?_.
+-LRB-_-LRB- 约翰认为_CD 谁喜欢玛丽_CD ?_. -RRB-_-RRB-
+Sentence_NN A_DT is_VBZ called_VBN an_DT indirect_JJ question_NN ,_, which_WDT is_VBZ actually_RB a_DT declarative_JJ sentence_NN ,_, while_IN sentence_NN B_NN is_VBZ a_DT direct_JJ question_NN ._.
+They_PRP have_VBP the_DT same_JJ surface-structure_NN ,_, but_CC their_PRP$ deep-structure_NN is_VBZ different_JJ ._.
+We_PRP can_MD see_VB their_PRP$ deep-structure_NN as_IN follows_VBZ :_: A._NN -LSB-_NNP CP_NNP IP_NNP John_NNP knows_VBZ -LSB-_NNP CP_NNP whoi_FW -LSB-_NNP IP_NNP ti_FW likes_VBZ Mary_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP B._NNP -LSB-_NNP CP_NNP whoi_FW does_VBZ -LSB-_NNP IP_NNP John_NNP think_VBP -LSB-_NNP CP_NNP t_NN '_'' i_FW -LSB-_FW IP_FW ti_FW likes_VBZ Mary_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP -RSB-_NNP In_IN sentence_NN A_DT ,_, ``_`` who_WP ''_'' is_VBZ in_IN the_DT clause_NN of_IN ``_`` knows_VBZ ''_'' ,_, so_IN it_PRP has_VBZ a_DT narrow_JJ scope_NN of_IN effect_NN ._.
+But_CC ``_`` who_WP ''_'' has_VBZ a_DT wide_JJ scope_NN of_IN effect_NN ,_, because_IN it_PRP makes_VBZ the_DT whole_JJ sentence_NN a_DT direct_JJ question_NN ._.
+The_DT displacement_NN of_IN ``_`` who_WP ''_'' gives_VBZ the_DT two_CD sentences_NNS different_JJ meanings_NNS ._.
+But_CC in_IN Chinese_JJ ,_, there_EX is_VBZ no_DT visible_JJ displacement_NN of_IN interrogative_JJ ._.
+For_IN example_NN :_: C._NNP 你喜欢谁_CD ?_.
+-LRB-_-LRB- Who_WP do_VBP you_PRP like_IN ?_. -RRB-_-RRB-
+D._NNP *_SYM 谁你喜欢_CD ?_.
+The_DT expression_NN of_IN D_NNP does_VBZ not_RB exit_NN ,_, so_RB in_IN sentence_NN C_$ we_PRP can_MD find_VB that_IN the_DT interrogative_JJ does_VBZ not_RB need_VB to_TO change_VB its_PRP$ place_NN ._.
+So_IN we_PRP can_MD assume_VB that_IN a_DT declarative_JJ sentence_NN can_MD be_VB changed_VBN into_IN a_DT question_NN without_IN changing_VBG the_DT word_NN order_NN ._.
+In_IN Chinese_NNP ,_, questions_NNS can_MD be_VB divided_VBN into_IN the_DT following_JJ sentence_NN patterns_NNS :_: yes-no_JJ questions_NNS ,_, specific_JJ questions_NNS ,_, positive-negative_JJ questions_NNS ,_, and_CC select_JJ questions_NNS ._.
+Yes-no_JJ questions_NNS refer_VBP to_TO the_DT questions_NNS that_IN we_PRP can_MD use_VB ``_`` yes_UH ''_'' or_CC ``_`` no_DT ''_'' to_TO answer_VB ._.
+For_IN example_NN :_: E._NNP 他从美国回来了_CD ?_.
+-LRB-_-LRB- Has_VBZ he_PRP come_VB back_RB from_IN the_DT US_NNP ?_. -RRB-_-RRB-
+--_: --_: 是的_FW 。_FW /_FW 不是的_FW 。_FW -LRB-_-LRB- Yes_UH ._.
+/_CD No_DT ._. -RRB-_-RRB-
+If_IN we_PRP add_VBP modal_JJ particle_NN to_TO the_DT end_NN of_IN the_DT question_NN ,_, like_IN ``_`` 吗_FW /_FW 吧_FW ''_'' ,_, we_PRP can_MD see_VB more_JJR clearly_RB that_IN it_PRP is_VBZ a_DT question_NN ,_, because_IN the_DT sentence_NN has_VBZ the_DT same_JJ word_NN order_NN as_IN a_DT declarative_JJ sentence_NN ._.
+So_RB ,_, if_IN we_PRP want_VBP analyze_VB yes-no_JJ question_NN ,_, we_PRP can_MD just_RB analyze_VB the_DT declarative_JJ sentence_NN ._.
+Specific_JJ question_NN is_VBZ also_RB called_VBN wh-question_NN ,_, because_IN it_PRP uses_VBZ interrogative_JJ word_NN ``_`` wh_SYM -_: ''_'' to_TO replace_VB the_DT information_NN you_PRP want_VBP to_TO ask_VB ._.
+For_IN example_NN :_: F_NN :_: 越南的首都是哪里_CD ?_.
+-LRB-_-LRB- Where_WRB is_VBZ the_DT capital_NN of_IN Vietnam_NNP ?_. -RRB-_-RRB-
+--_: --_: 河内市_CD 。_NN -LRB-_-LRB- Hanoi_NNP ._. -RRB-_-RRB-
+If_IN we_PRP use_VBP 河内市_CD to_TO replace_VB 哪里_CD ,_, we_PRP can_MD find_VB out_RP that_IN the_DT question_NN is_VBZ turned_VBN into_IN a_DT declarative_JJ sentence_NN without_IN changing_VBG the_DT word_NN order_NN ._.
+When_WRB we_PRP process_VBP this_DT wh-question_NN ,_, we_PRP delete_VBP words_NNS begun_VBN with_IN wh_SYM -_: ,_, and_CC use_NN query_NN triple_RB <_CD Vietnam_NNP ,_, capital_NN ,_, ?_.
+>_CD to_TO express_VB this_DT question_NN and_CC map_VB it_PRP onto_IN the_DT ontology_JJ entities_NNS ._.
+The_DT word_NN order_NN of_IN the_DT query_NN triple_RB is_VBZ <_CD subject_JJ ,_, predicate_VB ,_, object_VB >_NN ._.
+In_IN daily_JJ life_NN ,_, we_PRP usually_RB ask_VBP question_NN about_IN the_DT subject_JJ and_CC object_NN ,_, so_RB there_EX are_VBP two_CD conditions_NNS :_: <_CD ?_.
+,_, predicate_VB ,_, object_VB >_CD and_CC <_CD subject_JJ ,_, predicate_VB ,_, ?_.
+>_NN ._.
+Positive-negative_JJ question_NN is_VBZ also_RB called_VBN A-not-A_NNP question_NN ._.
+A_DT can_MD be_VB referred_VBN to_TO verb_NN ,_, auxiliary_JJ ,_, adjective_JJ or_CC phrase_NN ._.
+Now_RB we_PRP list_VBP five_CD Chinese_JJ positive-negative_JJ questions_NNS here_RB :_: G._NNP 你知道这件事不知道这件事_NNP ?_.
+H._NNP 你知道这件事不知道_CD ?_.
+I._NN 你知道不知道这件事_CD ?_.
+J._NNP 你知不知道这件事_NNP ?_.
+K._NNP 你知道这件事不_CD ?_.
+All_PDT these_DT five_CD questions_NNS mean_VBP ``_`` Do_VBP you_PRP know_VB this_DT event_NN or_CC do_VB not_RB know_VB ?_. ''_''
+Usually_RB ``_`` yes_UH ''_'' or_CC ``_`` no_DT ''_'' is_VBZ used_VBN to_TO answer_VB positive-negative_JJ question_NN ._.
+List_NN out_IN the_DT A-not-A_NNP part_NN ,_, it_PRP can_MD be_VB found_VBN that_IN the_DT question_NN become_VB a_DT declarative_JJ sentence_NN ``_`` 你知道_FW 这件事_FW ''_'' ,_, and_CC the_DT answer_NN of_IN this_DT kind_NN of_IN question_NN is_VBZ ``_`` yes/no_JJ ''_'' ._.
+In_IN order_NN to_TO deal_VB with_IN these_DT five_CD questions_NNS ,_, first_RB we_PRP have_VBP to_TO eliminate_VB the_DT repeated_VBN elements_NNS and_CC restore_VB the_DT trunk_NN of_IN the_DT question_NN ._.
+Select_NNP questions_NNS always_RB follow_VBP the_DT pattern_NN ``_`` A_DT or_CC B_NNP ''_'' ,_, added_VBN by_IN the_DT modal_JJ particle_NN ``_`` 呢_FW ''_'' sometimes_RB ._.
+Under_IN certain_JJ circumstance_NN ,_, the_DT modal_JJ adverbs_NNS ``_`` 到底_FW ''_'' or_CC ``_`` 究竟_FW ''_'' are_VBP added_VBN into_IN the_DT question_NN ._.
+For_IN example_NN ,_, ``_`` 你到底是选_FW A_DT 还是选_CD B_NNP 呢_CD ''_'' ._.
+Like_IN the_DT positive-negative_JJ questions_NNS ,_, the_DT modal_JJ adverbs_NNS and_CC modal_JJ particle_NN have_VBP to_TO be_VB eliminated_VBN first_RB ,_, and_CC then_RB formalize_VB the_DT questions_NNS ._.
+For_IN example_NN :_: L._NNP 你到底是去教室还是去食堂_NNP ?_.
+After_IN the_DT preprocessing_NN of_IN the_DT question_NN ,_, it_PRP turns_VBZ into_IN the_DT sentence_NN ``_`` 你去教室去食堂_NN ''_'' ._.
+So_RB this_DT question_NN turns_VBZ into_IN two_CD declarative_JJ sentences_NNS --_: ``_`` 你去教室_FW ''_'' and_CC ``_`` 你去食堂_FW ''_'' ._.
+The_DT answer_NN of_IN this_DT question_NN is_VBZ to_TO choose_VB one_CD sentence_NN from_IN the_DT above_JJ two_CD ._.
+From_IN the_DT analysis_NN above_IN ,_, we_PRP can_MD find_VB that_IN we_PRP can_MD use_VB the_DT knowledge_NN of_IN declarative_JJ sentences_NNS to_TO deal_VB with_IN questions_NNS ._.
+When_WRB we_PRP deal_VBP with_IN the_DT questions_NNS the_DT users_NNS input_NN ,_, first_RB we_PRP need_VBP to_TO use_VB segmentation_NN tool_NN to_TO segment_NN the_DT question_NN ._.
+In_IN our_PRP$ research_NN ,_, we_PRP use_VBP ICTCLAS_NNP to_TO segment_NN the_DT question_NN and_CC tag_VB the_DT part-of-speech_NN of_IN the_DT words_NNS ._.
+Then_RB a_DT list_NN of_IN stop_NN words_NNS is_VBZ used_VBN to_TO eliminate_VB the_DT words_NNS that_WDT do_VBP not_RB need_VB in_IN question_NN processing_NN ._.
+The_DT stop_NN words_NNS include_VBP modal_JJ particle_NN ,_, interrogative_JJ ,_, and_CC auxiliary_JJ words_NNS like_IN ``_`` 到底_FW ''_'' ,_, ``_`` 究竟_FW ''_'' ,_, ``_`` 那么_FW ''_'' etc._FW ._.
+Then_RB the_DT truck_NN of_IN the_DT question_NN is_VBZ left_VBN to_TO be_VB processed_VBN ._.
+As_IN we_PRP have_VBP discussed_VBN above_IN ,_, after_IN eliminating_VBG the_DT characteristic_NN of_IN question_NN ,_, a_DT question_NN is_VBZ more_RBR like_IN a_DT declarative_JJ sentence_NN ._.
+For_IN example_NN ,_, the_DT question_NN ``_`` 义安省生产肥煤吗_CD ?_. ''_''
+is_VBZ turned_VBN into_IN ``_`` 义安省_FW /_FW ns_FW 生产_FW /_FW v_FW 肥煤_FW /_FW n_FW ''_'' after_IN segmentation_NN ,_, POS_NNP tagging_VBG and_CC elimination_NN of_IN stop_NN words_NNS ._.
+Then_RB we_PRP find_VBP it_PRP is_VBZ a_DT declarative_JJ sentence_NN ,_, and_CC we_PRP can_MD map_VB the_DT keywords_NNS onto_IN the_DT ontology_NN to_TO see_VB whether_IN their_PRP$ relations_NNS are_VBP right_RB ._.
+If_IN the_DT question_NN is_VBZ a_DT specific_JJ question_NN like_IN ``_`` 越南的稻米主要产自哪_JJ 里_NN ?_. ''_'' ._.
+The_DT question_NN will_MD be_VB turned_VBN into_IN ``_`` 越南_FW /_FW ns_FW 稻_FW 米_FW /_FW n_FW 产_FW 自_FW /_FW v_FW ''_'' after_IN preprocessing_VBG ._.
+The_DT sentence_NN can_MD be_VB expressed_VBN like_IN <_CD ns_NNS ,_, n_NN ,_, v_NN ,_, ?_.
+>_NNP ,_, and_CC then_RB we_PRP can_MD use_VB the_DT known_VBN information_NN of_IN n_NN ,_, v_NN to_TO find_VB the_DT unknown_JJ information_NN of_IN ``_`` ?_. ''_''
+in_IN the_DT ontology_NN knowledge_NN base_NN ._.
+If_IN the_DT question_NN is_VBZ a_DT positive-negative_JJ sentence_NN ,_, for_IN example_NN ``_`` 知不知_FW 道越南的首都是哪里_FW ?_. ''_'' ._.
+After_IN the_DT preprocessing_NN ,_, we_PRP can_MD get_VB ``_`` 越南_FW /_FW ns_FW 首都_FW /_FW n_FW ''_'' ,_, which_WDT can_MD be_VB expressed_VBN like_IN <_CD ns_NNS ,_, n_NN ,_, ?_.
+>_NN ._.
+Then_RB the_DT information_NN of_IN ns_NNS and_CC n_NN can_MD help_VB find_VB the_DT unknown_JJ information_NN ._.
+If_IN the_DT question_NN is_VBZ a_DT select_JJ question_NN like_IN ``_`` 富国岛和昆仑岛哪个人口多_NN ?_. ''_''
+,_, it_PRP will_MD be_VB turned_VBN into_IN ``_`` 富国岛_FW /_FW ns_FW 昆仑岛_FW /_FW ns_FW 人口_FW /_FW n_FW ''_'' ._.
+It_PRP can_MD be_VB expressed_VBN like_IN ?_.
+<_CD ns_NNS ,_, ns_NNS ,_, n_SYM >_FW ._.
+Then_RB we_PRP need_VBP to_TO look_VB into_IN the_DT ontology_NN knowledge_NN base_NN to_TO see_VB the_DT relations_NNS of_IN them_PRP and_CC find_VB out_RP the_DT answer_NN ._.
+4_CD Experiment_NN and_CC prospect_NN From_IN the_DT analysis_NN of_IN the_DT four_CD types_NNS of_IN questions_NNS ,_, we_PRP can_MD roughly_RB list_VB the_DT patterns_NNS of_IN Chinese_JJ questions_NNS and_CC the_DT formalize_VB them_PRP ._.
+In_IN order_NN to_TO test_VB the_DT performance_NN of_IN the_DT question_NN processing_NN method_NN ,_, we_PRP need_VBP to_TO build_VB a_DT demo_NN question_NN answering_VBG system_NN ._.
+First_RB ,_, an_DT ontology_NN knowledge_NN base_NN has_VBZ to_TO be_VB built_VBN ._.
+In_IN this_DT research_NN ,_, we_PRP build_VBP an_DT ontology_NN knowledge_NN base_NN about_IN the_DT information_NN of_IN the_DT military_NN of_IN Vietnam_NNP ._.
+When_WRB a_DT new_JJ question_NN comes_VBZ ,_, it_PRP needs_VBZ to_TO be_VB preprocessed_VBN ._.
+Segmentation_NN tool_NN is_VBZ used_VBN to_TO segment_NN the_DT words_NNS and_CC tag_VB the_DT part-of-speech_NN of_IN each_DT word_NN ._.
+We_PRP define_VBP the_DT datatypes_NNS in_IN the_DT ontology_NN knowledge_NN base_NN as_IN DT_NNP ,_, and_CC the_DT adjectives_NNS of_IN the_DT highest_JJS level_NN as_IN MAX_NNP and_CC MIN_NNP ._.
+Then_RB according_VBG to_TO the_DT analysis_NN in_IN the_DT last_JJ part_NN ,_, the_DT formalized_VBN question_NN template_NN is_VBZ used_VBN to_TO match_VB the_DT processed_JJ sentence_NN ,_, and_CC the_DT unknown_JJ information_NN can_MD be_VB found_VBN in_IN the_DT ontology_NN knowledge_NN base_NN ._.
+At_IN last_JJ ,_, the_DT information_NN extracted_VBN from_IN the_DT ontology_NN knowledge_NN base_NN is_VBZ rearranged_VBN and_CC output_NN the_DT final_JJ answer_NN ._.
+Figure_NN 1_CD shows_VBZ the_DT formalized_VBN question_NN templates_NNS that_IN we_PRP summarized_VBD according_VBG to_TO the_DT characteristic_NN of_IN questions_NNS of_IN the_DT domain_NN ._.
+Figure_NN 1_CD ._.
+Part_NN of_IN the_DT question_NN patterns_NNS and_CC the_DT formalized_VBN question_NN templates_NNS Because_IN the_DT ontology_NN knowledge_NN base_NN of_IN Vietnam_NNP 's_POS military_JJ information_NN has_VBZ some_DT confidentiality_NN that_WDT is_VBZ not_RB proper_JJ to_TO expose_VB ,_, the_DT QA_NNP system_NN can_MD not_RB go_VB public_JJ here_RB ._.
+But_CC we_PRP have_VBP tested_VBN the_DT performance_NN of_IN the_DT system_NN ,_, and_CC found_VBD that_IN the_DT question_NN processing_NN method_NN we_PRP proposed_VBD is_VBZ useful_JJ to_TO improve_VB the_DT performance_NN of_IN the_DT system_NN ._.
+And_CC the_DT question_NN answering_VBG system_NN brings_VBZ a_DT lot_NN of_IN convenience_NN for_IN the_DT users_NNS studying_VBG on_IN the_DT domain_NN of_IN military_NN of_IN Vietnam_NNP ._.
+The_DT next_JJ step_NN of_IN our_PRP$ research_NN is_VBZ to_TO perfect_JJ the_DT analysis_NN of_IN the_DT Chinese_JJ questions_NNS and_CC improve_VB the_DT question_NN processing_NN method_NN ._.
+Also_RB ,_, the_DT ontology_NN knowledge_NN base_NN has_VBZ to_TO be_VB expanded_VBN to_TO get_VB a_DT higher_JJR recall_NN and_CC precision_NN ratio_NN ._.
+References_NNS -LSB-_VBP 1_CD -RSB-_JJ 赵赟_NN ._.
+基于本体的问答查询系统关键技术的_NNP 研究与实现_NNP ._.
+南京_NN :_: 东南大学_CD ,_, 2004_CD ._.
+-LSB-_NN 2_CD -RSB-_NNP 骆正华_CD ,_, 樊孝忠_CD ,_, 刘林_CD ._.
+本体论在自动问答系_CD 统中的应用_NN ._.
+计算机工程与应用_NNP ,_, 2005_CD ,_, -LRB-_-LRB- 32_CD -RRB-_-RRB- :229_CD -232_CD ._.
+-LSB-_NN 3_CD -RSB-_NNP 刘亮亮_CD ,_, 林乐宇_CD ._.
+基于查询模板的特定领域中_NNP 文问答系统的研究与实现_NNP ._.
+江苏科技大学学_CD 报自然科学版_CD ,_, 2011,25_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :163_CD -168_CD ._.
+-LSB-_NN 4_CD -RSB-_NNP 李伟刚_NN ._.
+基于本体知识库和_CD FAQ_NNP 的多策略问_CD 答系统研究_NN ._.
+洛阳_NN :_: 解放军外国语学院_CD ,2013_CD ._.
+-LSB-_NN 5_CD -RSB-_NNP Nyberg_NNP E_NNP ,_, Mitamura_NNP T_NNP ,_, Carbonell_NNP J_NNP G_NNP ,_, et_FW al._FW ._.
+The_DT Javelin_NNP Question-Answering_NNP System_NNP at_IN TREC_NNP 2002_CD ._.
+Computer_NNP Science_NNP Department_NNP ,_, 2002_CD :_: 322_CD ._.
+-LSB-_NN 6_CD -RSB-_NNP Li_NNP S_NNP ,_, Zhang_NNP J_NNP ,_, Huang_NNP X_NNP ,_, et_FW al._FW ._.
+Semantic_NNP Computation_NNP in_IN a_DT Chinese_JJ Question-Answering_NNP System_NNP ._.
+Journal_NNP of_IN Computer_NNP Science_NNP and_CC Technology_NNP ,_, 2002_CD ,_, 17_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :_: 933-939_CD ._.
+-LSB-_NN 7_CD -RSB-_NNP Fleischman_NNP M_NNP ,_, Hovy_NNP E_NNP ,_, Echihabi_NNP A._NNP Offline_NNP Strategies_NNS for_IN Online_NNP Question_NNP Answering_NNP :_: Answering_VBG Questions_NNS Before_IN They_PRP Are_VBP Asked_VBN ._.
+Proceedings_NNP of_IN the_DT 41st_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics-Volume_NNP 1_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2003_CD :_: 1-7_CD ._.
+-LSB-_NN 8_CD -RSB-_NNP Lopez_NNP V_NNP ,_, Uren_NNP V_NNP ,_, Motta_NNP E_NNP ,_, et_FW al._FW ._.
+AquaLog_NNP :_: An_DT ontology-driven_JJ question_NN answering_VBG system_NN for_IN organizational_JJ semantic_JJ intranets_NNS ._.
+Web_NNP Semantics_NNPS :_: Science_NNP ,_, Services_NNP and_CC Agents_NNPS on_IN the_DT World_NNP Wide_NNP Web_NNP ,_, 2007_CD ,_, 5_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :_: 72-105_NNS ._.
+-LSB-_NN 9_CD -RSB-_NNP Lopez_NNP V_NNP ,_, Pasin_NNP M_NNP ,_, Motta_NNP E._NNP Aqualog_NNP :_: An_DT ontology-portable_JJ question_NN answering_VBG system_NN for_IN the_DT semantic_JJ web_NN ._.
+The_DT Semantic_NNP Web_NNP :_: Research_NNP and_CC Applications_NNS ._.
+Springer_NNP Berlin_NNP Heidelberg_NNP ,_, 2005_CD :_: 546-562_CD ._.
+-LSB-_NNP 10_CD -RSB-_NNP Srihari_NNP R_NNP ,_, Li_NNP W_NNP ._.
+A_DT Question_NN Answering_NNP System_NNP Supported_VBN by_IN Information_NNP Extraction_NNP ._.
+Proceedings_NNP of_IN the_DT sixth_JJ conference_NN on_IN Applied_NNP natural_JJ language_NN processing_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2000_CD :_: 166-172_CD ._.
+-LSB-_NNP 11_CD -RSB-_NNP SaiasJ_NNP ,_, QuaresmaP.AProposalforanOntology_NNP Supported_NNP News_NNP Reader_NNP and_CC Question-answer_NNP System_NNP ._.
+Proceedings_NNP of_IN the_DT sixth_JJ conference_NN on_IN applied_VBN natural_JJ language_NN processing_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2000_CD :_: 166-172_CD ._.
+-LSB-_NNP 12_CD -RSB-_NNP Moldovan_JJ D_NNP ,_, Harabagiu_NNP S_NNP ,_, Pasca_NNP M_NNP ,_, et_FW al._FW ._.
+The_DT Structure_NNP and_CC Performance_NNP of_IN an_DT Open-Domain_NNP Question_NNP Answering_NNP System_NNP ._.
+Proceedings_NNP of_IN the_DT 38th_JJ Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistic_NNP ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2000_CD :_: 563-570_CD ._.

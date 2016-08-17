@@ -1,0 +1,319 @@
+Korean_JJ Twitter_NNP Emotion_NNP Classi_NNP cation_NN Using_VBG Automatically_RB Built_VBN Emotion_NNP Lexicons_NNPS and_CC Fine-Grained_NNP Features_NNP Abstract_NNP In_IN recent_JJ years_NNS many_JJ people_NNS have_VBP begun_VBN to_TO express_VB their_PRP$ thoughts_NNS and_CC opinions_NNS on_IN Twit_NN -_: ter_NN ._.
+Naturally_RB ,_, Twitter_NNP has_VBZ become_VBN an_DT ef_NN -_: fective_JJ source_NN to_TO investigate_VB people_NNS 's_POS emo_NN -_: tions_NNS for_IN numerous_JJ applications_NNS ._.
+Classifying_VBG only_RB positive_JJ and_CC negative_JJ tweets_NNS has_VBZ been_VBN ex_FW -_: ploited_VBN in_IN depth_NN ,_, whereas_IN analyzing_VBG ner_NN emo_NN -_: tions_NNS is_VBZ still_RB a_DT dif_NN cult_NN task_NN ._.
+More_RBR elaborate_JJ emotion_NN lexicons_NNS should_MD be_VB developed_VBN to_TO deal_VB with_IN this_DT problem_NN ,_, but_CC existing_VBG lexicon_NN sets_NNS are_VBP mostly_RB in_IN English_NNP ._.
+Moreover_RB ,_, building_VBG such_JJ lexicons_NNS is_VBZ known_VBN to_TO be_VB extremely_RB labor_NN -_: intensive_JJ or_CC resource-intensive_JJ ._.
+Finer-grained_JJ features_NNS need_VBP to_TO be_VB taken_VBN into_IN account_NN when_WRB determining_VBG ner-emotions_NNS ,_, but_CC many_JJ exist_VBP -_: ing_NN works_VBZ still_RB utilize_VB coarse_JJ features_NNS that_WDT have_VBP been_VBN widely_RB used_VBN in_IN analyzing_VBG only_RB the_DT po_NN -_: larity_NN of_IN emotion_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP present_VBP a_DT method_NN to_TO automatically_RB build_VB ne-grained_JJ emotion_NN lexicon_NN sets_NNS and_CC suggest_VBP features_NNS that_WDT improve_VBP the_DT performance_NN of_IN machine_NN learning_VBG based_VBN emotion_NN classi_NNS cation_NN in_IN Korean_JJ Twitter_NNP texts_NNS ._.
+1_CD Introduction_NNP Nowadays_NNPS ,_, people_NNS freely_RB express_VBP their_PRP$ thoughts_NNS on_IN microblogs_NNS ,_, and_CC Twitter_NNP is_VBZ known_VBN to_TO be_VB one_CD of_IN the_DT popularly_RB used_VBN services_NNS ._.
+In_IN 2014_CD ,_, 500_CD million_CD tweets_NNS were_VBD sent_VBN per_IN day_NN by_IN 316_CD million_CD monthly_JJ active_JJ users_NNS across_IN the_DT globe1_JJ ._.
+Not_RB surprisingly_RB ,_, Twitter_NNP has_VBZ been_VBN actively_RB mined_VBN in_IN the_DT eld_NN of_IN computer_NN sci_SYM -_: ence_NN to_TO investigate_VB public_JJ opinion_NN -LRB-_-LRB- Diakopoulos_NNPS and_CC Shamma_NNP ,_, 2010_CD ;_: Kim_NNP et_FW al._FW ,_, 2014_CD ;_: O’Connor_NNP et_FW al._FW ,_, 1_CD https://about.twitter.com/company_NN 2010_CD -RRB-_-RRB- ,_, get_VB real-time_JJ information_NN -LRB-_-LRB- Doan_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, and_CC even_RB forecast_VBN future_JJ events_NNS -LRB-_-LRB- Bollen_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+All_DT such_JJ research_NN shows_VBZ Twitter_NNP 's_POS potentials_NNS in_IN the_DT analysis_NN of_IN human_JJ thought_NN and_CC behavior_NN ._.
+In_IN partic_JJ -_: ular_JJ ,_, researchers_NNS are_VBP showing_VBG interest_NN in_IN the_DT analysis_NN of_IN human_JJ emotions_NNS presented_VBN in_IN Twitter_NNP messages_NNS ._.
+Many_JJ studies_NNS have_VBP been_VBN done_VBN to_TO classify_VB sentiments_NNS -LRB-_-LRB- positive_JJ and_CC negative_JJ -RRB-_-RRB- in_IN tweets_NNS ._.
+Going_VBG further_RB ,_, re_SYM -_: searchers_NNS are_VBP currently_RB trying_VBG to_TO analyze_VB ne-grained_JJ emotions_NNS beyond_IN polarity_NN ._.
+Fine-grained_JJ emotion_NN analysis_NN is_VBZ known_VBN to_TO be_VB more_RBR challenging_JJ than_IN sen_SYM -_: timent_NN analysis_NN because_IN it_PRP must_MD identify_VB subtle_JJ dif_NN -_: ferences_NNS between_IN emotions_NNS ._.
+Dealing_VBG with_IN emotions_NNS in_IN an_DT individual_JJ Twitter_NNP post_NN is_VBZ even_RB more_RBR dif_JJ cult_NN because_IN of_IN its_PRP$ short_JJ length_NN with_IN the_DT frequent_JJ use_NN of_IN informal_JJ words_NNS and_CC erroneous_JJ sentence_NN structures_NNS ._.
+Elaborate_VB emotion_NN lexicons_NNS should_MD be_VB used_VBN to_TO deal_VB with_IN the_DT problem_NN ,_, but_CC non-English_JJ speaking_NN coun_NN -_: tries_NNS have_VBP dif_NN culties_NNS using_VBG existing_VBG lexicon_NN sets_NNS be_VB -_: cause_NN they_PRP are_VBP mostly_RB in_IN English_NNP ._.
+Further_RB ,_, build_VB -_: ing_VBG such_JJ lexicons_NNS is_VBZ known_VBN to_TO be_VB extremely_RB labor_NN -_: intensive_JJ or_CC resource-intensive_JJ that_WDT can_MD be_VB a_DT burden_NN to_TO under-resourced_JJ countries_NNS ._.
+Moreover_RB ,_, a_DT set_NN of_IN features_NNS that_WDT achieves_VBZ the_DT best_JJS performance_NN in_IN ne_NN -_: grained_VBN emotion_NN classi_NNS cation_NN should_MD be_VB exploited_VBN that_DT is_VBZ particularly_RB attuned_JJ to_TO tweets_NNS written_VBN in_IN spe_NN -_: ci_FW c_NN language_NN ._.
+Our_PRP$ goal_NN in_IN this_DT paper_NN is_VBZ to_TO classify_VB Korean_JJ Twit_NN -_: ter_NN messages_NNS into_IN ne-grained_JJ emotions_NNS ._.
+The_DT emo_NN -_: tion_NN types_NNS are_VBP Ekman_NNP 's_POS six_CD basic_JJ emotions_NNS -LRB-_-LRB- Ekman_NNP ,_, 1992_CD -RRB-_-RRB- and_CC it_PRP is_VBZ known_VBN to_TO be_VB the_DT most_RBS frequently_RB used_VBN in_IN the_DT eld_NN of_IN computer_NN science_NN for_IN emotion_NN min_NN -_: ing_NN and_CC classi_NN cation_NN -LRB-_-LRB- Bann_NNP and_CC Bryson_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+For_IN this_DT goal_NN ,_, we_PRP employed_VBD machine_NN learning_VBG algorithms_NNS with_IN ne-grained_JJ features_NNS including_VBG an_DT emotion_NN lex_SYM -_: icon_NN feature_NN ._.
+Speci_NNP cally_RB ,_, we_PRP addressed_VBD the_DT follow_VBP -_: ing_NN problems_NNS :_: 1_LS ._.
+Emotion_NN lexicon_NN construction_NN ._.
+Is_VBZ there_EX any_DT sim_NN -_: ple_NN and_CC automatic_JJ method_NN to_TO generate_VB emotion_NN lexicons_NNS particularly_RB attuned_JJ to_TO the_DT Twitter_NNP do_VBP -_: main_JJ without_IN using_VBG other_JJ lexical_JJ resources_NNS ?_.
+2_LS ._.
+Feature_NN engineering_NN ._.
+What_WP is_VBZ the_DT best_JJS set_NN of_IN features_NNS that_WDT can_MD effectively_RB show_VB the_DT subtle_JJ distinctions_NNS between_IN ner-grained_JJ emotions_NNS ex_FW -_: pressed_VBN in_IN Korean_JJ Twitter_NNP texts_NNS ?_.
+We_PRP propose_VBP an_DT emotion_NN lexicon_NN construction_NN method_NN and_CC features_NNS to_TO address_VB the_DT problems_NNS above_IN ._.
+Our_PRP$ main_JJ contributions_NNS are_VBP the_DT following_NN :_: 1_CD ._.
+Emotion_NN lexicon_NN construction_NN ._.
+We_PRP propose_VBP the_DT weighted_JJ tweet_NN frequency_NN -LRB-_-LRB- weighted_JJ TwF_NNP -RRB-_-RRB- method_NN ,_, a_DT simple_JJ and_CC automatic_JJ way_NN to_TO build_VB emotion_NN lexicon_NN lists_NNS directly_RB from_IN an_DT anno_NN -_: tated_VBN corpus_NN without_IN using_VBG other_JJ resources_NNS ._.
+The_DT method_NN will_MD be_VB useful_JJ for_IN many_JJ countries_NNS where_WRB relevant_JJ resources_NNS are_VBP not_RB available_JJ ._.
+2_LS ._.
+Feature_NN engineering_NN ._.
+We_PRP propose_VBP a_DT set_NN of_IN ne-grained_JJ and_CC language-speci_JJ c_NN features_NNS that_WDT improves_VBZ the_DT overall_JJ performance_NN of_IN machine_NN learning_VBG based_VBN emotion_NN classi_NNS cation_NN in_IN Korean_JJ Twitter_NNP texts_NNS ._.
+3_LS ._.
+Resource_NNP and_CC Dataset_NNP Our_PRP$ study_NN is_VBZ unique_JJ be_VB -_: cause_NN emotion_NN analysis_NN on_IN Korean_JJ Twitter_NNP texts_NNS has_VBZ rarely_RB been_VBN addressed_VBN before_RB ._.
+In_IN addition_NN ,_, we_PRP built_VBD an_DT annotated_JJ dataset_NN ,_, emotion_NN lexicon_NN sets_NNS ,_, and_CC other_JJ resources_NNS ._.
+Since_IN nding_VBG related_JJ datasets_NNS and_CC resources_NNS in_IN Korean_JJ is_VBZ dif_NN cult_NN ,_, we_PRP believe_VBP our_PRP$ work_NN can_MD contribute_VB to_TO future_JJ re_SYM -_: lated_JJ studies_NNS ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+Sec_SYM -_: tion_NN 2_CD overviews_NNS related_VBN work_NN ,_, and_CC in_IN Section_NN 3_CD ,_, we_PRP introduce_VBP our_PRP$ annotated_JJ dataset_NN ._.
+In_IN Section_NN 4_CD ,_, we_PRP present_VBP our_PRP$ emotion_NN lexicon_NN construction_NN method_NN and_CC in_IN Section_NN 5_CD ,_, we_PRP describe_VBP features_NNS designed_VBN for_IN classi_NNS cation_NN ._.
+We_PRP provide_VBP experimental_JJ results_NNS and_CC analysis_NN in_IN Section_NN 6_CD and_CC conclude_VBP in_IN Section_NN 7_CD ._.
+2_CD Related_JJ Work_NN There_EX have_VBP been_VBN extensive_JJ studies_NNS on_IN sentiment_NN analysis_NN that_WDT classify_VBP expressions_NNS of_IN sentiment_NN into_IN positive_JJ and_CC negative_JJ emotions_NNS ._.
+In_IN the_DT last_JJ few_JJ years_NNS ,_, researchers_NNS have_VBP started_VBN to_TO explore_VB ner_NN granularity_NN of_IN emotion_NN because_IN simple_JJ division_NN of_IN polarity_NN may_MD not_RB suf_VB ce_NN in_IN many_JJ real-world_JJ applications_NNS ._.
+There_EX are_VBP two_CD main_JJ approaches_NNS to_TO emotion_NN analysis_NN ,_, one_CD is_VBZ a_DT lexicon_NN based_VBN approach_NN and_CC the_DT other_JJ is_VBZ a_DT machine_NN learning_VBG based_VBN approach_NN ._.
+The_DT lexicon_NN based_VBN ap_SYM -_: proach_NN utilizes_VBZ a_DT dictionary_NN of_IN words_NNS annotated_VBN with_IN their_PRP$ emotional_JJ orientation_NN and_CC simply_RB counts_VBZ the_DT words_NNS or_CC aggregates_NNS the_DT according_VBG values_NNS presented_VBN in_IN texts_NNS ._.
+In_IN contrast_NN ,_, the_DT machine_NN learning_VBG based_VBN ap_SYM -_: proach_NN performs_VBZ classi_NNS cation_NN using_VBG machine_NN learn_VBP -_: ing_NN algorithms_NNS based_VBN on_IN carefully_RB designed_VBN features_NNS ._.
+Roberts_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- tried_VBD to_TO classify_VB seven_CD emo_NN -_: tions_NNS in_IN the_DT Twitter_NNP domain_NN with_IN binary_JJ support_NN vec_NN -_: tor_NN machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- classi_FW ers_FW ,_, and_CC Balabantaray_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- also_RB used_VBN SVM_NNP classi_NNS ers_NNS with_IN features_NNS including_VBG WordNet-Affect_JJ emotion_NN lexicons_NNS ._.
+A_DT large_JJ number_NN of_IN existing_VBG emotion_NN lexicon_NN sets_NNS were_VBD built_VBN manually_RB such_JJ as_IN WordNet-Affect_JJ -LRB-_-LRB- Strap_SYM -_: parava_NN and_CC Valitutti_NNP ,_, 2004_CD -RRB-_-RRB- and_CC Linguistic_NNP Inquiry_NNP and_CC Word_NNP Count_NNP -LRB-_-LRB- Pennebaker_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ._.
+Crowd_NN -_: sourcing_VBG is_VBZ often_RB utilized_VBN to_TO obtain_VB a_DT large_JJ volume_NN of_IN human_JJ annotated_JJ lexicon_NN sets_NNS such_JJ as_IN the_DT NRC_NNP Word-Emotion_NNP Association_NNP Lexicon_NNP -LRB-_-LRB- Mohammad_NNP and_CC Turney_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Non-English_JJ speaking_NN countries_NNS like_IN Korea_NNP have_VBP dif_NN culties_NNS building_VBG emotion_NN lexi_NNS -_: cons_NNS without_IN human_JJ labor_NN because_IN existing_VBG lexicons_NNS and_CC crowd-sourcing_NN platforms_NNS are_VBP mostly_RB available_JJ in_IN English_NNP ._.
+To_TO deal_VB with_IN the_DT dif_NN culties_NNS ,_, one_CD pop_NN -_: ular_JJ approach_NN is_VBZ to_TO build_VB lexicons_NNS upon_IN other_JJ re_SYM -_: sources_NNS ._.
+For_IN example_NN ,_, AffectNet_NNP -LRB-_-LRB- Cambria_NNP and_CC Hus_NNP -_: sain_NN ,_, 2012_CD -RRB-_-RRB- was_VBD constructed_VBN using_VBG ConceptNet_NNP -LRB-_-LRB- Liu_NNP and_CC Singh_NNP ,_, 2004_CD -RRB-_-RRB- and_CC WordNet-Affect_NNP -LRB-_-LRB- Strapparava_NNP and_CC Valitutti_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+Another_DT popular_JJ choice_NN for_IN building_VBG lexicon_NN sets_NNS automatically_RB is_VBZ translating_VBG ex_FW -_: isting_VBG lexicon_NN lists_NNS written_VBN in_IN English_NNP ._.
+Those_DT built_VBN by_IN Remus_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- and_CC Momtazi_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- are_VBP ex_FW -_: amples_NNS ._.
+We_PRP also_RB propose_VBP an_DT automatic_JJ method_NN that_WDT does_VBZ not_RB require_VB lexical_JJ resources_NNS and_CC translation_NN ._.
+Very_RB few_JJ attempts_NNS have_VBP been_VBN made_VBN so_RB far_RB to_TO ana_NN -_: lyze_NN emotions_NNS in_IN Korean_JJ text_NN ._.
+Cho_NNP and_CC Lee_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- identi_FW ed_FW eight_CD emotions_NNS in_IN Korean_JJ song_NN lyrics_NNS with_IN manually_RB annotated_VBN word_NN emotion_NN vectors_NNS ._.
+Lee_NNP et_FW al._FW ._.
+-LRB-_-LRB- 2013_CD -RRB-_-RRB- classi_FW ed_FW Korean_JJ tweets_NNS into_IN seven_CD emotions_NNS and_CC achieved_VBD 52_CD %_NN accuracy_NN when_WRB using_VBG the_DT multi_NNS -_: nomial_JJ na_TO ̈ıve_VB Bayes_NNP algorithm_NN with_IN morpheme_JJ fea_NN -_: tures_NNS ._.
+The_DT only_RB publicly_RB available_JJ Korean_JJ emotion_NN lexicons_NNS we_PRP found_VBD were_VBD a_DT set_NN of_IN 265_CD terms_NNS of_IN nine_CD emotion_NN types_NNS ,_, manually_RB built_VBN by_IN Rhee_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+Our_PRP$ work_NN differs_VBZ from_IN the_DT aforementioned_JJ Korean_JJ studies_NNS because_IN we_PRP automatically_RB construct_VBP larger_JJR emotion_NN lexicon_NN sets_NNS and_CC introduce_VB ne-grained_JJ fea_NN -_: tures_NNS that_WDT are_VBP particularly_RB attuned_JJ for_IN Korean_JJ Twitter_NNP texts_NNS ._.
+3_CD Korean_JJ Twitter_NNP Emotion_NNP Analysis_NNP -LRB-_-LRB- KTEA_NNP -RRB-_-RRB- Dataset_NNP A_NNP Twitter_NNP dataset_NN annotated_VBN by_IN emotion_NN types_NNS is_VBZ essential_JJ in_IN the_DT machine_NN learning_VBG based_VBN approach_NN for_IN the_DT purpose_NN of_IN training_NN ._.
+To_TO build_VB the_DT corpus_NN ,_, we_PRP collected_VBD random_JJ Korean_JJ Twitter_NN messages_NNS us_PRP -_: ing_VBG Twitter_NNP streaming_VBG API_NNP ._.
+We_PRP removed_VBD tweets_NNS with_IN RT_NNP ,_, URL_NNP links_NNS ,_, and_CC replies_VBZ ._.
+After_IN the_DT collection_NN process_NN ,_, a_DT corpus_NN can_MD be_VB annotated_JJ either_CC manually_RB by_IN human_JJ annotators_NNS or_CC automatically_RB by_IN distant_JJ la_NNP -_: bels_NNS -LRB-_-LRB- Go_VB et_FW al._FW ,_, 2009_CD ;_: Wicaksono_NNP et_FW al._FW ,_, ;_: Lee_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+In_IN our_PRP$ case_NN ,_, we_PRP manually_RB annotated_VBD the_DT cor_NN -_: pus_NN ._.
+Each_DT tweet_NN was_VBD labeled_VBN by_IN three_CD annotators_NNS ,_, producing_VBG three_CD emotion_NN labels_NNS per_IN tweet_NN ._.
+Conse_NNP -_: quently_RB ,_, we_PRP constructed_VBD a_DT Korean_JJ Twitter_NNP Emotion_NNP Analysis_NNP -LRB-_-LRB- KTEA_NNP -RRB-_-RRB- dataset2_CD ,_, which_WDT contains_VBZ 5,706_CD valid_JJ tweets_NNS labeled_VBN by_IN seven_CD types_NNS of_IN emotions_NNS -_: Ekman_NNP 's_POS six_CD emotions_NNS and_CC no_DT emotion_NN -LRB-_-LRB- neutral_JJ -RRB-_-RRB- ._.
+Us_NNP -_: ing_VBG the_DT dataset_NN ,_, we_PRP constructed_VBD emotion_NN lexicon_NN sets_NNS as_IN described_VBN in_IN Section_NN 4_CD and_CC trained_VBN our_PRP$ machine_NN learning_VBG algorithm_NN as_IN presented_VBN in_IN Section_NN 5_CD ._.
+Emotion_NN Happiness_NN Sadness_NNP Anger_NNP Disgust_NNP Surprise_NNP Fear_NN Total_JJ Number_NN of_IN Tweets_NNPS 770_CD 1377_CD 903_CD 694_CD 475_CD 228_CD 4447_CD 4_CD 4.1_CD Constructing_NNP Emotion_NNP Lexicons_NNPS Our_PRP$ Approach_NNP -_: Weighted_NNP Tweet_NNP Frequency_NNP Table_NNP 1_CD :_: The_DT number_NN of_IN tweets_NNS we_PRP used_VBD to_TO generate_VB emo_NN -_: tion_NN lexicons_NNS using_VBG weighted_JJ TwF_NNP approach_NN To_TO generate_VB emotion_NN lexicons_NNS ,_, we_PRP propose_VBP the_DT weighted_JJ tweet_NN Frequency_NN -LRB-_-LRB- weighted_JJ TwF_NNP -RRB-_-RRB- method_NN ._.
+First_RB ,_, we_PRP aggregated_VBD tweets_NNS of_IN the_DT same_JJ emotion_NN la_NNP -_: bel_NN in_IN one_CD document_NN -LRB-_-LRB- d_LS -RRB-_-RRB- ,_, producing_VBG six_CD documents_NNS -LRB-_-LRB- D_NNP -RRB-_-RRB- of_IN tweets_NNS as_IN a_DT result_NN ._.
+Using_VBG the_DT six_CD documents_NNS ,_, we_PRP calculated_VBD the_DT weighted_JJ TwF_NNP for_IN each_DT term_NN -LRB-_-LRB- t_VBN -RRB-_-RRB- that_WDT appeared_VBD in_IN the_DT documents_NNS ._.
+The_DT weighted_JJ TwF_NNP is_VBZ expressed_VBN in_IN Equations_NNS 1_CD ,_, 2_CD ,_, and_CC 3_CD ._.
+Consequently_RB ,_, we_PRP generated_VBD six_CD emotion_NN lexicon_NN lists_NNS ,_, one_CD list_NN for_IN each_DT emotion_NN type_NN ._.
+Each_DT lexicon_NN has_VBZ a_DT weighted_JJ TwF_NNP value_NN which_WDT shows_VBZ the_DT strength_NN of_IN the_DT corre_NN -_: sponding_VBG emotion_NN ,_, i.e._FW ,_, the_DT higher_JJR the_DT value_NN is_VBZ ,_, the_DT stronger_JJR the_DT emotion_NN is_VBZ ._.
+The_DT basic_JJ idea_NN is_VBZ simi_SYM -_: lar_NN to_TO the_DT concept_NN of_IN term_NN frequency_NN -_: inverse_JJ doc_NN -_: ument_NN frequency_NN -LRB-_-LRB- TF-IDF_NNP -RRB-_-RRB- 3_CD ,_, for_IN which_WDT the_DT occur_VBP -_: rences_NNS of_IN a_DT term_NN are_VBP counted_VBN and_CC a_DT penalty_NN is_VBZ given_VBN if_IN the_DT term_NN appears_VBZ in_IN several_JJ documents_NNS ._.
+However_RB ,_, TF-IDF_NNP is_VBZ not_RB appropriate_JJ for_IN our_PRP$ task_NN because_IN the_DT structures_NNS of_IN tweets_NNS are_VBP often_RB highly_RB ungrammati_JJ -_: cal_NN ,_, and_CC there_EX are_VBP many_JJ tweets_NNS with_IN meaningless_JJ terms_NNS ,_, which_WDT are_VBP sometimes_RB excessively_RB repeated_VBN in_IN one_CD tweet_NN ._.
+In_IN such_JJ cases_NNS ,_, the_DT meaningless_JJ terms_NNS produce_VBP high_JJ term_NN frequency_NN ,_, which_WDT results_VBZ in_IN erro_NN -_: neous_JJ emotion_NN lexicons_NNS ._.
+As_IN illustrated_VBN in_IN Figure_NN 1_CD ,_, when_WRB term_NN frequency_NN -LRB-_-LRB- TF-IDF_NNP -RRB-_-RRB- is_VBZ used_VBN ,_, we_PRP can_MD see_VB some_DT words_NNS -LRB-_-LRB- that_WDT are_VBP names_NNS in_IN this_DT example_NN -RRB-_-RRB- ,_, such_JJ as_IN 시우민_CD ``_`` Xiumin_NNP ''_'' ,_, 성규_CD ``_`` Sung_NNP Kyu_NNP ''_'' ,_, and_CC 김민_CD 석_CD ``_`` Kim_NNP Min_NNP Seok_NNP ''_'' ,_, ranked_VBD high_JJ in_IN the_DT happiness_NN lexicon_NN list_NN ._.
+This_DT is_VBZ because_IN there_EX are_VBP few_JJ tweets_NNS that_WDT excessively_RB repeat_VBP those_DT names_NNS ._.
+Similar_JJ kinds_NNS of_IN unstructured_JJ tweets_NNS are_VBP frequent_JJ in_IN Twitter_NNP ,_, and_CC we_PRP can_MD disregard_VB such_JJ cases_NNS by_IN using_VBG the_DT tweet_NN fre_NN -_: quency_NN de_IN ned_VBN in_IN Equation_NN 1_CD ._.
+It_PRP counts_VBZ the_DT num_NN -_: ber_NN of_IN tweets_NNS instead_RB as_IN true_JJ emotion_NN lexicons_NNS appear_VBP across_IN many_JJ tweets_NNS ,_, not_RB in_IN a_DT few_JJ erroneous_JJ tweets_NNS ._.
+3_CD https://en.wikipedia.org/wiki/Tf-idf_JJ We_PRP built_VBD emotion_NN lexicons_NNS automatically_RB from_IN the_DT annotated_JJ corpus_NN without_IN using_VBG other_JJ lexical_JJ re_NN -_: sources_NNS ._.
+For_IN the_DT construction_NN ,_, we_PRP utilized_VBD part_NN of_IN our_PRP$ KTEA_NNP dataset_NN ,_, which_WDT is_VBZ the_DT set_NN of_IN tweets_NNS ,_, each_DT of_IN which_WDT was_VBD labeled_VBN as_IN representing_VBG one_CD of_IN Ekman_NNP 's_POS six_CD emotion_NN types_NNS -LRB-_-LRB- disregarding_VBG the_DT neutral_JJ case_NN -RRB-_-RRB- by_IN at_IN least_JJS one_CD annotator_NN ._.
+Table_NNP 1_CD shows_VBZ the_DT number_NN of_IN tweets_NNS we_PRP used_VBD per_IN emotion_NN for_IN the_DT purpose_NN of_IN lexi_NNS -_: con_JJ construction_NN ._.
+2_CD goo.gl_NN /_CD Gu0GNw_NNP Figure_NNP 1_CD :_: Example_NN of_IN top-ranked_JJ happiness_NN lexicons_NNS generated_VBD from_IN TF-IDF_NNP and_CC weighted_JJ TwF_NNP Another_DT reason_NN why_WRB TF-IDF_NNP is_VBZ not_RB suitable_JJ is_VBZ the_DT log_VB term_NN in_IN IDF_NNP ,_, which_WDT is_VBZ trivial_JJ due_JJ to_TO the_DT small_JJ num_NN -_: ber_NN of_IN documents_NNS ._.
+Thus_RB ,_, we_PRP used_VBD a_DT simple_JJ weighting_NN scheme_NN instead_RB as_IN in_IN Equation_NN 2_CD ._.
+We_PRP set_VBP the_DT weight_NN to_TO zero_CD when_WRB a_DT lexicon_NN appeared_VBD in_IN all_DT the_DT emotion_NN documents_NNS in_IN order_NN to_TO remove_VB lexical_JJ items_NNS that_WDT ap_SYM -_: pear_NN very_RB frequently_RB but_CC without_IN any_DT emotions_NNS ,_, for_IN example_NN ,_, 있다_CD ``_`` is_VBZ ''_'' ,_, and_CC 나_CD ``_`` I_PRP ''_'' ._.
+thesaurus_NN and_CC adds_VBZ them_PRP to_TO the_DT emotion_NN lexicon_NN lists_NNS ._.
+Due_JJ to_TO the_DT lack_NN of_IN a_DT large_JJ and_CC representative_JJ Ko_NNP -_: rean_JJ thesaurus_NN ,_, we_PRP combined_VBD various_JJ publicly_RB avail_NN -_: able_JJ resources_NNS ,_, namely_RB ,_, Dong-a_NNP 's_POS Prime_NNP dictionary4_NNS ,_, Naver_NNP dictionary5_NNS ,_, a_DT Korean_JJ thesaurus6_NN ,_, and_CC Wise_NNP -_: WordNet7_NNP ._.
+First_RB ,_, seed_NN words_NNS --_: happiness_NN ,_, sadness_NN ,_, anger_NN ,_, disgust_NN ,_, surprise_NN ,_, and_CC fear_NN --_: were_VBD translated_VBN into_IN Korean_JJ using_VBG Dong-a_NNP 's_POS Prime_NNP English-Korean_NNP Dictionary_NNP ._.
+Then_RB ,_, we_PRP extended_VBD the_DT emotion_NN lexicon_NN sets_VBZ to_TO include_VB derivatives_NNS and_CC synonyms_NNS using_VBG var_SYM -_: ious_JJ resources_NNS and_CC thesauruses_NNS ._.
+Since_IN the_DT resources_NNS were_VBD not_RB perfect_JJ ,_, there_EX were_VBD many_JJ erroneous_JJ syn_NN -_: onyms_NNS ._.
+Thus_RB ,_, for_IN the_DT last_JJ step_NN ,_, we_PRP manually_RB re_SYM -_: moved_VBD the_DT unreasonable_JJ ones_NNS ._.
+The_DT detailed_JJ proce_NN -_: dure_NN is_VBZ summarized_VBN in_IN Table_NNP 2_CD ._.
+4.3_CD Translation-Based_NNP Approach_NNP There_EX are_VBP many_JJ lexical_JJ resources_NNS in_IN English_NNP for_IN emotion_NN analysis_NN ._.
+This_DT method_NN translates_VBZ such_JJ re_SYM -_: sources_NNS to_TO a_DT speci_NN c_NN language_NN ,_, in_IN our_PRP$ case_NN ,_, Ko_NNP -_: rean_NN ._.
+Among_IN many_JJ lexical_JJ resources_NNS ,_, we_PRP chose_VBD WordNet-Affect_NNP -LRB-_-LRB- Strapparava_NNP and_CC Valitutti_NNP ,_, 2004_CD -RRB-_-RRB- as_IN it_PRP is_VBZ one_CD of_IN the_DT popular_JJ and_CC typical_JJ emotion_NN lexicon_NN sets_NNS used_VBN in_IN emotion_NN analysis_NN ,_, and_CC it_PRP is_VBZ freely_RB avail_NN -_: able_JJ ._.
+WordNet-Affect_JJ contains_VBZ WordNet_NNP synonyms_NNS and_CC is_VBZ manually_RB annotated_VBN by_IN Ekman_NNP 's_POS six_CD emotions_NNS ._.
+We_PRP translated_VBD the_DT WordNet-Affect_JJ list_NN using_VBG Google_NNP Translate8_NNP ._.
+We_PRP employed_VBD the_DT Google_NNP service_NN as_IN it_PRP is_VBZ the_DT most_RBS widely_RB used_VBN translator_NN and_CC its_PRP$ performance_NN is_VBZ known_VBN to_TO be_VB fairly_RB accurate_JJ ._.
+However_RB ,_, there_EX were_VBD 4_CD http://www.dongapublishing.com/entry/index.html_NN 5_CD dic.naver.com_NN 6_CD http://www.wordnet.co.kr/_NN 7Software_NNP Research_NNP Laboratory_NNP ,_, ETRI_NNP 8_CD https://translate.google.co.kr/_SYM -_: d_LS :_: A_DT document_NN with_IN tweets_NNS of_IN same_JJ emotion_NN -_: D_NNP :_: Total_JJ set_NN of_IN ds_NNS -_: t_NN :_: Target_NNP term_NN -_: n_NN :_: The_DT number_NN of_IN ds_NNS where_WRB t_NN appears_VBZ Normalized_NNP Tweet_NNP Frequency_NNP =_SYM Number_NNP of_IN tweets_NNS in_IN d_LS where_WRB t_NN appears_VBZ Total_JJ number_NN of_IN terms_NNS in_IN the_DT d_SYM 1_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- Weight_NNP =_SYM n_FW n_FW <_FW |_FW D_NNP |_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 0_CD n_NN =_SYM |_FW D_NNP |_CD weighted_JJ Tweet_NNP Frequency_NN -LRB-_-LRB- weighted_JJ TwF_NNP -RRB-_-RRB- =_SYM Normalized_VBN Tweet_NNP Frequency_NNP ×_NNP Weight_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- Automatic_NNP methods_NNS of_IN building_VBG emotion_NN lexicons_NNS have_VBP been_VBN studied_VBN in_IN many_JJ works_NNS ._.
+There_EX are_VBP two_CD widely_RB used_VBN methods_NNS ,_, namely_RB ,_, a_DT thesaurus-based_JJ approach_NN -LRB-_-LRB- Section_NN 4.2_CD -RRB-_-RRB- and_CC a_DT translation-based_JJ ap_NN -_: proach_NN -LRB-_-LRB- Section_NN 4.3_CD -RRB-_-RRB- ._.
+4.2_CD Thesaurus-Based_NNP Approach_NNP The_NNP thesaurus-based_JJ method_NN builds_VBZ emotion_NN lexicon_NN lists_NNS using_VBG synonyms_NNS ._.
+Using_VBG a_DT small_JJ set_NN of_IN emotion_NN seed_NN words_NNS ,_, this_DT method_NN looks_VBZ for_IN synonyms_NNS using_VBG a_DT Thesaurus-Based_NNP Approach_NNP Seed_NN words_NNS happiness_NN ,_, sadness_NN ,_, anger_NN ,_, disgust_NN ,_, surprise_NN ,_, fear_NN -LRB-_-LRB- each_DT seed_NN word_NN constructs_VBZ according_VBG emotion_NN lexicon_NN list_NN -RRB-_-RRB- Step_NN 1_CD ._.
+Translate_VB seed_NN words_NNS to_TO Korean_JJ using_VBG Dong-a_NNP 's_POS Prime_NNP dictionary_NNS Step_NN 2_CD ._.
+Add_VB derivatives_NNS using_VBG NAVER_NNP dictionary_NNS Step_NN 3_CD ._.
+Using_VBG Korean_JJ thesaurus_NN ,_, add_VB synonyms_NNS of_IN each_DT word_NN Step_NN 4_CD ._.
+Using_VBG WiseWordNet_NNP ,_, add_VB primary_JJ synonyms_NNS of_IN each_DT word_NN Step_NN 5_CD ._.
+Leave_VB only_RB exclusive_JJ words_NNS for_IN each_DT emotion_NN and_CC remove_VB duplicates_NNS within_IN list_NN Step_NN 6_CD ._.
+Manually_RB remove_VB unreasonable_JJ or_CC misleading_JJ emotion_NN words_NNS Table_NNP 2_CD :_: Procedure_NNP of_IN making_VBG emotion_NN lexicons_NNS using_VBG thesaurus-based_JJ approach_NN some_DT erroneous_JJ translations_NNS since_IN the_DT Korean_JJ trans_NNS -_: lator_NN is_VBZ not_RB perfect_JJ ._.
+Thus_RB ,_, we_PRP manually_RB modi_VBD ed_VBN and_CC removed_VBN problematic_JJ words_NNS and_CC duplicates_NNS ._.
+4.4_CD Comparison_NNP In_IN this_DT section_NN ,_, we_PRP explain_VBP the_DT qualitative_JJ aspects_NNS of_IN our_PRP$ lexicon_NN construction_NN method_NN in_IN comparison_NN with_IN other_JJ approaches_NNS ._.
+The_DT advantages_NNS of_IN our_PRP$ emotion_NN lexicon_NN sets_VBZ built_VBN by_IN weighted_JJ TwF_NNP approach_NN are_VBP the_DT following_NN :_: 1_CD ._.
+As_IN the_DT wordlist_NN is_VBZ constructed_VBN based_VBN on_IN real_JJ Twit_NN -_: ter_NN messages_NNS ,_, the_DT method_NN generates_VBZ Twitter-speci_JJ c_NN lexicons_NNS that_WDT include_VBP slang_NN ,_, swear_VBP words_NNS ,_, and_CC un_SYM -_: grammatical_JJ words_NNS ._.
+Example_NN :_: 존잘님_CD ``_`` slang_NN for_IN handsome_JJ person_NN ''_'' ,_, 조아_CD ``_`` ungrammatical_JJ word_NN for_IN like_JJ ''_'' 2_CD ._.
+Our_PRP$ method_NN discovers_VBZ topics_NNS that_WDT are_VBP closely_RB re_SYM -_: lated_VBN to_TO some_DT particular_JJ emotions_NNS ._.
+Example_NN :_: 야자_CD ``_`` night_NN school_NN study_NN ''_'' -LRB-_-LRB- sadness_NN -_: many_JJ students_NNS feel_VBP sad_JJ when_WRB they_PRP are_VBP forced_VBN to_TO study_VB at_IN night_NN in_IN school_NN -RRB-_-RRB- 3_LS ._.
+It_PRP is_VBZ possible_JJ to_TO discover_VB keywords_NNS that_WDT particularly_RB appear_VBP in_IN a_DT speci_NN c_NN time_NN range_NN ._.
+The_DT method_NN au_SYM -_: tomatically_RB updates_NNS the_DT lexicons_NNS to_TO include_VB newly_RB -_: coined_VBN words_NNS ,_, which_WDT are_VBP essential_JJ for_IN emotion_NN anal_JJ -_: ysis_NN in_IN Twitter_NNP domain_NN ._.
+Example_NN :_: 빅뱅_CD ``_`` Big_JJ Bang_NNP ''_'' -LRB-_-LRB- happiness_NN -_: a_DT famous_JJ Korean_JJ singer_NN Big_NNP Bang_NNP re_SYM -_: leased_VBN a_DT new_JJ album_NN at_IN the_DT time_NN we_PRP constructed_VBD the_DT emotion_NN lexicons_NNS -RRB-_-RRB- We_PRP show_VBP the_DT effectiveness_NN of_IN our_PRP$ weighted_JJ TwF_NNP approach_NN by_IN comparing_VBG it_PRP with_IN the_DT popular_JJ Approach_NNP Automatic_NNP ?_.
+Resource-free_NN ?_.
+No_DT manual_NN work_NN ?_.
+Twitter-speci_JJ c_NN ?_.
+Weighted_JJ TwF_NNP O_NNP O_NNP Thesaurus_NNP Translation_NN O_NNP O_NNP X_NNP -LRB-_-LRB- thesaurus_NN -RRB-_-RRB- X_NNP -LRB-_-LRB- translator_NN -RRB-_-RRB- O_NN X_NNP X_NNP O_NNP X_NNP X_NNP Table_NNP 3_CD :_: Comparison_NN of_IN our_PRP$ weighted_JJ TwF_NNP approach_NN with_IN thesaurus-based_JJ and_CC translation-based_JJ approaches_NNS thesaurus-based_JJ and_CC translation-based_JJ approaches_NNS ._.
+Table_NNP 3_CD compares_VBZ the_DT three_CD approaches_NNS ._.
+These_DT ap_SYM -_: proaches_NNS can_MD automatically_RB generate_VB emotion_NN lexi_SYM -_: cons_NNS ._.
+To_TO be_VB speci_JJ c_NN ,_, using_VBG the_DT thesaurus-based_JJ ap_NN -_: proach_NN ,_, we_PRP are_VBP able_JJ to_TO construct_VB emotion_NN wordlists_NNS easily_RB and_CC automatically_RB by_IN using_VBG only_RB a_DT small_JJ set_NN of_IN seed_NN words_NNS ._.
+The_DT translation-based_JJ approach_NN also_RB translates_VBZ the_DT existing_VBG emotion_NN lexicons_NNS automati_SYM -_: cally_JJ using_VBG translators_NNS ._.
+However_RB ,_, the_DT thesaurus_NN -_: based_VBN approach_NN is_VBZ heavily_RB dependent_JJ on_IN lexical_JJ re_SYM -_: sources_NNS like_IN dictionaries_NNS and_CC thesauruses_NNS ._.
+A_DT well_NN -_: built_VBN thesaurus_NN is_VBZ not_RB likely_JJ to_TO be_VB available_JJ in_IN many_JJ non-English_JJ speaking_NN countries_NNS ._.
+Additionally_RB ,_, translation-based_JJ approach_NN requires_VBZ a_DT reliable_JJ trans_NNS -_: lator_NN ._.
+In_IN comparison_NN ,_, our_PRP$ weighted_JJ TwF_NNP approach_NN is_VBZ based_VBN on_IN statistics_NNS ,_, which_WDT are_VBP independent_JJ of_IN lexical_JJ resources_NNS and_CC translators_NNS ;_: thus_RB ,_, it_PRP would_MD be_VB very_RB use_NN -_: ful_NN for_IN under-resourced_JJ countries_NNS ._.
+Moreover_RB ,_, we_PRP ob_SYM -_: served_VBD that_IN the_DT thesaurus_NN -_: and_CC translation-based_JJ ap_SYM -_: proaches_NNS generate_VBP a_DT lot_NN of_IN erroneous_JJ words_NNS due_JJ to_TO errors_NNS of_IN resources_NNS and_CC translators_NNS ._.
+Hence_RB ,_, manual_JJ removal_NN of_IN those_DT words_NNS was_VBD necessary_JJ to_TO achieve_VB accurate_JJ results_NNS ._.
+In_IN contrast_NN ,_, our_PRP$ approach_NN gener_NN -_: ates_VBZ lexicons_NNS with_IN strength_NN values_NNS that_WDT show_VBP how_WRB ac_SYM -_: curately_RB the_DT word_NN may_MD belong_VB to_TO an_DT emotion_NN type_NN ._.
+Even_RB though_IN erroneous_JJ words_NNS are_VBP included_VBN in_IN the_DT list_NN ,_, they_PRP are_VBP likely_JJ to_TO be_VB ignored_VBN due_JJ to_TO the_DT low_JJ weighted_JJ TwF_NNP value_NN ._.
+Lastly_RB ,_, our_PRP$ lexicon_NN sets_NNS are_VBP par_JJ -_: ticularly_JJ attuned_JJ to_TO the_DT Twitter_NNP domain_NN ;_: they_PRP include_VBP slang_NN ,_, jargon_NN ,_, ungrammatical_JJ words_NNS ,_, and_CC newly_RB -_: coined_VBN words_NNS ,_, whereas_IN most_JJS other_JJ approaches_NNS do_VBP not_RB ._.
+5_CD Machine_NN Learning_NNP with_IN Fine-Grained_JJ Features_NNS Our_PRP$ goal_NN is_VBZ to_TO classify_VB Korean_JJ Twitter_NNP messages_NNS ac_SYM -_: cording_NN to_TO one_CD of_IN the_DT following_VBG six_CD emotions_NNS ,_, happi_NN -_: ness_NN ,_, sadness_NN ,_, anger_NN ,_, disgust_NN ,_, surprise_NN ,_, and_CC fear_NN ._.
+We_PRP used_VBD a_DT machine_NN learning_VBG algorithm_NN to_TO classify_VB each_DT Twitter_NNP message_NN represented_VBN by_IN a_DT feature_NN vector_NN ._.
+We_PRP rst_VBP explain_VB features_NNS that_IN we_PRP propose_VBP in_IN this_DT work_NN and_CC explain_VB our_PRP$ machine_NN learning_VBG classi_NNS cation_NN ._.
+5.1_CD Fine-Grained_JJ Features_NNPS Feature_NNP engineering_NN is_VBZ very_RB important_JJ in_IN machine_NN learning_NN ._.
+Features_NNS that_WDT have_VBP been_VBN traditionally_RB used_VBN in_IN emotion_NN analysis_NN are_VBP lexicons_NNS and_CC punctuations_NNS ._.
+Positive_JJ and_CC negative_JJ emoticons_NNS such_JJ as_IN :-RRB-_NNP and_CC :-LRB-_NNP have_VBP also_RB been_VBN used_VBN in_IN some_DT research_NN ._.
+However_RB ,_, more_JJR ne-grained_JJ and_CC language-speci_JJ c_NN features_NNS are_VBP necessary_JJ to_TO distinguish_VB ner_NN granularity_NN of_IN emo_NN -_: tions_NNS ._.
+To_TO come_VB up_RP with_IN some_DT effective_JJ features_NNS ,_, we_PRP worked_VBD with_IN the_DT following_VBG ideas_NNS :_: •_CD Emoticons_NNS and_CC symbols_NNS may_MD express_VB speci_NN c_NN types_NNS of_IN ne-grained_JJ emotions_NNS •_VBP Some_DT alphabet_NN letters_NNS may_MD convey_VB emotions_NNS •_VBP Exclamation_JJ words_NNS may_MD appear_VB in_IN surprise_NN messages_NNS •_VBP Swear_JJ words_NNS may_MD appear_VB in_IN angry_JJ messages_NNS We_PRP explain_VBP how_WRB we_PRP designed_VBD the_DT features_NNS accord_NN -_: ing_NN to_TO the_DT ideas_NNS we_PRP presented_VBD above_IN with_IN some_DT ex_FW -_: amples_NNS ._.
+Fine-Grained_JJ Emoticons_NNS and_CC Symbols_NNPS Emoticons_NNPS and_CC symbols_NNS are_VBP important_JJ in_IN analyzing_VBG online_JJ lan_NN -_: guage_NN because_IN many_JJ people_NNS express_VBP their_PRP$ feelings_NNS using_VBG them_PRP ._.
+We_PRP constructed_VBD a_DT list_NN of_IN emoticons_NNS for_IN each_DT ne-grained_JJ emotion_NN type_NN that_WDT are_VBP used_VBN in_IN Ko_NNP -_: rea_NN as_RB well_RB as_IN general_JJ emoticons_NNS widely_RB used_VBN in_IN East_NNP -_: ern_NN and_CC Western_JJ countries_NNS ._.
+We_PRP constructed_VBD a_DT dictio_NN -_: nary_PDT of_IN emoticons_NNS and_CC symbols_NNS with_IN the_DT aid_NN of_IN vari_FW -_: ous_JJ website_NN articles_NNS ._.
+Moreover_RB ,_, we_PRP included_VBD Emojis_NNP which_WDT have_VBP become_VBN increasingly_RB popular_JJ on_IN Twitter_NNP since_IN mobile_JJ devices_NNS adopted_VBD them_PRP ._.
+We_PRP sorted_VBD each_DT emoticon_NN and_CC symbol_NN into_IN one_CD of_IN the_DT six_CD emotions_NNS using_VBG the_DT explanations_NNS written_VBN in_IN the_DT websites_NNS ._.
+One_CD interesting_JJ aspect_NN of_IN the_DT dictionary_NN is_VBZ that_IN it_PRP utilizes_VBZ regular_JJ expressions_NNS to_TO incorporate_VB various_JJ mutations_NNS of_IN emoticons_NNS ._.
+For_IN example_NN ,_, Korean_JJ emoticons_NNS of_IN -_: ten_CD use_NN various_JJ or_CC extended_JJ particles_NNS to_TO represent_VB the_DT mouth_NN of_IN a_DT face_NN ._.
+In_IN the_DT case_NN of_IN a_DT smiling_VBG face_NN -LRB-_-LRB- ˆˆ_FW -RRB-_-RRB- ,_, people_NNS use_VBP various_JJ mutation_NN of_IN such_JJ emoticons_NNS such_JJ as_IN -LRB-_-LRB- ˆ_FW ˆ_FW -RRB-_-RRB- ,_, -LRB-_-LRB- ˆ_FW ˆ_FW -RRB-_-RRB- ,_, -LRB-_-LRB- ˆ.ˆ_CD -RRB-_-RRB- ,_, -LRB-_-LRB- ˆᄉˆ_CD -RRB-_-RRB- ,_, -LRB-_-LRB- ˆ3ˆ_CD -RRB-_-RRB- ._.
+In_IN other_JJ words_NNS ,_, similar_JJ to_TO languages_NNS ,_, emoticons_NNS also_RB have_VBP informal_JJ versions_NNS of_IN similar_JJ patterns_NNS ._.
+Thus_RB ,_, we_PRP incorporated_VBD such_JJ common_JJ cases_NNS with_IN regular_JJ expressions_NNS ._.
+Part_NNP Figure_NNP 2_CD :_: Example_NN of_IN ne-grained_JJ emoticon-emotion_NN dic_SYM -_: tionary_JJ Korean_JJ Letters_NNS ᄏ_VBP ,_, ᄒ_VBP ᅲ_CD ,_, ᅮ_CD ᄃᄃ_CD ᄇᄃᄇᄃ_CD Meaning_NNP Laughing_VBG with_IN Happiness_NNP Crying_VBG with_IN Sadness_NNP Shaking_VBG with_IN Fear_NN Trembling_VBG with_IN Anger_NNP Table_NNP 4_CD :_: List_NN of_IN Korean_JJ letters_NNS closely_RB related_VBN to_TO emotions_NNS of_IN the_DT dictionary_NN of_IN emoticons_NNS and_CC symbols_NNS is_VBZ shown_VBN in_IN Figure_NN 2_CD ._.
+Korean_JJ Emotion_NN Letters_NNS Language-speci_JJ c_NN feature_NN are_VBP important_JJ in_IN performing_VBG emotion_NN analysis_NN for_IN a_DT speci_NN c_NN language_NN ._.
+Koreans_NNPS use_VBP certain_JJ Korean_JJ let_VB -_: ters_NNS to_TO show_VB emotions_NNS ,_, so_IN we_PRP took_VBD certain_JJ letters_NNS into_IN account_NN that_WDT are_VBP listed_VBN in_IN Table_NNP 4_CD ._.
+`_`` ᄏ_NN '_'' and_CC `_`` ᄒ_FW '_'' are_VBP often_RB used_VBN to_TO indicate_VB laughter_NN ,_, while_IN `_`` ᅲ_FW '_'' and_CC `_`` ᅮ_FW '_'' indicate_VBP crying_VBG ._.
+Also_RB ,_, sequences_NNS of_IN letters_NNS ,_, such_JJ as_IN '_'' ᄃᄃ_NN '_'' and_CC '_'' ᄇᄃᄇᄃ_CD '_'' ,_, are_VBP often_RB used_VBN to_TO express_VB fear_NN and_CC anger_NN ,_, respectively_RB ._.
+We_PRP counted_VBD and_CC normalized_VBD the_DT number_NN of_IN such_JJ emotion_NN letters_NNS and_CC added_VBD them_PRP as_IN a_DT language-speci_JJ c_NN feature_NN ._.
+Exclamations_NNS of_IN Surprise_NNP According_VBG to_TO Merriam_NNP -_: Webster_NNP dictionary_NN ,_, the_DT de_FW nition_FW of_IN an_DT exclamation_NN is_VBZ ``_`` a_DT sharp_JJ or_CC sudden_JJ cry_NN ,_, a_DT word_NN ,_, phrase_NN ,_, or_CC sound_VB that_DT expresses_VBZ a_DT strong_JJ emotion9_CD ''_'' ._.
+We_PRP assumed_VBD that_IN exclamations_NNS are_VBP often_RB used_VBN in_IN tweets_NNS expressing_VBG surprise_NN ,_, such_JJ as_IN 맙소사_CD ``_`` oh_UH no_DT ''_'' ,_, 앗_CD ``_`` oh_UH dear_RB ''_'' ,_, and_CC 우와_CD ``_`` wow_NN ''_'' ._.
+We_PRP searched_VBD various_JJ websites_NNS and_CC col_NN -_: lected_VBN examples_NNS to_TO make_VB a_DT list_NN of_IN exclamations_NNS of_IN surprise_NN ._.
+As_IN a_DT result_NN ,_, we_PRP constructed_VBD a_DT list_NN of_IN 45_CD surprise_NN exclamation_JJ words_NNS ._.
+We_PRP then_RB counted_VBD the_DT number_NN of_IN occurrences_NNS of_IN such_JJ words_NNS in_IN tweets_NNS and_CC added_VBD them_PRP as_IN a_DT feature_NN ._.
+Swear_NN Words_NNS We_PRP observed_VBD that_IN swear_VBP words_NNS are_VBP of_IN -_: ten_CD used_VBN in_IN angry_JJ tweets_NNS ;_: therefore_RB ,_, we_PRP assumed_VBD that_IN there_EX occurrence_NN is_VBZ a_DT strong_JJ clue_NN to_TO identify_VB tweets_NNS expressing_VBG anger_NN ._.
+We_PRP constructed_VBD our_PRP$ own_JJ list_NN of_IN Korean_JJ swear_VBP words_NNS by_IN combining_VBG numerous_JJ related_JJ 9_CD http://www.merriam-webster.com/dictionary/exclamation_JJ resources_NNS and_CC websites_NNS ._.
+As_IN a_DT result_NN ,_, a_DT list_NN of_IN 227_CD Korean_JJ swear_VBP words_NNS was_VBD built_VBN ._.
+For_IN each_DT tweet_NN ,_, we_PRP counted_VBD the_DT number_NN of_IN occurrences_NNS of_IN swear_VBP words_NNS and_CC added_VBD them_PRP as_IN a_DT feature_NN ._.
+Consequently_RB ,_, we_PRP designed_VBD a_DT feature_NN vector_NN based_VBN on_IN the_DT conventional_JJ features_NNS as_RB well_RB as_IN the_DT features_NNS we_PRP presented_VBD above_RB ._.
+To_TO sum_VB up_RP ,_, we_PRP considered_VBD the_DT following_VBG features_NNS for_IN classi_NNS cation_NN :_: 1_CD ._.
+Emotion_NN lexicons_NNS -LRB-_-LRB- weighted_JJ TwF_NNP -RRB-_-RRB- 2_CD ._.
+Emotion_NN lexicons_NNS -LRB-_-LRB- thesaurus_NN +_NN translation_NN -RRB-_-RRB- 3_LS ._.
+Punctuation_NN -LRB-_-LRB- ?_. !_.
+!?_NN ._.
+,_, ∼_NN -RRB-_-RRB- 4_LS ._.
+Fine-grained_JJ emoticons_NNS and_CC symbols_NNS 5_CD ._.
+Korean_JJ emotion_NN letters_NNS 6_CD ._.
+Exclamations_NNS of_IN surprise_NN 7_CD ._.
+Swear_NN words_NNS 5.2_CD Machine_NN Learning_NNP Based_VBD Classi_NNP cation_NN Before_IN constructing_VBG a_DT machine_NN learning_VBG classi_FW er_FW ,_, we_PRP applied_VBD the_DT synthetic_JJ minority_NN oversampling_VBG technique_NN -LRB-_-LRB- SMOTE_NNP -RRB-_-RRB- -LRB-_-LRB- Chawla_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- to_TO the_DT training_NN set_NN ,_, a_DT well-known_JJ oversampling_NN method_NN ,_, which_WDT is_VBZ known_VBN to_TO be_VB more_RBR effective_JJ than_IN the_DT plain_JJ oversampling_VBG method_NN with_IN replication_NN ._.
+We_PRP pre_VBP -_: ferred_VBD an_DT oversampling_NN method_NN to_TO an_DT undersam_NN -_: pling_NN method_NN since_IN our_PRP$ dataset_NN is_VBZ highly_RB imbalanced_JJ ,_, and_CC undersampling_VBG removes_VBZ too_RB many_JJ instances_NNS ._.
+SMOTE_NNP generates_VBZ synthetic_JJ instances_NNS of_IN the_DT minor_JJ -_: ity_NN class_NN by_IN choosing_VBG a_DT random_JJ point_NN for_IN each_DT line_NN segment_NN between_IN randomly_RB selected_VBN neighbors_NNS from_IN k_NN nearest_JJS minority_NN neighbors_NNS ._.
+As_IN a_DT result_NN of_IN apply_VB -_: ing_NN SMOTE_NNP to_TO our_PRP$ training_NN set_NN ,_, we_PRP could_MD make_VB a_DT balanced_JJ dataset_NN ,_, which_WDT is_VBZ favored_VBN for_IN most_JJS machine_NN learning_VBG algorithms_NNS ._.
+We_PRP compared_VBD several_JJ machine_NN learning_VBG algorithms_NNS for_IN classi_NNS cation_NN ,_, including_VBG sup_SYM -_: port_NN vector_NN machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ,_, multinomial_JJ logistic_JJ re_NN -_: gression_NN ,_, random_JJ forest_NN ,_, J48_NNP ,_, naive_JJ Bayes_NNP ,_, and_CC ze_SYM -_: roR_NN ._.
+6_CD Experimental_JJ Results_NNS and_CC Analysis_NNP We_PRP performed_VBD experiments_NNS using_VBG WEKA10_CD to_TO eval_VB -_: uate_NN 1_CD -RRB-_-RRB- our_PRP$ weighted_JJ tweet_NN frequency_NN method_NN and_CC 2_CD -RRB-_-RRB- the_DT performance_NN of_IN machine_NN learning_VBG based_VBN classi_NNS -_: cation_NN using_VBG the_DT feature_NN vector_NN we_PRP engineered_VBD ._.
+Dataset_NNP For_IN training_NN and_CC testing_VBG the_DT machine_NN learn_VBP -_: ing_NN algorithms_NNS ,_, we_PRP used_VBD 899_CD Twitter_NNP messages_NNS from_IN our_PRP$ KTEA_NNP dataset_NN ,_, which_WDT contains_VBZ tweets_NNS for_IN which_WDT 10_CD http://www.cs.waikato.ac.nz/ml/weka/_NN three_CD annotators_NNS all_DT agreed_VBN on_IN the_DT emotion_NN type_NN ,_, ex_FW -_: cluding_VBG neutral_JJ ._.
+We_PRP performed_VBD 5-cross_JJ validation_NN ._.
+Performance_NNP Measure_NN We_PRP used_VBD precision_NN ,_, recall_NN and_CC F-measure_NN to_TO evaluate_VB the_DT classi_NNS cation_NN perfor_NN -_: mance_NN for_IN each_DT emotion_NN type_NN ._.
+Also_RB ,_, the_DT weighted_JJ average_NN of_IN each_DT measure_NN was_VBD computed_VBN to_TO determine_VB the_DT overall_JJ performance_NN of_IN unbalanced_JJ test_NN dataset_NN ._.
+Weighted_JJ Tweet_NNP Frequency_NN We_PRP investigated_VBD the_DT performance_NN of_IN our_PRP$ lexicon_NN building_NN method_NN ,_, weighted_JJ tweet_NN Frequency_NN ,_, and_CC compared_VBN it_PRP with_IN the_DT performance_NN of_IN the_DT thesaurus_NN -_: and_CC translation-based_JJ methods_NNS ._.
+We_PRP found_VBD that_IN the_DT lexicons_NNS based_VBN on_IN the_DT thesaurus_NN -_: and_CC translation-based_JJ approaches_NNS suffer_VBP from_IN low_JJ coverage_NN due_JJ to_TO the_DT lack_NN of_IN reliable_JJ words_NNS produced_VBN by_IN the_DT Korean_JJ resources_NNS and_CC translator_NN ._.
+Therefore_RB ,_, we_PRP combined_VBD the_DT lexicon_NN lists_NNS produced_VBN by_IN the_DT thesaurus_NN -_: and_CC translation-based_JJ approaches_NNS to_TO make_VB a_DT larger_JJR emotion_NN lexicon_NN list_NN ._.
+In_IN other_JJ words_NNS ,_, we_PRP compared_VBD our_PRP$ approach_NN -LRB-_-LRB- weighted_JJ TwF_NNP -RRB-_-RRB- against_IN the_DT combined_VBN approach_NN -LRB-_-LRB- thesaurus_NN +_NN translation_NN -RRB-_-RRB- ._.
+The_DT precision_NN ,_, recall_NN ,_, and_CC F-measure_NN of_IN using_VBG SVM_NNP is_VBZ shown_VBN in_IN Figure_NN 3_CD ._.
+The_DT F-measure_NN of_IN our_PRP$ approach_NN is_VBZ higher_JJR than_IN that_DT of_IN the_DT thesaurus_NN +_NN translation_NN ap_SYM -_: proach_NN ._.
+The_DT precision_NN of_IN the_DT thesaurus_NN +_NN translation_NN approach_NN is_VBZ relatively_RB high_JJ due_JJ to_TO the_DT manual_NN re_SYM -_: moval_NN of_IN erroneous_JJ words_NNS from_IN the_DT lists_NNS ._.
+How_WRB -_: ever_RB ,_, its_PRP$ recall_NN is_VBZ very_RB low_JJ because_IN it_PRP does_VBZ not_RB con_JJ -_: tain_NN Twitter-speci_NN c_NN words_NNS ._.
+Furthermore_RB ,_, our_PRP$ ap_SYM -_: proach_NN ,_, used_VBN together_RB with_IN the_DT thesaurus_NN +_NN translation_NN approach_NN ,_, achieves_VBZ the_DT best_JJS performance_NN ._.
+Machine_NN Learning_NNP Based_VBD Classi_NNP cation_NN First_NNP ,_, we_PRP investigated_VBD the_DT most_RBS appropriate_JJ machine_NN learning_VBG algorithm_NN for_IN classi_NNS cation_NN ._.
+We_PRP tested_VBD various_JJ ma_SYM -_: chine_NN learning_VBG algorithms_NNS :_: SVM_NNP ,_, multinomial_JJ logis_NNS -_: tic_JJ regression_NN ,_, random_JJ forest_NN ,_, J48_NNP ,_, naive_JJ Bayes_NNP ,_, and_CC zeroR_NNP ._.
+Figure_NN 4_CD shows_VBZ the_DT results_NNS ._.
+SVM_NNP produced_VBD the_DT best_JJS precision_NN ,_, recall_NN ,_, and_CC F-measure_NN compared_VBN to_TO the_DT others_NNS ._.
+We_PRP conducted_VBD another_DT experiment_NN to_TO evaluate_VB how_WRB well_RB the_DT features_NNS we_PRP proposed_VBD improved_VBN the_DT performance_NN of_IN SVM_NNP ._.
+As_IN shown_VBN in_IN Figure_NN 5_CD ,_, the_DT best_JJS performance_NN was_VBD observed_VBN when_WRB all_PDT the_DT fea_NN -_: tures_NNS were_VBD combined_VBN and_CC the_DT overall_JJ F-measure_NN was_VBD about_RB 70_CD %_NN ._.
+Emotion_NN lexicon_NN and_CC punctuation_NN fea_NN -_: tures_NNS achieved_VBD an_DT F-measure_NN of_IN about_IN 64_CD %_NN ._.
+Adding_VBG the_DT exclamation_NN of_IN surprise_NN feature_NN improved_VBD the_DT classi_NNS cation_NN of_IN the_DT surprise_NN emotion_NN by_IN a_DT 12_CD %_NN F_NN -_: measure_NN ._.
+Further_JJ adding_VBG Korean_JJ emotion_NN letters_NNS Figure_NN 3_CD :_: Precision_NN ,_, recall_NN ,_, and_CC F-measure_NN of_IN using_VBG our_PRP$ weighted_JJ TwF_NNP ,_, thesaurus_NN +_NN translation_NN ,_, and_CC the_DT two_CD approaches_NNS combined_VBN ._.
+The_DT best_JJS accuracy_NN was_VBD observed_VBN when_WRB all_PDT the_DT approaches_NNS were_VBD used_VBN ._.
+Figure_NN 4_CD :_: Precision_NN ,_, recall_NN ,_, and_CC F-measure_NN achieved_VBN by_IN using_VBG different_JJ machine_NN learning_VBG algorithms_NNS ._.
+SVM_NNP gen_SYM -_: erated_VBD the_DT best_JJS performance_NN ._.
+helped_VBN to_TO classify_VB sadness_NN ,_, increasing_VBG the_DT classi_NNS -_: cation_NN score_NN from_IN 67_CD %_NN to_TO 72.1_CD %_NN ,_, while_IN the_DT value_NN for_IN fear_NN increased_VBN from_IN 76.3_CD %_NN to_TO 79.5_CD %_NN ._.
+Moreover_RB ,_, combining_VBG emoticon_NN and_CC symbol_NN feature_NN particularly_RB improved_VBD the_DT classi_NNS cation_NN for_IN happiness_NN increased_VBN from_IN 73_CD %_NN to_TO 76.3_CD %_NN ._.
+Lastly_RB ,_, we_PRP added_VBD the_DT swear_VBP word_NN feature_NN ._.
+As_IN expected_VBN ,_, it_PRP increased_VBD the_DT classi_NNS -_: cation_NN of_IN anger_NN from_IN 54.4_CD %_NN to_TO 56.5_CD %_NN ._.
+Overall_RB ,_, we_PRP found_VBD that_IN our_PRP$ ne-grained_JJ features_NNS helped_VBD the_DT anal_JJ -_: ysis_NN of_IN ne-grained_JJ emotions_NNS ,_, and_CC we_PRP believe_VBP that_IN improving_VBG the_DT feature_NN resources_NNS will_MD further_RBR improve_VB the_DT overall_JJ performance_NN ._.
+7_CD Conclusion_NN We_PRP proposed_VBD a_DT machine_NN learning_VBG based_VBN classi_NNS ca_MD -_: tion_NN method_NN that_WDT sorts_NNS Korean_JJ Twitter_NNP messages_NNS into_IN Figure_NN 5_CD :_: Precision_NN ,_, recall_NN ,_, and_CC F-measure_NN using_VBG com_NN -_: bined_JJ set_NN of_IN features_NNS ._.
+Using_VBG all_DT features_NNS achieved_VBD the_DT best_JJS performance_NN which_WDT is_VBZ about_IN 70_CD %_NN F-measure_JJ six_CD emotion_NN types_NNS using_VBG carefully_RB designed_VBN features_NNS ._.
+Emotion_NN analysis_NN research_NN in_IN under-resourced_JJ coun_NN -_: tries_VBZ can_MD bene_VB t_NN from_IN our_PRP$ emotion_NN lexicon_NN building_NN method_NN as_IN we_PRP automatically_RB construct_VBP lexicons_NNS with_IN -_: out_RP any_DT help_NN from_IN other_JJ resources_NNS and_CC tools_NNS ._.
+In_IN ad_NN -_: dition_NN ,_, we_PRP suggested_VBD several_JJ ne-grained_JJ features_NNS to_TO improve_VB classi_NNS cation_NN performance_NN ._.
+We_PRP believe_VBP that_IN our_PRP$ research_NN ,_, the_DT KTEA_NNP dataset_NN ,_, and_CC resources_NNS rep_NN -_: resent_VBP a_DT signi_JJ cant_JJ step_NN forward_RB in_IN Korean_JJ Twitter_NNP emotion_NN analysis_NN studies_NNS ,_, which_WDT have_VBP been_VBN rarely_RB ad_NN -_: dressed_VBN before_RB ._.
+Acknowledgment_NNP This_DT work_NN was_VBD supported_VBN by_IN the_DT National_NNP Research_NNP Foundation_NNP of_IN Korea_NNP -LRB-_-LRB- NRF_NNP -RRB-_-RRB- grant_NN funded_VBN by_IN the_DT Ko_NNP -_: rea_NN government_NN -LRB-_-LRB- MSIP_NNP -RRB-_-RRB- -LRB-_-LRB- No._NN 2010-0028631_CD -RRB-_-RRB- ._.
+References_NNS R._NNP C._NNP Balabantaray_NNP ,_, Mudasir_NNP Mohammad_NNP ,_, and_CC Nibha_NNP Sharma_NNP ._.
+2012_CD ._.
+Multi-class_JJ twitter_NN emotion_NN classi_NNS -_: cation_NN :_: A_DT new_JJ approach_NN ._.
+International_NNP Journal_NNP of_IN Ap_NNP -_: plied_VBD Information_NNP Systems_NNP ,_, 4_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :48_CD --_: 53_CD ._.
+E._NNP Y._NNP Bann_NNP and_CC J._NNP J._NNP Bryson_NNP ._.
+2012_CD ._.
+The_DT conceptualisation_NN of_IN emotion_NN qualia_NN :_: Semantic_JJ clustering_NN of_IN emotional_JJ tweets_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 13th_JJ Neural_NNP Computa_NNP -_: tion_NN and_CC Psychology_NNP Workshop_NNP ._.
+World_NNP Scienti_NNP c._NNP Johan_NNP Bollen_NNP ,_, Huina_NNP Mao_NNP ,_, and_CC Xiaojun_NNP Zeng_NNP ._.
+2011_CD ._.
+Twitter_NNP mood_NN predicts_VBZ the_DT stock_NN market_NN ._.
+Journal_NNP of_IN Computational_NNP Science_NNP ,_, 2_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 8_CD ._.
+Erik_NNP Cambria_NNP and_CC Amir_NNP Hussain_NNP ._.
+2012_CD ._.
+Sentic_NNP Comput_NNP -_: ing_NN :_: Techniques_NNS ,_, Tools_NNS ,_, and_CC Applications_NNS ,_, volume_NN 2_CD ._.
+Springer_NNP Science_NNP &_CC Business_NNP Media_NNP ._.
+Nitesh_NNP V._NNP Chawla_NNP ,_, Kevin_NNP W._NNP Bowyer_NNP ,_, Lawrence_NNP O._NNP Hall_NNP ,_, and_CC W._NNP Philip_NNP Kegelmeyer_NNP ._.
+2002_CD ._.
+Smote_NNP :_: synthetic_JJ minority_NN over-sampling_NN technique_NN ._.
+Journal_NNP of_IN Arti_NNP -_: cial_JJ Intelligence_NNP Research_NNP ,_, 16:321_CD --_: 357_CD ._.
+Young_NNP Hwan_NNP Cho_NNP and_CC Kong_NNP Joo_NNP Lee_NNP ._.
+2006_CD ._.
+Auto_NN -_: matic_JJ affect_VB recognition_NN using_VBG natural_JJ language_NN pro-_JJ cessing_NN techniques_NNS and_CC manually_RB built_VBN affect_VB lexi_SYM -_: con_NN ._.
+IEICE_NNP Transactions_NNS on_IN Information_NN and_CC Systems_NNPS ,_, 89_CD -LRB-_-LRB- 12_CD -RRB-_-RRB- :2964_CD --_: 2971_CD ._.
+Nicholas_NNP A._NNP Diakopoulos_NNP and_CC David_NNP A._NNP Shamma_NNP ._.
+2010_CD ._.
+Characterizing_VBG debate_NN performance_NN via_IN aggregated_JJ twitter_NN sentiment_NN ._.
+In_IN Proceedings_NNP of_IN the_DT SIGCHI_NNP Conference_NNP on_IN Human_NNP Factors_NNP in_IN Computing_NNP Systems_NNPS ,_, pages_NNS 1195_CD --_: 1198_CD ._.
+ACM_NNP ._.
+Son_NNP Doan_NNP ,_, Bao-Khanh_NNP Ho_NNP Vo_NNP ,_, and_CC Nigel_NNP Collier_NNP ._.
+2012_CD ._.
+An_DT analysis_NN of_IN twitter_NN messages_NNS in_IN the_DT 2011_CD tohoku_NN earthquake_NN ._.
+In_IN Electronic_JJ Healthcare_NNP ,_, volume_NN 91_CD ,_, pages_NNS 58_CD --_: 66_CD ._.
+Springer_NNP ._.
+Paul_NNP Ekman_NNP ._.
+1992_CD ._.
+An_DT argument_NN for_IN basic_JJ emotions_NNS ._.
+Cognition_NNP &_CC Emotion_NNP ,_, 6_CD -LRB-_-LRB- 3-4_CD -RRB-_-RRB- :169_CD --_: 200_CD ._.
+Alec_NNP Go_NNP ,_, Richa_NNP Bhayani_NNP ,_, and_CC Lei_NNP Huang_NNP ._.
+2009_CD ._.
+Twit_SYM -_: ter_NN sentiment_NN classi_NNS cation_NN using_VBG distant_JJ supervision_NN ._.
+CS224N_NNP Project_NNP Report_NNP ,_, Stanford_NNP ,_, 1:12_CD ._.
+Jeongin_NNP Kim_NNP ,_, Dongjin_NNP Choi_NNP ,_, Myunggwon_NNP Hwang_NNP ,_, and_CC Pankoo_NNP Kim_NNP ._.
+2014_CD ._.
+Analysis_NN on_IN smartphone_NN related_VBN twitter_NN reviews_NNS by_IN using_VBG opinion_NN mining_NN techniques_NNS ._.
+In_IN Advanced_NNP Approaches_NNPS to_TO Intelligent_NNP Information_NNP and_CC Database_NNP Systems_NNPS ,_, pages_NNS 205_CD --_: 212_CD ._.
+Springer_NNP ._.
+Cheolseong_NNP Lee_NNP ,_, Donghee_NNP Choi_NNP ,_, Seongsoon_NNP Kim_NNP ,_, and_CC Jaewoo_NNP Kang_NNP ._.
+2013_CD ._.
+Classi_NNP cation_NN and_CC analysis_NN of_IN emotion_NN in_IN korean_NN microblog_NN texts_NNS ._.
+Journal_NNP of_IN Ko_NNP -_: rean_JJ Institute_NNP of_IN Information_NNP Scientists_NNS and_CC Engineers_NNS :_: Databases_NNS ,_, 40_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :159_CD --_: 167_CD ._.
+Hugo_NNP Liu_NNP and_CC Push_NNP Singh_NNP ._.
+2004_CD ._.
+Conceptnet_NNP --_: a_DT prac_NN -_: tical_JJ commonsense_JJ reasoning_NN tool-kit_NN ._.
+Journal_NNP of_IN BT_NNP Technology_NNP ,_, 22_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :211_CD --_: 226_CD ._.
+Saif_NNP M._NNP Mohammad_NNP and_CC Peter_NNP D._NNP Turney_NNP ._.
+2013_CD ._.
+Crowd_NN -_: sourcing_VBG a_DT word_NN --_: emotion_NN association_NN lexicon_NN ._.
+Com_NNP -_: putational_JJ Intelligence_NNP ,_, 29_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :436_CD --_: 465_CD ._.
+Saeedeh_NNP Momtazi_NNP ._.
+2012_CD ._.
+Fine-grained_JJ german_JJ senti_NNS -_: ment_NN analysis_NN on_IN social_JJ media_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+European_JJ Language_NNP Resources_NNPS Asso_NNP -_: ciation_NN -LRB-_-LRB- ELRA_NNP -RRB-_-RRB- ._.
+Brendan_NNP O’Connor_NNP ,_, Ramnath_NNP Balasubramanyan_NNP ,_, Bryan_NNP R_NNP Routledge_NNP ,_, and_CC Noah_NNP A_NNP Smith_NNP ._.
+2010_CD ._.
+From_IN tweets_NNS to_TO polls_NNS :_: Linking_VBG text_NN sentiment_NN to_TO public_JJ opinion_NN time_NN series_NN ._.
+Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Web_NNP and_CC Social_NNP Media_NNP ,_, 11_CD -LRB-_-LRB- 122-129_CD -RRB-_-RRB- :1_CD --_: 2_CD ._.
+James_NNP W._NNP Pennebaker_NNP ,_, Martha_NNP E._NNP Francis_NNP ,_, and_CC Roger_NNP J._NNP Booth_NNP ._.
+2001_CD ._.
+Linguistic_JJ inquiry_NN and_CC word_NN count_NN :_: Liwc_NNP 2001_CD ._.
+Mahway_NNP :_: Lawrence_NNP Erlbaum_NNP Associates_NNPS ,_, 71:2001_CD ._.
+Robert_NNP Remus_NNP ,_, Uwe_NNP Quasthoff_NNP ,_, and_CC Gerhard_NNP Heyer_NNP ._.
+2010_CD ._.
+Sentiws_SYM -_: a_DT publicly_RB available_JJ german-language_JJ resource_NN for_IN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 7th_NNP International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+European_JJ Language_NNP Resources_NNPS Asso_NNP -_: ciation_NN -LRB-_-LRB- ELRA_NNP -RRB-_-RRB- ._.
+June_NNP Woong_NNP Rhee_NNP ,_, Hyun_NNP Joo_NNP Song_NN ,_, Eun_NNP Kyung_NNP Na_NNP ,_, and_CC Hyun_NNP Suk_NNP Kim_NNP ._.
+2008_CD ._.
+Classi_NNP cation_NN of_IN emotion_NN terms_NNS in_IN korean_NN ._.
+Korean_JJ Journal_NNP of_IN Journalism_NNP and_CC Commu_NNP -_: nication_NN Studies_NNS ,_, 52_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :85_CD --_: 116_CD ._.
+Kirk_NNP Roberts_NNP ,_, Michael_NNP A._NNP Roach_NNP ,_, Joseph_NNP Johnson_NNP ,_, Josh_NNP Guthrie_NNP ,_, and_CC Sanda_NNP M._NNP Harabagiu_NNP ._.
+2012_CD ._.
+Empatweet_NNP :_: Annotating_VBG and_CC detecting_VBG emotions_NNS on_IN twitter_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 8th_JJ International_NNP Conference_NNP on_IN Lan_NNP -_: guage_NN Resources_NNPS and_CC Evaluation_NNP ._.
+European_JJ Language_NNP Resources_NNPS Association_NNP -LRB-_-LRB- ELRA_NNP -RRB-_-RRB- ._.
+Carlo_NNP Strapparava_NNP and_CC Alessandro_NNP Valitutti_NNP ._.
+2004_CD ._.
+Word_NN -_: net_JJ affect_VB :_: an_DT affective_JJ extension_NN of_IN wordnet_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 4th_JJ International_NNP Conference_NNP on_IN Lan_NNP -_: guage_NN Resources_NNPS and_CC Evaluation_NNP ,_, volume_NN 4_CD ,_, pages_NNS 1083_CD --_: 1086_CD ._.
+Alfan_NNP F._NNP Wicaksono_NNP ,_, Clara_NNP Vania_NNP ,_, Distiawan_NNP T._NNP Bayu_NNP ,_, and_CC Mirna_NNP Adriani_NNP ._.
+Automatically_RB building_VBG a_DT corpus_NN for_IN sentiment_NN analysis_NN on_IN indonesian_JJ tweets_NNS ._.
+28th_JJ Paci_NNP c_NN Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Com_NNP -_: puting_NN ._.

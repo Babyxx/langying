@@ -1,0 +1,351 @@
+Multi-aspects_NNS Rating_NNP Prediction_NNP Using_VBG Aspect_NNP Words_NNS and_CC Sentences_NNS Abstract_NNP In_IN this_DT paper_NN we_PRP propose_VBP a_DT method_NN for_IN a_DT rat_NN -_: ing_NN prediction_NN task_NN ._.
+Each_DT review_NN consists_VBZ of_IN several_JJ ratings_NNS for_IN a_DT product_NN ,_, namely_RB aspects_NNS ._.
+To_TO predict_VB the_DT ratings_NNS of_IN the_DT aspects_NNS ,_, we_PRP uti_SYM -_: lize_NN not_RB only_RB aspect_NN words_NNS ,_, but_CC also_RB aspect_NN sen_NN -_: tences_NNS ._.
+First_RB ,_, our_PRP$ method_NN detects_VBZ aspect_NN sen_NN -_: tences_NNS by_IN using_VBG a_DT machine_NN learning_VBG technique_NN ._.
+Then_RB ,_, it_PRP incorporates_VBZ words_NNS extracted_VBN from_IN as_IN -_: pect_NN sentences_NNS with_IN aspect_NN word_NN features_NNS ._.
+For_IN estimating_VBG aspect_NN likelihood_NN of_IN each_DT word_NN ,_, we_PRP utilize_VBP the_DT variance_NN of_IN words_NNS among_IN aspects_NNS ._.
+Finally_RB ,_, it_PRP generates_VBZ classifiers_NNS for_IN each_DT aspect_NN by_IN using_VBG the_DT extracted_VBN features_NNS based_VBN on_IN the_DT aspect_NN likelihood_NN ._.
+Experimental_JJ result_NN shows_VBZ the_DT effectiveness_NN of_IN features_NNS from_IN aspect_NN sen_NN -_: tences_NNS ._.
+1_CD Introduction_NNP As_IN the_DT World_NNP Wide_NNP Web_NNP rapidly_RB grows_VBZ ,_, a_DT huge_JJ num_NN -_: ber_NN of_IN online_JJ documents_NNS are_VBP easily_RB accessible_JJ on_IN the_DT Web_NNP ._.
+Finding_VBG information_NN relevant_JJ to_TO user_NN needs_NNS has_VBZ become_VBN increasingly_RB important_JJ ._.
+The_DT most_RBS important_JJ information_NN on_IN the_DT Web_NNP is_VBZ usually_RB contained_VBN in_IN the_DT text_NN ._.
+We_PRP obtain_VB a_DT huge_JJ number_NN of_IN review_NN documents_NNS that_WDT include_VBP user_NN 's_POS opinions_NNS for_IN products_NNS ._.
+Buying_VBG products_NNS ,_, users_NNS usually_RB survey_VBP the_DT product_NN reviews_VBZ ._.
+More_RBR precise_JJ and_CC effective_JJ methods_NNS for_IN evaluating_VBG the_DT products_NNS are_VBP useful_JJ for_IN users_NNS ._.
+Many_JJ researchers_NNS have_VBP recently_RB studied_VBN extraction_NN and_CC classification_NN of_IN opinions_NNS ,_, namely_RB sentiment_NN analysis_NN -LRB-_-LRB- Pang_NNP and_CC Lee_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+For_IN sentiment_NN analysis_NN ,_, one_CD of_IN the_DT most_RBS primitive_JJ studies_NNS is_VBZ to_TO classify_VB a_DT document_NN into_IN two_CD classes_NNS ;_: positive_JJ and_CC negative_JJ opinions_NNS -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD ;_: Turney_NNP ,_, 2002_CD -RRB-_-RRB- ._.
+One_CD simple_JJ extension_NN of_IN p/n_JJ classifi_NNS -_: cation_NN is_VBZ a_DT rating_NN prediction_NN task_NN ._.
+It_PRP is_VBZ a_DT finer-grained_JJ task_NN ,_, as_IN compared_VBN with_IN the_DT p/n_JJ classification_NN ._.
+Several_JJ researchers_NNS have_VBP challenged_VBN rating_NN prediction_NN tasks_NNS in_IN reviews_NNS -LRB-_-LRB- Goldberg_NNP and_CC Zhu_NNP ,_, 2006_CD ;_: Li_NNP et_FW al._FW ,_, 2011_CD ;_: Okanohara_NNP and_CC Tsujii_NNP ,_, 2005_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+They_PRP are_VBP called_VBN ``_`` seeing_VBG stars_NNS ._. ''_''
+These_DT tasks_NNS han_SYM -_: dled_VBD an_DT overall_JJ rating_NN in_IN the_DT prediction_NN ._.
+However_RB ,_, each_DT review_NN contains_VBZ many_JJ descriptions_NNS about_IN sev_NN -_: eral_JJ aspects_NNS of_IN a_DT product_NN ._.
+For_IN example_NN ,_, they_PRP are_VBP ``_`` per_IN -_: formance_NN ''_'' ,_, ``_`` user-friendliness_NN ''_'' and_CC ``_`` portability_NN ''_'' for_IN laptop_JJ PCs_NNS and_CC ``_`` script_NN ''_'' ,_, ``_`` casting_NN ''_'' and_CC ``_`` music_NN ''_'' for_IN movies_NNS ._.
+Since_IN reviewers_NNS judge_NN not_RB only_RB the_DT over_JJ -_: all_DT polarity_NN for_IN a_DT product_NN but_CC also_RB details_NNS for_IN it_PRP ,_, pre_SYM -_: dicting_NN stars_NNS of_IN several_JJ aspects_NNS in_IN a_DT review_NN is_VBZ also_RB one_CD of_IN the_DT most_RBS important_JJ tasks_NNS in_IN sentiment_NN analy_NN -_: sis_NN ,_, instead_RB of_IN a_DT single_JJ overall_JJ rating_NN ._.
+There_EX are_VBP sev_SYM -_: eral_JJ studies_NNS to_TO predict_VB some_DT stars_NNS in_IN a_DT review_NN ,_, namely_RB ``_`` seeing_VBG several_JJ stars_NNS ''_'' or_CC ``_`` aspect_NN ratings_NNS ''_'' -LRB-_-LRB- Gupta_NNP et_FW al._FW ,_, 2010_CD ;_: Pappas_NNP and_CC Popescu-Belis_NNP ,_, 2014_CD ;_: Shimada_NNP and_CC Endo_NNP ,_, 2008_CD ;_: Snyder_NNP and_CC Barzilay_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN we_PRP propose_VBP a_DT method_NN for_IN a_DT rating_NN pre_NN -_: diction_NN task_NN with_IN some_DT aspects_NNS ._.
+In_IN other_JJ words_NNS ,_, we_PRP focus_VBP on_IN multi-scale_JJ and_CC multi-aspects_JJ rating_NN predic_NN -_: tion_NN for_IN reviews_NNS ._.
+We_PRP handle_VBP video_JJ game_NN reviews_NNS with_IN seven_CD aspects_NNS and_CC zero_CD to_TO five_CD stars_NNS ._.
+Here_RB we_PRP also_RB focus_VB on_IN feature_NN extraction_NN for_IN the_DT prediction_NN ._.
+The_DT most_RBS common_JJ approach_NN is_VBZ usually_RB based_VBN on_IN fea_NN -_: ture_NN extraction_NN from_IN all_DT sentences_NNS in_IN each_DT review_NN ._.
+However_RB ,_, all_DT sentences_NNS in_IN a_DT review_NN do_VBP not_RB always_RB contribute_VBP to_TO the_DT prediction_NN of_IN a_DT specific_JJ aspect_NN in_IN the_DT review_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT methods_NNS handling_VBG a_DT review_NN globally_RB are_VBP not_RB always_RB suitable_JJ to_TO gener_VB -_: ate_VBD a_DT model_NN for_IN rating_NN prediction_NN ._.
+In_IN addition_NN ,_, Pang_NNP and_CC Lee_NNP -LRB-_-LRB- 2004_CD -RRB-_-RRB- mentioned_VBD that_IN classifying_VBG sentences_NNS in_IN documents_NNS into_IN subjective_JJ or_CC objective_NN was_VBD effec_JJ -_: tive_JJ for_IN p/n_JJ classification_NN ._.
+In_IN a_DT similar_JJ way_NN ,_, for_IN the_DT aspect_NN rating_NN tasks_NNS ,_, aspect_NN identification_NN of_IN each_DT sen_NN -_: tence_NN and_CC use_NN of_IN aspect_NN sentences_NNS for_IN feature_NN extrac_NN -_: tion_NN might_MD contribute_VB to_TO the_DT improvement_NN for_IN rating_NN prediction_NN ._.
+Therefore_RB ,_, the_DT proposed_VBN method_NN iden_NN -_: tifies_NNS the_DT aspect_NN of_IN each_DT sentence_NN in_IN each_DT review_NN first_RB ._.
+Then_RB ,_, it_PRP extracts_VBZ features_NNS for_IN prediction_NN mod_NN -_: els_NNS of_IN seven_CD aspects_NNS from_IN all_DT sentences_NNS and_CC aspect_NN sentences_NNS ,_, on_IN the_DT basis_NN of_IN the_DT variance_NN of_IN words_NNS ._.
+Fi_SYM -_: nally_RB ,_, it_PRP generates_VBZ prediction_NN models_NNS based_VBN on_IN Sup_NNP -_: port_NN Vector_NNP Regression_NNP -LRB-_-LRB- SVR_NNP -RRB-_-RRB- for_IN seven_CD aspects_NNS ._.
+2_CD Related_JJ work_NN Snyder_NNP and_CC Barzilay_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN for_IN multiple_JJ aspect_NN ranking_JJ using_VBG the_DT good_JJ grief_NN algorithm_NN ._.
+The_DT method_NN utilized_VBD the_DT dependen_NN -_: cies_NNS among_IN aspect_NN ratings_NNS to_TO improve_VB the_DT accuracy_NN ._.
+Gupta_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- also_RB have_VBP reported_VBN methods_NNS for_IN rating_NN prediction_NN ._.
+They_PRP discussed_VBD several_JJ features_NNS and_CC methods_NNS for_IN a_DT restaurant_NN review_NN task_NN ._.
+They_PRP also_RB modified_VBD the_DT method_NN based_VBN on_IN rating_NN predictors_NNS and_CC different_JJ predictors_NNS for_IN joint_JJ assignment_NN of_IN ratings_NNS ._.
+These_DT methods_NNS did_VBD not_RB always_RB focus_VB on_IN aspects_NNS of_IN each_DT word_NN in_IN reviews_NNS ._.
+Shimada_NNP and_CC Endo_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN based_VBN on_IN word_NN variance_NN for_IN seeing_VBG several_JJ stars_NNS ._.
+They_PRP focused_VBD on_IN aspect_NN likelihood_NN of_IN each_DT word_NN ._.
+The_DT basic_JJ idea_NN of_IN our_PRP$ method_NN in_IN this_DT paper_NN is_VBZ also_RB based_VBN on_IN the_DT variance_NN of_IN words_NNS in_IN each_DT as_IN -_: pect_NN ._.
+However_RB ,_, they_PRP computed_VBD the_DT variance_NN from_IN all_DT sentences_NNS in_IN reviews_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, our_PRP$ method_NN also_RB focuses_VBZ on_IN aspect_NN sentences_NNS for_IN the_DT computation_NN of_IN the_DT word_NN variance_NN ._.
+Pappas_NNP and_CC Popescu-Belis_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN using_VBG multiple-instance_JJ learning_NN for_IN aspect_NN rating_NN predic_SYM -_: tion_NN ._.
+Their_PRP$ method_NN estimated_VBD the_DT weight_NN of_IN each_DT sen_NN -_: tences_NNS for_IN the_DT prediction_NN ._.
+The_DT weights_NNS led_VBD to_TO the_DT ex_FW -_: planation_NN of_IN each_DT aspect_NN ._.
+They_PRP estimated_VBD the_DT aspect_NN weights_NNS of_IN each_DT sentence_NN directly_RB in_IN their_PRP$ model_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, our_PRP$ method_NN identifies_VBZ the_DT aspect_NN of_IN each_DT sentence_NN by_IN using_VBG a_DT machine_NN learning_VBG method_NN separately_RB ._.
+Reviews_NNS with_IN seven_CD aspects_NNS Estimation_NN of_IN aspect_NN words_NNS Classifiers_NNP for_IN seven_CD aspects_NNS Estimated_VBN values_NNS of_IN seven_CD aspects_NNS Figure_NN 1_CD :_: The_DT outline_NN of_IN our_PRP$ method_NN ._.
+3_CD The_DT proposed_VBN method_NN In_IN this_DT section_NN ,_, we_PRP explain_VBP the_DT proposed_VBN method_NN ._.
+Figure_NN 1_CD shows_VBZ the_DT outline_NN of_IN our_PRP$ method_NN ._.
+It_PRP con_RB -_: sists_NNS of_IN two_CD parts_NNS ;_: aspect_NN identification_NN of_IN sentences_NNS and_CC estimation_NN of_IN aspect_NN likelihood_NN of_IN words_NNS ._.
+First_RB ,_, our_PRP$ method_NN identifies_VBZ the_DT aspects_NNS of_IN each_DT sentence_NN in_IN reviews_NNS ._.
+Then_RB ,_, it_PRP estimates_VBZ aspect_NN likelihood_NN of_IN each_DT word_NN for_IN each_DT aspect_NN ,_, namely_RB aspect_NN words_NNS and_CC the_DT weight_NN for_IN each_DT aspect_NN ,_, from_IN aspect_NN sentences_NNS and_CC all_DT sentences_NNS in_IN reviews_NNS ._.
+Finally_RB ,_, it_PRP generates_VBZ classifiers_NNS for_IN each_DT aspect_NN by_IN using_VBG the_DT extracted_VBN features_NNS based_VBN on_IN the_DT aspect_NN likelihood_NN ._.
+3.1_CD Target_NNP data_NNS There_EX are_VBP many_JJ review_NN documents_NNS of_IN various_JJ prod_VBP -_: ucts_NNS on_IN the_DT Web_NNP ._.
+In_IN this_DT paper_NN we_PRP handle_VBP review_NN documents_NNS about_IN video_NN games_NNS ._.
+Figure_NN 2_CD shows_VBZ an_DT example_NN of_IN a_DT review_NN document_NN ._.
+The_DT review_NN doc_NN -_: uments_NNS consist_VBP of_IN evaluation_NN criteria_NNS ,_, their_PRP$ ratings_NNS ,_, positive_JJ opinions_NNS -LRB-_-LRB- pros_NNS text_NN -RRB-_-RRB- ,_, negative_JJ opinions_NNS -LRB-_-LRB- cons_NNS text_NN -RRB-_-RRB- and_CC comments_NNS -LRB-_-LRB- free_JJ text_NN -RRB-_-RRB- for_IN a_DT video_NN game_NN ._.
+The_DT number_NN of_IN aspects_NNS ,_, namely_RB evaluation_NN criteria_NNS ,_, is_VBZ seven_CD :_: ``_`` Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- ''_'' ,_, ``_`` Graphics_NNP -LRB-_-LRB- g_VBN -RRB-_-RRB- ''_'' ,_, ``_`` Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- ''_'' ,_, ``_`` Addiction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- ''_'' ,_, ``_`` Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ''_'' ,_, ``_`` Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- ''_'' ,_, and_CC ``_`` Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- ''_'' ._.
+The_DT range_NN of_IN the_DT ratings_NNS ,_, namely_RB stars_VBZ ,_, is_VBZ zero_CD to_TO five_CD points_NNS ._.
+We_PRP extract_VBP review_NN documents_NNS from_IN a_DT Web_NNP site1_CD ._.
+The_DT site_NN establishes_VBZ a_DT guideline_NN for_IN contributions_NNS of_IN reviews_NNS and_CC the_DT reviews_NNS are_VBP checked_VBN on_IN the_DT basis_NN of_IN the_DT guideline_NN ._.
+As_IN a_DT result_NN ,_, the_DT reviews_NNS unfitting_JJ for_IN 1_CD http://ndsmk2.net_CD Aspect_NN identification_NN of_IN sentences_NNS Seven_CD aspects_NNS and_CC the_DT values_NNS :_: Originality_NN :_: 3pts_NNS ,_, Graphics_NNS :_: 3pts_NNS ,_, ..._: Pros_NNS Text_NNP Cons_NNP Text_NNP Free_NNP Text_NNP Figure_NNP 2_CD :_: An_DT example_NN of_IN a_DT review_NN document_NN ._.
+the_DT guideline_NN are_VBP rejected_VBN ._.
+Therefore_RB the_DT documents_NNS on_IN the_DT site_NN are_VBP good_JJ quality_NN reviews_NNS ._.
+3.2_CD Aspect_NN identification_NN First_NNP ,_, we_PRP identify_VBP the_DT aspects_NNS of_IN sentences_NNS in_IN reviews_NNS ._.
+For_IN the_DT purpose_NN ,_, we_PRP need_VBP to_TO construct_VB a_DT aspect_NN -_: sentence_NN corpus_NN ._.
+One_CD annotator_NN detects_VBZ an_DT evalua_NN -_: tive_JJ expression_NN from_IN reviews_NNS ._.
+Then_RB ,_, the_DT annotator_NN selects_VBZ not_RB only_JJ sentences_NNS but_CC also_RB short_JJ phrases_NNS as_IN the_DT evaluative_JJ expression_NN ._.
+Next_JJ ,_, the_DT annotator_NN gives_VBZ the_DT annotation_NN tags_NNS to_TO the_DT detected_VBN expression_NN ._.
+The_DT annotation_NN tag_NN consists_VBZ of_IN the_DT polarity_NN and_CC the_DT aspect_NN ._.
+Some_DT sentences_NNS contain_VBP multiple_JJ aspect_NN tags_NNS ._.
+Figure_NN 3_CD shows_NNS examples_NNS of_IN the_DT annotation_NN ._.
+We_PRP apply_VBP a_DT simple_JJ machine_NN learning_VBG approach_NN with_IN BOW_NN features_NNS for_IN the_DT identification_NN process_NN ._.
+We_PRP employ_VBP Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- as_IN the_DT machine_NN learning_VBG approach_NN -LRB-_-LRB- Vapnik_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+We_PRP use_VBP nouns_NNS ,_, adjectives_NNS and_CC adverbs_NNS as_IN features_NNS for_IN SVM_NNP ._.
+The_DT feature_NN vector_NN is_VBZ as_IN follows_VBZ :_: f_LS =_SYM -LCB-_-LRB- wa_NN ,_, wa_NN ,_, ..._: ,_, wa_NN ,_, wc_NN ,_, ..._: wc_NN ,_, ..._: ,_, ws_NNS ,_, ._. ._.
+ws_NNS -RCB-_-RRB- 1_CD 2_CD na_TO 1_CD nc_NN 1_CD ns_NNS where_WRB wx_JJ denotes_NNS a_DT word_NN w_NN in_IN an_DT aspect_NN x_LS ,_, and_CC x_SYM ∈_FW -LCB-_-LRB- a_DT ,_, c_NN ,_, d_LS ,_, g_NN ,_, m_NN ,_, o_NN ,_, s_VBZ -RCB-_-RRB- -LRB-_-LRB- See_VB Section_NNP 3.1_CD -RRB-_-RRB- ._.
+nx_NNP de_NNP -_: notes_VBZ the_DT number_NN of_IN words_NNS appearing_VBG in_IN an_DT aspect_NN x._FW <m p>_FW The_DT music_NN is_VBZ incredibly_RB powerful_JJ sound_NN !_.
+<_SYM /_SYM >_CD Positive_JJ -LRB-_-LRB- p_NN -RRB-_-RRB- about_IN the_DT aspect_NN ``_`` Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- ''_'' <s n>_VB It_PRP lacks_VBZ a_DT feeling_NN of_IN accomplishment_NN after_IN finishing_VBG ._.
+<_SYM /_SYM >_FW Negative_JJ -LRB-_-LRB- n_VBN -RRB-_-RRB- about_IN the_DT aspect_NN ``_`` Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ''_'' <_CD g_NN ,_, s_PRP p_VBP ,_, p_VBP >_CD Since_IN the_DT graphics_NNS was_VBD beautiful_JJ ,_, we_PRP got_VBD the_DT satisfaction_NN from_IN just_RB watching_VBG them_PRP ._.
+<_SYM /_SYM >_CD Combined_VBN tags_NNS are_VBP acceptable_JJ :_: Positive_JJ -LRB-_-LRB- p_NN -RRB-_-RRB- about_IN the_DT aspects_NNS ``_`` Graphics_NNP -LRB-_-LRB- g_VBN -RRB-_-RRB- ''_'' and_CC ``_`` Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- ''_'' Figure_NN 3_CD :_: Examples_NNS of_IN aspect_NN annotation_NN of_IN sentences_NNS ._.
+The_DT vector_NN value_NN of_IN a_DT word_NN is_VBZ computed_VBN as_IN follows_VBZ :_: val_NN -LRB-_-LRB- aspi_FW ,_, wj_NN -RRB-_-RRB- =_SYM numij_FW -LRB-_-LRB- 1_LS -RRB-_-RRB- sent_VBN -LRB-_-LRB- aspi_FW -RRB-_-RRB- where_WRB numij_NN and_CC sent_VBN -LRB-_-LRB- aspi_FW -RRB-_-RRB- denote_VBP the_DT frequency_NN of_IN a_DT word_NN wj_NN in_IN an_DT aspect_NN aspi_NN and_CC the_DT number_NN of_IN sentences_NNS belonging_VBG to_TO an_DT aspect_NN aspi_NN ,_, respectively_RB ._.
+This_DT is_VBZ a_DT normalization_NN process_NN because_IN the_DT num_NN -_: bers_NNS of_IN sentences_NNS belonging_VBG to_TO each_DT aspect_NN are_VBP non_SYM -_: uniform_NN ._.
+We_PRP generate_VBP seven_CD classifiers_NNS for_IN seven_CD as_IN -_: pects_NNS using_VBG the_DT features_NNS and_CC values_NNS ;_: the_DT classifier_NN for_IN the_DT aspect_NN ``_`` Addiction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- ''_'' or_CC not_RB ,_, the_DT classifier_NN for_IN the_DT aspect_NN ``_`` Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- ''_'' or_CC not_RB ,_, and_CC so_RB on_IN ._.
+Figure_NN 4_CD shows_VBZ the_DT aspect_NN identification_NN process2_NN ._.
+We_PRP use_VBP the_DT SVMlight_NNP package3_NN with_IN all_DT parameters_NNS set_VBN to_TO their_PRP$ default_NN values_NNS -LRB-_-LRB- Joachims_NNPS ,_, 1998_CD -RRB-_-RRB- ._.
+3.3_CD Rating_NNP prediction_NN Removing_VBG non-informative_JJ text_NN from_IN training_NN data_NNS leads_VBZ to_TO the_DT improvement_NN of_IN the_DT accuracy_NN -LRB-_-LRB- Fang_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+In_IN this_DT task_NN ,_, a_DT word_NN does_VBZ not_RB always_RB con_VB -_: tribute_NN to_TO all_DT aspects_NNS ._.
+A_DT word_NN usually_RB relates_VBZ to_TO one_CD or_CC two_CD aspects_NNS ._.
+Therefore_RB ,_, estimating_VBG a_DT relation_NN be_VB -_: tween_VB a_DT word_NN and_CC each_DT aspect_NN is_VBZ the_DT most_RBS important_JJ task_NN for_IN the_DT rating_NN prediction_NN ._.
+It_PRP improves_VBZ the_DT perfor_NN -_: mance_NN ._.
+We_PRP introduce_VBP a_DT variance-based_JJ feature_NN selection_NN proposed_VBN by_IN -LRB-_-LRB- Shimada_NNP and_CC Endo_NNP ,_, 2008_CD -RRB-_-RRB- into_IN this_DT process_NN ._.
+They_PRP obtained_VBD small_JJ improvement_NN in_IN terms_NNS of_IN an_DT error_NN rate_NN by_IN using_VBG the_DT variance-based_JJ feature_NN selection_NN ._.
+The_DT basic_JJ idea_NN is_VBZ to_TO extract_VB words_NNS appear_VB -_: ing_NN frequently_RB with_IN the_DT same_JJ point_NN -LRB-_-LRB- stars_NNS -RRB-_-RRB- regarding_VBG 2Note_JJ that_IN the_DT method_NN does_VBZ not_RB estimate_VB the_DT polarity_NN ,_, namely_RB positive_JJ or_CC negative_JJ ,_, in_IN this_DT process_NN ._.
+3_CD http://svmlight.joachims.org_NN Classifier_NNP for_IN Addiction_NNP -LRB-_-LRB- a_DT -RRB-_-RRB- Classifier_NNP for_IN Comfort_NNP -LRB-_-LRB- c_NN -RRB-_-RRB- Classifier_NNP for_IN Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- Classifier_NNP for_IN Graphics_NNP -LRB-_-LRB- g_VBN -RRB-_-RRB- Classifier_NNP for_IN Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- Classifier_NNP for_IN Originality_NNP -LRB-_-LRB- o_VBN -RRB-_-RRB- Classifier_NNP for_IN Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- Aspect-sentence_NN corpus_VBZ Figure_NN 4_CD :_: The_DT sentence-aspect_NN identification_NN ._.
+Yes_UH No_DT Yes_UH No_DT words_NNS from_IN all_DT sentences_NNS and_CC aspect-sentences_NNS ,_, re_SYM -_: spectively_RB ._.
+A_DT vector_NN of_IN an_DT aspect_NN y_NN for_IN a_DT review_NN x_LS is_VBZ as_IN follows_VBZ :_: r_NN =_SYM -LCB-_-LRB- wpal_NN ,_, wpal_NN ,_, ..._: ,_, wpal_JJ ,_, wcal_JJ ,_, wcal_JJ ,_, ..._: ,_, wcal_JJ ,_, xy_JJ 1_CD 2_CD i_FW 1_CD 2_CD i_FW Yes_UH No_DT 1_CD 2_CD j_NN 1_CD 2_CD j_NN Yes_NNP No_NNP Yes_NNP No_NNP Yes_NNP No_NNP Yes_NNP No_NNP We_PRP apply_VBP the_DT vector_NN into_IN a_DT machine_NN learning_VBG ap_SYM -_: proach_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP employ_VBP a_DT linear_JJ support_NN vector_NN regression_NN -LRB-_-LRB- SVR_NNP -RRB-_-RRB- ._.
+This_DT is_VBZ one_CD of_IN straightfor_NN -_: ward_NN methods_NNS for_IN this_DT task_NN ._.
+Related_JJ studies_NNS also_RB used_VBD SVR_NNP for_IN the_DT rating_NN inference_NN task_NN -LRB-_-LRB- Okanohara_NNP and_CC Tsujii_NNP ,_, 2005_CD ;_: Pang_NNP and_CC Lee_NNP ,_, 2005_CD ;_: Shimada_NNP and_CC Endo_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+We_PRP generate_VBP seven_CD classifiers_NNS for_IN seven_CD aspects_NNS using_VBG the_DT selected_VBN features_NNS ._.
+We_PRP also_RB use_VBP the_DT SVMlight_NNP for_IN SVR_NNP ._.
+4_CD Experiment_NN In_IN this_DT section_NN ,_, we_PRP describe_VBP two_CD experiments_NNS about_IN the_DT aspect_NN identification_NN of_IN sentences_NNS and_CC the_DT rating_NN prediction_NN ._.
+For_IN the_DT rating_NN prediction_NN ,_, we_PRP evaluate_VBP the_DT effectiveness_NN of_IN the_DT aspect-sentences_NNS ._.
+4.1_CD Aspect_NN identification_NN The_DT annotated_JJ corpus_NN for_IN the_DT aspect_NN identification_NN consisted_VBD of_IN 4719_CD sentences_NNS ._.
+Table_NNP 1_CD shows_VBZ the_DT dis_SYM -_: tribution_NN of_IN aspects6_CD ._.
+The_DT table_NN shows_VBZ that_IN there_EX were_VBD large_JJ differences_NNS among_IN aspects_NNS ._.
+Machine_NN learning_NN with_IN unbalanced_JJ data_NNS usually_RB leads_VBZ to_TO gen_VB -_: eration_NN of_IN a_DT wrong_JJ classifier_NN ._.
+Therefore_RB ,_, we_PRP adjusted_VBD the_DT number_NN of_IN sentences_NNS in_IN the_DT training_NN data_NNS -LRB-_-LRB- uses_VBZ -RRB-_-RRB- for_IN each_DT classifier_NN by_IN using_VBG the_DT following_JJ equation_NN ._.
+wpap_NNP ,_, wpap_NN ,_, ..._: ,_, wpap_NN ,_, wcap_NN ,_, wcap_NN ,_, ..._: ,_, wcap_JJ -RCB-_-RRB- an_DT evaluation_NN criterion_NN -LRB-_-LRB- aspect_NN -RRB-_-RRB- ._.
+It_PRP is_VBZ computed_VBN as_IN follows_VBZ :_: 1_CD ∑_CD n_NN var_NN -LRB-_-LRB- waj_FW -RRB-_-RRB- =_SYM m_FW -LRB-_-LRB- real_JJ -LRB-_-LRB- ri_FW ,_, aj_NNP -RRB-_-RRB- −_SYM ave_FW -LRB-_-LRB- waj_FW -RRB-_-RRB- -RRB-_-RRB- 2_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- i_FW =_SYM 0_CD ,_, w_SYM ∈_FW ri_FW where_WRB aj_NNP is_VBZ an_DT aspect_NN ._.
+m_NN and_CC n_NN are_VBP the_DT document_NN frequency_NN -LRB-_-LRB- df_FW -RRB-_-RRB- of_IN a_DT word_NN w_NN and_CC the_DT number_NN of_IN doc_NN -_: uments_NNS respectively_RB ._.
+real_JJ -LRB-_-LRB- ri_FW ,_, aj_NN -RRB-_-RRB- and_CC ave_NN -LRB-_-LRB- waj_FW -RRB-_-RRB- are_VBP the_DT actual_JJ rating_NN of_IN aj_NN in_IN ri_NN and_CC the_DT average_JJ score_NN of_IN w_NN for_IN aj_NN ._.
+We_PRP use_VBP w_NN of_IN which_WDT the_DT var_NN is_VBZ a_DT threshold_NN or_CC less_JJR ._.
+We_PRP apply_VBP the_DT variance-based_JJ feature_NN selection_NN to_TO aspect_NN sentences_NNS extracted_VBN in_IN Section_NN 3.2_CD and_CC all_DT sen_SYM -_: tences_NNS in_IN pros_NNS and_CC cons_NNS text_NN areas4_CD ._.
+We_PRP use_VBP MeCab_NNP for_IN the_DT morphological_JJ analysis5_NNS ._.
+We_PRP select_VBP words_NNS belonging_VBG to_TO ``_`` noun_NN ''_'' ,_, ``_`` adjective_NN ''_'' and_CC ``_`` adverb_NN ''_'' ._.
+Fi_SYM -_: nally_RB ,_, we_PRP extract_VBP words_NNS as_IN features_NNS on_IN the_DT basis_NN of_IN the_DT word_NN frequency_NN -LRB-_-LRB- freq_NN -RRB-_-RRB- and_CC the_DT value_NN var_NN ._.
+In_IN addition_NN ,_, we_PRP distinguish_VBP words_NNS in_IN the_DT pros_NNS text_NN ar_SYM -_: eas_FW and_CC the_DT cons_NNS text_NN areas_NNS ._.
+In_IN other_JJ words_NNS ,_, for_IN a_DT word_NN wi_NN ,_, a_DT word_NN in_IN the_DT pros_NNS text_NN areas_NNS is_VBZ wip_NN and_CC a_DT word_NN in_IN the_DT cons_NNS text_NN areas_NNS is_VBZ wic_JJ ._.
+Besides_IN ,_, uses_VBZ -LRB-_-LRB- aspi_FW ,_, aspj_NN -RRB-_-RRB- =_SYM reals_NNS -LRB-_-LRB- aspj_NN -RRB-_-RRB- ×_NN reals_NNS -LRB-_-LRB- aspi_FW -RRB-_-RRB- alls_IN −_CD reals_NNS -LRB-_-LRB- aspi_FW -RRB-_-RRB- we_PRP distinguish_VBP words_NNS from_IN all_DT sentences_NNS -LRB-_-LRB- wxal_JJ -RRB-_-RRB- and_CC xap_NN i_FW -LRB-_-LRB- 3_LS -RRB-_-RRB- where_WRB aspi_JJ and_CC aspj_JJ denote_VBP the_DT target_NN aspect_NN and_CC the_DT others_NNS ,_, respectively_RB ._.
+reals_NNS -LRB-_-LRB- aspj_NN -RRB-_-RRB- denotes_VBZ the_DT number_NN of_IN sentences_NNS of_IN an_DT aspect_NN aspj_NN and_CC alls_NNS is_VBZ the_DT number_NN of_IN sentences_NNS in_IN the_DT corpus_NN ,_, 4719_CD in_IN this_DT ex_FW -_: periment_NN ._.
+The_DT instance_NN about_IN Addiction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- is_VBZ shown_VBN in_IN Table_NNP 2_CD ._.
+Since_IN the_DT number_NN of_IN sentences_NNS in_IN the_DT Ad_NN -_: diction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- ,_, aspi_FW ,_, was_VBD 429_CD ,_, the_DT sum_NN of_IN the_DT others_NNS was_VBD 427_CD ._.
+We_PRP evaluated_VBD our_PRP$ method_NN with_IN 10-fold_JJ cross_NN val_NN -_: idation_NN ._.
+The_DT criteria_NNS are_VBP the_DT precision_NN ,_, recall_NN and_CC F_NN -_: value_NN ._.
+Table_NNP 3_CD shows_VBZ the_DT experimental_JJ result_NN ._.
+The_DT 6Note_JJ that_IN more_JJR than_IN half_NN of_IN sentences_NNS in_IN the_DT corpus_NN con_NN -_: tained_VBD two_CD or_CC three_CD aspects_NNS ._.
+aspect-sentences_NNS -LRB-_-LRB- wj_NN -RRB-_-RRB- ._.
+i_FW and_CC j_NN are_VBP the_DT numbers_NNS of_IN 4We_JJ ignore_VB sentences_NNS in_IN the_DT free_JJ text_NN area_NN in_IN Fig._NNP 2_CD ._.
+5_CD http://mecab.googlecode.com/svn/trunk/_NN mecab/doc/index_NN ._.
+html_NN Input_NN sentences_NNS Aspect_NNP #_# of_IN sentences_NNS Addiction_NNP -LRB-_-LRB- a_DT -RRB-_-RRB- 429_CD Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- 354_CD Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- 353_CD Graphics_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- 230_CD Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- 258_CD Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- 2339_CD Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 2252_CD Aspect_NNP Precision_NNP Recall_VBP F-value_JJ Addiction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- 0.941_CD 0.186_CD 0.310_CD Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- 0.772_CD 0.249_CD 0.377_CD Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- 0.738_CD 0.272_CD 0.398_CD Graphics_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- 0.890_CD 0.630_CD 0.738_CD Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- 0.404_CD 0.353_CD 0.377_CD Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- 0.805_CD 0.559_CD 0.660_CD Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 0.746_CD 0.562_CD 0.641_CD Average_JJ 0.756_CD 0.402_CD 0.525_CD Table_NNP 1_CD :_: The_DT aspects_NNS and_CC the_DT number_NN of_IN sentences_NNS ._.
+Aspect_NN Original_NNP Training_NNP Addiction_NNP -LRB-_-LRB- a_DT -RRB-_-RRB- 429_CD 429_CD Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- 354_CD 26_CD 427_CD Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- 353_CD 26_CD Graphics_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- 230_CD 17_CD Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- 258_CD 19_CD Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- 2339_CD 173_CD Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 2252_CD 166_CD Table_NNP 2_CD :_: Downsized_VBN and_CC adjusted_VBN training_NN data_NNS for_IN Addic_NNP -_: tion_NN -LRB-_-LRB- a_DT -RRB-_-RRB- aspects_NNS ``_`` Originality_NN ''_'' and_CC ``_`` Satisfaction_NN ''_'' obtained_VBN comparatively_RB higher_JJR accuracy_NN rates_NNS because_IN they_PRP consisted_VBD of_IN sufficient_JJ training_NN data_NNS ._.
+Sentences_NNS of_IN the_DT aspect_NN ``_`` Graphics_NNP ''_'' tended_VBD to_TO contain_VB direct_JJ ex_FW -_: pressions_NNS related_VBN to_TO graphics_NNS ,_, such_JJ as_IN ``_`` beautiful_JJ ._. ''_''
+In_IN addition_NN ,_, they_PRP were_VBD usually_RB simple_JJ sentences_NNS ;_: ``_`` The_DT graphics_NNS are_VBP ..._: ._. ''_''
+The_DT aspect_NN identification_NN about_IN the_DT aspects_NNS ``_`` Addiction_NN ''_'' ,_, ``_`` Comfort_NN ''_'' and_CC ``_`` Difficulty_NNP ''_'' were_VBD difficult_JJ tasks_NNS ._.
+In_IN comparison_NN with_IN the_DT aspect_NN ``_`` Graphics_NNP ''_'' ,_, sentences_NNS of_IN these_DT aspects_NNS did_VBD not_RB al_SYM -_: ways_NNS contain_VBP direct_JJ expressions_NNS ;_: e.g._FW ,_, ``_`` I_PRP play_VBP this_DT game_NN every_DT day_NN ''_'' for_IN ``_`` Addiction_NN ''_'' ,_, ``_`` There_EX are_VBP many_JJ situations_NNS about_IN pressing_VBG A_DT when_WRB I_PRP need_VBP to_TO push_VB B_NNP ''_'' for_IN ``_`` Comfort_NN ''_'' ,_, and_CC ``_`` The_DT enemy_NN in_IN the_DT water_NN area_NN is_VBZ too_RB clever_JJ ''_'' for_IN ``_`` Difficulty_NNP ._. ''_''
+This_DT was_VBD one_CD reason_NN that_IN the_DT recall_NN rates_NNS of_IN them_PRP were_VBD extremely_RB low_JJ ,_, as_IN compared_VBN with_IN others_NNS ._.
+It_PRP is_VBZ difficult_JJ to_TO identify_VB these_DT aspects_NNS correctly_RB ,_, especially_RB with_IN a_DT small_JJ dataset_NN ._.
+4.2_CD Rating_NNP prediction_NN Next_JJ ,_, we_PRP evaluated_VBD our_PRP$ method_NN for_IN the_DT rating_NN pre_NN -_: diction_NN ._.
+We_PRP prepared_VBD three_CD different_JJ sizes_NNS of_IN train_NN -_: ing_NN data_NNS ;_: -LRB-_-LRB- ds1_CD -RRB-_-RRB- 933_CD reviews_NNS about_IN 7_CD games_NNS ,_, -LRB-_-LRB- ds2_CD -RRB-_-RRB- 2629_CD reviews_NNS about_IN 37_CD games_NNS and_CC -LRB-_-LRB- ds3_CD -RRB-_-RRB- 3464_CD re_SYM -_: Table_NNP 3_CD :_: The_DT experimental_JJ result_NN of_IN aspect_NN identification_NN ._.
+views_NNS about_IN 44_CD games_NNS ._.
+They_PRP were_VBD balanced_VBN data_NNS sets_NNS ._.
+In_IN other_JJ word_NN ,_, each_DT data_NN set_NN contained_VBD reviews_NNS about_IN products_NNS with_IN high_JJ and_CC low_JJ scores_NNS uniformly_RB ._.
+These_DT data_NNS sets_NNS did_VBD not_RB contain_VB any_DT reviews_NNS that_WDT were_VBD used_VBN in_IN the_DT aspect_NN identification_NN of_IN sentences_NNS in_IN Sec_NNP -_: tion_NN 4.1_CD ._.
+For_IN the_DT determination_NN of_IN the_DT thresholds_NNS about_IN the_DT aspect_NN likelihood_NN var_NN and_CC the_DT word_NN fre_NN -_: quency_NN -LRB-_-LRB- freq_NN -RRB-_-RRB- in_IN Section_NN 3.3_CD ,_, we_PRP also_RB prepared_VBD the_DT development_NN data_NN set_NN consisting_VBG of_IN 76_CD reviews_NNS ._.
+If_IN we_PRP set_VBP high_JJ thresholds_NNS for_IN them_PRP ,_, we_PRP might_MD obtain_VB fea_NN -_: tures_NNS with_IN high_JJ confidence_NN about_IN each_DT aspect_NN ._.
+How_WRB -_: ever_RB ,_, too_RB thigh_NN thresholds_NNS usually_RB generate_VBP a_DT zero_NN -_: vector_NN ,_, which_WDT does_VBZ not_RB contain_VB any_DT features_NNS ._.
+We_PRP es_SYM -_: timated_VBN these_DT thresholds_NNS ,_, which_WDT did_VBD not_RB generate_VB a_DT zero-vector_NN ,_, from_IN the_DT development_NN data_NNS ._.
+In_IN this_DT ex_FW -_: periment_NN ,_, var_NN and_CC freq_NN for_IN all_DT sentences_NNS were_VBD less_JJR than_IN 1.5_CD and_CC more_JJR then_RB 3_CD ,_, and_CC var_NN and_CC freq_NN for_IN aspect-sentences_NNS were_VBD less_JJR than_IN 0.5_CD and_CC more_JJR than_IN 4_CD ,_, respectively_RB ._.
+We_PRP evaluated_VBD our_PRP$ method_NN with_IN the_DT leave-one-out_JJ cross-validation_NN for_IN the_DT three_CD data_NNS sets_NNS ._.
+The_DT crite_NN -_: rion_NN for_IN the_DT evaluation_NN was_VBD the_DT mean_JJ squared_VBD error_NN -LRB-_-LRB- MSE_NNP -RRB-_-RRB- ._.
+1_CD ∑_CD n_NN MSEj_NNP =_SYM n_FW -LRB-_-LRB- out_IN -LRB-_-LRB- dij_NN -RRB-_-RRB- −_CD real_JJ -LRB-_-LRB- dij_NN -RRB-_-RRB- -RRB-_-RRB- 2_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- i_FW =_SYM 1_CD where_WRB i_FW and_CC j_NN denote_VBP a_DT review_NN and_CC an_DT aspect_NN in_IN the_DT review_NN respectively_RB ._.
+out_RB and_CC real_RB are_VBP the_DT output_NN of_IN a_DT method_NN and_CC the_DT actual_JJ rating_NN in_IN a_DT review_NN respec_NN -_: tively_RB ._.
+We_PRP converted_VBD the_DT outputs_NNS of_IN the_DT SVR_NNP into_IN integral_JJ value_NN with_IN half_NN adjust_VBP because_IN it_PRP was_VBD con_JJ -_: tinuous_NN ._.
+The_DT MSE_NNP is_VBZ one_CD of_IN important_JJ criteria_NNS for_IN the_DT rating_NN inference_NN task_NN because_IN not_RB all_DT mistakes_NNS of_IN estimation_NN with_IN the_DT methods_NNS are_VBP equal_JJ ._.
+For_IN exam_NN -_: ple_NN ,_, assume_VB that_IN the_DT actual_JJ rating_NN of_IN a_DT criterion_NN is_VBZ 4_CD ._.
+Aspect_NN data_NNS -LRB-_-LRB- ds1_CD -RRB-_-RRB- data_NNS -LRB-_-LRB- ds2_CD -RRB-_-RRB- data_NNS -LRB-_-LRB- ds2_CD -RRB-_-RRB- Baseline_NNP Proposed_NNP Baseline_NNP Proposed_NNP Baseline_NNP Proposed_NNP Addiction_NNP -LRB-_-LRB- a_DT -RRB-_-RRB- 1.146_CD 1.047_CD 1.203_CD 1.054_CD 1.288_CD 1.068_CD Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- 0.887_CD 0.881_CD 0.975_CD 0.944_CD 0.980_CD 0.901_CD Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- 0.855_CD 0.856_CD 0.888_CD 0.872_CD 0.864_CD 0.866_CD Graphics_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- 0.704_CD 0.674_CD 0.693_CD 0.644_CD 0.711_CD 0.677_CD Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- 0.665_CD 0.654_CD 0.719_CD 0.666_CD 0.715_CD 0.671_CD Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- 0.770_CD 0.772_CD 0.757_CD 0.766_CD 0.789_CD 0.759_CD Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 1.296_CD 1.110_CD 1.210_CD 1.036_CD 1.266_CD 1.055_CD Average_JJ 0.903_CD 0.856_CD 0.921_CD 0.854_CD 0.944_CD 0.857_CD In_IN this_DT situation_NN ,_, the_DT mistake_NN of_IN estimating_VBG it_PRP as_IN 3_CD is_VBZ better_JJR than_IN the_DT mistake_NN of_IN estimating_VBG it_PRP as_IN 1_CD ._.
+We_PRP compared_VBD our_PRP$ method7_CD with_IN a_DT baseline_NN ._.
+The_DT baseline_NN did_VBD not_RB use_VB any_DT aspect-sentence_JJ informa_NN -_: tion_NN ._.
+In_IN other_JJ words_NNS ,_, it_PRP was_VBD based_VBN on_IN -LRB-_-LRB- Shimada_NNP and_CC Endo_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+Table_NNP 4_CD shows_VBZ the_DT experimental_JJ result_NN ._.
+Our_PRP$ method_NN outperformed_VBD the_DT baseline_NN for_IN all_DT data_NNS sets_NNS ._.
+The_DT improvements_NNS were_VBD 0.047_CD -LRB-_-LRB- approximately_RB 5_CD %_NN on_IN the_DT error_NN rate_NN -RRB-_-RRB- for_IN the_DT data_NNS -LRB-_-LRB- ds1_CD -RRB-_-RRB- ,_, 0.066_CD -LRB-_-LRB- ap_SYM -_: proximately_RB 7_CD %_NN on_IN the_DT error_NN rate_NN -RRB-_-RRB- for_IN the_DT data_NNS -LRB-_-LRB- ds2_CD -RRB-_-RRB- and_CC 0.087_CD -LRB-_-LRB- approximately_RB 9_CD %_NN on_IN the_DT error_NN rate_NN -RRB-_-RRB- for_IN the_DT data_NNS -LRB-_-LRB- ds3_CD -RRB-_-RRB- ._.
+For_IN the_DT data_NNS -LRB-_-LRB- ds2_CD -RRB-_-RRB- and_CC -LRB-_-LRB- ds3_CD -RRB-_-RRB- ,_, our_PRP$ method_NN yielded_VBD significant_JJ differences_NNS at_IN p_NN <_CD 0.05_CD by_IN t-test_JJ ._.
+The_DT results_NNS show_VBP the_DT effectiveness_NN of_IN the_DT aspect_NN identification_NN of_IN sentences_NNS and_CC the_DT feature_NN ex_FW -_: traction_NN based_VBN on_IN the_DT aspect-sentences_NNS ._.
+In_IN addition_NN ,_, the_DT MSE_NNP values_NNS on_IN the_DT proposed_VBN method_NN were_VBD stable_JJ although_IN those_DT on_IN the_DT baseline_NN decreased_VBD when_WRB the_DT size_NN of_IN the_DT data_NN set_NN was_VBD changed_VBN ._.
+This_DT result_NN show_VBP the_DT proposed_VBN method_NN is_VBZ robust_JJ in_IN the_DT case_NN that_WDT noise_NN in_IN training_NN data_NNS increases_NNS ._.
+4.3_CD Discussion_NNP A_NNP review_NN does_VBZ not_RB always_RB consist_VBP of_IN sentences_NNS re_SYM -_: lated_VBN to_TO all_DT aspects_NNS ._.
+Reviews_NNS often_RB do_VBP not_RB contain_VB any_DT sentences_NNS related_VBN to_TO an_DT aspect_NN ._.
+Gupta_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- reported_VBD that_IN only_RB 62_CD %_NN of_IN user_NN given_VBN ratings_NNS have_VBP supporting_VBG text_NN for_IN ratings_NNS of_IN the_DT aspects_NNS in_IN their_PRP$ re_SYM -_: view_NN data_NNS ._.
+In_IN -LRB-_-LRB- Shimada_NNP and_CC Endo_NNP ,_, 2008_CD -RRB-_-RRB- ,_, it_PRP was_VBD ap_SYM -_: proximately_RB 75_CD %_NN in_IN their_PRP$ dataset_NN ,_, which_WDT was_VBD similar_JJ to_TO our_PRP$ dataset_NN ._.
+Therefore_RB ,_, we_PRP computed_VBD the_DT content_JJ 7Note_NNP that_IN the_DT method_NN used_VBD the_DT aspect-sentences_JJ identified_VBN automatically_RB in_IN the_DT previous_JJ section_NN ._.
+They_PRP were_VBD not_RB oracle_VB data_NNS ._.
+rate_NN of_IN aspect-sentences_NNS in_IN each_DT data_NN set_NN ._.
+The_DT rate_NN is_VBZ computed_VBN by_IN CR_NNP =_SYM NumAspRev_NNP -LRB-_-LRB- 5_CD -RRB-_-RRB- N_NNP umRev_NNP where_WRB NumAspRev_NNP denotes_VBZ the_DT number_NN of_IN re_NN -_: views_NNS which_WDT contain_VBP identified_VBN aspect-sentences_NNS ._.
+NumRev_NNP is_VBZ the_DT number_NN of_IN reviews_NNS about_IN an_DT aspect_NN in_IN the_DT data_NN set_NN ._.
+We_PRP computed_VBD the_DT CR_NNP values_NNS for_IN the_DT three_CD data_NNS sets_NNS and_CC the_DT development_NN data_NNS ._.
+Table_NNP 5_CD shows_VBZ the_DT CR_NNP val_NN -_: ues_NNS of_IN all_DT aspects_NNS on_IN each_DT data_NN set_NN ._.
+The_DT CR_NNP values_NNS on_IN the_DT development_NN data_NN was_VBD a_DT kind_NN of_IN oracle_NN situation_NN because_IN the_DT sentences_NNS in_IN the_DT data_NNS were_VBD annotated_VBN by_IN human_JJ ._.
+From_IN the_DT CR_NNP on_IN the_DT development_NN in_IN Table_NNP 5_CD ,_, approximately_RB 30_CD %_NN of_IN reviews_NNS in_IN our_PRP$ data_NNS set_VBN were_VBD missing_VBG the_DT textual_JJ support_NN for_IN some_DT aspects_NNS in_IN the_DT reviews_NNS ._.
+This_DT is_VBZ one_CD reason_NN that_IN the_DT MSE_NNP values_NNS in_IN Section_NN 4.2_CD were_VBD not_RB sufficient_JJ ._.
+In_IN other_JJ words_NNS ,_, ow_SYM -_: ing_NN to_TO lack_NN of_IN textual_JJ information_NN ,_, the_DT aspect_NN rating_NN prediction_NN is_VBZ essentially_RB a_DT difficult_JJ task_NN ._.
+The_DT CR_NNP values_NNS of_IN the_DT aspects_NNS ``_`` Addiction_NN ''_'' ,_, ``_`` Com_NNP -_: fort_NN ''_'' and_CC ``_`` Difficulty_NNP ''_'' on_IN the_DT three_CD test_NN data_NNS set_VBN were_VBD lower_JJR than_IN the_DT development_NN data_NNS ._.
+The_DT accuracy_NN of_IN the_DT aspect_NN identification_NN in_IN Table_NNP 3_CD shows_VBZ a_DT simi_NN -_: lar_NN trend_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT CR_NNP of_IN the_DT aspect_NN ``_`` Music_NNP ''_'' was_VBD too_RB high_JJ ,_, as_IN compared_VBN with_IN the_DT devel_NN -_: opment_NN data_NNS ._.
+This_DT was_VBD caused_VBN by_IN the_DT low_JJ precision_NN rate_NN of_IN the_DT aspect_NN identification_NN -LRB-_-LRB- also_RB see_VB Table_NNP 3_CD -RRB-_-RRB- ._.
+To_TO improve_VB the_DT accuracy_NN of_IN the_DT aspect_NN identification_NN leads_VBZ to_TO the_DT improvement_NN of_IN the_DT rating_NN prediction_NN ._.
+The_DT improvement_NN of_IN these_DT recall_NN and_CC precision_NN rates_NNS for_IN these_DT aspects_NNS is_VBZ one_CD of_IN the_DT important_JJ tasks_NNS ._.
+As_IN you_PRP can_MD see_VB from_IN Table_NNP 5_CD ,_, the_DT rating_NN prediction_NN Table_NNP 4_CD :_: The_DT experimental_JJ result_NN of_IN the_DT rating_NN prediction_NN ._.
+Aspect_NN development_NN data_NNS -LRB-_-LRB- ds1_CD -RRB-_-RRB- data_NNS -LRB-_-LRB- ds2_CD -RRB-_-RRB- data_NNS -LRB-_-LRB- ds3_CD -RRB-_-RRB- Addiction_NN -LRB-_-LRB- a_DT -RRB-_-RRB- 0.750_CD 0.330_CD 0.340_CD 0.337_CD Comfort_NN -LRB-_-LRB- c_NN -RRB-_-RRB- 0.934_CD 0.229_CD 0.307_CD 0.287_CD Difficulty_NNP -LRB-_-LRB- d_LS -RRB-_-RRB- 0.631_CD 0.227_CD 0.231_CD 0.232_CD Graphics_NNS -LRB-_-LRB- g_NN -RRB-_-RRB- 0.408_CD 0.410_CD 0.426_CD 0.424_CD Music_NNP -LRB-_-LRB- m_FW -RRB-_-RRB- 0.237_CD 0.478_CD 0.477_CD 0.479_CD Originality_NN -LRB-_-LRB- o_FW -RRB-_-RRB- 0.961_CD 0.927_CD 0.961_CD 0.968_CD Satisfaction_NN -LRB-_-LRB- s_PRP -RRB-_-RRB- 0.961_CD 0.912_CD 0.954_CD 0.958_CD Average_JJ 0.697_CD 0.502_CD 0.528_CD 0.526_CD in_IN the_DT proposed_VBN method_NN used_VBN only_RB approximately_RB 50_CD %_NN of_IN the_DT identified_VBN aspect-utterances_NNS ._.
+More_RBR -_: over_IN ,_, 25_CD %_NN of_IN sentences_NNS in_IN the_DT aspect_NN identification_NN were_VBD wrong_JJ -LRB-_-LRB- see_VB the_DT average_JJ precision_NN rate_NN in_IN Ta_NNP -_: ble_NN 3_LS -RRB-_-RRB- ._.
+Despite_IN the_DT fact_NN that_IN the_DT input_NN data_NNS of_IN the_DT rating_NN prediction_NN contained_VBD many_JJ mistakes_NNS ,_, the_DT pro-_JJ posed_VBN method_NN with_IN aspect-sentences_NNS outperformed_VBD the_DT baseline_NN without_IN aspect-sentences_NNS ._.
+The_DT result_NN shows_VBZ that_IN the_DT aspect-sentences_NNS are_VBP essentially_RB ef_SYM -_: fective_NN to_TO predict_VB aspect_NN ratings_NNS even_RB if_IN they_PRP contain_VBP misrecognized_VBN data_NNS ._.
+If_IN the_DT accuracy_NN of_IN the_DT aspect_NN identification_NN is_VBZ improved_VBN ,_, the_DT accuracy_NN of_IN the_DT rating_NN prediction_NN is_VBZ also_RB improved_VBN ._.
+Therefore_RB ,_, the_DT improve_VB -_: ment_NN of_IN the_DT aspect_NN identification_NN is_VBZ the_DT most_RBS impor_JJ -_: tant_JJ future_JJ work_NN ._.
+The_DT identification_NN task_NN in_IN our_PRP$ study_NN is_VBZ a_DT multi-label_JJ classification_NN problem_NN ._.
+Applying_VBG multi-label_JJ learning_VBG such_JJ as_IN -LRB-_-LRB- Zhang_NNP and_CC Zhou_NNP ,_, 2007_CD -RRB-_-RRB- to_TO the_DT task_NN is_VBZ one_CD of_IN the_DT most_RBS interesting_JJ approaches_NNS although_IN we_PRP used_VBD a_DT binary_JJ classifier_NN based_VBN on_IN SVMs_NNS ._.
+Another_DT problem_NN in_IN the_DT identification_NN task_NN was_VBD the_DT unbalance_JJ data_NNS ._.
+As_IN we_PRP mentioned_VBD in_IN Section_NN 4.1_CD ,_, we_PRP handled_VBD this_DT problem_NN by_IN adjusting_VBG the_DT number_NN of_IN sentences_NNS in_IN the_DT training_NN data_NNS ._.
+Under_IN such_JJ circum_NN -_: stances_NNS ,_, Complement_NNP Naive_NNP Bayes_NNP -LRB-_-LRB- CNB_NNP -RRB-_-RRB- -LRB-_-LRB- Rennie_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- is_VBZ often_RB effective_JJ ._.
+Applying_VBG this_DT method_NN to_TO the_DT task_NN is_VBZ interesting_JJ ._.
+Besides_IN ,_, we_PRP applied_VBD a_DT clas_NNS -_: sification_NN method_NN in_IN the_DT identification_NN task_NN ._.
+The_DT re_SYM -_: call_NN rate_NN was_VBD not_RB sufficient_JJ ._.
+An_DT extraction_NN approach_NN based_VBN on_IN bootstrapping_NN -LRB-_-LRB- Etzioni_NNP et_FW al._FW ,_, 2004_CD ;_: Riloff_NNP and_CC Jones_NNP ,_, 1999_CD -RRB-_-RRB- ,_, which_WDT uses_VBZ the_DT extracted_VBN aspect_NN -_: sentences_NNS as_IN seeds_NNS ,_, is_VBZ also_RB an_DT interesting_JJ approach_NN to_TO obtain_VB more_JJR aspect_NN sentences_NNS in_IN the_DT data_NNS ._.
+In_IN this_DT experiment_NN ,_, we_PRP used_VBD SVR_NNP to_TO estimate_VB the_DT ratings_NNS in_IN a_DT document_NN ._.
+The_DT SVR_NNP is_VBZ often_RB utilized_VBN in_IN rating_NN inference_NN tasks_NNS ._.
+However_RB ,_, Pang_NNP and_CC Lee_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN based_VBN on_IN a_DT metric_JJ labeling_VBG formulation_NN for_IN a_DT rating_NN inference_NN problem_NN ._.
+The_DT results_NNS of_IN these_DT studies_NNS denote_VBP that_IN SVR_NNP is_VBZ not_RB always_RB the_DT best_JJS classifier_NN for_IN this_DT task_NN ._.
+Koppel_NNP and_CC Schler_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- have_VBP discussed_VBN a_DT problem_NN of_IN use_NN of_IN re_NN -_: gression_NN for_IN multi-class_JJ classification_NN tasks_NNS and_CC pro-_JJ posed_VBD a_DT method_NN based_VBN on_IN optimal_JJ stacks_NNS of_IN binary_JJ classifiers_NNS ._.
+Tsutsumi_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN based_VBN on_IN the_DT combination_NN of_IN several_JJ meth_NN -_: ods_NNS for_IN sentiment_NN analysis_NN ._.
+We_PRP need_VBP to_TO consider_VB other_JJ methods_NNS for_IN the_DT improvement_NN of_IN the_DT accuracy_NN ._.
+We_PRP estimated_VBD aspect_NN likelihood_NN based_VBN on_IN a_DT vari_FW -_: ance_NN of_IN each_DT word_NN ._.
+Kobayashi_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- have_VBP pro-_JJ posed_VBD a_DT method_NN to_TO extract_VB attribute-value_JJ pairs_NNS from_IN reviews_NNS ._.
+The_DT attributes_NNS relate_VBP to_TO aspects_NNS in_IN our_PRP$ work_NN ._.
+Wilson_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- have_VBP proposed_VBN a_DT method_NN to_TO clas_NNS -_: sify_VB the_DT strength_NN of_IN opinions_NNS ._.
+Sentiment_NN word_NN dic_SYM -_: tionaries_NNS with_IN aspects_NNS and_CC strength_NN are_VBP useful_JJ for_IN the_DT rating_NN prediction_NN ._.
+Besides_IN ,_, Kobayashi_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- have_VBP expanded_VBN their_PRP$ work_NN with_IN an_DT anaphora_NN reso_NN -_: lution_NN technique_NN ._.
+To_TO identify_VB the_DT aspect_NN of_IN a_DT sen_NN -_: tence_NN more_RBR correctly_RB ,_, context_NN information_NN in_IN reviews_NNS is_VBZ also_RB important_JJ ._.
+In_IN this_DT paper_NN ,_, the_DT aspects_NNS for_IN the_DT rating_NN prediction_NN are_VBP given_VBN ._.
+Yu_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- have_VBP proposed_VBN an_DT aspect_NN ranking_JJ method_NN for_IN reviews_NNS ._.
+They_PRP identified_VBD im_SYM -_: portant_NN product_NN aspects_NNS automatically_RB from_IN reviews_NNS ._.
+Aspect_NN mining_NN is_VBZ also_RB interesting_JJ future_NN work_NN ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN we_PRP proposed_VBD a_DT multi-scale_JJ and_CC multi_NNS -_: aspects_NNS rating_NN prediction_NN method_NN based_VBN on_IN aspect_NN -_: sentences_NNS ._.
+The_DT target_NN reviews_VBZ contained_VBN seven_CD as_IN -_: pects_NNS with_IN six_CD rating_NN points_NNS ._.
+Despite_IN the_DT fact_NN that_IN the_DT Table_NNP 5_CD :_: The_DT content_JJ rate_NN of_IN aspect-sentences_NNS ._.
+input_NN data_NNS of_IN the_DT rating_NN prediction_NN contained_VBD many_JJ mistakes_NNS ,_, namely_RB lack_NN of_IN 50_CD %_NN and_CC misrecognition_NN of_IN 25_CD %_NN ,_, the_DT proposed_VBN method_NN with_IN aspect-sentences_NNS outperformed_VBD the_DT baseline_NN without_IN aspect-sentences_NNS ._.
+The_DT experimental_JJ results_NNS show_VBP the_DT effectiveness_NN of_IN the_DT aspect_NN identification_NN of_IN sentences_NNS in_IN reviews_NNS for_IN the_DT rating_NN prediction_NN ._.
+Therefore_RB ,_, the_DT improvement_NN of_IN the_DT aspect_NN identification_NN of_IN sentences_NNS is_VBZ the_DT most_RBS important_JJ future_NN work_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP dealt_VBD with_IN only_RB predicting_VBG rat_NN -_: ings_NNS in_IN reviews_NNS ._.
+However_RB ,_, estimating_VBG relations_NNS be_VB -_: tween_NN aspects_NNS and_CC words_NNS is_VBZ beneficial_JJ for_IN many_JJ sen_NN -_: timent_NN analysis_NN tasks_NNS ._.
+Yu_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- reported_VBD that_IN the_DT extracted_VBN aspects_NNS improved_VBD the_DT performance_NN of_IN a_DT document-level_NN sentiment_NN classification_NN ._.
+Applying_VBG the_DT result_NN and_CC knowledge_NN from_IN the_DT rating_NN prediction_NN in_IN this_DT paper_NN to_TO other_JJ tasks_NNS ,_, such_JJ as_IN summarization_NN -LRB-_-LRB- Gerani_NNP et_FW al._FW ,_, 2014_CD ;_: Shimada_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, is_VBZ also_RB interesting_JJ future_NN work_NN ._.
+References_NNS Oren_NNP Etzioni_NNP ,_, Michael_NNP Cafarella_NNP ,_, Doug_NNP Downey_NNP ,_, Stanley_NNP Kok_NNP ,_, Ana-Maria_NNP Popescu_NNP ,_, Tal_NNP Shaked_NNP ,_, Stephen_NNP Soder_NNP -_: land_NN ,_, Daniel_NNP S._NNP Weld_NNP ,_, and_CC Alexander_NNP Yates_NNP ._.
+2004_CD ._.
+Web-scale_JJ information_NN extraction_NN in_IN knowitall_NN -LRB-_-LRB- prelim_SYM -_: inary_JJ results_NNS -RRB-_-RRB- ._.
+In_IN Proceedings_NNP of_IN the_DT 13th_JJ international_JJ conference_NN on_IN World_NNP Wide_NNP Web_NNP -LRB-_-LRB- WWW2004_NNP -RRB-_-RRB- ,_, pages_NNS 100_CD --_: 110_CD ._.
+Ji_NNP Fang_NNP ,_, Bob_NNP Price_NNP ,_, and_CC Lotti_NNP Price_NNP ._.
+2010_CD ._.
+Pruning_NN non_SYM -_: informative_JJ text_NN through_IN non-expert_JJ annotations_NNS to_TO im_SYM -_: prove_VB sentiment_NN classification_NN ._.
+In_IN Coling_NNP 2010_CD Work_NN -_: shop_NN :_: The_DT People_NNS 's_POS Web_NNP Meets_VBZ NLP_NNP :_: Collaboratively_RB Constructed_VBN Semantic_NNP Resources_NNPS ._.
+Shima_NNP Gerani_NNP ,_, Yashar_NNP Mehdad_NNP ,_, Giuseppe_NNP Carenini_NNP ,_, Ray_NNP -_: mond_NN Ng_NNP ,_, and_CC Bita_NNP Nejat_NNP ._.
+2014_CD ._.
+Abstractive_JJ summa_NN -_: rization_NN of_IN product_NN reviews_NNS using_VBG discourse_NN structure_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Conference_NN on_IN Empirical_NNP Meth_NNP -_: ods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 1602_CD --_: 1613_CD ._.
+Andrew_NNP B._NNP Goldberg_NNP and_CC Xiaojin_NNP Zhu_NNP ._.
+2006_CD ._.
+Seeing_VBG stars_NNS when_WRB there_EX are_VBP n't_RB many_JJ stars_NNS :_: Graph-based_JJ semi_NNS -_: supervised_JJ learning_NN for_IN sentiment_NN categorization_NN ._.
+In_IN Proceedings_NNP of_IN the_DT First_NNP Workshop_NNP on_IN Graph_NNP Based_VBD Methods_NNS for_IN Natural_JJ Language_NN Processing_NNP ,_, pages_NNS 45_CD --_: 52_CD ._.
+Narendra_NNP Gupta_NNP ,_, Giuseppe_NNP Di_NNP Fabbrizio_NNP ,_, and_CC Patrick_NNP Haffner_NNP ._.
+2010_CD ._.
+Capturing_VBG the_DT stars_NNS :_: Predicting_VBG ratings_NNS for_IN service_NN and_CC product_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT NAACL_NNP HLT_NNP 2010_CD Workshop_NNP on_IN Semantic_NNP Search_NNP ,_, pages_NNS 36_CD --_: 43_CD ._.
+Thorsten_NNP Joachims_NNP ._.
+1998_CD ._.
+Text_NN categorization_NN with_IN sup_NN -_: port_NN vector_NN machines_NNS :_: Learning_NNP with_IN many_JJ relevant_JJ features_NNS ._.
+In_IN European_JJ Conference_NN on_IN Machine_NN Learn_NNP -_: ing_NN -LRB-_-LRB- ECML_NNP -RRB-_-RRB- ,_, pages_NNS 137_CD --_: 142_CD ._.
+Nozomi_NNP Kobayashi_NNP ,_, Kentaro_NNP Inui_NNP ,_, Yuji_NNP Matsumoto_NNP ,_, Kenji_NNP Tateishi_NNP ,_, and_CC Toshikazu_NNP Fukushima_NNP ._.
+2004_CD ._.
+Collecting_VBG evaluative_JJ expressions_NNS for_IN opinion_NN extraction_NN ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT First_NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, IJCNLP_NNP '_POS 04_CD ,_, pages_NNS 596_CD --_: 605_CD ._.
+Nozomi_NNP Kobayashi_NNP ,_, Ryu_NNP Iida_NNP ,_, Kentaro_NNP Inui_NNP ,_, and_CC Yuji_NNP Matsumoto_NNP ._.
+2005_CD ._.
+Opinion_NN extraction_NN using_VBG a_DT learning-based_JJ anaphora_NN resolution_NN technique_NN ._.
+In_IN In_IN The_DT Second_NNP International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- IJCNLP_NNP -RRB-_-RRB- ,_, pages_NNS 175_CD --_: 180_CD ._.
+Moshe_NNP Koppel_NNP and_CC Jonathan_NNP Schler_NNP ._.
+2006_CD ._.
+The_DT impor_NN -_: tance_NN of_IN neutral_JJ examples_NNS in_IN learning_VBG sentiment_NN ._.
+Com_NNP -_: putational_JJ Intelligence_NNP ,_, 22_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :100_CD --_: 109_CD ._.
+Fangtao_NNP Li_NNP ,_, Nathan_NNP Liu_NNP ,_, Hongwei_NNP Jin_NNP ,_, Kai_NNP Zhao_NNP ,_, Qiang_NNP Yang_NNP ,_, and_CC Xiaoyan_NNP Zhu_NNP ._.
+2011_CD ._.
+Incorporating_VBG re_SYM -_: viewer_NN and_CC product_NN information_NN for_IN review_NN rating_NN pre_SYM -_: diction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Twenty-Second_NNP Inter_NNP -_: national_JJ Joint_NNP Conference_NN on_IN Artificial_NNP Intelligence_NNP -_: Volume_NN Volume_NN Three_CD ,_, IJCAI_NNP '_POS 11_CD ,_, pages_NNS 1820_CD --_: 1825_CD ._.
+Daisuke_NNP Okanohara_NNP and_CC Jun_NNP '_POS ichi_JJ Tsujii_NNP ._.
+2005_CD ._.
+Assign_VB -_: ing_NN polarity_NN scores_NNS to_TO reviews_NNS using_VBG machine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Second_JJ Interna_NNP -_: tional_JJ Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Process_NNP -_: ing_NN ,_, pages_NNS 314_CD --_: 325_CD ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2004_CD ._.
+A_DT sentimental_JJ edu_NN -_: cation_NN :_: Sentiment_NN analysis_NN using_VBG subjectivity_NN summa_NN -_: rization_NN based_VBN on_IN minimum_JJ cuts_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 42Nd_NNP Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Compu_NNP -_: tational_JJ Linguistics_NNP ,_, ACL_NNP '_POS 04_CD ,_, pages_NNS 271_CD --_: 278_CD ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2005_CD ._.
+Seeing_VBG stars_NNS :_: Exploiting_VBG class_NN relationships_NNS for_IN sentiment_NN categorization_NN with_IN respect_NN to_TO rating_NN scales_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 43rd_JJ An_DT -_: nual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ,_, ACL_NNP '_POS 05_CD ,_, pages_NNS 115_CD --_: 124_CD ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2008_CD ._.
+Opinion_NN mining_NN and_CC sentiment_NN analysis_NN ._.
+Foundations_NNS and_CC TrendsR_NNP in_IN Infor_NNP -_: mation_NN Retrieval_NNP ,_, 2_CD ._.
+Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+sentiment_NN classification_NN using_VBG ma_SYM -_: chine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 79_CD --_: 86_CD ._.
+Nikolaos_NNP Pappas_NNP and_CC Andrei_NNP Popescu-Belis_NNP ._.
+2014_CD ._.
+Ex_SYM -_: plaining_VBG the_DT stars_NNS :_: Weighted_JJ multiple-instance_JJ learn_VBP -_: ing_NN for_IN aspect-based_JJ sentiment_NN analysis_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 2014_CD Conference_NN on_IN Empirical_JJ Methods_NNS In_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP -RRB-_-RRB- ,_, pages_NNS 455_CD --_: 466_CD ._.
+Jason_NNP D._NNP M._NNP Rennie_NNP ,_, Lawrence_NNP Shih_NNP ,_, Jaime_NNP Teevan_NNP ,_, and_CC David_NNP R._NNP Karger_NNP ._.
+2003_CD ._.
+Tackling_VBG the_DT poor_JJ assump_NN -_: tions_NNS of_IN naive_JJ bayes_NNS text_NN classifiers_NNS ._.
+In_IN In_IN Proceedings_NNP of_IN the_DT Twentieth_NNP International_NNP Conference_NNP on_IN Machine_NN Learning_NNP -LRB-_-LRB- ICML_NNP -RRB-_-RRB- ,_, pages_NNS 616_CD --_: 623_CD ._.
+Ellen_NNP Riloff_NNP and_CC Rosie_NNP Jones_NNP ._.
+1999_CD ._.
+Learning_NNP dictionar_NN -_: ies_NNS for_IN information_NN extraction_NN by_IN multi-level_JJ bootstrap_NN -_: ping_NN ._.
+In_IN Proceeding_VBG of_IN AAAI_NNP 99_CD ,_, pages_NNS 474_CD --_: 479_CD ._.
+Kazutaka_NNP Shimada_NNP and_CC Tsutomu_NNP Endo_NNP ._.
+2008_CD ._.
+Seeing_VBG several_JJ stars_NNS :_: A_DT rating_NN inference_NN task_NN for_IN a_DT document_NN containing_VBG several_JJ evaluation_NN criteria_NNS ._.
+In_IN Advances_NNS in_IN Knowledge_NNP Discovery_NNP and_CC Data_NNP Mining_NNP ,_, 12th_JJ Pacific_NNP -_: Asia_NNP Conference_NNP ,_, PAKDD_NNP 2008_CD ,_, pages_NNS 1006_CD --_: 1014_CD ._.
+Kazutaka_NNP Shimada_NNP ,_, Ryosuke_NNP Tadano_NNP ,_, and_CC Tsutomu_NNP Endo_NNP ._.
+2011_CD ._.
+Multi-aspects_JJ review_NN summarization_NN with_IN ob_SYM -_: jective_JJ information_NN ._.
+Procedia_NNP -_: Social_NNP and_CC Behav_NNP -_: ioral_JJ Sciences_NNPS :_: Computational_NNP Linguistics_NNPS and_CC Re_NNP -_: lated_VBD Fields_NNP ,_, 27:140_CD --_: 149_CD ._.
+Benjamin_NNP Snyder_NNP and_CC Regina_NNP Barzilay_NNP ._.
+2007_CD ._.
+Multiple_JJ aspect_NN ranking_JJ using_VBG the_DT good_JJ grief_NN algorithm_NN ._.
+In_IN In_IN Proceedings_NNP of_IN the_DT Human_NNP Language_NNP Technology_NNP Con_NN -_: ference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT Associa_NNP -_: tion_NN of_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- HLT-NAACL_NNP ,_, pages_NNS 300_CD --_: 307_CD ._.
+Kimitaka_NNP Tsutsumi_NNP ,_, Kazutaka_NNP Shimada_NNP ,_, and_CC Tsutomu_NNP Endo_NNP ._.
+2007_CD ._.
+Movie_NNP review_NN classification_NN based_VBN on_IN a_DT multiple_JJ classifier_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 21st_CD Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Com_NNP -_: putation_NN -LRB-_-LRB- PACLIC_NNP -RRB-_-RRB- ,_, pages_NNS 481_CD --_: 488_CD ._.
+Peter_NNP D._NNP Turney_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN or_CC thumbs_NNS down_IN ?_.
+:_: Semantic_JJ orientation_NN applied_VBD to_TO unsupervised_JJ classi_NNS -_: fication_NN of_IN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ An_DT -_: nual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ,_, ACL_NNP '_POS 02_CD ,_, pages_NNS 417_CD --_: 424_CD ._.
+Vladimir_NNP N._NNP Vapnik_NNP ._.
+1995_CD ._.
+The_DT Nature_NN of_IN Statistical_NNP Learning_NNP Theory_NNP ._.
+Springer-Verlag_NNP New_NNP York_NNP ,_, Inc._NNP ._.
+Theresa_NNP Wilson_NNP ,_, Janyce_NNP Wiebe_NNP ,_, and_CC Rebecca_NNP Hwa_NNP ._.
+2004_CD ._.
+Just_RB how_WRB mad_JJ are_VBP you_PRP ?_.
+finding_VBG strong_JJ and_CC weak_JJ opin_NN -_: ion_NN clauses_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 19th_JJ National_NNP Con_NN -_: ference_NN on_IN Artifical_NNP Intelligence_NNP ,_, AAAI_NNP '_POS 04_CD ,_, pages_NNS 761_CD --_: 767_CD ._.
+Jianxing_VBG Yu_NNP ,_, Zheng-Jun_NNP Zha_NNP ,_, Meng_NNP Wang_NNP ,_, and_CC Tat-Seng_NNP Chua_NNP ._.
+2011_CD ._.
+Aspect_NN ranking_NN :_: Identifying_VBG important_JJ product_NN aspects_NNS from_IN online_JJ consumer_NN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Asso_NNP -_: ciation_NN for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Lan_NNP -_: guage_NN Technologies_NNPS -_: Volume_NN 1_CD ,_, HLT_NNP '_POS 11_CD ,_, pages_NNS 1496_CD --_: 1505_CD ._.
+Min-Ling_NNP Zhang_NNP and_CC Zhi-Hua_NNP Zhou_NNP ._.
+2007_CD ._.
+Ml-knn_NN :_: A_DT lazy_JJ learning_NN approach_NN to_TO multi-label_JJ learning_NN ._.
+Pattern_NN Recognition_NN ,_, 40_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- :2038_CD --_: 2048_CD ._.

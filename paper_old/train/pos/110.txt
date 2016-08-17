@@ -1,0 +1,339 @@
+Paraphrase_NNP Detection_NNP Based_VBD on_IN Identical_JJ Phrase_NN and_CC Similar_JJ Word_NN Matching_VBG Abstract_JJ Paraphrase_NNP detection_NN has_VBZ numerous_JJ important_JJ applications_NNS in_IN natural_JJ language_NN processing_NN -LRB-_-LRB- such_JJ as_IN clustering_NN ,_, summarizing_VBG ,_, and_CC detect_VB -_: ing_NN plagiarism_NN -RRB-_-RRB- ._.
+One_CD approach_NN to_TO detecting_VBG paraphrases_NNS is_VBZ to_TO use_VB predicate_NN argument_NN tu_SYM -_: ples_NNS ._.
+Although_IN this_DT approach_NN achieves_VBZ high_JJ paraphrase_NN recall_NN ,_, its_PRP$ accuracy_NN is_VBZ generally_RB low_JJ ._.
+Other_JJ approaches_NNS focus_VB on_IN matching_VBG similar_JJ words_NNS ,_, but_CC word_NN meaning_NN is_VBZ often_RB contextual_JJ -LRB-_-LRB- e.g._FW ,_, `_`` get_VB along_IN with_IN ,_, '_'' `_`` look_VB for_IN -_: ward_NN to_TO '_'' -RRB-_-RRB- ._.
+An_DT effective_JJ approach_NN to_TO detect_VB -_: ing_NN plagiarism_NN would_MD take_VB into_IN account_NN the_DT fact_NN that_IN plagiarists_NNS frequently_RB cut_VBP and_CC paste_VBP whole_JJ phrases_NNS and/or_CC replace_VB several_JJ words_NNS with_IN similar_JJ words_NNS ._.
+This_DT generally_RB results_NNS in_IN the_DT paraphrased_VBN text_NN containing_VBG identical_JJ phrases_NNS and_CC similar_JJ words_NNS ._.
+Moreover_RB ,_, pla_SYM -_: giarists_NNS usually_RB insert_VBP and/or_CC remove_VBP various_JJ minor_JJ words_NNS -LRB-_-LRB- prepositions_NNS ,_, conjunctions_NNS ,_, etc._FW -RRB-_-RRB- to_TO both_DT improve_VBP the_DT naturalness_NN and_CC disguise_VB the_DT paraphrasing_NN ._.
+We_PRP have_VBP developed_VBN a_DT sim_NN -_: ilarity_NN matching_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- metric_JJ for_IN de_IN -_: tecting_VBG paraphrases_NNS that_WDT is_VBZ based_VBN on_IN match_NN -_: ing_NN identical_JJ phrases_NNS and_CC similar_JJ words_NNS and_CC quantifying_VBG the_DT minor_JJ words_NNS ._.
+The_DT metric_JJ achieved_VBD the_DT highest_JJS paraphrase_NN detection_NN ac_SYM -_: curacy_NN -LRB-_-LRB- 77.6_CD %_NN -RRB-_-RRB- when_WRB it_PRP was_VBD combined_VBN with_IN eight_CD standard_JJ machine_NN translation_NN metrics_NNS ._.
+This_DT accuracy_NN is_VBZ better_JJR than_IN the_DT 77.4_CD %_NN rate_NN achieved_VBN with_IN the_DT state-of-the-art_JJ approach_NN for_IN paraphrase_NN detection_NN ._.
+1_CD Introduction_NNP Paraphrase_NNP detection_NN is_VBZ used_VBN to_TO determine_VB whether_IN two_CD texts_NNS -LRB-_-LRB- phrases_NNS ,_, sentences_NNS ,_, paragraphs_NNS ,_, docu_NN -_: ments_NNS ,_, etc._FW -RRB-_-RRB- of_IN arbitrary_JJ lengths_NNS have_VBP the_DT same_JJ meaning_NN ._.
+Such_JJ detection_NN is_VBZ widely_RB used_VBN to_TO remove_VB the_DT tremendous_JJ amount_NN of_IN duplicate_VB information_NN on_IN the_DT Internet_NNP ._.
+It_PRP is_VBZ also_RB used_VBN to_TO handle_VB the_DT over_JJ -_: lap_NN of_IN semantic_JJ components_NNS in_IN texts_NNS ._.
+Such_JJ compo_NN -_: nents_NNS are_VBP used_VBN in_IN various_JJ natural_JJ language_NN applica_NN -_: tions_NNS such_JJ as_IN word_NN sense_NN discrimination_NN ,_, summariza_NN -_: tion_NN ,_, automatic_JJ thesaurus_NN extraction_NN ,_, question-and_JJ -_: answer_NN generation_NN ,_, machine_NN translation_NN ,_, and_CC plagia_NN -_: rist_NN or_CC analogical_JJ relation_NN identification_NN ._.
+Some_DT researchers_NNS in_IN the_DT field_NN of_IN paraphrase_NN de_IN -_: tection_NN have_VBP used_VBN vector-based_JJ similarity_NN to_TO iden_VB -_: tify_VB the_DT differences_NNS between_IN two_CD sentences_NNS -LRB-_-LRB- Mihal_NNP -_: cea_NN et_FW al._FW ,_, 2006_CD ;_: Blacoe_NNP and_CC Lapata_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT two_CD sentences_NNS are_VBP represented_VBN by_IN two_CD vectors_NNS based_VBN on_IN the_DT frequency_NN of_IN their_PRP$ words_NNS in_IN text_NN corpora_NN ._.
+The_DT vectors_NNS are_VBP compared_VBN to_TO estimate_VB sentence_NN similar_JJ -_: ity_NN ._.
+Plagiarists_NNS attempt_VBP to_TO thwart_VB this_DT comparison_NN by_IN modifying_VBG the_DT copied_VBN sentence_NN by_IN inserting_VBG or_CC re_SYM -_: moving_VBG a_DT few_JJ minor_JJ words_NNS ,_, replacing_VBG words_NNS with_IN similar_JJ words_NNS that_WDT have_VBP different_JJ usage_NN frequencies_NNS ,_, etc._FW ._.
+Such_JJ modification_NN reduces_VBZ the_DT effectiveness_NN of_IN vector-based_JJ similarity_NN analysis_NN ._.
+Other_JJ researchers_NNS have_VBP analyzed_VBN the_DT difference_NN in_IN meaning_NN between_IN two_CD sentences_NNS on_IN the_DT basis_NN of_IN their_PRP$ syntactic_NN parsing_NN trees_NNS -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2011_CD ;_: Qiu_NNP et_FW al._FW ,_, 2006_CD ;_: Das_NNP and_CC Smith_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT structure_NN of_IN the_DT trees_NNS is_VBZ a_DT major_JJ factor_NN used_VBN various_JJ sophisticated_JJ algorithms_NNS such_JJ as_IN recursive_JJ autoencoders_NNS -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, heuristic_JJ similarity_NN -LRB-_-LRB- Qiu_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, and_CC probabilistic_JJ inference_NN -LRB-_-LRB- Das_NNP and_CC Smith_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+However_RB ,_, these_DT algorithms_NNS are_VBP affected_VBN by_IN manipu_NN -_: lation_NN -LRB-_-LRB- deleting_VBG ,_, inserting_VBG ,_, reordering_NN ,_, etc._FW -RRB-_-RRB- of_IN the_DT words_NNS in_IN the_DT sentences_NNS ._.
+Such_JJ manipulations_NNS can_MD sig_SYM -_: nificantly_RB change_VB the_DT structures_NNS of_IN the_DT parsing_NN trees_NNS ._.
+-LCB-_-LRB- yusuke_NN ,_, iechizen_NN -RCB-_-RRB- @nii_FW ._.
+ac.jp_NNP Other_JJ researchers_NNS -LRB-_-LRB- Mihalcea_NNP et_FW al._FW ,_, 2006_CD ;_: Chan_NNP and_CC Ng_NNP ,_, 2008_CD -RRB-_-RRB- have_VBP used_VBN matching_VBG algorithms_NNS to_TO de_FW -_: termine_IN the_DT similarity_NN of_IN two_CD sentences_NNS ._.
+Mihalcea_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- ,_, for_IN example_NN ,_, proposed_VBD a_DT method_NN for_IN find_VB -_: ing_VBG the_DT best_JJS matching_NN of_IN a_DT word_NN in_IN a_DT sentence_NN with_IN the_DT nearest_JJS word_NN in_IN the_DT other_JJ sentence_NN ._.
+However_RB ,_, word_NN meaning_NN is_VBZ often_RB contextual_JJ -LRB-_-LRB- e.g._FW ,_, `_`` make_VB sure_JJ of_IN ,_, '_'' `_`` take_VB care_NN of_IN '_'' -RRB-_-RRB- ._.
+Machine_NN translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- metrics_NNS ,_, which_WDT are_VBP gen_SYM -_: erally_RB used_VBN to_TO evaluate_VB the_DT quality_NN of_IN translated_VBN text_NN ,_, can_MD also_RB be_VB used_VBN to_TO judge_VB two_CD texts_NNS in_IN the_DT same_JJ language_NN ._.
+Due_JJ to_TO the_DT similarity_NN of_IN machine_NN trans_NNS -_: lation_NN and_CC paraphrase_NN detection_NN ,_, many_JJ MT_NNP metrics_NNS have_VBP been_VBN applied_VBN to_TO paraphrase_VB detection_NN -LRB-_-LRB- Finch_NNP et_FW al._FW ,_, 2005_CD ;_: Madnani_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+For_IN exam_NN -_: ple_NN ,_, eight_CD standard_JJ MT_NNP metrics_NNS have_VBP been_VBN combined_VBN to_TO create_VB a_DT state-of-the-art_JJ paraphrase_NN detection_NN ap_SYM -_: proach_NN -LRB-_-LRB- Madnani_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+However_RB ,_, the_DT objec_NN -_: tives_NNS of_IN machine_NN translation_NN and_CC paraphrase_NN detec_NN -_: tion_NN differ_VBP :_: machine_NN translation_NN tries_VBZ to_TO effectively_RB translate_VB text_NN from_IN one_CD language_NN to_TO another_DT while_IN paraphrase_NN detection_NN tries_VBZ to_TO identify_VB paraphrased_VBN text_NN ._.
+This_DT difference_NN affects_VBZ the_DT application_NN of_IN MT_NNP metrics_NNS to_TO paraphrase_VB detection_NN ._.
+A_DT paraphrase_NN is_VBZ a_DT restatement_NN of_IN the_DT meaning_NN of_IN a_DT text_NN using_VBG other_JJ words_NNS ._.
+It_PRP is_VBZ a_DT specific_JJ type_NN of_IN plagiarisms_NNS ._.
+We_PRP identify_VBP common_JJ practices_NNS plagia_SYM -_: rizers_NNS who_WP try_VBP to_TO paraphrase_VB a_DT text_NN ._.
+The_DT Microsoft_NNP Research_NNP Paraphrase_NNP -LRB-_-LRB- MSRP_NNP -RRB-_-RRB- corpus_VBZ -LRB-_-LRB- Dolan_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- is_VBZ commonly_RB used_VBN to_TO identify_VB the_DT common_JJ practices_NNS ._.
+An_DT example_NN paraphrase_NN pair_NN extracted_VBN from_IN this_DT corpus_NN is_VBZ shown_VBN in_IN Figure_NN 1_CD ._.
+Plagiarists_NNS frequently_RB cut_VBP and_CC paste_VBP several_JJ phrases_NNS of_IN different_JJ lengths_NNS ._.
+This_DT can_MD result_VB in_IN a_DT sentence_NN pair_NN containing_VBG identical_JJ phrases_NNS ._.
+The_DT two_CD sentences_NNS in_IN Figure_NN 1_CD have_VBP two_CD identical_JJ phrases_NNS :_: ``_`` Intelligence_NNP officials_NNS ''_'' and_CC ``_`` a_DT week_NN ago_RB to_TO expect_VB a_DT terrorist_JJ attack_NN in_IN Saudi_NNP Arabia_NNP ._. ''_''
+Plagiarists_NNS also_RB add_VBP and_CC delete_VBP minor_JJ words_NNS to_TO improve_VB the_DT natural_JJ -_: ness_NN of_IN the_DT text_NN ._.
+In_IN the_DT example_NN pair_NN ,_, the_DT preposition_NN ``_`` in_IN ''_'' -LRB-_-LRB- in_IN bold_JJ -RRB-_-RRB- in_IN the_DT second_JJ sentence_NN is_VBZ considered_VBN a_DT minor_JJ word_NN ._.
+Moreover_RB ,_, plagiarists_NNS can_MD replace_VB several_JJ words_NNS with_IN similar_JJ words_NNS without_IN changing_VBG the_DT sentence_NN meaning_NN to_TO avoid_VB paraphrase_NN detection_NN ._.
+The_DT words_NNS connected_VBN by_IN dashed_VBN lines_NNS with_IN arrows_NNS in_IN the_DT exam_NN -_: ple_NN are_VBP most_RBS likely_JJ such_JJ replacements_NNS ._.
+The_DT remain_VBP -_: ing_VBG words_NNS are_VBP probably_RB the_DT combination_NN of_IN a_DT few_JJ ma_SYM -_: nipulations_NNS -LRB-_-LRB- reorganization_NN ,_, deletion_NN ,_, insertion_NN ,_, re_SYM -_: placement_NN ,_, etc._FW -RRB-_-RRB- ._.
+Such_JJ modifications_NNS are_VBP typically_RB intended_VBN to_TO ensure_VB that_IN the_DT paraphrased_JJ sentence_NN has_VBZ the_DT same_JJ meaning_NN as_IN the_DT original_JJ sentence_NN ._.
+We_PRP make_VBP several_JJ contributions_NNS based_VBN on_IN an_DT anal_JJ -_: ysis_NN of_IN related_JJ work_NN and_CC the_DT common_JJ practices_NNS of_IN plagiarists_NNS in_IN this_DT paper_NN ._.
+•_CD We_PRP present_VBP a_DT heuristic_JJ algorithm_NN for_IN finding_VBG an_DT optimal_JJ matching_NN of_IN identical_JJ phrases_NNS with_IN maximum_JJ lengths_NNS ._.
+•_CD We_PRP suggest_VBP removing_VBG the_DT minor_JJ words_NNS from_IN the_DT words_NNS remaining_VBG in_IN the_DT sentences_NNS ._.
+These_DT minor_JJ words_NNS include_VBP prepositions_NNS ,_, subordinating_VBG con_NN -_: junctions_NNS -LRB-_-LRB- `_`` at_IN ,_, '_'' `_`` in_IN ,_, '_'' etc._FW -RRB-_-RRB- ,_, modal_JJ verbs_NNS ,_, posses_NNS -_: sive_JJ pronouns_NNS -LRB-_-LRB- `_`` its_PRP$ ,_, '_'' `_`` their_PRP$ ,_, '_'' etc._FW -RRB-_-RRB- ,_, and_CC periods_NNS -LRB-_-LRB- `_`` ._. '_'' -RRB-_-RRB- ._.
+•_CD We_PRP present_VBP an_DT algorithm_NN for_IN determining_VBG the_DT perfect_JJ matching_NN of_IN similar_JJ words_NNS by_IN using_VBG the_DT matching_VBG algorithm_NN proposed_VBN by_IN Kuhn_NNP and_CC Munkres_NNP -LRB-_-LRB- Kuhn_NNP ,_, 1955_CD ;_: Munkres_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+The_DT degree_NN of_IN similarity_NN between_IN two_CD similar_JJ words_NNS is_VBZ identified_VBN using_VBG WordNet_NNP -LRB-_-LRB- Pedersen_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+These_DT similarities_NNS are_VBP used_VBN as_IN weights_NNS for_IN the_DT matching_VBG algorithm_NN ._.
+•_CD We_PRP present_VBP a_DT related_JJ matching_NN -LRB-_-LRB- RelMat_NNP -RRB-_-RRB- met_VBD -_: ric_NN for_IN quantifying_VBG the_DT relationship_NN between_IN two_CD sentences_NNS on_IN the_DT basis_NN of_IN matching_VBG identical_JJ phrases_NNS and_CC similar_JJ words_NNS ._.
+•_CD We_PRP present_VBP a_DT brevity_NN penalty_NN metric_JJ to_TO reduce_VB the_DT effect_NN of_IN paraphrased_JJ sentence_NN modification_NN ._.
+This_DT metric_JJ is_VBZ combined_VBN with_IN the_DT RelM_NNP at_IN met_VBN -_: ric_NN into_IN a_DT similarity_NN matching_VBG SimMat_NNP metric_JJ for_IN effectively_RB detecting_VBG paraphrases_NNS ._.
+We_PRP used_VBD the_DT MSRP_NNP corpus_NN to_TO evaluate_VB the_DT SimMat_NNP metric_NN ._.
+Our_PRP$ method_NN using_VBG the_DT SimMat_NNP metric_JJ outperformed_VBD many_JJ previous_JJ methods_NNS ._.
+The_DT SimMat_NNP metric_JJ had_VBD the_DT highest_JJS accuracy_NN -LRB-_-LRB- 77.6_CD %_NN -RRB-_-RRB- when_WRB used_VBN in_IN combination_NN with_IN eight_CD standard_JJ MT_NNP metrics_NNS -LRB-_-LRB- MAXSIM_NNP ,_, SEPIA_NNP ,_, TER_NNP ,_, TERp_NNP ,_, METEOR_NNP ,_, BADGER_NNP ,_, BLEU_NNP ,_, and_CC NIST_NNP -RRB-_-RRB- ._.
+The_DT accuracy_NN was_VBD higher_JJR than_IN with_IN the_DT state-of-the-art_JJ approach_NN -LRB-_-LRB- accu_SYM -_: racy_JJ =_SYM 77.4_CD %_NN -RRB-_-RRB- ._.
+The_DT result_NN shows_VBZ that_IN our_PRP$ method_NN ef_SYM -_: fectively_RB uses_VBZ the_DT paraphrasing_NN practices_NNS commonly_RB used_VBN by_IN plagiarists_NNS to_TO detect_VB them_PRP ._.
+Fig_SYM 1_CD -LRB-_-LRB- introduction_NN :_: main_JJ example_NN Intelligence_NNP officials_NNS told_VBD key_JJ senators_NNS a_DT week_NN ago_RB to_TO expect_VB a_DT terrorist_JJ attack_NN in_IN Saudi_NNP Arabia_NNP ,_, Sen._NNP Pat_NNP Roberts_NNP -LRB-_-LRB- R-Kan_JJ ._. -RRB-_-RRB-
+said_VBD yesterday_NN ._.
+Intelligence_NNP officials_NNS in_IN Washington_NNP warned_VBD lawmakers_NNS a_DT week_NN ago_RB to_TO expect_VB a_DT terrorist_JJ attack_NN in_IN Saudi_NNP Arabia_NNP ,_, it_PRP was_VBD reported_VBN today_NN ._.
+2_CD 2.1_CD Related_VBN work_NN Paraphrase_NNP detection_NN cea_NN et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+The_DT similarity_NN of_IN matching_VBG two_CD words_NNS is_VBZ based_VBN on_IN WordNet_NNP ._.
+However_RB ,_, the_DT weakness_NN of_IN this_DT method_NN is_VBZ that_IN a_DT word_NN in_IN a_DT first_JJ sentence_NN is_VBZ probably_RB matched_VBN to_TO more_JJR than_IN one_CD word_NN in_IN the_DT sec_NN -_: ond_JJ sentence_NN ._.
+This_DT means_VBZ that_IN a_DT very_RB short_JJ sentence_NN can_MD be_VB detected_VBN as_IN a_DT paraphrase_NN of_IN a_DT long_JJ sentence_NN in_IN some_DT cases_NNS ._.
+Another_DT problem_NN with_IN word_NN match_NN -_: ing_NN is_VBZ that_IN the_DT meaning_NN of_IN some_DT words_NNS depends_VBZ on_IN 1_CD the_DT context_NN ._.
+For_IN example_NN ,_, the_DT basic_JJ meaning_NN of_IN `_`` get_VB '_'' changes_NNS when_WRB used_VBN in_IN the_DT phrasal_JJ verb_NN `_`` get_VB along_IN with_IN ._. '_''
+Commonly_RB used_VBN techniques_NNS for_IN detecting_VBG para_NN -_: phrases_NNS are_VBP based_VBN on_IN MT_NNP metrics_NNS ._.
+This_DT is_VBZ because_IN the_DT translation_NN task_NN is_VBZ very_RB similar_JJ to_TO the_DT paraphrase_NN detection_NN task_NN for_IN text_NN in_IN the_DT same_JJ language_NN ._.
+For_IN example_NN ,_, Finch_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- extended_VBD a_DT MT_NNP met_VBD -_: ric_NN -LRB-_-LRB- PER_NNP -RRB-_-RRB- and_CC combined_VBN it_PRP with_IN three_CD other_JJ standard_JJ metrics_NNS -LRB-_-LRB- BLEU_NNP ,_, NIST_NNP ,_, and_CC WER_NNP -RRB-_-RRB- into_IN a_DT method_NN for_IN detecting_VBG paraphrases_NNS ._.
+Another_DT method_NN developed_VBN by_IN Madnani_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- is_VBZ based_VBN on_IN the_DT integration_NN of_IN eight_CD metrics_NNS -LRB-_-LRB- TER_NNP ,_, TERp_NNP ,_, BADGER_NNP ,_, SEPIA_NNP ,_, BLEU_NNP ,_, NIST_NNP ,_, METEOR_NNP ,_, and_CC MAXSIM_NNP -RRB-_-RRB- ._.
+However_RB ,_, the_DT main_JJ purpose_NN of_IN these_DT metrics_NNS is_VBZ for_IN translating_VBG ,_, and_CC their_PRP$ integration_NN is_VBZ unsuitable_JJ for_IN detecting_VBG para_NN -_: phrases_NNS ._.
+To_TO overcome_VB these_DT weaknesses_NNS ,_, we_PRP devel_VBP -_: oped_VBD a_DT similarity_NN metric_JJ and_CC combined_VBN it_PRP with_IN eight_CD standard_JJ metrics_NNS ,_, as_IN described_VBN below_IN ._.
+2.2_CD Standard_NNP MT_NNP metrics_NNS Two_CD basic_JJ MT_NNP metrics_NNS for_IN measuring_VBG the_DT similarity_NN of_IN two_CD text_NN segments_NNS are_VBP based_VBN on_IN finding_VBG the_DT mini_NNS -_: mum_JJ number_NN of_IN operators_NNS needed_VBN to_TO change_VB one_CD seg_SYM -_: ment_NN so_IN that_IN it_PRP matches_VBZ the_DT other_JJ one_CD ._.
+The_DT transla_NN -_: tion_NN edit_NN rate_NN -LRB-_-LRB- TER_NNP -RRB-_-RRB- metric_JJ -LRB-_-LRB- Snover_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- sup_SYM -_: ports_NNS standard_JJ operators_NNS ,_, including_VBG shift_NN ,_, substitu_NN -_: tion_NN ,_, deletion_NN ,_, and_CC insertion_NN ._.
+The_DT TER-Plus_JJ -LRB-_-LRB- TERp_JJ -RRB-_-RRB- metric_JJ -LRB-_-LRB- Snover_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- supports_VBZ even_RB more_RBR op_SYM -_: erators_NNS ,_, including_VBG stemming_VBG and_CC synonymizing_VBG ._.
+The_DT BADGER_NNP MT_NNP metric_JJ -LRB-_-LRB- Parker_NNP ,_, 2008_CD -RRB-_-RRB- uses_VBZ compression_NN and_CC information_NN theory_NN ._.
+It_PRP is_VBZ used_VBN to_TO calculate_VB the_DT compression_NN distance_NN of_IN two_CD text_NN seg_NN -_: ments_NNS by_IN using_VBG Burrows-Wheeler_NNP transformation_NN ._.
+Figure_NN 1_CD :_: Example_NN paraphrase_NN pair_NN taken_VBN from_IN MSRP_NNP corpus_VBZ ._.
+The_DT baseline_NN for_IN paraphrase_NN detection_NN is_VBZ based_VBN on_IN vector-based_JJ similarity_NN ._.
+Each_DT source_NN mes_SYM -_: sage_NN and_CC target_NN message_NN is_VBZ represented_VBN as_IN a_DT vec_FW -_: tor_NN using_VBG the_DT frequencies_NNS of_IN its_PRP$ words_NNS -LRB-_-LRB- such_JJ as_IN term_NN frequency_NN -LRB-_-LRB- Mihalcea_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- and_CC co_SYM -_: occurrence_NN -LRB-_-LRB- Blacoe_NNP and_CC Lapata_NNP ,_, 2012_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+The_DT simi_NN -_: larity_NN of_IN the_DT two_CD vectors_NNS is_VBZ quantified_VBN using_VBG various_JJ measures_NNS -LRB-_-LRB- e.g._FW ,_, cosine_NN -LRB-_-LRB- Mihalcea_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, addi_SYM -_: tion_NN and_CC point-wise_JJ multiplication_NN -LRB-_-LRB- Blacoe_NNP and_CC La_NNP -_: pata_NN ,_, 2012_CD -RRB-_-RRB- -RRB-_-RRB- ._.
+The_DT problem_NN with_IN vector-based_JJ meth_NN -_: ods_NNS is_VBZ to_TO focus_VB on_IN the_DT frequency_NN of_IN separate_JJ words_NNS or_CC phrases_NNS ._.
+However_RB ,_, plagiarists_NNS can_MD paraphrase_VB by_IN replacing_VBG words_NNS with_IN similar_JJ words_NNS that_WDT have_VBP a_DT very_RB different_JJ frequency_NN ._.
+Moreover_RB ,_, they_PRP can_MD delete_VB and/or_CC insert_VB minor_JJ words_NNS that_WDT do_VBP not_RB change_VB the_DT meaning_NN of_IN the_DT original_JJ sentences_NNS ._.
+Such_JJ manipula_NN -_: tions_NNS change_VBP the_DT quality_NN of_IN the_DT representation_NN vector_NN ,_, which_WDT reduces_VBZ paraphrase_NN detection_NN performance_NN ._.
+Several_JJ methods_NNS have_VBP been_VBN proposed_VBN for_IN over_IN -_: coming_VBG the_DT manipulation_NN problem_NN that_WDT use_VBP syntactic_JJ parsing_NN trees_NNS of_IN messages_NNS ._.
+The_DT replacement_NN of_IN simi_NN -_: lar_NN words_NNS and_CC the_DT use_NN of_IN minor_JJ words_NNS do_VBP not_RB change_VB the_DT basic_JJ structure_NN of_IN the_DT trees_NNS ._.
+Qiu_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- re_SYM -_: ported_VBD a_DT method_NN that_WDT detects_VBZ the_DT similarity_NN of_IN two_CD sentences_NNS by_IN heuristically_RB comparing_VBG their_PRP$ predicate_NN argument_NN tuples_NNS ,_, which_WDT are_VBP a_DT type_NN of_IN syntactic_JJ pars_NNS -_: ing_VBG tree_NN ._.
+The_DT high_JJ paraphrase_NN recall_NN -LRB-_-LRB- 93_CD %_NN -RRB-_-RRB- it_PRP attained_VBD shows_NNS that_IN most_JJS paraphrases_NNS have_VBP the_DT same_JJ predicate_NN argument_NN tuples_NNS ._.
+However_RB ,_, the_DT accuracy_NN was_VBD very_RB low_JJ -LRB-_-LRB- 72_CD %_NN -RRB-_-RRB- ._.
+Parsing_VBG trees_NNS were_VBD used_VBN for_IN probabilistic_JJ inference_NN of_IN paraphrases_NNS by_IN Das_NNP and_CC Smith_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ._.
+Another_DT method_NN considers_VBZ these_DT trees_NNS as_IN input_NN for_IN a_DT paraphrase_NN detection_NN system_NN based_VBN on_IN recursive_JJ au_SYM -_: toencoders_NNS -LRB-_-LRB- Socher_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT drawback_NN of_IN the_DT parsing_NN tree_NN approach_NN is_VBZ that_IN parsing_VBG trees_NNS are_VBP af_SYM -_: fected_VBN by_IN the_DT reordering_NN words_NNS in_IN a_DT sentence_NN such_JJ as_IN the_DT conversion_NN of_IN a_DT sentence_NN from_IN passive_JJ voice_NN to_TO active_JJ voice_NN ._.
+Another_DT method_NN finds_VBZ the_DT maximum_NN matching_VBG for_IN each_DT word_NN in_IN two_CD sentences_NNS -LRB-_-LRB- Mihal_NNP -_: This_DT distance_NN represents_VBZ for_IN probability_NN that_IN one_CD seg_NN -_: ment_NN is_VBZ a_DT paraphrase_NN of_IN the_DT other_JJ ._.
+The_DT SEPIA_NNP MT_NNP metric_JJ -LRB-_-LRB- Habash_NNP and_CC Elkholy_NNP ,_, 2008_CD -RRB-_-RRB- is_VBZ based_VBN on_IN the_DT dependence_NN tree_NN and_CC is_VBZ used_VBN to_TO calculate_VB the_DT similarity_NN of_IN two_CD text_NN segments_NNS ._.
+It_PRP extends_VBZ the_DT tree_NN to_TO obtain_VB the_DT surface_NN span_NN ,_, which_WDT is_VBZ used_VBN as_IN the_DT main_JJ component_NN of_IN the_DT similarity_NN score_NN ._.
+After_IN the_DT components_NNS of_IN the_DT tree_NN are_VBP matched_VBN ,_, a_DT brevity_NN penalty_NN factor_NN is_VBZ suggested_VBN for_IN deciding_VBG the_DT difference_NN in_IN tree_NN lengths_NNS for_IN the_DT two_CD text_NN segments_NNS ._.
+Two_CD other_JJ MT_NNP metrics_NNS commonly_RB used_VBN in_IN ma_NN -_: chine_NN translation_NN are_VBP the_DT bilingual_JJ evaluation_NN under_IN -_: study_NN -LRB-_-LRB- BLEU_NNP -RRB-_-RRB- metric_JJ -LRB-_-LRB- Papineni_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- and_CC the_DT NIST_NNP metric_JJ -LRB-_-LRB- Doddington_NNP ,_, 2002_CD -RRB-_-RRB- -LRB-_-LRB- an_DT extension_NN of_IN the_DT BLEU_NNP metric_JJ -RRB-_-RRB- ._.
+Both_DT also_RB quantify_VBP similarity_NN on_IN the_DT basis_NN of_IN matching_VBG words_NNS in_IN the_DT original_JJ text_NN seg_NN -_: ment_NN with_IN words_NNS in_IN the_DT translated_VBN segment_NN ._.
+Whereas_IN the_DT BLEU_NNP metric_JJ simply_RB calculates_VBZ the_DT number_NN of_IN matching_VBG words_NNS ,_, the_DT NIST_NNP metric_JJ takes_VBZ into_IN account_NN the_DT importance_NN of_IN matching_VBG with_IN different_JJ levels_NNS ._.
+The_DT main_JJ drawback_NN of_IN these_DT word_NN matching_VBG metrics_NNS is_VBZ that_IN a_DT word_NN in_IN a_DT segment_NN can_MD match_VB more_JJR than_IN one_CD word_NN in_IN the_DT other_JJ segment_NN ._.
+Two_CD MT_NNP metrics_NNS based_VBN on_IN non-duplicate_JJ match_NN -_: ing_NN have_VBP been_VBN devised_VBN to_TO overcome_VB this_DT problem_NN ._.
+The_DT METEOR_NNP metric_JJ -LRB-_-LRB- Denkowski_NNP and_CC Lavie_NNP ,_, 2010_CD -RRB-_-RRB- uses_VBZ explicit_JJ ordering_VBG to_TO identify_VB matching_VBG tuples_NNS with_IN minimized_VBN cross_NN edges_NNS ._.
+However_RB ,_, it_PRP simply_RB per_IN -_: forms_NNS word-by-word_JJ matching_NN ._.
+The_DT maximum_NN sim_NN -_: ilarity_NN -LRB-_-LRB- MAXSIM_NNP -RRB-_-RRB- metric_JJ -LRB-_-LRB- Chan_NNP and_CC Ng_NNP ,_, 2008_CD -RRB-_-RRB- finds_VBZ the_DT maximum_NN matching_NN of_IN unigram_NN ,_, bigram_NN ,_, and_CC tri_SYM -_: gram_NN words_NNS by_IN using_VBG the_DT Kuhn-Munkres_NNP algorithm_NN ._.
+However_RB ,_, the_DT maximum_NN length_NN of_IN the_DT phrase_NN is_VBZ a_DT tri_FW -_: gram_NN ._.
+Moreover_RB ,_, the_DT similarities_NNS of_IN the_DT phrases_NNS -LRB-_-LRB- uni_SYM -_: gram_NN ,_, bigram_NN ,_, and_CC trigram_NN -RRB-_-RRB- are_VBP disjointly_JJ combined_VBN ._.
+To_TO overcome_VB these_DT drawbacks_NNS with_IN the_DT standard_JJ MT_NNP metrics_NNS ,_, we_PRP have_VBP developed_VBN a_DT heuristic_JJ method_NN for_IN finding_VBG the_DT maximum_NN of_IN matching_VBG tuples_NNS up_IN to_TO the_DT length_NN of_IN the_DT text_NN segments_NNS being_VBG compared_VBN ._.
+We_PRP also_RB developed_VBD a_DT metric_JJ for_IN sophisticatedly_RB quantifying_VBG the_DT similarity_NN on_IN the_DT basis_NN of_IN the_DT matching_VBG tuples_NNS ._.
+3_CD Similarity_NN matching_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- metric_JJ Our_PRP$ proposed_VBN similarity_NN metric_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- for_IN quan_NN -_: tifying_VBG the_DT similarity_NN of_IN input_NN text_NN comprises_VBZ four_CD steps_NNS ,_, as_IN illustrated_VBN in_IN Figure_NN 2_CD ._.
+The_DT following_NN is_VBZ a_DT step-by-step_JJ description_NN of_IN our_PRP$ method_NN using_VBG two_CD Figure_NN 3_CD :_: Matching_VBG identical_JJ phrases_NNS with_IN their_PRP$ maximum_NN lengths_NNS -LRB-_-LRB- Step_NN 1_CD -RRB-_-RRB- ._.
+sentences_NNS ,_, which_WDT is_VBZ an_DT actual_JJ paraphrase_NN pair_NN from_IN the_DT MSRP_NNP corpus_NN ._.
+s1_NN :_: ``_`` The_DT study_NN is_VBZ being_VBG published_VBN today_NN in_IN the_DT journal_NN Science_NN ''_'' s2_NN :_: ``_`` Their_PRP$ findings_NNS were_VBD published_VBN today_NN in_IN Sci_NNP -_: ence_NN ._. ''_''
+3.1_CD Match_NNP identical_JJ phrases_NNS -LRB-_-LRB- Step_NN 1_CD -RRB-_-RRB- The_DT individual_JJ words_NNS in_IN the_DT two_CD input_NN sentences_NNS are_VBP normalized_VBN using_VBG lemmas_NNS ._.
+The_DT Natural_JJ Lan_NN -_: guage_NN Processing_NNP -LRB-_-LRB- NLP_NNP -RRB-_-RRB- library_NN of_IN Stanford_NNP Univer_NNP -_: sity_NN -LRB-_-LRB- Manning_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ used_VBN to_TO identify_VB the_DT lemmas_NNS ._.
+The_DT lemmas_NNS for_IN the_DT two_CD example_NN sentences_NNS are_VBP shown_VBN in_IN Figure_NN 3_CD ._.
+The_DT heuristic_JJ algorithm_NN we_PRP developed_VBD for_IN match_NN -_: ing_VBG the_DT lemmas_NNS in_IN the_DT two_CD sentences_NNS repeatedly_RB finds_VBZ a_DT new_JJ matching_NN pair_NN in_IN each_DT round_NN ._.
+In_IN each_DT round_NN ,_, a_DT new_JJ pair_NN with_IN the_DT maximum_NN phrase_NN length_NN is_VBZ es_SYM -_: tablished_VBN ._.
+The_DT pseudo_NN code_NN of_IN the_DT algorithm_NN is_VBZ illus_SYM -_: trated_VBN in_IN Algorithm_NNP 1_CD ._.
+The_DT stop_NN condition_NN is_VBZ when_WRB there_EX is_VBZ no_DT new_JJ matching_NN pair_NN ._.
+For_IN example_NN ,_, two_CD identical_JJ lemma_NN of_IN phrases_NNS ,_, ``_`` be_VB publish_VB today_NN in_IN ''_'' and_CC ``_`` science_NN ,_, ''_'' are_VBP matched_VBN -LRB-_-LRB- as_IN shown_VBN as_IN Figure_NN 3_CD -RRB-_-RRB- ._.
+In_IN algorithm_NN 1_CD ,_, the_DT function_NN getLemmas_NNS -LRB-_-LRB- s_PRP -RRB-_-RRB- ex_FW -_: tracts_NNS the_DT lemmas_NNS of_IN sentence_NN s_VBZ using_VBG the_DT NLP_NNP li_SYM -_: brary_NN ._.
+The_DT function_NN lenL_NN gets_VBZ the_DT number_NN of_IN ele_NN -_: ments_NNS in_IN set_NN L_NNP ._.
+The_DT function_NN match_NN -LRB-_-LRB- L1_CD -LSB-_NNP i_FW -RSB-_NNP ,_, L2_NNP -LSB-_NNP j_VBD -RSB-_NNP -RRB-_-RRB- finds_VBZ the_DT maximum_NN length_NN matching_NN of_IN phrase_NN L1_CD ,_, which_WDT starts_VBZ at_IN the_DT i-th_JJ position_NN in_IN the_DT first_JJ sentence_NN ,_, and_CC that_IN of_IN phrase_NN L2_NN ,_, which_WDT starts_VBZ at_IN the_DT j-th_JJ posi_NN -_: tion_NN in_IN the_DT second_JJ sentence_NN ._.
+3.2_CD Remove_VB minor_JJ words_NNS -LRB-_-LRB- Step_NN 2_CD -RRB-_-RRB- The_DT words_NNS remaining_VBG after_IN phrase_NN matching_NN in_IN Step_NN 1_CD are_VBP used_VBN for_IN removing_VBG minor_JJ words_NNS ._.
+First_RB ,_, the_DT part_NN of_IN speech_NN -LRB-_-LRB- POS_NNP -RRB-_-RRB- for_IN each_DT word_NN is_VBZ identified_VBN ._.
+The_DT Stanford_NNP library_NN tool_NN -LRB-_-LRB- Manning_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ used_VBN for_IN this_DT purpose_NN ._.
+The_DT POSs_NNP for_IN the_DT words_NNS in_IN two_CD the_DT example_NN sentences_NNS are_VBP shown_VBN in_IN Figure_NN 4_CD ._.
+Fig_NN 3_CD :_: matching_VBG identical_JJ phrases_NNS -LRB-_-LRB- updated_VBN -RRB-_-RRB- s1_CD :_: The_DT study_NN is_VBZ being_VBG published_VBN today_NN in_IN the_DT journal_NN Science_NNP Lem_NNP :_: the_DT study_NN be_VB be_VB publish_VB today_NN in_IN the_DT journal_NN science_NN Lem_NNP :_: they_PRP find_VBP be_VB publish_VB today_NN in_IN science_NN ._.
+s2_NN :_: Their_PRP$ findings_NNS were_VBD published_VBN today_NN in_IN Science_NN ._.
+s1_CD s2_CD SimMat_NNP Step_NN 1_CD :_: Match_NNP identical_JJ phrases_NNS Step_NN 2_CD :_: Remove_VB minor_JJ words_NNS Step_NN 3_CD :_: Match_NNP similar_JJ words_NNS Step_NN 4_CD :_: Calculate_VB Figure_NN 2_CD :_: Four_CD steps_NNS in_IN calculation_NN of_IN similarity_NN matching_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- metric_JJ ._.
+Algorithm_NNP 1_CD Match_NNP identical_JJ phrases_NNS ._.
+Fig_NN 4_CD :_: Re_NNP moving_VBG m_NN similarity_NN metric_JJ inor_NN words_NNS -LRB-_-LRB- updated_VBN -RRB-_-RRB- POS_NNP :_: DT_NNP NN_NNP VBZVBG_NNP VBN_NNP NN_NNP IN_IN DT_NNP NN_NNP NN_NNP s1_CD :_: The_DT study_NN is_VBZ being_VBG published_VBN today_NN in_IN the_DT journal_NN Science_NNP Lem_NNP :_: the_DT study_NN be_VB be_VB publish_VB today_NN in_IN the_DT journal_NN science_NN 1_CD :_: 2_CD :_: 3_CD :_: 4_CD :_: 5_CD :_: 6_CD :_: 7_CD :_: 8_CD :_: 9_CD :_: 10_CD :_: 11_CD :_: 12_CD :_: 13_CD :_: 14_CD :_: 15_CD :_: 16_CD :_: 17_CD :_: 18_CD :_: 19_CD :_: 20_CD :_: 21_CD :_: 22_CD :_: functionMATCHIDENTICALPHRASES_NNS -LRB-_-LRB- s1_CD ,_, s2_CD -RRB-_-RRB- L1_CD ←_CD getLemmas_NNS -LRB-_-LRB- s1_CD -RRB-_-RRB- ;_: L2_CD ←_CD getLemmas_NNS -LRB-_-LRB- s2_CD -RRB-_-RRB- ;_: P_NNP ←_CD ⊘_CD ;_: repeat_VB new_JJ ←_CD ⊘_CD ;_: fori_NNS =_SYM 0tolenL1_NNP −_CD 1do_CD forj_NN =_SYM 0tolenL2_NNP −_CD 1do_CD if_IN -LCB-_-LRB- L1_CD -LSB-_NNP i_FW -RSB-_NNP ,_, L2_NNP -LSB-_NNP j_VBD -RSB-_NNP -RCB-_-RRB- ̸_SYM ∈_FW P_FW then_RB tmp_IN ←_CD match_NN -LRB-_-LRB- L1_CD -LSB-_NNP i_FW -RSB-_NNP ,_, L2_NNP -LSB-_NNP j_VBD -RSB-_NNP -RRB-_-RRB- ;_: if_IN lentmp_NN >_NN lennew_NN then_RB new_JJ ←_CD tmp_NN ;_: end_NN if_IN end_NN if_IN end_NN for_IN end_NN for_IN if_IN new_JJ is_VBZ not_RB null_JJ then_RB P_NNP =_SYM P_NNP new_JJ ;_: end_NN if_IN until_IN -LRB-_-LRB- new_JJ =_SYM ⊘_FW -RRB-_-RRB- ;_: return_NN P_NNP ;_: endfunction_NN Figure_NN 4_CD :_: Remove_VB minor_JJ words_NNS -LRB-_-LRB- Step_NN 2_CD -RRB-_-RRB- ._.
+Figure_NN 6_CD :_: Find_VB perfect_JJ matching_NN of_IN similar_JJ words_NNS using_VBG Kuhn-Munkres_NNP algorithm_NN -LRB-_-LRB- Kuhn_NNP ,_, 1955_CD ;_: Munkres_NNP ,_, 1957_CD -RRB-_-RRB- -LRB-_-LRB- Step_NN 3_LS -RRB-_-RRB- ._.
+gorithm_NN we_PRP developed_VBD on_IN the_DT basis_NN of_IN the_DT Kuhn_NNP -_: Munkres_NNP algorithm_NN -LRB-_-LRB- Kuhn_NNP ,_, 1955_CD ;_: Munkres_NNP ,_, 1957_CD -RRB-_-RRB- ._.
+The_DT weights_NNS of_IN each_DT pair_NN in_IN the_DT algorithm_NN are_VBP calcu_SYM -_: lated_VBN from_IN the_DT similarity_NN of_IN the_DT two_CD lemmas_NNS of_IN the_DT words_NNS using_VBG the_DT path_NN metric_JJ -LRB-_-LRB- Pedersen_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+The_DT path_NN -LRB-_-LRB- w1_CD ,_, w2_CD -RRB-_-RRB- metric_JJ computes_NNS the_DT shortest_JJS path_NN -LRB-_-LRB- pathLength_NNP -RRB-_-RRB- between_IN two_CD words_NNS w1_CD and_CC w2_CD in_IN the_DT `_`` is-a_NN '_'' hierarchies_NNS of_IN WordNet_NNP ,_, as_IN shown_VBN in_IN Eq_NNP ._.
+1_LS ._.
+The_DT pathLength_NNP is_VBZ constrained_VBN to_TO be_VB a_DT positive_JJ in_IN -_: teger_NN to_TO ensure_VB that_IN 0_CD <_CD =_SYM path_NN <_CD =_SYM 1_CD ._.
+For_IN example_NN ,_, the_DT path_NN metric_JJ for_IN the_DT ``_`` study_NN ''_'' and_CC ``_`` find_VB ''_'' pair_NN is_VBZ 0.33_CD ._.
+The_DT perfect_JJ matching_NN found_VBD for_IN the_DT two_CD ex_FW -_: ample_JJ sentences_NNS is_VBZ shown_VBN in_IN Figure_NN 6_CD ._.
+The_DT word_NN ``_`` study_NN ''_'' in_IN sentence_NN s1_CD is_VBZ matched_VBN with_IN a_DT similar_JJ word_NN ,_, ``_`` findings_NNS ,_, ''_'' in_IN sentence_NN s2_NN ._.
+4_CD Lem_NNP :_: they_PRP find_VBP be_VB publish_VB today_NN in_IN science_NN ._.
+s_PRP :_: Their_PRP$ findings_NNS were_VBD published_VBN today_NN in_IN Science_NN ._.
+2_CD Fig_NN 6_CD :_: Matching_VBG words_NNS -LRB-_-LRB- updated_VBN -RRB-_-RRB- POS_NNP :_: PRP$_NNP NNS_NNP VBD_NNP VBN_NNP NN_NNP IN_IN NNP_NNP ._.
+POS_NNP :_: DT_NNP NNVBZVBG_NNP VBN_NNP NN_NNP IN_IN DT_NNP NN_NNP NN_NNP s1_CD :_: The_DT study_NN is_VBZ being_VBG published_VBN today_NN in_IN the_DT journal_NN Science_NNP Lem_NNP :_: the_DT study_NN be_VB be_VB publish_VB today_NN in_IN the_DT journal_NN science_NN 0.33_CD Lem_NNP :_: they_PRP find_VBP be_VB publish_VB today_NN in_IN science_NN ._.
+s2_NN :_: Their_PRP$ findings_NNS were_VBD published_VBN today_NN in_IN Science_NN ._.
+POS_NNP :_: PRP$_NNP NNS_NNP VBD_NNP VBN_NNP NN_NNP IN_IN NNP_NNP ._.
+Our_PRP$ analysis_NN of_IN the_DT common_JJ practices_NNS of_IN plagia_NN -_: rists_NNS showed_VBD that_IN four_CD types_NNS of_IN minor_JJ words_NNS should_MD be_VB removed_VBN :_: prepositions_NNS and_CC subordinating_VBG con_NN -_: junctions_NNS -LRB-_-LRB- IN_IN -RRB-_-RRB- ,_, modal_JJ verbs_NNS -LRB-_-LRB- MD_NNP -RRB-_-RRB- ,_, possessive_JJ pro-_JJ nouns_NNS -LRB-_-LRB- PRP$_NNP -RRB-_-RRB- ,_, and_CC periods_NNS -LRB-_-LRB- ``_`` ._. ''_'' -RRB-_-RRB- ._.
+These_DT minor_JJ POSs_NNP generally_RB do_VBP not_RB change_VB the_DT meaning_NN of_IN the_DT para_NN -_: phrased_VBN text_NN as_IN they_PRP are_VBP often_RB used_VBN to_TO simply_RB improve_VB the_DT naturalness_NN of_IN the_DT paraphrased_VBN text_NN ._.
+For_IN example_NN ,_, the_DT two_CD minor_JJ POSs_NNS -LRB-_-LRB- PRP$_NNP and_CC ``_`` ._. ''_'' -RRB-_-RRB-
+were_VBD deleted_VBN from_IN sentence_NN s2_CD in_IN Figure_NN 4_CD ._.
+An_DT example_NN of_IN prepo_NN -_: sition_NN deletion_NN is_VBZ illustrated_VBN in_IN Figure_NN 1_CD ._.
+Detection_NNP of_IN remaining_VBG type_NN of_IN minor_JJ words_NNS -LRB-_-LRB- modal_JJ verbs_NNS -RRB-_-RRB- is_VBZ illustrated_VBN for_IN an_DT actual_JJ paraphrase_NN pair_NN in_IN Figure_NN 5_CD ._.
+3.3_CD Match_NNP similar_JJ words_NNS -LRB-_-LRB- Step_NN 3_CD -RRB-_-RRB- After_IN minor_JJ word_NN deletion_NN in_IN Step_NN 2_CD ,_, the_DT perfect_JJ matching_NN of_IN similar_JJ words_NNS is_VBZ done_VBN using_VBG the_DT al_NN -_: 3.4_CD 1_CD path_NN -LRB-_-LRB- w1_CD ,_, w2_CD -RRB-_-RRB- =_SYM pathLength_NNP -LRB-_-LRB- w1_CD ,_, w2_CD -RRB-_-RRB- -LRB-_-LRB- 1_LS -RRB-_-RRB- Calculate_VB similarity_NN metric_JJ -LRB-_-LRB- Step_NN 4_LS -RRB-_-RRB- Finally_RB ,_, the_DT RelMat_NNP metric_NN is_VBZ calculated_VBN using_VBG the_DT results_NNS of_IN identical_JJ phrase_NN matching_VBG in_IN Step_NN 1_CD and_CC similar_JJ word_NN matching_VBG in_IN Step_NN 3_CD :_: NNSTODT_NNP NN_NNP VBDNNPNNPPOSNN_NNP MD_NNP VBVBNDT_NNP NN_NNP IN_IN NN_NNP INNNPNNP_NNP ._.
+Aides_NNS to_TO the_DT general_NN said_VBD Mr._NNP Segal_NNP 's_POS arrival_NN could_MD have_VB been_VBN the_DT source_NN of_IN friction_NN with_IN Mr._NNP Fowler_NNP ._.
+aide_NN to_TO the_DT general_JJ say_VBP Mr._NNP Segal_NNP 's_POS arrival_NN could_MD have_VB be_VB the_DT source_NN of_IN friction_NN with_IN Mr._NNP Fowler_NNP ._.
+campaign_NN official_NN say_VBP the_DT move_NN may_MD have_VB be_VB a_DT source_NN of_IN some_DT friction_NN with_IN Fowler_NNP ._.
+Campaign_NN officials_NNS said_VBD the_DT moves_NNS may_MD have_VB been_VBN a_DT source_NN of_IN some_DT friction_NN with_IN Fowler_NNP ._.
+NN_NNP NNS_NNP VBDDT_NNP NNS_NNP MD_NNP VB_NNP VBN_NNP DT_NNP NN_NNP IN_IN DT_NNP NN_NNP IN_IN NNP_NNP ._.
+RelMat_NNP -LRB-_-LRB- s1_CD ,_, s2_CD -RRB-_-RRB- =_SYM #Np_NNP +_CD N_NNP −_CD 1_CD len_NN -LRB-_-LRB- pi_FW -RRB-_-RRB- α_FW +_FW M_NNP −_CD 1_CD path_NN -LRB-_-LRB- wj_FW -RRB-_-RRB- α_FW modification_NN is_VBZ typically_RB intended_VBN to_TO improve_VB the_DT naturalness_NN of_IN text_NN ._.
+Therefore_RB ,_, the_DT two_CD sentences_NNS be_VB -_: ing_NN compared_VBN frequently_RB have_VBP different_JJ lengths_NNS ._.
+To_TO reduce_VB this_DT effect_NN ,_, we_PRP developed_VBD a_DT brevity_NN penalty_NN metric_JJ p_NN based_VBN on_IN the_DT METEOR_NNP metric_JJ -LRB-_-LRB- Denkowski_NNP and_CC Lavie_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ calculated_VBN as_IN shown_VBN in_IN Eq_NNP ._.
+3_CD ,_, where_WRB #ReW_NNP -LRB-_-LRB- s_PRP -RRB-_-RRB- is_VBZ the_DT number_NN of_IN words_NNS remaining_VBG in_IN sentence_NN s_VBZ after_IN phrase_NN matching_NN and_CC minor_JJ word_NN removal_NN ._.
+Penalty_NNP p_NN is_VBZ combined_VBN with_IN RelMat_NNP into_IN the_DT similarity_NN matching_VBG SimMat_NNP metric_JJ ,_, as_IN shown_VBN in_IN Eq_NNP ._.
+4_LS ._.
+p_NN -LRB-_-LRB- s1_CD ,_, s2_CD -RRB-_-RRB- =_SYM =_SYM 0.5_CD ×_NN -LRB-_-LRB- |_SYM #ReW_NNP -LRB-_-LRB- s1_CD -RRB-_-RRB- −_SYM #ReW_NNP -LRB-_-LRB- s2_CD -RRB-_-RRB- |_NN -RRB-_-RRB- 3_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- i_FW =_SYM 0_CD j_NN =_SYM 0_CD =_SYM #Np_FW +_FW #Nw_FW +_FW N_NNP −_CD 1len_NNS -LRB-_-LRB- pi_FW -RRB-_-RRB- α_FW +_FW M_NNP −_CD 11α_CD ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- where_WRB #Np_NNP is_VBZ the_DT total_JJ number_NN of_IN words_NNS in_IN the_DT matched_VBN identical_JJ phrases_NNS ,_, #Nw_NNP is_VBZ the_DT number_NN of_IN matched_VBN similar_JJ words_NNS ,_, N_NNP and_CC M_NNP are_VBP the_DT cor_NN -_: responding_VBG numbers_NNS of_IN matched_VBN identical_JJ phrases_NNS and_CC similar_JJ words_NNS ,_, pi_NN is_VBZ the_DT i-th_JJ matched_VBN phrase_NN in_IN Step_NN 1_CD ,_, len_NN -LRB-_-LRB- pi_FW -RRB-_-RRB- is_VBZ the_DT number_NN of_IN words_NNS in_IN the_DT phrase_NN pi_NNS ,_, and_CC path_NN -LRB-_-LRB- wj_FW -RRB-_-RRB- is_VBZ the_DT path_NN metric_NN of_IN the_DT j-th_JJ matched_VBN word_NN in_IN Step_NN 3_CD ._.
+Eq_NN ._.
+2_CD ensures_VBZ that_IN 0_CD <_CD =_SYM RelMat_NNP <_CD =_SYM 1_CD ._.
+The_DT RelMat_NNP metric_JJ equals_VBZ 1_CD only_RB if_IN the_DT two_CD sentences_NNS are_VBP identical_JJ ._.
+Using_VBG #Np_NNP only_RB in_IN the_DT numera_NN -_: tor_NN means_VBZ that_IN the_DT matching_NN of_IN identical_JJ phrases_NNS is_VBZ more_RBR important_JJ than_IN the_DT matching_NN of_IN similar_JJ words_NNS ._.
+The_DT len_NN -LRB-_-LRB- pi_FW -RRB-_-RRB- α_NN and_CC path_NN -LRB-_-LRB- wj_NN -RRB-_-RRB- α_NN with_IN α_JJ >_NN =_SYM 0_CD indicate_VBP the_DT respective_JJ contributions_NNS of_IN matched_VBN phrase_NN pi_NNS and_CC matched_VBN word_NN wj_NN to_TO the_DT RelMat_NNP metric_NN ._.
+The_DT greater_JJR the_DT value_NN of_IN α_NN ,_, the_DT greater_JJR the_DT contribution_NN of_IN the_DT identical_JJ phrases_NNS and_CC the_DT lesser_JJR the_DT contribution_NN of_IN the_DT similar_JJ words_NNS ._.
+Because_IN 0_CD <_CD =_SYM path_NN -LRB-_-LRB- wj_FW -RRB-_-RRB- <_CD =_SYM 1_CD ,_, we_PRP use_VBP 1α_CD to_TO normalize_VB the_DT contributions_NNS of_IN the_DT matched_VBN words_NNS ._.
+Threshold_NN α_NN is_VBZ set_VBN to_TO an_DT optimal_JJ value_NN of_IN 0.2_CD ,_, as_IN described_VBN in_IN more_JJR detail_NN in_IN Section_NN 5_CD ._.
+The_DT RelMat_NNP metric_JJ for_IN the_DT two_CD example_NN sentences_NNS is_VBZ calculated_VBN using_VBG 5_CD +_NN -LRB-_-LRB- 40.2_CD +_IN 10.2_CD -RRB-_-RRB- +_SYM 0.330.2_CD RelMat_NNP =_SYM 5_CD +1_CD +_NN -LRB-_-LRB- 40.2_CD +10.2_CD -RRB-_-RRB- +10.2_CD =_SYM 0.87_CD ._.
+The_DT remaining_VBG words_NNS are_VBP probably_RB modified_VBN by_IN few_JJ manipulations_NNS -LRB-_-LRB- e.g._FW ,_, insertion_NN ,_, deletion_NN -RRB-_-RRB- ._.
+Such_JJ Figure_NN 5_CD :_: Example_NN of_IN removing_VBG minor_JJ words_NNS -LRB-_-LRB- modal_JJ verbs_NNS -RRB-_-RRB- ._.
+i_FW =_SYM 0_CD j_NN =_SYM 0_CD max_NN -LRB-_-LRB- #ReW_NNP -LRB-_-LRB- s1_CD -RRB-_-RRB- ,_, #ReW_NNP -LRB-_-LRB- s2_CD -RRB-_-RRB- -RRB-_-RRB- SimMat_NNP =_SYM RelMat_NNP ×_CD -LRB-_-LRB- 1_CD −_CD p_NN -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- Penalty_NNP metric_JJ p_NN and_CC the_DT SimMat_NNP metric_NN are_VBP re_SYM -_: spectively_RB calculated_VBN for_IN the_DT example_NN sentences_NNS us_PRP -_: ing_VBG Eq_NNP ._.
+5_CD and_CC Eq_NNP ._.
+6_CD ._.
+To_TO calculate_VB the_DT #ReW_NNP ,_, the_DT remaining_VBG words_NNS -LRB-_-LRB- in_IN bold_JJ -RRB-_-RRB- are_VBP shown_VBN in_IN Figure_NN 6_CD ._.
+p_NN -LRB-_-LRB- s1_CD ,_, s2_CD -RRB-_-RRB- =_SYM 0.5_CD ×_NN -LRB-_-LRB- |_SYM 5_CD −_CD 1_CD |_NN -RRB-_-RRB- 3_CD =_SYM 0.26_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- max_NN -LRB-_-LRB- 5_CD ,_, 1_CD -RRB-_-RRB- SimMat_NNP =_SYM 0.87_CD ×_NN -LRB-_-LRB- 1_CD −_CD 0.26_CD -RRB-_-RRB- =_SYM 0.64_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- Combination_NN of_IN SimMat_NNP metric_JJ and_CC MT_JJ metrics_NNS We_PRP proposed_VBD paraphrase_NN detection_NN method_NN by_IN com_NN -_: bining_VBG the_DT SimMat_NNP metric_JJ with_IN the_DT eight_CD standard_JJ MT_NNP metrics_NNS described_VBD above_RB ,_, as_IN shown_VBN in_IN Figure_NN 7_CD ._.
+The_DT last_JJ two_CD steps_NNS are_VBP described_VBN in_IN detail_NN below_IN ._.
+4_CD Step_NN 1_CD :_: Calculate_VB SimMat_NNP metric_JJ Step_NN 3_CD :_: Detect_VB paraphrases_NNS s1_CD Paraphrase_NNP s2_CD detection_NN 1_CD dimension_NN 15_CD dimensions_NNS Result_NN of_IN detection_NN 73.1_CD %_NN 72.9_CD %_NN 72.7_CD %_NN 72.5_CD %_NN 72.3_CD %_NN 72.1_CD %_NN 71.9_CD %_NN 71.7_CD %_NN 71.5_CD %_NN 71.3_CD %_NN 71.1_CD %_NN 0.2_CD ,_, 73.0_CD %_NN 0.0_CD ,_, 72.7_CD %_NN 0.0_CD 0.2_CD 0.4_CD 0.6_CD 0.8_CD 1.0_CD 1.2_CD 1.4_CD Threshold_NNP Step_NN 2_CD :_: Calculate_VB MT_JJ metrics_NNS Figure_NN 7_CD :_: Combination_NN of_IN SimMat_NNP metric_JJ with_IN eight_CD MT_NNP metrics_NNS ._.
+4.1_CD Calculate_NNP MT_NNP metrics_NNS -LRB-_-LRB- Step_NN 2_CD -RRB-_-RRB- The_DT eight_CD standard_JJ MT_NNP metrics_NNS are_VBP calculated_VBN for_IN the_DT two_CD sentences_NNS ._.
+Eight_CD libraries_NNS are_VBP used_VBN to_TO quan_VB -_: tify_VB them_PRP ._.
+These_DT libraries_NNS are_VBP suggested_VBN by_IN NIST_NNP and_CC the_DT state-of-the-art_JJ approach_NN for_IN paraphrase_NN de_IN -_: tection_NN -LRB-_-LRB- Madnani_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT libraries_NNS are_VBP described_VBN in_IN more_JJR detail_NN in_IN the_DT evaluation_NN section_NN ._.
+The_DT first_JJ six_CD MT_NNP metrics_NNS -LRB-_-LRB- MAXSIM_NNP ,_, SEPIA_NNP ,_, TER_NNP ,_, TERp_NNP ,_, METEOR_NNP ,_, and_CC BADGER_NNP -RRB-_-RRB- create_VBP six_CD dimen_NNS -_: sions_NNS in_IN total_NN ._.
+The_DT two_CD remaining_VBG metrics_NNS -LRB-_-LRB- BLEU_NNP and_CC NIST_NNP -RRB-_-RRB- using_VBG the_DT n-gram_JJ model_NN create_VB four_CD -LRB-_-LRB- n_NN =_SYM 1_CD ._.
+.4_CD -RRB-_-RRB- and_CC five_CD -LRB-_-LRB- n_NN =_SYM 1_CD ._.
+.5_CD -RRB-_-RRB- dimensions_NNS ,_, respectively_RB ._.
+These_DT 15_CD dimensions_NNS metrics_NNS are_VBP combined_VBN with_IN that_DT of_IN our_PRP$ proposed_VBN metric_JJ -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- for_IN detect_VB -_: ing_VBG paraphrases_NNS in_IN the_DT last_JJ step_NN ._.
+4.2_CD Detecting_VBG paraphrases_NNS -LRB-_-LRB- Step_NN 3_LS -RRB-_-RRB- The_DT 16_CD dimensions_NNS ,_, 15_CD from_IN the_DT MT_NNP metrics_NNS and_CC 1_CD from_IN our_PRP$ proposed_VBN metric_JJ -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- are_VBP combined_VBN for_IN detecting_VBG paraphrases_NNS using_VBG a_DT machine_NN learning_VBG approach_NN ._.
+Several_JJ commonly_RB used_VBN machine_NN learn_VBP -_: ing_NN algorithms_NNS -LRB-_-LRB- including_VBG support_NN vector_NN machine_NN ,_, logistic_JJ regression_NN ,_, etc._FW -RRB-_-RRB- were_VBD evaluated_VBN with_IN these_DT dimensions_NNS ._.
+Such_JJ algorithms_NNS are_VBP run_VBN with_IN 10-fold_JJ cross_NN validation_NN in_IN the_DT training_NN set_NN of_IN the_DT MRPS_NNP cor_NN -_: pus_NN for_IN choosing_VBG the_DT best_JJS classifier_NN ._.
+Logistic_JJ regres_NNS -_: sion_NN had_VBD the_DT best_JJS performance_NN and_CC was_VBD used_VBN for_IN de_FW -_: tection_NN ._.
+5_CD Evaluation_NN 5.1_CD MSRP_NNP corpus_VBZ We_PRP used_VBD the_DT MSRP_NNP corpus_NN to_TO evaluate_VB our_PRP$ method_NN ._.
+It_PRP contains_VBZ 5801_CD sentences_NNS pairs_NNS including_VBG 4076_CD for_IN training_NN and_CC the_DT remaining_VBG 1705_CD for_IN testing_NN ._.
+The_DT corpus_NN has_VBZ 2753_CD -LRB-_-LRB- 67.5_CD %_NN -RRB-_-RRB- and_CC 1147_CD -LRB-_-LRB- 66.5_CD %_NN -RRB-_-RRB- paraphrase_NN cases_NNS corresponding_JJ to_TO training_NN and_CC test_NN -_: ing_NN datasets_NNS ._.
+The_DT corpus_NN was_VBD annotated_VBN by_IN two_CD na_TO -_: tive_JJ speakers_NNS ._.
+Disagreements_NNS in_IN annotation_NN were_VBD re_SYM -_: solved_VBN by_IN a_DT third_JJ native_JJ speaker_NN ._.
+Agreement_NN between_IN the_DT two_CD annotators_NNS was_VBD moderate_JJ to_TO high_JJ -LRB-_-LRB- averaging_VBG Figure_NN 8_CD :_: Estimated_VBN threshold_NN α_NN ._.
+83_CD %_NN -RRB-_-RRB- ._.
+This_DT means_VBZ that_IN a_DT perfect_JJ algorithm_NN for_IN de_FW -_: tecting_VBG paraphrases_NNS would_MD have_VB 83_CD %_NN accuracy_NN ._.
+5.2_CD Estimating_VBG threshold_NN α_NN for_IN SimMat_NNP metric_JJ A_DT threshold_NN α_NN is_VBZ used_VBN to_TO adjust_VB the_DT contributions_NNS of_IN matched_VBN identical_JJ phrases_NNS and_CC matched_VBD similar_JJ words_NNS ._.
+It_PRP was_VBD estimated_VBN using_VBG Eq_NNP ._.
+2_CD and_CC the_DT training_NN dataset_NN of_IN the_DT MRPS_NNP corpus_NN ._.
+The_DT SimMat_NNP metric_NN was_VBD used_VBN as_IN the_DT single_JJ dimension_NN for_IN the_DT logistic_JJ re_NN -_: gression_NN algorithm_NN with_IN 10-fold_JJ cross_NN validation_NN ,_, as_IN shown_VBN in_IN Figure_NN 8_CD ._.
+Using_VBG only_RB the_DT training_NN dataset_NN ensured_VBD that_IN the_DT results_NNS did_VBD not_RB overfit_VB the_DT test_NN data_NNS ._.
+The_DT higher_JJR the_DT threshold_NN α_NN ,_, the_DT greater_JJR the_DT con_NN -_: tribution_NN of_IN the_DT matched_VBN identical_JJ phrases_NNS and_CC the_DT lesser_JJR the_DT contribution_NN of_IN the_DT matched_VBN similar_JJ words_NNS ._.
+If_IN α_NN is_VBZ small_JJ ,_, the_DT contributions_NNS of_IN identical_JJ phrases_NNS are_VBP low_JJ and_CC the_DT contributions_NNS of_IN similar_JJ words_NNS are_VBP high_JJ ,_, resulting_VBG in_IN lower_JJR accuracy_NN ._.
+However_RB ,_, the_DT SimMat_NNP metric_NN is_VBZ over-estimated_VBN if_IN the_DT value_NN of_IN α_NN is_VBZ too_RB large_JJ ,_, resulting_VBG in_IN lower_JJR accuracy_NN ._.
+The_DT high_JJ -_: est_NN accuracy_NN -LRB-_-LRB- 73.0_CD %_NN -RRB-_-RRB- was_VBD achieved_VBN for_IN α_NN =_SYM 0.2_CD ._.
+Therefore_RB ,_, α_NN was_VBD set_VBN to_TO 0.2_CD for_IN the_DT subsequent_JJ ex_FW -_: periments_NNS ._.
+5.3_CD MT_NNP metrics_NNS result_VBP In_IN our_PRP$ approach_NN ,_, the_DT proposed_VBN metric_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- is_VBZ combined_VBN with_IN eight_CD MT_NNP metrics_NNS -LRB-_-LRB- MAXSIM_NNP ,_, SEPIA_NNP ,_, TER_NNP ,_, TERp_NNP ,_, METEOR_NNP ,_, BADGER_NNP ,_, BLEU_NNP ,_, and_CC NIST_NNP -RRB-_-RRB- ._.
+These_DT metrics_NNS are_VBP integrated_VBN to_TO create_VB what_WP we_PRP call_VBP the_DT MTMETRICS_NNP algorithm_NN ,_, which_WDT is_VBZ state_NN of_IN the_DT art_NN for_IN paraphrase_NN detection_NN ._.
+The_DT eight_CD metrics_NNS are_VBP re-implemented_JJ on_IN the_DT basis_NN of_IN standard_JJ libraries_NNS suggested_VBN by_IN both_DT of_IN the_DT state_NN of_IN the_DT art_NN and_CC a_DT well-known_JJ organization_NN --_: NIST_NNP ._.
+The_DT details_NNS of_IN Accuracy_NNP -LRB-_-LRB- %_NN -RRB-_-RRB- MT_NNP metric_JJ Re-implementation_NN MTMETRICS_NNP Ver_NNP ._.
+Acc_NNP ._.
+F1_CD Acc_NNP ._.
+F1_CD MAXSIM_NNP 1.01_CD 67.5_CD %_NN 79.4_CD %_NN 67.2_CD %_NN 79.4_CD %_NN SEPIA_NNP 0.2_CD 68.3_CD %_NN 79.8_CD %_NN 68.1_CD %_NN 79.8_CD %_NN TER_NNP 1.01_CD 70.1_CD %_NN 81.0_CD %_NN 69.9_CD %_NN 80.9_CD %_NN TERP_NNP 1.0_CD 70.7_CD %_NN 81.0_CD %_NN 74.3_CD %_NN 81.8_CD %_NN BADGER_NNP 2.0_CD 67.2_CD %_NN 79.9_CD %_NN 67.6_CD %_NN 79.9_CD %_NN METEOR_NNP 1.5_CD 71.7_CD %_NN 80.0_CD %_NN 73.1_CD %_NN 81.0_CD %_NN BLEU_NNP 13a_CD 72.1_CD %_NN 80.8_CD %_NN 72.3_CD %_NN 80.9_CD %_NN NIST_NNP 13a_CD 71.8_CD %_NN 80.4_CD %_NN 72.8_CD %_NN 81.2_CD %_NN Integration_NN 76.6_CD %_NN 83.1_CD %_NN 77.4_CD %_NN 84.1_CD %_NN Method_NN Accuracy_NNP F-score_NNP Vector_NNP Based_VBD Similarity_NN -LRB-_-LRB- baseline_NN -RRB-_-RRB- 65.4_CD %_NN 75.3_CD %_NN Mihalcea_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- 70.3_CD %_NN 81.3_CD %_NN Qiu_NNP et_FW al._FW -LRB-_-LRB- 2006_CD -RRB-_-RRB- 72.0_CD %_NN 81.6_CD %_NN SimMat_NNP 72.7_CD %_NN 81.3_CD %_NN Blacoe_NNP and_CC Lapata_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- 73.0_CD %_NN 82.3_CD %_NN Finch_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- 75.0_CD %_NN 82.7_CD %_NN Das_NNP and_CC Smith_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- 76.1_CD %_NN 82.7_CD %_NN Madnani_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- -LRB-_-LRB- re-implemented_JJ -RRB-_-RRB- 76.6_CD %_NN 83.1_CD %_NN Socher_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- 76.8_CD %_NN 83.6_CD %_NN Madnani_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 77.4_CD %_NN 84.1_CD %_NN Combination_NN 77.6_CD %_NN 83.9_CD %_NN Table_NNP 1_CD :_: Results_NNS for_IN re-implemented_JJ MT_NNP metrics_NNS and_CC MT_SYM -_: METRICS_NNS algorithm_NN -LRB-_-LRB- Madnani_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+the_DT re-implementation_NN are_VBP shown_VBN in_IN Table_NNP 1_CD ._.
+The_DT versions_NNS of_IN the_DT eight_CD libraries_NNS for_IN the_DT re_NN -_: implemented_VBD metrics_NNS are_VBP shown_VBN in_IN column_NN 2_CD ._.
+They_PRP were_VBD the_DT latest_JJS for_IN each_DT library_NN ,_, for_IN which_WDT we_PRP used_VBD the_DT default_NN settings_NNS ._.
+Since_IN the_DT versions_NNS and_CC settings_NNS are_VBP not_RB shown_VBN for_IN MTMETRICS_NNP ,_, there_EX is_VBZ little_JJ dif_NN -_: ference_NN between_IN the_DT re-implemented_JJ metric_JJ results_NNS and_CC the_DT MTMETRICS_NNP results_NNS ._.
+The_DT results_NNS for_IN the_DT integration_NN of_IN the_DT eight_CD re-implemented_JJ metrics_NNS -LRB-_-LRB- ac_SYM -_: curacy_NN =_SYM 76.6_CD %_NN ,_, F1_CD =_SYM 83.1_CD %_NN -RRB-_-RRB- also_RB differ_VBP from_IN the_DT MT_NNP -_: METRICS_NNS results_NNS -LRB-_-LRB- accuracy_NN =_SYM 77.4_CD %_NN ,_, F1_CD =_SYM 84.1_CD %_NN -RRB-_-RRB- ._.
+5.4_CD Comparison_NN with_IN previous_JJ methods_NNS The_DT results_NNS of_IN our_PRP$ comparison_NN with_IN previous_JJ meth_NN -_: ods_NNS are_VBP summarized_VBN in_IN Table_NNP 2_CD ._.
+These_DT methods_NNS were_VBD also_RB evaluated_VBN using_VBG the_DT MRPS_NNP corpus_NN ._.
+Our_PRP$ proposed_VBN metric_JJ -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- was_VBD evaluated_VBN using_VBG a_DT threshold_NN α_NN of_IN 0.2_CD ._.
+This_DT single_JJ metric_JJ outper_NN -_: formed_VBD many_JJ previous_JJ methods_NNS ._.
+The_DT combination_NN of_IN SimMat_NN with_IN the_DT eight_CD MT_NNP metrics_NNS had_VBD the_DT highest_JJS accuracy_NN -LRB-_-LRB- 77.6_CD %_NN -RRB-_-RRB- ._.
+6_CD Conclusion_NNP Our_PRP$ proposed_VBN similarity_NN matching_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- met_VBD -_: ric_NN quantifies_VBZ the_DT similarity_NN between_IN two_CD sentences_NNS and_CC can_MD be_VB used_VBN to_TO detect_VB whether_IN one_CD is_VBZ a_DT para_NN -_: phrase_NN of_IN the_DT other_JJ ._.
+It_PRP is_VBZ calculated_VBN using_VBG the_DT match_NN -_: ing_NN of_IN identical_JJ phrases_NNS and_CC similar_JJ words_NNS ._.
+Phrase_NN -_: by-phrase_NN matching_NN is_VBZ done_VBN using_VBG a_DT heuristic_JJ algo_NN -_: rithm_NN that_IN determines_VBZ the_DT longest_JJS duplicate_VBP phrase_NN in_IN each_DT iteration_NN ._.
+Word_NN matching_NN is_VBZ done_VBN using_VBG the_DT Kuhn-Munkres_NNP algorithm_NN ._.
+WordNet_NNP is_VBZ used_VBN for_IN de_FW -_: Table_NNP 2_CD :_: Accuracy_NNP and_CC F-score_NNP of_IN our_PRP$ method_NN -LRB-_-LRB- SimMat_NNP -RRB-_-RRB- ,_, previous_JJ methods_NNS ,_, and_CC combination_NN of_IN SimMat_NN with_IN eight_CD MT_NNP metrics_NNS ._.
+termining_VBG the_DT similarity_NN of_IN two_CD words_NNS ._.
+This_DT simi_NN -_: larity_NN is_VBZ used_VBN as_IN the_DT weights_NNS for_IN the_DT word-matching_JJ algorithm_NN ._.
+Minor_NNP words_NNS ,_, which_WDT are_VBP often_RB added_VBN or_CC removed_VBN from_IN paraphrased_VBN text_NN to_TO improve_VB natural_JJ -_: ness_NN ,_, can_MD create_VB noise_NN when_WRB detecting_VBG paraphrases_NNS ._.
+They_PRP are_VBP thus_RB removed_VBN as_IN doing_VBG so_RB generally_RB does_VBZ not_RB change_VB the_DT meaning_NN ._.
+A_DT brevity_NN penalty_NN metric_JJ is_VBZ combined_VBN with_IN the_DT SimMat_NNP metric_JJ to_TO quantify_VB the_DT effect_NN of_IN inserting_VBG and/or_CC deleting_VBG words_NNS ._.
+Evaluation_NN using_VBG the_DT MSRP_NNP corpus_VBZ showed_VBD that_IN the_DT SimMat_NNP metric_JJ detects_NNS paraphrases_VBZ more_RBR ef_SYM -_: fectively_RB than_IN previous_JJ methods_NNS ._.
+The_DT SimMat_NNP metric_NN was_VBD combined_VBN with_IN eight_CD machine_NN trans_NNS -_: lation_NN metrics_NNS ._.
+Although_IN the_DT accuracy_NN of_IN the_DT eight_CD re-implemented_JJ metrics_NNS -LRB-_-LRB- accuracy_NN =_SYM 76.6_CD %_NN ,_, F_NN -_: score_NN =_SYM 83.1_CD %_NN -RRB-_-RRB- was_VBD lower_JJR than_IN the_DT published_VBN result_NN -LRB-_-LRB- accuracy_NN =_SYM 77.4_CD %_NN ,_, F-score_JJ =_SYM 84.1_CD %_NN -RRB-_-RRB- ,_, their_PRP$ combina_NN -_: tion_NN with_IN the_DT SimMat_NNP metric_JJ achieved_VBD the_DT best_JJS ac_SYM -_: curacy_NN -LRB-_-LRB- 77.6_CD %_NN -RRB-_-RRB- ,_, which_WDT was_VBD higher_JJR than_IN with_IN the_DT state-of-the-art_JJ approach_NN -LRB-_-LRB- 77.4_CD %_NN -RRB-_-RRB- ._.
+Moreover_RB ,_, the_DT F_NN -_: score_NN of_IN the_DT combination_NN -LRB-_-LRB- 83.9_CD %_NN -RRB-_-RRB- is_VBZ nearly_RB similar_JJ with_IN the-state-of-the-art_JJ approach_NN -LRB-_-LRB- 84.1_CD %_NN -RRB-_-RRB- ._.
+These_DT results_NNS show_VBP that_IN our_PRP$ method_NN is_VBZ promising_JJ approach_NN to_TO detecting_VBG paraphrasing_NN ._.
+Future_JJ work_NN includes_VBZ quantifying_VBG the_DT weights_NNS of_IN words_NNS in_IN matched_VBN phrases_NNS ,_, determining_VBG the_DT effect_NN of_IN a_DT word_NN 's_POS position_NN in_IN a_DT sentence_NN ,_, and_CC analyzing_VBG mis_SYM -_: classified_JJ pairs_NNS to_TO improve_VB performance_NN ._.
+References_NNS William_NNP Blacoe_NNP and_CC Mirella_NNP Lapata_NNP ._.
+2012_CD ._.
+A_DT comparison_NN of_IN vector-based_JJ representations_NNS for_IN semantic_JJ composi_NNS -_: tion_NN ._.
+In_IN EMNLP_NNP ,_, pages_NNS 546_CD --_: 556_CD ._.
+Yee_NNP Seng_NNP Chan_NNP and_CC Hwee_NNP Tou_NNP Ng_NNP ._.
+2008_CD ._.
+Maxsim_NNP :_: A_NNP maximum_NN similarity_NN metric_JJ for_IN machine_NN translation_NN evaluation_NN ._.
+In_IN ACL_NNP ,_, pages_NNS 55_CD --_: 62_CD ._.
+Dipanjan_NNP Das_NNP and_CC Noah_NNP A._NNP Smith_NNP ._.
+2009_CD ._.
+Paraphrase_NNP identification_NN as_IN probabilistic_JJ quasi-synchronous_JJ recognition_NN ._.
+In_IN ACL_NNP ,_, pages_NNS 468_CD --_: 476_CD ._.
+Michael_NNP Denkowski_NNP and_CC Alon_NNP Lavie_NNP ._.
+2010_CD ._.
+Extending_VBG the_DT meteor_NN machine_NN translation_NN evaluation_NN metric_JJ to_TO the_DT phrase_NN level_NN ._.
+In_IN NAACL_NNP ,_, pages_NNS 250_CD --_: 253_CD ._.
+George_NNP Doddington_NNP ._.
+2002_CD ._.
+Automatic_NNP evaluation_NN of_IN ma_FW -_: chine_NN translation_NN quality_NN using_VBG n-gram_JJ co-occurrence_NN statistics_NNS ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 2nd_CD International_NNP Confer_NNP -_: ence_NN on_IN Human_NNP Language_NNP Technology_NNP Research_NNP ,_, pages_NNS 138_CD --_: 145_CD ._.
+Bill_NNP Dolan_NNP ,_, Chris_NNP Quirk_NNP ,_, and_CC Chris_NNP Brockett_NNP ._.
+2004_CD ._.
+Un_SYM -_: supervised_JJ construction_NN of_IN large_JJ paraphrase_NN corpora_NN :_: Exploiting_VBG massively_RB parallel_JJ news_NN sources_NNS ._.
+In_IN COL_NNP -_: ING_NNP ,_, pages_NNS 350_CD --_: 356_CD ._.
+Andrew_NNP Finch_NNP ,_, Young-Sook_NNP Hwang_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2005_CD ._.
+Using_VBG machine_NN translation_NN evalua_NN -_: tion_NN techniques_NNS to_TO determine_VB sentence-level_JJ semantic_JJ equivalence_NN ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 3rd_CD International_NNP Work_NNP -_: shop_NN on_IN Paraphrasing_NNP ,_, pages_NNS 17_CD --_: 24_CD ._.
+Nizar_NNP Habash_NNP and_CC Ahmed_NNP Elkholy_NNP ._.
+2008_CD ._.
+Sepia_NNP :_: sur_SYM -_: face_NN span_NN extension_NN to_TO syntactic_JJ dependency_NN precision_NN -_: based_VBN mt_JJ evaluation_NN ._.
+In_IN Proc_NNP ._.
+of_IN Association_NNP for_IN Ma_NNP -_: chine_NN Translation_NN in_IN the_DT Americas_NNPS ._.
+Harold_NNP W._NNP Kuhn_NNP ._.
+1955_CD ._.
+The_DT hungarian_JJ method_NN for_IN the_DT assignment_NN problem_NN ._.
+Naval_NNP research_NN logistics_NNS quar_SYM -_: terly_JJ ,_, 2_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :83_CD --_: 97_CD ._.
+Nitin_NNP Madnani_NNP ,_, Joel_NNP Tetreault_NNP ,_, and_CC Martin_NNP Chodorow_NNP ._.
+2012_CD ._.
+Re-examining_VBG machine_NN translation_NN metrics_NNS for_IN paraphrase_NN identification_NN ._.
+In_IN NAACL_NNP ,_, pages_NNS 182_CD --_: 190_CD ._.
+Christopher_NNP D._NNP Manning_NNP ,_, Mihai_NNP Surdeanu_NNP ,_, John_NNP Bauer_NNP ,_, Jenny_NNP Finkel_NNP ,_, Steven_NNP J._NNP Bethard_NNP ,_, and_CC David_NNP McClosky_NNP ._.
+2014_CD ._.
+The_DT Stanford_NNP CoreNLP_NNP natural_JJ language_NN pro-_JJ cessing_NN toolkit_NN ._.
+In_IN ACL_NNP ,_, pages_NNS 55_CD --_: 60_CD ._.
+Rada_NNP Mihalcea_NNP ,_, Courtney_NNP Corley_NNP ,_, and_CC Carlo_NNP Strapparava_NNP ._.
+2006_CD ._.
+Corpus-based_JJ and_CC knowledge-based_JJ measures_NNS of_IN text_NN semantic_JJ similarity_NN ._.
+In_IN AAAI_NNP ,_, volume_NN 6_CD ,_, pages_NNS 775_CD --_: 780_CD ._.
+James_NNP Munkres_NNP ._.
+1957_CD ._.
+Algorithms_NNS for_IN the_DT assignment_NN and_CC transportation_NN problems_NNS ._.
+Journal_NNP of_IN the_DT Society_NNP for_IN Industrial_NNP &_CC Applied_NNP Mathematics_NNP ,_, 5_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :32_CD --_: 38_CD ._.
+Kishore_NNP Papineni_NNP ,_, Salim_NNP Roukos_NNP ,_, Todd_NNP Ward_NNP ,_, and_CC Wei_NNP -_: Jing_NNP Zhu_NNP ._.
+2002_CD ._.
+Bleu_NNP :_: a_DT method_NN for_IN automatic_JJ evalua_NN -_: tion_NN of_IN machine_NN translation_NN ._.
+In_IN ACL_NNP ,_, pages_NNS 311_CD --_: 318_CD ._.
+Steven_NNP Parker_NNP ._.
+2008_CD ._.
+Badger_NNP :_: A_DT new_JJ machine_NN translation_NN metric_JJ ._.
+In_IN Proc_NNP ._.
+of_IN Association_NNP for_IN Machine_NNP Transla_NNP -_: tion_NN in_IN the_DT Americas_NNPS ._.
+Ted_NNP Pedersen_NNP ,_, Siddharth_NNP Patwardhan_NNP ,_, and_CC Jason_NNP Miche_NNP -_: lizzi_NN ._.
+2004_CD ._.
+Wordnet_NNP :_: :_: Similarity_NN :_: measuring_VBG the_DT relat_NN -_: edness_NN of_IN concepts_NNS ._.
+In_IN NAACL_NNP :_: Demonstration_NN ,_, pages_NNS 38_CD --_: 41_CD ._.
+Long_NNP Qiu_NNP ,_, Min-Yen_NNP Kan_NNP ,_, and_CC Tat-Seng_NNP Chua_NNP ._.
+2006_CD ._.
+Paraphrase_NNP recognition_NN via_IN dissimilarity_NN significance_NN classification_NN ._.
+In_IN EMNLP_NNP ,_, pages_NNS 18_CD --_: 26_CD ._.
+Matthew_NNP Snover_NNP ,_, Bonnie_NNP Dorr_NNP ,_, Richard_NNP Schwartz_NNP ,_, Lin_NNP -_: nea_NN Micciulla_NNP ,_, and_CC John_NNP Makhoul_NNP ._.
+2006_CD ._.
+A_DT study_NN of_IN translation_NN edit_NN rate_NN with_IN targeted_JJ human_JJ annotation_NN ._.
+In_IN Proc_NNP ._.
+of_IN Association_NNP for_IN Machine_NNP Translation_NN in_IN the_DT Americas_NNPS ,_, pages_NNS 223_CD --_: 231_CD ._.
+Matthew_NNP G._NNP Snover_NNP ,_, Nitin_NNP Madnani_NNP ,_, Bonnie_NNP Dorr_NNP ,_, and_CC Richard_NNP Schwartz_NNP ._.
+2009_CD ._.
+Ter-plus_NN :_: paraphrase_VB ,_, se_FW -_: mantic_NN ,_, and_CC alignment_NN enhancements_NNS to_TO translation_NN edit_VB rate_NN ._.
+Machine_NN Translation_NN ,_, 23_CD -LRB-_-LRB- 2-3_CD -RRB-_-RRB- :117_CD --_: 127_CD ._.
+Richard_NNP Socher_NNP ,_, Eric_NNP H._NNP Huang_NNP ,_, Jeffrey_NNP Pennin_NNP ,_, Christo_NNP -_: pher_NN D._NNP Manning_NNP ,_, and_CC Andrew_NNP Y._NNP Ng_NNP ._.
+2011_CD ._.
+Dynamic_NNP pooling_VBG and_CC unfolding_VBG recursive_JJ autoencoders_NNS for_IN para_NN -_: phrase_NN detection_NN ._.
+In_IN NIPS_NNP ,_, pages_NNS 801_CD --_: 809_CD ._.

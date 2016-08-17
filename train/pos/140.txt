@@ -1,0 +1,301 @@
+Clustering_VBG Bilingual_NNP Documents_NNS via_IN Different_NNP Clustering_NNP Strategies_NNS Abstract_NNP Large_JJ amount_NN of_IN documents_NNS on_IN the_DT websites_NNS are_VBP written_VBN in_IN different_JJ languages_NNS ._.
+Though_IN there_EX have_VBP been_VBN many_JJ studies_NNS on_IN multilingual_JJ document_NN clustering_NN of_IN document_NN representa_NN -_: tion_NN ,_, clustering_VBG algorithm_NN or_CC clustering_NN strate_NN -_: gies_NNS ._.
+There_EX are_VBP no_DT systematic_JJ investigations_NNS about_IN comparing_VBG different_JJ strategies_NNS and_CC doc_NN -_: ument_NN representation_NN on_IN bilingual_JJ documents_NNS clustering_NN ._.
+In_IN this_DT paper_NN ,_, different_JJ strategies_NNS are_VBP compared_VBN based_VBN on_IN their_PRP$ performances_NNS in_IN parallel_JJ documents_NNS clustering_NN ._.
+Translations_NNS are_VBP made_VBN to_TO transfer_VB bilingual_JJ documents_NNS set_VBN into_IN monolingual_JJ documents_NNS set_VBN ._.
+When_WRB represent_VBP -_: ing_NN documents_NNS ,_, vector_NN space_NN model_NN and_CC topic_NN model_NN are_VBP used_VBN while_IN similarities_NNS are_VBP meas_SYM -_: ured_JJ correspondingly_RB with_IN cosine_NN distance_NN and_CC Jensen-Shannon_NNP divergence_NN ._.
+Experimental_JJ re_SYM -_: sults_NNS show_VBP that_IN :_: 1_LS -RRB-_-RRB- Traditional_JJ vector_NN space_NN model_NN performs_VBZ better_JJR than_IN topic_NN model_NN among_IN all_PDT the_DT strategies_NNS ._.
+2_LS -RRB-_-RRB- With_IN the_DT help_NN of_IN translation_NN technique_NN ,_, monolingual_JJ documents_NNS set_VBN in_IN English_NNP shows_VBZ better_JJR performance_NN than_IN documents_NNS set_VBN in_IN Chinese_NNP ._.
+1_CD Introduction_NNP With_IN globalization_NN of_IN Internet_NNP environment_NN ,_, there_EX are_VBP a_DT tremendous_JJ amount_NN of_IN documents_NNS on_IN the_DT websites_NNS which_WDT are_VBP written_VBN in_IN different_JJ languages_NNS ._.
+Apparently_RB ,_, large_JJ quantities_NNS of_IN bilingual_JJ documents_NNS are_VBP parallel_JJ corpora_NN or_CC comparable_JJ corpora_NN ._.
+When_WRB hot_JJ press_NN comes_VBZ out_RP ,_, news_NN and_CC reports_NNS in_IN different_JJ languages_NNS are_VBP available_JJ on_IN the_DT Internet_NNP rapidly_RB ._.
+These_DT documents_NNS sets_NNS are_VBP so-called_JJ comparable_JJ corpora_NN without_IN translations_NNS to_TO each_DT other_JJ ,_, but_CC they_PRP are_VBP about_IN the_DT same_JJ topic_NN ._.
+For_IN some_DT bilingual_JJ socie_NN -_: ties_NNS or_CC many_JJ international_JJ websites_NNS ,_, they_PRP appear_VBP to_TO -LSB-_NNP name_NN -RSB-_NNP -LSB-_NNP address1_CD -RSB-_NNP -LSB-_NNP address2_CD -RSB-_NNP -LSB-_NNP address3_CD -RSB-_NNP -LSB-_NNP email_NN -RSB-_NNP release_NN information_NN in_IN different_JJ language_NN editions_NNS which_WDT are_VBP translations_NNS to_TO each_DT other_JJ and_CC these_DT are_VBP parallel_JJ corpora_NN ._.
+Organizing_NNP multilingual_JJ infor_NN -_: mation_NN helps_VBZ to_TO improve_VB the_DT performance_NN of_IN infor_NN -_: mation_NN retrieval_NN and_CC provide_VB people_NNS more_RBR specific_JJ multilingual_JJ information_NN ,_, such_JJ as_IN the_DT multilingual_JJ documents_NNS summarization_NN -LRB-_-LRB- Evans_NNP ,_, Klavans_NNP ,_, &_CC McKeown_NNP ,_, 2004_CD ;_: Montalvo_NNP ,_, Fresno_NNP ,_, &_CC Martínez_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Multilingual_JJ document_NN clustering_VBG aims_NNS to_TO clus_SYM -_: ter_NN documents_NNS in_IN different_JJ languages_NNS into_IN groups_NNS with_IN the_DT same_JJ topic_NN or_CC subtopic_NN ._.
+Considering_VBG ap_SYM -_: proaches_NNS based_VBN on_IN translation_NN technique_NN ,_, two_CD strat_NN -_: egies_NNS are_VBP employed_VBN :_: translate_VB the_DT whole_JJ document_NN into_IN target_NN language_NN -LRB-_-LRB- Evans_NNP ,_, et_FW al._FW ,_, 2004_CD -RRB-_-RRB- or_CC trans_SYM -_: late_JJ certain_JJ features_NNS of_IN document_NN -LRB-_-LRB- e.g._FW cognate_FW named_VBN entities_NNS -RRB-_-RRB- -LRB-_-LRB- Montalvo_NNP ,_, Martinez_NNP ,_, Casillas_NNP ,_, &_CC Fresno_NNP ,_, 2006_CD -RRB-_-RRB- ._.
+Without_IN translation_NN ,_, documents_NNS can_MD be_VB represented_VBN using_VBG translation_NN independent_JJ fea_NN -_: tures_NNS -LRB-_-LRB- Denicia-Carral_JJ ,_, Montes-Go_JJ ́mez_NN ,_, Villaseñor_NNP -_: Pineda_NNP ,_, &_CC Aceves-Pe_NNP ́rez_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+Obviously_RB ,_, per_IN -_: formances_NNS of_IN clustering_VBG will_MD be_VB affected_VBN by_IN the_DT quality_NN of_IN translations_NNS ._.
+After_IN translating_VBG ,_, first_JJ step_NN of_IN clustering_NN is_VBZ to_TO represent_VB each_DT document_NN ._.
+So_RB far_RB ,_, several_JJ models_NNS have_VBP been_VBN proposed_VBN ,_, like_IN vector_NN space_NN model_NN -LRB-_-LRB- VSM_NNP -RRB-_-RRB- -LRB-_-LRB- Salton_NNP ,_, Wong_NNP ,_, &_CC Yang_NNP ,_, 1975_CD -RRB-_-RRB- ,_, latent_NN semantic_JJ indexing_NN -LRB-_-LRB- LSI_NNP -RRB-_-RRB- -LRB-_-LRB- Papadimitriou_NNP ,_, Tamaki_NNP ,_, Raghavan_NNP ,_, &_CC Vempala_NNP ,_, 1998_CD -RRB-_-RRB- ,_, probabilistic_JJ latent_NN semantic_JJ indexing_NN -LRB-_-LRB- PLSI_NNP -RRB-_-RRB- -LRB-_-LRB- Hofmann_NNP ,_, 1999_CD -RRB-_-RRB- and_CC latent_NN dirichlet_NN allocation_NN -LRB-_-LRB- LDA_NNP -RRB-_-RRB- which_WDT has_VBZ many_JJ extensions_NNS nowadays_RB to_TO find_VB latent_NN topics_NNS of_IN documents_NNS -LRB-_-LRB- Blei_NNP ,_, Ng_NNP ,_, &_CC Jordan_NNP ,_, 2003_CD ;_: Porteous_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+Meanwhile_RB ,_, clustering_VBG methods_NNS have_VBP also_RB been_VBN studied_VBN ,_, typical_JJ existing_VBG techniques_NNS include_VBP K-means_NNP -LRB-_-LRB- Wagstaff_NNP ,_, Cardie_NNP ,_, Rogers_NNP ,_, &_CC Schrödl_NNP ,_, 2001_CD -RRB-_-RRB- ,_, hierarchical_JJ ag_SYM -_: glomerative_JJ clustering_NN -LRB-_-LRB- Zhao_NNP ,_, Karypis_NNP ,_, &_CC Fayyad_NNP ,_, 2005_CD -RRB-_-RRB- ,_, density_NN based_VBN algorithms_NNS ,_, and_CC graph_NN based_VBN algorithms_NNS -LRB-_-LRB- Frey_NNP &_CC Dueck_NNP ,_, 2007_CD -RRB-_-RRB- etc._FW ._.
+Though_IN there_EX have_VBP been_VBN many_JJ studies_NNS on_IN document_NN repre_NN -_: sentation_NN methods_NNS ,_, clustering_VBG algorithms_NNS or_CC cluster_NN -_: ing_NN strategies_NNS ._.
+There_EX are_VBP no_DT systematic_JJ investigations_NNS about_IN comparing_VBG these_DT methods_NNS or_CC strategies_NNS on_IN bilingual_JJ documents_NNS clustering_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP compare_VBP clustering_VBG strategies_NNS and_CC document_NN representation_NN methods_NNS using_VBG the_DT parallel_JJ corpora_NN ._.
+Eliminating_VBG the_DT difference_NN and_CC noise_NN of_IN language_NN expression_NN in_IN comparable_JJ corpo_NN -_: ra_NN ,_, parallel_JJ corpora_NN are_VBP more_RBR suitable_JJ for_IN detecting_VBG evidences_NNS of_IN strategies_NNS effects_NNS ._.
+Basically_RB ,_, we_PRP have_VBP two_CD strategies_NNS during_IN experiments_NNS ,_, one_CD is_VBZ using_VBG monolingual_JJ corpora_NN which_WDT are_VBP translated_VBN from_IN parallel_JJ corpora_NN ,_, and_CC another_DT one_CD is_VBZ using_VBG original_JJ corpora_NN ._.
+Secondly_RB ,_, documents_NNS are_VBP represented_VBN by_IN vector_NN space_NN model_NN and_CC topic_NN model_NN respectively_RB ._.
+Referring_VBG to_TO strategy_NN using_VBG monolingual_JJ corpora_NN ,_, we_PRP cluster_NN documents_NNS set_VBN twice_RB comparing_VBG with_IN clustering_VBG once_RB ._.
+According_VBG to_TO experimental_JJ results_NNS ,_, we_PRP find_VBP that_DT traditional_JJ VSM_NNP performs_VBZ stably_RB among_IN all_PDT the_DT strategies_NNS and_CC performs_VBZ better_JJR than_IN the_DT topic_NN model_NN ._.
+After_IN translating_VBG parallel_JJ docu_NN -_: ments_NNS into_IN monolingual_JJ documents_NNS ,_, corpora_NN in_IN English_NNP show_VBP better_JJR performance_NN than_IN corpora_NN in_IN Chinese_NNP ._.
+This_DT paper_NN is_VBZ structured_VBN as_IN follows_VBZ :_: we_PRP will_MD give_VB an_DT overview_NN of_IN previous_JJ works_NNS in_IN the_DT next_JJ section_NN ._.
+Section_NN 3_CD will_MD present_VB methodology_NN of_IN our_PRP$ research_NN ._.
+Section_NN 4_CD describes_VBZ the_DT experimental_JJ results_NNS and_CC analysis_NN ._.
+The_DT conclusion_NN and_CC future_JJ work_NN will_MD be_VB given_VBN in_IN Section_NN 5_CD ._.
+2_CD Related_VBN works_NNS In_IN the_DT task_NN of_IN multilingual_JJ documents_NNS clustering_NN ,_, there_EX have_VBP been_VBN many_JJ studies_NNS on_IN clustering_VBG strate_NN -_: gies_NNS ,_, document_NN representation_NN methods_NNS or_CC cluster_NN -_: ing_NN algorithms_NNS and_CC so_RB on_IN ._.
+When_WRB referring_VBG to_TO the_DT clustering_NN strategies_NNS ,_, tra_NN -_: ditional_JJ methods_NNS can_MD take_VB advantages_NNS of_IN translation_NN technique_NN ,_, such_JJ as_IN using_VBG automatic_JJ translation_NN sys_SYM -_: tem_NN -LRB-_-LRB- Wang_NNP ,_, Qian_NNP ,_, &_CC Davidson_NNP ,_, 2012_CD -RRB-_-RRB- or_CC some_DT bi_SYM -_: lingual_NN thesaurus_NN and_CC dictionaries_NNS -LRB-_-LRB- Evans_NNP ,_, et_FW al._FW ,_, 2004_CD -RRB-_-RRB- ._.
+It_PRP transfers_VBZ bilingual_JJ documents_NNS clustering_VBG into_IN monolingual_JJ documents_NNS clustering_NN ._.
+In_IN some_DT studies_NNS ,_, documents_NNS were_VBD translated_VBN in_IN the_DT whole_JJ length_NN -LRB-_-LRB- Leftin_NNP ,_, 2003_CD -RRB-_-RRB- and_CC some_DT documents_NNS were_VBD just_RB translated_VBN in_IN specific_JJ words_NNS -LRB-_-LRB- Chen_NNP &_CC Lin_NNP ,_, 2000_CD -RRB-_-RRB- or_CC chosen_VBN some_DT features_NNS which_WDT reach_VBP a_DT given_VBN weight_NN threshold_NN -LRB-_-LRB- Yang_NNP &_CC Pedersen_NNP ,_, 1997_CD -RRB-_-RRB- ._.
+Anoth_NNP -_: er_JJR main_JJ method_NN is_VBZ independent_JJ of_IN translation_NN ._.
+Named_VBN entities_NNS are_VBP used_VBN to_TO represent_VB documents_NNS -LRB-_-LRB- Montalvo_NNP ,_, et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, and_CC pairs_NNS of_IN words_NNS ortho_SYM -_: graphically_RB or_CC thematically_RB related_VBN -LRB-_-LRB- Pham_NNP ,_, Bern_NNP -_: hard_RB ,_, Diallo_NNP ,_, Messai_NNP ,_, &_CC Simonet_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+There_EX were_VBD also_RB re-searchers_JJ utilizing_VBG other_JJ knowledge_NN -LRB-_-LRB- Kumar_NNP ,_, Santosh_NNP ,_, &_CC Varma_NNP ,_, 2011_CD -RRB-_-RRB- or_CC using_VBG new_JJ modeling_NN to_TO avoid_VB the_DT altering_VBG of_IN original_JJ docu_NN -_: ment_NN semantics_NNS -LRB-_-LRB- Romeo_NNP ,_, Tagarelli_NNP ,_, &_CC Ienco_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+Except_IN clustering_VBG strategies_NNS ,_, attentions_NNS have_VBP been_VBN paid_VBN to_TO documents_NNS representation_NN methods_NNS for_IN further_JJ computing_NN for_IN a_DT long_JJ time_NN ._.
+Totally_RB ,_, repre_NN -_: senting_NN models_NNS can_MD be_VB categorized_VBN into_IN five_CD types_NNS :_: set-theoretic_JJ ;_: algebraic_JJ ;_: probabilistic_NN ;_: graph-based_JJ and_CC hybrid_JJ models_NNS -LRB-_-LRB- Huang_NNP &_CC Kuo_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+Set_SYM -_: theoretic_JJ model_NN represents_VBZ documents_NNS as_IN sets_NNS of_IN terms_NNS ;_: algebraic_JJ model_NN represents_VBZ documents_NNS as_IN vectors_NNS ,_, tuples_NNS ,_, or_CC matrices_NNS ;_: probabilistic_JJ model_NN treats_VBZ the_DT process_NN of_IN document_NN retrieval_NN as_IN a_DT proba_NN -_: bilistic_JJ inference_NN -LRB-_-LRB- Huang_NNP &_CC Kuo_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+Among_IN all_PDT the_DT models_NNS ,_, vector_NN space_NN model_NN -LRB-_-LRB- Salton_NNP ,_, et_FW al._FW ,_, 1975_CD -RRB-_-RRB- is_VBZ the_DT most_RBS classical_JJ one_CD while_IN it_PRP will_MD lose_VB some_DT semantic_JJ information_NN ._.
+To_TO solve_VB this_DT problem_NN ,_, LDA_NNP model_NN -LRB-_-LRB- Blei_NNP ,_, et_FW al._FW ,_, 2003_CD -RRB-_-RRB- is_VBZ proposed_VBN ._.
+Many_JJ studies_NNS about_IN the_DT documents_NNS clustering_VBG based_VBN on_IN the_DT topic_NN model_NN are_VBP still_RB going_VBG ahead_RB -LRB-_-LRB- Sun_NNP ,_, 2014_CD -RRB-_-RRB- and_CC some_DT even_RB integrated_VBN document_NN clustering_NN and_CC topic_NN modeling_NN together_RB -LRB-_-LRB- Xie_NNP &_CC Xing_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Moreover_RB ,_, topic_NN models_NNS also_RB deal_VBP with_IN multilingual_JJ documents_NNS clustering_VBG ;_: many_JJ extensions_NNS of_IN LDA_NNP models_NNS are_VBP developed_VBN ,_, such_JJ as_IN MuTo_NNP -LRB-_-LRB- Boyd_NNP -_: Graber_NNP &_CC Blei_NNP ,_, 2009_CD -RRB-_-RRB- ,_, PLTM_NNP -LRB-_-LRB- Mimno_NNP ,_, Wallach_NNP ,_, Naradowsky_NNP ,_, Smith_NNP ,_, &_CC McCallum_NNP ,_, 2009_CD -RRB-_-RRB- ,_, etc._FW ._.
+Vulic_NNP &_CC Tang_NNP et_FW al._FW defined_VBD the_DT multilingual_JJ prob_NN -_: abilistic_JJ topic_NN modeling_NN -LRB-_-LRB- MuPTM_NNP -RRB-_-RRB- and_CC chose_VBD a_DT natural_JJ extension_NN of_IN the_DT omnipresent_JJ LDA_NNP model_NN to_TO multilingual_JJ settings_NNS called_VBN bilingual_JJ LDA_NNP -LRB-_-LRB- BiLDA_NNP -RRB-_-RRB- -LRB-_-LRB- Vulić_NNP ,_, De_NNP Smet_NNP ,_, Tang_NNP ,_, &_CC Moens_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+Researchers_NNS also_RB care_VBP about_IN computation_JJ meth_NN -_: ods_NNS of_IN document_NN similarity_NN -LRB-_-LRB- Forsyth_NNP &_CC Sharoff_NNP ,_, 2014_CD ;_: Sharoff_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, widely_RB used_VBN cosine_NN coefficient_NN -LRB-_-LRB- Salton_NNP ,_, et_FW al._FW ,_, 1975_CD -RRB-_-RRB- is_VBZ to_TO meas_SYM -_: ure_NN the_DT angle_NN between_IN two_CD document_NN vectors_NNS ._.
+Jen_SYM -_: sen-Shannon_NN divergence_NN between_IN words_NNS probability_NN distributions_NNS of_IN two_CD documents_NNS were_VBD also_RB used_VBN in_IN order_NN to_TO measure_VB textual_JJ coherence_NN -LRB-_-LRB- Boyack_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+From_IN previous_JJ works_NNS ,_, various_JJ strategies_NNS on_IN multilingual_JJ document_NN clustering_NN have_VBP own_JJ limita_NN -_: tions_NNS in_IN some_DT ways_NNS ._.
+We_PRP can_MD find_VB that_DT translation_NN quality_NN and_CC missing_VBG semantic_JJ information_NN will_MD def_VB -_: initely_RB affect_VB the_DT clustering_VBG performance_NN ._.
+So_IN we_PRP try_VBP to_TO find_VB out_RP the_DT better_JJR clustering_NN strategy_NN and_CC docu_NN -_: ment_NN representation_NN method_NN for_IN bilingual_JJ docu_NN -_: ments_NNS clustering_NN ._.
+3_CD Methodology_NNP In_IN this_DT study_NN ,_, three_CD different_JJ strategies_NNS are_VBP conduct_NN -_: ed_VBN for_IN bilingual_JJ documents_NNS clustering_NN ._.
+We_PRP choose_VBP the_DT parallel_JJ corpora_NN as_IN test_NN data_NNS ._.
+Different_JJ from_IN comparable_JJ corpora_NN ,_, each_DT pair_NN of_IN parallel_JJ docu_NN -_: ments_NNS can_MD be_VB considered_VBN as_IN a_DT piece_NN of_IN document_NN representing_VBG in_IN two_CD different_JJ languages_NNS ._.
+Taxono_NNP -_: my_PRP$ of_IN clustering_VBG strategies_NNS for_IN parallel_JJ corpus_NN is_VBZ shown_VBN in_IN figure_NN 1_CD ._.
+To_TO compare_VB the_DT influences_NNS made_VBN by_IN translation_NN ,_, strategies_NNS are_VBP firstly_RB divided_VBN into_IN two_CD types_NNS ,_, one_CD is_VBZ using_VBG translation_NN technique_NN and_CC another_DT one_CD is_VBZ using_VBG original_JJ documents_NNS ._.
+We_PRP de_IN -_: note_VB the_DT former_JJ strategy_NN as_IN `_`` I_PRP '_'' and_CC the_DT latter_JJ strate_NN -_: gy_NN as_IN `_`` II_NNP '_'' ._.
+In_IN the_DT strategy_NN I_PRP ,_, after_IN translation_NN ,_, two_CD corpora_NN are_VBP in_IN the_DT same_JJ language_NN ._.
+We_PRP can_MD combine_VB each_DT piece_NN of_IN parallel_JJ documents_NNS into_IN one_CD docu_NN -_: ment_NN and_CC then_RB cluster_NN them_PRP ,_, or_CC we_PRP cluster_NN the_DT two_CD documents_NNS sets_NNS in_IN the_DT parallel_JJ corpora_NN separately_RB and_CC then_RB combine_VBP the_DT identified_VBN clusters_NNS to_TO achieve_VB our_PRP$ goal_NN ._.
+Strategy_NN with_IN documents_NNS combination_NN first_RB is_VBZ marked_VBN as_IN `_`` I-DC_NN '_'' ._.
+Strategy_NN without_IN combi_NNS -_: nation_NN first_RB is_VBZ marked_VBN as_IN `_`` I-NC_NN '_'' ._.
+Figure_NN 1_CD ._.
+Taxonomy_NN of_IN Clustering_VBG Strategies_NNS for_IN Bilin_NNP -_: gual_JJ Documents_NNS 3.1_CD Bilingual_NNP Document_NNP Clustering_NNP Strategies_NNS From_IN previous_JJ studies_NNS ,_, we_PRP find_VBP that_DT performance_NN of_IN bilingual_JJ documents_NNS clustering_NN is_VBZ partly_RB affected_VBN by_IN the_DT quality_NN of_IN translation_NN ._.
+In_IN this_DT experiment_NN ,_, we_PRP compare_VBP the_DT strategies_NNS with_IN or_CC without_IN translations_NNS ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- Clustering_VBG Strategy_NN with_IN Translation_NN -LRB-_-LRB- Strategy_NNP I_PRP -RRB-_-RRB- Firstly_RB ,_, Microsoft_NNP machine_NN translation_NN API_NNP Bing1_NNP is_VBZ used_VBN to_TO do_VB translating_VBG works_NNS ._.
+Obviously_RB ,_, differ_VBP -_: ences_NNS between_IN documents_NNS after_IN translating_VBG are_VBP 1_CD http://www.microsoft.com/translator/api.aspx_JJ caused_VBN by_IN the_DT quality_NN of_IN translation_NN ._.
+-LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- and_CC -LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- represent_VBP the_DT two_CD documents_NNS sets_NNS of_IN parallel_JJ corpora_NN in_IN two_CD different_JJ languages_NNS ,_, target_NN language_NN T_NNP and_CC source_NN language_NN S_NNP respec_FW -_: tively_RB ._.
+-LCB-_-LRB- 1_CD ′_CD ,_, 2_CD ′_CD ,_, ⋯_CD ,_, ′_CD -RCB-_-RRB- represents_VBZ documents_NNS set_VBN in_IN language_NN T_NNP after_IN translation_NN ._.
+Two_CD strategies_NNS ,_, name_NN -_: ly_RB documents_NNS combination_NN -LRB-_-LRB- `_`` I-DC_NN '_'' -RRB-_-RRB- ,_, and_CC no_DT com_NN -_: bination_NN -LRB-_-LRB- `_`` I-NC_NN '_'' -RRB-_-RRB- are_VBP used_VBN to_TO preprocess_VB the_DT documents_NNS sets_VBZ -LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- and_CC -LCB-_-LRB- 1_CD ′_CD ,_, 2_CD ′_CD ,_, ⋯_CD ′_CD -RCB-_-RRB- ,_, respectively_RB ._.
+The_DT flowchart_NN of_IN Strategy_NNP I-DC_NNP is_VBZ shown_VBN in_IN figure_NN 2_CD ._.
+Parallel_JJ Corpora_NNP Doc_NNP Set_NNP in_IN target_NN language_NN Doc_NNP Set_NNP in_IN source_NN language_NN -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- 12_CD 12_CD Translation_NN DocSet_NNP -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- ′_SYM ′_SYM ′_SYM DocSet_NNP -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- 1_CD 2_CD 12_CD Document_NNP Combination_NNP Doc_NNP Set_NNP -LCB-_-LRB- ′_CD ,_, ′_CD ,_, ⋯_CD ,_, ′_CD -RCB-_-RRB- 1122_CD Doc_NNP representation_NN Similarity_NN calculation_NN Clustering_VBG algorithm_NN Doc_NNP clustering_VBG results_NNS Figure_NN 2_CD ._.
+The_DT flowchart_NN of_IN Clustering_VBG Strategy_NNP I-DC_NNP Strategy_NNP I-DC_NNP is_VBZ that_IN we_PRP combine_VBP document_NN 1_CD and_CC translated_VBN document_NN 1_CD ′_CD into_IN one_CD document_NN ,_, two_CD documents_NNS are_VBP all_DT in_IN target_NN language_NN ,_, same_JJ combination_NN for_IN the_DT other_JJ documents_NNS ._.
+Then_RB ,_, whole_JJ corpora_NN are_VBP organized_VBN like_IN -LCB-_-LRB- 1_CD 1_CD ′_CD ,_, 2_CD 2_CD ′_CD ,_, ⋯_CD ,_, ′_CD -RCB-_-RRB- ._.
+Additionally_RB ,_, features_NNS of_IN nth_NN document_NN will_MD be_VB rep_NN -_: resented_VBD based_VBN on_IN new_JJ combined_VBN document_NN ′_NN ._.
+Instead_RB of_IN orderly_JJ arranging_VBG the_DT features_NNS ,_, we_PRP re_VBP -_: count_NN features_NNS of_IN the_DT new_JJ documents_NNS as_IN a_DT whole_NN ._.
+Clustering_VBG steps_NNS in_IN this_DT study_NN include_VBP document_NN representation_NN ,_, similarity_NN calculation_NN and_CC clustering_VBG with_IN affinity_NN propagation_NN -LSB-_NNP 9_CD -RSB-_NN ._.
+Detailed_JJ information_NN will_MD be_VB described_VBN in_IN section_NN 3.2_CD ._.
+Strategy_NN I-NC_NN is_VBZ the_DT strategy_NN about_IN clustering_VBG for_IN twice_RB ._.
+Flowchart_NN of_IN it_PRP is_VBZ shown_VBN in_IN figure_NN 3_CD ._.
+Firstly_RB ,_, documents_NNS set_VBN -LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- and_CC translat_NN -_: ed_VBN documents_NNS set_VBN -LCB-_-LRB- 1_CD ′_CD ,_, 2_CD ′_CD ,_, ⋯_CD ,_, ′_CD -RCB-_-RRB- are_VBP clustered_VBN apart_RB ._.
+We_PRP get_VBP the_DT first_JJ clustering_NN results_NNS of_IN each_DT ._.
+In_IN order_NN to_TO combine_VB the_DT identified_VBN clusters_NNS ,_, we_PRP use_VBP the_DT center_NN vector_NN to_TO represent_VB each_DT cluster_NN and_CC cluster_NN these_DT center_NN vectors_NNS again_RB ._.
+So_RB ,_, based_VBN on_IN identified_VBN clusters_NNS ,_, center_NN vectors_NNS -LCB-_-LRB- 1_CD ′_CD ′_NN ,_, 2_CD ′_CD ′_NN ,_, ⋯_NN ,_, ′_CD ′_CD -RCB-_-RRB- of_IN all_DT clus_SYM -_: Bilingual_NNP Documents_NNS Clustering_VBG Clustering_NNP Strategy_NNP I_PRP Clustering_VBG Strategy_NNP II_NNP Clustering_NNP Strategy_NNP I-DC_NNP Clustering_NNP Strategy_NNP I-NC_NNP ters_NNS are_VBP computed_VBN ._.
+Here_RB we_PRP use_VBP formula_NN 1_CD to_TO obtain_VB center_NN vectors_NNS ._.
+∑_CD =_SYM 1_CD -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, j_NN ,_, ⋯_NN ,_, -RRB-_-RRB- -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RRB-_-RRB- =_SYM -LRB-_-LRB- 1_LS -RRB-_-RRB- Where_WRB the_DT C_NNP -LRB-_-LRB- ,_, ,_, ⋯_NN ,_, -RRB-_-RRB- represents_VBZ center_NN i12_CD vector_NN of_IN identified_VBN cluster_NN i_FW ,_, N_NNP is_VBZ the_DT number_NN of_IN documents_NNS in_IN cluster_NN i_FW ,_, docl_NN -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, j_NN ,_, ⋯_NN ,_, -RRB-_-RRB- is_VBZ vector_NN of_IN document_NN l_NN in_IN cluster_NN i_FW while_IN wj_NN is_VBZ the_DT weighted_JJ TF_NNP *_SYM IDF_NNP of_IN word_NN j._NN Then_RB ,_, we_PRP calculate_VBP similarities_NNS between_IN all_PDT the_DT center_NN vectors_NNS and_CC a_DT second_JJ clustering_NN is_VBZ conducted_VBN based_VBN on_IN these_DT similarities_NNS to_TO achieve_VB the_DT goal_NN of_IN clustering_VBG bilingual_JJ documents_NNS ._.
+Parallel_JJ Corpora_NNP Doc_NNP Set_NNP in_IN target_NN language_NN Doc_NNP Set_NNP in_IN source_NN language_NN -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- 12_CD 12_CD and_CC q_VB is_VBZ features_NNS count_NN of_IN document_NN Ti_NNP and_CC docu_NN -_: ment_NN Si_NNP ._.
+Methods_NNS of_IN similarity_NN computation_NN and_CC clustering_NN are_VBP the_DT same_JJ as_IN Strategy_NNP I-DC_NNP ._.
+Parallel_JJ Corpora_NNP Doc_NNP Set_NNP in_IN target_NN language_NN Doc_NNP Set_NNP in_IN source_NN language_NN -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- 12_CD 12_CD Document_NNP Combination_NNP DocSet_NNP -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- 1122_CD Doc_NNP representation_NN Similarity_NN calculation_NN Clustering_VBG algorithm_NN Doc_NNP clustering_VBG results_NNS Figure_NN 4_CD ._.
+The_DT flowchart_NN of_IN Clustering_VBG Strategy_NNP II_NNP 3.2_CD Document_NNP Representation_NNP and_CC Similarity_NNP Computation_NNP In_IN this_DT study_NN ,_, Chinese-English_JJ parallel_JJ corpora_NN are_VBP used_VBN as_IN test_NN dataset_NN ._.
+Preprocessing_NNP has_VBZ been_VBN done_VBN separately_RB on_IN the_DT title_NN and_CC full_JJ text_NN part_NN of_IN Chinese_JJ and_CC English_JJ documents_NNS ._.
+For_IN the_DT Chinese_JJ corpus_NN ,_, we_PRP segment_NN Chinese_JJ sentences_NNS by_IN a_DT Chinese_JJ seg_NN -_: mentation_NN tool_NN ,_, namely_RB ICTCLAS_NNP 2_CD and_CC remove_VB the_DT stop_NN words_NNS via_IN Chinese_JJ stop_NN list_NN ._.
+For_IN the_DT Eng_NNP -_: lish_JJ corpus_NN ,_, we_PRP first_RB stem_VBP the_DT words_NNS to_TO their_PRP$ base_NN forms_NNS using_VBG Porter_NNP Stemmer3_NNP ,_, unify_VBP the_DT letter_NN case_NN into_IN lower_JJR case_NN and_CC then_RB remove_VB stop_VB words_NNS via_IN English_JJ stop_NN list_NN as_RB well_RB ._.
+Then_RB ,_, we_PRP use_VBP vector_NN space_NN model_NN and_CC topic_NN model_NN to_TO do_VB document_NN representa_NN -_: tion_NN and_CC computation_NN of_IN document_NN similarity_NN are_VBP done_VBN according_VBG to_TO each_DT model_NN ._.
+Document_NNP Representation_NNP ._.
+Here_RB ,_, vector_NN space_NN model_NN and_CC topic_NN model_NN are_VBP used_VBN to_TO represent_VB the_DT documents_NNS respectively_RB ._.
+In_IN the_DT vector_NN space_NN model_NN ,_, TF_NNP *_SYM IDF_NNP value_NN of_IN each_DT word_NN is_VBZ computed_VBN ._.
+For_IN the_DT word_NN shown_VBN in_IN title_NN part_NN of_IN document_NN ,_, TF_NNP *_SYM IDF_NNP value_NN of_IN it_PRP is_VBZ multiplied_VBN by_IN 2_CD which_WDT denotes_VBZ the_DT weighting_NN coefficient_NN ._.
+Now_RB ,_, each_DT document_NN is_VBZ treated_VBN as_IN a_DT vector_NN in_IN a_DT high_JJ -_: dimensional_JJ space_NN ,_, where_WRB each_DT component_NN of_IN vec_NN -_: tor_NN corresponds_VBZ to_TO the_DT weighted_JJ TF_NNP *_SYM IDF_NNP of_IN each_DT word_NN in_IN document_NN ._.
+The_DT ith_NN document_NN doci_NN vector_NN can_MD be_VB described_VBN as_IN -LSB-_NN 1_CD ,_, 2_CD ,_, ⋯_CD ,_, ,_, ⋯_NN ,_, -RSB-_NNP ,_, where_WRB is_VBZ weighted_JJ TF_NNP *_SYM IDF_NNP value_NN of_IN word_NN j._NN 2_CD http://ictclas.nlpir.org/_NN 3_CD http://tartarus.org/~martin/PorterStemmer/_NNP Translation_NN Doc_NNP Set_NNP -LCB-_-LRB- ,_, ,_, ⋯_NN ,_, -RCB-_-RRB- Doc_NNP Set_NNP -LCB-_-LRB- ′_CD ,_, ′_CD ,_, ⋯_CD ,_, ′_CD -RCB-_-RRB- 12_CD 12_CD Doc_NNP representation_NN Similarity_NN calculation_NN Clustering_VBG algorithm_NN Doc_NNP clustering_VBG results_NNS Doc_NNP clustering_VBG results_NNS Center_NNP vectors_NNS set_VBD -LCB-_-LRB- ′_SYM ′_CD ,_, ′_CD ′_CD ,_, ⋯_CD ,_, ′_CD ′_CD -RCB-_-RRB- 12_CD Similarity_NN calculation_NN Clustering_VBG algorithm_NN Center_NNP vectors_NNS clustering_VBG results_NNS Figure_NN 3_CD ._.
+The_DT flowchart_NN of_IN Clustering_VBG Strategy_NNP I-NC_NNP -LRB-_-LRB- 2_LS -RRB-_-RRB- Clustering_VBG Strategy_NN without_IN Translation_NN -LRB-_-LRB- Strategy_NNP II_NNP -RRB-_-RRB- Strategy_NNP II_NNP does_VBZ documents_NNS clustering_VBG without_IN help_NN of_IN translation_NN ._.
+Flowchart_NN of_IN it_PRP is_VBZ shown_VBN in_IN figure_NN 4_CD ._.
+-LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- and_CC -LCB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- represent_VBP the_DT parallel_JJ corpora_NN in_IN target_NN language_NN T_NNP and_CC source_NN language_NN S_NNP ,_, respectively_RB ._.
+Document_NNP -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- is_VBZ concatenated_VBN with_IN document_NN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- ,_, new_JJ document_NN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- is_VBZ generated_VBN ._.
+Whole_JJ corpora_NN are_VBP organized_VBN as_IN -LCB-_-LRB- 1_CD 1_CD ,_, 2_CD 2_CD ,_, ⋯_CD ,_, -RCB-_-RRB- ._.
+Then_RB we_PRP use_VBP these_DT corpora_NN to_TO do_VB the_DT clustering_NN ._.
+It_PRP is_VBZ noted_VBN that_IN represented_VBN features_NNS of_IN each_DT document_NN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- will_MD be_VB different_JJ from_IN the_DT Strate_NNP -_: gy_SYM I-DC_NN ._.
+Suppose_VB the_DT document_NN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- and_CC document_NN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- can_MD be_VB represented_VBN as_IN -LSB-_NN 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RSB-_NNP and_CC -LSB-_NNP 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RSB-_NNP respectively_RB ._.
+After_IN concatenation_NN ,_, new_JJ vector_NN of_IN -LRB-_-LRB- i_FW ∈_FW -LSB-_NN 1_CD ,_, m_SYM -RSB-_NNP -RRB-_-RRB- is_VBZ -LSB-_JJ 1_CD ,_, 2_CD ,_, ⋯_CD ,_, ,_, 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RSB-_NNP ,_, where_WRB p_NN In_IN the_DT topic_NN model_NN ,_, in_IN order_NN to_TO find_VB appropriate_JJ number_NN of_IN topics_NNS ,_, Gibbs-sampled_JJ topic_NN model_NN is_VBZ tested_VBN at_IN the_DT following_VBG topic_NN count_NN -LRB-_-LRB- T_NNP -RRB-_-RRB- :_: 10_CD ,_, 20_CD ,_, 30_CD ,_, 40_CD ,_, 50_CD ,_, 60_CD ,_, 70_CD ,_, 80_CD ,_, 90_CD ,_, 100_CD ,_, 150_CD and_CC 200_CD respective_JJ -_: ly_RB ._.
+In_IN our_PRP$ experiments_NNS ,_, we_PRP run_VBP for_IN 3000_CD iterations_NNS and_CC prior_RB hyper_JJ parameter_NN settings_NNS of_IN β_NN =_SYM 0.01_CD and_CC α_CD =_SYM 50/T_CD ._.
+After_IN running_VBG out_RP GibbsLDA_NNP -LSB-_NNP 6_CD -RSB-_NNP ,_, topic_NN probability_NN distributions_NNS of_IN each_DT document_NN will_MD be_VB achieved_VBN ._.
+The_DT ith_NN document_NN doci_NN can_MD be_VB described_VBN as_IN -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, ,_, ⋯_NN ,_, -RRB-_-RRB- ,_, where_WRB Pji_NNP is_VBZ the_DT proba_NN -_: bility_NN of_IN topic_NN j_NN that_WDT doci_FW gets_VBZ ._.
+Similarity_NN Computation_NN ._.
+After_IN documents_NNS representation_NN ,_, similarity_NN between_IN documents_NNS is_VBZ computed_VBN according_VBG to_TO the_DT model_NN ._.
+In_IN VSM_NNP ,_, we_PRP use_VBP the_DT cosine_NN coefficient_NN -LSB-_NN 2_CD -RSB-_NN to_TO calculate_VB the_DT similarity_NN between_IN two_CD documents_NNS ._.
+It_PRP is_VBZ computed_VBN via_IN formula_NN 2_CD ._.
+When_WRB doing_VBG affinity_NN propagation4_NN ,_, preference_NN value_NN needs_VBZ to_TO be_VB set_VBN ahead_RB according_VBG to_TO the_DT similarities_NNS ._.
+For_IN VSM_NNP ,_, median_JJ value_NN among_IN similarities_NNS is_VBZ cho_SYM -_: sen_NN to_TO be_VB the_DT preference_NN ._.
+To_TO make_VB the_DT algorithm_NN converge_NN ,_, preference_NN value_NN is_VBZ tuned_VBN in_IN two_CD condi_NNS -_: tions_NNS ._.
+For_IN the_DT corpus_NN of_IN translated_VBN Chinese_JJ blogs_NNS ,_, we_PRP choose_VBP the_DT minimum_JJ value_NN among_IN similarities_NNS to_TO be_VB the_DT preference_NN ._.
+For_IN topic_NN model_NN ,_, we_PRP choose_VBP the_DT mean_JJ value_NN between_IN median_JJ value_NN and_CC maxi_NN -_: mum_JJ value_NN of_IN similarities_NNS to_TO be_VB the_DT preference_NN ._.
+1_CD ∙_CD 2_CD In_IN this_DT study_NN ,_, parallel_JJ corpora_NN are_VBP collected_VBN from_IN Engadget_NNP website_NN ,_, which_WDT is_VBZ a_DT multilingual_JJ technol_NN -_: ogy_NN blog_NN website_NN ._.
+We_PRP chose_VBD the_DT Chinese5_NNP and_CC Eng_NNP -_: 6_CD lish_JJ versions_NNS of_IN this_DT website_NN and_CC downloaded_VBD 4_CD ,_, 904_CD pairs_NNS of_IN blogs_NNS to_TO be_VB the_DT experimental_JJ dataset_NN ._.
+A_DT blog_NN includes_VBZ title_NN ,_, author_NN ,_, time_NN ,_, category_NN ,_, full_JJ text_NN of_IN the_DT blog_NN and_CC tags_NNS ._.
+In_IN this_DT experiment_NN ,_, we_PRP make_VBP use_NN of_IN the_DT title_NN ,_, full_JJ text_NN of_IN the_DT blog_NN and_CC the_DT catego_NN -_: ry_NN of_IN each_DT blog_NN ._.
+Totally_RB ,_, there_EX are_VBP 20_CD categories_NNS of_IN all_PDT the_DT blogs7_NNP ._.
+Table_NNP 1_CD ._.
+Classification_NN Distribution_NN of_IN Test_NNP Dataset_NNP -LRB-_-LRB- 1_CD ,_, 2_CD -RRB-_-RRB- =_SYM -LRB-_-LRB- 2_LS -RRB-_-RRB- ‖_SYM 1_CD ‖_CD ∙_NN ‖_NN 2_CD ‖_CD In_IN topic_NN model_NN ,_, similarity_NN between_IN documents_NNS will_MD be_VB converted_VBN to_TO similarity_NN between_IN two_CD proba_NN -_: bility_NN distributions_NNS of_IN topics_NNS ._.
+Jensen-Shannon_NNP di_FW -_: vergence_NN -LRB-_-LRB- Lin_NNP ,_, 1991_CD -RRB-_-RRB- measure_NN is_VBZ used_VBN to_TO calculate_VB similarity_NN via_IN formula_NN 3_CD ._.
+Based_VBN on_IN the_DT representa_NN -_: tion_JJ definitions_NNS above_IN ,_, -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RRB-_-RRB- and_CC -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RRB-_-RRB- are_VBP topic_NN probability_NN distribu_NN -_: tions_NNS of_IN documents_NNS and_CC ,_, where_WRB m_NN is_VBZ the_DT topic_NN numbers_NNS ._.
+Average_JJ probability_NN distribution_NN between_IN and_CC is_VBZ -LRB-_-LRB- 1_CD ,_, 2_CD ,_, ⋯_CD ,_, -RRB-_-RRB- ,_, which_WDT is_VBZ calcu_NN -_: lated_VBN via_IN formula_NN 4_CD ._.
+-LRB-_-LRB- ∥_CD -RRB-_-RRB- =_SYM 12_CD -LSB-_NNP -LRB-_-LRB- ∥_CD -RRB-_-RRB- +_NN -LRB-_-LRB- ∥_FW -RRB-_-RRB- -RSB-_NNP -LRB-_-LRB- 3_LS -RRB-_-RRB- =_SYM 12_CD -LRB-_-LRB- +_NN -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- Jensen_NNP --_: Shannon_NNP divergence_NN is_VBZ based_VBN on_IN the_DT Kullback-Leibler_NNP divergence_NN -LRB-_-LRB- Kullback_NNP &_CC Leibler_NNP ,_, 1951_CD -RRB-_-RRB- ._.
+For_IN discrete_JJ probability_NN distributions_NNS and_CC ,_, Kullback_NNP --_: Leibler_NNP divergence_NN of_IN from_IN is_VBZ calculated_VBN via_IN formula_NN 5_CD ._.
+-LRB-_-LRB- ∥_CD -RRB-_-RRB- =_SYM ∑_FW -LRB-_-LRB- -RRB-_-RRB- -LRB-_-LRB- -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- -LRB-_-LRB- -RRB-_-RRB- Where_WRB ,_, -LRB-_-LRB- -RRB-_-RRB- is_VBZ the_DT mth_JJ probability_NN in_IN the_DT probability_NN distributions_NNS ,_, -LRB-_-LRB- -RRB-_-RRB- is_VBZ the_DT mth_JJ prob_NN -_: ability_NN in_IN the_DT probability_NN distributions_NNS ._.
+3.3_CD Affinity_NNP Propagation_NNP Clustering_NNP After_IN we_PRP get_VBP similarities_NNS in_IN two_CD different_JJ models_NNS ,_, the_DT affinity_NN propagation_NN clustering_NN -LRB-_-LRB- Frey_NNP &_CC Dueck_NNP ,_, 2007_CD -RRB-_-RRB- is_VBZ carried_VBN out_RP based_VBN on_IN these_DT similarities_NNS ._.
+4http_NNS :_: /_SYM /_SYM www.psi.toronto.edu/index.php?q=affinity%20propagat_CD ion_NN 5_CD http://cn.engadget.com/_NN 6_CD http://www.engadget.com/_NN 7_CD Originally_RB there_EX are_VBP 34_CD categories_NNS ._.
+We_PRP checked_VBD the_DT blogs_NNS in_IN each_DT category_NN and_CC found_VBD that_IN blogs_NNS in_IN some_DT categories_NNS are_VBP very_RB similar_JJ to_TO each_DT other_JJ ._.
+We_PRP made_VBD a_DT new_JJ summary_NN with_IN 20_CD cate_NN -_: gories_NNS ._.
+4_CD 4.1_CD Experiment_NN and_CC results_NNS analysis_NN Experimental_NNP Dataset_NNP Category_NNP Sum_NNP Category_NNP Sum_NNP Category_NNP Sum_NNP Mobile_NNP 918_CD Game_NNP prod_VB -_: 319_CD Locating_VBG 21_CD products_NNS ucts_JJ products_NNS News_NNP and_CC 827_CD Playing_VBG 248_CD Wearing_VBG 105_CD report_NN facilities_NNS products_NNS Internet_NNP 462_CD Digital_NNP 244_CD Home_NN 103_CD network_NN camera_NN appliance_NN Computer_NN 442_CD High_NNP -_: 105_CD Intelligent_JJ 102_CD products_NNS definition_NN machine_NN television_NN Peripheral_NNP 345_CD Transporta_NNP -_: 175_CD Display_NNP 94_CD equipment_NN tion_NN related_VBN products_NNS Software_NNP 82_CD Wireless_NNP 52_CD Desktop_NNP 45_CD application_NN application_NN products_NNS Tablet_NNP PC_NNP 188_CD 4.2_CD Evaluation_NN Measures_NNS of_IN Experimental_JJ Results_NNS Purity_NN and_CC entropy_NN value_NN -LRB-_-LRB- Pang-Ning_JJ ,_, Steinbach_NNP ,_, &_CC Kumar_NNP ,_, 2006_CD -RRB-_-RRB- are_VBP used_VBN to_TO evaluate_VB experimental_JJ results_NNS of_IN parallel_JJ corpus_NN ._.
+Entropy_NNP ._.
+The_DT degree_NN of_IN each_DT cluster_NN that_IN it_PRP is_VBZ composed_VBN of_IN objects_NNS from_IN a_DT single_JJ category_NN ._.
+For_IN each_DT cluster_NN ,_, we_PRP need_VBP to_TO calculate_VB category_NN distri_NN -_: butions_NNS via_IN formula_NN 6_CD ,_, that_DT is_VBZ for_IN cluster_NN i_FW ,_, the_DT prob_NN -_: ability_NN is_VBZ computed_VBN that_IN members_NNS in_IN cluster_NN i_FW belong_VBP to_TO category_NN j._NN =_SYM -LRB-_-LRB- 6_CD -RRB-_-RRB- Where_WRB ,_, mi_FW is_VBZ the_DT object_NN numbers_NNS in_IN cluster_NN i_FW and_CC mij_NN is_VBZ the_DT object_NN numbers_NNS of_IN category_NN j_NN in_IN the_DT clus_NN -_: ter_NN i_FW ._.
+We_PRP compute_VBP the_DT entropy_NN of_IN each_DT cluster_NN and_CC the_DT entropy_NN of_IN cluster_NN i_FW is_VBZ calculated_VBN via_IN formula_NN 7_CD ._.
+=_SYM −_SYM ∑_FW =_SYM 1_CD 2_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- Where_WRB ,_, L_NNP is_VBZ the_DT categories_NNS count_NN ._.
+The_DT total_JJ entropy_NN of_IN the_DT clusters_NNS set_VBN is_VBZ calculat_NN -_: ed_VBD via_IN formula_NN 8_CD ._.
+=_SYM ∑_FW =_SYM 1_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- Where_WRB ,_, K_NNP is_VBZ the_DT clusters_NNS number_NN and_CC m_NN is_VBZ the_DT number_NN of_IN all_PDT the_DT objects_NNS ._.
+Purity_NN ._.
+Another_DT measurement_NN about_IN the_DT degree_NN of_IN each_DT cluster_NN that_IN it_PRP is_VBZ composed_VBN of_IN objects_NNS from_IN a_DT single_JJ category_NN ._.
+The_DT purity_NN of_IN cluster_NN i_FW is_VBZ calcu_NN -_: lated_VBN via_IN equation_NN 9_CD ._.
+And_CC total_JJ purity_NN of_IN the_DT clusters_NNS is_VBZ calculated_VBN via_IN equation_NN 10_CD ._.
+tropy_JJ values_NNS while_IN abbreviation_NN of_IN `_`` P_NN '_'' indicates_VBZ that_DT column_NN represents_VBZ purity_NN values_NNS ._.
+Table_NNP 2_CD ._.
+Entropy_NNP and_CC Purity_NNP Value_NNP of_IN Vector_NNP Space_NNP Model_NNP Strategies_NNS Table_NNP 3_CD ._.
+Entropy_NNP and_CC Purity_NNP Values_NNS of_IN Topic_NNP Model_NNP Strategies_NNS Strategy_NNP Index_NNP Strategy_NNP I-DC_NNP Strategy_NNP I-NC_NNP Strate_NNP -_: gy_NN II_NNP I-DC-c_NNP I-DC-e_NNP I-NC-c_NNP I-NC-e_NNP Entropy_NNP 1.431_CD 1.208_CD 1.932_CD 1.629_CD 1.242_CD Purity_NN 0.610_CD 0.651_CD 0.539_CD 0.592_CD 0.643_CD T_NNP Strategy_NNP I-DC_NNP Strategy_NNP I-NC_NNP Strategy_NNP II_NNP I-DC-c_NNP I-DC-e_NNP I-NC-c_NNP I-NC-e_NNP E_NNP P_NNP E_NNP P_NNP E_NNP P_NNP E_NNP P_NNP E_NNP P_NNP 10_CD 3.577_CD 0.218_CD 3.494_CD 0.218_CD 3.539_CD 0.215_CD 3.406_CD 0.268_CD 3.636_CD 0.204_CD 20_CD 3.662_CD 0.203_CD 3.553_CD 0.225_CD 3.682_CD 0.191_CD 3.596_CD 0.212_CD 3.670_CD 0.200_CD 30_CD 3.657_CD 0.204_CD 3.617_CD 0.212_CD 3.696_CD 0.189_CD 3.570_CD 0.210_CD 3.651_CD 0.204_CD 40_CD 3.661_CD 0.203_CD 3.608_CD 0.202_CD 3.702_CD 0.189_CD 3.560_CD 0.226_CD 3.649_CD 0.197_CD 50_CD 3.668_CD 0.201_CD 3.648_CD 0.197_CD 3.694_CD 0.190_CD 3.568_CD 0.220_CD 3.655_CD 0.210_CD 60_CD 3.656_CD 0.204_CD 3.637_CD 0.200_CD 3.703_CD 0.189_CD 3.695_CD 0.190_CD 3.665_CD 0.194_CD 70_CD 3.652_CD 0.202_CD 3.654_CD 0.198_CD 3.708_CD 0.188_CD 3.683_CD 0.195_CD 3.664_CD 0.203_CD 80_CD 3.645_CD 0.204_CD 3.641_CD 0.210_CD 3.716_CD 0.187_CD 3.688_CD 0.192_CD 3.649_CD 0.215_CD 90_CD 3.657_CD 0.204_CD 3.646_CD 0.194_CD 3.714_CD 0.188_CD 3.712_CD 0.188_CD 3.641_CD 0.199_CD 100_CD 3.656_CD 0.203_CD 3.640_CD 0.204_CD 3.714_CD 0.188_CD 3.641_CD 0.196_CD 3.625_CD 0.208_CD 150_CD 3.642_CD 0.197_CD 3.641_CD 0.205_CD 3.715_CD 0.187_CD 3.714_CD 0.187_CD 3.612_CD 0.210_CD 200_CD 3.624_CD 0.205_CD 3.646_CD 0.205_CD 3.716_CD 0.187_CD 3.711_CD 0.188_CD 3.608_CD 0.204_CD =_SYM =_SYM ∑_FW =_SYM 1_CD 4.3_CD Experimental_JJ Results_NNS Analysis_NN -LRB-_-LRB- 9_CD -RRB-_-RRB- -LRB-_-LRB- 10_CD -RRB-_-RRB- -LRB-_-LRB- 1_CD -RRB-_-RRB- Analysis_NN of_IN Performance_NNP between_IN Clustering_NNP Strategies_NNS According_VBG to_TO table_NN 2_CD and_CC table_NN 3_CD ,_, we_PRP can_MD find_VB that_DT ,_, in_IN VSM_NNP ,_, Strategy_NNP I-DC-e_NNP performs_VBZ the_DT best_JJS among_IN all_DT the_DT strategies_NNS ,_, entropy_JJ value_NN is_VBZ 1.208_CD and_CC purity_NN value_NN is_VBZ 0.651_CD while_IN in_IN topic_NN model_NN ,_, Strategy_NNP I-NC_NNP -_: e_LS performs_VBZ the_DT best_JJS -LRB-_-LRB- T_NNP =_SYM 10_CD -RRB-_-RRB- among_IN all_PDT the_DT strategies_NNS ,_, entropy_JJ value_NN is_VBZ 3.406_CD and_CC purity_NN value_NN is_VBZ 0.268_CD ._.
+These_DT two_CD strategies_NNS all_DT use_VBP the_DT English_JJ monolin_NN -_: gual_JJ corpora_NN after_IN translation_NN ._.
+After_IN clustering_VBG ,_, we_PRP compare_VBP performances_NNS be_VB -_: tween_NN different_JJ strategies_NNS and_CC models_NNS based_VBN on_IN the_DT entropy_NN and_CC purity_NN values_NNS ._.
+Furthermore_RB ,_, we_PRP make_VBP statistical_JJ significant_JJ test_NN to_TO validate_VB the_DT effective_JJ -_: ness_NN as_RB well_RB ._.
+The_DT evaluation_NN measures_NNS of_IN experi_NNS -_: mental_JJ results_NNS are_VBP shown_VBN in_IN table_NN 2_CD and_CC table_NN 3_CD ._.
+In_IN the_DT Strategy_NNP I_PRP ,_, we_PRP translate_VBP parallel_JJ docu_NN -_: ments_NNS into_IN monolingual_JJ documents_NNS in_IN one_CD of_IN the_DT two_CD languages_NNS ._.
+So_RB ,_, experimental_JJ inputs_NNS are_VBP all_DT in_IN Chinese_JJ or_CC all_DT in_IN English_NNP ._.
+Character_NN of_IN `_`` c_NN '_'' behind_IN strategy_NN names_NNS shown_VBN in_IN the_DT table_NN 2_CD ,_, 3_CD and_CC figure_NN 4_CD represents_VBZ experimental_JJ input_NN is_VBZ all_DT in_IN Chinese_JJ lan_NN -_: guage_NN ,_, character_NN of_IN `_`` e_LS '_'' represents_VBZ experimental_JJ input_NN is_VBZ all_DT in_IN English_NNP language_NN ._.
+Character_NN of_IN `_`` E_NNP '_'' in_IN the_DT table_NN 2_CD ,_, 3_CD indicates_VBZ that_IN column_NN represents_VBZ en_IN -_: Figure_NN 5_CD ._.
+Entropy_NNP Value_NNP of_IN Topic_NNP Model_NNP according_VBG to_TO Topics_NNP Number_NNP I-DC-c_NNP I-DC-e_NNP I-NC-e_NNP II_NNP I-NC-c_NNP 3.8_CD 3.7_CD 3.6_CD 3.5_CD 3.4_CD 10_CD 20_CD 30_CD 40_CD 50_CD 60_CD 70 80 901001502_CD 00_CD Topics_NNS number_NN Entropy_NNP value_NN To_TO better_RBR understand_VB the_DT performance_NN of_IN strate_NN -_: gies_NNS under_IN topic_NN model_NN ,_, we_PRP draw_VBP figure_NN 5_CD about_IN entropy_JJ values_NNS between_IN strategies_NNS of_IN topic_NN distribu_NN -_: tion_NN model_NN ._.
+With_IN the_DT number_NN of_IN topics_NNS increasing_VBG ,_, entropy_JJ value_NN of_IN the_DT other_JJ strategies_NNS all_DT gets_VBZ in_IN -_: creased_VBN ._.
+Strategy_NN I-DC-e_NN performs_VBZ better_JJR than_IN other_JJ strategies_NNS and_CC it_PRP shows_VBZ big_JJ difference_NN with_IN Strategy_NNP I-DC-c_NNP when_WRB topic_NN number_NN is_VBZ smaller_JJR than_IN 50_CD ._.
+Be_VB -_: sides_NNS ,_, performance_NN of_IN Strategy_NNP II_NNP without_IN transla_NN -_: tion_NN technique_NN is_VBZ moderate_JJ ._.
+We_PRP make_VBP a_DT two_CD independent_JJ samples_NNS t-test_JJ be_VB -_: tween_VB two_CD groups_NNS of_IN Strategy_NNP I-NC_NNP and_CC a_DT One-way_JJ ANOVA_NNP test_NN with_IN the_DT least-significant_JJ difference_NN -LRB-_-LRB- LSD_NNP -RRB-_-RRB- among_IN three_CD groups_NNS of_IN strategy_NN I-DC_NN and_CC Strategy_NNP II_NNP using_VBG SPSS_NNP 19.08_CD statistical_JJ software_NN ._.
+We_PRP all_DT use_VBP entropy_JJ values_NNS to_TO be_VB the_DT test_NN variable_NN ._.
+Test_NN results_NNS are_VBP in_IN table_NN 4_CD and_CC table_NN 5_CD respectively_RB ._.
+Table_NNP 4_CD ._.
+Independent_NNP Samples_NNPS Test_NNP of_IN Strategy_NNP I-NC_NNP Table_NNP 5_CD ._.
+Multiple_JJ Comparisons_NNS between_IN groups_NNS of_IN strat_NN -_: egy_SYM I-DC_NNP and_CC Strategy_NNP II_NNP From_IN table_NN 4_CD ,_, p-value_JJ is_VBZ 0.054_CD ,_, there_EX is_VBZ no_DT dif_NN -_: ference_NN between_IN the_DT mean_JJ entropy_NN values_NNS of_IN Chi_NNP -_: nese_JJ documents_NNS set_VBN and_CC English_JJ documents_NNS set_VBN under_IN Strategy_NNP I-NC_NNP at_IN 5_CD %_NN significance_NN level_NN ._.
+From_IN table_NN 5_CD ,_, p-value_JJ between_IN Strategy_NNP I-DC-c_NNP and_CC Strategy_NNP I-DC-e_NNP is_VBZ 0.05_CD ,_, there_EX is_VBZ difference_NN be_VB -_: tween_IN the_DT mean_JJ entropy_NN values_NNS of_IN Strategy_NNP I-DC-c_NNP and_CC Strategy_NNP I-DC-e_NNP at_IN 5_CD %_NN significance_NN level_NN ._.
+Strategy_NNP II_NNP does_VBZ n't_RB show_VB significant_JJ difference_NN from_IN the_DT other_JJ two_CD methods_NNS ._.
+To_TO sum_VB up_RP ,_, no_DT matter_NN under_IN strategy_NN I-DC_NN or_CC strategy_NN I-NC_NN ,_, corpora_NN in_IN English_NNP appear_VBP to_TO have_VB better_JJR performance_NN than_IN corpora_NN in_IN Chinese_JJ when_WRB the_DT topic_NN is_VBZ smaller_JJR than_IN 50_CD ._.
+Taking_VBG the_DT prepro_NN -_: cessing_VBG into_IN consideration_NN ,_, stemming_VBG step_NN of_IN Eng_NNP -_: 8_CD http://www.spss.co.in/_NN lish_JJ corpora_NN changes_NNS inflected_VBD words_NNS to_TO their_PRP$ word_NN stem_NN root_NN form_NN ._.
+Similarity_NN between_IN documents_NNS will_MD increase_VB due_JJ to_TO the_DT increasing_VBG number_NN of_IN same_JJ word_NN bases_NNS generated_VBD from_IN stemming_VBG ._.
+To_TO the_DT con_NN -_: trary_NN ,_, different_JJ characteristics_NNS of_IN a_DT certain_JJ word_NN in_IN Chinese_JJ corpora_NN may_MD cause_VB low_JJ similarities_NNS though_IN they_PRP have_VBP the_DT same_JJ semantic_JJ information_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Analysis_NN of_IN Performance_NNP between_IN Representation_NNP Models_NNP According_VBG to_TO the_DT table_NN 2_CD and_CC table_NN 3_CD ,_, we_PRP can_MD clearly_RB see_VB that_DT performances_NNS of_IN VSM_NNP are_VBP better_RBR in_IN all_DT strategies_NNS than_IN the_DT performances_NNS of_IN topic_NN model_NN ._.
+Comparisons_NNS between_IN two_CD groups_NNS of_IN different_JJ doc_NN -_: ument_NN representation_NN models_NNS are_VBP also_RB performed_VBN using_VBG a_DT two_CD independent_JJ samples_NNS t-test_VBP to_TO see_VB if_IN there_EX is_VBZ a_DT significant_JJ main_JJ effect_NN of_IN different_JJ repre_NN -_: sentation_NN models_NNS ._.
+Test_NN result_NN is_VBZ shown_VBN in_IN table_NN 6_CD ._.
+Table_NNP 6_CD ._.
+Independent_NNP Samples_NNPS Test_NNP of_IN Document_NNP Repre_NNP -_: sentation_NN Models_NNS From_IN table_NN 6_CD ,_, since_IN the_DT p-value_NN is_VBZ 0.000_CD ,_, we_PRP conclude_VBP that_IN there_EX is_VBZ difference_NN between_IN the_DT mean_JJ entropy_NN values_NNS of_IN vector_NN space_NN model_NN and_CC topic_NN model_NN at_IN 5_CD %_NN significance_NN level_NN ._.
+One_CD possible_JJ rea_NN -_: son_NN for_IN the_DT difference_NN between_IN models_NNS is_VBZ that_IN we_PRP set_VBD a_DT weighting_NN coefficient_NN of_IN words_NNS in_IN title_NN part_NN in_IN VSM_NNP ._.
+Additionally_RB ,_, when_WRB using_VBG topic_NN probability_NN distributions_NNS to_TO represent_VB documents_NNS ,_, the_DT generated_VBN topic_NN itself_PRP may_MD be_VB a_DT fuzzy_JJ one_CD ._.
+This_DT will_MD definitely_RB reduce_VB the_DT accuracy_NN of_IN representing_VBG documents_NNS ._.
+To_TO sum_VB up_RP ,_, the_DT vector_NN space_NN model_NN is_VBZ more_RBR reliable_JJ for_IN representation_NN in_IN this_DT study_NN ._.
+5_CD Conclusion_NN and_CC future_JJ works_NNS In_IN this_DT paper_NN ,_, we_PRP use_VBP two_CD different_JJ document_NN repre_NN -_: sentations_NNS with_IN three_CD strategies_NNS to_TO do_VB the_DT bilingual_JJ document_NN clustering_NN ._.
+We_PRP also_RB compare_VBP the_DT strate_NN -_: gies_NNS with_IN or_CC without_IN translation_NN technique_NN ._.
+To_TO sum_VB up_RP ,_, different_JJ strategies_NNS show_VBP different_JJ performanc_NN -_: es_NNS and_CC the_DT traditional_JJ VSM_NNP representation_NN method_NN performs_VBZ better_JJR than_IN the_DT topic_NN model_NN ._.
+With_IN the_DT help_NN of_IN translation_NN technique_NN ,_, input_NN in_IN English_NNP shows_VBZ better_JJR performance_NN than_IN input_NN in_IN Chinese_NNP ._.
+In_IN the_DT future_NN ,_, comparable_JJ corpora_NN will_MD be_VB cho_SYM -_: sen_NN to_TO be_VB the_DT test_NN data_NNS for_IN there_EX are_VBP much_RB more_RBR rel_SYM -_: Levene_NNP 's_POS Test_NN for_IN Equality_NNP of_IN Variances_NNPS T-test_NNP for_IN Equality_NNP of_IN Means_NNP F_NN Sig_NN ._.
+t_SYM df_FW Sig_NN ._.
+-LRB-_-LRB- 2-tailed_JJ -RRB-_-RRB- entropy_JJ 6.182_CD .021_CD 2.077_CD 22_CD .050_CD 2.077_CD 16.747_CD .054_CD Levene_NNP 's_POS Test_NN for_IN Equali_NNP -_: ty_NN of_IN Variances_NNPS T-test_NNP for_IN Equality_NNP of_IN Means_NNP F_NN Sig_NN ._.
+t_SYM df_FW Sig_NN ._.
+-LRB-_-LRB- 2-tailed_JJ -RRB-_-RRB- entropy_JJ 58.217_CD .000_CD 49.408_CD 63_CD .000_CD 16.074_CD 4.025_CD .000_CD -LRB-_-LRB- I_PRP -RRB-_-RRB- Strategy_NNP -LRB-_-LRB- J_NNP -RRB-_-RRB- Strategy_NNP Mean_NNP Difference_NNP -LRB-_-LRB- I-J_NNP -RRB-_-RRB- Std_NNP ._.
+Error_NN Sig_NN ._.
+I-DC-c_JJ I-DC-e_JJ .0276667_CD *_SYM .0135876_CD .050_CD II_NNP .0026667_CD .0135876_CD .846_CD I-DC-e_JJ I-DC-c_JJ -.0276667_CD *_SYM .0135876_CD .050_CD II_NNP -.0250000_CD .0135876_CD .075_CD II_NNP I-DC-c_NNP -.0026667_CD .0135876_CD .846_CD I-DC-e_JJ .0250000_CD .0135876_CD .075_CD evant_JJ resources_NNS on_IN the_DT Internet_NNP ._.
+Other_JJ language_NN pairs_NNS can_MD be_VB our_PRP$ options_NNS as_RB well_RB ._.
+Different_JJ translate_VBP engines_NNS show_VBP different_JJ translation_NN qualities_NNS ,_, we_PRP will_MD use_VB other_JJ automatic_JJ translation_NN engines_NNS ,_, like_IN Google_NNP Translator_NNP for_IN better_JJR comparison_NN ._.
+Deep_JJ learning_VBG technique_NN will_MD also_RB be_VB added_VBN into_IN the_DT doc_NN -_: ument_NN representation_NN methods_NNS to_TO find_VB out_RP the_DT best_JJS one_NN ._.
+Referring_VBG to_TO topic_NN model_NN representation_NN meth_NN -_: od_NN ,_, can_MD we_PRP also_RB set_VBD any_DT weight_NN on_IN the_DT probability_NN of_IN topic_NN distribution_NN to_TO distinguish_VB from_IN ambiguous_JJ ones_NNS ?_.
+More_JJR works_NNS are_VBP needed_VBN to_TO be_VB done_VBN in_IN the_DT future_NN ._.
+Acknowledgement_NNP References_NNP Blei_NNP ,_, D._NNP M._NNP ,_, Ng_NNP ,_, A._NN Y._NNP ,_, &_CC Jordan_NNP ,_, M._NNP I._NNP 2003_CD ._.
+Latent_NN dirichlet_NN allocation_NN ._.
+the_DT Journal_NNP of_IN machine_NN Learning_NNP research_NN ,_, 3_CD ,_, 993-1022_CD ._.
+Boyack_NNP ,_, K._NNP W._NNP ,_, Newman_NNP ,_, D._NNP ,_, Duhon_NNP ,_, R._NNP J._NNP ,_, Klavans_NNP ,_, R._NNP ,_, Patek_NNP ,_, M._NNP ,_, Biberstine_NNP ,_, J._NNP R._NNP ,_, et_FW al._FW 2011_CD ._.
+Clustering_VBG more_JJR than_IN two_CD million_CD biomedical_JJ publications_NNS :_: Comparing_VBG the_DT accuracies_NNS of_IN nine_CD text-based_JJ similarity_NN approaches_NNS ._.
+PloS_JJ one_CD ,_, 6_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- ,_, e18029_FW ._.
+Boyd-Graber_NNP ,_, J._NNP ,_, &_CC Blei_NNP ,_, D._NNP M._NNP 2009_CD ._.
+Multilingual_JJ topic_NN models_NNS for_IN unaligned_JJ text_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT Twenty-Fifth_NNP Conference_NN on_IN Uncertainty_NN in_IN Artificial_NNP Intelligence_NNP ._.
+Chen_NNP ,_, H.-H._NNP ,_, &_CC Lin_NNP ,_, C.-J_NNP ._.
+2000_CD ._.
+A_DT multilingual_JJ news_NN summarizer_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 18th_JJ conference_NN on_IN Computational_NNP linguistics-Volume_NNP 1_CD ._.
+Denicia-Carral_NNP ,_, C._NNP ,_, Montes-Go_NNP ́mez_NNP ,_, M._NNP ,_, Villaseñor_NNP -_: Pineda_NNP ,_, L._NNP ,_, &_CC Aceves-Pe_NNP ́rez_NNP ,_, R._NNP M._NNP 2010_CD ._.
+Bilingual_JJ document_NN clustering_VBG using_VBG translation-independent_NN features_NNS ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN CICLing_NNP ._.
+Evans_NNP ,_, D._NNP K._NNP ,_, Klavans_NNP ,_, J._NNP L._NNP ,_, &_CC McKeown_NNP ,_, K._NNP R._NNP 2004_CD ._.
+Columbia_NNP newsblaster_NN :_: multilingual_JJ news_NN summarization_NN on_IN the_DT Web_NNP ._.
+Paper_NNP presented_VBD at_IN the_DT Demonstration_NNP Papers_NNP at_IN HLT-NAACL_NNP 2004_CD ._.
+Forsyth_NNP ,_, R._NNP S._NNP ,_, &_CC Sharoff_NNP ,_, S._NNP 2014_CD ._.
+Document_NNP dissimilarity_NN within_IN and_CC across_IN languages_NNS :_: A_DT benchmarking_VBG study_NN ._.
+Literary_NNP and_CC Linguistic_NNP Computing_NNP ,_, 29_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 6-22_CD ._.
+Frey_NNP ,_, B._NNP J._NNP ,_, &_CC Dueck_NNP ,_, D._NNP 2007_CD ._.
+Clustering_VBG by_IN passing_VBG messages_NNS between_IN data_NNS points_NNS ._.
+science_NN ,_, 315_CD -LRB-_-LRB- 5814_CD -RRB-_-RRB- ,_, 972-976_CD ._.
+Hofmann_NNP ,_, T._NNP 1999_CD ._.
+Probabilistic_NNP latent_NN semantic_JJ indexing_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 22nd_JJ annual_JJ international_JJ ACM_NNP SIGIR_NNP conference_NN on_IN Research_NNP and_CC development_NN in_IN information_NN retrieval_NN ._.
+Huang_NNP ,_, H.-H._NNP ,_, &_CC Kuo_NNP ,_, Y.-H_NNP ._.
+2010_CD ._.
+Cross-lingual_JJ document_NN representation_NN and_CC semantic_JJ similarity_NN measure_NN :_: a_DT fuzzy_JJ set_NN and_CC rough_JJ set_NN based_VBN approach_NN ._.
+Fuzzy_NNP Systems_NNPS ,_, IEEE_NNP Transactions_NNS on_IN ,_, 18_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- ,_, 1098-1111_CD ._.
+Kullback_NNP ,_, S._NNP ,_, &_CC Leibler_NNP ,_, R._NNP A._NNP 1951_CD ._.
+On_IN information_NN and_CC sufficiency_NN ._.
+The_DT annals_NN of_IN mathematical_JJ statistics_NNS ,_, 79-86_CD ._.
+Kumar_NNP ,_, K._NNP ,_, Santosh_NNP ,_, G._NNP ,_, &_CC Varma_NNP ,_, V._NNP 2011_CD ._.
+Multilingual_JJ document_NN clustering_VBG using_VBG wikipedia_NN as_IN external_JJ knowledge_NN :_: Springer_NNP ._.
+Leftin_NNP ,_, L._NNP J._NNP 2003_CD ._.
+Newsblaster_NNP Russian-English_NNP clustering_VBG performance_NN analysis_NN ._.
+Computer_NNP Science_NNP Technical_NNP Report_NNP Series_NNP ._.
+Lin_NNP ,_, J._NNP 1991_CD ._.
+Divergence_NN measures_NNS based_VBN on_IN the_DT Shannon_NNP entropy_NN ._.
+Information_NNP Theory_NNP ,_, IEEE_NNP Transactions_NNS on_IN ,_, 37_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 145-151_CD ._.
+Mimno_NNP ,_, D._NNP ,_, Wallach_NNP ,_, H._NNP M._NNP ,_, Naradowsky_NNP ,_, J._NNP ,_, Smith_NNP ,_, D._NNP A._NNP ,_, &_CC McCallum_NNP ,_, A._NN 2009_CD ._.
+Polylingual_JJ topic_NN models_NNS ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 2009_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP :_: Volume_NN 2_LS -_: Volume_NN 2_CD ._.
+Montalvo_NNP ,_, S._NNP ,_, Fresno_NNP ,_, V._NNP ,_, &_CC Martínez_NNP ,_, R._NNP 2012_CD ._.
+NESM_NNP :_: A_NNP named_VBD entity_NN based_VBN proximity_NN measure_NN for_IN multilingual_JJ news_NN clustering_NN ._.
+Procesamiento_NNP del_FW lenguaje_FW natural_NN ,_, 48_CD ,_, 81-88_CD ._.
+Montalvo_NNP ,_, S._NNP ,_, Martinez_NNP ,_, R._NNP ,_, Casillas_NNP ,_, A._NN ,_, &_CC Fresno_NNP ,_, V._NNP 2006_CD ._.
+Multilingual_JJ document_NN clustering_NN :_: an_DT heuristic_JJ approach_NN based_VBN on_IN cognate_NN named_VBN entities_NNS ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 21st_CD International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNPS and_CC the_DT 44th_JJ annual_JJ meeting_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Pang-Ning_NNP ,_, T._NNP ,_, Steinbach_NNP ,_, M._NNP ,_, &_CC Kumar_NNP ,_, V._NNP 2006_CD ._.
+Introduction_NN to_TO data_NNS mining_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Library_NNP of_IN Congress_NNP ._.
+Papadimitriou_NNP ,_, C._NNP H._NNP ,_, Tamaki_NNP ,_, H._NNP ,_, Raghavan_NNP ,_, P._NNP ,_, &_CC Vempala_NNP ,_, S._NNP 1998_CD ._.
+Latent_NN semantic_JJ indexing_NN :_: A_DT probabilistic_JJ analysis_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT seventeenth_JJ ACM_NNP SIGACT-SIGMOD-SIGART_NNP symposium_NN on_IN Principles_NNPS of_IN database_NN systems_NNS ._.
+Pham_NNP ,_, M._NNP H._NNP ,_, Bernhard_NNP ,_, D._NNP ,_, Diallo_NNP ,_, G._NNP ,_, Messai_NNP ,_, R._NNP ,_, &_CC Simonet_NNP ,_, M._NNP 2007_CD ._.
+SOM-based_JJ clustering_NN of_IN multilingual_JJ documents_NNS using_VBG an_DT ontology_NN ._.
+Data_NNP Mining_NNP with_IN Ontologies_NNPS :_: Implementations_NNS ,_, Findings_NNS ,_, and_CC Frameworks_NNS ,_, 65-82_CD ._.
+Porteous_NNP ,_, I._NNP ,_, Newman_NNP ,_, D._NNP ,_, Ihler_NNP ,_, A._NN ,_, Asuncion_NNP ,_, A._NN ,_, Smyth_NNP ,_, P._NNP ,_, &_CC Welling_NNP ,_, M._NNP 2008_CD ._.
+Fast_NNP collapsed_VBD gibbs_NNS sampling_VBG for_IN latent_NN dirichlet_NN allocation_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 14th_JJ ACM_NNP SIGKDD_NNP international_JJ conference_NN on_IN Knowledge_NN discovery_NN and_CC data_NNS mining_NN ._.
+Romeo_NNP ,_, S._NNP ,_, Tagarelli_NNP ,_, A._NN ,_, &_CC Ienco_NNP ,_, D._NNP 2014_CD ._.
+Semantic_JJ -_: based_VBN multilingual_JJ document_NN clustering_VBG via_IN tensor_NN modeling_NN ._.
+Paper_NNP presented_VBD at_IN the_DT EMNLP_NNP ,_, Conference_NNP on_IN Empirical_NNP Methods_NNPS in_IN Natural_NNP Language_NNP Processing_NNP ._.
+Salton_NNP ,_, G._NNP ,_, Wong_NNP ,_, A._NN ,_, &_CC Yang_NNP ,_, C.-S_NNP ._.
+1975_CD ._.
+A_DT vector_NN space_NN model_NN for_IN automatic_JJ indexing_NN ._.
+Communications_NNPS of_IN the_DT ACM_NNP ,_, 18_CD -LRB-_-LRB- 11_CD -RRB-_-RRB- ,_, 613-620_CD ._.
+Sharoff_NNP ,_, S._NNP 2013_CD ._.
+Measuring_VBG the_DT distance_NN between_IN comparable_JJ corpora_NN between_IN languages_NNS Building_NN and_CC Using_VBG Comparable_JJ Corpora_NNP -LRB-_-LRB- pp._FW 113-130_CD -RRB-_-RRB- :_: Springer_NNP ._.
+Sun_NNP ,_, X._NNP 2014_CD ._.
+Textual_NNP Document_NNP Clustering_NNP Using_VBG Topic_NNP Models_NNPS ._.
+Paper_NNP presented_VBD at_IN the_DT Semantics_NNP ,_, Knowledge_NNP and_CC Grids_NNP -LRB-_-LRB- SKG_NNP -RRB-_-RRB- ,_, 2014_CD 10th_JJ International_NNP Conference_NNP on_IN ._.
+Vulić_NNP ,_, I._NNP ,_, De_NNP Smet_NNP ,_, W._NNP ,_, Tang_NNP ,_, J._NNP ,_, &_CC Moens_NNP ,_, M.-F_NNP ._.
+2015_CD ._.
+Probabilistic_NNP topic_NN modeling_NN in_IN multilingual_JJ settings_NNS :_: An_DT overview_NN of_IN its_PRP$ methodology_NN and_CC applications_NNS ._.
+Information_NNP Processing_NNP &_CC Management_NNP ,_, 51_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, 111-147_CD ._.
+Wagstaff_NNP ,_, K._NNP ,_, Cardie_NNP ,_, C._NNP ,_, Rogers_NNP ,_, S._NNP ,_, &_CC Schrödl_NNP ,_, S._NNP 2001_CD ._.
+Constrained_VBN k-means_JJ clustering_VBG with_IN background_NN knowledge_NN ._.
+Paper_NNP presented_VBD at_IN the_DT ICML_NNP ._.
+Wang_NNP ,_, X._NNP ,_, Qian_NNP ,_, B._NNP ,_, &_CC Davidson_NNP ,_, I._NNP 2012_CD ._.
+Improving_NN document_NN clustering_VBG using_VBG automated_VBN machine_NN translation_NN ._.
+Paper_NNP presented_VBD at_IN the_DT Proceedings_NNP of_IN the_DT 21st_JJ ACM_JJ international_JJ conference_NN on_IN Information_NN and_CC knowledge_NN management_NN ._.
+Xie_NNP ,_, P._NNP ,_, &_CC Xing_NNP ,_, E._NNP P._NNP 2013_CD ._.
+Integrating_VBG document_NN clustering_NN and_CC topic_NN modeling_NN ._.
+arXiv_JJ preprint_NN arXiv_NNP :1309.6874_CD ._.
+Yang_NNP ,_, Y._NNP ,_, &_CC Pedersen_NNP ,_, J._NNP O._NNP 1997_CD ._.
+A_DT comparative_JJ study_NN on_IN feature_NN selection_NN in_IN text_NN categorization_NN ._.
+Paper_NNP presented_VBD at_IN the_DT ICML_NNP ._.
+Zhao_NNP ,_, Y._NNP ,_, Karypis_NNP ,_, G._NNP ,_, &_CC Fayyad_NNP ,_, U._NNP 2005_CD ._.
+Hierarchical_JJ clustering_VBG algorithms_NNS for_IN document_NN datasets_NNS ._.
+Data_NNP mining_NN and_CC knowledge_NN discovery_NN ,_, 10_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ,_, 141-168_CD ._.

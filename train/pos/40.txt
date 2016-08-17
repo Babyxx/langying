@@ -1,0 +1,473 @@
+systems_NNS or_CC routing_VBG ,_, where_WRB the_DT response_NN time_NN of_IN a_DT native_JJ emergency_NN calls_VBZ -RRB-_-RRB- operator_NN might_MD be_VB critical_JJ 1_CD Abstract_NNP Many_JJ of_IN the_DT language_NN identification_NN -LRB-_-LRB- LID_NNP -RRB-_-RRB- systems_NNS are_VBP based_VBN on_IN language_NN models_NNS using_VBG machine_NN learning_NN -LRB-_-LRB- ML_NNP -RRB-_-RRB- techniques_NNS that_WDT take_VBP into_IN account_NN the_DT fluctuation_NN of_IN speech_NN over_IN time_NN ,_, such_JJ as_IN Hidden_NNP Markov_NNP Models_NNPS -LRB-_-LRB- HMM_NNP -RRB-_-RRB- ._.
+Considering_VBG the_DT fluctuation_NN of_IN speech_NN results_NNS LID_NNP systems_NNS use_VBP relatively_RB long_JJ recording_NN intervals_NNS to_TO obtain_VB reasonable_JJ accuracy_NN ._.
+This_DT research_NN tries_VBZ to_TO extract_VB enough_JJ features_NNS from_IN short_JJ recording_NN intervals_NNS in_IN order_NN to_TO enable_VB successful_JJ classification_NN of_IN the_DT tested_VBN spoken_VBN languages_NNS ._.
+The_DT classification_NN process_NN is_VBZ based_VBN on_IN frames_NNS of_IN 20_CD milliseconds_NNS -LRB-_-LRB- ms_NNS -RRB-_-RRB- where_WRB most_JJS of_IN the_DT previous_JJ LID_NNP systems_NNS were_VBD based_VBN on_IN much_RB longer_JJR time_NN frames_NNS -LRB-_-LRB- from_IN 3_CD seconds_NNS to_TO 2_CD minutes_NNS -RRB-_-RRB- ._.
+We_PRP defined_VBD and_CC implemented_VBD 173_CD low_JJ level_NN features_NNS divided_VBN into_IN three_CD feature_NN sets_NNS :_: cepstrum_NN ,_, relative_JJ spectral_JJ -LRB-_-LRB- RASTA_NNP -RRB-_-RRB- ,_, and_CC spectrum_NN ._.
+The_DT examined_VBD corpus_NN ,_, containing_VBG speech_NN files_NNS in_IN seven_CD languages_NNS ,_, is_VBZ a_DT subset_NN of_IN the_DT Oregon_NNP Graduate_NNP Institute_NNP -LRB-_-LRB- OGI_NNP -RRB-_-RRB- telephone_NN speech_NN corpus_NN ._.
+Six_CD machine_NN learning_NN -LRB-_-LRB- ML_NNP -RRB-_-RRB- methods_NNS have_VBP been_VBN applied_VBN and_CC compared_VBN and_CC the_DT best_JJS optimized_VBN results_NNS have_VBP been_VBN achieved_VBN by_IN Random_NNP Forest_NNP -LRB-_-LRB- RF_NNP -RRB-_-RRB- :_: 89_CD %_NN ,_, 82_CD %_NN ,_, and_CC 80_CD %_NN for_IN 2_CD ,_, 5_CD ,_, and_CC 7_CD languages_NNS ,_, respectively_RB ._.
+Introduction_NNP Ruben_NNP Hagege_NNP Dept._NNP of_IN Electronics_NNP Jerusalem_NNP College_NNP of_IN Technology_NNP --_: Lev_NNP Academic_NNP Center_NNP 21_CD Havaad_NNP Haleumi_NNP St._NNP ,_, P.O.B._NNP 16031_CD 9116001_CD Jerusalem_NNP ,_, Israel_NNP hagege.ruben@gmail.com_NNP the_DT control_NN to_TO the_DT appropriate_JJ next_JJ stage_NN ;_: e.g._FW speech_NN recognition_NN systems_NNS ,_, multilingual_JJ call-centers_NNS -LRB-_-LRB- e.g._FW ,_, ._.
+LID_NN is_VBZ a_DT process_NN by_IN which_WDT a_DT given_VBN spoken_VBN utterance_NN language_NN is_VBZ automatically_RB identified_VBN -LRB-_-LRB- Muthusamy_JJ et_FW al._FW ,_, 1994_CD -RRB-_-RRB- ._.
+Most_JJS LID_NN systems_NNS are_VBP based_VBN on_IN high_JJ level_NN features_NNS such_JJ as_IN frequency_NN of_IN a_DT single_JJ phoneme_NN ,_, phoneme_NN sequences_NNS -LRB-_-LRB- Zissman_NNP and_CC Singer_NNP ,_, 1994_CD -RRB-_-RRB- ,_, syllable_JJ ,_, words_NNS ,_, and_CC prosody_NN -LRB-_-LRB- Thymé_SYM -_: Gobbel_NNP and_CC Hutchins_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+Such_JJ LID_NNP systems_NNS need_VBP a_DT comprehensive_JJ corpus_NN ,_, including_VBG transcription_NN from_IN trained_JJ humans_NNS ,_, and_CC long_RB enough_RB intervals_NNS to_TO correctly_RB classify_VB ,_, first_RB ,_, these_DT high_JJ level_NN features_NNS and_CC then_RB the_DT spoken_VBN language_NN -LRB-_-LRB- Zissman_NNP ,_, 1996_CD ;_: Greenberg_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+Any_DT error_NN in_IN the_DT higher_JJR level_NN feature_NN recognizers_NNS is_VBZ carried_VBN over_IN ,_, and_CC probably/possibly_RB amplified_VBN in_IN ,_, the_DT following_JJ steps_NNS ._.
+However_RB ,_, providing_VBG a_DT comprehensive_JJ corpus_NN enables_VBZ higher_JJR level_NN features_NNS which_WDT ensure_VB better_JJR results_NNS than_IN using_VBG acoustic_JJ features_NNS alone_RB ._.
+LID_NN systems_NNS based_VBN on_IN higher_JJR level_NN features_NNS have_VBP one_CD principal_JJ problem_NN :_: Tokenizing_VBG those_DT features_NNS accurately_RB has_VBZ proven_VBN to_TO be_VB the_DT main_JJ obstacle_NN thus_RB far_RB in_IN high_JJ accuracy_NN of_IN natural_JJ LID_NNP -LRB-_-LRB- Abramson_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+Matejka_NNP et_FW al._FW -LRB-_-LRB- 2005_CD -RRB-_-RRB- found_VBD that_IN separating_VBG gender_NN before_IN processing_VBG improved_VBD the_DT LID_NNP 's_POS accuracy_NN ._.
+A_DT LID_NNP system_NN has_VBZ two_CD main_JJ parts_NNS :_: feature_NN extraction_NN ,_, where_WRB a_DT vector_NN of_IN measurements_NNS that_WDT Automatic_NNP Classification_NNP of_IN Spoken_NNP Languages_NNP using_VBG Diverse_NNP Acoustic_NNP Features_VBZ LID_NNP is_VBZ used_VBN either_CC as_IN a_DT standalone_JJ task_NN or_CC as_IN a_DT pre_NN -_: processing_VBG step_NN ,_, capturing_VBG the_DT first_JJ seconds_NNS -LRB-_-LRB- sec_FW -RRB-_-RRB- of_IN the_DT recording_NN and_CC processing_VBG it_PRP in_IN order_NN to_TO transfer_VB translation_NN should_MD characterize_VB the_DT high_JJ level_NN features_NNS are_VBP extracted_VBN from_IN the_DT signal_NN ;_: and_CC pattern_NN matching_NN ,_, where_WRB these_DT extracted_VBN features_NNS are_VBP processed_VBN using_VBG statistical_JJ -LRB-_-LRB- like_IN in_IN this_DT study_NN -RRB-_-RRB- or_CC temporal_JJ -LRB-_-LRB- Rabiner_NNP ,_, 1989_CD -RRB-_-RRB- methods_NNS to_TO recognize_VB speech_NN languages_NNS ._.
+The_DT approach_NN taken_VBN in_IN our_PRP$ study_NN does_VBZ not_RB resort_VB to_TO the_DT use_NN of_IN phoneme_NN recognizers_NNS or_CC any_DT higher_JJR level_NN features_NNS ._.
+Instead_RB ,_, we_PRP rely_VBP on_IN low-level_JJ features_NNS alone_RB ,_, rather_RB than_IN using_VBG low-level_JJ features_NNS to_TO predict_VB intermediate_JJ features_NNS as_IN in_IN previous_JJ work_NN ._.
+The_DT motivation_NN is_VBZ ``_`` quicker_JJR response_NN time_NN and_CC simpler_JJR training_NN stages_NNS ''_'' ._.
+Section_NN 3_CD describes_VBZ the_DT different_JJ feature_NN sets_NNS chosen_VBN for_IN this_DT study_NN ._.
+2_CD Previous_JJ LID_NNP Systems_NNPS In_IN this_DT section_NN ,_, we_PRP focus_VBP our_PRP$ overview_NN of_IN previous_JJ LID_NNP systems_NNS that_WDT had_VBD goals_NNS similar_JJ to_TO our_PRP$ work_NN or_CC systems_NNS that_WDT used_VBD the_DT same_JJ -LRB-_-LRB- or_CC a_DT very_RB similar_JJ -RRB-_-RRB- corpus_NN and_CC /_NN or_CC set_NN of_IN languages_NNS ._.
+Silences_NNS are_VBP an_DT integral_JJ part_NN of_IN speech_NN recordings_NNS in_IN all_DT languages_NNS ._.
+These_DT silences_NNS are_VBP usually_RB unnecessary_JJ for_IN computer_NN processing_NN purposes_NNS :_: they_PRP considerably_RB increase_VB the_DT files_NNS size_NN and_CC potentially_RB lead_VBP to_TO a_DT great_JJ loss_NN of_IN accuracy_NN of_IN the_DT LID_NNP system_NN ._.
+Thus_RB ,_, the_DT first_JJ step_NN in_IN most_JJS LID_NNP systems_NNS use_VBP a_DT Voice_NNP Activation_NNP Detection_NNP -LRB-_-LRB- VAD_NNP -RRB-_-RRB- ,_, a_DT sub-process_NN that_WDT identifies_VBZ and_CC discards_VBZ those_DT silences_NNS ._.
+Other_JJ factors_NNS must_MD also_RB be_VB taken_VBN in_IN account_NN ,_, such_JJ as_IN the_DT channels_NNS through_IN which_WDT the_DT speech_NN is_VBZ conveyed_VBN ._.
+These_DT channels_NNS add_VBP noises_NNS to_TO the_DT speech_NN which_WDT ,_, although_IN it_PRP is_VBZ still_RB recognizable_JJ by_IN Humans_NNS ,_, causes_VBZ difficulties_NNS for_IN computers_NNS ._.
+Therefore_RB ,_, to_TO ensure_VB better_JJR performance_NN using_VBG ML_NNP methods_NNS ,_, a_DT noise_NN -_: filtering_VBG sub-process_NN is_VBZ preferable_JJ ._.
+All_PDT the_DT previous_JJ LID_NNP systems_NNS described_VBD below_IN used_VBN at_IN least_JJS one_CD of_IN those_DT techniques_NNS to_TO enhance_VB their_PRP$ results_NNS ._.
+Thus_RB ,_, we_PRP decided_VBD to_TO implement_VB those_DT techniques_NNS as_RB well_RB ._.
+Hazen_NNP and_CC Zue_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- tested_VBD their_PRP$ system_NN on_IN the_DT OGI_NNP Multi-Language_NNP telephone_NN speech_NN -LRB-_-LRB- MLTS_NNP -RRB-_-RRB- corpus_VBZ -LRB-_-LRB- Yeshwant_NNP K._NNP Muthusamy_NNP et_FW al._FW ,_, 1992_CD -RRB-_-RRB- ._.
+Us_NNP -_: ing_NN both_DT genders_NNS on_IN the_DT speech_NN utterances_NNS ._.
+The_DT av_SYM -_: erage_NN length_NN of_IN selected_VBN utterance_NN on_IN the_DT OGI_NNP corpus_NN is_VBZ about_IN 13.4_CD sec_NN ._.
+They_PRP developed_VBD and_CC tested_VBD a_DT LID_NNP system_NN based_VBN on_IN a_DT segment-based_JJ approach_NN com_NN -_: posed_VBN of_IN phonotactic_NN -LRB-_-LRB- Matejka_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ,_, pro-_JJ sodic_JJ ,_, and_CC acoustic_JJ property_NN of_IN the_DT languages_NNS ._.
+The_DT features_NNS used_VBN are_VBP 14_CD Mel_NNP Frequency_NNP Cepstral_NNP Coef_NNP -_: ficients_NNS -LRB-_-LRB- MFCC_NNP -RRB-_-RRB- ,_, in_IN contrast_NN to_TO most_JJS LID_NNP systems_NNS that_WDT use_VBP 13_CD MFCCs_NNS ,_, for_IN each_DT frame_NN ._.
+The_DT Cepstral_NNP Coefficient_NNP -LRB-_-LRB- CC_NNP -RRB-_-RRB- deltas_NNS were_VBD also_RB extracted_VBN along_IN with_IN the_DT pitch_NN -LRB-_-LRB- F0_CD -RRB-_-RRB- feature_NN ,_, which_WDT was_VBD used_VBN to_TO find_VB and_CC discard_VB silences_NNS -LRB-_-LRB- VAD_NNP -RRB-_-RRB- as_RB well_RB as_IN removing_VBG the_DT speaker_NN dependency_NN ._.
+Each_DT frame_NN was_VBD 5ms_CD long_RB ._.
+They_PRP tested_VBD their_PRP$ system_NN on_IN 10_CD languages_NNS ,_, an_DT overall_JJ system_NN performance_NN of_IN 48.6_CD %_NN was_VBD achieved_VBN using_VBG n-grams_NNS ,_, acoustic_JJ ,_, duration_NN ,_, F0_CD ,_, and_CC delta-F0_JJ fea_NN -_: tures_NNS ._.
+The_DT correct_JJ language_NN was_VBD one_CD of_IN the_DT top_JJ three_CD choices_NNS 74.4_CD %_NN of_IN the_DT time_NN ._.
+Their_PRP$ results_NNS on_IN less_JJR than_IN a_DT sec_NN for_IN each_DT file_NN is_VBZ between_IN 10_CD %_NN and_CC 20_CD %_NN ._.
+Muthusamy_NNP et_FW al._FW -LRB-_-LRB- 1993_CD -RRB-_-RRB- based_VBN their_PRP$ system_NN on_IN the_DT OGI-MLTS_NNP corpus_NN with_IN 13.4_CD sec_NN of_IN speech_NN per_IN file_NN on_IN average_NN ._.
+They_PRP explained_VBD that_IN at_IN the_DT time_NN it_PRP was_VBD still_RB not_RB clear_JJ which_WDT of_IN the_DT possible_JJ LID_NNP tech_SYM -_: niques_NNS will_MD be_VB more_RBR suitable_JJ to_TO discriminate_JJ lan_NN -_: guages_NNS ._.
+Thus_RB ,_, they_PRP compared_VBD 3_CD different_JJ approaches_NNS -LRB-_-LRB- acoustic_JJ features_NNS ,_, category_NN segmentation_NN ,_, and_CC pho_SYM -_: netic_JJ classification_NN -RRB-_-RRB- ._.
+In_IN all_DT the_DT sets_NNS ,_, the_DT Perceptual_NNP Linear_NNP Predictive_NNP -LRB-_-LRB- PLP_NNP ;_: Dave_NNP ,_, 2013_CD -RRB-_-RRB- coefficients_NNS was_VBD applied_VBN using_VBG 10ms_NNS frames_NNS with_IN either_DT 4ms_NNS or_CC 7ms_NNS of_IN overlapping_VBG intervals_NNS ._.
+Their_PRP$ best_JJS result_NN was_VBD obtained_VBN using_VBG 200_CD bigrams_NNS and_CC unigrams_NNS ._.
+They_PRP classified_VBD the_DT whole_JJ speech_NN files_NNS -LRB-_-LRB- up_IN to_TO 50_CD sec_NN -RRB-_-RRB- using_VBG these_DT feature_NN sets_NNS and_CC the_DT Artificial_NNP Neural_NNP Network_NNP -LRB-_-LRB- ANN_NNP ;_: Lopez-Moreno_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ML_NNP method_NN ._.
+Best_JJS results_NNS of_IN 86.3_CD %_NN on_IN 2_CD languages_NNS -LRB-_-LRB- EN_NNP and_CC JA_NNP -RRB-_-RRB- were_VBD obtained_VBN ._.
+They_PRP also_RB obtained_VBD 70_CD %_NN accuracy_NN using_VBG acoustic_NN features_NNS -LRB-_-LRB- PLP_NNP -RRB-_-RRB- alone_RB ._.
+Lamel_NNP and_CC Gauvain_NNP -LRB-_-LRB- 1994_CD -RRB-_-RRB- presented_VBD a_DT LID_NNP sys_SYM -_: tem_NN tested_VBN on_IN the_DT OGI_NNP corpus_NN and_CC Laboratory_NN qual_NN -_: ity_NN speech_NN -LRB-_-LRB- four_CD different_JJ corpora_NN ,_, two_CD for_IN EN_NNP and_CC two_CD for_IN FR_NNP language_NN -RRB-_-RRB- ._.
+They_PRP applied_VBD phone-based_JJ acoustic_JJ likelihoods_NNS ,_, using_VBG parallel-trained_JJ Hidden_NNP Markov_NNP Models_NNPS -LRB-_-LRB- HMMs_NNS -RRB-_-RRB- ._.
+In_IN 10_CD languages_NNS classifi_SYM -_: cation_NN tasks_NNS ,_, they_PRP tested_VBD the_DT OGI_NNP corpus_NN and_CC got_VBD 48.7_CD %_NN ,_, 55.1_CD %_NN ,_, and_CC 59.7_CD %_NN on_IN intervals_NNS of_IN 2_CD ,_, 6_CD and_CC 10_CD sec_NN ,_, respectively_RB ._.
+On_IN 2_CD languages_NNS -LRB-_-LRB- FR_NNP and_CC EN_NNP -RRB-_-RRB- however_RB ,_, their_PRP$ results_NNS rose_VBD to_TO 76_CD %_NN ,_, 80.87_CD %_NN ,_, and_CC 81.33_CD %_NN on_IN 2_CD ,_, 6_CD ,_, and_CC 10_CD sec_NN ,_, respectively_RB ._.
+Shuichi_NNP and_CC Liang_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- tested_VBD their_PRP$ system_NN on_IN corpora_NN produced_VBN from_IN multiple_JJ respected_JJ sources_NNS ,_, The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Section_NN 2_CD presents_NNS an_DT overview_NN of_IN previous_JJ LID_NNP systems_NNS ._.
+suggested_VBD classification_NN model_NN and_CC the_DT implemented_VBN features_NNS for_IN LID_NNP of_IN seven_CD languages_NNS :_: French_JJ -LRB-_-LRB- FR_NNP -RRB-_-RRB- ,_, Farsi_NNP -LRB-_-LRB- FA_NNP -RRB-_-RRB- ,_, Japanese_JJ -LRB-_-LRB- JA_NNP -RRB-_-RRB- ,_, Korean_JJ -LRB-_-LRB- KO_NNP -RRB-_-RRB- ,_, Mandarin_NNP -LRB-_-LRB- MA_NNP -RRB-_-RRB- ,_, Tamil_NNP -LRB-_-LRB- TA_NNP -RRB-_-RRB- ,_, and_CC Vietnamese_NNP -LRB-_-LRB- VI_NNP -RRB-_-RRB- ._.
+Section_NN 5_CD describes_VBZ the_DT examined_VBN corpora_NN and_CC experimental_JJ results_NNS and_CC analyzes_VBZ them_PRP ._.
+Section_NN 6_CD includes_VBZ a_DT summary_NN and_CC proposes_VBZ suggestions_NNS for_IN future_JJ Section_NN 4_CD presents_VBZ the_DT research_NN ._.
+containing_VBG the_DT OGI_NNP ,_, NTT_NNP and_CC NATC_NNP corpora_NN ._.
+They_PRP proposed_VBD a_DT LID_NNP system_NN based_VBN solely_RB on_IN F0_CD and_CC its_PRP$ time-dependent_JJ patterns_NNS using_VBG discriminant_JJ analysis_NN on_IN the_DT polygonal_JJ line_NN approximation_NN of_IN the_DT F0_CD patterns_NNS ._.
+Using_VBG the_DT 21_CD extracted_VBN features_NNS from_IN the_DT F0_CD behavior_NN -LRB-_-LRB- e.g._FW ,_, slope_NN ,_, shape_NN ,_, etc._FW -RRB-_-RRB- They_PRP achieved_VBD 75_CD %_NN on_IN the_DT NTT_NNP and_CC NATC_NNP corpus_NN and_CC 63.3_CD %_NN on_IN the_DT OGI_NNP corpus_NN ._.
+Zissman_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- compared_VBN different_JJ LID_NN techniques_NNS on_IN the_DT OGI_NNP corpus_NN ._.
+he_PRP also_RB uses_VBZ RelAtive_JJ SpecTrAl_NNP -LRB-_-LRB- RASTA_NNP ;_: Hermansky_NNP and_CC Morgan_NNP ,_, 1994_CD -RRB-_-RRB- as_IN a_DT part_NN of_IN the_DT pre-processing_NN of_IN speech_NN in_IN order_NN to_TO remove_VB slowly_RB varying_VBG ,_, linear_JJ channel_NN effects_NNS from_IN the_DT raw_JJ feature_NN vectors_NNS ._.
+He_PRP obtained_VBD that_IN single_JJ -_: language_NN phone_NN recognition_NN followed_VBN by_IN language_NN -_: dependent_JJ language_NN modeling_NN -LRB-_-LRB- PRLM_NNP -RRB-_-RRB- gave_VBD best_JJS results_NNS when_WRB distinguishing_VBG 10_CD languages_NNS ,_, giving_VBG results_NNS as_RB high_JJ as_IN 79_CD %_NN on_IN 45_CD sec_JJ speech_NN utterances_NNS and_CC 63_CD %_NN on_IN 10_CD sec_NN ._.
+Furthermore_RB ,_, their_PRP$ results_NNS in_IN 2_CD languages_NNS discrimination_NN were_VBD up_RB 97_CD %_NN on_IN 45_CD sec_NN of_IN speech_NN -LRB-_-LRB- EN_NNP and_CC SP_NNP -RRB-_-RRB- using_VBG parallel_JJ phone_NN recognition_NN -LRB-_-LRB- PPR_NNP ;_: Nagarajan_NNP and_CC Murthy_NNP ,_, 2004_CD -RRB-_-RRB- and_CC 90_CD %_NN on_IN 10_CD sec_NN -LRB-_-LRB- JA_NNP and_CC SP_NNP -RRB-_-RRB- using_VBG parallel_JJ PRLM_NNP ,_, they_PRP also_RB tested_VBD Gaussian_NNP Mixture_NNP Model_NNP -LRB-_-LRB- GMM_NNP -RRB-_-RRB- achieving_VBG 84_CD %_NN on_IN 10_CD sec_NN long_RB audio_JJ file_NN -LRB-_-LRB- EN_NNP and_CC JA_NNP -RRB-_-RRB- ._.
+Lippmann_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- compared_VBN human_JJ and_CC state_NN of_IN the_DT art_NN LID_NNP available_JJ at_IN the_DT time_NN and_CC noted_VBD that_IN even_RB if_IN machine_NN ability_NN to_TO identify_VB a_DT language_NN was_VBD still_RB several_JJ order_NN of_IN magnitude_NN lower_JJR than_IN human_JJ ,_, he_PRP only_RB proved_VBD that_IN it_PRP was_VBD needed_VBN to_TO work_VB on_IN more_JJR re_NN -_: liant_NN ,_, noise_NN robust_JJ ,_, LID_NNP systems_NNS and_CC components_NNS ._.
+``_`` The_DT transcription_NN error_NN rate_NN -LRB-_-LRB- ER_NNP -RRB-_-RRB- is_VBZ less_JJR than_IN 0.009_CD %_NN for_IN read_NN digits_NNS ,_, less_JJR than_IN 0.4_CD %_NN for_IN read_NN sen_NN -_: tences_NNS from_IN the_DT Wall_NNP Street_NNP Journal_NNP ,_, and_CC less_JJR than_IN 4_CD %_NN for_IN spontaneous_JJ conversations_NNS recorded_VBN over_IN the_DT telephone_NN ._. ''_''
+His_PRP$ study_NN was_VBD focused_VBN more_RBR on_IN isolated_VBN digits_NNS or_CC alphabet_NN letters_NNS recognition_NN in_IN order_NN to_TO per_IN -_: form_NN LID_NN than_IN spontaneous_JJ conversation_NN ._.
+Pellegrino_NNP and_CC Andre-Obrecht_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- tested_VBD a_DT LID_NNP system_NN on_IN 5_CD languages_NNS from_IN the_DT OGI-MLTS_NNP corpus_NN :_: FR_NNP ,_, KO_NNP ,_, VI_NNP ,_, JA_NNP ,_, and_CC SP_NNP ._.
+Using_VBG two_CD different_JJ approach_NN -LRB-_-LRB- GMM_NNP and_CC HMM_NNP -RRB-_-RRB- to_TO model_VB either_CC the_DT vocalic_JJ -LRB-_-LRB- GMM_NNP -RRB-_-RRB- or_CC phonetic_JJ -LRB-_-LRB- HMM_NNP -RRB-_-RRB- space_NN ._.
+Features_NNS such_JJ as_IN MFCC_NNP -LRB-_-LRB- 8_CD coefficients_NNS -RRB-_-RRB- and_CC duration_NN of_IN the_DT segments_NNS obtained_VBD using_VBG a_DT so_RB called_VBN ``_`` Forward_RB Backward_RB Divergence_NN ''_'' -LRB-_-LRB- Andre-Obrecht_NNP ,_, 1988_CD -RRB-_-RRB- segmentation_NN algorithm_NN ._.
+The_DT features_NNS are_VBP extracted_VBN inside_IN segments_NNS by_IN frames_NNS of_IN 20ms_NNS ._.
+The_DT purpose_NN of_IN this_DT study_NN was_VBD to_TO demonstrate_VB the_DT possibility_NN to_TO extract_VB vowel_NN information_NN from_IN acoustic_JJ signal_NN ._.
+Results_NNS were_VBD presented_VBN either_RB in_IN segments_NNS of_IN 2_CD minutes_NNS or_CC 45_CD sec_NN of_IN speech_NN ._.
+Their_PRP$ best_JJS results_NNS are_VBP 73.8_CD %_NN and_CC 61.2_CD %_NN on_IN 4_CD and_CC 5_CD languages_NNS ,_, respectively_RB ,_, using_VBG 2-minute-long_JJ speech_NN utterances_NNS and_CC all_DT of_IN the_DT features_NNS presented_VBN earlier_JJR ._.
+Kirchhoff_NNP and_CC Parandekar_NNP -LRB-_-LRB- 2001_CD -RRB-_-RRB- based_VBN her_PRP$ LID_NNP system_NN on_IN the_DT OGI_NNP corpus_NN ._.
+Using_VBG Multi-Stream_NNP Statistical_NNP N-Gram_NNP Modeling_NNP ,_, he_PRP compared_VBD the_DT accuracy_NN of_IN the_DT model_NN on_IN different_JJ speech_NN lengths_NNS -LRB-_-LRB- from_IN 3_CD to_TO 45_CD sec_NN -RRB-_-RRB- ._.
+Features_NNS such_JJ as_IN manner_NN ,_, consonantal_JJ place_NN ,_, vowel_NN place_NN ,_, front-back_NN ,_, and_CC rounding_VBG and_CC their_PRP$ dependencies_NNS -LRB-_-LRB- front-back_NN -_: vowel_NN place_NN and_CC front-back_NN --_: consonantal_JJ place_NN -RRB-_-RRB- were_VBD used_VBN ._.
+On_IN 10_CD languages_NNS ,_, her_PRP$ results_NNS were_VBD as_RB high_JJ as_IN 48_CD %_NN ,_, 58.8_CD %_NN ,_, and_CC 64.6_CD %_NN on_IN audio_JJ files_NNS of_IN less_JJR than_IN 3_CD sec_NN ,_, between_IN 3_CD and_CC 15_CD sec_NN ,_, and_CC longer_JJR than_IN 15_CD sec_NN audio_JJ files_NNS respectively_RB ._.
+Torres-carrasquillo_JJ et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- used_VBD the_DT 1996_CD Linguistic_NNP Data_NNP Consortium_NNP 's_POS CallFriend_NNP LID_NNP eval_NN -_: uation_NN set_NN ,_, a_DT 12_CD languages_NNS corpus_VBZ that_DT was_VBD allocated_VBN as_IN follows_VBZ :_: The_DT development_NN set_VBN consists_VBZ of_IN 1184_CD 30-sec_JJ utterances_NNS and_CC the_DT evaluation_NN set_NN of_IN the_DT cor_NN -_: pus_NN consists_VBZ of_IN 1492_CD 30-sec_JJ utterances_NNS ,_, each_DT distrib_NN -_: uted_VBD among_IN the_DT various_JJ languages_NNS of_IN interest_NN ._.
+LID_NN was_VBD performed_VBN using_VBG GMM_NNP Tokenization_NNP :_: extract_VB -_: ing_NN features_NNS to_TO then_RB tokenize_VB them_PRP using_VBG GMM_NNP and_CC finally_RB perform_VB LM_NNP -LRB-_-LRB- in_IN an_DT attempt_NN to_TO enhance_VB the_DT PRLM_NNP system_NN developed_VBN by_IN Zissman_NNP in_IN 1996_CD -RRB-_-RRB- ._.
+Us_NNP -_: ing_VBG the_DT evaluation_NN set_NN ,_, an_DT ER_NNP of_IN 17_CD %_NN -LRB-_-LRB- 83_CD %_NN of_IN accu_NN -_: racy_JJ -RRB-_-RRB- was_VBD obtained_VBN using_VBG both_DT Parallel-PRLM_NNP ,_, GMM_NNP tokenizers_NNS ,_, and_CC GMM_NNP acoustics_NNS ._.
+Li_NNP et_FW al._FW -LRB-_-LRB- 2007_CD -RRB-_-RRB- investigate_VBP automatic_JJ spoken_VBN language_NN identification_NN -LRB-_-LRB- LID_NNP -RRB-_-RRB- process_NN based_VBN on_IN Vector_NNP Space_NNP Modeling_NNP -LRB-_-LRB- VSM_NNP ;_: e.g._FW ,_, Martínez_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT evaluation_NN is_VBZ carried_VBN out_RP on_IN recorded_JJ telephone_NN speech_NN of_IN 12_CD languages_NNS :_: Arabic_NNP ,_, EN_NNP ,_, FA_NNP ,_, FR_NNP ,_, GE_NNP ,_, Hindi_NNP -LRB-_-LRB- HI_NNP -RRB-_-RRB- ,_, JA_NNP ,_, KO_NNP ,_, MA_NNP ,_, SP_NNP ,_, TA_NNP ,_, and_CC VI_NNP from_IN 1996_CD and_CC 2003_CD NIST_NNP Language_NNP Recognition_NNP Evaluation_NNP ._.
+Achieving_VBG ER_NNP as_RB low_JJ as_IN 2.75_CD %_NN -LRB-_-LRB- 97.25_CD %_NN of_IN accuracy_NN -RRB-_-RRB- on_IN 30-sec_JJ of_IN speech_NN on_IN 6_CD languages_NNS identification_NN ._.
+The_DT 2nd_JJ focus_NN in_IN their_PRP$ project_NN was_VBD the_DT possibility_NN of_IN Real-time_JJ -LRB-_-LRB- RT_NNP -RRB-_-RRB- applications_NNS ._.
+All_PDT those_DT studies_NNS based_VBN their_PRP$ performance_NN evaluation_NN on_IN a_DT wider_JJR time_NN frame_NN than_IN ours_JJ ,_, this_DT is_VBZ a_DT major_JJ difference_NN ,_, and_CC it_PRP must_MD be_VB considered_VBN when_WRB comparing_VBG our_PRP$ results_NNS ._.
+Moreover_RB ,_, unlike_IN most_JJS of_IN the_DT previous_JJ works_NNS ,_, our_PRP$ system_NN is_VBZ not_RB designed_VBN to_TO classify_VB languages_NNS using_VBG keyword_NN ,_, phoneme_NN ,_, or_CC even_RB vowel_NN recognition_NN ._.
+It_PRP does_VBZ n't_RB require_VB any_DT language_NN model_NN either_RB ,_, making_VBG the_DT language_NN training_NN process_NN a_DT lot_NN faster_RBR ._.
+3_CD Acoustic_NNP Features_NNP In_IN this_DT research_NN ,_, we_PRP consider_VBP 173_CD acoustic_JJ features_NNS divided_VBN into_IN three_CD main_JJ feature_NN sets_NNS :_: 114_CD Cepstrum_NNP features_NNS ,_, 28_CD RASTA_NN features_NNS ,_, and_CC 30_CD Spectrum_NNP features_NNS ._.
+The_DT hierarchical_JJ structure_NN of_IN the_DT three_CD feature_NN sets_NNS is_VBZ described_VBN in_IN Figure_NN 1_CD ._.
+Although_IN most_JJS of_IN these_DT features_NNS have_VBP been_VBN extensively_RB used_VBN in_IN previous_JJ LID_NNP systems_NNS ,_, these_DT features_NNS were_VBD a_DT basis_NN for_IN higher_JJR level_NN features_NNS ._.
+In_IN contrast_NN ,_, our_PRP$ system_NN is_VBZ solely_RB relying_VBG on_IN an_DT extensive_JJ combination_NN of_IN low_JJ level_NN features_NNS which_WDT has_VBZ never_RB been_VBN used_VBN before_IN to_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ._.
+The_DT Cepstrum_NNP features_NNS set_VBN is_VBZ composed_VBN of_IN groups_NNS of_IN coefficients_NNS which_WDT represent_VBP the_DT filter_NN sources_NNS -LRB-_-LRB- e.g._FW ,_, shape_NN of_IN the_DT mouth_NN etc._FW -RRB-_-RRB- ._.
+The_DT Bark_NNP and_CC Mel_NNP scales_NNS -LRB-_-LRB- Stevens_NNP et_FW al._FW ,_, 1937_CD ;_: Stevens_NNP and_CC Volkmann_NNP ,_, 1940_CD -RRB-_-RRB- are_VBP perceptual_JJ scales_NNS of_IN the_DT pitch_NN ._.
+Filter_NNP Bank_NNP Energy_NNP -LRB-_-LRB- FBE_NNP -RRB-_-RRB- represents_VBZ the_DT energy_NN from_IN all_PDT the_DT band_NN filters_NNS -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- used_VBN to_TO extract_VB the_DT MFCCs_NNP ._.
+HTK_NNP -LRB-_-LRB- HMM_NNP ToolKit_NNP -RRB-_-RRB- represents_VBZ the_DT CCs_NNS extracted_VBN using_VBG parameters_NNS close_RB to_TO the_DT original_JJ HTK_NNP -LRB-_-LRB- Young_NNP et_FW al._FW ,_, 2002_CD ;_: Ellis_NNP ,_, 2005_CD ;_: Brookes_NNP ,_, 1997_CD -RRB-_-RRB- approach_NN ._.
+The_DT RASTA_NNP set_NN represents_VBZ features_NNS extracted_VBD af_SYM -_: ter_NN filtering_VBG ._.
+These_DT features_NNS are_VBP extracted_VBN in_IN both_DT spectrum_NN and_CC cepstrum_NN ,_, taking_VBG cepstrum_NN coeffi_NNS -_: cients_NNS using_VBG both_DT Linear_NNP Predictive_NNP Coefficients_NNP -LRB-_-LRB- LPC_NNP -RRB-_-RRB- ,_, which_WDT are_VBP used_VBN to_TO compute_VB spectral_JJ and_CC cepstral_JJ features_NNS ,_, and_CC RASTA_NNP filter_NN ._.
+We_PRP implemented_VBD the_DT IIR_NNP RASTA_NNP filter_NN as_IN it_PRP is_VBZ de_IN -_: scribed_VBN in_IN Equation_NN 1_CD -LRB-_-LRB- Ellis_NNP 2005_CD ;_: Matlab_NNP RASTA_NNP 's_POS filter_NN transfer_NN function_NN implementation_NN -RRB-_-RRB- ._.
+H_NNP -LRB-_-LRB- z_SYM -RRB-_-RRB- =_SYM 0.1_CD ×_SYM 2z5_FW +_FW z4_FW −_FW z2_FW −_FW 2z_FW -LRB-_-LRB- 1_LS -RRB-_-RRB- z_SYM −_SYM 0.94_CD The_DT -0.94_CD weight_NN in_IN the_DT denominator_NN side_NN was_VBD chosen_VBN in_IN our_PRP$ Matlab_NNP implementation_NN to_TO improve_VB filter_NN response_NN time_NN from_IN the_DT original_JJ 500ms_NNS to_TO 160ms_NNS response_NN time_NN using_VBG -0.98_CD that_WDT is_VBZ applied_VBN in_IN some_DT of_IN the_DT previous_JJ works_NNS -LRB-_-LRB- Zissman_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+The_DT Spectrum_NNP features_NNS set_VBD consists_VBZ of_IN the_DT follow_VBP -_: ing_VBG feature_NN sets_NNS :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT pitch_NN -LRB-_-LRB- F0_CD -RRB-_-RRB- feature_NN -LRB-_-LRB- Titze_NNP ,_, 1994_CD ;_: Zahorian_NNP and_CC Hu_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT graph_NN fea_NN -_: tures_NNS ,_, which_WDT are_VBP statistical_JJ features_NNS that_WDT record_VBP the_DT occurrence_NN of_IN each_DT frame_NN 's_POS median_JJ peak_NN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Values_NNS -LRB-_-LRB- mean_VB ,_, median_NN ,_, min_NN ,_, max_NN ,_, std_NN -RRB-_-RRB- ,_, and_CC frequency_NN -LRB-_-LRB- me_PRP -_: dian_NN -RRB-_-RRB- stats_NNS ,_, describing_VBG each_DT frame_NN 's_POS FFT_NNP ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- For_IN -_: mants_NNS are_VBP the_DT principal_JJ spectral_JJ component_NN of_IN a_DT frame_NN ,_, defined_VBN by_IN ``_`` the_DT spectral_JJ peaks_NNS of_IN the_DT voice_NN spectrum_NN ''_'' ._.
+Linguists_NNS largely_RB maintain_VBP that_IN the_DT first_JJ two_CD formants_NNS -LRB-_-LRB- in_IN EN_NNP at_IN least_JJS -RRB-_-RRB- are_VBP sufficient_JJ to_TO differ_VB -_: entiate_NN between_IN all_DT vowels_NNS -LRB-_-LRB- Ladefoged_NNP and_CC Johnson_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+We_PRP decided_VBD to_TO extract_VB the_DT 4_CD first_JJ formants_NNS ._.
+There_EX is_VBZ a_DT spectral_JJ tilt_NN in_IN speech_NN caused_VBN by_IN the_DT voice-source_NN -LRB-_-LRB- vocal_JJ tract_NN -RRB-_-RRB- ._.
+The_DT vocal_JJ tract_NN creates_VBZ the_DT formant_JJ frequencies_NNS ,_, so_RB when_WRB these_DT are_VBP estimated_VBN -LRB-_-LRB- using_VBG FFT_NNP -RRB-_-RRB- ,_, the_DT spectral_JJ tilt_NN needs_VBZ to_TO be_VB removed_VBN ._.
+This_DT is_VBZ usually_RB done_VBN with_IN a_DT simple_JJ pre_NN -_: emphasis_NN filter_NN ,_, as_IN in_IN our_PRP$ case_NN ._.
+The_DT algorithms_NNS that_WDT were_VBD developed_VBN ,_, using_VBG MATLAB_NNP -LRB-_-LRB- V8_NNP .3_CD -RRB-_-RRB- ,_, for_IN this_DT study_NN were_VBD built_VBN for_IN fea_NN -_: ture_NN extraction_NN ,_, VAD_NNP ,_, and_CC WEKA_NNP interfacing_VBG pur_SYM -_: poses_VBZ ._.
+They_PRP were_VBD designed_VBN to_TO perform_VB for_IN real-time_JJ applications_NNS and_CC ,_, in_IN addition_NN ,_, to_TO be_VB dynamic_JJ so_IN that_IN they_PRP could_MD be_VB easily_RB changed_VBN to_TO extract_VB any_DT specific_JJ set_NN of_IN features_NNS and/or_CC classes_NNS ._.
+WEKA_NNP -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- explorer_NN was_VBD used_VBN for_IN the_DT classification_NN task_NN ._.
+Figure_NN 1_CD ._.
+The_DT computed_JJ acoustic_NN features_NNS ._.
+LPC_NNP COEFF_NNP ._.
+RASTA_NNP ENFRAMED_NNP RASTA_NNP -_: PLP_NNP EX_SYM -_: TRACT_NN +_NN FILTER_NNP SPECTRUM_NNP AND_CC MELCEPSTRUM_NNP FEATURES_VBZ EXTRACTION_NNP RASTA-PLP_NNP ENFRAMED_NNP VOICE_NNP EX_NNP -_: TRACTION_NNP SPEECH_NNP VOICE_NNP FILTERED_VBD VOICE_NN RASTA_NNP Features_VBZ Wave-form_JJ Features_NNS Figure_NN 2_CD ._.
+The_DT feature_NN extraction_NN process_NN -LRB-_-LRB- stages_NNS 2-3_CD in_IN the_DT classification_NN model_NN -RRB-_-RRB- ._.
+4_LS The_DT Classification_NNP Model_NNP The_NNP main_JJ stages_NNS of_IN the_DT classification_NN model_NN are_VBP as_IN follows_VBZ :_: 1_LS ._.
+Building_VBG the_DT speech_NN corpus_NN -LRB-_-LRB- Table_NNP 1_CD -RRB-_-RRB- ._.
+2_LS ._.
+Cleaning_VBG the_DT speech_NN files_NNS ._.
+Removing_VBG the_DT silent_JJ intervals_NNS and_CC filtering_VBG each_DT file_NN -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+3_LS ._.
+Computing_NNP the_DT features_NNS for_IN each_DT file_NN -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+4_LS ._.
+Transforming_VBG the_DT features_NNS matrix_VBP into_IN a_DT WEKA_NNP input_NN file_NN ._.
+5_CD ._.
+Applying_VBG six_CD ML_NNP methods_NNS on_IN various_JJ combina_NN -_: tions_NNS of_IN feature_NN sets_NNS using_VBG WEKA_NNP ._.
+Figure_NN 2_CD describes_VBZ the_DT feature_NN extraction_NN process_NN -LRB-_-LRB- stages_NNS 2-3_CD in_IN the_DT classification_NN model_NN -RRB-_-RRB- ._.
+This_DT Figure_NN grossly_RB illustrates_VBZ how_WRB the_DT structure_NN containing_VBG the_DT features_NNS ,_, used_VBN to_TO discriminate_JJ the_DT languages_NNS ,_, is_VBZ extracted_VBN ._.
+In_IN order_NN to_TO process_VB the_DT speech_NN files_NNS as_IN clean_JJ as_IN possible_JJ equalization_NN and_CC filtering_VBG seemed_VBD appropriate_JJ to_TO better_JJR distinguish_NN noise_NN or_CC silence_NN from_IN speech_NN -LRB-_-LRB- experimentation_NN shows_VBZ an_DT improvement_NN of_IN at_IN least_JJS 5_CD %_NN in_IN VAD_NNP classification_NN after_IN RASTA_NNP filtering_VBG compared_VBN to_TO before_IN -RRB-_-RRB- ._.
+A_DT RASTA_NNP filter_NN is_VBZ applied_VBN to_TO suppress_VB the_DT effect_NN of_IN the_DT telephone_NN line_NN on_IN the_DT features_NNS ._.
+First_RB ,_, the_DT audio_JJ file_NN -LRB-_-LRB- speech_NN -RRB-_-RRB- is_VBZ passed_VBN through_IN a_DT VAD_NNP ,_, and_CC the_DT si_SYM -_: lence_NN intervals_NNS are_VBP discarded_VBN ._.
+One_CD of_IN the_DT features_NNS used_VBN to_TO perform_VB the_DT VAD_NNP -LRB-_-LRB- F0_NNP -RRB-_-RRB- is_VBZ also_RB extracted_VBN -LRB-_-LRB- Zahorian_NNP and_CC Hu_NNP ,_, 2008a_CD -RRB-_-RRB- ._.
+Speech_NN ,_, rid_JJ of_IN silences_NNS ,_, goes_VBZ through_IN RASTA_NNP feature_NN extraction_NN that_WDT ex_FW -_: tracts_NNS the_DT RASTA_NNP features_NNS family_NN and_CC filters_VBZ the_DT au_SYM -_: dio_NN files_NNS ._.
+The_DT filtered_VBN ,_, silence-free_JJ speech_NN file_NN is_VBZ then_RB enframed_VBN -LRB-_-LRB- Brookes_NNP and_CC others_NNS ,_, 1997_CD -RRB-_-RRB- into_IN frames_NNS of_IN 20ms_NNS with_IN 10ms_NNS overlap_VBP ,_, and_CC a_DT Hamming_VBG window_NN is_VBZ applied_VBN on_IN each_DT frame_NN -LRB-_-LRB- where_WRB the_DT last_JJ frame_NN is_VBZ dis_SYM -_: carded_VBN if_IN shorter_JJR than_IN 20ms_NNS -RRB-_-RRB- ._.
+The_DT frames_NNS are_VBP sent_VBN to_TO the_DT spectrum_NN and_CC cepstrum_NN features_NNS extraction_NN where_WRB remaining_VBG features_NNS are_VBP extracted_VBN ._.
+Then_RB ,_, the_DT features_NNS extracted_VBN are_VBP grouped_VBN together_RB inside_IN a_DT ``_`` features_NNS structure_NN ''_'' with_IN each_DT frame_NN 's_POS features_NNS con_VBP -_: tained_VBN in_IN a_DT single_JJ line_NN vector_NN ._.
+Every_DT file_NN ,_, after_IN com_NN -_: pleting_VBG the_DT feature_NN extraction_NN process_NN ,_, outputs_VBZ a_DT structure_NN composed_VBN of_IN X_NNP vectors_NNS -LRB-_-LRB- depending_VBG on_IN file_NN length_NN -RRB-_-RRB- containing_VBG the_DT 173_CD features_NNS ._.
+The_DT resulting_VBG structure_NN is_VBZ then_RB converted_VBN into_IN a_DT matrix_NN ,_, and_CC the_DT ma_NN -_: trices_NNS are_VBP concatenated_VBN so_RB that_IN every_DT language_NN gets_VBZ a_DT part_NN of_IN all_PDT the_DT files_NNS -LRB-_-LRB- presented_VBN experimented_VBN on_IN gets_VBZ 10,000_CD feature_NN vectors_NNS -LRB-_-LRB- frames_NNS -RRB-_-RRB- for_IN each_DT lan_NN -_: guage_NN ._.
+Six_CD supervised_JJ ML_NNP methods_NNS including_VBG one_CD deci_SYM -_: sion_NN tree_NN ,_, two_CD ensemble_NN learning_NN ,_, and_CC two_CD SVMs_NNS ,_, have_VBP been_VBN selected_VBN for_IN application_NN of_IN the_DT last_JJ stage_NN in_IN our_PRP$ model_NN :_: 1_CD ._.
+J48_CD is_VBZ an_DT improved_JJ variant_NN of_IN the_DT C4_NNP .5_CD decision_NN tree_NN induction_NN -LRB-_-LRB- Quinlan_NNP ,_, 1993_CD ;_: Quinlan_NNP ,_, 2014_CD -RRB-_-RRB- implemented_VBN in_IN WEKA_NNP ._.
+J48_CD is_VBZ a_DT classifier_NN that_WDT generates_VBZ pruned_VBN or_CC unpruned_JJ C4_NNP .5_CD decision_NN trees_NNS ._.
+The_DT algorithm_NN uses_VBZ greedy_JJ techniques_NNS and_CC is_VBZ a_DT variant_NN of_IN ID3_NNP ,_, which_WDT determines_VBZ at_IN each_DT step_NN the_DT most_RBS predictive_JJ attribute_NN ,_, and_CC splits_VBZ a_DT node_NN based_VBN on_IN this_DT attribute_NN ._.
+J48_CD attempts_NNS to_TO account_VB for_IN noise_NN and_CC missing_VBG data_NNS ._.
+It_PRP also_RB deals_VBZ with_IN numeric_JJ attributes_NNS by_IN determining_VBG where_WRB thresholds_NNS for_IN decision_NN splits_VBZ should_MD be_VB placed_VBN ._.
+The_DT main_JJ parameters_NNS that_WDT can_MD be_VB set_VBN for_IN this_DT algorithm_NN are_VBP the_DT confidence_NN threshold_NN ,_, the_DT minimum_JJ number_NN of_IN instances_NNS per_IN leaf_NN and_CC the_DT number_NN of_IN folds_NNS for_IN REP._NNP As_IN described_VBN earlier_RBR ,_, trees_NNS are_VBP one_CD of_IN the_DT easiest_JJS thing_NN that_WDT could_MD be_VB understood_VBN because_IN of_IN their_PRP$ nature_NN ._.
+RF_NNP ,_, an_DT ensemble_NN learning_VBG method_NN for_IN classification_NN and_CC regression_NN -LRB-_-LRB- Breiman_NNP ,_, 2001_CD -RRB-_-RRB- ._.
+This_DT ML_NNP technique_NN is_VBZ an_DT ensemble_NN learning_VBG 2_CD ._.
+ENFRAME_NNP SILENCE_NNP FEATURES_VBZ STRUCT_NNP technique_NN ._.
+Ensemble_NN methods_NNS use_VBP multiple_JJ learning_NN algorithms_NNS to_TO obtain_VB better_JJR predictive_JJ performance_NN than_IN what_WP could_MD be_VB obtained_VBN from_IN any_DT of_IN the_DT constituent_JJ learning_NN algorithms_NNS ._.
+RF_NNP is_VBZ based_VBN on_IN what_WP 's_VBZ called_VBN a_DT random_JJ tree_NN :_: a_DT tree_NN that_WDT randomly_RB chooses_VBZ K_NNP attributes_NNS and_CC then_RB build_VB a_DT simple_JJ tree_NN with_IN no_DT pruning_NN ._.
+RF_NNP let_VB us_PRP choose_VB the_DT number_NN of_IN features_NNS -LRB-_-LRB- K_NNP -RRB-_-RRB- and_CC the_DT number_NN of_IN random_JJ trees_NNS -LRB-_-LRB- I_PRP -RRB-_-RRB- we_PRP want_VBP to_TO use_VB ._.
+MultiBoostab_NNP -LRB-_-LRB- MB_NNP -RRB-_-RRB- -LRB-_-LRB- Webb_NNP ,_, 2000_CD -RRB-_-RRB- is_VBZ an_DT exten_NN -_: sion_NN to_TO the_DT highly_RB successful_JJ AdaBoost_NNP -LRB-_-LRB- Freund_NNP and_CC Schapire_NNP ,_, 1996_CD -RRB-_-RRB- technique_NN for_IN forming_VBG deci_SYM -_: sion_NN committees_NNS ._.
+MB_NNP technique_NN can_MD be_VB viewed_VBN as_IN combining_VBG AdaBoost_NNP with_IN wagging_VBG -LRB-_-LRB- Bauer_NNP and_CC Kohavi_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ able_JJ to_TO harness_VB both_DT AdaBoost_NNP 's_POS high_JJ bias_NN and_CC variance_NN reduction_NN with_IN wagging_NN 's_POS superior_JJ variance_NN reduction_NN ._.
+Us_NNP -_: ing_NN C4_CD .5_CD as_IN the_DT base_NN learning_VBG algorithm_NN ,_, Multi_NNP -_: boosting_VBG is_VBZ demonstrated_VBN to_TO produce_VB decision_NN committees_NNS with_IN lower_JJR error_NN than_IN either_DT Ada_NNP -_: Boost_VB or_CC wagging_VBG significantly_RB more_RBR often_RB than_IN the_DT reverse_NN ._.
+It_PRP offers_VBZ the_DT further_JJ advantage_NN over_IN AdaBoost_NNP of_IN suiting_VBG parallel_JJ execution_NN ._.
+In_IN WEKA_NNP ,_, the_DT default_NN base_NN classifier_NN for_IN MB_NNP is_VBZ De_NNP -_: cision_NN Stump_NNP -LRB-_-LRB- Iba_NNP and_CC Langley_NNP ,_, 1992_CD -RRB-_-RRB- ._.
+BayesNet_NNP -LRB-_-LRB- BN_NNP -RRB-_-RRB- is_VBZ a_DT variant_NN of_IN a_DT probabilistic_JJ statistical_JJ classification_NN model_NN that_WDT represents_VBZ a_DT set_NN of_IN random_JJ variables_NNS and_CC their_PRP$ conditional_JJ dependencies_NNS via_IN a_DT directed_VBN acyclic_JJ graph_NN -LRB-_-LRB- DAG_NNP -RRB-_-RRB- -LRB-_-LRB- Friedman_NNP et_FW al._FW ,_, 2000_CD ;_: Heckerman_NNP ,_, 1997_CD ;_: Pourret_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+Logistic_JJ regression_NN -LRB-_-LRB- LR_NNP -RRB-_-RRB- -LRB-_-LRB- Cessie_NNP et_FW al._FW ,_, 1992_CD -RRB-_-RRB- is_VBZ a_DT variant_NN of_IN a_DT probabilistic_JJ statistical_JJ model_NN that_WDT is_VBZ used_VBN for_IN predicting_VBG the_DT out_RP -_: come_VB of_IN a_DT categorical_JJ dependent_JJ variable_JJ -LRB-_-LRB- i.e._FW ,_, a_DT class_NN label_NN -RRB-_-RRB- based_VBN on_IN one_CD feature_NN or_CC more_JJR -LRB-_-LRB- Landwehr_NNP et_FW al._FW ,_, 2005_CD ;_: Sumner_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+Sequential_NNP Minimal_NNP Optimization_NNP -LRB-_-LRB- SMO_NNP ;_: Platt_NNP ,_, 1998_CD ;_: Keerthi_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- is_VBZ a_DT variant_NN of_IN the_DT Sup_NNP -_: port_NN Vectors_NNS Machines_NNS -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ML_NNP method_NN -LRB-_-LRB- Cortes_NNP and_CC Vapnik_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+The_DT SMO_NNP technique_NN 3_CD ._.
+These_DT ML_NNP methods_NNS have_VBP been_VBN applied_VBN using_VBG the_DT WEKA_NNP platform_NN -LRB-_-LRB- Frank_NNP ,_, 2006_CD ;_: Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+We_PRP performed_VBD parameter_NN tuning_VBG with_IN Info-Gain_NNP -LRB-_-LRB- IG_NNP -RRB-_-RRB- ,_, a_DT feature_NN selection_NN metric_JJ for_IN classification_NN purposes_NNS ._.
+Yang_NNP and_CC Pedersen_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- reported_VBD that_IN IG_NNP performed_VBD best_JJS in_IN their_PRP$ multi-class_JJ benchmarks_NNS ._.
+The_DT accuracy_NN of_IN each_DT model_NN was_VBD estimated_VBN by_IN a_DT 10_CD -_: fold_VB cross-validation_JJ test_NN ._.
+5_CD Experimental_JJ Results_NNS The_DT OGI_NNP Multi-language_NNP Telephone_NNP Speech_NNP Corpus_NNP -LRB-_-LRB- Muthusamy_NNP et_FW al._FW ,_, 1992_CD ;_: Muthusamy_NNP et_FW al._FW ,_, 1993_CD -RRB-_-RRB- consists_VBZ of_IN telephone_NN speech_NN recorded_VBN in_IN eleven_CD languages_NNS :_: EN_NNP ,_, FA_NNP ,_, FR_NNP ,_, GE_NNP ,_, HI_NNP ,_, JA_NNP ,_, KO_NNP ,_, MA_NNP ,_, SP_NNP ,_, TA_NNP and_CC VI_NNP ._.
+The_DT OGI_NNP corpus_NN is_VBZ not_RB balanced_VBN between_IN males_NNS and_CC females_NNS :_: the_DT male_JJ files_NNS represent_VBP more_JJR than_IN 75_CD %_NN of_IN the_DT corpus_NN ._.
+Thus_RB ,_, in_IN this_DT study_NN ,_, we_PRP only_RB used_VBD the_DT male_JJ speech_NN files_NNS ._.
+The_DT examined_VBD corpus_NN contains_VBZ 478_CD files_NNS -LRB-_-LRB- each_DT from_IN a_DT different_JJ person_NN -RRB-_-RRB- from_IN seven_CD selected_VBN languages_NNS with_IN an_DT average_JJ length_NN of_IN 44.3_CD sec_NN ,_, each_DT file_NN consists_VBZ of_IN free_JJ ,_, continuous_JJ speech_NN ._.
+Since_IN our_PRP$ classification_NN system_NN was_VBD heavily_RB consuming_NN a_DT classic_JJ workstation_NN 's_POS RAM_NNP ,_, the_DT final_JJ corpus_NN had_VBD to_TO be_VB reduced_VBN to_TO 10,000_CD frames_NNS per_IN language_NN -LRB-_-LRB- equally_RB distributed_VBN on_IN the_DT various_JJ files_NNS -RRB-_-RRB- ,_, that_WDT are_VBP equivalent_JJ to_TO 100_CD sec_NN of_IN speech_NN ._.
+As_IN most_JJS of_IN telephone_NN speech_NN corpus_VBZ based_VBN LID_NNP systems_NNS -LRB-_-LRB- Hermansky_NNP ,_, 2011_CD -RRB-_-RRB- ,_, we_PRP used_VBD a_DT RASTA_NNP filter_NN -LRB-_-LRB- Matlab_NNP implementation_NN ;_: Ellis_NNP ,_, 2005_CD -RRB-_-RRB- to_TO reduce_VB the_DT channel_NN -LRB-_-LRB- telephone_NN -RRB-_-RRB- effect_NN noises_NNS ._.
+Table_NNP 1_CD presents_NNS general_JJ information_NN about_IN the_DT speech_NN files_VBZ contained_VBN in_IN the_DT examined_VBN corpus_NN ._.
+The_DT number_NN of_IN speech_NN files_NNS for_IN each_DT language_NN is_VBZ ranging_VBG from_IN 53_CD to_TO 86_CD ._.
+The_DT average_JJ time_NN length_NN is_VBZ rather_RB similar_JJ for_IN all_DT languages_NNS -LRB-_-LRB- from_IN 42.2_CD to_TO 47.5_CD sec_NN -RRB-_-RRB- ._.
+Table_NNP 1_CD ._.
+General_NNP information_NN about_IN the_DT speech_NN files_VBZ selected_VBN from_IN the_DT OGI_NNP corpus_NN ._.
+4_LS ._.
+5_CD ._.
+tion_NN 6_CD ._.
+classifica_NN -_: is_VBZ an_DT iterative_JJ algorithm_NN created_VBN to_TO solve_VB the_DT op_SYM -_: timization_NN problem_NN often_RB seen_VBN in_IN SVM_NNP tech_SYM -_: niques_NNS ._.
+SMO_NNP divides_VBZ this_DT problem_NN into_IN a_DT series_NN of_IN smallest_JJS possible_JJ sub-problems_NNS ,_, which_WDT are_VBP then_RB resolved_VBN analytically_RB ._.
+#_# Language_NN #_# of_IN speech_NN files_NNS Length_NNP of_IN speech_NN files_NNS in_IN sec_NN ._.
+Avg_NNP ._.
+time_NN length_NN in_IN sec_NN ._.
+1_CD French_JJ -LRB-_-LRB- FR_NNP -RRB-_-RRB- 55_CD 37_CD <_NN x_SYM <_SYM 49_CD 47.5_CD 2_CD Farsi_NNP -LRB-_-LRB- FA_NNP -RRB-_-RRB- 81_CD 5_CD <_CD x_SYM <_SYM 49_CD 44.4_CD 3_CD Japanese_JJ -LRB-_-LRB- JA_NNP -RRB-_-RRB- 53_CD 23_CD <_NN x_SYM <_SYM 49_CD 46.6_CD 4_CD Korean_JJ -LRB-_-LRB- KO_NNP -RRB-_-RRB- 62_CD 4_CD <_CD x_SYM <_SYM 49_CD 42.2_CD 5_CD Mandarin_NNP -LRB-_-LRB- MA_NNP -RRB-_-RRB- 73_CD 10_CD <_NN x_SYM <_SYM 49_CD 42.5_CD 6_CD Tamil_NNP -LRB-_-LRB- TA_NNP -RRB-_-RRB- 86_CD 8_CD <_NN x_SYM <_SYM 49_CD 44.3_CD 7_CD Vietnamese_NNS -LRB-_-LRB- VI_NNP -RRB-_-RRB- 68_CD 7_CD <_CD x_SYM <_SYM 49_CD 43.9_CD #_# Languages_NNPS BN_NNP SMO_NNP LR_NNP MB_NNP J48_NNP RF_NNP 2_CD FR_NNP ,_, TA_NNP 66.47_CD 72.59_CD 73.02_CD 66.84_CD 80.21_CD 88.27_CD 3_CD FR_NNP ,_, MA_NNP ,_, TA_NNP 54.25_CD 58.76_CD 60.41_CD 42.96_CD 68.47_CD 81.17_CD 4_CD FR_NNP ,_, MA_NNP ,_, TA_NNP ,_, VI_NNP 45.99_CD 50.00_CD 51.04_CD 34.11_CD 62.72_CD 77.51_CD 5_CD FR_NNP ,_, FA_NNP ,_, MA_NNP ,_, TA_NNP ,_, VI_NNP 36.84_CD 42.81_CD 43.34_CD 27.45_CD 57.03_CD 73.97_CD 6_CD FR_NNP ,_, FA_NNP ,_, JA_NNP ,_, MA_NNP ,_, TA_NNP ,_, VI_NNP 32.36_CD 37.54_CD 37.70_CD 22.89_CD 53.29_CD 71.83_CD 7_CD FR_NNP ,_, FA_NNP ,_, JA_NNP ,_, KO_NNP ,_, MA_NNP ,_, TA_NNP ,_, VI_NNP 29.38_CD 33.52_CD 33.66_CD 19.48_CD 51.50_CD 71.13_CD Table_NNP 2_CD ._.
+Accuracy_NN results_NNS for_IN the_DT best_JJS language_NN combinations_NNS using_VBG default_NN parameters_NNS and_CC all_DT features_NNS ._.
+For_IN each_DT tested_VBN combination_NN of_IN feature_NN sets_NNS we_PRP applied_VBD all_DT of_IN the_DT 6_CD chosen_VBN ML_NNP methods_NNS :_: BN_NNP ,_, SMO_NNP ,_, LR_NNP ,_, MB_NNP ,_, J48_NNP and_CC RF_NNP ._.
+We_PRP then_RB checked_VBD our_PRP$ feature_NN sets_VBZ using_VBG IG_NNP ,_, among_IN other_JJ feature_NN selection_NN methods_NNS ,_, and_CC no_DT features_NNS with_IN zero_CD weights_NNS were_VBD found_VBN ._.
+We_PRP also_RB performed_VBD a_DT parameter_NN tuning_VBG process_NN in_IN order_NN to_TO achieve_VB the_DT best_JJS results_NNS on_IN the_DT best_JJS default_NN ML_NNP method_NN -LRB-_-LRB- see_VB Figure_NN 3_CD -RRB-_-RRB- ._.
+All_PDT the_DT optimized_VBN results_NNS are_VBP obtained_VBN as_IN follows_VBZ :_: each_DT ML_NNP parameter_NN is_VBZ tuned_VBN in_IN a_DT hill_NN climbing_VBG fashion_NN ,_, changing_VBG one_CD parameter_NN at_IN a_DT time_NN -LRB-_-LRB- manually_RB -RRB-_-RRB- until_IN the_DT best_JJS value_NN is_VBZ obtained_VBN -LRB-_-LRB- within_IN a_DT <_NN 1_CD %_NN margin_NN -RRB-_-RRB- ._.
+On_IN ML_NNP methods_NNS based_VBN on_IN simple_JJ trees_NNS such_JJ as_IN J48_NNP ,_, it_PRP appears_VBZ to_TO be_VB enough_JJ :_: the_DT parameters_NNS seemed_VBD to_TO be_VB independent_JJ -LRB-_-LRB- according_VBG to_TO the_DT results_NNS we_PRP had_VBD -RRB-_-RRB- ._.
+However_RB ,_, for_IN the_DT RF_NNP ML_NNP method_NN ,_, the_DT two_CD principal_JJ parameters_NNS were_VBD tuned_VBN together_RB since_IN our_PRP$ preliminary_JJ results_NNS tends_VBZ to_TO show_VB that_IN they_PRP have_VBP an_DT influence_NN on_IN one_CD another_DT ._.
+Unlike_IN previously_RB developed_VBN methods_NNS -LRB-_-LRB- see_VB Section_NN 2_LS -RRB-_-RRB- that_WDT focus_VB on_IN changes_NNS of_IN specific_JJ features_NNS over_IN time_NN to_TO classify_VB languages_NNS ,_, our_PRP$ research_NN assess_VB the_DT potential_NN of_IN features_NNS computed_VBN on_IN a_DT single_JJ frame_NN -LRB-_-LRB- 20ms_NNS -RRB-_-RRB- ,_, using_VBG each_DT frames_NNS as_IN a_DT basis_NN of_IN the_DT classification_NN decision_NN ._.
+Table_NNP 2_CD presents_VBZ the_DT accuracy_NN results_NNS for_IN the_DT 6_CD selected_VBN ML_NNP methods_NNS under_IN default_NN parameters_NNS proposed_VBN by_IN the_DT WEKA_NNP platform_NN ._.
+The_DT best_JJS language_NN combinations_NNS from_IN 7_CD to_TO 2_CD languages_NNS -LRB-_-LRB- with_IN accuracy_NN as_IN the_DT deciding_VBG factor_NN -RRB-_-RRB- were_VBD selected_VBN by_IN analyzing_VBG the_DT confusion_NN matrices_NNS that_WDT were_VBD produced_VBN by_IN the_DT best_JJS ML_NN method_NN --_: RF_NNP -LRB-_-LRB- according_VBG to_TO Table_NNP 2_CD -RRB-_-RRB- ,_, and_CC filtering_VBG out_RP the_DT less_JJR successful_JJ language_NN in_IN each_DT stage_NN ._.
+Firstly_RB ,_, The_DT RF_NNP ML_NNP method_NN has_VBZ been_VBN applied_VBN on_IN the_DT all_DT seven_CD languages_NNS and_CC then_RB the_DT six_CD best_JJS languages_NNS -LRB-_-LRB- achieving_VBG the_DT best_JJS accuracy_NN -RRB-_-RRB- were_VBD picked_VBN from_IN those_DT seven_CD based_VBN on_IN the_DT confusion_NN matrix_NN ,_, and_CC so_RB on_IN ,_, until_IN only_RB the_DT best_JJS combination_NN of_IN two_CD languages_NNS remains_VBZ ._.
+As_IN a_DT result_NN ,_, we_PRP got_VBD the_DT following_JJ language_NN combinations_NNS :_: 7_CD ._.
+FR_NNP ,_, FA_NNP ,_, JA_NNP ,_, KO_NNP ,_, MA_NNP ,_, TA_NNP ,_, and_CC VI_NNP ._.
+6_CD ._.
+FR_NNP ,_, FA_NNP ,_, JA_NNP ,_, MA_NNP ,_, TA_NNP ,_, and_CC VI_NNP ._.
+5_CD ._.
+FR_NNP ,_, FA_NNP ,_, JA_NNP ,_, TA_NNP ,_, and_CC VI_NNP ._.
+4_LS ._.
+FR_NNP ,_, JA_NNP ,_, TA_NNP ,_, and_CC VI_NNP ._.
+3_LS ._.
+FR_NNP ,_, JA_NNP ,_, and_CC TA_NNP ._.
+2_LS ._.
+FR_NNP ,_, and_CC TA_NNP ._.
+Various_JJ conclusions_NNS concerning_VBG our_PRP$ LID_NNP system_NN can_MD be_VB drawn_VBN from_IN Table_NNP 2_CD :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT RF_NNP method_NN obtained_VBD the_DT best_JJS accuracy_NN results_NNS ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT 2nd_CD best_JJS ML_NNP method_NN was_VBD J48_CD ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- The_DT decision_NN tree_NN ML_NNP methods_NNS are_VBP the_DT best_JJS ML_NN methods_NNS for_IN our_PRP$ LID_NNP tasks_NNS ._.
+Since_IN RF_NNP is_VBZ uncontestably_RB the_DT most_RBS suited_VBN technique_NN between_IN the_DT six_CD chosen_VBN ML_NNP techniques_NNS ,_, we_PRP decided_VBD to_TO optimize_VB the_DT RF_NNP 's_POS parameters_NNS -LRB-_-LRB- maxDepth_NNP ,_, numFeatures_NNP ,_, numTrees_NNP ,_, and_CC seed_NN -RRB-_-RRB- ._.
+Because_IN of_IN the_DT lack_NN of_IN space_NN to_TO display_VB results_NNS ,_, we_PRP were_VBD only_RB able_JJ to_TO present_VB optimized_VBN results_NNS on_IN a_DT limited_JJ set_NN of_IN languages_NNS ._.
+We_PRP chose_VBD to_TO optimize_VB the_DT best_JJS language_NN combinations_NNS of_IN size_NN 2_CD ,_, 5_CD ,_, and_CC 7_CD -LRB-_-LRB- see_VB Table_NNP 2_CD -RRB-_-RRB- ._.
+All_PDT the_DT optimized_VBN results_NNS are_VBP obtained_VBN as_IN follows_VBZ :_: each_DT parameter_NN is_VBZ tuned_VBN in_IN a_DT hill_NN climbing_VBG fashion_NN ._.
+By_IN manually_RB changing_VBG one_CD parameter_NN at_IN a_DT time_NN till_IN the_DT best_JJS value_NN is_VBZ obtained_VBN within_IN a_DT reasonable_JJ -LRB-_-LRB- <_SYM 0.1_CD %_NN -RRB-_-RRB- margin_NN ._.
+SPECTRUM_NN CEPSTRUM_NNP RASTA_NNP 2_CD lang_NN ._.
+Optimized_VBN 2_CD lang_NN ._.
+Default_NNP 5_CD lang_NN ._.
+Default_NNP 7_CD lang_NN ._.
+Optimized_VBN 7_CD lang_NN ._.
+Default_NNP ALL_NNP 5_CD lang_NN ._.
+Optimized_NNP Figure_NNP 3_CD ._.
+Optimized/default_NN accuracy_NN on_IN each_DT feature_NN set_NN and_CC all_DT features_NNS ._.
+56.78_CD 52.94_CD 61.48_CD 58.77_CD 81.79_CD 81.54_CD 71.87_CD 68.39_CD 85.68_CD 84.43_CD 69.31_CD 64.61_CD 70.7_CD 68.44_CD 83.82_CD 82.86_CD 67.65_CD 65.09_CD 81.85_CD 73.97_CD 80.33_CD 71.13_CD 89.18_CD 88.27_CD Multiple_JJ conclusions_NNS can_MD be_VB drawn_VBN from_IN Figure_NN 3_CD :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- RF_NNP has_VBZ a_DT great_JJ optimizing_VBG potential_JJ ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- The_DT more_JJR language_NN it_PRP classifies_VBZ ,_, the_DT greater_JJR become_VB the_DT optimization_NN over_IN default_NN results_NNS ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- The_DT Cepstrum_NNP feature_NN set_NN has_VBZ the_DT greatest_JJS differentiation_NN potential_NN ._.
+A_DT possible_JJ explanation_NN for_IN these_DT results_NNS can_MD be_VB the_DT high_JJ number_NN of_IN relevant_JJ features_NNS :_: the_DT more_RBR relevant_JJ data_NNS one_CD have_VBP ,_, the_DT easier_JJR classification_NN become_VBN ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- RASTA_NNP has_VBZ the_DT greatest_JJS differentiation_NN potential_JJ per_IN feature_NN ;_: its_PRP$ performance_NN is_VBZ almost_RB equal_JJ to_TO the_DT Cepstrum_NNP set_NN while_IN using_VBG only_RB a_DT quarter_NN of_IN its_PRP$ number_NN of_IN features_NNS ._.
+6_CD Summary_NNP and_CC Future_NNP Research_NNP In_IN this_DT paper_NN ,_, we_PRP present_VBP a_DT methodology_NN for_IN classifying_VBG speech_NN files_NNS from_IN 7_CD different_JJ languages_NNS based_VBN on_IN combined_VBN cepstrum_NN ,_, RASTA_NNP ,_, and_CC spectrum_NN feature_NN sets_NNS ._.
+This_DT methodology_NN compares_VBZ six_CD different_JJ ML_NN methods_NNS ._.
+RF_NNP ,_, the_DT best_JJS ML_NN method_NN achieves_VBZ relatively_RB high_JJ accuracy_NN results_NNS of_IN 89.18_CD %_NN ,_, 81.85_CD %_NN ,_, and_CC 80.33_CD %_NN for_IN the_DT following_VBG classification_NN experiments_NNS :_: 2_CD ,_, 5_CD ,_, and_CC 7_CD best_JJS language_NN combinations_NNS ,_, respectively_RB ._.
+The_DT novelties_NNS of_IN this_DT research_NN are_VBP in_IN its_PRP$ reliance_NN :_: -LRB-_-LRB- 1_CD -RRB-_-RRB- on_IN low-level_JJ features_NNS alone_RB ,_, rather_RB than_IN using_VBG low-level_JJ features_NNS changes_NNS over_IN time_NN to_TO predict_VB intermediate_JJ features_NNS as_IN in_IN previous_JJ work_NN ,_, and_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- on_RB much_RB smaller_JJR frames_NNS -LRB-_-LRB- 20ms_NNS -RRB-_-RRB- in_IN comparison_NN to_TO most_RBS previous_JJ LIDs_NNS whose_WP$ results_NNS are_VBP based_VBN on_IN much_RB longer_JJR time_NN periods_NNS -LRB-_-LRB- at_IN least_JJS 3_CD sec_NN ._.
+or_CC longer_RBR ;_: see_VB Martinez_NNP et_FW al._FW ,_, 2013_CD ,_, among_IN many_JJ other_JJ references_NNS below_IN ,_, for_IN detail_NN on_IN the_DT impact_NN of_IN frame_NN length_NN on_IN result_NN -RRB-_-RRB- ._.
+Eliminating_VBG reliance_NN on_IN intermediate_JJ features_NNS is_VBZ an_DT important_JJ contribution_NN ,_, especially_RB for_IN low-resource_JJ languages_NNS ._.
+Our_PRP$ results_NNS are_VBP comparable_JJ to_TO the_DT accuracy_NN level_NN of_IN top_JJ LID_NNP systems_NNS from_IN about_IN 20_CD years_NNS ago_IN -LRB-_-LRB- that_IN also_RB used_VBN different_JJ versions_NNS of_IN the_DT OGI_NNP corpus_NN ;_: see_VB section_NN 2_LS -RRB-_-RRB- ._.
+However_RB ,_, our_PRP$ LID_NNP system_NN uses_VBZ a_DT time_NN frame_NN that_WDT is_VBZ at_IN least_JJS 60_CD times_NNS shorter_JJR than_IN the_DT time_NN frames_NNS used_VBN by_IN previous_JJ LID_NNP systems_NNS ._.
+To_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, there_EX is_VBZ no_DT LID_NNP system_NN which_WDT is_VBZ based_VBN on_IN a_DT such_JJ short_JJ time_NN frame_NN ._.
+Future_JJ directions_NNS for_IN research_NN are_VBP :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Developing_VBG additional_JJ feature_NN sets_NNS in_IN general_JJ and_CC additional_JJ features_NNS in_IN particular_JJ -LRB-_-LRB- with_IN an_DT emphasis_NN on_IN the_DT RASTA_NNP set_NN -RRB-_-RRB- ,_, -LRB-_-LRB- 2_LS -RRB-_-RRB- Applying_VBG other_JJ ML_NNP methods_NNS in_IN order_NN to_TO find_VB the_DT most_RBS suited_VBN method_NN for_IN LID_NNP purposes_NNS ,_, -LRB-_-LRB- 3_LS -RRB-_-RRB- Conducting_VBG more_JJR experiments_NNS using_VBG more_JJR speech_NN files_NNS from_IN more_JJR languages_NNS ,_, -LRB-_-LRB- 4_LS -RRB-_-RRB- Discovering_VBG which_WDT combination_NN of_IN features_NNS in_IN particular_JJ are_VBP appropriate_JJ for_IN LID_NNP of_IN speech_NN files_NNS using_VBG the_DT system_NN we_PRP developed_VBD ,_, and_CC -LRB-_-LRB- 5_CD -RRB-_-RRB- How_WRB well_RB does_VBZ the_DT system_NN based_VBN on_IN acoustic_NN features_NNS work_VBP for_IN non-native_JJ speakers_NNS ?_.
+Acknowledgments_NNS The_DT authors_NNS would_MD like_VB to_TO thank_VB Shmuel_NNP Kirshner_NNP for_IN his_PRP$ many_JJ advises_VBZ on_IN theory_NN of_IN speech_NN processing_NN ,_, Edmond_NNP Shalom_FW for_IN enabling_VBG us_PRP to_TO start_VB this_DT research_NN ,_, Shlomo_NNP Engelberg_NNP for_IN his_PRP$ continuous_JJ support_NN ,_, on_IN each_DT aspect_NN of_IN this_DT endeavor_NN ,_, Shimon_NNP Mizrahi_NNP for_IN giving_VBG us_PRP the_DT time_NN needed_VBN to_TO accomplish_VB such_PDT a_DT work_NN ,_, Boris_NNP Dekhovitch_NNP for_IN his_PRP$ comments_NNS ,_, Evgeni_NNP Frishman_NNP and_CC Yaakov_NNP Friedman_NNP for_IN financing_NN of_IN the_DT database_NN ._.
+Many_JJ thanks_NNS to_TO the_DT Dept._NNP of_IN Electronics_NNP and_CC the_DT rector_NN Kenneth_NNP Hochberg_NNP of_IN the_DT Jerusalem_NNP College_NNP of_IN Technology_NNP ,_, Lev_NNP Academic_NNP Center_NNP ,_, for_IN their_PRP$ assistance_NN during_IN this_DT research_NN ._.
+We_PRP would_MD also_RB like_VB to_TO thank_VB the_DT three_CD reviewers_NNS for_IN their_PRP$ useful_JJ and_CC instructive_JJ comments_NNS ._.
+References_NNS Arthur_NNP S._NNP Abramson_NNP ._.
+2003_CD ._.
+A_DT Practical_NNP Introduction_NNP to_TO Phonetics_NNP -LRB-_-LRB- review_NN -RRB-_-RRB- ._.
+volume_NN 79_CD ._.
+Clarendon_NNP Press_NNP Oxford_NNP ._.
+Régine_NNP Andre-Obrecht_NNP ._.
+1988_CD ._.
+A_DT New_NNP Statistical_NNP Approach_NNP For_IN The_DT Automatic_NNP Segmentation_NNP Of_IN Continuous_NNP Speech_NNP Signals_NNPS ._.
+IEEE_NNP Transactions_NNS on_IN Acoustics_NNP ,_, Speech_NNP ,_, and_CC Signal_NNP Processing_NNP ,_, 36_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :29_CD --_: 40_CD ,_, January_NNP ._.
+Eric_NNP Bauer_NNP and_CC Ron_NNP Kohavi_NNP ._.
+1999_CD ._.
+An_DT Empirical_JJ Comparison_NN of_IN Voting_NNP Classification_NNP Algorithms_NNPS :_: Bagging_NNP ,_, Boosting_NNP ,_, and_CC Variants_NNS ._.
+Machine_NN Learning_NNP ,_, 36_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :105_CD --_: 139_CD ._.
+Leo_NNP Breiman_NNP ._.
+2001_CD ._.
+Random_NNP Forests_NNPS ._.
+Machine_NN Learning_NNP ,_, 45_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :5_CD --_: 32_CD ._.
+Mike_NNP Brookes_NNP ._.
+1997_CD ._.
+Voicebox_NNP :_: Speech_NNP Processing_NNP Toolbox_NNP for_IN Matlab_NNP ._.
+..._: From_IN Www_NNP ._.
+Ee_NN ._.
+Ic_NNP ._.
+Ac_NNP ._.
+Uk/Hp/Staff_NNP /_CD Dmb/Voicebox/Voicebox_NNP ..._: Saskia_NNP Le_NNP Cessie_NNP ,_, J._NNP C._NNP Van_NNP Houwelingen_NNP ,_, and_CC Royal_NNP Statistical_NNP Society_NNP ._.
+1992_CD ._.
+Ridge_NNP Estimators_NNP in_IN Logistic_NNP Regression_NNP ._.
+Journal_NNP of_IN the_DT Royal_NNP Statistical_NNP Society_NNP ._.
+Series_NNP C_NNP -LRB-_-LRB- Applied_NNP Statistics_NNPS -RRB-_-RRB- ,_, 41_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :191_CD --_: 201_CD ._.
+Corinna_NNP Cortes_NNP and_CC Vladimir_NNP Vapnik_NNP ._.
+1995_CD ._.
+Support_NN -_: Vector_NNP Networks_NNP ._.
+Machine_NN learning_NN ,_, 20_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :273_CD --_: 297_CD ._.
+Namrata_NNP Dave_NNP ._.
+2013_CD ._.
+Feature_NN Extraction_NNP Methods_NNPS LPC_NNP ,_, PLP_NNP and_CC MFCC_NNP In_IN Speech_NNP Recognition_NNP ._.
+International_NNP Journal_NNP for_IN Advance_NNP Research_NNP in_IN Engineering_NNP and_CC Technology_NNP ,_, 1_CD -LRB-_-LRB- Vi_NNP -RRB-_-RRB- :1_CD --_: 5_CD ._.
+Daniel_NNP P.W._NNP Ellis_NNP ._.
+2005_CD ._.
+PLP_NNP and_CC RASTA_NNP -LRB-_-LRB- and_CC MFCC_NNP ,_, and_CC Inversion_NNP -RRB-_-RRB- in_IN Matlab_NNP ._.
+Http://Www.Ee.Columbia.Edu/~Dpwe/Resources/Ma_NNP tlab/Rastamat_NNP /_NN ._.
+Joachim_NNP Frank_NNP ._.
+2006_CD ._.
+Electron_NNP Tomography_NNP :_: Methods_NNS for_IN Three-Dimensional_NNP Visualization_NNP of_IN Structures_NNPS in_IN the_DT Cell_NNP ._.
+Morgan_NNP Kaufmann_NNP ._.
+Yoav_NNP Freund_NNP and_CC Re_NNP Robert_NNP E_NNP Schapire_NNP ._.
+1996_CD ._.
+Experiments_NNS with_IN a_DT New_NNP Boosting_NNP Algorithm_NNP ._.
+In_IN International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ,_, volume_NN 96_CD ,_, pages_NNS 148_CD --_: 156_CD ._.
+Nir_NNP Friedman_NNP ,_, M_NNP Linial_NNP ,_, I_PRP Nachman_NNP ,_, and_CC D_NNP Pe’er_NNP ._.
+2000_CD ._.
+Using_VBG Bayesian_NNP Networks_NNP to_TO Analyze_VB Expression_NNP Data_NNP ._.
+Journal_NNP of_IN computational_JJ biology_NN :_: a_DT journal_NN of_IN computational_JJ molecular_JJ cell_NN biology_NN ,_, 7_CD -LRB-_-LRB- 3-4_CD -RRB-_-RRB- :601_CD --_: 620_CD ._.
+Steven_NNP Greenberg_NNP ._.
+1999_CD ._.
+Speaking_VBG in_IN Shorthand_NNP -_: a_DT Syllable-Centric_NNP Perspective_NNP for_IN Understanding_NNP Pronunciation_NNP Variation_NNP ._.
+Speech_NN Communication_NNP ,_, 29_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :159_CD --_: 176_CD ._.
+Mark_NNP Hall_NNP ,_, Eibe_NNP Frank_NNP ,_, Geoffrey_NNP Holmes_NNP ,_, Bernhard_NNP Pfahringer_NNP ,_, Peter_NNP Reutemann_NNP ,_, and_CC Ian_NNP H._NNP Witten_NNP ._.
+2009_CD ._.
+The_DT WEKA_NNP Data_NNP Mining_NNP Software_NNP ._.
+ACM_NNP SIGKDD_NNP Explorations_NNPS Newsletter_NNP ,_, 11_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :10_CD ._.
+Timothy_NNP J_NNP Hazen_NNP and_CC Victor_NNP Zue_NNP ._.
+1993_CD ._.
+Automatic_NNP Language_NNP Identification_NNP Using_VBG a_DT Segment-Based_NNP Approach_NNP ._.
+In_IN 3rd_CD International_NNP Conference_NNP on_IN Spoken_NNP Language_NNP Processing_NNP ,_, pages_NNS 1307_CD --_: 1310_CD ._.
+David_NNP Heckerman_NNP ._.
+1997_CD ._.
+Bayesian_NNP Networks_NNP for_IN Data_NNP Mining_NNP ._.
+Data_NNP Mining_NNP and_CC Knowledge_NNP Discovery_NNP ,_, 119_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :79_CD --_: 119_CD ._.
+Hynek_NNP Hermansky_NNP ._.
+2011_CD ._.
+Speech_NNP Recognition_NNP from_IN Spectral_NNP Dynamics_NNP ._.
+Sadhana_NNP -_: Academy_NNP Proceedings_NNP in_IN Engineering_NNP Sciences_NNPS ,_, 36_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :729_CD --_: 744_CD ._.
+Hynek_NNP Hermansky_NNP and_CC Nelson_NNP Morgan_NNP ._.
+1994_CD ._.
+RASTA_NNP Processing_NNP of_IN Speech_NNP ._.
+Speech_NN and_CC Audio_NNP Processing_NNP ,_, IEEE_NNP Transactions_NNS on_IN ,_, 2_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :578_CD --_: 589_CD ._.
+and_CC Raj_NNP Foreword_NNP By-Reddy_NNP ._.
+Huang_NNP ,_, Xuedong_NNP ,_, Alex_NNP Acero_NNP ,_, Hsiao-Wuen_NNP Hon._NNP 2001_CD ._.
+Spoken_NNP Language_NNP Processing_NNP :_: a_DT Guide_NNP to_TO Theory_NNP ,_, Algorithm_NNP ,_, and_CC System_NNP Development_NNP ._.
+Prentice_NNP Hall_NNP PTR_NNP ._.
+Wayne_NNP Iba_NNP and_CC Pat_NNP Langley_NNP ._.
+1992_CD ._.
+Induction_NNP of_IN One_CD -_: Level_NNP Decision_NNP Trees_NNP ._.
+In_IN ML92_NNP :_: Proceedings_NNP of_IN the_DT Ninth_NNP International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ,_, Aberdeen_NNP ,_, Scotland_NNP ,_, 1_CD --_: 3_CD July_NNP 1992_CD ,_, pages_NNS 233_CD --_: 240_CD ._.
+Sathiya_NNP S._NNP Keerthi_NNP ,_, S._NNP K._NNP Shevade_NNP ,_, C._NNP Bhattacharyya_NNP ,_, and_CC K._NNP R._NNP K._NNP Murthy_NNP ._.
+2001_CD ._.
+Improvements_NNP to_TO Platt_NNP 's_POS SMO_NNP Algorithm_NNP for_IN SVM_NNP Classifier_NNP Design_NNP ._.
+Neural_NNP Computation_NNP ,_, 13_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :637_CD --_: 649_CD ._.
+Katrin_NNP Kirchhoff_NNP and_CC Sonia_NNP Parandekar_NNP ._.
+2001_CD ._.
+Multi_SYM -_: stream_NN Statistical_NNP N-gram_NNP Modeling_VBG with_IN Application_NN to_TO Automatic_NNP Language_NNP Identification_NNP ._.
+In_IN INTERSPEECH_NNP ,_, number_NN 1_CD ,_, pages_NNS 803_CD --_: 806_CD ._.
+Peter_NNP Ladefoged_NNP ._.
+2001_CD ._.
+A_DT Course_NNP in_IN Phonetics.volume_NNP 53_CD ._.
+Cengage_JJ learning_NN ._.
+Lori_NNP F._NNP Lamel_NNP and_CC Jean-Luc_NNP Gauvain_NNP ._.
+1994_CD ._.
+Language_NN Identification_NN Using_VBG Phone-Based_NNP Acoustic_NNP Likelihoods_NNPS ._.
+In_IN Proceedings_NNP of_IN ICASSP_NNP '_POS 94_CD ._.
+IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, volume_NN i_FW ,_, page_NN I/293_NNP --_: I/296_CD vol_NN .1_CD ._.
+Niels_NNP Landwehr_NNP ,_, Mark_NNP Hall_NNP ,_, and_CC Eibe_NNP Frank_NNP ._.
+2005_CD ._.
+Logistic_NNP Model_NNP Trees_NNP ._.
+Machine_NN Learning_NNP ,_, 59_CD -LRB-_-LRB- 1_LS -_: 2_LS -RRB-_-RRB- :161_CD --_: 205_CD ._.
+Haizhou_NNP Li_NNP Haizhou_NNP Li_NNP ,_, Bin_NNP Ma_NNP Bin_NNP Ma_NNP ,_, and_CC Chin-Hui_NNP Lee_NNP Chin-Hui_NNP Lee_NNP ._.
+2007_CD ._.
+A_DT Vector_NNP Space_NNP Modeling_NNP Approach_NNP to_TO Spoken_NNP Language_NNP Identification_NNP ._.
+IEEE_NNP Transactions_NNS on_IN Audio_NNP ,_, Speech_NNP ,_, and_CC Language_NNP Processing_NNP ,_, 15_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :271_CD --_: 284_CD ._.
+Richard_NNP P._NNP Lippmann_NNP ._.
+1997_CD ._.
+Speech_NN Recognition_NN by_IN Machines_NNS and_CC Humans_NNS ._.
+Speech_NN Communication_NNP ,_, 22_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 15_CD ._.
+Ignacio_NNP Lopez-Moreno_NNP ,_, Javier_NNP Gonzalez-Dominguez_NNP ,_, Oldrich_NNP Plchot_NNP ,_, David_NNP Martínez_NNP ,_, Joaquin_NNP Gonzalez_NNP -_: Rodriguez_NNP ,_, and_CC Pedro_NNP Moreno_NNP ._.
+2014_CD ._.
+Automatic_NNP Language_NNP Identification_NNP Using_VBG Deep_NNP Neural_NNP Networks_NNP ._.
+Icassp_NNP :0_CD --_: 4_LS ._.
+David_NNP Martinez_NNP ,_, Eduardo_NNP Lleida_NNP ,_, Alfonso_NNP Ortega_NNP ,_, and_CC Antonio_NNP Miguel_NNP ._.
+2013_CD ._.
+Prosodic_NNP Features_NNPS and_CC Formant_NNP Modeling_NNP for_IN an_DT Ivector-based_JJ Language_NN Recognition_NNP System_NNP ._.
+In_IN ICASSP_NNP ,_, IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP -_: Proceedings_NNP ,_, pages_NNS 6847_CD --_: 6851_CD ._.
+IEEE_NNP ._.
+David_NNP Martínez_NNP ,_, Oldřich_NNP Plchot_NNP ,_, Lukáš_NNP Burget_NNP ,_, Ondřej_NNP Glembek_NNP ,_, and_CC Pavel_NNP Matějka_NNP ._.
+2011_CD ._.
+Language_NN Recognition_NN in_IN iVectors_NNP Space_NNP ._.
+Proceedings_NNP of_IN the_DT Annual_JJ Conference_NN of_IN the_DT International_NNP Speech_NNP Communication_NNP Association_NNP ,_, INTERSPEECH_NNP -LRB-_-LRB- August_NNP -RRB-_-RRB- :861_CD --_: 864_CD ._.
+Pavel_NNP Matejka_NNP ,_, Petr_NNP Schwarz_NNP ,_, Jan_NNP Cernocký_NNP ,_, and_CC Pavel_NNP Chytil_NNP ._.
+2005_CD ._.
+Tuning_VBG Phonotactic_NNP Language_NNP Identificaion_NNP System_NNP ._.
+Technical_NNP Report_NNP 4_CD ._.
+Yeshwant_NNP K._NNP Muthusamy_NNP ,_, Etienne_NNP Barnard_NNP ,_, and_CC Ronald_NNP a._NNP Cole_NNP ._.
+1994_CD ._.
+Reviewing_VBG Automatic_NNP Language_NNP Identification_NNP ._.
+IEEE_NNP Signal_NNP Processing_NNP Magazine_NNP ,_, 11_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :33_CD --_: 41_CD ._.
+Yeshwant_NNP Kumar_NNP Muthusamy_NNP ,_, Kay_NNP M_NNP Berkling_NNP ,_, T_NNP Arai_NNP ,_, Ronald_NNP a_DT Cole_NNP ,_, and_CC E_NNP Barnard_NNP ._.
+1993_CD ._.
+A_DT Comparison_NN of_IN Approaches_NNS to_TO Automatic_NNP Language_NNP Identification_NNP Using_VBG Telephone_NNP Speech_NNP ._.
+In_IN 3rd_CD European_JJ Conference_NN on_IN Speech_NNP Communication_NNP and_CC Technology_NNP ,_, volume_NN 2_CD ,_, pages_NNS 1307_CD --_: 1310_CD ._.
+Thangavelu_NNP Nagarajan_NNP and_CC H._NNP A._NNP Murthy_NNP ._.
+2004_CD ._.
+Language_NN identification_NN using_VBG parallel_JJ syllable-like_JJ unit_NN recognition_NN ._.
+In_IN 2004_CD IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP ,_, and_CC Signal_NNP Processing_NNP ,_, volume_NN 1_CD ,_, pages_NNS I_PRP --_: 401_CD ._.
+IEEE_NNP ._.
+François_NNP Pellegrino_NNP and_CC Régine_NNP Andre-Obrecht_NNP ._.
+2000_CD ._.
+Automatic_NNP language_NN identification_NN :_: an_DT alternative_JJ approach_NN to_TO phonetic_JJ modelling_NN ._.
+Signal_NNP Processing_NNP ,_, 80_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- :1231_CD --_: 1244_CD ._.
+John_NNP C._NNP Platt_NNP ._.
+1998_CD ._.
+Sequential_NNP Minimal_NNP Optimization_NNP :_: a_DT Fast_NNP Algorithm_NNP for_IN Training_NNP Support_NN Vector_NNP Machines_NNP ._.
+Advances_NNS in_IN Kernel_NNP MethodsSupport_NNP Vector_NNP Learning_NNP ,_, 208:1_CD --_: 21_CD ._.
+Olivier_NNP Pourret_NNP ._.
+2008_CD ._.
+Bayesian_NNP Networks_NNP :_: a_DT Practical_NNP Guide_NNP to_TO Applications.volume_NNP 73_CD ._.
+John_NNP Wiley_NNP &_CC Sons_NNP ._.
+John_NNP Ross_NNP Quinlan_NNP ._.
+1993_CD ._.
+Programs_NNS for_IN Machine_NN Learning.volume_NNP 240_CD ._.
+Elsevier_NNP ._.
+John_NNP Ross_NNP Quinlan_NNP ._.
+2014_CD ._.
+C4_CD ._.
+5_CD :_: Programs_NNS for_IN Machine_NN Learning_NNP ._.
+Elsevier_NNP ._.
+Lawrence_NNP R._NNP Rabiner_NNP ._.
+1989_CD ._.
+Tutorial_NNP on_IN Hidden_NNP Markov_NNP Models_NNPS and_CC Selected_NNP Applications_NNS in_IN Speech_NNP Recognition_NNP ._.
+Proceedings_NNP of_IN the_DT IEEE_NNP ,_, 77_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :257_CD --_: 286_CD ._.
+Itahashi_NNP Shuichi_NNP and_CC Du_NNP Liang_NNP ._.
+1995_CD ._.
+Language_NN Identification_NN Based_VBN on_IN Speech_NNP Fundamental_JJ Frequency_NN ._.
+In_IN 4th_JJ European_JJ Conference_NN on_IN Speech_NNP Communication_NNP and_CC Technology_NNP ,_, volume_NN 2_CD ,_, pages_NNS 1359_CD --_: 1362_CD ._.
+Stanley_NNP S._NNP Stevens_NNP ._.
+1937_CD ._.
+A_DT Scale_NNP for_IN the_DT Measurement_NNP of_IN the_DT Psychological_NNP Magnitude_NNP Pitch_NNP ._.
+The_DT Journal_NNP of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 8_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :185_CD ._.
+Stanley_NNP S._NNP Stevens_NNP ._.
+1939_CD ._.
+The_DT Relation_NN of_IN Pitch_NN to_TO the_DT Duration_NNP of_IN a_DT Tone_NN ._.
+The_DT Journal_NNP of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 10_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :255_CD ._.
+Marc_NNP Sumner_NNP ,_, Eibe_NNP Frank_NNP ,_, and_CC Mark_NNP Hall_NNP ._.
+2005_CD ._.
+Speeding_VBG up_RP Logistic_NNP Model_NNP Tree_NNP Induction_NNP ._.
+In_IN Knowledge_NNP Discovery_NNP in_IN Databases_NNP :_: PKDD_NNP 2005_CD ,_, volume_NN 3721_CD ,_, pages_NNS 675_CD --_: 683_CD ._.
+Springer_NNP ._.
+Ann_NNP E._NNP Thyme-Gobbel_NNP and_CC S._NNP E._NNP Hutchins_NNP ._.
+1996_CD ._.
+On_IN Using_VBG Prosodic_NNP Cues_NNS in_IN Automatic_NNP Language_NNP Identification_NNP ._.
+In_IN Proceeding_VBG of_IN Fourth_JJ International_NNP Conference_NNP on_IN Spoken_NNP Language_NNP Processing_NNP ._.
+ICSLP_NNP '_POS 96_CD ,_, volume_NN 3_CD ,_, pages_NNS 1768_CD --_: 1772_CD ._.
+Ingo_NNP R._NNP Titze_NNP and_CC Daniel_NNP W._NNP Martin_NNP ._.
+1998_CD ._.
+Principles_NNS of_IN Voice_NNP Production_NNP ._.
+The_DT Journal_NNP of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 104_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :1148_CD ._.
+Pedro_NNP A._NNP Torres-Carrasquillo_NNP ,_, Douglas_NNP A._NNP Reynolds_NNP ,_, and_CC J._NNP R._NNP Deller_NNP ._.
+2002_CD ._.
+Language_NN Identification_NN Using_VBG Gaussian_NNP Mixture_NNP Model_NNP Tokenization_NNP ._.
+In_IN 2002_CD IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP ,_, and_CC Signal_NNP Processing_NNP ,_, volume_NN 1_CD ,_, pages_NNS I_PRP --_: 757_CD --_: I_PRP --_: 760_CD ._.
+Geoffrey_NNP I._NNP Webb_NNP ._.
+2000_CD ._.
+MultiBoosting_VBG :_: a_DT Technique_NNP for_IN Combining_NNP Boosting_NNP and_CC Wagging_NNP ._.
+Machine_NN Learning_NNP ,_, 40_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :159_CD --_: 196_CD ._.
+Yiming_NNP Yang_NNP and_CC Jan_NNP O_NNP Pedersen_NNP ._.
+1997_CD ._.
+A_DT Comparative_NNP Study_NNP on_IN Feature_NNP Selection_NNP in_IN Text_NNP Categorization_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Fourteenth_NNP International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ,_, volume_NN 97_CD ,_, pages_NNS 412_CD --_: 420_CD ._.
+Yeshwant_NNP K._NNP Muthusamy_NNP ,_, Ronald_NNP A._NNP Cole_NNP ,_, and_CC Beatrice_NNP T._NNP Oshika_NNP ._.
+1992_CD ._.
+The_DT OGI_NNP Multi-language_NNP Telephone_NNP Speech_NNP Corpus_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Spoken_NNP Language_NNP Proceedings_NNP -LRB-_-LRB- ICSLP_NNP ,_, 現_CD INTERSPEECH_NNP -RRB-_-RRB- ,_, volume_NN 92_CD ,_, pages_NNS 895_CD --_: 898_CD ._.
+Citeseer_NNP ._.
+Steve_NNP Young_NNP ,_, Gunnar_NNP Evermann_NNP ,_, Dan_NNP Kershaw_NNP ,_, Gareth_NNP Moore_NNP ,_, Julian_NNP Odell_NNP ,_, Dave_NNP Ollason_NNP ,_, Valtcho_NNP Valtchev_NNP ,_, and_CC Phil_NNP Woodland_NNP ._.
+2002_CD ._.
+The_DT HTK_NNP book.volume_NN 3_CD ._.
+Entropic_NNP Cambridge_NNP Research_NNP Laboratory_NNP Cambridge_NNP ._.
+Stephen_NNP A_NNP Zahorian_NNP and_CC Hongbing_NNP Hu_NNP ._.
+2008a_NNS ._.
+YAAPT_NNP Pitch_NNP Tracking_NNP MATLAB_NNP Function_NN ._.
+The_DT Journal_NNP of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 123:4559_CD --_: 4571_CD ._.
+Stephen_NNP A._NNP Zahorian_NNP and_CC Hongbing_NNP Hu_NNP ._.
+2008b_JJ ._.
+A_DT Spectral/Temporal_NNP Method_NNP for_IN Robust_NNP Fundamental_JJ Frequency_NN Tracking_NNP ._.
+The_DT Journal_NNP of_IN the_DT Acoustical_NNP Society_NNP of_IN America_NNP ,_, 123_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :4559_CD --_: 4571_CD ._.
+Marc_NNP A._NNP Zissman_NNP ._.
+1996_CD ._.
+Comparison_NN of_IN Four_CD Approaches_NNPS to_TO Automatic_NNP Language_NNP Identification_NNP of_IN Telephone_NNP Speech_NNP ._.
+IEEE_NNP Transactions_NNS on_IN Speech_NN and_CC Audio_NNP Processing_NNP ,_, 4_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :31_CD --_: 44_CD ,_, January_NNP ._.
+Marc_NNP A._NNP Zissman_NNP and_CC E._NNP Singer_NNP ._.
+1994_CD ._.
+Automatic_NNP Language_NNP Identification_NNP of_IN Telephone_NNP Speech_NNP Messages_NNPS using_VBG Phoneme_NNP Recognition_NNP and_CC N-gram_NNP Modeling_NNP ._.
+In_IN Proceedings_NNP of_IN ICASSP_NNP '_POS 94_CD ._.
+IEEE_NNP International_NNP Conference_NNP on_IN Acoustics_NNP ,_, Speech_NNP and_CC Signal_NNP Processing_NNP ,_, volume_NN i_FW ,_, pages_NNS I_PRP --_: 305_CD ._.

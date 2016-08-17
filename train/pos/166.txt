@@ -1,0 +1,316 @@
+Predicting_VBG Sector_NNP Index_NNP Movement_NNP with_IN Microblogging_NNP Public_NNP Mood_NNP Time_NNP Series_NNP on_IN Social_NNP Issues_NNP Abstract_NNP This_DT paper_NN develops_VBZ a_DT technique_NN that_WDT unfolds_VBZ public_JJ mood_NN on_IN social_JJ issues_NNS from_IN real-time_JJ so_RB -_: cial_JJ media_NNS for_IN sector_NN index_NN prediction_NN ._.
+We_PRP first_RB propose_VBP a_DT low-dimensional_JJ support_NN vector_NN ma_SYM -_: chine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- classifier_JJR using_VBG surrounding_VBG infor_NN -_: mation_NN for_IN twitter_NN sentiment_NN classification_NN ._.
+Then_RB ,_, we_PRP generate_VBP public_JJ mood_NN time_NN series_NN by_IN aggre_JJ -_: gating_VBG message-level_JJ weighted_JJ daily_JJ mood_NN -LRB-_-LRB- WDM_NNP -RRB-_-RRB- based_VBN on_IN the_DT sentiment_NN classification_NN re_SYM -_: sults_NNS ._.
+Lastly_RB ,_, we_PRP evaluate_VBP our_PRP$ method_NN against_IN the_DT real_JJ stock_NN index_NN in_IN two_CD kinds_NNS of_IN time_NN periods_NNS -LRB-_-LRB- fluctuating_JJ and_CC monotonous_JJ -RRB-_-RRB- separately_RB using_VBG static_JJ cross-correlation_NN coefficient_NN -LRB-_-LRB- CCF_NNP -RRB-_-RRB- and_CC dynamic_JJ vector_NN auto-regression_NN -LRB-_-LRB- VAR_NNP -RRB-_-RRB- ._.
+The_DT ex_FW -_: periments_NNS on_IN ``_`` food_NN safety_NN ''_'' issue_NN show_NN that_IN the_DT proposed_VBN WDM_NNP method_NN outperforms_VBZ the_DT word_NN -_: level_NN baseline_NN method_NN in_IN predicting_VBG stock_NN move_NN -_: ment_NN ,_, especially_RB during_IN fluctuating_JJ period_NN ._.
+1_CD Introduction_NNP Social_NNP media_NNS websites_NNS ,_, such_JJ as_IN Twitter_NNP and_CC Face_NNP -_: book_NN ,_, have_VBP generated_VBN a_DT great_JJ amount_NN of_IN public_JJ opin_NN -_: ions_NNS on_IN a_DT variety_NN of_IN issues_NNS ,_, especially_RB hot_JJ events_NNS and_CC emergencies_NNS ._.
+As_IN a_DT result_NN ,_, user-generated_JJ content_NN has_VBZ become_VBN a_DT significant_JJ resource_NN for_IN exploring_VBG useful_JJ knowledge_NN ._.
+In_IN the_DT use_NN of_IN public_JJ mood_NN entailed_VBN in_IN the_DT real-time_JJ message_NN streaming_VBG ,_, researchers_NNS have_VBP pro-_JJ posed_VBD a_DT wide_JJ range_NN of_IN applications_NNS ,_, for_IN example_NN ,_, election_NN prediction_NN -LRB-_-LRB- Andranik_NNP et_NNP al._NNP ,_, 2009_CD -RRB-_-RRB- ,_, anti-ter_JJ -_: rorism_NN assistance_NN -LRB-_-LRB- Cheong_NNP and_CC Lee_NNP ,_, 2009_CD -RRB-_-RRB- and_CC con_NN -_: sumer_NN confidence_NN poll_NN -LRB-_-LRB- O’Connor_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+In_IN this_DT paper_NN ,_, we_PRP use_VBP it_PRP for_IN stock_NN prediction_NN ._.
+1_CD According_VBG to_TO 2015_CD first_JJ quarter_NN financial_JJ results_NNS released_VBN by_IN Weibo_NNP Corp._NNP ._.
+Figure_NN 1_CD :_: An_DT example_NN tweet_NN from_IN Sina_NNP Weibo_NNP Sina_NNP Weibo_NNP is_VBZ a_DT Twitter-like_JJ microblogging_NN service_NN in_IN China_NNP ._.
+Launched_VBN in_IN 2009_CD ,_, it_PRP now_RB has_VBZ near_RB 200_CD million_CD monthly_JJ active_JJ users1_NN ,_, which_WDT makes_VBZ it_PRP the_DT most_RBS dominant_JJ social_JJ networking_NN service_NN in_IN China_NNP ._.
+Users_NNS discuss_VBP all_DT kinds_NNS of_IN social_JJ topics_NNS and_CC express_VB their_PRP$ opinions_NNS on_IN the_DT platform_NN ._.
+As_IN an_DT example_NN ,_, food_NN safety_NN issue_NN has_VBZ become_VBN a_DT prominent_JJ social_JJ problem_NN and_CC caused_VBD much_JJ concern_NN in_IN recent_JJ years_NNS in_IN China_NNP ._.
+Figure_NN 1_CD is_VBZ an_DT example_NN tweet_NN talking_VBG about_IN food_NN safety_NN from_IN Sina_NNP Weibo_NNP ,_, in_IN which_WDT the_DT author_NN ex_FW -_: presses_NNS his_PRP$ dissatisfaction_NN to_TO the_DT situation_NN of_IN food_NN safety_NN in_IN China_NNP ._.
+Note_VB that_DT besides_IN the_DT text_NN part_NN ,_, there_EX is_VBZ auxiliary_JJ information_NN around_IN the_DT text_NN -LRB-_-LRB- called_VBN sur_SYM -_: rounding_VBG information_NN in_IN this_DT paper_NN -RRB-_-RRB- ._.
+Previous_JJ work_NN shows_VBZ that_IN indicators_NNS from_IN real-time_JJ media_NNS can_MD conceivably_RB be_VB used_VBN to_TO predict_VB changes_NNS for_IN many_JJ economic_JJ indexes_NNS -LRB-_-LRB- Bollen_NNP et_FW al._FW 2011_CD -RRB-_-RRB- ,_, and_CC behavioral_JJ finance_NN theory_NN suggests_VBZ that_IN public_JJ mood_NN can_MD drive_VB stock_NN market_NN -LRB-_-LRB- Nofsinger_NNP ,_, 2005_CD -RRB-_-RRB- ._.
+Hence_RB ,_, we_PRP construct_VBP public_JJ mood_NN time_NN series_NN by_IN analyzing_VBG mil_SYM -_: lions_NNS of_IN tweets_NNS in_IN a_DT time_NN span_NN to_TO predict_VB stock_NN move_NN -_: ment_NN in_IN the_DT corresponding_JJ period_NN ._.
+Our_PRP$ main_JJ contributions_NNS are_VBP summarized_VBN as_IN follows_VBZ :_: We_PRP investigate_VBP how_WRB microblogging_VBG public_JJ mood_NN on_IN certain_JJ social_JJ issues_NNS relates_VBZ to_TO the_DT stock_NN move_NN -_: ment_NN of_IN the_DT relevant_JJ sector_NN ._.
+In_IN this_DT study_NN ,_, we_PRP con_VBP -_: duct_VB an_DT experiment_NN on_IN the_DT topic_NN of_IN ``_`` food_NN safety_NN ''_'' using_VBG tweets_NNS from_IN Sina_NNP Weibo_NNP and_CC Shenzhen_NNP Stock_NNP Exchange_NNP -LRB-_-LRB- SZSE_NNP -RRB-_-RRB- Food_NNP &_CC Beverage_NNP Index_NNP ._.
+We_PRP utilize_VBP not_RB only_RB the_DT text_NN part_NN of_IN the_DT tweet_NN ,_, but_CC also_RB the_DT non-text_JJ part_NN ,_, namely_RB surrounding_VBG infor_NN -_: mation_NN and_CC user_NN information_NN ,_, and_CC show_VBP that_IN both_DT sentiment_NN classification_NN and_CC public_JJ mood_NN time_NN se_FW -_: ries_NNS can_MD be_VB improved_VBN in_IN use_NN of_IN it_PRP ._.
+We_PRP study_VBP how_WRB the_DT methods_NNS perform_VBP for_IN different_JJ types_NNS of_IN periods_NNS of_IN stock_NN index_NN ._.
+Both_DT CCF_NNP and_CC VAR_NNP evaluation_NN show_NN that_WDT public_JJ mood_NN time_NN series_NN has_VBZ better_JJR predictive_JJ power_NN during_IN fluctuating_VBG pe_SYM -_: riod_NN than_IN monotonous_JJ period_NN ._.
+To_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, this_DT work_NN is_VBZ the_DT first_JJ to_TO predict_VB sector_NN stock_NN index_NN by_IN public_JJ mood_NN time_NN series_NN on_IN social_JJ issues_NNS in_IN Chinese_JJ microblogging_NN ._.
+2_CD Related_JJ Work_NN 2.1_CD Stock_NNP Prediction_NN with_IN Social_NNP Media_NNP With_IN the_DT popularity_NN of_IN real-time_JJ social_JJ media_NNS ,_, stock_NN market_NN prediction_NN based_VBN on_IN microblog_NN has_VBZ attracted_VBN more_JJR and_CC more_JJR attention_NN ._.
+Past_JJ work_NN can_MD be_VB roughly_RB categorized_VBN into_IN two_CD classes_NNS depending_VBG on_IN whether_IN sentiment_NN is_VBZ used_VBN or_CC not_RB ._.
+One_CD class_NN is_VBZ sentiment-based_JJ methodology_NN using_VBG general_JJ tweets_NNS ._.
+Bollen_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- generated_VBD seven_CD different_JJ public_JJ mood_NN time_NN series_NN using_VBG Opinion_NNP -_: Finder_NNP and_CC Google-Profile_NNP of_IN Mood_NNP States_NNPS ._.
+Both_DT Granger_NNP causality_NN analysis_NN with_IN Dow_NNP Jones_NNP Indus_NNP -_: trial_NN Average_JJ and_CC a_DT Self-Organizing_NNP Fuzzy_NNP Neural_NNP Network_NNP predictor_NN showed_VBD that_IN ``_`` Calm_NNP ''_'' dimension_NN had_VBD the_DT best_JJS predictive_JJ effect_NN ._.
+Vu_NN et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ex_FW -_: perimented_VBD a_DT Decision_NNP Tree_NNP classifier_NN with_IN different_JJ combinations_NNS of_IN features_NNS to_TO predict_VB daily_RB up_RB and_CC down_RB movement_NN of_IN the_DT stock_NN price_NN of_IN tech_NN compa_NN -_: nies_NNS ._.
+They_PRP proved_VBD that_IN positive/negative_JJ sentiment_NN ,_, bullish/bearish_JJ orientation_NN ,_, and_CC stock_NN price_NN change_NN of_IN three_CD previous_JJ days_NNS are_VBP effective_JJ features_NNS ._.
+Si_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- proposed_VBD a_DT topic-based_JJ method_NN called_VBN con_NN -_: tinuous_JJ Dirichlet_NNP Process_NNP Mixture_NNP to_TO learn_VB subtopics_NNS ,_, drew_VBD sentiment_NN time_NN series_NN by_IN aggregating_VBG opinion_NN words_NNS over_IN the_DT topic_NN chains_NNS ._.
+The_DT VAR_NNP analysis_NN with_IN Standard_NNP &_CC Poor_NNP 's_POS 100_CD showed_VBD its_PRP$ effectiveness_NN ._.
+The_DT other_JJ class_NN is_VBZ non-sentiment-based_JJ methodol_NN -_: ogy_NN using_VBG financial_JJ tweets_NNS ._.
+Bar-Haim_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- distinguished_VBN expert_NN users_NNS from_IN non-experts_NNS accord_NN -_: ing_NN to_TO the_DT correctness_NN of_IN stock_NN rise_NN prediction_NN against_IN one_CD 's_POS bullish_JJ posts_NNS ._.
+The_DT precision_NN of_IN predicting_VBG stock_NN rise_NN showed_VBD that_IN Per-User_NNP Model_NNP after_IN expert_JJ classification_NN performed_VBD better_JJR than_IN other_JJ pattern_NN methods_NNS ._.
+Ruiz_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- represented_VBN financial_JJ tweet_NN sets_NNS as_IN graphs_NNS ,_, and_CC extracted_VBD activity_NN features_NNS and_CC graph_NN features_NNS ._.
+The_DT correlation_NN analysis_NN with_IN stock_NN market_NN activities_NNS showed_VBD that_IN the_DT number_NN of_IN connected_JJ components_NNS is_VBZ the_DT best_JJS feature_NN ,_, and_CC the_DT correlation_NN with_IN traded_VBN volume_NN is_VBZ stronger_JJR than_IN stock_NN price_NN ._.
+Our_PRP$ method_NN belongs_VBZ to_TO the_DT former_JJ ._.
+The_DT main_JJ defer_VBP -_: ence_NN from_IN previous_JJ work_NN is_VBZ that_IN our_PRP$ public_JJ mood_NN time_NN series_NN is_VBZ based_VBN on_IN message-level_JJ sentiment_NN analysis_NN on_IN general_JJ tweets_NNS ,_, and_CC we_PRP creatively_RB in_IN -_: volve_NN non-text_JJ information_NN ._.
+Besides_IN ,_, unlike_IN Bollen_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- predicting_VBG composite_JJ index_NN value_NN or_CC Vu_NN et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- forecasting_NN individual_JJ company_NN stock_NN price_NN ,_, we_PRP observe_VBP how_WRB public_JJ mood_NN on_IN social_JJ issues_NNS affects_VBZ stock_NN movement_NN at_IN sector_NN level_NN ._.
+2.2_CD Sentiment_NN Analysis_NN in_IN Social_NNP Media_NNP Pang_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Turney_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- are_VBP gen_SYM -_: erally_RB regarded_VBN as_IN the_DT start_NN of_IN the_DT research_NN area_NN of_IN sentiment_NN analysis_NN ._.
+These_DT two_CD works_NNS represent_VBP the_DT two_CD main_JJ methodologies_NNS of_IN sentiment_NN analysis_NN --_: supervised_JJ method_NN and_CC unsupervised_JJ method_NN ._.
+Pang_NNP fed_NN machine_NN learning_VBG methods_NNS ,_, including_VBG support_NN vector_NN machine_NN ,_, maximum_NN entropy_NN ,_, and_CC Naïve_NNP Bayes_NNP ,_, with_IN features_NNS such_JJ as_IN n-gram_JJ ,_, part_NN of_IN speech_NN to_TO classify_VB the_DT polarity_NN of_IN texts_NNS ._.
+On_IN the_DT other_JJ hand_NN ,_, Turney_NNP calculated_VBD the_DT comprehensive_JJ polarity_NN of_IN a_DT text_NN by_IN aggregating_VBG the_DT similarity_NN between_IN the_DT key_NN -_: words_NNS in_IN the_DT text_NN and_CC the_DT seed_NN words_NNS ,_, which_WDT is_VBZ known_VBN as_IN SO-PMI_NNP algorithm_NN ._.
+Broader_JJR overviews_NNS on_IN traditional_JJ sentiment_NN analysis_NN are_VBP presented_VBN in_IN Pang_NNP and_CC Lee_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- and_CC Liu_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Recent_JJ studies_NNS on_IN sentiment_NN analysis_NN focus_NN on_IN social_JJ media_NNS ._.
+As_IN an_DT early_JJ attempt_NN ,_, Go_VB et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- anno_SYM -_: tated_VBD a_DT noisy_JJ training_NN set_VBN based_VBN on_IN emoticons_NNS in_IN tweets_NNS ,_, carried_VBD out_RP analogous_JJ experiments_NNS as_IN Pang_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- ,_, and_CC showed_VBD that_IN SVM_NNP classier_JJR achieved_VBD the_DT best_JJS precision_NN ._.
+Pak_NNP and_CC Paroublek_NNP -LRB-_-LRB- 2010_CD -RRB-_-RRB- proposed_VBD a_DT Naïve_NNP Bayes_NNP classifier_NN using_VBG n_SYM -_: gram_NN -LRB-_-LRB- embedded_VBN in_IN POS_NNP distribution_NN -RRB-_-RRB- ,_, andcon_NN -_: cluded_VBD that_IN 2-gram_JJ worked_VBD the_DT best_JJS ._.
+The_DT SemEval_NNP Task_NNP reports_NNS -LRB-_-LRB- Nakov_NNP et_FW al._FW ,_, 2013_CD ;_: Rosenthal_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- pointed_VBD out_RP that_IN participants_NNS leveraged_VBN vari_SYM -_: ous_NN features_NNS ,_, depended_VBD heavily_RB on_IN sentiment_NN lexi_NNS -_: cons_NNS ,_, and_CC obtained_VBD the_DT best_JJS accuracy_NN around_IN 70_CD %_NN ._.
+Xiang_NNP and_CC Zhou_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- proposed_VBD a_DT topic-based_JJ sen_NN -_: timent_NN mixture_NN model_NN ,_, and_CC achieved_VBD higher_JJR preci_SYM -_: sion_NN than_IN the_DT top_JJ systems_NNS in_IN SemEval_NNP 2013_CD ._.
+Despite_IN some_DT special_JJ characteristics_NNS of_IN Sina_NNP Weibo_NNP ,_, sentiment_NN analysis_NN of_IN Sina_NNP Weibo_NNP is_VBZ similar_JJ to_TO Twit_NNP -_: ter_NN ._.
+Wang_NNP and_CC Li_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- proposed_VBD a_DT SVM_NNP classifier_NN with_IN three-layered_JJ features_NNS which_WDT aggregate_JJ syno_NN -_: nyms_NNS and_CC highly-related_JJ words_NNS to_TO help_VB reduce_VB fea_SYM -_: ture_NN dimension_NN ,_, and_CC indicated_VBD that_IN it_PRP was_VBD better_JJR than_IN SVM_NNP classifiers_NNS using_VBG n-gram_JJ and_CC POS_NNP tags_NNS ._.
+Xie_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- proposed_VBD a_DT set_NN of_IN weibo-specific_JJ features_NNS ,_, such_JJ as_IN the_DT number_NN of_IN emoticon_NN ,_, for_IN SVM_NNP classifier_NN ,_, and_CC achieved_VBD an_DT accuracy_NN around_IN 67_CD %_NN ._.
+Concerning_VBG word-based_JJ features_NNS unavoidably_RB cause_VBP data_NNS sparseness_NN problem_NN ,_, similar_JJ to_TO Xie_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ,_, we_PRP use_VBP a_DT SVM_NNP classifier_NN with_IN microblog-specific_JJ low-dimensional_JJ features_NNS due_JJ to_TO its_PRP$ flexibility_NN and_CC efficiency_NN ._.
+However_RB ,_, unlike_IN previous_JJ work_NN that_WDT only_RB employs_VBZ the_DT text_NN part_NN of_IN a_DT tweet_NN ,_, we_PRP also_RB make_VBP use_NN of_IN non-text_JJ information_NN ,_, such_JJ as_IN the_DT number_NN of_IN re_NN -_: tweet_NN and_CC the_DT number_NN of_IN reply_NN ._.
+3_CD Approach_NNP Outline_NNP The_NNP overall_JJ framework_NN of_IN our_PRP$ research_NN is_VBZ shown_VBN in_IN Figure_NN 2_CD ._.
+The_DT core_NN of_IN our_PRP$ method_NN is_VBZ to_TO build_VB a_DT sound_JJ public_JJ mood_NN time_NN series_NN curve_NN from_IN tweets_NNS ._.
+This_DT in_IN -_: cludes_NNS two_CD main_JJ steps_NNS --_: bullish/bearish_JJ orientation_NN representation_NN and_CC daily_JJ mood_NN indicator_NN design_NN ._.
+Re_NNP -_: garding_VBG the_DT manifestation_NN of_IN bullish/bearish_JJ orienta_NN -_: tion_NN ,_, instead_RB of_IN using_VBG lexicon-based_JJ word_NN sentiment_NN of_IN general_JJ tweets_NNS -LRB-_-LRB- Bollen_NNP et_FW al._FW ,_, 2011_CD ;_: Si_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- or_CC explicit_JJ buy/sell_JJ transaction_NN of_IN stock_NN tweets_NNS -LRB-_-LRB- Bar_NN -_: Haim_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, we_PRP utilize_VBP global_JJ polarity_NN of_IN gen_NN -_: eral_JJ tweets_NNS ,_, since_IN global_JJ polarity_NN contains_VBZ more_RBR ac_SYM -_: curate_VB emotion_NN about_IN its_PRP$ related_JJ object_NN and_CC general_JJ tweets_NNS allow_VBP us_PRP to_TO have_VB a_DT wider_JJR base_NN -LRB-_-LRB- Vu_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+In_IN our_PRP$ study_NN ,_, tweets_NNS are_VBP divided_VBN into_IN three_CD cat_NN -_: egories_NNS :_: ``_`` positive_JJ ''_'' ,_, ``_`` negative_JJ ''_'' and_CC ``_`` neutral_JJ ''_'' ._.
+A_DT positive_JJ tweet_NN can_MD be_VB a_DT potential_JJ ``_`` bullish_JJ ''_'' signal_NN and_CC a_DT negative_JJ message_NN can_MD be_VB a_DT potential_JJ ``_`` bearish_JJ ''_'' sig_NN -_: nal_NN for_IN stock_NN price_NN ._.
+To_TO have_VB a_DT better_JJR message-level_NN sentiment_NN classifica_NN -_: tion_NN ,_, we_PRP train_VBP a_DT customized_VBN classifier_NN for_IN our_PRP$ se_FW -_: lected_VBN topic_NN instead_RB of_IN using_VBG existing_VBG general_JJ tools_NNS -LRB-_-LRB- e.g._FW OpinionFinder_NNP -RRB-_-RRB- ._.
+We_PRP first_RB extract_VB text_NN features_NNS and_CC non-text_JJ features_NNS from_IN tweets_NNS and_CC feed_VB the_DT classier_JJR with_IN different_JJ combination_NN of_IN them_PRP to_TO find_VB the_DT best_JJS classifier_NN ._.
+Using_VBG the_DT customized_VBN classifier_NN ,_, we_PRP then_RB obtain_VB the_DT global_JJ polarity_NN of_IN each_DT tweet_NN ._.
+Ra_SYM -_: ther_NN than_IN using_VBG simple_JJ sentiment_NN ratio_NN as_IN daily_JJ mood_NN ,_, we_PRP take_VBP non-text_JJ information_NN into_IN account_NN to_TO design_VB a_DT weighted_JJ daily_JJ mood_NN indicator_NN ._.
+The_DT public_JJ mood_NN time_NN series_NN curve_NN can_MD be_VB easily_RB drawn_VBN once_IN we_PRP had_VBD weighted_VBN daily_JJ mood_NN values_NNS of_IN each_DT day_NN ._.
+We_PRP adopt_VBP two_CD different_JJ perspectives_NNS to_TO evaluate_VB the_DT prediction_NN 2_CD Multiclass_JJ classification_NN problem_NN can_MD be_VB turned_VBN into_IN multiple_JJ binary_JJ classification_NN ._.
+Figure_NN 2_CD :_: Overview_NNP of_IN the_DT research_NN ability_NN of_IN mood_NN curves_NNS --_: CCF_NNP and_CC VAR_NNP ._.
+Moreover_RB ,_, as_IN shown_VBN at_IN the_DT bottom_NN of_IN Figure_NN 2_CD ,_, the_DT stock_NN index_NN is_VBZ divided_VBN into_IN fluctuating_JJ period_NN and_CC two_CD monoto_NN -_: nous_JJ periods_NNS according_VBG to_TO the_DT degree_NN of_IN volatility_NN ._.
+We_PRP will_MD compare_VB how_WRB differently_RB mood_NN curves_NNS per_IN -_: form_NN during_IN the_DT two_CD kinds_NNS of_IN time_NN periods_NNS ._.
+4_CD Customized_JJ Sentiment_NN Classification_NN Both_DT Pang_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- and_CC Go_VB et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- reported_VBD that_IN SVM_NNP outperformed_VBD other_JJ classifiers_NNS where_WRB n_SYM -_: gram_NN and_CC POS_NN features_NNS are_VBP used_VBN and_CC unigram_NN feature_NN worked_VBD the_DT best_JJS for_IN traditional_JJ and_CC twitter_NN sentiment_NN analysis_NN respectively_RB ._.
+Therefore_RB ,_, we_PRP choose_VBP SVM_NNP as_IN our_PRP$ classier_JJR ._.
+Given_VBN the_DT limited_JJ length_NN of_IN microblog_NN -_: ging_NN -LRB-_-LRB- only_RB 140_CD characters_NNS -RRB-_-RRB- ,_, word-based_JJ n-gram_NN and_CC POS_NN features_NNS lead_VBP to_TO severe_JJ sparseness_NN problem_NN ,_, so_IN we_PRP design_VBP our_PRP$ microblog-specific_JJ features_NNS for_IN SVM_NNP classifier_NN ._.
+4.1_CD SVM_NNP Classifier_NNP Support_NN Vector_NNP Machine_NNP -LRB-_-LRB- SVM_NNP -RRB-_-RRB- has_VBZ proved_VBN to_TO be_VB an_DT efficient_JJ classification_NN model_NN ._.
+The_DT basic_JJ idea_NN of_IN it_PRP is_VBZ to_TO find_VB a_DT hyperplane_NN represented_VBN by_IN its_PRP$ normal_JJ vec_NN -_: tor_NN which_WDT maximizes_VBZ the_DT margin_NN -LRB-_-LRB- the_DT distance_NN from_IN the_DT closest_JJS instances_NNS -RRB-_-RRB- ._.
+This_DT search_NN then_RB be_VB -_: comes_VBZ a_DT constrained_VBN optimization_NN problem_NN and_CC the_DT solution_NN can_MD be_VB written_VBN as_IN :_: =_SYM ∑_CD ,_, ≥_CD 0_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- =_SYM 1_CD can_MD be_VB obtained_VBN by_IN standard_JJ quadratic_JJ pro-_JJ gramming_NN ,_, are_VBP support_NN vectors_NNS lying_VBG on_IN the_DT mar_NN -_: gin_NN and_CC ∈_CD -LCB-_-LRB- 1_CD ,_, −_CD 1_CD -RCB-_-RRB- 2_CD ._.
+SVM_NNP can_MD solve_VB non-linear_JJ tasks_NNS using_VBG kernel_NN trick_NN as_RB well_RB ._.
+In_IN this_DT work_NN ,_, our_PRP$ SVM_NNP classifier_NN is_VBZ trained_VBN with_IN LibSVM_NNP toolkit_NN us_PRP -_: ing_VBG RBF_NNP kernel_NN -LRB-_-LRB- Chang_NNP and_CC Lin_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Methodology_NNP Weibo_NNP Feed_NNP s.weibo.com_NNP Corpus_NNP Training_VBG Sampling_NNP Preprocessing_NNP Sentiment_NN Classification_NN SVM_NNP Daily_NNP Mood_NNP Indicator_NNP 1_CD 0_CD −_NN 1_CD Proposed_NNP WDM_NNP Baseline_NNP :_: Raw_NNP Time_NNP Series_NNP Evaluations_NNPS CCF_NNP lag_NN lag_NN ,_, w_VB Weighted_NNP Indicator_NNP Design_NNP Lexicon-based_JJ sentiment_NN ratio_NN Normalization_NNP Stock_NNP Index_NNP lag_NN ,_, w_NN VAR_NNP Shenzhen_NNP 399131_CD Text_NNP Features_VBZ Non-Text_NNP Features_NNP Corr_NNP Coef_NNP P-value_NNP Up_IN and_CC Down_IN Accuracy_NNP Timeline_NNP Fluctuating_NNP Period_NNP 2012 10/08_CD 11/09_CD Monotonous_NNP Period_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- Monotonous_JJ Period_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 12/03_CD 12/31_CD where_WRB 4.2_CD Text_NN Features_VBZ Besides_IN traditional_JJ text_NN features_NNS like_IN n-gram_JJ ,_, POS_NNP tags_NNS and_CC simple_JJ lexicon-based_JJ emotional_JJ word_NN number_NN ,_, there_EX are_VBP many_JJ microblogging-specific_JJ fea_NN -_: tures_NNS in_IN the_DT text_NN part_NN of_IN the_DT tweet_NN ._.
+Entity_NNP Tag_NNP Count_NNP Entities_NNPS are_VBP special_JJ elements_NNS in_IN microblog_NN ._.
+We_PRP exploit_VBP four_CD kinds_NNS of_IN often-used_JJ en_IN -_: tities_NNS :_: hashtag_NN ,_, @tag_NN ,_, URL_NNP and_CC seed_NN ._.
+The_DT former_JJ three_CD are_VBP the_DT same_JJ as_IN Twitter_NNP ,_, while_IN the_DT last_JJ one_CD is_VBZ a_DT weibo-specific_JJ entity_NN which_WDT allows_VBZ users_NNS to_TO sub_SYM -_: scribe_NN RSS_NNP news_NN about_IN tagged_VBN words_NNS ._.
+The_DT number_NN of_IN the_DT four_CD kinds_NNS of_IN entities_NNS are_VBP used_VBN as_IN features_NNS ._.
+These_DT features_NNS were_VBD also_RB used_VBN in_IN previous_JJ work_NN ._.
+Set-count_JJ Neutral_NNP Signals_NNP Based_VBD on_IN observation_NN of_IN many_JJ tweets_NNS ,_, we_PRP collect_VBP heuristic_JJ neutral_JJ signals_NNS for_IN identifying_VBG objective_JJ tweets_NNS ._.
+The_DT more_JJR neutral_JJ sig_NN -_: nals_VBZ a_DT tweet_NN contains_VBZ ,_, the_DT more_JJR possible_JJ it_PRP is_VBZ objec_JJ -_: tive_NN ._.
+The_DT neutral_JJ signals_NNS consist_VBP of_IN two_CD subsets_NNS ._.
+One_CD subset_NN includes_VBZ :_: bracket_NN pair_NN -LRB-_-LRB- -RRB-_-RRB- ,_, book_NN title_NN mark_NN -LRB-_-LRB- -RRB-_-RRB- ,_, time_NN patterns_NNS -LRB-_-LRB- e.g._FW *_SYM 月_SYM *_SYM 日_FW -RRB-_-RRB- and_CC numbers_NNS -LRB-_-LRB- e.g._FW 35_CD %_NN -RRB-_-RRB- ,_, and_CC the_DT other_JJ contains_VBZ 5_CD types_NNS of_IN words_NNS :_: news_NN vocabulary_NN -LRB-_-LRB- e.g._FW 宣传日_FW -RRB-_-RRB- ,_, Q&A_NNP words_NNS -LRB-_-LRB- e.g._FW 科普_FW -RRB-_-RRB- ,_, stock_NN terms_NNS -LRB-_-LRB- e.g._FW 沪指_FW -RRB-_-RRB- ,_, sharing_VBG words_NNS -LRB-_-LRB- e.g._FW 下载_FW -RRB-_-RRB- ,_, and_CC irrelevant_JJ words_NNS -LRB-_-LRB- e.g._FW 抽奖_FW -RRB-_-RRB- ._.
+Neutral_JJ signals_NNS are_VBP set-count_JJ features3_CD ,_, so_RB there_EX are_VBP two_CD features_NNS in_IN total_NN ._.
+Sentence_NN Count_NN Unlike_IN English_JJ tweet_NN ,_, Chinese_JJ tweet_NN can_MD easily_RB have_VB 3_CD or_CC more_JJR sentences_NNS ,_, so_RB sen_SYM -_: tence_NN information_NN is_VBZ important_JJ for_IN weibo_NN ._.
+We_PRP count_VBP the_DT number_NN of_IN sentences_NNS ,_, the_DT number_NN of_IN exclamatory_JJ sentence_NN indicated_VBN by_IN exclamation_JJ marks_NNS ,_, and_CC the_DT number_NN of_IN questions_NNS indicated_VBN by_IN question_NN marks_NNS ._.
+The_DT sum_NN of_IN emotional_JJ words_NNS is_VBZ the_DT basic_JJ element_NN to_TO measure_VB the_DT sentiment_NN of_IN a_DT sentence_NN or_CC a_DT mes_FW -_: sage_NN ._.
+We_PRP compute_VBP sentiment_NN scores_NNS at_IN both_DT sen_SYM -_: tence_NN and_CC message_NN level_NN ._.
+They_PRP are_VBP defined_VBN as_IN :_: |_JJ U_NNP |_NN others_NNS ._.
+Thus_RB we_PRP compute_VBP sentiment_NN scores_NNS of_IN them_PRP respectively_RB ._.
+Firstly_RB ,_, we_PRP clear_VBP up_RP tags_NNS -LRB-_-LRB- entities_NNS ,_, emoticon_NN etc._FW -RRB-_-RRB- in_IN the_DT raw_JJ tweet_NN ,_, normalize_VB the_DT ab_SYM -_: normal_JJ full_JJ stops_NNS ,_, tokenize_VBP the_DT cleaned_VBN text_NN using_VBG NLPIR/ICTCLAS_NNP and_CC segment_NN it_PRP into_IN sentences_NNS by_IN punctuation_NN -LRB-_-LRB- period_NN ,_, semicolon_NN ,_, exclamation_JJ mark_NN ,_, question_NN mark_NN ,_, and_CC suspension_NN points_NNS -RRB-_-RRB- ._.
+Then_RB we_PRP turn_VBP sentences_NNS into_IN word_NN polarity_NN vectors_NNS and_CC gain_VB the_DT sentence_NN score_NN by_IN summing_VBG up_RP all_PDT the_DT values_NNS in_IN the_DT vector_NN ._.
+For_IN example_NN ,_, ``_`` 各种_FW |_FW 食品安全_FW |_FW 问题_FW |_FW 集中_FW |_FW 爆发_FW |_FW ,_, |_SYM 有些_FW |_FW 是_FW |_FW 问题_FW |_FW ,_, |_SYM 有些_FW |_FW 是_FW |_FW 误解_FW |_FW 。_FW ''_'' is_VBZ transformed_VBN to_TO -LSB-_NNP 0,0,-1_CD ,1_CD ,_, -1,0,0,0_CD ,_, -1,0,0,0_CD ,_, -_: 1,0_CD -RSB-_NNP ._.
+This_DT calculation_NN relies_VBZ heavily_RB on_IN the_DT quality_NN of_IN polarity_NN dictionaries_NNS ._.
+There_EX are_VBP three_CD open-source_JJ sentiment_NN lexicons_NNS for_IN Chinese_JJ :_: How-net_JJ dictionary_NN ,_, DTU_NNP ontology_NN dictionary_NN and_CC NTU_NNP dictionary_NNS ._.
+By_IN comparing_VBG the_DT effectiveness_NN of_IN these_DT lexicons_NNS and_CC their_PRP$ combinations_NNS on_IN a_DT small_JJ test_NN set_NN ,_, we_PRP use_VBP the_DT integration_NN of_IN all_DT of_IN them_PRP ._.
+Message_NN Sentiment_NN Score_NN We_PRP compute_VBP two_CD global_JJ sentiment_NN scores_NNS by_IN emoticons_NNS and_CC emotional_JJ words_NNS respectively_RB ._.
+Emoticon_NNP is_VBZ such_JJ a_DT special_JJ reference_NN for_IN noisy_JJ labeling_VBG -LRB-_-LRB- Pak_NNP and_CC Paroubek_NNP ,_, 2010_CD -RRB-_-RRB- and_CC a_DT strong_JJ indicator_NN of_IN global_JJ polarity_NN -LRB-_-LRB- Kouloumpis_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- that_IN we_PRP consider_VBP it_PRP separately_RB ._.
+Unlike_IN the_DT emoticons_NNS in_IN English_NNP that_WDT are_VBP combinations_NNS of_IN ASCII_NNP characters_NNS ,_, Sina_NNP Weibo_NNP emoticons_NNS are_VBP stipu_SYM -_: lated_JJ icons_NNS ._.
+Thus_RB ,_, we_PRP first_RB classified_VBD 72_CD often-used_JJ emoticons_NNS in_IN Sina_NNP Weibo_NNP into_IN 3_CD categories_NNS -LRB-_-LRB- positive_JJ ,_, negative_JJ and_CC neutral_JJ -RRB-_-RRB- ,_, then_RB sum_VB up_RP their_PRP$ polarities_NNS as_IN the_DT global_JJ sentiment_NN score_NN ._.
+There_EX are_VBP two_CD emoticons_NNS at_IN the_DT end_NN of_IN the_DT example_NN tweet_NN -LRB-_-LRB- see_VB Figure_NN 1_CD -RRB-_-RRB- ._.
+Global_JJ sentiment_NN score_NN by_IN emotional_JJ words_NNS is_VBZ com_NN -_: puted_VBD the_DT same_JJ as_IN the_DT sentence_NN sentiment_NN score_NN but_CC on_IN a_DT larger_JJR scale_NN ._.
+4.3_CD Non-Text_NNP Features_NNP Apart_RB from_IN text_NN features_NNS ,_, there_EX are_VBP many_JJ metadata_NN of_IN the_DT tweet_NN -LRB-_-LRB- surrounding_VBG information_NN -RRB-_-RRB- and_CC the_DT au_SYM -_: thor_NN -LRB-_-LRB- user_NN information_NN -RRB-_-RRB- ._.
+Previous_JJ studies_NNS have_VBP not_RB made_VBN full_JJ use_NN of_IN these_DT data_NNS ._.
+Since_IN raw_JJ data_NNS is_VBZ stored_VBN in_IN HTML_NNP pages_NNS ,_, basic_JJ fields_NNS enclosed_VBN by_IN HTML_NNP tags_NNS can_MD be_VB extracted_VBN by_IN HTML_NNP parser_NN ._.
+We_PRP extract_VBP message_NN ID_NNP ,_, user_NN ID_NNP ,_, user_NN badge_NN ,_, user_NN nickname_NN ,_, sending_VBG date_NN ,_, sending_VBG source_NN ,_, the_DT number_NN of_IN retweet_NN ,_, the_DT number_NN of_IN replies_NNS ,_, the_DT state_NN of_IN embedded_VBN picture_NN and_CC video_NN ._.
+Some_DT of_IN these_DT fields_NNS are_VBP just_RB identificati_SYM -_: Score_NN -LRB-_-LRB- U_NNP -RRB-_-RRB- =_SYM ∑_FW where_WRB U_NNP denotes_VBZ a_DT unit_NN of_IN text_NN and_CC i_FW denotes_FW a_DT word_NN polarity_NN -LRB-_-LRB- i_FW -RRB-_-RRB- -LRB-_-LRB- 2_LS -RRB-_-RRB- i_FW =_SYM 1_CD or_CC an_DT emoticon_NN whose_WP$ polarity_NN is_VBZ in_IN -LCB-_-LRB- 1_CD ,_, 0,-1_CD -RCB-_-RRB- ._.
+Sentence_NN Sentiment_NN Score_NN The_DT first_JJ sentence_NN and_CC the_DT last_JJ sentence_NN are_VBP always_RB more_RBR important_JJ than_IN 3_CD A_DT set-count_JJ feature_NN is_VBZ a_DT count_NN of_IN the_DT number_NN of_IN instances_NNS from_IN a_DT set_NN of_IN terms_NNS ._.
+on_IN with_IN little_JJ meaning_NN such_JJ as_IN message_NN ID_NNP and_CC user_NN ID_NNP ,_, while_IN other_JJ fields_NNS can_MD potentially_RB be_VB useful_JJ fea_NN -_: tures_NNS ._.
+Surrounding_VBG Information_NN Surrounding_VBG infor_NN -_: mation_NN refers_VBZ to_TO the_DT fields_NNS surrounding_VBG the_DT text_NN part_NN of_IN the_DT tweet_NN -LRB-_-LRB- see_VB Figure_NN 1_CD -RRB-_-RRB- ._.
+In_IN our_PRP$ study_NN ,_, user_NN badge_NN ,_, the_DT number_NN of_IN retweet_NN ,_, the_DT number_NN of_IN replies_NNS ,_, the_DT state_NN of_IN embedded_VBN picture_NN and_CC video_NN are_VBP selected_VBN as_IN features_NNS ._.
+User_NNP Information_NNP We_PRP can_MD access_VB the_DT user_NN infor_NN -_: mation_NN using_VBG Sina_NNP Weibo_NNP user_NN interface_NN by_IN user_NN ID_NNP ._.
+Many_JJ fields_NNS such_JJ as_IN gender_NN ,_, city_NN ,_, badge_NN ,_, and_CC brief_JJ introduction_NN about_IN the_DT user_NN can_MD be_VB returned_VBN ._.
+We_PRP only_RB make_VBP use_NN of_IN three_CD numeric_JJ fields_NNS :_: the_DT number_NN of_IN fol_NN -_: lower_JJR ,_, following_VBG and_CC posted_VBD tweets_NNS ._.
+5_CD Daily_NNP Mood_NNP Indicator_NNP Design_NNP Bollen_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- has_VBZ shown_VBN that_IN daily_JJ #positive_JJ /_NN #negative_JJ ratio_NN -LRB-_-LRB- happiness_NN -RRB-_-RRB- time_NN series_NN can_MD repre_VB -_: sent_VBN public_JJ mood_NN and_CC emotionally_RB responded_VBD to_TO hot_JJ social_JJ events_NNS ._.
+Different_JJ from_IN Bollen_NNP 's_POS curves_NNS based_VBN on_IN word_NN polarity_NN aggregation_NN ,_, our_PRP$ time_NN series_NN are_VBP built_VBN on_IN message-level_JJ sentiment_NN analysis_NN ._.
+Considering_VBG the_DT sentiment_NN distribution_NN of_IN our_PRP$ exper_NN -_: iment_NN topic_NN is_VBZ skewed_VBN at_IN the_DT message_NN level_NN -LRB-_-LRB- very_RB few_JJ positive_JJ tweets_NNS on_IN food_NN safety_NN problem_NN -RRB-_-RRB- ,_, we_PRP use_VBP Eq_NNP .3_CD as_IN our_PRP$ basic_JJ daily_JJ mood_NN indicator_NN instead_RB ._.
+It_PRP also_RB means_VBZ the_DT degree_NN of_IN happiness_NN and_CC is_VBZ monoton_NN -_: ically_RB decreasing_VBG -LRB-_-LRB- the_DT more_RBR there_EX are_VBP negative_JJ tweets_NNS ,_, the_DT less_JJR it_PRP will_MD be_VB -RRB-_-RRB- ._.
+The_DT public_JJ mood_NN of_IN day_NN t_NN -LRB-_-LRB- de_FW -_: noted_VBD as_IN Daily_NNP Mood_NNP ,_, DM_NNP -RRB-_-RRB- is_VBZ defined_VBN as_IN :_: -LRB-_-LRB- 3_LS -RRB-_-RRB- where_WRB #_# -LRB-_-LRB- tweet_NN -RRB-_-RRB- denotes_VBZ the_DT number_NN of_IN tweets_NNS in_IN date_NN t_NN and_CC #_# -LRB-_-LRB- tweet_JJ −_NN -RRB-_-RRB- denotes_VBZ the_DT number_NN of_IN nega_JJ -_: tive_JJ tweets_NNS in_IN date_NN t._NN Different_JJ tweets_NNS have_VBP different_JJ weights_NNS ._.
+A_DT tweet_NN that_WDT has_VBZ many_JJ retweets_NNS or_CC posted_VBN by_IN famous_JJ people_NNS will_MD have_VB stronger_JJR impact_NN on_IN public_JJ mood_NN and_CC then_RB on_IN stock_NN market_NN ._.
+So_IN we_PRP need_VBP to_TO take_VB these_DT useful_JJ non_NN -_: text_NN fields_NNS into_IN account_NN ._.
+The_DT weighted_JJ daily_JJ mood_NN -LRB-_-LRB- WDM_NNP -RRB-_-RRB- and_CC Weight_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- are_VBP represented_VBN as_IN :_: WDM_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- =_SYM DM_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- ∗_CD Weight_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- -LRB-_-LRB- 4_LS -RRB-_-RRB- 4_CD http://s.weibo.com/_NN Weight_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- =_SYM log_VB -LRB-_-LRB- ∑_FW t_FW -LRB-_-LRB- retweet_NN -RRB-_-RRB- 2_CD ∑_CD t_NN ,_, −_CD -LRB-_-LRB- retweet_NN -RRB-_-RRB- -LRB-_-LRB- 5_CD -RRB-_-RRB- ∗_CD lg_NN -LRB-_-LRB- ∑_FW t_FW -LRB-_-LRB- follower_NN -RRB-_-RRB- -RRB-_-RRB- -RRB-_-RRB- lg_NN -LRB-_-LRB- ∑_FW t_FW ,_, −_NN -LRB-_-LRB- follower_NN -RRB-_-RRB- -RRB-_-RRB- where_WRB retweet_NN means_VBZ the_DT number_NN of_IN the_DT retweets_NNS of_IN a_DT tweet_NN and_CC follower_NN means_VBZ the_DT number_NN of_IN the_DT fol_NN -_: lowers_VBZ of_IN the_DT author_NN of_IN the_DT tweet_NN ._.
+We_PRP compute_VBP the_DT total_JJ number_NN of_IN them_PRP in_IN day_NN t_NN ._.
+Since_IN follower_NN is_VBZ much_RB greater_JJR than_IN retweet_NN ,_, it_PRP is_VBZ log_VB transformed_VBN ._.
+The_DT product_NN is_VBZ also_RB log_VB transformed_VBN for_IN order_NN reduc_NN -_: tion_NN ._.
+#t_NN -LRB-_-LRB- tweet_NN -RRB-_-RRB- Given_VBN that_IN Sina_NNP Weibo_NNP API_NNP does_VBZ not_RB provide_VB search_NN interface_NN freely_RB as_IN Twitter_NNP does_VBZ ,_, we_PRP scrape_VBP tweets_NNS discussing_VBG food_NN safety_NN with_IN the_DT keyword_NN --_: ``_`` 食品_FW 安全_FW ''_'' -LRB-_-LRB- food_NN safety_NN in_IN Chinese_NNP -RRB-_-RRB- from_IN its_PRP$ search_NN ser_NN -_: vice_NN platform_NN 4_CD ._.
+Unlike_IN Twitter_NNP API_NNP ,_, Sina_NNP Weibo_NNP search_NN platform_NN allows_VBZ to_TO backtrack_VB until_IN 2009_CD ._.
+The_DT collecting_VBG interval_NN is_VBZ the_DT fourth_JJ season_NN of_IN 2012_CD -LRB-_-LRB- Oct._NNP 1st_CD 2012_CD -_: Dec._NNP 31st_CD 2012_CD -RRB-_-RRB- when_WRB food_NN safety_NN problem_NN was_VBD the_DT most_RBS concerned_JJ problem_NN for_IN Chinese_JJ people_NNS ._.
+To_TO sidestep_VB undesired_JJ repetition_NN ,_, the_DT original_JJ option_NN is_VBZ ticked_VBN ._.
+Totally_RB we_PRP fetched_VBD 51,611_CD pieces_NNS of_IN tweets_NNS -LRB-_-LRB- denoted_VBN as_IN Corpus_NNP -RRB-_-RRB- ._.
+A_DT training_NN dataset_NN is_VBZ annotated_VBN for_IN SVM_NNP classifier_NN -LRB-_-LRB- denoted_VBN as_IN Training_NN -RRB-_-RRB- ._.
+In_IN accordance_NN with_IN Go_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, the_DT definition_NN of_IN our_PRP$ polarity_NN is_VBZ ``_`` a_DT personal_JJ positive_JJ or_CC negative_JJ feeling_NN ''_'' ._.
+The_DT polarity_NN is_VBZ pre_SYM -_: sented_VBN as_IN ``_`` +1_CD -LRB-_-LRB- positive_JJ -RRB-_-RRB- ,_, 0_CD -LRB-_-LRB- neutral_JJ -RRB-_-RRB- ,_, and_CC -1_CD -LRB-_-LRB- nega_NN -_: tive_JJ -RRB-_-RRB- ''_'' ._.
+In_IN addition_NN ,_, irrelevant_JJ tweets_NNS and_CC objective_JJ tweets_NNS -LRB-_-LRB- e.g._FW news_NN ,_, commercial_JJ -RRB-_-RRB- are_VBP regarded_VBN as_IN 0_CD -LRB-_-LRB- as_IN strict_JJ neutral_JJ ones_NNS consisting_VBG of_IN both_DT positive_JJ and_CC negative_JJ are_VBP rare_JJ -RRB-_-RRB- ._.
+All_PDT the_DT tweets_NNS were_VBD tagged_VBN with_IN one_CD of_IN -LCB-_-LRB- +1_CD ,_, 0,-1_CD -RCB-_-RRB- by_IN annotators_NNS ._.
+Training_VBG consists_VBZ of_IN 901_CD pieces_NNS of_IN labelled_JJ messages_NNS coming_VBG from_IN a_DT ran_VBD -_: domly_RB selected_VBN date_NN ._.
+6.2_CD Sector_NNP Index_NNP In_IN order_NN to_TO evaluate_VB our_PRP$ public_JJ mood_NN time_NN series_NN ,_, a_DT sector_NN stock_NN index_NN for_IN food_NN industry_NN is_VBZ needed_VBN ._.
+We_PRP select_VBP SZSE_NNP Food_NNP &_CC Beverage_NNP Index_NNP 399131_CD -LRB-_-LRB- de_FW -_: noted_VBD as_IN Index_NNP -RRB-_-RRB- as_IN our_PRP$ stock_NN index_NN ._.
+Index_NNP consists_VBZ of_IN 56_CD main_JJ companies_NNS in_IN food_NN sector_NN of_IN China_NNP ._.
+The_DT pe_SYM -_: DM_NNP -LRB-_-LRB- t_VBN -RRB-_-RRB- =_SYM #_# -LRB-_-LRB- tweet_NN -RRB-_-RRB- t_SYM −_SYM 6_CD 6.1_CD Experiment_NN on_IN Sentiment_NN Classification_NN Text_NNP Data_NNP riod_NN of_IN Index_NNP corresponds_VBZ to_TO Corpus_NNP collecting_VBG pe_SYM -_: riod_NN -LRB-_-LRB- Oct._NNP 1st_CD 2012_CD -_: Dec._NNP 31st_CD 2012_CD -RRB-_-RRB- 5_CD ._.
+To_TO make_VB it_PRP con_VB -_: tinuous_JJ ,_, the_DT values_NNS at_IN weekends_NNS is_VBZ computed_VBN by_IN lin_NN -_: ear_NN interpolation6_NNS ._.
+Figure_NN 3_CD shows_VBZ the_DT Index_NNP curve_NN -LRB-_-LRB- in_IN order_NN to_TO compare_VB with_IN mood_NN curves_NNS ,_, the_DT curve_NN is_VBZ Z-score_JJ normalized_VBN -RRB-_-RRB- ._.
+As_IN we_PRP can_MD see_VB ,_, there_EX are_VBP continuous_JJ decline_NN and_CC in_IN -_: crease_NN periods_NNS in_IN the_DT curve_NN ._.
+On_IN one_CD hand_NN ,_, these_DT long-term_JJ -LRB-_-LRB- soft_JJ -RRB-_-RRB- monotonous_JJ movement_NN will_MD render_VB prediction_NN more_RBR difficult_JJ since_IN public_JJ mood_NN changes_NNS drastically_RB ._.
+On_IN the_DT other_JJ hand_NN ,_, prediction_NN in_IN long_JJ -_: term_NN monotonous_JJ periods_NNS in_IN less_JJR meaningful_JJ than_IN it_PRP is_VBZ in_IN fluctuating_VBG periods_NNS for_IN stock_NN investors_NNS ._.
+So_IN we_PRP discuss_VBP prediction_NN in_IN two_CD types_NNS of_IN periods_NNS :_: fluctuat_SYM -_: ing_NN period_NN -LRB-_-LRB- Oct._NNP 8th_JJ -_: Nov._NNP 9th_CD -RRB-_-RRB- and_CC monotonous_JJ peri_NNS -_: ods_NNS -LRB-_-LRB- Nov._NNP 10th_JJ -_: Dec._NNP 3rd_CD ,_, and_CC Dec_NNP 4th_JJ -_: Dec._NNP 31st_CD -RRB-_-RRB- ._.
+dimension_NN of_IN C_NNP *_SYM classifiers_NNS is_VBZ far_RB way_RB less_JJR than_IN baseline_NN ,_, which_WDT saves_VBZ learning_NN time_NN ._.
+The_DT result_NN also_RB implies_VBZ that_IN the_DT traditional_JJ classification_NN methods_NNS based_VBN on_IN words_NNS have_VBP limitation_NN for_IN sentiment_NN anal_JJ -_: ysis_NN ,_, because_IN word_NN alone_RB is_VBZ not_RB necessarily_RB the_DT car_NN -_: rier_NN of_IN emotion_NN ._.
+Hence_RB ,_, although_IN the_DT dimension_NN is_VBZ very_RB high_JJ ,_, each_DT of_IN them_PRP does_VBZ not_RB contribute_VB much_RB ._.
+In_IN contrast_NN ,_, each_DT of_IN our_PRP$ features_NNS has_VBZ its_PRP$ underlying_JJ influence_NN on_IN the_DT global_JJ polarity_NN ._.
+2_LS ._.
+C2_CD is_VBZ higher_JJR than_IN C1_CD by_IN 2.44_CD %_NN ,_, and_CC C3_NNP decreased_VBN by_IN 4.88_CD %_NN ._.
+This_DT suggests_VBZ surrounding_VBG information_NN improves_VBZ the_DT classification_NN ,_, while_IN user_NN information_NN does_VBZ not_RB ._.
+This_DT makes_VBZ sense_NN because_IN we_PRP know_VBP con_NN -_: troversial_JJ tweets_NNS on_IN social_JJ issues_NNS having_VBG many_JJ re_SYM -_: tweets_NNS or_CC replies_NNS are_VBP more_RBR likely_JJ to_TO be_VB emotional_JJ ._.
+On_IN the_DT contrary_NN ,_, user_NN information_NN is_VBZ not_RB only_RB different_JJ from_IN other_JJ features_NNS in_IN magnitude_NN ,_, but_CC also_RB incom_SYM -_: patible_NN with_IN them_PRP in_IN quality_NN so_IN that_IN it_PRP disturbs_VBZ the_DT learning_NN ._.
+This_DT indicates_VBZ that_IN message_NN sentiment_NN is_VBZ mainly_RB decided_VBN by_IN tweet_NN text_NN and_CC its_PRP$ surrounding_VBG in_IN -_: formation_NN ._.
+As_IN a_DT result_NN ,_, we_PRP utilize_VBP C2_CD as_IN our_PRP$ model_NN ._.
+Now_RB we_PRP look_VBP into_IN the_DT precision_NN of_IN different_JJ categories_NNS ._.
+The_DT precision_NN for_IN neutral_JJ class_NN reaches_VBZ an_DT impressive_JJ 98_CD %_NN ,_, for_IN negative_JJ class_NN -LRB-_-LRB- majority_NN -RRB-_-RRB- reaches_VBZ 72.3_CD %_NN ,_, both_DT of_IN which_WDT are_VBP higher_JJR than_IN Xie_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- 8_CD ._.
+However_RB ,_, public_JJ mood_NN on_IN social_JJ events_NNS always_RB goes_VBZ to_TO extremes_NNS ._.
+The_DT majority_NN of_IN subjective_JJ class_NN in_IN Cor_NNP -_: pus_NN is_VBZ negative_JJ ,_, because_IN public_JJ mood_NN for_IN food_NN safety_NN in_IN China_NNP is_VBZ irritated_JJ at_IN the_DT collecting_VBG period_NN ._.
+There_EX are_VBP only_RB 8_CD positive_JJ samples_NNS in_IN Training_NN and_CC only_RB 1_CD of_IN them_PRP are_VBP classified_VBN correctly_RB ._.
+Consequently_RB ,_, the_DT prediction_NN for_IN positive_JJ tweets_NNS is_VBZ unreliable_JJ ._.
+In_IN fact_NN ,_, according_VBG to_TO manual_JJ check_NN ,_, the_DT positive_JJ tweets_NNS ac_SYM -_: count_NN for_IN less_JJR than_IN 1_CD %_NN of_IN Corpus_NNP ._.
+This_DT is_VBZ why_WRB we_PRP changed_VBD the_DT definition_NN of_IN daily_JJ mood_NN in_IN Section_NN 5_CD ._.
+6.4_CD SVM_NNP Mood_NNP Curve_NNP &_CC Sample_NNP Mood_NNP Curve_NNP In_IN theory_NN ,_, we_PRP simulate_VBP the_DT real_JJ mood_NN curve_NN based_VBN on_IN the_DT result_NN of_IN SVM_NNP classier_JJR ,_, but_CC what_WP if_IN the_DT real_JJ mood_NN curve_NN itself_PRP has_VBZ no_DT predictive_JJ power_NN at_IN the_DT first_JJ place_NN ?_.
+In_IN order_NN to_TO make_VB sure_JJ whether_IN there_EX is_VBZ a_DT relationship_NN between_IN the_DT real_JJ mood_NN curve_NN and_CC the_DT stock_NN index_NN curve_NN ,_, we_PRP annotated_VBD another_DT larger_JJR dataset_NN -LRB-_-LRB- denoted_VBN as_IN Sample_NNP -RRB-_-RRB- ._.
+Sample_NN is_VBZ sampled_VBN from_IN tweets_NNS in_IN Cor_NNP -_: pus_NN during_IN fluctuating_JJ period_NN -LRB-_-LRB- Oct.8th-Nov_JJ .9_CD th_JJ -RRB-_-RRB- at_IN the_DT 7_CD http://www.cs.waikato.ac.nz/ml/weka/_NN 8_CD This_DT is_VBZ a_DT loose_JJ comparison_NN because_IN the_DT training_NN dataset_NN is_VBZ dif_SYM -_: ferent_NN ._.
+Shenzhen_NNP SE_NNP Food_NNP &_CC Beverage_NNP Index_NNP Fluctuating_NNP Period_NNP Monotonous_NNP Period_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- Monotonous_JJ Period_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- 2_CD 1_CD 0_CD -1_CD -2_CD 10/8_CD 10/15_CD 10/22_CD 10/29_CD 11/5_CD 11/12_CD 11/19_CD 11/26_CD 12/3_CD 12/10_CD 12/17_CD 12/24_CD 12/31_CD Figure_NN 3_CD :_: SZSE_NNP Food_NNP &_CC Beverage_NNP closing_VBG values_NNS -LRB-_-LRB- Oct._NNP 8th_JJ -_: Dec._NNP 31st_CD -RRB-_-RRB- 6.3_CD Classification_NNP Result_NN The_DT unigram_NN method_NN for_IN sentiment_NN classification_NN described_VBN in_IN Go_NNP et_FW al._FW -LRB-_-LRB- 2009_CD -RRB-_-RRB- is_VBZ used_VBN as_IN a_DT baseline_NN ._.
+We_PRP employ_VBP WEKA7_NNP to_TO construct_VB the_DT unigram_NN model_NN and_CC classify_VB tweets_NNS by_IN its_PRP$ embedded_VBN LibSVM_NNP ._.
+We_PRP tried_VBD three_CD combinations_NNS of_IN our_PRP$ features_NNS ._.
+The_DT evalu_NN -_: ation_NN method_NN is_VBZ five-fold_JJ cross-validation_NN ._.
+Table_NNP 2_CD show_VBP the_DT precision_NN of_IN each_DT method_NN ._.
+Table_NNP 1_CD :_: The_DT results_NNS of_IN different_JJ classifiers_NNS From_IN Table_NNP 2_CD we_PRP can_MD see_VB :_: 1_LS ._.
+C_NNP *_SYM classifiers_NNS perform_VB better_JJR than_IN the_DT baseline_NN by_IN 10.1_CD %_NN on_IN average_NN ._.
+In_IN addition_NN ,_, the_DT number_NN of_IN the_DT 5_CD Unfortunately_RB 399131_CD Index_NN has_VBZ been_VBN delisted_VBN from_IN Mar_NNP 1st_CD ,_, 2013_CD ._.
+6_CD Since_IN Oct_NNP 1st_CD --_: Oct_NNP 7th_NNP is_VBZ national_JJ holiday_NN in_IN China_NNP ,_, we_PRP ignore_VBP these_DT days_NNS ._.
+Features_NNS #Dim_NNP Precision_NNP baseline_NN :_: unigram_NN 2517_CD 79.69_CD %_NN C1_CD :_: text_NN features_NNS only_RB 13_CD 89.79_CD %_NN C2_NN :_: C1_CD +_NN surrounding_VBG info_NN 17_CD 92.23_CD %_NN C3_NN :_: C2_CD +_NN user_NN info_NN 20_CD 87.35_CD %_NN Z-Score_JJ rate_NN of_IN 20_CD %_NN -LRB-_-LRB- 4106_CD tweets_NNS in_IN total_NN -RRB-_-RRB- 9_CD ._.
+Each_DT tweet_NN has_VBZ been_VBN tagged_VBN by_IN two_CD independent_JJ annotators_NNS ,_, and_CC the_DT agreement_NN rate_NN between_IN annotators_NNS is_VBZ 88_CD %_NN ._.
+The_DT or_CC -_: ganizer_NN double-check_NN the_DT left_VBN inconsistent_JJ 12_CD %_NN ,_, and_CC decide_VB the_DT final_JJ polarity_NN ._.
+First_RB ,_, we_PRP see_VBP how_WRB close_JJ SVM-based_JJ curve_NN is_VBZ to_TO Sam_NNP -_: ple-based_JJ curve_NN ._.
+Figure_NN 4_CD shows_VBZ the_DT two_CD curves_NNS ._.
+The_DT vertical_JJ axis_NN is_VBZ WDM_NNP value_NN ._.
+Figure_NN 4_CD suggests_VBZ that_IN the_DT two_CD curves_NNS are_VBP correlated_JJ significantly_RB -LRB-_-LRB- p-value_JJ of_IN correlation_NN analysis_NN <_CD 0.01_CD -RRB-_-RRB- ,_, which_WDT means_VBZ that_IN the_DT C2_NNP classifier_NN is_VBZ reliable_JJ for_IN building_VBG WDM_NNP time_NN se_FW -_: ries_NNS ._.
+The_DT prediction_NN performance_NN of_IN Sample-based_JJ curve_NN is_VBZ shown_VBN in_IN the_DT next_JJ section_NN ._.
+10_CD ._.
+However_RB ,_, concerning_VBG that_IN original_JJ public_JJ mood_NN is_VBZ highly_RB vibrant_JJ -LRB-_-LRB- O’Connor_NNP et_FW al._FW 2010_CD -RRB-_-RRB- ,_, we_PRP smooth_VBP the_DT mood_NN curves_NNS by_IN moving_VBG average_JJ over_IN a_DT window_NN of_IN the_DT past_JJ 7_CD days_NNS ._.
+Smoothed_VBN time_NN series_NN of_IN Raw_NNP ,_, DM_NNP ,_, and_CC WDM_NNP are_VBP shown_VBN in_IN Figure_NN 5_CD -LRB-_-LRB- Z-score_JJ nor_CC -_: malized_VBN -RRB-_-RRB- ._.
+2_CD 1_CD 0_CD -1_CD -2_CD 10/1_CD 10/8_CD 10/15_CD 10/22_CD 10/29_CD 11/5_CD 11/12_CD 11/19_CD 11/26_CD 12/3_CD 12/10_CD 12/17_CD 12/24_CD 12/31_CD Raw_NNP DM_NNP WDM_NNP Figure_NNP 5_CD :_: Public_NNP mood_NN time_NN series_NN -LRB-_-LRB- Oct._NNP 8t_CD -_: Dec._NNP 31st_CD -RRB-_-RRB- 7.2_CD Cross-Correlation_NNP Coefficient_NNP Cross-correlation_NN coefficient_NN shifts_NNS one_CD curve_NN back_RB and_CC forth_RB to_TO estimate_VB correlation_NN between_IN two_CD series_NN at_IN different_JJ time_NN lag_NN -LRB-_-LRB- Eduardo_NNP et_FW al._FW 2012_CD -RRB-_-RRB- ._.
+We_PRP shift_VBP Index_NNP curve_NN ,_, so_IN the_DT right_JJ part_NN where_WRB lag_NN is_VBZ greater_JJR than_IN 0_CD means_VBZ the_DT ability_NN to_TO predict_VB ._.
+Figure_NN 6_CD shows_NNS correlation_NN coefficients_NNS between_IN mood_NN curves_NNS -LSB-_NNP t_VBD -RSB-_NNP and_CC Index_NNP -LSB-_NNP t_VBD +_CD lag_NN -RSB-_NNP ._.
+We_PRP can_MD see_VB that_IN the_DT WDM_NNP curve_NN has_VBZ the_DT best_JJS similarity_NN with_IN Index_NNP in_IN prediction_NN part_NN in_IN all_PDT the_DT time_NN spans_NNS ._.
+The_DT average_JJ correlation_NN value_NN for_IN WDM_NNP is_VBZ 0.31_CD at_IN predicting_VBG stage_NN in_IN entire_JJ period11_CD ._.
+As_IN expected_VBN ,_, WDM_NNP has_VBZ a_DT similar_JJ trend_NN with_IN Sample_NNP ,_, and_CC what_WP surprised_VBD us_PRP is_VBZ that_IN WDM_NNP is_VBZ even_RB higher_JJR than_IN Sample_NNP curve_NN ._.
+This_DT may_MD be_VB because_IN that_DT Sample_NNP only_RB contains_VBZ 20_CD %_NN of_IN Corpus_NNP ,_, while_IN WDM_NNP observes_VBZ the_DT whole_JJ Corpus_NNP ._.
+Moreover_RB ,_, It_PRP is_VBZ obvious_JJ that_IN WDM_NNP works_VBZ better_RBR than_IN simple_JJ DM_NNP ,_, which_WDT verifies_VBZ our_PRP$ idea_NN that_IN non_SYM -_: text_NN information_NN helps_VBZ ._.
+Besides_IN ,_, we_PRP can_MD see_VB that_IN WDM_NNP works_VBZ much_RB better_RBR in_IN fluctuating_JJ period_NN than_IN monotonous_JJ periods_NNS and_CC achieves_VBZ the_DT best_JJS value_NN when_WRB lag_NN is_VBZ 2_CD in_IN fluctuating_JJ period_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, both_DT DM_NNP and_CC Raw_NNP have_VBP little_JJ predictive_JJ abil_NN -_: ity_NN in_IN fluctuating_JJ period_NN ._.
+7.3_CD Vector_NNP Auto_NN Regression_NN To_TO access_NN dynamic_JJ prediction_NN ability_NN ,_, we_PRP use_VBP the_DT vector_NN auto-regression_NN evaluation_NN proposed_VBN in_IN Si_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- ._.
+The_DT first_JJ order_NN -LRB-_-LRB- lag_NN =_SYM 1_LS -RRB-_-RRB- VAR_NNP model_NN is_VBZ de_IN -_: fined_VBN as_IN :_: 11_CD Eduardo_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- reported_VBD 0.1_CD averagely_RB on_IN their_PRP$ time_NN series_NN ._.
+12_CD 11_CD 10_CD 9_CD 8_CD 7_CD 6_CD 5_CD 4_CD SVM_NNP &_CC Sample_NNP Time_NNP Series_NNP Public_NNP Mood_NNP Time_NNP Series_NNP 10/8_CD 10/11_CD 10/14_CD 10/17_CD 10/20_CD 10/23_CD 10/26_CD 10/29_CD 11/1_CD 11/4_CD 11/7_CD SVM_NNP Sample_NNP Figure_NNP 4_CD :_: SVM_NNP &_CC Sample_NNP WDM_NNP Time_NNP Series_NNP -LRB-_-LRB- Oct._NNP 8th_JJ -_: Nov._NNP 9th_CD -RRB-_-RRB- 7_CD Experiment_NN on_IN Mood_NN Time_NNP Series_NNP Stock_NNP prediction_NN is_VBZ an_DT extremely_RB complex_JJ process_NN ._.
+To_TO better_RBR verify_VB the_DT prediction_NN effect_NN of_IN proposed_VBN mood_NN time_NN series_NN ,_, we_PRP evaluate_VBP it_PRP in_IN two_CD ways_NNS -LRB-_-LRB- CCF_NNP and_CC VAR_NNP -RRB-_-RRB- ._.
+CCF_NNP observes_VBZ the_DT static_JJ similarity_NN be_VB -_: tween_NN mood_NN time_NN series_NN and_CC stock_NN index_NN ,_, while_IN VAR_NNP assesses_VBZ the_DT dynamic_JJ one-day-ahead_JJ prediction_NN ability_NN of_IN mood_NN time_NN series_NN ._.
+Besides_IN ,_, we_PRP evaluate_VBP the_DT proposed_VBN method_NN separately_RB during_IN fluctuating_VBG pe_SYM -_: riod_NN and_CC monotonous_JJ periods_NNS ._.
+7.1_CD Public_NNP Mood_NNP Time_NNP Series_NNP We_PRP apply_VBP the_DT best_JJS C2_NN model_NN to_TO predict_VB the_DT polarity_NN for_IN each_DT tweet_NN in_IN Corpus_NNP ._.
+Since_IN there_EX is_VBZ not_RB yet_RB sim_SYM -_: ilar_NN work_NN on_IN message-level_JJ sentiment_NN time_NN series_NN ,_, we_PRP use_VBP Bollen_NNP 's_POS method_NN as_IN our_PRP$ baseline_NN -LRB-_-LRB- denoted_VBN as_IN Raw_NNP -RRB-_-RRB- ._.
+Based_VBN on_IN WDM_NNP ,_, we_PRP can_MD draw_VB our_PRP$ proposed_VBN time_NN se_FW -_: ries_NNS -LRB-_-LRB- denoted_VBN as_IN WDM_NNP -RRB-_-RRB- ._.
+For_IN comparison_NN ,_, we_PRP also_RB draw_VBP the_DT DM_NNP time_NN series_NN -LRB-_-LRB- -LRB-_-LRB- denoted_VBN as_IN DM_NNP -RRB-_-RRB- -RRB-_-RRB- and_CC Sample-based_JJ mood_NN time_NN series_NN -LRB-_-LRB- denoted_VBN as_IN Sample_NNP -RRB-_-RRB- 9_CD The_DT best_JJS way_NN to_TO obtain_VB the_DT real_JJ curve_NN is_VBZ to_TO tag_VB all_PDT the_DT tweets_NNS in_IN Corpus_NNP ,_, but_CC that_DT is_VBZ too_RB large_JJ for_IN manual_NN annotation_NN ._.
+10_CD To_TO compare_VB with_IN Sample_NNP ,_, the_DT first_JJ 6_CD days_NNS of_IN fluctuating_VBG pe_SYM -_: riod_NN are_VBP cut_VBN off_RP because_IN of_IN smoothing_NN ._.
+WDM_NNP Z-Score_NNP Fluctuating_NNP Period_NNP Monotonous_NNP Periods_NNS Entire_NNP Period_NNP predict_VBP predict_VBP predict_VBP Lag_NN of_IN Index_NNP Figure_NNP 6_CD :_: Correlation_NN coefficient_NN for_IN different_JJ lags_VBZ in_IN different_JJ periods_NNS =_SYM 11_CD −_NN 1_CD =_SYM 21_CD −_NN 1_CD 12_CD −_NN 1_CD ,_, 22_CD −_NN 1_CD ,_, lag_NN 2_CD ,_, which_WDT is_VBZ in_IN accordance_NN with_IN the_DT CCF_NNP result_NN ._.
+-LRB-_-LRB- 6_CD -RRB-_-RRB- Since_IN the_DT curve_NN fluctuates_VBZ much_RB in_IN this_DT period_NN ,_, ac_SYM -_: The_DT training_NN data_NN is_VBZ a_DT sliding_VBG window_NN of_IN the_DT past_JJ w_NN days_NNS ._.
+VAR_NNP uses_VBZ the_DT training_NN data_NNS to_TO predict_VB the_DT one_NN -_: day-ahead_NN up_RP and_CC down_IN of_IN Index_NNP ._.
+In_IN our_PRP$ study_NN ,_, lag_NN is_VBZ in_IN -LCB-_-LRB- 1_CD ,_, 2_CD ,_, 3_CD -RCB-_-RRB- and_CC w_NN is_VBZ in_IN -LCB-_-LRB- 5_CD ,_, 10_CD ,_, 15_CD -RCB-_-RRB- ._.
+Apart_RB from_IN mood_NN curves_NNS ,_, we_PRP test_VBP Index_NNP itself_PRP by_IN univariate_JJ auto_NN -_: regression_NN model_NN for_IN reference_NN ._.
+All_DT curves_NNS are_VBP normalized_VBN to_TO -LSB-_NNP 0_CD ,_, 1_CD -RSB-_NN ._.
+Table_NNP 3_CD shows_VBZ the_DT average_JJ accuracy_NN of_IN the_DT predic_JJ -_: tion_NN in_IN different_JJ lags_VBZ ._.
+We_PRP can_MD see_VB from_IN Table_NNP 3_CD that_WDT WDM_NNP performs_VBZ best_JJS on_IN average_NN in_IN fluctuating_VBG pe_SYM -_: riod_NN ,_, and_CC achieves_VBZ the_DT highest_JJS accuracy_NN 72.9_CD %_NN on_IN curacy_NN of_IN Index_NNP itself_PRP is_VBZ only_RB 51.4_CD %_NN ,_, which_WDT is_VBZ nearly_RB guess_NN ._.
+However_RB ,_, if_IN we_PRP look_VBP at_IN the_DT monotonous_JJ peri_NNS -_: ods_NNS ,_, all_PDT the_DT three_CD mood_NN curves_NNS are_VBP worse_JJR than_IN the_DT Index_NNP itself_PRP ._.
+This_DT is_VBZ because_IN the_DT tendency_NN in_IN monot_NN -_: onous_JJ periods_NNS is_VBZ very_RB clear_JJ ,_, Index_NNP itself_PRP can_MD be_VB a_DT very_RB strong_JJ predictor_NN ._.
+Besides_IN ,_, DM_NNP performs_VBZ the_DT best_JJS among_IN the_DT mood_NN curves_NNS ._.
+In_IN the_DT entire_JJ period_NN ,_, we_PRP combine_VBP a_DT W&D_NNP curve_NN using_VBG WDM_NNP in_IN fluctuating_JJ period_NN and_CC DM_NNP in_IN monotonous_JJ periods_NNS and_CC achieves_VBZ an_DT accuracy_NN of_IN 65.3_CD %_NN averagely_RB ,_, performs_VBZ better_JJR than_IN DM_NNP or_CC WDM_NNP alone_RB ._.
+Since_IN the_DT monotonous_JJ pe_NN -_: riods_NNS is_VBZ nearly_RB twice_RB the_DT length_NN as_IN the_DT fluctuating_VBG pe_SYM -_: riod_NN ,_, the_DT overall_JJ accuracy_NN does_VBZ not_RB win_VB Index_NN ._.
+8_CD Conclusion_NN and_CC Future_NNP Work_NNP In_IN this_DT paper_NN ,_, we_PRP presented_VBD a_DT framework_NN using_VBG pub_NN -_: lic_JJ mood_NN on_IN social_JJ issues_NNS to_TO predict_VB sector_NN index_NN movement_NN ._.
+We_PRP developed_VBD a_DT low-dimensional_JJ super_JJ -_: vised_JJ sentiment_NN classifier_NN and_CC designed_VBN a_DT weighted_JJ daily_JJ mood_NN indicator_NN ._.
+We_PRP found_VBD non-text_JJ information_NN of_IN tweet_NN was_VBD useful_JJ for_IN both_DT sentiment_NN classification_NN and_CC daily_JJ mood_NN de_IN -_: sign_NN ._.
+Experiment_NN results_NNS showed_VBD that_IN our_PRP$ proposed_VBN method_NN worked_VBD best_JJS in_IN terms_NNS of_IN static_JJ CCF_NNP ._.
+For_IN pre_SYM -_: dicting_NN one-day-ahead_NN up_RB and_CC down_RB by_IN VAR_NNP ,_, mood_NN curves_NNS perform_VB better_JJR during_IN fluctuating_JJ period_NN ._.
+Although_IN we_PRP presented_VBD an_DT experiment_NN on_IN the_DT topic_NN of_IN ``_`` food_NN safety_NN ''_'' ,_, the_DT described_VBN technique_NN can_MD be_VB ex_FW -_: tended_VBD to_TO any_DT other_JJ social_JJ topics_NNS ._.
+In_IN the_DT future_NN ,_, we_PRP plan_VBP to_TO experiment_NN controversial_JJ topics_NNS ,_, such_JJ as_IN ``_`` ge_SYM -_: netically_RB modified_VBN food_NN ''_'' ._.
+In_IN addition_NN ,_, since_IN the_DT pre_NN -_: diction_NN power_NN depends_VBZ on_IN period_NN type_NN ,_, it_PRP 's_VBZ meaning_NN -_: ful_NN to_TO judge_VB where_WRB the_DT boundary_NN of_IN the_DT period_NN types_NNS is_VBZ ._.
+These_DT will_MD be_VB part_NN of_IN our_PRP$ future_JJ work_NN ._.
+Fluctuating_VBG Period_NNP Lag_NN Index_NNP Raw_NNP DM_NNP WDM_NNP Hand_VBD 1_CD 0.579_CD 0.592_CD 0.592_CD 0.601_CD 0.592_CD 2_CD 0.454_CD 0.617_CD 0.626_CD 0.729_CD 0.647_CD 3_CD 0.510_CD 0.626_CD 0.550_CD 0.610_CD 0.626_CD avg_NN 0.514_CD 0.612_CD 0.589_CD 0.647_CD 0.622_CD Monotonous_NNP Periods_NNS Lag_NN Index_NNP Raw_NNP DM_NNP WDM_NNP 1_CD 0.755_CD 0.735_CD 0.769_CD 0.683_CD 2_CD 0.757_CD 0.688_CD 0.717_CD 0.738_CD 3_CD 0.797_CD 0.695_CD 0.683_CD 0.667_CD avg_NN 0.769_CD 0.706_CD 0.723_CD 0.696_CD Entire_NNP Period_NNP Lag_NN Index_NNP Raw_NNP DM_NNP WDM_NNP W&D_VBD 1_CD 0.694_CD 0.653_CD 0.658_CD 0.636_CD 0.673_CD 2_CD 0.677_CD 0.668_CD 0.659_CD 0.683_CD 0.678_CD 3_CD 0.685_CD 0.600_CD 0.634_CD 0.591_CD 0.606_CD avg_NN 0.685_CD 0.640_CD 0.650_CD 0.637_CD 0.653_CD Table_NNP 2_CD :_: Average_JJ accuracies_NNS over_IN all_DT training_NN windows_NNS size_NN and_CC different_JJ lags_VBZ in_IN different_JJ periods_NNS -LRB-_-LRB- Boldface_NNP :_: best_JJS performance_NN -RRB-_-RRB- Correlation_NN Coefficient_NNP References_NNP Alec_NNP Go_NNP ,_, Richa_NNP Bhayani_NNP ,_, and_CC Lei_NNP Huang_NNP .2009_CD ._.
+Twitter_NN sentiment_NN classification_NN using_VBG distant_JJ supervision_NN ._.
+CS224N_NNP Project_NNP Report_NNP ,_, Stanford_NNP ,_, pages_NNS 1_CD --_: 6_CD ._.
+Alexander_NNP Pak_NNP and_CC Patrick_NNP Paroubek_NNP ._.
+2010_CD ._.
+Twitter_NNP as_IN a_DT corpus_NN for_IN sentiment_NN analysis_NN and_CC opinion_NN mining_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Seventh_NNP International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP -LRB-_-LRB- LREC_NNP '_POS 10_CD -RRB-_-RRB- ,_, pages_NNS 1320_CD --_: 1326_CD ._.
+Bing_NNP Liu_NNP ._.
+2012_CD ._.
+Sentiment_NN analysis_NN and_CC opinion_NN mining_NN ._.
+Synthesis_NN Lectures_VBZ on_IN Human_NNP Language_NNP Technologies_NNPS ,_, 5_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 167_CD ._.
+Bing_NNP Xiang_NNP and_CC Liang_NNP Zhou_NNP .2014_CD ._.
+Improving_NN twitter_NN sen_SYM -_: timent_NN analysis_NN with_IN topic-based_JJ mixture_NN modeling_NN and_CC semi-supervised_JJ training_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 14_CD -RRB-_-RRB- ,_, pages_NNS 434_CD --_: 439_CD ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2008_CD ._.
+Opinion_NN mining_NN and_CC sen_NN -_: timent_NN analysis_NN ._.
+Foundations_NNS and_CC trends_NNS in_IN information_NN retrieval_NN ,_, 2_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :1_CD --_: 135_CD ._.
+Bo_NNP Pang_NNP ,_, Lillian_NNP Lee_NNP ,_, and_CC Shivakumar_NNP Vaithyanathan_NNP ._.
+2002_CD ._.
+Thumbs_NNS up_IN ?_.
+Sentiment_NN classification_NN using_VBG ma_SYM -_: chine_NN learning_VBG techniques_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Con_NN -_: ference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP '_POS 02_CD -RRB-_-RRB- ,_, pages_NNS 79_CD --_: 86_CD ._.
+Brendan_NNP O’Connor_NNP ,_, Ramnath_NNP Balasubramanyan_NNP ,_, Bryan_NNP R._NNP Routledge_NNP ,_, and_CC Noah_NNP A._NNP Smith_NNP ._.
+2010_CD ._.
+From_IN Tweets_NNS to_TO Polls_NNS :_: Linking_VBG Text_NNP Sentiment_NN to_TO Public_NNP Opinion_NNP Time_NNP Series_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP AAAI_NNP Conference_NNP on_IN Weblogs_NNPS and_CC Social_NNP Media_NNP -LRB-_-LRB- ICWSM_NNP '_POS 10_CD -RRB-_-RRB- ,_, pages_NNS 122_CD --_: 129_CD ._.
+Chih-Chung_NNP Chang_NNP and_CC Chih-Jen_NNP Lin_NNP ._.
+2011_CD ._.
+LIBSVM_NNP :_: A_NNP library_NN for_IN support_NN vector_NN machines_NNS ._.
+In_IN ACM_NNP Transac_NNP -_: tions_NNS on_IN Intelligent_NNP Systems_NNPS and_CC Technology_NNP ,_, 2_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :27_CD ._.
+Eduardo_NNP J._NNP Ruiz_NNP ,_, Vagelis_NNP Hristidis_NNP ,_, Carlos_NNP Castillo_NNP ,_, Aris_NNP -_: tides_NNS Gionis_NNP ,_, Alejandro_NNP Jaimes_NNP ._.
+2012_CD ._.
+Correlating_VBG fi_SYM -_: nancial_JJ time_NN series_NN with_IN micro-blogging_JJ activity_NN ._.
+In_IN Proceedings_NNP of_IN the_DT fifth_JJ ACM_JJ international_JJ conference_NN on_IN Web_NNP search_NN and_CC data_NNS mining_NN -LRB-_-LRB- WSDM_NNP '_POS 12_CD -RRB-_-RRB- ,_, pages_NNS 513_CD --_: 522_CD ._.
+Efthymios_NNP Kouloumpis_NNP ,_, Theresa_NNP Wilson_NNP ,_, and_CC Johanna_NNP Moore_NNP .2011_CD ._.
+Twitter_NN sentiment_NN analysis_NN :_: the_DT good_JJ the_DT bad_JJ and_CC the_DT OMG_NNP !_. ._.
+In_IN Proceedings_NNP of_IN the_DT Fifth_NNP Interna_NNP -_: tional_JJ AAAI_NNP Conference_NN on_IN Weblogs_NNS and_CC Social_NNP Media_NNP -LRB-_-LRB- ICWSM_NNP '_POS 11_CD -RRB-_-RRB- ,_, pages_NNS 538_CD --_: 541_CD ._.
+Jianfeng_NNP Si_NNP ,_, Arjun_NNP Mukherjee_NNP ,_, Bing_NNP Liu_NNP ,_, Qing_NNP Li_NNP ,_, Huayi_NNP Li_NNP ,_, and_CC Xiaotie_NNP Deng_NNP ._.
+2013_CD ._.
+Exploiting_VBG topic_NN based_VBN twitter_NN sentiment_NN for_IN stock_NN prediction_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 51st_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Com_NNP -_: putational_JJ Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 13_CD -RRB-_-RRB- ,_, pages_NNS 24_CD --_: 29_CD ._.
+Johan_NNP Bollen_NNP ,_, Huina_NNP Mao_NNP ,_, and_CC Xiaojun_NNP Zeng_NNP ._.
+2011_CD ._.
+Twit_SYM -_: ter_NN mood_NN predicts_VBZ the_DT stock_NN market_NN ._.
+Journal_NNP of_IN Compu_NNP -_: tational_JJ Science_NN ,_, 2_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD --_: 8_CD ._.
+John_NNP R._NNP Nofsinger_NNP ._.
+2005_CD ._.
+Social_NNP Mood_NNP and_CC Financial_NNP Economics_NNP ._.
+Journal_NNP of_IN Behavioral_NNP Finance_NNP ,_, 6_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :144_CD --_: 160_CD ._.
+Marc_NNP Cheong_NNP and_CC Vincent_NNP C._NNP S._NNP Lee_NNP ._.
+2011_CD ._.
+A_DT microblog_NN -_: ging-based_JJ approach_NN to_TO terrorism_NN informatics_NNS :_: Explora_NNP -_: tion_NN and_CC chronicling_VBG civilian_JJ sentiment_NN and_CC response_NN to_TO terrorism_NN events_NNS via_IN Twitter_NNP ._.
+Information_NNP Systems_NNP Frontiers_NNP ,_, 13_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :45_CD --_: 59_CD ._.
+Peter_NNP D._NNP Turney_NNP .2002_CD ._.
+Thumbs_NNS up_IN or_CC thumbs_NNS down_IN ?_.
+Se_SYM -_: mantic_JJ orientation_NN applied_VBD to_TO unsupervised_JJ classifica_NN -_: tion_NN of_IN reviews_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP '_POS 02_CD -RRB-_-RRB- ,_, pages_NNS 417-424_CD ._.
+Preslav_NNP Nakov_NNP ,_, Sara_NNP Rosenthal_NNP ,_, Zornitsa_NNP Kozareva_NNP ,_, Veselin_NNP Stoyanov_NNP ,_, Alan_NNP Ritter_NNP ,_, and_CC Theresa_NNP Wil_NNP -_: son_NN .2013_CD ._.
+SemEval-2013_NN Task_NNP 2_CD :_: Sentiment_NN Analysis_NN in_IN Twitter_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 7th_NNP International_NNP Work_NNP -_: shop_NN on_IN Semantic_NNP Evaluation_NNP -LRB-_-LRB- SemEval_NNP '_POS 13_CD -RRB-_-RRB- ,_, pages_NNS 312_CD --_: 320_CD ._.
+Roy_NNP Bar-Haim_NNP ,_, Elad_NNP Dinur_NNP ,_, Ronen_NNP Feldman_NNP ,_, Moshe_NNP Fresko_NNP ,_, and_CC Guy_NNP Goldstein_NNP .2011_CD ._.
+Identifying_VBG and_CC Fol_NNP -_: lowing_VBG Expert_NNP Investors_NNS in_IN Stock_NNP Microblogs_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 2011_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP -LRB-_-LRB- EMNLP_NNP '_POS 11_CD -RRB-_-RRB- ,_, pages_NNS 1310_CD --_: 1319_CD ._.
+Sara_NNP Rosenthal_NNP ,_, Alan_NNP Ritter_NNP ,_, Preslav_NNP Nakov_NNP ,_, and_CC Veselin_NNP Stoyanov_NNP ._.
+2014_CD ._.
+SemEval-2014_NNP Task_NNP 9_CD :_: Sentiment_NN Analysis_NN in_IN Twitter_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ Interna_NNP -_: tional_JJ Workshop_NNP on_IN Semantic_NNP Evaluation_NNP -LRB-_-LRB- SemEval_NNP '_POS 14_CD -RRB-_-RRB- ,_, pages_NNS 73_CD --_: 80_CD ._.
+Tien_NNP Thanh_NNP Vu_NNP ,_, Shu_NNP Chang_NNP ,_, Quang_NNP Thuy_NNP Ha_NNP ,_, and_CC Ni_NNP gel_NNP Collier_NNP ._.
+2012_CD ._.
+An_DT Experiment_NN in_IN Integrating_VBG Sentiment_NN Features_NNS for_IN Tech_NNP Stock_NNP Prediction_NNP in_IN Twitter_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT Workshop_NNP on_IN Information_NNP Extraction_NNP and_CC Entity_NNP Analytics_NNPS on_IN Social_NNP Media_NNP Data_NNP -LRB-_-LRB- COLING_NNP '_POS 12_CD -RRB-_-RRB- ,_, pages_NNS 23_CD --_: 38_CD ._.
+Tumasjan_NNP Andranik_NNP ,_, Sprenger_NNP Timm_NNP O_NNP ,_, Sandner_NNP Philipp_NNP G_NNP ,_, Welpe_NNP ,_, and_CC Isabell_NNP M._NNP 2011_CD ._.
+Election_NN Forecasts_NNS with_IN Twitter_NNP :_: How_WRB 140_CD Characters_NNS Reflect_VB the_DT Political_NNP Landscape_NNP ._.
+Social_NNP Science_NNP Computer_NNP Review_NNP ,_, 29_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :402_CD --_: 418_CD ._.
+Xie_NNP Lixing_NNP ,_, Zhou_NNP Ming_NNP ,_, and_CC Sun_NNP Maosong_NNP ._.
+2012_CD ._.
+Hier_SYM -_: archical_JJ structure_NN based_VBN hybrid_JJ approach_NN to_TO sentiment_NN analysis_NN of_IN Chinese_JJ microblog_NN and_CC its_PRP$ feature_NN extraction_NN ._.
+Journal_NNP of_IN Chinese_NNP Information_NNP Processing_NNP ,_, 26_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :73_CD --_: 83_CD ._.

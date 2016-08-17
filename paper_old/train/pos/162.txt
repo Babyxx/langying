@@ -1,0 +1,328 @@
+1_CD Abstract1_NNP Difangzhi_NNP -LRB-_-LRB- 地方志_CD -RRB-_-RRB- is_VBZ a_DT large_JJ collection_NN of_IN local_JJ gazetteers_NNS complied_VBN by_IN local_JJ govern_VBP -_: ments_NNS of_IN China_NNP ,_, and_CC the_DT documents_NNS provide_VBP invaluable_JJ information_NN about_IN the_DT host_NN locali_NNS -_: ty_NN ._.
+This_DT paper_NN reports_VBZ the_DT current_JJ status_NN of_IN using_VBG natural_JJ language_NN processing_NN and_CC text_NN mining_NN methods_NNS to_TO identify_VB biographical_JJ in_IN -_: formation_NN of_IN government_NN officers_NNS so_IN that_IN we_PRP can_MD add_VB the_DT information_NN into_IN the_DT China_NNP Bio_NNP -_: graphical_NN Database_NNP -LRB-_-LRB- CBDB_NNP -RRB-_-RRB- ,_, which_WDT is_VBZ hosted_VBN by_IN Harvard_NNP University_NNP ._.
+Information_NN offered_VBN by_IN CBDB_NNP is_VBZ instrumental_JJ for_IN human_JJ histori_NNS -_: ans_NNS ,_, and_CC serves_VBZ as_IN a_DT core_NN foundation_NN for_IN au_SYM -_: tomatic_JJ tagging_NN systems_NNS ,_, like_IN MARKUS_NNP of_IN the_DT Leiden_NNP University_NNP ._.
+Mining_NNP texts_NNS in_IN Difangzhi_NNP is_VBZ not_RB easy_JJ partially_RB because_IN there_EX is_VBZ litter_NN knowledge_NN about_IN the_DT grammars_NNS of_IN literary_JJ Chinese_JJ so_RB far_RB ._.
+We_PRP employed_VBD tech_SYM -_: niques_NNS of_IN language_NN modeling_NN and_CC conditional_JJ random_JJ fields_NNS to_TO find_VB person_NN and_CC location_NN names_NNS and_CC their_PRP$ relationships_NNS ._.
+The_DT methods_NNS were_VBD evaluated_VBN with_IN realistic_JJ Difangzhi_NNP data_NNS of_IN more_JJR than_IN 2_CD million_CD Chinese_JJ characters_NNS written_VBN in_IN literary_JJ Chinese_NNPS ._.
+Experimental_JJ re_SYM -_: sults_NNS indicate_VBP that_IN useful_JJ information_NN was_VBD discovered_VBN from_IN the_DT current_JJ dataset_NN ._.
+Introduction_NN markers_NNS because_IN the_DT names_NNS of_IN the_DT dynasties_NNS and_CC reign_NN periods_NNS -LRB-_-LRB- 年號_CD ,_, nian2_CD hao4_NN -RRB-_-RRB- are_VBP known_VBN and_CC stable_JJ ._.
+We_PRP apply_VBP techniques_NNS of_IN natural_JJ language_NN processing_NN and_CC machine_NN learning_VBG to_TO find_VB person_NN names_NNS ,_, location_NN names_NNS ,_, and_CC their_PRP$ relationships_NNS in_IN Difangzhi_NNP -LRB-_-LRB- 地方志_CD ,_, DFZ_NNP henceforth_NN -RRB-_-RRB- in_IN the_DT present_JJ work_NN ,_, aiming_VBG to_TO enrich_VB the_DT contents_NNS of_IN the_DT China_NNP Biographical_NNP Database_NNP -LRB-_-LRB- Bol_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+DFZ_NNP is_VBZ a_DT general_JJ name_NN for_IN a_DT large_JJ number_NN of_IN local_JJ gazetteers_NNS that_WDT were_VBD compiled_VBN by_IN local_JJ governments_NNS of_IN different_JJ levels_NNS in_IN China_NNP since_IN as_RB early_JJ as_IN the_DT 6th_JJ century_NN AD_NNP -LRB-_-LRB- cf._NNP Hargett_NNP ,_, 1996_CD -RRB-_-RRB- ._.
+DFZ_NNP contain_VBP a_DT wide_JJ range_NN of_IN information_NN about_IN their_PRP$ host_NN locations_NNS ,_, and_CC the_DT biographical_JJ information_NN about_IN the_DT government_NN officers_NNS is_VBZ our_PRP$ current_JJ focus_NN ._.
+The_DT main_JJ barrier_NN for_IN achieving_VBG our_PRP$ goals_NNS is_VBZ that_IN there_EX is_VBZ little_JJ completed_VBD work_NN in_IN the_DT litera_NN -_: ture_NN about_IN the_DT grammars_NNS for_IN literary_JJ Chinese_JJ ,_, while_IN grammars_NNS are_VBP central_JJ for_IN extracting_VBG named_VBN entities_NNS like_IN person_NN and_CC location_NN names_NNS from_IN texts_NNS with_IN computational_JJ methods_NNS -LRB-_-LRB- Gao_NNP et_FW al._FW ,_, 2005_CD ;_: Nadeau_NNP and_CC Sekine_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+Figure_NN 1_CD shows_VBZ the_DT image_NN of_IN a_DT sample_NN DFZ_NNP page_NN ._.
+In_IN the_DT old_JJ days_NNS ,_, Chinese_JJ texts_NNS were_VBD written_VBN from_IN top_JJ to_TO bottom_JJ and_CC from_IN right_JJ to_TO left_VBN on_IN a_DT page_NN ._.
+Most_JJS linguists_NNS know_VBP that_IN there_EX are_VBP no_DT word_NN boundaries_NNS in_IN modern_JJ Chinese_NNPS ._.
+It_PRP might_MD be_VB quite_RB surprising_JJ for_IN researchers_NNS outside_IN of_IN the_DT Chinese_JJ community_NN that_IN there_EX were_VBD even_RB no_DT punctuations_NNS in_IN literary_JJ Chinese_NNPS ._.
+Without_IN clear_JJ delimiters_NNS between_IN words_NNS and_CC sentences_NNS ,_, it_PRP is_VBZ very_RB challenging_JJ even_RB for_IN people_NNS to_TO read_VB literary_JJ Chinese_JJ ,_, so_IN it_PRP takes_VBZ a_DT serious_JJ research_NN to_TO find_VB ways_NNS not_RB just_RB for_IN segmenting_VBG words_NNS but_CC also_RB for_IN splitting_JJ sentences_NNS in_IN literary_JJ Chinese_JJ -LRB-_-LRB- Huang_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Grammar_NN induction_NN -LRB-_-LRB- de_FW la_FW Higuera_NNP ,_, 2005_CD -RRB-_-RRB- is_VBZ a_DT general_JJ name_NN for_IN enabling_VBG computers_NNS to_TO learn_VB the_DT grammars_NNS of_IN natural_JJ languages_NNS ._.
+Some_DT re_SYM -_: searchers_NNS worked_VBD on_IN the_DT grammars_NNS for_IN selected_VBN sources_NNS of_IN Chinese_JJ ._.
+Huang_NNP et_FW al._FW -LRB-_-LRB- 2001_CD -RRB-_-RRB- ex_FW -_: Toward_IN Algorithmic_NNP Discovery_NNP of_IN Biographical_NNP Information_NNP in_IN Local_NNP Gazetteers_NNP of_IN Ancient_NNP China_NNP Chao-Lin_NNP Liu_NNP †_CD Chih-Kai_NNP Huang_NNP §_NNP Hongsu_NNP Wang_NNP ‡_NNP Peter_NNP K._NNP Bol_NNP !_.
+†_SYM §_FW Department_NNP of_IN Computer_NNP Science_NNP ,_, National_NNP Chengchi_NNP University_NNP ,_, Taiwan_NNP ‡_CD !_.
+Institute_NNP for_IN Quantitative_NNP Social_NNP Science_NNP ,_, Harvard_NNP University_NNP ,_, USA_NNP †_CD Graduate_NNP Institute_NNP of_IN Linguistics_NNPS ,_, National_NNP Chengchi_NNP University_NNP ,_, Taiwan_NNP -LCB-_-LRB- †_SYM chaolin_NN ,_, §_CD 102753029_CD -RCB-_-RRB- @nccu.edu_NN ._.
+tw_NN ,_, -LCB-_-LRB- ‡_SYM hongsuwang_NN ,_, !_.
+pkbol_JJ -RCB-_-RRB- @fas.harvard.edu_NNP Person_NNP and_CC location_NN names_NNS are_VBP two_CD crucial_JJ in_IN -_: gredients_NNS for_IN studying_VBG historical_JJ documents_NNS ._.
+Knowing_VBG the_DT participants_NNS and_CC locations_NNS provides_VBZ a_DT solid_JJ foundation_NN for_IN detecting_VBG and_CC reasoning_NN about_IN the_DT developments_NNS of_IN historical_JJ events_NNS ._.
+Detecting_VBG temporal_JJ markers_NNS is_VBZ also_RB very_RB im_SYM -_: portant_NN for_IN historical_JJ studies_NNS ,_, yet_RB ,_, for_IN Chinese_JJ history_NN ,_, it_PRP is_VBZ relatively_RB easier_JJR to_TO spot_VB the_DT temporal_JJ 1_CD An_DT extended_VBN version_NN of_IN this_DT paper_NN appears_VBZ in_IN the_DT proceedings_NNS of_IN the_DT Third_NNP Big_NNP Humanities_NNP Data_NNP Workshop_NNP in_IN the_DT 2015_CD IEEE_NNP Int_NNP '_POS l_NN Conf_NNP ._.
+on_IN Big_NNP Data_NNP -LRB-_-LRB- Liu_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+The_DT main_JJ contents_NNS of_IN this_DT paper_NN and_CC the_DT workshop_NN paper_NN are_VBP the_DT same_JJ ,_, while_IN the_DT workshop_NN paper_NN is_VBZ an_DT extended_JJ version_NN ._.
+Figure_NN 1_CD ._.
+A_DT page_NN of_IN DFZ_NNP plored_VBD the_DT induction_NN problem_NN with_IN about_IN a_DT thou_NN -_: sand_NN sentences_NNS that_WDT were_VBD extracted_VBN from_IN Hanfeizi_NNP -LRB-_-LRB- 韓非子_CD -RRB-_-RRB- and_CC Xunzi_NNP -LRB-_-LRB- 荀子_CD -RRB-_-RRB- ,_, both_DT of_IN which_WDT are_VBP classics_NNS that_WDT are_VBP more_JJR than_IN two_CD thou_SYM -_: sand_NN years_NNS old_JJ ._.
+Kuo_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- tried_VBD to_TO find_VB phrase-structure_JJ rules_NNS for_IN modern_JJ Chinese_JJ texts_NNS ,_, and_CC Lee_NNP and_CC Kong_NNP -LRB-_-LRB- 2012_CD -RRB-_-RRB- built_VBN treebanks_NNS for_IN Tang_NNP poems_NNS ._.
+Although_IN these_DT researchers_NNS worked_VBD on_IN grammars_NNS for_IN Chinese_JJ texts_NNS ,_, they_PRP encoun_VBP -_: tered_VBN Chinese_JJ patterns_NNS that_WDT are_VBP quite_RB different_JJ from_IN the_DT ones_NNS that_IN we_PRP need_VBP to_TO handle_VB in_IN DFZ_NNP ._.
+Previous_JJ works_NNS for_IN inducing_VBG grammars_NNS of_IN literary_JJ Chinese_JJ employed_VBN some_DT forms_NNS of_IN pre-existing_JJ information_NN to_TO begin_VB the_DT induction_NN procedures_NNS ._.
+Given_VBN that_IN literary_JJ Chinese_JJ texts_NNS consisted_VBD of_IN just_RB long_JJ sequences_NNS of_IN characters_NNS ,_, the_DT needs_NNS for_IN external_JJ information_NN for_IN grammar_NN induction_NN should_MD be_VB expected_VBN ._.
+Hwa_NNP -LRB-_-LRB- 1999_CD -RRB-_-RRB- assumed_VBD that_IN the_DT training_NN corpus_NN was_VBD partially_RB annotated_VBN with_IN high-level_JJ syntactic_JJ labels_NNS ._.
+Lü_NNP et_FW al._FW -LRB-_-LRB- 2002_CD -RRB-_-RRB- started_VBD with_IN bilingual_JJ corpora_NN ._.
+Yu_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- embarked_VBN with_IN a_DT sample_NN treebank_NN ,_, and_CC Boonkwan_NNP and_CC Steedman_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- began_VBD with_IN some_DT syntactic_JJ prototypes_NNS ._.
+We_PRP tackle_VBP the_DT NER_NNP tasks_NNS in_IN literary_JJ Chinese_JJ from_IN two_CD unexplored_JJ perspectives_NNS ._.
+First_RB ,_, we_PRP employ_VBP the_DT biographical_JJ information_NN in_IN the_DT China_NNP Biographical_NNP Database_NNP -LRB-_-LRB- CBDB_NNP ,_, hence_RB -_: forth_RB -RRB-_-RRB- to_TO annotate_VB the_DT DFZ_NNP texts_NNS ,_, learn_VBP language_NN models_NNS -LRB-_-LRB- LMs_NNP ,_, henceforth_NN -RRB-_-RRB- from_IN the_DT annotated_JJ texts_NNS ,_, and_CC extract_VB biographical_JJ information_NN based_VBN on_IN the_DT learned_VBN models_NNS ._.
+Alternatively_RB ,_, we_PRP train_VBP conditional-random-field_JJ -LRB-_-LRB- Sutton_NNP and_CC McCallum_NNP ,_, 2011_CD -RRB-_-RRB- models_NNS with_IN a_DT set_NN of_IN labeled_VBN DFZ_NNP data_NNS that_WDT were_VBD achieved_VBN in_IN -LRB-_-LRB- Bol_NNP et_FW al._FW ,_, 2012_CD ;_: Pang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, and_CC use_VB the_DT condition_NN -_: al-random-field_JJ -LRB-_-LRB- CRF_NNP ,_, henceforth_NN -RRB-_-RRB- models_NNS to_TO extract_VB candidate_NN names_NNS from_IN the_DT test_NN data_NNS ,_, which_WDT is_VBZ another_DT set_NN of_IN DFZ_NNP texts_NNS ._.
+We_PRP have_VBP verified_VBN the_DT findings_NNS of_IN the_DT LM-based_JJ and_CC the_DT CRF-based_JJ methods_NNS ._.
+Both_DT show_VBP very_RB good_JJ results_NNS for_IN NER_NNP in_IN DFZ_NNP ._.
+We_PRP present_VBP the_DT sources_NNS of_IN our_PRP$ data_NNS ,_, define_VB our_PRP$ target_NN problems_NNS ,_, and_CC discuss_VB the_DT motivation_NN for_IN our_PRP$ work_NN in_IN Section_NN 2_CD ._.
+We_PRP then_RB provide_VBP details_NNS about_IN our_PRP$ main_JJ approaches_NNS in_IN two_CD long_JJ sections_NNS ._.
+In_IN Sections_NNS 3_CD and_CC 4_CD ,_, we_PRP look_VBP into_IN de_FW -_: tails_NNS about_IN the_DT LM-based_JJ and_CC CRF-based_JJ meth_NN -_: ods_NNS ,_, respectively_RB ,_, including_VBG the_DT designs_NNS of_IN the_DT classification_NN models_NNS and_CC results_NNS of_IN several_JJ evaluation_NN tasks_NNS ._.
+In_IN Section_NN 5_CD ,_, we_PRP wrap_VBP up_RP this_DT paper_NN with_IN a_DT brief_JJ summary_NN and_CC discussions_NNS about_IN some_DT technical_JJ issues_NNS ._.
+2_CD Data_NNP Sources_NNS ,_, Problem_NNP Definitions_NNPS ,_, and_CC Motivation_NN We_PRP provide_VBP information_NN about_IN the_DT sources_NNS of_IN our_PRP$ data_NNS ,_, define_VBP the_DT problems_NNS that_IN we_PRP wish_VBP to_TO solve_VB ,_, and_CC explain_VB the_DT rationality_NN of_IN our_PRP$ approaches_NNS in_IN this_DT section_NN ._.
+2.1_CD Unlabeled_NNP Data_NNP Currently_NNP ,_, we_PRP have_VBP two_CD sets_NNS of_IN DFZ_NNP text_NN files_NNS ._.
+The_DT unlabeled_JJ part_NN has_VBZ more_JJR than_IN 900_CD thousand_CD of_IN characters_NNS that_WDT were_VBD extracted_VBN from_IN 83_CD vol_NN -_: umes_NNS of_IN local_JJ gazetteers_NNS -LRB-_-LRB- Bol_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+The_DT labeled_VBN part_NN will_MD be_VB presented_VBN in_IN Section_NN 2.4_CD ._.
+These_DT 83_CD volumes_NNS were_VBD compiled_VBN between_IN the_DT middle_NN of_IN the_DT Ming_NNP dynasty_NN -LRB-_-LRB- 1368-1644AD_NNP -RRB-_-RRB- and_CC the_DT early_JJ Min-Guo_NNP period_NN -LRB-_-LRB- since_IN 1912AD_NNP -RRB-_-RRB- ._.
+These_DT books_NNS were_VBD produced_VBN by_IN governments_NNS of_IN different_JJ levels_NNS at_IN 65_CD locations_NNS in_IN China_NNP ._.
+Figure_NN 1_CD shows_VBZ a_DT sample_NN page_NN from_IN this_DT col_NN -_: lection_NN ._.
+It_PRP is_VBZ hard_JJ to_TO count_VB the_DT number_NN of_IN col_NN -_: umns_NNS on_IN this_DT page_NN ._.
+Typically_RB ,_, we_PRP consider_VBP that_IN a_DT column_NN ,_, in_IN this_DT case_NN ,_, consists_VBZ of_IN two_CD thinner_JJR columns_NNS ._.
+A_DT person_NN name_NN is_VBZ emphasized_VBN by_IN oc_SYM -_: cupying_VBG the_DT width_NN of_IN a_DT column_NN ,_, and_CC details_NNS about_IN this_DT person_NN are_VBP recorded_VBN in_IN the_DT thin_JJ columns_NNS ._.
+Therefore_RB ,_, we_PRP would_MD say_VB that_IN the_DT leftmost_JJS three_CD columns_NNS of_IN text_NN in_IN Figure_NN 1_CD would_MD read_VB like_IN the_DT passage_NN shown_VBN in_IN Figure_NN 2_CD ._.
+The_DT DFZ_NNP texts_NNS may_MD contain_VB characters_NNS that_WDT are_VBP not_RB or_CC seldom_RB used_VBN in_IN modern_JJ Chinese_NNPS ._.
+If_IN these_DT characters_NNS have_VBP modern_JJ counterparts_NNS ,_, they_PRP will_MD be_VB substituted_VBN by_IN their_PRP$ modern_JJ replacements_NNS ;_: otherwise_RB ,_, spaces_NNS will_MD take_VB their_PRP$ positions_NNS ._.
+As_IN an_DT example_NN for_IN the_DT former_JJ case_NN ,_, the_DT eleventh_JJ char_NN -_: acter_NN on_IN the_DT second_JJ column_NN from_IN the_DT right_NN in_IN 不知勞洪武元年楊璟取廣西吉尼堅壁不下城破_NNP 執送京師不屈死郡人感其德立廟祀之陳瑜字仲_NNP 庸雷州人廣西中書省都事城破以佩刀自刎有劉_NNP 永錫者潭州人與瑜同事率妻子溺於白龍池死焉_NNP 曾尚賓江西人為義兵千户洪武元年明兵圍靜江_NNP 尚賓守西城城陷身中數鎗知不敵_NNP Figure_NNP 2_CD ._.
+A_DT partial_JJ DFZ_NNP passage_NN from_IN Figure_NN 1_CD Figure_NN 1_CD is_VBZ ``_`` 裏_FW ''_'' -LRB-_-LRB- li3_CD -RRB-_-RRB- ,_, which_WDT may_MD be_VB written_VBN as_IN ``_`` 裡_FW ''_'' -LRB-_-LRB- li3_CD -RRB-_-RRB- in_IN our_PRP$ files_NNS ._.
+When_WRB the_DT latter_JJ cases_NNS occur_VBP ,_, understanding_VBG the_DT original_JJ DFZ_NNP records_NNS will_MD become_VB even_RB more_RBR challenging_JJ ._.
+2.2_CD Problem_NNP Definitions_NNPS We_PRP wish_VBP to_TO build_VB a_DT system_NN that_WDT can_MD extract_VB bio_SYM -_: graphical_JJ information_NN from_IN DFZ_NNP to_TO enrich_VB the_DT contents_NNS of_IN CBDB_NNP ._.
+The_DT current_JJ contents_NNS of_IN CBDB_NNP were_VBD extracted_VBN from_IN sources_NNS other_JJ than_IN DFZ_NNP -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Hence_RB ,_, we_PRP are_VBP inter_SYM -_: ested_VBN in_IN spotting_VBG all_DT types_NNS biographical_JJ infor_NN -_: mation_NN in_IN DFZ_NNP ._.
+In_IN this_DT paper_NN ,_, we_PRP focus_VBP on_IN issues_NNS about_IN find_VBP -_: ing_VBG person_NN names_NNS and_CC location_NN names_NNS ,_, and_CC ex_FW -_: tend_VB to_TO some_DT relevant_JJ topics_NNS ,_, such_JJ as_IN checking_VBG whether_IN the_DT locations_NNS were_VBD native_JJ places_NNS ._.
+In_IN the_DT longer_JJR run_NN ,_, we_PRP will_MD expand_VB our_PRP$ attention_NN to_TO find_VB information_NN about_IN social_JJ networks_NNS and_CC personal_JJ careers_NNS as_RB well_RB ._.
+2.3_CD More_JJR on_IN Motivation_NN For_IN a_DT text_NN passage_NN as_IN illustrated_VBN in_IN Figure_NN 2_CD ,_, it_PRP is_VBZ very_RB challenging_JJ for_IN people_NNS to_TO find_VB useful_JJ in_IN -_: formation_NN without_IN assistive_JJ information_NN ,_, even_RB for_IN modern_JJ generations_NNS of_IN native_JJ speakers_NNS of_IN Chinese_JJ ._.
+In_IN the_DT text_NN file_NN ,_, it_PRP is_VBZ not_RB easy_JJ to_TO find_VB the_DT name_NN ``_`` 陳瑜_FW ''_'' -LRB-_-LRB- chen2_CD yu2_CD -RRB-_-RRB- that_WDT was_VBD written_VBN in_IN larger_JJR characters_NNS in_IN the_DT original_JJ DFZ_NNP ._.
+The_DT grammars_NNS of_IN literary_JJ and_CC modern_JJ Chi_NNP -_: nese_NN are_VBP not_RB exactly_RB the_DT same_JJ ,_, and_CC reading_VBG liter_NN -_: ary_JJ Chinese_JJ is_VBZ a_DT lot_NN harder_JJR than_IN reading_VBG modern_JJ Chinese_JJ ,_, especially_RB when_WRB there_EX are_VBP no_DT boundary_NN markers_NNS between_IN sentences_NNS ._.
+In_IN addition_NN ,_, histori_SYM -_: cal_NN knowledge_NN is_VBZ also_RB required_VBN for_IN correct_JJ word_NN segmentation_NN and_CC lexical_JJ disambiguation_NN ,_, which_WDT are_VBP important_JJ for_IN understanding_NN and_CC extracting_VBG desired_VBN information_NN from_IN the_DT texts_NNS ._.
+To_TO achieve_VB our_PRP$ goals_NNS ,_, we_PRP need_VBP some_DT informa_NN -_: tive_JJ sources_NNS for_IN the_DT work_NN of_IN information_NN extrac_NN -_: tion_NN ._.
+The_DT importance_NN of_IN these_DT informative_JJ sources_NNS for_IN our_PRP$ methods_NNS for_IN extracting_VBG infor_NN -_: mation_NN is_VBZ just_RB like_IN that_DT of_IN the_DT machine-readable_JJ dictionaries_NNS for_IN the_DT methods_NNS for_IN handling_VBG mod_NN -_: ern_NN natural_JJ languages_NNS ._.
+Our_PRP$ approaches_NNS are_VBP innovative_JJ because_IN we_PRP utilize_VBP the_DT biographical_JJ information_NN in_IN CBDB_NNP to_TO provide_VB semantic_JJ information_NN about_IN the_DT DFZ_NNP texts_NNS ._.
+In_IN contrast_NN ,_, the_DT literature_NN that_IN we_PRP reviewed_VBD in_IN Section_NNP 1_CD carried_VBD out_RP grammar_NN induction_NN with_IN such_JJ linguistic_JJ knowledge_NN as_IN part-of-speech_NN tags_NNS and_CC syntactic_JJ structures_NNS ._.
+2.4_CD Labeled_NNP Data_NNP We_PRP have_VBP a_DT set_NN of_IN labeled_VBN DFZ_NNP data_NNS ._.
+This_DT set_NN of_IN data_NNS was_VBD collected_VBN from_IN 143_CD volumes_NNS of_IN DFZ_NNP ,_, which_WDT contained_VBD more_JJR than_IN 1498_CD thousand_CD of_IN characters_NNS ._.
+The_DT DFZ_NNP texts_NNS were_VBD labeled_VBN with_IN regular_JJ expressions_NNS -LRB-_-LRB- REs_NNS ,_, henceforth_NN -RRB-_-RRB- that_WDT were_VBD com_NN -_: piled_VBN by_IN domain_NN experts_NNS -LRB-_-LRB- Bol_NNP et_FW al._FW ,_, 2012_CD ;_: Pang_NNP et_FW al._FW 2014_CD -RRB-_-RRB- ,_, and_CC the_DT REs_NNS were_VBD designed_VBN to_TO ex_FW -_: tract_NN biographical_JJ information_NN ._.
+The_DT labeled_VBN data_NNS were_VBD then_RB saved_VBN as_IN records_NNS in_IN a_DT large_JJ table_NN with_IN 113,784_CD records_NNS in_IN total_NN ._.
+Each_DT record_NN has_VBZ many_JJ fields_NNS ,_, and_CC the_DT fields_NNS were_VBD designed_VBN to_TO contain_VB a_DT wide_JJ variety_NN of_IN fac_NN -_: toids_NNS about_IN the_DT individuals_NNS ._.
+Major_JJ fields_NNS contain_VBP information_NN about_IN an_DT individual_NN 's_POS legal_JJ name_NN ,_, style_NN name_NN -LRB-_-LRB- 字_CD ,_, zi4_CD -RRB-_-RRB- ,_, pen_NN name_NN -LRB-_-LRB- 號_CD ,_, hao4_CD -RRB-_-RRB- ,_, dyn_SYM -_: asty_NN ,_, native_JJ place_NN -LRB-_-LRB- 籍貫_CD ,_, ji2_CD guan4_NNS -RRB-_-RRB- ,_, serving_VBG office_NN -LRB-_-LRB- 官職_CD ,_, guan1_CD zhi2_CD -RRB-_-RRB- ,_, entry_NN method_NN -LRB-_-LRB- 入仕方_CD 法_CD ,_, ru4_CD shi4_CD fang1_CD fa3_NN -RRB-_-RRB- ,_, service_NN time_NN ,_, service_NN location_NN ,_, and_CC reign_NN period_NN -LRB-_-LRB- 年號_FW ,_, nian2_JJ hao4_NN -RRB-_-RRB- ._.
+Due_JJ to_TO the_DT nature_NN of_IN the_DT original_JJ DFZ_NNP data_NNS and_CC the_DT limited_JJ expressiveness_NN of_IN REs_NNP ,_, a_DT non-negligible_JJ portion_NN of_IN the_DT fields_NNS do_VBP not_RB have_VB values_NNS -LRB-_-LRB- i.e._FW ,_, have_VBP missing_VBG values_NNS -RRB-_-RRB- ,_, and_CC ,_, some_DT -_: times_NNS ,_, the_DT values_NNS are_VBP not_RB correct_VB ._.
+Nevertheless_RB ,_, these_DT labeled_VBN data_NNS remain_VBP to_TO be_VB valuable_JJ and_CC prove_VB to_TO be_VB useful_JJ from_IN the_DT perspectives_NNS of_IN historical_JJ studies_NNS -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC of_IN building_NN machine-learning_NN models_NNS ._.
+3_CD Language-Model-based_JJ Approach_NNP We_PRP annotate_VBP the_DT DFZ_NNP with_IN the_DT biographical_JJ information_NN available_JJ in_IN CBDB_NNP ,_, and_CC find_VB the_DT frequent_JJ and_CC consistent_JJ n-grams_NNS for_IN locating_VBG candidate_NN strings_NNS from_IN which_WDT we_PRP may_MD extract_VB legal_JJ names_NNS and_CC style_NN names_NNS ._.
+3.1_CD Labeling_VBG and_CC Disambiguation_NNP Figure_NNP 3_CD lists_NNS the_DT steps_NNS of_IN our_PRP$ main_JJ procedure_NN ,_, Constrained_VBN N-Grams_NNS -LRB-_-LRB- CNGRAM_NNP -RRB-_-RRB- ,_, for_IN NER_NNP ._.
+First_RB ,_, we_PRP label_VBP the_DT text_NN with_IN information_NN in_IN CBDB_NNP ._.
+Five_CD types_NNS of_IN labels_NNS are_VBP in_IN use_NN now_RB :_: name_NN for_IN a_DT legal_JJ or_CC a_DT style_NN name_NN ,_, address_NN for_IN locations_NNS ,_, entry_NN for_IN entry_NN methods_NNS ,_, office_NN for_IN Procedure_NNP CNGRAM_NNP -LRB-_-LRB- txt_NN ,_, idbs_NNS ,_, cc_NN -RRB-_-RRB- txt_NN :_: DFZ_NNP texts_NNS idbs_NNS :_: information_NN databases_NNS cc_VBP :_: chosen_VBN conditions_NNS for_IN checking_VBG consistency_NN Steps_VBZ 1_CD ._.
+Label_NN the_DT text_NN based_VBN on_IN the_DT given_VBN idbs_NNS ._.
+Prefer_VB the_DT labels_NNS that_WDT cover_VBP longer_JJR strings_NNS ,_, all_DT else_RB being_VBG equal_JJ ._.
+2_LS ._.
+For_IN contexts_NNS of_IN chosen_JJ conditions_NNS ,_, cc_NN ,_, remove_VB the_DT inconsistent_JJ labels_NNS ._.
+3_LS ._.
+Find_VB the_DT frequent_JJ consistent_JJ n-gram_JJ patterns_NNS ,_, and_CC use_VB them_PRP as_IN filter_NN patterns_NNS 4_LS ._.
+Try_VB to_TO extract_VB named_VBN entities_NNS from_IN strings_NNS that_WDT conform_VBP to_TO the_DT filter_NN patterns_NNS Figure_NN 3_CD ._.
+The_DT CNGRAM_NNP procedure_NN service_NN office_NN ,_, and_CC nianhao_NN for_IN reign_NN periods_NNS ._.
+In_IN reality_NN ,_, some_DT strings_NNS may_MD be_VB labeled_VBN in_IN more_JJR than_IN one_CD ways_NNS ._.
+For_IN instance_NN ,_, ``_`` 陽朔_FW ''_'' -LRB-_-LRB- yang1_CD shuo4_CD -RRB-_-RRB- can_MD be_VB a_DT reign_NN period_NN of_IN the_DT Han_NNP dynasty_NN or_CC a_DT location_NN name_NN ,_, and_CC ``_`` 王臣_FW ''_'' -LRB-_-LRB- wang2_CD chen2_NNS -RRB-_-RRB- is_VBZ a_DT very_RB popular_JJ person_NN name_NN that_WDT was_VBD used_VBN in_IN many_JJ dynasties_NNS ._.
+Before_IN we_PRP try_VBP to_TO disam_VB -_: biguate_VB the_DT labeling_VBG ,_, we_PRP will_MD keep_VB all_DT possible_JJ labels_NNS for_IN a_DT string_NN ._.
+We_PRP will_MD use_VB the_DT following_VBG short_JJ excerpt_NN of_IN Figure_NN 2_CD to_TO explain_VB the_DT execution_NN of_IN CNGRAM_NNP ._.
+T1_CD :_: 陳瑜字仲庸雷州人廣西中書省都事_CD Identifying_NNP T1_NNP from_IN its_PRP$ context_NN is_VBZ possible_JJ because_IN this_DT string_NN begins_VBZ and_CC ends_VBZ with_IN words_NNS that_WDT have_VBP corresponding_JJ labels_NNS ._.
+We_PRP will_MD find_VB out_RP that_IN there_EX was_VBD a_DT person_NN named_VBN ``_`` 陳瑜_FW ''_'' -LRB-_-LRB- chen2_CD yu2_CD -RRB-_-RRB- in_IN Yuan_NNP ,_, Ming_NNP ,_, and_CC Qing_NNP dynasties_NNS and_CC that_IN both_DT ``_`` 雷州_NN ''_'' -LRB-_-LRB- lei2_CD zhou1_CD -RRB-_-RRB- and_CC ``_`` 廣西_FW ''_'' -LRB-_-LRB- guang3_CD xi1_CD -RRB-_-RRB- were_VBD addresses_NNS ._.
+At_IN the_DT first_JJ step_NN of_IN CNGRAM_NNP ,_, we_PRP prefer_VBP longer_RB matches_VBZ for_IN the_DT same_JJ type_NN of_IN labels_NNS ,_, as_IN a_DT heuristic_JJ principle_NN for_IN disambiguation_NN ._.
+The_DT principle_NN of_IN preferring_VBG longer_JJR words_NNS is_VBZ very_RB common_JJ for_IN Chinese_JJ word_NN segmentation_NN ._.
+In_IN T1_CD ,_, both_DT ``_`` 中書省都事_NN ''_'' -LRB-_-LRB- zhong1_CD shu1_CD sheng3_NN dou1_CD shi4_CD -RRB-_-RRB- and_CC ``_`` 中書省_FW ''_'' can_MD be_VB labeled_VBN as_IN office_NN names_NNS in_IN the_DT Yuan_NNP dynasty_NN ,_, but_CC we_PRP would_MD choose_VB the_DT former_JJ because_IN ``_`` 中書省都事_NN ''_'' is_VBZ a_DT longer_JJR string_NN ._.
+In_IN contrast_NN ,_, we_PRP do_VBP not_RB have_VB ``_`` 中書_FW 省都事_FW ''_'' for_IN the_DT Ming_NNP dynasty_NN ,_, so_RB will_MD use_VB ``_`` 中書_FW ''_'' and_CC ``_`` 都事_FW ''_'' for_IN Ming_NNP ._.
+We_PRP also_RB assume_VBP that_IN named_VBN entities_NNS in_IN a_DT passage_NN should_MD be_VB consistent_JJ in_IN some_DT senses_NNS ,_, as_IN another_DT heuristic_JJ principle_NN for_IN disambiguation_NN ._.
+This_DT consistent_JJ principle_NN should_MD be_VB reminiscent_JJ of_IN the_DT ``_`` one_CD sense_NN per_IN discourse_NN ''_'' principle_NN for_IN word_NN sense_NN disambiguation_NN -LRB-_-LRB- Yarowsky_NNP ,_, 1995_CD -RRB-_-RRB- ._.
+Currently_RB ,_, we_PRP presume_VBP that_IN named_VBN entities_NNS in_IN a_DT context_NN of_IN six_CD labels_NNS should_MD be_VB referring_VBG to_TO something_NN of_IN the_DT same_JJ dynasty_NN ,_, where_WRB six_CD is_VBZ an_DT arbitrary_JJ choice_NN and_CC can_MD be_VB varied_VBN ._.
+We_PRP have_VBP not_RB used_VBN addresses_NNS to_TO check_VB consistency_NN because_IN we_PRP are_VBP still_RB expanding_VBG our_PRP$ list_NN of_IN addresses_NNS ._.
+There_EX -_: fore_NN ,_, we_PRP do_VBP not_RB accept_VB a_DT ``_`` 陳瑜_NN ''_'' of_IN the_DT Qing_NNP dynasty_NN because_IN neither_DT ``_`` 中書省都事_NN ''_'' nor_CC ``_`` 中_FW 書_FW ''_'' is_VBZ an_DT entity_NN in_IN Qing_NNP ._.
+Using_VBG the_DT consistent_JJ principle_NN ,_, we_PRP will_MD keep_VB labels_NNS only_RB for_IN the_DT Song_NN and_CC Ming_VBG dynasties_NNS for_IN the_DT sample_NN passage_NN ,_, thereby_RB achieving_VBG some_DT disambiguation_NN effects_NNS ._.
+Hence_RB ,_, we_PRP have_VBP two_CD consistent_JJ sequences_NNS :_: -LSB-_JJ name_NN -LRB-_-LRB- ``_`` 陳瑜_NN ''_'' ,_, Yuan_VBN -RRB-_-RRB- ,_, address_NN -LRB-_-LRB- ``_`` 雷州_NN ''_'' -RRB-_-RRB- ,_, address_NN -LRB-_-LRB- ``_`` 廣西_NN ''_'' -RRB-_-RRB- ,_, office_NN -LRB-_-LRB- ``_`` 中書省都事_NN ''_'' ,_, Yuan_NNP -RRB-_-RRB- -RSB-_NNP and_CC -LSB-_NNP name_NN -LRB-_-LRB- ``_`` 陳瑜_NN ''_'' ,_, Ming_NNP -RRB-_-RRB- ,_, address_NN -LRB-_-LRB- ``_`` 雷州_NN ''_'' -RRB-_-RRB- ,_, ad_NN -_: dress_NN -LRB-_-LRB- ``_`` 廣西_NN ''_'' -RRB-_-RRB- ,_, office_NN -LRB-_-LRB- ``_`` 中書_NN ''_'' ,_, Ming_NNP -RRB-_-RRB- ,_, office_NN -LRB-_-LRB- ``_`` 都_NN 事_NN ''_'' ,_, Ming_NNP -RRB-_-RRB- -RSB-_NNP ._.
+3.2_CD Extracting_VBG Unknown_JJ Style_NNP Names_NNPS Aiming_NNP at_IN extracting_VBG person_NN and_CC style_NN names_NNS for_IN government_NN officers_NNS ,_, we_PRP focus_VBP on_IN the_DT consistent_JJ sequences_NNS that_WDT have_VBP at_IN least_JJS one_CD name_NN label_NN ._.
+We_PRP then_RB identify_VB and_CC prefer_VB strings_NNS that_WDT are_VBP associ_SYM -_: ated_VBN with_IN more_JJR different_JJ labels_NNS ._.
+We_PRP show_VBP four_CD such_JJ filter_NN patterns_NNS below_IN ._.
+P1_CD :_: name-address-nianhao-entry_JJ P2_NN :_: name-address-entry-nianhao_NN P3_NN :_: name-name-address-address_JJ P4_NN :_: name-address-address-office_NN These_DT patterns_NNS shed_VBD light_NN on_IN how_WRB person_NN names_NNS were_VBD presented_VBN in_IN DFZ_NNP texts_NNS ._.
+We_PRP can_MD now_RB examine_VB the_DT DFZ_NNP strings_NNS that_WDT are_VBP labeled_VBN with_IN these_DT patterns_NNS to_TO judge_VB whether_IN these_DT patterns_NNS indeed_RB carry_VBP useful_JJ information_NN ._.
+Usually_RB ,_, we_PRP find_VBP regularities_NNS in_IN these_DT statements_NNS ,_, and_CC can_MD implement_VB specific_JJ programs_NNS for_IN extracting_VBG target_NN information_NN from_IN such_JJ patterns_NNS ._.
+Our_PRP$ running_VBG example_NN ,_, T1_CD ,_, contains_VBZ the_DT P4_NNP pattern_NN in_IN two_CD different_JJ ways_NNS ,_, and_CC we_PRP list_VBP the_DT substrings_NNS ._.
+T2_NN :_: 陳瑜字仲庸雷州人廣西中書_CD T3_NN :_: 陳瑜字仲庸雷州人廣西中書省都事_CD In_IN both_DT T2_CD and_CC T3_CD ,_, we_PRP see_VBP that_IN a_DT key_JJ signal_NN ``_`` 字_FW ''_'' -LRB-_-LRB- zi4_CD -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT typical_JJ prefix_NN for_IN style_NN names_NNS ,_, follows_VBZ a_DT name_NN label_NN ._.
+``_`` 字_FW ''_'' is_VBZ followed_VBN by_IN two_CD unlabeled_JJ characters_NNS which_WDT are_VBP then_RB followed_VBN by_IN an_DT address_NN ,_, an_DT unlabeled_JJ character_NN ,_, another_DT address_NN ,_, and_CC an_DT office_NN ._.
+Thus_RB ,_, T2_NNP and_CC T3_NNP are_VBP examples_NNS of_IN pattern_NN P5_CD ,_, where_WRB <name>_JJ and_CC <address>_JJ represent_VBP labeled_VBN strings_NNS and_CC Z1_NNP and_CC Z2_NNP are_VBP two_CD unlabeled_JJ characters_NNS ._.
+P5_CD :_: <name>_VB 字_CD Z1_NNP Z2_NNP <address>_NNP The_NNP unlabeled_JJ characters_NNS ,_, Z1_NNP and_CC Z2_NNP ,_, can_MD be_VB extracted_VBN as_IN style_NN names_NNS because_IN practical_JJ statis_NN -_: tics_NNS indicate_VBP that_IN over_IN 98_CD %_NN of_IN style_NN names_NNS con_VBP -_: tain_NN exactly_RB two_CD characters_NNS ._.
+Therefore_RB ,_, we_PRP em_SYM -_: body_NN this_DT finding_NN with_IN actions_NNS in_IN our_PRP$ programs_NNS ._.
+The_DT third_JJ step_NN in_IN CNGRAM_NNP is_VBZ thus_RB an_DT inter_NN -_: active_JJ step2_NN ,_, and_CC requires_VBZ human_JJ participation_NN ._.
+Notice_NNP that_IN the_DT work_NN for_IN domain_NN experts_NNS is_VBZ quite_RB minimal_JJ and_CC that_IN the_DT results_NNS are_VBP worthwhile_JJ ._.
+A_DT human_JJ expert_NN does_VBZ not_RB have_VB to_TO read_VB 83_CD books_NNS to_TO find_VB the_DT candidate_NN patterns_NNS ._.
+Using_VBG CNGRAM_NNP to_TO locate_VB string_NN patterns_NNS that_WDT contain_VBP useful_JJ infor_NN -_: mation_NN ,_, we_PRP are_VBP able_JJ process_NN a_DT large_JJ amount_NN of_IN data_NNS both_DT efficiently_RB and_CC effectively_RB ._.
+With_IN the_DT extracted_VBN style_NN name_NN ``_`` 仲_FW 庸_FW ''_'' -LRB-_-LRB- zhong4_CD yong1_CD -RRB-_-RRB- ,_, we_PRP can_MD create_VB two_CD records_NNS ,_, i.e._FW ,_, -LRB-_-LRB- Yuan_NNP ,_, 陳瑜_CD ,_, 仲庸_CD -RRB-_-RRB- and_CC -LRB-_-LRB- Ming_NNP ,_, 陳瑜_CD ,_, 仲庸_CD -RRB-_-RRB- ._.
+``_`` 仲庸_FW ''_'' is_VBZ unknown_JJ to_TO CBDB_NNP ,_, and_CC can_MD be_VB added_VBN to_TO CBDB_NNP with_IN the_DT approval_NN of_IN domain_NN experts_NNS ._.
+The_DT CNGRAM_NNP procedure_NN actually_RB helps_VBZ us_PRP learn_VB the_DT language_NN models_NNS that_WDT were_VBD used_VBN in_IN DFZ_NNP ._.
+By_IN inspecting_VBG frequent_JJ and_CC consistent_JJ patterns_NNS that_WDT actually_RB contain_VBP biographical_NN in_IN -_: formation_NN ,_, we_PRP can_MD gather_VB more_JJR knowledge_NN about_IN grammar_NN rules_NNS in_IN DFZ_NNP and_CC then_RB implement_VB NER_NNP procedures_NNS based_VBN on_IN the_DT observations_NNS ._.
+3.3_CD Empirical_JJ Evaluations_NNS We_PRP compared_VBD the_DT extracted_VBN records_NNS with_IN the_DT records_NNS in_IN CBDB_NNP -LRB-_-LRB- 2014_CD version_NN -RRB-_-RRB- to_TO evaluate_VB the_DT CNGRAM_NNP procedure_NN ,_, and_CC show_VB the_DT results_NNS in_IN Table_NNP 1_CD ,_, where_WRB the_DT circles_NNS and_CC crosses_NNS ,_, respec_FW -_: tively_RB ,_, indicate_VBP matches_NNS and_CC mismatches_NNS be_VB -_: tween_IN the_DT extracted_VBN and_CC CBDB_NNP records_NNS ._.
+The_DT matching_JJ results_NNS are_VBP categorized_VBN into_IN types_NNS ,_, e.g._FW ,_, type_NN 1_CD is_VBZ the_DT group_NN that_IN we_PRP had_VBD per_IN -_: fect_JJ matches_NNS in_IN dynasty_NN ,_, legal_JJ name_NN ,_, and_CC style_NN name_NN ._.
+We_PRP have_VBP 609_CD such_JJ instances_NNS in_IN the_DT current_JJ experiment_NN ,_, and_CC the_DT proportion_NN of_IN type-1_JJ in_IN -_: stances_NNS is_VBZ 28.3_CD %_NN of_IN the_DT 2152_CD extracted_VBN records_NNS ._.
+The_DT two_CD records_NNS that_IN we_PRP obtained_VBD in_IN the_DT pre_NN -_: vious_JJ subsection_NN belong_VBP to_TO type_NN 2_CD ,_, because_IN ``_`` 仲_FW 庸_FW ''_'' is_VBZ not_RB known_VBN to_TO CBDB_NNP ._.
+All_DT extracted_VBN rec_NN -_: ords_NNS of_IN type_NN 2_CD provide_VBP opportunities_NNS of_IN finding_VBG unknown_JJ style_NN names_NNS for_IN CBDB_NNP ._.
+However_RB ,_, they_PRP should_MD be_VB confirmed_VBN by_IN historians_NNS ._.
+The_DT experts_NNS may_MD check_VB the_DT original_JJ texts_NNS for_IN this_DT approval_NN procedure_NN ,_, which_WDT is_VBZ an_DT operation_NN facilitated_VBN by_IN 2_CD our_PRP$ software_NN platform_NN ._.
+Records_NNP of_IN types_NNS 3_CD and_CC 4_CD are_VBP similar_JJ to_TO rec_NN -_: ords_NNS of_IN type_NN 2_CD ._.
+They_PRP offer_VBP opportunities_NNS of_IN add_VBP -_: ing_VBG extra_JJ information_NN to_TO CBDB_NNP ._.
+Records_NNP of_IN types_NNS 5_CD ,_, 6_CD ,_, and_CC 7_CD provide_VBP some_DT opportunities_NNS for_IN adding_VBG information_NN about_IN new_JJ persons_NNS in_IN CBDB_NNP ._.
+After_IN inspecting_VBG the_DT original_JJ text_NN segments_NNS ,_, we_PRP will_MD be_VB able_JJ to_TO tell_VB whether_IN these_DT mismatches_NNS are_VBP new_JJ discoveries_NNS or_CC just_RB incorrect_JJ extractions_NNS ._.
+3.4_CD Further_JJ Extensions_NNS We_PRP are_VBP more_RBR ambitious_JJ than_IN verifying_VBG whether_IN CNGRAM_NNP can_MD help_VB us_PRP find_VB correct_JJ biographical_JJ information_NN ._.
+Type-1_NN records_NNS can_MD be_VB instrumental_JJ for_IN advanced_JJ applications_NNS ._.
+They_PRP help_VBP us_PRP find_VB the_DT beginnings_NNS of_IN the_DT descriptions_NNS that_WDT contain_VBP in_IN -_: formation_NN about_IN the_DT owners_NNS of_IN type-1_JJ records_NNS ._.
+If_IN we_PRP can_MD determine_VB the_DT beginnings_NNS of_IN two_CD consecutive_JJ segments_NNS ,_, then_RB we_PRP can_MD find_VB persons_NNS who_WP have_VBP relationships_NNS ._.
+T1_CD is_VBZ the_DT beginning_NN of_IN a_DT major_JJ segment_NN in_IN Figure_NN 1_CD ._.
+The_DT string_NN ``_`` 也兒吉_FW 尼字尚文唐兀氏人_FW ''_'' is_VBZ the_DT beginning_NN of_IN a_DT seg_NN -_: ment_NN for_IN a_DT person_NN named_VBN ``_`` 也兒吉尼_FW ''_'' -LRB-_-LRB- ye3_JJ er2_FW ji2_FW ni2_FW -RRB-_-RRB- ._.
+The_DT person_NN mentioned_VBD between_IN ``_`` 也兒_FW 吉尼字尚文唐兀氏_FW ''_'' and_CC T1_CD ,_, e.g._FW ,_, ``_`` 楊璟_FW ''_'' -LRB-_-LRB- yang2_CD jing3_CD -RRB-_-RRB- ,_, should_MD have_VB some_DT relationships_NNS with_IN ``_`` 也兒吉尼_FW ''_'' ._.
+In_IN addition_NN ,_, it_PRP is_VBZ quite_RB intriguing_JJ to_TO apply_VB pattern_NN P5_NN ,_, in_IN Section_NN 3.2_CD ,_, in_IN an_DT extreme_JJ way_NN ._.
+Figure_NN 4_CD shows_VBZ the_DT raw_JJ data_NN for_IN the_DT text_NN in_IN Fig_NNP -_: ure_NN 2_CD ._.
+If_IN we_PRP compare_VBP Figure_NN 4_CD and_CC the_DT image_NN in_IN Figure_NN 1_CD carefully_RB ,_, we_PRP can_MD find_VB that_IN the_DT circles_NNS were_VBD added_VBN to_TO signify_VB -LRB-_-LRB- 1_LS -RRB-_-RRB- changes_NNS between_IN major_JJ columns_NNS and_CC thin_JJ columns_NNS or_CC -LRB-_-LRB- 2_LS -RRB-_-RRB- changes_NNS of_IN lines_NNS ._.
+The_DT semantics_NNS of_IN the_DT circles_NNS are_VBP am_VBP -_: biguous_JJ ,_, but_CC they_PRP are_VBP potentially_RB useful_JJ ._.
+If_IN ``_`` 字_FW ''_'' is_VBZ really_RB a_DT strong_JJ indicator_NN that_WDT con_VBP -_: nects_NNS legal_JJ names_NNS and_CC style_NN names_NNS ,_, P6_NNP and_CC P7_NNP may_MD lead_VB us_PRP to_TO find_VB pairs_NNS of_IN legal_JJ and_CC style_NN names_NNS ._.
+Here_RB ,_, we_PRP use_VBP C1_CD ,_, C2_CD ,_, and_CC C3_CD to_TO denote_VB Chinese_JJ characters_NNS ._.
+P6_NNP :_: ○_SYM C1_CD C2_CD C3字_NNP Z1_NNP Z2_NNP P7_NNP :_: ○_SYM C1_CD C2_NNP 字_CD Z1_NNP Z2_NNP Table_NNP 1_CD ._.
+Analysis_NN of_IN 2152_CD extracted_VBN records_NNS Type_NNP Dynasty_NNP Name_NN Style_NNP N._NNP Quan_NNP ._.
+Prop_NN ._.
+1_CD ○_CD ○_SYM ○_SYM 609_CD 28.30_CD %_NN 2_CD ○_CD ○_SYM ×_SYM 665_CD 30.90_CD %_NN 3_CD ×_SYM ○_SYM ○_SYM 117_CD 5.44_CD %_NN 4_CD ○_SYM ×_SYM ○_SYM 262_CD 12.17_CD %_NN 5_CD ×_SYM ○_SYM ×_SYM 220_CD 10.22_CD %_NN 6_CD ×_SYM ×_SYM ○_SYM 45_CD 2.09_CD %_NN 7_CD ○_SYM /_SYM ×_SYM ×_SYM ×_SYM 234_CD 10.87_CD %_NN Using_VBG computers_NNS to_TO select_VB the_DT patterns_NNS is_VBZ possible_JJ if_IN we_PRP are_VBP willingly_RB to_TO set_VB a_DT frequency_NN threshold_NN to_TO determine_VB ``_`` frequent_JJ ''_'' patterns_NNS ,_, which_WDT may_MD not_RB be_VB a_DT perfect_JJ choice_NN for_IN historical_JJ studies_NNS ._.
+○_FW 不知勞洪武元年楊璟取廣西吉尼堅壁不下_FW ○_FW 城破執送京師不屈死郡人感其德立廟祀之_FW ○_FW 陳_FW 瑜_FW ○_FW 字仲庸雷州人廣西中書省都事城破以佩刀_FW 自刎_FW ○_FW 有劉永錫者潭州人與瑜同事率妻子溺於_FW 白龍池_FW ○_FW 死_FW ○_FW 焉_FW ○_FW 曾尚賓_FW ○_FW 江西人為義兵千户_FW 洪武元年明兵圍靜_FW ○_FW 江尚賓守西城城陷身中數_FW 鎗知不敵自_FW ○_FW Figure_NN 4_CD ._.
+A_DT partial_JJ DFZ_NNP passage_NN with_IN circles_NNS When_WRB we_PRP find_VBP substrings_NNS that_WDT conform_VBP to_TO P6_CD or_CC P7_CD in_IN the_DT raw_JJ data_NN ,_, we_PRP may_MD want_VB to_TO check_VB whether_IN C1-C2-C3_NNP -LRB-_-LRB- or_CC C1-C2_NN -RRB-_-RRB- is_VBZ a_DT legal_JJ name_NN ,_, Z1-Z2_NN is_VBZ a_DT style_NN name_NN ,_, and_CC their_PRP$ combination_NN is_VBZ for_IN a_DT real_JJ person_NN ._.
+We_PRP evaluated_VBD this_DT heuristic_JJ approach_NN with_IN the_DT unlabeled_JJ data_NNS of_IN Section_NN 2.1_CD ,_, and_CC found_VBD 3765_CD pairs_NNS of_IN -LRB-_-LRB- legal_name_JJ ,_, style_name_JJ -RRB-_-RRB- ._.
+We_PRP checked_VBD these_DT pairs_NNS with_IN CBDB_NNP -LRB-_-LRB- 2014_CD version_NN -RRB-_-RRB- ,_, and_CC achieved_VBD Table_NNP 2_CD ._.
+Note_VB that_DT strings_NNS con_VBP -_: forming_VBG to_TO P6_NNP and_CC P7_NNP have_VBP very_RB short_JJ contexts_NNS ,_, so_IN we_PRP could_MD not_RB judge_VB the_DT dynasties_NNS of_IN these_DT names_NNS ,_, so_RB Table_NNP 2_CD is_VBZ simpler_JJR than_IN Table_NNP 1_CD ._.
+Table_NNP 2_CD shows_NNS that_WDT 31_CD %_NN of_IN the_DT pairs_NNS have_VBP corresponding_JJ records_NNS in_IN CBDB_NNP ._.
+Although_IN we_PRP can_MD not_RB guarantee_VB the_DT correctness_NN of_IN these_DT matched_VBN records_NNS ,_, the_DT statistics_NNS are_VBP promising_JJ and_CC encouraging_JJ ._.
+1192_CD type-1_JJ records_NNS matched_VBD the_DT legal_JJ and_CC style_NN names_NNS of_IN certain_JJ CBDB_NNP records_NNS ._.
+This_DT amount_NN is_VBZ more_JJR than_IN the_DT number_NN of_IN type-1_JJ records_NNS in_IN Table_NNP 1_CD ._.
+Some_DT of_IN the_DT pairs_NNS that_IN we_PRP identify_VBP with_IN the_DT current_JJ heuristic_JJ did_VBD not_RB appear_VB in_IN filter_NN patterns_NNS that_IN we_PRP discussed_VBD in_IN Section_NN 3.2_CD ,_, suggesting_VBG that_IN a_DT hybrid_JJ approach_NN might_MD be_VB worthy_JJ of_IN trying_VBG in_IN the_DT future_NN ._.
+4_CD CRF-based_JJ Approach_NNP CRF-based_JJ models_NNS -LRB-_-LRB- Sutton_NNP and_CC McCallum_NNP ,_, 2011_CD -RRB-_-RRB- are_VBP very_RB common_JJ for_IN handling_VBG NER_NNP with_IN ma_SYM -_: chine_NN learning_VBG methods_NNS -LRB-_-LRB- Nadeau_NNP and_CC Sekine_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+We_PRP employed_VBD MALLET_NNP -LRB-_-LRB- McCallum_NNP ,_, 2002_CD -RRB-_-RRB- tools_NNS for_IN building_VBG linear-chain_JJ CRF_NNP mod_NN -_: els_NNS ,_, and_CC trained_VBN and_CC tested_VBN our_PRP$ models_NNS with_IN the_DT labeled_VBN data_NNS that_IN we_PRP discussed_VBD in_IN Section_NN 2.4_CD ._.
+4.1_CD Features_NNS Given_VBN the_DT training_NN data_NNS -LRB-_-LRB- cf._FW Section_NN 2.4_CD -RRB-_-RRB- and_CC the_DT biographical_JJ information_NN in_IN CBDB_NNP ,_, we_PRP can_MD create_VB a_DT feature_NN set_VBN for_IN each_DT Chinese_JJ character_NN in_IN DFZ_NNP for_IN training_NN and_CC testing_NN a_DT CRF_NNP model_NN ._.
+We_PRP consider_VBP four_CD types_NNS of_IN features_NNS :_: original_JJ charac_NN -_: ters_NNS ,_, relative_JJ positions_NNS of_IN named_VBN entities_NNS in_IN CBDB_NNP ,_, whether_IN the_DT character_NN was_VBD used_VBN in_IN per_IN -_: son_NN or_CC location_NN names_NNS in_IN DFZ_NNP ,_, and_CC whether_IN the_DT characters_NNS belong_VBP to_TO a_DT named_VBN entity_NN ._.
+We_PRP explain_VBP our_PRP$ features_NNS listed_VBN in_IN Table_NNP 3_CD ,_, using_VBG T3_NNP ,_, in_IN Section_NN 3.2_CD ,_, as_IN a_DT running_VBG example_NN ._.
+The_DT original_JJ Chinese_JJ characters_NNS are_VBP basic_JJ features_NNS ,_, summarized_VBN in_IN groups_NNS 1_CD and_CC 2_CD in_IN Table_NNP 3_CD ._.
+For_IN the_DT position_NN of_IN ``_`` 州_FW ''_'' -LRB-_-LRB- zhou1_CD -RRB-_-RRB- ,_, ``_`` 州_FW ''_'' is_VBZ an_DT obvious_JJ feature_NN for_IN itself_PRP ._.
+The_DT surrounding_VBG k_NN characters_NNS can_MD be_VB included_VBN in_IN the_DT feature_NN set_VBN as_RB well_RB ._.
+If_IN we_PRP set_VBP k_NN to_TO three_CD ,_, the_DT three_CD characters_NNS before_IN and_CC after_IN ``_`` 州_FW ''_'' ,_, i.e._FW ,_, ``_`` 仲_FW ''_'' -LRB-_-LRB- zhong4_CD -RRB-_-RRB- ,_, ``_`` 庸_FW ''_'' -LRB-_-LRB- yong1_CD -RRB-_-RRB- ,_, ``_`` 雷_FW ''_'' -LRB-_-LRB- lei2_CD -RRB-_-RRB- ,_, ``_`` 人_FW ''_'' -LRB-_-LRB- ren2_CD -RRB-_-RRB- ,_, ``_`` 廣_FW ''_'' -LRB-_-LRB- guang3_CD -RRB-_-RRB- ,_, and_CC ``_`` 西_FW ''_'' -LRB-_-LRB- si1_CD -RRB-_-RRB- ,_, are_VBP included_VBN in_IN the_DT feature_NN set_NN ._.
+Relative_JJ positions_NNS of_IN the_DT closest_JJS named_VBN enti_SYM -_: ties_NNS -LRB-_-LRB- NEs_NNS -RRB-_-RRB- are_VBP summarized_VBN in_IN group_NN 3_CD in_IN Table_NNP 3_CD ._.
+We_PRP consider_VBP four_CD types_NNS of_IN NEs_NNS :_: office_NN names_NNS ,_, entry_NN methods_NNS ,_, reign_NN periods_NNS ,_, and_CC time_NN markers_NNS ,_, and_CC will_MD record_VB NEs_NNS on_IN both_DT sides_NNS of_IN the_DT current_JJ position_NN ._.
+The_DT first_JJ three_CD types_NNS are_VBP just_RB like_IN the_DT office_NN ,_, entry_NN ,_, and_CC nianhao_JJ labels_NNS that_IN we_PRP dis_SYM -_: cussed_VBN in_IN Section_NN 3.1_CD ._.
+The_DT time_NN markers_NNS refer_VBP to_TO a_DT special_JJ way_NN of_IN counting_VBG years_NNS in_IN China_NNP ,_, i.e._FW ,_, Chinese_JJ sexagenary_JJ cycle_NN -LRB-_-LRB- 干支_CD ,_, gan1_CD zhi1_CD -RRB-_-RRB- ,_, and_CC names_NNS of_IN months_NNS when_WRB they_PRP were_VBD used_VBN ._.
+We_PRP consider_VBP NEs_NNS that_WDT are_VBP within_IN 30_CD characters_NNS on_IN either_DT side_NN of_IN the_DT current_JJ position_NN ,_, so_RB a_DT position_NN can_MD have_VB up_RP to_TO eight_CD features_NNS of_IN group_NN 3_CD ._.
+In_IN T3_CD ,_, there_EX are_VBP three_CD characters_NNS between_IN ``_`` 州_FW ''_'' and_CC ``_`` 中書省都事_FW ''_'' ,_, so_RB officeRight@3_JJ would_MD be_VB used_VBN as_IN a_DT feature_NN for_IN ``_`` 州_FW ''_'' ._.
+The_DT label_NN name_NN con_NN -_: sists_NNS of_IN three_CD parts_NNS :_: the_DT type_NN of_IN NEs_NNS ,_, the_DT direc_NN -_: tion_NN respective_JJ to_TO the_DT current_JJ position_NN -LRB-_-LRB- i.e._FW ,_, Right_RB or_CC Left_VBN -RRB-_-RRB- ,_, and_CC the_DT number_NN of_IN characters_NNS between_IN the_DT current_JJ position_NN and_CC the_DT NE_NNP ._.
+Group_NNP 4_CD is_VBZ about_IN the_DT usage_NN of_IN the_DT current_JJ position_NN ._.
+It_PRP would_MD be_VB helpful_JJ to_TO know_VB the_DT proba_NN -_: bility_NN of_IN the_DT current_JJ character_NN being_VBG used_VBN in_IN a_DT person_NN name_NN or_CC in_IN a_DT location_NN name_NN ._.
+Equation_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- shows_VBZ the_DT basic_JJ formula_NN ._.
+Pr_NN -LRB-_-LRB- x_LS in_IN person_NN names_NNS -RRB-_-RRB- =_SYM freq_NN -LRB-_-LRB- x_LS in_IN person_NN names_NNS -RRB-_-RRB- -LRB-_-LRB- 1_CD -RRB-_-RRB- freq_NN -LRB-_-LRB- x_LS in_IN DFZ_NNP -RRB-_-RRB- In_IN T3_CD ,_, ``_`` 雷_FW ''_'' is_VBZ used_VBN as_IN a_DT character_NN in_IN a_DT loca_NN -_: tion_NN name_NN ._.
+We_PRP calculated_VBD the_DT frequency_NN of_IN ``_`` 雷_FW ''_'' being_VBG used_VBN in_IN location_NN names_NNS ,_, and_CC divided_VBN this_DT frequency_NN by_IN the_DT total_JJ frequency_NN of_IN ``_`` 雷_FW ''_'' in_IN DFZ_NNP ._.
+We_PRP discretized_VBD the_DT probability_NN measure_NN into_IN five_CD equal_JJ ranges_NNS :_: -LSB-_JJ 0_CD ,_, 0.2_CD -RRB-_-RRB- ,_, -LSB-_NNP 0.2_CD ,_, 0.4_CD -RRB-_-RRB- ,_, -LSB-_NNP 0.4_CD ,_, 0.6_CD -RRB-_-RRB- ,_, -LSB-_NNP 0.6_CD ,_, Table_NNP 2_CD ._.
+Analysis_NN of_IN 3765_CD extracted_VBN records_NNS Type_NN Name_NN Style_NNP Name_NN Quan_NNP ._.
+Prop_NN ._.
+1_CD ○_CD ○_NN 1192_CD 31.66_CD %_NN 2_CD ○_CD ×_NN 885_CD 23.51_CD %_NN 3_CD ×_SYM ○_SYM 1104_CD 29.32_CD %_NN 4_CD ×_SYM ×_SYM 584_CD 15.51_CD %_NN Table_NNP 3_CD ._.
+Features_NNS for_IN CRF_NNP models_NNS Group_NNP Types_NNP Description_NNP 1_CD Chinese_JJ characters_NNS self_NN 2_CD Chinese_JJ characters_NNS surrounding_VBG k_NN characters_NNS 3_CD relative_JJ positions_NNS of_IN selected_VBN named_VBN entities_NNS office_NN ,_, entry_NN ,_, reign_NN period_NN ,_, and_CC time_NN 4_CD usage_NN used_VBN in_IN person_NN or_CC location_NN name_NN 5_CD usage_NN family_NN name_NN ?_.
+6_CD named_VBN entities_NNS office_NN ,_, entry_NN ,_, reign_NN period_NN ,_, and_CC time_NN 0.8_CD -RRB-_-RRB- ,_, and_CC -LSB-_NNP 0.8_CD ,_, 1.0_CD -RSB-_NN ._.
+If_IN the_DT probability_NN of_IN ``_`` 雷_FW ''_'' was_VBD used_VBN in_IN a_DT location_NN name_NN was_VBD 0.45_CD ,_, we_PRP would_MD add_VB probLoc@3_NNP for_IN ``_`` 雷_FW ''_'' ,_, where_WRB 3_CD means_VBZ the_DT third_JJ interval_NN in_IN the_DT discretized_VBN ranges_NNS ._.
+Group_NNP 5_CD is_VBZ also_RB about_IN the_DT usage_NN of_IN the_DT cur_NN -_: rent_VB position_NN ._.
+There_EX is_VBZ a_DT list_NN of_IN well-known_JJ Chinese_JJ family_NN names_NNS ,_, that_DT is_VBZ commonly_RB called_VBN Hundred_NNP Family_NNP Names_NNS -LRB-_-LRB- 百_CD 家_CD 姓_NN ,_, bai3_CD jia1_CD xing4_NNS -RRB-_-RRB- 3_LS ._.
+We_PRP add_VBP a_DT feature_NN to_TO the_DT current_JJ position_NN if_IN it_PRP is_VBZ in_IN the_DT list_NN ._.
+In_IN T3_CD ,_, ``_`` 陳_FW ''_'' -LRB-_-LRB- chen2_CD -RRB-_-RRB- is_VBZ such_JJ a_DT character_NN ._.
+If_IN a_DT family_NN name_NN has_VBZ two_CD characters_NNS ,_, the_DT features_NNS will_MD indicate_VB the_DT positions_NNS of_IN the_DT characters_NNS ,_, e.g._FW ,_, ``_`` 歐_FW ''_'' -LRB-_-LRB- ou1_CD -RRB-_-RRB- and_CC ``_`` 陽_FW ''_'' -LRB-_-LRB- yang2_CD -RRB-_-RRB- in_IN ``_`` 歐陽_FW ''_'' will_MD ,_, respectively_RB ,_, have_VBP surename@1_CD and_CC surename@2_CD as_IN their_PRP$ features_NNS ._.
+Features_NNS in_IN group_NN 6_CD are_VBP for_IN four_CD types_NNS of_IN the_DT named_VBN entities_NNS ,_, i.e._FW ,_, office_NN ,_, entry_NN ,_, nianhao_NN -LRB-_-LRB- for_IN reign_NN period_NN -RRB-_-RRB- ,_, and_CC time_NN -LRB-_-LRB- as_IN we_PRP discussed_VBD for_IN the_DT features_NNS in_IN group_NN 3_CD -RRB-_-RRB- ._.
+In_IN general_JJ ,_, historians_NNS have_VBP more_JJR complete_JJ information_NN about_IN these_DT key_JJ types_NNS of_IN NEs_NNS in_IN Chinese_JJ history_NN ,_, so_RB using_VBG spe_SYM -_: cific_NN tags_NNS for_IN these_DT NEs_NNS may_MD offer_VB stronger_JJR signals_NNS for_IN nearby_JJ person_NN and_CC location_NN names_NNS ._.
+When_WRB we_PRP used_VBD group_NN 6_CD along_IN with_IN other_JJ groups_NNS ,_, we_PRP would_MD not_RB annotate_VB a_DT position_NN with_IN features_NNS in_IN groups_NNS 1_CD through_IN 5_CD ,_, if_IN the_DT position_NN is_VBZ part_NN of_IN certain_JJ named_VBN entities_NNS of_IN group_NN 6_CD ._.
+Instead_RB ,_, we_PRP would_MD use_VB only_RB the_DT values_NNS for_IN group_NN 6_CD ._.
+For_IN example_NN ,_, at_IN the_DT beginning_NN of_IN the_DT text_NN in_IN Figure_NN 2_CD ,_, we_PRP have_VBP ``_`` 洪武元年楊璟_FW ''_'' -LRB-_-LRB- hong2_CD wu3_CD yuan2_NN nian2_CD yang2_CD jing3_NN -RRB-_-RRB- ,_, where_WRB ``_`` 洪武_FW ''_'' represented_VBD a_DT reign_NN period_NN ,_, so_IN both_DT characters_NNS would_MD be_VB anno_NN -_: tated_VBN only_RB by_IN nianhao_NN ._.
+``_`` 楊璟_FW ''_'' did_VBD not_RB belong_VB to_TO any_DT types_NNS of_IN NEs_NNS in_IN group_NN 6_CD ,_, so_RB would_MD be_VB anno_NN -_: tated_VBN with_IN other_JJ features_NNS ._.
+Features_NNS of_IN groups_NNS 3_CD and_CC 6_CD are_VBP related_VBN in_IN na_TO -_: ture_NN ._.
+We_PRP will_MD see_VB that_IN using_VBG group_NN 6_CD in_IN places_NNS of_IN group_NN 3_CD led_VBD to_TO better_JJR performance_NN in_IN the_DT next_JJ section_NN ._.
+4.2_CD Evaluation_NN :_: Labeled_NNP Data_NNP We_PRP evaluated_VBD the_DT effectiveness_NN of_IN using_VBG line_NN -_: 3_CD http://baike.baidu.com/subview/6559/15189786.htm_CD ar-chain_NN CRF_NNP models_NNS for_IN recognizing_VBG person_NN and_CC location_NN names_NNS in_IN DFZ_NNP with_IN the_DT labeled_VBN data_NNS that_WDT was_VBD discussed_VBN in_IN Section_NN 2.4_CD ._.
+Given_VBN the_DT original_JJ labels_NNS ,_, we_PRP could_MD create_VB feature_NN sets_NNS for_IN all_DT char_SYM -_: acters_NNS ,_, and_CC then_RB ran_VBD 5-fold_JJ cross_NN validations_NNS ._.
+We_PRP classified_VBD the_DT characters_NNS into_IN seven_CD cat_NN -_: egories_NNS :_: NB_NNP ,_, NI_NNP ,_, NE_NNP ,_, AB_NNP ,_, AI_NNP ,_, AE_NNP ,_, and_CC O_NNP ._.
+We_PRP use_VBP N_NNP and_CC A_DT to_TO denote_VB name_NN and_CC location_NN ,_, re_SYM -_: spectively_RB ._.
+B_NNP ,_, I_PRP ,_, and_CC E_NNP denote_VBP beginning_NN ,_, internal_JJ ,_, and_CC ending_VBG ,_, respectively_RB ._.
+O_RB means_VBZ others_NNS ._.
+Hence_RB ,_, for_IN example_NN ,_, NB_NNP is_VBZ for_IN the_DT first_JJ character_NN of_IN a_DT person_NN name_NN and_CC AE_NNP is_VBZ the_DT last_JJ character_NN of_IN a_DT location_NN name_NN ._.
+We_PRP ran_VBD several_JJ experiments_NNS for_IN CRF_NNP models_NNS that_WDT considered_VBD different_JJ combinations_NNS of_IN the_DT features_NNS that_IN we_PRP discussed_VBD in_IN Section_NN 4.1_CD ._.
+The_DT classification_NN results_NNS were_VBD measured_VBN by_IN standard_JJ metrics_NNS ,_, i.e._FW ,_, precision_NN ,_, recall_NN ,_, and_CC F1_CD measure_NN that_WDT are_VBP very_RB common_JJ for_IN information_NN retrieval_NN ._.
+Table_NNP 4_CD shows_VBZ the_DT experimental_JJ results_NNS for_IN four_CD such_JJ combinations_NNS ._.
+The_DT results_NNS improved_VBD gradually_RB for_IN the_DT experiments_NNS listed_VBN from_IN the_DT left_VBN to_TO the_DT right_JJ side_NN ._.
+The_DT first_JJ row_NN of_IN Table_NNP 4_CD lists_NNS the_DT combinations_NNS of_IN features_NNS used_VBN in_IN the_DT experi_NNS -_: ments_NNS ._.
+The_DT second_JJ row_NN shows_VBZ the_DT abbreviated_JJ names_NNS of_IN the_DT performance_NN measures_NNS ._.
+The_DT left_NN -_: most_RBS column_NN shows_VBZ the_DT seven_CD categories_NNS of_IN the_DT classification_NN results_NNS ._.
+The_DT experiments_NNS that_WDT used_VBD only_RB group_NN 1_CD as_IN the_DT feature_NN provided_VBD results_NNS that_WDT were_VBD better_JJR than_IN we_PRP thought_VBD ._.
+Identifying_VBG categories_NNS of_IN individual_JJ characters_NNS in_IN the_DT dataset_NN of_IN Section_NN 2.4_CD did_VBD not_RB seem_VB to_TO be_VB a_DT very_RB challenging_JJ task_NN ._.
+We_PRP added_VBD the_DT second_JJ group_NN of_IN features_NNS by_IN setting_VBG k_NN to_TO five_CD ._.
+Then_RB ,_, we_PRP added_VBD group_NN 4_CD ,_, group_NN 5_CD ,_, and_CC group_NN 6_CD ,_, one_CD by_IN one_CD for_IN the_DT listed_VBN experiments_NNS ._.
+We_PRP did_VBD add_VB group_NN 3_CD in_IN some_DT of_IN our_PRP$ experi_NNS -_: ments_NNS ,_, but_CC adding_VBG this_DT group_NN generally_RB made_VBD the_DT experimental_JJ results_NNS worse_JJR than_IN not_RB having_VBG them_PRP ,_, so_IN we_PRP do_VBP not_RB show_VB those_DT results_NNS ._.
+We_PRP also_RB set_VBD k_NN to_TO three_CD and_CC seven_CD ,_, but_CC we_PRP did_VBD not_RB observe_VB significant_JJ differences_NNS in_IN the_DT results_NNS ._.
+Setting_VBG k_NN to_TO seven_CD provided_VBD a_DT bit_NN better_JJR results_NNS ,_, but_CC the_DT improvement_NN was_VBD not_RB statistically_RB sig_NN -_: nificant_NN ._.
+Recognizing_VBG the_DT categories_NNS of_IN individual_JJ Table_NNP 4_CD ._.
+Performances_NNPS of_IN selected_VBN CRF_NNP models_NNS Group_NNP 1_CD Groups_NNS 1_CD +2_CD Groups_NNS 1_CD +2_CD +4_CD +5_CD Groups_NNS 1_CD +2_CD +4_CD +5_CD +6_CD Prec_NNP ._.
+Recall_VB F1_CD Prec_NNP ._.
+Recall_VB F1_CD Prec_NNP ._.
+Recall_VB F1_CD Prec_NNP ._.
+Recall_VB F1_CD O_NNP 0.96_CD 0.90_CD 0.93_CD 0.97_CD 0.94_CD 0.95_CD 0.97_CD 0.96_CD 0.96_CD 0.97_CD 0.97_CD 0.97_CD NB_NNP 0.76_CD 0.91_CD 0.83_CD 0.85_CD 0.94_CD 0.89_CD 0.91_CD 0.94_CD 0.93_CD 0.93_CD 0.95_CD 0.94_CD NI_NNP 0.78_CD 0.85_CD 0.82_CD 0.86_CD 0.91_CD 0.88_CD 0.91_CD 0.92_CD 0.91_CD 0.93_CD 0.93_CD 0.93_CD NE_NNP 0.72_CD 0.87_CD 0.79_CD 0.82_CD 0.92_CD 0.87_CD 0.89_CD 0.92_CD 0.90_CD 0.91_CD 0.93_CD 0.92_CD AB_NNP 0.78_CD 0.83_CD 0.80_CD 0.85_CD 0.86_CD 0.86_CD 0.89_CD 0.88_CD 0.88_CD 0.91_CD 0.89_CD 0.90_CD AI_NNP 0.48_CD 0.73_CD 0.57_CD 0.71_CD 0.84_CD 0.77_CD 0.80_CD 0.86_CD 0.83_CD 0.83_CD 0.89_CD 0.86_CD AE_NNP 0.79_CD 0.83_CD 0.81_CD 0.85_CD 0.86_CD 0.86_CD 0.89_CD 0.88_CD 0.88_CD 0.91_CD 0.89_CD 0.90_CD characters_NNS was_VBD just_RB a_DT basic_JJ task_NN for_IN our_PRP$ system_NN ._.
+Our_PRP$ goal_NN was_VBD to_TO identify_VB person_NN names_NNS and_CC location_NN names_NNS ._.
+Hence_RB ,_, we_PRP really_RB care_VB about_IN whether_IN a_DT sequence_NN of_IN NB_NNP ,_, NI_NNP ,_, and_CC NE_NNP ,_, for_IN instance_NN ,_, indeed_RB represented_VBD a_DT person_NN name_NN ._.
+We_PRP conducted_VBD such_PDT an_DT integrated_VBN verifica_NN -_: tion_NN with_IN the_DT best_JJS performing_VBG model_NN in_IN Table_NNP 4_CD ,_, i.e._FW ,_, using_VBG groups_NNS 1_CD ,_, 2_CD ,_, 4_CD ,_, 5_CD ,_, and_CC 6_CD as_IN features_NNS ._.
+A_DT name_NN ,_, either_CC for_IN a_DT person_NN or_CC for_IN a_DT location_NN ,_, must_MD exactly_RB match_VB the_DT original_JJ labels_NNS ,_, to_TO be_VB consid_VBN -_: ered_VBN as_IN a_DT correct_JJ classification_NN ._.
+For_IN person_NN names_NNS ,_, the_DT precision_NN and_CC recall_NN rates_NNS are_VBP 92.0_CD %_NN and_CC 93.9_CD %_NN ,_, respectively_RB ._.
+For_IN location_NN names_NNS ,_, the_DT precision_NN and_CC recall_NN rates_NNS are_VBP 91.0_CD %_NN and_CC 89.5_CD %_NN ,_, respectively_RB ._.
+Fining_VBG location_NN names_NNS is_VBZ harder_JJR than_IN finding_VBG person_NN names_NNS ._.
+4.3_CD Evaluation_NN :_: Unlabeled_NNP Data_NNP We_PRP trained_VBD a_DT CRF_NNP model_NN ,_, employing_VBG feature_NN groups_NNS 1_CD ,_, 2_CD ,_, 4_CD ,_, 5_CD ,_, and_CC 6_CD ,_, with_IN all_DT of_IN the_DT labeled_VBN data_NNS -LRB-_-LRB- Section_NN 2.4_CD -RRB-_-RRB- ,_, and_CC evaluated_VBD the_DT model_NN with_IN the_DT task_NN of_IN identifying_VBG person_NN and_CC location_NN names_NNS in_IN the_DT unlabeled_JJ data_NNS -LRB-_-LRB- Section_NN 2.1_CD -RRB-_-RRB- ._.
+Due_JJ to_TO the_DT page_NN limit_NN ,_, we_PRP can_MD not_RB report_VB the_DT results_NNS ._.
+5_CD Discussions_NNS and_CC Concluding_VBG Remarks_NNS We_PRP reported_VBD our_PRP$ work_NN for_IN mining_NN biographical_JJ information_NN from_IN Difangzhi_NNP with_IN techniques_NNS of_IN language_NN models_NNS and_CC conditional_JJ random_JJ fields_NNS ._.
+Results_NNS observed_VBD in_IN practical_JJ evaluations_NNS proved_VBD the_DT effectiveness_NN of_IN these_DT technologies_NNS for_IN named_VBN entities_NNS recognition_NN in_IN literary_JJ Chinese_NNPS ._.
+As_IN illustrated_VBN in_IN Figures_NNS 1_CD and_CC 2_CD ,_, processing_VBG texts_NNS of_IN literary_JJ Chinese_JJ with_IN computer_NN pro-_JJ grams_NNS is_VBZ challenging_VBG ._.
+We_PRP approach_VBP this_DT problem_NN with_IN gradually_RB more_JJR complex_JJ methods_NNS ._.
+Building_NNP our_PRP$ current_JJ work_NN on_IN the_DT data_NNS that_WDT were_VBD labeled_VBN in_IN previous_JJ work_NN -LRB-_-LRB- Bol_NNP ,_, 2012_CD ;_: Pang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- and_CC CBDB_NNP ,_, we_PRP were_VBD able_JJ to_TO apply_VB LM_NNP and_CC CRF_NNP based_VBN models_NNS ._.
+The_DT CNGRAM_NNP -LRB-_-LRB- Section_NNP 3.1_CD -RRB-_-RRB- is_VBZ an_DT interactive_JJ procedure_NN that_WDT was_VBD designed_VBN to_TO guide_VB researchers_NNS to_TO find_VB useful_JJ patterns_NNS ._.
+For_IN practical_JJ applications_NNS ,_, the_DT LM_NNP and_CC CRF_NNP models_NNS may_MD be_VB integrated_VBN with_IN an_DT online_NN tagging_VBG service_NN ,_, MARKUS_NNP -LRB-_-LRB- Ho_NNP ,_, 2015_CD -RRB-_-RRB- 4_CD ,_, of_IN the_DT Leiden_NNP University_NNP ._.
+As_IN we_PRP collect_VBP more_JJR information_NN about_IN person_NN names_NNS ,_, style_NN names_NNS ,_, pen_NN names_NNS ,_, location_NN names_NNS ,_, and_CC native_JJ places_NNS ,_, we_PRP become_VBP more_RBR competent_JJ to_TO separate_VB the_DT continuous_JJ Chinese_JJ strings_NNS into_IN meaningful_JJ paragraphs_NNS -LRB-_-LRB- cf._FW Section_NN 3.4_CD -RRB-_-RRB- and_CC find_VB social_JJ networks_NNS of_IN the_DT government_NN officers_NNS -LRB-_-LRB- Bol_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+In_IN the_DT near_JJ future_NN ,_, we_PRP will_MD consider_VB more_RBR domain-dependent_JJ knowledge_NN and_CC contextual_JJ constraints_NNS to_TO recognize_VB and_CC disambiguate_VB named_VBN entities_NNS ._.
+People_NNS of_IN different_JJ dynasties_NNS may_MD have_VB the_DT same_JJ name_NN ,_, for_IN instance_NN ._.
+In_IN a_DT Difangzhi_NNP book_NN ,_, records_NNS about_IN government_NN officers_NNS of_IN the_DT same_JJ dynasty_NN usually_RB appeared_VBD close_JJ to_TO each_DT other_JJ ._.
+Many_JJ times_NNS ,_, the_DT records_NNS were_VBD ordered_VBN chronically_RB ._.
+Considering_VBG these_DT constrains_VBZ for_IN disambiguation_NN can_MD make_VB our_PRP$ annotations_NNS about_IN a_DT person_NN more_RBR precise_JJ ._.
+In_IN the_DT longer_JJR run_NN ,_, mining_VBG the_DT grammar_NN rules_NNS of_IN literary_JJ Chinese_NNPS is_VBZ a_DT bigger_JJR and_CC rewarding_JJ challenge_NN ._.
+It_PRP was_VBD found_VBN that_IN the_DT language_NN mod_NN -_: els_NNS and_CC CRF_NNP models_NNS worked_VBD better_RBR for_IN some_DT of_IN the_DT 83_CD Difangzhi_NNP books_NNS but_CC not_RB as_RB well_RB for_IN others_NNS -LRB-_-LRB- Bol_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+People_NNS who_WP compiled_VBD these_DT books_NNS adopted_VBN different_JJ styles_NNS of_IN writing_VBG ,_, and_CC the_DT styles_NNS varied_VBD from_IN time_NN to_TO time_NN and_CC from_IN place_NN to_TO place_NN ._.
+Knowing_VBG the_DT grammar_NN rules_NNS that_WDT govern_VBP these_DT language_NN patterns_NNS will_MD enable_VB us_PRP to_TO find_VB more_JJR precise_JJ information_NN from_IN Difangzhi_NNP and_CC perhaps_RB other_JJ historical_JJ documents_NNS written_VBN in_IN literary_JJ Chinese_NNPS ._.
+Acknowledgements_NNS This_DT work_NN was_VBD supported_VBN in_IN part_NN by_IN the_DT Ministry_NNP of_IN Science_NNP and_CC Technology_NNP of_IN Taiwan_NNP under_IN grants_NNS MOST-102-2420-H-004-054-MY2_NNP and_CC MOST-104-2221-E-004-005-MY3_NNP ._.
+We_PRP thank_VBP the_DT reviewers_NNS for_IN their_PRP$ valuable_JJ comments_NNS ,_, with_IN which_WDT we_PRP can_MD strengthen_VB our_PRP$ work_NN in_IN the_DT future_NN ._.
+4_CD http://chinese-empires.eu/analysis/tools/_JJ References_NNS Bol_NNP ,_, Peter_NNP K._NNP 2012_CD ._.
+Historical_JJ research_NN in_IN a_DT digital_JJ environment_NN ,_, keynote_JJ speech_NN in_IN the_DT 3rd_CD Interna_NNP -_: tional_JJ Conference_NN on_IN Digital_NNP Archives_NNPS and_CC Digital_NNP Humanities_NNP ,_, <_CD http://isites.harvard.edu/fs/docs/icb.topic1080143.files/Histori_NNS cal_JJ %_NN 20Research_CD %_NN 20in_CD %_NN 20Dig_CD %_NN 20Env_JJ ._.
+ppt_NN >_NN ._.
+Bol_NNP ,_, Peter_NNP K._NNP ,_, Jieh_NNP Hsiang_NNP ,_, and_CC Grace_NNP Fong_NNP ._.
+2012_CD ._.
+Prosopographical_JJ databases_NNS ,_, text-mining_NN ,_, GIS_NNP and_CC system_NN interoperability_NN for_IN Chinese_JJ history_NN and_CC literature_NN ,_, Proceedings_NNP of_IN the_DT 2012_CD International_NNP Conference_NNP on_IN Digital_NNP Humanities_NNP ._.
+Bol_NNP ,_, Peter_NNP K._NNP ,_, Chao-Lin_NNP Liu_NNP ,_, and_CC Hongsu_NNP Wang_NNP ._.
+2015_CD ._.
+Mining_NN and_CC discovering_VBG biographical_JJ infor_NN -_: mation_NN in_IN Difangzhi_NNP with_IN a_DT language-model-based_JJ approach_NN ,_, Presented_VBN in_IN the_DT 2015_CD International_NNP Conference_NNP on_IN Digital_NNP Humanities_NNP ._.
+Boonkwan_NNP ,_, Prachya_NNP and_CC Mark_NNP Steedman_NNP ._.
+2011_CD ._.
+Grammar_NN induction_NN from_IN text_NN using_VBG small_JJ syntactic_JJ prototypes_NNS ,_, Proceedings_NNP of_IN the_DT 5th_JJ International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP ,_, 438_CD --_: 446_CD ._.
+de_IN la_DT Higuera_NNP ,_, Colin_NNP ._.
+2005_CD ._.
+A_DT bibliographical_JJ study_NN of_IN grammatical_JJ inference_NN ,_, Pattern_NNP Recognition_NNP ,_, 38_CD :_: 1332_CD 1348_CD ._.
+Gao_NNP ,_, Jianfeng_NNP ,_, Mu_NNP Li_NNP ,_, Andi_NNP Wu_NNP ,_, and_CC Chang-Ning_NNP Huang_NNP ._.
+2005_CD ._.
+Chinese_JJ word_NN segmentation_NN and_CC named_VBN entity_NN recognition_NN :_: A_DT pragmatic_JJ approach_NN ,_, Computational_NNP Linguistics_NNP ,_, 31_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 531_CD 574_CD ._.
+Hargett_NNP ,_, James_NNP M._NNP 1996_CD ._.
+Song_NN dynasty_NN local_JJ gazet_NN -_: teers_NNS and_CC their_PRP$ place_NN in_IN the_DT history_NN of_IN Difangzhi_NNP writing_NN ,_, Harvard_NNP Journal_NNP of_IN Asiatic_NNP Studies_NNP ,_, 56_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :405_CD 442_CD ._.
+Ho_NNP ,_, Hou_NNP Ieong_NNP ._.
+2015_CD ._.
+MARKUS_NNP :_: A_NNP fundamental_JJ semi-automatic_JJ markup_NN platform_NN for_IN classical_JJ Chinese_JJ ,_, Presented_VBN in_IN the_DT 2015_CD International_NNP Con_NN -_: ference_NN on_IN Digital_NNP Humanities_NNP ._.
+Huang_NNP ,_, Hen-Hsen_NNP ,_, Chuen-Tsai_NNP Sun_NNP ,_, and_CC Hsin-Hsi_NNP Chen_NNP ._.
+2010_CD ._.
+Classical_JJ Chinese_JJ sentence_NN segmenta_NN -_: tion_NN ,_, Proceedings_NNP of_IN CIPS-SIGHAN_NNP Joint_NNP Confer_NNP -_: ence_NN on_IN Chinese_JJ Language_NN Processing_NNP ,_, 15_CD 22_CD ._.
+Huang_NNP ,_, Liang_NNP ,_, Yinan_NNP Peng_NNP ,_, Huan_NNP Wang_NNP ,_, and_CC Zhenyu_NNP Wu_NNP ._.
+2001_CD ._.
+PCFG_NNP parsing_NN for_IN restricted_VBN classical_JJ Chinese_JJ texts_NNS ,_, Proceedings_NNP of_IN the_DT 1st_CD SIGHAN_NNP Workshop_NNP on_IN Chinese_JJ Language_NN processing_NN ,_, 1_CD 6_CD ._.
+Hwa_NNP ,_, Rebecca_NNP ._.
+1999_CD ._.
+Supervised_VBN grammar_NN induction_NN using_VBG training_NN data_NNS with_IN limited_JJ constituent_NN infor_NN -_: mation_NN ,_, Proceedings_NNP of_IN the_DT 37th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 73_CD 79_CD ._.
+Kuo_NNP ,_, Yu-Chen_NNP ._.
+2009_CD ._.
+Using_VBG Reinforcement_NNP Learning_NNP to_TO Learn_VB Phrase_NNP Structure_NNP Parsing_NNP in_IN Mandarin_NNP Chinese_NNP ,_, Master_NNP 's_POS Thesis_NNP ,_, National_NNP Tsing_NNP Hua_NNP University_NNP ,_, Taiwan_NNP ._.
+-LRB-_-LRB- in_IN Chinese_NNP -RRB-_-RRB- Lee_NNP ,_, John_NNP and_CC Yin_NNP Hei_NNP Kong_NNP ._.
+2012_CD ._.
+A_DT dependency_NN treebank_NN of_IN classical_JJ Chinese_JJ poems_NNS ,_, Proceedings_NNP of_IN 2012_CD Conference_NN of_IN the_DT North_JJ American_JJ Chap_NNP -_: ter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS :_: Human_NNP Language_NNP Technologies_NNPS ,_, 191_CD --_: 199_CD ._.
+Lü_NNP ,_, Yajuan_NNP ,_, Sheng_NNP Li_NNP ,_, Tiejun_NNP Zhao_NNP ,_, and_CC Muyun_NNP Yang_NNP ._.
+2002_CD ._.
+Learning_NNP Chinese_NNPS bracketing_VBG knowledge_NN based_VBN on_IN a_DT bilingual_JJ language_NN model_NN ,_, Proceedings_NNP of_IN the_DT 19th_JJ International_NNP Conference_NNP on_IN Computa_NNP -_: tional_JJ Linguistics_NNP ,_, 1_CD 7_CD ._.
+Liu_NNP ,_, Chao-Lin_NNP ,_, Chih-Kai_NNP Huang_NNP ,_, Hongsu_NNP Wang_NNP ,_, and_CC Peter_NNP K._NNP Bol_NNP ._.
+2015_CD ._.
+Mining_NNP local_JJ gazetteers_NNS of_IN lit_VBN -_: erary_JJ Chinese_JJ with_IN CRF_NNP and_CC pattern_NN based_VBN meth_NN -_: ods_NNS for_IN biographical_JJ information_NN in_IN Chinese_JJ history_NN ,_, Proceedings_NNP of_IN the_DT 3rd_CD Big_JJ Humanities_NNP Data_NNP Workshop_NNP in_IN 2015_CD IEEE_NNP International_NNP Conference_NNP on_IN Big_NNP Data_NNP ,_, accepted_VBD ._.
+McCallum_NNP ,_, Andrew_NNP Kachites_NNP ._.
+2002_CD ._.
+MALLET_NNP :_: A_NNP Machine_NNP Learning_NNP for_IN Language_NNP Toolkit_NNP ._.
+<_SYM http://mallet.cs.umass.edu_SYM >_CD Nadeau_NNP ,_, David_NNP and_CC Satoshi_NNP Sekine_NNP ._.
+2007_CD ._.
+A_DT survey_NN of_IN named_VBN entity_NN recognition_NN and_CC classification_NN ,_, Lin_NNP -_: guisticae_NN Investigationes_NNS ,_, 30_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :3_CD --_: 26_CD ._.
+Pang_NNP ,_, Wai-him_NN ,_, Shih-pei_JJ Chen_NNP ,_, and_CC Hui_NNP Cheng_NNP ._.
+2014_CD ._.
+From_IN text_NN to_TO data_NNS :_: Extracting_VBG posting_VBG data_NNS from_IN Chinese_JJ local_JJ monographs_NNS ,_, Proceedings_NNP of_IN the_DT 5th_JJ International_NNP Conference_NNP on_IN Digital_NNP Archives_NNPS and_CC Digital_NNP Humanities_NNP ,_, 93_CD --_: 116_CD ._.
+Sutton_NNP ,_, Charles_NNP and_CC Andrew_NNP McCallum_NNP ._.
+2011_CD ._.
+An_DT introduction_NN to_TO conditional_JJ random_JJ fields_NNS ,_, Founda_NNP -_: tions_NNS and_CC Trends_NNS in_IN Machine_NN Learning_NNP ,_, 4_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :267_CD --_: 373_CD ._.
+Yarowsky_NNP ,_, David_NNP ._.
+1995_CD ._.
+Unsupervised_JJ word_NN sense_NN disambiguation_NN rivaling_VBG supervised_JJ methods_NNS ,_, Pro-_JJ ceedings_NNS of_IN the_DT 33rd_CD Annual_JJ Meeting_VBG of_IN the_DT Asso_NNP -_: ciation_NN for_IN Computational_NNP Linguistics_NNP ,_, 189_CD --_: 196_CD ._.
+Yu_NNP ,_, Kun_NNP ,_, Yusuke_NNP Miyao_NNP ,_, Xiangli_NNP Wang_NNP ,_, Takuya_NNP Matsuzaki_NNP ,_, and_CC Junichi_NNP Tsujii_NNP ._.
+2010_CD ._.
+Semi-automatically_JJ developing_VBG Chinese_JJ HPSG_NNP grammar_NN from_IN the_DT Penn_NNP Chinese_NNP Treebank_NNP for_IN deep_JJ parsing_NN ,_, Proceedings_NNP of_IN the_DT 23rd_JJ Internation_NNP -_: al_IN Conference_NN on_IN Computational_NNP Linguistics_NNPS :_: post_NN -_: ers_NNS ,_, 1417_CD 1425_CD ._.

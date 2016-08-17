@@ -1,0 +1,432 @@
+Hindi_NNP Dialog_NNP system_NN using_VBG PurposeNet-based_JJ Ontology_NNP Abstract_NNP In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT question_NN answering_VBG cum_NN dialog_NN system_NN in_IN Hindi_NNP ,_, in_IN the_DT domain_NN of_IN MMTS_NNP -LRB-_-LRB- Multi-Modal_NNP Transport_NNP System_NNP -RRB-_-RRB- ,_, us_PRP -_: ing_VBG an_DT Ontology_NNP ,_, developed_VBD on_IN an_DT architecture_NN based_VBN on_IN PurposeNet_NNP ._.
+Apart_RB from_IN retrieving_VBG answers_NNS from_IN the_DT knowledgebase_NN ,_, this_DT paper_NN focuses_VBZ on_IN effectively_RB removing_VBG the_DT linguistic_JJ gap_NN between_IN the_DT input_NN query_NN and_CC the_DT knowl_NN -_: edgebase_NN ,_, which_WDT is_VBZ in_IN another_DT language_NN ._.
+In_IN ad_NN -_: dition_NN to_TO answering_VBG the_DT traditional_JJ factoid_NN -LRB-_-LRB- sin_NN -_: gle_NN word_NN and_CC list-based_JJ -RRB-_-RRB- answers_NNS ,_, we_PRP have_VBP dis_SYM -_: cussed_VBN methods_NNS to_TO answer_VB why_WRB and_CC how_WRB ques_NNS -_: tions_NNS ,_, as_RB well_RB ._.
+1_CD Introduction_NNP MMTS1_NNP train_NN service_NN connects_VBZ a_DT large_JJ population_NN ,_, with_IN a_DT varied_JJ demographics_NNS ,_, across_IN Hyderabad_NNP ,_, ev_SYM -_: eryday_NN ._.
+Till_IN now_RB ,_, a_DT single_JJ template_NN based_VBN timing_NN in_IN -_: formation_NN extraction_NN is_VBZ possible_JJ ._.
+But_CC ,_, for_IN other_JJ spe_NN -_: cific_JJ information_NN ,_, one_CD needs_VBZ to_TO either_DT remember_VBP the_DT complete_JJ MMTS_NNP route_NN or_CC extract_VB information_NN from_IN the_DT tabular_JJ enlistment_NN of_IN train_NN timings_NNS on_IN various_JJ routes_NNS ._.
+A_DT significant_JJ population_NN in_IN Hyderabad_NNP speak_VBP Hindi2_NNP ,_, hence_RB we_PRP decided_VBD to_TO implement_VB a_DT Hindi_NNP dia_NN -_: log_VB system_NN on_IN the_DT local-train_NN timing_NN domain_NN ._.
+This_DT paper_NN provides_VBZ a_DT detailed_JJ explanation_NN of_IN cre_NN -_: ating_VBG a_DT text-based_JJ dialog_NN system_NN which_WDT takes_VBZ natu_SYM -_: ral_NN language_NN questions_NNS in_IN Hindi_NNP ,_, extracts_VBZ the_DT ques_NNS -_: tion_NN type_NN and_CC question_NN arguments_NNS ,_, processes_VBZ it_PRP to_TO 1Local_JJ train_NN system_NN in_IN the_DT twin_JJ cities_NNS of_IN Hyderabad_NNP and_CC Se_NNP -_: cunderabad_NN ,_, India_NNP -LRB-_-LRB- http://www.mmtstraintimings.in/_VBN -RRB-_-RRB- 2_CD http://en.wikipedia.org/wiki/Demographics_NNS of_IN Hyderabad_NNP create_VBP intermediate_JJ queries_NNS based_VBN on_IN some_DT predeter_NN -_: mined_VBN template_NN ,_, extracts_VBZ information_NN from_IN a_DT self_NN -_: built_VBN knowledgebase_NN and_CC generates_VBZ the_DT answer_NN in_IN Hindi_NNP ._.
+The_DT OWL_NNP -LRB-_-LRB- Web_NNP Ontology_NNP Language_NNP -RRB-_-RRB- based_VBN ontology_JJ along-with_NN the_DT pellet_NN reasoner_NN -LRB-_-LRB- Sirin_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- is_VBZ used_VBN to_TO get_VB answers_NNS of_IN the_DT intermediate_JJ queries_NNS ._.
+The_DT ontology_NN is_VBZ already_RB studied_VBN and_CC all_PDT the_DT relevant_JJ intermediate_JJ queries_NNS are_VBP created_VBN ._.
+These_DT pre_SYM -_: determined_VBN queries_NNS encompass_VBP the_DT complete_JJ knowl_NN -_: edge_NN present_NN in_IN the_DT knowledgebase_NN ._.
+This_DT approach_NN is_VBZ similar_JJ to_TO the_DT one_CD used_VBN by_IN Sneiders_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.
+The_DT prime_JJ focus_NN of_IN the_DT paper_NN is_VBZ to_TO bridge_VB the_DT gap_NN between_IN a_DT conceptual_JJ ontology_NN and_CC query_NN in_IN any_DT language_NN ._.
+The_DT ontology_NN is_VBZ supposed_VBN to_TO be_VB a_DT con_NN -_: ceptual_NN and_CC not_RB linguistic_JJ representation_NN of_IN the_DT do_VBP -_: main_JJ ._.
+Even_RB if_IN the_DT ontology_NN would_MD have_VB been_VBN created_VBN in_IN Hindi_NNP or_CC in_IN any_DT language_NN ,_, the_DT results_NNS would_MD have_VB been_VBN same_JJ ._.
+The_DT ontology_NN was_VBD manually_RB created_VBN ,_, but_CC the_DT purpose_NN of_IN this_DT ontology_NN is_VBZ not_RB only_RB to_TO aid_NN in_IN a_DT Hindi_NNP dialog_NN system_NN but_CC is_VBZ manifold_NN ._.
+The_DT proposed_VBN system_NN clearly_RB gives_VBZ a_DT major_JJ contri_NN -_: butions_NNS in_IN the_DT following_VBG areas_NNS :_: •_CD Given_VBN a_DT question_NN ,_, how_WRB can_MD one_CD find_VBP out_RP the_DT an_DT -_: swer_NN in_IN a_DT cross-lingual_JJ set-up_NN ._.
+•_SYM MostoftheQAsystemsreportedinliteraturetar_SYM -_: get_VB factoid_JJ questions_NNS ,_, while_IN we_PRP have_VBP targeted_VBN all_PDT the_DT types_NNS of_IN question_NN possible_JJ in_IN Hindi_NNP ._.
+Major_JJ emphasis_NN is_VBZ given_VBN for_IN ''_'' how_WRB ''_'' and_CC ''_'' why_WRB ''_'' -LRB-_-LRB- causal_JJ -RRB-_-RRB- questions_NNS ,_, for_IN which_WDT we_PRP have_VBP come_VBN up_RP with_IN a_DT graph-based_JJ algorithm_NN as_RB well_RB ._.
+This_DT algorithm_NN can_MD be_VB extended_VBN to_TO any_DT resource_NN which_WDT provides_VBZ the_DT information_NN of_IN sub-action_NN ,_, precondition_NN and_CC outcomes_NNS -LRB-_-LRB- or_CC similar_JJ action_NN frame_NN with_IN a_DT slight_JJ modification_NN in_IN the_DT algorithm_NN -RRB-_-RRB- ._.
+•_CD A_DT domain-oriented_JJ open-source_NN knowledge-base_NN is_VBZ created_VBN and_CC uploaded_VBN for_IN free_JJ use_NN ._.
+-LRB-_-LRB- Upload_NNP link_NN can_MD not_RB be_VB mentioned_VBN to_TO ensure_VB anonymity_NN -RRB-_-RRB- Maybury_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- has_VBZ mentioned_VBN that_IN accessing_VBG causal_JJ -LRB-_-LRB- why_WRB -RRB-_-RRB- questions_NNS is_VBZ more_RBR difficult_JJ than_IN how_WRB questions_NNS and_CC how_WRB question_NN is_VBZ more_RBR difficult_JJ than_IN factoid_JJ -LRB-_-LRB- when_WRB ,_, where_WRB ,_, which_WDT ,_, who_WP ,_, what_WP -RRB-_-RRB- questions_NNS ._.
+PurposeNet_NNP -LRB-_-LRB- Sangal_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- architecture_NN helps_VBZ in_IN achieving_VBG the_DT task_NN of_IN answering_VBG reasoning_NN based_VBN questions_NNS ._.
+By_IN creating_VBG a_DT DAG_NNP -LRB-_-LRB- directed_VBN acyclic_JJ graph_NN -RRB-_-RRB- of_IN the_DT actions_NNS and_CC conditions_NNS ,_, we_PRP can_MD easily_RB traverse_VB the_DT ontology_NN to_TO find_VB the_DT answers_NNS for_IN reason_NN -_: ing_NN based_VBN questions_NNS -LRB-_-LRB- We_PRP have_VBP considered_VBN why_WRB and_CC how_WRB as_RB reasoning_NN based_VBN questions_NNS -RRB-_-RRB- ._.
+2_CD Literature_NNP Review_NNP For_IN the_DT past_JJ decade_NN ,_, both_DT corpus-based_JJ -LRB-_-LRB- open_JJ do_VBP -_: main_JJ -RRB-_-RRB- -LRB-_-LRB- Ravichandran_NNP and_CC Hovy_NNP ,_, 2002_CD -RRB-_-RRB- and_CC ontology_JJ based_VBN approaches_NNS -LRB-_-LRB- closed_VBD domain_NN -RRB-_-RRB- -LRB-_-LRB- Ferra_NNP ́ndez_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- have_VBP been_VBN tried_VBN for_IN developing_VBG QA_NNP systems_NNS ._.
+Though_NNP ,_, not_RB a_DT lot_NN of_IN work_NN has_VBZ been_VBN done_VBN for_IN build_VB -_: ing_VBG Ontology_NNP based_VBN QA_NNP system_NN ,_, general_JJ purpose_NN QA_NNP systems_NNS -LRB-_-LRB- Vargas-Vera_NNP and_CC Motta_NNP ,_, 2004_CD ;_: Lopez_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- have_VBP been_VBN developed_VBN ._.
+These_DT systems_NNS exten_SYM -_: sively_JJ use_NN NLP_NNP tools_NNS for_IN processing_VBG questions_NNS and_CC the_DT query_NN is_VBZ in_IN English_NNP ._.
+These_DT systems_NNS use_VBP rdf_NN -LRB-_-LRB- Re_NNP -_: source_NN Description_NNP Framework_NNP -RRB-_-RRB- ontologies_NNS as_IN their_PRP$ data_NNS resources_NNS ,_, but_CC their_PRP$ indexing_NN mechanism_NN ,_, which_WDT indexes_NNS all_PDT the_DT entities_NNS and_CC relations_NNS ,_, loses_VBZ the_DT effect_NN of_IN using_VBG a_DT structural_JJ resource_NN in_IN entirety_NN ._.
+Indian_JJ languages_NNS are_VBP a_DT late_JJ entrant_NN in_IN the_DT field_NN of_IN QA_NNP systems_NNS ._.
+Kaur_NNP and_CC Gupta_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- ,_, in_IN their_PRP$ re_SYM -_: cent_NN study_NN have_VBP compared_VBN various_JJ works_NNS carried_VBD in_IN the_DT domain_NN of_IN QA_NNP for_IN Indian_NNP languages_NNS ._.
+Corpus_NNP -_: based_VBN QA_NNP system_NN for_IN natural_JJ language_NN questions_NNS in_IN Hindi_NNP has_VBZ been_VBN targeted_VBN in_IN the_DT recent_JJ work_NN of_IN Sahu_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- ._.
+Some_DT other_JJ efforts_NNS in_IN Indian_JJ languages_NNS are_VBP Gupta_NNP and_CC Gupta_NNP -LRB-_-LRB- 2013_CD -RRB-_-RRB- for_IN Punjabi_NNP and_CC Bandy_NNP -_: opadhyay_NN -LRB-_-LRB- 2012_CD -RRB-_-RRB- for_IN Bengali_NNP ._.
+Sekine_NNP and_CC Grishman_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- is_VBZ one_CD of_IN the_DT earli_JJ -_: est_NN attempts_NNS to_TO build_VB a_DT QA_NNP system_NN for_IN Hindi_NNP ._.
+The_DT proposed_VBN system_NN works_NNS in_IN a_DT multi-lingual_JJ setting_NN ._.
+It_PRP takes_VBZ English_JJ queries_NNS as_IN input_NN ,_, translates_VBZ non_SYM -_: functional_JJ words_NNS to_TO Hindi_NNP to_TO determine_VB the_DT answer_NN from_IN Hindi_NNP corpus_NN -LRB-_-LRB- news_NN corpus_NN -RRB-_-RRB- ,_, and_CC the_DT retrieved_VBN answers_NNS are_VBP translated_VBN to_TO English_NNP ._.
+The_DT amount_NN of_IN er_SYM -_: rors_NNS propagated_VBN through_IN translation_NN severely_RB affects_VBZ the_DT QA_NNP quality_NN ._.
+Previous_JJ works_NNS which_WDT have_VBP tackled_VBN why_WRB questions_NNS include_VBP that_IN of_IN Oh_UH et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- in_IN which_WDT the_DT au_SYM -_: thors_NNS exploit_VBP the_DT intra_NN -_: and_CC inter-sentential_JJ clausal_JJ relation_NN ._.
+Higashinaka_NNP and_CC Isozaki_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- have_VBP pro-_JJ posed_VBD a_DT machine_NN learning_VBG based_VBN method_NN for_IN recog_NN -_: nizing_VBG causal_JJ patterns_NNS from_IN corpus_NN ._.
+No_DT significant_JJ work_NN has_VBZ been_VBN reported_VBN for_IN a_DT robust_JJ reasoning_NN QA_NNP system_NN using_VBG ontology_NN ._.
+Ontology_NNP based_VBN dialogue_NN system_NN has_VBZ been_VBN dis_SYM -_: cussed_VBN in_IN Milward_NNP and_CC Beveridge_NNP -LRB-_-LRB- 2003_CD -RRB-_-RRB- ._.
+One_CD of_IN the_DT earliest_JJS works_NNS for_IN dialogue_NN system_NN for_IN Indian_JJ languages_NNS has_VBZ been_VBN carried_VBN on_IN in_IN Telugu_NNP -LRB-_-LRB- Reddy_NNP and_CC Bandyopadhyay_NNP ,_, 2006_CD -RRB-_-RRB- ._.
+They_PRP have_VBP also_RB tack_NN -_: led_VBD the_DT problem_NN of_IN coreference_NN and_CC anaphora_NN reso_NN -_: lution_NN by_IN the_DT dialogue_NN manager_NN ,_, although_IN the_DT same_JJ has_VBZ not_RB been_VBN implemented_VBN by_IN us_PRP ._.
+Though_NNP ,_, the_DT dia_NN -_: logue_NN systems_NNS are_VBP nearly_RB always_RB supplemented_VBN by_IN a_DT speech_NN module_NN -LRB-_-LRB- Jurafsky_NNP and_CC James_NNP ,_, 2000_CD ;_: Cole_NNP et_FW al._FW ,_, 1997_CD -RRB-_-RRB- ,_, we_PRP are_VBP not_RB targeting_VBG for_IN such_PDT a_DT system_NN ._.
+3_CD Question_NN distribution_NN in_IN Hindi_NNP In_IN Hindi_NNP ,_, we_PRP primarily_RB find_VBP 8_CD question_NN types_NNS includ_SYM -_: ing_NN kab_NN -LRB-_-LRB- when_WRB -RRB-_-RRB- ,_, kitna_NNS -LRB-_-LRB- how_WRB many_JJ -RRB-_-RRB- ,_, kaise_FW -LRB-_-LRB- how_WRB -RRB-_-RRB- ,_, kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- ,_, kahan_NN -LRB-_-LRB- where_WRB -RRB-_-RRB- ,_, kaun_NN -LRB-_-LRB- who_WP -RRB-_-RRB- ,_, kya_FW -LRB-_-LRB- what_WP -RRB-_-RRB- and_CC kis_FW -LRB-_-LRB- which_WDT -RRB-_-RRB- ._.
+As_IN discussed_VBN below_IN ,_, the_DT reduplication_NN of_IN each_DT of_IN these_DT question_NN words_NNS is_VBZ possible_JJ ,_, some_DT -_: times_CC there_EX is_VBZ a_DT change_NN in_IN the_DT requirement_NN of_IN answer_NN type_NN ._.
+In_IN this_DT section_NN we_PRP briefly_RB explain_VBP the_DT various_JJ answers_NNS expected_VBN by_IN each_DT question_NN type3_CD ._.
+Though_IN Kumar_NNP et_FW al._FW -LRB-_-LRB- 2003_CD -RRB-_-RRB- also_RB give_VB a_DT brief_JJ overview_NN of_IN question_NN types_NNS in_IN Hindi_NNP ,_, their_PRP$ approach_NN is_VBZ too_RB partic_JJ -_: ular_JJ for_IN answer_NN retrieval_NN from_IN running_VBG text_NN and_CC para_NN -_: graphs_NNS ._.
+3.1_CD Question_NN Type_NN with_IN the_DT suitable_JJ answer_NN type_NN 1_CD ._.
+single_JJ answer_NN questions_NNS :_: The_DT answers_NNS to_TO these_DT questions_NNS are_VBP mostly_RB singular_JJ and_CC these_DT can_MD be_VB extracted_VBN directly_RB or_CC by_IN simple_JJ aggregation_NN over_IN the_DT ontology_NN ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- kab_FW -LRB-_-LRB- when_WRB -RRB-_-RRB- :_: Inquiring_VBG time_NN of_IN occurrence_NN of_IN certain_JJ event_NN ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- kitna/kitne/kitni_NNS -LRB-_-LRB- how_WRB many_JJ -RRB-_-RRB- :_: The_DT answer_NN to_TO this_DT question_NN is_VBZ a_DT numeric_JJ entity_NN ._.
+Though_IN the_DT 3Due_JJ to_TO paucity_NN of_IN space_NN ,_, We_PRP are_VBP not_RB showing_VBG examples_NNS of_IN all_PDT the_DT questions_NNS types_NNS ,_, but_CC we_PRP have_VBP shown_VBN wherever_WRB necessary_JJ following_VBG are_VBP exceptions_NNS to_TO the_DT rule_NN ._.
+•_SYM kitne_FW baje_FW -LRB-_-LRB- what_WP time_NN -RRB-_-RRB- :_: Inquiring_VBG time_NN of_IN occurrence_NN of_IN certain_JJ event_NN ._.
+•_SYM kitni_FW der/kitna_FW samay_FW -LRB-_-LRB- what_WP duration_NN -RRB-_-RRB- :_: Requires_VBZ the_DT duration_NN for_IN an_DT event_NN to_TO occur_VB ._.
+-LRB-_-LRB- c_NN -RRB-_-RRB- kaun_NN -LRB-_-LRB- who/which_JJ -RRB-_-RRB- :_: The_DT answer_NN to_TO this_DT ques_NNS -_: tion_NN is_VBZ a_DT noun_NN ,_, mostly_RB physical_JJ nouns_NNS ._.
+-LRB-_-LRB- d_LS -RRB-_-RRB- kis_FW -LRB-_-LRB- who/which_JJ -RRB-_-RRB- :_: The_DT answer_NN to_TO this_DT question_NN is_VBZ a_DT noun_NN ,_, mostly_RB physical_JJ nouns_NNS ._.
+-LRB-_-LRB- e_LS -RRB-_-RRB- kahan_NN -LRB-_-LRB- where_WRB -RRB-_-RRB- :_: The_DT answer_NN to_TO this_DT question_NN is_VBZ a_DT place_NN ._.
+The_DT place_NN can_MD be_VB general_JJ or_CC specific_JJ ,_, even_RB proper_JJ noun_NN ._.
+-LRB-_-LRB- f_LS -RRB-_-RRB- kya_NN -LRB-_-LRB- what_WP -RRB-_-RRB- :_: This_DT is_VBZ the_DT most_RBS complicated_JJ question_NN type_NN ._.
+This_DT can_MD either_RB have_VB a_DT boolean_JJ answer_NN or_CC a_DT factoid_NN answer_NN :_: •_CD kya_NN -LRB-_-LRB- Can_MD ,_, Does_VBZ ,_, Is_VBZ ,_, etc._FW -RRB-_-RRB- :_: The_DT answer_NN of_IN this_DT can_MD be_VB a_DT yes_RB or_CC no_DT ._.
+For_IN example_NN ,_, -LRB-_-LRB- 1_CD -RRB-_-RRB- kya_NN agli_JJ train_NN chadh_NN jaun_NN ?_.
+can_MD next_RB train_VB board_NN do_VB ?_.
+Can_MD I_PRP board_NN the_DT next_JJ train_NN ?_.
+•_NNP kya_NNP -LRB-_-LRB- what_WP -RRB-_-RRB- :_: This_DT can_MD be_VB either_RB a_DT direct_JJ or_CC a_DT description_NN type_NN question_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- MMTS_NNP train_NN kya_NN hai_FW ?_.
+MMTS_NNS train_VBP what_WP is_VBZ ?_.
+What_WP is_VBZ MMTS_NNP train_NN ?_.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- MMTS_NNP train_NN ka_FW samay_FW kya_FW hai_FW ?_.
+MMTS_NNP train_NN of_IN time_NN what_WP is_VBZ ?_.
+What_WP is_VBZ the_DT time_NN of_IN the_DT MMTS_NNP train_NN ?_.
+2_LS ._.
+list_NN answer_NN questions_NNS :_: The_DT answer_NN to_TO these_DT ques_NNS -_: tions_NNS is_VBZ an_DT empty_JJ or_CC non-empty_JJ list_NN ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- kab_FW kab_FW -LRB-_-LRB- when_WRB all_PDT -RRB-_-RRB- :_: The_DT answer_NN to_TO these_DT questions_NNS is_VBZ a_DT list_NN of_IN timings_NNS ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- kitni_FW kitni_FW der/kitne_FW kitne_FW samay_FW mein_FW :_: An_DT -_: swered_VBN as_IN a_DT list_NN of_IN duration_NN for_IN some_DT event_NN ._.
+-LRB-_-LRB- c_NN -RRB-_-RRB- kaun_NN kaun_NN -LRB-_-LRB- who_WP all/which_VBP all_RB -RRB-_-RRB- :_: The_DT answer_NN includes_VBZ a_DT list_NN of_IN nouns_NNS ._.
+This_DT can_MD be_VB found_VBN in_IN 2_CD major_JJ forms_NNS in_IN Hindi_NNP ._.
+•_NNP kaun_NNP kaun_NN X_NNP -LRB-_-LRB- who_WP all_PDT -RRB-_-RRB- :_: Here_RB X_NNP is_VBZ a_DT verb_NN ._.
+The_DT answer_NN to_TO this_DT question_NN type_NN is_VBZ a_DT set_NN of_IN nouns_NNS performing_VBG X._NNP •_NNP kaun_NNP kaun_NNP se_FW X_NNP -LRB-_-LRB- which_WDT all_DT X_NNP -RRB-_-RRB- :_: It_PRP is_VBZ an_DT -_: swered_VBN as_IN a_DT list_NN of_IN Xs_NNP ._.
+Here_RB X_NNP is_VBZ a_DT noun_NN ._.
+-LRB-_-LRB- d_LS -RRB-_-RRB- kahan_JJ kahan_NN -LRB-_-LRB- where_WRB all_PDT -RRB-_-RRB- :_: The_DT answer_NN to_TO this_DT question_NN is_VBZ a_DT list_NN of_IN place_NN ._.
+-LRB-_-LRB- e_LS -RRB-_-RRB- kis_FW kis_FW :_: The_DT answer_NN to_TO this_DT question_NN is_VBZ a_DT list_NN of_IN entities_NNS mostly_RB noun_NN ._.
+-LRB-_-LRB- f_LS -RRB-_-RRB- kya_FW kya_FW -LRB-_-LRB- what_WP all_PDT -RRB-_-RRB- :_: A_DT list_NN of_IN descrip_NN -_: tion/entities_NNS is_VBZ answer_NN to_TO these_DT questions_NNS ._.
+3_LS ._.
+reasoning_NN answer_NN questions_NNS :_: The_DT answers_NNS are_VBP not_RB direct_JJ ,_, instead_RB some_DT reasoning_NN needs_VBZ to_TO be_VB done_VBN with_IN the_DT existing_VBG knowledge_NN ._.
+4_LS ._.
+Questions_NNS without_IN question_NN word_NN :_: These_DT are_VBP imperative_JJ questions_NNS ._.
+The_DT answers_NNS to_TO these_DT ques_NNS -_: tions_NNS vary_VBP differently_RB ._.
+-LRB-_-LRB- 4_LS -RRB-_-RRB- hyderabad_NN se_FW lingampally_FW jane_FW Hyderabad_NNP from_IN Lingampally_NNP going_VBG wali_NNS sabhi_FW gadiyon_FW ke_FW samay_FW batayein_FW ._.
+all_DT trains_NNS time_NN inform_VB ._.
+Inform_VB train_NN timings_NNS of_IN all_PDT the_DT trains_NNS go_VB -_: ing_NN from_IN Hyderabad_NNP to_TO Lingampally_NNP ._.
+Implications_NNS :_: Apart_RB from_IN these_DT ,_, certain_JJ implica_NN -_: tive_JJ questions_NNS can_MD also_RB be_VB asked_VBN which_WDT actually_RB do_VBP intend_VB to_TO ask_VB something_NN else_RB ._.
+Target_NNP Question_NNP Types_NNP 5_CD ._.
+3.2_CD -LRB-_-LRB- a_DT -RRB-_-RRB- kyun/kyun_NN kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- :_: The_DT answer_NN demands_NNS reasons_NNS for_IN happening_VBG or_CC not_RB happening_VBG of_IN an_DT event_NN ._.
+The_DT answer_NN to_TO this_DT is_VBZ the_DT reason_NN for_IN the_DT happening_VBG of_IN certain_JJ event_NN ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- kaise/kaise_NN kaise_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- :_: The_DT method_NN for_IN do_VBP -_: ing_VBG certain_JJ action_NN is_VBZ the_DT answer_NN to_TO these_DT ques_NNS -_: tions_NNS ._.
+The_DT answer_NN for_IN this_DT is_VBZ the_DT method_NN of_IN doing_VBG that_DT event_NN ._.
+All_PDT the_DT questions_NNS have_VBP been_VBN taken_VBN literally_RB and_CC im_SYM -_: plications_NNS have_VBP yet_RB not_RB been_VBN covered_VBN ._.
+We_PRP have_VBP not_RB targeted_VBN questions_NNS without_IN question_NN word_NN ._.
+Addition_NN -_: ally_NN ,_, due_JJ to_TO the_DT high_JJ ambiguity_NN for_IN questions_NNS with_IN kya_NN -LRB-_-LRB- what_WP ,_, does_VBZ ,_, can_MD ,_, is_VBZ ,_, etc._FW -RRB-_-RRB- question_NN word_NN ,_, we_PRP have_VBP planned_VBN to_TO tackle_VB this_DT using_VBG dialog_NN mechanism_NN for_IN interacting_VBG with_IN humans_NNS in_IN case_NN of_IN ambiguity_NN ._.
+Al_NNP -_: though_IN it_PRP has_VBZ not_RB been_VBN described_VBN in_IN this_DT paper_NN ,_, we_PRP have_VBP planned_VBN an_DT expert_NN system_NN interface_NN for_IN the_DT kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- and_CC kaise_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- questions_NNS ._.
+4_CD Ontology_NNP creation_NN According_VBG to_TO Minock_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ,_, the_DT following_VBG condi_NN -_: tions_NNS should_MD be_VB satisfied_VBN for_IN a_DT restricted_VBN domain_NN :_: •_CD It_PRP should_MD be_VB circumscribed_VBN ._.
+•_CD It_PRP should_MD be_VB complex_JJ ._.
+•_CD It_PRP should_MD be_VB practical_JJ ._.
+Keeping_VBG the_DT above_JJ in_IN mind_NN ,_, we_PRP chose_VBD the_DT MMTS_NNP train-timing_NN domain_NN as_IN it_PRP satisfies_VBZ all_PDT the_DT above_JJ cri_NN -_: teria_NN ._.
+To_TO ease_VB answering_NN kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- and_CC kaise_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- questions_NNS ,_, we_PRP chose_VBD PurposeNet_NNP as_IN its_PRP$ struc_NN -_: ture_NN helps_VBZ in_IN expanding_VBG multiple_JJ actions_NNS and_CC con_NN -_: ditions_NNS ._.
+Mayee_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- attempts_VBZ to_TO inform_VB the_DT complexity_NN in_IN the_DT action_NN semantics_NNS involved_VBN in_IN PurposeNet_NNP architecture_NN ._.
+The_DT action_NN frame_NN in_IN Pur_NNP -_: poseNet_NNP contains_VBZ :_: •_CD precondition_NN :_: the_DT conditions_NNS before_IN certain_JJ ac_SYM -_: tion_NN can_MD happen_VB ._.
+•_SYM sub-actions_NNS :_: the_DT actions_NNS without_IN which_WDT an_DT action_NN can_MD not_RB happen_VB ._.
+These_DT actions_NNS combine_VBP together_RB to_TO form_VB the_DT main_JJ action_NN ._.
+•_NN outcome_NN :_: the_DT result_NN of_IN an_DT action_NN ._.
+•_CD thematic_JJ roles_NNS :_: various_JJ roles_NNS performed_VBN by_IN ob_SYM -_: jects_NNS for_IN an_DT action_NN ._.
+These_DT features_NNS help_VBP us_PRP a_DT lot_NN when_WRB deciding_VBG the_DT an_DT -_: swers_NNS for_IN why_WRB and_CC how_WRB kind_NN of_IN questions_NNS ._.
+The_DT pro-_JJ cedure_NN will_MD be_VB described_VBN in_IN section_NN 6.2_CD ._.
+Multiple_JJ attempts_NNS to_TO automatically_RB populate_VB Pur_NNP -_: poseNet_NNP have_VBP already_RB been_VBN carried_VBN out_RP in_IN the_DT past_NN -LRB-_-LRB- Mayee_NNP et_FW al._FW ,_, 2010_CD ;_: Singh_NNP and_CC Srivastava_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Although_IN ,_, none_NN of_IN these_DT have_VBP been_VBN clear_JJ as_IN to_TO how_WRB to_TO automatically_RB populate_VB the_DT entire_JJ Ontology_NNP using_VBG web_NN resources_NNS or_CC a_DT corpus_NN ._.
+We_PRP decided_VBD to_TO manu_VB -_: ally_NN create_VB the_DT ontology_NN using_VBG the_DT online_JJ data_NNS on_IN the_DT MMTS_NNP website_NN ._.
+The_DT ontology_NN has_VBZ been_VBN created_VBN us_PRP -_: ing_VBG OWL_NNP -LRB-_-LRB- Web_NNP Ontology_NNP Language_NNP -RRB-_-RRB- -LRB-_-LRB- McGuinness_NNP et_FW al._FW ,_, 2004_CD -RRB-_-RRB- using_VBG Protege_NNP ._.
+Pellet_NNP reasoner_NN runs_VBZ on_IN this_DT ontology_NN ,_, thus_RB giving_VBG us_PRP a_DT data_NN resource_NN for_IN retriev_NN -_: ing_NN query_NN answers_NNS ._.
+5_CD System_NNP Design_NNP Our_PRP$ design_NN involves_VBZ the_DT following_VBG ideology_NN to_TO ensure_VB the_DT generalization_NN of_IN the_DT methodology_NN :_: •_CD Multilingual_JJ architecture_NN :_: Although_IN systems_NNS other_JJ than_IN that_DT of_IN Hindi_NNP have_VBP not_RB been_VBN tested_VBN and_CC their_PRP$ specific_JJ issues_NNS are_VBP not_RB handled_VBN ,_, the_DT architec_NN -_: ture_NN of_IN our_PRP$ QA_NNP system_NN is_VBZ designed_VBN in_IN such_JJ a_DT way_NN that_IN it_PRP should_MD work_VB for_IN most_JJS of_IN the_DT Indo-Aryan_NNP languages_NNS ._.
+•_NNP Domain_NNP independence_NN :_: Our_PRP$ QA_NNP system_NN can_MD be_VB extended_VBN to_TO various_JJ domains_NNS like_IN medicine_NN ,_, tourism_NN ,_, transport_NN ,_, etc._FW ._.
+However_RB ,_, some_DT more_JJR set_NN of_IN specific_JJ rules_NNS -LRB-_-LRB- domain_NN oriented_VBN -RRB-_-RRB- need_VBP to_TO be_VB in_IN -_: tegrated_VBN to_TO cover_VB a_DT larger_JJR group_NN of_IN factoid_NN ques_NNS -_: tions_NNS in_IN other_JJ domains_NNS ._.
+Figure_NN 1_CD shows_VBZ the_DT dialogue_NN system_NN ._.
+It_PRP is_VBZ com_NN -_: prised_VBN of_IN a_DT various_JJ sub-modules_NNS each_DT of_IN which_WDT is_VBZ de_IN -_: scribed_VBN as_IN follows_VBZ ._.
+5.1_CD Dialog_NNP Manager_NNP This_DT is_VBZ the_DT major_JJ backbone_NN of_IN the_DT dialogue_NN system_NN ._.
+The_DT dialogue_NN manager_NN contributes_VBZ to_TO a_DT variety_NN of_IN functionalities_NNS in_IN a_DT dialogue_NN system_NN ._.
+1_LS ._.
+User_NN interface_NN -LRB-_-LRB- UI_NNP -RRB-_-RRB- :_: This_DT module_NN handles_VBZ the_DT user_NN interaction_NN ._.
+Both_DT to_TO and_CC fro_NN dialogues_NNS are_VBP delivered_VBN by_IN this_DT module_NN ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- inform_VBP user_NN :_: The_DT module_NN deals_NNS with_IN inform_VBP -_: ing_VBG the_DT user_NN about_IN the_DT answers_NNS or_CC the_DT details_NNS of_IN the_DT response_NN the_DT dialogue_NN manager_NN is_VBZ expect_VB -_: ing_NN ._.
+As_IN the_DT QA_NNP system_NN is_VBZ in_IN Hindi_NNP ,_, we_PRP have_VBP provided_VBN a_DT complete_JJ Hindi_NNP based_VBN interface_NN to_TO the_DT users_NNS ._.
+The_DT user_NN is_VBZ either_RB prompted_VBN for_IN a_DT clearer_JJR input_NN -LRB-_-LRB- in_IN case_NN of_IN certain_JJ ambiguity_NN -RRB-_-RRB- or_CC given_VBN the_DT answer_NN in_IN Hindi_NNP ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- accept_VB response_NN :_: This_DT module_NN accepts_VBZ re_SYM -_: sponses_NNS from_IN the_DT user_NN ._.
+2_LS ._.
+Back-end_JJ processing_NN :_: Some_DT of_IN the_DT functions_NNS of_IN this_DT part_NN include_VBP acquiring_VBG questions_NNS ,_, identi_NNS -_: fying_VBG incorrect/irrelevant_JJ questions_NNS ,_, identifying_VBG whether_IN the_DT kya_NN type_NN of_IN question_NN is_VBZ factoid_JJ or_CC boolean_JJ ,_, argument_NN completion_NN wherever_WRB possible_JJ and_CC delivering_VBG the_DT answer_NN ._.
+-LRB-_-LRB- Refer_NNP Section_NNP 6.4_CD -RRB-_-RRB- ._.
+5.2_CD Language_NN difference_NN One_CD of_IN the_DT major_JJ challenges_NNS in_IN this_DT work_NN was_VBD that_IN the_DT ontology_NN was_VBD created_VBN in_IN English_NNP and_CC the_DT questions_NNS were_VBD given_VBN in_IN Hindi_NNP ._.
+We_PRP addressed_VBD these_DT issues_NNS by_IN :_: •_SYM Devanagari_NNP -LRB-_-LRB- script_NN for_IN Hindi_NNP -RRB-_-RRB- digits_NNS in_IN a_DT given_VBN query_NN is_VBZ converted_VBN to_TO Latin_NNP numbers_NNS ._.
+eg_NN ._. ''_''
+2_CD e_SYM 3_CD e_LS ''_'' is_VBZ deemed_VBN as_IN ''_'' 2_CD e_SYM 3_CD e_LS ''_'' for_IN the_DT query_NN ._.
+•_CD A_DT dictionary_NN of_IN mapping_NN of_IN proper_JJ nouns_NNS of_IN the_DT Ontology_NNP in_IN Hindi_NNP was_VBD created_VBN ._.
+eg_NN ._. ''_''
+u_IN a_DT e_LS ai_VBP a_DT aa_NN ''_'' is_VBZ deemed_VBN as_IN ''_'' Falaknuma_NNP e_LS Hyderabad_NNP ''_'' for_IN the_DT query_NN ._.
+•_CD A_DT mapping_NN of_IN the_DT answer_NN terms_NNS from_IN Hindi_NNP to_TO English_NNP along-with_IN the_DT reverse_NN of_IN above_IN men_NNS -_: tioned_VBN dictionary_NN was_VBD created_VBN ._.
+eg_NN ._.
+When_WRB the_DT an_DT -_: swer_NN contains_VBZ the_DT term_NN ''_'' Next_JJ train_NN ''_'' ,_, it_PRP is_VBZ mapped_VBN to_TO ''_'' a_DT e_LS ''_'' in_IN the_DT final_JJ answer_NN ._.
+Same_JJ is_VBZ done_VBN from_IN question_NN to_TO answer_VB as_RB well_RB ._.
+Argument_NN Completor_NNP no_DT 5.3_CD Extract_NNP arguments_NNS Though_IN Hindi_NNP is_VBZ a_DT free_JJ word_NN order_NN language_NN ,_, it_PRP pro-_JJ vides_NNS perfect_JJ syntactic_NN cues_NNS in_IN many_JJ cases_NNS whereas_IN at_IN some_DT places_NNS it_PRP makes_VBZ an_DT ambiguous_JJ phrase_NN or_CC sen_NN -_: tence_NN ._.
+We_PRP use_VBP these_DT syntactic_JJ cues_NNS for_IN extracting_VBG the_DT arguments_NNS of_IN the_DT question_NN ._.
+•_SYM postpositions_NNS ._.
+eg_FW se_FW -LRB-_-LRB- from_IN -RRB-_-RRB- specified_VBN after_IN a_DT word_NN -LRB-_-LRB- which_WDT is_VBZ in_IN the_DT list_NN of_IN stations_NNS -RRB-_-RRB- is_VBZ the_DT source_NN sta_NN -_: tion_NN ,_, whereas_IN se_FW -LRB-_-LRB- from_IN -RRB-_-RRB- specified_VBN after_IN a_DT time_NN for_IN -_: mat_NN specifies_VBZ the_DT time_NN from_IN which_WDT the_DT user_NN is_VBZ in_IN -_: terested_VBN in_IN ._.
+Similar_JJ cues_NNS can_MD be_VB found_VBN for_IN desti_NNS -_: nation_NN station_NN ._.
+•_SYM pehli_NNS -LRB-_-LRB- first_JJ -RRB-_-RRB- and_CC agli_JJ -LRB-_-LRB- next_JJ -RRB-_-RRB- keywords_NNS are_VBP used_VBN for_IN the_DT first_JJ -LRB-_-LRB- train_NN -RRB-_-RRB- search_NN whereas_IN pichli_NNS -LRB-_-LRB- last_JJ from_IN the_DT current_JJ time_NN -RRB-_-RRB- and_CC aakhri_NNS -LRB-_-LRB- last_JJ in_IN the_DT day_NN -RRB-_-RRB- specify_VB the_DT last_JJ -LRB-_-LRB- train_NN -RRB-_-RRB- search_NN ._.
+•_NN whether_IN arrival_NN or_CC departure_NN is_VBZ being_VBG talked_VBN about_IN •_CD which_WDT is_VBZ the_DT primary_JJ entity_NN being_VBG inquired_VBN ._.
+5.4_CD Identify_NNP question_NN types_NNS Regular_JJ expression_NN is_VBZ matched_VBN for_IN all_PDT the_DT the_DT ques_NNS -_: tion_JJ types_NNS explained_VBD -LRB-_-LRB- Section_NN 3_CD -RRB-_-RRB- ._.
+If_IN the_DT question_NN type_NN is_VBZ identified_VBN as_IN a_DT reasoning_NN type_NN question_NN ,_, the_DT control_NN is_VBZ transferred_VBN to_TO the_DT reasoning_NN module_NN ,_, else_RB the_DT fac_NN -_: toid_JJ module_NN solves_VBZ the_DT query_NN ._.
+5.5_CD Create_NNP SPARQL_NNP query_NN For_IN every_DT question_NN type_NN mentioned_VBN in_IN section_NN 3_CD ,_, we_PRP have_VBP a_DT predefined_JJ SPARQL_NNP template_NN with_IN prede_NN -_: fined_VBN argument_NN structure_NN ._.
+The_DT argument_NN structure_NN is_VBZ completed_VBN by_IN the_DT arguments_NNS extracted_VBN -LRB-_-LRB- section_NN 5.3_CD -RRB-_-RRB- ._.
+Following_VBG is_VBZ a_DT template_NN to_TO find_VB out_RP all_PDT the_DT arrival_NN times_NNS -LRB-_-LRB- calculated_VBN by_IN subtracting_VBG halt-duration_NN from_IN the_DT departure_NN time_NN -RRB-_-RRB- -LRB-_-LRB- Line_NNP 1_CD -RRB-_-RRB- given_VBN ,_, the_DT start_NN station_NN -LRB-_-LRB- Line_NNP 3,4_CD -RRB-_-RRB- ,_, end_NN station_NN -LRB-_-LRB- Line_NNP 5,6_CD -RRB-_-RRB- and_CC the_DT name_NN of_IN the_DT station_NN at_IN which_WDT the_DT time_NN has_VBZ to_TO be_VB found_VBN -LRB-_-LRB- Line_NNP 7,8_CD -RRB-_-RRB- ._.
+1_LS ._.
+SELECT_NNP -LRB-_-LRB- xsd_NN :_: time_NN -LRB-_-LRB- ?_.
+deptime_NN -RRB-_-RRB- -_: xsd_NN :_: duration_NN -LRB-_-LRB- ?_.
+hlt_NN -RRB-_-RRB- AS_IN ?_.
+arrTime_NNP -RRB-_-RRB- 2_CD ._.
+WHERE_JJR -LCB-_-LRB- 3_CD ._. ?_.
+s_PRP :_: source_NN ?_.
+src_NN ._.
+4_LS ._.
+FILTER_NN -LRB-_-LRB- regex_FW -LRB-_-LRB- str_NN -LRB-_-LRB- ?_.
+src_NN -RRB-_-RRB- ,_, ''_'' depstation_NN ''_'' -RRB-_-RRB- -RRB-_-RRB- ._.
+5_CD ._. ?_.
+s_PRP :_: destination_NN ?_.
+dest_NN ._.
+6_CD ._.
+FILTER_NN -LRB-_-LRB- regex_FW -LRB-_-LRB- str_NN -LRB-_-LRB- ?_.
+dest_JJ -RRB-_-RRB- ,_, ''_'' arrstation_NN ''_'' -RRB-_-RRB- -RRB-_-RRB- ._.
+7_CD ._. ?_.
+s_PRP :_: atStation_NN ?_.
+st._NN 8_CD ._.
+FILTER_NN -LRB-_-LRB- regex_FW -LRB-_-LRB- str_NN -LRB-_-LRB- ?_.
+st_NN -RRB-_-RRB- ,_, ''_'' atstation_NN ''_'' -RRB-_-RRB- -RRB-_-RRB- ._.
+9_CD ._. ?_.
+s_PRP :_: stationHaltTime_VB ?_.
+hlt_NN ._. -RCB-_-RRB-
+Natural_JJ Language_NN -LRB-_-LRB- NL_NNP -RRB-_-RRB- Question_NNP boolean_JJ /_NN factoid_NN question_NN kya_NN correct_JJ /_NN incorrect_JJ -LRB-_-LRB- irrevant_JJ -RRB-_-RRB- question_NN yes_RB Extract_VB Arguments_NNS AIduetnot-icfyomQpuleste_JJ -_: AtirognumTyepnets_NNPS factoid_VBD /_CD kya_NN /_NN reasoning_NN question_NN reason_NN Full_JJ parse_VBP the_DT question_NN Extract_VB main_JJ verb_NN and_CC the_DT assosiated_JJ theme_NN Tackle_NNP reasoning_NN based_VBN questions_NNS factoid_VBD factoid_JJ no_DT arguments_NNS complete_VB ?_.
+provide_VB arguments_NNS yes_RB Local_JJ Word_NNP Grouper_NNP on_IN the_DT sentence_NN Creating_VBG sparql_NN query_NN using_VBG arguments_NNS Extract_VB fac_SYM -_: toid_JJ answers_NNS Ontology_NNP Create_NNP an_DT -_: swer_NN template_NN Fill_VB the_DT answer_NN template_NN template_NN with_IN the_DT extracted_VBN answer_NN -LRB-_-LRB- NL_NNP answer_NN -RRB-_-RRB- Translate_VB the_DT answer_NN to_TO Hindi_NNP Figure_NNP 1_CD :_: of_IN the_DT dialogue_NN system_NN ._.
+Blocks_NNS in_IN dark_JJ color_NN -LRB-_-LRB- blue_JJ -RRB-_-RRB- represent_VBP the_DT parts_NNS of_IN the_DT QA_NNP system_NN ,_, parts_NNS in_IN light_JJ color_NN -LRB-_-LRB- light_JJ green_JJ -RRB-_-RRB- represent_VBP the_DT components_NNS of_IN the_DT dialogue_NN system_NN ,_, parts_NNS with_IN the_DT dotted_JJ line_NN box_NN -LRB-_-LRB- dark_JJ green_JJ -RRB-_-RRB- represent_VBP parts_NNS of_IN reasoning_NN question_NN type_NN handler_NN whereas_IN parts_NNS within_IN solid_JJ box_NN -LRB-_-LRB- red_JJ -RRB-_-RRB- repre_SYM -_: sent_VBN factoid_NN type_NN handler_NN ._.
+White_NNP trapezium_NN repre_NN -_: sents_NNS resource_NN ._.
+Figure_NN shows_VBZ the_DT the_DT complete_JJ structure_NN Extract_VB action_NN 5.6_CD Create_NNP answer_NN template_NN Using_VBG the_DT question_NN type_NN ,_, we_PRP create_VBP predefined_VBN an_DT -_: swer_NN templates_NNS ,_, with_IN predefined_VBN argument_NN structure_NN ._.
+These_DT are_VBP plain_JJ Hindi_NNP sentences_NNS with_IN blanks_NNS in_IN be_VB -_: tween_NN to_TO be_VB filled_VBN in_IN by_IN the_DT oncoming_JJ answers_NNS ._.
+The_DT entities_NNS which_WDT we_PRP receive_VBP and_CC decide_VBP at_IN run-time_NN are_VBP replaced_VBN using_VBG the_DT dictionary_NN created_VBN in_IN section_NN 5.2_CD ._.
+The_DT answer_NN we_PRP extract_VBP from_IN the_DT above_JJ steps_NNS is_VBZ filled_VBN in_IN that_DT argument_NN structure_NN and_CC the_DT answer_NN is_VBZ sent_VBN as_IN an_DT output_NN to_TO users_NNS ._.
+6_CD Approach_NNP Given_VBN a_DT natural_JJ language_NN question_NN in_IN Hindi_NNP ,_, our_PRP$ target_NN is_VBZ to_TO give_VB back_RP natural_JJ language_NN answer_NN in_IN Hindi_NNP ._.
+For_IN this_DT ,_, we_PRP initially_RB extract_VB the_DT arguments_NNS and_CC then_RB the_DT question_NN type_NN from_IN the_DT question_NN ._.
+If_IN the_DT question_NN type_NN is_VBZ kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- or_CC kaise_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- we_PRP send_VBP the_DT query_NN to_TO a_DT separate_JJ module_NN handling_VBG reasoning_NN -_: based_VBN questions_NNS -LRB-_-LRB- refer_VBP section_NN 6.2_CD -RRB-_-RRB- ,_, otherwise_RB we_PRP send_VBP it_PRP to_TO a_DT module_NN handling_VBG factoid_NN questions_NNS ._.
+We_PRP then_RB extract_VB answers_NNS from_IN a_DT pellet_NN reasoner_NN which_WDT runs_VBZ over_IN an_DT OWL_NN ontology_NN ._.
+Using_VBG the_DT question_NN type_NN ,_, we_PRP create_VBP answer_NN template_NN and_CC after_IN we_PRP get_VBP the_DT answers_NNS from_IN the_DT reasoner_NN ,_, we_PRP fill_VBP the_DT answer_NN tem_NN -_: plate_NN ,_, thus_RB returning_VBG natural_JJ language_NN answers_NNS to_TO the_DT user_NN ._.
+In_IN case_NN of_IN ambiguities_NNS or_CC incompleteness_NN ,_, we_PRP ask_VBP the_DT user_NN back_RB for_IN the_DT information_NN required_VBN ._.
+6.1_CD Handling_VBG factoid_NN questions_NNS We_PRP run_VBP local_JJ word_NN grouper_NN on_IN all_PDT the_DT questions_NNS to_TO group_NN all_PDT the_DT relevant_JJ information_NN together_RB and_CC then_RB extract_VB all_PDT the_DT arguments_NNS and_CC the_DT question_NN type_NN ._.
+We_PRP select_VBP the_DT equivalent_JJ sparql_NN query_NN and_CC fill_NN in_IN the_DT ar_NN -_: guments_NNS ._.
+The_DT sparql_NN queries_VBZ templates_NNS -LRB-_-LRB- section_NN 5.5_CD -RRB-_-RRB- are_VBP used_VBN to_TO extract_VB direct_JJ answers_NNS from_IN the_DT ontology_NN ._.
+OWL_NN and_CC pellet_NN APIs_NNS are_VBP used_VBN for_IN this_DT purpose_NN ._.
+6.2_CD Tackle_NN reasoning_NN questions_NNS Currently_RB ,_, we_PRP have_VBP targeted_VBN only_RB two_CD reasoning_NN based_VBN questions_NNS ,_, kyun_NN -LRB-_-LRB- why_WRB -RRB-_-RRB- and_CC kaise_NN -LRB-_-LRB- how_WRB -RRB-_-RRB- ._.
+These_DT question_NN types_NNS inquire_VBP about_IN the_DT happening_VBG or_CC not_RB happening_VBG -LRB-_-LRB- the_DT reasoning_NN or_CC steps_NNS -RRB-_-RRB- of_IN any_DT specific_JJ action_NN ._.
+In_IN the_DT further_JJ sections_NNS we_PRP explain_VBP how_WRB to_TO tackle_VB these_DT questions_NNS in_IN the_DT PurposeNet_NNP framework_NN ._.
+PurposeNet_NNP framework_NN contains_VBZ action_NN frame_NN which_WDT quite_RB vividly_RB explains_VBZ the_DT requirements_NNS of_IN an_DT action_NN ._.
+yes_RB any_DT more_JJR sub_NN -_: action_NN ?_.
+Find_VB Sub-action_JJ Find_VB Precondition_NNP Pellet_NNP reasoner_NN of_IN OWL_NNP ontology_JJ Figure_NN 2_CD :_: around_IN an_DT action_NN ._.
+To_TO get_VB completed_VBN ,_, an_DT action_NN needs_VBZ to_TO satisfy_VB all_DT its_PRP$ preconditions_NNS ._.
+Additionally_RB it_PRP needs_VBZ to_TO have_VB com_NN -_: pleted_VBN all_DT its_PRP$ sub-actions_NNS ._.
+Those_DT sub-actions_NNS again_RB have_VBP to_TO satisfy_VB conditions_NNS and_CC sub-actions_NNS ,_, thus_RB con_JJ -_: tinuing_VBG the_DT sequence_NN ,_, till_IN we_PRP reach_VBP basic_JJ actions_NNS ._.
+6.2.1_CD DAG_NNP -LRB-_-LRB- Directed_NNP acyclic_JJ graph_NN -RRB-_-RRB- Satisfying_VBG its_PRP$ sub-actions_NNS as_RB well_RB as_IN preconditions_NNS is_VBZ the_DT requirement_NN for_IN an_DT action_NN ._.
+Similarly_RB ,_, for_IN a_DT pre_NN -_: condition_NN P_NNP ,_, actions_NNS which_WDT have_VBP their_PRP$ outcome_NN as_IN P_NNP may_MD or_CC may_MD not_RB be_VB the_DT requirement_NN of_IN P._NNP To_TO answer_VB reasoning_NN based_VBN questions_NNS ,_, we_PRP need_VBP to_TO create_VB a_DT net_JJ around_IN the_DT main_JJ action_NN consisting_VBG of_IN its_PRP$ sub-actions_NNS and_CC preconditions_NNS and_CC the_DT same_JJ way_NN for_IN them_PRP too_RB by_IN depth_NN first_JJ traversal_NN -LRB-_-LRB- DFS_NNP -RRB-_-RRB- of_IN the_DT ontology_NN ._.
+Figure_NN 2_CD shows_VBZ the_DT steps_NNS for_IN creating_VBG DAG_NNP around_IN an_DT action_NN ._.
+We_PRP first_RB check_VBP the_DT list_NN of_IN sub-actions_NNS and_CC precondi_NNS -_: tions_NNS ._.
+If_IN an_DT action_NN has_VBZ some_DT sub-actions_NNS they_PRP are_VBP considered_VBN for_IN the_DT next_JJ cycle_NN ._.
+If_IN preconditions_NNS are_VBP present_JJ ,_, we_PRP extract_VBP those_DT actions_NNS which_WDT have_VBP their_PRP$ outcome_NN as_IN this_DT precondition_NN ._.
+Now_RB ,_, this_DT gives_VBZ us_PRP the_DT structure_NN of_IN a_DT graph_NN ._.
+If_IN the_DT graph_NN is_VBZ cyclic_JJ anywhere_RB ,_, we_PRP ca_MD n't_RB give_VB a_DT fixed_VBN or_CC -_: der_NN of_IN steps_NNS ,_, wherever_WRB a_DT cycle_NN occurs_VBZ ._.
+Considering_VBG the_DT resultant_NN will_MD be_VB a_DT DAG_NNP ,_, we_PRP apply_VBP topological_JJ sort_NN on_IN this_DT created_VBN DAG_NNP ._.
+Now_RB with_IN the_DT results_NNS of_IN this_DT DAG_NNP ,_, we_PRP can_MD proceed_VB one_CD action_NN after_IN another_DT to_TO ask/confirm_VB the_DT steps_NNS for_IN a_DT given_VBN action_NN ._.
+Answering_VBG reasoning_NN questions_NNS uses_VBZ sparql_NN queries_NNS -LRB-_-LRB- section_NN 5.5_CD -RRB-_-RRB- as_IN an_DT internal_JJ subroutine_NN ,_, though_IN for_IN this_DT problem_NN we_PRP only_RB have_VBP sparql_NN queries_NNS answering_VBG direct_JJ answers_NNS ._.
+For_IN example_NN list_NN of_IN precondition_NN ,_, outcome_NN and_CC subaction_NN for_IN an_DT action_NN ._.
+As_RB soon_RB as_IN the_DT question_NN enters_VBZ this_DT module_NN we_PRP run_VBP a_DT full_JJ parser_NN on_IN the_DT question_NN to_TO identify_VB the_DT main_JJ verb_NN ._.
+This_DT verb_NN and_CC its_PRP$ arguments_NNS would_MD be_VB needed_VBN any_DT more_JJR precon_NN -_: dition_NN ?_.
+yes_RB Figure_NN shows_VBZ how_WRB to_TO construct_VB a_DT DAG_NNP Find_VB action_NN for_IN which_WDT this_DT condition_NN is_VBZ outcome_NN outcome_NN have_VBP Ticket_NN subaction_NN subaction_NN outcome_NN Pay_VB Money_NN outcome_NN precondtion_NN paid_VBD Money_NNP action_NN ._.
+We_PRP proceed_VBP according_VBG to_TO the_DT algorithm_NN 1_CD ._.
+Algorithm_NNP 1_CD :_: Tackle_VB kaise_NN questions_NNS 1_CD Identifythemainaction_NNP -LRB-_-LRB- kharid_JJ -LRB-_-LRB- buy_VB -RRB-_-RRB- -RRB-_-RRB- ._.
+2_CD Identifythetheme_NNP -LRB-_-LRB- ticket_NN -LRB-_-LRB- ticket_NN -RRB-_-RRB- -RRB-_-RRB- ._.
+3_CD CreateDAGaroundthemainaction_NNP ._.
+4_CD TopologicalsortthisDAG_NNP ._.
+5_CD Startfromthebeginningtodisplayallthebase_NNP actions_NNS -LRB-_-LRB- not_RB having_VBG any_DT sub-actions_NNS -RRB-_-RRB- on_IN the_DT way_NN ._.
+precondition_NN have_VBP Money_NN -LRB-_-LRB- a_DT -RRB-_-RRB- Figure_NN shows_VBZ the_DT ontological_JJ structure_NN around_IN the_DT ac_NN -_: tion_NN BuyMMTSTicket_NNP Buy_VB MMTS_NNP Ticket_NNP Pay_VBP Receive_NNP Money_NNP Ticket_NNP have_VBP Ticket_NNP have_VBP paid_VBN Money_NN Money_NN So_IN the_DT output_NN of_IN question_NN 5_CD would_MD be_VB :_: -LRB-_-LRB- b_NN -RRB-_-RRB- Figure_NN shows_VBZ the_DT DAG_NNP created_VBD around_IN the_DT action_NN 1_CD ._.
+Pay_VB Money_NNP BuyMMTSTicket_NNP 2_CD ._.
+Receive_VB Ticket_NN 3_CD ._.
+haveTicket_NNP ._.
+Buy_VB MMTS_NNP Ticket_NNP Pay_VBP Receive_NNP Money_NNP Ticket_NNP have_VBP Ticket_NNP 6.2.3_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- Tackle_NN kyun_NN questions_NNS kyun_NN ticket_NN nahi_NN kharida_NN ja_NN why_WRB ticket_NN not_RB to_TO buy_VB happening_VBG ?_.
+Why_WRB am_VBP I_PRP not_RB able_JJ to_TO buy_VB tickets_NNS ?_.
+raha_NN hai_NN ?_.
+6.2.2_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- Tackle_NN kaise_NN questions_NNS ticket_NN kaise_NN kharidein_NN ?_.
+tickethow_NN tobuy_NN ?_.
+How_WRB to_TO buy_VB a_DT ticket_NN ?_.
+So_IN the_DT output_NN of_IN question_NN 6_CD would_MD be_VB :_: 1_LS ._.
+Do_VBP you_PRP have_VBP money_NN ?_.
+2_LS ._.
+Did_VBD you_PRP pay_VBP money_NN ?_.
+3_LS ._.
+Did_VBD you_PRP receive_VBP ticket_NN ?_.
+The_DT user_NN would_MD automatically_RB know_VB where_WRB has_VBZ he_PRP not_RB done_VBD the_DT correct_JJ action_NN ._.
+One_CD very_RB interesting_JJ question_NN that_WDT arises_VBZ is_VBZ ,_, sup_SYM -_: pose_VB a_DT user_NN has_VBZ n't_RB performed_VBN the_DT action_NN of_IN receiving_VBG ticket_NN -LRB-_-LRB- Receive_NNP Ticket_NNP -RRB-_-RRB- then_RB is_VBZ it_PRP relevant_JJ to_TO ask_VB him_PRP whether_IN he_PRP has_VBZ money_NN -LRB-_-LRB- have_VBP Money_NN -RRB-_-RRB- ?_.
+As_IN we_PRP can_MD see_VB ,_, in_IN a_DT bigger_JJR Ontology_NNP where_WRB a_DT DAG_NNP can_MD be_VB very_RB huge_JJ ,_, it_PRP would_MD be_VB nearly_RB impossible_JJ to_TO ask/suggest_VB such_PDT a_DT large_JJ number_NN of_IN irrelevant_JJ questions_NNS ._.
+We_PRP can_MD make_VB this_DT more_JJR intuitive_JJ and_CC interactive_JJ using_VBG an_DT ex_FW -_: pert_JJ system_NN interface_NN by_IN asking_VBG only_RB the_DT most_RBS rele_JJ -_: vant_NN questions_NNS first_RB ._.
+have_VB paid_VBN Money_NNP Money_NNP Buy_VBP MMTS_NNP Ticket_NNP -LRB-_-LRB- c_NN -RRB-_-RRB- Figure_NN shows_VBZ the_DT topologically_JJ sorted_VBN order_NN of_IN DAG_NNP Figure_NNP 3_CD :_: Figure_NN shows_VBZ the_DT various_JJ steps_NNS in_IN extract_VB -_: ing_VBG information_NN from_IN ontology_NN to_TO having_VBG a_DT sorted_VBN or_CC -_: der_NN of_IN events_NNS using_VBG DAG_NNP ._.
+in_IN creating_VBG the_DT DAG_NNP ._.
+An_DT Example_NNP :_: We_PRP consider_VBP an_DT action_NN Buy_VB MMTS_NNP Ticket_NNP ._.
+Figure_NN 3a_NN shows_VBZ how_WRB the_DT ontology_NN around_IN this_DT action_NN is_VBZ configured_VBN ._.
+Applying_VBG our_PRP$ technique_NN of_IN constructing_VBG a_DT DAG_NNP ,_, we_PRP find_VBP all_PDT the_DT sub-actions_NNS and_CC preconditions_NNS over_IN which_WDT this_DT action_NN is_VBZ depen_SYM -_: dent_NN and_CC construct_VB edges_NNS ._.
+We_PRP do_VBP that_DT for_IN all_PDT the_DT sub-actions_NNS hierarchically_RB ._.
+Now_RB we_PRP pick_VBP up_RP the_DT pre_NN -_: condition_NN paid_VBD Money_NN and_CC find_VB out_RP that_IN its_PRP$ outcome_NN for_IN pay_NN Money_NN so_IN we_PRP create_VBP an_DT edge_NN for_IN the_DT same_JJ ._.
+We_PRP repeat_VBP this_DT process_NN till_IN we_PRP have_VBP traversed_VBN our_PRP$ complete_JJ graph_NN ._.
+The_DT completed_VBN DAG_NNP is_VBZ shown_VBN in_IN figure_NN 3b_NN ._.
+Figure_NN 3c_CD depicts_VBZ the_DT topologically_JJ sorted_VBN order_NN of_IN events_NNS ,_, i.e._FW if_IN the_DT events_NNS are_VBP dependent_JJ on_IN each_DT other_JJ ,_, then_RB the_DT events_NNS occurring_VBG later_RB can_MD not_RB occur_VB before_IN a_DT previously_RB enlisted_VBN event_NN ._.
+We_PRP have_VBP to_TO do_VB the_DT following_JJ operations_NNS until_IN we_PRP find_VBP the_DT main_JJ reason_NN of_IN not_RB being_VBG able_JJ to_TO do_VB the_DT above_JJ specified_VBN action_NN according_VBG to_TO the_DT algorithm_NN 2_CD ._.
+Algorithm_NNP 2_CD :_: Tackle_VB kyun_NN questions_NNS 1_CD Identifythemainaction_NNP -LRB-_-LRB- kharid_JJ -LRB-_-LRB- buy_VB -RRB-_-RRB- -RRB-_-RRB- ._.
+2_CD Identifythetheme_NNP -LRB-_-LRB- ticket_NN -LRB-_-LRB- ticket_NN -RRB-_-RRB- -RRB-_-RRB- ._.
+3_CD CreateDAGaroundthemainaction_NNP ._.
+4_CD TopologicalsortthisDAG_NNP ._.
+5_CD Startfromthebeginningtodisplaybaseactions_NNS and_CC non-outcome_JJ states_NNS ._.
+We_PRP have_VBP to_TO identify_VB the_DT steps_NNS for_IN doing_VBG a_DT specific_JJ Receive_NNP Ticket_NNP 6.3_CD Handling_NNP kya_NN questions_NNS kya_VBP questions_NNS can_MD be_VB ambiguous_JJ as_IN discussed_VBN earlier_JJR -LRB-_-LRB- Section_NN 3.1_CD -RRB-_-RRB- ._.
+The_DT dialog_NN manager_NN asks_VBZ the_DT user_NN if_IN the_DT question_NN is_VBZ boolean_JJ or_CC factoid_JJ types_NNS ._.
+in_IN the_DT question_NN -RRB-_-RRB- ,_, which_WDT can_MD be_VB used_VBN when_WRB the_DT query_NN is_VBZ incomplete_JJ or_CC ambiguous_JJ ._.
+The_DT system_NN identifies_VBZ the_DT arguments_NNS and_CC if_IN any_DT essential_JJ argument_NN is_VBZ missing_VBG ,_, the_DT dialog_NN manager_NN asks_VBZ the_DT users_NNS to_TO provide_VB that_DT argument_NN ._.
+The_DT prompt_JJ given_VBN to_TO user_NN is_VBZ like_IN sawaal_JJ adhoora_NN :_: kripya_FW gan_SYM -_: tavya_NN sthan_NN bataen_NN -LRB-_-LRB- question_NN incomplete_JJ :_: please_VB provide_VB the_DT destination_NN station_NN -RRB-_-RRB- ._.
+The_DT user_NN then_RB pro-_JJ vides_NNS the_DT arguments_NNS which_WDT are_VBP again_RB handled_VBN by_IN the_DT dialogue_NN manager_NN ._.
+6.4.2_CD Handling_VBG incorrect_JJ or_CC irrelavant_JJ questions_NNS Although_IN this_DT module_NN is_VBZ not_RB very_RB effective_JJ ,_, it_PRP han_SYM -_: dles_NNS trivial_JJ issues_NNS ,_, like_IN :_: •_VB a_DT question_NN without_IN a_DT question_NN word_NN •_CD nouns_NNS not_RB being_VBG identified_VBN in_IN the_DT domain_NN ._.
+7_CD Experiments_NNS and_CC Results_NNS As_IN no_DT previous_JJ work_NN has_VBZ been_VBN reported_VBN in_IN this_DT do_VBP -_: main_JJ for_IN Hindi_NNP till_IN date_NN ,_, we_PRP do_VBP not_RB have_VB a_DT bench_NN -_: mark_NN to_TO evaluate_VB our_PRP$ system_NN ._.
+Regarding_VBG the_DT eval_NN -_: uation_NN with_IN other_JJ ontology_NN based_VBN QA_NNP systems_NNS ,_, the_DT pipeline_NN for_IN QA_NNP is_VBZ nearly_RB same_JJ ._.
+The_DT coverage_NN of_IN our_PRP$ system_NN with_IN respect_NN to_TO the_DT number_NN of_IN types_NNS of_IN questions_NNS is_VBZ much_RB broader_JJR than_IN those_DT systems_NNS which_WDT handle_VBP only_RB factoid_JJ questions_NNS ,_, because_IN in_IN addition_NN to_TO factoid_NN questions_NNS ,_, we_PRP also_RB handle_VBP how_WRB and_CC why_WRB ques_NNS -_: tion_JJ types_NNS ._.
+We_PRP have_VBP collected_VBN questions_NNS from_IN 5_CD different_JJ users_NNS ,_, informing_VBG them_PRP about_IN the_DT domain_NN scenario_NN ._.
+Though_NNP ,_, it_PRP was_VBD not_RB a_DT compulsion_NN ,_, they_PRP were_VBD re_SYM -_: quested_VBN to_TO adhere_VB to_TO these_DT guidelines_NNS :_: •_VB the_DT primary_JJ domain_NN was_VBD train_NN timing_NN domain_NN •_CD single_JJ sentence_NN queries_NNS were_VBD encouraged_JJ •_CD The_DT questions_NNS should_MD contain_VB one_CD and_CC only_RB one_CD question_NN word_NN ._.
+We_PRP collected_VBD 66_CD questions4_NN ,_, with_IN repetitions_NNS ,_, from_IN the_DT 5_CD users_NNS ._.
+For_IN a_DT fair_JJ evaluation_NN ,_, the_DT test_NN queries_NNS were_VBD collected_VBN after_IN the_DT rules_NNS were_VBD framed_VBN ._.
+Hindi_NNP questions_NNS were_VBD entered_VBN in_IN Devanagari_NNP script_NN and_CC an_DT -_: swers/dialogue_NN interactions_NNS were_VBD also_RB given_VBN in_IN Hindi_NNP in_IN Devanagari_NNP script_NN ._.
+Table_NNP 1_CD explains_VBZ the_DT distribu_NN -_: 4The_JJ primary_JJ focus_NN of_IN the_DT work_NN is_VBZ to_TO address_VB a_DT larger_JJR variety_NN in_IN terms_NNS of_IN question_NN types_NNS ,_, than_IN the_DT state-of-the-art_JJ QA_NNP systems_NNS ._.
+Yet_RB we_PRP acknowledge_VBP that_IN we_PRP should_MD have_VB had_VBD a_DT larger_JJR testing_NN data_NNS for_IN more_JJR confident_JJ results_NNS ._.
+•_SYM •_FW If_IN the_DT question_NN is_VBZ factoid_JJ type_NN ,_, it_PRP is_VBZ treated_VBN exactly_RB as_IN the_DT other_JJ factoid_NN types_NNS questions_NNS and_CC send_VB for_IN processing_VBG to_TO other_JJ modules_NNS ._.
+If_IN the_DT question_NN is_VBZ boolean_JJ type_NN ,_, it_PRP is_VBZ treated_VBN as_IN a_DT factoid_JJ question_NN and_CC if_IN the_DT result_NN from_IN ontology_NN is_VBZ a_DT not_RB null_JJ value_NN ,_, we_PRP formulate_VBP the_DT answer_NN as_IN ''_'' Yes_UH ''_'' ._.
+For_IN eg_NN ._.
+-LRB-_-LRB- 7_CD -RRB-_-RRB- kya_NN 5_CD baje_NN ke_FW baad_FW koi_FW MMTS_FW what_WP 5_CD o’clock_NN after_IN any_DT MMTS_NNP train_NN Falaknuma_NNP train_NN Falaknuma_NNP se_FW Lingampally_NNP jaati_NNS hai_FW ?_.
+from_IN Lingampally_NNP go_VBP is_VBZ ?_.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Does_VBZ any_DT train_NN go_VB from_IN Falaknuma_NNP to_TO Lingam_NNP -_: pally_RB after_IN 5_CD o_NN '_'' clock_NN ?_.
+-LRB-_-LRB- b_NN -RRB-_-RRB- What_WP is_VBZ the_DT MMTS_NNP train_NN that_WDT goes_VBZ from_IN Falaknuma_NNP to_TO Lingampally_NNP after_IN 5_CD o’clock_NN ?_.
+This_DT question_NN 's_POS literal_JJ meaning_NN is_VBZ the_DT Sentence_NN 7_CD -LRB-_-LRB- a_DT -RRB-_-RRB- ,_, but_CC we_PRP consider_VBP the_DT question_NN as_IN its_PRP$ ambigu_NN -_: ous_JJ equivalent_JJ Sentence_NN 7_CD -LRB-_-LRB- b_NN -RRB-_-RRB- ._.
+We_PRP then_RB send_VBP this_DT sentence_NN to_TO the_DT pipeline_NN and_CC if_IN the_DT answer_NN result_NN by_IN the_DT ontology_NN is_VBZ not_RB null_JJ ,_, we_PRP declare_VBP that_IN the_DT answer_NN of_IN the_DT question_NN would_MD be_VB Yes_UH else_RB the_DT an_DT -_: swer_NN would_MD be_VB No_UH ._.
+Handling_VBG various_JJ problems_NNS encountered_VBN in_IN the_DT QA_NNP system_NN 6.4_CD In_IN this_DT section_NN we_PRP try_VBP to_TO cover_VB 2_CD of_IN the_DT major_JJ issues_NNS we_PRP have_VBP not_RB addressed_VBN till_IN now_RB ._.
+One_CD major_JJ setback_NN which_WDT the_DT QA_NNP system_NN suffered_VBD from_IN was_VBD the_DT way_NN it_PRP handled_VBD incomplete_JJ questions_NNS ._.
+The_DT other_JJ issue_NN was_VBD to_TO identify_VB and_CC notify_VB an_DT incorrect_JJ or_CC out_IN of_IN domain_NN question_NN ,_, which_WDT is_VBZ also_RB handled_VBN here_RB ._.
+6.4.1_CD Handling_VBG incomplete_JJ questions_NNS The_DT sentence_NN given_VBN in_IN natural_JJ language_NN may_MD or_CC may_MD not_RB contain_VB the_DT complete_JJ information_NN ._.
+Some_DT information_NN might_MD be_VB implicit_JJ by_IN the_DT user_NN and_CC hence_RB it_PRP is_VBZ suitable_JJ to_TO assume_VB them_PRP ._.
+Some_DT of_IN the_DT argu_NN -_: ments_NNS are_VBP compulsory_JJ for_IN every_DT query_NN while_IN some_DT might_MD be_VB taken_VBN as_RB optional_JJ and_CC certain_JJ assumptions_NNS can_MD be_VB made_VBN ._.
+For_IN a_DT majority_NN of_IN questions_NNS ,_, source_NN station_NN and_CC destination_NN station_NN are_VBP the_DT two_CD explicit_JJ arguments_NNS which_WDT this_DT system_NN wants_VBZ ,_, for_IN everything_NN else_RB ,_, we_PRP have_VBP kept_VBN a_DT suitable_JJ default_NN value_NN -LRB-_-LRB- eg_FW ._.
+cur_SYM -_: rent_VB time_NN is_VBZ taken_VBN by_IN default_NN if_IN time_NN is_VBZ not_RB specified_VBN Question_NNP Type_NNP #_# ques_NNS ._.
+Stage_NN I_PRP Stage_NNP II_NNP Stage_NNP III_NNP Stage_NNP IV_NNP Stage_NNP V_NNP all_DT uniq_CD %_NN %_NN %_NN %_NN %_NN Factoid_NN -LRB-_-LRB- single_JJ answer_NN -RRB-_-RRB- kab/kitne_FW baje_FW kitni_FW der_FW kitni_FW X_NNP kaun_NNP kahan_NN 18_CD 9_CD 3_CD 1_CD 7_CD 7_CD 5_CD 3_CD 1_CD 5_CD 9_CD 2_CD 0_CD 0_CD 4_CD 39.5_CD 9_CD 2_CD 0_CD 0_CD 4_CD 39.5_CD 15_CD 4_CD 2_CD 1_CD 5_CD 71.1_CD 15_CD 4_CD 2_CD 1_CD 5_CD 71.1_CD 16_CD 6_CD 3_CD 1_CD 7_CD 86.8_CD kya_NN -LRB-_-LRB- bool_NN ._.
+type_NN -RRB-_-RRB- kya_NN -LRB-_-LRB- other_JJ -RRB-_-RRB- 6_CD 1_CD 4_CD 1_CD 0_CD 0_CD 0_CD 0_CD 0_CD 0_CD 0_CD 0_CD 0_CD 5_CD 1_CD 85.7_CD 6_CD 1_CD 100_CD Factoid_NNP -LRB-_-LRB- list_NN answer_NN -RRB-_-RRB- kab_FW kab_FW kitni_FW kitni_FW der_FW kaun_FW kaun_FW se_FW X_NNP kaun_NNP kaun_NN X_NNP kahan_NNP kahan_NN 1_CD 2_CD 2_CD 2_CD 8_CD 1_CD 1_CD 1_CD 2_CD 5_CD 1_CD 0_CD 0_CD 0_CD 3_CD 26.7_CD 1_CD 0_CD 0_CD 0_CD 3_CD 26.7_CD 1_CD 1_CD 2_CD 0_CD 7_CD 73.3_CD 1_CD 1_CD 2_CD 0_CD 7_CD 73.3_CD 1_CD 2_CD 2_CD 0_CD 8_CD 86.7_CD Reasoning_NN questions_NNS kaise/kaise_VBP kaise_NN kyun/kyun_NN kyun_NN 3_CD 1_CD 3_CD 1_CD 0_CD 0_CD 0_CD 2_CD 1_CD 75_CD 2_CD 1_CD 75_CD 2_CD 1_CD 75_CD 3_CD 1_CD 100_CD Others_NNS no_DT question_NN word_NN 2_CD 2_CD 0_CD 0_CD 0_CD 0_CD 2_CD 100_CD Total_JJ 66_CD 43_CD 19_CD 28.8_CD 22_CD 33.3_CD 41_CD 62.1_CD 47_CD 71.2_CD 59_CD 89.4_CD Weighted_NNP Avg_NNP ._.
+13.2_CD 28.2_CD 43.9_CD 61.0_CD 94.7_CD Table_NNP 1_CD :_: This_DT table_NN shows_VBZ the_DT question_NN distribution_NN according_VBG to_TO the_DT question_NN type_NN and_CC the_DT number_NN of_IN correctly_RB answered_VBN questions_NNS by_IN the_DT system_NN at_IN every_DT stage_NN ._.
+Stage_NN I_NN shows_VBZ the_DT results_NNS of_IN raw_JJ QA_NNP system_NN dealing_VBG only_RB in_IN factoid_NN questions_NNS ._.
+Stage_NNP II_NNP shows_VBZ the_DT results_NNS after_IN adding_VBG reasoning_NN system_NN in_IN place_NN ._.
+Stage_NN III_NNP shows_VBZ results_NNS when_WRB local_JJ word_NN grouper_NN is_VBZ added_VBN in_IN the_DT pipeline_NN ._.
+Stage_NN IV_NNP shows_VBZ the_DT introduction_NN of_IN kya_NN questions_NNS with_IN the_DT help_NN of_IN dialog_NN systems_NNS ._.
+Stage_NN V_NN shows_VBZ the_DT results_NNS after_IN adding_VBG argument_NN completer_NN module_NN in_IN the_DT dialog_NN system_NN as_RB well_RB as_IN the_DT pipeline_NN ._.
+tion_NN of_IN these_DT questions_NNS with_IN the_DT question_NN type_NN ex_FW -_: plained_VBN in_IN the_DT section_NN 3_CD ._.
+100_CD 80_CD 60_CD 40_CD Tota_NNP 20_CD 0_CD Figure_NN 4_CD :_: Figure_NN shows_VBZ how_WRB various_JJ stages_NNS have_VBP affected_VBN the_DT accuracy_NN of_IN various_JJ question_NN types_NNS and_CC the_DT overall_JJ dialog_NN system_NN accuracy_NN ._.
+We_PRP created_VBD the_DT dialog_NN system_NN in_IN various_JJ stages_NNS ._.
+It_PRP should_MD also_RB be_VB noted_VBN that_IN some_DT of_IN the_DT question_NN types_NNS had_VBD very_RB few_JJ questions_NNS to_TO actually_RB determine_VB the_DT ex_FW -_: act_NN accuracy_NN ._.
+But_CC the_DT spikes_NNS in_IN the_DT number_NN of_IN ques_NNS -_: tions_NNS tackled_VBD successfully_RB give_VB a_DT fair_JJ estimate_NN of_IN the_DT impact_NN of_IN every_DT module_NN ._.
+Figure_NN 4_CD shows_VBZ the_DT accu_NN -_: racy_JJ of_IN various_JJ modules_NNS against_IN the_DT various_JJ stages_NNS ._.
+•_NNP Stage_NNP I_PRP :_: This_DT was_VBD our_PRP$ it_PRP baseline_JJ system_NN handling_VBG only_RB the_DT factoid_NN questions_NNS which_WDT predicted_VBD just_RB 19_CD results_NNS out_IN of_IN 66_CD ._.
+•_SYM StageII_NNP :_: Withanadditionofreasoningbasedan_NNP -_: swer_NN pipeline_NN ,_, 75_CD %_NN of_IN the_DT reasoning_NN based_VBN ques_NNS -_: tions_NNS could_MD be_VB answered_VBN ._.
+•_NNP Stage_NNP III_NNP :_: To_TO increase_VB the_DT efficiency_NN of_IN factoid_NN questions_NNS ,_, local_JJ word_NN grouper_NN was_VBD introduced_VBN be_VB -_: cause_NN of_IN which_WDT the_DT efficiency_NN spiked_VBD up_RP to_TO 41_CD questions_NNS being_VBG answered_VBN ._.
+•_NNP Stage_NNP IV_NNP :_: After_IN the_DT addition_NN of_IN kya_NN question_NN dis_SYM -_: criminators_NNS ,_, nearly_RB 85_CD %_NN of_IN the_DT questions_NNS could_MD be_VB answered_VBN •_CD Stage_NN V_NNP :_: The_DT overall_JJ accuracy_NN spiked_VBD up_RP to_TO 86.36_CD %_NN as_RB soon_RB as_IN the_DT argument_NN completion_NN module_NN was_VBD put_VBN into_IN place_NN ._.
+-LRB-_-LRB- Refer_JJR section_NN 6.4_CD -RRB-_-RRB- ._.
+8_CD Conclusion_NN We_PRP have_VBP presented_VBN an_DT approach_NN for_IN answering_VBG Hindi_NNP questions_NNS ._.
+We_PRP emphasize_VBP on_IN the_DT pipeline_NN for_IN a_DT com_NN -_: Weighted-Average_NNP l_NN Factoid-Single_NNP Factoid-List_NNP kya_NNP Reasoning_NN 12345_CD Stage_NNP Accuracy_NNP plete_NN dialog_NN system_NN accepting_VBG questions_NNS in_IN natural_JJ language_NN and_CC answering_NN in_IN natural_JJ language_NN ._.
+The_DT problems_NNS effectively_RB addressed_VBD are_VBP dealing_VBG with_IN a_DT knowledge_NN store_NN in_IN different_JJ language_NN and_CC retrieving_VBG answers_NNS from_IN a_DT structured_JJ knowledgebase_NN ._.
+References_NNS Somnath_NNP Banerjee_NNP Sivaji_NNP Bandyopadhyay_NNP ._.
+2012_CD ._.
+Bengali_JJ question_NN classification_NN :_: Towards_IN developing_VBG qa_NN sys_SYM -_: tem_NN ._.
+In_IN 24th_JJ International_NNP Conference_NNP on_IN Computa_NNP -_: tional_JJ Linguistics_NNP ,_, page_NN 25_CD ._.
+Ronald_NNP A_NNP Cole_NNP ,_, David_NNP G_NNP Novick_NNP ,_, Pieter_NNP JE_NNP Vermeulen_NNP ,_, Stephen_NNP Sutton_NNP ,_, Mark_NNP Fanty_NNP ,_, LFA_NNP Wessels_NNP ,_, Jacques_NNP Ho_NNP de_IN Villiers_NNP ,_, Johan_NNP Schalkwyk_NNP ,_, Brian_NNP Hansen_NNP ,_, and_CC Daniel_NNP Burnett_NNP ._.
+1997_CD ._.
+Experiments_NNS with_IN a_DT spoken_VBN di_FW -_: alogue_JJ system_NN for_IN taking_VBG the_DT us_PRP census_NN ._.
+Speech_NN Com_NNP -_: munication_NN ,_, 23_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :243_CD --_: 260_CD ._.
+Oscar_NNP Ferra_NNP ́ndez_NNP ,_, Rube_NNP ́n_NNP Izquierdo_NNP ,_, Sergio_NNP Ferra_NNP ́ndez_NNP ,_, and_CC Jose_NNP ́_NNP Luis_NNP Vicedo_NNP ._.
+2009_CD ._.
+Addressing_VBG ontology-based_JJ question_NN answering_VBG with_IN collections_NNS of_IN user_NN queries_NNS ._.
+Information_NNP Processing_NNP &_CC Management_NNP ,_, 45:175_CD --_: 188_CD ._.
+Poonam_NNP Gupta_NNP and_CC Vishal_NNP Gupta_NNP ._.
+2013_CD ._.
+Algorithm_NNP for_IN punjabi_JJ question_NN answering_VBG system_NN ._.
+Intl._NNP ._.
+Journal_NNP ._.
+Ryuichiro_NNP Higashinaka_NNP and_CC Hideki_NNP Isozaki_NNP ._.
+2008_CD ._.
+Corpus-based_JJ question_NN answering_VBG for_IN why-questions_NNS ._.
+In_IN IJCNLP_NNP ,_, pages_NNS 418_CD --_: 425_CD ._.
+Daniel_NNP Jurafsky_NNP and_CC H_NNP James_NNP ._.
+2000_CD ._.
+Speech_NN and_CC lan_NN -_: guage_NN processing_VBG an_DT introduction_NN to_TO natural_JJ language_NN processing_NN ,_, computational_JJ linguistics_NNS ,_, and_CC speech_NN ._.
+Jaspreet_NNP Kaur_NNP and_CC Vishal_NNP Gupta_NNP ._.
+2013_CD ._.
+Comparative_JJ analysis_NN of_IN question_NN answering_VBG system_NN in_IN indian_JJ lan_NN -_: guages_NNS ._.
+International_NNP Journal_NNP ,_, 3_CD -LRB-_-LRB- 7_CD -RRB-_-RRB- ._.
+Praveen_NNP Kumar_NNP ,_, Shrikant_NNP Kashyap_NNP ,_, Ankush_NNP Mittal_NNP ,_, and_CC Sumit_NNP Gupta_NNP ._.
+2003_CD ._.
+A_DT query_NN answering_VBG system_NN for_IN e-learning_JJ hindi_NNS documents_NNS ._.
+South_JJ Asian_JJ Language_NN Review_NNP ,_, 13_CD -LRB-_-LRB- 1_CD &_CC 2_CD -RRB-_-RRB- ._.
+Vanessa_NNP Lopez_NNP ,_, Michele_NNP Pasin_NNP ,_, and_CC Enrico_NNP Motta_NNP ._.
+2005_CD ._.
+Aqualog_NNP :_: An_DT ontology-portable_JJ question_NN answering_VBG system_NN for_IN the_DT semantic_JJ web_NN ._.
+In_IN The_DT Semantic_NNP Web_NNP :_: Research_NNP and_CC Applications_NNS ,_, pages_NNS 546_CD --_: 562_CD ._.
+Springer_NNP ._.
+Mark_NNP T_NNP Maybury_NNP ._.
+2003_CD ._.
+Toward_IN a_DT question_NN answering_VBG roadmap_NN ._.
+New_NNP Directions_NNP in_IN Question_NNP Answering_NNP ._.
+PK_NNP Mayee_NNP ,_, R_NNP Sangal_NNP ,_, and_CC S_NNP Paul_NNP ._.
+2010_CD ._.
+Automatic_NNP ex_FW -_: traction_NN and_CC incorporation_NN of_IN purpose_NN data_NNS into_IN pur_NN -_: posenet_NN ._.
+In_IN Computer_NNP Engineering_NNP and_CC Technology_NNP -LRB-_-LRB- ICCET_NNP -RRB-_-RRB- ,_, 2010_CD 2nd_CD International_NNP Conference_NNP on_IN ,_, vol_SYM -_: ume_NN 6_CD ,_, pages_NNS V6_VBP --_: 154_CD ._.
+IEEE_NNP ._.
+P_NNP Kiran_NNP Mayee_NNP ,_, Rajeev_NNP Sangal_NNP ,_, and_CC Soma_NNP Paul_NNP ._.
+2011_CD ._.
+Action_NNP semantics_NNS in_IN purposenet_NN ._.
+In_IN Information_NNP and_CC Communication_NNP Technologies_NNP -LRB-_-LRB- WICT_NNP -RRB-_-RRB- ,_, 2011_CD World_NNP Congress_NNP on_IN ,_, pages_NNS 1299_CD --_: 1304_CD ._.
+IEEE_NNP ._.
+Deborah_NNP L_NNP McGuinness_NNP ,_, Frank_NNP Van_NNP Harmelen_NNP ,_, et_FW al._FW 2004_CD ._.
+Owl_NN web_NN ontology_JJ language_NN overview_NN ._.
+W3C_CD recommendation_NN ,_, 10_CD -LRB-_-LRB- 2004-03_CD -RRB-_-RRB- :10_CD ._.
+David_NNP Milward_NNP and_CC Martin_NNP Beveridge_NNP ._.
+2003_CD ._.
+Ontology_NNP -_: based_VBN dialogue_NN systems_NNS ._.
+In_IN Proc_NNP ._.
+3rd_CD Workshop_NNP on_IN Knowledge_NNP and_CC reasoning_NN in_IN practical_JJ dialogue_NN sys_SYM -_: tems_NNS -LRB-_-LRB- IJCAI03_CD -RRB-_-RRB- ,_, pages_NNS 9_CD --_: 18_CD ._.
+Citeseer_NNP ._.
+Michael_NNP Minock_NNP ._.
+2005_CD ._.
+Where_WRB are_VBP the_DT killer_NN applications_NNS of_IN restricted_VBN domain_NN question_NN answering_VBG ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT IJCAI_NNP Workshop_NNP on_IN Knowledge_NNP Reasoning_NN in_IN Question_NNP Answering_NNP ,_, page_NN 4_CD ._.
+Jong-Hoon_NNP Oh_UH ,_, Kentaro_NNP Torisawa_NNP ,_, Chikara_NNP Hashimoto_NNP ,_, Motoki_NNP Sano_NNP ,_, Stijn_NNP De_NNP Saeger_NNP ,_, and_CC Kiyonori_NNP Ohtake_NNP ._.
+2013_CD ._.
+Why-question_JJ answering_NN using_VBG intra-and_JJ inter_NN -_: sentential_JJ causal_JJ relations_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 51st_CD Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP -LRB-_-LRB- ACL_NNP 2013_CD -RRB-_-RRB- ._.
+Deepak_NNP Ravichandran_NNP and_CC Eduard_NNP Hovy_NNP ._.
+2002_CD ._.
+Learning_NNP surface_NN text_NN patterns_NNS for_IN a_DT question_NN answering_VBG system_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 40th_JJ Annual_JJ Meeting_VBG on_IN Associ_NNP -_: ation_NN for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 41_CD --_: 47_CD ._.
+As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Rami_NNP Reddy_NNP Nandi_NNP Reddy_NNP and_CC Sivaji_NNP Bandyopadhyay_NNP ._.
+2006_CD ._.
+Dialogue_NN based_VBN question_NN answering_VBG system_NN in_IN telugu_NN ._.
+In_IN Workshop_NNP on_IN Multilingual_NNP Question_NNP An_NNP -_: swering_NN ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Shriya_NNP Sahu_NNP ,_, Nandkishor_NNP Vasnik_NNP ,_, and_CC Devshri_NNP Roy_NNP ._.
+2012_CD ._.
+Prashnottar_NNP :_: A_DT hindi_JJ question_NN answering_VBG system_NN ._.
+In_IN -_: ternational_JJ Journal_NNP of_IN Computer_NNP Science_NNP &_CC Informa_NNP -_: tion_NN Technology_NN ,_, 4_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+Rajeev_NNP Sangal_NNP ,_, Soma_NNP Paul_NNP ,_, and_CC P_NNP Kiran_NNP Mayee_NNP ._.
+2013_CD ._.
+Purposenet_NNP :_: A_NNP knowledge_NN base_NN organized_VBN around_IN pur_NN -_: pose_VB ._.
+In_IN Conceptual_JJ Structures_NNS for_IN STEM_NNP Research_NNP and_CC Education_NNP ,_, pages_NNS 29_CD --_: 30_CD ._.
+Springer_NNP ._.
+Satoshi_NNP Sekine_NNP and_CC Ralph_NNP Grishman_NNP ._.
+2003_CD ._.
+Hindi_SYM -_: english_JJ cross-lingual_JJ question-answering_NN system_NN ._.
+ACM_NNP Transactions_NNS on_IN Asian_JJ Language_NN Information_NN Processing_NNP -LRB-_-LRB- TALIP_NNP -RRB-_-RRB- ,_, 2_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :181_CD --_: 192_CD ._.
+Chandni_NNP Singh_NNP and_CC Rishabh_NNP Srivastava_NNP ._.
+2011_CD ._.
+Study_NNP and_CC population_NN of_IN artifacts_NNS ._.
+International_NNP Journal_NNP of_IN Computer_NNP Technology_NNP and_CC Electronics_NNP Engineering_NNP ,_, -LRB-_-LRB- NCETCSIT-Dec_JJ '_'' 2011_CD -RRB-_-RRB- :1_CD --_: 5_CD ._.
+Evren_NNP Sirin_NNP ,_, Bijan_NNP Parsia_NNP ,_, Bernardo_NNP Cuenca_NNP Grau_NNP ,_, Aditya_NNP Kalyanpur_NNP ,_, and_CC Yarden_NNP Katz_NNP ._.
+2007_CD ._.
+Pellet_NNP :_: A_NNP practical_JJ owl-dl_NN reasoner_NN ._.
+Web_NNP Semantics_NNPS :_: science_NN ,_, services_NNS and_CC agents_NNS on_IN the_DT World_NNP Wide_NNP Web_NNP ,_, 5_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :51_CD --_: 53_CD ._.
+Eriks_NNP Sneiders_NNP ._.
+2002_CD ._.
+Automated_VBN question_NN answering_VBG us_PRP -_: ing_VBG question_NN templates_NNS that_WDT cover_VBP the_DT conceptual_JJ model_NN of_IN the_DT database_NN ._.
+In_IN Natural_JJ Language_NN Processing_NNP and_CC Information_NNP Systems_NNP ,_, pages_NNS 235_CD --_: 239_CD ._.
+Springer_NNP ._.
+Maria_NNP Vargas-Vera_NNP and_CC Enrico_NNP Motta_NNP ._.
+2004_CD ._.
+Aqua_NNP --_: ontology-based_JJ question_NN answering_VBG system_NN ._.
+In_IN MICAI_NNP 2004_CD :_: Advances_NNS in_IN Artificial_NNP Intelligence_NNP ,_, pages_NNS 468_CD --_: 477_CD ._.
+Springer_NNP ._.

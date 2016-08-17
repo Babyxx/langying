@@ -1,0 +1,181 @@
+Graph_NNP Theoretic_NNP Features_NNP of_IN the_DT Adult_NNP Mental_NNP Lexicon_NNP Predict_NNP Language_NNP Production_NN in_IN Mandarin_NNP :_: Clustering_VBG Coefficient_NNP Abstract_NNP Graph_NNP theory_NN has_VBZ recently_RB been_VBN used_VBN to_TO explore_VB the_DT mathematical_JJ structure_NN of_IN the_DT mental_JJ lexicon_NN ._.
+In_IN this_DT study_NN we_PRP tested_VBD the_DT influence_NN of_IN graph_NN measures_NNS on_IN Man_NN -_: darin_NN speech_NN production_NN ._.
+Thirty-six_CD na_TO -_: tive_JJ Mandarin-speaking_JJ adults_NNS took_VBD part_NN in_IN a_DT shadowing_VBG task_NN containing_VBG 194_CD mon_NN -_: osyllabic_JJ words_NNS ,_, 94_CD of_IN which_WDT consisted_VBD of_IN 3_CD phonemes_NNS and_CC were_VBD the_DT items_NNS under_IN analysis_NN ._.
+Linear_JJ mixed_JJ effect_NN modeling_NN revealed_VBD that_IN clustering_VBG coefficient_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- predicted_VBD spoken_VBN production_NN of_IN Mandarin_NNP monosyllabic_JJ words_NNS ,_, while_IN network_NN de_IN -_: gree_NN ,_, in_IN this_DT case_NN its_PRP$ phonological_JJ neigh_NN -_: borhood_NN density_NN -LRB-_-LRB- PND_NNP -RRB-_-RRB- failed_VBD to_TO account_VB for_IN lexical_JJ processing_NN ._.
+High_NNP C_NNP resulted_VBD in_IN shorter_JJR reaction_NN times_NNS ,_, contrary_JJ to_TO evi_SYM -_: dence_NN in_IN English_NNP ._.
+While_IN these_DT findings_NNS suggest_VBP that_IN lexical_JJ processing_NN is_VBZ affect_VB -_: ed_VBN by_IN the_DT network_NN structure_NN of_IN the_DT mental_JJ lexicon_NN ,_, they_PRP also_RB suggest_VBP that_IN language_NN specific_JJ traits_NNS lead_VBP to_TO differing_VBG behavior_NN -_: al_JJ outcomes_NNS ._.
+While_IN PND_NNP can_MD be_VB under_IN -_: stood_VBD as_IN the_DT underlying_VBG lattice_NN for_IN which_WDT a_DT similarity_NN network_NN is_VBZ created_VBN ,_, lexical_JJ selection_NN is_VBZ not_RB affected_VBN by_IN only_RB a_DT target_NN word_NN 's_POS neighbors_NNS but_CC instead_RB the_DT level_NN of_IN interconnectivity_NN of_IN words_NNS -LRB-_-LRB- C_NNP -RRB-_-RRB- within_IN the_DT network_NN ._.
+du.hk_NN 1_CD Introduction_NNP Graph_NNP theory_NN is_VBZ currently_RB an_DT active_JJ tool_NN within_IN the_DT language_NN sciences_NNS ._.
+Networks_NNP constructed_VBD from_IN the_DT semantic_JJ knowledge_NN of_IN children_NNS have_VBP shown_VBN typi_SYM -_: cal_JJ versus_CC disordered_JJ development_NN -LRB-_-LRB- Beckage_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- and_CC helped_VBD to_TO explain_VB the_DT growth_NN of_IN vocabu_NN -_: lary_JJ -LRB-_-LRB- Hills_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT network_NN structure_NN of_IN phonological_JJ networks_NNS has_VBZ been_VBN found_VBN to_TO influence_VB children_NNS 's_POS productive_JJ vocabulary_NN development_NN and_CC failed_VBD lexical_JJ retrieval_NN in_IN adults_NNS -LRB-_-LRB- Vitevitch_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT new_JJ methodology_NN coming_VBG to_TO form_VB in_IN -_: volves_VBZ the_DT combination_NN of_IN graph_NN theoretic_JJ models_NNS and_CC psycholinguistic_JJ tasks_NNS ,_, allowing_VBG for_IN a_DT view_NN into_IN the_DT lexicon_NN to_TO examine_VB language_NN processing_NN ac_SYM -_: cording_NN to_TO structural_JJ relations_NNS ._.
+The_DT manner_NN in_IN which_WDT a_DT phonological_JJ network_NN is_VBZ constructed_VBN is_VBZ through_IN what_WP is_VBZ known_VBN as_IN phonolog_NN -_: ical_JJ neighborhood_NN density_NN -LRB-_-LRB- PND_NNP -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT simi_NN -_: larity_NN metric_JJ that_IN involves_VBZ the_DT addition_NN ,_, deletion_NN or_CC substitution_NN of_IN a_DT single_JJ phoneme_NN -LRB-_-LRB- Vitevitch_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+Thus_RB ,_, in_IN the_DT network_NN ,_, words_NNS -LRB-_-LRB- nodes_NNS -RRB-_-RRB- are_VBP connected_VBN -LRB-_-LRB- edges_NNS -RRB-_-RRB- to_TO one_CD another_DT based_VBN on_IN their_PRP$ sound_JJ simi_NN -_: larity_NN ._.
+Words_NNS that_WDT are_VBP connected_JJ via_IN this_DT similarity_NN are_VBP known_VBN as_IN neighbors_NNS and_CC give_VB us_PRP the_DT network_NN feature_NN known_VBN as_IN degree_NN -LRB-_-LRB- k_NN -RRB-_-RRB- ._.
+In_IN the_DT psycholinguis_NNS -_: tic_JJ literature_NN PND_NNP has_VBZ been_VBN extensively_RB investigat_SYM -_: ed_VBN ._.
+It_PRP has_VBZ been_VBN shown_VBN to_TO influence_VB word_NN recognition_NN -LRB-_-LRB- Luce_NNP and_CC Pisoni_NNP ,_, 1998_CD -RRB-_-RRB- ,_, production_NN -LRB-_-LRB- Sadat_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, and_CC word_NN learning_NN -LRB-_-LRB- Storkel_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- to_TO just_RB name_VB a_DT few_JJ ._.
+Once_RB the_DT network_NN is_VBZ built_VBN ,_, other_JJ measures_NNS are_VBP then_RB available_JJ ,_, such_JJ as_IN each_DT node_NN 's_POS clustering_NN coef_NN -_: ficient_NN -LRB-_-LRB- C_NNP -RRB-_-RRB- ._.
+C_NNP is_VBZ the_DT number_NN of_IN triangles_NNS made_VBN in_IN relation_NN to_TO a_DT given_VBN node_NN ._.
+In_IN terms_NNS of_IN the_DT mental_JJ lexicon_NN ,_, this_DT presents_VBZ us_PRP with_IN a_DT measure_NN of_IN how_WRB interconnected_VBN a_DT word_NN 's_POS neighbors_NNS are_VBP with_IN each_DT other_JJ ._.
+It_PRP has_VBZ been_VBN illustrated_VBN with_IN an_DT English_JJ lexi_NN -_: con_NN that_IN PND_NNP and_CC C_NNP are_VBP not_RB equivalent_JJ measures_NNS in_IN that_IN they_PRP do_VBP not_RB correlate_VB with_IN each_DT other_JJ -LRB-_-LRB- Chan_NNP and_CC Vitevitch_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+The_DT role_NN of_IN C_NNP has_VBZ been_VBN exam_NN -_: ined_VBN in_IN word_NN recognition_NN -LRB-_-LRB- Chan_NNP and_CC Vitevitch_NNP ,_, 2009_CD ;_: Yates_NNP ,_, 2013_CD -RRB-_-RRB- ,_, and_CC picture_NN naming_NN -LRB-_-LRB- Chan_NNP and_CC Vitevitch_NNP ,_, 2010_CD -RRB-_-RRB- ,_, allowing_VBG for_IN the_DT tentative_JJ state_NN -_: ment_NN that_IN ,_, at_IN least_JJS for_IN English_NNP speakers_NNS ,_, low_JJ C_NNP words_NNS are_VBP produced_VBN faster_RBR and_CC more_RBR accurately_RB than_IN high_JJ C_NNP words_NNS ._.
+While_IN research_NN into_IN the_DT network_NN features_NNS of_IN the_DT mental_JJ lexicon_NN has_VBZ advanced_VBN rapidly_RB ,_, there_EX has_VBZ been_VBN an_DT inordinate_JJ stress_NN upon_IN European_JJ lan_NN -_: guages_NNS ,_, specifically_RB English_JJ ._.
+Mandarin_NNP ,_, to_TO date_NN has_VBZ no_DT evidence_NN of_IN either_CC a_DT PND_NNP or_CC C_NNP effect_NN on_IN lan_NN -_: guage_NN processing_NN ,_, despite_IN several_JJ attempts_NNS -LRB-_-LRB- Myers_NNP and_CC Tsay_NNP ,_, 2005_CD ;_: Tsai_NNP ,_, 2007_CD -RRB-_-RRB- ._.
+One_CD reason_NN for_IN such_JJ a_DT disparaging_VBG lack_NN might_MD lie_VB in_IN the_DT complexity_NN of_IN the_DT Mandarin_NNP mental_JJ lexicon_NN ,_, specifically_RB the_DT role_NN that_IN tone_NN plays_NNS ._.
+Indeed_RB ,_, Vitevitch_NNP and_CC Stamer_NNP -LRB-_-LRB- 2006_CD -RRB-_-RRB- propose_VBP that_IN differences_NNS in_IN processing_VBG found_VBN be_VB -_: tween_NN languages_NNS are_VBP likely_JJ to_TO be_VB found_VBN due_JJ to_TO the_DT linguistic_JJ differences_NNS exhibited_VBN by_IN many_JJ languages_NNS ._.
+In_IN comparison_NN to_TO English_NNP ,_, Mandarin_NNP has_VBZ a_DT small_JJ syllable_JJ inventory_NN -LRB-_-LRB- ~_SYM 400_CD without_IN tone_NN -RRB-_-RRB- ._.
+This_DT lan_NN -_: guage_NN specific_JJ feature_NN might_MD suggest_VB a_DT lexicon_NN that_WDT would_MD be_VB more_RBR dense_JJ ,_, leading_VBG to_TO increased_VBN compe_NN -_: tition_NN between_IN neighbors_NNS ._.
+Tone_NN however_RB creates_VBZ distance_NN between_IN what_WP would_MD be_VB otherwise_RB similar_JJ sounding_VBG words_NNS ._.
+Tone_NN ,_, in_IN fact_NN has_VBZ been_VBN shown_VBN to_TO be_VB the_DT initial_JJ guiding_VBG point_NN for_IN phonological_JJ ma_NN -_: nipulation_NN -LRB-_-LRB- Neergaard_NNP &_CC Huang_NNP ,_, 2016_CD ;_: Weiner_NNP &_CC Turnball_NNP ,_, 2015_CD -RRB-_-RRB- ._.
+The_DT purpose_NN of_IN the_DT current_JJ study_NN is_VBZ to_TO investi_NNS -_: gate_NN the_DT role_NN of_IN network_NN characteristics_NNS in_IN a_DT tonal_JJ language_NN through_IN the_DT implementation_NN of_IN an_DT audito_NN -_: ry_NN shadowing_VBG task_NN ._.
+2_CD Methods_NNS 2.1_CD Participants_NNS tions_NNS ._.
+None_NN of_IN the_DT participants_NNS reported_VBD speech_NN ,_, hearing_NN ,_, or_CC visual_JJ disorders_NNS ._.
+2.2_CD Stimuli_NNS The_DT stimuli_NNS ,_, recorded_VBN by_IN a_DT female_JJ native_JJ Mandarin_NNP speaker_NN from_IN the_DT Beijing_NNP area_NN ,_, consisted_VBN of_IN 193_CD Mandarin_NNP monosyllabic_JJ words_NNS ._.
+All_DT stimuli_NNS were_VBD 415ms_CD in_IN duration_NN ._.
+Target_NN stimuli_NNS ,_, which_WDT can_MD be_VB seen_VBN in_IN Appendix_NNP A_NNP ,_, consisted_VBD of_IN 94_CD words_NNS that_WDT were_VBD 3_CD phonemes_NNS in_IN length_NN ._.
+Filler_NN words_NNS consisted_VBD of_IN 99_CD monosyllabic_JJ words_NNS that_WDT contained_VBD 1_CD ,_, 2_CD and_CC 4_CD phonemes_NNS ._.
+Filler_NN words_NNS were_VBD used_VBN in_IN the_DT task_NN so_RB as_IN to_TO preclude_VB the_DT participants_NNS '_POS ability_NN to_TO predict_VB the_DT structure_NN of_IN upcoming_VBG words_NNS ._.
+Presentation_NN order_NN nian2_CD lian2_CD qian2_NN xian2_CD mian2_CD qian1_CD Figure_NN 1_CD ._.
+The_DT word_NN level_NN network_NN for_IN qian2_CD /_CD tɕ_NN `_`` iɛn2_FW /_FW 前_FW -LRB-_-LRB- PND_NNP :_: 12_CD ;_: C_NNP :_: .83_CD -RRB-_-RRB- qie2_FW qin2_FW quan2_FW qian3_FW tian2_FW yan2_FW qian4_FW kui4_FW zhui4_FW cui4_FW gui4_FW hui4_FW zui4_FW dui1_FW wei4_FW sui4_FW shui4_FW The_DT current_JJ results_NNS come_VBP from_IN the_DT spoken_VBN produc_NN -_: tui4_CD tion_NN of_IN Thirty-six_CD native_JJ Mandarin_NNP speakers_NNS -LRB-_-LRB- Fe_NNP -_: rui4_CD male_NN :_: 20_CD -RRB-_-RRB- ._.
+One_CD participant_NN was_VBD excluded_VBN from_IN the_DT analysis_NN due_JJ to_TO misunderstanding_VBG the_DT task_NN instruc_NN -_: Figure_NN 2_CD ._.
+The_DT word_NN level_NN network_NN for_IN dui4_CD /_CD tueɪ4_IN /_CD 对_CD ,_, -LRB-_-LRB- PND_NNP :_: 12_CD ;_: C_NNP :_: .29_CD -RRB-_-RRB- dui4_CD was_VBD pseudo-randomized_VBN so_RB as_IN not_RB to_TO allow_VB for_IN the_DT serial_JJ presentation_NN of_IN words_NNS that_WDT began_VBD with_IN the_DT same_JJ onset_NN or_CC that_DT had_VBD the_DT same_JJ tone_NN ._.
+The_DT stimulus_NN words_NNS were_VBD selected_VBN from_IN a_DT data_NN -_: base_NN of_IN movie_NN subtitles_NNS -LRB-_-LRB- Subtlex-CH_NNP :_: Cai_NNP and_CC Brysbaert_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+As_IN is_VBZ common_JJ amongst_IN data_NNS -_: bases_NNS that_WDT provide_VBP calculations_NNS of_IN PND_NNP and_CC other_JJ lexical_JJ information_NN -LRB-_-LRB- See_VB Marian_NNP et_NNP al._NNP ,_, 2012_CD for_IN an_DT in-depth_JJ discussion_NN -RRB-_-RRB- ,_, a_DT representative_JJ sample_NN of_IN orthographic_JJ words_NNS is_VBZ chosen_VBN from_IN either_CC a_DT dic_NN -_: tionary_JJ or_CC subtitle_JJ movie_NN corpora_NN ._.
+The_DT current_JJ study_NN calculated_VBN PND_NNP and_CC four_CD of_IN the_DT following_VBG word_NN characteristics_NNS from_IN the_DT top_JJ 17_CD thousand_CD en_IN -_: tries_VBZ of_IN phonological_JJ words_NNS ._.
+The_DT pinyin_NN transcrip_NN -_: tions_NNS of_IN the_DT Subltex-CH_NNP database_NN were_VBD made_VBN using_VBG the_DT Lingua_NNP Sinica_NNP corpus_VBZ -LRB-_-LRB- Chen_NNP et_FW al._FW ,_, 1996_CD -RRB-_-RRB- ._.
+Pho_SYM -_: nological_JJ representations_NNS of_IN spoken_VBN Mandarin_NNP were_VBD then_RB taken_VBN from_IN Neergaard_NNP and_CC Huang_NNP -LRB-_-LRB- 2016_CD -RRB-_-RRB- ac_SYM -_: cording_NN to_TO the_DT maximal_JJ syllable_JJ structure_NN :_: CVVX_NNP plus_CC tone_NN ._.
+The_DT frequencies_NNS of_IN homophonous_JJ words_NNS were_VBD summed_VBN together_RB such_JJ that_IN spoken_VBN word_NN frequency_NN -LRB-_-LRB- SWF_NNP -RRB-_-RRB- -LRB-_-LRB- M_NNP :_: 0.0271_CD per-million_NN ;_: SD_NNP :_: 0.0556_CD per_IN -_: million_CD -RRB-_-RRB- ,_, and_CC homophone_RB density_NN -LRB-_-LRB- HD_NNP -RRB-_-RRB- could_MD be_VB calculated_VBN ._.
+HD_NNP -LRB-_-LRB- M_NNP :_: 5_CD ;_: SD_NNP :_: 4_LS -RRB-_-RRB- was_VBD calculated_VBN based_VBN on_IN the_DT number_NN of_IN orthographic_JJ words_NNS that_WDT were_VBD used_VBN in_IN the_DT corpus_NN per_IN each_DT phonological_JJ word_NN ._.
+Neighborhood_NN frequency_NN -LRB-_-LRB- NF_NNP -RRB-_-RRB- -LRB-_-LRB- M_NNP :_: 18,1950_CD ;_: SD_NNP :_: 20,2318_CD -RRB-_-RRB- was_VBD calculated_VBN from_IN the_DT combined_VBN fre_NN -_: quency_NN of_IN a_DT word_NN 's_POS neighbors_NNS ._.
+C_NNP -LRB-_-LRB- M_NNP :_: 0.4065_CD ;_: SD_NNP :_: 0.1623_CD -RRB-_-RRB- was_VBD calculated_VBN through_IN the_DT use_NN of_IN the_DT net_NN -_: work_NN analysis_NN tool_NN ,_, Gephi_NNP -LRB-_-LRB- Bastian_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+It_PRP should_MD be_VB noted_VBN that_IN the_DT correlation_NN between_IN PND_NNP -LRB-_-LRB- M_NNP :_: 14_CD ;_: SD_NNP :_: 5_LS -RRB-_-RRB- and_CC C_NNP within_IN our_PRP$ stimuli_NNS set_VBN was_VBD low_JJ :_: 0.3_CD ._.
+For_IN an_DT illustration_NN of_IN the_DT difference_NN be_VB -_: tween_NN PND_NNP and_CC C_NNP see_VBP Figures_NNS 1_CD and_CC 2_CD ._.
+Note_VB that_IN both_DT represent_VBP words_NNS with_IN equivalent_JJ densities_NNS ._.
+2.3_CD Procedure_NNP Participants_NNS were_VBD seated_VBN in_IN a_DT quiet_JJ room_NN in_IN front_NN of_IN a_DT computer_NN running_VBG experimental_JJ software_NN ,_, E_NNP -_: Prime_NNP 2.0_CD -LRB-_-LRB- Psychology_NNP Software_NNP Tools_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+They_PRP were_VBD instructed_VBN to_TO repeat_VB experimenter_NN -_: provided_VBN auditory_JJ stimuli_NNS into_IN a_DT headset_NN as_RB quickly_RB as_IN possible_JJ ._.
+The_DT onset_NN of_IN each_DT trial_NN was_VBD activated_VBN when_WRB a_DT participant_NN spoke_VBD via_IN a_DT PST_NNP Serial_JJ Re_NNP -_: sponse_NN Box_NNP ._.
+They_PRP were_VBD given_VBN a_DT practice_NN set_NN of_IN 10_CD words_NNS ._.
+Each_DT trial_NN consisted_VBD of_IN the_DT same_JJ sequence_NN :_: ``_`` 下_FW 个词_FW ''_'' -LRB-_-LRB- next_JJ word_NN -RRB-_-RRB- was_VBD presented_VBN at_IN the_DT center_NN of_IN the_DT screen_NN for_IN 1000ms_NNS ,_, followed_VBN by_IN a_DT blank_JJ screen_NN and_CC the_DT onset_NN of_IN the_DT target_NN audio_NN which_WDT changed_VBD either_CC upon_IN the_DT onset_NN of_IN a_DT participant_NN 's_POS spoken_VBN re_SYM -_: sponse_NN or_CC a_DT maximum_NN of_IN 3000ms_NNS ,_, then_RB finally_RB a_DT pause_NN of_IN 3000ms_NNS ._.
+The_DT entire_JJ experiment_NN took_VBD less_JJR than_IN 15_CD minutes_NNS and_CC was_VBD recorded_VBN on_IN a_DT second_JJ computer_NN using_VBG Audacity_NNP 2.0.6_CD ._.
+Reaction_NN times_NNS were_VBD measured_VBN offline_JJ using_VBG SayWhen_NNP -LRB-_-LRB- Jansen_NNP and_CC Watter_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+The_DT audio_JJ recordings_NNS were_VBD also_RB used_VBN to_TO transcribe_VB the_DT partici_NN -_: pants_NNS '_POS spoken_VBN production_NN by_IN two_CD native-Mandarin_JJ speaking_NN volunteers_NNS ._.
+Incorrect_JJ responses_NNS were_VBD re_SYM -_: moved_VBN from_IN the_DT analysis_NN ,_, accounting_VBG for_IN less_JJR than_IN 6_CD %_NN of_IN the_DT data_NNS ._.
+3_CD Results_NNS Statistical_NNP analyses_NNS were_VBD done_VBN using_VBG linear_JJ mixed_JJ effect_NN modeling_NN -LRB-_-LRB- lmerTest_NNP in_IN R_NNP -RRB-_-RRB- ._.
+The_DT first_JJ constructed_VBN model_NN revealed_VBD that_IN SWF_NNP -LRB-_-LRB- t_JJ =_SYM -2.462_CD ;_: p_VB =_SYM 0.014_CD -RRB-_-RRB- and_CC C_NNP -LRB-_-LRB- t_JJ =_SYM -2.771_CD ;_: p_VB =_SYM 0.0056_CD -RRB-_-RRB- were_VBD predictors_NNS in_IN the_DT production_NN of_IN Mandarin_NNP monosyllabic_JJ words_NNS ,_, while_IN PND_NNP ,_, NF_NNP ,_, and_CC HD_NNP were_VBD non-significant_JJ ._.
+In_IN order_NN to_TO eliminate_VB the_DT effect_NN of_IN SWF_NNP on_IN the_DT other_JJ pre_NN -_: dictors_NNS ,_, 96_CD trials_NNS ,_, identified_VBN as_IN outliers_NNS ,_, were_VBD removed_VBN from_IN the_DT total_NN of_IN 3,177_CD trials_NNS ._.
+The_DT removal_NN of_IN the_DT outliers_NNS ,_, which_WDT accounted_VBD for_IN 3_CD %_NN of_IN the_DT total_NN ,_, limited_VBD the_DT responses_NNS '_POS reac_SYM -_: tion_NN time_NN to_TO within_IN 450_CD and_CC 1000ms_NNS ._.
+Figure_NN 3_CD ._.
+The_DT effect_NN of_IN Mandarin_NNP clustering_VBG coefficient_NN on_IN reaction_NN time_NN A_DT second_JJ model_NN was_VBD then_RB created_VBN accord_NN -_: ing_NN to_TO stepwise_VB backwards_RB model_JJ comparison_NN ._.
+While_IN the_DT SWF_NNP effect_NN disappeared_VBD ,_, and_CC none_NN of_IN the_DT other_JJ predictors_NNS changed_VBD status_NN ,_, the_DT ef_SYM -_: fect_NN of_IN C_NNP remained_VBD through_IN each_DT successive_JJ 0.735_CD 0.73_CD 0.725_CD 0.72_CD 0.715_CD 0.71_CD -0.4_CD -0.2_NN 0_CD 0.2_CD 0.4_CD 0.6_CD Clustering_NNP Coef7icient_NNP Reaction_NNP Time_NNP model_NN iteration_NN -LRB-_-LRB- Std_NNP ._.
+Error_NN :_: 0.00820_CD ;_: df_NN :_: 3037_CD ;_: t_VB =_SYM -3.27_CD ;_: p_VB =_SYM 0.001_CD -RRB-_-RRB- ._.
+Unique_JJ to_TO this_DT study_NN ,_, high_JJ C_NNP values_NNS resulted_VBD in_IN shorter_JJR reac_NN -_: tion_NN times_NNS as_IN can_MD be_VB seen_VBN in_IN Figure_NN 3_CD ._.
+4_CD Conclusion_NNP The_DT present_JJ study_NN is_VBZ the_DT first_JJ to_TO find_VB an_DT influ_NN -_: ence_NN of_IN network_NN measures_NNS on_IN language_NN pro-_JJ duction_NN in_IN a_DT tonal_JJ language_NN ._.
+Of_IN particular_JJ note_NN is_VBZ the_DT fact_NN that_IN the_DT direction_NN of_IN the_DT C_NNP effect_NN is_VBZ contrary_JJ to_TO that_DT of_IN the_DT English_NNP findings_NNS -LRB-_-LRB- Chan_NNP and_CC Vitevitch_NNP ,_, 2009_CD ,_, 2010_CD -RRB-_-RRB- ._.
+While_IN the_DT two_CD prior_JJ studies_NNS implemented_VBD different_JJ tasks_NNS to_TO what_WP is_VBZ currently_RB featured_VBN ,_, the_DT direction_NN was_VBD the_DT same_JJ for_IN English_NNP speakers_NNS :_: words_NNS with_IN low_JJ C_NNP were_VBD produced_VBN faster_RBR and_CC more_RBR accu_SYM -_: rately_RB than_IN words_NNS with_IN high_JJ C_NNP ._.
+The_DT present_JJ results_NNS ,_, in_IN contrast_NN ,_, suggest_VBP that_IN the_DT greater_JJR the_DT interconnectivity_NN of_IN phonological_JJ words_NNS the_DT less_JJR the_DT competition_NN for_IN lexical_JJ selection_NN ._.
+One_CD direction_NN for_IN further_JJ investigation_NN is_VBZ the_DT role_NN that_WDT network_NN density_NN plays_VBZ across_IN the_DT Manda_NNP -_: rin_NN lexicon_NN ,_, specifically_RB during_IN development_NN ._.
+If_IN ,_, like_IN the_DT present_JJ findings_NNS suggest_VBP ,_, greater_JJR connec_NN -_: tivity_NN speeds_NNS processing_VBG ,_, then_RB this_DT would_MD imply_VB the_DT emergence_NN of_IN an_DT adaptive_JJ trait_NN learned_VBD through_IN the_DT acquisition_NN of_IN highly_RB similar_JJ words_NNS ._.
+Such_JJ a_DT lan_NN -_: guage_NN specific_JJ adaptation_NN would_MD have_VB impli_NNS -_: cations_NNS for_IN vocabulary_JJ acquisition_NN and_CC possibly_RB be_VB of_IN note_NN for_IN children_NNS with_IN phono_NN -_: logical_JJ delay_NN -LRB-_-LRB- Gierut_NNP et_FW al._FW ,_, 1999_CD -RRB-_-RRB- ._.
+An_DT alternative_JJ hypothesis_NN is_VBZ that_IN a_DT signifi_NN -_: cant_JJ C_NNP effect_NN concurrent_JJ with_IN a_DT null_JJ PND_NNP ef_SYM -_: fect_NN points_NNS to_TO an_DT error_NN in_IN the_DT model_NN 's_POS construction_NN ._.
+There_EX have_VBP been_VBN multiple_JJ pro-_JJ posals_NNS as_IN to_TO the_DT segmentation_NN of_IN the_DT Mandarin_NNP syllable_NN -LRB-_-LRB- Duanmu_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+In_IN the_DT current_JJ study_NN we_PRP examined_VBD a_DT segmental_JJ approach_NN with_IN pho_NN -_: nological_JJ tone_NN ._.
+Future_JJ experimental_JJ designs_NNS would_MD benefit_VB from_IN contrasting_VBG stimuli_NNS that_WDT have_VBP been_VBN calculated_VBN according_VBG to_TO multiple_JJ segmentation_NN schemas_NNS ._.
+References_NNP Duncan_NNP J._NNP Watts_NNP ,_, and_CC Steven_NNP H._NNP Strogatz_NNP ._.
+1998_CD ._.
+Collec_NNP -_: tive_JJ dynamics_NNS of_IN `_`` small-world_JJ '_'' networks_NNS ._.
+Nature_NN 393_CD -LRB-_-LRB- 6684_CD -RRB-_-RRB- :440_CD -442_CD ._.
+Holly_NNP L_NNP Storkel_NNP ,_, Jonna_NNP Armbruster_NNP ,_, and_CC Tiffany_NNP P._NNP Ho_NNP -_: gan_NN ._.
+2006_CD ._.
+Differentiating_VBG phonotactic_JJ probability_NN and_CC neighborhood_NN density_NN in_IN adult_NN word_NN learning_NN ._.
+Journal_NNP of_IN Speech_NNP ,_, Language_NN ,_, and_CC Hearing_NNP Research_NNP ,_, 49_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :_: 1175-1192_CD ._.
+James_NNP Myers_NNP ,_, and_CC Jane_NNP Tsay_NNP ._.
+2005_CD ._.
+The_DT processing_NN of_IN phonological_JJ acceptability_NN judgments_NNS ._.
+Proceedings_NNP of_IN Symposium_NNP on_IN 90-92_CD NSC_NNP Projects_NNPS ,_, pp._SYM 26-45_CD ._.
+Jasmin_NNP Sadat_NNP ,_, Clara_NNP D._NNP Martin_NNP ,_, Albert_NNP Costa_NNP ,_, and_CC F_NN -_: Xavier_NNP Alario_NNP ._.
+2014_CD ._.
+Reconciling_VBG phonological_JJ neighborhood_NN effects_NNS in_IN speech_NN production_NN through_IN single_JJ trial_NN analysis_NN ._.
+Cognitive_JJ psychology_NN ,_, 68:33_CD -58_CD ._.
+Judith_NNP A._NNP Gierut_NNP ,_, Michele_NNP L._NNP Morrisette_NNP ,_, and_CC Annette_NNP H._NNP Champion_NNP ._.
+1999_CD ._.
+Lexical_JJ constraints_NNS in_IN phonological_JJ acquisition_NN ._.
+Journal_NNP of_IN Child_NNP Language_NNP ,_, 26:261_CD -294_CD ._.
+Karl_NNP Neergaard_NNP ,_, and_CC Chu-Ren_NNP Huang_NNP ._.
+2016_CD ._.
+Phonologi_NNP -_: cal_JJ neighborhood_NN density_NN in_IN a_DT tonal_JJ language_NN :_: Man_NN -_: darin_NN neighbor_NN generation_NN task_NN ._.
+90th_JJ Annual_JJ Meeting_VBG of_IN the_DT Linguistic_NNP Society_NNP of_IN America_NNP ,_, Washington_NNP ,_, DC_NNP ._.
+Keh-jiann_JJ Chen_NNP ,_, Chu-Ren_NNP Huang_NNP ,_, Li-ping_JJ Chang_NNP ,_, and_CC Hui-Li_NNP Hsu_NNP ._.
+1996_CD ._.
+Sinica_NNP Corpus_NNP :_: Design_NN Methodol_NNP -_: ogy_NN for_IN Balanced_NNP Corpora_NNP ._.
+Proceeding_VBG of_IN the_DT 11th_JJ Pacific_NNP Asia_NNP Conference_NNP on_IN Language_NNP ,_, Information_NNP and_CC Computation_NNP -LRB-_-LRB- PACLIC_NNP 11_CD -RRB-_-RRB- ._.
+pp._NNP 167-176_CD ._.
+Seoul_NNP ,_, South_NNP Korea_NNP ._.
+Kit_NN Ying_NNP Chan_NNP ,_, and_CC Michael_NNP Vitevitch_NNP ._.
+2009_CD ._.
+The_DT influ_NN -_: ence_NN of_IN the_DT phonological_JJ neighborhood_NN clustering_VBG co_SYM -_: efficient_JJ on_IN spoken_VBN word_NN recognition_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Human_NNP Perception_NNP and_CC Performance_NNP ,_, 35:1934_CD -1949_CD ._.
+Kit_NN Ying_NNP Chan_NNP ,_, and_CC Michael_NNP Vitevitch_NNP ._.
+2010_CD ._.
+Network_NNP structure_NN influences_VBZ speech_NN production_NN ._.
+Cognitive_NNP Science_NNP ,_, 34_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :685_CD -697_CD ._.
+Mark_NNP Yates_NNP ._.
+2013_CD ._.
+How_WRB the_DT clustering_NN of_IN phonological_JJ neighbors_NNS affects_VBZ visual_JJ word_NN recognition_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Learning_NNP ,_, Memory_NN ,_, and_CC Cognition_NNP ,_, 39_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :1649_CD ._.
+Mathieu_NNP Bastian_NNP ,_, Sebastien_NNP Heymann_NNP ,_, and_CC Mathieu_NNP Jacomy_NNP ._.
+2009_CD ._.
+Gephi_NNP :_: an_DT open_JJ source_NN software_NN for_IN exploring_VBG and_CC manipulating_VBG networks_NNS ._.
+The_DT Interna_NNP -_: tional_JJ AAAI_NNP Conference_NN on_IN Web_NNP and_CC Social_NNP Media_NNP ,_, 8:361_CD -362_CD ._.
+Michael_NNP S._NNP Vitevitch_NNP ._.
+2008_CD ._.
+What_WP can_MD graph_NN theory_NN tell_VBP us_PRP about_IN word_NN learning_NN and_CC lexical_JJ retrieval_NN ?_. ._.
+Journal_NNP of_IN Speech_NNP ,_, Language_NN ,_, and_CC Hearing_NNP Research_NNP ._.
+51_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :408_CD -422_CD ._.
+Michael_NNP S._NNP Vitevitch_NNP ,_, Kit_NNP Ying_NNP Chan_NNP ,_, and_CC Rutherford_NNP Goldstein_NNP ._.
+2014_CD ._.
+Insights_NNPS into_IN failed_VBN lexical_JJ retrieval_NN from_IN network_NN science_NN ._.
+Cognitive_NNP Psychology_NNP ,_, 68:1_CD -_: 32_CD ._.
+Michael_NNP S._NNP Vitevitch_NNP ,_, and_CC Melissa_NNP K._NNP Stamer_NNP ._.
+2006_CD ._.
+The_DT curious_JJ case_NN of_IN competition_NN in_IN Spanish_JJ speech_NN pro-_JJ duction_NN ._.
+Language_NN and_CC Cognitive_NNP Processes_NNPS ,_, 21_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :760_CD -770_CD ._.
+Nicole_NNP Beckage_NNP ,_, Linda_NNP Smith_NNP ,_, and_CC Thomas_NNP Hills_NNP ._.
+2011_CD ._.
+Small_JJ worlds_NNS and_CC semantic_JJ network_NN growth_NN in_IN typical_JJ and_CC late_JJ talkers_NNS ._.
+PLoS_NNP ONE_CD ,_, 6_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: e19348_NNS ._.
+Paul_NNP A._NNP Luce_NNP ,_, and_CC David_NNP B._NNP Pisoni_NNP ._.
+1998_CD ._.
+Recognizing_VBG spoken_VBN words_NNS :_: The_DT neighborhood_NN activation_NN model_NN ._.
+Ear_NN and_CC hearing_NN ,_, 19_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :1_CD ._.
+Pei-Tzu_NNP Tsai_NNP ._.
+2007_CD ._.
+The_DT effects_NNS of_IN phonological_JJ neigh_NN -_: borhoods_NNS on_IN spoken_VBN word_NN recognition_NN in_IN Mandarin_NNP Chinese_NNP ._.
+Unpublished_JJ masters_NNS thesis_NN ._.
+Peter_NNP A._NNP Jansen_NNP ,_, and_CC Scott_NNP Watter_NNP ._.
+2008_CD ._.
+SayWhen_NNP :_: An_DT automated_VBN method_NN for_IN high-accuracy_JJ speech_NN onset_NN detection_NN ._.
+Behavioral_NNP Research_NNP Methods_NNPS ,_, 40_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :744_SYM -_: 751_CD ._.
+Psychology_NNP Software_NNP Tools_NNP ,_, Inc._NNP -LSB-_NNP E-Prime_NNP 2.0_CD -RSB-_NNP ._.
+2012_CD ._.
+Pitsburch_NNP ,_, PA._NNP ._.
+Qing_NNP Cai_NNP ,_, and_CC Marc_NNP Brysbaert_NNP ._.
+2010_CD ._.
+Subtlex-CH_NNP :_: Chi_NNP -_: nese_JJ word_NN and_CC character_NN frequency_NN based_VBN on_IN film_NN subtitles_NNS ._.
+PLoS_NNP ONE_CD ,_, 5_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :_: e10729_NNS ._.
+Appendix_NNP A._NNP Experimental_NNP Stimuli_NNP San_NNP ,_, Duanmu_NNP ._.
+2011_CD ._.
+Chinese_JJ syllable_JJ structure_NN ._.
+van_NN Oostendorp_NNP ,_, Marc/Ewen_NNP ,_, Colin_NNP J._NNP /_NNP Hume_NNP ,_, Eliza_NNP -_: beth/Rice_NNP ,_, Keren_NNP -LRB-_-LRB- Hg_NNP ._. -RRB-_-RRB-
+:_: The_DT Blackwell_NNP Companion_NNP to_TO Phonology_NNP -LRB-_-LRB- 5_CD -RRB-_-RRB- ,_, 2754-2777_CD ._.
+Seth_NNP Weiner_NNP ,_, and_CC Rory_NNP Turnball_NNP ._.
+2015_CD ._.
+Constraints_NNS of_IN Tones_NNS ,_, Vowels_NNPS and_CC Consonants_NNPS on_IN Lexical_NNP Selection_NNP in_IN Mandarin_NNP Chinese_NNP ._.
+Language_NN and_CC Speech_NN :1_CD -24_CD ._.
+Thomas_NNP T_NNP Hills_NNP ,_, Mounir_NNP Maouene_NNP ,_, Josita_NNP Maouene_NNP ,_, Adam_NNP Sheya_NNP ,_, and_CC Linda_NNP Smith_NNP ._.
+2009_CD ._.
+Longitudinal_NNP Analysis_NNP of_IN Early_NNP Semantic_NNP Networks_NNP Preferential_NNP Attachment_NNP or_CC Preferential_NNP Acquisition_NNP ?_. ._.
+Psychologi_NNP -_: cal_NN Science_NN ,_, 20_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :729_CD -739_CD ._.
+Viorica_NNP Marian_NNP ,_, James_NNP Bartolotti_NNP ,_, Sarah_NNP Chabal_NNP ,_, and_CC Anthony_NNP Shook_NNP ._.
+CLEARPOND_NNP :_: Cross-linguistic_JJ easy-access_JJ resource_NN for_IN phonological_JJ and_CC ortho_NN -_: graphic_JJ neighborhood_NN densities_NNS ._.
+PloS_NNP ONE_CD ,_, 7_CD -LRB-_-LRB- 8_CD -RRB-_-RRB- :_: e43230_NNS ._.
+Stimulus_NN Tone_NN SWF_NNP HD_NNP PNDNF_NNP C_NNP ban1_CD 1_CD bei3_CD 3_CD bing1_CD 1_CD bo1_CD 1_CD cai2_CD 2_CD cong2_NN 2_CD cuo4_CD 4_CD dai4_NN 4_CD die1_CD 1_CD fei2_CD 2_CD fen4_CD 4_CD feng1_CD 1_CD gai1_CD 1_CD gang1_CD 1_CD gao3_CD 3_CD gua4_NN 4_CD 0.0077_CD 8_CD 0.0010_CD 1_CD 0.0025_CD 2_CD 0.0027_CD 7_CD 0.0370_CD 4_CD 0.0473_CD 3_CD 0.0363_CD 4_CD 0.0385_CD 10_CD 0.0003_CD 1_CD 0.0011_CD 2_CD 0.0159_CD 6_CD 0.0115_CD 9_CD 0.0342_CD 1_CD 0.0115_CD 7_CD 0.0185_CD 3_CD 0.0035_CD 2_CD 20_CD 9_CD 14_CD 13_CD 15_CD 9_CD 18_CD 21_CD 13_CD 9_CD 15_CD 17_CD 19_CD 23_CD 21_CD 11_CD 83792_CD 325390_CD 165280_CD 241279_CD 214339_CD 24192_CD 431772_CD 896543_CD 46232_CD 279495_CD 39299_CD 35947_CD 108154_CD 133498_CD 151546_CD 167761_CD 0.3895_CD 0.4444_CD 0.2857_CD 0.6154_CD 0.4000_CD 0.4444_CD 0.6928_CD 0.5333_CD 0.4744_CD 0.5000_CD 0.4571_CD 0.5809_CD 0.4327_CD 0.3913_CD 0.5190_CD 0.2000_CD gun3_NN 3_CD hei1_CD 1_CD hen3_CD 3_CD hong2_NN 2_CD hou4_CD 4_CD hua2_JJ 2_CD hun4_CD 4_CD huo2_JJ 2_CD jia1_CD 1_CD jie1_CD 1_CD jin4_CD 4_CD jing3_NN 3_CD jue2_NN 2_CD jun1_CD 1_CD kua3_CD 3_CD kun4_NN 4_CD lao3_CD 3_CD lie4_NN 4_CD lun2_NN 2_CD mai3_CD 3_CD mao1_NN 1_CD mei2_CD 2_CD men2_NN 2_CD min2_CD 2_CD ming2_CD 2_CD mo2_CD 2_CD nan2_CD 2_CD nong4_JJ 4_CD pao4_NN 4_CD pei2_NN 2_CD pin1_CD 1_CD qia1_CD 1_CD qin2_CD 2_CD qing3_CD 3_CD que1_NN 1_CD qun2_CD 2_CD ran2_NN 2_CD rang4_CD 4_CD ren2_NN 2_CD reng1_CD 1_CD rou4_CD 4_CD ruo4_NN 4_CD san3_CD 3_CD sang1_CD 1_CD shan1_CD 1_CD shang4_CD 4_CD 0.0040_CD 2_CD 0.0457_CD 3_CD 0.2011_CD 3_CD 0.0031_CD 8_CD 0.0226_CD 4_CD 0.0026_CD 5_CD 0.0035_CD 2_CD 0.0115_CD 1_CD 0.0332_CD 13_CD 0.0148_CD 8_CD 0.0247_CD 10_CD 0.0054_CD 9_CD 0.0026_CD 13_CD 0.0016_CD 5_CD 0.0004_CD 1_CD 0.0015_CD 1_CD 0.0177_CD 4_CD 0.0016_CD 8_CD 0.0032_CD 4_CD 0.0158_CD 1_CD 0.0035_CD 1_CD 0.1617_CD 13_CD 0.0089_CD 2_CD 0.0005_CD 4_CD 0.0115_CD 7_CD 0.0035_CD 8_CD 0.0171_CD 5_CD 0.0136_CD 1_CD 0.0014_CD 3_CD 0.0035_CD 5_CD 0.0012_CD 1_CD 0.0004_CD 1_CD 0.0007_CD 8_CD 0.0306_CD 2_CD 0.0007_CD 2_CD 0.0032_CD 2_CD 0.0007_CD 3_CD 0.1238_CD 2_CD 0.1950_CD 5_CD 0.0041_CD 1_CD 0.0025_CD 1_CD 0.0022_CD 5_CD 0.0002_CD 2_CD 0.0004_CD 2_CD 0.0034_CD 12_CD 0.1147_CD 4_CD 12_CD 33905_CD 6_CD 43405_CD 11_CD 24792_CD 11_CD 64484_CD 16 450310_CD 9_CD 199436_CD 16 227090_CD 14 334170_CD 12 106018_CD 18 125483_CD 11 104577_CD 16 126033_CD 5_CD 16343_CD 7_CD 9095_CD 9_CD 8227 14 117829_CD 22 1062897_CD 12 112347_CD 9_CD 12206_CD 15_CD 48933_CD 19 350311_CD 9_CD 129539_CD 12 248251_CD 11_CD 45135_CD 13_CD 75796_CD 12 176888_CD 15_CD 98327_CD 9_CD 83669_CD 23 798622_CD 9_CD 274588_CD 13_CD 42567_CD 9_CD 60204_CD 11 135499_CD 14_CD 56346_CD 7_CD 22955_CD 5_CD 13142_CD 14 260802_CD 16 180346_CD 11_CD 24812_CD 14_CD 41806_CD 15 123569_CD 17 467943_CD 22_CD 58109_CD 20 113667_CD 19_CD 81325_CD 21 204382_CD 0.3030_CD 0.4667_CD 0.5273_CD 0.3091_CD 0.6583_CD 0.2222_CD 0.2917_CD 0.4396_CD 0.2121_CD 0.3007_CD 0.2000_CD 0.3083_CD 0.1000_CD 0.1429_CD 0.2222_CD 0.3516_CD 0.4762_CD 0.3333_CD 0.2222_CD 0.4476_CD 0.5439_CD 0.4444_CD 0.3485_CD 0.2182_CD 0.3077_CD 0.5909_CD 0.5524_CD 0.7778_CD 0.4545_CD 0.4444_CD 0.2051_CD 0.2222_CD 0.2545_CD 0.3516_CD 0.1905_CD 0.2000_CD 0.6044_CD 0.7583_CD 0.4000_CD 0.8571_CD 0.7429_CD 0.7794_CD 0.5974_CD 0.5158_CD 0.4152_CD 0.4667_CD sheng3_FW shua1_FW shuo1_FW song4_FW tang3_FW ting1_FW wai4_FW wan2_FW wang4_FW wei2_FW wen4_FW xia4_FW xie2_FW xin1_FW xue2_FW xun1_FW yan3_FW yang3_FW yao4_FW yong3_FW you3_FW yuan2_FW zai3_FW zao3_FW zeng4_FW zhan4_FW zhen4_FW zheng4_FW zhong1_FW zhua1_FW zong3_FW zun1_FW 3_CD 0.0014_CD 1_CD 1_CD 0.0006_CD 2_CD 1_CD 0.2270_CD 1_CD 4_CD 0.0133_CD 5_CD 3_CD 0.0023_CD 4_CD 1_CD 0.0555_CD 3_CD 4_CD 0.0041_CD 1_CD 2_CD 0.0244_CD 6_CD 4_CD 0.0077_CD 4_CD 2_CD 0.0493_CD 13_CD 4_CD 0.0205_CD 3_CD 4_CD 0.0557_CD 4_CD 2_CD 0.0028_CD 12_CD 1_CD 0.0265_CD 9_CD 2_CD 0.0062_CD 1_CD 1_CD 0.0004_CD 5_CD 3_CD 0.0064_CD 5_CD 3_CD 0.0036_CD 4_CD 4_CD 0.2435_CD 4_CD 3_CD 0.0010_CD 12_CD 3_CD 0.2896_CD 6_CD 2_CD 0.0121_CD 15_CD 3_CD 0.0007_CD 2_CD 3_CD 0.0129_CD 5_CD 4_CD 0.0001_CD 3_CD 4_CD 0.0132_CD 9_CD 4_CD 0.0024_CD 7_CD 4_CD 0.0207_CD 5_CD 1_CD 0.0382_CD 6_CD 1_CD 0.0084_CD 1_CD 3_CD 0.0099_CD 1_CD 1_CD 0.0004_CD 5_CD 13_CD 12_CD 13_CD 10_CD 19_CD 13_CD 26_CD 20_CD 23_CD 13_CD 14_CD 11_CD 12_CD 12_CD 8_CD 7_CD 15_CD 22_CD 30_CD 14_CD 22_CD 7_CD 15_CD 21_CD 13_CD 22_CD 15_CD 16_CD 14_CD 10_CD 12_CD 8_CD 58529_CD 299841_CD 25019_CD 84434_CD 57176_CD 76196_CD 773415_CD 201339_CD 319519_CD 289022_CD 40995_CD 115839_CD 92857_CD 69575_CD 8282_CD 34976_CD 236670_CD 317363_CD 696392_CD 381844_CD 175262_CD 24682_CD 527024_CD 193120_CD 42450_CD 245617_CD 469888_CD 315381_CD 56887_CD 34372_CD 92516_CD 6180_CD 0.3205_CD 0.2424_CD 0.5897_CD 0.6444_CD 0.3626_CD 0.3077_CD 0.3908_CD 0.3421_CD 0.4150_CD 0.3077_CD 0.5275_CD 0.2182_CD 0.1818_CD 0.2576_CD 0.1786_CD 0.1429_CD 0.3810_CD 0.2944_CD 0.3471_CD 0.4066_CD 0.3463_CD 0.1905_CD 0.4667_CD 0.5190_CD 0.5897_CD 0.4286_CD 0.4476_CD 0.4000_CD 0.4176_CD 0.3111_CD 0.5606_CD 0.5357_CD Note_NN :_: Stimulus_NN words_NNS are_VBP presented_VBN in_IN pinyin_NN ;_: frequency_NN ;_: HD_NNP is_VBZ homophone_RB density_NN ;_: PND_NNP is_VBZ phonological_JJ neighborhood_NN density_NN ;_: NF_NNP is_VBZ neighborhood_NN frequency_NN ;_: C_NNP is_VBZ clustering_VBG coefficient_NN SWF_NNP is_VBZ spoken_VBN word_NN

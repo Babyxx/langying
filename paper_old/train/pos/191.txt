@@ -1,0 +1,313 @@
+Towards_IN producing_VBG compact_JJ results_NNS in_IN User-System_NNP interactions_NNS in_IN a_DT NLIDB_NNP system_NN Abstract_NNP User-System_NNP interactions_NNS are_VBP a_DT very_RB important_JJ part_NN of_IN dialogue_NN systems_NNS ._.
+Very_RB often_RB ,_, a_DT user_NN does_VBZ not_RB mention_VB complete_JJ information_NN in_IN his_PRP$ query_NN ._.
+As_IN a_DT result_NN ,_, the_DT system_NN may_MD give_VB a_DT large_JJ number_NN of_IN results_NNS ,_, of_IN which_WDT very_RB few_JJ may_MD be_VB relevant_JJ to_TO the_DT user_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT novel_NN approach_NN on_IN how_WRB a_DT system_NN can_MD reduce_VB the_DT size_NN of_IN results_NNS by_IN prompting_VBG the_DT user_NN and_CC give_VB a_DT compact_JJ set_NN of_IN answers_NNS ._.
+We_PRP experiment_NN our_PRP$ approach_NN in_IN a_DT small_JJ domain_NN and_CC discuss_VB on_IN how_WRB the_DT proposed_VBN system_NN can_MD be_VB useful_JJ in_IN large_JJ real_JJ time_NN database_NN systems_NNS ._.
+1_CD Introduction_NNP Questioning_VBG a_DT database_NN in_IN natural_JJ language_NN is_VBZ a_DT user_NN friendly_JJ way_NN of_IN searching_VBG databases_NNS rather_RB than_IN writ_NN -_: ing_NN and_CC posing_VBG a_DT question_NN in_IN the_DT restricted_VBN pattern_NN of_IN S_NNP Q_NNP L_NNP syntax_NN ._.
+A_DT Natural_JJ Language_NN Interface_NNP to_TO Database_NNP -LRB-_-LRB- NLIDB_NNP -RRB-_-RRB- system_NN -LRB-_-LRB- Androutsopoulos_NNPS et_FW al._FW ,_, 1995_CD ;_: Catalina_NNP Hallett_NNP and_CC David_NNP Hardcastle_NNP ,_, 2008_CD ;_: Pazos_NNP et_FW al._FW ,_, 2002_CD ;_: Popescu_NNP et_FW al._FW ,_, 2003_CD ;_: Giordani_NNP and_CC Moschitti_NNP ,_, 2009_CD ;_: Gupta_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- is_VBZ a_DT N_NNP L_NNP P_NNP application_NN which_WDT takes_VBZ a_DT query_NN in_IN natural_JJ language_NN -LRB-_-LRB- NL_NNP -RRB-_-RRB- from_IN the_DT user_NN and_CC generates_VBZ a_DT SQL_NNP query_NN from_IN it_PRP ._.
+The_DT S_NNP Q_NNP L_NNP query_NN retrieves_VBZ the_DT results_NNS based_VBN on_IN the_DT domain_NN semantics_NNS and_CC database_NN schema_NN and_CC sends_VBZ it_PRP back_RB to_TO the_DT user_NN ._.
+In_IN NLIDB_NNP systems_NNS ,_, the_DT user_NN asks_VBZ a_DT query_NN and_CC the_DT system_NN presents_VBZ the_DT user_NN with_IN few_JJ results_NNS accord_NN -_: ingly_RB ._.
+N_NNP L_NNP I_PRP D_NNP B_NNP systems_NNS can_MD be_VB extended_VBN to_TO Dialogue_NNP systems_NNS ,_, -LRB-_-LRB- Akula_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- wherein_NN ,_, instead_RB of_IN re_SYM -_: stricting_VBG the_DT user_NN to_TO ask_VB only_RB a_DT single_JJ question_NN ,_, the_DT user_NN can_MD have_VB a_DT conversation_NN with_IN the_DT system_NN ._.
+In_IN Second_JJ Author_NN Affiliation_NNP /_NNP Address_NNP line_NN 1_CD Affiliation_NNP /_NNP Address_NNP line_NN 2_CD Affiliation_NNP /_NNP Address_NNP line_NN 3_CD email@domain_NN each_DT question_NN asked_VBN by_IN the_DT user_NN ,_, the_DT system_NN tries_VBZ to_TO convert_VB these_DT individual_JJ queries_NNS into_IN SQL_NNP queries_NNS and_CC retrieve_VB answers_NNS from_IN the_DT database_NN ._.
+Very_RB of_IN -_: ten_CD ,_, people_NNS do_VBP not_RB give_VB complete_JJ information_NN while_IN querying_VBG the_DT system_NN ._.
+Due_JJ to_TO this_DT unspecific_JJ nature_NN of_IN user_NN queries_NNS ,_, the_DT system_NN may_MD output_NN large_JJ num_NN -_: ber_NN of_IN results_NNS ._.
+Going_VBG through_IN a_DT large_JJ number_NN of_IN re_NN -_: sults_NNS would_MD be_VB quite_RB difficult_JJ and_CC uncomfortable_JJ for_IN a_DT user_NN ._.
+In_IN order_NN to_TO avoid_VB this_DT ,_, the_DT system_NN has_VBZ to_TO give_VB a_DT compact_JJ set_NN of_IN results_NNS ._.
+For_IN this_DT ,_, the_DT system_NN has_VBZ to_TO make_VB the_DT query_NN more_RBR specific_JJ by_IN interacting_VBG with_IN the_DT user_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT system_NN which_WDT tries_VBZ to_TO give_VB a_DT compact_JJ set_NN of_IN results_NNS to_TO a_DT user_NN when_WRB the_DT size_NN of_IN results_NNS is_VBZ large_JJ ._.
+2_CD Related_JJ Work_NNP System_NNP driven_VBD knowledge_NN acquisition_NN strategies_NNS have_VBP been_VBN proposed_VBN ._.
+In_IN -LRB-_-LRB- Pappu_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, the_DT authors_NNS propose_VBP three_CD types_NNS of_IN knowledge_NN acquisition_NN strate_NN -_: gies_NNS -LRB-_-LRB- Query_NNP Driven_NNP ,_, Personal_NNP and_CC Show_NNP &_CC Ask_NNP -RRB-_-RRB- and_CC show_VBP that_IN these_DT strategies_NNS are_VBP helpful_JJ for_IN the_DT system_NN to_TO learn_VB new_JJ slot-value_JJ pairs1_NN ._.
+Our_PRP$ problem_NN also_RB requires_VBZ system_NN driven_VBN techniques_NNS to_TO make_VB a_DT user_NN query_NN more_RBR specific_JJ ._.
+In_IN -LRB-_-LRB- Akula_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- the_DT au_SYM -_: thors_NNS propose_VBP user-system_JJ interaction_NN models_NNS in_IN a_DT di_FW -_: alogue_JJ process_NN in_IN the_DT background_NN of_IN N_NNP L_NNP I_PRP D_NNP B_NNP systems_NNS ._.
+The_DT authors_NNS also_RB propose_VBP relationships_NNS between_IN dia_NN -_: logue_NN units_NNS using_VBG the_DT concept_NN of_IN entities_NNS ,_, attributes_NNS and_CC values_NNS in_IN the_DT Entity_NNP Relationship_NN schema_NN of_IN the_DT database_NN ._.
+Identifying_VBG user_NN system_NN interaction_NN mod_NN -_: els_NNS is_VBZ important_JJ to_TO know_VB the_DT behaviour_NN of_IN a_DT user_NN ._.
+To_TO 1slot-value_JJ pair_NN :_: A_DT slot_NN is_VBZ similar_JJ to_TO an_DT attribute_NN in_IN Relational_NNP database_NN ._.
+Eg_NN ._.
+Person_NN name_NN :_: Smith_NNP ,_, where_WRB Person_NNP name_NN is_VBZ slot_NN and_CC Smith_NNP is_VBZ a_DT value_NN our_PRP$ knowledge_NN ,_, no_DT work_NN has_VBZ been_VBN done_VBN on_IN the_DT lines_NNS of_IN analysing_VBG the_DT number_NN of_IN results_NNS to_TO be_VB presented_VBN to_TO the_DT user_NN ,_, until_IN now_RB ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT system_NN that_WDT minimizes_VBZ the_DT results_NNS of_IN a_DT user_NN query_NN when_WRB there_EX are_VBP too_RB many_JJ results_NNS ._.
+The_DT system_NN may_MD require_VB more_JJR information_NN to_TO reduce_VB the_DT results_NNS and_CC thus_RB prompts_VBZ the_DT user_NN ._.
+In_IN order_NN to_TO prompt_VB the_DT user_NN ,_, the_DT system_NN uses_VBZ the_DT concept_NN of_IN attributes_NNS from_IN the_DT database_NN ._.
+Prompting_VBG the_DT user_NN with_IN the_DT ideal_JJ attribute_NN helps_VBZ in_IN minimizing_VBG the_DT results_NNS to_TO be_VB presented_VBN to_TO the_DT user_NN ._.
+The_DT system_NN also_RB ensures_VBZ that_IN while_IN reducing_VBG the_DT final_JJ set_NN of_IN results_NNS ,_, the_DT user_NN does_VBZ not_RB miss_VB any_DT important_JJ information_NN ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN section_NN 3_CD ,_, we_PRP discuss_VBP on_IN nature_NN of_IN user_NN queries_NNS ._.
+In_IN section_NN 4_CD ,_, we_PRP discuss_VBP types_NNS of_IN user_NN queries_NNS from_IN a_DT different_JJ perspective_NN ._.
+Section_NN 5_CD discusses_VBZ on_IN user_NN -_: system_NN interaction_NN models_NNS ._.
+In_IN Section_NNP 6_CD ,_, we_PRP discuss_VBP about_IN prompting_VBG the_DT user_NN ._.
+Section_NN 7_CD shows_NNS non_SYM -_: prompting_VBG heuristics_NNS to_TO reduce_VB the_DT size_NN of_IN results_NNS ._.
+Section_NN 8_CD discusses_VBZ the_DT experiments_NNS ._.
+We_PRP conclude_VBP in_IN section_NN 9_CD ._.
+3_CD Specificity_NN of_IN a_DT user_NN query_NN We_PRP categorize_VBP user_NN queries_NNS into_IN four_CD types_NNS based_VBN on_IN how_WRB specific_JJ a_DT user_NN is_VBZ ._.
+They_PRP are_VBP :_: 1_LS ._.
+Strongly_RB specific_JJ If_IN the_DT number_NN of_IN values_NNS in_IN a_DT query_NN is_VBZ more_JJR than_IN one_CD ,_, then_RB the_DT user_NN is_VBZ said_VBN to_TO be_VB strongly_RB specific_JJ ._.
+For_IN example_NN ,_, Give_VB me_PRP a_DT good_JJ American_JJ restaurant_NN on_IN Fairgrounds_NNP Dr_NNP in_IN Sunny_NNP -_: vale_FW ?_. ._.
+Here_RB the_DT user_NN is_VBZ strongly_RB specific_JJ as_IN he_PRP men_NNS -_: tions_NNS two_CD values_NNS -LRB-_-LRB- American_NNP ,_, Fairgrounds_NNP Dr_NNP -RRB-_-RRB- in_IN the_DT query_NN ._.
+2_LS ._.
+Specific_JJ If_IN there_EX is_VBZ exactly_RB one_CD value_NN in_IN a_DT query_NN ,_, then_RB the_DT user_NN is_VBZ said_VBN to_TO be_VB specific_JJ ._.
+For_IN example_NN ,_, List_NN the_DT restaurants_NNS in_IN San_NNP Francisco_NNP ._.
+Here_RB the_DT user_NN is_VBZ specific_JJ as_IN he_PRP mentions_VBZ a_DT value_NN -LRB-_-LRB- San_NNP Francisco_NNP -RRB-_-RRB- in_IN the_DT query_NN ._.
+3_LS ._.
+Weakly_RB specific_JJ If_IN there_EX are_VBP adjectival_JJ modi_NNS -_: fiers_NNS to_TO an_DT attribute_NN in_IN the_DT query_NN ,_, then_RB the_DT user_NN is_VBZ said_VBN to_TO be_VB weakly_RB specific_JJ ._.
+For_IN example_NN ,_, List_NN the_DT good_JJ restaurants_NNS ._.
+4_LS ._.
+Unspecific_JJ If_IN there_EX are_VBP no_DT values_NNS in_IN the_DT query_NN or_CC no_DT modifiers_NNS to_TO an_DT attribute_NN ,_, then_RB the_DT user_NN is_VBZ said_VBN to_TO be_VB unspecific_JJ ._.
+For_IN example_NN ,_, List_NN all_PDT the_DT restaurants_NNS ._.
+Here_RB ,_, the_DT user_NN is_VBZ unspecific_JJ as_IN he_PRP wants_VBZ the_DT list_NN of_IN all_DT restaurants_NNS ._.
+In_IN case_NN ,_, the_DT user_NN is_VBZ unspecific_JJ ,_, the_DT system_NN prompts_VBZ the_DT user_NN with_IN an_DT open_JJ question_NN asking_VBG whether_IN he_PRP would_MD like_VB to_TO add_VB any_DT details_NNS regarding_VBG his_PRP$ query_NN ._.
+If_IN the_DT user_NN is_VBZ again_RB unspecific_JJ ,_, then_RB the_DT system_NN outputs_VBZ all_PDT the_DT results_NNS to_TO the_DT user_NN ._.
+The_DT same_JJ follows_VBZ for_IN other_JJ types_NNS of_IN queries_NNS ._.
+This_DT is_VBZ done_VBN to_TO ensure_VB that_IN there_EX is_VBZ no_DT loss_NN of_IN information_NN for_IN the_DT user_NN ._.
+4_CD Types_NNS of_IN a_DT user_NN query_NN Akula_NNP et_FW al._FW ,_, -LRB-_-LRB- 2013_CD -RRB-_-RRB- categorize_VBP user-system_NN interac_NN -_: tions_NNS based_VBN on_IN topic_NN and_CC goal_NN ._.
+Similar_JJ to_TO them_PRP ,_, we_PRP categorize_VBP a_DT user_NN query_NN based_VBN only_RB on_IN the_DT goal_NN of_IN a_DT user_NN ._.
+We_PRP categorize_VBP a_DT user_NN query_NN into_IN the_DT following_JJ types_NNS :_: 1_LS ._.
+Complete_JJ goal_NN :_: In_IN this_DT type_NN ,_, the_DT user_NN has_VBZ al_SYM -_: ready_JJ mentioned_VBD his_PRP$ goal_NN completely_RB in_IN the_DT query_NN ._.
+2_LS ._.
+Partial_JJ goal_NN :_: In_IN this_DT type_NN ,_, the_DT user_NN mentions_VBZ his_PRP$ goal_NN partially_RB and_CC is_VBZ expected_VBN to_TO complete_VB his_PRP$ goal_NN during_IN further_JJ interaction_NN with_IN the_DT system_NN ._.
+Knowing_VBG whether_IN a_DT user_NN query_NN is_VBZ complete_JJ goal_NN type_NN or_CC a_DT partial_JJ goal_NN type_NN is_VBZ essential_JJ for_IN the_DT system_NN in_IN order_NN to_TO prompt_VB the_DT user_NN appropriately_RB ._.
+5_CD Modeling_NN User-system_NN interactions_NNS Depending_VBG on_IN the_DT way_NN in_IN which_WDT a_DT user_NN becomes_VBZ spe_SYM -_: cific_NN in_IN a_DT dialogue_NN interaction_NN with_IN the_DT system_NN ,_, we_PRP propose_VBP two_CD models_NNS :_: 1_LS ._.
+Hierarchical_JJ Model_NNP :_: In_IN this_DT model_NN of_IN user_NN -_: system_NN of_IN interaction_NN ,_, the_DT user_NN becomes_VBZ specific_JJ in_IN a_DT hierarchical_JJ manner_NN ._.
+In_IN each_DT dialogue_NN ,_, user_NN adds_VBZ values_NNS of_IN attributes_NNS which_WDT are_VBP hierarchically_RB related_VBN ._.
+For_IN example_NN ,_, consider_VB the_DT attributes_NNS Region_NN name_NN ,_, City_NNP name_NN and_CC Street_NNP name_NN ._.
+The_DT hierarchy_NN between_IN these_DT three_CD attributes_NNS is_VBZ :_: Region_NN name_NN >_CD City_NNP name_NN >_NNP Street_NNP name_NN ._.
+This_DT is_VBZ because_IN a_DT region_NN consists_VBZ of_IN cities_NNS and_CC a_DT city_NN consists_VBZ of_IN streets_NNS ._.
+Figure_NN 1_CD :_: An_DT example_NN of_IN hierarchical_JJ interaction_NN U1_NNP :_: List_NN the_DT restaurants_NNS in_IN Bay_NNP area_NN ._.
+S1_CD :_: There_EX are_VBP many_JJ restaurants_NNS in_IN Bay_NNP area_NN ._.
+Can_MD you_PRP be_VB more_RBR specific_JJ ?_.
+U2_NNP :_: List_NN all_DT Italian_JJ restaurants_NNS in_IN Bay_NNP area_NN ._.
+S2_CD :_: Would_MD you_PRP like_VB to_TO add_VB anything_NN more_RBR specific_JJ ?_.
+U3_NNP :_: I_PRP 'd_MD like_VB to_TO eat_VB Spaghetti_NNP S3_NNP :_: Restaurant_NNP 1_CD ,_, Restaurant_NNP 2_CD ,_, ..._: Restaurant_NNP n_NNP Figure_NNP 1_CD shows_VBZ an_DT example_NN of_IN hierarchical_JJ user-system_NN interaction_NN ._.
+Each_DT time_NN the_DT system_NN prompts_VBZ the_DT user_NN ,_, the_DT user_NN adds_VBZ values_NNS of_IN attributes_NNS which_WDT are_VBP related_VBN hierarchi_NNS -_: cally_RB ._.
+The_DT hierarchical_JJ attributes/attribute-values_NNS in_IN figure_NN 1_CD are_VBP restaurant_NN name_NN -LRB-_-LRB- restaurant_NN -RRB-_-RRB- in_IN U1_NNP ,_, cuisine_NN name_NN -LRB-_-LRB- Italian_JJ -RRB-_-RRB- in_IN U2_NNP ,_, dish_NN name_NN -LRB-_-LRB- Spaghetti_NNP -RRB-_-RRB- in_IN U3_NN ._.
+Linguisti_NNP -_: cally_RB ,_, the_DT concept_NN of_IN hierarchy_NN is_VBZ similar_JJ to_TO hypernymy_NN and_CC hyponymy_NN ._.
+In_IN Figure_NN 1_CD ,_, restaurant_NN and_CC cuisine_NN can_MD be_VB considered_VBN as_IN hypernym_NN and_CC hyponym2_NN respectively_RB ._.
+The_DT user_NN stops_VBZ adding_VBG attributes_NNS hierarchically_RB when_WRB he_PRP has_VBZ reached_VBN his_PRP$ goal_NN ._.
+2_LS ._.
+Non-hierarchical_JJ Model_NNP :_: In_IN a_DT Non-Hierarchical_JJ model_NN of_IN user-system_NN interaction_NN ,_, users_NNS do_VBP not_RB add_VB values_NNS of_IN attributes_NNS in_IN a_DT hierarchical_JJ manner_NN ._.
+We_PRP categorize_VBP non_SYM -_: hierarchical_JJ model_NN interactions_NNS mainly_RB into_IN two_CD types_NNS :_: a_LS -RRB-_-RRB- Goal-related_JJ :_: In_IN Goal-related_JJ interaction_NN ,_, when_WRB a_DT user_NN is_VBZ prompted_VBN to_TO become_VB more_RBR specific_JJ ,_, user_NN adds_VBZ at_IN -_: tribute_NN values_NNS related_VBN to_TO the_DT goal_NN which_WDT he_PRP has_VBZ already_RB mentioned_VBN ._.
+b_NN -RRB-_-RRB- Goal-unrelated_JJ :_: In_IN Goal-unrelated_JJ interaction_NN ,_, when_WRB the_DT user_NN is_VBZ prompted_VBN to_TO become_VB more_RBR specific_JJ ,_, the_DT user_NN adds_VBZ attribute_NN values_NNS which_WDT are_VBP not_RB related_VBN to_TO the_DT goal_NN which_WDT he_PRP has_VBZ already_RB stated_VBN in_IN his_PRP$ previous_JJ query_NN ._.
+Here_RB ,_, the_DT user_NN adds_VBZ something_NN new_JJ which_WDT could_MD actually_RB be_VB the_DT beginning_NN of_IN a_DT new_JJ goal_NN as_RB well_RB ._.
+Figure_NN 2_CD :_: An_DT example_NN of_IN Non-hierarchical_JJ interac_NN -_: tion_NN ._.
+In_IN Figure_NN 2_CD ,_, notice_NN that_IN in_IN U2_NNP and_CC U3_NNP ,_, the_DT user_NN adds_VBZ attribute-values_NNS which_WDT are_VBP related_VBN to_TO what_WP is_VBZ mentioned_VBN in_IN U1_NNP ._.
+The_DT user_NN mentions_VBZ his_PRP$ goal_NN in_IN U1_NNP -LRB-_-LRB- list_NN restaurants_NNS -RRB-_-RRB- and_CC the_DT information_NN in_IN U2_NNP -LRB-_-LRB- time_NN -RRB-_-RRB- and_CC U3_NNP -LRB-_-LRB- good_JJ ambience_NN -RRB-_-RRB- are_VBP goal-related_JJ to_TO U1_NNP ._.
+The_DT information_NN provided_VBN by_IN the_DT user_NN in_IN U2_NNP and_CC U3_NNP just_RB elevate_VB information_NN in_IN U1_NNP but_CC do_VBP not_RB make_VB a_DT new_JJ goal_NN ._.
+Since_IN in_IN each_DT interaction_NN after_IN U1_NNP ,_, the_DT user_NN is_VBZ not_RB moving_VBG towards_IN his_PRP$ goal_NN -LRB-_-LRB- as_IN the_DT user_NN has_VBZ already_RB mentioned_VBN his_PRP$ goal_NN in_IN U1_NNP -RRB-_-RRB- ,_, the_DT example_NN in_IN Figure_NN 2_CD is_VBZ an_DT example_NN of_IN Non-hierarchical_JJ user-system_NN interac_NN -_: tion_NN ._.
+6_CD Prompting_VBG the_DT user_NN In_IN this_DT section_NN ,_, we_PRP discuss_VBP on_IN how_WRB a_DT system_NN should_MD prompt_VB a_DT user_NN to_TO make_VB a_DT user_NN query_NN more_RBR specific_JJ in_IN hi_SYM -_: 2Hyponym_NN is_VBZ a_DT word_NN whose_WP$ semantic_JJ field_NN is_VBZ present_JJ within_IN another_DT word_NN ,_, called_VBN hypernym_NN ._.
+erarchical_JJ model_NN of_IN user-system_NN interaction_NN ._.
+Algorithm_NNP 1_CD shows_VBZ the_DT work_NN flow_NN of_IN the_DT system_NN to_TO reduce_VB results_NNS de_IN -_: pending_VBG on_IN user-system_NN interaction_NN models_NNS ._.
+Algorithm_NNP 1_CD Algorithm_NNP showing_VBG on_IN how_WRB the_DT system_NN switches_VBZ to_TO different_JJ user-system_NN models_NNS for_IN reduc_NN -_: ing_NN results_NNS 1_CD :_: 2_CD :_: 3_CD :_: 4_CD :_: 5_CD :_: 6_CD :_: 7_CD :_: 8_CD :_: 9_CD :_: 10_CD :_: 11_CD :_: 12_CD :_: 13_CD :_: 14_CD :_: 15_CD :_: 16_CD :_: 17_CD :_: 18_CD :_: 19_CD :_: 20_CD :_: 21_CD :_: 22_CD :_: 23_CD :_: 24_CD :_: 25_CD :_: 26_CD :_: 27_CD :_: 28_CD :_: 29_CD :_: 6.1_CD procedure_NN K_NNP ←_NNP Threshold_NNP value_NN for_IN size_NN of_IN results_NNS S_NNP ←_CD size_NN of_IN results_NNS of_IN U1_NNP d_LS -LRB-_-LRB- Ui_NNP -RRB-_-RRB- ←_CD specificity_NN degree_NN of_IN Ui_NNP ._.
+if_IN S_NNP ≤_CD K_NNP then_RB output_NN results_NNS else_RB prompt_VBP the_DT user_NN with_IN an_DT open_JJ question_NN to_TO add_VB more_JJR details_NNS if_IN d_LS -LRB-_-LRB- U2_NN -RRB-_-RRB- =_SYM =_SYM d_LS -LRB-_-LRB- U1_CD -RRB-_-RRB- then_RB ◃_CD ensuring_VBG there_EX is_VBZ no_DT loss_NN of_IN information_NN for_IN the_DT user_NN ._.
+output_NN results_NNS else_RB Identify_VB whether_IN the_DT user_NN has_VBZ moved_VBN hierarchically_RB or_CC non-hierarchically_RB from_IN U1_CD to_TO U2_CD if_IN U1_CD →_CD U2_NNP ∈_CD Hierarchical_JJ then_RB while_IN Ui_NNP −_CD 1_CD →_CD Ui_NNP ∈_CD Hierarchical_JJ U1_NN :_: Show_NNP all_PDT the_DT restaurants_NNS in_IN San_NNP Francisco_NNP ._.
+S1_CD :_: Could_MD you_PRP be_VB little_JJ specific_JJ ?_.
+U2_NNP :_: Show_NNP all_PDT the_DT restaurants_NNS open_JJ till_IN Midnight_NNP in_IN San_NNP Francisco_NNP ._.
+S2_CD :_: There_EX seem_VBP to_TO be_VB many_JJ restaurants_NNS ._.
+You_PRP 'd_MD like_VB to_TO add_VB anything_NN ?_.
+U3_NNP :_: Good_JJ ambience_NN and_CC 5_CD star_NN rating_NN ._.
+S3_CD :_: Restaurant_NNP 1_CD ,_, Restaurant_NNP 2_CD ,_, ..._: Restaurant_NNP n_NNP andS_NNP >_CD K_NNP do_VBP prompt_JJ hierarchically_RB S_NNP ←_CD update_VBP if_IN S_NNP >_CD K_NNP then_RB while_IN S_NNP >_CD K_NNP do_VBP prompt_JJ non_NN -_: S_NNP ←_CD update_VBP output_NN results_NNS else_RB else_RB ◃_CD IfU1_NNP →_CD U2_NNP ∈_CD Non-hierarchical_JJ while_IN S_NNP >_CD K_NNP do_VBP prompt_JJ non-hierarchically_JJ S_NNP ←_CD update_VBP output_NN results_NNS endprocedure_NN Prompting_VBG the_DT user_NN in_IN Hierarchical_NNP Model_NNP hierarchically_RB output_NN results_NNS If_IN the_DT list_NN of_IN hierarchical_JJ attributes_NNS are_VBP known_VBN to_TO the_DT sys_NNS -_: tem_NN and_CC the_DT if_IN the_DT system_NN identifies_VBZ an_DT interaction_NN as_IN hier_NN -_: archical_JJ interaction_NN ,_, then_RB the_DT system_NN can_MD prompt_VB the_DT user_NN with_IN the_DT appropriate_JJ attribute_NN in_IN the_DT hierarchy_NN ._.
+There_EX are_VBP two_CD ways_NNS to_TO prompt_VB a_DT user_NN in_IN hierarchical_JJ model_NN based_VBN on_IN the_DT number_NN of_IN attributes_NNS present_JJ in_IN U1_NNP ._.
+They_PRP are_VBP :_: 1_LS ._.
+Single_JJ attribute_NN :_: If_IN there_EX is_VBZ only_RB one_CD attribute_NN in_IN a_DT query_NN ,_, the_DT system_NN prompts_VBZ the_DT user_NN according_VBG to_TO the_DT hier_NN -_: archy_NN of_IN the_DT attribute_NN mentioned_VBN by_IN the_DT user_NN in_IN U1_NNP ._.
+Hi_SYM -_: erarchical_JJ list_NN of_IN attributes_NNS is_VBZ maintained_VBN by_IN the_DT system_NN separately_RB ._.
+2_LS ._.
+Multiple_JJ attributes_NNS :_: Here_RB ,_, the_DT system_NN starts_VBZ prompting_VBG in_IN a_DT similar_JJ manner_NN to_TO single_JJ attribute_NN type_NN ._.
+Since_IN there_EX are_VBP more_JJR than_IN one_CD attributes_NNS ,_, each_DT having_VBG their_PRP$ own_JJ hierarchical_JJ list_NN of_IN attributes_NNS ,_, the_DT process_NN is_VBZ repeated_VBN for_IN each_DT attribute_NN mentioned_VBN in_IN U1_NNP ._.
+However_RB ,_, there_EX is_VBZ one_CD constraint_NN which_WDT the_DT system_NN follows_VBZ in_IN order_NN to_TO reduce_VB the_DT results_NNS quickly_RB and_CC effectively_RB ._.
+A_DT dialogue_NN interaction_NN can_MD have_VB more_JJR than_IN one_CD attribute_NN values_NNS ._.
+Sometimes_RB these_DT attributes_NNS values_NNS may_MD not_RB be_VB related_VBN to_TO each_DT other_JJ hierarchically_RB ._.
+However_RB ,_, each_DT attribute_NN value_NN can_MD have_VB its_PRP$ own_JJ hierarchy_NN independent_JJ of_IN the_DT other_JJ other_JJ attribute_NN value_NN in_IN the_DT user_NN system_NN interaction_NN ._.
+Figure_NN 3_CD shows_VBZ an_DT example_NN of_IN such_PDT an_DT interaction_NN ._.
+Here_RB ,_, -LSB-_JJ cuisine_NN ,_, food_NN -RSB-_NNP belong_VBP to_TO one_CD hierarchy_NN and_CC -LSB-_NNP California_NNP ,_, San_NNP Diego_NNP ,_, Eden_NNP street_NN -RSB-_NNP belong_VBP to_TO the_DT second_JJ hierarchy_NN ._.
+Note_VB that_IN in_IN S2_NNP ,_, instead_RB of_IN discussing_VBG further_RBR on_IN hierarchy_NN of_IN food_NN ,_, the_DT system_NN prompts_VBZ the_DT user_NN on_IN the_DT lines_NNS of_IN the_DT second_JJ hierarchy_NN ._.
+It_PRP is_VBZ important_JJ to_TO maintain_VB the_DT balance_NN between_IN depths_NNS of_IN different_JJ hierarchies_NNS in_IN a_DT interaction_NN for_IN two_CD reasons_NNS ._.
+One_CD ,_, it_PRP becomes_VBZ easier_JJR for_IN the_DT system_NN to_TO reduce_VB the_DT results_NNS in_IN smaller_JJR number_NN of_IN steps_NNS and_CC two_CD ,_, it_PRP is_VBZ important_JJ that_IN the_DT system_NN becomes_VBZ specific_JJ in_IN more_JJR than_IN one_CD way_NN in_IN order_NN to_TO benefit_VB the_DT user_NN in_IN terms_NNS of_IN usefulness_NN of_IN the_DT results_NNS ._.
+Figure_NN 3_CD :_: Example_NN of_IN user-system_NN interaction_NN with_IN multiple_JJ hierarchical_JJ attributes_NNS When_WRB the_DT system_NN identifies_VBZ a_DT hierarchical_JJ model_NN ,_, it_PRP can_MD prompt_VB the_DT user_NN with_IN attributes_NNS in_IN the_DT hierarchical_JJ list_NN as_IN discussed_VBN earlier_JJR ._.
+However_RB ,_, it_PRP is_VBZ not_RB necessary_JJ that_IN the_DT system_NN should_MD prompt_VB with_IN only_RB one_CD attribute_NN in_IN a_DT prompt_JJ ._.
+The_DT system_NN can_MD prompt_VB with_IN one_CD or_CC more_JJR than_IN one_CD at_IN -_: tribute_NN ._.
+We_PRP categorize_VBP system_NN prompts_VBZ based_VBN on_IN the_DT num_NN -_: ber_NN of_IN attributes_NNS a_DT system_NN uses_VBZ in_IN a_DT prompt_JJ ._.
+They_PRP are_VBP as_IN follows_VBZ :_: 1_LS ._.
+Strong_JJ prompt_JJ :_: If_IN the_DT system_NN prompts_VBZ a_DT user_NN with_IN two_CD or_CC more_JJR than_IN two_CD attributes_NNS ,_, the_DT prompt_JJ is_VBZ known_VBN as_IN Algorithm_NNP 2_CD Algorithm_NNP for_IN prompting_VBG the_DT user_NN hier_NN -_: archically_RB 1_CD :_: 2_CD :_: 3_CD :_: 4_CD :_: 5_CD :_: 6_CD :_: 7_CD :_: 8_CD :_: 9_CD :_: 10_CD :_: 11_CD :_: 12_CD :_: 13_CD :_: 14_CD :_: procedure_NN K_NNP ←_NNP Threshold_NNP value_NN for_IN size_NN of_IN results_NNS S_NNP ←_CD size_NN of_IN results_NNS of_IN U1_NNP if_IN S_NNP ≤_CD K_NNP then_RB output_NN results_NNS else_RB num_VBP ←_CD number_NN of_IN attributes_NNS in_IN U1_CD if_IN num_NN =_SYM 1_CD then_RB pos_VBZ ←_CD position_NN of_IN attribute_NN in_IN U1_NNP in_IN its_PRP$ hierarchical_JJ chain_NN len_NN ←_CD length_NN of_IN hierarchical_JJ attribute_NN chain_NN to_TO which_WDT attribute_VBP in_IN U_NNP while_IN pos_NNS <len and S >_NNP K_NNP do_VBP prompt_JJ with_IN attribute_NN in_IN the_DT hier_NN -_: archy_NN chain_NN pos_VBZ ←_CD pos_NNS +_VBP 1_CD S_NNP ←_CD update_VBP ◃_CD num_JJ >_NN 1_CD prompt_JJ similar_JJ to_TO single_JJ attribute_NN but_CC abs_NNS -LRB-_-LRB- pos_NNS -LRB-_-LRB- a1_CD -RRB-_-RRB- −_CD pos_NNS -LRB-_-LRB- a2_CD -RRB-_-RRB- -RRB-_-RRB- is_VBZ minimum_JJ end_NN procedure_NN 15_CD :_: else_RB 16_CD :_: 17_CD :_: a_DT strong_JJ prompt_JJ ._.
+2_LS ._.
+Moderate_JJ prompt_JJ :_: If_IN the_DT system_NN prompts_VBZ a_DT user_NN with_IN only_RB one_CD attribute_NN ,_, the_DT prompt_JJ is_VBZ known_VBN as_IN a_DT moder_NN -_: ate_VBD prompt_JJ ._.
+3_LS ._.
+Weak_JJ prompt_JJ :_: If_IN the_DT system_NN prompts_VBZ the_DT user_NN without_IN any_DT prompt_JJ ,_, then_RB the_DT prompt_JJ is_VBZ known_VBN as_IN a_DT weak_JJ prompt_JJ ._.
+A_DT weak_JJ prompt_JJ is_VBZ more_JJR of_IN a_DT open_JJ question_NN ._.
+Effect_NN of_IN a_DT prompt_JJ on_IN the_DT reduction_NN in_IN the_DT size_NN of_IN results_NNS :_: Strong_JJ prompt_JJ >_NN Moderate_JJ prompt_JJ >_NN Weak_JJ prompt_JJ ._.
+Depending_VBG on_IN the_DT following_VBG factors_NNS ,_, the_DT system_NN prompts_VBZ the_DT user_NN accordingly_RB ._.
+a._IN Current_JJ results_NNS size_NN :_: If_IN the_DT size_NN of_IN results_NNS is_VBZ too_RB large_JJ ,_, then_RB the_DT system_NN would_MD preferably_RB prompt_VB strongly_RB ._.
+If_IN the_DT size_NN of_IN results_NNS is_VBZ not_RB too_RB high_JJ ,_, the_DT system_NN would_MD prompt_VB moderately_RB ._.
+b._NNP Position_NNP of_IN an_DT attribute_NN in_IN its_PRP$ hierarchy_NN :_: If_IN the_DT size_NN of_IN results_NNS is_VBZ too_RB high_JJ and_CC the_DT attribute_NN in_IN the_DT current_JJ Ui_NNP is_VBZ high_JJ in_IN the_DT hierarchy_NN -LRB-_-LRB- that_DT is_VBZ ,_, there_EX are_VBP more_JJR attributes_NNS after_IN the_DT current_JJ attribute_NN in_IN the_DT hierarchy_NN or_CC if_IN the_DT hierar_NN -_: chical_JJ chain_NN is_VBZ too_RB long_JJ -RRB-_-RRB- ,_, then_RB the_DT system_NN would_MD prompt_VB the_DT user_NN strongly_RB ._.
+This_DT is_VBZ an_DT important_JJ part_NN of_IN a_DT user_NN -_: system_NN interaction_NN ,_, as_IN it_PRP helps_VBZ in_IN reducing_VBG the_DT results_NNS in_IN minimum_JJ number_NN of_IN steps_NNS according_VBG to_TO various_JJ factors_NNS in_IN the_DT user-system_NN interaction_NN ._.
+If_IN the_DT results_NNS size_NN is_VBZ reduced_VBN with_IN only_RB one_CD attribute_NN ,_, then_RB the_DT system_NN will_MD only_RB prompt_VB U1_NNP :_: List_NN the_DT restaurants_NNS in_IN California_NNP ._.
+S1_CD :_: Which_WDT cuisine_NN are_VBP you_PRP looking_VBG for_IN ?_.
+U2_NNP :_: Italian_JJ Cuisine_NNP ._.
+Looking_VBG for_IN good_JJ pasta_NN ._.
+S2_CD :_: Where_WRB do_VBP you_PRP live_VBP in_IN California_NNP ?_.
+U3_NNP :_: I_PRP live_VBP in_IN Eden_NNP street_NN ,_, San_NNP Diego_NNP ._.
+S3_CD :_: Restaurant_NNP 1_CD ,_, Restaurant_NNP 2_CD ..._: Restaurant_NNP n_SYM 1_CD moderately_RB ._.
+The_DT system_NN limits_NNS itself_PRP to_TO prompt_VB at_IN the_DT most_RBS with_IN two_CD attributes_NNS ._.
+The_DT system_NN in_IN no_DT way_NN tries_VBZ to_TO move_VB along_RB with_IN the_DT user_NN towards_IN his_PRP$ goal_NN once_IN the_DT size_NN of_IN re_NN -_: sults_NNS is_VBZ less_JJR than_IN the_DT required_JJ threshold_NN ,_, K_NNP ._.
+The_DT threshold_NN K_NNP is_VBZ discussed_VBN in_IN section_NN 8_CD ._.
+In_IN a_DT non-hierarchical_JJ user-system_NN interaction_NN model_NN ,_, the_DT system_NN may_MD need_VB to_TO prompt_VB based_VBN on_IN the_DT various_JJ as_IN -_: pects_NNS of_IN the_DT current_JJ goal_NN presented_VBN by_IN the_DT user_NN ._.
+The_DT scope_NN of_IN new_JJ information_NN is_VBZ very_RB vast_JJ and_CC may_MD vary_VB from_IN one_CD user_NN to_TO other_JJ user_NN ._.
+Currently_RB ,_, we_PRP do_VBP not_RB address_VB how_WRB the_DT system_NN can_MD prompt_VB a_DT user_NN non-hierarchically_RB ._.
+When_WRB a_DT user_NN gives_VBZ an_DT input_NN query_NN ,_, if_IN the_DT size_NN of_IN results_NNS is_VBZ more_JJR than_IN K_NNP ,_, the_DT system_NN can_MD prompt_VB the_DT user_NN hierar_NN -_: chically_RB until_IN the_DT user_NN moves_VBZ non-hierarchically_RB ._.
+Once_RB the_DT user_NN is_VBZ found_VBN to_TO move_VB non-hierarchically_RB ,_, the_DT system_NN can_MD assume_VB that_IN the_DT user_NN has_VBZ reached_VBN his_PRP$ goal_NN and_CC from_IN there_EX on_IN prompt_JJ the_DT user_NN non-hierarchically_RB until_IN the_DT size_NN of_IN results_NNS is_VBZ less_JJR than_IN K._NNP 7_CD Reducing_VBG results_NNS without_IN prompting_VBG the_DT user_NN In_IN this_DT section_NN ,_, we_PRP propose_VBP few_JJ heuristics_NNS which_WDT can_MD be_VB helpful_JJ in_IN reducing_VBG the_DT results_NNS without_IN prompting_VBG a_DT user_NN ._.
+The_DT heuristics_NNS are_VBP :_: 1_LS ._.
+Semantic_JJ knowledge_NN Semantic_JJ knowledge_NN helps_VBZ the_DT system_NN in_IN two_CD ways_NNS ._.
+It_PRP helps_VBZ in_IN reducing_VBG the_DT results_NNS without_IN prompting_VBG the_DT user_NN and_CC at_IN the_DT same_JJ time_NN ,_, the_DT sys_NNS -_: tem_NN makes_VBZ sure_JJ that_IN these_DT results_NNS are_VBP more_RBR relevant_JJ to_TO the_DT user_NN ._.
+For_IN example_NN ,_, in_IN List_NN some_DT good_JJ restaurants_NNS ,_, tokens_NNS like_IN good_JJ imply_VBP that_IN the_DT attribute_NN rating_NN should_MD be_VB used_VBN ._.
+So_RB ,_, the_DT system_NN would_MD now_RB list_VB restaurant_NN whose_WP$ rating_NN is_VBZ in_IN the_DT range_NN 3-4_CD -LRB-_-LRB- out_IN of_IN 5_CD -RRB-_-RRB- ._.
+Here_RB using_VBG the_DT rating_NN is_VBZ help_NN -_: ful_NN in_IN reducing_VBG the_DT number_NN of_IN restaurants_NNS and_CC at_IN the_DT same_JJ time_NN it_PRP gives_VBZ good_JJ restaurants_NNS ._.
+If_IN the_DT user_NN had_VBD asked_VBN for_IN the_DT best_JJS restaurant_NN ,_, then_RB the_DT system_NN gives_VBZ the_DT restaurant_NN with_IN maximum_JJ rating_NN ._.
+2_LS ._.
+Contextual_JJ knowledge_NN Sometimes_RB ,_, it_PRP may_MD not_RB be_VB clear_JJ for_IN the_DT system_NN to_TO choose_VB an_DT attribute_NN for_IN prompting_VBG the_DT user_NN ._.
+In_IN such_JJ cases_NNS ,_, the_DT system_NN tries_VBZ to_TO recognize_VB the_DT attribute_NN which_WDT is_VBZ frequently_RB used_VBN by_IN the_DT user_NN in_IN the_DT pre_NN -_: ceding_VBG conversation_NN ._.
+This_DT information_NN can_MD also_RB give_VB the_DT system_NN an_DT idea_NN about_IN user_NN 's_POS goal_NN ._.
+Contextual_JJ knowledge_NN helps_VBZ in_IN increasing_VBG the_DT weights_NNS of_IN the_DT attributes_NNS ,_, which_WDT is_VBZ useful_JJ in_IN database_NN heuristics_NNS ._.
+3_LS ._.
+Database_NNP Knowledge_NNP The_NNP system_NN has_VBZ to_TO prompt_VB the_DT user_NN with_IN an_DT attribute_NN which_WDT gives_VBZ minimum_NN results_NNS ._.
+For_IN this_DT ,_, the_DT system_NN follows_VBZ a_DT simple_JJ heuristic_JJ using_VBG the_DT database_NN ._.
+Attribute_VB prompt_JJ =_SYM min_FW -LCB-_-LRB- max_NN -LRB-_-LRB- att_IN -LSB-_NNP 1_CD -RSB-_NNP -RRB-_-RRB- ,_, max_FW -LRB-_-LRB- att_NN -LSB-_NN 2_CD -RSB-_NNP -RRB-_-RRB- ,_, ..._: ,_, max_NN -LRB-_-LRB- att_JJ -LSB-_NNP n_NN -RSB-_NNP -RRB-_-RRB- -RCB-_-RRB- Here_RB ,_, att_IN -LSB-_NNP 1_CD -RSB-_NNP is_VBZ the_DT number_NN of_IN results_NNS obtained_VBN for_IN each_DT value_NN of_IN attribute1_CD ._.
+max_NN -LRB-_-LRB- att_IN -LSB-_NNP 1_CD -RSB-_NNP -RRB-_-RRB- is_VBZ the_DT worst_JJS case_NN number_NN of_IN results_NNS obtained_VBN for_IN choosing_VBG some_DT value_NN of_IN attribute1_CD ._.
+Algorithm_NNP 3_CD Algorithm_NNP for_IN reducing_VBG size_NN of_IN results_NNS without_IN prompting_VBG the_DT user_NN 1_CD :_: 2_CD :_: 3_CD :_: 4_CD :_: 5_CD :_: 6_CD :_: 7_CD :_: 8_CD :_: 9_CD :_: 10_CD :_: 11_CD :_: 12_CD :_: 13_CD :_: 14_CD :_: 15_CD :_: 16_CD :_: 17_CD :_: procedure_NN K_NNP ←_NNP Threshold_NNP value_NN for_IN size_NN of_IN results_NNS S_NNP ←_CD size_NN of_IN results_NNS of_IN U1_NNP if_IN S_NNP ≤_CD K_NNP then_RB output_NN results_NNS else_RB apply_VBP semantic_JJ knowledge_NN or_CC scaling_NN of_IN attributes_NNS if_IN applicable_JJ to_TO U1_NNP S_NNP ←_CD update_VBP if_IN S_NNP ≤_CD K_NNP then_RB output_NN results_NNS else_RB while_IN S_NNP >_CD K_NNP do_VBP compute_VB attribute_NN prompt_JJ prompt_JJ with_IN attribute_NN prompt_JJ S_NNP ←_CD update_VBP output_NN results_NNS endprocedure_NN n_NN is_VBZ the_DT total_JJ number_NN of_IN attributes_NNS in_IN the_DT ER_NNP schema_NN ._.
+Attribute_VB prompt_JJ is_VBZ the_DT attribute_NN the_DT system_NN uses_VBZ to_TO prompt_VB the_DT user_NN ._.
+The_DT system_NN chooses_VBZ an_DT attribute_NN having_VBG the_DT minimum_NN of_IN all_DT worst_JJS case_NN number_NN of_IN results_NNS of_IN all_PDT the_DT attributes_NNS to_TO present_VB the_DT minimum_JJ number_NN of_IN results_NNS to_TO the_DT user_NN ._.
+But_CC the_DT above_JJ heuristic_NN is_VBZ not_RB correct_JJ as_IN the_DT system_NN is_VBZ only_RB looking_VBG to_TO reduce_VB the_DT results_NNS without_IN considering_VBG user_NN 's_POS requirement_NN ._.
+Here_RB ,_, the_DT output_NN is_VBZ solely_RB dependent_JJ on_IN the_DT results_NNS stored_VBN in_IN the_DT database_NN ._.
+To_TO make_VB the_DT results_NNS more_RBR meaningful_JJ ,_, system_NN uses_VBZ contextual_JJ knowledge_NN ._.
+Thus_RB ,_, we_PRP modify_VBP the_DT above_JJ heuristic_JJ using_VBG weights_NNS for_IN each_DT attribute_NN ._.
+If_IN an_DT attribute_NN is_VBZ used_VBN by_IN the_DT user_NN in_IN the_DT context_NN of_IN the_DT current_JJ dialogue_NN ,_, weight_NN of_IN the_DT attribute_NN is_VBZ increased_VBN by_IN one_CD ._.
+Initial_JJ weights_NNS of_IN all_PDT the_DT attributes_NNS are_VBP assumed_VBN to_TO be_VB one_CD ._.
+Attribute_VB prompt_JJ =_SYM min_FW -LCB-_-LRB- w1_CD *_SYM max_FW -LRB-_-LRB- att_IN -LSB-_NNP 1_CD -RSB-_NNP -RRB-_-RRB- ,_, w2_FW *_SYM max_FW -LRB-_-LRB- att_NN -LSB-_NN 2_CD -RSB-_NNP -RRB-_-RRB- ,_, ..._: ,_, wn_JJ *_SYM max_FW -LRB-_-LRB- att_JJ -LSB-_NNP n_NN -RSB-_NNP -RRB-_-RRB- -RCB-_-RRB- 4_LS ._.
+Scaling_VBG of_IN attribute_NN values_NNS If_IN the_DT user_NN asks_VBZ for_IN a_DT good_JJ restaurant_NN -LRB-_-LRB- rating_NN between_IN 3_CD and_CC 4_CD -RRB-_-RRB- and_CC if_IN there_EX are_VBP too_RB many_JJ restaurants_NNS in_IN that_DT range_NN ,_, then_RB the_DT system_NN in_IN -_: creases_NNS the_DT rating_NN to_TO 3.5-4_CD ._.
+That_DT is_VBZ ,_, here_RB the_DT attribute_NN value_NN rating_NN is_VBZ scaled_VBN in_IN order_NN to_TO decrease_VB the_DT size_NN of_IN results_NNS ._.
+8_CD Experiments_NNS and_CC Discussions_NNP 8.1_CD Data_NNP and_CC Experimental_JJ setup_NN We_PRP experiment_NN our_PRP$ approach_NN and_CC heuristics_NNS on_IN the_DT REST_NNP -_: QUERY3_NNP corpus_VBZ which_WDT is_VBZ a_DT state-of-the-art_JJ corpus_NN used_VBN for_IN evaluating_VBG NLIDB_NNP systems_NNS ._.
+The_DT total_JJ number_NN of_IN queries_NNS in_IN the_DT dataset_NN was_VBD 251_CD ._.
+We_PRP removed_VBD 83_CD queries_NNS from_IN the_DT above_JJ dataset_NN ._.
+39_CD of_IN those_DT queries_NNS had_VBD only_RB one_CD an_DT -_: swer_NN ._.
+An_DT example_NN of_IN such_JJ query_NN is_VBZ How_WRB many_JJ bakeries_NNS are_VBP there_RB in_IN the_DT Bay_NNP area_NN ?_. ._.
+It_PRP can_MD directly_RB be_VB seen_VBN that_IN the_DT answer_NN for_IN the_DT above_JJ query_NN would_MD only_RB be_VB a_DT num_NN -_: ber_NN ._.
+The_DT size_NN of_IN results_NNS for_IN such_JJ queries_NNS is_VBZ only_RB one_CD and_CC hence_RB there_EX is_VBZ no_DT scope_NN for_IN the_DT system_NN to_TO reduce_VB the_DT size_NN of_IN results_NNS ._.
+The_DT remaining_VBG 44_CD queries_NNS were_VBD found_VBN to_TO have_VB very_RB low_JJ scope_NN for_IN reducing_VBG the_DT size_NN of_IN results_NNS ._.
+An_DT ex_FW -_: ample_JJ of_IN such_PDT a_DT query_NN is_VBZ Give_VB me_PRP the_DT best_JJS bakery_NN in_IN Palo_NNP Alto_NNP ?_. ._.
+We_PRP repeated_VBD a_DT few_JJ queries_NNS and_CC also_RB added_VBD un_SYM -_: specific_JJ queries_NNS as_IN there_EX were_VBD no_DT unspecific_JJ queries_NNS in_IN the_DT standard_JJ dataset_NN ._.
+The_DT final_JJ size_NN of_IN the_DT dataset_NN was_VBD 300_CD queries_NNS ._.
+We_PRP conducted_VBD the_DT experiment_NN with_IN 100_CD un_SYM -_: dergraduate_NN CS_NNP students_NNS of_IN our_PRP$ university_NN ._.
+Each_DT student_NN was_VBD given_VBN 3_CD queries_NNS and_CC was_VBD asked_VBN to_TO make_VB each_DT query_NN more_RBR specific_JJ by_IN adding_VBG information_NN ._.
+This_DT was_VBD done_VBN un_SYM -_: der_NN the_DT assumption_NN that_IN there_EX are_VBP large_JJ number_NN of_IN results_NNS for_IN the_DT given_VBN query_NN which_WDT rightly_RB serves_VBZ the_DT purpose_NN of_IN the_DT experiment_NN ._.
+This_DT results_NNS in_IN a_DT dialogue_NN process_NN cover_NN -_: ing_VBG topics_NNS like_IN restaurants_NNS ,_, locations_NNS ,_, cuisines_NNS ,_, restaurant_NN timings_NNS etc_FW ,_, ._.
+We_PRP collected_VBD 300_CD dialogue_NN processes_NNS ._.
+The_DT users_NNS were_VBD prompted_VBN for_IN a_DT minimum_NN of_IN two_CD times_NNS to_TO add_VB more_JJR information_NN to_TO the_DT given_VBN query_NN ._.
+The_DT length_NN of_IN each_DT dialogue_NN process_NN varied_VBD depending_VBG on_IN the_DT specificity_NN of_IN the_DT given_VBN query_NN ._.
+For_IN each_DT query_NN ,_, the_DT system_NN tries_VBZ to_TO reduce_VB the_DT results_NNS size_NN using_VBG various_JJ heuristics_NNS ._.
+K_NNP is_VBZ the_DT threshold_NN value_NN of_IN the_DT size_NN of_IN results_NNS ,_, based_VBN on_IN which_WDT the_DT system_NN will_MD decide_VB whether_IN it_PRP should_MD try_VB to_TO reduce_VB the_DT size_NN of_IN results_NNS or_CC not_RB ._.
+We_PRP take_VBP K_NNP as_IN the_DT average_JJ number_NN of_IN results_NNS produced_VBN for_IN a_DT strongly_RB specific_JJ query_NN -LRB-_-LRB- with_IN only_RB two_CD values_NNS -RRB-_-RRB- in_IN the_DT database_NN ._.
+If_IN the_DT number_NN of_IN results_NNS is_VBZ less_JJR than_IN or_CC equal_JJ to_TO K_NNP ,_, the_DT system_NN will_MD not_RB prompt_VB the_DT user_NN ._.
+Therefore_RB ,_, the_DT main_JJ aim_NN of_IN the_DT system_NN is_VBZ to_TO try_VB and_CC reduce_VB the_DT size_NN of_IN results_NNS to_TO K_NNP or_CC less_JJR than_IN K_NNP ._.
+After_IN a_DT pilot_NN set_NN of_IN experi_NNS -_: ments_NNS in_IN the_DT RESTQUERY_NNP dataset_NN ,_, we_PRP found_VBD that_IN addition_NN of_IN even_RB one_CD or_CC two_CD values_NNS results_NNS in_IN the_DT size_NN of_IN results_NNS less_JJR than_IN K_NNP ._.
+But_CC this_DT is_VBZ not_RB possible_JJ in_IN large_JJ real_JJ time_NN database_NN systems_NNS ._.
+Hence_RB ,_, for_IN the_DT ease_NN and_CC betterment_NN of_IN the_DT ex_FW -_: perimentation_NN we_PRP did_VBD not_RB restrict_VB users_NNS from_IN adding_VBG more_JJR information_NN ._.
+8.2_CD Discussions_NNS Out_IN of_IN the_DT 300_CD dialogue_NN processes_NNS ,_, we_PRP found_VBD that_IN 55.36_CD %_NN of_IN the_DT dialogue_NN processes_VBZ belonged_VBN to_TO the_DT Hierarchical_JJ 3_CD http://www.cs.utexas.edu/users/ml/nldata.html_NN model_NN -LRB-_-LRB- more_JJR than_IN we_PRP expected_VBD -RRB-_-RRB- ,_, 25.42_CD %_NN of_IN the_DT dialogue_NN processes_VBZ belonged_VBN to_TO the_DT Non-hierarchical_JJ model_NN ,_, 19.2_CD %_NN of_IN the_DT dialogue_NN processes_VBZ belonged_VBN to_TO both_DT hierarchical_JJ and_CC non-hierarchical_JJ models_NNS ._.
+15.53_CD %_NN -LRB-_-LRB- majority_NN -RRB-_-RRB- out_IN of_IN the_DT 19.2_CD %_NN processes_VBZ see_VB hierarchical_JJ followed_VBN by_IN non_NN -_: hierarchical_JJ ._.
+This_DT shows_VBZ that_IN if_IN a_DT user_NN has_VBZ reached_VBN his_PRP$ goal_NN and_CC is_VBZ still_RB prompted_VBN to_TO add_VB new_JJ information_NN ,_, he_PRP moves_VBZ non-hierarchically_RB ._.
+We_PRP observe_VBP that_IN whenever_WRB a_DT user_NN has_VBZ already_RB men_NNS -_: tioned_VBN his_PRP$ goal_NN in_IN the_DT query_NN -LRB-_-LRB- complete_JJ goal_NN -RRB-_-RRB- ,_, the_DT user_NN in_IN -_: teracts_NNS in_IN a_DT non-hierarchical_JJ manner_NN ._.
+If_IN a_DT user_NN has_VBZ only_RB partially_RB mentioned_VBD his_PRP$ goal_NN in_IN the_DT query_NN -LRB-_-LRB- partial_JJ goal_NN -RRB-_-RRB- ,_, then_RB there_EX is_VBZ a_DT possibility_NN that_IN a_DT user_NN can_MD move_VB towards_IN his_PRP$ goal_NN when_WRB prompted_VBN ._.
+In_IN such_JJ cases_NNS ,_, the_DT user_NN 's_POS goal_NN is_VBZ definitely_RB related_VBN to_TO some_DT of_IN the_DT attributes_NNS he_PRP has_VBZ al_SYM -_: ready_JJ mentioned_VBN in_IN previous_JJ queries_NNS ._.
+As_IN all_DT hierarchical_JJ attributes_NNS are_VBP related_VBN to_TO each_DT other_JJ in_IN the_DT context_NN of_IN a_DT goal_NN ,_, we_PRP claim_VBP that_IN when_WRB a_DT user_NN has_VBZ not_RB completely_RB revealed_VBD his_PRP$ goal_NN initially_RB in_IN an_DT interaction_NN ,_, there_EX is_VBZ a_DT possibility_NN that_IN the_DT user_NN may_MD move_VB hierarchically_RB ._.
+It_PRP is_VBZ also_RB possible_JJ that_IN when_WRB a_DT system_NN prompts_VBZ a_DT user_NN regarding_VBG something_NN ,_, the_DT user_NN can_MD actually_RB make_VB a_DT new_JJ goal_NN ._.
+In_IN this_DT case_NN ,_, the_DT sys_NNS -_: tem_NN should_MD again_RB prompt_VB the_DT user_NN in_IN a_DT hierarchical_JJ fash_NN -_: ion_NN or_CC in_IN some_DT manner_NN in_IN which_WDT attributes_NNS are_VBP related_VBN to_TO each_DT other_JJ ._.
+In_IN our_PRP$ work_NN ,_, we_PRP only_RB consider_VBP hierarchical_JJ relationships_NNS between_IN attributes_NNS ._.
+We_PRP observed_VBD that_IN length_NN of_IN dialogue_NN process_NN was_VBD higher_JJR when_WRB users_NNS were_VBD given_VBN unspecific_JJ or_CC weakly_RB spe_SYM -_: cific_NN queries_NNS in_IN comparison_NN to_TO strongly_RB specific_JJ queries_NNS ._.
+Theoretically_RB also_RB ,_, this_DT is_VBZ correct_JJ as_IN the_DT scope_NN of_IN adding_VBG more_JJR information_NN increases_NNS with_IN decrease_NN in_IN specificity_NN of_IN a_DT query_NN ._.
+However_RB ,_, this_DT may_MD not_RB be_VB true_JJ if_IN a_DT user_NN starts_VBZ a_DT new_JJ goal_NN ._.
+We_PRP applied_VBD the_DT semantic_JJ knowledge_NN heuristic_NN to_TO the_DT RESTQUERY_NNP dataset_NN ._.
+Semantic_JJ knowledge_NN was_VBD found_VBN to_TO be_VB applicable_JJ for_IN 40.47_CD %_NN of_IN the_DT queries_NNS in_IN the_DT dataset_NN ._.
+The_DT average_JJ size_NN of_IN the_DT results_NNS size_NN before_IN applying_VBG se_FW -_: mantic_JJ knowledge_NN was_VBD found_VBN to_TO be_VB 196_CD and_CC after_IN apply_VB -_: ing_NN semantic_JJ knowledge_NN the_DT average_JJ results_NNS size_NN was_VBD just_RB 28_CD ._.
+16_CD %_NN of_IN the_DT 40.47_CD %_NN queries_NNS resulted_VBD in_IN no_DT results_NNS af_SYM -_: ter_NN applying_VBG the_DT semantic_JJ knowledge_NN ._.
+4_CD %_NN queries_VBZ out_IN of_IN the_DT 40.47_CD %_NN resulted_VBD in_IN too_RB many_JJ results_NNS even_RB after_IN apply_VB -_: ing_NN semantic_JJ knowledge_NN ._.
+The_DT semantic_JJ knowledge_NN must_MD make_VB sure_JJ that_IN some_DT minimum_JJ number_NN of_IN results_NNS are_VBP re_SYM -_: turned_VBD and_CC at_IN the_DT same_JJ time_NN it_PRP has_VBZ to_TO make_VB sure_JJ that_IN not_RB too_RB many_JJ results_NNS are_VBP returned_VBN even_RB after_IN applying_VBG seman_NN -_: tic_JJ heuristics_NNS ._.
+Such_JJ issues_NNS are_VBP handled_VBN by_IN attribute_NN value_NN scaling_VBG ._.
+The_DT attribute_NN value_NN scaling_VBG module_NN tunes_NNS the_DT se_FW -_: mantic_JJ heuristics_NNS according_VBG to_TO the_DT size_NN of_IN the_DT results_NNS ._.
+Se_SYM -_: mantic_JJ knowledge_NN is_VBZ generally_RB very_RB useful_JJ in_IN the_DT lesser_JJR specific_JJ queries_NNS ._.
+It_PRP is_VBZ difficult_JJ for_IN a_DT user_NN to_TO express_VB his_PRP$ goal_NN with_IN min_NN -_: imal_JJ number_NN of_IN values_NNS ._.
+When_WRB the_DT first_JJ user_NN query_NN -LRB-_-LRB- U1_CD -RRB-_-RRB- is_VBZ not_RB strongly_RB specific_JJ the_DT results_NNS size_NN is_VBZ generally_RB high_JJ ._.
+Thus_RB ,_, when_WRB the_DT system_NN prompts_VBZ a_DT user_NN in_IN case_NN U1_CD is_VBZ not_RB strongly_RB specific_JJ ,_, it_PRP is_VBZ very_RB likely_JJ that_IN the_DT user_NN will_MD add_VB values_NNS which_WDT make_VBP his_PRP$ goal_NN more_RBR clear_JJ ._.
+Hence_RB ,_, the_DT sys_NNS -_: tem_NN always_RB prompts_VBZ the_DT user_NN hierarchically_RB based_VBN on_IN the_DT attribute_NN values_NNS in_IN U1_NNP during_IN the_DT initial_JJ stages_NNS of_IN the_DT dia_NN -_: logue_NN process_NN ._.
+From_IN the_DT experiments_NNS ,_, it_PRP shows_VBZ that_IN ma_SYM -_: jority_NN of_IN the_DT users_NNS move_VB hierarchically_RB during_IN the_DT initial_JJ stages_NNS of_IN the_DT dialogue_NN process_NN ._.
+Hence_RB the_DT proposed_VBN ap_SYM -_: proach_NN proves_VBZ to_TO be_VB viable_JJ ._.
+9_CD Conclusion_NN and_CC Future_NNP Work_NNP This_DT is_VBZ a_DT work_NN in_IN progress_NN ._.
+We_PRP propose_VBP a_DT system_NN for_IN re_SYM -_: ducing_VBG the_DT size_NN of_IN results_NNS of_IN a_DT user_NN query_NN in_IN NLIDB_NNP sys_SYM -_: tems_NNS ._.
+User_NN queries_NNS are_VBP categorized_VBN based_VBN on_IN number_NN of_IN values_NNS mentioned_VBN by_IN a_DT user_NN ._.
+At_IN a_DT high_JJ level_NN ,_, we_PRP pro-_JJ pose_VBP two_CD types_NNS of_IN user-system_NN interactions_NNS based_VBN on_IN how_WRB a_DT user_NN interacts_VBZ with_IN the_DT system_NN ._.
+Depending_VBG on_IN the_DT model_NN of_IN user-system_NN interaction_NN ,_, system_NN prompts_VBZ the_DT user_NN ac_SYM -_: cordingly_RB ,_, to_TO reduce_VB the_DT size_NN of_IN results_NNS of_IN a_DT user_NN query_NN by_IN making_VBG it_PRP more_RBR specific_JJ ._.
+User_NN responses_NNS can_MD be_VB related_VBN in_IN many_JJ ways_NNS ._.
+Our_PRP$ work_NN focuses_VBZ on_IN user_NN responses_NNS which_WDT are_VBP hierarchically_RB related_VBN assuming_VBG that_IN the_DT user_NN is_VBZ mov_SYM -_: ing_NN towards_IN his_PRP$ goal_NN ._.
+As_IN our_PRP$ system_NN is_VBZ only_RB concerned_JJ with_IN the_DT results_NNS of_IN a_DT NLIDB_NNP system_NN ,_, it_PRP can_MD be_VB coupled_VBN with_IN any_DT NLIDB_NNP system_NN irrespective_RB of_IN the_DT approach_NN used_VBN in_IN the_DT NLIDB_NNP system_NN ._.
+The_DT generalized_JJ nature_NN of_IN the_DT pro-_JJ posed_VBN user-system_NN interaction_NN models_NNS and_CC the_DT heuristics_NNS make_VBP the_DT approach_NN domain_NN independent_JJ ._.
+We_PRP are_VBP currently_RB working_VBG on_IN non-hierarchical_JJ prompt_JJ -_: ing_NN ._.
+There_EX are_VBP two_CD challenges_NNS in_IN non-hierarchical_JJ prompting_VBG ._.
+One_CD ,_, the_DT system_NN should_MD identify_VB when_WRB a_DT user_NN is_VBZ adding_VBG random_JJ information_NN or_CC information_NN which_WDT is_VBZ not_RB related_VBN to_TO previous_JJ user_NN query_NN ._.
+In_IN other_JJ words_NNS ,_, the_DT sys_NNS -_: tem_NN should_MD be_VB able_JJ to_TO simultaneously_RB address_VB new_JJ goals_NNS -LRB-_-LRB- goal_NN unrelated_JJ ,_, as_IN discussed_VBN in_IN section_NN 5_CD -RRB-_-RRB- added_VBN by_IN the_DT user_NN ._.
+The_DT second_JJ challenge_NN is_VBZ ,_, once_RB the_DT user_NN completes_VBZ his_PRP$ goal_NN ,_, when_WRB a_DT user_NN moves_NNS in_IN a_DT goal-related_JJ way_NN ,_, there_EX is_VBZ vastness_NN in_IN occurrence_NN of_IN new_JJ information_NN ._.
+For_IN example_NN ,_, consider_VB List_NN the_DT restaurants_NNS in_IN San_NNP Francisco_NNP ._.
+Assuming_VBG the_DT user_NN has_VBZ mentioned_VBN his_PRP$ goal_NN completely_RB in_IN the_DT above_JJ query_NN ,_, lets_VBZ say_VB he_PRP would_MD now_RB move_VB non-hierarchically_RB in_IN a_DT goal-related_JJ way_NN ._.
+Now_RB the_DT user_NN can_MD add_VB new_JJ in_IN -_: formation_NN like_IN :_: ''_'' buffet_NN restaurants_NNS ,_, cost_NN for_IN two_CD ,_, ambi_SYM -_: ence_NN ,_, candle_NN light_NN dinner_NN ,_, open_JJ top_JJ restaurants_NNS ,_, good_JJ mu_SYM -_: sic_NN ''_'' etc._FW ._.
+It_PRP is_VBZ difficult_JJ to_TO maintain_VB such_JJ information_NN in_IN a_DT database_NN ._.
+However_RB ,_, we_PRP are_VBP trying_VBG to_TO address_VB such_JJ things_NNS using_VBG web_NN sites_NNS like_IN Zomato_NNP ._.
+In_IN future_NN ,_, we_PRP would_MD explore_VB user-system_NN interaction_NN models_NNS in_IN more_JJR detail_NN ._.
+We_PRP would_MD also_RB work_VB on_IN computing_VBG the_DT threshold_NN value_NN K_NNP in_IN a_DT more_RBR sophisticated_JJ manner_NN which_WDT can_MD be_VB helpful_JJ in_IN addressing_VBG the_DT problem_NN more_RBR effectively_RB ._.
+References_NNS Arjun_NNP R._NNP Akula_NNP ,_, Rajeev_NNP Sangal_NNP ,_, Radhika_NNP Mamidi_NNP ._.
+2013_CD ._.
+A_DT Novel_NNP Approach_NNP Towards_NNP Incorporating_NNP Context_NNP Processing_NNP Capabilities_NNPS in_IN NLIDB_NNP System_NNP ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT International_NNP Joint_NNP Conference_NNP on_IN Natural_NNP Language_NNP Processing_NNP -LRB-_-LRB- IJCNLP_NNP -RRB-_-RRB- ,_, pages_NNS 1216_CD -_: 1222_CD ,_, Nagoya_NNP ,_, Japan_NNP ._.
+Arjun_NNP R._NNP Akula_NNP ._.
+2015_CD ._.
+A_DT Novel_NNP Approach_NNP Towards_NNP Building_NNP a_DT Generic_NNP ,_, Portable_NNP and_CC Contextual_NNP NLIDB_NNP System_NNP ._.
+International_NNP Institute_NNP of_IN Information_NNP Tech_NNP -_: nology_NN Hyderabad_NNP Ioannis_NNP Androutsopoulos_NNP ,_, Graeme_NNP D._NNP Ritchie_NNP ,_, and_CC Pe_SYM -_: ter_NN Thanisch_NNP ._.
+1995_CD ._.
+Natural_JJ language_NN interfaces_NNS to_TO databases_NNS --_: an_DT introduction_NN ._.
+Natural_JJ language_NN engi_SYM -_: neering_VBG ,1_CD -LRB-_-LRB- 01_CD -RRB-_-RRB- ,_, 29-81_CD ._.
+Raffaella_NNP Bernardi_NNP and_CC Manuel_NNP Kirschner_NNP ._.
+2008_CD ._.
+Context_NN modeling_NN for_IN iqa_NN :_: the_DT role_NN of_IN tasks_NNS and_CC entities_NNS ._.
+In_IN Col_NNP -_: ing_NN 2008_CD :_: Proceedings_NNP of_IN the_DT workshop_NN on_IN Knowledge_NN and_CC Reasoning_NN for_IN Answering_VBG Questions_NNS ,_, pages_NNS 25_CD --_: 32_CD ._.
+Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Nuria_NNP Bertomeu_NNP ,_, Hans_NNP Uszkoreit_NNP ,_, Anette_NNP Frank_NNP ,_, Han_NNP -_: sUlrich_NNP Krieger_NNP ,_, and_CC Brigitte_NNP Jorg_NNP ._.
+2006_CD ._.
+Contex_NNP -_: tual_JJ phenomena_NNS and_CC thematic_JJ relations_NNS in_IN database_NN qa_NN dialogues_NNS :_: results_NNS from_IN a_DT wizard-of-oz_NN experiment_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Interactive_NNP Question_NNP Answering_NNP Workshop_NNP at_IN HLT-NAACL_NNP ,_, pages_NNS 1-8_CD Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Joyce_NNP Y_NNP Chai_NNP and_CC Rong_NNP Jin_NNP ._.
+2004_CD ._.
+Discourse_NN struc_SYM -_: ture_NN for_IN context_NN question_NN answering_VBG ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Pragmatics_NNPS of_IN Question_NNP Answer_NNP -_: ing_NN at_IN HLT-NAACL_NNP ,_, pages_NNS 23-30_CD ._.
+Alessandra_NNP Giordani_NNP ._.
+2008_CD ._.
+Mapping_VBG Natural_JJ Language_NN into_IN SQL_NNP in_IN a_DT NLIDB_NNP ._.
+In_IN Natural_JJ Language_NN and_CC In_IN -_: formation_NN Systems_NNP -LRB-_-LRB- pp._FW 367-371_CD -RRB-_-RRB- ._.
+Springer_NNP Berlin_NNP Hei_NNP -_: delberg_NN Alessandra_NNP Giordani_NNP and_CC Alessandro_NNP Moschitti_NNP ._.
+2009_CD ._.
+Syntactic_JJ structural_JJ kernels_NNS for_IN natural_JJ language_NN in_IN -_: terfaces_NNS to_TO databases_NNS ._.
+In_IN Machine_NN Learning_NNP and_CC Knowledge_NNP Discovery_NNP in_IN Databases_NNP ,_, pages_NNS 391_CD --_: 406_CD ._.
+Springer_NNP ._.
+Abhijeet_NNP Gupta_NNP ,_, Arjun_NNP Akula_NNP ,_, Deepak_NNP Malladi_NNP ,_, Puneeth_NNP Kukkadapu_NNP ,_, Vinay_NNP Ainavolu_NNP ,_, and_CC Rajeev_NNP Sangal_NNP ._.
+2012_CD ._.
+A_DT novel_JJ approach_NN towards_IN building_VBG a_DT portable_JJ nlidb_NN system_NN using_VBG the_DT computational_JJ paninian_NN gram_NN -_: mar_NN framework_NN ._.
+In_IN Asian_JJ Language_NN Processing_NNP -LRB-_-LRB- IALP_NNP -RRB-_-RRB- ,_, 2012_CD International_NNP Conference_NNP on_IN -LRB-_-LRB- pp._FW 93-96_CD -RRB-_-RRB- ._.
+IEEE_NNP ._.
+Catalina_NNP Hallett_NNP and_CC David_NNP Hardcastle_NNP 2008_CD ._.
+Towards_IN a_DT bootstrapping_NN nlidb_NN system_NN In_IN Natural_JJ Language_NN and_CC Information_NNP Systems_NNP ,_, Springer_NNP ,_, 2008_CD ,_, pp._SYM 199-204_CD ._.
+Aasish_NNP Pappu_NNP and_CC Alexander_NNP I_PRP Rudnicky_NNP ._.
+2014_CD ._.
+Knowl_NNP -_: edge_NN acquisition_NN strategies_NNS for_IN goal-oriented_JJ dialog_NN systems_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 15th_JJ SIGDIAL_NNP Con_NN -_: ference_NN ,_, pages_NNS 194-198_CD ._.
+Ana-Maria_NNP Popescu_NNP ,_, Oren_NNP Etzioni_NNP ,_, and_CC Henry_NNP Kautz_NNP ._.
+2003_CD ._.
+Towards_IN a_DT theory_NN of_IN natural_JJ language_NN interfaces_NNS to_TO databases_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 8th_JJ international_JJ conference_NN on_IN Intelligent_NNP user_NN interfaces_NNS ,_, pages_NNS 149_CD -_: 157_CD ._.
+ACM_NNP ._.
+Rodolfo_NNP A._NNP Pazos_NNP Rangel_NNP ,_, Alexander_NNP Gelbukh_NNP ,_, J._NNP Javier_NNP Gonza_NNP ́lez_NNP Barbosa_NNP ,_, Erika_NNP Alarco_NNP ́n_NNP Ruiz_NNP ,_, Alejandro_NNP Mendoza_NNP Mej_NNP ́ıa_NNP ,_, and_CC A._NN Patricia_NNP Dom_NNP ́ınguez_NNP Sa_NNP ́nchez_VBD 2002_CD ._.
+Spanish_JJ Natural_JJ Language_NN Interface_NNP for_IN a_DT Re_NNP -_: lational_JJ Database_NNP Querying_NNP System_NNP ._.
+In_IN Sojka_NNP ,_, P._NNP ,_, Kopecˇek_NNP ,_, I._NNP ,_, Pala_NNP ,_, K._NNP -LRB-_-LRB- eds_NNS ._. -RRB-_-RRB-
+TSD_NNP 2002_CD ._.
+LNCS_NNP -LRB-_-LRB- LNAI_NNP -RRB-_-RRB- ,_, vol_NN ._.
+2448_CD ,_, pp._SYM 123-130_CD ._.
+Springer_NNP ,_, Heidelberg_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- ._.

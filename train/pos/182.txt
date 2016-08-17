@@ -1,0 +1,193 @@
+Realignment_NN from_IN Finer-grained_JJ Alignment_NN to_TO Coarser-grained_JJ Align_NNP -_: ment_NN to_TO Enhance_VB Mongolian-Chinese_JJ SMT_NNP Abstract_NNP The_NNP conventional_JJ Mongolian-Chinese_NNP sta_NN -_: tistical_JJ machine_NN translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- model_NN uses_VBZ Mongolian_JJ words_NNS and_CC Chinese_JJ words_NNS to_TO practice_VB the_DT system_NN ._.
+However_RB ,_, data_NNS sparsity_NN ,_, complex_JJ Mongolian_JJ morphology_NN and_CC Chinese_JJ word_NN segmentation_NN -LRB-_-LRB- CWS_NNP -RRB-_-RRB- er_SYM -_: rors_NNS lead_VBP to_TO alignment_JJ errors_NNS and_CC ambiguities_NNS ._.
+Some_DT other_JJ works_NNS use_VBP finer-grained_JJ Mongolian_JJ stems_VBZ and_CC Chinese_JJ characters_NNS ,_, which_WDT suffer_VBP from_IN in_IN -_: formation_NN loss_NN when_WRB inducting_VBG translation_NN rules_NNS ._.
+To_TO tackle_VB this_DT ,_, we_PRP proposed_VBD a_DT meth_NN -_: od_NN of_IN using_VBG finer-grained_JJ Mongolian_JJ stems_VBZ and_CC Chinese_JJ characters_NNS for_IN word_NN alignment_NN ,_, but_CC coarser-grained_JJ Mongolian_JJ words_NNS and_CC Chinese_JJ words_NNS for_IN translation_NN rule_NN induc_NN -_: tion_NN -LRB-_-LRB- TRI_NNP -RRB-_-RRB- and_CC decoding_VBG ._.
+We_PRP presented_VBD a_DT heuristic_JJ technique_NN to_TO transform_VB Chinese_JJ character-based_JJ alignment_NN to_TO word-based_JJ alignment_NN ._.
+Experimentally_RB ,_, our_PRP$ method_NN outperformed_VBD the_DT baselines_NNS :_: fully_RB finer_SYM -_: grained_VBN and_CC fully_RB coarser-grained_JJ ,_, in_IN terms_NNS of_IN alignment_NN quality_NN and_CC translation_NN per_IN -_: formance_NN ._.
+1_CD Introduction_NNP Mongolian_NNP is_VBZ an_DT agglutinative_JJ language_NN and_CC has_VBZ complex_JJ morphology_NN ._.
+The_DT current_JJ scale_NN of_IN Mon_NNP -_: golian-Chinese_JJ parallel_JJ corpus_NN is_VBZ very_RB small_JJ ._.
+These_DT two_CD reasons_NNS make_VBP data_NNS sparsity_NN a_DT very_RB serious_JJ problem_NN in_IN Mongolian-Chinese_NNP SMT_NNP ._.
+Using_VBG finer_SYM -_: grained_VBN Mongolian_JJ stems_VBZ rather_RB than_IN Mongolian_JJ words_NNS can_MD reveal_VB the_DT word_NN semantics_NNS and_CC alleviate_VB data_NNS sparsity_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, CWS_NNP is_VBZ a_DT neces_NNS -_: sary_JJ process_NN to_TO separate_JJ Chinese_JJ words_NNS ,_, because_IN Chinese_JJ words_NNS are_VBP not_RB naturally_RB separated_VBN by_IN space_NN -LRB-_-LRB- Jiang_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+CWS_NNP can_MD achieve_VB high_JJ accura_NN -_: cy_NN ,_, but_CC does_VBZ not_RB necessarily_RB guarantee_VB better_JJR per_IN -_: formance_NN of_IN alignment_NN -LRB-_-LRB- Chang_NNP et_FW al._FW ,_, 2008_CD ;_: Zhang_NNP et_FW al._FW ,_, 2008_CD ;_: Xiao_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Besides_IN ,_, CWS_NNP also_RB brings_VBZ errors_NNS -LRB-_-LRB- Xiao_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Using_VBG of_IN finer_NN -_: grained_VBN Chinese_JJ characters_NNS ,_, which_WDT are_VBP separated_VBN without_IN using_VBG of_IN CWS_NNP ,_, can_MD avoid_VB the_DT CWS_NNP errors_NNS and_CC alleviate_VB data_NNS sparsity_NN ._.
+However_RB ,_, coarser_JJR -_: grained_VBN basic_JJ units_NNS are_VBP proved_VBN perform_VB better_JJR in_IN translation_NN rule_NN induction_NN -LRB-_-LRB- TRI_NNP -RRB-_-RRB- ._.
+-LRB-_-LRB- Philipp_NNP Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+So_RB inspired_VBN by_IN the_DT work_NN of_IN -LRB-_-LRB- Xi_NNP et_FW al._FW ,_, 2011_CD ;_: Xi_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ,_, we_PRP proposed_VBD a_DT method_NN that_WDT uses_VBZ differ_VBP -_: ent_NN granularity_NN respectively_RB for_IN alignment_NN and_CC TRI_NNP ._.
+We_PRP train_VBP a_DT finer-grained_JJ alignment_NN using_VBG Mongoli_NNP -_: an_DT stems_VBZ and_CC Chinese_JJ characters_NNS ._.
+Afterwards_RB ,_, we_PRP realign_VBP it_PRP to_TO Chinese_JJ words_NNS and_CC Mongolian_JJ words_NNS alignment_NN for_IN the_DT following_VBG TRI_NNP and_CC decoding_NN ._.
+We_PRP design_VBP a_DT technique_NN to_TO convert_VB finer-grained_JJ align_NN -_: ment_NN to_TO coarser-grained_JJ alignment_NN ._.
+The_DT conversion_NN can_MD be_VB unambiguous_JJ after_IN carefully_RB processing_VBG the_DT differences_NNS brought_VBN by_IN Mongolian_JJ word_NN lemmati_NNS -_: zation_NN and_CC CWS_NNP ._.
+In_IN the_DT experiments_NNS ,_, our_PRP$ method_NN outperformed_VBD the_DT baselines_NNS of_IN fully_RB finer-grained_JJ and_CC fully_RB coars_NNS -_: er-grained_JJ ,_, in_IN terms_NNS of_IN alignment_NN quality_NN and_CC trans_NNS -_: lation_NN performance_NN ._.
+The_DT experiments_NNS indicate_VBP that_IN using_VBG finer-grained_JJ basic_JJ units_NNS for_IN alignment_NN and_CC College_NNP of_IN Computer_NNP Science_NNP Inner_NNP Mongolia_NNP University_NNP Hohhot_NNP ,_, 010021_CD ,_, China_NNP cshhx@imu.edu.cn_NNP coarser-grained_JJ basic_JJ units_NNS for_IN TRI_NNP performs_VBZ better_JJR than_IN other_JJ granularity_NN combinations_NNS ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ :_: Section_NN 2_CD explains_VBZ how_WRB our_PRP$ method_NN designed_VBN and_CC how_WRB can_MD it_PRP have_VB good_JJ influence_NN on_IN alignment_NN and_CC translation_NN ._.
+Section_NN 3_CD demonstrates_VBZ the_DT realignment_NN model_NN and_CC analyzes_VBZ how_WRB it_PRP works_VBZ for_IN better_JJR align_SYM -_: ment_NN ._.
+Section_NN 4_CD describes_VBZ the_DT evaluations_NNS ._.
+Section_NN 5_CD is_VBZ the_DT conclusion_NN ._.
+2_CD Design_NN of_IN different_JJ Granularity_NN Align_NNP -_: ment_NN The_DT conventional_JJ practice_NN of_IN SMT_NNP uses_VBZ Mongolian_JJ and_CC Chinese_JJ words_NNS in_IN the_DT process_NN of_IN word_NN align_NN -_: ment_NN and_CC TRI_NNP -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 1993_CD -RRB-_-RRB- ._.
+We_PRP proposed_VBD a_DT method_NN of_IN using_VBG finer_JJR granularity_NN for_IN word_NN align_NN -_: ment_NN but_CC coarser_JJR granularity_NN for_IN TRI_NNP to_TO enhance_VB the_DT Mongolian-Chinese_NNP SMT_NNP system_NN ._.
+The_DT process_NN of_IN the_DT method_NN is_VBZ depicted_VBN in_IN Figure_NN 1_CD :_: Figure_NNP 1_CD ._.
+Process_NN of_IN the_DT method_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- In_IN the_DT first_JJ step_NN ,_, we_PRP get_VBP the_DT finer-grained_JJ alignment_NN by_IN using_VBG Mongolian_JJ stems_VBZ and_CC Chinese_JJ characters_NNS as_IN basic_JJ units_NNS ;_: -LRB-_-LRB- 2_LS -RRB-_-RRB- In_IN the_DT realignment_NN procedure_NN ,_, we_PRP transform_VBP finer-grained_JJ alignment_NN into_IN coarser-grained_JJ alignment_NN through_IN a_DT converting_VBG technique_NN ;_: -LRB-_-LRB- 3_LS -RRB-_-RRB- In_IN the_DT step_NN of_IN TRI_NNP and_CC decoding_NN ,_, we_PRP use_VBP the_DT coarser-grained_JJ alignment_NN ._.
+Mongolian_JJ words_NNS are_VBP formed_VBN by_IN stems_VBZ and_CC suf_SYM -_: fixes_NNS -LRB-_-LRB- Hou_NNP et.al._FW ,_, 2000_CD -RRB-_-RRB- ._.
+For_IN some_DT examples_NNS :_: when_WRB a_DT noun_NN plays_VBZ different_JJ constituents_NNS in_IN sentence_NN ,_, like_IN subject_JJ or_CC object_NN ,_, the_DT case_NN suffixes_VBZ added_VBN to_TO it_PRP are_VBP different_JJ ;_: a_DT verb_NN adds_VBZ different_JJ inflectional_JJ suffixes_NNS when_WRB it_PRP is_VBZ under_IN different_JJ tenses_NNS or_CC followed_VBN by_IN different_JJ nouns_NNS ;_: a_DT word_NN has_VBZ different_JJ forms_NNS -LRB-_-LRB- with_IN the_DT same_JJ word_NN stem_NN but_CC different_JJ suffixes_NNS -RRB-_-RRB- when_WRB it_PRP is_VBZ in_IN different_JJ positions_NNS of_IN the_DT sentence_NN ._.
+Therefore_RB ,_, Data_NNP sparsity_NN is_VBZ a_DT very_RB serious_JJ problem_NN in_IN Mongo_NNP -_: lian-Chinese_JJ SMT_NNP because_IN of_IN the_DT complex_JJ Mongo_NNP -_: lian_JJ morphology_NN and_CC the_DT small_JJ scale_NN parallel_NN cor_SYM -_: pus_NN ._.
+Mongolian_JJ stems-based_JJ alignment_NN can_MD miti_VB -_: gate_NN this_DT problem_NN ,_, because_IN Mongolian_JJ words_NNS in_IN different_JJ forms_NNS but_CC with_IN the_DT same_JJ semantic_JJ mean_NN -_: ing_NN will_MD become_VB one_CD same_JJ stem_NN after_IN removing_VBG some_DT suffixes_NNS ._.
+Besides_IN ,_, using_VBG Chinese_JJ characters_NNS for_IN alignment_NN can_MD avoid_VB the_DT errors_NNS brought_VBN by_IN CWS_NNP ._.
+Table_NNP 1_CD shows_VBZ the_DT token_JJ distribution_NN of_IN Mongolian_JJ words_NNS and_CC Mongolian_JJ stems_VBZ in_IN corpus_NN ._.
+We_PRP can_MD see_VB that_IN the_DT unique_JJ tokens_NNS in_IN stem-based_JJ corpus_NN reduce_VB almost_RB 10_CD %_NN than_IN those_DT in_IN word_NN -_: based_VBN corpus_NN ._.
+Table_NNP 2_CD shows_VBZ the_DT frequency_NN distri_NN -_: bution_NN of_IN words_NNS and_CC characters_NNS of_IN Chinese_JJ corpus_NN ._.
+The_DT tokens_NNS whose_WP$ frequency_NN is_VBZ no_DT than_IN 4_CD has_VBZ a_DT lower_JJR percentage_NN in_IN character-based_JJ corpus_NN ._.
+We_PRP see_VBP that_IN the_DT unique_JJ tokens_NNS in_IN character_NN segment_NN corpus_NN are_VBP only_RB one-third_JJ of_IN those_DT in_IN word_NN segment_NN corpus_NN ._.
+In_IN the_DT fined-grained_JJ Chinese_JJ corpus_NN ,_, the_DT frequency_NN of_IN 77.88_CD %_NN tokens_NNS are_VBP equal_JJ to_TO or_CC more_JJR than_IN 5_CD ,_, while_IN the_DT percentage_NN of_IN word_NN tokens_NNS in_IN coarser-grained_JJ Chinese_JJ corpus_NN is_VBZ only_RB 38.74_CD %_NN ._.
+The_DT above_JJ statistical_JJ data_NNS prove_VBP that_IN coarser_JJR -_: grained_VBN word_NN alignment_NN suffers_VBZ from_IN more_JJR serious_JJ data_NNS sparsity_NN than_IN finer-grained_JJ word_NN alignment_NN ._.
+Table_NNP 1_CD ._.
+Unique_JJ tokens_NNS of_IN Mongolian_JJ word_NN and_CC stem_NN Table_NNP 2_CD ._.
+Frequency_NN distribution_NN of_IN Chinese_JJ word_NN and_CC character_NN Word_NNP Stem_NNP Total_NNP Tokens_NNP 37140_CD 29861_CD Unique_NNP Tokens_NNP 20859_CD 14340_CD Percentage_NN -LRB-_-LRB- %_NN -RRB-_-RRB- 56.16_CD 48.02_CD Frequency_NN Word_NN -LRB-_-LRB- %_NN -RRB-_-RRB- Character_NN -LRB-_-LRB- %_NN -RRB-_-RRB- 1_CD 31.25_CD 9.34_CD 2_CD 14.91_CD 5.85_CD 3_CD 8.84_CD 3.47_CD 4_CD 6.26_CD 3.46_CD 5_CD +_NN 38.74_CD 77.88_CD Figure_NN 2_CD ._.
+Realignment_NN from_IN finer-grained_JJ to_TO coarser-grained_JJ However_RB ,_, comparing_VBG to_TO finer-grained_JJ tokens_NNS ,_, coarser-grained_JJ tokens_NNS have_VBP more_JJR complete_JJ se_FW -_: mantic_JJ information_NN ._.
+State-of-the-art_JJ SMT_NNP models_NNS achieve_VBP excellent_JJ results_NNS by_IN extracting_VBG phrases_NNS to_TO induct_VB the_DT translation_NN rules_NNS -LRB-_-LRB- Philipp_NNP Koehn_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+When_WRB the_DT phrase-based_JJ translation_NN models_NNS try_VBP to_TO extract_VB and_CC score_VB the_DT phrases_NNS by_IN getting_VBG lexi_SYM -_: cal_JJ translation_NN table_NN ,_, the_DT probability_NN of_IN words_NNS to_TO words_NNS can_MD express_VB more_RBR semantic_JJ information_NN than_IN stems_VBZ to_TO characters_NNS -LRB-_-LRB- Deng_NNP and_CC Zhou_NNP ,_, 2009_CD -RRB-_-RRB- ._.
+More_RBR -_: over_IN ,_, when_WRB we_PRP use_VBP language_NN model_NN ,_, the_DT position_NN information_NN expressed_VBN by_IN Mongolian_JJ word_NN suffix_NN -_: es_NNS might_MD be_VB ignored_VBN by_IN using_VBG Mongolian_JJ stems_VBZ ._.
+Therefore_RB ,_, we_PRP still_RB use_VBP coarser-grained_JJ units_NNS to_TO induct_VB the_DT translation_NN rules_NNS ._.
+3_CD Realignment_NNP The_NNP realignment_NN from_IN Mongolian_JJ stems_VBZ to_TO Mongo_NNP -_: lian_JJ words_NNS is_VBZ an_DT easy_JJ method_NN of_IN one-to-one_JJ map_NN -_: ping_NN because_IN there_EX is_VBZ no_DT position_NN changing_VBG ._.
+We_PRP build_VBP a_DT heuristic_JJ model_NN to_TO describe_VB the_DT Chinese_JJ realignment_NN ._.
+We_PRP set_VBP e_LS and_CC f_LS as_IN the_DT source_NN -LRB-_-LRB- Mongo_NNP -_: lian_NN -RRB-_-RRB- and_CC target_NN -LRB-_-LRB- Chinese_JJ -RRB-_-RRB- sentence_NN in_IN finer-grained_JJ alignment_NN ._.
+Given_VBN finer-grained_JJ source_NN sentence_NN -LRB-_-LRB- Mongolian_JJ -RRB-_-RRB- and_CC target_NN sentence_NN -LRB-_-LRB- Chinese_JJ -RRB-_-RRB- ,_, we_PRP can_MD get_VB the_DT coarser-grained_JJ alignment_NN a_DT by_IN the_DT realignment_NN model_NN as_IN equation_NN -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- M_NNP exp_NN -LSB-_NNP h_NN -LRB-_-LRB- a_DT ,_, e_LS '_'' ,_, f_LS '_'' -RRB-_-RRB- -RSB-_JJ mmc_NN P_NNP -LRB-_-LRB- a_DT │_NN e_LS '_'' ,_, f_LS '_'' -RRB-_-RRB- c_NN M_NNP The_NNP conversion_NN model_NN based_VBN on_IN -LRB-_-LRB- Zhang_NNP ,_, 2003_CD -RRB-_-RRB- as_IN equation_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- :_: m_SYM 1_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- exp_FW -LSB-_FW h_FW -LRB-_-LRB- a_DT '_'' ,_, e_LS '_'' ,_, f_LS '_'' -RRB-_-RRB- -RSB-_NN '_'' ac_FW m_FW 1_CD mmc_NN can_MD be_VB modeled_VBN In_IN the_DT model_NN ,_, getting_VBG from_IN and_CC ._.
+is_VBZ the_DT alignment_NN model_NN used_VBN in_IN our_PRP$ alignment_NN training_NN which_WDT can_MD be_VB given_VBN as_IN log-linear_JJ model_NN by_IN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2005_CD ;_: Liu_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- as_IN equation_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- ._.
+It_PRP is_VBZ easy_JJ to_TO understand_VB that_IN the_DT transformation_NN from_IN a_DT finer-grained_JJ sentence_NN to_TO its_PRP$ coarser-grained_JJ sentence_NN is_VBZ unambiguous_JJ ._.
+An_DT example_NN of_IN conver_NN -_: sion_NN shows_NNS in_IN figure_NN 2_CD ,_, we_PRP can_MD get_VB the_DT word_NN align_NN -_: ment_NN from_IN Mongolian_JJ words_NNS to_TO Chinese_JJ words_NNS by_IN converting_VBG Chinese_JJ characters_NNS into_IN Chinese_JJ words_NNS ._.
+``_`` 没关系_FW ''_'' is_VBZ a_DT Chinese_JJ word_NN which_WDT means_VBZ ``_`` It_PRP does_VBZ not_RB matter_VB ''_'' ._.
+It_PRP is_VBZ composed_VBN of_IN three_CD characters_NNS ``_`` 没_FW ''_'' ,_, ``_`` 关_FW ''_'' and_CC ``_`` 系_FW ''_'' ._.
+The_DT alignment_NN from_IN Mongo_NNP -_: lian_JJ words_NNS to_TO Chinese_JJ characters_NNS ``_`` 没_FW ''_'' ,_, ``_`` 关_FW ''_'' and_CC ``_`` 系_FW ''_'' is_VBZ ``_`` 0-0_CD ,_, 0-1_CD ,_, 0-2_CD ,_, 1-1_CD ,_, 2-2_CD ''_'' ,_, the_DT alignment_NN from_IN Chinese_JJ characters_NNS to_TO Chinese_JJ word_NN ``_`` 没关系_FW ''_'' is_VBZ ``_`` 0-0_CD ,_, 1-0_CD ,_, 2-0_CD ''_'' ,_, so_IN the_DT realignment_NN from_IN Mongo_NNP -_: lian_JJ words_NNS to_TO Chinese_JJ word_NN is_VBZ ``_`` 0-0_CD ,_, 1-0_CD ,_, 2-0_CD ''_'' ._.
+An_DT -_: other_JJ example_NN shows_NNS in_IN figure_NN 2_CD is_VBZ the_DT alignment_NN from_IN Mongolian_JJ word_NN ``_`` ᠳᠤᠷᠠᠲᠠᠢ_NN ''_'' to_TO Chinese_JJ word_NN ``_`` 乐意_FW ''_'' ,_, which_WDT means_VBZ ``_`` with_IN pleasure_NN ''_'' ._.
+Comparing_VBG with_IN Chinese_JJ words_NNS ,_, Chinese_JJ characters_NNS carry_VBP more_JJR uncertain_JJ meaning_NN ._.
+``_`` 关_FW ''_'' is_VBZ a_DT verb_NN which_WDT means_VBZ ``_`` close_JJ ''_'' ,_, but_CC when_WRB it_PRP is_VBZ followed_VBN by_IN ``_`` 系_FW ''_'' ,_, which_WDT is_VBZ also_RB a_DT verb_NN and_CC means_VBZ ``_`` tie_VB ''_'' ,_, the_DT meaning_NN of_IN ``_`` 关系_FW ''_'' is_VBZ ``_`` relation_NN ''_'' and_CC it_PRP is_VBZ a_DT noun_NN ._.
+So_RB using_VBG Chinese_JJ characters_NNS as_IN basic_JJ unit_NN may_MD induce_VB more_RBR interference_NN alignment_NN options_NNS ._.
+However_RB ,_, the_DT re_SYM -_: call_NN score_NN gets_VBZ higher_JJR when_WRB we_PRP apply_VBP Chinese_JJ characters_NNS to_TO do_VB the_DT alignment_NN ._.
+Because_IN we_PRP find_VBP that_DT when_WRB we_PRP get_VBP the_DT word_NN alignment_NN by_IN realigning_VBG is_VBZ the_DT finer-grained_JJ alignment_NN -LRB-_-LRB- 3_LS -RRB-_-RRB- Figure_NN 3_CD ._.
+Comparing_VBG coarser-grained_JJ alignment_NN with_IN realignment_NN from_IN Chinese_JJ character-based_JJ alignment_NN rather_RB than_IN by_IN Chinese_JJ words_NNS directly_RB ,_, there_EX are_VBP fewer_JJR invalid_JJ alignment_NN options_NNS ._.
+We_PRP believe_VBP this_DT prob_NN -_: lem_NN is_VBZ avoided_VBN by_IN the_DT feature_NN of_IN co-occurrence_NN and_CC distortion_NN used_VBN by_IN alignment_NN models_NNS which_WDT ex_FW -_: plained_VBN in_IN detail_NN by_IN -LRB-_-LRB- Xi_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Moreover_RB ,_, we_PRP find_VBP that_IN our_PRP$ method_NN can_MD mitigate_VB word_NN alignment_NN errors_NNS which_WDT caused_VBN by_IN incorrect_JJ CWS_NNP result_NN ._.
+As_IN shows_NNS in_IN figure_NN 3_CD ,_, the_DT correct_JJ segmentation_NN should_MD be_VB ``_`` 飞机_FW 着陆_FW 时_FW ''_'' but_CC not_RB ``_`` 飞机_FW 着_FW 陆时_FW ''_'' ._.
+The_DT correct_JJ alignment_NN should_MD make_VB No._NN 1_CD ,_, No._NN 2_CD ,_, No._NN 3_CD ,_, No._NN 4_CD and_CC No._NN 5_CD of_IN Mongo_NNP -_: lian_JJ words_NNS align_VBP to_TO the_DT No._NN 1_CD and_CC No._NN 2_CD of_IN Chinese_JJ words_NNS ,_, but_CC Chinese_JJ word-based_JJ alignment_NN only_RB gets_VBZ the_DT right_JJ alignment_NN 1-2_CD ,_, but_CC wrongly_RB aligns_VBZ No._NN 3_CD of_IN Mongolian_JJ word_NN to_TO the_DT Chinese_JJ comma_NN as_IN showed_VBN in_IN the_DT fourth_JJ row_NN of_IN figure_NN 3_CD ._.
+In_IN our_PRP$ meth_NN -_: od_NN ,_, we_PRP can_MD get_VB a_DT more_RBR precise_JJ alignment_NN result_NN based_VBN on_IN characters_NNS ``_`` 着_FW ''_'' ,_, ``_`` 陆_FW ''_'' and_CC ``_`` 时_FW ''_'' ._.
+The_DT rea_NN -_: lignment_NN based_VBN on_IN a_DT wrong_JJ word_NN segmentation_NN result_NN will_MD lead_VB to_TO a_DT wrong_JJ word_NN alignment_NN inside_IN the_DT phrase_NN ``_`` 着_FW 陆时_FW ''_'' ._.
+However_RB ,_, as_IN showed_VBN in_IN the_DT fifth_JJ row_NN of_IN the_DT figure_NN 3_CD ,_, we_PRP find_VBP that_IN because_IN of_IN the_DT better_JJR character-based_JJ alignment_NN ,_, the_DT phrase_NN ``_`` 着_FW 陆时_FW ''_'' as_IN a_DT whole_NN still_RB can_MD be_VB realigned_VBN more_RBR precisely_RB to_TO its_PRP$ corresponding_JJ Mongolian_JJ phrase_NN ._.
+In_IN conclusion_NN ,_, due_JJ to_TO a_DT more_RBR precise_JJ Chinese_JJ character-based_JJ alignment_NN ,_, our_PRP$ realignment_NN based_VBN on_IN Chinese_JJ word_NN segmentation_NN -LRB-_-LRB- even_RB based_VBN on_IN a_DT wrong_JJ word_NN segmentation_NN result_NN -RRB-_-RRB- can_MD get_VB a_DT more_RBR precise_JJ word_NN alignment_NN result_NN ._.
+4_CD Experiments_NNS We_PRP implement_VBP Moses_NNP as_IN our_PRP$ basic_JJ SMT_NNP system_NN and_CC built_VBD it_PRP as_IN follows_VBZ :_: alignment_NN performed_VBN by_IN GIZA_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+A_DT phrase-based_JJ MT_NNP decoder_NN similar_JJ to_TO the_DT work_NN of_IN -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- was_VBD used_VBN with_IN the_DT decoding_NN weights_NNS opti_NNS -_: mized_VBN by_IN MERT_NNP -LRB-_-LRB- Och_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+We_PRP use_VBP a_DT 3-gram_JJ language_NN model_NN ._.
+Mongolian_JJ language_NN resources_NNS and_CC Mongolian_JJ processing_NN tools_NNS are_VBP scarce_JJ ._.
+CWMT_NNP '_POS 2009_CD -LRB-_-LRB- Zhao_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- was_VBD used_VBN for_IN the_DT experiments_NNS ._.
+It_PRP is_VBZ a_DT small_JJ training_NN set_VBN when_WRB com_NN -_: pares_VBZ to_TO major_JJ language_NN training_NN set_VBN because_IN as_IN a_DT small_JJ language_NN ,_, public_JJ Mongolian_JJ and_CC Chinese_JJ parallel_NN corpus_NN is_VBZ limit_NN ._.
+The_DT lemmatization_NN tool_NN we_PRP used_VBD is_VBZ the_DT same_JJ as_IN -LRB-_-LRB- Yu_NNP and_CC Hou_NNP ,_, 2011_CD ;_: Hou_NNP et.al._NNP ,_, 2009_CD -RRB-_-RRB- ._.
+Table_NNP 3_CD shows_VBZ the_DT data_NN set_NN in_IN detail_NN ._.
+Mo_NNP is_VBZ the_DT abbreviation_NN of_IN Mongolian_JJ and_CC Ch_NNP is_VBZ the_DT ab_SYM -_: breviation_NN of_IN Chinese_NNP ._.
+Table_NNP 3_CD ._.
+Data_NNP set_VBD We_PRP manually_RB aligned_VBD 100_CD pairs_NNS of_IN bilingual_JJ sentence_NN to_TO evaluate_VB the_DT alignment_NN performance_NN including_VBG precision_NN ,_, recall_NN ,_, F-score_NN and_CC AER_NNP -LRB-_-LRB- Da_NNP -_: vid_FW et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+As_IN table_NN 4_CD shows_NNS ,_, after_IN using_VBG fin_SYM -_: er-grained_JJ stem-based_JJ as_IN basic_JJ units_NNS :_: precision_NN has_VBZ been_VBN increased_VBN from_IN 62.75_CD %_NN to_TO 63.82_CD %_NN ;_: recall_NN has_VBZ been_VBN increased_VBN from_IN 75.91_CD %_NN to_TO 83.47_CD %_NN and_CC im_SYM -_: proved_VBD significantly_RB by_IN using_VBG Chinese_JJ characters_NNS ;_: AER_NNP has_VBZ been_VBN reduced_VBN 2.74_CD %_NN from_IN 39.44_CD to_TO 38.36_CD ._.
+These_DT evaluations_NNS prove_VBP that_IN our_PRP$ method_NN of_IN using_VBG finer-grained_JJ for_IN alignment_NN enhances_VBZ the_DT quality_NN of_IN SMT_NNP alignment_NN and_CC reduce_VB the_DT AER_NNP ._.
+The_DT good_JJ performance_NN in_IN alignment_NN partly_RB because_IN of_IN the_DT process_NN of_IN data_NNS sparsity_NN we_PRP argued_VBD in_IN section_NN 2_CD and_CC partly_RB because_IN of_IN the_DT good_JJ realignment_NN we_PRP dis_SYM -_: cussed_VBN in_IN section_NN 3_CD ._.
+Train_NN Dev_NNP Test_NNP Bilingual_NNP sentence_NN pairs_NNS 66808_CD 1000_CD 1000_CD Scale_NNP 18.3_CD MB_NNP 214KB_NNP 213KB_NNP Total_NNP Mo_NNP words/stems_VBZ 869168_CD 11239_CD 11134_CD Total_JJ Ch_JJ words_NNS 846574_CD 8765_CD 8697_CD Total_JJ Ch_NNP characters_NNS 1096551_CD 12569_CD 12526_CD Mongolian_JJ Chinese_JJ Precision_NN Recall_VB F-score_JJ AER_NNP word_NN word_NN 62.75_CD 75.91_CD 69.33_CD 39.44_CD stem_NN word_NN 62.94_CD 77.39_CD 70.17_CD 38.83_CD word_NN character_NN 63.71_CD 82.25_CD 72.98_CD 38.89_CD stem_NN character_NN 63.82_CD 83.47_CD 73.65_CD 38.36_CD Alignment_NNP TRI_NNP BLEU_NNP Baseline_NN 2_CD Mo_NNP stem_NN stem_NN 21.97_CD Ch_NNP word_NN word_NN System_NNP 1_CD Mo_NNP stem_NN word_NN 22.15_CD Ch_NNP word_NN word_NN Table_NNP 4_CD ._.
+Alignment_NN evaluation_NN of_IN Precision_NNP ,_, Recall_VB and_CC F-score_VB To_TO evaluate_VB the_DT translation_NN performance_NN of_IN tour_NN method_NN ,_, we_PRP do_VBP experiments_NNS on_IN all_DT kinds_NNS of_IN gram_NN -_: matical_JJ components_NNS including_VBG :_: fully_RB coarser_JJR -_: grained_NN ,_, different_JJ grained_JJ units_NNS for_IN alignment_NN and_CC TRI_NNP ._.
+We_PRP also_RB evaluate_VBP the_DT influence_NN on_IN using_VBG fin_SYM -_: er-grained_JJ and_CC coarser-grained_JJ units_NNS on_IN source_NN or_CC target_NN language_NN ._.
+In_IN the_DT experiments_NNS of_IN translation_NN ,_, we_PRP set_VBP conventional_JJ Mongolian-Chinese_NNP SMT_NNP sys_SYM -_: tem_NN as_IN baseline_NN 1_CD ._.
+We_PRP also_RB set_VBD baseline_JJ 2_CD ,_, baseline_NN 3_CD and_CC baseline_JJ 4_CD which_WDT use_VBP finer-grained_JJ for_IN both_DT alignment_NN and_CC TRI_NNP to_TO compare_VB with_IN our_PRP$ systems_NNS ._.
+From_IN table_NN 5_CD we_PRP can_MD see_VB that_IN all_PDT our_PRP$ three_CD sys_SYM -_: tems_NNS outperform_VBP the_DT baseline_NN 1_CD ._.
+The_DT comparison_NN between_IN our_PRP$ systems_NNS and_CC the_DT baseline_NN 1_CD shows_NNS that_WDT using_VBG finer-grained_JJ basic_JJ units_NNS in_IN alignment_NN out_IN -_: performs_VBZ the_DT conventional_JJ Mongolian-Chinese_NNP SMT_NNP ._.
+The_DT BLEU_NNP of_IN System_NNP 3_CD is_VBZ higher_JJR than_IN sys_SYM -_: tem_NN 1_CD and_CC system_NN 2_CD ,_, which_WDT proves_VBZ that_IN using_VBG finer_NN -_: grained_VBN for_IN both_DT source_NN language_NN and_CC target_NN lan_NN -_: guage_NN achieve_VB better_JJR performance_NN than_IN using_VBG it_PRP on_IN one_CD language_NN ._.
+Table_NNP 6_CD ._.
+Compare_VB our_PRP$ System_NNP 1_CD with_IN Baseline_NN 2_CD ._.
+In_IN the_DT comparison_NN of_IN table_NN 7_CD ,_, baseline_NN 3_CD uses_NNS finer-grained_JJ basic_JJ units_NNS for_IN Chinese_JJ alignment_NN and_CC TRI_NNP ,_, while_IN system_NN 2_CD uses_NNS finer-grained_JJ basic_JJ units_NNS only_RB for_IN Chinese_JJ alignment_NN but_CC not_RB TRI_NNP ._.
+Sys_SYM -_: tem_NN 3_CD outperformed_VBD Baseline_NN 4_CD indicates_VBZ that_IN using_VBG coarser-grained_JJ Chinese_JJ units_NNS for_IN TRI_NNP is_VBZ more_RBR proper_JJ and_CC applying_VBG our_PRP$ method_NN to_TO target_VB language_NN of_IN Chinese_NNP is_VBZ successful_JJ ._.
+Table_NNP 7_CD ._.
+Compare_VB our_PRP$ System_NNP 2_CD with_IN Baseline_NN 3_CD ._.
+In_IN the_DT comparison_NN of_IN table_NN 8_CD ,_, baseline_NN 4_CD uses_NNS finer-grained_JJ basic_JJ units_NNS for_IN both_DT Mongolian_JJ and_CC Chinese_JJ alignment_NN and_CC TRI_NNP ,_, while_IN system_NN 3_CD uses_NNS finer-grained_JJ basic_JJ units_NNS only_RB for_IN Mongolian_JJ and_CC Chinese_JJ alignment_NN but_CC not_RB TRI_NNP ._.
+System_NNP 1_CD outper_NN -_: formed_VBN Baseline_NN 2_CD indicates_VBZ that_IN using_VBG coarser_JJR -_: grained_VBN units_NNS in_IN both_DT Chinese_JJ and_CC Mongolian_JJ for_IN TRI_NNP is_VBZ more_RBR proper_JJ and_CC our_PRP$ method_NN is_VBZ successful_JJ in_IN the_DT evaluation_NN ._.
+Table_NNP 8_CD ._.
+Compare_VB our_PRP$ System_NNP 3_CD with_IN Baseline_NN 4_CD ._.
+These_DT comparisons_NNS of_IN table_NN 5_CD to_TO table_NN 8_CD proved_VBD that_DT :_: -LRB-_-LRB- 1_LS -RRB-_-RRB- Using_VBG finer-grained_JJ for_IN alignment_NN performed_VBN better_JJR then_RB coarser-grained_JJ -LRB-_-LRB- table_NN 5_CD -RRB-_-RRB- because_IN finer_NN -_: grained_VBN basic_JJ units_NNS can_MD enhance_VB the_DT alignment_NN quality_NN -LRB-_-LRB- table_NN 4_LS -RRB-_-RRB- ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- Using_VBG coarser-grained_JJ for_IN TRI_NNP ,_, which_WDT means_VBZ using_VBG finer-grained_JJ only_RB for_IN alignment_NN rather_RB than_IN Alignment_NNP TRI_NNP BLEU_NNP Baseline_NN 3_CD Mo_NNP word_NN word_NN 23.19_CD Ch_NNP character_NN character_NN System_NNP 2_CD Mo_NNP word_NN word_NN 23.36_CD Ch_NNP character_NN word_NN Alignment_NNP TRI_NNP BLEU_NNP Baseline1_NNP Mo_NNP word_NN word_NN 21.88_CD Ch_NNP word_NN word_NN System_NNP 1_CD Mo_NNP stem_NN word_NN 22.15_CD Ch_NNP word_NN word_NN System_NNP 2_CD Mo_NNP word_NN word_NN 23.36_CD Ch_NNP character_NN word_NN System_NNP 3_CD Mo_NNP stem_NN word_NN 23.49_CD Ch_NNP character_NN word_NN Alignment_NNP TRI_NNP BLEU_NNP Baseline_NN 4_CD Mo_NNP stem_NN stem_NN 22.73_CD Ch_NNP character_NN character_NN System_NNP 3_CD Mo_NNP stem_NN word_NN 23.49_CD Ch_NNP character_NN word_NN Table_NNP 5_CD ._.
+Translation_NN evaluation_NN of_IN proposed_VBN systems_NNS and_CC Baseline_NN 1_CD ._.
+In_IN the_DT comparison_NN of_IN table_NN 6_CD ,_, baseline_NN 2_CD uses_NNS finer-grained_JJ basic_JJ units_NNS for_IN Mongolian_JJ alignment_NN and_CC TRI_NNP ,_, while_IN system_NN 1_CD uses_VBZ finer-grained_JJ basic_JJ units_NNS only_RB for_IN Mongolian_JJ alignment_NN but_CC not_RB TRI_NNP ._.
+System_NNP 1_CD outperformed_VBD Baseline_NN 2_CD indicates_VBZ that_IN using_VBG coarser-grained_JJ Chinese_JJ units_NNS for_IN TRI_NNP is_VBZ more_RBR proper_JJ and_CC applying_VBG our_PRP$ method_NN to_TO source_NN language_NN of_IN Mongolian_JJ is_VBZ successful_JJ ._.
+using_VBG them_PRP though_IN the_DT whole_JJ translation_NN process_NN is_VBZ better_JJR -LRB-_-LRB- table_NN 8_CD -RRB-_-RRB- ,_, because_IN stems_VBZ and_CC characters_NNS are_VBP too_RB finer_JJ to_TO induct_VB the_DT translation_NN rules_NNS ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- Using_VBG our_PRP$ method_NN of_IN finer-grained_JJ for_IN align_NN -_: ment_NN and_CC coarser-grained_JJ for_IN TRI_NNP improved_VBD the_DT conventional_JJ SMT_NNP system_NN and_CC outperformed_VBD other_JJ grammatical_JJ components_NNS -LRB-_-LRB- table_NN 5_CD and_CC table_NN 8_CD -RRB-_-RRB- ;_: -LRB-_-LRB- 4_LS -RRB-_-RRB- Using_VBG our_PRP$ method_NN only_RB in_IN one_CD side_NN of_IN source_NN language_NN or_CC target_NN language_NN also_RB performed_VBD better_JJR -LRB-_-LRB- table_NN 6_CD and_CC table_NN 7_CD -RRB-_-RRB- ._.
+5_CD Conclusion_NN We_PRP presented_VBD a_DT method_NN of_IN using_VBG finer-grained_JJ Mongolian_JJ stems_VBZ and_CC Chinese_JJ characters_NNS as_IN basic_JJ units_NNS for_IN alignment_NN ,_, but_CC coarser-grained_JJ Mongolian_JJ and_CC Chinese_JJ words_NNS for_IN TRI_NNP ._.
+Our_PRP$ method_NN outper_NN -_: forms_NNS four_CD baselines_NNS ,_, mitigates_VBZ the_DT data_NNS sparsity_NN and_CC enhances_VBZ the_DT alignment_NN quality_NN and_CC translation_NN performance_NN ._.
+Through_IN the_DT experiments_NNS we_PRP find_VBP some_DT conclusions_NNS as_IN follows_VBZ :_: applying_VBG finer_NN -_: grained_VBN units_NNS can_MD perform_VB a_DT better_JJR word_NN alignment_NN result_NN ;_: Using_VBG finer-grained_JJ basic_JJ units_NNS for_IN align_NN -_: ment_NN ,_, but_CC coarser-grained_JJ for_IN TRI_NNP can_MD be_VB a_DT more_RBR efficient_JJ way_NN than_IN fully_RB finer-grained_JJ or_CC fully_RB coarser-grained_VBN ;_: using_VBG our_PRP$ method_NN for_IN both_DT source_NN language_NN and_CC target_NN language_NN can_MD achieve_VB better_JJR performance_NN than_IN using_VBG it_PRP for_IN either_DT source_NN or_CC tar_NN -_: get_VB language_NN ._.
+We_PRP do_VBP the_DT same_JJ experiments_NNS on_IN the_DT Chinese-Mongolian_NNP SMT_NNP system_NN and_CC get_VB the_DT same_JJ conclusion_NN ._.
+The_DT experiments_NNS indicate_VBP that_IN using_VBG finer-grained_JJ basic_JJ units_NNS for_IN alignment_NN and_CC coars_NNS -_: er-grained_JJ basic_JJ units_NNS for_IN TRI_NNP performs_VBZ better_JJR than_IN other_JJ granularity_NN combination_NN ._.
+We_PRP also_RB find_VBP that_DT using_VBG Chinese_JJ characters_NNS contribute_VBP more_JJR than_IN us_PRP -_: ing_NN Mongolian_JJ stems_VBZ in_IN Chinese-Mongolian_NNP SMT_NNP ,_, which_WDT partly_RB because_IN of_IN the_DT errors_NNS brought_VBN by_IN lemmatization_NN ._.
+If_IN we_PRP can_MD combine_VB more_RBR features_NNS -LRB-_-LRB- Elming_NNP and_CC Habash_NNP ,_, 2007_CD -RRB-_-RRB- to_TO do_VB the_DT realignment_NN ,_, and_CC have_VBP a_DT higher_JJR accuracy_NN tool_NN of_IN lemmatization_NN ,_, our_PRP$ method_NN can_MD be_VB better_RBR ._.
+Acknowledgments_NNP We_PRP thank_VBP PACLIC29_CD reviewers_NNS ._.
+This_DT work_NN is_VBZ sup_SYM -_: ported_VBN by_IN the_DT National_NNP Natural_NNP Science_NNP Foundation_NNP of_IN China_NNP -LRB-_-LRB- No._NN 61362028_CD -RRB-_-RRB- and_CC the_DT Postgraduate_NNP Scientific_NNP Research_NNP Innovation_NNP Foundation_NNP of_IN Inner_NNP Mongolia_NNP -LRB-_-LRB- No._NN 1402020201_CD -RRB-_-RRB- ._.
+Reference_NNP Peter_NNP F._NNP Brown_NNP ,_, Stephen_NNP A._NNP Della_NNP Pietra_NNP ,_, Vincent_NNP J._NNP Della_NNP Peitra_NNP ,_, Robert_NNP L._NNP Mercer_NNP ._.
+1993_CD ._.
+The_DT Mathemat_NNP -_: ics_NNS of_IN statistical_JJ machine_NN translation_NN :_: parameter_NN esti_NNS -_: mation_NN ._.
+Computational_NNP Linguistics_NNP ,_, 19_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :263_CD -311_CD ._.
+Pichuan_NNP Chang_NNP ,_, Michel_NNP Galley_NNP ,_, and_CC Christopher_NNP D._NNP Manning_NNP ._.
+2008_CD ._.
+Optimizing_VBG Chinese_JJ word_NN segmenta_NN -_: tion_NN for_IN machine_NN translation_NN performance_NN ._.
+In_IN pro-_JJ ceedings_NNS of_IN third_JJ workshop_NN on_IN SMT_NNP ,_, pages_NNS 224-232_CD ._.
+Yonggang_NNP Deng_NNP and_CC Bowen_NNP Zhou_NNP ._.
+2009_CD ._.
+Optimizing_VBG word_NN alignment_NN combination_NN for_IN phrase_NN table_NN training_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL_NNP and_CC the_DT 4th_JJ IJCNLP_NNP of_IN the_DT AFNLP_NNP ,_, pages_NNS 229_CD --_: 232_CD Vilar_NNP ,_, David_NNP ,_, Maja_NNP Popovic_NNP ,_, and_CC Hermann_NNP Ney_NNP ._.
+2006_CD ._.
+AER_NNP :_: Do_VBP we_PRP need_VBP to_TO ``_`` improve_VB ''_'' our_PRP$ alignments_NNS ?_.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Workshop_NNP on_IN Spo_NNP -_: ken_NN Language_NNP Translation_NN ,_, pages_NNS 205_CD --_: 212_CD ,_, Jakob_NNP Elming_NNP and_CC Nizar_NNP Habash_NNP ._.
+2007_CD ._.
+Combination_NN of_IN statistical_JJ word_NN alignments_NNS based_VBN on_IN multiple_JJ pre_NN -_: processing_VBG schemes_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Associa_NNP -_: tion_NN for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 25-28_CD ._.
+Wenbin_NNP Jiang_NNP ,_, Liang_NNP Huang_NNP ,_, and_CC Qun_NNP Liu_NNP ._.
+2009_CD ._.
+Au_SYM -_: tomatic_JJ adaptation_NN of_IN annotation_NN standards_NNS :_: Chinese_JJ word_NN segmentation_NN and_CC POS_NNP tagging_VBG -_: a_DT case_NN study_NN ._.
+In_IN Proceedings_NNP of_IN ACL_NNP and_CC the_DT 4th_JJ IJCNLP_NNP of_IN the_DT AFNLP_NNP ,_, pages_NNS 522-530_CD ._.
+Hongxu_NNP Hou_NNP ,_, Qun_NNP Liu_NNP ,_, Nasanurtu_NNP ._.
+2009_CD ._.
+Mongolian_JJ word_NN segmentation_NN based_VBN on_IN statistical_JJ language_NN model_NN ._.
+Pattern_NN Recognition_NN and_CC Artificial_NNP Intelli_NNP -_: gence_NN ,_, 22_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 108-112_CD ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicola_NNP Bertoldi_NNP ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Moran_NNP ,_, Rich_NNP -_: ard_IN Zens_NNP ,_, Chris_NNP Dyer_NNP ,_, Ondrej_NNP Bojar_NNP ,_, Alexandra_NNP Constantin_NNP ,_, and_CC Evan_NNP Herbst_NNP ._.
+2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN ACL_NNP Philipp_NNP Koehn_NNP ,_, Franz_NNP Josef_NNP Och_NNP ,_, and_CC Daniel_NNP Marcu_NNP ._.
+2003_CD ._.
+Statistical_NNP phrase-based_JJ translation_NN ._.
+In_IN Pro-_JJ ceeding_NN of_IN NAACL_NNP ._.
+Yang_NNP Liu_NNP ,_, Qun_NNP Liu_NNP ,_, and_CC Shouxun_NNP Lin_NNP ._.
+2005_CD ._.
+Log-linear_JJ models_NNS for_IN word_NN alignment_NN ._.
+In_IN ACL_NNP '_POS 05_CD :_: Proceed_VB -_: ings_NNS of_IN the_DT 43rd_CD Annual_JJ Meeting_VBG on_IN Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 459_CD --_: 466_CD ._.
+Franz_NNP Josef_NNP Och_NNP ._.
+2003_CD ._.
+Minimum_NNP error_NN rate_NN training_NN in_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 440-447_CD ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT systematic_JJ comparison_NN of_IN various_JJ statistical_JJ alignment_NN models_NNS ._.
+Computational_NNP Linguistics_NNP ,_, 29_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 19-51_CD ._.
+Ning_VBG Xi_NNP ,_, Guangchao_NNP Tang_NNP ,_, Boyuan_NNP Li_NNP ,_, and_CC Yinggong_NNP Zhao_NNP ._.
+2011_CD ._.
+Word_NN alignment_NN combination_NN over_IN mul_NN -_: tiple_JJ word_NN segmentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT ACL2011_NNP Student_NNP Session_NN ,_, pages_NNS 1-5_CD ._.
+Ning_VBG Xi_NNP ,_, Guangchao_NNP Tang_NNP ,_, Xinyu_NNP Dai_NNP ,_, Shujian_NNP Huang_NNP ,_, Jiajun_NNP Chen_NNP ._.
+2012_CD ._.
+Enhancing_VBG Statistical_NNP Machine_NNP Translation_NN with_IN Character_NNP Alignment_NNP ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT ACL2012_NNP ,_, pages_NNS 285-290_CD ._.
+Xinyan_NNP Xiao_NNP ,_, Yang_NNP Liu_NNP ,_, Young-Sook_NNP Hwang_NNP ,_, Qun_NNP Liu_NNP ,_, and_CC Shouxun_NNP Lin_NNP ._.
+2010_CD ._.
+Joint_NNP tokenization_NN and_CC trans_NNS -_: lation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 23rd_JJ International_NNP Con_NN -_: ference_NN on_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 1200_CD -_: 1208_CD ._.
+Ming_VBG Yu_NNP and_CC Hongxu_NNP Hou_NNP ._.
+2011_CD ._.
+Researching_VBG of_IN Mon_NNP -_: golian_JJ word_NN segmentation_NN system_NN based_VBN on_IN diction_NN -_: ary_NN ,_, rules_NNS and_CC language_NN model_NN ._.
+Inner_JJ Mongolian_NNP University_NNP ._.
+Ruiqiang_NNP Zhang_NNP ,_, Keiji_NNP Yasuda_NNP ,_, and_CC Eiichiro_NNP Sumita_NNP ._.
+2008_CD ._.
+Improved_VBN statistical_JJ machine_NN translation_NN by_IN multiple_JJ Chinese_JJ word_NN segmentation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Third_NNP Workshop_NNP on_IN Statistical_NNP Machine_NNP Transla_NNP -_: tion_NN ,_, pages_NNS 216-223_CD ._.
+Hongmei_NNP Zhao_NNP ,_, Yajuan_NNP Lv_NNP ,_, Guosheng_NNP Ben_NNP ,_, Yun_NNP Huang_NNP ,_, Qun_NNP Liu_NNP ._.
+2012_CD ._.
+Summary_NN on_IN CWMT2011_NNP MT_NNP Trans_NNP -_: lation_NN Evaluation_NN ._.
+Journal_NNP of_IN Chinese_NNP Information_NNP Processing_NNP ,_, 26_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 22-30_CD ._.

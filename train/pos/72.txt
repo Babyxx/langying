@@ -1,0 +1,332 @@
+Dynamic_NNP Semantics_NNP for_IN Intensification_NNP and_CC Epistemic_NNP Necessity_NNP :_: The_DT Case_NN of_IN Yídìng_NNP and_CC Shìbìin_NNP Mandarin_NNP Chinese_NNP Abstract_NNP Functioning_NNP as_IN adverbials_NNS ,_, yídìng_NN and_CC shìbì_NN in_IN Mandarin_NNP Chinese_NNP can_MD either_RB express_VB intensi_SYM -_: fication_NN or_CC -LRB-_-LRB- strong_JJ -RRB-_-RRB- epistemic_JJ necessity_NN ._.
+In_IN ad_NN -_: dition_NN ,_, context_NN influences_VBZ their_PRP$ semantics_NNS ._.
+Hence_RB ,_, dynamic_JJ semantics_NNS are_VBP proposed_VBN for_IN them_PRP ._.
+An_DT information_NN state_NN is_VBZ a_DT pair_NN <_CD A_NNP ,_, s_VBZ >_CD ,_, where_WRB s_PRP is_VBZ a_DT proposition_NN and_CC A_DT is_VBZ an_DT affirma_NN -_: tive_JJ ordering_VBG ._.
+Yídìng_NNP -LRB-_-LRB- -RRB-_-RRB- performs_VBZ update_VB on_IN an_DT information_NN state_NN :_: A_DT is_VBZ updated_VBN with_IN and_CC s_PRP is_VBZ specified_VBN to_TO be_VB a_DT subset_NN of_IN or_CC equal_JJ of_IN ,_, as_RB long_RB as_RB is_VBZ true_JJ in_IN one_CD of_IN the_DT absolutely_RB af_SYM -_: firmative_JJ worlds_NNS ._.
+Otherwise_RB ,_, uttering_VBG yídìng_NN -LRB-_-LRB- -RRB-_-RRB- leads_VBZ to_TO an_DT absurd_JJ state_NN ._.
+This_DT is_VBZ how_WRB a_DT strong_JJ epistemic_JJ necessity_NN reading_NN is_VBZ derived_VBN ._.
+To_TO yield_VB an_DT intensification_NN reading_NN ,_, yídìng_NN -LRB-_-LRB- -RRB-_-RRB- per_IN -_: forms_NNS a_DT test_NN on_IN the_DT information_NN state_NN ._.
+Yídìng_NNP -LRB-_-LRB- -RRB-_-RRB- gives_VBZ back_RP the_DT original_JJ information_NN state_NN as_RB long_RB as_RB is_VBZ true_JJ in_IN all_DT of_IN the_DT absolutely_RB af_SYM -_: firmative_JJ worlds_NNS ._.
+Otherwise_RB ,_, an_DT absurd_JJ state_NN is_VBZ produced_VBN ._.
+As_IN for_IN shìbì_NN ,_, its_PRP$ semantics_NNS is_VBZ identi_SYM -_: cal_NN to_TO that_DT of_IN yídìng_NN ,_, except_IN for_IN that_IN the_DT s_PRP in_IN an_DT information_NN state_NN for_IN shìbìis_NNS underspecified_VBD and_CC needs_VBZ resolving_VBG before_IN a_DT proposition_NN gets_VBZ an_DT appropriate_JJ interpretation_NN ._.
+The_DT information_NN needed_VBN to_TO resolve_VB the_DT underspecified_VBN s_PRP for_IN shìbìmust_NN be_VB inferred_VBN from_IN the_DT context_NN ._.
+1_CD Introduction_NNP In_IN Mandarin_NNP Chinese_NNP -LRB-_-LRB- henceforth_NN ,_, Chinese_NNP -RRB-_-RRB- ,_, inten_FW -_: sification_NN and_CC modal_JJ necessity_NN can_MD be_VB expressed_VBN by_IN the_DT same_JJ lexical_JJ item_NN ._.
+Adverbial_NNP yídìng_NNP is_VBZ one_CD of_IN such_JJ lexical_JJ items_NNS .1_CD Please_UH refer_VBP to_TO the_DT following_VBG examples_NNS ._.
+-LRB-_-LRB- 1_LS -RRB-_-RRB- A_DT :_: Zhāngsān_NNP xǐhuān_NNP Xiǎoměi_NNP ma_FW ?_.
+Zhangsan_NNP like_IN Xiaomei_NNP Q2_NNP `_`` Does_VBZ Zhangsan_NNP like_IN Xiaomei_NNP ?_. '_''
+B_NNP :_: Zhāngsān_NNP yídìng_NNP xǐhuān_NNP Xiǎoměi_NNP Zhangsan_NNP YÍDÌNG_NNP like_IN Xiaomei_NNP Tā_NNP hěn_NNP zhùyì_NNP Xiǎoměi_NNP -_: de_IN He_PRP very_RB pay.attention.to_JJ Xiaomei-ASSO_NNP yìjǔyídòng_NN ._.
+Zhè_NNP shì_VBD hěn_JJ hélìde_JJ move_NN this_DT be_VB very_RB reasonable_JJ tuīcè_NN ._.
+conjecture_NN `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Zhangsan_NNP likes_VBZ Xiaomei_NNP ._.
+He_PRP pays_VBZ much_JJ attention_NN to_TO every_DT move_NN of_IN Xiaomei_NNP ._.
+This_DT is_VBZ a_DT rea_NN -_: sonable_JJ conjecture_NN ._. '_''
+B_NNP '_POS :_: Zhāngsān_NNP yídìng_NNP xǐhuān_NNP Xiǎoměi_NNP ._.
+Zhangsan_NNP YÍDÌNG_NNP like_IN Xiaomei_NNP Zhè_NNP shì_VBD zhòngsuǒzhōzhīde_CD shìshí_NN ._.
+This_DT be_VB widely-known_JJ fact_NN `_`` Zhangsan_NNP definitely_RB likes_VBZ Xiaomei_NNP ._.
+This_DT is_VBZ a_DT widely-known_JJ fact_NN ._. '_''
+1_CD Please_UH note_VB that_IN yídìng_NN can_MD function_VB either_CC as_IN a_DT nominal_JJ mod_NN -_: ifier_NN or_CC a_DT propositional_JJ modifier_NN ._.
+The_DT former_JJ is_VBZ referred_VBN to_TO as_IN adjectival_JJ yídìng_NN and_CC the_DT latter_JJ adverbial_JJ yídìng_NN ._.
+This_DT paper_NN discusses_VBZ adverbial_JJ yídìng_VBG only_RB because_IN the_DT semantics_NNS of_IN ad_NN -_: jectival_JJ yídìng_NN is_VBZ simple_JJ and_CC not_RB as_IN rich_JJ as_IN adverbial_JJ yídìng_NN ._.
+2_CD The_DT abbreviations_NNS used_VBN in_IN this_DT paper_NN include_VBP :_: ASSO_NNP for_IN an_DT associative_JJ marker_NN ,_, DEON_NNP for_IN a_DT deontic_JJ modal_JJ expression_NN ,_, DYN_NNP for_IN a_DT dynamic_JJ modal_JJ expression_NN ,_, EPI_NNP for_IN an_DT epistemic_JJ modal_JJ expression_NN ,_, Prc_NNP for_IN a_DT sentence-final_JJ particle_NN ,_, Prg_NNP for_IN a_DT progres_NNS -_: sive_JJ marker_NN ,_, Q_NNP for_IN an_DT interrogative_JJ particle_NN ._.
+Wu_NNP ,_, Jiun-Shiung_NNP Chung_NNP Cheng_NNP University_NNP ,_, 168_CD ,_, University_NNP Road_NNP ,_, Minshiung_NNP ,_, Chiayi_NNP County_NNP ,_, Taiwan_NNP ,_, 621_CD Lngwujs@ccu.edu.tw_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- contains_VBZ two_CD conversations_NNS :_: one_CD between_IN A_DT and_CC B_NNP ,_, and_CC the_DT other_JJ between_IN A_DT and_CC B_NNP '_POS ._.
+In_IN the_DT two_CD conversations_NNS ,_, A_DT asks_VBZ whether_IN Zhangsan_NNP likes_VBZ Xiaomei_NNP ._.
+Although_IN the_DT same_JJ sentence_NN Zhāngsān_NNP yídìng_NNP xǐhuān_NNP Xiǎoměi_NNP `_`` Zhangsan_NNP YÍDÌNG_NNP like_IN Xiaomei_NNP '_POS is_VBZ uttered_VBN as_IN a_DT response_NN to_TO A_DT 's_POS question_NN ,_, yídìng_NN has_VBZ different_JJ semantic_JJ functions_NNS ._.
+In_IN the_DT ut_NN -_: terance_NN of_IN B_NNP ,_, yídìng_VBG expresses_VBZ epistemic_JJ necessity_NN because_IN B_NNP says_VBZ that_IN the_DT proposition_NN Zhāngsān_NNP yídìng_NNP xǐhuān_NNP Xiǎoměi_NNP `_`` Zhangsan_NNP YÍDÌNG_NNP like_IN Xiaomei_NNP '_POS is_VBZ a_DT reasonable_JJ conjecture_NN ._.
+Yídìng_NNP of_IN this_DT usage_NN is_VBZ translated_VBN as_IN it_PRP must_MD be_VB the_DT case_NN that_WDT ..._: Moreover_RB ,_, when_WRB expressing_VBG epistemic_JJ necessity_NN ,_, yídìng_VBG expresses_VBZ `_`` strong_JJ '_'' epistemic_JJ necessity_NN ._.
+The_DT following_JJ examples_NNS demonstrate_VBP the_DT difference_NN between_IN epistemic_JJ necessity_NN and_CC `_`` strong_JJ '_'' epistemic_JJ necessity_NN ._.
+-LRB-_-LRB- 2_LS -RRB-_-RRB- a._IN Ruóguǒ_NNP zài_FW kǎo_FW bù_FW jígé_FW ,_, nǐ_VBP that_IN the_DT proposition_NN -LRB-_-LRB- =_SYM Zhāngsān_NNP yídìng_NNP xǐhuān_NNP Xiǎoměi_NNP `_`` Zhangsan_NNP YÍDÌNG_NNP like_IN Xiaomei_NNP '_POS -RRB-_-RRB- is_VBZ a_DT widely-known_JJ fact_NN ._.
+This_DT usage_NN of_IN yídìng_NN is_VBZ trans_NNS -_: lated_VBN as_IN definitely_RB in_IN English_NNP and_CC is_VBZ referred_VBN to_TO as_IN an_DT intensification_NN reading_NN ._.
+Shìbìhas_NNP a_DT semantic_JJ function_NN similar_JJ to_TO yídìng_VB and_CC they_PRP are_VBP interchangeable_JJ in_IN some_DT examples_NNS ,_, but_CC not_RB in_IN others_NNS ._.
+See_VB below_IN ._.
+-LRB-_-LRB- 3_LS -RRB-_-RRB- a._FW Yīnwèi_FW zhùzi_FW tài_FW xì_FW ,_, yòng_JJ zhè_NN zhǒng_NN Because_IN pillar_NN too_RB thin_JJ ,_, use_VB this_DT kind_NN wūdǐng_NN yídìng_VBG /_CD shìbì_JJ yǒukěnéng_NN roof_NN YÍDÌNG_NNP /_CD SHÌBÌ_NNP have_VBP possibility_NN tāxiàlái_NNS ._.
+collapse_NN `_`` Because_IN the_DT pillars_NNS are_VBP too_RB thin_JJ ,_, if_IN this_DT type_NN of_IN roof_NN is_VBZ used_VBN ,_, it_PRP is_VBZ definitely_RB possi_JJ -_: ble_NN that_IN the_DT roof_NN will_MD collapse_VB ._. '_''
+b._FW Rúgǒu_FW nǐ_FW chuān_FW hòu_FW yīfú_FW ,_, nǐde_VB if_IN you_PRP wear_VBP thick_JJ clothes_NNS your_PRP$ shāng_NN yídìng_VBG /_CD shìbì_JJ jiào_NN qīng_NN ._.
+wound_NN YÍDÌNG_NNP /_CD SHÌBÌ_NNP relatively_RB minor_JJ `_`` If_IN you_PRP wear_VBP thick_JJ clothes_NNS ,_, it_PRP must_MD be_VB the_DT case_NN that_WDT your_PRP$ wound_NN is_VBZ relative_JJ minor_JJ ._. '_''
+-LRB-_-LRB- 4_LS -RRB-_-RRB- a._SYM Zhè_SYM -_: ge_NN shíhòu_NN ,_, Xiǎomíng_NNP yídìng_VBD /_CD *_SYM shìbì_SYM This-CL_JJR time_NN Xiaoming_NNP YÍDÌNG_NNP /_CD *_SYM SHÌBÌ_NNP zài_FW jiā_FW ._.
+at_IN home_NN `_`` At_IN this_DT moment_NN ,_, it_PRP must_MD be_VB the_DT case_NN that_WDT Xiaoming_NNP is_VBZ at_IN home_NN ._. '_''
+b.Hūn_NNP hòu_NNP ,_, rúgǔozhùYìnní_NNP ,_, wǒ_JJ married_JJ after_IN if_IN live_JJ Indonesia_NNP I_PRP *_SYM yídìng_VBG /_CD shìbì_JJ cídiào_NN gōngzuò_NN ._.
+*_SYM YÍDÌNG_NNP /_CD SHÌBÌ_NNP resign_VB job_NN `_`` After_IN getting_VBG married_JJ ,_, if_IN we_PRP live_VBP in_IN Indo_NNP -_: nesia_NN ,_, I_PRP definitely_RB have_VBP to_TO quit_VB my_PRP$ job_NN ._. '_''
+In_IN -LRB-_-LRB- 3a_CD ,_, b_NN -RRB-_-RRB- ,_, yídìng_JJ and_CC shìbìare_JJ interchangeable_JJ and_CC these_DT two_CD sentences_NNS are_VBP pretty_RB much_JJ synony_NN -_: mous_JJ ._.
+However_RB ,_, in_IN -LRB-_-LRB- 4a_FW ,_, b_NN -RRB-_-RRB- ,_, they_PRP are_VBP not_RB inter_SYM -_: changeable_JJ ._.
+In_IN -LRB-_-LRB- 4a_FW -RRB-_-RRB- ,_, only_RB yídìng_VBG is_VBZ allowed_VBN ,_, whereas_IN in_IN -LRB-_-LRB- 4b_JJ -RRB-_-RRB- only_RB shìbìis_VBZ permissible_JJ ._.
+In_IN this_DT paper_NN ,_, I_PRP would_MD like_VB to_TO address_VB the_DT follow_VB -_: ing_NN questions_NNS ._.
+First_RB ,_, is_VBZ it_PRP possible_JJ to_TO provide_VB a_DT uni_NN -_: fied_VBD semantics_NNS for_IN yídìng_NN and_CC shìbì_VB ?_.
+Second_NNP ,_, how_WRB can_MD the_DT unified_VBN semantics_NNS account_VBP for_IN the_DT semantic_JJ similarity_NN and_CC difference_NN between_IN yídìng_NN and_CC shìbì_NN as_IN demonstrated_VBN in_IN -LRB-_-LRB- 3_LS -RRB-_-RRB- and_CC -LRB-_-LRB- 4_LS -RRB-_-RRB- ?_.
+Finally_RB ,_, how_WRB can_MD the_DT unified_VBN semantics_NNS take_VBP care_NN of_IN contextual_JJ influ_NN -_: ence_NN on_IN the_DT semantics_NNS of_IN yídìng_NN and_CC shìbìillustrat_NN -_: ed_VBN by_IN the_DT utterances_NNS of_IN B_NNP and_CC of_IN B_NNP '_'' in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ?_.
+If_IN again_RB take.exam_JJ not_RB pass_VB māma_FW yídìng_FW hěn_FW shēngqì_FW ._.
+you_PRP Mom_NN YÍDÌNG_NNP very_RB angry_JJ `_`` If_IN you_PRP fail_VBP the_DT exam_NN again_RB ,_, it_PRP must_MD be_VB the_DT case_NN that_IN you_PRP mom_NN will_MD be_VB very_RB angry_JJ ._. '_''
+b._SYM Ruóguǒ_NNP zài_FW kǎo_FW bù_FW jígé_FW ,_, nǐ_JJ If_IN again_RB take.exam_JJ not_RB pass_VB māma_FW huì_FW hěn_FW shēngqì_FW ._.
+Mom_NN will_MD very_RB angry_JJ `_`` If_IN you_PRP fail_VBP the_DT exam_NN again_RB ,_, you_PRP mom_NN will_MD be_VB very_RB angry_JJ ._. '_''
+The_DT difference_NN between_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 2b_JJ -RRB-_-RRB- lies_VBZ in_IN that_DT -LRB-_-LRB- 2a_JJ -RRB-_-RRB- contains_VBZ yídìng_JJ ,_, while_IN -LRB-_-LRB- 2b_JJ -RRB-_-RRB- uses_VBZ huì_JJ ._.
+Huì_NNP has_VBZ several_JJ meanings_NNS and_CC one_CD of_IN them_PRP is_VBZ inference_NN ,_, e.g._FW Chang_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- ,_, Liu_NNP -LRB-_-LRB- 1997_CD -RRB-_-RRB- ,_, etc._FW ._.
+In_IN -LRB-_-LRB- 2b_JJ -RRB-_-RRB- ,_, huìis_FW used_VBN express_VB an_DT inference_NN about_IN a_DT future_JJ situation_NN based_VBN the_DT antecedent_NN led_VBN by_IN rúguǒ_NN `_`` if_IN '_'' ._.
+Although_IN yídìng_VBG in_IN -LRB-_-LRB- 2a_JJ -RRB-_-RRB- has_VBZ a_DT similar_JJ function_NN ,_, -LRB-_-LRB- 2a_JJ -RRB-_-RRB- and_CC -LRB-_-LRB- 2b_JJ -RRB-_-RRB- have_VBP a_DT subtle_JJ semantic_JJ difference_NN :_: -LRB-_-LRB- 2a_JJ -RRB-_-RRB- shows_VBZ a_DT stronger_JJR certainty_NN of_IN the_DT speaker_NN 's_POS regarding_VBG the_DT truth_NN of_IN the_DT proposition_NN your_PRP$ Mom_NN will_MD be_VB angry_JJ ,_, compared_VBN to_TO -LRB-_-LRB- 2b_JJ -RRB-_-RRB- ._.
+Hence_RB ,_, when_WRB used_VBN to_TO indicate_VB an_DT inference_NN ,_, yídìng_NN is_VBZ said_VBN to_TO express_VB `_`` strong_JJ '_'' epis_SYM -_: temic_JJ necessity_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, yídìng_VBG in_IN the_DT utterance_NN of_IN B_NNP '_POS has_VBZ a_DT different_JJ semantic_JJ function_NN ._.
+In_IN this_DT utterance_NN ,_, yídìng_NN is_VBZ used_VBN to_TO intensify_VB the_DT speaker_NN 's_POS affirma_NN -_: tiveness_NN toward_IN the_DT proposition_NN your_PRP$ Mom_NN will_MD be_VB angry_JJ ,_, instead_RB of_IN expressing_VBG the_DT proposition_NN as_IN an_DT inference_NN ._.
+The_DT intensification_NN function_NN of_IN yídìng_VBG in_IN this_DT example_NN is_VBZ made_VBN explicit_JJ because_IN of_IN B_NNP '_POS claims_NNS you_PRP This_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN Section_NN Two_CD ,_, I_PRP critically_RB review_VBP literature_NN on_IN yídìng_NN and_CC shìbì_NN ._.
+In_IN Section_NNP Three_CD ,_, I_PRP present_VBP more_JJR data_NNS and_CC provide_VB dynamic_JJ semantics_NNS for_IN yídìng_NN and_CC shìbì_NN ._.
+Section_NN Four_CD concludes_VBZ this_DT paper_NN ._.
+2_CD Review_NNP of_IN Previous_JJ Studies_NNPS The_DT literature_NN on_IN yídìng_JJ and/or_CC shìbìinclude_JJ Chen_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, Ding_NNP -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- ,_, C._NNP Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ,_, S._NNP Li_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, Wang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, Xu_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- ,_, Zhou_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- ,_, etc._FW ._.
+Xu_NNP -LRB-_-LRB- 1995_CD -RRB-_-RRB- is_VBZ on_IN the_DT English_NNP translations_NNS of_IN yídìng_NN and_CC two_CD other_JJ adverbs_NNS and_CC is_VBZ not_RB reviewed_VBN here_RB ._.
+I_PRP criti_VBP -_: cally_JJ review_NN the_DT other_JJ seven_CD studies_NNS ._.
+I_PRP start_VBP with_IN the_DT literature_NN on_IN yídìng_NN and_CC conduct_VB the_DT review_NN in_IN chronological_JJ order_NN ._.
+Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- distin_SYM -_: guishes_NNS two_CD variants_NNS of_IN yídìng_NN ,_, labeled_VBN as_IN yídìng1_CD and_CC yídìng2_CD ._.
+He_PRP suggests_VBZ that_IN the_DT former_JJ expresses_VBZ strong_JJ volition_NN ,_, either_CC the_DT subject_NN 's_POS or_CC the_DT speaker_NN 's_POS strong_JJ volition_NN -LRB-_-LRB- for_IN another_DT person_NN -RRB-_-RRB- to_TO do_VB some_DT -_: thing_NN ,_, while_IN the_DT latter_JJ denotes_NNS stipulation_NN or_CC judg_NN -_: ment_NN ._.
+He_PRP further_RB claims_VBZ that_IN yídìng1_CD often_RB goes_VBZ with_IN yào_NN ,_, which_WDT expresses_VBZ a_DT deontic_JJ reading_NN here_RB ,_, or_CC with_IN děi_NNS ,_, which_WDT also_RB has_VBZ a_DT deontic_JJ reading_NN ,_, and_CC that_IN yídìng2_CD often_RB goes_VBZ with_IN shi_FW `_`` be_VB '_'' or_CC hui_FW ,_, which_WDT denotes_VBZ epistemic_JJ necessity_NN ._.
+A_DT major_JJ problem_NN with_IN Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- is_VBZ that_IN he_PRP does_VBZ not_RB take_VB the_DT intensification_NN reading_NN into_IN con_NN -_: sideration_NN ,_, such_JJ as_IN the_DT utterance_NN of_IN B_NNP '_'' in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+An_DT -_: other_JJ problem_NN is_VBZ that_IN the_DT semantic_JJ contribution_NN of_IN yídìng_NN is_VBZ blurred_VBN when_WRB it_PRP goes_VBZ with_IN another_DT modal_JJ expression_NN ._.
+For_IN example_NN ,_, he_PRP suggests_VBZ that_IN yídìng_VBG děi_FW `_`` YÍDÌNG_NNP DEON_NNP '_POS expresses_VBZ a_DT deontic_JJ reading_NN ._.
+Then_RB ,_, a_DT reasonable_JJ question_NN to_TO ask_VB is_VBZ what_WP seman_SYM -_: tic_JJ contribution_NN yídìng_NN has_VBZ here_RB ._.
+The_DT same_JJ problem_NN occurs_VBZ to_TO yídìng_VB huì_JJ `_`` YÍDÌNG_NNP EPI_NNP '_POS ._.
+Ding_NNP -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- also_RB discusses_VBZ the_DT semantics_NNS of_IN yídìng_NN ._.
+These_DT two_CD studies_NNS distinguish_VBP yídìng1_CD from_IN yídìng2_CD as_RB well_RB ._.
+Similar_JJ to_TO Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- ,_, Ding_NNP -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- claims_VBZ that_IN yídìng1_CD expresses_VBZ strong_JJ vo_SYM -_: lition_NN and_CC yídìng2_CD denotes_NNS emphasis_NN on_IN the_DT truth_NN of_IN an_DT inference/judgment_NN ._.
+Ding_NNP 's_POS -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- conclu_SYM -_: sion_NN is_VBZ similar_JJ to_TO Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- and_CC hence_RB suffers_VBZ from_IN the_DT same_JJ problems_NNS ._.
+Chen_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- is_VBZ mostly_RB on_IN the_DT grammaticali_NNS -_: zation_NN of_IN yídìng_NN ._.
+As_IN for_IN the_DT semantics_NNS of_IN yídìng_NN ,_, he_PRP claims_VBZ that_IN yídìng_VBG expresses_VBZ strong_JJ volition_NN or_CC stip_NN -_: ulation/inference_NN ._.
+Since_IN Chen_NNP 's_POS -LRB-_-LRB- 2011_CD -RRB-_-RRB- conclusion_NN is_VBZ identical_JJ to_TO Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- and_CC Ding_NNP -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- ,_, and_CC therefore_RB is_VBZ vulnerable_JJ to_TO the_DT same_JJ problems_NNS ._.
+Two_CD major_JJ problems_NNS shared_VBN by_IN Chen_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- ,_, Ding_NNP -LRB-_-LRB- 2008a_JJ ,_, b_NN -RRB-_-RRB- and_CC Li_NNP -LRB-_-LRB- 2005_CD -RRB-_-RRB- are_VBP the_DT following_NN ._.
+First_RB ,_, they_PRP do_VBP not_RB discuss_VB whether_IN it_PRP is_VBZ possible_JJ to_TO provide_VB a_DT unified_VBN semantics_NNS for_IN yídìng_NN ,_, and_CC second_JJ ,_, they_PRP do_VBP not_RB discuss_VB how_WRB the_DT contextual_JJ influence_NN on_IN the_DT semantics_NNS of_IN yídìng_VBG as_IN demonstrated_VBN in_IN the_DT two_CD conversations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- should_MD be_VB dealt_VBN with_IN ._.
+S._NNP Li_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- ,_, Wang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- and_CC Zhou_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- focus_NN on_IN shìbì_NN ._.
+These_DT three_CD studies_NNS are_VBP also_RB re_SYM -_: viewed_VBN in_IN chronological_JJ order_NN ._.
+Wang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- is_VBZ on_IN the_DT lexicalization_NN of_IN shìbì_NN ._.
+This_DT paper_NN suggests_VBZ that_IN shìbìdescribes_VBZ an_DT inference_NN made_VBD based_VBN on_IN a_DT cur_NN -_: rent_VB situation_NN ._.
+S._NNP Li_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- is_VBZ about_IN the_DT historical_JJ development_NN of_IN shìbì_NN ._.
+This_DT study_NN states_VBZ that_IN shìbì_NN expresses_VBZ an_DT inference_NN that_IN some_DT situation_NN is_VBZ cer_SYM -_: tain_NN to_TO take_VB place_NN in_IN the_DT future_NN ,_, based_VBN on_IN the_DT current_JJ status_NN of_IN some_DT other_JJ situation_NN ._.
+Zhou_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- pro-_JJ vides_NNS a_DT relatively_RB detailed_JJ discussion_NN on_IN the_DT seman_NN -_: tic_JJ features_NNS of_IN shìbì_NN ,_, but_CC basically_RB says_VBZ the_DT same_JJ thing_NN as_IN S._NNP Li_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- and_CC Wang_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+While_IN ep_SYM -_: istemic_JJ necessity_NN is_VBZ one_CD of_IN the_DT readings_NNS expressed_VBN by_IN shìbì_NN ,_, these_DT studies_NNS can_MD not_RB explain_VB why_WRB shìbìis_VBZ not_RB good_JJ in_IN -LRB-_-LRB- 4a_FW -RRB-_-RRB- ,_, which_WDT also_RB has_VBZ an_DT epistemic_JJ ne_NN -_: cessity_NN reading_NN ,_, and_CC neither_DT do_VBP they_PRP take_VBP the_DT inten_NN -_: sification_NN reading_NN ,_, such_JJ as_IN -LRB-_-LRB- 3a_FW -RRB-_-RRB- ,_, into_IN consideration_NN ._.
+Since_IN the_DT above_JJ reviewed_VBN papers_NNS do_VBP not_RB provide_VB a_DT comprehensive_JJ picture_NN for_IN the_DT semantics_NNS of_IN yídìng_NN and_CC shìbì_NN ,_, further_JJ study_NN is_VBZ called_VBN for_IN so_RB that_IN the_DT unanswered_JJ questions_NNS can_MD be_VB addressed_VBN ._.
+3_CD 3.1_CD Semantics_NNS of_IN Yídìng_NNP and_CC Shìbì_NNP The_NNP Data_NNP Yídìng_NNP can_MD either_RB present_VB a_DT proposition_NN without_IN a_DT modal_JJ expression_NN or_CC one_CD with_IN a_DT modal_JJ expression_NN ._.
+The_DT utterances_NNS of_IN B_NNP and_CC of_IN B_NNP '_'' in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, and_CC the_DT sen_NN -_: tence_NN -LRB-_-LRB- 2a_FW -RRB-_-RRB- are_VBP typical_JJ examples_NNS where_WRB yídìng_JJ pre_NN -_: sents_VBZ a_DT proposition_NN not_RB containing_VBG a_DT modal_JJ expression_NN ._.
+-LRB-_-LRB- 3a_FW -RRB-_-RRB- is_VBZ an_DT example_NN where_WRB yídìng_JJ pre_NN -_: sents_VBZ a_DT modal_JJ containing_VBG a_DT modal_JJ expression_NN ._.
+Ei_SYM -_: ther_NN case_NN ,_, yídìng_NN is_VBZ ambiguous_JJ between_IN a_DT strong_JJ epistemic_JJ reading_NN and_CC an_DT intensification_NN reading_NN ._.
+Let_NNP 's_POS look_NN at_IN a_DT few_JJ more_JJR examples_NNS ._.
+-LRB-_-LRB- 5_CD -RRB-_-RRB- a._IN Lǐsì_NNP yídìng_NNP zài_FW jiā_FW ._.
+Lisi_NNP YÍDÌNG_NNP at_IN home_NN `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Lisi_NNP is_VBZ at_IN home_NN ._. '_''
+Or_CC ,_, `_`` Lisi_NNP is_VBZ definite_JJ at_IN home_NN ._. '_''
+b._IN Wángwǔ_NNP yídìng_NNP yǐjīng_NNP xiěwán_NNP Wangwu_NNP YÍDÌNG_NNP already_RB write.finish_JJ gōngkè_NN le_FW ._.
+homework_NN Prc_NNP `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Wangwu_NNP has_VBZ al_SYM -_: ready_JJ finished_VBD his_PRP$ homework_NN ._. '_''
+Or_CC ,_, `_`` Wangwau_NNP definitely_RB has_VBZ finished_VBN his_PRP$ homework_NN ._. '_''
+c._SYM Zài_FW xià_FW jǐ_FW tiān_FW dà_FW yǔ_FW ,_, Againrainseveralday_NNP heavy_JJ rain_NN zhèlǐ_NN yídìng_VBG fānshēng_JJ tǔshīliú_NN ._.
+here_RB YÍDÌNG_NNP happen_VB mud.slide_JJ `_`` If_IN it_PRP rains_NNS heavily_RB a_DT few_JJ more_JJR days_NNS ,_, it_PRP must_MD be_VB the_DT case_NN that_WDT mud_NN slide_NN will_MD hap_VB -_: pen_NN here_RB ._. '_''
+Or_CC ,_, `_`` If_IN it_PRP rains_NNS heavily_RB a_DT few_JJ more_JJR days_NNS ,_, mud_NN slide_NN definitely_RB will_MD happen_VB here_RB ._. '_''
+-LRB-_-LRB- 6_CD -RRB-_-RRB- a._IN Zhàoliù_NNP yídìng_VBG huì_JJ qí_NN jiǎotàchē_NN ._.
+Zhaoliu_NNP YÍDÌNG_NNP DYN_NNP ride_NN bike_NN `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Zhaoliu_NNP can_MD ride_VB a_DT bike_NN ._. '_''
+Or_CC ,_, `_`` Zhaoliu_NNP definitely_RB can_MD ride_VB a_DT bike_NN ._. '_''
+b.Sūnqīyídìngděi_NNP dǎsǎofángjiānle_NNP ._.
+Sunqi_NNP YÍDÌNG_NNP DEON_NNP clean_JJ room_NN Prc_NNP `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Sunqi_NNP has_VBZ to_TO clean_VB his_PRP$ room_NN ._. '_''
+Or_CC ,_, `_`` Sunqi_FW definitely_RB has_VBZ to_TO clean_VB his_PRP$ room_NN ._. '_''
+Some_DT native_JJ speakers_NNS I_PRP consult_VBP point_NN out_IN to_TO me_PRP that_IN ,_, standing_VBG alone_RB ,_, -LRB-_-LRB- 6b_JJ -RRB-_-RRB- preferably_RB has_VBZ an_DT intensi_NN -_: fication_NN reading_NN ,_, rather_RB than_IN a_DT strong_JJ epistemic_JJ ne_NN -_: cessity_NN reading_NN ._.
+However_RB ,_, if_IN we_PRP provide_VBP a_DT context_NN for_IN the_DT sentence_NN ,_, the_DT strong_JJ epistemic_JJ necessity_NN reading_NN can_MD be_VB brought_VBN out_RP ._.
+For_IN example_NN ,_, -LRB-_-LRB- 7_CD -RRB-_-RRB- Sūnqī_NNP yídìng_NNP děi_FW dǎsǎo_FW fángjiān_FW le_FW ._.
+Sunqi_NNP YÍDÌNG_NNP DEON_NNP clean_JJ room_NN Prc_NNP Zhè_NNP shì_VBD wǒ_SYM -_: de_FW tuīcè_FW ._.
+Tā_SYM -_: de_FW fùmǔ_FW this_DT be_VB my_PRP$ conjecture_NN his_PRP$ parents_NNS yǐjīng_VBG shòubǔliǎo_NN le_FW ._.
+already_RB tolerate.not_NNP Prc_NNP `_`` It_PRP must_MD be_VB the_DT case_NN that_WDT Sunqi_NNP has_VBZ to_TO clean_VB his_PRP$ room_NN ._.
+This_DT is_VBZ my_PRP$ guess_NN ._.
+His_PRP$ parents_NNS can_MD not_RB tolerate_VB it_PRP anymore_RB ._. '_''
+So_RB ,_, can_MD a_DT unified_VBN semantics_NNS be_VB proposed_VBN for_IN yídìng_VBG ?_.
+I_PRP believe_VBP so_RB ._.
+The_DT examples_NNS presented_VBN in_IN this_DT section_NN and_CC previous_JJ sections_NNS tell_VBP us_PRP that_IN the_DT semantics_NNS of_IN yídìng_NN contains_VBZ two_CD parts_NNS ._.
+The_DT first_JJ part_NN provides_VBZ an_DT epistemic_JJ necessity_NN reading_NN ,_, just_RB like_IN must_MD in_IN English_NNP ._.
+The_DT other_JJ part_NN provides_VBZ an_DT intensification_NN reading_NN ._.
+If_IN we_PRP put_VBP aside_RB the_DT contextual_JJ influence_NN on_IN the_DT semantics_NNS of_IN yídìng_VBG for_IN the_DT moment_NN ,_, the_DT semantics_NNS of_IN yídìng_NN can_MD be_VB modeled_VBN using_VBG Kratzer_NNP 's_POS -LRB-_-LRB- 2012_CD -LSB-_NNP 1981_CD -RSB-_NNP ,_, 1991_CD -RRB-_-RRB- semantics_NNS of_IN modal_JJ expres_NNS -_: sions_NNS ._.
+See_VB -LRB-_-LRB- 8_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 8_CD -RRB-_-RRB- Modal_JJ semantics_NNS for_IN yídìng_VBG Modal_JJ base_NN :_: Epistemic_NNP Modal_NNP force_NN :_: Necessity_NN Ordering_VBG sources_NNS :_: -LRB-_-LRB- a_DT -RRB-_-RRB- doxastic_JJ or_CC stereo_NN -_: typical_JJ ,_, -LRB-_-LRB- b_NN -RRB-_-RRB- affirmative_JJ In_IN -LRB-_-LRB- 8_CD -RRB-_-RRB- ,_, the_DT modal_JJ base_NN ,_, modal_JJ force_NN and_CC one_CD of_IN the_DT ordering_VBG sources_NNS in_IN -LRB-_-LRB- a_DT -RRB-_-RRB- together_RB are_VBP actually_RB the_DT typical_JJ semantics_NNS for_IN an_DT epistemic_JJ necessary_JJ modal_JJ expression_NN ._.
+The_DT new_JJ idea_NN here_RB is_VBZ the_DT second_JJ ordering_VBG source_NN ,_, the_DT affirmative_JJ ordering_VBG source_NN ._.
+von_NNP Fintel_NNP and_CC Iatridou_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- propose_VBP that_IN weak_JJ necessity_NN modals_NNS such_JJ as_IN should_MD in_IN English_NNP need_VBP two_CD ordering_VBG sources_NNS for_IN their_PRP$ semantics_NNS ._.
+The_DT idea_NN of_IN two_CD ordering_VBG sources_NNS is_VBZ adopted_VBN here_RB ._.
+What_WP is_VBZ an_DT affirmative_JJ ordering_VBG source_NN ?_.
+An_DT af_SYM -_: firmative_JJ ordering_VBG source_NN orders_NNS possible_JJ worlds_NNS in_IN terms_NNS of_IN the_DT speaker_NN 's_POS affirmativeness_NN toward_IN a_DT proposition_NN ._.
+A_DT represents_VBZ an_DT affirmative_JJ ordering_VBG source_NN ._.
+Then_RB ,_, the_DT ordering_VBG of_IN two_CD possible_JJ worlds_NNS based_VBN on_IN an_DT affirmative_JJ ordering_VBG source_NN is_VBZ defined_VBN as_RB below_IN ._.
+-LRB-_-LRB- 9_CD -RRB-_-RRB- v_NN ,_, w_NN are_VBP possible_JJ worlds_NNS ._.
+p_NN is_VBZ a_DT proposition_NN ._.
+w_NN A_DT v_FW iff_FW -LCB-_-LRB- p_NN :_: p_NN is_VBZ affirmed_VBN in_IN v_NN -RCB-_-RRB- -LCB-_-LRB- p_NN :_: p_NN is_VBZ affirmed_VBN in_IN w_NN -RCB-_-RRB- -LRB-_-LRB- cf._NNP Kratzer_NNP 2012_CD -LSB-_NNP 1981_CD -RSB-_NNP :_: 39_CD -RRB-_-RRB- How_WRB about_RB shìbì_CD ?_.
+I_PRP show_VBP that_IN yídìng_NN and_CC shìbì_NN are_VBP interchangeable_JJ in_IN some_DT cases_NNS ,_, but_CC not_RB in_IN others_NNS ._.
+For_IN the_DT purpose_NN of_IN discussion_NN ,_, I_PRP repeat_VBP the_DT relevant_JJ examples_NNS in_IN -LRB-_-LRB- 10_CD -RRB-_-RRB- ._.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- a._SYM Zhè_SYM -_: ge_NN shíhòu_NN ,_, Xiǎomíng_NNP yídìng_NNP /_NNP This-CL_NNP time_NN Xiaoming_NNP YÍDÌNG_NNP /_CD *_SYM shìbì_SYM zài_FW jiā_FW ._.
+*_SYM SHÌBÌ_NN at_IN home_NN `_`` At_IN this_DT moment_NN ,_, it_PRP must_MD be_VB the_DT case_NN that_WDT Xiaoming_NNP is_VBZ at_IN home_NN ._. '_''
+b.Hūn_NNP hòu_NNP ,_, rúgǔozhùYìnní_NNP ,_, wǒ_JJ married_JJ after_IN if_IN live_JJ Indonesia_NNP I_PRP *_SYM yídìng_VBG /_CD shìbì_JJ cídiào_NN gōngzuò_NN ._.
+*_SYM YÍDÌNG_NNP /_CD SHÌBÌ_NNP resign_VB job_NN `_`` After_IN getting_VBG married_JJ ,_, if_IN we_PRP live_VBP in_IN In_IN -_: donesia_NN ,_, I_PRP definitely_RB have_VBP to_TO quit_VB my_PRP$ job_NN ._. '_''
+-LRB-_-LRB- 11_CD -RRB-_-RRB- a._FW Rúguǒ_FW wǒ_FW bù_FW néng_FW chōngfèn_FW If_IN I_PRP not_RB can_MD sufficient_JJ gōngyìng_VBG shìchāng_NN dehuà_NN ,_, wǒ_SYM -_: de_FW provide_VB market_NN Prc_NNP my_PRP$ gùkè_FW shìbì_FW /_FW yídìng_FW huì_FW cóng_FW customer_NN SHÌBÌ_NNP /_CD YÍDÌNG_NNP will_MD from_IN bié_JJ chù_JJ gòu_NN huò_NN ._.
+other_JJ place_NN purchase_NN goods_NNS `_`` If_IN I_PRP can_MD not_RB provide_VB sufficiently_RB in_IN the_DT market_NN ,_, my_PRP$ customers_NNS definitely_RB pur_SYM -_: chase_VB goods_NNS from_IN somewhere_RB else_RB ._. '_''
+b._IN Yào_NNP jiàngdī_NNP chéngběn_NNP ,_, want_VBP decrease_NN cost_NN yídìng_VBG /_CD shìbì_JJ yào_NN zēng_NN YÍDÌNG_NNP /_CD SHÌBÌ_NNP DEON_NNP increase_NN chǎn_NN production_NN `_`` If_IN it_PRP wants_VBZ to_TO decrease_VB cost_NN ,_, CPC_NNP defi_SYM -_: nitely_NN has_VBZ to_TO increase_VB production_NN ._. '_''
+In_IN -LRB-_-LRB- 10a_FW -RRB-_-RRB- ,_, yídìng_VBG is_VBZ good_JJ ,_, but_CC shìbì_NN is_VBZ not_RB ._.
+331_CD examples_NNS of_IN shìbì_NN are_VBP retrieved_VBN from_IN the_DT online_JJ version_NN of_IN the_DT Sinica_NNP Corpus_NNP ._.
+Examining_VBG these_DT ex_FW -_: amples_NNS carefully_RB ,_, I_PRP find_VBP that_IN ,_, whenever_WRB shìbì_NN is_VBZ used_VBN ,_, additional_JJ information_NN must_MD be_VB present_JJ so_IN that_IN the_DT sentence_NN with_IN shìbì_NN can_MD be_VB inferred_VBN ._.
+For_IN example_NN ,_, in_IN -LRB-_-LRB- 10b_JJ -RRB-_-RRB- ,_, moving_VBG to_TO Indonesia_NNP after_IN get_VB -_: ting_VBG married_JJ leads_NNS to_TO the_DT event_NN that_IN the_DT speaker_NN has_VBZ to_TO quit_VB his/her_JJR current_JJ job_NN ._.
+The_DT same_JJ reasoning_NN ap_SYM -_: plies_NNS to_TO -LRB-_-LRB- 11a_CD ,_, b_NN -RRB-_-RRB- ._.
+Therefore_RB ,_, the_DT first_JJ difference_NN between_IN yídìng_NN and_CC shìbìis_NNS that_IN the_DT former_JJ does_VBZ not_RB need_VB the_DT con_NN -_: text_NN to_TO explicitly_RB provide_VB information_NN based_VBN on_IN which_WDT the_DT proposition_NN presented_VBN by_IN yídìng_VBG can_MD be_VB inferred_VBN ,_, whereas_IN the_DT latter_JJ does_VBZ ._.
+In_IN -LRB-_-LRB- 10a_FW -RRB-_-RRB- ,_, shìbìis_VBZ not_RB good_JJ because_IN of_IN lack_NN of_IN such_JJ information_NN ._.
+What_WP happens_VBZ if_IN another_DT modal_JJ expression_NN ,_, oth_NN -_: er_JJR than_IN yídìng_JJ and_CC shìbì_JJ ,_, occurs_VBZ in_IN the_DT sentences_NNS ,_, such_JJ as_IN -LRB-_-LRB- 11a_CD ,_, b_NN -RRB-_-RRB- ?_.
+In_IN these_DT cases_NNS ,_, yídìng_NN and_CC shìbì_NN are_VBP interchangeable_JJ ,_, and_CC they_PRP are_VBP ambiguous_JJ as_IN discussed_VBN above_IN ._.
+So_RB ,_, what_WP is_VBZ the_DT semantics_NNS of_IN shìbìand_NN how_WRB is_VBZ it_PRP related_VBN to_TO that_DT of_IN yídìng_VBG ?_.
+-LRB-_-LRB- 10_CD -RRB-_-RRB- sheds_VBZ some_DT light_NN on_IN this_DT question_NN ._.
+Again_RB ,_, putting_VBG contextual_JJ influence_NN aside_RB ,_, I_PRP propose_VBP that_IN the_DT modal_JJ base_NN of_IN shìbì_NN and_CC the_DT ordering_VBG source_NN related_VBN to_TO the_DT modal_JJ base_NN are_VBP both_DT underspecified_VBD ,_, while_IN the_DT affirmative_JJ ordering_VBG sourceisalwaysthereforshìbì.Shìbìcannotbe_NN used_VBN in_IN -LRB-_-LRB- 10a_FW -RRB-_-RRB- because_IN information_NN required_VBN to_TO infer_VB the_DT proposition_NN presented_VBN by_IN shìbì_NN does_VBZ not_RB exist_VB ._.
+The_DT lack_NN of_IN such_JJ information_NN makes_VBZ it_PRP impossible_JJ to_TO resolve_VB the_DT underspecified_JJ modal_JJ base_NN -LRB-_-LRB- and_CC the_DT underspecifiedorderingsource_NN -RRB-_-RRB- ofshìbì_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, in_IN -LRB-_-LRB- 10b_JJ -RRB-_-RRB- ,_, if_IN one_CD moves_VBZ out_IN of_IN town_NN ,_, then_RB it_PRP is_VBZ most_RBS likely_JJ required_VBN for_IN him/her_NN to_TO quit_VB his/her_JJR current_JJ job_NN in_IN town_NN ._.
+That_DT is_VBZ ,_, the_DT rela_NN -_: tion_NN between_IN the_DT two_CD clauses_NNS in_IN -LRB-_-LRB- 10b_JJ -RRB-_-RRB- indicates_VBZ a_DT deontic_JJ reading_NN and_CC the_DT underspecified_JJ modal_JJ base_NN ofshìbìisresolvedtocircumstantialandtheorder_NN -_: ing_NN source_NN is_VBZ related_VBN to_TO a_DT physical_JJ law_NN :_: if_IN one_CD is_VBZ not_RB at_IN a_DT place_NN ,_, he_PRP can_MD not_RB hold_VB a_DT job_NN at_IN that_DT place_NN .3_CD In_IN sum_NN ,_, putting_VBG contextual_JJ influence_NN aside_RB ,_, I_PRP propose_VBP the_DT following_NN ._.
+Yídìng_NNP has_VBZ an_DT epistemic_JJ modal_JJ base_NN and_CC two_CD ordering_VBG sources_NNS ._.
+One_CD is_VBZ dox_SYM -_: astic_JJ or_CC stereotypical_JJ and_CC the_DT other_JJ is_VBZ affirmative_JJ ._.
+An_DT affirmative_JJ ordering_VBG source_NN orders_NNS possible_JJ worlds_NNS in_IN terms_NNS of_IN the_DT degree_NN of_IN speaker_NN 's_POS affirma_NN -_: tiveness_NN concerning_VBG a_DT proposition_NN ._.
+Shìbì_NNP has_VBZ an_DT underspecified_JJ modal_JJ base_NN and_CC two_CD ordering_VBG sources_NNS ._.
+One_CD of_IN the_DT ordering_VBG sources_NNS is_VBZ underspeci_SYM -_: fied_VBN as_RB well_RB because_IN it_PRP needs_VBZ to_TO be_VB compatible_JJ with_IN the_DT modal_JJ base_NN ._.
+The_DT other_JJ is_VBZ an_DT affirmative_JJ one_CD ._.
+3.2_CD Dynamic_NNP Semantics_NNP for_IN Yídìng_NNP and_CC Shìbì_NNP Although_IN ,_, in_IN Section_NN 3.1_CD ,_, semantics_NNS are_VBP proposed_VBN ,_, along_IN the_DT lines_NNS of_IN Kratzer_NNP -LRB-_-LRB- 2012_CD -LSB-_NNP 1981_CD -RSB-_NNP ,_, 1991_CD -RRB-_-RRB- ,_, for_IN yídìng_NN and_CC shìbì_NN ,_, Kratzer_NNP 's_POS semantics_NNS of_IN modality_NN can_MD not_RB take_VB care_NN of_IN contextual_JJ influence_NN ,_, which_WDT is_VBZ demonstrated_VBN in_IN the_DT two_CD conversations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+There_EX is_VBZ no_DT mechanism_NN in_IN Kratzer_NNP 's_POS semantics_NNS of_IN modality_NN -LRB-_-LRB- and_CC in_IN truth-conditional_JJ semantics_NNS as_RB well_RB -RRB-_-RRB- to_TO deal_VB with_IN contextual_JJ effects_NNS ._.
+Instead_RB ,_, I_PRP would_MD like_VB to_TO propose_VB dynamic_JJ se_FW -_: mantics_NNS -LRB-_-LRB- Groenendijk_NNP and_CC Stokhof_NNP 1991_CD ,_, Chierchia_NNP 1995_CD ,_, etc._FW -RRB-_-RRB- 4_CD for_IN yídìng_NN and_CC shìbìso_NN that_WDT contextual_JJ effects_NNS can_MD be_VB taken_VBN care_NN of_IN ._.
+Yalcin_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- discuss_VB -_: es_NNS why_WRB sentences_NNS such_JJ as_IN suppose_VB that_IN it_PRP is_VBZ raining_VBG but_CC it_PRP might_MD not_RB be_VB is_VBZ infelicitous_JJ ._.
+In_IN order_NN to_TO take_VB care_NN of_IN embedded_VBN epistemic_JJ modals_NNS ,_, a_DT clause_NN em_SYM -_: bedded_VBN under_IN suppose_VB must_MD be_VB interpreted_VBN accord_NN -_: 3_CD Let_NNP 's_POS not_RB consider_VB ,_, for_IN the_DT moment_NN ,_, work_NN at_IN home_NN through_IN internet_NN or_CC other_JJ special_JJ situations_NNS ._.
+4_CD For_IN an_DT excellent_JJ introduction_NN to_TO dynamic_JJ -LRB-_-LRB- modal_JJ -RRB-_-RRB- logic_NN ,_, please_VB refer_VBP to_TO Sectioin_NNP 3.2_CD ,_, Portner_NNP -LRB-_-LRB- 2008_CD -RRB-_-RRB- ._.
+zhōngyóu_NNP CPC_NNP ing_VBG to_TO what_WP the_DT subject_JJ supposes_NNS ._.
+Hence_RB ,_, one_CD ver_NN -_: sion_NN of_IN Yalcin_NNP 's_POS -LRB-_-LRB- 2007_CD -RRB-_-RRB- proposal_NN is_VBZ as_IN follows_VBZ :_: -LRB-_-LRB- 12_CD -RRB-_-RRB- a._FW Sw_FW ,_, xis_FW defined_VBN as_IN -LCB-_-LRB- w_NN '_'' :_: w_NN '_'' is_VBZ compatible_JJ with_IN what_WP x_LS supposes_VBZ in_IN w_NN -RCB-_-RRB- b._FW |_FW |_FW x_LS suppose_VB |_CD |_CD c_NN ,_, s_VBZ ,_, w_VB =_SYM -LCB-_-LRB- w_NN :_: Swx_NNP |_NNP |_VBD |_CD |_CD c_NN ,_, Sw_NN ,_, x_LS ,_, w_VBG '_'' -RCB-_-RRB- c._FW |_FW |_FW Suppose_VB that_IN it_PRP is_VBZ raining_VBG but_CC it_PRP might_MD not_RB be_VB |_JJ |_NN =_SYM w_FW '_'' Sw_NNP ,_, x_SYM :|_FW |_FW |_FW |_FW c_NN ,_, Sw_NN ,_, x_LS ,_, w_VBG '_'' is_VBZ true_JJ w_NN '_'' Sw_NN ,_, x_LS :_: |_FW |_FW |_FW |_FW c_NN ,_, Sw_NN ,_, x_LS ,_, w_VBG '_'' is_VBZ true_JJ -LRB-_-LRB- 12c_JJ -RRB-_-RRB- is_VBZ a_DT contradiction_NN because_IN it_PRP is_VBZ not_RB plausi_SYM -_: ble_NN that_IN Sw_NNP ,_, x_LS contains_VBZ a_DT possible_JJ world_NN where_WRB and_CC are_VBP both_DT true_JJ at_IN the_DT same_JJ time_NN ._.
+Yalcin_NNP 's_POS -LRB-_-LRB- 2007_CD -RRB-_-RRB- idea_NN applies_VBZ to_TO yídìng_VB and_CC shìbìas_VB well_RB because_IN of_IN the_DT infelicity_NN of_IN the_DT following_VBG example_NN :_: -LRB-_-LRB- 13_CD -RRB-_-RRB- tiān_JJ zhème_NN hēi_NNS ,_, xiànzài_NNS yídìng_VBG /_CD shìbì_NN sky_NN so_RB dark_JJ now_RB YÍDÌNG_NNP /_CD SHÌBÌ_NNP zài_FW xiàyù_FW ._.
+#dànshì_NNP ,_, yě_JJ yǒu_NN kěnéng_NN In_IN addition_NN ,_, in_IN order_NN to_TO account_VB for_IN the_DT high_JJ degree_NN of_IN affirmativness_NN in_IN the_DT semantics_NNS of_IN yídìng_NN and_CC shìbì_NN ,_, we_PRP define_VBP absolutely_RB affirmative_JJ words_NNS as_IN -LRB-_-LRB- 14a_FW -RRB-_-RRB- ._.
+We_PRP also_RB need_VBP to_TO update_VB the_DT affirmative_JJ ordering_VBG with_IN a_DT proposition_NN ,_, so_RB that_IN the_DT proposition_NN is_VBZ true_JJ in_IN the_DT worlds_NNS where_WRB more_RBR propositions_NNS are_VBP affirmed_VBN to_TO be_VB true_JJ ,_, as_IN defined_VBN in_IN -LRB-_-LRB- 14b_JJ -RRB-_-RRB- :_: -LRB-_-LRB- 14_CD -RRB-_-RRB- a._FW Absolutely_RB affirmative_JJ worlds_NNS -LRB-_-LRB- cf._FW n_FW <_FW ,_, s_VBZ >_CD in_IN Veltman_NNP 1996_CD :_: 14_CD -RRB-_-RRB- AffA_NNP =_SYM -LCB-_-LRB- w_NN W_NNP :_: v_VB W_NNP ,_, w_NN A_DT v_NN -RCB-_-RRB- ,_, where_WRB W_NNP is_VBZ the_DT set_NN of_IN all_DT possible_JJ worlds_NNS ._.
+b._FW Updating_VBG an_DT affirmative_JJ ordering_VBG A_DT ={_CD <_NN w_NN ,_, v_SYM >_FW :_: w_VB A_DT vifv_NN ,_, then_RB w_VB -RCB-_-RRB- -LRB-_-LRB- 14a_FW -RRB-_-RRB- says_VBZ the_DT following_NN :_: AffA_NNP is_VBZ a_DT set_NN of_IN possi_NNS -_: ble_JJ worlds_NNS each_DT of_IN whose_WP$ members_NNS has_VBZ more_RBR prop_VB -_: ositions_NNS affirmed_VBN to_TO be_VB true_JJ than_IN one_CD of_IN the_DT other_JJ possible_JJ worlds_NNS in_IN W._NNP AffA_NNP is_VBZ referred_VBN to_TO as_IN the_DT ab_SYM -_: solutely_JJ affirmative_JJ worlds_NNS because_IN all_PDT the_DT worlds_NNS in_IN this_DT set_NN contain_VBP only_RB propositions_NNS affirmed_VBN to_TO be_VB true_JJ ._.
+-LRB-_-LRB- 14b_CD -RRB-_-RRB- is_VBZ the_DT definition_NN of_IN updating_VBG A_DT with_IN :_: A_DT is_VBZ a_DT pair_NN <_CD w_NN ,_, v_SYM >_FW ,_, where_WRB ,_, if_IN is_VBZ true_JJ in_IN v_NN ,_, then_RB is_VBZ also_RB true_JJ in_IN w_NN ,_, that_WDT is_VBZ ,_, the_DT affirmative_JJ ordering_VBG takes_VBZ into_IN consideration_NN ._.
+In_IN this_DT way_NN ,_, we_PRP can_MD re_VB -_: late_RB a_DT proposition_NN to_TO an_DT affirmative_JJ ordering_VBG A._NN -LRB-_-LRB- 15_CD -RRB-_-RRB- a._FW strong_JJ epistemic_JJ necessity_NN reading_VBG |_CD |_JJ yídìng_NN -LRB-_-LRB- -RRB-_-RRB- |_FW |_FW M_NNP =_SYM <_FW A_DT ,_, s_VBZ >_CD if_IN AffA_NNP -LCB-_-LRB- w_SYM :|_FW |_FW |_FW |_FW w_FW ,_, M_NNP =_SYM 1_CD -RCB-_-RRB- and_CC s_VBZ represents_VBZ the_DT speaker_NN 's_POS knowledge_NN in_IN w_NN ;_: or_CC =_SYM absurd_JJ state_NN ,_, otherwise_RB b._NN intensification_NN reading_VBG |_CD |_JJ yídìng_NN -LRB-_-LRB- -RRB-_-RRB- |_FW |_FW M_NNP =_SYM if_IN AffA_NNP -LCB-_-LRB- w_NN :_: |_FW |_FW |_FW |_FW w_FW ,_, M_NNP =_SYM 1_CD -RCB-_-RRB- =_SYM AffA_NNP and_CC s_VBZ the_DT speaker_NN 's_POS knowledge_NN in_IN w_NN ;_: or_CC =_SYM absurd_JJ state_NN ,_, otherwise_RB ._.
+-LRB-_-LRB- 15a_FW -RRB-_-RRB- accounts_VBZ for_IN the_DT strong_JJ epistemic_JJ necessi_NN -_: ty_JJ reading_NN yídìng_NN can_MD denote_VB ._.
+The_DT ordering_VBG source_NN A_DT is_VBZ updated_VBN with_IN the_DT proposition_NN ._.
+This_DT update_VBP relates_VBZ to_TO the_DT order_NN A_DT so_IN that_IN the_DT affirmative_JJ or_CC -_: dering_VBG takes_VBZ into_IN consideration_NN ._.
+Just_RB like_IN Yalcin_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, s_VBZ says_VBZ that_DT is_VBZ interpreted_VBN with_IN respect_NN to_TO s_PRP ,_, the_DT speaker_NN 's_POS knowledge_NN ._.
+There_EX is_VBZ a_DT condition_NN for_IN the_DT new_JJ information_NN state_NN <_CD A_NNP ,_, s_VBZ >_CD to_TO hold_VB :_: Prg_JJ rain_NN #but_NN méiyǒu_NN not_RB `_`` It_PRP is_VBZ so_RB dark_JJ ._.
+Now_RB ,_, it_PRP must_MD be_VB the_DT case_NN that_IN it_PRP is_VBZ raining_VBG ,_, #but_VB it_PRP may_MD not_RB be_VB ._. '_''
+But_CC ,_, Yalcin_NNP 's_POS -LRB-_-LRB- 2007_CD -RRB-_-RRB- idea_NN alone_RB is_VBZ not_RB adequate_JJ for_IN yídìng_NN and_CC shìbìbecause_NN they_PRP denote_VBP a_DT `_`` strong_JJ '_'' epistemic_JJ necessity_NN reading_NN ,_, rather_RB than_IN simple_JJ ep_NN -_: istemic_JJ necessity_NN ._.
+Is_VBZ it_PRP possible_JJ to_TO incorporate_VB the_DT affirmative_JJ ordering_VBG source_NN as_IN defined_VBN in_IN Section_NN 3.1_CD into_IN an_DT information_NN state_NN ,_, i.e._FW what_WP Yalcin_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- refers_VBZ to_TO as_IN s_PRP ?_.
+Veltman_NNP 's_POS -LRB-_-LRB- 1996_CD -RRB-_-RRB- proposal_NN can_MD help_VB us_PRP here_RB ._.
+In_IN order_NN to_TO account_VB for_IN the_DT semantics_NNS of_IN nor_CC -_: mally_RB and_CC presumably_RB ,_, Veltman_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- propose_VBP that_IN an_DT information_NN state_NN is_VBZ a_DT pair_NN =_SYM <_FW ,_, s_VBZ >_NN ._.
+s_PRP is_VBZ a_DT proposition_NN and_CC Yalcin_NNP 's_POS -LRB-_-LRB- 2007_CD -RRB-_-RRB- s_PRP or_CC Sw_NN ,_, x_LS is_VBZ one_CD type_NN of_IN Veltman_NNP 's_POS -LRB-_-LRB- 1996_CD -RRB-_-RRB- s._NN is_VBZ an_DT expectation_NN pat_NN -_: tern_NN ,_, i.e._FW an_DT ordering_VBG of_IN possible_JJ worlds_NNS ,_, where_WRB w_FW v_FW iff_FW every_DT expectation_NN which_WDT is_VBZ met_VBN by_IN v_NN is_VBZ also_RB met_VBN by_IN w_NN -LRB-_-LRB- Veltman_NNP 1996_CD :_: 13_CD -RRB-_-RRB- ._.
+Combining_NNP Veltman_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- and_CC Yalcin_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, I_PRP propose_VBP that_IN for_IN yídìng_NN and_CC shìbì_VB the_DT in_IN -_: formation_NN state_NN is_VBZ also_RB a_DT pair_NN and_CC that_IN =_SYM <_FW A_DT ,_, s_VBZ >_NN ._.
+s_PRP is_VBZ a_DT proposition_NN ,_, as_IN in_IN Veltman_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- and_CC Yalcin_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ._.
+A_DT is_VBZ an_DT affirmative_JJ ordering_VBG ,_, where_WRB w_NN A_DT v_NN if_IN and_CC only_RB if_IN every_DT proposition_NN which_WDT is_VBZ affirmed_VBN to_TO be_VB true_JJ in_IN v_NN is_VBZ also_RB affirmed_VBN to_TO be_VB true_JJ in_IN w._NN also_RB have_VBP possibility_NN must_MD be_VB true_JJ in_IN one_CD of_IN the_DT absolutely_RB affirmative_JJ worlds_NNS ._.
+This_DT condition_NN is_VBZ stated_VBN as_IN AffA_NNP -LCB-_-LRB- w_NN :_: |_FW |_FW |_FW |_FW w_FW ,_, M_NNP =_SYM 1_CD -RCB-_-RRB- ._.
+If_IN the_DT condition_NN does_VBZ not_RB hold_VB ,_, then_RB A_DT fails_VBZ and_CC uttering_VBG the_DT |_JJ |_NN yídìng_NN -LRB-_-LRB- -RRB-_-RRB- |_FW |_FW M_NNP pro-_JJ duces_NNS an_DT absurd_JJ state_NN ._.
+As_IN for_IN the_DT intensification_NN reading_NN ,_, since_IN this_DT is_VBZ not_RB an_DT inference_NN or_CC judgment_NN ,_, s_VBZ does_VBZ not_RB equal_JJ to_TO the_DT speaker_NN 's_POS knowledge_NN in_IN w._NN Instead_RB of_IN updating_VBG the_DT information_NN state_NN ,_, an_DT intensification_NN reading_NN simply_RB performs_VBZ a_DT test_NN ,_, as_IN stated_VBN in_IN -LRB-_-LRB- 15b_JJ -RRB-_-RRB- ._.
+As_RB long_RB as_RB is_VBZ true_JJ in_IN all_DT of_IN the_DT absolutely_RB affirmative_JJ worlds_NNS ,_, then_RB |_CD |_SYM yídìng_VBG -LRB-_-LRB- -RRB-_-RRB- |_FW |_FW M_NNP gives_VBZ back_RP the_DT original_JJ information_NN state_NN ._.
+If_IN the_DT condition_NN does_VBZ not_RB hold_VB ,_, then_RB an_DT absurd_JJ state_NN is_VBZ yielded_VBN ._.
+How_WRB about_RB shìbì_CD ?_.
+As_IN pointed_VBN out_RP in_IN Section_NN 3.1_CD ,_, the_DT difference_NN between_IN yídìng_NN and_CC shìbìlies_NNS in_IN that_IN the_DT modal_JJ base_NN of_IN shìbì_NN is_VBZ underspecified_VBN ._.
+If_IN we_PRP examine_VBP the_DT information_NN state_NN carefully_RB ,_, we_PRP can_MD find_VB that_DT s_VBZ in_IN functions_NNS in_IN a_DT way_NN similar_JJ to_TO a_DT modal_JJ base_NN ._.
+Hence_RB ,_, I_PRP propose_VBP that_IN the_DT s_PRP in_IN the_DT in_IN -_: formation_NN state_NN for_IN shíbíis_NNS underspecified_VBD and_CC must_MD be_VB resolved_VBN before_IN a_DT sentence_NN containing_VBG shìbìcan_NN get_VB an_DT appropriate_JJ interpretation_NN ._.
+I_PRP formalize_VBP the_DT idea_NN as_IN follows_VBZ :_: -LRB-_-LRB- 16_CD -RRB-_-RRB- a._IN <_CD A_DT ,_, s_VBZ =_SYM ?_.
+>_FW |_FW |_FW shìbì_FW -LRB-_-LRB- -RRB-_-RRB- |_JJ |_NN M_NNP b._NNP Suppose_VB that_DT ,_, forms_NNS a_DT -LRB-_-LRB- mini_NNS -RRB-_-RRB- dis_SYM -_: course_NN ._.
+,_, are_VBP propositions_NNS If_IN <_CD A_DT ,_, s_VBZ =_SYM ?_.
+>_NNP ,_, |_CD |_CD shìbì_NN -LRB-_-LRB- -RRB-_-RRB- |_FW |_FW M_NNP and_CC R_NNP -LRB-_-LRB- ,_, -RRB-_-RRB- ,_, then_RB s_VBZ =_SYM R_NN ._.
+In_IN -LRB-_-LRB- 16a_FW -RRB-_-RRB- ,_, s_VBZ =_SYM ?_.
+stands_NNS for_IN an_DT underspecified_VBN s_PRP ._.
+In_IN -LRB-_-LRB- 16b_JJ -RRB-_-RRB- ,_, R_NNP -LRB-_-LRB- ,_, -RRB-_-RRB- means_VBZ that_IN and_CC have_VB a_DT certain_JJ relation_NN R_NN ._.
+This_DT R_NN resolves_VBZ the_DT underspecified_JJ s._NN For_IN example_NN ,_, in_IN -LRB-_-LRB- 10b_JJ -RRB-_-RRB- ,_, the_DT two_CD clauses_NNS are_VBP related_VBN because_IN of_IN a_DT physical_JJ law_NN ,_, which_WDT says_VBZ that_IN one_CD needs_VBZ to_TO live_VB in_IN a_DT reasonable_JJ distance_NN from_IN where_WRB his_PRP$ job_NN is_VBZ ._.
+For_IN this_DT example_NN ,_, this_DT physical_JJ law_NN re_SYM -_: solves_VBZ s_PRP and_CC hence_RB -LRB-_-LRB- 10b_CD -RRB-_-RRB- can_MD get_VB an_DT appropriate_JJ interpretation_NN ._.
+Except_IN for_IN -LRB-_-LRB- 16a_CD ,_, b_NN -RRB-_-RRB- ,_, the_DT semantics_NNS of_IN shìbìis_NNS identical_JJ to_TO that_DT of_IN yídìng_NN ,_, as_IN in_IN -LRB-_-LRB- 15_CD -RRB-_-RRB- ._.
+Now_RB ,_, with_IN the_DT dynamic_JJ semantics_NNS -LRB-_-LRB- 15_CD -RRB-_-RRB- and_CC -LRB-_-LRB- 16_CD -RRB-_-RRB- ,_, we_PRP can_MD successfully_RB explain_VB the_DT two_CD conversations_NNS in_IN -LRB-_-LRB- 1_LS -RRB-_-RRB- ._.
+For_IN the_DT conversation_NN between_IN A_DT and_CC B_NNP ,_, since_IN B_NNP says_VBZ that_IN this_DT is_VBZ a_DT reasonable_JJ conjecture_NN ,_, s_PRP must_MD represent_VB the_DT speaker_NN 's_POS knowledge_NN ._.
+Therefore_RB ,_, -LRB-_-LRB- 15b_CD -RRB-_-RRB- is_VBZ ruled_VBN out_RP ._.
+The_DT information_NN state_NN is_VBZ updated_VBN and_CC we_PRP a_DT strong_JJ epistemic_JJ necessity_NN reading_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, for_IN the_DT conversation_NN between_IN A_DT and_CC B_NNP '_POS ,_, since_IN B_NNP '_POS says_VBZ that_IN this_DT is_VBZ a_DT widely-known_JJ fact_NN ,_, s_PRP can_MD not_RB be_VB equal_JJ to_TO the_DT speaker_NN 's_POS knowledge_NN ._.
+Hence_RB ,_, -LRB-_-LRB- 15b_CD -RRB-_-RRB- kicks_VBZ in_IN and_CC we_PRP get_VBP an_DT intensification_NN reading_NN ._.
+In_IN this_DT section_NN ,_, I_PRP propose_VBP dynamic_JJ semantics_NNS for_IN yídìng_NN and_CC shìbì_NN ._.
+Both_DT of_IN these_DT adverbials_NNS have_VBP an_DT information_NN state_NN <_CD A_NNP ,_, s_VBZ >_CD ,_, where_WRB s_PRP is_VBZ a_DT proposition_NN and_CC A_DT is_VBZ an_DT affirmative_JJ ordering_VBG ._.
+To_TO derive_VB a_DT strong_JJ epistemic_JJ necessity_NN reading_NN ,_, yídìng_NN and_CC shìbìupdate_NN A_DT with_IN a_DT proposition_NN they_PRP present_VBP and_CC specify_VBP that_IN the_DT proposition_NN is_VBZ a_DT subset_NN of_IN or_CC equal_JJ to_TO s_PRP ._.
+This_DT update_VBP holds_VBZ if_IN is_VBZ true_JJ in_IN one_CD of_IN the_DT ab_SYM -_: solutely_JJ affirmative_JJ worlds_NNS ._.
+To_TO produce_VB an_DT intensi_NN -_: fication_NN reading_NN ,_, a_DT check_NN is_VBZ performed_VBN on_IN an_DT information_NN state_NN :_: if_IN is_VBZ true_JJ in_IN all_DT of_IN the_DT absolute_JJ -_: ly_RB affirmative_JJ worlds_NNS ,_, the_DT original_JJ information_NN state_NN is_VBZ returned_VBN ._.
+If_IN the_DT condition_NN is_VBZ not_RB satisfied_JJ ,_, neither_DT strong_JJ epistemic_JJ necessity_NN reading_NN nor_CC intensifica_NN -_: tion_JJ reading_NN can_MD be_VB produced_VBN ._.
+This_DT is_VBZ the_DT unified_VBN semantics_NNS for_IN yídìng_NN and_CC shìbì_NN ._.
+Their_PRP$ difference_NN is_VBZ that_IN the_DT s_PRP in_IN an_DT information_NN state_NN <_CD A_NNP ,_, s_VBZ >_CD for_IN shìbìis_NNS underspecified_VBD ,_, and_CC needs_VBZ to_TO be_VB contextually_RB resolved_VBN so_RB that_IN a_DT proposition_NN presented_VBN by_IN shìbìcan_JJ get_VB a_DT proper_JJ reading_NN ._.
+4_CD Conclusion_NN In_IN this_DT paper_NN ,_, I_PRP propose_VBP dynamic_JJ semantics_NNS for_IN yídìng_NN and_CC shìbì_NN because_IN truth-conditional_JJ seman_NN -_: tics_NNS can_MD not_RB deal_VB with_IN contextual_JJ effects_NNS in_IN the_DT se_FW -_: mantics_NNS of_IN yídìng_NN and_CC shìbì_NN ._.
+Following_VBG Veltman_NNP -LRB-_-LRB- 1996_CD -RRB-_-RRB- ,_, I_PRP propose_VBP an_DT information_NN state_NN is_VBZ a_DT pair_NN <_CD A_NNP ,_, s_VBZ >_CD ,_, where_WRB s_PRP is_VBZ a_DT proposition_NN and_CC A_DT is_VBZ an_DT af_SYM -_: firmative_JJ ordering_VBG ._.
+Yídìng_NNP -LRB-_-LRB- -RRB-_-RRB- performs_VBZ update_VB on_IN an_DT information_NN state_NN :_: A_DT is_VBZ update_VB with_IN and_CC s_PRP is_VBZ specified_VBN to_TO be_VB a_DT subset_NN of_IN or_CC equal_JJ of_IN ,_, as_RB long_RB as_RB is_VBZ true_JJ in_IN one_CD of_IN the_DT absolutely_RB affirmative_JJ worlds_NNS ._.
+Otherwise_RB ,_, uttering_VBG yídìng_NN -LRB-_-LRB- -RRB-_-RRB- leads_VBZ to_TO an_DT absurd_JJ state_NN ._.
+This_DT is_VBZ how_WRB a_DT strong_JJ epistemic_JJ necessity_NN reading_NN is_VBZ derived_VBN ._.
+On_IN the_DT other_JJ hand_NN ,_, to_TO yield_VB an_DT intensification_NN reading_NN ,_, yídìng_NN -LRB-_-LRB- -RRB-_-RRB- performs_VBZ a_DT test_NN on_IN an_DT infor_NN -_: mation_NN state_NN ._.
+Yídìng_NNP -LRB-_-LRB- -RRB-_-RRB- gives_VBZ back_RP the_DT original_JJ in_IN -_: formation_NN state_NN as_RB long_RB as_RB is_VBZ true_JJ in_IN all_DT of_IN the_DT absolutely_RB affirmative_JJ worlds_NNS ._.
+Otherwise_RB ,_, an_DT ab_SYM -_: surd_JJ state_NN is_VBZ produced_VBN ._.
+As_IN for_IN shìbì_NN ,_, its_PRP$ semantics_NNS is_VBZ identical_JJ to_TO that_DT of_IN yídìng_NN ,_, except_IN for_IN the_DT following_NN :_: the_DT s_PRP in_IN an_DT infor_NN -_: mation_NN state_NN for_IN shìbìis_NNS underspecified_VBD and_CC needs_VBZ to_TO be_VB resolved_VBN before_IN a_DT proposition_NN presented_VBN by_IN shìbì_NN can_MD get_VB an_DT appropriate_JJ interpretation_NN ._.
+The_DT information_NN needed_VBN to_TO resolve_VB the_DT underspecified_VBN s_PRP for_IN shìbìmust_NN be_VB inferred_VBN from_IN the_DT context_NN ._.
+Acknowledgements_NNS I_PRP hereby_VBP acknowledge_VBP the_DT financial_JJ support_NN from_IN Ministry_NNP of_IN Science_NNP and_CC Technology_NNP ,_, Taiwan_NNP ,_, un_SYM -_: der_NN the_DT grant_NN number_NN MOST_JJS 103-2410-H-194-037_NN ._.
+I_PRP also_RB thank_VBP my_PRP$ part-time_JJ research_NN assistant_NN Hsuan_NNP -_: Hsiang_NNP Wang_NNP for_IN collecting_VBG data_NNS and_CC for_IN a_DT prelimi_NN -_: nary_PDT analysis_NN ._.
+References_NNS Chang_NNP ,_, Yung-Li_NNP ._.
+2000_CD ._.
+Hànyǔ_NNP lùnduàn_NNP huì_NNP de_IN yǔyì_NNP -LSB-_NNP On_IN the_DT Semantics_NNS of_IN Predictive-Assertive_JJ hui_NNS in_IN Manda_NNP -_: rin_SYM -RSB-_NNP ._.
+Paper_NNP presented_VBD at_IN the_DT 9th_NNP International_NNP Confer_NNP -_: ence_NN on_IN Chinese_JJ Linguistics_NNPS ._.
+Singapore_NNP ._.
+Chen_NNP ,_, Yong_NNP ._.
+2011_CD ._.
+Yídìng_NNP de_FW xūhuà_FW jí_FW liǎng_FW zhǒng_FW yǔyì_FW de_FW fēnhuà_FW -LSB-_NNP Grammaticalization_NNP of_IN Yídìng_NNP and_CC Two_CD Types_NNS of_IN Modality_NNP Diversification_NN -RSB-_NNP ._.
+Journal_NNP of_IN Wu_NNP -_: han_NN University_NNP of_IN Science_NNP &_CC Technology_NNP -LRB-_-LRB- Social_NNP Sci_NNP -_: ence_NN Edition_NNP -RRB-_-RRB- ,_, 13_CD ,_, 5_CD ,_, pp._SYM 605-609_CD ._.
+Chierchia_NNP ,_, Gennro_NNP ._.
+1995_CD ._.
+Dynamics_NNP of_IN Meaning_NNP :_: Anaphora_NNP ,_, Presupposition_NNP and_CC the_DT Theory_NNP of_IN Gram_NNP -_: mar._FW ._.
+Chicago_NNP :_: University_NNP of_IN Chicago_NNP ._.
+Ding_NNP ,_, Ping_NNP ._.
+2008a_NNS ._.
+Yě_NNP shuō_NNP fùcí_NNP yídìng_NNP -LSB-_NNP Adverb_NNP Yídìng_NNP Revisited_NNP -RSB-_NNP ._.
+Journal_NNP of_IN Northwest_NNP University_NNP for_IN Nationalities_NNP -LRB-_-LRB- Philosophy_NNP and_CC Social_NNP Sciences_NNPS -RRB-_-RRB- ,_, Year_NN 2008_CD ,_, Issue_NN 5_CD ,_, pp._SYM 108-112_CD ._.
+Ding_NNP ,_, Ping_NNP ._.
+2008b_JJ ._.
+Yídìng_VBG yǔ_FW kěndìng_FW zuò_FW zhuàngyǔ_FW shí_FW de_FW bǐjào_FW -LSB-_NNP Comparison_NNP of_IN Adverb_NNP Yídìng_NNP and_CC Adverb_NNP Kěndìng_NNP -RSB-_NNP ._.
+Journal_NNP of_IN Southwest_NNP University_NNP for_IN Na_NNP -_: tionalities_NNS -LRB-_-LRB- Humanities_NNS and_CC Social_NNP Sciences_NNPS -RRB-_-RRB- ,_, Year_NN 2008_CD ,_, Issue_NN 8_CD ,_, pp._SYM 236-240_CD ._.
+von_NNP Fintel_NNP ,_, Kai_NNP and_CC Sabine_NNP Iatridou_NNP ._.
+2008_CD ._.
+How_WRB to_TO Say_VB Ought_NNP in_IN Foreign_NNP :_: The_DT Composition_NN of_IN Weak_NNP Neces_NNP -_: sity_NN Modals_NNS ._.
+In_IN Time_NNP and_CC Modality_NNP ._.
+Eds_NNS ._.
+J._NNP Guéron_NNP and_CC J._NNP Lecarme_NNP ._.
+Pp._NNP 115-141_CD ._.
+Berlin_NNP :_: Springer_NNP ._.
+Groenendijk_NNP ,_, Jeroen_NNP and_CC Martin_NNP Stokhof_NNP ._.
+1991_CD ._.
+Dynam_NNP -_: ic_JJ Predicate_NNP Logic_NNP ._.
+Linguistics_NNPS and_CC Philosophy_NNP ,_, 14_CD ,_, pp._SYM 39-100_CD ._.
+Kratzer_NNP ,_, Angelika_NNP ._.
+1991_CD ._.
+Modality_NN ._.
+In_IN Sematics_NNPS :_: An_DT International_NNP Handbook_NNP of_IN Contemporary_NNP Research_NNP ._.
+Eds_NNS ._.
+von_NNP Stechow_NNP ,_, A._NN ,_, Wunderlich_NNP ,_, D._NNP Pp._NNP 639-650_CD ._.
+Berlin_NNP :_: de_IN Gruyter_NNP ._.
+Kratzer_NNP ,_, Angelika_NNP ._.
+2012_CD -LSB-_JJ 1981_CD -RSB-_NNP ._.
+The_DT Notional_NNP Category_NNP of_IN modality_NN ._.
+In_IN Modals_NNPS and_CC Conditionals_NNPS ._.
+Ed_NNP ._.
+Ange_SYM -_: lika_FW Kratzer_NNP ._.
+Pp._NNP 21-69_CD ._.
+Oxford_NNP :_: Oxford_NNP University_NNP ._.
+Li_NNP ,_, Chengjun_NNP ._.
+2005_CD ._.
+Fùcí_NNP yídìng_NNP shuōluè_NNP -LSB-_NNP On_IN Adverb_NNP Yídìng_NNP -RSB-_NNP ._.
+Lǐlù_NNP yùkān_NNP -LSB-_NNP Theory_NNP Monthly_JJ -RSB-_NN ,_, Year_NN 2005_CD ,_, Is_VBZ -_: sue_VB 5_CD ,_, pp._SYM 126-127_CD ._.
+Li_NNP ,_, Suying_NNP ._.
+2009_CD ._.
+Yǔqì_NNP fùcí_NNP shìbì_NNP de_IN xíngchéng_NNP -LSB-_NNP On_IN the_DT Formation_NN of_IN Modal_NNP Adverb_NNP Shìbì_NNP -RSB-_NNP ._.
+Yǔwén_NNP xuékān_NNP -LSB-_NNP Journal_NNP of_IN Language_NNP and_CC Literature_NNP -RSB-_NNP ,_, Year_NN 2009_CD ,_, Issue_NNP 10_CD ,_, pp._SYM 42-44_CD ._.
+Liu_NNP ,_, Hsiao-mei_NNP ._.
+1997_CD ._.
+Guó_NNP Mǐn_NNP Kèyǔ_NNP de_FW dòngtài_FW wěnfǎ_FW tǐxì_FW jí_FW dòngtàicí_FW de_FW shàngjiā_FW dòngmào_FW yǔyì_FW -LSB-_NNP Mood_NNP System_NNP and_CC Interaction_NNP between_IN Mood_NNP and_CC Aspect_NNP in_IN Mandarin_NNP ,_, Taiwanese_JJ and_CC Hakka_JJ -RSB-_NN ._.
+Taipei_NNP :_: Crane_NNP ._.
+Portner_NNP ,_, Paul_NNP ._.
+2008_CD ._.
+Modality_NN ._.
+Cambridge_NNP :_: Cambridge_NNP University_NNP Press_NNP ._.
+Veltman_NNP ,_, Frank_NNP ._.
+1996_CD ._.
+Defaults_NNS in_IN Update_NNP Semantics_NNP ._.
+Journal_NNP of_IN Philosophical_NNP Logic_NNP ,_, 25_CD ,_, pp._SYM 221-261_CD ._.
+Wang_NNP ,_, Meihua_NNP ._.
+2007_CD ._.
+Shìbìde_NNP cíhuìhuà_NNP -LSB-_NNP Lexicalization_NNP of_IN Shìbì_NNP -RSB-_NNP ._.
+Journal_NNP of_IN Hunan_NNP First_NNP Normal_NNP College_NNP ,_, 7_CD ,_, 1_CD ,_, pp._SYM 101-103_CD ._.
+Xu_NNP ,_, Xiaomei_NNP ._.
+1995_CD ._.
+Qiǎn_NNP tán_JJ hànyǔ_NN wùbì_NN ,_, yídìng_NN ,_, quèxìn_JJ zài_FW yīngyǔ_FW zhōng_FW de_FW biǎodáfǎ_FW -LSB-_FW On_IN the_DT English_NNP Translations_NNPS of_IN Wùbì_NNP ,_, yídìng_NNP and_CC Quèxìn_NNP -RSB-_NNP ._.
+Huáiyīn_NNP gōngyè_NNP zhuānkē_NNP xuéxiào_NNP xuébào_NNP -LSB-_NNP Journal_NNP of_IN Huaiyin_NNP Junior_NNP College_NNP of_IN Industry_NNP -RSB-_NNP ,_, 4_CD ,_, 1_CD ,_, pp._SYM 56-57_CD ._.
+Yalcin_NNP ,_, Seth_NNP ._.
+2007_CD ._.
+Epistemic_NNP Modals_NNP ._.
+Mind_NN ,_, 116_CD ,_, pp._SYM 983-1026_CD ._.
+Zhou_NNP ,_, Minli_NNP ._.
+2014_CD ._.
+Xīnwén_NNP bàodǎo_NNP yǔtǐ_NNP zhōng_NNP de_IN fùcí_NNP shìbì_NNP qiǎnxī_NNP --_: jiān_JJ tán_JJ yǔ_NN bìrán_NNP de_IN bǐjiào_NNP -LSB-_NNP On_IN Adverb_NNP Shìbì_NNP in_IN News_NNP Report_NNP and_CC Its_PRP$ Comparison_NN with_IN Bìrán_NNP -RSB-_NNP ._.
+Journal_NNP of_IN Xinyu_NNP University_NNP ,_, 19_CD ,_, 1_CD ,_, pp._SYM 42-45_CD ._.

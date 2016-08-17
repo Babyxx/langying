@@ -1,0 +1,241 @@
+Distant_JJ Supervision_NNP for_IN Entity_NNP Linking_NNP Abstract_NNP Entity_NNP linking_VBG is_VBZ an_DT indispensable_JJ oper_NN -_: ation_NN of_IN populating_VBG knowledge_NN reposito_NN -_: ries_NNS for_IN information_NN extraction_NN ._.
+It_PRP stud_VBD -_: ies_NNS on_IN aligning_VBG a_DT textual_JJ entity_NN mention_NN to_TO its_PRP$ corresponding_JJ disambiguated_JJ entry_NN in_IN a_DT knowledge_NN repository_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP a_DT new_JJ paradigm_NN named_VBN dis_SYM -_: tantly_RB supervised_JJ entity_NN linking_VBG -LRB-_-LRB- DSEL_NNP -RRB-_-RRB- ,_, in_IN the_DT sense_NN that_IN the_DT disambiguated_JJ entities_NNS that_WDT belong_VBP to_TO a_DT huge_JJ knowledge_NN reposi_NN -_: tory_JJ -LRB-_-LRB- Freebase_NNP -RRB-_-RRB- are_VBP automatically_RB aligned_VBN to_TO the_DT corresponding_JJ descriptive_JJ webpages_NNS -LRB-_-LRB- Wiki_NNP pages_NNS -RRB-_-RRB- ._.
+In_IN this_DT way_NN ,_, a_DT large_JJ scale_NN of_IN weakly_RB labeled_VBN data_NNS can_MD be_VB generat_SYM -_: ed_VBN without_IN manual_NN annotation_NN and_CC fed_VBN to_TO a_DT classifier_NN for_IN linking_VBG more_JJR newly_RB dis_SYM -_: covered_VBN entities_NNS ._.
+Compared_VBN with_IN tradi_NN -_: tional_JJ paradigms_NNS based_VBN on_IN solo_NN knowl_NN -_: edge_NN base_NN ,_, DSEL_NNP benefits_NNS more_RBR via_IN joint_JJ -_: ly_RB leveraging_VBG the_DT respective_JJ advantages_NNS of_IN Freebase_NNP and_CC Wikipedia_NNP ._.
+Specifically_RB ,_, the_DT proposed_VBN paradigm_NN facilitates_VBZ bridging_VBG the_DT disambiguated_JJ labels_NNS -LRB-_-LRB- Freebase_NNP -RRB-_-RRB- of_IN entities_NNS and_CC their_PRP$ textual_JJ descriptions_NNS -LRB-_-LRB- Wikipedi_NNP -_: a_LS -RRB-_-RRB- for_IN Web-scale_JJ entities_NNS ._.
+Experiments_NNS conducted_VBN on_IN a_DT dataset_NN of_IN 140,000_CD items_NNS and_CC 60,000_CD features_NNS achieve_VB a_DT baseline_NN F1_SYM -_: measure_NN of_IN 0.517_CD ._.
+Furthermore_RB ,_, we_PRP ana_SYM -_: lyze_VB the_DT feature_NN performance_NN and_CC improve_VB the_DT F1-measure_NN to_TO 0.545_CD ._.
+1_CD Introduction_NNP To_TO build_VB the_DT ``_`` Digital_NNP Alexandria_NNP Library_NNP ''_'' for_IN our_PRP$ human_JJ race_NN ,_, researchers_NNS in_IN the_DT NLP_NNP community_NN have_VBP dedicated_VBN themselves_PRP to_TO Information_NNP Extrac_NNP -_: tion_NN -LRB-_-LRB- Sarawagi_NNP ,_, 2008_CD -RRB-_-RRB- over_IN the_DT past_JJ decades_NNS ._.
+In_IN -_: formation_NN extraction_NN focuses_VBZ on_IN processing_VBG natu_SYM -_: ral_NN language_NN text_NN to_TO produce_VB structured_JJ knowledge_NN ,_, which_WDT is_VBZ usually_RB represented_VBN as_IN triples_NNS -LRB-_-LRB- two_CD entities_NNS and_CC their_PRP$ relation_NN -RRB-_-RRB- for_IN the_DT convenience_NN of_IN storage_NN in_IN a_DT database_NN ,_, retrieval_NN ,_, or_CC even_RB automatic_JJ reason_NN -_: ing_NN ._.
+For_IN example_NN ,_, if_IN we_PRP send_VBP a_DT natural_JJ language_NN sentence_NN ,_, Michael_NNP Jordan_NNP visited_VBD CMU_NNP yesterday_NN ,_, to_TO the_DT pipeline_NN of_IN information_NN extraction_NN machine_NN ,_, it_PRP will_MD be_VB processed_VBN by_IN three_CD operations_NNS in_IN advance_NN ,_, i.e._FW ,_, •_CD Named_VBN Entity_NNP Recognition_NNP -LRB-_-LRB- Nadeau_NNP and_CC Sekine_NNP ,_, 2007_CD -RRB-_-RRB- :_: Entities_NNS should_MD firstly_RB be_VB i_FW -_: dentified_VBN and_CC classified_VBN into_IN predefined_VBN cate_NN -_: gories_NNS ,_, such_JJ as_IN person_NN -LRB-_-LRB- PER_NNP -RRB-_-RRB- ,_, location_NN -LRB-_-LRB- LOC_NNP -RRB-_-RRB- and_CC organization_NN -LRB-_-LRB- ORG_NNP -RRB-_-RRB- ._.
+The_DT sentence_NN will_MD be_VB annotated_VBN as_IN -LSB-_NNP Michael_NNP Jordan_NNP -RSB-_NNP /_CD PER_NNP vis_FW -_: ited_VBN -LSB-_NNP CMU_NNP -RSB-_NNP /_CD ORG_NNP yesterday_NN ,_, after_IN being_VBG pro-_JJ cessed_VBN by_IN this_DT operation_NN ._.
+•_SYM Coreference_NNP Resolution_NNP -LRB-_-LRB- Ng_NNP ,_, 2010_CD -RRB-_-RRB- :_: Some_DT entities_NNS may_MD have_VB alias_NNS or_CC abbreviations_NNS ._.
+It_PRP is_VBZ well_RB known_VBN that_IN CMU_NNP is_VBZ the_DT abbreviation_NN for_IN Carnegie_NNP Mellon_NNP University_NNP ._.
+The_DT knowl_NN -_: edge_NN repository_NN may_MD only_RB store_VB the_DT regular_JJ -_: ized_VBN name_NN ,_, e.g._FW ,_, Carnegie_NNP Mellon_NNP University_NNP ,_, for_IN this_DT named_VBN entity_NN ,_, so_RB coreference_JJ resolu_NN -_: tion_NN is_VBZ indeed_RB necessary_JJ ._.
+•_NNP Relation_NNP Extraction_NNP -LRB-_-LRB- Bach_NNP and_CC Badaskar_NNP ,_, 2007_CD -RRB-_-RRB- :_: After_IN both_DT of_IN the_DT named_VBN entities_NNS -LRB-_-LRB- -LSB-_NNP Michael_NNP Jordan_NNP -RSB-_NNP /_CD PER_NNP and_CC -LSB-_NNP Carnegie_NNP Mel_NNP -_: lon_NN University_NNP -RSB-_NNP /_CD ORG_NNP -RRB-_-RRB- are_VBP recognized_VBN and_CC regularized_VBN ,_, we_PRP begin_VBP to_TO study_VB on_IN the_DT rela_NN -_: tion_NN between_IN them_PRP ._.
+In_IN this_DT case_NN ,_, we_PRP extrac_VBP -_: t_IN the_DT verb_NN visited_VBD and_CC map_VB it_PRP to_TO the_DT relation_NN visit_NN ._.
+Then_RB the_DT output_NN will_MD be_VB a_DT triple_RB ,_, i.e._FW ,_, -LRB-_-LRB- Michael_NNP Jordan_NNP -LSB-_NNP PER_NNP -RSB-_NNP ,_, visit_NN ,_, Carnegie_NNP Mel_NNP -_: lon_NN University_NNP -LSB-_NNP ORG_NNP -RSB-_NNP -RRB-_-RRB- ._.
+So_RB far_RB ,_, we_PRP only_RB abstract_JJ the_DT triple_JJ as_IN the_DT struc_NN -_: tured_VBN knowledge_NN from_IN the_DT natural_JJ language_NN sen_NN -_: tence_NN ._.
+However_RB ,_, it_PRP devotes_VBZ nothing_NN to_TO increasing_VBG the_DT scale_NN of_IN the_DT knowledge_NN repository_NN such_JJ as_IN Free_NNP -_: base_NN -LRB-_-LRB- Bollacker_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- which_WDT is_VBZ a_DT huge1_CD ,_, public2_CD ,_, collaborative3_CD -LRB-_-LRB- Bollacker_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- and_CC online_JJ knowledge_NN base_NN with_IN billions_NNS of_IN triples_NNS and_CC millions_NNS of_IN disambiguated_JJ entities_NNS ,_, and_CC is_VBZ primari_SYM -_: ly_RB maintained_VBN by_IN Google_NNP Inc._NNP ,_, because_IN we_PRP even_RB do_VBP not_RB know_VB which_WDT exact_JJ Michael_NNP Jordan_NNP the_DT triple_JJ -LRB-_-LRB- Michael_NNP Jordan_NNP -LSB-_NNP PER_NNP -RSB-_NNP ,_, visit_NN ,_, Carnegie_NNP Mellon_NNP U_NNP -_: niversity_NN -LSB-_NNP ORG_NNP -RSB-_NNP -RRB-_-RRB- refers_VBZ to_TO in_IN Freebase_NNP ._.
+As_IN illus_NN -_: trated_VBN in_IN Figure_NN 1_CD ,_, there_EX are_VBP three_CD different_JJ person_NN -_: s_PRP named_VBD Michael_NNP Jordan_NNP in_IN Freebase_NNP and_CC each_DT of_IN them_PRP may_MD be_VB the_DT protagonist_NN of_IN that_DT news_NN ._.
+There_EX -_: fore_NN ,_, to_TO populate_VB knowledge_NN repositories_NNS -LRB-_-LRB- Ji_NNP and_CC Grishman_NNP ,_, 2011_CD -RRB-_-RRB- ,_, we_PRP need_VBP the_DT fourth_JJ operation_NN :_: •_CD Entity_NNP Linking_NNP -LRB-_-LRB- Rao_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- :_: It_PRP con_RB -_: cerns_NNS about_IN the_DT study_NN of_IN aligning_VBG a_DT textu_NN -_: al_IN entity_NN mention_NN to_TO the_DT corresponding_JJ dis_NN -_: ambiguated_VBN entry_NN in_IN a_DT knowledge_NN reposito_NN -_: ry_NN ._.
+More_RBR specifically_RB ,_, since_IN there_EX are_VBP sever_VBP -_: al_IN Michael_NNP Jordan_NNP disambiguated_VBN by_IN differ_VBP -_: ent_NN MIDs_NNS -LRB-_-LRB- machine_NN identifiers_NNS -RRB-_-RRB- as_IN illustrated_VBN in_IN Figure_NN 1_CD ,_, we_PRP may_MD build_VB a_DT classifier_NN that_WDT can_MD help_VB assign_VB the_DT Michael_NNP Jordan_NNP in_IN the_DT ex_FW -_: tracted_VBN triplet_NN -LRB-_-LRB- Michael_NNP Jordan_NNP -LSB-_NNP PER_NNP -RSB-_NNP ,_, visit_NN ,_, Carnegie_NNP Mellon_NNP University_NNP -LSB-_NNP ORG_NNP -RSB-_NNP -RRB-_-RRB- to_TO the_DT exact_JJ named_VBN entity_NN in_IN Freebase_NNP or_CC find_VB out_RP that_IN this_DT Michael_NNP Jordan_NNP is_VBZ a_DT newly_RB discov_SYM -_: ered_VBD named_VBN entity_NN -LRB-_-LRB- NIL_NNP -RRB-_-RRB- ._.
+Hachey_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC Rao_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- eluci_SYM -_: date_NN that_IN most_JJS of_IN the_DT literatures_NNS -LRB-_-LRB- Bunescu_NNP and_CC Pas_NNP -_: ca_MD ,_, 2006_CD ;_: Mihalcea_NNP and_CC Csomai_NNP ,_, 2007_CD ;_: Cucerzan_NNP ,_, 2007_CD ;_: Milne_NNP and_CC Witten_NNP ,_, 2008_CD ;_: Ratinov_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- and_CC the_DT entity_NN linking_VBG tracks4_CD in_IN TAC-KBP_NNP -LRB-_-LRB- McNamee_NNP and_CC Dang_NNP ,_, 2009_CD ;_: Ji_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- con_NN -_: centrate_NN on_IN linking_VBG ambiguous_JJ entities_NNS to_TO the_DT en_FW -_: tries_VBZ in_IN Wikipedia_NNP ,_, whereas_IN our_PRP$ ultimate_JJ goal_NN is_VBZ to_TO populate_VB the_DT structured_JJ knowledge_NN repository_NN ,_, e.g._FW ,_, Freebase_NNP ._.
+However_RB ,_, to_TO the_DT best_JJS of_IN our_PRP$ knowledge_NN ,_, few_JJ works_NNS -LRB-_-LRB- Zheng_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- concern_NN about_IN dis_SYM -_: ambiguating_VBG named_VBN entities_NNS using_VBG Freebase_NNP which_WDT contains_VBZ much_RB more_RBR entries_NNS but_CC less_JJR text_NN informa_NN -_: tion_NN for_IN each_DT entry_NN than_IN Wikipedia_NNP ._.
+Overall_RB ,_, Hachey_NNP et_FW al._FW -LRB-_-LRB- 2013_CD -RRB-_-RRB- and_CC Zheng_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- represent_VBP two_CD research_NN directions_NNS leverag_NN -_: 1According_VBG to_TO the_DT statistics_NNS released_VBN on_IN 10th_JJ March_NNP ,_, 2014_CD by_IN Google_NNP Inc._NNP ,_, there_EX are_VBP about_IN 1.9_CD billion_CD Freebase_NNP triples_NNS and_CC 43_CD million_CD entities_NNS ._.
+2The_JJ whole_JJ dump_NN of_IN Freebase_NNP can_MD be_VB downloaded_VBN from_IN https://developers.google.com/freebase/_JJ data_NNS 3One_NN can_MD access_VB to_TO Freebase_NNP and_CC contribute_VB more_JJR knowl_NN -_: edge_NN ._.
+4_CD http://www.nist.gov/tac/2013/KBP/_NNP EntityLinking/index_NNP ._.
+html_NN Figure_NN 1_CD :_: The_DT disambiguated_VBN entities_NNS with_IN the_DT same_JJ name_NN Michael_NNP Jordan_NNP in_IN Freebase_NNP ._.
+The_DT en_IN -_: tities_NNS in_IN Freebase_NN are_VBP disambiguated_VBN by_IN a_DT unique_JJ machine_NN identifier_NN ,_, e.g._FW ,_, the_DT famous_JJ basketbal_NN -_: l_NN player_NN ,_, Michael_NNP Jordan_NNP labeled_VBN by_IN 054c1_CD -LRB-_-LRB- MID_NNP -RRB-_-RRB- ._.
+ing_VBG Wikipedia_NNP and_CC Freebase_NNP ,_, respectively_RB ._.
+As_IN both_DT of_IN the_DT two_CD collaborative_JJ web_NN resources_NNS have_VBP their_PRP$ respective_JJ superiorities_NNS ,_, i.e._FW ,_, more_JJR context_NN infor_NN -_: mation_NN and_CC more_JJR disambiguated_JJ entities_NNS ,_, we_PRP be_VB -_: gin_NN to_TO study_VB a_DT new_JJ paradigm_NN that_WDT could_MD bridge_VB the_DT gap_NN between_IN those_DT two_CD separated_JJ repositories_NNS and_CC benefit_NN from_IN their_PRP$ respective_JJ advantages_NNS ._.
+From_IN the_DT perspective_NN of_IN supervised_JJ learning_NN ,_, entity_NN linking_VBG can_MD be_VB naturally_RB regarded_VBN as_IN a_DT classification_NN prob_SYM -_: lem_NN ._.
+To_TO build_VB a_DT training_NN dataset_NN for_IN disambiguating_VBG a_DT set_NN of_IN entities_NNS with_IN the_DT same_JJ name_NN ,_, we_PRP can_MD firstly_RB collect_VB the_DT sentences_NNS that_WDT mention_VBP that_IN name_NN from_IN webpages_NNS ,_, such_JJ as_IN Wiki_NNP pages5_CD ,_, and_CC then_RB manu_SYM -_: ally_NN annotate_VBP each_DT entity_NN mention_NN with_IN its_PRP$ unique_JJ machine_NN identifier_NN -LRB-_-LRB- MID_NNP -RRB-_-RRB- in_IN Freebase_NNP given_VBN the_DT contexts_NNS of_IN sentences_NNS that_IN it_PRP occurs_VBZ in_IN ._.
+However_RB ,_, hand-labeled_JJ data_NNS is_VBZ time_NN consuming_NN and_CC usually_RB applicable_JJ to_TO some_DT specific_JJ classes_NNS of_IN entities_NNS ,_, such_JJ as_IN person_NN -LRB-_-LRB- PER_NNP -RRB-_-RRB- ,_, location_NN -LRB-_-LRB- LOC_NNP -RRB-_-RRB- and_CC organization_NN -LRB-_-LRB- ORG_NNP -RRB-_-RRB- ._.
+Therefore_RB ,_, we_PRP look_VBP forward_RB to_TO an_DT approach_NN that_WDT averts_VBZ the_DT tedious_JJ and_CC laborious_JJ work_NN ._.
+Inspired_VBN by_IN the_DT idea_NN of_IN weak_JJ labeling_VBG -LRB-_-LRB- Fan_NN et_FW al._FW ,_, 2014_CD ;_: Craven_NNP et_FW al._FW ,_, 1999_CD -RRB-_-RRB- ,_, we_PRP contribute_VBP a_DT new_JJ paradigm_NN called_VBN distantly_RB supervised_VBN entity_NN linking_VBG -LRB-_-LRB- DSEL_NNP -RRB-_-RRB- without_IN manual_NN annotation_NN in_IN this_DT paper_NN ._.
+More_RBR specifically_RB ,_, we_PRP take_VBP advantage_NN of_IN a_DT heuris_NN -_: tic_JJ alignment_NN assumption_NN based_VBN on_IN crowd_NN sourc_NN -_: ing_NN to_TO connect_VB a_DT certain_JJ disambiguated_JJ entity_NN in_IN Freebase_NN with_IN its_PRP$ related_JJ webpages_NNS ._.
+In_IN these_DT web_NN -_: pages_NNS ,_, feature_VBP vectors_NNS can_MD be_VB extracted_VBN from_IN the_DT sentence-level_JJ textual_JJ contexts_NNS of_IN that_DT entity_NN men_NNS -_: tion_NN ,_, and_CC be_VB labeled_VBN by_IN its_PRP$ corresponding_JJ MID_NNP in_IN 5The_NNP Wiki_NNP page_NN for_IN the_DT famous_JJ basketball_NN play_NN -_: er_NN ,_, Michael_NNP Jordan_NNP ,_, is_VBZ http://en.wikipedia.org/_JJ wiki/Michael_NNP __NN jordan_NN ._.
+Figure_NN 2_CD :_: The_DT topic_NN equivalent_JJ webpages_NNS of_IN the_DT famous_JJ basketball_NN player_NN ,_, Michael_NNP Jordan_NNP in_IN Free_NNP -_: base_NN ._.
+Freebase_NN ._.
+Then_RB we_PRP can_MD produce_VB a_DT large_JJ scale_NN of_IN weakly_RB labeled6_CD dataset_NN in_IN this_DT way_NN ._.
+Moreover_RB ,_, it_PRP is_VBZ unrealistic_JJ to_TO learn_VB a_DT specific_JJ classifier_NN for_IN each_DT entity_NN ,_, as_IN there_EX are_VBP about_IN 43_CD million_CD disambiguat_NN -_: ed_VBD entities_NNS in_IN Freebase_NNP ._.
+To_TO tackle_VB with_IN those_DT chal_JJ -_: lenges_NNS ,_, we_PRP propose_VBP a_DT strategy_NN of_IN training_VBG a_DT general_JJ classifier_NN for_IN disambiguating_VBG multiple_JJ entities_NNS and_CC select_VB a_DT well_RB known_VBN classifier_NN ,_, i.e._FW ,_, liblinear_NN -LRB-_-LRB- Fan_NN et_FW al._FW ,_, 2008_CD -RRB-_-RRB- to_TO self-learn_VB the_DT weights_NNS among_IN the_DT high-dimensional_JJ sparse_JJ and_CC noisy_JJ features_NNS ._.
+Ex_SYM -_: periments_NNS are_VBP conducted_VBN on_IN a_DT dataset_NN of_IN 140,000_CD items_NNS and_CC 60,000_CD features_NNS ._.
+DSEL_NNP achieves_VBZ a_DT base_NN -_: line_NN F1-measure_NN of_IN 0.517_CD ._.
+Furthermore_RB ,_, we_PRP ana_SYM -_: lyze_VB the_DT performance_NN influenced_VBN by_IN other_JJ different_JJ features_NNS ,_, and_CC finally_RB the_DT F1-measure_NN is_VBZ improved_VBN to_TO 0.545_CD ._.
+2_CD Paradigm_NNP Traditional_JJ supervised_JJ learning_NN methods_NNS for_IN enti_NNS -_: ty_SYM disambiguation_NN require_VBP tedious_JJ labor_NN on_IN manual_NN annotation_NN to_TO build_VB training_NN datasets_NNS ._.
+Manual_NNP an_DT -_: notation_NN costs_VBZ a_DT lot_NN ,_, and_CC can_MD only_RB cover_VB some_DT spe_NN -_: cific_JJ category_NN ,_, e.g._FW ,_, person_NN names_NNS -LRB-_-LRB- Christen_NNP ,_, 2006_CD -RRB-_-RRB- as_RB well_RB ._.
+Therefore_RB ,_, we_PRP look_VBP forward_RB to_TO explor_VB -_: ing_VBG a_DT paradigm_NN that_WDT could_MD automatically_RB gener_VB -_: ate_VBD large_JJ scale_NN of_IN open-category_JJ training_NN datasets_NNS without_IN manual_NN annotation_NN ._.
+Based_VBN on_IN the_DT dataset_NN ,_, we_PRP aim_VBP to_TO build_VB a_DT practical_JJ classifier_NN and_CC generalize_VB it_PRP to_TO disambiguate_VB more_JJR unlinked_JJ entity_NN mentions_VBZ in_IN free_JJ texts_NNS ._.
+Freebase_NN contains_VBZ 43_CD million_CD disambiguated_JJ en_IN -_: tities_NNS falling_VBG into_IN 76_CD categories_NNS ._.
+Each_DT entity_NN is_VBZ assigned_VBN by_IN a_DT unique_JJ machine_NN identifer_NN -LRB-_-LRB- MID_NNP -RRB-_-RRB- ._.
+Those_DT MIDs_NNS are_VBP the_DT natural_JJ labels_NNS for_IN the_DT new_JJ -_: ly_RB identified_VBN entity_NN mentions_VBZ linking_VBG to_TO ._.
+Howev_NNP -_: er_NN ,_, there_EX are_VBP inadequate_JJ free_JJ texts_NNS locally_RB for_IN ex_FW -_: tracting_VBG features_NNS ,_, as_IN Freebase_NNP is_VBZ a_DT well-structured_JJ 6Auto-labeling_JJ via_IN crowd_NN sourcing_VBG may_MD naturally_RB bring_VB about_RB noise_NN ._.
+Therefore_RB ,_, we_PRP regard_VBP the_DT dataset_NN weakly_RB labeled_VBN ._.
+knowledge_NN repository_NN with_IN billions_NNS of_IN triples_NNS ._.
+Therefore_RB ,_, we_PRP resort_VBP to_TO other_JJ free-text_JJ corpus_NN that_WDT could_MD be_VB distantly_RB supervised_VBN by_IN Freebase_NNP and_CC the_DT key_JJ challenge_NN is_VBZ to_TO find_VB the_DT bridge_NN of_IN supervision_NN ._.
+Fortunately_RB ,_, every_DT entity_NN in_IN Freebase_NNP maintains_VBZ a_DT list_NN of_IN links_NNS to_TO its_PRP$ topic_NN equivalent_JJ webpages_NNS via_IN crowd_NN sourcing_VBG -LRB-_-LRB- Howe_NNP ,_, 2006_CD -RRB-_-RRB- as_IN shown_VBN in_IN Figure_NN 2_CD ._.
+These_DT links_NNS will_MD guide_VB us_PRP to_TO find_VB the_DT description_NN webpages_NNS for_IN that_DT entity_NN ._.
+Even_RB though_IN those_DT links_NNS involves_VBZ in_IN different_JJ languages_NNS ,_, we_PRP only_RB choose_VB the_DT English_NNP Wiki_NNP pages_NNS to_TO conduct_VB experiments_NNS ._.
+Overall_RB ,_, we_PRP jointly_RB exploit_VBP Freebase_NNP and_CC Wikipedi_NNP -_: a_DT to_TO automatically_RB construct_VB the_DT data_NNS for_IN training_VBG a_DT classifier_NN ._.
+3_CD Feature_NN For_IN each_DT entity_NN in_IN Freebase_NNP ,_, we_PRP find_VBP its_PRP$ topic_NN -_: equivalent_JJ Wiki_NNP page_NN and_CC extract_VB the_DT contextual_NN features_NNS of_IN its_PRP$ mention_NN at_IN sentence_NN level_NN ._.
+Generally_RB ,_, we_PRP simultaneously_RB choose_VB K_NNP -LRB-_-LRB- K_NNP =_SYM 1_CD ,_, 2_CD ,_, 3_CD -RRB-_-RRB- open-class_JJ words_NNS -LRB-_-LRB- Van_NNP Petten_NNP and_CC Kutas_NNP ,_, 1991_CD -RRB-_-RRB- ,_, namely_RB nouns_NNS ,_, verbs_NNS ,_, adjectives_NNS and_CC ad_NN -_: verbs_NNS ,_, in_IN front_NN and_CC behind_IN the_DT given_VBN entity_NN men_NNS -_: tion_NN ._.
+If_IN we_PRP ignore_VBP the_DT sequence_NN of_IN these_DT words_NNS ,_, we_PRP can_MD gain_VB the_DT bag-of-words_NNS feature_VBP ,_, whereas_IN the_DT word_NN sequence_NN feature_NN ._.
+Furthermore_RB ,_, we_PRP use_VBP S_NNP -_: tanford_NN NLP_NNP core7_CD and_CC add_VB the_DT part-of-speech_NN tag_NN -_: ging_VBG feature_NN which_WDT may_MD help_VB disambiguate_VB those_DT contextual_JJ words_NNS ._.
+Therefore_RB ,_, for_IN each_DT K_NNP size_NN win_VBP -_: dow_NN surrounding_VBG the_DT entity_NN mention_NN ,_, we_PRP could_MD ex_FW -_: tract_NN four_CD kinds_NNS of_IN different_JJ features_NNS ,_, i.e._FW ,_, bag_NN of_IN words_NNS -LRB-_-LRB- BOW_NNP -RRB-_-RRB- ,_, word_NN sequence_NN -LRB-_-LRB- WS_NNP -RRB-_-RRB- ,_, bag_NN of_IN word_NN -_: s_PRP plus_CC part-of-speech_JJ tagging_NN -LRB-_-LRB- BOW_NNP +_CD POS_NNP -RRB-_-RRB- and_CC word_NN sequence_NN plus_CC part-of-speech_NN tagging_NN -LRB-_-LRB- WS_NNP +_NNP POS_NNP -RRB-_-RRB- ._.
+In_IN total_JJ ,_, there_EX are_VBP twelve_CD kinds_NNS of_IN lexical_JJ features_NNS ._.
+To_TO elucidate_VB the_DT various_JJ kinds_NNS of_IN contextual_JJ fea_NN -_: tures_NNS ,_, we_PRP randomly_RB pick_VBP up_RP a_DT sentence_NN from_IN the_DT Wiki_NNP page_NN of_IN the_DT famous_JJ basketball_NN player_NN as_IN ex_FW -_: ample_JJ ,_, i.e._FW ,_, His_PRP$ biography_NN on_IN the_DT National_NNP Basketball_NNP As_IN -_: sociation_NN -LRB-_-LRB- NBA_NNP -RRB-_-RRB- website_NN states_NNS ,_, ``_`` By_IN acclamation_NN ,_, Michael_NNP Jordan_NNP is_VBZ the_DT greatest_JJS basketball_NN player_NN of_IN all_DT time_NN ._. ''_''
+The_DT twelve_CD kinds_NNS of_IN lexical_JJ features_NNS for_IN the_DT sen_NN -_: tence_NN above_IN are_VBP listed_VBN in_IN Table_NNP 1_CD ._.
+We_PRP will_MD compare_VB the_DT performance_NN among_IN these_DT features_NNS in_IN Section_NN 5_CD ._.
+7_CD http://nlp.stanford.edu/software/_NN corenlp.shtml_NN Figure_NN 3_CD :_: The_DT architecture_NN of_IN DSEL_NNP system_NN ._.
+Sentence_NN His_PRP$ biography_NN on_IN the_DT National_NNP Basketball_NNP Association_NNP -LRB-_-LRB- NBA_NNP -RRB-_-RRB- website_NN states_NNS ,_, ``_`` By_IN acclamation_NN ,_, Michael_NNP Jordan_NNP is_VBZ the_DT greatest_JJS basketball_NN player_NN of_IN all_DT time_NN ._. ''_''
+BOW_NN -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- <_CD -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- >_SYM <_FW -LCB-_-LRB- states_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- ,_, -LCB-_-LRB- greatest_JJS -RCB-_-RRB- >_SYM <_FW -LCB-_-LRB- website_NN -RCB-_-RRB- ,_, -LCB-_-LRB- states_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- ,_, -LCB-_-LRB- greatest_JJS -RCB-_-RRB- ,_, -LCB-_-LRB- basketball_NN -RCB-_-RRB- >_SYM WS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- <_CD -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- >_SYM <_CD -LCB-_-LRB- states-acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is-greatest_JJ -RCB-_-RRB- >_SYM <_CD -LCB-_-LRB- website-states-acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is-greatest-basketball_NN -RCB-_-RRB- >_CD BOW_NNP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- <_CD -LCB-_-LRB- acclamation/NN_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ_NNP -RCB-_-RRB- >_SYM <_FW -LCB-_-LRB- states/NNS_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation/NN_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ_NNP -RCB-_-RRB- -LCB-_-LRB- greatest/JJS_NNS -RCB-_-RRB- >_SYM <_FW -LCB-_-LRB- website/NN_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- states/NNS_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation/NN_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- greatest/JJS_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- basketball/NN_NNP -RCB-_-RRB- >_SYM WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- <_CD -LCB-_-LRB- acclamation/NN_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ_NNP -RCB-_-RRB- >_SYM <_FW -LCB-_-LRB- states/NNS-acclamation/NN_JJ -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ-greatest/JJS_JJ -RCB-_-RRB- >_SYM <_CD -LCB-_-LRB- website/NN-states/NNS-acclamation_NN /_CD NN_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- is/VBZ-greatest/JJS_SYM -_: basketball/NN_NNP -RCB-_-RRB- >_CD Table_NNP 1_CD :_: Twelve_CD kinds_NNS of_IN lexical_JJ features_NNS for_IN the_DT given_VBN sentence_NN ._.
+A_DT pair_NN of_IN angle_NN brackets_NNS stands_VBZ for_IN a_DT feature_NN vector_NN ,_, e.g._FW ,_, <_CD -LCB-_-LRB- states_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- -LCB-_-LRB- greatest_JJS -RCB-_-RRB- >_FW ._.
+A_DT feature_NN item_NN is_VBZ marked_VBN by_IN a_DT pair_NN of_IN braces_NNS ,_, e.g._FW ,_, -LCB-_-LRB- states-acclamation_NN -RCB-_-RRB- ._.
+#_# of_IN MIDs_NNS with_IN the_DT same_JJ name_NN #_# of_IN names_NNS #_# of_IN MIDs_NNS with_IN the_DT same_JJ name_NN #_# of_IN names_NNS #_# of_IN MIDs_NNS with_IN the_DT same_JJ name_NN #_# of_IN names_NNS 2_CD 3_CD 4_CD 4,467,216_CD 740,530_CD 440,261_CD 5_CD 6_CD 7_CD 180,489_CD 134,012_CD 76,459_CD 8_CD 9_CD 10_CD 60,273_CD 41,256_CD 33,628_CD Table_NNP 2_CD :_: The_DT distribution_NN of_IN 4_CD Implementation_NN As_IN we_PRP have_VBP already_RB automatically_RB produced_VBD a_DT training_NN dataset_NN based_VBN on_IN the_DT proposed_VBN distan_NN -_: t_NN supervision_NN paradigm_NN ,_, an_DT intuitive_JJ idea_NN is_VBZ to_TO feed_VB a_DT specific_JJ classifier_NN for_IN each_DT ambiguous_JJ name_NN with_IN its_PRP$ unambiguous_JJ MIDs_NNS and_CC the_DT correspond_VB -_: ing_NN feature_NN vectors_NNS ._.
+However_RB ,_, Table_NNP 2_CD shows_NNS that_IN there_EX are_VBP at_IN least_JJS 5.5_CD million_CD names_NNS that_WDT de_FW -_: nominate_VB more_JJR than_IN one_CD entity_NN -LRB-_-LRB- MID_NNP -RRB-_-RRB- in_IN Free_NNP -_: base_NN ._.
+Therefore_RB ,_, it_PRP is_VBZ infeasible_JJ to_TO build_VB 5.5_CD mil_SYM -_: lion_NN specific_JJ classifiers_NNS ._.
+To_TO train_VB a_DT general_JJ classi_NN -_: fier_NN that_WDT does_VBZ not_RB restrict_VB itself_PRP to_TO disambiguating_VBG a_DT certain_JJ name_NN ,_, we_PRP adopt_VBP a_DT strategy_NN that_WDT merges_VBZ those_DT specific_JJ classifiers_NNS ._.
+Concretely_RB ,_, we_PRP trans_SYM -_: form_NN MIDs_NNS ,_, the_DT original_JJ labels_NNS into_IN features_NNS and_CC use_VB 1/0_CD to_TO indicate_VB whether_IN the_DT contextual_NN features_NNS from_IN Wiki_NNP pages_NNS and_CC MIDs_NNS in_IN Freebase_NNP match_NN or_CC not_RB with_IN each_DT other_JJ ._.
+If_IN we_PRP choose_VBP the_DT BOW_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- feature_NN in_IN Table_NNP 1_CD for_IN instance_NN ,_, one_CD positive_JJ training_NN sample_NN will_MD contain_VB a_DT new_JJ fea_NN -_: ture_NN vector_NN -LRB-_-LRB- <_FW -LCB-_-LRB- website_NN -RCB-_-RRB- ,_, -LCB-_-LRB- states_NNS -RCB-_-RRB- ,_, -LCB-_-LRB- acclamation_NN -RCB-_-RRB- ,_, -LCB-_-LRB- is_VBZ -RCB-_-RRB- ,_, -LCB-_-LRB- greatest_JJS -RCB-_-RRB- ,_, -LCB-_-LRB- basketball_NN -RCB-_-RRB- ,_, -LCB-_-LRB- MID_NNP :054_CD c1_CD -RCB-_-RRB- >_NN -RRB-_-RRB- labeled_VBN by_IN 1_CD ._.
+To_TO balance_VB the_DT training_NN dataset_NN ,_, we_PRP randomly_RB pick_VBP up_RP features_NNS from_IN other_JJ entities_NNS uniformly_RB named_VBN to_TO generate_VB negative_JJ samples_NNS ._.
+For_IN example_NN ,_, another_DT well-known_JJ Michael_NNP Jordan_NNP -LRB-_-LRB- MID_NNP :0_CD bby3vs_NNS -RRB-_-RRB- is_VBZ an_DT English_JJ mycologist_NN ._.
+We_PRP can_MD extract_VB a_DT BOW_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- feature_NN vector_NN ,_, i.e._FW ,_, <_CD -LCB-_-LRB- is_VBZ -RCB-_-RRB- ,_, -LCB-_-LRB- English_NNP -RCB-_-RRB- ,_, -LCB-_-LRB- mycologist_NN -RCB-_-RRB- >_NN ,_, and_CC it_PRP concatenates_VBZ -LCB-_-LRB- MID_NNP :054_CD c1_CD -RCB-_-RRB- to_TO construct_VB a_DT negative_JJ sample_NN la_NNP -_: beled_VBN by_IN 0_CD ._.
+The_DT distant_JJ supervision_NN paradigm_NN and_CC the_DT strat_NN -_: egy_NN of_IN building_VBG the_DT training_NN set_VBN for_IN a_DT general_JJ clas_NNS -_: sifier_JJR lead_NN to_TO high-dimensional_JJ noisy_JJ and_CC sparse_JJ features_NNS ._.
+Moreover_RB ,_, given_VBN the_DT millions_NNS of_IN train_NN -_: ing_NN samples_NNS produced_VBN by_IN aligning_VBG Freebase_NNP and_CC Wikipedia_NNP ,_, we_PRP choose_VBP a_DT linear_JJ classifier_NN that_WDT is_VBZ based_VBN on_IN logistic_JJ regression_NN approach_NN ,_, i.e._FW ,_, Lib_SYM -_: linear_JJ -LRB-_-LRB- Fan_NN et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, to_TO rapidly_RB self-learn_VB the_DT weights_NNS among_IN the_DT high-dimensional_JJ sparse_JJ and_CC noisy_JJ features_NNS ._.
+For_IN a_DT newly_RB discovered_VBN entity_NN mention_NN in_IN the_DT testing_NN corpus_NN ,_, we_PRP firstly_RB extract_VB its_PRP$ contextual_JJ fea_NN -_: ambiguous_JJ entities_NNS in_IN Freebase_NNP ._.
+ture_NN ,_, e.g._FW ,_, bag_NN of_IN words_NNS as_IN above_JJ ._.
+Then_RB the_DT feature_NN concatenates_VBZ all_PDT the_DT candidate_NN MIDs_NNS that_WDT share_VBP the_DT same_JJ name_NN with_IN that_DT entity_NN mention_NN ._.
+Each_DT testing_NN sample_NN within_IN the_DT same_JJ name_NN collection_NN will_MD pre_VB -_: dict_NN a_DT score_NN indicating_VBG the_DT strength_NN of_IN linking_VBG ._.
+For_IN each_DT collection_NN ,_, the_DT Top-N_NNP predictions_NNS with_IN higher_JJR probabilities_NNS are_VBP selected_VBN for_IN evaluation_NN ._.
+We_PRP summarize_VBP the_DT procedures_NNS of_IN implement_VBP -_: ing_VBG our_PRP$ proposed_VBN paradigm_NN and_CC use_NN Figure_NN 3_CD to_TO demonstrate_VB the_DT architecture_NN of_IN DSEL_NNP system_NN ._.
+5_CD Experiments_NNS In_IN this_DT section_NN ,_, we_PRP report_VBP the_DT experimental_JJ results_NNS following_VBG the_DT procedures_NNS described_VBN in_IN Section_NN 4_CD ._.
+To_TO evaluate_VB the_DT performance_NN of_IN different_JJ features_NNS ,_, we_PRP adopt_VBP three_CD widely_RB used_VBN metrics_NNS -LRB-_-LRB- Meij_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, namely_RB precision_NN ,_, recall_NN and_CC F1-measure_NN ._.
+5.1_CD Dataset_NNP We_PRP randomly_RB select_VBP 20,000_CD ambiguous_JJ names_NNS -LRB-_-LRB- collections_NNS -RRB-_-RRB- in_IN Freebase_NNP ._.
+About_IN 82,000_CD sentences_NNS that_WDT contain_VBP at_IN least_JJS one_CD entity_NN mention_NN are_VBP extract_VB -_: ed_VBN from_IN the_DT topic-equivalent_JJ Wiki_NNP pages_NNS ._.
+For_IN each_DT collection_NN ,_, 80_CD %_NN sentences_NNS are_VBP randomly_RB picked_VBN up_RP for_IN constructing_VBG the_DT training_NN set_NN and_CC 20_CD %_NN re_SYM -_: mains_NNS are_VBP for_IN held-out_JJ evaluation_NN ._.
+Following_VBG the_DT procedures_NNS of_IN building_VBG training_NN samples_NNS described_VBN in_IN Section_NN 4_CD ,_, we_PRP gain_VBP a_DT dataset_NN including_VBG around_IN 140,000_CD items_NNS and_CC 60,000_CD features_NNS ._.
+5.2_CD Evaluation_NN metrics_NNS Precision_NNP and_CC recall_NN are_VBP widely_RB used_VBN metrics_NNS to_TO e_SYM -_: valuate_NN different_JJ rank-based_JJ approaches_NNS on_IN entity_NN linking_VBG ._.
+F1-measure_NN synthetically_RB measures_VBZ preci_SYM -_: sion_NN and_CC recall_NN by_IN calculating_VBG the_DT harmonic_JJ mean_NN of_IN them_PRP ._.
+Suppose_VB that_IN C_NNP denotes_VBZ the_DT whole_JJ col_NN -_: lection_NN set_VBN for_IN testing_NN ._.
+Ci_NNP ,_, j_NN represents_VBZ the_DT set_NN of_IN Top-j_NNP predictions_NNS with_IN higher_JJR probabilities_NNS in_IN the_DT i-th_JJ collection_NN ._.
+Gi_NN stands_VBZ for_IN the_DT set_NN of_IN gold_NN stan_NN -_: dards_NNS of_IN the_DT i-th_JJ collection_NN ._.
+#_# -LRB-_-LRB- S_NNP -RRB-_-RRB- is_VBZ the_DT function_NN that_WDT counts_VBZ the_DT entries_NNS in_IN set_NN S_NNP ._.
+Then_RB the_DT formulae_NN to_TO calculate_VB precision_NN ,_, recall_NN and_CC F1-measure_NN are_VBP as_IN follows_VBZ ,_, Feature_NNP type_NN Avg_NNP ._.
+F1-measure_NN Feature_NN type_NN Avg_NNP ._.
+F1-measure_NN BOW_NN -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.539_CD 0.531_CD 0.529_CD WS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.544_CD 0.532_CD 0.518_CD BOW_NNP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.540_CD 0.532_CD 0.529_CD WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS+POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.545_CD 0.531_CD 0.517_CD Table_NNP 3_CD :_: The_DT F1-measure_NN comparison_NN among_IN different_JJ features_NNS ._.
+0.95_CD 0.9_CD 0.85_CD 0.8_CD 0.75_CD 0.7_CD 0.65_CD 0.6_CD 0.55_CD 0.5_CD BOW_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.42_CD 0.44_CD 0.46_CD 0.48_CD 0.5_CD Recall_VB 0.95_CD 0.9_CD 0.85_CD 0.8_CD 0.75_CD 0.7_CD 0.65_CD 0.6_CD 0.55_CD 0.5_CD 0.45_CD 0.4_CD 0.42_CD 0.44_CD 0.46_CD 0.48_CD 0.5_CD 0.52_CD Recall_VB WS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- -LRB-_-LRB- a_DT -RRB-_-RRB- Precision-Recall_NNP curves_NNS for_IN BOW_NN features_NNS ._.
+-LRB-_-LRB- a_DT -RRB-_-RRB- Precision-Recall_NNP curves_NNS for_IN WS_NNP features_NNS ._.
+0.95_CD 0.9_CD 0.85_CD 0.8_CD 0.75_CD 0.7_CD 0.65_CD 0.6_CD 0.55_CD 0.5_CD 0.45_CD 0.4_CD 0.42_CD 0.44_CD 0.46_CD 0.48_CD 0.5_CD 0.52_CD Recall_VB WS_NNP +_NNP POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- WS_NNP +_NNP POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- WS_NNP +_NNP POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.95_CD 0.9_CD 0.85_CD 0.8_CD 0.75_CD 0.7_CD 0.65_CD 0.6_CD 0.55_CD 0.5_CD BOW_NNP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 2_LS -RRB-_-RRB- BOW_VBP +_CD POS_NNP -LRB-_-LRB- K_NNP =_SYM 3_LS -RRB-_-RRB- 0.42_CD 0.44_CD 0.46_CD 0.48_CD 0.5_CD Recall_VB -LRB-_-LRB- b_NN -RRB-_-RRB- Precision-Recall_NNP curves_NNS for_IN BOW_NNP +_CD POS_NNP features_NNS ._.
+Figure_NN 4_CD :_: Precision-Recall_NNP curves_VBZ for_IN the_DT BOW_NNP -_: class_NN lexical_NN features_NNS ._.
+-LRB-_-LRB- b_NN -RRB-_-RRB- Precision-Recall_NNP curves_NNS for_IN WS_NNP +_NNP POS_NNP features_NNS ._.
+Figure_NN 5_CD :_: Precision-Recall_NNP curves_VBZ for_IN the_DT WS-class_JJ lexical_NN features_NNS ._.
+Precision_NN Precison_NNP Precision_NNP Precision_NNP #_# -LRB-_-LRB- Ci_FW ,_, j_VBP Gi_NNP -RRB-_-RRB- •_CD The_DT alignment_NN assumption_NN is_VBZ simple_JJ and_CC heuristic_JJ ._.
+Further_JJ studies_NNS may_MD dedicate_VB on_IN discovering_VBG other_JJ reasonable_JJ alignment_NN prin_NN -_: ciples_NNS ._.
+•_CD Even_RB though_IN the_DT strategy_NN for_IN generating_VBG train_NN -_: ing_NN data_NNS that_WDT fits_VBZ a_DT general_JJ classifier_NN ,_, it_PRP rises_VBZ the_DT problem_NN that_IN high-dimensional_JJ sparse_JJ and_CC noisy_JJ features_NNS impact_VBP the_DT effectiveness_NN and_CC efficiency_NN of_IN the_DT proposed_VBN paradigm_NN ._.
+Generally_RB speaking_NN ,_, the_DT experiments_NNS prove_VBP that_IN our_PRP$ new_JJ proposed_VBN paradigm_NN is_VBZ promising_JJ and_CC it_PRP is_VBZ worthy_JJ of_IN being_VBG further_JJ studied_VBN ._.
+Acknowledgements_NNS This_DT work_NN is_VBZ mainly_RB supported_VBN by_IN National_NNP Program_NNP on_IN Key_NNP Basic_NNP Research_NNP Project_NNP -LRB-_-LRB- 973_CD Program_NN -RRB-_-RRB- under_IN Grant_NNP 2013CB329304_NNP ,_, Nation_NNP -_: al_IN Science_NNP Foundation_NNP of_IN China_NNP -LRB-_-LRB- NSFC_NNP -RRB-_-RRB- under_IN Grant_NNP No._NN 61433018_CD and_CC No._NN 61373075_CD ,_, and_CC Chi_NNP -_: na_TO Scholarship_NNP Council_NNP ._.
+Thanks_NNS to_TO Yulong_NNP Gu_NNP ,_, Yingnan_NNP Xiao_NNP and_CC anonymous_JJ reviewers_NNS for_IN their_PRP$ insightful_JJ comments_NNS ._.
+References_NNS Nguyen_NNP Bach_NNP and_CC Sameer_NNP Badaskar_NNP ._.
+2007_CD ._.
+A_DT review_NN of_IN relation_NN extraction_NN ._.
+Literature_NN review_NN for_IN Lan_NNP -_: guage_NN and_CC Statistics_NNP II_NNP ._.
+Kurt_NNP Bollacker_NNP ,_, Robert_NNP Cook_NNP ,_, and_CC Patrick_NNP Tufts_NNP ._.
+2007_CD ._.
+Freebase_NN :_: A_DT shared_VBN database_NN of_IN structured_JJ general_JJ human_JJ knowledge_NN ._.
+In_IN Proceedings_NNP of_IN the_DT nation_NN -_: al_JJ conference_NN on_IN Artificial_NNP Intelligence_NNP ,_, volume_NN 22_CD ,_, page_NN 1962_CD ._.
+Menlo_NNP Park_NNP ,_, CA_NNP ;_: Cambridge_NNP ,_, MA_NNP ;_: Lon_NNP -_: don_VBP ;_: AAAI_NNP Press_NNP ;_: MIT_NNP Press_NNP ;_: 1999_CD ._.
+Kurt_NNP Bollacker_NNP ,_, Colin_NNP Evans_NNP ,_, Praveen_NNP Paritosh_NNP ,_, Tim_NNP S_NNP -_: turge_NN ,_, and_CC Jamie_NNP Taylor_NNP ._.
+2008_CD ._.
+Freebase_NN :_: a_DT collab_NN -_: oratively_RB created_VBN graph_NN database_NN for_IN structuring_VBG hu_SYM -_: man_NN knowledge_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2008_CD ACM_NNP SIGMOD_NNP international_JJ conference_NN on_IN Management_NN of_IN data_NNS ,_, pages_NNS 1247_CD --_: 1250_CD ._.
+ACM_NNP ._.
+Razvan_NNP C_NNP Bunescu_NNP and_CC Marius_NNP Pasca_NNP ._.
+2006_CD ._.
+Using_VBG en_IN -_: cyclopedic_JJ knowledge_NN for_IN named_VBN entity_NN disambigua_NN -_: tion_NN ._.
+In_IN EACL_NNP ,_, volume_NN 6_CD ,_, pages_NNS 9_CD --_: 16_CD ._.
+Peter_NNP Christen_NNP ._.
+2006_CD ._.
+A_DT comparison_NN of_IN personal_JJ name_NN matching_NN :_: Techniques_NNS and_CC practical_JJ issues_NNS ._.
+In_IN Data_NNP Mining_NNP Workshops_NNPS ,_, 2006_CD ._.
+ICDM_NNP Workshops_NNPS 2006_CD ._.
+Sixth_NNP IEEE_NNP International_NNP Conference_NNP on_IN ,_, pages_NNS 290_CD --_: 294_CD ._.
+IEEE_NNP ._.
+Mark_NNP Craven_NNP ,_, Johan_NNP Kumlien_NNP ,_, et_FW al._FW 1999_CD ._.
+Construct_VB -_: ing_NN biological_JJ knowledge_NN bases_NNS by_IN extracting_VBG infor_NN -_: mation_NN from_IN text_NN sources_NNS ._.
+In_IN ISMB_NNP ,_, volume_NN 1999_CD ,_, pages_NNS 77_CD --_: 86_CD ._.
+Precision_NN =_SYM Recall_VB =_SYM #_# -LRB-_-LRB- Ci_FW ,_, j_VBP Gi_NNP -RRB-_-RRB- ,_, ,_, ij_FW #_# -LRB-_-LRB- Ci_FW ,_, j_VBN -RRB-_-RRB- 5.3_CD i_FW j_FW #_# -LRB-_-LRB- C_NNP -RRB-_-RRB- F1-measure_NN =_SYM 2_CD ×_CD P_NNP recision_NN ×_CD Recall_VBP ._.
+P_NNP recision_NN +_NN Recall_VB Feature_NNP comparison_NN For_IN each_DT type_NN of_IN feature_NN ,_, we_PRP conduct_VBP one_CD trial_NN and_CC tune_VB the_DT parameters_NNS for_IN the_DT logistic_JJ classifier_NN using_VBG 5-fold_JJ cross_NN validation_NN ._.
+Then_RB we_PRP adopt_VB held-out_JJ testing_NN taking_VBG advantage_NN of_IN the_DT 20_CD %_NN sentences_NNS left_VBD ._.
+Figure_NN 4_CD and_CC Figure_NNP 5_CD show_VBP the_DT precision-recall_JJ curves_NNS for_IN the_DT twelve_CD lexical_NN features_NNS ,_, and_CC Table_NNP 3_CD displays_NNS the_DT average_JJ F1-measure_NN comparison_NN a_SYM -_: mong_NN different_JJ features_NNS ._.
+We_PRP find_VBP out_RP that_IN the_DT WS-class_JJ features_NNS generally_RB outperform_VBP the_DT BOW_NNP -_: class_NN features_NNS ,_, and_CC the_DT short-distance_JJ contextual_NN features_NNS -LRB-_-LRB- K_NNP =_SYM 1_LS -RRB-_-RRB- are_VBP more_RBR effective_JJ than_IN the_DT long_JJ -_: distance_NN ones_NNS -LRB-_-LRB- K_NNP =_SYM 2_CD ,_, 3_CD -RRB-_-RRB- ._.
+6_CD Conclusion_NN and_CC Future_NNP Work_NNP As_IN far_RB as_IN we_PRP know_VBP ,_, it_PRP is_VBZ the_DT first_JJ attempt_NN to_TO deal_VB with_IN the_DT task_NN of_IN entity_NN linking_VBG based_VBN on_IN the_DT idea_NN of_IN distant_JJ supervision_NN ._.
+We_PRP leverage_NN a_DT heuristic_JJ align_NN -_: ment_NN assumption_NN ,_, i.e._FW ,_, the_DT topic_NN equivalent_JJ pages_NNS ,_, to_TO bridge_VB the_DT gap_NN between_IN Freebase_NNP and_CC Wikipedia_NNP and_CC jointly_RB use_VB those_DT two_CD knowledge_NN bases_NNS to_TO au_VB -_: tomatically_RB produce_VBP training_NN data_NNS without_IN manual_NN annotation_NN ._.
+Moreover_RB ,_, we_PRP propose_VBP a_DT strategy_NN that_IN transforms_VBZ labels_NNS into_IN features_NNS and_CC feed_VB them_PRP to_TO a_DT general_JJ classifier_NN ,_, rather_RB than_IN building_VBG an_DT indi_NN -_: vidualized_VBN classifier_NN for_IN each_DT ambiguous_JJ name_NN for_IN millions_NNS of_IN entities_NNS ._.
+For_IN the_DT future_JJ work_NN ,_, we_PRP believe_VBP that_IN this_DT new_JJ paradigm_NN leaves_VBZ several_JJ open_JJ questions_NNS :_: •_CD Besides_IN the_DT entities_NNS -LRB-_-LRB- MIDs_NNS -RRB-_-RRB- that_WDT have_VBP already_RB been_VBN stored_VBN in_IN knowledge_NN repositories_NNS -LRB-_-LRB- Free_NNP -_: base_NN -RRB-_-RRB- ,_, new_JJ entity_NN instances_NNS -LRB-_-LRB- NIL_NNP -RRB-_-RRB- with_IN the_DT same_JJ name_NN need_NN to_TO be_VB discovered_VBN ._.
+There_EX -_: fore_NN ,_, further_JJ study_NN could_MD focus_VB on_IN extending_VBG paradigm_NN to_TO identify_VB unknown_JJ entities_NNS ._.
+•_SYM Thelinkformanyotherwebpagesindifferent_NNP languages_NNS are_VBP also_RB provided_VBN in_IN Freebase_NNP ,_, as_IN illustrated_VBN in_IN Figure_NN 2_CD ._.
+It_PRP may_MD facilitate_VB the_DT research_NN of_IN cross-lingual_JJ entity_NN linking_VBG ._.
+Silviu_NNP Cucerzan_NNP ._.
+2007_CD ._.
+Large-scale_JJ named_VBN entity_NN dis_SYM -_: ambiguation_NN based_VBN on_IN wikipedia_NN data_NNS ._.
+In_IN EMNLP_NNP -_: CoNLL_NNP ,_, volume_NN 7_CD ,_, pages_NNS 708_CD --_: 716_CD ._.
+Rong-En_JJ Fan_NN ,_, Kai-Wei_NNP Chang_NNP ,_, Cho-Jui_NNP Hsieh_NNP ,_, Xiang_NNP -_: Rui_NNP Wang_NNP ,_, and_CC Chih-Jen_NNP Lin_NNP ._.
+2008_CD ._.
+Liblinear_NNP :_: A_NNP library_NN for_IN large_JJ linear_JJ classification_NN ._.
+The_DT Journal_NNP of_IN Machine_NNP Learning_NNP Research_NNP ,_, 9:1871_CD --_: 1874_CD ._.
+Miao_NNP Fan_NNP ,_, Deli_NNP Zhao_NNP ,_, Qiang_NNP Zhou_NNP ,_, Zhiyuan_NNP Liu_NNP ,_, Thomas_NNP Fang_NNP Zheng_NNP ,_, and_CC Edward_NNP Y_NNP Chang_NNP ._.
+2014_CD ._.
+Distant_JJ supervision_NN for_IN relation_NN extraction_NN with_IN ma_SYM -_: trix_NN completion_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ,_, volume_NN 1_CD ,_, pages_NNS 839_CD --_: 849_CD ._.
+Ben_NNP Hachey_NNP ,_, Will_NNP Radford_NNP ,_, Joel_NNP Nothman_NNP ,_, Matthew_NNP Honnibal_NNP ,_, and_CC James_NNP R_NNP Curran_NNP ._.
+2013_CD ._.
+Evaluating_VBG entity_NN linking_VBG with_IN wikipedia_NN ._.
+Artificial_JJ intelligence_NN ,_, 194:130_CD --_: 150_CD ._.
+Jeff_NNP Howe_NNP ._.
+2006_CD ._.
+The_DT rise_NN of_IN crowdsourcing_NN ._.
+Wired_VBN magazine_NN ,_, 14_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :1_CD --_: 4_LS ._.
+Heng_NNP Ji_NNP and_CC Ralph_NNP Grishman_NNP ._.
+2011_CD ._.
+Knowledge_NN base_NN population_NN :_: Successful_JJ approaches_NNS and_CC chal_JJ -_: lenges_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 49th_JJ Annual_JJ Meet_NNP -_: ing_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistic_NNP -_: s_PRP :_: Human_NNP Language_NNP Technologies-Volume_NNP 1_CD ,_, pages_NNS 1148_CD --_: 1158_CD ._.
+Association_NNP for_IN Computational_NNP Linguis_NNP -_: tics_NNS ._.
+Heng_NNP Ji_NNP ,_, Ralph_NNP Grishman_NNP ,_, Hoa_NNP Trang_NNP Dang_NNP ,_, Kira_NNP Grif_NNP -_: fitt_NN ,_, and_CC Joe_NNP Ellis_NNP ._.
+2010_CD ._.
+Overview_NNP of_IN the_DT tac_NN 2010_CD knowledge_NN base_NN population_NN track_NN ._.
+In_IN Third_NNP Tex_NNP -_: t_NN Analysis_NNP Conference_NNP -LRB-_-LRB- TAC_NNP 2010_CD -RRB-_-RRB- ._.
+Paul_NNP McNamee_NNP and_CC Hoa_NNP Trang_NNP Dang_NNP ._.
+2009_CD ._.
+Overview_NNP of_IN the_DT tac_NN 2009_CD knowledge_NN base_NN population_NN track_NN ._.
+In_IN Text_NNP Analysis_NNP Conference_NNP -LRB-_-LRB- TAC_NNP -RRB-_-RRB- ,_, volume_NN 17_CD ,_, pages_NNS 111_CD --_: 113_CD ._.
+Edgar_NNP Meij_NNP ,_, Krisztian_NNP Balog_NNP ,_, and_CC Daan_NNP Odijk_NNP ._.
+2013_CD ._.
+Entity_NN linking_VBG and_CC retrieval_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 36th_JJ international_JJ ACM_NNP SIGIR_NNP conference_NN on_IN Re_NNP -_: search_NN and_CC development_NN in_IN information_NN retrieval_NN ,_, pages_NNS 1127_CD --_: 1127_CD ._.
+ACM_NNP ._.
+Rada_NNP Mihalcea_NNP and_CC Andras_NNP Csomai_NNP ._.
+2007_CD ._.
+Wiki_SYM -_: fy_NN !_.
+:_: linking_VBG documents_NNS to_TO encyclopedic_JJ knowledge_NN ._.
+In_IN Proceedings_NNP of_IN the_DT sixteenth_JJ ACM_NNP conference_NN on_IN Conference_NN on_IN information_NN and_CC knowledge_NN manage_VBP -_: ment_NN ,_, pages_NNS 233_CD --_: 242_CD ._.
+ACM_NNP ._.
+David_NNP Milne_NNP and_CC Ian_NNP H_NNP Witten_NNP ._.
+2008_CD ._.
+Learning_NNP to_TO link_VB with_IN wikipedia_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 17th_JJ ACM_NNP conference_NN on_IN Information_NN and_CC knowledge_NN manage_VBP -_: ment_NN ,_, pages_NNS 509_CD --_: 518_CD ._.
+ACM_NNP ._.
+David_NNP Nadeau_NNP and_CC Satoshi_NNP Sekine_NNP ._.
+2007_CD ._.
+A_DT sur_NN -_: vey_NN of_IN named_VBN entity_NN recognition_NN and_CC classification_NN ._.
+Lingvisticae_NNP Investigationes_NNP ,_, 30_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :3_CD --_: 26_CD ._.
+Vincent_NNP Ng_NNP ._.
+2010_CD ._.
+Supervised_VBN noun_NN phrase_NN corefer_NN -_: ence_NN research_NN :_: The_DT first_JJ fifteen_CD years_NNS ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 48th_JJ annual_JJ meeting_NN of_IN the_DT association_NN for_IN computational_JJ linguistics_NNS ,_, pages_NNS 1396_CD --_: 1411_CD ._.
+As_IN -_: sociation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Delip_NNP Rao_NNP ,_, Paul_NNP McNamee_NNP ,_, and_CC Mark_NNP Dredze_NNP ._.
+2013_CD ._.
+Entity_NN linking_VBG :_: Finding_VBG extracted_VBN entities_NNS in_IN a_DT knowl_NN -_: edge_NN base_NN ._.
+In_IN Multi-source_JJ ,_, multilingual_JJ informa_NN -_: tion_NN extraction_NN and_CC summarization_NN ,_, pages_NNS 93_CD --_: 115_CD ._.
+Springer_NNP ._.
+Lev_NNP Ratinov_NNP ,_, Dan_NNP Roth_NNP ,_, Doug_NNP Downey_NNP ,_, and_CC Mike_NNP Anderson_NNP ._.
+2011_CD ._.
+Local_JJ and_CC global_JJ algorithm_NN -_: s_PRP for_IN disambiguation_NN to_TO wikipedia_NN ._.
+In_IN Proceed_NNP -_: ings_NNS of_IN the_DT 49th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNPS :_: Human_NNP Language_NNP Technologies-Volume_NNP 1_CD ,_, pages_NNS 1375_CD --_: 1384_CD ._.
+Associ_SYM -_: ation_NN for_IN Computational_NNP Linguistics_NNP ._.
+Sunita_NNP Sarawagi_NNP ._.
+2008_CD ._.
+Information_NNP extraction_NN ._.
+Foun_SYM -_: dations_NNS and_CC trends_NNS in_IN databases_NNS ,_, 1_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :261_CD --_: 377_CD ._.
+Cyma_NNP Van_NNP Petten_NNP and_CC Marta_NNP Kutas_NNP ._.
+1991_CD ._.
+Influ_NNP -_: ences_NNS of_IN semantic_JJ and_CC syntactic_JJ context_NN on_IN open_JJ -_: and_CC closed-class_JJ words_NNS ._.
+Memory_NN &_CC Cognition_NNP ,_, 19_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :95_CD --_: 112_CD ._.
+Zhicheng_NNP Zheng_NNP ,_, Xiance_NNP Si_NNP ,_, Fangtao_NNP Li_NNP ,_, Edward_NNP Y_NNP Chang_NNP ,_, and_CC Xiaoyan_NNP Zhu_NNP ._.
+2012_CD ._.
+Entity_NN disambigua_SYM -_: tion_NN with_IN freebase_NN ._.
+In_IN Proceedings_NNP of_IN the_DT The_DT 2012_CD IEEE/WIC/ACM_NNP International_NNP Joint_NNP Conferences_NNP on_IN Web_NNP Intelligence_NNP and_CC Intelligent_NNP Agent_NNP Technology_NNP -_: Volume_NN 01_CD ,_, pages_NNS 82_CD --_: 89_CD ._.
+IEEE_NNP Computer_NNP Society_NNP ._.

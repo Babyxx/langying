@@ -1,0 +1,115 @@
+1_CD Abstract_NNP Grammar_NNP is_VBZ the_DT key_NN and_CC difficult_JJ part_NN in_IN teaching_NN Chinese_JJ as_IN a_DT second_JJ language_NN -LRB-_-LRB- TCSL_NNP -RRB-_-RRB- ._.
+However_RB ,_, the_DT research_NN work_NN on_IN the_DT knowledge-base_NN for_IN grammar_NN teaching_NN in_IN TCSL_NNP is_VBZ scarce_JJ ,_, which_WDT can_MD not_RB meet_VB the_DT demands_NNS of_IN the_DT development_NN of_IN Chinese_NNP International_NNP Education_NNP ._.
+This_DT paper_NN introduces_VBZ the_DT construction_NN of_IN Chinese_JJ Grammar_NNP Points_NNP Knowledge_NNP -LRB-_-LRB- CGPK_NNP -RRB-_-RRB- and_CC its_PRP$ application_NN ._.
+Firstly_RB ,_, introduces_VBZ attributes_NNS setting_VBG in_IN Static_NNP Description_NNP Knowledge_NNP -_: base_NN ._.
+Secondly_RB ,_, discusses_VBZ the_DT annotation_NN of_IN sentences_NNS with_IN grammar_NN points_NNS in_IN the_DT corpus_NN ._.
+Finally_RB ,_, presents_VBZ the_DT application_NN of_IN CGPK_NNP in_IN a_DT Chinese_JJ teaching_NN platform_NN and_CC indicates_VBZ it_PRP is_VBZ effective_JJ in_IN TCSL_NNP ._.
+Keywords_NNS :_: corpus_NNS ;_: annotation_NN ;_: grammar_NN points_NNS ;_: TCSL_NNP Introduction_NNP The_DT Construction_NN of_IN Chinese_JJ Grammar_NNP Points_NNP Knowledge-base_NNP and_CC Its_PRP$ Application_NN in_IN TCSL_NNP Tan_NNP Xiaoping_NNP Institute_NNP of_IN Chinese_NNP Information_NNP Processing_NNP Beijing_NNP Normal_NNP University_NNP Bejing_NNP ,_, China_NNP tanxiaoping82@hotmail.com_CD Yang_NNP Lijiao_NNP Institute_NNP of_IN Chinese_NNP Information_NNP Processing_NNP Beijing_NNP Normal_NNP University_NNP Bejing_NNP ,_, China_NNP yanglijiao@mail.bnu.edu.cn_NNP The_NNP Grammar_NNP Resources_NNPS Database_NNP for_IN International_NNP Chinese_NNP Education_NNP -LRB-_-LRB- Peng_NNP Weiming_NNP ,_, Song_NN Jihua_NNP et_NNP al._IN ,2014_CD -RRB-_-RRB- are_VBP two_CD typical_JJ grammar_NN knowledge-base_NN for_IN TCSL_NNP ._.
+The_DT first_JJ one_CD chose_VBD more_JJR than_IN 1000_CD constructions_NNS and_CC described_VBD their_PRP$ features_NNS ._.
+The_DT second_JJ one_CD reconstructed_VBD the_DT grammar_NN points_NNS system_NN and_CC researched_VBD on_IN identifying_VBG them_PRP automatically_RB ._.
+However_RB ,_, we_PRP can_MD do_VB more_JJR work_NN in_IN the_DT aspect_NN of_IN describing_VBG grammar_NN points_NNS and_CC annotating_VBG grammar_NN information_NN in_IN the_DT corpus_NN for_IN TCSL_NNP ,_, which_WDT can_MD help_VB the_DT teachers_NNS more_RBR directly_RB ._.
+In_IN this_DT paper_NN ,_, we_PRP introduced_VBD the_DT content_NN ,_, structure_NN of_IN the_DT grammar_NN points_NNS knowledge-base_JJ and_CC its_PRP$ application_NN in_IN a_DT Chinese_JJ teaching_NN platform_NN ,_, which_WDT could_MD help_VB the_DT teacher_NN in_IN preparing_VBG lessons_NNS and_CC researching_VBG of_IN Chinese_JJ textbook_NN ._.
+The_DT rest_NN of_IN this_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+Section_NN 2_CD describes_VBZ the_DT related_JJ work_NN ._.
+We_PRP introduces_VBZ the_DT construction_NN of_IN CGPK_NNP in_IN section_NN 3_CD ._.
+In_IN section_NN 4_CD ,_, we_PRP discusses_VBZ the_DT application_NN of_IN the_DT CGPK_NNP in_IN a_DT Chinese_JJ teaching_NN platform_NN ._.
+Section_NN 5_CD includes_VBZ conclusions_NNS and_CC our_PRP$ future_JJ work_NN ._.
+2_CD Related_JJ Work_NN The_DT knowledge-base_NN is_VBZ widely_RB used_VBN in_IN natural_JJ language_NN processing_NN at_IN present_JJ ._.
+The_DT famous_JJ knowledge-base_NN includes_VBZ the_DT WordNet_NNP -LRB-_-LRB- Fellbaum_NNP ,_, 1998_CD -RRB-_-RRB- ,_, The_DT Grammatical_NNP Knowledge-base_NN of_IN Contemporary_NNP Chinese_NNP -LRB-_-LRB- Yu_NNP &_CC Zhu_NNP et_FW al._FW ,_, 1996_CD -RRB-_-RRB- ._.
+However_RB ,_, Yu_NNP Shi-wen_NNP ,_, Zhu_NNP Xue-feng_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- notes_VBZ that_IN the_DT knowledge-base_NN could_MD also_RB be_VB used_VBN in_IN TCSL_NNP ._.
+With_IN the_DT development_NN of_IN computer_NN technology_NN and_CC corpus_NN linguistics_NNS ,_, the_DT Chinese_JJ language_NN resources_NNS have_VBP constructed_VBN for_IN nearly_RB 40_CD years_NNS ,_, such_JJ as_IN CCL_NNP corpus_NN and_CC BCC_NNP corpus_NNS ,_, which_WDT have_VBP been_VBN promoted_VBN the_DT research_NN in_IN Chinese_JJ language_NN ._.
+However_RB ,_, the_DT Chinese_JJ language_NN resources_NNS for_IN TCSL_NNP were_VBD scarce_JJ ._.
+The_DT Chinese_JJ inter-language_NN corpus_NN are_VBP the_DT main_JJ language_NN resources_NNS in_IN the_DT area_NN of_IN TCSL_NNP ,_, which_WDT can_MD not_RB totally_RB meet_VB the_DT teachers_NNS '_POS needs_NNS ._.
+The_DT Chinese_JJ Construction_NN Database_NNP and_CC In_IN recent_JJ years_NNS ,_, several_JJ language_NN resources_NNS for_IN TCSL_NNP have_VBP been_VBN built_VBN ,_, which_WDT could_MD be_VB divided_VBN into_IN 3_CD types_NNS ._.
+The_DT first_JJ one_CD is_VBZ the_DT inter-language_JJ corpus_NN ,_, such_JJ as_IN the_DT HSK_NNP Dynamic_NNP Composition_NNP Corpus_NNP ,_, which_WDT could_MD only_RB help_VB teacher_NN to_TO analyze_VB the_DT inter_NN -_: language_NN ._.
+The_DT second_JJ is_VBZ the_DT Chinese_JJ Textbook_NN Corpus_NNP ,_, such_JJ as_IN The_DT Global_JJ Chinese_JJ Textbook_NN Corpus_NNP ,_, however_RB ,_, most_JJS of_IN the_DT Chinese_JJ text_NN book_NN corpus_NN are_VBP raw_JJ corpus_NN ._.
+Little_JJ research_NN work_NN was_VBD on_IN how_WRB to_TO annotate_VB the_DT corpus_NN for_IN TCSL_NNP ,_, the_DT value_NN of_IN them_PRP have_VBP not_RB been_VBN developed_VBN completely_RB ._.
+The_DT third_JJ is_VBZ knowledge-base_JJ ,_, such_JJ as_IN The_DT Grammar_NNP Resources_NNPS Database_NNP ._.
+However_RB ,_, little_JJ attention_NN was_VBD focused_VBN on_IN building_VBG the_DT language_NN resources_NNS of_IN grammar_NN for_IN TCSL_NNP and_CC few_JJ the_DT language_NN resources_NNS of_IN grammar_NN could_MD be_VB used_VBN by_IN teachers_NNS directly_RB ._.
+The_DT aim_NN of_IN this_DT paper_NN is_VBZ to_TO provide_VB a_DT Chinese_JJ grammar_NN points_NNS knowledge-base_NN for_IN teacher_NN ,_, which_WDT could_MD help_VB teacher_NN to_TO prepare_VB lessons_NNS conveniently_RB ._.
+The_DT data_NNS we_PRP used_VBD in_IN this_DT work_NN are_VBP from_IN classic_JJ Chinese_JJ textbooks_NNS and_CC HSK_NNP exma_FW texts_NNS ,_, which_WDT contains_VBZ 141464_CD sentences_NNS in_IN total_NN ._.
+The_DT content_NN and_CC the_DT difficult_JJ level_NN are_VBP more_RBR suitable_JJ for_IN learners_NNS ._.
+and_CC complex_JJ sentences_NNS ,_, such_JJ as_IN ``_`` budan_JJ ..._: erqie_NN ..._: ''_'' -LRB-_-LRB- 不但_CD ..._: ._.
+而且_NN ..._: ._. -RRB-_-RRB- ._.
+Two_CD factors_NNS affected_VBD the_DT selection_NN of_IN grammar_NN pionts_NNS ._.
+The_DT first_JJ one_CD is_VBZ the_DT high_JJ frequency_NN in_IN TCSL_NNP ._.
+We_PRP obtain_VB the_DT frequency_NN information_NN by_IN caculating_VBG the_DT grammar_NN points_NNS in_IN three_CD classic_JJ Chinese_JJ textbooks_NNS ._.
+Is_VBZ it_PRP easy_JJ to_TO get_VB sentence_NN with_IN grammar_NN points_NNS from_IN the_DT general_JJ Chinese_JJ corpus_NN ?_.
+This_DT is_VBZ the_DT second_JJ factor_NN ._.
+For_IN example_NN ,_, the_DT sentences_NNS with_IN grammar_NN point_NN of_IN ``_`` cai_FW ..._: jiu_NN ..._: ''_'' -LRB-_-LRB- 才_CD ..._: ._.
+就_NN ..._: ._. -RRB-_-RRB-
+are_VBP harder_JJR to_TO find_VB in_IN general_JJ Chinese_JJ corpus_NN than_IN the_DT sentences_NNS with_IN grammar_NN point_NN of_IN ``_`` cai_FW ''_'' -LRB-_-LRB- 才_CD -RRB-_-RRB- ._.
+Because_IN retrieve_VBP accuracy_NN of_IN ``_`` cai_FW ..._: jiu_NN ..._: ''_'' is_VBZ much_RB lower_JJR than_IN ``_`` cai_FW ''_'' in_IN general_JJ Chinese_JJ corpus_NN ,_, the_DT teacher_NN is_VBZ esay_NN to_TO find_VB sentence_NN with_IN ``_`` cai_FW ''_'' and_CC is_VBZ hard_JJ to_TO find_VB sentences_NNS with_IN ``_`` cai_FW ..._: jiu_NN ..._: ''_'' ._.
+The_DT Dynamic_NNP Annotated_NNP Corpus_NNP The_NNP dynamic_JJ annotated_JJ corpus_NN is_VBZ designed_VBN for_IN the_DT static_JJ description_NN knowlege-base_NN ._.
+The_DT attributes_NNS '_POS characters_NNS in_IN static_JJ description_NN knowledge-base_NN could_MD be_VB reflected_VBN in_IN dynamic_JJ annotated_JJ corpus_NN ._.
+There_EX are_VBP 95592_CD sentences_NNS with_IN the_DT selected_VBN grammar_NN points_NNS in_IN the_DT annotated_JJ corpus_NN ._.
+All_PDT the_DT sentences_NNS are_VBP a_DT annotated_VBN from_IN the_DT aspect_NN of_IN semantic_JJ and_CC syntactic_JJ information_NN ._.
+There_EX are_VBP three_CD main_JJ functions_NNS of_IN the_DT annotated_JJ corpus_NN ._.
+The_DT first_JJ is_VBZ to_TO check_VB the_DT description_NN of_IN the_DT grammar_NN poins_NNS is_VBZ correct_JJ or_CC not_RB ,_, we_PRP modified_VBD the_DT static_JJ description_NN knowledge-base_NN by_IN the_DT annotated_JJ results_NNS if_IN it_PRP was_VBD necessary_JJ ._.
+The_DT second_JJ is_VBZ providing_VBG the_DT senmantic_NN and_CC syntactic_JJ frequency_NN information_NN for_IN the_DT static_JJ description_NN knowledge_NN ._.
+The_DT third_JJ one_NN is_VBZ provding_VBG data_NNS for_IN the_DT Chinese_JJ teaching_NN platform_NN ._.
+3.2_CD Description_NN of_IN the_DT grammar_NN points_NNS in_IN Knowledge-base_JJ Hu_NNP Yushu_NNP and_CC Fan_NNP Xiao_NNP -LRB-_-LRB- 1985_CD -RRB-_-RRB- proposed_VBD the_DT three_CD plane_NN theory_NN on_IN the_DT grammar_NN researching_VBG ,_, which_WDT are_VBP the_DT syntactic_JJ plane_NN ,_, semantic_JJ plane_NN and_CC pragmatic_JJ plane_NN ._.
+Lu_NNP Fubo_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- suggested_VBD that_IN the_DT three_CD plane_NN theory_NN should_MD be_VB used_VBN in_IN TCSL_NNP ._.
+In_IN this_DT paper_NN we_PRP proposes_VBZ the_DT structure_NN of_IN describing_VBG the_DT grammar_NN poins_NNS on_IN the_DT three_CD plane_NN theory_NN ._.
+-LRB-_-LRB- see_VB Figure_NN 2_CD -RRB-_-RRB- 3_CD 3.1_CD Outline_NNP of_IN CGPK_NNP Scale_NNP and_CC structure_NN CGPK_NNP consists_VBZ of_IN a_DT Static_JJ Description_NN Knowledge_NN -_: base_NN of_IN Grammar_NNP Points_NNP and_CC a_DT Dynamic_NNP Annotated_NNP Corpus_NNP of_IN Grammar_NNP Points_NNP ._.
+-LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- Figure_NN 1_CD Main_NNP structure_NN of_IN GPK_NNP The_NNP Static_NNP Description_NNP Knowledge-base_NNP The_NNP Static_NNP Description_NNP Knowledge-base_NNP contains_VBZ 121_CD grammar_NN points_NNS ,_, which_WDT are_VBP the_DT important_JJ and_CC common_JJ grammar_NN points_NNS in_IN TCSL_NNP ,_, such_JJ as_IN comparative_JJ sentences_NNS ,_, existential_JJ sentences_NNS ._.
+The_DT 121_CD grammar_NN points_NNS are_VBP divided_VBN into_IN four_CD types_NNS ,_, the_DT fixed_VBN structures_NNS ,_, such_JJ as_IN ``_`` you_PRP ..._: you_PRP ..._: ''_'' -LRB-_-LRB- 又_CD ..._: ._.
+又_NN ..._: ._. -RRB-_-RRB-
+,_, preposition_NN words_NNS &_CC preposition_NN phrases_NNS ,_, such_JJ as_IN ``_`` zai_FW ..._: shang_NN ''_'' -LRB-_-LRB- 在_CD ..._: ._.
+上_NN -RRB-_-RRB- ,_, special_JJ sentence_NN patterns_NNS ,_, such_JJ as_IN comparative_JJ sentences_NNS -LRB-_-LRB- 比较句_CD -RRB-_-RRB- Figure_NN 2_CD Structure_NN of_IN describing_VBG the_DT grammar_NN points_NNS In_IN the_DT basic_JJ information_NN part_NN ,_, we_PRP set_VBP 3_CD attributes_NNS fields_NNS to_TO describe_VB the_DT grammar_NN points_NNS ._.
+For_IN example_NN ,_, the_DT item_NN number_NN of_IN ``_`` Tai_NNP ..._: Le_NNP ''_'' is_VBZ ``_`` 1TL_NNP ''_'' ,_, the_DT item_NN name_NN is_VBZ ``_`` 太_FW ..._: ._.
+了_NN ''_'' ,_, the_DT item_NN type_NN is_VBZ fixed_VBN structure_NN ._.
+In_IN the_DT teaching_NN information_NN part_NN ,_, we_PRP set_VBD 11_CD attributes_NNS fields_NNS to_TO describe_VB the_DT grammar_NN points_NNS ._.
+Semantic_JJ information_NN In_IN the_DT semantic_JJ plane_NN ,_, we_PRP set_VBP 2_CD attributes_NNS ._.
+Fox_NNP example_NN ,_, the_DT semantic_JJ information_NN of_IN ``_`` you_PRP ..._: you_PRP ..._: ''_'' -LRB-_-LRB- 又_CD ..._: ._.
+又_NN ..._: ._. -RRB-_-RRB-
+is_VBZ in_IN the_DT table_NN 1_CD ._.
+Table_NNP 2_CD :_: the_DT basic_JJ form_NN of_IN the_DT existential_JJ sentence_NN From_IN the_DT table_NN 2_CD ,_, we_PRP can_MD see_VB that_IN there_EX are_VBP three_CD forms_NNS of_IN the_DT existential_JJ sentences_NNS and_CC there_EX are_VBP 89_CD sentences_NNS with_IN the_DT first_JJ form_NN ,_, 87_CD sentences_NNS with_IN the_DT second_JJ form_NN and_CC 53_CD sentences_NNS with_IN the_DT third_JJ form_NN ._.
+sentences_NNS with_IN the_DT first_JJ meaning_NN ,_, 95_CD sentences_NNS with_IN the_DT second_JJ meaning_NN ._.
+Syntactic_JJ information_NN We_PRP describe_VBP the_DT syntactic_JJ plane_NN from_IN 4_CD aspects_NNS ._.
+There_EX are_VBP the_DT basic_JJ form_NN ,_, the_DT form_NN with_IN subject_JJ ,_, the_DT negative_JJ form_NN and_CC the_DT collocation_NN form_NN ,_, which_WDT are_VBP useful_JJ and_CC necessary_JJ in_IN TCSL_NNP ._.
+In_IN this_DT paper_NN ,_, we_PRP take_VBP the_DT basic_JJ information_NN and_CC the_DT form_NN with_IN subjects_NNS as_IN the_DT examples_NNS to_TO explain_VB the_DT syntactic_JJ plane_NN in_IN CGPK_NNP ._.
+Table_NNP 2_CD is_VBZ the_DT basic_JJ form_NN of_IN the_DT existential_JJ sentence_NN ._.
+Item_NN name_NN The_DT num-ber_NN of_IN the_DT form_NN Basic_JJ form_NN Frequency_NN existential_JJ sentence_NN -LRB-_-LRB- 存现_FW 句_FW -RRB-_-RRB- 3_CD 1Place_JJ noun_NN +_NN you_PRP -LRB-_-LRB- 有_CD -RRB-_-RRB- +_NN Noun_NN 89_CD 2Place_JJ noun_NN +_CD Verb_NNP +_CD z_SYM he_PRP -LRB-_-LRB- 着_CD -RRB-_-RRB- /_FW le_FW -LRB-_-LRB- 了_CD -RRB-_-RRB- /_CD man_NN -LRB-_-LRB- 满_FW -RRB-_-RRB- +_JJ Nou_NNP n_NN 87_CD 3Place_NNP noun_NN +_NN shi_NN -LRB-_-LRB- 是_FW -RRB-_-RRB- +_JJ Noun_NN 53_CD Item_NN name_NN The_DT number_NN of_IN the_DT sense_NN The_DT sense_NN Freque_NNP -_: ncy_NN you_PRP ..._: yo_FW u._FW ._. ._.
+-LRB-_-LRB- 又_CD ..._: ._.
+又_NN ..._: ._. -RRB-_-RRB-
+2_CD 1It_JJ means_NNS that_WDT something_NN has_VBZ two_CD characters_NNS at_IN the_DT same_JJ time_NN ._.
+379_CD 2It_JJ means_NNS that_WDT two_CD actions_NNS happened_VBD at_IN the_DT same_JJ time_NN ._.
+95_CD Item_NN name_NN Forms_NNS with_IN subject_JJ Freque_NNP -_: ncy_NN yue_NN ..._: yu_FW e._FW ._. ._.
+-LRB-_-LRB- 越_CD ..._: ..._: 越_CD ..._: ._. -RRB-_-RRB-
+1subject_CD +_NN yue_NN ..._: yue_NN ..._: 106_CD 2_CD subject1_CD +_NN yue_NN ..._: subject2_CD +_CD y_NN ue_NN ..._: 87_CD 3yue_CD ..._: subject_JJ +_JJ yue_NN ..._: 53_CD Table_NNP 1_CD :_: Senmantic_JJ information_NN of_IN ``_`` you_PRP ..._: you_PRP ..._: ''_'' From_IN table_NN 1_CD ,_, we_PRP can_MD see_VB that_IN there_EX are_VBP 2_CD senses_NNS of_IN ``_`` you_PRP ..._: you_PRP ..._: ''_'' ,_, there_EX are_VBP 474_CD sentences_NNS with_IN ``_`` you_PRP ..._: you_PRP ..._: ''_'' in_IN 141464_CD sentences_NNS and_CC 379_CD Table_NNP 3_CD :_: the_DT form_NN with_IN subject_JJ information_NN of_IN ``_`` yue_FW ..._: yue_NN ..._: ''_'' From_IN the_DT table_NN 3_CD ,_, we_PRP can_MD see_VB that_IN the_DT grammar_NN point_NN of_IN ``_`` yue_FW ..._: yue_NN ..._: ''_'' could_MD have_VB one_CD subject_JJ or_CC two_CD subjects_NNS ._.
+When_WRB it_PRP has_VBZ two_CD subjects_NNS ,_, form_NN 2_CD should_MD be_VB used_VBN ._.
+When_WRB it_PRP has_VBZ one_CD subject_NN ,_, form_NN 1_CD and_CC form_NN 3_CD could_MD be_VB used_VBN ._.
+Pragmatic_JJ information_NN In_IN the_DT pragmatic_JJ plane_NN ,_, we_PRP set_VBD 4_CD attribute_NN fields_NNS to_TO describe_VB grammar_NN points_NNS ._.
+The_DT attribute_NN field_NN of_IN ``_`` tone_NN ''_'' is_VBZ to_TO describe_VB the_DT language_NN point_NN is_VBZ used_VBN in_IN spoken_VBN language_NN or_CC the_DT written_VBN language_NN ._.
+The_DT ``_`` mood_NN ''_'' is_VBZ to_TO describe_VB the_DT grammar_NN points_NNS is_VBZ to_TO express_VB affirmation_NN ,_, negative_JJ mode_NN or_CC a_DT mild_JJ mood_NN ._.
+The_DT ``_`` style_NN ''_'' is_VBZ to_TO describe_VB the_DT language_NN point_NN is_VBZ used_VBN in_IN the_DT declarative_JJ sentence_NN ,_, question_NN sentence_NN ,_, imperative_JJ sentence_NN or_CC exclamatory_JJ sentence_NN ._.
+The_DT pragmatic_JJ meaning_NN is_VBZ for_IN the_DT complex_JJ sentence_NN ,_, which_WDT is_VBZ to_TO describe_VB the_DT grammar_NN points_NNS is_VBZ used_VBN in_IN progressive_JJ complex_JJ sentences_NNS ,_, transitional_JJ complex_JJ sentences_NNS or_CC others_NNS ._.
+Other_JJ information_NN The_DT attribute_NN field_NN of_IN ``_`` level_NN ''_'' is_VBZ to_TO describe_VB the_DT grammar_NN points_NNS '_POS level_NN in_IN the_DT HSK_NNP exam_NN ._.
+The_DT ``_`` Error_NN ''_'' is_VBZ to_TO give_VB some_DT error_NN examples_NNS which_WDT from_IN HSK_NNP dynamic_JJ Composition_NNP Corpus_NNP to_TO help_VB the_DT teacher_NN to_TO know_VB the_DT errors_NNS the_DT learners_NNS may_MD make_VB ._.
+The_DT similar_JJ items_NNS is_VBZ to_TO help_VB the_DT teacher_NN to_TO get_VB the_DT information_NN that_IN what_WP grammar_NN points_NNS are_VBP easy_JJ to_TO mix_VB up_RP for_IN the_DT learners_NNS ._.
+3.3_CD Annotation_NN of_IN the_DT grammar_NN points_NNS in_IN Corpus_NNP In_IN the_DT corpus_NN ,_, we_PRP annotate_VBP the_DT sense_NN ,_, basic_JJ form_NN ,_, form_NN with_IN subject_JJ ,_, negative_JJ form_NN and_CC collocative_JJ information_NN ._.
+The_DT annoted_JJ result_NN could_MD be_VB used_VBN in_IN the_DT Chinese_JJ teaching_NN platform_NN and_CC the_DT statistical_JJ result_NN is_VBZ used_VBN by_IN the_DT Static_NNP Description_NNP Knowledge_NNP -_: base_NN of_IN the_DT frequency_NN infromation_NN ._.
+Because_IN the_DT Microsoft_NNP EXCEL_NNP is_VBZ good_JJ at_IN storing_VBG ,_, analyzing_VBG data_NNS and_CC it_PRP is_VBZ easy_JJ to_TO manipulate_VB ,_, we_PRP take_VBP it_PRP as_IN the_DT annotation_NN tool_NN ._.
+The_DT process_NN of_IN the_DT annotation_NN is_VBZ shown_VBN in_IN figure_NN 3_CD ._.
+Figure_NN 3_CD The_DT process_NN of_IN annotation_NN The_DT first_JJ step_NN is_VBZ to_TO make_VB the_DT annotation_NN structure_NN for_IN each_DT grammar_NN points_NNS ._.
+To_TO extract_VB data_NNS with_IN the_DT target_NN grammar_NN point_NN from_IN 141464_CD sentences_NNS is_VBZ the_DT second_JJ step_NN ._.
+The_DT third_JJ step_NN is_VBZ to_TO design_VB the_DT annotation_NN sheet_NN in_IN the_DT EXCEL_NNP ._.
+The_DT forth_RB step_NN is_VBZ to_TO annotate_VB the_DT grammar_NN points_VBZ informaiton_NN in_IN the_DT annotation_NN sheet_NN ._.
+-LRB-_-LRB- See_VB Figure_NN 4_CD -RRB-_-RRB- Figure_NN 4_CD Annotation_NNP sheet_NN of_IN ``_`` Gei_NNP ''_'' Figure_NN 4_CD is_VBZ the_DT annotation_NN sheet_NN of_IN ``_`` Gei_NNP ''_'' ,_, we_PRP can_MD see_VB that_IN the_DT sentences_NNS with_IN grammar_NN point_NN of_IN ``_`` Gei_NNP ''_'' has_VBZ been_VBN extracted_VBN from_IN 141464_CD sentences_NNS and_CC save_VB them_PRP in_IN one_CD sheet_NN ._.
+The_DT grammar_NN features_NNS of_IN ``_`` Gei_NNP ''_'' in_IN each_DT sentence_NN were_VBD annotated_VBN from_IN aspects_NNS of_IN sense_NN ,_, basic_JJ form_NN ,_, collocation_NN form_NN ._.
+4_CD Application_NN in_IN TCSL_NNP The_NNP CGPK_NNP has_VBZ been_VBN used_VBN in_IN a_DT Chinese_JJ teaching_NN platform_NN ,_, which_WDT could_MD help_VB the_DT teacher_NN to_TO obtain_VB the_DT valuable_JJ teaching_NN information_NN of_IN the_DT grammar_NN points_NNS and_CC useful_JJ sentences_NNS with_IN grammar_NN pionts_NNS directly_RB ._.
+Figure_NN 5_CD The_DT explanation_NN of_IN ``_`` tai_FW ..._: le_FW ''_'' in_IN the_DT Chinese_JJ teaching_NN platform_NN Figure_NN 5_CD is_VBZ the_DT explanation_NN of_IN ``_`` tai_FW ..._: le_FW ''_'' ,_, the_DT user_NN can_MD get_VB all_PDT the_DT sentencse_NN with_IN ``_`` tai_FW ..._: le_FW ''_'' in_IN the_DT corpus_NN ._.
+The_DT user_NN also_RB can_MD get_VB the_DT semantics_NNS ,_, syntactics_NNS and_CC pragramtics_NNS information_NN from_IN the_DT platfrom_NN ._.
+Besides_IN ,_, users_NNS can_MD choose_VB sentences_NNS by_IN clicking_VBG the_DT semantics_NNS or_CC the_DT forms_NNS they_PRP want_VBP ._.
+For_IN example_NN ,_, if_IN users_NNS want_VBP to_TO get_VB the_DT sentences_NNS with_IN the_DT form_NN of_IN ``_`` Tai_FW +_FW adj._FW +_FW le_FW ''_'' ,_, they_PRP just_RB need_VBP to_TO click_VB ``_`` 太_FW +_FW 形_FW +_FW 了_FW ''_'' ,_, the_DT results_NNS will_MD be_VB show_NN in_IN the_DT right_JJ part_NN of_IN the_DT interface_NN ._.
+5_CD Conclusion_NN and_CC future_JJ work_NN This_DT paper_NN introduces_VBZ the_DT construction_NN of_IN CGPK_NNP and_CC its_PRP$ application_NN in_IN a_DT Chinese_JJ teaching_NN platform_NN ._.
+There_EX are_VBP valuable_JJ teaching_NN information_NN of_IN 121_CD grammar_NN points_NNS and_CC 99592_CD annotated_JJ sentences_NNS in_IN the_DT CGPK_NNP ._.
+In_IN the_DT future_NN ,_, we_PRP will_MD add_VB more_JJR grammar_NN points_NNS in_IN CGPK_NNP and_CC research_NN on_IN how_WRB to_TO use_VB and_CC show_VB the_DT frequency_NN informaiton_NN in_IN the_DT platform_NN ._.
+References_NNS Christiane_NNP Fellbaum_NNP ,_, ed_VBD ._.
+-LRB-_-LRB- 1998_CD -RRB-_-RRB- ,_, WordNet_NNP :_: an_DT electronic_JJ lexical_NN database_NN ,_, The_DT MIT_NNP Press_NNP ._.
+Hu_NNP Yushu_NNP &_CC Fan_NNP Xiao_NNP -LRB-_-LRB- 1993_CD -RRB-_-RRB- The_DT Discussion_NN on_IN the_DT three_CD planes_NNS of_IN grammar_NN research_NN ,_, Language_NN Teaching_NN and_CC Linguistic_NNP Studies_NNPS ,_, -LRB-_-LRB- 02_CD -RRB-_-RRB- ,_, 4-21_CD ._.
+Lu_NNP Fubo_NNP -LRB-_-LRB- 2000_CD -RRB-_-RRB- The_DT Teaching_NN and_CC Studying_VBG on_IN the_DT structure_NN of_IN ``_`` Tai_NNP ''_'' :_: the_DT Researcing_NNP on_IN the_DT Combination_NN of_IN Teaching_NNP Chinese_NNP as_IN a_DT Sencond_JJ language_NN and_CC the_DT Three_CD Plane_NN Theory_NNP ,_, Chinese_NNP Teaching_NNP in_IN the_DT World_NNP ,_, -LRB-_-LRB- 02_CD -RRB-_-RRB- ,_, 74-81_CD ._.
+Peng_NNP Weiming_NNP ,_, Song_NN Jihua_NNP ,_, et_FW al._FW -LRB-_-LRB- 2014_CD -RRB-_-RRB- The_DT Construction_NN of_IN Grammar_NNP Resources_NNP Knowledge_NNP -_: base_NN for_IN TCSL_NNP ,_, Chinese_NNP Distance_NNP Education_NNP ,_, -LRB-_-LRB- 08_CD -RRB-_-RRB- :90_SYM -_: 94_CD ._.
+Yu_NNP Shiwen_NNP ,_, Zhu_NNP Xuefeng_NNP ,_, et_FW al._FW -LRB-_-LRB- 1996_CD -RRB-_-RRB- The_DT Specification_NNP of_IN the_DT Modern_NNP Chinese_NNP Grammatical_NNP Information_NNP Dictionary_NNP ,_, Journal_NNP of_IN Chinese_NNP Information_NNP Processing_NNP ,_, -LRB-_-LRB- 03_CD -RRB-_-RRB- :1_CD -22_CD ._.
+Yu_NNP Shiwen_NNP ,_, Zhu_NNP Xuefeng_NNP -LRB-_-LRB- 2014_CD -RRB-_-RRB- Comprehensive_NNP Language_NNP knowledge-base_NN and_CC Its_PRP$ Applications_NNS in_IN Language_NN Teaching_NN ,_, Journal_NNP of_IN Beihua_NNP University_NNP -LRB-_-LRB- Social_NNP Sciences_NNPS -RRB-_-RRB- ,_, -LRB-_-LRB- 03_CD -RRB-_-RRB- :4_CD -9_NN ._.

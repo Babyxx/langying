@@ -1,0 +1,375 @@
+Sentiment_NN Classification_NN of_IN Arabic_NNP Documents_NNS :_: Experiments_NNS with_IN multi-type_JJ features_NNS and_CC ensemble_NN algorithms_NNS Abstract_NNP Document_NNP sentiment_NN classification_NN is_VBZ of_IN -_: ten_CD processed_VBN by_IN applying_VBG machine_NN learn_VBP -_: ing_NN techniques_NNS ,_, in_IN particular_JJ supervised_JJ learning_NN which_WDT consists_VBZ basically_RB of_IN two_CD major_JJ steps_NNS :_: feature_NN extraction_NN and_CC train_NN -_: ing_VBG the_DT learning_NN model_NN ._.
+In_IN the_DT literature_NN ,_, most_JJS existing_VBG researches_VBZ rely_VBP on_IN n-grams_NNS as_IN selected_VBN features_NNS ,_, and_CC on_IN a_DT simple_JJ basic_JJ classifier_NN as_IN learning_VBG model_NN ._.
+In_IN the_DT context_NN of_IN our_PRP$ work_NN ,_, we_PRP try_VBP to_TO improve_VB document_NN classification_NN findings_NNS in_IN Ara_NNP -_: bic_NN sentiment_NN analysis_NN by_IN combining_VBG dif_SYM -_: ferent_JJ types_NNS of_IN features_NNS such_JJ as_IN opinion_NN and_CC discourse_NN features_NNS ;_: and_CC by_IN proposing_VBG an_DT ensemble-based_JJ classifier_NN to_TO investi_NNS -_: gate_NN its_PRP$ contribution_NN in_IN Arabic_NNP sentiment_NN classification_NN ._.
+Obtained_VBN results_NNS attained_VBD 85.06_CD %_NN in_IN terms_NNS of_IN macro-averaged_JJ F_NN -_: measure_NN ,_, and_CC showed_VBD that_IN discourse_NN fea_NN -_: tures_NNS have_VBP moderately_RB improved_VBN F_NN -_: measure_NN by_IN approximately_RB 3_CD %_NN or_CC 4_CD %_NN ._.
+1_CD Introduction_NNP With_IN the_DT expanding_VBG growth_NN of_IN social_JJ networks_NNS services_NNS ,_, user_NN generated_VBD content_JJ web_NN has_VBZ emerged_VBN from_IN being_VBG a_DT simple_JJ web_NN space_NN for_IN peo_NN -_: ple_NN to_TO express_VB their_PRP$ opinions_NNS and_CC to_TO share_VB their_PRP$ knowledge_NN ,_, to_TO a_DT high_JJ value_NN information_NN source_NN for_IN business_NN companies_NNS to_TO discover_VB consumer_NN feedbacks_NNS about_IN their_PRP$ products_NNS or_CC even_RB to_TO decide_VB future_JJ marketing_NN actions_NNS ._.
+Therefore_RB ,_, opinion_NN mining_NN is_VBZ becoming_VBG a_DT potential_JJ research_NN domain_NN interesting_JJ more_RBR and_CC more_RBR researchers_NNS who_WP at_IN -_: tempt_VB to_TO improve_VB current_JJ results_NNS and_CC to_TO solve_VB more_JJR advanced_JJ and_CC complex_JJ issues_NNS in_IN the_DT do_VBP -_: main_JJ ._.
+Typically_RB ,_, mining_VBG opinions_NNS is_VBZ viewed_VBN as_IN a_DT Lamia_NNP Hadrich_NNP Belguith_NNP ANLP_NNP Group_NNP ,_, MIRACL_NNP FSEGS_NNP ,_, Sfax_NNP University_NNP 3018_CD ,_, Sfax_NNP ,_, TUNISIA_NNP l.belguith@rnu.fsegs.tn_NNP Hatem_NNP Ghorbel_NNP ISIC_NNP Lab_NNP ,_, HE-Arc_NNP Applied_NNP Science_NNP University_NNP CH-2610_NNP ,_, Switzerland_NNP hatem.ghorbel@he-arc.ch_JJ classification_NN problem_NN called_VBN sentiment_NN classifi_NNS -_: cation_NN ._.
+Sentiment_NN classification_NN aims_VBZ to_TO determine_VB whether_IN the_DT semantic_JJ orientation_NN of_IN a_DT text_NN is_VBZ posi_SYM -_: tive_JJ ,_, negative_JJ or_CC neutral_JJ ._.
+It_PRP can_MD be_VB tackled_VBN at_IN many_JJ levels_NNS of_IN granularity_NN :_: expression_NN or_CC phrase_NN level_NN ,_, sentence_NN level_NN ,_, and_CC document_NN level_NN ._.
+Expression_NN sentiment_NN classification_NN aims_VBZ to_TO determine_VB the_DT pri_NN -_: or_CC sentiment_NN class_NN or_CC valence_NN of_IN an_DT expression_NN ._.
+As_IN for_IN sentence_NN level_NN ,_, the_DT objective_NN is_VBZ to_TO calculate_VB the_DT contextual_JJ polarity_NN of_IN a_DT sentence_NN ._.
+Concerning_VBG document_NN level_NN ,_, which_WDT is_VBZ our_PRP$ focus_NN in_IN this_DT re_NN -_: search_NN ,_, the_DT main_JJ goal_NN is_VBZ to_TO mine_VB the_DT overall_JJ polari_NN -_: ty_NN of_IN a_DT document_NN with_IN the_DT hypothesis_NN that_WDT is_VBZ ex_FW -_: pressed_VBN by_IN a_DT single_JJ author_NN towards_IN a_DT single_JJ target_NN ._.
+Document_NNP sentiment_NN classification_NN is_VBZ often_RB processed_VBN by_IN applying_VBG machine_NN learning_VBG tech_SYM -_: niques_NNS ,_, in_IN particular_JJ supervised_JJ learning_NN which_WDT consists_VBZ basically_RB of_IN two_CD major_JJ steps_NNS :_: feature_NN ex_FW -_: traction_NN and_CC training_NN the_DT learning_NN model_NN ._.
+In_IN the_DT literature_NN ,_, most_JJS existing_VBG researches_VBZ rely_VBP on_IN n_SYM -_: grams_NNS as_IN selected_VBN features_NNS ,_, and_CC on_IN a_DT simple_JJ basic_JJ classifier_NN as_IN learning_VBG model_NN ._.
+The_DT limit_NN of_IN these_DT two_CD choices_NNS is_VBZ revealed_VBN when_WRB shifting_VBG from_IN one_CD domain_NN to_TO another_DT ._.
+As_IN a_DT matter_NN of_IN fact_NN ,_, in_IN one_CD hand_NN ,_, each_DT domain_NN has_VBZ generally_RB his_PRP$ specific_JJ vo_SYM -_: cabulary_JJ ._.
+So_RB ,_, n-grams_JJ features_NNS produced_VBN from_IN one_CD domain_NN fail_VBP to_TO be_VB discriminative_JJ in_IN another_DT ._.
+In_IN the_DT other_JJ hand_NN ,_, numerous_JJ studies_NNS showed_VBD that_IN the_DT performance_NN of_IN classification_NN algorithms_NNS is_VBZ domain_NN dependent_JJ -LRB-_-LRB- Xia_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+In_IN the_DT context_NN of_IN our_PRP$ work_NN ,_, we_PRP try_VBP to_TO improve_VB document_NN classification_NN findings_NNS in_IN Arabic_NNP sen_SYM -_: timent_NN analysis_NN by_IN -LRB-_-LRB- i_FW -RRB-_-RRB- combining_VBG different_JJ types_NNS of_IN features_NNS such_JJ as_IN opinion_NN and_CC discourse_NN fea_NN -_: tures_NNS ;_: and_CC by_IN -LRB-_-LRB- ii_FW -RRB-_-RRB- proposing_VBG an_DT ensemble-based_JJ classifier_NN consisting_VBG of_IN a_DT set_NN of_IN accurate_JJ basic_JJ classifiers_NNS to_TO investigate_VB its_PRP$ contribution_NN in_IN Ara_NNP -_: bic_NN sentiment_NN classification_NN similarly_RB to_TO some_DT other_JJ languages_NNS such_JJ as_IN Chinese_JJ -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN section_NN 2_CD ,_, we_PRP review_VBP a_DT selection_NN of_IN related_JJ work_NN to_TO document_NN sentiment_NN classification_NN for_IN English_NNP and_CC Arabic_NNP languages_NNS ._.
+In_IN section_NN 3_CD ,_, we_PRP detail_NN our_PRP$ proposed_VBN approach_NN and_CC focus_NN on_IN the_DT feature_NN extraction_NN and_CC the_DT classification_NN model_NN selection_NN steps_NNS ._.
+In_IN section_NN 4_CD ,_, we_PRP describe_VBP the_DT conducted_VBN experiments_NNS and_CC discuss_VB the_DT obtained_VBN results_NNS ._.
+Finally_RB ,_, we_PRP summarize_VBP our_PRP$ conclusions_NNS and_CC provide_VB some_DT perspectives_NNS ._.
+Lexicon-based_JJ approach_NN relies_VBZ on_IN a_DT sentiment_NN lexicon_NN to_TO calculate_VB orientation_NN for_IN a_DT document_NN from_IN the_DT semantic_JJ orientation_NN of_IN words_NNS or_CC phrases_NNS in_IN the_DT document_NN -LRB-_-LRB- Taboada_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Sentiment_NN lexicon_NN is_VBZ a_DT collection_NN of_IN classified_JJ opinion_NN terms_NNS that_WDT can_MD be_VB compiled_VBN according_VBG to_TO three_CD approaches_NNS :_: dictionary-based_JJ approach_NN ,_, corpus-based_JJ approach_NN ,_, or_CC combined_VBN approach_NN ._.
+In_IN dictionary_JJ based_VBN approach_NN ,_, we_PRP attempt_VBP to_TO find_VB a_DT set_NN of_IN opinion_NN seed_NN words_NNS and_CC then_RB enrich_VB them_PRP by_IN retrieving_VBG their_PRP$ synonyms_NNS and_CC antonyms_NNS from_IN dictionaries_NNS such_JJ WordNet_NNP and_CC Thesaurus_NNP ._.
+For_IN instance_NN ,_, Hu_NNP and_CC Liu_NNP -LRB-_-LRB- Hu_NNP and_CC Liu_NNP ,_, 2004_CD -RRB-_-RRB- and_CC Esuli_NNP and_CC Sebastiani_NNP -LRB-_-LRB- Esuli_NNP and_CC Sebastiani_NNP ,_, 2005_CD -RRB-_-RRB- classify_VBP polarity_NN using_VBG emotion_NN words_NNS and_CC se_FW -_: mantic_JJ relations_NNS from_IN WordNet_NNP ,_, WordNet_NNP Gloss_NNP ,_, WordNet-Affect_NNP and_CC SentiWordNet_NNP respectively_RB ._.
+However_RB ,_, in_IN corpus-based_JJ approach_NN ,_, we_PRP use_VBP patterns_NNS in_IN particular_JJ syntactic_JJ ones_NNS to_TO mine_VB large_JJ domain_NN specific_JJ corpora_NN and_CC extract_VB opinion_NN terms_NNS ._.
+Among_IN well-known_JJ researches_VBZ in_IN lexicon_NN -_: based_VBN approach_NN ,_, we_PRP mention_VBP those_DT of_IN Taboada_NNP et_FW al._FW -LRB-_-LRB- Taboada_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- who_WP developed_VBD a_DT se_FW -_: mantic_JJ orientation_NN calculator_NN called_VBN SO-CAL_NNP ._.
+They_PRP started_VBD by_IN manually_RB creating_VBG a_DT sentiment_NN lexicon_NN by_IN annotating_VBG a_DT large_JJ corpus_NN of_IN reviews_NNS extracted_VBN from_IN Epinions_NNP website_NN ._.
+The_DT lexicon_NN was_VBD enhanced_VBN by_IN positive_JJ and_CC negative_JJ words_NNS from_IN the_DT General_NNP Inquirer_NNP dictionary_NN ._.
+To_TO calcu_SYM -_: late_RB the_DT semantic_JJ orientation_NN of_IN each_DT review_NN ,_, the_DT authors_NNS took_VBD in_RP consideration_NN intensification_NN by_IN multiplying_VBG intensifier_NN words_NNS by_IN a_DT percentage_NN ,_, and_CC they_PRP incorporated_VBD Negation_NNP by_IN shifting_VBG the_DT semantic_JJ orientation_NN toward_IN the_DT opposite_JJ polarity_NN by_IN a_DT fixed_VBN amount_NN ._.
+Note_VB that_IN some_DT researches_VBZ combined_VBN the_DT ma_NN -_: chine_NN learning_NN and_CC the_DT lexicon_NN based_VBN approaches_NNS by_IN exploiting_VBG a_DT sentiment_NN lexicon_NN in_IN the_DT frame_NN -_: work_NN of_IN a_DT supervised_JJ learning_NN method_NN -LRB-_-LRB- Mejova_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- -LRB-_-LRB- Maynard_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+2.2_CD Arabic_NNP Sentiment_NN Classification_NN Most_JJS of_IN the_DT work_NN in_IN sentiment_NN analysis_NN was_VBD de_IN -_: voted_VBD to_TO the_DT English_NNP language_NN ,_, an_DT important_JJ number_NN of_IN resources_NNS and_CC tools_NNS have_VBP been_VBN elabo_SYM -_: rated_VBN accordingly_RB ._.
+When_WRB addressing_VBG the_DT same_JJ issue_NN to_TO other_JJ target_NN languages_NNS such_JJ as_IN Arabic_NNP ,_, several_JJ difficulties_NNS come_VBP out_RP as_IN potential_JJ chal_JJ -_: lenges_NNS ,_, including_VBG the_DT lack_NN of_IN standard_JJ lexical_JJ and_CC sentiment_NN resources_NNS and_CC of_IN good_JJ accurate_JJ linguis_NNS -_: tic_JJ analyzers_NNS and_CC parsers_NNS ._.
+That_DT 's_VBZ why_WRB ,_, we_PRP consid_VBD -_: er_NN that_IN Arabic_NNP sentiment_NN classification_NN is_VBZ still_RB lim_SYM -_: ited_VBD compared_VBN to_TO English_NNP ._.
+Nevertheless_RB ,_, there_EX are_VBP many_JJ published_VBN re_SYM -_: search_NN papers_NNS focusing_VBG on_IN sentiment_NN classifica_NN -_: 2_CD 2.1_CD Related_NNP Work_NNP English_NNP Sentiment_NN classification_NN In_IN English_JJ sentiment_NN classification_NN ,_, various_JJ strat_NN -_: egies_NNS have_VBP been_VBN proposed_VBN ,_, -LRB-_-LRB- Liu_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT most_RBS effective_JJ ones_NNS are_VBP related_VBN to_TO machine-learning_JJ paradigm_NN ,_, viewing_VBG the_DT opinion_NN and_CC polarity_NN de_IN -_: tection_NN as_IN text_NN classification_NN tasks_NNS ._.
+These_DT tech_SYM -_: niques_NNS vary_VBP from_IN supervised_VBN to_TO unsupervised_JJ learning_NN ,_, typically_RB probabilistic_JJ methods_NNS such_JJ as_IN Naïve_NNP Bayes_NNP -LRB-_-LRB- NB_NNP -RRB-_-RRB- and_CC Maximum_NNP Entropy_NNP -LRB-_-LRB- MaxEnt_NNP -RRB-_-RRB- ,_, and_CC linear_JJ discrimination_NN methods_NNS such_JJ as_IN Support_NN Vector_NNP machine_NN -LRB-_-LRB- SVM_NNP -RRB-_-RRB- ._.
+As_IN other_JJ pos_SYM -_: sible_NN classification_NN schemes_NNS ,_, we_PRP mention_VBP non_SYM -_: parametric_NN classifiers_NNS such_JJ as_IN k-Nearest_NNP Neighbor_NNP -LRB-_-LRB- KNN_NNP -RRB-_-RRB- ,_, as_RB well_RB as_IN similarity_NN scores_NNS methods_NNS -LRB-_-LRB- i.e._FW phrase_NN pattern_NN matching_NN ,_, distance_NN vector_NN ,_, frequen_NN -_: cy_NN counts_NNS and_CC statistical_JJ weight_NN measures_NNS -RRB-_-RRB- ._.
+Nevertheless_RB ,_, to_TO get_VB a_DT good_JJ accurate_JJ classifier_NN ,_, we_PRP need_VBP to_TO select_VB the_DT most_RBS effective_JJ set_NN of_IN textual_JJ predictors_NNS -LRB-_-LRB- Liu_NNP and_CC Motoda_NNP ,_, 2008_CD -RRB-_-RRB- ._.
+In_IN sentiment_NN classification_NN ,_, n-grams_NNS -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- are_VBP the_DT most_RBS used_JJ features_NNS ,_, however_RB ,_, there_EX are_VBP some_DT re_SYM -_: searches_NNS where_WRB other_JJ semantic_JJ features_NNS are_VBP tested_VBN such_JJ us_PRP opinion_NN words_NNS and_CC phrases_NNS ,_, opinion_NN op_SYM -_: erators_NNS such_JJ as_IN negation_NN -LRB-_-LRB- Mejova_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ,_, parts_NNS of_IN speech_NN -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, and_CC syntactic_NN dependencies_NNS -LRB-_-LRB- Nakagawa_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+Some_DT other_JJ researches_VBZ attempt_NN to_TO integrate_VB discourse_NN features_NNS and_CC report_VB a_DT significant_JJ added_VBN value_NN of_IN rhetorical_JJ roles_NNS in_IN sentiment_NN classification_NN -LRB-_-LRB- Chardon_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, So_RB -_: masundarun_NN et_FW al._FW -LRB-_-LRB- Somasundarun_JJ et_FW al._FW ,_, 2009_CD -RRB-_-RRB- proposed_VBD a_DT supervised_JJ and_CC unsupervised_JJ methods_NNS employing_VBG Discourse_NNP relations_NNS to_TO improve_VB senti_NNS -_: ment_NN classification_NN ._.
+This_DT is_VBZ performed_VBN by_IN adopt_VB -_: ing_VBG relational_JJ feature_NN that_WDT exploit_VBP discourse_NN and_CC neighbor_NN opinion_NN information_NN ._.
+In_IN general_JJ ,_, most_JJS of_IN adopted_VBN features_NNS tend_VBP to_TO be_VB domain_NN specific_NN -LRB-_-LRB- e.g._FW ,_, the_DT term_NN television_NN has_VBZ a_DT negative_JJ polarity_NN in_IN a_DT movie_NN review_NN ,_, but_CC may_MD have_VB a_DT positive_JJ one_CD in_IN a_DT book_NN review_NN -RRB-_-RRB- ._.
+This_DT prob_NN -_: lem_NN can_MD be_VB solved_VBN by_IN the_DT second_JJ approach_NN :_: the_DT lexicon_NN based_VBN approach_NN ._.
+tion_NN of_IN Arabic_NNP documents_NNS ._.
+These_DT researches_VBZ have_VB been_VBN the_DT object_NN of_IN some_DT surveys_NNS -LRB-_-LRB- Korayem_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- -LRB-_-LRB- Al-Twairesh_JJ et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, we_PRP cite_VBP Abbasi_NNP et_FW al._FW -LRB-_-LRB- Abbasi_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- who_WP proposed_VBD a_DT machine_NN learning_VBG method_NN based_VBN on_IN entropy_NN weighted_JJ genetic_JJ algorithms_NNS to_TO classify_VB movie_NN reviews_NNS and_CC forum_NN comments_NNS in_IN English_NNP and_CC Arabic_NNP ._.
+Conducted_VBN experiments_NNS based_VBN main_JJ -_: ly_RB on_IN stylistic_JJ features_NNS yielded_VBD an_DT accuracy_NN of_IN 93.62_CD %_NN but_CC with_IN a_DT high_JJ computational_JJ cost_NN ._.
+Rushdi-Saleh_NNP et_FW al._FW -LRB-_-LRB- Rushdi-Saleh_JJ et_FW al._FW ,_, 2011_CD -RRB-_-RRB- have_VBP introduced_VBN in_IN their_PRP$ research_NN a_DT new_JJ collected_VBN corpus_NN of_IN movie_NN reviews_NNS called_VBN OCA_NNP -LRB-_-LRB- Opinion_NNP Corpus_NNP for_IN Arabic_NNP -RRB-_-RRB- ._.
+They_PRP reported_VBD as_RB well_RB as_IN some_DT experiments_NNS based_VBN on_IN n-grams_JJ words_NNS and_CC carried_VBD out_RP with_IN SVM_NNP and_CC NB_NNP classifiers_NNS ._.
+The_DT best_JJS F-measure_NN attained_VBD 90.73_CD %_NN with_IN SVM_NNP classifier_NN ._.
+Mountassir_NNP et_FW al._FW 2013_CD -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- investigated_VBD three_CD classification_NN settings_NNS in_IN an_DT n-grams_JJ framework_NN based_VBN on_IN three_CD classifiers_NNS namely_RB NB_NNP ,_, SVM_NNP and_CC KNN_NNP ._.
+The_DT tested_VBN settings_NNS are_VBP stemming_VBG type_NN ,_, term_NN frequency_NN thresholding_NN and_CC term_NN weighting_NN ._.
+Experiments_NNS are_VBP performed_VBN on_IN two_CD data_NNS collections_NNS :_: OCA_NNP and_CC ACOM_NNP -LRB-_-LRB- col_SYM -_: lected_VBN by_IN the_DT authors_NNS -RRB-_-RRB- ._.
+Best_JJS results_NNS in_IN terms_NNS of_IN F_NN -_: measure_NN attained_VBD 93_CD %_NN on_IN OCA_NNP with_IN KNN_NNP classi_NNS -_: fier_NN and_CC 87.5_CD %_NN and_CC 76.4_CD %_NN respectively_RB on_IN ACOM_NNP DS1_NNP and_CC ACOM_NNP DS2_CD with_IN NB_NNP classifier_NN ._.
+El-Halees_NNS -LRB-_-LRB- El-Halees_NNS ,_, 2011_CD -RRB-_-RRB- followed_VBD an_DT hy_NN -_: brid_NN sequential_JJ approach_NN by_IN applying_VBG lexicon_NN -_: based_VBN method_NN with_IN a_DT seed_NN word_NN list_NN enriched_VBN from_IN online_JJ dictionaries_NNS ._.
+Classified_VBN documents_NNS were_VBD then_RB used_VBN to_TO train_VB a_DT MaxEnt_NNP based_VBN classifi_NNS -_: er_NN ._.
+Classified_VBN documents_NNS of_IN the_DT two_CD previous_JJ steps_NNS were_VBD finally_RB used_VBN to_TO train_VB a_DT KNN_NNP based_VBN classifier_NN ._.
+Experiments_NNS were_VBD conducted_VBN on_IN a_DT mul_NN -_: ti-domain_JJ corpus_NN consisting_VBG of_IN 1143_CD documents_NNS ._.
+Achieved_VBN accuracy_NN was_VBD around_IN of_IN 80_CD %_NN ._.
+3_CD Proposed_NNP Approach_NNP In_IN this_DT section_NN ,_, we_PRP present_VBP our_PRP$ approach_NN proposed_VBD for_IN the_DT sentiment_NN classification_NN of_IN Arabic_NNP docu_NN -_: ments_NNS ._.
+This_DT approach_NN ,_, based_VBN on_IN multi-type_JJ fea_NN -_: tures_NNS ,_, is_VBZ using_VBG a_DT set_NN of_IN publicly_RB available_JJ linguis_NNS -_: tic_JJ resources_NNS and_CC tools_NNS ._.
+It_PRP takes_VBZ as_IN input_NN an_DT Ara_NNP -_: bic_NN review_NN about_IN a_DT given_VBN target_NN and_CC predicts_VBZ its_PRP$ polarity_NN which_WDT can_MD be_VB Positive_JJ or_CC Negative_JJ ._.
+The_DT approach_NN consists_VBZ chiefly_RB of_IN three_CD sequential_JJ phases_NNS which_WDT are_VBP composed_VBN of_IN one_CD or_CC more_JJR steps_NNS ._.
+The_DT three_CD phases_NNS are_VBP :_: document_NN pre-processing_NN ,_, feature_NN extraction_NN ,_, and_CC sentiment_NN classification_NN ._.
+3.1_CD Data_NNP Description_NNP In_IN Arabic_NNP language_NN ,_, sentiment_NN resources_NNS are_VBP in_IN general_JJ rare_JJ ._.
+However_RB ,_, in_IN the_DT task_NN of_IN document_NN sentiment_NN classification_NN ,_, there_EX are_VBP many_JJ used_VBD da_NN -_: ta_NN collections_NNS since_IN they_PRP are_VBP easy_JJ to_TO collect_VB and_CC to_TO annotate_VB ._.
+In_IN fact_NN ,_, we_PRP remark_VBP that_IN each_DT researcher_NN has_VBZ collected_VBN his_PRP$ own_JJ datasets_NNS and_CC used_VBN in_IN the_DT evaluation_NN of_IN his_PRP$ classification_NN approach_NN ,_, which_WDT does_VBZ not_RB allow_VB comparing_VBG properly_RB the_DT obtained_VBN results_NNS ._.
+Therefore_RB ,_, we_PRP have_VBP decided_VBN to_TO use_VB in_IN our_PRP$ experiments_NNS existent_JJ datasets_NNS that_WDT have_VBP been_VBN widely_RB used_VBN by_IN the_DT NLP_NNP research_NN community_NN ._.
+According_VBG to_TO the_DT literature_NN ,_, there_EX are_VBP few_JJ pub_NN -_: licly_RB available_JJ sentiment_NN corpora_NN for_IN document_NN sentiment_NN classification_NN ._.
+They_PRP are_VBP derived_VBN from_IN different_JJ domain_NN such_JJ as_IN social_JJ networks_NNS -LRB-_-LRB- Abdullah_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, product_NN reviews_NNS -LRB-_-LRB- Abbasi_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- -LRB-_-LRB- Rushdi-Saleh_JJ et_FW al._FW ,_, 2011_CD -RRB-_-RRB- -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- and_CC news_NN -LRB-_-LRB- Ahmad_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- -LRB-_-LRB- Almas_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- ._.
+Among_IN these_DT corpo_NN -_: ra_NN ,_, the_DT most_RBS used_VBN one_CD is_VBZ OCA_NNP -LRB-_-LRB- Rushdi-Saleh_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- and_CC the_DT largest_JJS one_NN is_VBZ ACOM_NNP -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+That_DT 's_VBZ why_WRB ,_, we_PRP have_VBP chosen_VBN these_DT two_CD corpus_NNS to_TO evaluate_VB our_PRP$ ap_SYM -_: proach_NN and_CC to_TO compare_VB our_PRP$ results_NNS ._.
+OCA_NNP -LRB-_-LRB- Opinion_NNP Corpus_NNP for_IN Arabic_NNP -RRB-_-RRB- consists_VBZ of_IN 500_CD documents_NNS divided_VBN equally_RB into_IN positive_JJ and_CC negative_JJ -LRB-_-LRB- Table_NNP 1_CD -RRB-_-RRB- ._.
+The_DT corpus_NN was_VBD collected_VBN by_IN extracting_VBG reviews_NNS about_IN movies_NNS from_IN Arabic_NNP web_NN pages_NNS and_CC blogs_NNS ._.
+After_IN that_DT ,_, many_JJ pro-_JJ cessing_NN steps_NNS on_IN each_DT review_NN were_VBD carried_VBN out_RP in_IN order_NN to_TO obtain_VB a_DT formatted_VBN document_NN ._.
+The_DT main_JJ steps_NNS were_VBD removing_VBG HTML_NNP tags_NNS and_CC special_JJ characters_NNS ,_, correcting_VBG spelling_VBG mistakes_NNS ,_, filtering_VBG out_RP nonsense_NN and_CC nonrelated_JJ comments_NNS ,_, fixing_VBG Romanized_JJ comments_NNS and_CC comments_NNS in_IN different_JJ languages_NNS ._.
+The_DT classification_NN of_IN documents_NNS into_IN positive_JJ and_CC negative_JJ were_VBD automatically_RB per_IN -_: formed_VBN by_IN exploiting_VBG the_DT review_NN rating_NN score_NN giv_SYM -_: en_IN by_IN the_DT user_NN ._.
+This_DT annotation_NN strategy_NN avoids_VBZ wasting_VBG time_NN in_IN manual_NN annotation_NN ,_, but_CC ,_, it_PRP does_VBZ not_RB always_RB succeed_VB to_TO assign_VB the_DT right_JJ class_NN to_TO the_DT an_DT -_: notated_JJ review_NN ._.
+In_IN fact_NN ,_, reviewers_NNS can_MD mention_VB much_RB more_RBR negative_JJ feedbacks_NNS than_IN positive_JJ ones_NNS ,_, but_CC give_VB a_DT weak_JJ positive_JJ rating_NN score_NN to_TO the_DT movie_NN ._.
+Table_NNP 1_CD :_: Statistics_NNS on_IN OCA_NNP Property_NNP Neg_NNP ._.
+Pos_NNS ._.
+Total_JJ documents_NNS Total_JJ tokens_NNS Avg_NNP ._.
+tokens_NNS in_IN each_DT file_NN Total_JJ sentences_NNS Avg_NNP ._.
+sentences_NNS in_IN each_DT file_NN 250_CD 250_CD 94,556_CD 121,392_CD 378_CD 485_CD 4,881_CD 3,137_CD 20_CD 13_CD ACOM_NNP -LRB-_-LRB- Arabic_NNP Corpus_NNP for_IN Opinion_NNP Mining_NNP -RRB-_-RRB- is_VBZ a_DT multi-genre_JJ corpus_NN collected_VBN from_IN Aljazeera_NNP polls_NNS and_CC forums_NNS ._.
+It_PRP consists_VBZ of_IN three_CD datasets_NNS of_IN different_JJ domains_NNS ._.
+The_DT first_JJ dataset_NN DS1_NNP consists_VBZ of_IN 594_CD documents_NNS and_CC falls_VBZ within_IN movie_NN review_NN domain_NN ._.
+The_DT second_JJ dataset_NN DS2_NNP is_VBZ sport-specific_JJ dataset_NN and_CC consists_VBZ of_IN 1492_CD comments_NNS about_IN 18_CD sport_NN topics_NNS ._.
+The_DT third_JJ dataset_NN DSP2_NNP is_VBZ a_DT collec_NN -_: tion_NN of_IN 1082_CD comments_NNS about_IN a_DT political_JJ issue_NN titled_VBN ``_`` Arab_JJ support_NN for_IN the_DT Palestinian_JJ affair_NN ''_'' ._.
+ACOM_NNP were_VBD manually_RB annotated_VBN according_VBG to_TO four_CD classes_NNS :_: positive_JJ ,_, negative_JJ ,_, neutral_JJ and_CC dia_NN -_: lectal_NN ._.
+Then_RB ,_, neutral_JJ and_CC dialectal_JJ categories_NNS were_VBD eliminated_VBN since_IN the_DT authors_NNS were_VBD interested_JJ in_IN classification_NN by_IN polarity_NN of_IN documents_NNS written_VBN only_RB in_IN Modern_NNP Standard_NNP Arabic_NNP -LRB-_-LRB- Table_NNP 2_CD -RRB-_-RRB- ._.
+Table_NNP 2_CD :_: Statistics_NNS on_IN the_DT collected_VBN ACOM_NNP In_IN addition_NN ,_, the_DT authors_NNS proceeded_VBD to_TO eliminate_VB a_DT number_NN of_IN negative_JJ comments_NNS from_IN each_DT da_NN -_: taset_NN in_IN a_DT way_NN to_TO equalize_VB the_DT number_NN of_IN docu_NN -_: ments_NNS for_IN each_DT category_NN -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+The_DT final_JJ number_NN of_IN documents_NNS used_VBN in_IN experiments_NNS is_VBZ 1368_CD documents_NNS :_: 698_CD negative_JJ and_CC 670_CD positive_JJ -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- ._.
+to_TO eliminate_VB discretization_NN from_IN the_DT reviews_NNS ._.
+Normalization_NN is_VBZ also_RB applied_VBN to_TO some_DT characters_NNS such_JJ as_IN alef_NN by_IN transforming_VBG all_PDT his_PRP$ forms_NNS -LRB-_-LRB- Alef_NNP Hamza_NNP above_IN ''_'' أ_FW ''_'' and_CC Alef_NNP Hamza_NNP below_IN ''_'' إ_FW ''_'' -RRB-_-RRB- into_IN bare_JJ Alef_NNP ''_'' ا_FW ''_'' ._.
+This_DT process_NN is_VBZ applied_VBN because_IN many_JJ reviewers_NNS omit_VBP or_CC confuse_VBP these_DT similar_JJ letters_NNS and_CC use_VB them_PRP interchangeably_RB ._.
+Stemming_VBG :_: MADAMIRA_NNP -LRB-_-LRB- Pasha_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- is_VBZ used_VBN to_TO apply_VB a_DT light_JJ stemming_VBG on_IN the_DT reviews_NNS ._.
+Light_NNP stemming_VBG aims_NNS ,_, to_TO transform_VB nouns_NNS in_IN sin_NN -_: gular_JJ and_CC to_TO conjugate_VB verbs_NNS with_IN the_DT third_JJ per_IN -_: sonal_JJ pronoun_NN ._.
+In_IN fact_NN ,_, stemming_VBG ,_, which_WDT reduces_VBZ words_NNS to_TO their_PRP$ roots_NNS ,_, is_VBZ not_RB convenient_JJ in_IN Arabic_NNP language_NN ,_, because_IN it_PRP may_MD affect_VB the_DT word_NN sense_NN ._.
+Light_NNP stemming_VBG will_MD be_VB helpful_JJ to_TO detect_VB all_DT mor_SYM -_: phological_JJ variations_NNS of_IN the_DT word_NN ._.
+Stop-word_JJ removal_NN :_: To_TO accelerate_VB the_DT detec_NN -_: tion_NN process_NN of_IN the_DT lexical_JJ cues_NNS ,_, we_PRP have_VBP profited_VBN from_IN the_DT stop-word_JJ list_NN of_IN Khoja_NNP stemmer_NN tool_NN -LRB-_-LRB- Khoja_NNP and_CC Garside_NNP ,_, 1999_CD -RRB-_-RRB- and_CC revised_VBD it_PRP ._.
+In_IN fact_NN ,_, this_DT Stop-word_JJ list_NN was_VBD established_VBN to_TO serve_VB in_IN -_: formation_NN retrieval_NN applications_NNS ._.
+However_RB ,_, in_IN sentiment_NN classification_NN task_NN ,_, a_DT more_RBR reduced_JJ list_NN is_VBZ required_VBN ,_, because_IN many_JJ non-informative_JJ bear_NN -_: ing_VBG words_NNS -LRB-_-LRB- such_JJ as_IN negation_NN operators_NNS and_CC dis_SYM -_: course_NN markers_NNS -RRB-_-RRB- can_MD be_VB helpful_JJ cues_NNS in_IN sentiment_NN classification_NN ._.
+3.3_CD Extraction_NN of_IN classification_NN features_NNS In_IN English_JJ language_NN ,_, several_JJ features_NNS ranging_VBG from_IN lexical_JJ to_TO deep_JJ analysis_NN features_NNS were_VBD tested_VBN in_IN the_DT sentiment_NN classification_NN task_NN ._.
+However_RB ,_, in_IN Arabic_NNP ,_, research_NN works_NNS were_VBD focused_VBN on_IN lexical_JJ or_CC statistical_JJ features_NNS in_IN particular_JJ n-grams_NNS ._.
+This_DT is_VBZ due_JJ to_TO many_JJ reasons_NNS basically_RB the_DT lack_NN of_IN sen_NN -_: timent_NN resources_NNS -LRB-_-LRB- i.e._FW lexicons_NNS ,_, standard_JJ annotat_NN -_: ed_VBN corpora_NN -RRB-_-RRB- and_CC high_JJ accurate_JJ linguistic_NN tools_NNS -LRB-_-LRB- i.e._FW syntactic_FW parser_NN ,_, segmenter_NN -RRB-_-RRB- ._.
+That_DT 's_VBZ why_WRB ,_, we_PRP propose_VBP to_TO adopt_VB a_DT set_NN multi-type_JJ features_NNS ._.
+Our_PRP$ selected_VBN features_NNS are_VBP :_: opinion_NN features_NNS ,_, discourse_NN markers_NNS ,_, stylistic_JJ features_NNS ,_, domain_NN dependent_JJ features_NNS and_CC morpho-lexical_JJ features_NNS ._.
+In_IN feature_NN extraction_NN step_NN ,_, a_DT set_NN of_IN linguistic_JJ resources_NNS and_CC tools_NNS are_VBP required_VBN ._.
+Opinion_NN features_NNS :_: include_VB opinion_NN bearing_NN words_NNS and_CC opinion_NN operators_NNS ._.
+Opinion_NN bearing_NN words_NNS were_VBD detected_VBN using_VBG a_DT sentiment_NN lexicon_NN called_VBN LAP_NNP -LRB-_-LRB- Bayoudhi_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ an_DT Ara_NNP -_: bic_NN lexicon_NN that_WDT contain_VBP over_IN than_IN 8,000_CD entries_NNS ,_, semi-automatically_JJ constructed_VBN from_IN the_DT MPQA_NNP Arabic_NNP translated_VBD lexicon_NN -LRB-_-LRB- Elarnaoty_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ also_RB fed_VBN by_IN mapping_VBG synonyms_NNS from_IN Arabic_NNP Wordnet_NNP -LRB-_-LRB- Boudabous_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, by_IN manual_NN annotation_NN of_IN sentiment_NN corpora_NN and_CC by_IN entries_NNS Dataset_NNP Positive_NNP Negative_JJ Total_JJ DS1_NNP DS2_NNP DS3_NNP Total_NNP 468 284 184 1003_CD 517 486 611 462_CD 149 2082 1263 819_CD Property_NN Negative_JJ Positive_JJ Total_JJ documents_NNS Total_JJ tokens_NNS Avg_NNP ._.
+tokens_NNS in_IN each_DT file_NN 698_CD 45697_CD 65.46_CD 670_CD 38819_CD 57.93_CD 3.2_CD Table_NNP 3_CD :_: Statistics_NNS on_IN the_DT datasets_NNS of_IN ACOM_NNP used_VBN in_IN experiments_NNS Document_NNP preprocessing_VBG Before_IN going_VBG on_IN with_IN the_DT classification_NN task_NN ,_, some_DT preprocessing_JJ steps_NNS are_VBP necessary_JJ to_TO pre_VB -_: pare_VB the_DT raw_JJ documents_NNS to_TO the_DT feature_NN extraction_NN step_NN ._.
+This_DT step_NN requires_VBZ to_TO search_VB and_CC to_TO identify_VB a_DT set_NN of_IN lexical_JJ cue_NN words_NNS and_CC markers_NNS ._.
+To_TO this_DT end_NN ,_, three_CD main_JJ steps_NNS are_VBP required_VBN :_: segmentation_NN ,_, stemming_VBG and_CC stop-word_JJ removal_NN ._.
+Segmentation_NN :_: This_DT step_NN ,_, which_WDT we_PRP carried_VBD out_RP using_VBG Stanford_NNP word_NN segmenter_NN -LRB-_-LRB- Monroe_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, includes_VBZ text_NN normalization_NN and_CC word_NN segmentation_NN ._.
+Normalization_NN aims_VBZ to_TO normalize_VB the_DT spelling_NN of_IN some_DT Arabic_NNP characters_NNS which_WDT can_MD be_VB written_VBN in_IN different_JJ ways_NNS ._.
+Arabic_NNP text_NN can_MD be_VB vowelized_VBN ,_, non-vowelized_JJ ,_, or_CC even_RB partially_RB vowelized_VBN ._.
+To_TO ensure_VB the_DT detection_NN and_CC extrac_NN -_: tion_NN of_IN all_DT orthographic_JJ word_NN forms_NNS ,_, we_PRP decided_VBD from_IN multilingual_JJ sentiment_NN lexicons_NNS ._.
+Statistics_NNS on_IN this_DT lexicon_NN are_VBP illustrated_VBN in_IN Table_NNP 4_CD ._.
+Regarding_VBG Opinion_NN operators_NNS ,_, they_PRP are_VBP linguistic_JJ elements_NNS which_WDT do_VBP not_RB intrinsically_RB bear_VB opinions_NNS ,_, but_CC they_PRP are_VBP altering_VBG the_DT characteristics_NNS of_IN opinion_NN words_NNS located_VBN in_IN their_PRP$ scope_NN -LRB-_-LRB- Chardon_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Table_NNP 4_CD :_: Statistics_NNS on_IN the_DT lexicon_NN LAP_NNP In_IN the_DT course_NN of_IN our_PRP$ research_NN ,_, we_PRP propose_VBP to_TO classify_VB opinion_NN operators_NNS in_IN three_CD categories_NNS :_: intensifiers_NNS ,_, negation_NN operators_NNS ,_, and_CC epistemic_JJ modality_NN operators_NNS ._.
+A_DT list_NN of_IN each_DT opinion_NN opera_NN -_: tor_NN is_VBZ prepared_VBN by_IN a_DT linguistic_NN expert_NN ._.
+Intensifiers_NNP :_: they_PRP are_VBP operators_NNS altering_VBG the_DT intensity_NN of_IN the_DT opinion_NN expression_NN ._.
+We_PRP distinguish_VBP two_CD types_NNS of_IN intensifiers_NNS :_: -LRB-_-LRB- i_FW -RRB-_-RRB- amplifiers_NNS -LRB-_-LRB- i.e._FW very_RB ,_, much_RB ,_, extremely_RB -RRB-_-RRB- strengthen_VB the_DT intensity_NN of_IN the_DT opinion_NN expression_NN ,_, -LRB-_-LRB- ii_FW -RRB-_-RRB- attenuators_NNS -LRB-_-LRB- i.e._FW little_RB ,_, less_JJR -RRB-_-RRB- weaken_VBP the_DT intensity_NN of_IN the_DT opinion_NN expression_NN ._.
+Negation_NN operators_NNS :_: affect_VB the_DT polarity_NN of_IN the_DT opinion_NN expression_NN -LRB-_-LRB- i.e._FW not_RB ,_, never_RB ,_, neither_CC -RRB-_-RRB- ._.
+This_DT effect_NN is_VBZ handled_VBN at_IN the_DT sentence_NN level_NN by_IN following_VBG different_JJ strategies_NNS such_JJ as_IN switch_NN po_SYM -_: larity_NN -LRB-_-LRB- Sauri_NNP ,_, 2008_CD -RRB-_-RRB- and_CC linear_JJ shift_NN polarity_NN -LRB-_-LRB- Taboada_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- and_CC angular_JJ shift_NN polarity_NN -LRB-_-LRB- Chardon_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Epistemic_JJ modality_NN operators_NNS :_: Epistemic_JJ modality_NN serves_VBZ to_TO reveal_VB how_WRB confident_JJ writers_NNS are_VBP about_IN the_DT truth_NN of_IN the_DT ideational_JJ material_NN they_PRP con_VBP -_: vey_NN -LRB-_-LRB- Palmer_NNP ,_, 1986_CD -RRB-_-RRB- ._.
+There_EX are_VBP two_CD types_NNS of_IN epis_FW -_: temic_JJ modality_NN operators_NNS :_: hedges_NNS and_CC boosters_NNS ._.
+Hedges_NNP -LRB-_-LRB- i.e._FW perhaps_RB ,_, I_PRP guess_VBP -RRB-_-RRB- are_VBP words_NNS employed_VBN by_IN the_DT speaker_NN to_TO reduce_VB the_DT degree_NN of_IN his_PRP$ liability_NN or_CC responsibility_NN towards_IN the_DT expression_NN ._.
+Boosters_NNS -LRB-_-LRB- i.e._FW definitely_RB ,_, I_PRP assure_VBP that_DT and_CC of_IN course_NN -RRB-_-RRB- are_VBP ele_SYM -_: ments_NNS used_VBN by_IN the_DT speaker_NN to_TO emphasize_VB the_DT expres_NNS -_: sion_NN ._.
+Both_DT hedges_NNS and_CC boosters_NNS modify_VBP polarity_NN of_IN the_DT opinion_NN expression_NN ,_, either_CC strengthen_VB or_CC weaken_VB it_PRP -LRB-_-LRB- Abdul-Mageed_JJ et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Discourse_NN features_NNS :_: In_IN document_NN sentiment_NN classification_NN ,_, many_JJ research_NN studies_NNS have_VBP inves_NNS -_: tigated_VBD the_DT integration_NN of_IN deep_JJ analysis_NN tech_NN -_: niques_NNS through_IN syntactic_NN parsing_NN and_CC dependency_NN relations_NNS ,_, or_CC through_IN discourse_NN analysis_NN and_CC role_NN relation_NN detection_NN ._.
+Accordingly_RB ,_, we_PRP propose_VBP in_IN our_PRP$ research_NN to_TO follow_VB the_DT same_JJ approach_NN by_IN adopting_VBG discourse_NN features_NNS ._.
+In_IN fact_NN ,_, compared_VBN to_TO dependencies_NNS relations_NNS ,_, discourse_NN relations_NNS con_VBP -_: tain_NN ,_, in_IN addition_NN to_TO the_DT structural_JJ aspect_NN ,_, a_DT seman_NN -_: tic_JJ aspect_NN which_WDT can_MD be_VB exploited_VBN in_IN the_DT senti_NNS -_: ment_NN classification_NN ._.
+However_RB ,_, unfortunately_RB ,_, dis_SYM -_: course_NN processing_NN researches_VBZ in_IN Arabic_NNP are_VBP very_RB limited_VBN ._.
+It_PRP focuses_VBZ on_IN either_DT annotating_VBG corpus_NN with_IN discourse_NN information_NN -LRB-_-LRB- Al-saif_JJ and_CC Market_NN ,_, 2010_CD -RRB-_-RRB- or_CC proposing_VBG taxonomies_NNS of_IN discourse_NN rela_NN -_: tions_NNS -LRB-_-LRB- Khalifa_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+Therefore_RB ,_, it_PRP is_VBZ not_RB possible_JJ to_TO profit_VB ,_, in_IN Arabic_NNP language_NN ,_, from_IN an_DT automatic_JJ generated_VBN discourse_NN structure_NN or_CC an_DT automatic_JJ recognition_NN of_IN discourse_NN relations_NNS to_TO improve_VB sentiment_NN classification_NN ._.
+Hence_RB ,_, dis_SYM -_: course_NN analysis_NN can_MD be_VB exploited_VBN only_RB through_IN discourse_NN markers_NNS called_VBN also_RB discourse_NN connec_NN -_: tives_NNS -LRB-_-LRB- DC_NNP -RRB-_-RRB- -LRB-_-LRB- Asher_NNP ,_, 1993_CD -RRB-_-RRB- ._.
+To_TO use_VB these_DT discourse_NN markers_NNS ,_, we_PRP have_VBP adopted_VBN the_DT list_NN of_IN Arabic_NNP Text_NNP Segmenter_NNP -LRB-_-LRB- Keskes_NNP ,_, 2015_CD -RRB-_-RRB- ,_, an_DT Arabic_NNP tool_NN that_WDT segments_NNS text_NN into_IN elementary_JJ Discourse_NNP Units_NNS ._.
+This_DT list_NN is_VBZ structured_VBN in_IN a_DT discourse_NN relation_NN hier_NN -_: archy_NN containing_VBG 24_CD relations_NNS categorized_VBN in_IN four_CD main_JJ classes_NNS :_: thematic_JJ ,_, temporal_JJ ,_, causal_JJ and_CC structural_JJ ._.
+In_IN the_DT context_NN of_IN this_DT work_NN ,_, we_PRP started_VBD by_IN exploiting_VBG only_RB the_DT structural_JJ class_NN ._.
+This_DT class_NN contains_VBZ 7_CD relations_NNS illustrated_VBD in_IN Table_NNP 5_CD ._.
+Table_NNP 5_CD :_: Discourse_NN relation_NN hierarchy_NN that_IN we_PRP used_VBD in_IN sentiment_NN classification_NN To_TO exploit_VB these_DT DCs_NNS in_IN our_PRP$ classification_NN model_NN ,_, we_PRP have_VBP grouped_VBN them_PRP according_VBG to_TO their_PRP$ effect_NN in_IN opinion_NN expressions_NNS into_IN three_CD feature_NN categories_NNS :_: polarity_NN propagation_NN ,_, polarity_NN switch_NN ,_, conditional_JJ polarity_NN -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+Class_NNP Number_NNP of_IN entries_NNS Negative_JJ Strong_JJ Negative_JJ Weak_NNP Positive_NNP Strong_JJ Positive_NNP Weak_NNP Total_NNP 2,281_CD 2,689_CD 1,726_CD 1,437_CD 8,133_CD Relation_NN Sample_NN of_IN DCs_NNP Contrast_NNP في_FW المقابل_FW ،_FW إ_FW أن_FW ،_FW بيىما_FW Antithetic_FW في_FW حيه_FW أن_FW ،_FW ليس_FW ،_FW Concession_NN غير_SYM أن_FW ،_FW لكه_FW ،_FW بيد_FW أن_FW Correction_NN بل_SYM ،_SYM ك_SYM ،_SYM إوما_CD Alternation_NNP سواء_CD ،_CD أم_IN ،_CD أو_CD Parallel_JJ كرلك_FW ،_FW كما_FW ،_FW مع_FW Conditional_JJ لو_FW ،_FW شرط_FW أن_FW ،_FW إذا_FW q_FW Polarity_NNP Switch_NNP :_: Contrast_NNP Antithetic_NNP Concession_NNP Correction_NNP q_NNP Polarity_NNP Propagation_NNP :_: Alternation_NNP Parallel_JJ q_NN Conditional_NNP Polarity_NNP :_: conditional_JJ Figure_NN 1_CD :_: Proposed_VBN discourse_NN features_NNS for_IN the_DT sentiment_NN classification_NN Discourse_NNP Feature_NNP categories_NNS Stylistic_NNP features_NNS :_: consist_VBP mainly_RB of_IN :_: Punctuation_NN marks_NNS :_: three_CD punctuation_NN marks_NNS are_VBP considered_VBN in_IN our_PRP$ research_NN :_: period_NN -LRB-_-LRB- full_JJ stop_NN -RRB-_-RRB- ,_, question_NN mark_NN and_CC exclamation_JJ mark_NN ._.
+Comma_NNP is_VBZ not_RB taken_VBN into_IN account_NN since_IN it_PRP is_VBZ not_RB often_RB used_VBN in_IN Arabic_NNP writing_VBG ._.
+Number_NN of_IN words_NNS per_IN document_NN ._.
+Polarities_NNS of_IN the_DT first_JJ and_CC last_JJ expressed_VBN opinion_NN words_NNS :_: based_VBN on_IN the_DT assumption_NN that_IN the_DT first_JJ and_CC last_JJ sentences_NNS of_IN a_DT document_NN are_VBP the_DT most_RBS informative_JJ sentences_NNS ,_, we_PRP added_VBD to_TO our_PRP$ sty_SYM -_: listic_NN features_VBZ the_DT polarity_NN of_IN the_DT first_JJ expressed_VBN opinion_NN word_NN and_CC the_DT polarity_NN of_IN the_DT last_JJ ex_FW -_: pressed_VBN opinion_NN word_NN ._.
+Domain_NN dependent_JJ features_NNS :_: n-grams_NNS are_VBP widely_RB used_VBN as_IN features_NNS in_IN text_NN classification_NN and_CC sentiment_NN classification_NN for_IN their_PRP$ capacity_NN to_TO en_IN -_: code_NN word_NN order_NN information_NN and_CC substantially_RB the_DT context_NN of_IN the_DT document_NN -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+However_RB ,_, these_DT features_NNS are_VBP domain_NN dependent_JJ ;_: they_PRP cause_VBP a_DT big_JJ decrease_NN in_IN the_DT performance_NN of_IN the_DT classifier_NN when_WRB testing_VBG it_PRP with_IN other_JJ data_NNS col_NN -_: lections_NNS ._.
+Therefore_RB ,_, we_PRP have_VBP decided_VBN to_TO minimize_VB the_DT effect_NN of_IN domain_NN dependent_JJ features_NNS by_IN ex_FW -_: cluding_VBG unigrams_NNS and_CC relying_VBG only_RB on_IN bigrams_NNS and_CC trigrams_NNS ._.
+Choosing_VBG bigrams_NNS and_CC trigrams_NNS is_VBZ explained_VBN also_RB by_IN the_DT fact_NN that_IN the_DT lexicon_NN LAP_NN does_VBZ not_RB contain_VB compound_NN words_NNS ._.
+Hence_RB ,_, to_TO feed_VB the_DT classifier_NN with_IN compound_NN words_NNS ,_, we_PRP se_FW -_: lected_VBD a_DT set_NN of_IN bigrams_NNS and_CC trigrams_NNS based_VBN on_IN their_PRP$ frequency_NN ._.
+Morpho-lexical_JJ features_NNS :_: Since_IN adjectives_NNS and_CC adverbs_NNS are_VBP the_DT most_RBS morphological_JJ forms_NNS expressing_VBG opinions_NNS ,_, and_CC since_IN the_DT lexicon_NN LAP_NNP do_VBP not_RB include_VB Part-of-speech_JJ information_NN ,_, we_PRP propose_VBP to_TO consider_VB ,_, as_IN additional_JJ features_NNS ,_, the_DT number_NN of_IN positive_JJ adjectives_NNS and_CC adverbs_NNS and_CC also_RB the_DT number_NN of_IN negative_JJ adjective_NN and_CC ad_NN -_: verbs_NNS in_IN each_DT document_NN ._.
+3.4_CD Feature_NNP transformation_NN Feature_NNP transformation_NN step_NN determines_VBZ the_DT nu_SYM -_: merical_JJ representation_NN used_VBN in_IN the_DT classification_NN process_NN ._.
+It_PRP 's_VBZ performed_VBN by_IN applying_VBG a_DT weighting_NN scheme_NN on_IN the_DT extracted_VBN textual_JJ data_NNS of_IN the_DT cor_NN -_: pus_NN ._.
+We_PRP distinguish_VBP three_CD weighting_NN schemes_NNS :_: binary_JJ ,_, term_NN frequency_NN and_CC TF-IDF_NN representa_NN -_: tion_NN ._.
+Binary_JJ schema_NN takes_VBZ into_IN account_NN presence_NN or_CC absence_NN of_IN a_DT term_NN in_IN a_DT document_NN ._.
+Term_NN fre_SYM -_: quency_NN considers_VBZ the_DT number_NN of_IN times_NNS a_DT term_NN oc_SYM -_: curs_NNS in_IN a_DT document_NN -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+TF-IDF_NN -LRB-_-LRB- Term_NNP Frequency_NN -_: Inverse_NNP Document_NNP Frequen_NNP -_: cy_NN -RRB-_-RRB- considers_VBZ not_RB only_JJ term_NN frequencies_NNS in_IN a_DT docu_NN -_: ment_NN ,_, but_CC also_RB the_DT relevance_NN of_IN a_DT term_NN in_IN the_DT entire_JJ collection_NN of_IN documents_NNS -LRB-_-LRB- Manning_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+Many_JJ researches_VBZ confirm_VBP that_IN the_DT most_RBS suita_JJ -_: ble_NN representation_NN for_IN sentiment_NN classification_NN is_VBZ binary_JJ since_IN overall_JJ sentiment_NN may_MD not_RB usually_RB be_VB highlighted_VBN through_IN repeated_VBN use_NN of_IN the_DT same_JJ terms_NNS ._.
+In_IN fact_NN ,_, Pang_NNP et_FW al._FW -LRB-_-LRB- Pang_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- showed_VBD in_IN their_PRP$ experiments_NNS that_IN better_JJR perfor_NN -_: mance_NN is_VBZ obtained_VBN using_VBG presence_NN rather_RB than_IN fre_SYM -_: quency_NN ,_, that_WDT is_VBZ ,_, binary-valued_JJ feature_NN vectors_NNS in_IN which_WDT the_DT entries_NNS merely_RB indicate_VBP whether_IN a_DT term_NN occurs_VBZ or_CC not_RB formed_VBD a_DT more_RBR effective_JJ basis_NN for_IN review_NN polarity_NN classification_NN ._.
+Whereas_IN ,_, Mountassir_NNP et_FW al._FW -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- point_NN out_IN that_IN TF-IDF_NNP is_VBZ also_RB a_DT suitable_JJ weighting_NN for_IN SVM_NNP and_CC KNN_NNP ._.
+3.5_CD Attribute_JJ selection_NN Attribute_NNP selection_NN aims_VBZ to_TO evaluate_VB the_DT effective_JJ -_: ness_NN of_IN features_NNS by_IN identifying_VBG relevant_JJ features_NNS ones_NNS to_TO be_VB considered_VBN in_IN the_DT learning_VBG process_NN ._.
+This_DT is_VBZ allows_VBZ performing_VBG an_DT intense_JJ dimensionality_NN re_SYM -_: duction_NN without_IN losing_VBG on_IN the_DT classifier_NN accuracy_NN ._.
+There_EX are_VBP many_JJ algorithms_NNS for_IN attribute_NN selec_NN -_: tion_NN such_JJ as_IN information_NN gain_NN -LRB-_-LRB- Abbasi_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ,_, mutual_JJ information_NN ,_, and_CC chi-square_NN -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+None_NN of_IN them_PRP has_VBZ been_VBN widely_RB accept_VB -_: ed_VBN as_IN the_DT best_JJS feature_NN selection_NN method_NN for_IN senti_NNS -_: ment_NN classification_NN ,_, despite_IN the_DT fact_NN that_IN infor_NN -_: mation_NN gain_NN has_VBZ often_RB been_VBN competitive_JJ :_: it_PRP ranks_VBZ terms_NNS by_IN considering_VBG their_PRP$ presence_NN and_CC absence_NN in_IN each_DT class_NN -LRB-_-LRB- Moraes_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+3.6_CD Learning_NNP Algorithm_NNP Apart_RB from_IN classification_NN features_NNS ,_, Sentiment_NN classification_NN task_NN depends_VBZ highly_RB on_IN the_DT used_VBN learning_NN algorithm_NN ._.
+According_VBG to_TO the_DT literature_NN ,_, the_DT most_RBS popular_JJ algorithms_NNS are_VBP NB_NNP ,_, SVM_NNP ,_, MaxEnt_NNP ,_, Artificial_NNP Neural_NNP Networks_NNP -LRB-_-LRB- ANN_NNP -RRB-_-RRB- ._.
+Many_JJ studies_NNS were_VBD interested_JJ in_IN evaluating_VBG and_CC comparing_VBG these_DT learning_VBG techniques_NNS and_CC exper_NN -_: imental_JJ findings_NNS confirm_VBP that_IN a_DT given_VBN learning_NN algorithm_NN can_MD outperform_VB all_DT others_NNS only_RB for_IN a_DT specific_JJ problem_NN or_CC an_DT exact_JJ subset_NN of_IN the_DT input_NN data_NNS ,_, it_PRP is_VBZ abnormal_JJ to_TO find_VB a_DT single_JJ algorithm_NN achieving_VBG the_DT best_JJS results_NNS on_IN the_DT overall_JJ problem_NN domain_NN -LRB-_-LRB- Kuncheva_NNP ,_, 2004_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, a_DT lot_NN of_IN authors_NNS reported_VBD that_IN they_PRP achieved_VBD the_DT best_JJS per_IN -_: formance_NN with_IN SVM_NNP in_IN their_PRP$ experiments_NNS -LRB-_-LRB- liu_FW et_FW al._FW ,_, 2011_CD -RRB-_-RRB- -LRB-_-LRB- Rushdi_NNP Saleh_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Moraes_NNP et_FW al._FW -LRB-_-LRB- Moraes_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- affirm_VBP that_IN ANN_NNP produce_VBP superior_JJ or_CC at_IN least_JJS comparable_JJ results_NNS to_TO SVM_NNP ._.
+Other_JJ researchers_NNS claim_VBP that_IN they_PRP yield_VBP the_DT best_JJS performance_NN by_IN applying_VBG KNN_NNP and_CC NB_NNP -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+The_DT proposed_VBN solution_NN for_IN this_DT problem_NN is_VBZ adopting_VBG the_DT ensemble_NN technique_NN ._.
+This_DT technique_NN consists_VBZ in_IN combining_VBG ,_, in_IN an_DT efficient_JJ way_NN ,_, the_DT outputs_NNS of_IN several_JJ classification_NN models_NNS to_TO form_VB an_DT integrated_JJ output_NN ._.
+We_PRP distinguish_VBP in_IN the_DT litera_NN -_: ture_NN many_JJ combination_NN types_NNS such_JJ as_IN sum_NN ,_, vot_SYM -_: ing_NN ,_, weighted_JJ combination_NN and_CC meta-classifier_NN -LRB-_-LRB- Xia_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+In_IN the_DT context_NN of_IN our_PRP$ research_NN ,_, we_PRP are_VBP focusing_VBG on_IN four_CD well-known_JJ ensemble_NN al_SYM -_: gorithms_NNS namely_RB Bagging_VBG -LRB-_-LRB- Breiman_NNP ,_, 1996_CD -RRB-_-RRB- ,_, Boost_VB -_: ing_NN -LRB-_-LRB- Schapire_NNP et_FW al._FW ,_, 1998_CD -RRB-_-RRB- ,_, Voting_NNP -LRB-_-LRB- Kuncheva_NNP ,_, 2004_CD -RRB-_-RRB- and_CC Stacking_VBG -LRB-_-LRB- Syarif_NNP et_NNP al._NNP ,_, 2012_CD -RRB-_-RRB- ._.
+4_CD Experiments_NNS and_CC discussion_NN In_IN this_DT section_NN ,_, we_PRP carried_VBD out_RP two_CD types_NNS of_IN exper_NN -_: iments_NNS ._.
+The_DT first_JJ type_NN of_IN experiments_NNS focus_VB on_IN evaluating_VBG a_DT set_NN of_IN base_NN learning_VBG algorithms_NNS ver_SYM -_: sus_NN a_DT set_NN of_IN ensemble_NN based_VBN classifiers_NNS ._.
+The_DT ob_SYM -_: jective_NN is_VBZ to_TO find_VB the_DT combination_NN configuration_NN that_WDT ensures_VBZ the_DT best_JJS and_CC stable_JJ performance_NN across_IN different_JJ domains_NNS ._.
+The_DT second_JJ type_NN of_IN ex_FW -_: periments_NNS concentrates_VBZ on_IN the_DT feature_NN set_NN used_VBN in_IN the_DT classification_NN process_NN ._.
+The_DT objective_NN is_VBZ to_TO evaluate_VB ,_, in_IN particular_JJ ,_, the_DT effectiveness_NN of_IN dis_SYM -_: course_NN features_NNS in_IN Arabic_NNP sentiment_NN classifica_NN -_: tion_NN ._.
+All_DT results_NNS reported_VBD in_IN this_DT section_NN are_VBP obtained_VBN by_IN applying_VBG an_DT evaluation_NN method_NN based_VBN on_IN 10_CD -_: folds_VBZ cross_NN validation_NN ._.
+Attribute_VB transformation_NN ,_, attribute_NN selection_NN and_CC learning_VBG algorithms_NNS are_VBP applied_VBN using_VBG the_DT Weka_NNP data_NNS mining_NN software_NN -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ._.
+Binary_JJ representation_NN is_VBZ used_VBN for_IN opinion_NN features_NNS ,_, and_CC the_DT TF-IDF_NNP representa_NN -_: tion_NN for_IN bigrams_NNS and_CC trigrams_NNS ._.
+4.1_CD Base_NNP Classifier_NNP evaluation_NN In_IN this_DT first_JJ type_NN of_IN experiments_NNS ,_, we_PRP conducted_VBD a_DT comparative_JJ evaluation_NN of_IN three_CD well-known_JJ classification_NN algorithms_NNS namely_RB SVM_NNP ,_, MaxEnt_NNP and_CC ANN_NNP ._.
+The_DT objective_NN is_VBZ to_TO determine_VB the_DT best_JJS accurate_JJ base_NN algorithm_NN in_IN each_DT dataset_NN ._.
+Many_JJ attempts_NNS with_IN different_JJ parameters_NNS are_VBP made_VBN to_TO achieve_VB the_DT best_JJS performance_NN ._.
+These_DT experiments_NNS were_VBD performed_VBN on_IN the_DT following_VBG data_NNS collec_NN -_: tions_NNS :_: OCA_NNP ,_, ACOM_NNP DS1_NNP ,_, ACOM_NNP DS2_NNP ,_, ACOM_NNP DS3_NNP ,_, ACOMB_NNP -LRB-_-LRB- ACOM_NNP Balanced_JJ data_NNS -RRB-_-RRB- ,_, ACO_NNP -_: MA_NNP -LRB-_-LRB- ACOM_NNP All_NNP data_NNS -RRB-_-RRB- ._.
+Obtained_VBN results_NNS are_VBP expressed_VBN in_IN terms_NNS of_IN F_NN -_: measure_NN -LRB-_-LRB- Table_NNP 6_CD -RRB-_-RRB- ._.
+But_CC ,_, since_IN we_PRP are_VBP applying_VBG our_PRP$ model_NN to_TO several_JJ sets_NNS of_IN data_NNS ,_, we_PRP need_VBP an_DT av_SYM -_: eraging_VBG evaluation_NN metric_JJ to_TO get_VB an_DT idea_NN about_IN the_DT best_JJS performance_NN in_IN the_DT overall_JJ experiments_NNS ._.
+There_EX are_VBP two_CD types_NNS of_IN averaging_VBG methods_NNS :_: mac_SYM -_: ro-averaged_JJ and_CC micro-averaged_JJ ._.
+Macro_NNP -_: averaging_VBG gives_VBZ equal_JJ weight_NN to_TO each_DT dataset_NN ,_, whereas_IN micro-averaging_NN gives_VBZ equal_JJ weight_NN to_TO each_DT document_NN ._.
+Because_IN the_DT F-measure_NN ignores_VBZ true_JJ negatives_NNS and_CC is_VBZ mostly_RB determined_VBN by_IN the_DT number_NN of_IN true_JJ positives_NNS ,_, large_JJ datasets_NNS dominate_VBP small_JJ datasets_NNS in_IN micro-averaging_NN ._.
+Micro_NNP -_: averaged_VBD results_NNS are_VBP therefore_RB really_RB a_DT measure_NN of_IN effectiveness_NN on_IN the_DT large_JJ datasets_NNS in_IN a_DT test_NN col_NN -_: lection_NN -LRB-_-LRB- Van_NNP Asch_NNP ,_, 2013_CD -RRB-_-RRB- ._.
+Hence_RB ,_, we_PRP have_VBP used_VBN in_IN Table_NNP 6_CD macro-averaged_JJ F-measure_NN to_TO com_NN -_: pare_VB the_DT performance_NN of_IN the_DT three_CD algorithms_NNS on_IN the_DT different_JJ datasets_NNS ._.
+Compared_VBN to_TO earlier_JJR work_NN ,_, our_PRP$ results_NNS overstep_VBP state_NN of_IN the_DT art_NN existing_VBG performances_NNS ._.
+Indeed_RB ,_, MaxEnt_NNP classifier_NN tested_VBN in_IN OCA_NNP has_VBZ achieved_VBN 95_CD %_NN of_IN F-measure_NN ,_, which_WDT exceed_VBP 93_CD %_NN reported_VBN by_IN Mountassir_NNP et_FW al._FW with_IN KNN_NNP classifier_NN -LRB-_-LRB- Mountassir_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- and_CC 90.73_CD %_NN reported_VBN by_IN Rushdi-Saleh_NNP et_FW al._FW with_IN SVM_NNP classifier_NN -LRB-_-LRB- Rushdi_NNP -_: Saleh_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Similarly_RB ,_, our_PRP$ obtained_VBN re_SYM -_: sults_NNS in_IN ACOM_NNP DS1_NNP and_CC ACOM_NNP DS2_CD which_WDT are_VBP respectively_RB 89.3_CD %_NN and_CC 80.1_CD %_NN exceed_VBP Mountas_NNP -_: sir_NN et_FW al._FW reported_VBD results_NNS -LRB-_-LRB- 87.5_CD %_NN and_CC 76.4_CD %_NN -RRB-_-RRB- ._.
+Concerning_VBG ACOM_NNP DS3_NNP ,_, ACOMA_NNP and_CC ACOM_NNP ,_, these_DT data_NNS collections_NNS are_VBP not_RB yet_RB evaluated_VBN by_IN any_DT earlier_JJR work_NN ._.
+Table_NNP 6_CD :_: Results_NNS of_IN the_DT base_NN classifiers_NNS According_VBG to_TO our_PRP$ experiments_NNS ,_, SVM_NNP seems_VBZ to_TO be_VB the_DT most_RBS stable_JJ classifier_NN among_IN the_DT three_CD classifiers_NNS ._.
+In_IN fact_NN ,_, it_PRP achieved_VBD the_DT best_JJS results_NNS on_IN ACOM_NNP DS2_NNP ,_, ACOM_NNP DS3_NNP ,_, ACOMB_NNP and_CC on_IN ACOMA_NNP ._.
+Regarding_VBG OCA_NNP and_CC ACOM_NNP DS1_NNP ,_, the_DT best_JJS performance_NN was_VBD yielded_VBN respectively_RB by_IN MaxEnt_NNP and_CC ANN_NNP ,_, although_IN these_DT two_CD datasets_NNS are_VBP derived_VBN from_IN the_DT same_JJ domain_NN -LRB-_-LRB- movie_NN re_SYM -_: view_NN -RRB-_-RRB- and_CC have_VBP a_DT relatively_RB close_JJ size_NN ._.
+The_DT dif_NN -_: ference_NN in_IN terms_NNS of_IN F-measure_NN between_IN the_DT two_CD classification_NN results_NNS is_VBZ considered_VBN significant_JJ since_IN it_PRP exceeds_VBZ 5.5_CD %_NN ._.
+As_IN for_IN DS2_NNP ,_, results_NNS were_VBD less_RBR good_JJ than_IN the_DT other_JJ datasets_NNS ._.
+In_IN fact_NN ,_, alt_SYM -_: hough_NN the_DT documents_NNS are_VBP in_IN the_DT same_JJ domain_NN ,_, they_PRP talk_VBP about_IN 18_CD different_JJ sports_NNS ,_, which_WDT make_VBP the_DT dataset_NN relatively_RB heterogeneous_JJ ._.
+On_IN the_DT other_JJ hand_NN ,_, DS3_NNP is_VBZ derived_VBN from_IN political_JJ specific_NN do_VBP -_: main_JJ which_WDT is_VBZ a_DT very_RB large_JJ domain_NN ,_, but_CC all_DT docu_NN -_: Dataset_NNP SVM_NNP MaxEnt_NNP ANN_NNP OCA_NNP ACOM_NNP DS1_NNP ACOM_NNP DS2_NNP ACOM_NNP DS3_NNP ACOMB_NNP ACOMA_NNP Macro-avg_NN 91.8_CD 86_CD 80.1_CD 89.5_CD 80.5_CD 79.6_CD 84.58_CD 95_CD 90.6_CD 87.5_CD 89.3_CD 80_CD 76.2_CD 86.2_CD 86.8_CD 80.1_CD 77.8_CD 75.7_CD 76.1_CD 84.08_CD 82.8_CD ments_NNS discuss_VBP only_RB one_CD political_JJ issue_NN ,_, which_WDT explain_VBP why_WRB the_DT classification_NN results_NNS were_VBD good_JJ ._.
+Concerning_VBG ACOMA_NNP and_CC ACOMB_NNP ,_, as_IN expected_VBN ,_, results_NNS were_VBD better_RBR in_IN ACOMB_NNP in_IN which_WDT the_DT num_NN -_: ber_NN of_IN documents_NNS is_VBZ much_RB less_JJR than_IN ACOMA_NNP ._.
+4.2_CD Ensemble_NNP classifier_JJR evaluation_NN In_IN addition_NN to_TO the_DT evaluation_NN of_IN base_NN classifiers_NNS ,_, we_PRP conducted_VBD another_DT set_NN of_IN experiments_NNS to_TO eval_JJ -_: uate_NN ensemble_NN classifiers_NNS with_IN the_DT same_JJ datasets_NNS and_CC evaluation_NN metrics_NNS ._.
+The_DT combination_NN of_IN the_DT classifiers_NNS is_VBZ performed_VBN according_VBG to_TO the_DT four_CD methods_NNS :_: boosting_VBG ,_, bagging_VBG ,_, voting_VBG and_CC stacking_VBG ._.
+Several_JJ experiments_NNS are_VBP performed_VBN to_TO choose_VB the_DT base_NN classifiers_NNS and_CC the_DT combination_NN method_NN that_WDT reach_VBP the_DT best_JJS performance_NN ._.
+At_IN the_DT end_NN ,_, we_PRP have_VBP maintained_VBN these_DT four_CD experiments_NNS :_: -LRB-_-LRB- i_FW -RRB-_-RRB- bagging_VBG MaxEnt_NNP ,_, -LRB-_-LRB- ii_FW -RRB-_-RRB- boosting_VBG MaxEnt_NNP ,_, -LRB-_-LRB- iii_FW -RRB-_-RRB- majority_NN vot_NN -_: ing_VBG with_IN SVM_NNP ,_, MaxEnt_NNP and_CC ANN_NNP as_IN base_NN classi_NNS -_: fiers_NNS ,_, -LRB-_-LRB- iiii_FW -RRB-_-RRB- stacking_VBG SVM_NNP and_CC MaxEnt_NNP with_IN Line_NNP -_: ar_NN regression_NN as_IN meta-classifier_NN ._.
+The_DT results_NNS achieved_VBN in_IN each_DT experiment_NN are_VBP illustrated_VBN in_IN terms_NNS of_IN F-measure_NN and_CC macro-averaged_JJ F_NN -_: measure_NN in_IN Table_NNP 7_CD ._.
+algorithm_NN obtained_VBD according_VBG to_TO the_DT experiments_NNS described_VBN in_IN section_NN 4.1_CD ._.
+Table_NNP 8_CD :_: Discourse_NN feature_NN evaluation_NN Obtained_VBN results_NNS show_VBP that_IN discourse_NN features_NNS are_VBP more_RBR efficient_JJ with_IN OCA_NNP and_CC ACOM_NNP DS1_NNP derived_VBD from_IN movie_NN review_NN domain_NN ._.
+In_IN fact_NN ,_, re_SYM -_: moving_VBG discourse_NN features_NNS with_IN OCA_NNP and_CC ACOM_NNP DS1_NNP has_VBZ respectively_RB decreased_VBN F-measure_NN by_IN 2.4_CD %_NN and_CC 4_CD %_NN ._.
+This_DT can_MD be_VB explained_VBN by_IN the_DT fact_NN that_IN in_IN movie_NN review_NN domain_NN in_IN particular_JJ ,_, dis_SYM -_: course_NN markers_NNS are_VBP frequently_RB employed_VBN ._. ._.
+Never_RB -_: theless_JJ ,_, regarding_VBG ACOM_NNP DS2_NNP and_CC ACOM_NNP DS3_NNP ,_, the_DT results_NNS were_VBD not_RB very_RB altered_VBN by_IN removing_VBG discourse_NN features_NNS since_IN F-measure_NN has_VBZ decreased_VBN only_RB by_IN 0.3_CD %_NN and_CC 0.4_CD %_NN ._.
+So_RB ,_, this_DT type_NN of_IN features_NNS is_VBZ not_RB very_RB efficient_JJ for_IN sport_NN or_CC political_JJ domain_NN ._.
+Concerning_VBG the_DT two_CD last_JJ experiments_NNS ,_, removing_VBG discourse_NN features_NNS while_IN evaluating_VBG ACOMA_NNP and_CC ACOMB_NNP has_VBZ not_RB revealed_VBN any_DT impact_NN on_IN the_DT classification_NN results_NNS ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP have_VBP proposed_VBN a_DT supervised_JJ classification_NN approach_NN of_IN Arabic_NNP documents_NNS ._.
+The_DT proposed_VBN approach_NN is_VBZ based_VBN on_IN multi-type_JJ feature_NN set_VBN including_VBG opinion_NN features_NNS ,_, discourse_NN markers_NNS ,_, stylistic_JJ features_NNS ,_, domain_NN dependent_JJ features_NNS and_CC morpho-lexical_JJ features_NNS ._.
+In_IN addition_NN ,_, we_PRP have_VBP carried_VBN out_RP a_DT comparative_JJ study_NN between_IN some_DT well-known_JJ base_NN classifiers_NNS and_CC some_DT en_IN -_: semble-based_JJ classifier_NN with_IN different_JJ combina_NN -_: tion_NN methods_NNS ._.
+Obtained_VBN results_NNS showed_VBD that_IN MaxEnt_NNP ,_, SVM_NNP and_CC ANN_NNP combined_VBN with_IN majori_FW -_: ty_NN voting_NN rules_NNS have_VBP achieved_VBN the_DT best_JJS results_NNS with_IN a_DT macro-averaged_JJ F1-mesaure_NN of_IN 85.06_CD %_NN ._.
+Furthermore_RB ,_, experiments_NNS showed_VBD that_IN discourse_NN features_NNS have_VBP improved_VBN F-measure_JJ by_IN approxi_NN -_: mately_NN 3_CD %_NN or_CC 4_CD %_NN ._.
+As_IN perspectives_NNS ,_, we_PRP intend_VBP to_TO integrate_VB dis_SYM -_: course_NN structure_NN and_CC relations_NNS as_IN features_NNS ._.
+This_DT is_VBZ can_MD be_VB performed_VBN by_IN exploiting_VBG cross_NN lingual_NN dis_SYM -_: course_NN parsing_NN of_IN parallel_JJ sentiment_NN corpora_NN ,_, since_IN there_EX is_VBZ no_DT Arabic_NNP discourse_NN parser_NN ._.
+In_IN addi_SYM -_: tion_NN ,_, following_VBG the_DT same_JJ approach_NN ,_, we_PRP intend_VBP to_TO adopt_VB also_RB syntactic_JJ information_NN and_CC dependency_NN relations_NNS as_IN classification_NN features_NNS ._.
+Dataset_NNP Best_JJS F-meas_NNS ._.
+Diff_NNP classifier_NN -LRB-_-LRB- %_NN -RRB-_-RRB- -LRB-_-LRB- %_NN -RRB-_-RRB- OCA_NNP ACOM_NNP DS1_NNP ACOM_NNP DS2_NNP ACOM_NNP DS3_NNP ACOMB_NNP ACOMA_NNP MaxEnt_NNP 92.6_CD -2.4_CD ANN_NNP 85.3_CD -4_CD SVM_NNP 79.7_CD -0.4_CD SVM_NNP 89.2_CD -0.3_CD SVM_NNP 80.5_CD 0_CD SVM_NNP 79.82_CD 0_CD Dataset_NNP Bag_NNP ._.
+Boost_VB ._.
+Vot_NNP ._.
+Stack_VB ._.
+OCA_NNP ACOM_NNP DS1_NNP ACOM_NNP DS2_NNP ACOM_NNP DS3_NNP ACOM_NNP B_NNP ACOM_NNP A_NNP M._NNP Avg_NNP 95_CD 92.9_CD 80.3_CD 88.2_CD 79.4_CD 75.9_CD 84.7_CD 94_CD 93.2_CD 94.8_CD 89.4_CD 90.4_CD 87.8_CD 79.6_CD 80.6_CD 79.7_CD 84_CD 90.3_CD 88.2_CD 79.9_CD 81.4_CD 80_CD 74_CD 79.7_CD 79_CD 83.38_CD 85.06_CD 84.26_CD Table_NNP 7_CD :_: Results_NNS of_IN ensemble_NN based_VBN classifiers_NNS Compared_VBN to_TO Table_NNP 6_CD ,_, Table_NNP 7_CD indicates_VBZ that_IN most_JJS of_IN the_DT selected_VBN ensemble_NN classifiers_NNS have_VBP exceeded_VBN the_DT results_NNS yielded_VBN by_IN base_NN classifiers_NNS in_IN terms_NNS of_IN macro-averaged_JJ F-measure_NN ._.
+In_IN particu_NN -_: lar_NN ,_, majority_NN voting_NN of_IN MaxEnt_NNP ,_, SVM_NNP and_CC ANN_NNP has_VBZ achieved_VBN the_DT best_JJS results_NNS with_IN a_DT macro_NN -_: averaged_VBD F-measure_NN of_IN 85.06_CD %_NN ._.
+In_IN five_CD among_IN six_CD datasets_NNS ,_, this_DT ensemble_NN classifier_NN has_VBZ per_IN -_: formed_VBN better_JJR results_NNS than_IN the_DT best_JJS base_NN classifiers_NNS ._.
+4.3_CD Discourse_NN feature_NN evaluation_NN In_IN order_NN to_TO evaluate_VB the_DT effectiveness_NN of_IN the_DT dis_FW -_: course_NN features_NNS ,_, we_PRP have_VBP reapplied_VBN the_DT best_JJS accu_NN -_: rate_NN base_NN algorithms_NNS on_IN our_PRP$ datasets_NNS with_IN remov_NN -_: ing_NN discourse_NN features_NNS ._.
+This_DT was_VBD performed_VBN with_IN respecting_VBG all_DT pre-mentioned_JJ constraints_NNS of_IN at_IN -_: tribute_NN transformation_NN and_CC attribute_NN selection_NN steps_NNS ._.
+Table_NNP 8_CD presents_VBZ the_DT new_JJ achieved_VBN F_NN -_: measure_NN in_IN each_DT dataset_NN with_IN the_DT best_JJS accurate_JJ References_NNP Abbasi_NNP A._NN ,_, Chen_NNP H._NNP ,_, Salem_NNP A._NNP 2008_CD ._.
+Sentiment_NN analy_SYM -_: sis_NN in_IN multiple_JJ languages_NNS :_: Feature_NN selection_NN or_CC opin_NN -_: ion_NN classification_NN in_IN Web_NNP forums_NNS ._.
+ACM_NNP Transactions_NNS on_IN Information_NNP Systems_NNP 26_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :12_CD ._.
+Abdul-Mageed_NNP M._NNP ,_, Diab_NNP M._NNP 2012_CD ._.
+AWATIF_NNP :_: A_NNP Multi_NNP -_: Genre_NNP Corpus_NNP for_IN Modern_NNP Standard_NNP Arabic_NNP Subjec_NNP -_: tivity_NN and_CC Sentiment_NN Analysis_NN ._.
+In_IN Proc_NNP LREC_NNP 2012_CD ,_, pp._SYM 3907-3914_CD ._.
+Ahmad_NNP K._NNP ,_, Cheng_NNP D._NNP ,_, Almas_NNP Y._NNP 2006_CD ._.
+Multi-lingual_JJ sentiment_NN analysis_NN of_IN financial_JJ news_NN streams_NNS ._.
+In_IN Proc_NNP ._.
+of_IN the_DT 1st_CD International_NNP Conference_NNP on_IN Grid_NNP in_IN Finance_NNP ._.
+Almas_NNP Y._NNP ,_, Ahmad_NNP K._NNP 2007_CD ._.
+A_DT note_NN on_IN extracting_VBG sen_SYM -_: timents_NNS in_IN financial_JJ news_NN in_IN English_NNP ,_, Arabic_NNP &_CC Urdu_NNP ._.
+In_IN Proc_NNP of_IN Workshop_NNP on_IN Computational_NNP Approaches_NNPS to_TO Arabic_NNP Script-based_JJ Languages_NNPS ._.
+Al-Saif_NNP A._NN ,_, Markert_NNP K._NNP 2010_CD ._.
+The_DT Leeds_NNP Arabic_NNP dis_SYM -_: course_NN treebank_NN :_: Annotating_VBG discourse_NN connectives_NNS for_IN Arabic_NNP ._.
+In_IN Proc_NNP of_IN LREC_NNP ,_, 17-23_CD May_NNP ,_, Malta_NNP ._.
+Al-Twairesh_NNP N._NNP ,_, Al-Khalifa_NNP H._NNP ,_, Al-Salman_NNP A._NNP 2014_CD ._.
+Subjectivity_NNP and_CC Sentiment_NN Analysis_NN of_IN Arabic_NNP :_: Trends_NNS and_CC Challenges_VBZ ._.
+In_IN Proc_NNP ._.
+Of_IN the_DT 11th_JJ ACS/IEEE_NNP International_NNP Conference_NNP on_IN Computer_NNP Systems_NNPS and_CC Applications_NNS -LRB-_-LRB- AICCSA_NNP '_POS 2014_CD -RRB-_-RRB- ,_, Doha_NNP ,_, Qatar_NNP ,_, 10-13_CD November_NNP ._.
+Asher_NNP N._NNP 1993_CD ._.
+Reference_NNP to_TO Abstract_NNP Objects_NNPS in_IN Dis_NNP -_: course_NN ._.
+Kluwer_NNP Dordrecht_NNP ._.
+Bayoudhi_NNP A._NN ,_, Koubaa_NNP H._NNP ,_, Ghorbel_NNP H._NNP ,_, Hadrich_NNP Bel_NNP -_: guith_NN L._NNP 2014_CD ._.
+Vers_NNS un_JJ lexique_NN arabe_NN pour_VBP l’analyse_FW des_FW opinions_NNS et_FW des_FW sentiments_NNS ,_, In_IN Proc_NNP of_IN the_DT 5th_JJ In_IN -_: ternational_JJ Conference_NN on_IN Arabic_NNP Language_NNP Pro-_JJ cessing_NN CITALA_NNP '_POS 14_CD ,_, Oujda_NNP ,_, Morocco_NNP ,_, 26_CD --_: 27_CD No_DT -_: vember_NN ._.
+Boudabous_NNP M.M._NNP ,_, Chaâben_NNP Kammoun_NNP N._NNP ,_, Khedher_NNP N._NNP ,_, Hadrich_NNP Belguith_NNP L._NNP ,_, Sadat_NNP F._NNP 2013_CD ._.
+Arabic_NNP Word_NNP -_: Net_JJ semantic_JJ relations_NNS enrichment_NN through_IN morpho_NN -_: lexical_JJ patterns_NNS ,_, in_IN Proc_NNP ._.
+of_IN the_DT First_NNP International_NNP Conference_NNP on_IN Communications_NNPS ,_, Signal_NNP Processing_NNP ,_, and_CC their_PRP$ Applications_NNS -LRB-_-LRB- ICCSPA_NNP '_POS 13_CD -RRB-_-RRB- ,_, Sharjah_NNP ,_, UAE_NNP ,_, February_NNP 12-14_CD ._.
+Breiman_NNP L._NNP 1994_CD ._.
+Bagging_VBG predictors_NNS ._.
+Technical_NNP Report_NNP 421_CD ,_, Department_NNP of_IN Statistics_NNPS ,_, University_NNP of_IN Califor_NNP -_: nia_NN ,_, Berkeley_NNP ._.
+Chardon_NNP B._NNP 2013_CD ._.
+Chaîne_NNP de_IN traitement_NN pour_VBP une_JJ ap_SYM -_: proche_NN discursive_JJ de_IN l'analyse_JJ d'opinion_NN ._.
+Phd_NNP disser_NN -_: tion_NN UPS_NNP France_NNP ._.
+Elarnaoty_NNP M._NNP ,_, AbdelRahman_NNP S._NNP ,_, Fahmy_NNP A._NNP 2012_CD ._.
+A_DT machine_NN learning_VBG approach_NN for_IN opinion_NN holder_NN ex_FW -_: traction_NN in_IN Arabic_NNP ,_, International_NNP Journal_NNP of_IN Artificial_NNP Intelligence_NNP &_CC Applications_NNS ;_: March_NNP 2012_CD ,_, Vol_NNP ._.
+3_CD Is_VBZ -_: sue_VB 2_CD ,_, p45_CD ._.
+El-Halees_NNP A._NNP 2011_CD ._.
+Arabic_NNP Opinion_NNP Mining_NNP Using_VBG Com_NNP -_: bined_VBD Classification_NNP Approach_NNP ._.
+In_IN Proc_NNP of_IN the_DT interna_NN -_: tional_JJ Arab_JJ Conference_NN on_IN Information_NNP Technology_NNP ,_, 11-14_CD December_NNP ,_, Riyadh_NNP ,_, Saudi_NNP Arabia_NNP ._.
+Esuli_NNP A._NN ,_, Sebastiani_NNP F._NNP 2006_CD ._.
+SentiWordNet_NNP :_: A_DT Publicly_RB Available_JJ Lexical_NNP Resource_NNP for_IN Opinion_NNP Mining_NNP ._.
+In_IN Proc_NNP of_IN the_DT fifth_JJ international_JJ conference_NN on_IN Lan_NNP -_: guage_NN Resources_NNPS and_CC Evaluation_NNP ,_, 22-28_CD May_NNP ,_, Gen_NNP -_: oa_NN ,_, Italy_NNP ._.
+Hall_NNP M._NNP ,_, Frank_NNP E._NNP ,_, Holmes_NNP G._NNP ,_, Pfahringer_NNP B._NNP ,_, Reute_NNP -_: mann_NN P._NNP ,_, Witten_NNP I.H._NNP 2009_CD ._.
+The_DT WEKA_NNP data_NNS mining_NN software_NN :_: an_DT update_VBP ,_, ACM_NNP SIGKDD_NNP Explorations_NNPS Newsletter_NNP ,_, Volume_NN 11_CD Issue_NN 1_CD ,_, pp_NN 10-18_CD ,_, June_NNP 2009_CD ._.
+Hu_NNP M._NNP ,_, Liu_NNP B._NNP 2004_CD ._.
+Mining_NNP Opinions_NNS Features_NNS in_IN Cus_NNP -_: tomer_NN Reviews_NNS ._.
+Proc_NNP of_IN 19th_JJ international_JJ conference_NN on_IN Artificial_NNP Intelligence_NNP AAAI_NNP ,_, 25-29_CD July_NNP ,_, San_NNP Jo_NNP -_: se_FW ,_, California_NNP ,_, pp._NNP 755-760_CD ._.
+Keskes_NNP I._NNP 2015_CD ._.
+Discourse_NN Analysis_NN of_IN Arabic_NNP Docu_NNP -_: ments_NNS and_CC Application_NN to_TO Automatic_NNP Summarization_NNP ._.
+PhD_NNP dissertion_NN ,_, UPS_NNP France_NNP ._.
+Khoja_NNP S._NNP and_CC Garside_NNP R._NNP 1999_CD ._.
+Stemming_VBG Arabic_NNP Text_NNP ,_, UK_NNP :_: Computing_NNP Department_NNP ,_, Lancaster_NNP University_NNP ._.
+Khalifa_NNP I._NNP ,_, Feki_NNP Z._NNP ,_, Farawila_NNP A._NNP 2011_CD ._.
+Arabic_NNP discourse_NN segmentation_NN based_VBN on_IN rhetorical_JJ methods_NNS ._.
+In_IN Elec_NNP -_: tric_JJ Computer_NNP Sciences_NNPS 11_CD ._.
+Korayem_NNP M._NNP ,_, Crandall_NNP D._NNP ,_, Abdul-Mageed_NNP M._NNP 2012_CD ._.
+Subjectivity_NNP and_CC Sentiment_NN Analysis_NN of_IN Arabic_NNP :_: A_DT Survey_NN ._.
+in_IN Advanced_NNP Machine_NNP Learning_NNP Technolo_NNP -_: gies_NNS and_CC Applications_NNS AMLTA_NNP ,_, 322_CD ._.
+Kuncheva_NNP L._NNP 2004_CD ._.
+Combining_VBG pattern_NN classifiers_NNS :_: methods_NNS and_CC algorithms_NNS ._.
+John_NNP Wiley_NNP &_CC Sons_NNP ._.
+Li_NNP S._NNP ,_, Xia_NNP R._NNP ,_, Zong_NNP C._NNP ,_, Huang_NNP C.-R_NNP ._.
+2009_CD ._.
+A_DT frame_NN -_: work_NN of_IN feature_NN selection_NN methods_NNS for_IN text_NN categori_NN -_: zation_NN ._.
+In_IN Proc_NNP of_IN the_DT 47th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 2-7_CD Au_SYM -_: gust_NN ,_, suntec_NN ,_, Singapore_NNP ._.
+Liu_NNP B._NNP 2009_CD ._.
+Sentiment_NN Analysis_NN and_CC Opinion_NNP Min_NNP -_: ing_NN ._.
+Boca_NNP Raton_NNP :_: Morgan_NNP &_CC Claypool_NNP Publishers_NNPS ._.
+Liu_NNP B._NNP 2011_CD ._.
+Web_NN data_NNS mining_NN :_: Exploring_VBG hyperlinks_NNS ,_, New_NNP York_NNP :_: Springer_NNP ,_, Lovins_NNP ,_, J._NNP B._NNP -LRB-_-LRB- 1968_CD -RRB-_-RRB- ._.
+Devel_NNP -_: opment_NN of_IN a_DT stemming_VBG algorithm_NN ._.
+Mechanical_JJ Trans_NNP -_: lation_NN and_CC Computational_NNP Linguistic_NNP ._.
+Liu_NNP H._NNP ,_, Motoda_NNP H._NNP 2008_CD ._.
+Computational_NNP Methods_NNPS of_IN Feature_NNP Selection_NNP ,_, Boca_NNP Raton_NNP :_: Chapman_NNP &_CC Hall_NNP ._.
+Manning_NNP C.D._NNP ,_, Raghavan_NNP P._NNP ,_, Schtze_NNP H._NNP 2008_CD ._.
+Introduction_NN to_TO information_NN retrieval_NN ._.
+Cambridge_NNP University_NNP Press_NNP ._.
+Maynard_NNP D._NNP ,_, Funk_NNP A._NNP 2011_CD ._.
+Automatic_NNP detection_NN of_IN political_JJ opinions_NNS in_IN tweets_NNS ._.
+In_IN Proc_NNP of_IN the_DT 10th_JJ Inter_NNP -_: national_JJ semantic_JJ web_NN conference_NN ,_, 23-27_CD October_NNP ,_, Bonn_NNP ,_, Germany_NNP ._.
+Medhat_NNP W._NNP ,_, Hassan_NNP A._NN ,_, Korashy_NNP A._NNP 20140_NNP ._.
+Sentiment_NN analysis_NN algorithms_NNS and_CC applications_NNS :_: A_DT survey_NN ._.
+Ain_NNP Shams_NNP Engineering_NNP Journal_NNP 5_CD ,_, pp._SYM 1093_CD --_: 1113_CD ._.
+Mejova_NNP Y._NNP ,_, Srinivasan_NNP P._NNP 2011_CD ._.
+Exploring_VBG Feature_NNP Def_NNP -_: inition_NN and_CC Selection_NN for_IN Sentiment_NN Classifiers_NNS ._.
+In_IN Proc_NNP of_IN the_DT Fifth_NNP International_NNP AAAI_NNP Conference_NNP on_IN Weblogs_NNPS and_CC Social_NNP Media_NNP ICWSM_NNP ,_, 17-21_CD July_NNP ,_, Barcelona_NNP ,_, Spain_NNP ._.
+Monroe_NNP W._NNP ,_, Green_NNP S._NNP ,_, Manning_NNP C.D._NNP 2014_CD ._.
+Word_NN Segmentation_NN of_IN Informal_NNP Arabic_NNP with_IN Domain_NNP Ad_NNP -_: aptation_NN ._.
+In_IN Proc_NNP of_IN the_DT 52nd_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, 22-27_CD June_NNP ,_, Baltimore_NNP ,_, USA_NNP ._.
+Moraes_NNP R._NNP ,_, Francisco_NNP Valiati_NNP J._NNP ,_, Gavião_NNP Neto_NNP W.P._NNP 2013_CD ._.
+Document-level_JJ sentiment_NN classification_NN :_: An_DT empirical_JJ comparison_NN between_IN SVM_NNP and_CC ANN_NNP ._.
+Ex_SYM -_: pert_JJ Systems_NNPS with_IN Applications_NNS 40_CD ,_, pp._SYM 621-633_CD ._.
+Mountassir_NNP A._NN ,_, Benbrahim_NNP H._NNP ,_, Berrada_NNP I._NNP 2013_CD ._.
+Senti_SYM -_: ment_NN classification_NN on_IN Arabic_NNP corpora_NN :_: A_DT prelimi_SYM -_: nary_PDT cross-study_JJ ._.
+Document_NNP Numérique_NNP 16_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 73_CD -_: 96_CD ._.
+Nakagawa_NNP T._NNP ,_, Inui_NNP K._NNP ,_, Kurohashi_NNP S._NNP 2010_CD ._.
+Dependency_NN Tree-based_JJ Sentiment_NN Classification_NN using_VBG CRFs_NNS with_IN Hidden_NNP Variables_NNP ,_, Human_NNP Language_NNP Technol_NNP -_: ogies_NNS ,_, The_DT 2010_CD Annual_JJ Conference_NN of_IN the_DT North_JJ American_JJ Chapter_NN of_IN the_DT ACL_NNP NAACL_NNP HLT_NNP ,_, pp_NN 786_CD --_: 794_CD ,_, 1-6_CD June_NNP ,_, Los_NNP Angeles_NNP ,_, California_NNP ._.
+Palmer_NNP F._NNP 1986_CD ._.
+Mood_NN and_CC Modality_NN ._.
+Cambridge_NNP Uni_NNP -_: versity_NN Press_NNP ._.
+Pang_NNP B._NNP ,_, Lee_NNP L._NNP ,_, Vaithyanathan_NNP S._NNP 2002_CD ._.
+Thumbs_NNS up_IN ?_.
+Sentiment_NN Classification_NN using_VBG Machine_NN Learn_VB -_: ing_NN Techniques_NNS ,_, In_IN Proc_NNP of_IN the_DT Conference_NN on_IN Em_NNP -_: pirical_NN Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP EMNLP_NNP ,_, 6-7_CD July_NNP ,_, Philadelphia_NNP ,_, PA_NNP ,_, USA_NNP ._.
+Pasha_NNP A._NN ,_, Al-Badrashiny_NNP M._NNP ,_, Diab_NNP M.T._NNP ,_, El-Kholy_NNP A._NN ,_, Eskander_NNP R._NNP ,_, Habash_NNP N._NNP ,_, Pooleery_NNP M._NNP ,_, Rambow_NNP O._NNP ,_, Roth_NNP R._NNP 2014_CD ._.
+MADAMIRA_NNP :_: A_NNP Fast_NNP ,_, Comprehen_NNP -_: sive_JJ Tool_NNP for_IN Morphological_NNP Analysis_NNP and_CC Disam_NNP -_: biguation_NN of_IN Arabic_NNP ._.
+In_IN Proc_NNP of_IN the_DT The_DT 9th_JJ edition_NN of_IN the_DT Language_NNP Resources_NNPS and_CC Evaluation_NNP Conference_NNP LREC_NNP ,_, 26-31_CD May_NNP ,_, Reykjavik_NNP ,_, Iceland_NNP ._.
+Rushdi-Saleh_NNP M._NNP ,_, Martın-Valdivia_NNP M._NNP ,_, Urena-Lopez_NNP L._NNP ,_, Perea-Ortega_NNP J._NNP 2011_CD ._.
+OCA_NNP :_: Opinion_NN corpus_NN for_IN Ar_NNP -_: abic_JJ ._.
+Journal_NNP of_IN the_DT American_NNP Society_NNP for_IN Infor_NNP -_: mation_NN Science_NN and_CC Technology_NN 62_CD -LRB-_-LRB- 10_CD -RRB-_-RRB- ._.
+Saurı_NNP R._NNP 2008_CD ._.
+A_DT Factuality_NNP Profiler_NNP for_IN Eventualities_NNPS in_IN Text_NNP ._.
+PhD_NNP dissertation_NN ._.
+Schapire_NNP R._NNP E._NNP ,_, Freund_NNP Y._NNP ,_, Bartlett_NNP P._NNP ,_, Lee_NNP W.S._NNP 1998_CD ._.
+Boosting_VBG the_DT margin_NN :_: A_DT new_JJ explanation_NN for_IN the_DT ef_NN -_: fectiveness_NN of_IN voting_VBG methods_NNS ._.
+Annals_NNS of_IN Statistics_NNS ._.
+Somasundaran_NNP S._NNP ,_, Namata_NNP G._NNP ,_, Wiebe_NNP J._NNP ,_, Getoor_NNP L._NNP 2009_CD ._.
+Supervised_VBN and_CC unsupervised_JJ methods_NNS in_IN em_NN -_: ploying_VBG discourse_NN relations_NNS for_IN improving_VBG opinion_NN polarity_NN classification_NN ._.
+In_IN Proc_NNP of_IN the_DT conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP EMNLP_NNP ,_, 6-7_CD August_NNP ,_, Suntec_NNP ,_, Singapore_NNP ._.
+Syarif_NNP I_PRP ,_, Zaluska_NNP E._NNP ,_, Prugel-Bennett_NNP A._NNP ,_, Wills_NNP G._NNP 2012_CD ._.
+Application_NN of_IN bagging_NN ,_, boosting_VBG and_CC stacking_VBG to_TO in_IN -_: trusion_NN detection_NN ._.
+In_IN Proc_NNP of_IN the_DT 8th_JJ International_NNP Conference_NN on_IN Machine_NN Learning_NNP and_CC Data_NNP Mining_NNP MLDM_NNP ,_, 13-20_CD Jul_NNP ,_, Berlin_NNP ,_, DE_NNP ._.
+Taboada_NNP M._NNP ,_, Brooke_NNP J_NNP ,_, Tofiloski_NNP M._NNP ,_, Voll_NNP K._NNP ,_, Stede_NNP M._NNP 2011_CD ._.
+Lexicon-based_JJ methods_NNS for_IN sentiment_NN analy_NN -_: sis_NN ._.
+Computational_NNP Linguistics_NNP 37_CD ,_, pp_NN 267_CD -307_CD ._.
+Van_NNP Asch_NNP V._NNP 2013_CD ._.
+Macro_NNP -_: and_CC micro-averaged_JJ evalua_NN -_: tion_NN measures_NNS -LSB-_NNP -LSB-_NNP basic_JJ draft_NN -RSB-_NNP -RSB-_NNP ._.
+Wang_NNP G._NNP ,_, Sun_NNP J._NNP ,_, Ma_NNP J._NNP ,_, Xue_NNP K._NNP ,_, Gud_NNP J._NNP 2014_CD ._.
+Senti_SYM -_: ment_NN classification_NN :_: The_DT contribution_NN of_IN ensemble_NN learning_NN ._.
+Decision_NN Support_NN Systems_NNPS 57_CD ,_, pp._SYM 77_CD --_: 93_CD ._.
+Xia_NNP R._NNP ,_, Zong_NNP C._NNP ,_, Li_NNP S._NNP 2011_CD ._.
+Ensemble_NN of_IN feature_NN sets_NNS and_CC classification_NN algorithms_NNS for_IN sentiment_NN classifi_NNS -_: cation_NN ,_, Information_NNP Sciences_NNP 181_CD ,_, pp_NN 1138_CD --_: 1152_CD ._.

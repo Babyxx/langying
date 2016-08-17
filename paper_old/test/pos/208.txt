@@ -1,0 +1,374 @@
+1_CD Abstract_NNP In_IN this_DT paper_NN ,_, we_PRP study_VBP the_DT impact_NN of_IN using_VBG a_DT domain-specific_JJ bilingual_JJ lexicon_NN on_IN the_DT performance_NN of_IN an_DT Example-Based_NNP Machine_NN Translation_NN system_NN ._.
+We_PRP conducted_VBD experiments_NNS for_IN the_DT English_NNP -_: French_JJ language_NN pair_NN on_IN in-domain_JJ texts_NNS from_IN Europarl_NNP -LRB-_-LRB- European_NNP Parliament_NNP Proceedings_NNP -RRB-_-RRB- and_CC out-of-domain_JJ texts_NNS from_IN Emea_NNP -LRB-_-LRB- European_JJ Medicines_NNP Agency_NNP Documents_NNS -RRB-_-RRB- ,_, and_CC we_PRP compared_VBD the_DT results_NNS of_IN the_DT Example-Based_NNP Machine_NN Translation_NN system_NN against_IN those_DT of_IN the_DT Statistical_NNP Machine_NN Translation_NN system_NN Moses_NNP ._.
+The_DT obtained_VBN results_NNS revealed_VBD that_IN adding_VBG a_DT domain-specific_JJ bilingual_JJ lexicon_NN -LRB-_-LRB- extracted_VBN from_IN a_DT parallel_JJ domain-specific_JJ corpus_NN -RRB-_-RRB- to_TO the_DT general-purpose_JJ bilingual_JJ lexicon_NN of_IN the_DT Example-Based_NNP Machine_NN Translation_NN system_NN improves_VBZ translation_NN quality_NN for_IN both_DT in-domain_JJ as_RB well_RB as_IN out_IN -_: of-domain_JJ texts_NNS ,_, and_CC the_DT Example-Based_NNP Machine_NN Translation_NN system_NN outperforms_VBZ Moses_NNP when_WRB texts_NNS to_TO translate_VB are_VBP related_VBN to_TO the_DT specific_JJ domain_NN ._.
+Introduction_NN pairs_NNS and_CC domains_NNS ._.
+In_IN several_JJ fields_NNS ,_, available_JJ corpora_NN are_VBP not_RB sufficient_JJ to_TO make_VB Statistical_NNP Machine_NNP Translation_NN -LRB-_-LRB- SMT_NNP -RRB-_-RRB- approaches_VBZ operational_JJ ._.
+Most_JJS previous_JJ works_NNS addressing_VBG domain_NN adaptation_NN in_IN machine_NN translation_NN have_VBP proven_VBN that_IN a_DT SMT_NNP system_NN ,_, trained_VBN on_IN general_JJ texts_NNS ,_, has_VBZ poor_JJ performance_NN on_IN specific_JJ domains_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP study_VBP the_DT impact_NN of_IN using_VBG a_DT domain-specific_JJ bilingual_JJ lexicon_NN on_IN the_DT performance_NN of_IN an_DT Example-Based_NNP Machine_NN Translation_NN -LRB-_-LRB- EBMT_NNP -RRB-_-RRB- system_NN ,_, and_CC we_PRP compare_VBP the_DT results_NNS of_IN the_DT EBMT_NNP system_NN against_IN those_DT of_IN the_DT SMT_NNP system_NN Moses_NNP on_IN in-domain_NN and_CC out-of_NN -_: domain_NN texts_NNS ._.
+The_DT rest_NN of_IN the_DT paper_NN is_VBZ organized_VBN as_IN follows_VBZ ._.
+In_IN Section_NN 2_CD ,_, we_PRP present_VBP previous_JJ research_NN in_IN the_DT field_NN of_IN domain_NN adaptation_NN in_IN SMT_NNP ._.
+Section_NN 3_CD describes_VBZ the_DT translation_NN process_NN and_CC the_DT main_JJ components_NNS of_IN the_DT EBMT_NNP system_NN ._.
+Section_NN 4_CD presents_VBZ the_DT experimental_JJ setup_NN and_CC inspects_VBZ the_DT results_NNS of_IN the_DT EBMT_NNP system_NN in_IN qualitative_JJ and_CC quantitative_JJ evaluations_NNS ._.
+Section_NN 5_CD concludes_VBZ our_PRP$ study_NN and_CC presents_VBZ our_PRP$ future_JJ research_NN directions_NNS ._.
+2_CD Related_JJ Work_NN Domain_NN adaptation_NN consists_VBZ in_IN adapting_VBG MT_NNP systems_NNS designed_VBN for_IN one_CD domain_NN to_TO work_VB in_IN another_DT ._.
+Several_JJ ideas_NNS have_VBP been_VBN explored_VBN and_CC implemented_VBN in_IN domain_NN adaptation_NN of_IN SMT_NNP -LRB-_-LRB- Bungum_NNP and_CC Gambäck_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Langlais_NNP -LRB-_-LRB- 2002_CD -RRB-_-RRB- integrated_VBN domain-specific_JJ lexicons_NNS in_IN the_DT translation_NN model_NN of_IN a_DT SMT_NNP engine_NN which_WDT yields_VBZ a_DT significant_JJ reduction_NN in_IN word_NN error_NN rate_NN ._.
+Lewis_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- developed_VBD domain_NN specific_JJ SMT_NNP by_IN pooling_VBG all_DT training_NN data_NNS into_IN one_CD large_JJ data_NNS pool_NN ,_, including_VBG as_IN much_JJ in-domain_JJ parallel_NN data_NNS as_IN possible_JJ ._.
+They_PRP trained_VBD highly_RB specific_JJ language_NN models_NNS on_IN in-domain_JJ monolingual_JJ data_NNS in_IN order_NN to_TO reduce_VB the_DT dampening_VBG effect_NN of_IN heterogeneous_JJ data_NNS on_IN quality_NN within_IN the_DT domain_NN ._.
+Hildebrand_NNP et_FW al._FW ._.
+Improving_NN the_DT Performance_NNP of_IN an_DT Example-Based_NNP Machine_NN Translation_NN System_NNP Using_VBG a_DT Domain-specific_JJ Bilingual_NNP Lexicon_NNP Nasredine_NNP Semmar_NNP ,_, Othman_NNP Zennaki_NNP ,_, Meriama_NNP Laib_NNP CEA_NNP ,_, LIST_NNP ,_, Vision_NNP and_CC Content_NNP Engineering_NNP Laboratory_NNP F-91191_NNP ,_, Gif-sur-Yvette_NNP ,_, France_NNP -LCB-_-LRB- nasredine.semmar_NN ,_, othman.zennaki_NN ,_, meriama.laib_NN -RCB-_-RRB- @cea_NN ._.
+fr_NNP There_EX are_VBP mainly_RB two_CD approaches_NNS for_IN Machine_NN Translation_NN -LRB-_-LRB- MT_NNP -RRB-_-RRB- :_: rule-based_JJ and_CC corpus-based_JJ -LRB-_-LRB- Trujillo_NNP ,_, 1999_CD ;_: Hutchins_NNP ,_, 2003_CD -RRB-_-RRB- ._.
+Rule-Based_JJ MT_NNP -LRB-_-LRB- RBMT_NNP -RRB-_-RRB- approaches_VBZ require_VB manually_RB made_VBN bilingual_JJ lexicons_NNS and_CC linguistic_JJ rules_NNS ,_, which_WDT can_MD be_VB costly_JJ ,_, and_CC not_RB generalized_VBN to_TO other_JJ languages_NNS ._.
+Corpus-based_JJ machine_NN translation_NN approaches_NNS are_VBP effective_JJ only_RB when_WRB large_JJ amounts_NNS of_IN parallel_JJ corpora_NN are_VBP available_JJ ._.
+However_RB ,_, parallel_JJ corpora_NN are_VBP only_RB available_JJ for_IN a_DT limited_JJ number_NN of_IN language_NN -LRB-_-LRB- 2005_CD -RRB-_-RRB- used_VBD an_DT approach_NN which_WDT consisted_VBD essentially_RB in_IN performing_VBG test-set_JJ relativization_NN -LRB-_-LRB- choosing_VBG training_NN samples_NNS that_WDT look_VBP most_RBS like_IN the_DT test_NN data_NNS -RRB-_-RRB- to_TO improve_VB the_DT translation_NN quality_NN when_WRB changing_VBG the_DT domain_NN ._.
+Civera_NNP and_CC Juan_NNP -LRB-_-LRB- 2007_CD -RRB-_-RRB- ,_, and_CC Bertoldi_NNP and_CC Federico_NNP -LRB-_-LRB- 2009_CD -RRB-_-RRB- used_VBN monolingual_JJ corpora_NN and_CC Snover_NNP et_FW al._FW -LRB-_-LRB- 2008_CD -RRB-_-RRB- used_VBN comparable_JJ corpora_NN to_TO adapt_VB MT_NNP systems_NNS designed_VBN for_IN Parliament_NNP domain_NN to_TO work_VB in_IN News_NNP domain_NN ._.
+The_DT obtained_VBN results_NNS showed_VBD significant_JJ gains_NNS in_IN performance_NN ._.
+Banerjee_NNP et_FW al._FW -LRB-_-LRB- 2010_CD -RRB-_-RRB- combined_VBN two_CD separate_JJ domain_NN models_NNS ._.
+Each_DT model_NN is_VBZ trained_VBN from_IN small_JJ amounts_NNS of_IN domain-specific_JJ data_NNS ._.
+This_DT data_NN is_VBZ gathered_VBN from_IN a_DT single_JJ corporate_JJ website_NN ._.
+The_DT authors_NNS used_VBN document_NN filtering_VBG and_CC classification_NN techniques_NNS to_TO realize_VB the_DT automatic_JJ domain_NN detection_NN ._.
+Daumé_NNP III_NNP and_CC Jagarlamudi_NNP -LRB-_-LRB- 2011_CD -RRB-_-RRB- used_VBN dictionary_JJ mining_NN techniques_NNS to_TO find_VB translations_NNS for_IN unseen_JJ words_NNS from_IN comparable_JJ corpora_NN and_CC they_PRP integrated_VBD these_DT translations_NNS into_IN a_DT statistical_JJ phrase-based_JJ translation_NN system_NN ._.
+They_PRP reported_VBD improvements_NNS in_IN translation_NN quality_NN -LRB-_-LRB- between_IN 0.5_CD and_CC 1.5_CD BLEU_NNP points_NNS -RRB-_-RRB- on_IN four_CD domains_NNS and_CC two_CD language_NN pairs_NNS ._.
+Pecina_NNP et_FW al._FW -LRB-_-LRB- 2011_CD -RRB-_-RRB- exploited_VBD domain-specific_JJ data_NNS acquired_VBN by_IN domain-focused_JJ web-crawling_NN to_TO adapt_VB general_JJ -_: domain_NN SMT_NNP systems_NNS to_TO new_JJ domains_NNS ._.
+They_PRP observed_VBD that_IN even_RB small_JJ amounts_NNS of_IN in-domain_JJ parallel_JJ data_NNS are_VBP more_RBR important_JJ for_IN translation_NN quality_NN than_IN large_JJ amounts_NNS of_IN in-domain_JJ monolingual_JJ data_NNS ._.
+Wang_NNP et_FW al._FW -LRB-_-LRB- 2012_CD -RRB-_-RRB- used_VBD a_DT single_JJ translation_NN model_NN and_CC generalized_VBD a_DT single-domain_JJ decoder_NN to_TO deal_VB with_IN different_JJ domains_NNS ._.
+They_PRP used_VBD this_DT method_NN to_TO adapt_VB large-scale_JJ generic_JJ SMT_NNP systems_NNS for_IN 20_CD language_NN pairs_NNS in_IN order_NN to_TO translate_VB patents_NNS ._.
+The_DT authors_NNS reported_VBD a_DT gain_NN of_IN 0.35_CD BLEU_NNP points_NNS for_IN patent_NN translation_NN and_CC a_DT loss_NN of_IN only_RB 0.18_CD BLEU_NNP points_NNS for_IN generic_JJ translation_NN ._.
+3_CD The_DT Translation_NN Process_NNP of_IN the_DT Example_NNP -_: Based_VBD Machine_NN Translation_NN System_NNP The_NNP translation_NN process_NN of_IN the_DT EBMT_NNP system_NN consists_VBZ of_IN several_JJ steps_NNS :_: retrieving_VBG translation_NN candidates_NNS from_IN a_DT monolingual_JJ corpus_NN using_VBG a_DT cross-language_JJ search_NN engine_NN ,_, producing_VBG translation_NN hypotheses_NNS using_VBG a_DT transducer_NN ,_, using_VBG word_NN lattices_NNS to_TO represent_VB the_DT combination_NN of_IN translation_NN candidates_NNS and_CC translation_NN hypotheses_NNS ,_, and_CC choosing_VBG the_DT n-best_JJ translations_NNS according_VBG to_TO a_DT statistical_JJ language_NN model_NN learned_VBD from_IN a_DT target_NN language_NN corpus_NN -LRB-_-LRB- Semmar_NNP and_CC Bouamor_NNP 2011_CD ;_: Semmar_NNP et_FW al._FW ,_, 2011_CD ;_: Semmar_NNP et_FW al._FW ,_, 2015_CD -RRB-_-RRB- ._.
+This_DT process_NN uses_VBZ a_DT cross-language_JJ search_NN engine_NN ,_, a_DT bilingual_JJ reformulator_NN -LRB-_-LRB- transducer_NN -RRB-_-RRB- and_CC a_DT generator_NN of_IN translations_NNS ._.
+In_IN order_NN to_TO illustrate_VB the_DT functioning_NN of_IN the_DT EBMT_NNP system_NN ,_, we_PRP indexed_VBD a_DT small_JJ textual_JJ database_NN composed_VBN of_IN 1127_CD French_JJ sentences_NNS extracted_VBN from_IN the_DT ARCADE_NNP II_NNP corpus_VBZ -LRB-_-LRB- Veronis_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- and_CC we_PRP considered_VBD the_DT input_NN source_NN sentence_NN ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP encourage_VBP investment_NN in_IN innovation_NN ._. ''_''
+as_IN the_DT sentence_NN to_TO translate_VB ._.
+3.1_CD The_DT Cross-language_JJ Search_NNP Engine_NNP The_NNP role_NN of_IN the_DT cross-language_JJ search_NN engine_NN is_VBZ to_TO extract_VB for_IN each_DT sentence_NN to_TO translate_VB -LRB-_-LRB- user_NN 's_POS query_NN -RRB-_-RRB- sentences_NNS or_CC sub-sentences_NNS from_IN an_DT indexed_VBN monolingual_JJ corpus_NN in_IN the_DT target_NN language_NN -LRB-_-LRB- Davis_NNP and_CC Ogden_NNP ,_, 1997_CD ;_: Grefenstette_NNP ,_, 1998_CD ;_: Baeza-Yates_NNP and_CC Ribeiro-Neto_NNP ,_, 1999_CD -RRB-_-RRB- ._.
+These_DT sentences_NNS or_CC sub_SYM -_: sentences_NNS correspond_VBP to_TO a_DT total_JJ or_CC a_DT partial_JJ translation_NN of_IN the_DT sentence_NN to_TO translate_VB ._.
+The_DT cross_NN -_: language_NN search_NN engine_NN used_VBN in_IN the_DT EBMT_NNP system_NN is_VBZ based_VBN on_IN a_DT deep_JJ linguistic_JJ analysis_NN of_IN the_DT query_NN and_CC the_DT monolingual_JJ corpus_NN to_TO be_VB indexed_VBN and_CC uses_VBZ a_DT weighted_JJ vector_NN space_NN model_NN -LRB-_-LRB- Salton_NNP and_CC McGill_NNP ,_, 1986_CD ;_: Besançon_NNP et_FW al._FW ,_, 2003_CD ;_: Semmar_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+This_DT cross-language_JJ search_NN engine_NN is_VBZ composed_VBN of_IN the_DT following_VBG modules_NNS :_: •_CD A_DT linguistic_JJ analyzer_NN based_VBN on_IN the_DT open_JJ 1_CD source_NN multilingual_JJ platform_NN LIMA_NNP -LRB-_-LRB- Besançon_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- which_WDT includes_VBZ a_DT morphological_JJ analyzer_NN ,_, a_DT Part-Of-Speech_NNP tagger_NN and_CC a_DT syntactic_NN analyzer_NN ._.
+This_DT analyzer_NN processes_VBZ both_DT sentences_NNS to_TO be_VB indexed_VBN in_IN the_DT target_NN language_NN and_CC the_DT sentence_NN to_TO translate_VB in_IN order_NN to_TO produce_VB a_DT set_NN of_IN normalized_JJ lemmas_NNS with_IN their_PRP$ linguistic_JJ information_NN -LRB-_-LRB- Part-Of-Speech_NNP ,_, gender_NN ,_, number_NN ,_, etc._FW -RRB-_-RRB- ._.
+The_DT syntactic_NN analyzer_NN implements_VBZ a_DT dependency_NN grammar_NN to_TO produce_VB syntactic_NN dependencies_NNS relations_NNS -LRB-_-LRB- used_VBN to_TO compute_VB compound_NN words_NNS -RRB-_-RRB- and_CC works_VBZ by_IN identifying_VBG verbal_JJ and_CC nominal_JJ chains_NNS ._.
+These_DT syntactic_JJ dependencies_NNS are_VBP detected_VBN using_VBG finite-state_JJ automata_NN defined_VBN by_IN rules_NNS expressing_VBG possible_JJ successions_NNS of_IN grammatical_JJ categories_NNS ._.
+1_CD https://github.com/aymara/lima_NN ._.
+•_CD A_DT statistical_JJ analyzer_NN that_WDT attributes_VBZ to_TO each_DT word_NN or_CC a_DT compound_NN word_NN of_IN the_DT sentences_NNS to_TO be_VB indexed_VBN a_DT weight_NN ._.
+For_IN this_DT purpose_NN ,_, we_PRP use_VBP the_DT TF-IDF_NNP weighting_NN ._.
+The_DT weight_NN wij_NN of_IN term_NN j_NN in_IN document_NN i_FW is_VBZ defined_VBN with_IN the_DT formula_NN wij_NN =_SYM tfijlogN/nj_NNP ,_, where_WRB tfij_NN is_VBZ the_DT frequency_NN of_IN term_NN j_NN in_IN document_NN i_FW ,_, N_NNP is_VBZ the_DT total_JJ number_NN of_IN documents_NNS in_IN the_DT collection_NN ,_, and_CC nj_NN is_VBZ the_DT number_NN of_IN documents_NNS where_WRB term_NN j_NN appears_VBZ ._.
+•_CD An_DT indexer_NN to_TO build_VB the_DT textual_JJ database_NN which_WDT contains_VBZ the_DT sentences_NNS of_IN the_DT target_NN language_NN ._.
+•_CD A_DT query_NN reformulator_NN to_TO expand_VB queries_NNS during_IN the_DT interrogation_NN of_IN the_DT textual_JJ database_NN ._.
+The_DT query_NN terms_NNS are_VBP translated_VBN using_VBG a_DT bilingual_JJ lexicon_NN ._.
+Each_DT term_NN of_IN the_DT query_NN is_VBZ reformulated_VBN into_IN its_PRP$ translations_NNS in_IN target_NN language_NN using_VBG an_DT English-French_JJ 2_CD lexicon_NN composed_VBN of_IN 243539_CD entries_NNS ._.
+•_CD A_DT comparator_NN which_WDT measures_VBZ the_DT similarity_NN between_IN the_DT sentence_NN to_TO translate_VB -LRB-_-LRB- query_NN -RRB-_-RRB- and_CC the_DT indexed_VBN sentences_NNS in_IN order_NN to_TO retrieve_VB the_DT closest_JJS sentences_NNS to_TO the_DT reformulated_VBN query_NN ._.
+The_DT Cosine_NNP similarity_NN is_VBZ used_VBN to_TO measure_VB the_DT distance_NN between_IN the_DT sentence_NN to_TO translate_VB and_CC each_DT sentence_NN of_IN the_DT textual_JJ database_NN ._.
+The_DT retrieved_VBN sentences_NNS are_VBP classified_VBN by_IN the_DT comparator_NN which_WDT groups_NNS in_IN the_DT same_JJ cluster_NN the_DT sentences_NNS that_WDT share_VBP the_DT same_JJ words_NNS ._.
+For_IN example_NN ,_, from_IN the_DT sentence_NN ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP encourage_VBP investment_NN in_IN innovation_NN ._. ''_''
+,_, two_CD nominal_JJ chains_NNS are_VBP recognized_VBN :_: ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP ''_'' and_CC ``_`` investment_NN in_IN innovation_NN ''_'' ._.
+From_IN the_DT first_JJ nominal_JJ chain_NN ,_, the_DT syntactic_NN analyzer_NN recognizes_VBZ three_CD compound_NN words_NNS :_: Social_NNP security_NN funds_NNS in_IN Greece_NNP -LRB-_-LRB- Greece_fund_security_social_NNP -RRB-_-RRB- ,_, Social_NNP security_NN funds_NNS -LRB-_-LRB- fund_security_social_JJ -RRB-_-RRB- ,_, and_CC Social_NNP security_NN -LRB-_-LRB- security_social_JJ -RRB-_-RRB- ._.
+Table_NNP 1_CD illustrates_VBZ the_DT two_CD first_JJ translation_NN candidates_NNS provided_VBN by_IN the_DT cross_NN -_: language_NN search_NN engine_NN for_IN the_DT sentence_NN to_TO translate_VB ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP encourage_VBP investment_NN in_IN innovation_NN ._. ''_'' ._.
+These_DT sentences_NNS share_NN with_IN the_DT query_NN the_DT terms_NNS ``_`` fund_security_social_JJ ,_, Greece_NNP ,_, investment_NN ''_'' for_IN the_DT first_JJ class_NN and_CC the_DT term_NN 2_CD ``_`` fund_security_social_JJ ''_'' for_IN the_DT second_JJ class_NN ._.
+In_IN addition_NN ,_, the_DT cross-language_JJ search_NN engine_NN provides_VBZ the_DT linguistic_JJ information_NN -LRB-_-LRB- lemma_NN ,_, Part_NN -_: Of-Speech_NNP ,_, gender_NN ,_, number_NN and_CC syntactic_NN dependency_NN relations_NNS -RRB-_-RRB- of_IN all_DT words_NNS included_VBD in_IN the_DT translation_NN candidates_NNS -LRB-_-LRB- Table_NNP 2_CD -RRB-_-RRB- ._.
+The_DT translation_NN candidates_NNS are_VBP represented_VBN as_IN graphs_NNS of_IN words_NNS and_CC encoded_VBN with_IN Finite-State_NNP Machines_NNP -LRB-_-LRB- FSMs_NNS -RRB-_-RRB- ._.
+Each_DT transition_NN of_IN the_DT automaton_NN corresponds_VBZ to_TO the_DT lemma_NN and_CC its_PRP$ linguistic_JJ information_NN which_WDT is_VBZ provided_VBN by_IN the_DT linguistic_JJ analyzer_NN of_IN the_DT cross_NN -_: language_NN search_NN engine_NN -LRB-_-LRB- Figure_NN 1_CD -RRB-_-RRB- ._.
+Class_NN n_SYM °_FW ._.
+Class_NN query_NN terms_NNS Translation_NN candidates_NNS 1_CD fund_security_social_JJ ,_, Greece_NNP ,_, investment_NN Les_NNP caisses_FW de_FW sécurité_FW sociale_FW de_FW Grèce_FW revendiquent_FW l'inde_FW ́pendance_FW en_FW matière_FW d'investissements_FW ._.
+2_CD fund_security_social_JJ Objet_NNP :_: Caisses_NNP de_IN sécurité_JJ sociale_NN grecques_NNS ._.
+Table_NNP 1_CD ._.
+The_DT two_CD first_JJ translation_NN candidates_NNS returned_VBN by_IN the_DT cross-language_JJ search_NN engine_NN for_IN the_DT sentence_NN of_IN to_TO translate_VB ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP encourage_VBP investment_NN in_IN innovation_NN ._. ''_'' ._.
+Les_NNP -LSB-_NNP le_FW ,_, Plural_JJ determiner_NN -RSB-_JJ caisses_NNS -LSB-_JJ caisse_NN ,_, Plural_NNP common_JJ noun_NN -RSB-_NNP de_IN -LSB-_NNP de_NNP ,_, Singular_JJ preposition_NN -RSB-_NNP sécurité_JJ -LSB-_NNP sécurité_NN ,_, Singular_JJ common_JJ noun_NN -RSB-_NNP sociale_NN -LSB-_NNP social_JJ ,_, Singular_JJ adjective_JJ -RSB-_NNP de_IN -LSB-_NNP de_NNP ,_, Singular_JJ preposition_NN -RSB-_NNP Grèce_NNP -LSB-_NNP Grèce_NNP ,_, Singular_JJ proper_JJ noun_NN -RSB-_NN revendiquent_JJ -LSB-_NN revendiquer_NN ,_, Third_NNP person_NN plural_JJ verb_NN -RSB-_NNP l'_VBD -LSB-_NNP le_FW ,_, Singular_JJ determiner_NN -RSB-_NNP indépendance_NNP -LSB-_NNP indépendance_NN ,_, Singular_JJ common_JJ noun_NN -RSB-_NNP en_IN -LSB-_NNP en_IN ,_, Singular_JJ preposition_NN -RSB-_NNP matière_VBD -LSB-_NNP matière_NN ,_, Singular_JJ common_JJ noun_NN -RSB-_NNP d'_VBD -LSB-_NNP de_NNP ,_, Singular_JJ preposition_NN -RSB-_NNP investissements_NNS -LSB-_NNP investissement_NN ,_, Plural_NNP common_JJ noun_NN -RSB-_NN ._.
+-LSB-_NN ._.
+,_, Punctuation_NNP -RSB-_NNP Table_NNP 2_CD :_: Linguistic_JJ information_NN -LRB-_-LRB- lemma_NN ,_, grammatical_JJ category_NN -RRB-_-RRB- of_IN the_DT words_NNS of_IN the_DT first_JJ translation_NN candidate_NN ._.
+This_DT sentence_NN is_VBZ composed_VBN of_IN two_CD nominal_JJ chains_NNS linked_VBN by_IN the_DT word_NN ``_`` revendiquent_JJ ''_'' ._.
+Figure_NN 1_CD :_: FSMs_NNS representing_VBG the_DT retrieved_VBN sentences_NNS returned_VBN by_IN the_DT cross-language_JJ search_NN engine_NN ._.
+http://catalog.elra.info/product_info.php?products_id=666_NNS ._.
+3.2_CD The_DT Bilingual_NNP Reformulator_NNP The_NNP role_NN of_IN the_DT bilingual_JJ reformulator_NN is_VBZ to_TO produce_VB a_DT set_NN of_IN translation_NN hypotheses_NNS from_IN the_DT sentence_NN to_TO translate_VB ._.
+It_PRP consists_VBZ ,_, on_IN the_DT one_CD hand_NN ,_, in_IN transforming_VBG into_IN the_DT target_NN language_NN the_DT syntactic_NN structure_NN of_IN the_DT sentence_NN to_TO translate_VB ,_, and_CC ,_, on_IN the_DT other_JJ hand_NN ,_, in_IN translating_VBG its_PRP$ words_NNS ._.
+The_DT reformulator_NN uses_VBZ a_DT set_NN of_IN linguistic_JJ rules_NNS to_TO transform_VB syntactic_JJ structures_NNS from_IN the_DT source_NN language_NN to_TO the_DT target_NN language_NN -LRB-_-LRB- Syntactic_JJ transfer_NN -RRB-_-RRB- and_CC the_DT bilingual_JJ lexicon_NN of_IN the_DT cross-language_JJ search_NN engine_NN to_TO translate_VB words_NNS of_IN the_DT sentence_NN to_TO translate_VB -LRB-_-LRB- Lexical_JJ transfer_NN -RRB-_-RRB- ._.
+The_DT rules_NNS of_IN the_DT syntactic_JJ transfer_NN are_VBP built_VBN manually_RB and_CC are_VBP based_VBN on_IN morpho-syntactic_JJ patterns_NNS -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- ._.
+Expressions_NNS -LRB-_-LRB- phrases_NNS -RRB-_-RRB- corresponding_JJ to_TO each_DT pattern_NN are_VBP identified_VBN by_IN the_DT syntactic_NN analyzer_NN during_IN the_DT step_NN of_IN recognition_NN of_IN verbal_JJ and_CC nominal_JJ chains_NNS ._.
+These_DT expressions_NNS can_MD be_VB seen_VBN as_IN sentences_NNS accepted_VBN by_IN a_DT FSM_NNP transducer_NN whose_WP$ outputs_NNS are_VBP instances_NNS of_IN these_DT sentences_NNS in_IN the_DT target_NN language_NN -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+For_IN example_NN ,_, from_IN the_DT sentence_NN to_TO translate_VB ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP encourage_VBP investment_NN in_IN innovation_NN ._. ''_''
+,_, two_CD nominal_JJ chains_NNS are_VBP recognized_VBN :_: ``_`` Social_NNP security_NN funds_NNS in_IN Greece_NNP ''_'' and_CC ``_`` investment_NN in_IN innovation_NN ''_'' ._.
+These_DT nominal_JJ chains_NNS are_VBP linked_VBN with_IN the_DT verb_NN ``_`` encourage_VB ''_'' ._.
+The_DT expression_NN ``_`` investment_NN in_IN innovation_NN ''_'' is_VBZ transformed_VBN using_VBG the_DT sixth_JJ rule_NN -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- into_IN the_DT expression_NN ``_`` the_DT investment_NN in_IN the_DT innovation_NN ''_'' ._.
+It_PRP is_VBZ important_JJ to_TO mention_VB here_RB that_IN the_DT linking_VBG word_NN ``_`` the_DT ''_'' -LRB-_-LRB- definite_JJ article_NN -RRB-_-RRB- is_VBZ added_VBN to_TO the_DT applied_VBN rule_NN before_IN each_DT noun_NN -LRB-_-LRB- investment_NN ,_, innovation_NN -RRB-_-RRB- in_IN order_NN to_TO complete_VB the_DT transformation_NN ._.
+The_DT FSM_NNP transducer_NN of_IN the_DT syntactic_JJ transfer_NN step_NN produces_VBZ a_DT lattice_NN of_IN words_NNS in_IN the_DT source_NN language_NN -LRB-_-LRB- Figure_NN 2_CD -RRB-_-RRB- ._.
+Each_DT word_NN is_VBZ represented_VBN with_IN its_PRP$ lemma_NN in_IN the_DT lattice_NN and_CC is_VBZ associated_VBN with_IN its_PRP$ linguistic_JJ information_NN -LRB-_-LRB- Part-Of-Speech_NNP ,_, gender_NN ,_, number_NN ,_, etc._FW -RRB-_-RRB- ._.
+Lexical_JJ transfer_NN translates_VBZ in_IN the_DT target_NN language_NN the_DT lemmas_NNS of_IN the_DT obtained_VBN syntactic_NN structures_NNS words_NNS using_VBG the_DT bilingual_JJ lexicon_NN of_IN the_DT cross_NN -_: language_NN search_NN engine_NN ._.
+This_DT English-French_JJ lexicon_NN is_VBZ composed_VBN of_IN 243539_CD entries_NNS ._.
+These_DT entries_NNS are_VBP represented_VBN in_IN their_PRP$ normalized_JJ forms_NNS -LRB-_-LRB- lemmas_FW -RRB-_-RRB- ._.
+A_DT lemmatization_NN process_NN provided_VBN by_IN the_DT linguistic_JJ analyzer_NN LIMA_NNP is_VBZ applied_VBN on_IN the_DT obtained_VBN syntactic_NN structures_NNS words_NNS ._.
+This_DT step_NN produces_VBZ an_DT important_JJ number_NN of_IN translation_NN hypotheses_NNS ._.
+This_DT is_VBZ due_JJ to_TO the_DT combination_NN of_IN the_DT syntactic_JJ transfer_NN rules_NNS and_CC the_DT polysemy_NN in_IN the_DT bilingual_JJ lexicon_NN ._.
+The_DT result_NN of_IN the_DT bilingual_JJ reformulator_NN is_VBZ a_DT set_NN of_IN lattices_NNS in_IN which_WDT words_NNS are_VBP in_IN the_DT target_NN language_NN ._.
+3.3_CD The_DT Generator_NNP of_IN Translations_NNPS The_DT role_NN of_IN the_DT generator_NN of_IN translations_NNS consists_VBZ in_IN assembling_VBG the_DT results_NNS returned_VBN by_IN the_DT cross_NN -_: language_NN search_NN engine_NN and_CC the_DT bilingual_JJ reformulator_NN ,_, and_CC in_IN choosing_VBG the_DT n-best_JJ translations_NNS according_VBG to_TO a_DT statistical_JJ language_NN model_NN learned_VBD from_IN the_DT target_NN language_NN corpus_NN ._.
+The_DT assembling_VBG process_NN consists_VBZ in_IN composing_VBG FSMs_NNS corresponding_JJ to_TO the_DT translation_NN candidates_NNS with_IN FSMs_NNS corresponding_JJ to_TO the_DT translation_NN hypotheses_NNS ._.
+The_DT FSM_NNP state_NN where_WRB the_DT composition_NN is_VBZ made_VBN is_VBZ determined_VBN by_IN words_NNS which_WDT link_VBP the_DT nominal_JJ chains_NNS of_IN the_DT translation_NN candidates_NNS and_CC the_DT translation_NN hypotheses_NNS ._.
+All_PDT the_DT operations_NNS applied_VBD on_IN the_DT FSMs_NNS are_VBP made_VBN with_IN the_DT AT&T_NNP Rule_NNP n_VBD °_CD ._.
+Tag_NN pattern_NN -LRB-_-LRB- English_NNP -RRB-_-RRB- Tag_NN pattern_NN -LRB-_-LRB- French_JJ -RRB-_-RRB- 1_CD AN_DT NA_NN 2_CD ANN_NNP NNA_NNP 3_CD NN_NNP NN_NNP 4_CD AAN_NNP NAA_NNP 5_CD NAN_NNP NNA_NNP 6_CD NPN_NNP NPN_NNP 7_CD NNN_NNP NNN_NNP 8_CD ANPN_NNP NAPN_NNP 9_CD NPAN_NNP NPNA_NNP 10_CD TN_NNP TN_NNP Table_NNP 3_CD :_: Frequent_JJ Part-Of-Speech_NNP tag_NN patterns_NNS used_VBN to_TO transform_VB syntactic_JJ structures_NNS of_IN the_DT sentence_NN to_TO translate_VB from_IN English_NNP to_TO French_NNP ._.
+In_IN these_DT patterns_NNS A_DT refers_VBZ to_TO an_DT Adjective_NNP ,_, P_NNP to_TO a_DT Preposition_NNP ,_, T_NNP to_TO Past_NNP Participle_NNP ,_, and_CC N_NNP to_TO a_DT Noun_NN ._.
+Figure_NN 2_CD :_: Example_NN of_IN a_DT lattice_NN of_IN words_NNS corresponding_JJ to_TO the_DT syntactic_NN transformation_NN of_IN the_DT compound_NN word_NN ``_`` Social_NNP security_NN funds_NNS ''_'' ._.
+3_CD FSM_NNP Library_NNP -LRB-_-LRB- Mohri_NNP et_FW al._FW ,_, 2002_CD -RRB-_-RRB- ._.
+In_IN order_NN to_TO find_VB the_DT best_JJS translation_NN hypothesis_NN from_IN the_DT set_NN of_IN word_NN lattices_NNS -LRB-_-LRB- Dong_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, a_DT statistical_JJ model_NN is_VBZ 4_CD learned_VBN with_IN the_DT CRF_NNP +_CD +_JJ toolkit_NN -LRB-_-LRB- Lafferty_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- on_IN lemmas_NNS and_CC Part-Of-Speech_NNP tags_NNS of_IN the_DT target_NN language_NN corpus_NN ._.
+Therefore_RB ,_, the_DT n-best_JJ translations_NNS words_NNS are_VBP in_IN their_PRP$ normalized_JJ forms_NNS -LRB-_-LRB- lemmas_FW -RRB-_-RRB- ._.
+To_TO generate_VB the_DT n-best_JJ translations_NNS with_IN words_NNS in_IN their_PRP$ surface_NN -LRB-_-LRB- inflected_VBN -RRB-_-RRB- forms_NNS ,_, we_PRP applied_VBD a_DT morphological_JJ generator_NN -LRB-_-LRB- flexor_NN -RRB-_-RRB- which_WDT uses_VBZ the_DT linguistic_JJ information_NN -LRB-_-LRB- Part-Of-Speech_NNP ,_, gender_NN ,_, number_NN ,_, etc._FW -RRB-_-RRB- ._.
+The_DT word_NN lattices_VBZ corresponding_JJ to_TO the_DT translations_NNS are_VBP enriched_VBN with_IN the_DT results_NNS of_IN the_DT flexor_NN ._.
+These_DT lattices_NNS are_VBP then_RB scored_VBN with_IN another_DT statistical_JJ language_NN model_NN learned_VBD from_IN texts_NNS of_IN the_DT target_NN language_NN containing_VBG words_NNS in_IN inflected_JJ forms_NNS ._.
+The_DT CRF_NNP +_CD +_JJ toolkit_NN is_VBZ used_VBN to_TO select_VB the_DT n_SYM -_: best_JJS translations_NNS in_IN inflected_JJ forms_NNS ._.
+4_CD Experiments_NNS and_CC Results_NNS 4.1_CD Data_NNP and_CC Experimental_NNP Setup_NNP In_IN order_NN to_TO study_VB the_DT impact_NN of_IN using_VBG a_DT domain_NN -_: specific_JJ bilingual_JJ lexicon_NN on_IN the_DT performance_NN of_IN the_DT EBMT_NNP system_NN ,_, we_PRP conducted_VBD our_PRP$ experiments_NNS on_IN two_CD English-French_JJ parallel_JJ corpora_NN -LRB-_-LRB- Table_NNP 4_CD -RRB-_-RRB- :_: Europarl_NNP -LRB-_-LRB- European_NNP Parliament_NNP Proceedings_NNP -RRB-_-RRB- and_CC Emea_NNP -LRB-_-LRB- European_JJ Medicines_NNP Agency_NNP Documents_NNS -RRB-_-RRB- ._.
+Both_DT corpora_NN were_VBD extracted_VBN from_IN the_DT open_JJ parallel_NN corpus_VBZ OPUS_NNP -LRB-_-LRB- Tiedemann_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Evaluation_NN consists_VBZ in_IN comparing_VBG translation_NN results_NNS produced_VBN by_IN the_DT open_JJ source_NN SMT_NNP system_NN Moses_NNP -LRB-_-LRB- Khoen_NNP et_FW al._FW ,_, 2007_CD -RRB-_-RRB- and_CC the_DT EBMT_NNP system_NN on_IN in-domain_NN and_CC out-of-domain_JJ texts_NNS ._.
+The_DT English-French_JJ training_NN corpus_NN is_VBZ used_VBN to_TO build_VB Moses_NNP 's_POS translation_NN and_CC language_NN models_NNS ._.
+The_DT French_JJ sentences_NNS of_IN this_DT training_NN corpus_NN are_VBP used_VBN to_TO create_VB the_DT indexed_VBN database_NN of_IN the_DT cross-language_JJ search_NN engine_NN integrated_VBN in_IN the_DT EBMT_NNP system_NN ._.
+We_PRP conducted_VBD eight_CD runs_NNS and_CC two_CD test_NN experiments_NNS for_IN each_DT run_NN :_: In-Domain_NNP and_CC Out-Of-Domain_NNP ._.
+For_IN this_DT ,_, we_PRP randomly_RB extracted_VBD 500_CD parallel_JJ sentences_NNS from_IN Europarl_NNP as_IN an_DT In-Domain_NNP corpus_NN and_CC 500_CD pairs_NNS of_IN sentences_NNS from_IN Emea_NNP as_IN an_DT Out-Of-Domain_NNP corpus_NN ._.
+These_DT experiments_NNS are_VBP done_VBN to_TO show_VB the_DT impact_NN of_IN the_DT domain_NN vocabulary_NN on_IN the_DT translation_NN results_NNS ._.
+The_DT domain_NN vocabulary_NN is_VBZ represented_VBN in_IN the_DT case_NN of_IN Moses_NNP by_IN the_DT specialized_VBN parallel_NN corpus_NN -LRB-_-LRB- Emea_NNP -RRB-_-RRB- which_WDT is_VBZ added_VBN to_TO the_DT training_NN data_NNS -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- ._.
+In_IN the_DT case_NN of_IN the_DT EBMT_NNP system_NN ,_, the_DT domain_NN vocabulary_NN is_VBZ identified_VBN by_IN a_DT bilingual_JJ lexicon_NN which_WDT is_VBZ extracted_VBN automatically_RB from_IN the_DT specialized_VBN parallel_NN corpus_NN -LRB-_-LRB- Emea_NNP -RRB-_-RRB- using_VBG a_DT word_NN alignment_NN tool_NN -LRB-_-LRB- Semmar_NNP et_FW al._FW ,_, 2010_CD ;_: Bouamor_NNP et_FW al._FW ,_, 2012_CD -RRB-_-RRB- ._.
+This_DT specialized_VBN bilingual_JJ lexicon_NN is_VBZ added_VBN to_TO the_DT English-French_JJ lexicon_NN which_WDT is_VBZ used_VBN jointly_RB by_IN the_DT cross-language_JJ search_NN engine_NN and_CC the_DT bilingual_JJ reformulator_NN ._.
+To_TO evaluate_VB the_DT performance_NN of_IN the_DT EBMT_NNP system_NN and_CC Moses_NNP ,_, we_PRP used_VBD the_DT BLEU_NNP score_NN -LRB-_-LRB- Papineni_FW et_FW al_FW ;_: 2002_CD -RRB-_-RRB- ._.
+Run_NNP n_SYM °_FW ._.
+Training_NN -LRB-_-LRB- #_# sentences_NNS -RRB-_-RRB- T_SYM uning_NN -LRB-_-LRB- #_# sentences_NNS -RRB-_-RRB- 1_CD 150K_CD -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 3.75_CD K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 2_CD 150K_CD +10_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 1.5_CD K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 3_CD 150K_CD +20_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 1.5_CD K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 4_CD 150K_CD +30_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 1.5_CD K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 5_CD 500K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 2.5_CD K_NNP -LRB-_-LRB- Europarl_NNP -RRB-_-RRB- 6_CD 500K_CD +10_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 2K_CD +0.5_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 7_CD 500K_CD +20_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 2K_CD +0.5_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 8_CD 500K_CD +30_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 2K_CD +0.5_CD K_NNP -LRB-_-LRB- Europarl_NNP +_NNP Emea_NNP -RRB-_-RRB- 3_CD use_NN as_IN executable_JJ binary_JJ programs_NNS ._.
+FSM_NNP Library_NNP is_VBZ available_JJ from_IN AT&T_NNP for_IN non-commercial_JJ 4_CD 100401/crfpp/CRF_NNP +_CD +_SYM -0.51_CD /_CD doc_NN /_NN ._.
+http://wing.comp.nus.edu.sg/~forecite/services/parscit_SYM -_: Table_NNP 4_CD :_: Corpora_NNP details_NNS used_VBD to_TO train_VB Moses_NNP language_NN and_CC translation_NN models_NNS ,_, and_CC to_TO build_VB database_NN of_IN the_DT EBMT_NNP system_NN ._.
+In_IN this_DT table_NN ,_, K_NNP refers_VBZ to_TO 1000_CD ._.
+4.2_CD Results_NNS and_CC Discussion_NNP The_NNP performance_NN of_IN Moses_NNP and_CC the_DT EBMT_NNP system_NN is_VBZ evaluated_VBN using_VBG the_DT BLEU_NNP score_NN on_IN the_DT two_CD test_NN sets_NNS for_IN the_DT eight_CD runs_NNS described_VBN in_IN the_DT previous_JJ section_NN ._.
+Note_VB that_IN we_PRP consider_VBP one_CD reference_NN per_IN sentence_NN ._.
+The_DT obtained_VBN results_NNS are_VBP reported_VBN in_IN Table_NNP 5_CD ._.
+Run_NNP n_SYM °_FW ._.
+In-Domain_NNP Out-Of-Domain_NNP Moses_NNP EBMT_NNP Moses_VBZ EBMT_NNP 1_CD 34.79_CD 30.57_CD 13.62_CD 24.27_CD 2_CD 32.62_CD 30.10_CD 22.96_CD 27.80_CD 3_CD 33.81_CD 29.60_CD 23.30_CD 28.70_CD 4_CD 34.25_CD 28.70_CD 24.55_CD 29.50_CD 5_CD 37.25_CD 33.12_CD 14.74_CD 26.94_CD 6_CD 37.62_CD 32.10_CD 22.68_CD 29.02_CD 7_CD 37.40_CD 31.03_CD 26.50_CD 33.26_CD 8_CD 37.43_CD 29.92_CD 29.26_CD 36.84_CD Table_NNP 5_CD :_: BLEU_NNP scores_NNS of_IN Moses_NNP and_CC the_DT EBMT_NNP system_NN ._.
+The_DT first_JJ observation_NN is_VBZ that_IN ,_, when_WRB the_DT test_NN set_NN is_VBZ In-Domain_NNP ,_, we_PRP achieve_VBP a_DT relatively_RB high_JJ BLEU_NNP score_NN for_IN both_DT the_DT two_CD systems_NNS and_CC the_DT score_NN of_IN Moses_NNP is_VBZ better_RBR in_IN all_PDT the_DT runs_NNS ._.
+For_IN the_DT Out-Of_NNP -_: Domain_NN test_NN corpus_NN ,_, the_DT EBMT_NNP system_NN performs_VBZ better_JJR than_IN Moses_NNP in_IN all_PDT the_DT runs_NNS and_CC in_IN particular_JJ Moses_NNP has_VBZ obtained_VBN a_DT very_RB low_JJ BLEU_NNP score_NN in_IN the_DT first_JJ and_CC fifth_JJ runs_NNS -LRB-_-LRB- 13.62_CD and_CC 14.74_CD -RRB-_-RRB- ._.
+Furthermore_RB ,_, it_PRP seems_VBZ that_IN the_DT English-French_JJ lexicon_NN used_VBN in_IN the_DT cross-language_JJ search_NN engine_NN and_CC the_DT bilingual_JJ reformulator_NN has_VBZ had_VBN a_DT significant_JJ impact_NN on_IN the_DT result_NN of_IN the_DT EBMT_NNP system_NN ._.
+It_PRP improved_VBD regularly_RB its_PRP$ BLEU_NNP score_NN in_IN all_PDT the_DT runs_NNS ._.
+Likewise_RB ,_, these_DT results_NNS show_VBP that_IN small_JJ amounts_NNS of_IN in-domain_JJ parallel_JJ data_NNS are_VBP more_RBR important_JJ for_IN translation_NN quality_NN of_IN Moses_NNP than_IN large_JJ amounts_NNS of_IN out-of_NN -_: domain_NN data_NNS ._.
+For_IN example_NN ,_, adding_VBG a_DT specialized_VBN parallel_NN corpus_NN composed_VBN of_IN 30000_CD sentences_NNS to_TO the_DT 500000_CD sentences_NNS of_IN Europarl_NNP reported_VBD a_DT gain_NN of_IN 14.52_CD BLEU_NNP points_NNS ._.
+However_RB ,_, for_IN the_DT In_NNP -_: Domain_NN test_NN corpus_NN ,_, Moses_NNP 's_POS BLEU_NNP score_NN in_IN runs_NNS 7_CD and_CC 8_CD -LRB-_-LRB- adding_VBG respectively_RB 20000_CD and_CC 30000_CD sentences_NNS to_TO the_DT 500000_CD sentences_NNS of_IN Europarl_NNP -RRB-_-RRB- is_VBZ little_JJ than_IN Moses_NNP 's_POS BLEU_NNP score_NN in_IN run_NN 6_CD -LRB-_-LRB- adding_VBG only_RB 10000_CD sentences_NNS to_TO the_DT 500000_CD sentences_NNS of_IN Europarl_NNP -RRB-_-RRB- ._.
+In_IN order_NN to_TO evaluate_VB qualitatively_RB the_DT EBMT_NNP system_NN and_CC Moses_NNP when_WRB translating_VBG specific_JJ and_CC general-purpose_JJ texts_NNS ,_, we_PRP take_VBP two_CD examples_NNS of_IN translations_NNS drawn_VBN from_IN texts_NNS relating_VBG to_TO the_DT European_JJ Medicines_NNP Agency_NNP texts_NNS and_CC the_DT European_NNP Parliament_NNP proceedings_NNS -LRB-_-LRB- Tables_NNPS 6_CD and_CC 7_CD -RRB-_-RRB- ._.
+For_IN the_DT In-Domain_NNP sentence_NN -LRB-_-LRB- Example_NN 1_CD -RRB-_-RRB- ,_, the_DT EBMT_NNP system_NN and_CC Moses_NNP provide_VBP close_JJ translations_NNS and_CC these_DT translations_NNS are_VBP more_RBR or_CC less_RBR correct_JJ ._.
+In_IN the_DT first_JJ example_NN ,_, the_DT English_NNP word_NN ``_`` keep_VB ''_'' was_VBD identified_VBN by_IN the_DT morpho-syntactic_JJ analyzer_NN used_VBN by_IN the_DT EBMT_NNP system_NN as_IN a_DT verb_NN and_CC the_DT bilingual_JJ lexicon_NN proposed_VBN respectively_RB the_DT words_NNS ``_`` garder_NN ''_'' and_CC ``_`` continuer_NN ''_'' as_IN translations_NNS for_IN this_DT word_NN ._.
+Of_IN course_NN ,_, the_DT translation_NN proposed_VBN in_IN the_DT first_JJ run_NN -LRB-_-LRB- garder_NN -RRB-_-RRB- is_VBZ correct_JJ but_CC it_PRP is_VBZ less_RBR expressive_JJ than_IN the_DT one_CD proposed_VBN in_IN the_DT fifth_JJ run_NN -LRB-_-LRB- continuer_NN -RRB-_-RRB- ._.
+The_DT English-French_JJ lexicon_NN proposes_VBZ for_IN the_DT word_NN ``_`` keep_VB ''_'' several_JJ translations_NNS -LRB-_-LRB- continuer_NN ,_, entretenir_NN ,_, garder_NN ,_, maintenir_NN ,_, observer_NN ,_, protéger_NN ,_, respecter_NN ,_, tenir_NN ,_, etc._FW -RRB-_-RRB- but_CC the_DT EBMT_NNP system_NN has_VBZ chosen_VBN ``_`` garder_NN ''_'' in_IN run_NN 1_CD and_CC ``_`` continuer_NN ''_'' in_IN run_NN 6_CD ._.
+On_IN the_DT other_JJ hand_NN ,_, Moses_NNP added_VBD the_DT preposition_NN ``_`` de_FW ''_'' -LRB-_-LRB- instead_RB of_IN the_DT definite_JJ article_NN ``_`` la_NNP ''_'' -RRB-_-RRB- to_TO the_DT word_NN ``_`` cohésion_NN ''_'' when_WRB it_PRP translated_VBD the_DT word_NN ``_`` cohesion_NN ''_'' in_IN the_DT expression_NN ``_`` solidarity_NN and_CC cohesion_NN ''_'' ._.
+Example_NN 1_CD Input_NNP :_: our_PRP$ success_NN must_MD be_VB measured_VBN by_IN our_PRP$ capacity_NN to_TO keep_VB growing_VBG while_IN ensuring_VBG solidarity_NN and_CC cohesion_NN ._.
+Reference_NNP nous_JJ devons_NNS mesurer_FW notre_FW réussite_FW à_FW notre_FW capacité_FW à_FW poursuivre_FW sur_FW la_FW voie_FW de_FW la_FW croissance_FW tout_VB en_IN garantissant_JJ la_NNP solidarité_NN et_FW la_FW cohésion_FW ._.
+EBMT_NNP system_NN :_: Run_NNP 1_CD notre_JJ succès_NNS doit_VBP être_FW mesuré_FW à_FW notre_FW capacité_FW à_FW garder_FW la_FW croissance_FW en_FW garantissant_FW la_FW solidarité_FW et_FW la_FW cohésion_FW ._.
+EBMT_NNP system_NN :_: Run_NNP 6_CD notre_NN succès_NNS doit_VBP être_FW mesuré_FW à_FW notre_FW capacité_FW à_FW continuer_FW la_FW croissance_FW en_FW garantissant_FW la_FW solidarité_FW et_FW la_FW cohésion_FW ._.
+Moses_NNP :_: Run_NNP 1_CD notre_JJ succès_NNS doit_VBP être_JJ mesuré_JJ par_NN notre_NN capacité_NN à_IN maintenir_FW la_FW croissance_FW tout_VB en_IN assurant_JJ la_NNP solidarité_NN et_FW de_FW cohésion_FW ._.
+Moses_NNP :_: Run_NNP 6_CD notre_NN succès_NNS doit_VBP être_JJ mesuré_JJ par_NN notre_NN capacité_NN à_FW suivre_FW la_FW croissance_FW ,_, tout_VB en_IN assurant_JJ la_NNP solidarité_NN et_FW de_FW cohésion_FW ._.
+Table_NNP 6_CD :_: Translations_NNS produced_VBN by_IN the_DT EBMT_NNP system_NN and_CC Moses_NNP for_IN an_DT In-Domain_JJ sentence_NN ._.
+For_IN the_DT Out-Of-Domain_NNP sentence_NN -LRB-_-LRB- Example_NN 2_CD -RRB-_-RRB- ,_, the_DT EBMT_NNP system_NN results_NNS are_VBP clearly_RB better_JJR and_CC most_JJS of_IN the_DT translations_NNS produced_VBN by_IN Moses_NNP are_VBP incomprehensible_NN and_CC ungrammatical_JJ ._.
+This_DT result_NN can_MD be_VB explained_VBN by_IN the_DT fact_NN that_IN the_DT test_NN corpus_NN has_VBZ a_DT vocabulary_NN which_WDT is_VBZ different_JJ from_IN the_DT entries_NNS of_IN Moses_NNP 's_POS translation_NN table_NN ._.
+For_IN instance_NN ,_, the_DT EBMT_NNP system_NN translates_VBZ correctly_RB the_DT compound_NN words_NNS ``_`` fasting_JJ blood_NN glucose_NN ''_'' and_CC ``_`` total_JJ cholesterol_NN ''_'' -LRB-_-LRB- glycémie_JJ à_NN jeun_NN ,_, cholesterol_NN total_NN -RRB-_-RRB- but_CC it_PRP translates_VBZ the_DT compound_NN word_NN ``_`` routine_JJ care_NN group_NN ''_'' as_IN ``_`` groupe_FW de_FW soins_FW de_FW routine_JJ ''_'' instead_RB of_IN ``_`` groupe_FW de_FW soins_FW routiniers_FW ''_'' ._.
+As_IN we_PRP can_MD see_VB ,_, this_DT translation_NN could_MD not_RB be_VB provided_VBN by_IN the_DT bilingual_JJ reformulator_NN because_IN there_EX is_VBZ no_DT transfer_NN rule_NN implementing_VBG the_DT tag_NN pattern_NN of_IN this_DT compound_NN word_NN which_WDT is_VBZ NPNPN_NNP -LRB-_-LRB- Table_NNP 3_CD -RRB-_-RRB- ._.
+This_DT expression_NN corresponds_VBZ to_TO a_DT partial_JJ translation_NN provided_VBN by_IN the_DT cross-language_JJ search_NN engine_NN for_IN the_DT sentence_NN to_TO translate_VB ._.
+On_IN the_DT other_JJ hand_NN ,_, Moses_NNP fails_VBZ to_TO translate_VB correctly_RB the_DT multiword_JJ expressions_NNS ``_`` fasting_JJ blood_NN glucose_NN ''_'' ,_, ``_`` total_JJ cholesterol_NN ''_'' ,_, ``_`` duloxetine-treated_JJ patients_NNS ''_'' and_CC ``_`` routine_JJ care_NN group_NN ''_'' in_IN run_NN 4_CD ._.
+However_RB ,_, it_PRP succeeds_VBZ in_IN the_DT translation_NN of_IN the_DT expressions_NNS ``_`` fasting_JJ blood_NN glucose_NN ''_'' and_CC ``_`` total_JJ cholesterol_NN ''_'' in_IN run_NN 8_CD ._.
+Example_NN 2_CD Input_NNP :_: there_EX was_VBD also_RB a_DT small_JJ increase_NN in_IN fasting_VBG blood_NN glucose_NN and_CC in_IN total_JJ cholesterol_NN in_IN duloxetine-treated_JJ patients_NNS while_IN those_DT laboratory_NN tests_NNS showed_VBD a_DT slight_JJ decrease_NN in_IN the_DT routine_JJ care_NN group_NN ._.
+Reference_NNP il_FW y_FW a_FW eu_FW également_FW une_FW faible_FW augmentation_FW de_FW la_FW glycémie_FW à_FW jeun_FW et_FW du_NNP cholestérol_NNP total_JJ dans_NNS le_FW groupe_FW duloxétine_FW alors_FW que_FW les_FW tests_NNS en_IN laboratoire_NN montrent_JJ une_NN légère_NN diminution_NN de_FW ces_FW paramètres_FW dans_FW le_FW groupe_FW traitement_NN usuel_NN ._.
+EBMT_NNP System_NNP :_: Run_NNP 4_CD il_FW y_FW avait_FW aussi_FW une_FW petite_JJ augmentation_NN dans_IN la_DT glycémie_NN à_NN jeun_NN et_NNP du_NNP cholesterol_NN total_JJ chez_NN les_FW patients_NNS traités_JJ par_IN la_DT duloxétine_JJ alors_NNS que_VBP les_FW tests_NNS en_IN laboratoire_NN montraient_JJ une_NN légère_NN diminution_NN dans_VBZ le_FW groupe_FW de_FW soins_FW de_FW routine_NN ._.
+EBMT_NNP System_NNP :_: Run_NNP 8_CD il_FW y_FW avait_FW aussi_FW une_FW faible_FW augmentation_FW dans_FW la_FW glycémie_FW à_FW jeun_FW et_FW du_NNP cholesterol_NN total_JJ chez_NN les_FW patients_NNS traités_JJ par_IN la_DT duloxétine_JJ alors_NNS que_VBP les_FW tests_NNS en_IN laboratoire_NN montraient_JJ une_NN légère_NN diminution_NN dans_VBZ le_FW groupe_FW de_FW soins_FW de_FW routine_NN ._.
+Moses_NNP :_: Run_NNP 4_CD il_FW était_FW également_FW une_FW légère_FW augmentation_FW de_FW répréhensible_FW glycémie_FW artérielle_FW et_FW en_FW total_NN de_IN patients_NNS duloxetine-treated_JJ cholesterol_NN laboratoire_NN alors_NNS que_VBP ces_NNS tests_NNS ,_, ont_JJ montré_JJ une_NN diminution_NN sensible_JJ dans_JJ les_FW soins_FW standards_NNS groupe_VBP ._.
+Moses_NNP :_: Run_NNP 8_CD il_FW y_FW a_FW aussi_FW une_FW légère_FW augmentation_FW de_FW la_FW glycémie_FW à_FW jeun_FW et_FW cholestérol_FW total_NN de_IN patients_NNS duloxetine-treated_JJ alors_NNS que_VBP ces_NNS tests_NNS de_IN laboratoire_FW a_FW montré_FW une_FW légère_FW baisse_FW dans_FW les_FW soins_FW de_FW routine_JJ groupe_NN ._.
+Table_NNP 7_CD :_: Translations_NNS produced_VBN by_IN the_DT EBMT_NNP system_NN and_CC Moses_NNP for_IN an_DT Out-Of-Domain_JJ sentence_NN ._.
+After_IN analyzing_VBG some_DT translations_NNS ,_, we_PRP observed_VBD that_IN the_DT major_JJ issues_NNS of_IN our_PRP$ EBMT_NNP system_NN are_VBP related_VBN to_TO errors_NNS from_IN the_DT source-language_JJ syntactic_NN analyzer_NN ,_, the_DT non-isomorphism_JJ between_IN the_DT syntax_NN of_IN the_DT two_CD languages_NNS and_CC the_DT polysemy_NN in_IN the_DT bilingual_JJ lexicon_NN ._.
+To_TO handle_VB the_DT first_JJ two_CD issues_NNS ,_, we_PRP proposed_VBD to_TO take_VB into_IN account_NN translation_NN candidates_NNS returned_VBN by_IN the_DT cross-language_JJ search_NN engine_NN even_RB if_IN these_DT translations_NNS correspond_VBP only_RB to_TO a_DT part_NN of_IN the_DT sentence_NN to_TO translate_VB ._.
+However_RB ,_, for_IN the_DT presence_NN of_IN the_DT polysemy_NN in_IN the_DT bilingual_JJ lexicon_NN ,_, the_DT EBMT_NNP system_NN has_VBZ no_DT specific_JJ treatment_NN ._.
+This_DT can_MD explain_VB partially_RB why_WRB the_DT EBMT_NNP system_NN is_VBZ outperformed_VBN by_IN Moses_NNP when_WRB translating_VBG In_IN -_: Domain_NN sentences_NNS ._.
+It_PRP seems_VBZ that_IN translation_NN table_NN probabilities_NNS which_WDT are_VBP computed_VBN during_IN the_DT word_NN alignment_NN process_NN with_IN Giza_NNP +_CD +_NN -LRB-_-LRB- Och_NNP and_CC Ney_NNP ,_, •_CD •_SYM •_SYM MosesCORPUS_NNPS :_: In_IN this_DT method_NN ,_, we_PRP add_VBP the_DT extracted_VBN bilingual_JJ lexicon_NN as_IN a_DT parallel_JJ corpus_NN and_CC retrain_VB the_DT translation_NN model_NN ._.
+By_IN increasing_VBG the_DT occurrences_NNS of_IN the_DT specialized_VBN words_NNS and_CC their_PRP$ translations_NNS ,_, we_PRP expect_VBP a_DT modification_NN of_IN alignment_NN and_CC probability_NN estimation_NN ._.
+MosesT_NNP ABLE_NNP :_: This_DT method_NN consists_VBZ in_IN adding_VBG the_DT extracted_VBN bilingual_JJ lexicon_NN into_IN Moses_NNP 's_POS phrase_NN table_NN ._.
+We_PRP use_VBP the_DT Cosine_NNP similarity_NN measure_NN provided_VBN by_IN our_PRP$ word_NN alignment_NN tool_NN for_IN each_DT specialized_VBN word_NN of_IN the_DT bilingual_JJ lexicon_NN as_IN a_DT translation_NN probability_NN ._.
+MosesFEATURE_NNP :_: In_IN this_DT method_NN ,_, we_PRP extend_VBP ``_`` MosesT_NNP ABLE_NNP ''_'' by_IN adding_VBG a_DT new_JJ feature_NN indicating_VBG whether_IN a_DT word_NN comes_VBZ from_IN the_DT specialized_VBN bilingual_JJ lexicon_NN or_CC not_RB -LRB-_-LRB- l_NN or_CC 0_CD is_VBZ introduced_VBN for_IN each_DT entry_NN of_IN the_DT phrase_NN table_NN -RRB-_-RRB- ._.
+2002_CD ;_: Och_NNP and_CC Ney_NNP ,_, 2003_CD -RRB-_-RRB- have_VBP contributed_VBN to_TO choose_VB the_DT right_JJ translation_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, we_PRP noted_VBD that_IN most_JJS of_IN Moses_NNP 's_POS translation_NN errors_NNS for_IN Out-Of-Domain_NNP sentences_NNS are_VBP related_VBN to_TO vocabulary_NN ._.
+For_IN example_NN ,_, Moses_NNP proposes_VBZ the_DT compound_NN word_NN ``_`` glycémie_NN artérielle_NN ''_'' as_IN a_DT translation_NN for_IN the_DT expression_NN ``_`` fasting_NN blood_NN glucose_NN ''_'' in_IN run_NN 4_CD which_WDT is_VBZ not_RB correct_JJ ._.
+In_IN SMT_NNP systems_NNS such_JJ as_IN Moses_NNP ,_, phrase_NN tables_NNS are_VBP the_DT main_JJ knowledge_NN source_NN for_IN the_DT machine_NN translation_NN decoder_NN ._.
+The_DT decoder_NN consults_VBZ these_DT tables_NNS to_TO figure_VB out_RP how_WRB to_TO translate_VB an_DT input_NN sentence_NN from_IN the_DT source_NN language_NN into_IN the_DT target_NN language_NN ._.
+These_DT tables_NNS are_VBP built_VBN automatically_RB using_VBG the_DT open_JJ source_NN word_NN alignment_NN tool_NN Giza_NNP +_CD +_NN ._.
+However_RB ,_, Giza_NNP +_CD +_NN could_MD produce_VB errors_NNS in_IN particular_JJ when_WRB it_PRP aligns_VBZ multiword_JJ expressions_NNS ._.
+-LRB-_-LRB- Bouamor_NNP et_NNP al_NNP ,_, 2012_CD ;_: Ren_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- showed_VBD that_IN the_DT integration_NN of_IN multiword_JJ expressions_NNS in_IN Moses_NNP '_POS s_PRP translation_NN model_NN improves_VBZ the_DT translation_NN quality_NN ._.
+Multiword_JJ expressions_NNS include_VBP a_DT large_JJ list_NN of_IN categories_NNS such_JJ as_IN collocations_NNS ,_, compound_NN words_NNS ,_, idiomatic_JJ expressions_NNS ,_, named_VBN entities_NNS and_CC domain-specific_JJ terms_NNS -LRB-_-LRB- Baldwin_NNP and_CC Kim_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+To_TO reduce_VB word_NN alignment_NN errors_NNS with_IN Giza_NNP +_CD +_NN ,_, we_PRP propose_VBP the_DT following_VBG three_CD methods_NNS to_TO integrate_VB into_IN Moses_NNP the_DT bilingual_JJ lexicon_NN which_WDT is_VBZ extracted_VBN automatically_RB by_IN our_PRP$ word_NN alignment_NN tool_NN from_IN the_DT specialized_VBN parallel_NN corpus_NN -LRB-_-LRB- Emea_NNP -RRB-_-RRB- :_: Run_NNP n_SYM °_FW ._.
+In-Domain_NNP MosesCORPUS_NNP MosesTABLE_NNP MosesFEATURE_NNP 2_CD 32.82_CD 32.15_CD 29.18_CD 3_CD 33.89_CD 33.48_CD 30.26_CD 4_CD 34.64_CD 34.11_CD 31.84_NN For_IN these_DT experiments_NNS ,_, we_PRP used_VBD only_RB English_JJ -_: French_JJ training_NN corpora_NN of_IN runs_NNS 2_CD ,_, 3_CD and_CC 4_CD to_TO build_VB Moses_NNP 's_POS translation_NN and_CC language_NN models_NNS ._.
+We_PRP measure_VBP the_DT translation_NN quality_NN on_IN the_DT same_JJ test_NN sets_NNS of_IN the_DT previous_JJ experiments_NNS -LRB-_-LRB- 500_CD parallel_JJ sentences_NNS extracted_VBN randomly_RB from_IN Europarl_NNP for_IN the_DT In-Domain_NNP test_NN and_CC 500_CD pairs_NNS of_IN sentences_NNS extracted_VBN randomly_RB from_IN Emea_NNP for_IN the_DT Out-Of_NNP -_: Domain_NN test_NN -RRB-_-RRB- ._.
+Because_IN the_DT bilingual_JJ lexicon_NN which_WDT is_VBZ extracted_VBN automatically_RB from_IN the_DT specialized_VBN parallel_NN corpus_NN is_VBZ composed_VBN of_IN entries_NNS in_IN their_PRP$ normalized_JJ forms_NNS -LRB-_-LRB- lemmas_FW -RRB-_-RRB- ,_, we_PRP used_VBD the_DT factored_JJ translation_NN model_NN of_IN Moses_NNP -LRB-_-LRB- Koehn_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ._.
+This_DT model_NN accepts_VBZ the_DT use_NN of_IN additional_JJ annotations_NNS at_IN the_DT word_NN level_NN and_CC operates_VBZ on_IN lemmas_NNS instead_RB of_IN surface_NN forms_NNS ._.
+The_DT translation_NN process_NN consists_VBZ ,_, first_RB ,_, in_IN translating_VBG lemmas_NNS of_IN words_NNS from_IN the_DT source_NN language_NN into_IN the_DT target_NN language_NN ,_, and_CC second_JJ ,_, in_IN generating_VBG the_DT inflected_JJ forms_NNS for_IN each_DT lemma_NN ._.
+Tables_NNS 8_CD and_CC 9_CD present_JJ respectively_RB the_DT Moses_NNP 's_POS results_NNS for_IN the_DT In-Domain_NNP and_CC the_DT Out-Of-Domain_NNP sentences_NNS when_WRB using_VBG the_DT three_CD integration_NN strategies_NNS ._.
+The_DT first_JJ important_JJ point_NN to_TO mention_VB here_RB is_VBZ that_IN there_EX is_VBZ improvement_NN of_IN the_DT BLEU_NNP score_NN in_IN all_PDT the_DT integration_NN methods_NNS for_IN the_DT Out-Of-Domain_NNP sentences_NNS ._.
+The_DT best_JJS improvement_NN is_VBZ achieved_VBN using_VBG the_DT MosesFEATURE_NNP method_NN which_WDT guides_NNS Moses_NNP to_TO choose_VB specialized_VBN words_NNS instead_RB of_IN those_DT provided_VBN by_IN the_DT translation_NN model_NN built_VBN with_IN Giza_NNP +_CD +_NN ._.
+Compared_VBN to_TO the_DT baseline_NN system_NN -LRB-_-LRB- Moses_NNS without_IN using_VBG integration_NN strategies_NNS -RRB-_-RRB- ,_, this_DT method_NN reports_VBZ a_DT gain_NN of_IN 3.63_CD BLEU_NNP points_NNS for_IN the_DT fourth_JJ run_NN ._.
+The_DT obtained_VBN BLEU_NNP score_NN -LRB-_-LRB- 28.18_CD -RRB-_-RRB- is_VBZ not_RB very_RB far_RB from_IN the_DT BLEU_NNP score_NN obtained_VBN by_IN the_DT EMBT_NNP system_NN in_IN the_DT same_JJ run_NN -LRB-_-LRB- 29.50_CD -RRB-_-RRB- ._.
+We_PRP think_VBP that_IN this_DT high_JJ score_NN is_VBZ due_JJ to_TO the_DT feature_NN which_WDT guides_NNS Moses_NNP in_IN choosing_VBG the_DT best_JJS translation_NN with_IN a_DT preference_NN to_TO the_DT words_NNS of_IN the_DT specialized_VBN bilingual_JJ lexicon_NN ._.
+In_IN this_DT case_NN ,_, Moses_NNP neglects_VBZ the_DT other_JJ translations_NNS found_VBN in_IN the_DT translation_NN table_NN ._.
+On_IN the_DT other_JJ hand_NN ,_, the_DT MosesTABLE_NNP method_NN has_VBZ lower_JJR scores_NNS in_IN all_PDT the_DT runs_NNS ._.
+We_PRP assume_VBP that_IN we_PRP obtain_VB such_JJ lower_JJR scores_NNS because_IN the_DT content_NN of_IN the_DT translation_NN table_NN is_VBZ not_RB coherent_JJ ._.
+Indeed_RB ,_, we_PRP considered_VBD the_DT Cosine_NNP similarity_NN measure_NN provided_VBN by_IN our_PRP$ word_NN alignment_NN tool_NN for_IN each_DT specialized_VBN word_NN of_IN the_DT bilingual_JJ lexicon_NN as_IN a_DT translation_NN probability_NN ._.
+However_RB ,_, in_IN actual_JJ fact_NN ,_, values_NNS of_IN Cosine_NNP similarity_NN measures_NNS are_VBP not_RB similar_JJ to_TO translation_NN probabilities_NNS provided_VBN by_IN Giza_NNP +_CD +_NN ._.
+Table_NNP 8_CD ._.
+Translation_NN results_NNS in_IN terms_NNS of_IN BLEU_NNP scores_NNS corresponding_JJ to_TO the_DT three_CD integration_NN methods_NNS for_IN the_DT In-Domain_NNP sentences_NNS ._.
+Table_NNP 9_CD ._.
+Translation_NN results_NNS in_IN terms_NNS of_IN BLEU_NNP scores_NNS corresponding_JJ to_TO the_DT three_CD integration_NN methods_NNS for_IN the_DT Out-Of-Domain_NNP sentences_NNS ._.
+As_IN it_PRP can_MD be_VB seen_VBN ,_, these_DT results_NNS confirm_VBP that_IN adding_VBG specialized_VBN parallel_JJ corpora_NN to_TO the_DT training_NN data_NNS improves_VBZ the_DT translation_NN quality_NN of_IN Out-Of_NNP -_: Domain_NN test_NN corpus_NN for_IN the_DT both_DT MT_NNP systems_NNS in_IN all_DT cases_NNS but_CC the_DT improvement_NN of_IN the_DT EBMT_NNP system_NN is_VBZ more_RBR significant_JJ ._.
+Likewise_RB ,_, even_RB if_IN the_DT size_NN of_IN the_DT specialized_VBN corpus_NN and_CC the_DT size_NN of_IN the_DT general_JJ -_: purpose_NN monolingual_JJ corpus_NN are_VBP not_RB significant_JJ ,_, the_DT EBMT_NNP prototype_NN produces_VBZ correct_JJ translations_NNS for_IN both_DT in-domain_JJ and_CC out-of-domain_JJ texts_NNS ._.
+5_CD Conclusion_NN In_IN this_DT paper_NN ,_, we_PRP have_VBP studied_VBN the_DT impact_NN of_IN using_VBG a_DT domain-specific_JJ corpus_NN on_IN the_DT performance_NN of_IN an_DT EBMT_NNP system_NN and_CC Moses_NNP ._.
+Two_CD kinds_NNS of_IN texts_NNS are_VBP used_VBN in_IN our_PRP$ experiments_NNS :_: in-domain_JJ texts_NNS from_IN Europarl_NNP and_CC out-of-domain_JJ texts_NNS from_IN Emea_NNP ._.
+We_PRP have_VBP seen_VBN that_IN both_DT the_DT two_CD systems_NNS achieved_VBD a_DT relatively_RB high_JJ BLEU_NNP score_NN for_IN in-domain_JJ texts_NNS ._.
+Our_PRP$ experiments_NNS on_IN out-of-domain_JJ texts_NNS have_VBP showed_VBN that_IN the_DT EBMT_NNP system_NN performs_VBZ better_JJR than_IN Moses_NNP ._.
+Moreover_RB ,_, we_PRP have_VBP noticed_VBN that_IN the_DT method_NN which_WDT guides_NNS Moses_NNP to_TO choose_VB specialized_VBN words_NNS instead_RB of_IN those_DT provided_VBN by_IN the_DT translation_NN model_NN built_VBN with_IN Giza_NNP +_CD +_NN achieves_VBZ the_DT best_JJS improvement_NN ._.
+In_IN the_DT future_NN ,_, we_PRP plan_VBP ,_, on_IN the_DT one_CD hand_NN ,_, to_TO use_VB machine_NN learning_VBG techniques_NNS to_TO extract_VB transfer_NN rules_NNS for_IN the_DT bilingual_JJ reformulator_NN from_IN annotated_JJ parallel_JJ corpora_NN ,_, and_CC on_IN the_DT other_JJ hand_NN ,_, to_TO evaluate_VB the_DT EBMT_NNP system_NN on_IN other_JJ specific_JJ domains_NNS such_JJ as_IN security_NN ,_, finance_NN ,_, etc._FW ._.
+Run_NNP n_SYM °_FW ._.
+Out-Of-Domain_NNP MosesCORPUS_NNP MosesTABLE_NNP MosesFEATURE_NNP 2_CD 23.45_CD 23.11_CD 24.69_CD 3_CD 24.09_CD 23.76_CD 25.68_CD 4_CD 25.43_CD 25.05_CD 28.18_CD References_NNP Ricardo_NNP Baeza-Yates_NNP and_CC Berthier_NNP Ribeiro-Neto_NNP ._.
+1999_CD ._.
+Modern_NNP Information_NNP Retrieval_NNP ._.
+In_IN Addison-Wesley_NNP Longman_NNP Publishing_NNP Co._NNP ,_, Inc._NNP ._.
+Timothy_NNP Baldwin_NNP and_CC Su_NNP Nam_NNP Kim_NNP ._.
+2010_CD ._.
+Multiword_NNP Expressions_NNPS ._.
+In_IN Indurkhya_NNP and_CC Damerau_NNP Handbook_NNP of_IN Natural_NNP Language_NNP Processing_NNP ,_, Second_NNP Edition_NNP ,_, pages_NNS 267-292_CD ._.
+Pratyush_NNP Banerjee_NNP ,_, Jinhua_NNP Du_NNP ,_, Baoli_NNP Li_NNP ,_, Sudip_NNP Kr_NNP ._.
+Naskar_NNP ,_, Andy_NNP Way_NNP ,_, and_CC Josef_NNP van_NNP Genabith_NNP ._.
+2010_CD ._.
+Combining_VBG Multi-Domain_NNP Statistical_NNP Machine_NNP Translation_NN Models_NNS using_VBG Automatic_NNP Classifiers_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT Ninth_NNP Conference_NN of_IN the_DT Association_NNP for_IN MT_NNP in_IN the_DT Americas_NNPS ,_, pages_NNS 141_CD --_: 150_CD ._.
+Nicola_NNP Bertoldi_NNP and_CC Marcello_NNP Federico_NNP ._.
+2009_CD ._.
+Domain_NN adaptation_NN for_IN statistical_JJ machine_NN translation_NN with_IN th_JJ Romaric_NNP Besançon_NNP ,_, Gaël_NNP De_NNP Chalendar_NNP ,_, Olivier_NNP Ferret_NNP ,_, Christian_NNP Fluhr_NNP ,_, Olivier_NNP Mesnard_NNP ,_, and_CC Hubert_NNP Naets_NNP ._.
+2003_CD ._.
+Concept-Based_NNP Searching_NNP and_CC Merging_NNP for_IN Multilingual_NNP Information_NNP Retrieval_NNP :_: First_NNP Experiments_NNS at_IN CLEF_NNP 2003_CD ._.
+In_IN C._NNP Peters_NNP et_FW al._FW -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+:_: CLEF_NNP 2003_CD ,_, Springer_NNP Verlag_NNP ,_, Berlin_NNP ._.
+Romaric_NNP Besançon_NNP ,_, Gaël_NNP De_NNP Chalendar_NNP ,_, Olivier_NNP Ferret_NNP ,_, Faïza_NNP Gara_NNP ,_, Meriama_NNP Laib_NNP ,_, Olivier_NNP Mesnard_NNP ,_, and_CC Nasredine_NNP Semmar_NNP ._.
+2010_CD ._.
+LIMA_NNP :_: A_NNP multilingual_JJ framework_NN for_IN linguistic_JJ analysis_NN and_CC linguistic_JJ resources_NNS development_NN and_CC evaluation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT seventh_JJ international_JJ conference_NN on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+Dhouha_NNP Bouamor_NNP ,_, Nasredine_NNP Semmar_NNP ,_, and_CC Pierre_NNP Zweigenbaum_NNP ._.
+2012_CD ._.
+Automatic_NNP Construction_NNP of_IN a_DT Multiword_NNP Expressions_NNPS Bilingual_NNP Lexicon_NNP :_: A_NNP Jorge_NNP Civera_NNP and_CC Alfons_NNP Juan_NNP ._.
+2007_CD ._.
+Domain_NN adaptation_NN in_IN statistical_JJ machine_NN translation_NN with_IN mixture_NN modelling_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Second_JJ Workshop_NNP on_IN Statistical_NNP Machine_NNP Translation_NN ._.
+Hal_NNP Daumé_NNP III_NNP and_CC Jagadeesh_NNP Jagarlamudi_NNP ._.
+2011_CD ._.
+Domain_NN Adaptation_NN for_IN Machine_NN Translation_NN by_IN monolingual_JJ resources_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT 4_CD Workshop_NNP on_IN Statistical_NNP Machine_NNP Translation_NN ._.
+Statistical_NNP Machine_NNP Translation_NN rd_NN Perspective_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 3_CD Evaluation_NNP Gregory_NNP Grefenstette_NNP ._.
+1998_CD ._.
+Cross-Language_NNP Information_NNP Retrieval_NNP ._.
+In_IN The_DT Information_NN Retrieval_NNP Series_NNP ,_, Vol_NNP ._.
+2_CD ,_, Springer_NNP ._.
+Almut_NNP Silja_NNP Hildebrand_NNP ,_, Matthias_NNP Eck_NNP ,_, Stephan_NNP Vogel_NNP ,_, and_CC Waibel_NNP Alex._NNP 2005_CD ._.
+Adaptation_NN of_IN the_DT translation_NN model_NN for_IN statistical_JJ machine_NN translation_NN based_VBN on_IN information_NN retrieval_NN ._.
+In_IN Proceedings_NNP of_IN the_DT European_NNP Association_NNP for_IN Machine_NNP Translation_NN Conference_NN ._.
+John_NNP Hutchins_NNP ._.
+2003_CD ._.
+Machine_NN Translation_NN :_: General_NNP Overview_NNP ._.
+In_IN Ruslan_NNP -LRB-_-LRB- Ed_NNP ._. -RRB-_-RRB-
+,_, The_DT Oxford_NNP Handbook_NNP of_IN Computational_NNP Linguistics_NNP ,_, Oxford_NNP :_: University_NNP Press_NNP ,_, pages_NNS 501-511_CD ._.
+Philipp_NNP Koehn_NNP ,_, Hieu_NNP Hoang_NNP ,_, Alexandra_NNP Birch_NNP ,_, Chris_NNP Callison-Burch_NNP ,_, Marcello_NNP Federico_NNP ,_, Nicolas_NNP Ber_NNP -_: toldi_NNS ,_, Brooke_NNP Cowan_NNP ,_, Wade_NNP Shen_NNP ,_, Christine_NNP Mo-ran_NNP ,_, Richard_NNP Zens_NNP ,_, Chris_NNP Dyer_NNP ,_, Ondrej_NNP Bojar_NNP ,_, Al-exandra_NNP Constantin_NNP ,_, and_CC Evan_NNP Herbst_NNP ._.
+2007_CD ._.
+Moses_NNP :_: Open_NNP source_NN toolkit_NN for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Conference_NNP ACL_NNP 2007_CD ,_, demo_NN session_NN ,_, Prague_NNP ,_, Czech_JJ Republic_NNP ._.
+Philipp_NNP Koehn_NNP ,_, Barry_NNP Haddow_NNP ,_, Philip_NNP Williams_NNP ,_, and_CC Hieu_NNP Hoang_NNP ._.
+2010_CD ._.
+More_JJR Linguistic_NNP Annotation_NNP for_IN Statistical_NNP Machine_NNP Translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Fifth_NNP Workshop_NNP on_IN Statistical_NNP Machine_NNP Translation_NN and_CC Metrics_NNS ._.
+John_NNP Lafferty_NNP ,_, Andrew_NNP McCallum_NNP ,_, and_CC Fernando_NNP C._NNP N._NNP Pereira_NNP ._.
+2001_CD ._.
+Conditional_JJ random_JJ fields_NNS :_: Probabilistic_NNP models_NNS for_IN segmenting_VBG and_CC labeling_VBG sequence_NN data_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Eighteenth_NNP International_NNP Conference_NNP on_IN Machine_NN Learning_NNP ._.
+Workshop_NNP on_IN Cognitive_NNP Aspects_NNP of_IN the_DT Lexicon_NNP ,_, COLING_NNP 2012_CD ._.
+Dhouha_NNP Bouamor_NNP ,_, Nasredine_NNP Semmar_NNP ,_, and_CC Pierre_NNP Zweigenbaum_NNP ._.
+2012_CD ._.
+Identifying_VBG bilingual_JJ multi_NNS -_: word_NN expressions_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+th_JJ Language_NNP Resources_NNPS and_CC Evaluation_NNP ,_, pages_NNS 674-679_CD ,_, In_IN Proceedings_NNP of_IN the_DT 8_CD Turkey_NNP ._.
+international_JJ conference_NN on_IN Lars_NNP Bungum_NNP and_CC Bjorn_NNP Gambäck_NNP ._.
+2011_CD ._.
+A_DT Survey_NN of_IN Domain_NNP Adaptation_NNP in_IN Machine_NNP Translation_NN Towards_IN a_DT refinement_NN of_IN domain_NN space_NN ._.
+In_IN Proceedings_NNP of_IN the_DT India-Norway_NNP Workshop_NNP on_IN Web_NNP Concepts_NNPS and_CC Technologies_NNPS ._.
+th_JJ Annual_JJ Meeting_VBG of_IN the_DT Association_NNP for_IN Computational_NNP Mining_NNP Unseen_NNP Words_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT 49_CD Linguistics_NNPS :_: short_JJ papers_NNS ,_, pages_NNS 407_CD --_: 412_CD ._.
+Mark_NNP W._NNP Davis_NNP and_CC William_NNP C._NNP Ogden_NNP ._.
+1997_CD ._.
+QUILT_NNP :_: Implementing_VBG a_DT large-scale_JJ cross-language_JJ text_NN retrieval_NN system_NN ._.
+In_IN Proceedings_NNP of_IN SIGIR_NNP ._.
+Meiping_NNP Dong_NNP ,_, Y_NNP ong_NNP Cheng_NNP ,_, Y_NNP ang_NNP Liu_NNP ,_, Jia_NNP Xu_NNP ,_, Maosong_NNP Sun_NNP ,_, Tatsuya_NNP Izuha_NNP ,_, and_CC Jie_NNP Hao_NNP ._.
+2014_CD ._.
+Query_NNP Lattice_NNP for_IN Translation_NN Retrieval_NNP ._.
+In_IN th_JJ Conference_NN on_IN Computational_NNP Linguistics_NNPS :_: Technical_NNP Proceedings_NNP of_IN COLING_NNP 2014_CD ,_, the_DT 25_CD Papers_NNP ,_, pages_NNS 2031_CD --_: 2041_CD ,_, Dublin_NNP ,_, Ireland_NNP ._.
+International_NNP Philippe_NNP Langlais_NNP ._.
+2002_CD ._.
+Improving_NN a_DT general-purpose_JJ statistical_JJ translation_NN engine_NN by_IN terminological_JJ lexicons_NNS ._.
+In_IN Proceedings_NNP of_IN COLING_NNP :_: Second_JJ international_JJ workshop_NN on_IN computational_JJ terminology_NN ._.
+William_NNP D._NNP Lewis_NNP ,_, Chris_NNP Wendt_NNP ,_, and_CC David_NNP Bullock_NNP ._.
+2010_CD ._.
+Achieving_VBG Domain_NNP Specificity_NNP in_IN SMT_NNP without_IN Overt_NNP Siloing_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT seventh_JJ international_JJ conference_NN on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+Mehryar_NNP Mohri_NNP ,_, Fernando_NNP Pereira_NNP ,_, and_CC Michael_NNP Riley_NNP ._.
+2002_CD ._.
+Weighted_JJ Finite-State_NNP Transducers_NNPS in_IN Speech_NNP Recognition_NNP ._.
+In_IN Computer_NNP Speech_NNP and_CC Language_NNP ,_, 16_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- ,_, pages_NNS 69-88_CD ._.
+Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2002_CD ._.
+Discriminative_JJ training_NN and_CC maximum_NN entropy_NN models_NNS for_IN statistical_JJ machine_NN translation_NN ._.
+In_IN Lexicons_NNPS ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN LR_NNP and_CC HLT_NNP for_IN Semitic_NNP Languages_NNP ,_, LREC_NNP ._.
+Nasredine_NNP Semmar_NNP ,_, Dhouha_NNP Bouamor_NNP ._.
+2011_CD ._.
+A_DT New_NNP Hybrid_NNP Machine_NNP Translation_NN Approach_NNP Using_VBG Cross_NNP -_: Language_NN Information_NN Retrieval_NNP and_CC Only_RB Target_NNP Text_NNP Corpora_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Workshop_NNP on_IN Using_VBG Linguistic_NNP Information_NNP for_IN Hybrid_NNP Machine_NNP Translation_NN ,_, Spain_NNP ._.
+Nasredine_NNP Semmar_NNP ,_, Christophe_NNP Servan_NNP ,_, Dhouha_NNP Bouamor_NNP ,_, and_CC Ali_NNP Joua_NNP ._.
+2011_CD ._.
+Using_VBG Cross-Language_NNP Information_NNP Retrieval_NNP for_IN Machine_NNP Translation_NN ._.
+In_IN th_JJ Proceedings_NNP of_IN the_DT 5_CD Language_NN &_CC Technology_NNP Conference_NNP ,_, Poland_NNP ._.
+Nasredine_NNP Semmar_NNP ,_, Othman_NNP Zennaki_NNP ,_, and_CC Meriama_NNP Laib_NNP ._.
+2015_CD ._.
+Evaluating_VBG the_DT Impact_NN of_IN Using_VBG a_DT Domain-specific_JJ Bilingual_NNP Lexicon_NNP on_IN the_DT Performance_NNP of_IN a_DT Hybrid_NNP Machine_NN Translation_NN th_JJ Approach_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 10_CD International_NNP Conference_NNP on_IN Recent_JJ Advances_NNS in_IN Natural_JJ Language_NN Processing_NNP ,_, Bulgaria_NNP ._.
+Matthew_NNP Snover_NNP ,_, Bonnie_NNP Dorr_NNP ,_, and_CC Richard_NNP Schwartz_NNP ._.
+2008_CD ._.
+Language_NN and_CC translation_NN model_NN adaptation_NN using_VBG comparable_JJ corpora_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_JJ Language_NN Processing_NNP ._.
+Ankit_NNP Srivastava_NNP ,_, Sergio_NNP Penkale_NNP ,_, Declan_NNP Groves_NNP ,_, and_CC John_NNP Tinsley_NNP ._.
+2009_CD ._.
+Evaluating_VBG Syntax-Driven_NNP Approaches_NNPS to_TO Phrase_NNP Extraction_NNP for_IN MT._NNP In_IN rd_NN Proceedings_NNP of_IN the_DT 3_CD International_NNP Workshop_NNP on_IN Example-Based_NNP Machine_NNP Translation_NN ,_, Ireland_NNP ._.
+Jörg_NNP Tiedemann_NNP ._.
+2012_CD ._.
+Parallel_JJ Data_NNP ,_, Tools_NNP and_CC th_JJ Interfaces_NNS in_IN OPUS_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 8_CD International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ._.
+Arturo_NNP Trujillo_NNP ._.
+1999_CD ._.
+Translation_NN Engines_NNS :_: Techniques_NNS for_IN Machine_NN Translation_NN ._.
+In_IN Applied_NNP Computing_NNP ,_, Springer_NNP ._.
+th_JJ Computational_NNP Linguistics_NNPS ._.
+Proceedings_NNP of_IN the_DT 40_CD meeting_NN of_IN the_DT Association_NNP for_IN Franz_NNP Josef_NNP Och_NNP and_CC Hermann_NNP Ney_NNP ._.
+2003_CD ._.
+A_DT Systematic_JJ Comparison_NN of_IN V_NNP arious_VBZ Statistical_NNP Alignment_NNP Models_NNPS ._.
+In_IN Computational_NNP Linguistics_NNP ,_, volume_NN 29_CD ,_, number_NN 1_CD ,_, pages_NNS 19-51_CD ._.
+Kishore_NNP Papineni_NNP ,_, Salim_NNP Roukos_NNP ,_, Todd_NNP Ward_NNP ,_, and_CC Wei_NNP -_: Jing_NNP Zhu_NNP ._.
+2002_CD ._.
+BLEU_NNP :_: a_DT method_NN for_IN automatic_JJ evaluation_NN of_IN machine_NN translation_NN ._.
+In_IN Proceedings_NNP of_IN th_JJ the_DT 40_CD Annual_JJ meeting_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ,_, pages_NNS 311_CD --_: 318_CD ._.
+Pavel_NNP Pecina_NNP ,_, Antonio_NNP Toral_NNP ,_, Andy_NNP Way_NNP ,_, Vassilis_NNP Papavassiliou_NNP ,_, Prokopis_NNP Prokopidis_NNP ,_, and_CC Maria_NNP Giagkou_NNP ._.
+2011_CD ._.
+Towards_IN Using_VBG Web-Crawled_NNP Data_NNP for_IN Domain_NNP Adaptation_NNP in_IN Statistical_NNP Machine_NNP th_VBP the_DT European_NNP Association_NNP for_IN Machine_NNP Translation_NN ._.
+Zhixiang_NNP Ren_NNP ,_, Y_NNP ajuan_JJ Lu_NNP ,_, Jie_NNP Cao_NNP ,_, Qun_NNP Liu_NNP ,_, and_CC Y_NNP un_NN Huang_NNP ._.
+2009_CD ._.
+Improving_NN statistical_JJ machine_NN translation_NN using_VBG domain_NN bilingual_JJ multiword_JJ expressions_NNS ._.
+In_IN Proceedings_NNP of_IN the_DT Workshop_NNP on_IN Multiword_NNP Expressions_NNPS ,_, ACL-IJCNLP_NNP ,_, pages_NNS 47_CD --_: 57_CD ,_, Suntec_NNP ,_, Singapore_NNP ._.
+Gerard_NNP Salton_NNP and_CC Michael_NNP J._NNP McGill_NNP ._.
+1986_CD ._.
+Introduction_NN to_TO Modern_NNP Information_NNP Retrieval_NNP ._.
+In_IN McGraw-Hill_NNP ,_, Inc._NNP ._.
+Nasredine_NNP Semmar_NNP ,_, Meriama_NNP Laib_NNP and_CC Christian_NNP Fluhr_NNP ._.
+2006_CD ._.
+A_DT Deep_JJ Linguistic_NNP Analysis_NNP for_IN Cross-language_NNP Information_NNP Retrieval_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT International_NNP Conference_NNP on_IN Language_NNP Resources_NNPS and_CC Evaluation_NNP ,_, LREC_NNP ,_, Italy_NNP ._.
+Nasredine_NNP Semmar_NNP and_CC Meriama_NNP Laib_NNP ._.
+2010b_JJ ._.
+Using_VBG a_DT Hybrid_NNP Word_NNP Alignment_NNP Approach_NNP for_IN Automatic_NNP Construction_NNP and_CC Updating_NNP of_IN Arabic_NNP to_TO French_JJ Translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 15_CD Conference_NN of_IN V_NNP eronis_VBZ Jean_NNP ,_, Belmouhoub_NNP Dominique_NNP ,_, Nguyen_NNP Thi_NNP Minh_NNP Huyen_NNP ,_, Semmar_NNP Nasredine_NNP ,_, Stuck_NNP François_NNP and_CC Wajdi_NNP Zaghouani_NNP ._.
+2008_CD ._.
+L’_NNP évaluation_NNP des_NNP technologies_NNS de_IN traitement_NN de_IN la_DT langue_NN :_: La_NNP campagne_JJ d’_NN évaluation_NN Arcade_NNP II_NNP ._.
+In_IN Chapitre_NNP 2_CD ,_, Editions_NNP Hermès_NNP ,_, 2008_CD ._.
+Wei_NNP Wang_NNP ,_, Klaus_NNP Macherey_NNP ,_, Wolfgang_NNP Macherey_NNP ,_, Franz_NNP Och_NNP ,_, and_CC Peng_NNP Xu_NNP ._.
+2012_CD ._.
+Improved_VBN Domain_NNP Adaptation_NNP for_IN Statistical_NNP Machine_NNP Translation_NN ._.
+In_IN Proceedings_NNP of_IN the_DT Conference_NN of_IN the_DT North_NNP Hamon_NNP Rachid_NNP ,_, Olivier_NNP ,_, Kraif_NNP A_NNP yache_NN Olivier_NNP ,_, Christelle_NNP ,_, Laurent_NNP American_NNP Chapter_NNP of_IN the_DT Computational_NNP Linguistics_NNPS :_: T_SYM echnologies_NNS ._.
+Association_NNP for_IN Human_NNP Language_NN

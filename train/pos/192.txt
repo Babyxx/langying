@@ -1,0 +1,198 @@
+Word_NN frequency_NN effect_NN in_IN lexical_JJ decision_NN task_NN :_: evidence_NN from_IN Khalkha_NNP Mongolian_NNP Abstract_NNP One_CD clue_NN into_IN the_DT architecture_NN of_IN lexical_JJ memory_NN comes_VBZ from_IN the_DT presence_NN of_IN robust_JJ frequency_NN effects_NNS in_IN lexical_JJ decision_NN tasks_NNS -LRB-_-LRB- LDT_NNP -RRB-_-RRB- ,_, in_IN which_WDT subjects_NNS judge_NN whether_IN a_DT written_VBN stimulus_NN is_VBZ a_DT real_JJ word_NN and_CC processing_NN complexity_NN is_VBZ measured_VBN by_IN reaction_NN time_NN -LRB-_-LRB- RT_NNP -RRB-_-RRB- ._.
+The_DT recognition_NN of_IN words_NNS is_VBZ facilitated_VBN -LRB-_-LRB- or_CC inhibited_VBN -RRB-_-RRB- by_IN its_PRP$ frequency_NN as_IN measured_VBN from_IN the_DT representative_JJ corpus_NN ._.
+Our_PRP$ study_NN verifies_VBZ the_DT word_NN frequency_NN effect_NN in_IN standard_JJ LDT_NNP performed_VBN by_IN Khalkha_NNP Mongolian_JJ subjects_NNS ._.
+The_DT results_NNS showed_VBD strong_JJ weight_NN of_IN word_NN frequency_NN as_IN RTs_NNP predictor_NN -LRB-_-LRB- R2_CD =_SYM .631_CD ,_, F_NN -LRB-_-LRB- 1_CD ,_, 28_CD -RRB-_-RRB- =_SYM 50.57_CD ,_, p_SYM <_SYM .000_CD ,_, β_FW =_SYM .802_CD ,_, t_NN =_SYM 7.111_CD ,_, p_SYM <_SYM .000_CD -RRB-_-RRB- ._.
+Our_PRP$ experimental_JJ results_NNS also_RB replicate_VBP Hino_NNP &_CC Lupker_NNP -LRB-_-LRB- 1998_CD -RRB-_-RRB- findings_NNS on_IN word_NN frequency_NN effects_NNS for_IN Japanese_JJ Katakana_NNP -LRB-_-LRB- syllabic_JJ -RRB-_-RRB- and_CC Kanji_NNP -LRB-_-LRB- logographic_JJ -RRB-_-RRB- words_NNS in_IN standard_JJ LDT_NNP ._.
+Introduction_NNP Tumee_NNP Odonchimeg_NNP Khovd_NNP State_NNP University_NNP Khovd_NNP ,_, Mongolia_NNP odnoo_t@mail.ru_NNP Vasha_NNP Sainbayar_NNP Khovd_NNP State_NNP University_NNP Khovd_NNP ,_, Mongolia_NNP v_sainbayar@yahoo.com_NNP Frequency_NN effects_NNS have_VBP long_RB been_VBN known_VBN account_NN for_IN large_JJ amount_NN of_IN variance_NN in_IN lexical_JJ decision_NN latencies_NNS -LRB-_-LRB- Howes_NNP &_CC Solomon_NNP ,_, 1951_CD -RRB-_-RRB- ._.
+Proponents_NNS of_IN dual-route_JJ models_NNS -LRB-_-LRB- e.g._FW ,_, Baayen_NNP et_FW al._FW 1997_CD ;_: Baayen_NNP &_CC Schreuder_NNP ,_, 1999_CD ;_: Caramazza_NNP et_FW al._FW ,_, 1988_CD -RRB-_-RRB- emphasize_VB the_DT role_NN of_IN whole_JJ word_NN frequency_NN in_IN word_NN recognition_NN ._.
+Traditionally_RB ,_, the_DT word_NN frequency_NN effect_NN based_VBN on_IN the_DT findings_NNS that_WDT high-frequency_VBP words_NNS are_VBP responded_VBN faster_RBR than_IN low-frequency_JJ ones_NNS in_IN almost_RB any_DT lexical_JJ processing_NN task_NN ,_, including_VBG lexical_JJ decision_NN ,_, reading_VBG aloud_RB ,_, semantic_JJ categorization_NN ,_, and_CC picture_NN naming_NN -LRB-_-LRB- Duyck_NNP et_FW al._FW ,_, 2008_CD -RRB-_-RRB- ._.
+This_DT effect_NN is_VBZ one_CD of_IN the_DT most_RBS robust_JJ and_CC well-known_JJ in_IN word_NN recognition_NN research_NN in_IN different_JJ languages_NNS -LRB-_-LRB- Monsell_NNP et_FW al._IN 1989_CD ;_: Allen_NNP ,_, et_FW al._FW ,_, 1995_CD ;_: Lien_NNP et_FW al._FW ,_, 2012_CD ;_: Kwon_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+The_DT lexical_JJ decision_NN task_NN -LRB-_-LRB- LDT_NNP -RRB-_-RRB- is_VBZ widely_RB used_VBN to_TO reveal_VB this_DT effect_NN ._.
+According_VBG to_TO Gardner_NNP et.al_NNP ._.
+-LRB-_-LRB- 1987_CD -RRB-_-RRB- the_DT difference_NN in_IN reaction_NN times_NNS -LRB-_-LRB- RTs_NNS -RRB-_-RRB- is_VBZ due_JJ to_TO the_DT differing_VBG frequency_NN of_IN high_JJ -_: and_CC low_JJ -_: frequency_NN words_NNS in_IN the_DT general_JJ language_NN ._.
+This_DT would_MD imply_VB that_IN people_NNS making_VBG a_DT lexical_JJ decision_NN are_VBP influenced_VBN by_IN their_PRP$ experience_NN with_IN the_DT lexicon_NN ,_, and_CC that_IN greater_JJR experience_NN leads_VBZ to_TO faster_RBR decisions_NNS ._.
+There_EX is_VBZ also_RB another_DT possible_JJ explanation_NN of_IN the_DT word_NN frequency_NN effect_NN ._.
+Landauer_NNP and_CC Streeter_NNP -LRB-_-LRB- 1973_CD -RRB-_-RRB- showed_VBD that_IN a_DT number_NN of_IN lexical_JJ dimensions_NNS are_VBP correlated_VBN with_IN word_NN frequency_NN ._.
+For_IN instance_NN ,_, common_JJ and_CC rare_JJ words_NNS have_VBP different_JJ distributions_NNS of_IN phonemes_NNS and_CC graphemes_NNS ._.
+A_DT number_NN of_IN other_JJ differences_NNS exist_VBP as_RB well_RB ._.
+In_IN Coltheart_NNP `_`` s_PRP DRC_NNP model_NN the_DT effect_NN of_IN neighborhood_NN size_NN in_IN LDT_NNP is_VBZ proposed_VBN -LRB-_-LRB- Coltheart_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ._.
+N-value_JJ -LRB-_-LRB- the_DT number_NN of_IN orthographic_JJ neighbors1_NN -RRB-_-RRB- actually_RB may_MD be_VB one_CD of_IN the_DT robust_JJ independent_JJ variable_JJ in_IN studying_VBG visual_JJ word_NN recognition_NN in_IN LDT_NNP ._.
+Also_RB bigram_JJ or_CC sound_JJ clusters_NNS frequencies_NNS can_MD significantly_RB affect_VB RTs_NNP ._.
+But_CC these_DT factors_NNS were_VBD not_RB taking_VBG into_IN account_NN in_IN our_PRP$ study_NN because_IN of_IN the_DT lack_NN of_IN any_DT appropriate_JJ databases_NNS in_IN Khalkha_NNP Mongolian_NNP ._.
+Another_DT potential_JJ predictor_NN of_IN RTs_NNP is_VBZ word_NN length_NN which_WDT can_MD be_VB based_VBN both_DT on_IN orthographic_JJ measures_NNS -LRB-_-LRB- number_NN of_IN letters_NNS -RRB-_-RRB- or_CC phonological_JJ measures_NNS 1_CD An_DT orthographic_JJ neighbor_NN is_VBZ defined_VBN as_IN a_DT word_NN of_IN the_DT same_JJ length_NN that_WDT differs_VBZ from_IN the_DT original_JJ string_NN by_IN only_RB one_CD letter_NN ._.
+to_TO -LRB-_-LRB- number_NN of_IN phonemes_NNS and_CC syllables_NNS -RRB-_-RRB- ._.
+These_DT different_JJ measures_NNS are_VBP generally_RB highly_RB intercorrelated_JJ ,_, and_CC they_PRP also_RB correlate_VBP with_IN other_JJ variables_NNS -LRB-_-LRB- such_JJ as_IN the_DT number_NN of_IN orthographic_JJ neighbors_NNS and_CC the_DT printed_VBN frequency_NN -RRB-_-RRB- that_WDT influence_VBP word_NN recognition_NN ._.
+Recent_JJ visual_JJ word_NN recognition_NN studies_NNS -LRB-_-LRB- such_JJ as_IN perceptual_JJ identification_NN ,_, lexical_JJ decision_NN ,_, naming_VBG ,_, and_CC eye_NN movement_NN recording_NN -RRB-_-RRB- included_VBD word_NN length_NN as_IN an_DT independent_JJ variable_JJ -LRB-_-LRB- New_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Experiments_NNS in_IN English_NNP ,_, Dutch_NNP ,_, French_NNP and_CC German_NNP yielded_VBD a_DT mixture_NN of_IN null_JJ effects_NNS and_CC inhibitory_NN length_NN effects_NNS ._.
+Investigating_VBG French_JJ word_NN length_NN and_CC frequency_NN effects_NNS ,_, O’Regan_NNP and_CC Jacobs_NNP -LRB-_-LRB- 1992_CD -RRB-_-RRB- found_VBD reliable_JJ inhibitory_NN length_NN effects_NNS in_IN lexical_JJ decision_NN and_CC naming_VBG with_IN words_NNS ranging_VBG from_IN 4_CD to_TO 11_CD letters_NNS ._.
+The_DT effect_NN size_NN was_VBD around_RB 15_CD --_: 19_CD msec_FW per_FW letter_NN both_DT in_IN lexical_JJ decision_NN and_CC in_IN naming_VBG ._.
+Furthermore_RB ,_, the_DT authors_NNS showed_VBD that_IN frequency_NN and_CC length_NN did_VBD not_RB interact_VB ._.
+In_IN eye_NN movement_NN study_NN -LRB-_-LRB- Vitu_NNP et_FW al._FW ,_, 1990_CD -RRB-_-RRB- there_EX was_VBD also_RB no_DT frequency_NN and_CC length_NN interaction_NN ._.
+In_IN Balota_NNP ,_, Cortese_NNP ,_, Sergent-Marshall_NNP ,_, Spieler_NNP ,_, and_CC Yap_NNP study_NN -LRB-_-LRB- 2004_CD -RRB-_-RRB- the_DT length_NN effect_NN was_VBD moderated_VBN by_IN word_NN frequency_NN :_: it_PRP was_VBD significantly_RB larger_JJR for_IN low-frequency_JJ words_NNS than_IN for_IN high-frequency_NN words_NNS ._.
+For_IN university_NN students_NNS ,_, the_DT length_NN effect_NN was_VBD even_RB facilitatory_JJ when_WRB the_DT analysis_NN was_VBD limited_VBN to_TO high_JJ frequency_NN words_NNS and_CC lexical_JJ decision_NN ._.
+Another_DT important_JJ result_NN of_IN Balota_NNP et_FW al._FW -LRB-_-LRB- 2004_CD -RRB-_-RRB- was_VBD that_IN their_PRP$ length_NN effect_NN was_VBD obtained_VBN after_IN partialling_VBG out_RP the_DT length_NN in_IN phonemes_NNS ,_, suggesting_VBG that_IN the_DT letter_NN length_NN effect_NN is_VBZ not_RB a_DT phoneme_NN length_NN effect_NN in_IN disguise_VB ._.
+The_DT results_NNS of_IN other_JJ different_JJ studies_NNS tend_VBP to_TO be_VB inconsistent_JJ -LRB-_-LRB- New_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Related_VBN works_NNS LaCross_NNP `_`` s_PRP study_NN -LRB-_-LRB- 2012_CD -RRB-_-RRB- is_VBZ one_CD of_IN the_DT first_JJ research_NN in_IN Khalkha_NNP Mongolian_JJ speakers_NNS providing_VBG interesting_JJ findings_NNS on_IN word_NN frequency_NN and_CC vowel_NN pattern_NN frequency_NN on_IN RTs_NNS and_CC familiarity_NN ratings_NNS ._.
+The_DT author_NN `_`` s_VBZ results_NNS offer_VBP the_DT first_JJ empirical_JJ support_NN to_TO the_DT idea_NN of_IN separate_JJ lexical_JJ entries_NNS for_IN non-adjacent_JJ phonological_JJ dependencies_NNS ._.
+Generally_RB ,_, word-familiarity_JJ task_NN showed_VBD that_IN Khalkha_NNP Mongolian_JJ subjects_NNS rated_VBN highest_JJS and_CC responded_VBD fastest_JJS to_TO high-frequency_JJ words_NNS with_IN high_JJ frequency_NN vowel_NN patterns_NNS -LRB-_-LRB- such_JJ as_IN ,_, a_a_NN ,_, e_e_FW ,_, ɔ_ɔ_NN ,_, o_o_NN ,_, a_i_FW ,_, ʊ_a_NN ,_, ai_i_FW ,_, u_e_NN ,_, i_e_FW ,_, ii_i_FW ,_, ɔ_i_FW ,_, ee_e_FW ,_, ʊʊ_ʊ_JJ ,_, ɔ_ɔɔ_JJ -RRB-_-RRB- ._.
+But_CC there_EX was_VBD no_DT significant_JJ effect_NN of_IN word_NN frequency_NN on_IN RTs_NNS to_TO high_JJ vs._NN low_JJ frequency_NN words_NNS ._.
+Additionally_RB ,_, no_DT significant_JJ effect_NN of_IN vowel_NN pattern_NN frequency_NN was_VBD found_VBN either_RB on_IN subjects_NNS `_`` ratings_NNS or_CC RTs_NNS ._.
+As_IN LaCross_NNP revealed_VBD the_DT vowel_NN pattern_NN frequency_NN effect_NN only_RB in_IN nonword_JJ ratings_NNS and_CC RTs_NNS ,_, we_PRP assumed_VBD that_IN in_IN real_JJ words_NNS recognition_NN more_RBR frequent_JJ patterns_NNS of_IN vowels_NNS -LRB-_-LRB- graphemes_NNS -RRB-_-RRB- might_MD be_VB less_RBR informative_JJ than_IN less_JJR frequent_JJ ones_NNS as_IN declares_VBZ in_IN -LRB-_-LRB- New_NNP &_CC Grainger_NNP ,_, 2011_CD :_: 326_CD -RRB-_-RRB- ._.
+Thus_RB ,_, LaCross_NNP hypothesized_VBD that_IN real_JJ word_NN frequency_NN effects_NNS obscured_VBD and_CC confounded_VBD any_DT possible_JJ effects_NNS of_IN vowel_NN pattern_NN frequency_NN ._.
+Also_RB such_JJ findings_NNS could_MD be_VB explained_VBN by_IN unrepresentative_JJ corpus_NN size_NN LaCross_NNP used_VBD in_IN the_DT study_NN ._.
+Recent_JJ studies_NNS -LRB-_-LRB- Brysbaert_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- claim_NN that_IN word_NN frequency_NN measures_NNS should_MD be_VB based_VBN on_IN a_DT representative_JJ corpus_NN ,_, but_CC the_DT quality_NN of_IN word_NN frequency_NN measures_NNS should_MD be_VB ascertained_VBN by_IN correlating_VBG them_PRP with_IN behavioral_JJ word_NN processing_NN data_NNS ._.
+Thus_RB ,_, the_DT best_JJS way_NN to_TO verify_VB LaCross_NNP `_`` s_PRP findings_NNS is_VBZ to_TO take_VB into_IN account_NN the_DT General_NNP Corpus_NNP of_IN the_DT Modern_NNP Mongolian_NNP Language_NNP and_CC related_JJ databases_NNS to_TO compute_VB word_NN frequency_NN -LRB-_-LRB- Krylov_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Experiment_NN Corpus_NNP To_TO compute_VB word_NN frequency_NN we_PRP used_VBD the_DT General_NNP Corpus_NNP of_IN Mongolian_NNP -LRB-_-LRB- Krylov_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+It_PRP is_VBZ the_DT first_JJ resource_NN of_IN such_JJ type_NN in_IN Mongolian_JJ and_CC contains_VBZ 966_CD texts_NNS of_IN different_JJ genres_NNS -LRB-_-LRB- 1155583_CD words_NNS length_NN -RRB-_-RRB- ._.
+The_DT corpus_NN is_VBZ lemmatized_VBN and_CC glossed_VBN -LRB-_-LRB- in_IN the_DT script_NN of_IN the_DT Leipzig_NNP glossing_VBG rules_NNS -RRB-_-RRB- ._.
+The_DT morphological_JJ analyzer_NN -LRB-_-LRB- working_VBG within_IN the_DT Starling_NNP environment_NN -RRB-_-RRB- is_VBZ on_IN the_DT experimental_JJ stage_NN ,_, 97_CD %_NN of_IN text_NN word_NN forms_NNS -LRB-_-LRB- which_WDT correspond_VBP to_TO 76_CD %_NN of_IN the_DT word_NN forms_NNS which_WDT are_VBP inputs_NNS in_IN the_DT concordance_NN of_IN word_NN forms_NNS -RRB-_-RRB- can_MD be_VB effectively_RB analyzed_VBN ._.
+There_EX are_VBP also_RB frequency_NN dictionaries_NNS of_IN different_JJ types_NNS ,_, presented_VBN on_IN the_DT Starling_NNP environment2_NN ._.
+2_LS http://starling.rinet.ru/cgi_SYM -_: bin/query_NN ._.
+cgi?root_JJ =_SYM mongqrs_NNPS &_CC morpho_NN =_SYM 0_CD &_CC basename_NN =_SYM mongqrs_FW \_FW mwf02f1a_FW &_CC encoding_VBG =_SYM utf-eng_JJ ©_NN Krylov_NNP Subjects_NNPS The_DT LDT_NNP was_VBD performed_VBN by_IN Khalkha_NNP Mongolian_JJ adult_NN skilled_JJ readers_NNS -LRB-_-LRB- n_SYM 48_CD ,_, 21_CD males_NNS and_CC 27_CD females_NNS -RRB-_-RRB- ._.
+Material_NNP The_NNP list_NN of_IN items_NNS consists_VBZ of_IN 30_CD real_JJ Khalkha_NNP Mongolian_JJ words_NNS -LRB-_-LRB- nouns_NNS -RRB-_-RRB- with_IN length_NN at_IN 2_CD ..._: 8_CD letters_NNS ._.
+In_IN our_PRP$ study_NN we_PRP restrict_VBP our_PRP$ analysis_NN to_TO lemmatized_JJ words_NNS to_TO avoid_VB morphological_JJ factor_NN ,_, since_IN complex_JJ words_NNS frequency_NN could_MD be_VB determined_VBN by_IN its_PRP$ components_NNS -LRB-_-LRB- base_NN ,_, suffixes_NNS -RRB-_-RRB- ._.
+Also_RB 30_CD nonwords_NNS were_VBD used_VBN from_IN the_DT previous_JJ studies_NNS -LRB-_-LRB- Trofimova_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+The_DT word_NN frequency_NN was_VBD computed_VBN with_IN ``_`` Alphabetical_JJ frequency_NN dictionary_NN of_IN Modern_NNP Mongolian_JJ lexemes_NNS with_IN quantitative_JJ properties_NNS of_IN their_PRP$ grammatical_JJ manifestations_NNS in_IN corpus_NN ''_'' 3_LS ._.
+The_DT whole_JJ item_NN list_NN presented_VBN in_IN Appendix_NNP 1_CD ._.
+Predictors_NNS of_IN RTs_NNP While_IN a_DT vast_JJ number_NN of_IN RT_NNP predictors_NNS have_VBP been_VBN proposed_VBN in_IN the_DT literature_NN ,_, here_RB we_PRP choose_VBP predictors_NNS which_WDT either_CC reflect_VBP well-known_JJ properties_NNS of_IN speeded_JJ reading_NN or_CC measure_NN possible_JJ frequency_NN effects_NNS at_IN different_JJ levels_NNS of_IN lexical_JJ memory_NN ._.
+They_PRP are_VBP word_NN frequency_NN ,_, orthographic_JJ word_NN length_NN ,_, number_NN of_IN syllables_NNS ._.
+It_PRP is_VBZ assumed_VBN that_IN word_NN frequency_NN represent_VBP the_DT most_RBS important_JJ predictors_NNS of_IN lexical_JJ decision_NN latencies_NNS -LRB-_-LRB- Lignos_NNP and_CC Gorman_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+Procedure_NNP We_PRP used_VBD the_DT typical_JJ LDT_NNP experimental_JJ design_NN ._.
+As_IN dependent_JJ variables_NNS ,_, we_PRP measured_VBD the_DT RTs_NNP -LRB-_-LRB- in_IN milliseconds_NNS -RRB-_-RRB- and_CC error_NN rates_NNS -LRB-_-LRB- in_IN percentages_NNS -RRB-_-RRB- ._.
+Stimuli_NNS presentation_NN and_CC data_NNS collection_NN were_VBD controlled_VBN by_IN an_DT HP_NNP ProBook_NNP 470_CD G2_NNP using_VBG Inquisit_NNP 4_CD Lab_NNP software_NN for_IN Windows_NNS -LRB-_-LRB- Millisecond_NNP SoftwareTM_NNP -RRB-_-RRB- ._.
+The_DT strings_NNS of_IN letters_NNS were_VBD presented_VBN in_IN the_DT center_NN of_IN the_DT screen_NN and_CC in_IN lowercase_JJ type_NN ._.
+Each_DT trial_NN consisted_VBD of_IN a_DT 50-ms_JJ blank_NN and_CC then_RB the_DT target_NN -LRB-_-LRB- word_NN or_CC nonword_JJ -RRB-_-RRB- ._.
+Words_NNS and_CC nonwords_NNS were_VBD presented_VBN separately_RB and_CC randomly_RB until_IN the_DT subject_JJ decided_VBD whether_IN the_DT string_NN of_IN characters_NNS was_VBD a_DT real_JJ Mongolian_JJ word_NN ._.
+The_DT response_NN keys_NNS -LRB-_-LRB- ``_`` Yes_UH ''_'' /_FW ''_'' No_UH ''_'' -RRB-_-RRB- were_VBD located_VBN at_IN the_DT extreme_JJ left_NN and_CC 3_CD http://starling.rinet.ru/cgi-bin/main.cgi?root=mongqrs_NNS ©_VBP Krylov_NNP right_JJ ends_NNS of_IN the_DT bottom_JJ row_NN of_IN the_DT keyboard_NN ._.
+A_DT practice_NN list_NN preceded_VBD the_DT test_NN phase_NN in_IN order_NN to_TO familiarize_VB the_DT subjects_NNS with_IN the_DT task_NN and_CC to_TO standardize_VB the_DT RTs_NNP ._.
+Results_NNS and_CC Discussion_NNP Firstly_NNP ,_, we_PRP examined_VBD the_DT relation_NN between_IN each_DT of_IN three_CD predictors_NNS -LRB-_-LRB- word_NN frequency_NN ,_, word_NN length_NN in_IN characters_NNS and_CC word_NN length_NN in_IN syllables_NNS -RRB-_-RRB- and_CC the_DT standardized_JJ RTs_NNP -LRB-_-LRB- in_IN correct_JJ responses_NNS only_RB -RRB-_-RRB- ,_, expecting_VBG the_DT increase_NN of_IN RTs_NNS to_TO the_DT words_NNS with_IN lower_JJR frequency_NN and_CC greater_JJR length_NN -LRB-_-LRB- inhibitory_JJ effect_NN -RRB-_-RRB- ._.
+As_IN it_PRP is_VBZ assumed_VBN that_IN RT_NNP distribution_NN generally_RB doesn_JJ `_`` t_FW correspond_VBP to_TO Gaussian_JJ distribution_NN -LRB-_-LRB- McGill_NNP ,_, 1963_CD -RRB-_-RRB- we_PRP calculated_VBD a_DT nonparametric_JJ coefficient_NN of_IN correlation_NN -LRB-_-LRB- R_NN for_IN Spearman_NNP -RRB-_-RRB- for_IN each_DT pair_NN of_IN variables_NNS ._.
+It_PRP was_VBD not_RB significant_JJ neither_CC for_IN word_NN length_NN in_IN characters_NNS -LRB-_-LRB- rs_NNS =_SYM .228_CD ,_, n_JJ =_SYM 30_CD ,_, p_VBP =_SYM .225_CD -RRB-_-RRB- ,_, nor_CC for_IN word_NN length_NN in_IN syllables_NNS -LRB-_-LRB- rs_NNS =_SYM .026_CD ,_, n_JJ =_SYM 30_CD ,_, p_VBP =_SYM .890_CD -RRB-_-RRB- ._.
+But_CC we_PRP revealed_VBD strong_JJ negative_JJ correlation_NN for_IN RTs_NNS and_CC word_NN frequency_NN -LRB-_-LRB- rs_NNS =_SYM -_: .622_CD ,_, n_JJ =_SYM 30_CD ,_, p_SYM <_SYM .0001_CD -RRB-_-RRB- ._.
+To_TO verify_VB this_DT we_PRP computed_VBD the_DT regression_NN analysis_NN in_IN reciprocal-Х_NNP model_NN :_: Y_NNP =_SYM a_DT +_NN b/X_NNP ._.
+The_DT results_NNS showed_VBD strong_JJ weight_NN of_IN word_NN frequency_NN as_IN RTs_NNP predictor_NN -LRB-_-LRB- R2_CD =_SYM .631_CD ,_, F_NN -LRB-_-LRB- 1_CD ,_, 28_CD -RRB-_-RRB- =_SYM 50.57_CD ,_, p_SYM <_SYM .0001_CD ,_, β_FW =_SYM .802_CD ,_, t_NN =_SYM 7.111_CD ,_, p_SYM <_SYM .0001_CD -RRB-_-RRB- ._.
+Figure_NN 1_CD :_: Results_NNS of_IN regression_NN analysis_NN of_IN RTs_NNS :_: inverse_JJ linearity_NN between_IN RTs_NNP and_CC Word_NNP Frequency_NNP as_IN a_DT predictor_NN ._.
+The_DT findings_NNS correspond_VBP to_TO traditional_JJ thesis_NN of_IN Balota_NNP &_CC Chumbley_NNP that_IN the_DT lexical-selection_JJ process_NN might_MD be_VB frequency_NN sensitive_JJ precisely_RB in_IN standard_JJ LDT_NNP -LRB-_-LRB- Balota_NNP and_CC Chumbley_NNP ,_, 1984_CD -RRB-_-RRB- ._.
+Our_PRP$ findings_NNS are_VBP also_RB appropriate_JJ for_IN dual-route_JJ modelssince_NN it_PRP is_VBZ assumed_VBN that_IN the_DT lexical_JJ route_NN directly_RB accesses_VBZ word_NN entries_NNS in_IN the_DT mental_JJ lexicon_NN in_IN a_DT holistic_JJ fashion_NN and_CC is_VBZ affected_VBN by_IN word_NN frequency_NN -LRB-_-LRB- Coltheart_NNP et_FW al._FW ,_, 2001_CD -RRB-_-RRB- ._.
+Such_JJ ``_`` heavy_JJ weight_NN ''_'' of_IN word_NN frequency_NN as_IN RTs_NNP predictor_NN could_MD be_VB also_RB explained_VBN with_IN the_DT orthographic_JJ depth_NN hypothesis_NN :_: relatively_RB shallow_JJ orthographies_NNS with_IN high_JJ grapheme-to-phoneme_NN and_CC phoneme-to-grapheme_NN correspondence_NN -LRB-_-LRB- such_JJ as_IN Mongolian_JJ -RRB-_-RRB- are_VBP more_RBR easily_RB able_JJ to_TO support_VB a_DT word_NN recognition_NN process_NN that_WDT involves_VBZ the_DT language_NN phonology_NN ._.
+In_IN contrast_NN ,_, deep_JJ orthographies_NNS encourage_VBP a_DT reader_NN to_TO process_VB printed_VBN words_NNS by_IN referring_VBG to_TO their_PRP$ morphology_NN via_IN printed_VBN word_NN `_`` s_VBZ visual_JJ orthographic_JJ structure_NN -LRB-_-LRB- Katz_NNP and_CC Frost_NNP ,_, 1992_CD -RRB-_-RRB- ._.
+For_IN instance_NN ,_, in_IN English_NNP -LRB-_-LRB- with_IN its_PRP$ relatively_RB deep_JJ orthography_NN -RRB-_-RRB- printed_VBN word_NN frequency_NN ,_, number_NN of_IN syllables_NNS ,_, and_CC number_NN of_IN orthographic_JJ neighbors_NNS all_DT make_VBP independent_JJ contributions_NNS on_IN lexical_JJ decision_NN -LRB-_-LRB- New_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ._.
+Recent_JJ research_NN in_IN French_NNP -LRB-_-LRB- also_RB with_IN relatively_RB deep_JJ orthography_NN -RRB-_-RRB- revealed_VBD letter_NN frequency_NN effects_NNS -LRB-_-LRB- New_NNP &_CC Grainger_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Our_PRP$ experimental_JJ results_NNS also_RB replicate_VBP Hino_NNP &_CC Lupker_NNP findings_NNS on_IN word_NN frequency_NN effects_NNS for_IN Japanese_JJ Katakana_NNP -LRB-_-LRB- syllabic_JJ -RRB-_-RRB- and_CC Kanji_NNP -LRB-_-LRB- logographic_JJ -RRB-_-RRB- words_NNS in_IN standard_JJ LDT_NNP ._.
+Except_IN the_DT main_JJ effect_NN of_IN word_NN frequency_NN another_DT effect_NN of_IN script_NN type_NN was_VBD obtained_VBN :_: RTs_NNS were_VBD faster_RBR for_IN Katakana_NNP word_NN as_RB well_RB as_IN nonwords_NNS than_IN for_IN Kanji_NNP ones_NNS ._.
+Hino_NNP &_CC Lupker_NNP emphasize_VBP that_IN in_IN standard_JJ LDT_NNP such_JJ effects_NNS are_VBP specific_JJ for_IN lexical-selection_JJ process_NN only_RB while_IN a_DT decision-making_JJ process_NN involves_VBZ retrieving_VBG phonological_JJ ,_, syntactic_JJ ,_, semantic_JJ information_NN ._.
+Thus_RB ,_, lexical_JJ decision_NN process_NN requires_VBZ more_RBR analytic_JJ processing_NN and_CC needs_VBZ to_TO verify_VB in_IN different_JJ lexical_JJ tasks_NNS as_IN presented_VBN in_IN -LRB-_-LRB- Hino_NNP and_CC Lupker_NNP ,_, 1998_CD -RRB-_-RRB- ._.
+Conclusion_NN Our_PRP$ experiment_NN revealed_VBD a_DT negative_JJ correlation_NN between_IN Khalkha_NNP Mongolian_NNP word_NN frequency_NN and_CC RTs_NNS in_IN standard_JJ LDT_NNP ._.
+The_DT results_NNS replicated_VBD the_DT word_NN frequency_NN effect_NN on_IN visual_JJ word_NN recognition_NN obtained_VBN in_IN most_JJS of_IN the_DT previous_JJ studies_NNS in_IN other_JJ languages_NNS ._.
+The_DT substantial_JJ portion_NN of_IN the_DT word_NN frequency_NN effect_NN on_IN RTs_NNP was_VBD due_JJ to_TO quantity_NN of_IN their_PRP$ occurrences_NNS in_IN corpus_NN ._.
+This_DT is_VBZ close_RB to_TO LaCross_NNP `_`` s_PRP findings_NNS in_IN familiarity_NN ratings_NNS task_NN :_: Khalkha_NNP Mongolian_JJ speakers_NNS rated_VBN high_JJ frequency_NN words_NNS as_IN significantly_RB more_JJR familiar_JJ than_IN low_JJ frequency_NN ones_NNS -LRB-_-LRB- LaCross_NNP ,_, 2012_CD -RRB-_-RRB- ._.
+The_DT main_JJ question_NN needs_VBZ to_TO be_VB answered_VBN in_IN future_JJ studies_NNS :_: how_WRB differ_VBP a_DT lexical-selection_JJ process_NN and_CC decision_NN process_NN in_IN Khalkha_NNP Mongolian_JJ subjects_NNS performing_VBG LDT_NNP and_CC Go/No-Go_NNP LDT_NNP ?_.
+Psycholinguistic_JJ studies_NNS on_IN this_DT topic_NN tend_VB to_TO be_VB more_RBR accessible_JJ in_IN Khalkha_NNP Mongolian_NNP due_JJ to_TO the_DT providing_VBG statistical_JJ usage-based_JJ information_NN about_IN the_DT language_NN ,_, e.g._VB the_DT General_NNP Corpus_NNP of_IN the_DT Modern_NNP Mongolian_NNP Language_NNP -LRB-_-LRB- Krylov_NNP ,_, 2012_CD -RRB-_-RRB- and_CC Mongolian_JJ Corpus_NNP project_NN -LRB-_-LRB- Loglo_NNP and_CC Sarula_NNP ,_, 2011_CD -RRB-_-RRB- ._.
+Creating_VBG the_DT corpora_NN and_CC frequency_NN databases_NNS in_IN Mongolian_JJ with_IN behavioral_JJ word_NN processing_NN data_NNS could_MD facilitate_VB special_JJ lexical_JJ projects_NNS ,_, such_JJ as_IN English_NNP Lexicon_NNP Project4_NNP ,_, French_NNP Lexicon_NNP Project5_NNP ,_, Chinese_NNP Lexicon_NNP Project_NNP -LRB-_-LRB- Sze_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ._.
+Also_RB ,_, subsequent_JJ behavioral_JJ and_CC psychophysiological_JJ word_NN processing_NN studies_NNS in_IN agglutinative_JJ languages_NNS could_MD provide_VB new_JJ evidence_NN from_IN word_NN frequency_NN ×_CD vowel_NN harmony_NN interaction_NN ._.
+Acknowledgments_NNS The_DT research_NN is_VBZ supported_VBN by_IN grant_NN of_IN the_DT Russian_JJ Foundation_NNP for_IN Humanities_NNP and_CC Ministry_NNP of_IN Education_NNP and_CC Science_NNP of_IN Mongolia_NNP -LRB-_-LRB- project_NN No._NN 13-24-03002_CD -RRB-_-RRB- ._.
+References_NNP Allen_NNP Philip_NNP A._NN ,_, Wallace_NNP Benjamin_NNP ,_, and_CC Weber_NNP Timothy_NNP A._NN 1995_CD ._.
+Influence_NN of_IN Case_NNP Type_NNP ,_, Word_NNP Frequency_NNP ,_, and_CC Exposure_NNP Duration_NNP on_IN Visual_NNP Word_NNP Recognition_NNP ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Human_NNP Perception_NNP and_CC Performance_NNP ,_, Vol_NNP ._.
+21_CD ,_, No._NN 4_CD :_: 914_CD -_: 934_CD ._.
+Baayen_NNP R.H._NNP ,_, T._NNP Dijkstra_NNP ,_, and_CC R._NNP Schreuder_NNP ._.
+1997_CD ._.
+Singulars_NNS and_CC plurals_NNS in_IN Dutch_NNP :_: Evidence_NN for_IN a_DT parallel_JJ dual-route_JJ model_NN ._.
+Journal_NNP of_IN Memory_NN and_CC Language_NN ,_, 37_CD :_: 94_CD --_: 117_CD ._.
+Baayen_NNP R.H._NNP ,_, and_CC R._NNP Schreuder_NNP ._.
+1999_CD ._.
+War_NNP and_CC peace_NN :_: Morphemes_NNS and_CC full_JJ forms_NNS in_IN a_DT non-interactive_JJ activation_NN parallel_NN dual-route_JJ model_NN ._.
+Brain_NN and_CC Language_NN ,_, 68_CD :_: 27_CD --_: 32_CD ._.
+Balota_NNP D._NNP A._NNP and_CC Chumbley_NNP J.I._NNP 1984_CD ._.
+Are_VBP lexical_JJ decisions_NNS a_DT good_JJ measure_NN of_IN lexical_JJ access_NN ?_.
+The_DT role_NN 4_CD http://elexicon.wustl.edu_NN 5_CD http://sites.google.com/site/frenchlexicon/home_NN of_IN word_NN frequency_NN in_IN neglected_VBN decision_NN stage_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Human_NNP Perception_NNP and_CC Performance_NNP ,_, 10_CD :_: 340-357_CD Balota_NNP D._NNP A._NNP ,_, Cortese_NNP M._NNP J._NNP ,_, Sergent-Marshall_NNP S._NNP D._NNP ,_, Spieler_NNP D._NNP H._NNP ,_, and_CC Yap_NNP M._NNP J._NNP 2004_CD ._.
+Visual_JJ word_NN recognition_NN of_IN single-syllable_JJ words_NNS ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, 133_CD :_: 283-316_CD Brysbaert_NNP Marc_NNP ,_, Buchmeier_NNP Matthias_NNP ,_, Conrad_NNP Markus_NNP ,_, Jacobs_NNP Arthur_NNP M._NNP ,_, Bölte_NNP Jens_NNP ,_, Böhl_NNP Andrea_NNP ._.
+2011_CD ._.
+The_DT Word_NNP Frequency_NN Effect_NN :_: A_DT Review_NNP of_IN Recent_JJ Developments_NNS and_CC Implications_NNS for_IN the_DT Choice_NNP of_IN Frequency_NNP Estimates_NNS in_IN German_JJ ._.
+Experimental_JJ Psychology_NNP ,_, 58_CD -LRB-_-LRB- 5_CD -RRB-_-RRB- :_: 412-424_CD ._.
+DOI_NNP :10.1027_CD /_CD 1618_CD -_: 3169/a000123_CD Caramazza_NNP A._NN ,_, Laudanna_NNP A._NN ,_, and_CC Romani_NNP C._NNP 1988_CD ._.
+Lexical_JJ access_NN and_CC inflectional_JJ morphology_NN ._.
+Cognition_NNP ,_, 28_CD :_: 297_CD --_: 332_CD ._.
+Coltheart_NNP ,_, M._NNP ,_, Rastle_NNP ,_, K._NNP ,_, Perry_NNP ,_, C._NNP ,_, Langdon_NNP ,_, R._NNP ,_, and_CC Ziegler_NNP ,_, J._NNP 2001_CD ._.
+DRC_NNP :_: A_NNP Dual_NNP Route_NNP Cascaded_NNP Model_NNP of_IN Visual_NNP Word_NNP Recognition_NNP and_CC Reading_VBG Aloud_RB ._.
+Psychological_JJ Review_NNP ,_, Vol_NNP ._.
+108_CD ,_, No_DT 1_CD :_: 204_CD -_: 256_CD ._.
+DOI_NNP :_: 10.1037_CD /_CD /_NN 0033-295X_NN .108.1.204_CD ._.
+Duyck_NNP Wouter_NNP ,_, Vanderelst_NNP Dieter_NNP ,_, Desmet_NNP Timothy_NNP ,_, and_CC Hartsuiker_NNP Robert_NNP J._NNP 2008_CD ._.
+The_DT frequency_NN effect_NN in_IN second-language_JJ visual_JJ word_NN recognition_NN ._.
+Psychonomic_NNP Bulletin_NNP &_CC Review_NNP ,_, 15_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 850-855_CD ._.
+DOI_NNP :_: 10.3758_CD /_CD PBR_NNP .15.4.850_CD ._.
+Gardner_NNP Michael_NNP K._NNP ,_, Rothkopf_NNP E.Z._NNP ,_, Lapan_NNP Richard_NNP ,_, and_CC Lafferty_NNP Toby_NNP ._.
+1987_CD ._.
+The_DT word_NN frequency_NN effect_NN in_IN lexical_JJ decision_NN :_: finding_VBG a_DT frequency-based_JJ component_NN ._.
+Memory_NN and_CC Cognition_NNP ,_, 15_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 24-28_CD ._.
+Hino_NNP Y._NNP and_CC Lupker_NNP S._NNP 1998_CD ._.
+The_DT effects_NNS of_IN word_NN frequency_NN for_IN Japanese_JJ Kana_NNP and_CC Kanji_NNP words_NNS in_IN naming_VBG and_CC lexical_JJ decision_NN :_: can_MD the_DT Dual-Route_NNP Model_NNP save_VB the_DT lexical-selection_NN account_NN ?_.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: Human_NNP Perception_NNP and_CC Performance_NNP ,_, Vol_NNP ._.
+24_CD ._.
+No._NN 5_CD :_: 1431-1453_CD Howes_NNP D.H._NNP and_CC Solomon_NNP R.L._NNP 1951_CD ._.
+Visual_JJ duration_NN threshold_NN as_IN a_DT function_NN of_IN word_NN probability_NN ._.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP ,_, 41_CD :_: 401_CD --_: 410_CD ._.
+Katz_NNP L._NNP and_CC Frost_NNP R._NNP 1992_CD ._.
+The_DT reading_NN process_NN is_VBZ different_JJ for_IN different_JJ orthographies_NNS :_: the_DT orthographic_JJ depth_NN hypothesis_NN ._.
+In_IN Frost_NNP ,_, R._NNP and_CC Katz_NNP ,_, L._NNP ,_, -LRB-_-LRB- Eds_NNS -RRB-_-RRB- ._.
+Orthography_NNP ,_, Phonology_NNP ,_, Morphology_NNP ,_, and_CC Meaning_NNP ._.
+Amsterdam_NN :_: Elsevier_NNP North_NNP Holland_NNP Press_NNP :_: 67-84_CD Kwon_NNP YouAn_NNP ,_, Park_NNP KiNam_NNP ,_, Lim_NNP HeuiSeok_NNP ,_, Nam_NNP KiChun_NNP ,_, and_CC Jung_NNP Soonyoung_NNP ._.
+2006_CD ._.
+Word_NN Frequency_NN Effect_NN and_CC Word_NN Similarity_NN Effect_NN in_IN Korean_JJ Lexical_NNP Decision_NNP Task_NNP and_CC Their_PRP$ Computational_NNP Model_NNP ._.
+Neural_NNP Information_NNP Processing_NNP ._.
+Lecture_NN Notes_NNS in_IN Computer_NNP Science_NNP ,_, Volume_NN 4234_CD :_: 331-340_CD ._.
+Krylov_NNP S.A._NNP 2012_CD ._.
+The_DT general_JJ corpus_NN of_IN the_DT modern_JJ Mongolian_JJ language_NN and_CC its_PRP$ structural-probabilistic_JJ model_NN ._.
+In_IN Computational_NNP Linguistics_NNPS and_CC Intellectual_NNP Technologies_NNPS ._.
+Papers_NNP from_IN the_DT Annual_JJ International_NNP Conference_NNP ``_`` Dialogue_NNP ''_'' ,_, Issue_NNP 11_CD ,_, Vol_NNP ._.
+1_CD :_: 331-342_CD LaCross_NNP Amy_NNP ._.
+2012_CD ._.
+Non-adjacent_JJ Phonological_NNP Dependency_NNP Effects_NNPS on_IN Khalkha_NNP Mongolian_NNP Speech_NNP Perception_NNP ._.
+In_IN Proceedings_NNP of_IN the_DT 29th_JJ West_NNP Coast_NNP Conference_NNP on_IN Formal_NNP Linguistics_NNP ,_, ed_VBD ._.
+Jaehoon_NNP Choi_NNP et_FW al._FW :_: 143-151_CD ._.
+Somerville_NNP ,_, MA_NNP :_: Cascadilla_NNP Proceedings_NNP Project_NNP Landauer_NNP T.K._NNP ,_, and_CC Streeter_NNP L.A._NNP 1973_CD ._.
+Structural_JJ differences_NNS between_IN common_JJ and_CC rare_JJ words_NNS :_: Failure_NN of_IN equivalence_NN assumptions_NNS for_IN theories_NNS of_IN word_NN recognition_NN ._.
+Journal_NNP of_IN Verbal_NNP Learning_NNP and_CC Verbal_NNP Behavior_NNP ,_, 12_CD :_: 119_CD --_: 131_CD Lien_NNP Mei-Ching_NNP ,_, Allen_NNP Philip_NNP A._NN ,_, and_CC Crawford_NNP Caitlin_NNP ._.
+2012_CD ._.
+Electrophysiological_JJ evidence_NN of_IN different_JJ loci_NN for_IN case-mixing_JJ and_CC word_NN frequency_NN effects_NNS in_IN visual_JJ word_NN recognition_NN ._.
+Psychonomic_NNP Bulletin_NNP and_CC Review_NNP ,_, 19_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :_: 677-684_CD ._.
+Lignos_NNP C._NNP ,_, and_CC Gorman_NNP K._NNP 2012_CD ._.
+Revisiting_VBG frequency_NN and_CC storage_NN in_IN morphological_JJ processing_NN ._.
+In_IN Proceedings_NNP of_IN CLS_NNP 48_CD :_: 447-461_CD Loglo_NNP S._NNP ,_, Sarula_NNP ._.
+2011_CD ._.
+The_DT Study_NN on_IN Key_NNP Technology_NNP of_IN Mongolian_JJ Full-Text_NNP Retrieval_NNP ._.
+Advances_NNS in_IN Computer_NNP Science_NNP ,_, Environment_NNP ,_, Ecoinformatics_NNP ,_, and_CC Education_NNP ._.
+Communications_NNPS in_IN Computer_NNP and_CC Information_NNP Science_NNP ,_, Vol_NNP ._.
+217_CD :_: 340-345_CD McGill_NNP W.J._NNP 1963_CD ._.
+Stochastic_NNP latency_NN mechanisms_NNS ._.
+In_IN R.D._NNP Luce_NNP ,_, R.R._NNP Bush_NNP ,_, and_CC E._NNP Galanter_NNP -LRB-_-LRB- Eds_NNP ._. -RRB-_-RRB- ._.
+Handbook_NN of_IN mathematical_JJ psychology_NN ,_, Vol_NNP ._.
+1_LS ._.
+New_NNP York_NNP :_: Wiley_NNP :_: 309-360_CD Monsell_NNP S._NNP ,_, Doyle_NNP M.C._NNP ,_, and_CC Haggard_NNP P.N._NNP 1989_CD ._.
+Effects_NNPS of_IN frequency_NN on_IN visual_JJ word_NN recognition_NN tasks_NNS :_: Where_WRB are_VBP they_PRP ?_.
+Journal_NNP of_IN Experimental_NNP Psychology_NNP :_: General_NNP ,_, Vol_NNP ._.
+118_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 43-71_CD ._.
+New_NNP B._NNP and_CC Grainger_NNP J._NNP 2011_CD ._.
+On_IN letter_NN frequency_NN effects_NNS ._.
+Acta_NNP Phychologica_NNP ,_, 138_CD :_: 322-328_CD ._.
+DOI_NNP :_: 10.1016_CD /_CD j.actpsy_NN .2011.07.001_CD ._.
+New_NNP B._NNP ,_, Ferrand_NNP L._NNP ,_, Pallier_NNP C._NNP ,_, and_CC Brysbaert_NNP M._NNP 2006_CD ._.
+Reexamining_VBG the_DT word_NN length_NN effect_NN in_IN visual_JJ word_NN recognition_NN :_: New_NNP evidence_NN from_IN the_DT English_NNP Lexicon_NNP Project_NNP ._.
+Psychonomic_NNP Bulletin_NNP and_CC Review_NNP ,_, 13_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 45-52_CD O’Regan_NNP J._NNP K._NNP ,_, and_CC Jacobs_NNP A._NNP M._NNP 1992_CD ._.
+Optimal_JJ viewing_VBG position_NN effect_NN in_IN word_NN recognition_NN :_: A_DT challenge_NN to_TO current_JJ theory_NN ._.
+Journal_NNP of_IN Experimental_JJ соёо_JJ 32_CD 4_CD 2_CD зопигану_NN сэрээ_NN 15_CD 5_CD 2_CD унар_NN тэмээ_NN 417_CD 5_CD 2_CD жлхртуу_NN уул_NN 625_CD 3_CD 1_CD саихрах_NN үүр_NN 143_CD 3_CD 1_CD грбад_NN хивс_NN 36_CD 4_CD 1_CD храст_NN цэцэрлэг_NN 43_CD 8_CD 3_CD царрбго_NN чийдэн_NN 22_CD 6_CD 2_CD хрэнсу_NN эвэр_NN 90_CD 4_CD 2_CD ахрэнө_NN эмээ_NN 84_CD 4_CD 2_CD өдрахлб_NN үс_NN 202_CD 2_CD 1_CD мөөндөөг_NN хаалга_NN 318_CD 6_CD 2_CD хүүлүү_NN Psychology_NNP :_: Human_NNP Perception_NNP and_CC Performance_NNP ,_, 18_CD :_: 185-197_CD Sze_NNP W.P._NNP ,_, Rickard_NNP Liow_NNP ,_, S._NNP J._NNP ,_, and_CC Yap_NNP ,_, M.J._NNP 2014_CD ._.
+The_DT Chinese_JJ Lexicon_NNP Project_NN :_: a_DT repository_NN of_IN lexical_JJ decision_NN behavioral_JJ responses_NNS for_IN 2,500_CD Chinese_JJ characters_NNS ._.
+Behavior_NNP Research_NNP Methods_NNPS ,_, Vol_NNP ._.
+46_CD -LRB-_-LRB- 1_LS -RRB-_-RRB- :_: 263-273_CD ._.
+DOI_NNP :_: 10.3758_CD /_CD s13428-013-0355-9_NN ._.
+Trofimova_NNP E.B._NNP ,_, Trofimova_NNP U.M._NNP ,_, Sergeeva_NNP M.E._NNP ,_, Vlasov_NNP M.S._NNP ,_, Filippova_NNP E.Y._NNP ,_, and_CC Odonchimeg_NNP T._NNP 2011_CD ._.
+Uzual_NNP `_`` noje_FW i_FW okkazional_FW `_`` noje_JJ semoiticheskoje_NN prostranstvo_NN emotsij_NN -LSB-_NNP Usual_NNP and_CC occasional_JJ semiotic_JJ domain_NN of_IN emotions_NNS -RSB-_NNP ._.
+Ulan-Bator_NNP :_: Soyombo_NNP Printing_NNP ._.
+Vitu_NNP F._NNP ,_, O’Regan_NNP J.K._NNP ,_, and_CC Mittau_NNP M._NNP 1990_CD ._.
+Optimal_JJ landing_NN position_NN in_IN reading_VBG isolated_JJ words_NNS and_CC continuous_JJ text_NN ._.
+Perception_NN and_CC Psychophysics_NNS ,_, 47_CD :_: 583-600_CD Yap_NNP M.J._NNP ,_, and_CC Balota_NNP D.A._NNP 2009_CD ._.
+Visual_JJ word_NN recognition_NN of_IN multisyllabic_JJ words_NNS ._.
+Journal_NNP of_IN Memory_NN and_CC Language_NN 60.502_CD --_: 529_CD Appendix_NNP 1_CD :_: Experimental_JJ item_NN list_NN Word_VBD Word_NN frequen_NN cy_NN Charact_NNP ers_NNS ,_, N_NNP Syllable_NNP s_VBZ ,_, N_NNP Nonwords_NNPS ааруул_NN 34_CD 6_CD 2_CD бкадл_NN алим_NN 30_CD 4_CD 2_CD наацаз_NN аяга_NN 192_CD 4_CD 2_CD виви_NN бал_NN 22_CD 3_CD 1_CD сарв_NN ваар_NN 39_CD 4_CD 1_CD гансан_NN вандан_NN 12_CD 6_CD 2_CD нинини_NN гөлөг_NN 37_CD 5_CD 2_CD бамруг_NN домбо_NN 15_CD 5_CD 2_CD ласич_NN жүнз_NN 6_CD 4_CD 1_CD дард_NN зэвсэг_NN 134_CD 6_CD 2_CD лимар_NN лаа_NN 28_CD 3_CD 1_CD кими_NN морь_NN 1487_CD 4_CD 1_CD калши_NN навч_NN 137_CD 4_CD 1_CD амн_NN нийслэл_NN 44_CD 7_CD 2_CD ряаб_NN нуруу_NN 348_CD 5_CD 2_CD ооронхүцэн_NN өвөө_NN 95_CD 4_CD 2_CD архборбэах_NN ор_NN 285_CD 2_CD 1_CD нсодсох_NN ороолт_NN 9_CD 6_CD 2_CD водуулцан_NN

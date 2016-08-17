@@ -1,0 +1,325 @@
+Topic_NNP Model_NNP for_IN Identifying_NNP Suicidal_NNP Ideation_NNP in_IN Chinese_NNP Microblog_NNP Abstract_NNP Suicide_NNP is_VBZ one_CD of_IN major_JJ public_JJ health_NN problems_NNS worldwide_VBP ._.
+Traditionally_RB ,_, suicidal_JJ ideation_NN is_VBZ assessed_VBN by_IN surveys_NNS or_CC interviews_NNS ,_, which_WDT lacks_VBZ of_IN a_DT real-time_JJ assessment_NN of_IN personal_JJ men_NNS -_: tal_JJ state_NN ._.
+Online_NNP social_JJ networks_NNS ,_, with_IN large_JJ amount_NN of_IN user-generated_JJ data_NNS ,_, offer_VBP opportu_SYM -_: nities_NNS to_TO gain_VB insights_NNS of_IN suicide_NN assessment_NN and_CC prevention_NN ._.
+In_IN this_DT paper_NN ,_, we_PRP explore_VBP potentiality_NN to_TO identify_VB and_CC monitor_VB suicide_NN expressed_VBN in_IN microblog_NN on_IN social_JJ networks_NNS ._.
+First_RB ,_, we_PRP identify_VBP users_NNS who_WP have_VBP commit_VB -_: ted_VBN suicide_NN and_CC collect_VB millions_NNS of_IN microblogs_NNS from_IN social_JJ networks_NNS ._.
+Second_NNP ,_, we_PRP build_VBP suicide_NN psychological_JJ lexicon_NN by_IN psychologi_NNS -_: cal_JJ standards_NNS and_CC word_NN embedding_VBG technique_NN ._.
+Third_NNP ,_, by_IN leveraging_VBG both_DT language_NN styles_NNS and_CC online_JJ behaviors_NNS ,_, we_PRP employ_VBP Topic_NNP Model_NNP and_CC other_JJ machine_NN learning_VBG algorithms_NNS to_TO iden_VB -_: tify_NN suicidal_JJ ideation_NN ._.
+Our_PRP$ approach_NN achieves_VBZ the_DT best_JJS results_NNS on_IN topic-500_NN ,_, yielding_VBG F1_CD −_CD measure_NN of_IN 80.0_CD %_NN ,_, Precision_NN of_IN 87.1_CD %_NN ,_, Re_NNP -_: call_NN of_IN 73.9_CD %_NN ,_, and_CC Accuracy_NNP of_IN 93.2_CD %_NN ._.
+Fur_NNP -_: thermore_NN ,_, a_DT prototype_NN system_NN for_IN monitoring_VBG suicidal_JJ ideation_NN on_IN several_JJ social_JJ networks_NNS is_VBZ deployed_VBN ._.
+1_CD Introduction_NNP Suicide_NNP is_VBZ a_DT severe_JJ health_NN problem_NN worldwide_NN ,_, which_WDT is_VBZ one_CD of_IN leading_VBG causes_NNS of_IN youth_NN death_NN in_IN the_DT world_NN ,_, especially_RB in_IN China_NNP ._.
+In_IN the_DT latest_JJS report_NN -LRB-_-LRB- Organiza_NNP -_: tion_NN and_CC others_NNS ,_, 2014_CD -RRB-_-RRB- from_IN World_NNP Health_NNP Organi_NNP -_: zation_NN -LRB-_-LRB- WHO_WP -RRB-_-RRB- ,_, over_IN 800_CD ,_, 000_CD people_NNS committed_JJ sui_SYM -_: cide_NN in_IN 2012_CD ,_, including_VBG 120,730_CD Chinese_JJ ;_: and_CC it_PRP is_VBZ very_RB likely_JJ that_IN the_DT data_NN is_VBZ underestimated_VBN ._.
+In_IN -_: deed_NN ,_, there_EX are_VBP many_JJ more_JJR people_NNS who_WP attempt_VBP sui_SYM -_: cide_NN every_DT year_NN ._.
+Instead_RB of_IN calling_VBG health_NN services_NNS or_CC seeking_VBG for_IN help_NN in-person_NN ,_, choosing_VBG social_JJ networks_NNS is_VBZ a_DT preferable_JJ choice_NN for_IN some_DT suicide_NN because_IN of_IN privacy_NN and_CC facilitating_VBG sharing_VBG similar_JJ experiences_NNS among_IN peers_NNS -LRB-_-LRB- Luxton_NNP et_FW al._FW ,_, 2011_CD -RRB-_-RRB- ._.
+Social_NNP network_NN sites_NNS -LRB-_-LRB- SNS_NNP -RRB-_-RRB- ,_, such_JJ as_IN Twitter_NNP ,_, Sina_NNP Weibo_NNP ,_, have_VBP become_VBN popular_JJ platforms_NNS for_IN peo_NN -_: ple_NN to_TO express_VB themselves_PRP ._.
+Sina_NNP Weibo_NNP is_VBZ a_DT Chi_NNP -_: nese_JJ leading_VBG social_JJ network_NN akin_JJ to_TO Twitter_NNP ._.
+Ac_SYM -_: cording_NN to_TO the_DT latest_JJS Sina_NNP Weibo_NNP User_NNP Activity_NNP Report_NNP -LRB-_-LRB- http://data.weibo.com/report/_NNP reportDetail?id_NNP =_SYM 215_CD -RRB-_-RRB- ,_, Weibo_NNP now_RB has_VBZ more_JJR than_IN 70_CD million_CD active_JJ users_NNS per_IN day_NN ,_, and_CC over_IN 160_CD million_CD active_JJ users_NNS per_IN month_NN ._.
+It_PRP becomes_VBZ a_DT great_JJ platform_NN for_IN sharing_VBG opinions_NNS ,_, emotions_NNS ,_, and_CC even_RB to_TO breaking_VBG news_NN or_CC public_JJ events_NNS ._.
+Recent_JJ work_NN -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- showed_VBD that_IN SNS_NNP not_RB only_RB enhanced_JJ our_PRP$ connections_NNS with_IN others_NNS ,_, but_CC also_RB facilitated_VBD selec_SYM -_: tive_JJ self-presentation_NN of_IN undesirable_JJ behaviors_NNS ,_, such_JJ as_IN suicide_NN ._.
+The_DT association_NN between_IN social_JJ media_NNS and_CC suicide_NN has_VBZ drawn_VBN public_JJ attention_NN recently_RB ,_, since_IN several_JJ actual_JJ suicidal_JJ cases_NNS were_VBD reported_VBN in_IN Sina_NNP Weibo_NNP ,_, e.g._NNP ,_, -LRB-_-LRB- http://news.sina.com.cn/zl/_JJ zatan/2014_NN -12_CD -02_CD /_NN 18032759_CD ._.
+shtml_NN -RRB-_-RRB- ._.
+However_RB ,_, new_JJ approaches_NNS towards_IN online_JJ suicide_NN ideation_NN monitoring_NN and_CC prevention_NN are_VBP still_RB under_IN development_NN ._.
+-LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- suggested_VBD that_IN dif_SYM -_: fusion_NN of_IN microblogs_NNS about_IN one_CD 's_POS suicidal_JJ ideation_NN or_CC behaviors_NNS on_IN social_JJ networks_NNS might_MD serve_VB as_IN an_DT early_JJ indication_NN of_IN a_DT person_NN 's_POS mental_JJ state_NN ._.
+These_DT indicators_NNS include_VBP one_CD 's_POS writing_VBG through_IN style_NN ,_, format_NN ,_, selection_NN of_IN specific_JJ words_NNS ,_, and_CC general_JJ structure_NN ._.
+It_PRP would_MD therefore_RB be_VB desirable_JJ to_TO build_VB an_DT appropriate_JJ suicide-monitoring_NN system_NN ,_, to_TO identify_VB people_NNS who_WP gave_VBD expressed_VBN suicidal_JJ ideation_NN on_IN SNS_NNP and_CC provide_VB follow-up_JJ support_NN and_CC services_NNS ._.
+In_IN this_DT paper_NN ,_, we_PRP propose_VBP to_TO detect_VB suicide_NN ideation_NN in_IN Chinese_JJ SNS_NNP and_CC explore_VB the_DT possibil_NN -_: ity_NN of_IN using_VBG Topic_NNP Model_NNP -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+In_IN particular_JJ ,_, we_PRP first_RB collect_VBP and_CC evaluate_VBP suicidal_JJ mi_SYM -_: croblogs_NNS by_IN psychological_JJ standards_NNS ._.
+Second_NNP ,_, we_PRP construct_VBP our_PRP$ psychological_JJ lexicons_NNS using_VBG word_NN em_SYM -_: bedding_NN techniques_NNS and_CC explore_VB the_DT differences_NNS of_IN online_JJ behaviors_NNS between_IN suicide_NN and_CC none-suicide_JJ Weibo_NNP users_NNS ._.
+Then_RB ,_, in_IN order_NN to_TO avoid_VB the_DT adverse_JJ outcomes_NNS that_WDT high_JJ dimensions_NNS of_IN lexicon_NN feature_NN ,_, which_WDT could_MD weaken_VB both_DT efficiency_NN and_CC accuracy_NN of_IN classifiers_NNS ,_, we_PRP model_VBP features_NNS of_IN microblog_NN in_IN so_RB -_: cial_JJ networks_NNS and_CC utilize_VB the_DT popular_JJ unsupervised_JJ model_NN ,_, Topic_NNP Model_NNP ._.
+Finally_RB we_PRP design_NN ,_, develop_VB ,_, and_CC test_NN a_DT model_NN that_WDT can_MD effectively_RB identify_VB suici_SYM -_: dal_NN ideation_NN in_IN SNS_NNP ._.
+To_TO summarize_VB ,_, our_PRP$ research_NN has_VBZ three_CD main_JJ con_NN -_: tributions_NNS :_: first_RB ,_, we_PRP use_VBP word_NN embedding_VBG technique_NN to_TO construct_VB psychological_JJ lexicons_NNS to_TO enable_VB utiliza_NN -_: tion_NN of_IN suicide_NN online_NN behaviours_NNS ;_: second_JJ ,_, we_PRP em_SYM -_: ploy_NN Topic_NNP Model_NNP with_IN lexicon_NN knowledge_NN and_CC hy_SYM -_: brid_NN approaches_NNS for_IN suicidal_JJ ideation_NN identification_NN on_IN real-world_JJ datasets_NNS ;_: third_JJ ,_, a_DT real-time_JJ application_NN of_IN suicide_NN ideation_NN prototype_NN monitoring_VBG system_NN is_VBZ deployed_VBN online_NN ._.
+2_CD Related_JJ Work_NN Psychologists_NNS '_POS researches_VBZ on_IN suicide_NN cases_NNS in_IN social_JJ networks_NNS started_VBD in_IN recent_JJ years_NNS ._.
+Research_NNP -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- found_VBD that_IN social_JJ media_NNS not_RB only_RB can_MD spread_VB suicidal_JJ ideation_NN very_RB quickly_RB ,_, but_CC it_PRP also_RB can_MD be_VB used_VBN to_TO identify_VB suicidal_JJ ideation_NN in_IN its_PRP$ early_JJ stages_NNS ._.
+Psy_SYM -_: chologists_NNS -LRB-_-LRB- Jashinsky_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- implied_VBD that_IN eval_JJ -_: uating_NN suicidal_JJ risk_NN factors_NNS in_IN Twitter_NNP can_MD be_VB used_VBN to_TO prevent_VB suicide_NN ._.
+Undoubtedly_NNP ,_, previous_JJ research_NN -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2014b_CD ;_: Guan_NNP et_FW al._FW ,_, 2014_CD ;_: Li_NNP et_FW al._FW ,_, 2014b_JJ -RRB-_-RRB- also_RB have_VBP dug_VBN interesting_JJ patterns_NNS for_IN suicide_NN prevention_NN ,_, however_RB ,_, these_DT patterns_NNS can_MD not_RB be_VB deployed_VBN on_IN large_JJ population_NN to_TO provide_VB timely_JJ service_NN ._.
+``_`` Sentiment_NN Analysis_NN ''_'' -LRB-_-LRB- Pang_NNP and_CC Lee_NNP ,_, 2008_CD -RRB-_-RRB- has_VBZ been_VBN researched_VBN on_IN various_JJ corpus_NN for_IN years_NNS ,_, such_JJ as_IN product_NN reviews_NNS -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2010_CD -RRB-_-RRB- ,_, movie_NN re_SYM -_: views_NNS -LRB-_-LRB- Whitelaw_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- ._.
+The_DT core_NN method_NN in_IN most_JJS of_IN previous_JJ works_NNS -LRB-_-LRB- Pestian_JJ et_FW al._FW ,_, 2010_CD ;_: Pes_SYM -_: tian_JJ et_FW al._FW ,_, 2012_CD -RRB-_-RRB- in_IN this_DT field_NN is_VBZ using_VBG N_NNP −_CD Gram_NNP -LRB-_-LRB- Brown_NNP et_FW al._FW ,_, 1992_CD -RRB-_-RRB- to_TO model_VB clinical_JJ suicide_NN note_NN ._.
+Another_DT promising_JJ approach_NN to_TO learn_VB sentiment_NN from_IN microblogs_NNS is_VBZ LDA_NNP -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ,_, a_DT unsuper_JJ -_: vised_VBN algorithm_NN that_WDT takes_VBZ documents_NNS as_IN a_DT mix_NN -_: ture_NN of_IN topics_NNS ._.
+It_PRP can_MD discover_VB latent_NN semantics_NNS in_IN documents_NNS and_CC compute_VB documents_NNS into_IN a_DT low_JJ -_: dimensional_JJ topic_NN distributions_NNS ._.
+The_DT potentiality_NN of_IN using_VBG topic_NN models_NNS also_RB has_VBZ been_VBN applied_VBN in_IN senti_NNS -_: ment_NN analysis_NN -LRB-_-LRB- Mei_FW et_FW al._FW ,_, 2007_CD ;_: Lin_NNP and_CC He_PRP ,_, 2009_CD -RRB-_-RRB- ._.
+Mental_NNP Health_NNP problems_NNS have_VBP been_VBN attracted_VBN much_JJ attention_NN from_IN researchers_NNS all_DT over_IN the_DT world_NN ._.
+Wu_NNP et_FW al._FW -LRB-_-LRB- Wu_NNP et_FW al._FW ,_, 2005_CD -RRB-_-RRB- mined_VBN depressive_JJ symp_NN -_: toms_NNS from_IN psychiatric_JJ consultation_NN records_NNS ._.
+Re_NNP -_: searches_NNS on_IN depression_NN in_IN SNS_NNP have_VBP been_VBN studied_VBN in_IN single_JJ depression_NN case_NN -LRB-_-LRB- Wang_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ,_, multi_NNS -_: media_NNS content_NN of_IN depressive_JJ microblogs_NNS -LRB-_-LRB- Lin_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- ,_, depression_NN research_NN in_IN Twitter_NNP -LRB-_-LRB- De_NNP Choud_NNP -_: hury_JJ et_FW al._FW ,_, 2013_CD -RRB-_-RRB- or_CC mining_VBG emotion_NN labels_NNS from_IN so_RB -_: cial_JJ texts_NNS -LRB-_-LRB- Yu_NNP and_CC Ho_NNP ,_, 2014_CD -RRB-_-RRB- ._.
+Researchers_NNS -LRB-_-LRB- Resnik_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- applied_VBD LDA_NNP on_IN essay_NN 's_POS depression_NN judge_NN -_: ment_NN among_IN college_NN students_NNS and_CC compared_VBN its_PRP$ ef_SYM -_: fectiveness_NN with_IN LIWC_NNP ._.
+Given_VBN much_JJ research_NN have_VBP been_VBN done_VBN on_IN suicide_NN ideation_NN and_CC sentiment_NN analysis_NN ,_, and_CC they_PRP have_VBP pro-_JJ duced_VBN much_RB promising_JJ results_NNS ,_, which_WDT inspire_VBP us_PRP to_TO investigate_VB efficient_JJ methods_NNS to_TO better_RBR understand_VB and_CC identify_VB suicidal_JJ ideation_NN on_IN SNS_NNP ._.
+3_NNP Data_NNP Collection_NNP We_PRP trained_VBD model_NN on_IN data_NNS collected_VBN through_IN our_PRP$ Java-based_JJ crawler_NN from_IN Sina_NNP Weibo_NNP ._.
+We_PRP collected_VBD publicly_RB reported_VBN suicide_NN cases_NNS from_IN 2011_CD to_TO 2014_CD ,_, and_CC spent_VBD another_DT 6_CD months_NNS collecting_VBG and_CC tagging_VBG their_PRP$ data_NNS ._.
+Based_VBN on_IN evaluation_NN criteria_NNS -LRB-_-LRB- Rudd_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, six_CD experts_NNS first_JJ summarized_VBN and_CC evaluated_VBN 12_CD warning_NN signs_NNS of_IN suicide_NN ,_, such_JJ as_IN threatening_VBG to_TO hurt_VB or_CC kill_VB themselves_PRP ._.
+Those_DT experts_NNS were_VBD trained_VBN to_TO ensure_VB the_DT lowest_JJS biased_VBN tagging_NN ._.
+They_PRP spent_VBD sig_NN -_: nificant_JJ time_NN in_IN assessment_NN and_CC diagnosis_NN of_IN suicide_NN risk_NN ._.
+Before_IN tagging_VBG data_NNS ,_, the_DT experts_NNS were_VBD tested_VBN by_IN tagging_VBG 50_CD microblogs_NNS independently_RB ;_: and_CC the_DT test_NN 's_POS interrater_NN agreement_NN coefficient1_NN is_VBZ 0.819_CD ._.
+1Kendall_NNP 's_POS W_NNP :_: a_DT statistic_NN ,_, ranged_VBD from_IN 0_CD to_TO 1_CD ,_, can_MD be_VB used_VBN for_IN assessing_VBG agreement_NN among_IN raters_NNS ._.
+The_DT higher_JJR score_NN ,_, more_JJR agreements_NNS among_IN raters_NNS are_VBP reached_VBN ._.
+For_IN each_DT piece_NN of_IN microblog_NN ,_, only_RB if_IN it_PRP was_VBD voted_VBN by_IN more_JJR than_IN half_NN of_IN the_DT experts_NNS ,_, it_PRP would_MD be_VB tagged_VBN as_IN suicidal_JJ microblog_NN ._.
+During_IN tagging_VBG process_NN ,_, each_DT suicidal_JJ microblog_NN has_VBZ three_CD levels_NNS :_: there_EX is_VBZ suicide_NN warning_NN sign_NN ,_, but_CC no_DT suicide_NN plan_NN ;_: microblog_NN indi_SYM -_: cates_VBZ suicide_NN plan_NN ,_, but_CC author_NN is_VBZ not_RB going_VBG to_TO commit_VB it_PRP ;_: microblog_NN indicates_VBZ the_DT author_NN is_VBZ going_VBG to_TO commit_VB suicide_NN ._.
+Since_IN we_PRP only_RB focus_VB on_IN binary_JJ classification_NN in_IN this_DT study_NN ,_, all_DT three_CD levels_NNS will_MD be_VB consider_VB as_IN sui_SYM -_: cide_NN ._.
+Finally_RB ,_, 664_CD suicidal_JJ microblogs_NNS were_VBD obtained_VBN from_IN over_IN 30_CD ,_, 000_CD microblogs_NNS ._.
+Table_NNP 1_CD :_: The_DT composition_NN of_IN experiment_NN data_NNS To_TO perform_VB 10-fold_JJ cross_NN validation_NN ,_, we_PRP randomly_RB sampled_VBD 6_CD ,_, 650_CD microblogs_NNS from_IN a_DT Weibo_NNP User_NNP Pool_NNP -LRB-_-LRB- WUP_NNP -RRB-_-RRB- -LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2014a_JJ -RRB-_-RRB- with_IN 1.06_CD million_CD active_JJ users_NNS '_POS microblogs_NNS ,_, which_WDT share_VBP the_DT same_JJ time_NN inter_NN -_: val_NN ._.
+Statistics_NNS of_IN the_DT data_NN is_VBZ illustrated_VBN in_IN Table_NNP 1_CD ._.
+computer_NN program_NN treats_VBZ them_PRP differently_RB ._.
+We_PRP con_VBP -_: verted_VBN Traditional_JJ Chinese_NNPS into_IN Simplified_NNP Chinese_NNP in_IN our_PRP$ research_NN ._.
+4_CD Lexicons_NNPS Construction_NNP Primarily_RB ,_, we_PRP took_VBD advantage_NN of_IN existing_VBG sentiment_NN dictionary_NN ,_, the_DT latest_JJS version_NN of_IN HowNet_NNP -LRB-_-LRB- Dong_NNP and_CC Dong_NNP ,_, 2003_CD -RRB-_-RRB- ,_, which_WDT is_VBZ a_DT Chinese-based_JJ emotional_JJ -_: words_NNS resource_NN for_IN sentiment_NN analysis_NN ._.
+HowNet_NNP is_VBZ designed_VBN for_IN general_JJ sentiment_NN analysis_NN ._.
+Intuitively_RB ,_, words_NNS with_IN similar_JJ contexts_NNS or_CC co_SYM -_: occurrence_NN may_MD share_VB similar_JJ meanings_NNS -LRB-_-LRB- Turney_NNP and_CC Pantel_NNP ,_, 2010_CD -RRB-_-RRB- ._.
+In_IN order_NN to_TO extended_VBN our_PRP$ existing_VBG sui_SYM -_: cide_NN lexicons_NNS and_CC take_VB advantage_NN of_IN words_NNS contex_SYM -_: tual_JJ information_NN ,_, we_PRP run_VBP word2vec_CD -LRB-_-LRB- Mikolov_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- over_IN 100_CD millions_NNS microblogs_NNS from_IN WUP_NNP by_IN the_DT following_JJ steps_NNS :_: first_RB ,_, we_PRP segmented_JJ and_CC tok_SYM -_: enized_VBN corpus_NN ,_, and_CC trained_JJ vector_NN features_NNS for_IN each_DT word_NN ;_: top_JJ 5_CD semantic_JJ synonyms_NNS were_VBD chosen_VBN empir_NN -_: ically_RB for_IN each_DT word_NN in_IN our_PRP$ existing_VBG lexicons_NNS -LRB-_-LRB- each_DT synonym_NN was_VBD chosen_VBN if_IN at_IN least_JJS half_NN of_IN our_PRP$ experts_NNS reached_VBD agreement_NN -RRB-_-RRB- ;_: we_PRP elaborately_RB collected_VBD words_NNS into_IN our_PRP$ extended_JJ suicide_NN dictionary_NN ._.
+Examples_NNS of_IN suicide_NN dictionary_NN are_VBP shown_VBN in_IN Table_NNP 2_CD ._.
+Table_NNP 2_CD :_: Suicide_NNP Lexicon_NNP Table_NNP We_PRP categorized_VBN suicide_NN words_NNS and_CC phrases_NNS accord_NN -_: ing_NN to_TO 12_CD suicide_NN warning_NN signs_NNS ,_, which_WDT differs_VBZ from_IN categories_NNS in_IN previous_JJ work_NN -LRB-_-LRB- Gao_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+De_NNP -_: tails_NNS of_IN 12_CD potential_JJ suicide_NN warning_NN signs_NNS can_MD be_VB found_VBN in_IN -LRB-_-LRB- Rudd_NNP et_FW al._FW ,_, 2006_CD -RRB-_-RRB- ,_, such_JJ as_IN ``_`` Acting_NNP reck_NNP -_: less_JJR ''_'' ._.
+Because_IN when_WRB we_PRP associate_VBP each_DT word_NN or_CC phrase_NN with_IN one_CD or_CC more_JJR warning_NN signs_NNS ,_, words_NNS or_CC phrases_NNS become_VBP more_RBR interpretable_JJ and_CC might_MD de_FW -_: scribe_NN more_JJR details_NNS of_IN suicide_NN ._.
+We_PRP also_RB extended_VBD our_PRP$ suicide_NN lexicons_NNS by_IN adding_VBG references_NNS such_JJ as_IN I_PRP ,_, me_PRP ,_, mom_NN and_CC so_RB on_IN ._.
+-LRB-_-LRB- Li_NNP et_FW al._FW ,_, 2014b_JJ -RRB-_-RRB- found_VBD that_IN self-reference_NN was_VBD used_VBN more_RBR common_JJ among_IN suicide_NN than_IN none_NN suicide_NN 's_POS microblog_NN ._.
+We_PRP found_VBD that_IN suicidal_JJ ideation_NN words_NNS -LRB-_-LRB- i.e._FW death_NN ,_, depression_NN or_CC estazolam_NN -RRB-_-RRB- always_RB co_SYM -_: occur_VBP with_IN some_DT particular_JJ words_NNS ,_, such_JJ as_IN ``_`` I_PRP ''_'' ,_, ``_`` psy_SYM -_: chologist_NN ''_'' ,_, or_CC ``_`` medicine_NN ''_'' ._.
+Furthermore_RB ,_, suicide_NN pre_NN -_: All_DT Suicide_NNP Non-suicide_NN 7_CD ,_, 314_CD 664_CD 6_CD ,_, 650_CD Retweet_NNP Content_NNP Microblog_NNP content_JJ Mention_NNP :_: Social_NNP Relations_NNPS Type_NNP Number_NNP Example_NNP Suicide_NNP Words_NNPS 3453_CD insomnia_NN ,_, stilnox_NN Suicide_NNP Phrases_NNP 3763_CD disapear_JJ +_NN myself_PRP Time_NNP retweet_NNP Figure_NNP 1_CD :_: Detail_NN Descriptions_NNS of_IN One_CD Microblog_NNP Microblogs_NNPS were_VBD segmented_JJ and_CC tokenized_VBD us_PRP -_: ing_VBG Ansj_NNP -LRB-_-LRB- Sun_NNP ,_, 2014_CD -RRB-_-RRB- ,_, a_DT Chinese_JJ segmentation_NN tool_NN ._.
+URLs_NNS were_VBD removed_VBN by_IN regular_JJ expression_NN rules_NNS ._.
+In_IN Fig._NNP 1_CD ,_, we_PRP present_VBP an_DT example_NN of_IN microblog_NN ._.
+For_IN each_DT microblog_NN ,_, we_PRP extracted_VBD both_DT content_JJ related_JJ features_NNS and_CC meta_NN features_NNS -LRB-_-LRB- i.e._FW ,_, time_NN ,_, like_IN ,_, etc_FW -RRB-_-RRB- ._.
+3.1_CD Traditional_JJ &_CC Simplified_NNP Chinese_NNP Conversion_NNP Currently_NNP ,_, there_EX are_VBP two_CD types_NNS of_IN Chinese_JJ encoding_NN :_: Simplified_VBN Chinese_JJ and_CC Traditional_JJ Chinese_JJ ._.
+Words_NNS have_VBP the_DT same_JJ meaning_NN but_CC different_JJ encodings_NNS ,_, so_RB critics_NNS like_IN fer_NN to_TO mention_VB their_PRP$ families_NNS or_CC other_JJ suicidal_JJ vic_NN -_: tims_NNS ._.
+The_DT statistics_NNS of_IN reference_NN comparison_NN between_IN suicide_NN and_CC none_NN suicide_NN is_VBZ shown_VBN in_IN Table_NNP 3_CD ._.
+Table_NNP 3_CD :_: Statistics_NNS of_IN Reference_NNP Comparison_NNP 5_CD Modeling_NNP 5.1_CD Knowledge-based_JJ Modeling_NNP In_IN order_NN to_TO take_VB advantage_NN of_IN domain_NN knowledge_NN from_IN psychology_NN ,_, the_DT extended_JJ suicide_NN lexicons_NNS was_VBD also_RB used_VBN ._.
+These_DT features_NNS are_VBP based_VBN on_IN its_PRP$ subjectiv_NN -_: ity_NN ,_, sentiments_NNS or_CC categories_NNS ._.
+It_PRP contains_VBZ both_DT pos_SYM -_: itive_JJ and_CC negative_JJ words_NNS ._.
+In_IN addition_NN ,_, we_PRP added_VBD reference_NN including_VBG both_DT self-reference_NN and_CC other_JJ -_: reference_NN as_IN an_DT independent_JJ category_NN in_IN the_DT model_NN -_: ing_NN process_NN ._.
+For_IN any_DT input_NN sentence_NN ,_, we_PRP count_VBP the_DT numbers_NNS of_IN positive_JJ ,_, negative_JJ ,_, suicide_NN words_NNS ,_, refer_VBP -_: ence_NN words_NNS according_VBG to_TO our_PRP$ lexicon_NN resources_NNS ._.
+5.2_CD Syntactic_NNP Features_VBZ Syntactic_NN features_NNS contains_VBZ dependency_NN relation_NN ,_, Part_NN of_IN Speech_NNP -LRB-_-LRB- POS_NNP -RRB-_-RRB- tagging_NN ,_, etc._FW ._.
+Considering_VBG that_IN some_DT types_NNS of_IN words_NNS or_CC their_PRP$ POS_NNP -LRB-_-LRB- e.g._FW ,_, ad_NN -_: verbs_NNS ,_, adjectives_NNS ,_, etc_FW -RRB-_-RRB- are_VBP likely_JJ to_TO convey_VB senti_NNS -_: ments_NNS ,_, we_PRP obtained_VBD POS_NNP features_NNS by_IN counting_VBG the_DT numbers_NNS of_IN words_NNS with_IN the_DT following_VBG POS_NNP tags_NNS :_: ad_NN -_: jective_NN -LRB-_-LRB- VA_NNP -RRB-_-RRB- ,_, adverb_NN -LRB-_-LRB- AD_NNP -RRB-_-RRB- ,_, noun_NN -LRB-_-LRB- NN/NR/NT_NNP -RRB-_-RRB- ,_, verb_NN -LRB-_-LRB- VV/VE/VC_NNP -RRB-_-RRB- ,_, pronoun_NN -LRB-_-LRB- PN_NNP -RRB-_-RRB- and_CC preposition_NN -LRB-_-LRB- P_NNP -RRB-_-RRB- ._.
+Those_DT tagging_VBG signs_NNS are_VBP from_IN Chinese_JJ Penn_NNP Tree_NNP -_: bank_NN Tag_NN Set2_NN ._.
+Table_NNP 4_CD :_: Syntactic_NNP Features_NNP Comparison_NNP Table_NNP 2_CD http://www.cis.upenn.edu/\_JJ ̃chinese_JJ /_NN posguide.3rd.ch.pdf_CD We_PRP applied_VBD Stanford_NNP Parser_NNP -LRB-_-LRB- Toutanova_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- to_TO acquire_VB the_DT statistics_NNS of_IN POS_NNP ._.
+The_DT statis_NN -_: tics_NNS of_IN data_NNS is_VBZ illustrated_VBN in_IN Table_NNP 4_CD ._.
+Two_CD observa_NN -_: tions_NNS were_VBD derived_VBN from_IN the_DT Table_NNP 4_CD :_: in_IN suicide_NN mi_SYM -_: croblogs_NNS ,_, the_DT users_NNS prefer_VBP to_TO mention_VB self-reference_NN or_CC other_JJ people_NNS than_IN in_IN none_NN suicidal_JJ microblogs_NNS ;_: more_JJR adverb_NN ,_, more_JJR verb_NN and_CC adjective_NN appear_VBP in_IN sui_NN -_: cidal_JJ microblogs_NNS may_MD suggest_VB people_NNS with_IN suicidal_JJ ideation_NN would_MD like_VB to_TO express_VB more_JJR about_IN their_PRP$ emo_NN -_: tions_NNS or_CC behaviors_NNS in_IN their_PRP$ microblogs_NNS ._.
+5.3_CD Topic_NNP Modeling_NNP Another_DT approach_NN we_PRP used_VBD in_IN our_PRP$ experiment_NN is_VBZ La_NNP -_: tent_NN Dirichlet_NNP Allocation_NNP -LRB-_-LRB- LDA_NNP -RRB-_-RRB- -LRB-_-LRB- Blei_NNP et_FW al._FW ,_, 2003_CD -RRB-_-RRB- ._.
+It_PRP can_MD generate_VB predefined_VBN topics_NNS over_IN the_DT ``_`` bag_NN of_IN words_NNS ''_'' and_CC infer_VB topic_NN distributions_NNS in_IN new_JJ docu_NN -_: ments_NNS ._.
+We_PRP are_VBP interested_JJ in_IN incorporating_VBG sentiment_NN dictionary_NN with_IN topic_NN models_NNS to_TO make_VB topics_NNS more_RBR in_IN -_: terpretable_JJ ._.
+Part_NN of_IN LDA-induced_JJ topics_NNS are_VBP shown_VBN in_IN Table_NNP 5_CD ._.
+Table_NNP 5_CD :_: Part_NN of_IN LDA-induced_JJ topics_NNS related_VBN to_TO suicide_NN Type_NNP Self-reference_NN Other-reference_NN Suicide_NNP 71_CD %_NN 29_CD %_NN None_NN Suicide_NNP 26_CD %_NN 22_CD %_NN Example_NN I_PRP ,_, myself_PRP Dad_NNP ,_, mother_NN Themes_NNS Topic_NNP Words_NNP Depression_NNP me_PRP ,_, depression_NN ,_, leave_VBP ,_, bye_VBP Stress_NN &_CC Negative_JJ death_NN ,_, I_PRP wo_MD n't_RB love_VB fear_NN of_IN death_NN ,_, to_TO die_VB Anxiety_NN long_RB ,_, desperate_JJ ,_, take_VB medicine_NN Family_NNP Mother_NNP ,_, Father_NNP Sadness_NNP &_CC Hopeless_NNP dead_JJ ,_, do_VBP n't_RB ,_, one_CD day_NN pain_NN ,_, past_NN ,_, wrong_JJ Reference_NNP me_PRP ,_, we_PRP ,_, myself_PRP ,_, you_PRP 5.4_CD Topic_NNP Model_NNP with_IN More_RBR Layers_NNPS In_IN this_DT paper_NN ,_, we_PRP hypothesize_VBP that_IN non-sentiment_JJ words_NNS around_IN implicit_JJ sentiment_NN words_NNS could_MD be_VB affected_VBN ,_, which_WDT may_MD be_VB interpreted_VBN as_IN sentiment_NN -_: propagation_NN from_IN word-to-word_JJ ._.
+Derived_VBN from_IN LDA_NNP ,_, sentiment_NN associated_VBN the_DT topic_NN will_MD also_RB be_VB re_SYM -_: flected_VBN by_IN its_PRP$ associated_VBN sentiment_NN words_NNS ._.
+Motivated_VBN by_IN these_DT observations_NNS ,_, we_PRP implemented_VBD a_DT new_JJ ap_NN -_: proach_NN ,_, which_WDT adopts_VBZ sentiment_NN dictionaries_NNS into_IN the_DT topic_NN model_NN ._.
+As_IN illustrated_VBN in_IN Fig._NNP 2_CD ,_, the_DT basic_JJ idea_NN is_VBZ that_IN each_DT suicide_NN microblog_NN may_MD contain_VB multiple_JJ topics_NNS ,_, and_CC each_DT topic_NN may_MD associate_VB with_IN one_CD or_CC several_JJ suicide_NN keywords_NNS ._.
+From_IN the_DT topic_NN perspective_NN ,_, a_DT topic_NN asso_SYM -_: ciating_VBG with_IN sentiment_NN words_NNS could_MD be_VB identified_VBN as_IN sentiment_NN topic_NN ._.
+Thus_RB ,_, words_NNS ,_, associated_VBN with_IN sen_NN -_: Type_NNP Suicide_NNP POS_NNP None_NNP Suicide_NNP POS_NNP Adjective_NNP 2.10_CD %_NN 1.63_CD %_NN Adverb_NNP 18.50_CD %_NN 11.52_CD %_NN Noun_NN 20.56_CD %_NN 37.21_CD %_NN Verb_NN 29.95_CD %_NN 26.75_CD %_NN Pronoun_NNP 10.36_CD %_NN 4.21_CD %_NN Preposition_NNP 2.77_CD %_NN 2.98_CD %_NN Total_JJ 84.24_CD %_NN 84.30_CD %_NN timent_NN words_NNS within_IN the_DT same_JJ topic_NN ,_, convey_VBP some_DT sort_NN of_IN sentiment_NN ,_, which_WDT could_MD be_VB viewed_VBN as_IN the_DT pro-_JJ cess_NN of_IN sentiment_NN propagation_NN ._.
+Each_DT microblog_NN has_VBZ several_JJ topics_NNS labeled_VBN by_IN sentiment_NN words_NNS follow_VBP -_: ing_VBG different_JJ multinomial_JJ distributions_NNS ._.
+Therefore_RB ,_, a_DT suicidal-sentiment_JJ layer_NN can_MD be_VB extracted_VBN from_IN anno_NN -_: tating_VBG each_DT sentiment_NN word_NN and_CC computing_VBG the_DT senti_NNS -_: ment_NN polarity_NN that_WDT is_VBZ associated_VBN with_IN words_NNS and_CC top_JJ -_: ics_FW in_IN documents_NNS ._.
+Figure_NN 2_CD :_: Basic_JJ Idea_NN of_IN Sentiment_NN Propagation_NNP While_IN training_NN model_NN ,_, psychological_JJ dictionaries_NNS are_VBP incorporated_VBN into_IN topic_NN modeling_NN ._.
+The_DT sentiment_NN layer_NN in_IN our_PRP$ approach_NN associates_NNS with_IN both_DT topic_NN and_CC word_NN ._.
+Each_DT topic_NN associates_NNS with_IN more_JJR sentiment_NN words_NNS ._.
+From_IN this_DT perspective_NN ,_, the_DT process_NN of_IN com_NN -_: puting_VBG the_DT sentiment_NN layer_NN could_MD be_VB viewed_VBN as_IN min_NN -_: ing_NN for_IN sentiments_NNS from_IN documents_NNS and_CC labeling_VBG sui_SYM -_: cidal_JJ words_NNS to_TO topics_NNS on_IN behalf_NN of_IN psychologists_NNS ._.
+For_IN example_NN ,_, as_IN illustrated_VBN in_IN Fig._NNP 3_CD ,_, if_IN one_CD microblog_NN is_VBZ about_IN ``_`` Insomnia_NNP ''_'' and_CC ``_`` Dysthymia_NNP ''_'' ,_, then_RB intuitively_RB ,_, the_DT topics_NNS within_IN that_DT microblog_NN could_MD be_VB annotated_VBN by_IN keywords_NNS ,_, which_WDT are_VBP associated_VBN with_IN psycholog_NN -_: ical_JJ dictionaries_NNS ._.
+In_IN general_JJ ,_, the_DT sentiment_NN layer_NN can_MD be_VB viewed_VBN as_IN describing_VBG a_DT group_NN of_IN words_NNS that_WDT repre_VBP -_: sent_VBD a_DT psychological_JJ mental_JJ state_NN ._.
+rithm_NN 1_CD ._.
+We_PRP first_RB load_VBP the_DT map_NN of_IN sentiment_NN words_NNS with_IN their_PRP$ initial_JJ polarity_NN ,_, Lexiconp_NNP ,_, from_IN lexicons_NNS ._.
+We_PRP scan_VBP each_DT microblog_NN and_CC annotate_NN sentiment_NN words_NNS within_IN microblog_NN ._.
+Then_RB the_DT labeled_VBN word_NN will_MD be_VB enriched_VBN with_IN more_JJR sentiment_NN words_NNS ,_, which_WDT is_VBZ measured_VBN by_IN initial_JJ sentiment_NN polarity_NN ._.
+Next_IN a_DT matrix_NN of_IN the_DT data_NN 's_POS topic_NN multinomial_JJ probabili_NNS -_: ties_NNS ,_, T_NNP opicP_NNP rob_NN ,_, and_CC the_DT map_NN of_IN topic_NN alphabet_NN ,_, Topicalphabet_NNP ,_, are_VBP inferenced_VBN ._.
+K_NNP is_VBZ the_DT number_NN of_IN topics_NNS ._.
+Algorithm_NNP 1_CD Process_NNP of_IN recomputing_VBG Topic_NNP Model_NNP Ensure_NNP :_: Matrix_NNP of_IN Topic_NNP Distributions_NNPS ,_, T_NNP opicP_NNP rob_NN ;_: 1_CD :_: Build_VB and_CC load_VB Lexiconp_NNP ;_: 2_CD :_: Scaneachmicroblogandlabelsentimentwords_NNS ;_: 3_CD :_: Labelwordwithpsychologicallexicons_NNP ;_: 4_LS :_: RecomputeTopicProbabilities_NNS ,_, TopicProb_NNP ;_: 5_CD :_: RecomputeTopicalphabets_NNS ,_, Topicalphabet_NNP ;_: 6_CD :_: Iterate_VB T_NNP opicalphabet_NNP ,_, calculate_VBP P_NNP olarityk_NN for_IN each_DT topic_NN 7_CD :_: NormalizePolarityk_NNP matrix_NN ;_: 8_CD :_: for_IN each_DT topic_NN multinomial_JJ probability_NN in_IN T_NNP opicP_NNP rob_NN do_VBP 9_CD :_: Recompute_VB probability_NN using_VBG P_NNP olarityk_NN ;_: 10_CD :_: Update_NNP topic_NN probability_NN in_IN T_NNP opicP_NNP rob_NN ;_: 11_CD :_: endfor_VB 12_CD :_: return_NN TopicProb_NNP ;_: Polarityk_NNP =_SYM log_VB e_LS k_NN ,_, w_NN e_LS Nw_NNP -LRB-_-LRB- 1_LS -RRB-_-RRB- The_DT Polarityk_NNP encodes_VBZ the_DT sentiment-topic_JJ po_NN -_: larity_NN for_IN the_DT kth_NN topic_NN of_IN the_DT microblog_NN ._.
+Pwk_NNP is_VBZ Topic_NNP Word_NNP Word_NNP Sentiment_NN Word_VBD Word_NNP Word_NNP Topic_NNP Word_NNP Word_NNP Sentiment_NN Word_VBD Word_NNP Word_NNP Microblog_NNP Document_NNP wk_NNP Nws_NNP Nws_NNP P_NNP eNw_NNP −_CD P_NNP w_NN k_NN k_NN ,_, w_SYM Microblog_NNP estazolam_NN the_DT initial_JJ weight_NN of_IN negative_JJ word_NN w_NN appears_VBZ in_IN kth_NN Topic_NNP stilnox_NN Topic_NNP Topic_NNP Topic_NNP desperation_NN topic_NN ,_, and_CC Pwk_NNP refers_VBZ to_TO initial_JJ weight_NN of_IN the_DT positive_JJ word_NN ,_, respectively_RB ._.
+According_VBG to_TO -LRB-_-LRB- Kay_NNP et_FW al._FW ,_, 1987_CD -RRB-_-RRB- ,_, positive_JJ information_NN would_MD reduce_VB the_DT influence_NN of_IN negative_JJ emotion_NN ._.
+However_RB ,_, researchers_NNS -LRB-_-LRB- Martin_NNP et_FW al._FW ,_, 1993_CD -RRB-_-RRB- found_VBD that_IN negative_JJ effects_NNS bring_VBP longer_JJR Sentiment_NN Label_NN :_: Insomnia_NNP depression_NN suicide_NN Figure_NN 3_CD :_: Extend_VB sentiment_NN words_NNS with_IN dictionary_JJ Our_PRP$ proposed_VBN algorithm_NN is_VBZ presented_VBN in_IN Algo_NNP -_: and_CC deeper_JJR impacts_NNS than_IN positive_JJ effects_NNS ._.
+We_PRP thus_RB Nws_VBZ use_NN e_LS Nw_NNP to_TO simulate_VB the_DT cumulative_JJ impact_NN of_IN neg_NN -_: ative_JJ sentiment_NN impact_NN ,_, where_WRB Nws_NNP refers_VBZ to_TO the_DT fre_NN -_: quency_NN of_IN the_DT word_NN w_NN appearing_VBG in_IN the_DT kth_NN topic_NN ,_, and_CC Sentiment_NN Label_NN :_: Dysthymia_NNP Nw_NNP refers_VBZ to_TO the_DT number_NN of_IN words_NNS associated_VBN with_IN kth_NN topic_NN ._.
+Given_VBN the_DT normalized_JJ sentiment_NN matrix_NN at_IN step_NN 7_CD ,_, we_PRP incorporate_VBP it_PRP with_IN original_JJ topic_NN multinomial_JJ distribution_NN in_IN step_NN 8_CD ._.
+We_PRP recompute_VBP the_DT topic_NN multinomial_JJ distribution_NN to_TO simulate_VB the_DT sentiment_NN -_: diffusion_NN process_NN as_IN shown_VBN back_RB in_IN Fig._NNP 2_CD ._.
+5.5_CD Meta_NNP Features_VBZ within_IN Microblogs_NNP Although_IN previous_JJ work_NN -LRB-_-LRB- Lin_NNP et_FW al._FW ,_, 2014_CD -RRB-_-RRB- reported_VBD detecting_VBG depression_NN from_IN pictures_NNS in_IN microblog_NN ,_, in_IN our_PRP$ dataset_NN ,_, microblogs_NN rarely_RB contain_VBP pictures_NNS ,_, thus_RB we_PRP mainly_RB focused_VBD on_IN text_NN content_NN ._.
+We_PRP also_RB ob_SYM -_: served_VBD that_IN the_DT number_NN of_IN critics_NNS ,_, like_IN ,_, retweet_NN surged_VBD after_IN the_DT suicide_NN was_VBD reported_VBN publicly_RB ._.
+Thus_RB ,_, we_PRP took_VBD three_CD meta_NN features_NNS into_IN consideration_NN :_: posting_VBG type_NN ,_, posting_VBG time_NN and_CC social_JJ relationship_NN ._.
+Detail_NN de_IN -_: scriptions_NNS can_MD be_VB found_VBN in_IN Fig._NNP 1_CD ._.
+5.5.1_CD Posting_VBG Type_NN The_DT posting_VBG type_NN refers_VBZ to_TO one_CD microblog_NN 's_POS origin_NN ,_, either_CC original_JJ creation_NN or_CC retweet_NN ._.
+In_IN our_PRP$ research_NN ,_, it_PRP appears_VBZ that_IN suicidal_JJ users_NNS prefer_VBP to_TO post_VB original_JJ sui_SYM -_: cide_NN notes_NNS instead_RB of_IN retweeting_NN ._.
+The_DT comparisons_NNS in_IN experimental_JJ data_NNS are_VBP shown_VBN in_IN Fig._NNP 4_CD ._.
+might_MD be_VB that_IN some_DT suicidal_JJ users_NNS suffer_VBP from_IN insom_NN -_: nia_NN ,_, which_WDT hypnotic_JJ pills_NNS appear_VBP in_IN their_PRP$ microblogs_NNS ,_, such_JJ as_IN tranquillizers_NNS or_CC stilnox_NN ._.
+5.5.2_CD Figure_NN 4_CD :_: Comparisons_NNS in_IN Microblog_NNP 's_POS Type_NNP Posting_NNP Time_NNP Microblogs_NNP also_RB contain_VBP much_JJ useful_JJ information_NN like_IN social_JJ relationships_NNS ,_, which_WDT connect_VBP microblogs_NNS to_TO microblogs_NNS ,_, or_CC microblogs_NNS to_TO users_NNS ,_, as_IN shown_VBN in_IN Figure_NN 6_CD ._.
+Microblog_NNP Microblog_NNP Microblog_NNP Suicide_NNP Topic_NNP Figure_NNP 6_CD :_: Social_NNP Relations_NNPS within_IN Microblogs_NNP There_EX is_VBZ one_CD major_JJ social_JJ relationship_NN existed_VBD in_IN microblog_NN :_: mention_VB ._.
+People_NNS use_VBP ``_`` @_SYM ''_'' to_TO mention_VB individuals_NNS or_CC group_NN of_IN individuals_NNS ._.
+In_IN addition_NN ,_, retweeting_VBG microblogs_NNS also_RB generate_VBP mention_NN behav_NN -_: ior_NN ._.
+According_VBG to_TO our_PRP$ study_NN ,_, we_PRP found_VBD that_IN sev_SYM -_: eral_JJ users_NNS mentioned_VBD other_JJ suicide_NN before_IN commit_VB -_: ting_VBG suicide_NN ._.
+From_IN this_DT perspective_NN ,_, it_PRP could_MD be_VB ex_FW -_: plained_VBN by_IN part_NN of_IN suicidal_JJ ideation_NN diffusion_NN and_CC sui_SYM -_: cide_NN mimic_VB engagement_NN among_IN social_JJ networks_NNS -LRB-_-LRB- Fu_NNP et_FW al._FW ,_, 2013_CD -RRB-_-RRB- ._.
+We_PRP employed_VBD binary_JJ value_NN to_TO indicate_VB whether_IN the_DT microblogs_NNS have_VBP relationship_NN with_IN other_JJ suicide_NN or_CC suicide_NN related_VBN subjects_NNS ._.
+5.5.3_CD Figure_NN 5_CD :_: Comparisons_NNS in_IN Microblogs_NNP '_POS Time_NNP Social_NNP Relationships_NNPS We_PRP also_RB found_VBD that_IN temporal_JJ features_NNS matter_NN ._.
+Em_SYM -_: pirically_RB ,_, we_PRP separated_VBD 24_CD hours_NNS into_IN four_CD periods_NNS :_: 23:00_CD to_TO 06:00_CD ,_, 07:00_CD to_TO 13:00_CD ,_, 14:00_CD to_TO 18:00_CD ,_, and_CC 18:00_CD to_TO 23:00_CD ._.
+The_DT result_NN shows_VBZ that_IN suicidal_JJ mi_SYM -_: croblogs_NNS are_VBP posted_VBN more_RBR frequently_RB during_IN 23:00_CD to_TO 06:00_CD and_CC less_JJR in_IN the_DT morning_NN ,_, which_WDT is_VBZ in_IN con_NN -_: trast_NN to_TO none_NN suicidal_JJ microblogs_NNS ._.
+Specific_JJ details_NNS can_MD be_VB gleaned_VBN from_IN Fig._NNP 5_CD ._.
+A_DT plausible_JJ explanation_NN 6_CD Experiment_NN and_CC Discussion_NNP 6.1_CD Experiment_NNP Approach_NNP In_IN the_DT experiment_NN ,_, we_PRP run_VBP LDA_NNP -LRB-_-LRB- implemented_VBN by_IN Mallet_NNP -LRB-_-LRB- McCallum_NNP ,_, 2002_CD -RRB-_-RRB- -RRB-_-RRB- to_TO infer_VB k-topic_JJ probabil_NN -_: ities_NNS and_CC alphabet_NN associated_VBN with_IN each_DT topic_NN ._.
+Mal_SYM -_: let_VB 's_POS parameters_NNS were_VBD set_VBN with_IN default_NN values_NNS ,_, and_CC stoplist_NN was_VBD extended_VBN by_IN Chinese_JJ punctuations_NNS ._.
+We_PRP trained_VBD SVM_NNP classifier_NN by_IN using_VBG LibSVM_NNP -LRB-_-LRB- Chang_NNP and_CC Lin_NNP ,_, 2011_CD -RRB-_-RRB- package_NN ._.
+The_DT SVM_NNP classifier_NN in_IN our_PRP$ ex_FW -_: periments_NNS used_VBD a_DT RBF_NNP kernel_NN and_CC was_VBD trained_VBN by_IN de_FW -_: fault_NN parameter_NN values_NNS ._.
+Weka_NNP -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- ,_, an_DT useful_JJ machine_NN learning_NN tools_NNS ,_, was_VBD also_RB employed_VBN in_IN our_PRP$ experiment_NN for_IN training_NN and_CC testing_NN ._.
+We_PRP run_VBP 10-fold_JJ cross_NN validation_NN to_TO avoid_VB evalua_NN -_: tion_NN bias_NN ._.
+In_IN Table_NNP 6_CD ,_, we_PRP list_VBP all_DT features_NNS that_WDT were_VBD selected_VBN for_IN training_NN classification_NN models_NNS in_IN our_PRP$ ex_FW -_: periment_NN ._.
+Table_NNP 6_CD :_: Summarization_NN of_IN Features_NNS in_IN Experiment_NNP Table_NNP 7_CD :_: Comparison_NN between_IN Prior-knowledge-based_JJ Features_NNS and_CC LDA_NNP approach_NN Topics_NNP F1_NNP Precision_NNP Recall_VB Accuracy_NNP 100_CD 31.2_CD %_NN 74.9_CD %_NN 19.7_CD %_NN 92.1_CD %_NN 200_CD 47.4_CD %_NN 86.5_CD %_NN 32.7_CD %_NN 93.4_CD %_NN 300_CD 53.1_CD %_NN 82.5_CD %_NN 39.2_CD %_NN 93.7_CD %_NN 400_CD 48.8_CD %_NN 78.3_CD %_NN 35.4_CD %_NN 93.2_CD %_NN 500_CD 56.8_CD %_NN 68.7_CD %_NN 40.4_CD %_NN 93.6_CD %_NN 600_CD 52.1_CD %_NN 79.6_CD %_NN 38.7_CD %_NN 93.5_CD %_NN 700_CD 59.0_CD %_NN 80.7_CD %_NN 46.5_CD %_NN 94.1_CD %_NN 800_CD 59.5_CD %_NN 80.7_CD %_NN 47.1_CD %_NN 94.2_CD %_NN 900_CD 60.3_CD %_NN 80.2_CD %_NN 48.3_CD %_NN 94.3_CD %_NN 1000_CD 58.1_CD %_NN 79.9_CD %_NN 45.6_CD %_NN 94.0_CD %_NN Lexicon_NN 54.2_CD %_NN 85.4_CD %_NN 39.6_CD %_NN 93.9_CD %_NN Feature_NNP Compute_NNP Method_NNP Knowledge-based_JJ Features_NNS Count_VBP *_SYM Lexicon_NN polarity_NN Syntactic_NNP Features_NNP Count_NNP Topic_NNP Model_NNP Topic_NNP Distributions_NNPS Advanced_NNP Topic_NNP Model_NNP Topic_NNP Distributions_NNPS Posting_NNP Type_NNP Binary_NNP Value_NNP Posting_NNP Time_NNP Intervals_NNP Social_NNP Relationships_NNPS Binary_NNP Value_NNP N-gram_NNP Count_NNP The_NNP performance_NN of_IN classification_NN are_VBP measured_VBN by_IN ``_`` Precision_NN ''_'' ,_, ``_`` Recall_VB ''_'' ,_, ``_`` F1_CD −_CD measure_NN ''_'' ,_, ``_`` Accu_NNP -_: racy_JJ ''_'' ._.
+``_`` Precision_NN ''_'' refers_VBZ to_TO the_DT ratio_NN of_IN true_JJ suici_NNS -_: dal_NN microblogs_NNS against_IN all_DT microblogs_NNS predicted_VBD as_IN suicidal_JJ ._.
+``_`` Recall_VB ''_'' refers_VBZ to_TO the_DT fraction_NN of_IN suici_NN -_: dal_NN instances_NNS retrieved_VBN by_IN trained_JJ models_NNS ._.
+``_`` Accu_NNP -_: racy_JJ ''_'' refers_VBZ to_TO all_DT predictions_NNS match_VBP their_PRP$ labels_NNS re_SYM -_: gardless_NN whether_IN they_PRP are_VBP suicidal_JJ microblogs_NNS or_CC not_RB ._.
+``_`` F1_CD −_CD measure_NN ''_'' is_VBZ defined_VBN as_IN follows_VBZ 2_CD ._.
+F1_CD −_CD measure_NN =_SYM 2_CD ∗_CD precision_NN ∗_CD recall_NN -LRB-_-LRB- 2_LS -RRB-_-RRB- precision_NN +_NN recall_VBP 6.2_CD Comparison_NNP between_IN Lexicons_NNPS and_CC LDA_NNP The_NNP Lexicon_NNP approach_NN uses_VBZ psychological_JJ lexicons_NNS ,_, described_VBN in_IN Section_NN 3_CD ,_, to_TO extract_VB lexicon_NN features_NNS and_CC train_VB the_DT classifiers_NNS ._.
+We_PRP run_VBP LDA_NNP with_IN number_NN of_IN topics_NNS from_IN 100_CD to_TO 1000_CD topics_NNS with_IN increment_NN of_IN 100_CD -LRB-_-LRB- i.e._FW 100_CD ,_, 200_CD ,_, ..._: ,_, 1000_CD -RRB-_-RRB- ._.
+Comparison_NN of_IN classi_NNS -_: fication_NN performance_NN is_VBZ presented_VBN in_IN Table_NNP 7_CD ._.
+Table_NNP 7_CD shows_NNS that_IN more_JJR topic_NN features_NNS can_MD im_SYM -_: prove_VB the_DT performance_NN of_IN classification_NN ._.
+The_DT highest_JJS F1_CD −_CD measure_NN is_VBZ 60.3_CD %_NN with_IN 900_CD topics_NNS in_IN LDA_NNP ._.
+Al_NNP -_: though_IN in_IN the_DT low_JJ topic_NN dimensions_NNS LDA_NNP performs_VBZ poorer_JJR than_IN Lexicon_NN approach_NN ,_, LDA_NNP could_MD perform_VB better_JJR than_IN Lexicons_NNPS when_WRB assigned_VBN a_DT high_JJ topic_NN value_NN ._.
+6.3_CD Experiment_NN with_IN advanced_JJ Topic_NNP Model_NNP To_TO test_VB our_PRP$ proposed_VBN method_NN in_IN Section_NN 5.4_CD ,_, we_PRP also_RB conducted_VBD experiments_NNS with_IN the_DT same_JJ topic_NN number_NN and_CC default_NN parameter_NN settings_NNS as_IN in_IN Section_NN 6.2_CD ,_, and_CC the_DT results_NNS are_VBP shown_VBN in_IN Table_NNP 8_CD ._.
+Table_NNP 8_CD shows_NNS that_IN compared_VBN with_IN LDA_NNP in_IN Table_NNP 7_CD ,_, our_PRP$ approach_NN works_VBZ better_RBR ._.
+Table_NNP 8_CD :_: Cross-validation_JJ performance_NN on_IN Topic_NNP Model_NNP after_IN adding_VBG psychological_JJ lexicons_NNS Topics_NNPS F1_NNP Precision_NNP Recall_VB Accuracy_NNP 100_CD 44.1_CD %_NN 95.9_CD %_NN 28.6_CD %_NN 93.4_CD %_NN 200_CD 62.4_CD %_NN 89.6_CD %_NN 47.9_CD %_NN 94.8_CD %_NN 300_CD 67.9_CD %_NN 93.2_CD %_NN 53.4_CD %_NN 95.4_CD %_NN 400_CD 74.2_CD %_NN 96.8_CD %_NN 60.1_CD %_NN 96.2_CD %_NN 500_CD 76.2_CD %_NN 94.6_CD %_NN 63.9_CD %_NN 96.4_CD %_NN 600_CD 75.1_CD %_NN 98.8_CD %_NN 60.5_CD %_NN 96.3_CD %_NN 700_CD 74.0_CD %_NN 95.0_CD %_NN 60.5_CD %_NN 96.1_CD %_NN 800_CD 67.3_CD %_NN 84.0_CD %_NN 56.2_CD %_NN 95.1_CD %_NN 900_CD 64.6_CD %_NN 76.1_CD %_NN 56.2_CD %_NN 94.4_CD %_NN 1000_CD 61.8_CD %_NN 72.3_CD %_NN 53.9_CD %_NN 93.9_CD %_NN The_DT best_JJS performance_NN is_VBZ on_IN 500_CD topics_NNS ,_, with_IN F1_CD −_CD measure_NN at_IN 76.2_CD %_NN ,_, Recall_VB at_IN 63.9_CD %_NN ,_, Accuracy_NN over_IN 96_CD %_NN ._.
+The_DT results_NNS indicate_VBP that_IN it_PRP is_VBZ feasible_JJ to_TO pre_VB -_: dict_NN and_CC even_RB prevent_VB the_DT suicides_NNS through_IN analyzing_VBG microblogs_NNS ._.
+80.0_CD %_NN 70.0_CD %_NN 60.0_CD %_NN 50.0_CD %_NN 40.0_CD %_NN 30.0_CD %_NN 20.0_CD %_NN 10.0_CD %_NN 0.0_CD %_NN 100_CD 200_CD 300_CD 400_CD LDA_NNP 500 600 700 800_CD Topic_NNP Number_NNP Our_PRP$ Approach_NNP 900_CD 1000_CD Figure_NN 7_CD :_: Comparisons_NNS in_IN F1_CD −_CD measure_NN between_IN LDA_NNP and_CC Advanced_NNP Topic_NNP Model_NNP Compared_VBN with_IN previous_JJ approaches_NNS both_DT in_IN lex_NN -_: icons_NNS and_CC LDA_NNP ,_, we_PRP obtained_VBD around_IN 25_CD %_NN improve_VB -_: ment_NN in_IN F1-measure_NN ._.
+Fig._NN 7_CD presents_VBZ a_DT more_RBR detailed_JJ comparison_NN between_IN LDA_NNP -LRB-_-LRB- in_IN blue_JJ -RRB-_-RRB- and_CC our_PRP$ approach_NN -LRB-_-LRB- in_IN red_JJ -RRB-_-RRB- on_IN F1_CD −_CD measure_NN ._.
+6.4_CD Results_NNS with_IN Meta_NNP Features_NNPS To_TO further_RBR improve_VB the_DT performance_NN ,_, we_PRP add_VBP meta_JJ features_NNS described_VBN in_IN Section_NN 5.5_CD with_IN topic_NN 500_CD ._.
+We_PRP run_VBP SVM_NNP and_CC several_JJ classifiers_NNS in_IN Weka_NNP -LRB-_-LRB- Hall_NNP et_FW al._FW ,_, 2009_CD -RRB-_-RRB- :_: Logistic_NNP ,_, J48_NNP classifier_NN ,_, Random_NNP Forest_NNP -LRB-_-LRB- RF_NNP -RRB-_-RRB- ,_, Random_NNP Tree_NNP -LRB-_-LRB- RT_NNP -RRB-_-RRB- ,_, Decision_NNP Table_NNP -LRB-_-LRB- DT_NNP -RRB-_-RRB- ._.
+All_DT classi_NNS -_: fiers_NNS are_VBP trained_VBN and_CC tested_VBN with_IN default_NN parameters_NNS ,_, and_CC performances_NNS are_VBP presented_VBN in_IN Table_NNP 9_CD ._.
+Table_NNP 9_CD :_: Cross-validation_JJ performance_NN of_IN Different_JJ clas_NNS -_: sifiers_NNS Clearly_RB ,_, J48_NNP attains_VBZ the_DT best_JJS F1_NN −_NN measure_NN -LRB-_-LRB- 80.0_CD %_NN -RRB-_-RRB- and_CC Recall_VB -LRB-_-LRB- 73.9_CD %_NN -RRB-_-RRB- ._.
+Compared_VBN with_IN Ta_SYM -_: ble_NN 8_CD ,_, we_PRP acquired_VBD a_DT better_JJR performance_NN after_IN inte_NN -_: grating_VBG meta_NN features_NNS ._.
+We_PRP found_VBD that_IN there_EX are_VBP still_RB about_IN nearly_RB one_CD fourth_JJ suicidal_JJ microblogs_NNS that_WDT were_VBD not_RB identified_VBN correctly_RB ._.
+There_EX might_MD be_VB several_JJ reasons_NNS :_: first_RB ,_, the_DT complexity_NN and_CC ambiguity_NN of_IN language_NN on_IN the_DT Inter_NNP -_: net_NN ,_, especially_RB the_DT SNS_NNP ;_: second_JJ ,_, the_DT psychological_JJ lexicon_NN is_VBZ quite_RB limited_VBN ._.
+This_DT research_NN has_VBZ a_DT number_NN of_IN potential_JJ applica_NN -_: tions_NNS ._.
+The_DT trained_JJ model_NN can_MD be_VB used_VBN to_TO build_VB a_DT suicide_NN monitoring_NN system_NN to_TO help_VB professionals_NNS ex_FW -_: ecute_NN suicide_NN intervention_NN in_IN time_NN ._.
+If_IN this_DT system_NN was_VBD effective_JJ in_IN detecting_VBG suicide_NN ideation_NN in_IN microblogs_NNS from_IN SNS_NNP ,_, it_PRP might_MD also_RB help_VB psychologists_NNS investi_NNS -_: gate_NN how_WRB linguistic_JJ and_CC behavioral_JJ patterns_NNS are_VBP cor_SYM -_: related_VBN with_IN suicide_NN thoughts_NNS and_CC provide_VB them_PRP with_IN advanced_JJ decision_NN support_NN ._.
+7_CD Conclusion_NN In_IN this_DT paper_NN ,_, for_IN the_DT purpose_NN of_IN identifying_VBG suici_NNS -_: dal_JJ ideation_NN of_IN microblogs_NNS on_IN social_JJ networks_NNS ,_, first_RB ,_, we_PRP build_VBP a_DT suicidal_JJ domain_NN lexicons_NNS and_CC develop_VB hy_SYM -_: brid_NN approaches_NNS combined_VBN both_DT contextual_JJ and_CC meta_JJ information_NN for_IN suicidal_JJ ideation_NN identification_NN ;_: sec_SYM -_: ond_NN ,_, we_PRP run_VBP Topic_NNP Model_NNP for_IN feature_NN selection_NN with_IN less_JJR than_IN 1_CD ,_, 000_CD dimensions_NNS left_VBD ,_, and_CC achieve_VB more_JJR than_IN 38_CD %_NN accuracy_NN increased_VBD over_IN lexicon_NN approach_NN ;_: furthermore_RB ,_, we_PRP deploy_VBP a_DT real-time_JJ engine_NN to_TO detect_VB suicide_NN ideation_NN in_IN microblogs_NNS for_IN monitoring_VBG sui_SYM -_: cide_NN ,_, which_WDT might_MD be_VB helpful_JJ for_IN professional_JJ orga_NN -_: nizations_NNS to_TO assess_VB people_NNS 's_POS suicide_NN ideation_NN ;_: finally_RB ,_, from_IN psychological_JJ perspective_NN ,_, we_PRP found_VBD that_IN writ_NN -_: ing_VBG styles_NNS and_CC time_NN variations_NNS are_VBP highly_RB correlated_VBN with_IN suicidal_JJ ideation_NN ._.
+A_DT prototype_NN system3_NN has_VBZ been_VBN deployed_VBN online_JJ to_TO detect_VB suicide_NN ideation_NN of_IN SNS_NNP in_IN real-time_JJ ._.
+The_DT performance_NN of_IN model_NN is_VBZ limited_VBN by_IN several_JJ is_VBZ -_: sues_VBZ as_IN follows_VBZ :_: first_RB the_DT model_NN has_VBZ been_VBN trained_VBN and_CC tested_VBN on_IN small_JJ size_NN data_NNS sample_NN ;_: second_JJ ,_, we_PRP need_VBP to_TO try_VB more_JJR advanced_JJ machine_NN learning_VBG algorithms_NNS ._.
+Our_PRP$ future_JJ work_NN is_VBZ undertaken_VBN in_IN two_CD directions_NNS :_: im_SYM -_: proving_VBG performance_NN and_CC mining_NN latent_NN social_JJ rela_NN -_: tionships_NNS ._.
+8_CD Acknowledge_NNP We_PRP would_MD like_VB to_TO thank_VB Google_NNP Summer_NNP of_IN Code_NNP 2014_CD and_CC Portland_NNP State_NNP University_NNP for_IN sponsoring_VBG the_DT open-source_JJ development_NN of_IN this_DT project_NN ._.
+The_DT authors_NNS acknowledge_VBP the_DT support_NN from_IN National_NNP High-tech_NNP R&D_NNP Program_NNP of_IN China_NNP -LRB-_-LRB- 2013AA01A606_NNP -RRB-_-RRB- ,_, National_NNP Basic_NNP Research_NNP Pro-_NNP gram_NN of_IN China_NNP -LRB-_-LRB- 2014CB744600_NNP -RRB-_-RRB- ,_, and_CC Key_NNP Research_NNP Program_NNP of_IN Chinese_NNP Academy_NNP of_IN Sciences_NNP -LRB-_-LRB- KJZD_NNP -_: EWL04_NNP -RRB-_-RRB- ._.
+Thank_VB anonymous_JJ reviewers_NNS for_IN their_PRP$ valuable_JJ comments_NNS to_TO improve_VB quality_NN of_IN the_DT paper_NN ._.
+3It_NNP can_MD be_VB visited_VBN at_IN http://ccpl.psych.ac.cn/_JJ suicide_NN /_NN ._.
+F1_CD Precision_NNP Recall_VB Accuracy_NNP SVM_NNP 76.8_CD %_NN 96.8_CD %_NN 63.7_CD %_NN 96.5_CD %_NN Logistic_NNP 53.0_CD %_NN 59.2_CD %_NN 48.0_CD %_NN 92.3_CD %_NN J48_CD 80.0_CD %_NN 87.1_CD %_NN 73.9_CD %_NN 93.2_CD %_NN RF_NNP 71.3_CD %_NN 98.2_CD %_NN 56.0_CD %_NN 93.6_CD %_NN RT_NNP 67.7_CD %_NN 71.0_CD %_NN 64.6_CD %_NN 94.4_CD %_NN DT_NNP 74.6_CD %_NN 92.0_CD %_NN 62.7_CD %_NN 96.1_CD %_NN F1-measure_NN References_NNP David_NNP M_NNP Blei_NNP ,_, Andrew_NNP Y_NNP Ng_NNP ,_, and_CC Michael_NNP I_PRP Jordan_NNP ._.
+2003_CD ._.
+Latent_NN dirichlet_NN allocation_NN ._.
+the_DT Journal_NNP of_IN ma_SYM -_: chine_NN Learning_NNP research_NN ,_, 3:993_CD --_: 1022_CD ._.
+Peter_NNP F_NN Brown_NNP ,_, Peter_NNP V_NNP Desouza_NNP ,_, Robert_NNP L_NNP Mercer_NNP ,_, Vin_NNP -_: cent_NN J_NNP Della_NNP Pietra_NNP ,_, and_CC Jenifer_NNP C_NNP Lai_NNP ._.
+1992_CD ._.
+Class_NN -_: based_VBN n-gram_JJ models_NNS of_IN natural_JJ language_NN ._.
+Computa_NNP -_: tional_JJ linguistics_NNS ,_, 18_CD -LRB-_-LRB- 4_LS -RRB-_-RRB- :467_CD --_: 479_CD ._.
+Chih-Chung_NNP Chang_NNP and_CC Chih-Jen_NNP Lin_NNP ._.
+2011_CD ._.
+Libsvm_NNP :_: a_DT library_NN for_IN support_NN vector_NN machines_NNS ._.
+ACM_NNP Trans_NNP -_: actions_NNS on_IN Intelligent_NNP Systems_NNPS and_CC Technology_NNP -LRB-_-LRB- TIST_NNP -RRB-_-RRB- ,_, 2_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :27_CD ._.
+Munmun_NNP De_NNP Choudhury_NNP ,_, Michael_NNP Gamon_NNP ,_, Scott_NNP Counts_NNP ,_, and_CC Eric_NNP Horvitz_NNP ._.
+2013_CD ._.
+Predicting_VBG depression_NN via_IN so_RB -_: cial_JJ media_NNS ._.
+In_IN ICWSM_NNP ._.
+Zhendong_NNP Dong_NNP and_CC Qiang_NNP Dong_NNP ._.
+2003_CD ._.
+Hownet-a_JJ hybrid_JJ language_NN and_CC knowledge_NN resource_NN ._.
+In_IN Natu_NNP -_: ral_NN Language_NN Processing_NNP and_CC Knowledge_NNP Engineering_NNP ,_, 2003_CD ._.
+Proceedings_NNP ._.
+2003_CD International_NNP Conference_NNP on_IN ,_, pages_NNS 820_CD --_: 824_CD ._.
+IEEE_NNP ._.
+King-wa_JJ Fu_NNP ,_, Qijin_NNP Cheng_NNP ,_, Paul_NNP WC_NNP Wong_NNP ,_, and_CC Paul_NNP SF_NNP Yip_NNP ._.
+2013_CD ._.
+Responses_NNS to_TO a_DT self-presented_JJ suicide_NN at_IN -_: tempt_VB in_IN social_JJ media_NNS :_: A_DT social_JJ network_NN analysis_NN ._.
+Cri_SYM -_: sis_NN :_: The_DT Journal_NNP of_IN Crisis_NNP Intervention_NN and_CC Suicide_NNP Prevention_NNP ,_, 34_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :406_CD ._.
+Rui_NNP Gao_NNP ,_, Bibo_NNP Hao_NNP ,_, He_PRP Li_NNP ,_, Yusong_NNP Gao_NNP ,_, and_CC Ting_NNP -_: shao_NN Zhu_NNP ._.
+2013_CD ._.
+Developing_VBG simplified_VBN chinese_JJ psychological_JJ linguistic_JJ analysis_NN dictionary_NN for_IN mi_FW -_: croblog_NN ._.
+In_IN Brain_NN and_CC Health_NNP Informatics_NNPS ,_, pages_NNS 359_CD --_: 368_CD ._.
+Springer_NNP ._.
+Li_NNP Guan_NNP ,_, Bibo_NNP Hao_NNP ,_, and_CC Tingshao_NNP Zhu_NNP ._.
+2014_CD ._.
+How_WRB did_VBD the_DT suicide_NN act_NN and_CC speak_VBP differently_RB online_VB ?_.
+be_VB -_: havioral_NN and_CC linguistic_NN features_NNS of_IN china_NN 's_POS suicide_NN mi_SYM -_: croblog_NN users_NNS ._.
+arXiv_JJ preprint_NN arXiv_NNP :1407.0466_CD ._.
+Mark_NNP Hall_NNP ,_, Eibe_NNP Frank_NNP ,_, Geoffrey_NNP Holmes_NNP ,_, Bernhard_NNP Pfahringer_NNP ,_, Peter_NNP Reutemann_NNP ,_, and_CC Ian_NNP H_NNP Witten_NNP ._.
+2009_CD ._.
+The_DT weka_NN data_NNS mining_NN software_NN :_: an_DT update_VBP ._.
+ACM_NNP SIGKDD_NNP explorations_VBZ newsletter_NN ,_, 11_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :10_CD --_: 18_CD ._.
+Jared_NNP Jashinsky_NNP ,_, Scott_NNP H_NNP Burton_NNP ,_, Carl_NNP L_NNP Hanson_NNP ,_, Josh_NNP West_NNP ,_, Christophe_NNP Giraud-Carrier_NNP ,_, Michael_NNP D_NNP Barnes_NNP ,_, and_CC Trenton_NNP Argyle_NNP ._.
+2013_CD ._.
+Tracking_NNP suicide_NN risk_NN fac_SYM -_: tors_NNS through_IN twitter_NN in_IN the_DT us_PRP ._.
+Stanley_NNP R_NNP Kay_NNP ,_, Abraham_NNP Flszbein_NNP ,_, and_CC Lewis_NNP A_NNP Opfer_NNP ._.
+1987_CD ._.
+The_DT positive_JJ and_CC negative_JJ syndrome_NN scale_NN -LRB-_-LRB- panss_NN -RRB-_-RRB- for_IN schizophrenia_NN ._.
+Schizophrenia_NN bulletin_NN ,_, 13_CD -LRB-_-LRB- 2_LS -RRB-_-RRB- :261_CD ._.
+Lin_NNP Li_NNP ,_, Ang_NNP Li_NNP ,_, Bibo_NNP Hao_NNP ,_, Zengda_NNP Guan_NNP ,_, and_CC Tingshao_NNP Zhu_NNP ._.
+2014a_NNS ._.
+Predicting_VBG active_JJ users_NNS '_POS personality_NN based_VBN on_IN micro-blogging_JJ behaviors_NNS ._.
+PLoS_NNP ONE_CD ,_, 9_CD -LRB-_-LRB- e84997_CD -RRB-_-RRB- ._.
+Tim_NNP MH_NNP Li_NNP ,_, Michael_NNP Chau_NNP ,_, Paul_NNP SF_NNP Yip_NNP ,_, and_CC Paul_NNP WC_NNP Wong_NNP ._.
+2014b_JJ ._.
+Temporal_JJ and_CC computerized_JJ psycholin_NN -_: guistic_JJ analysis_NN of_IN the_DT blog_NN of_IN a_DT chinese_JJ adolescent_JJ sui_NN -_: cide_NN ._.
+Chenghua_NNP Lin_NNP and_CC Yulan_NNP He_PRP ._.
+2009_CD ._.
+Joint_NNP sentiment/topic_JJ model_NN for_IN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 18th_JJ ACM_NNP conference_NN on_IN Information_NN and_CC knowledge_NN management_NN ,_, pages_NNS 375_CD --_: 384_CD ._.
+ACM_NNP ._.
+Huijie_NNP Lin_NNP ,_, Jia_NNP Jia_NNP ,_, Quan_NNP Guo_NNP ,_, Yuanyuan_NNP Xue_NNP ,_, Jie_NNP Huang_NNP ,_, Lianhong_NNP Cai_NNP ,_, and_CC Ling_NNP Feng_NNP ._.
+2014_CD ._.
+Psychological_JJ stress_NN detection_NN from_IN cross-media_JJ microblog_NN data_NNS us_PRP -_: ing_VBG deep_JJ sparse_JJ neural_JJ network_NN ._.
+David_NNP D_NNP Luxton_NNP ,_, Jennifer_NNP D_NNP June_NNP ,_, and_CC Julie_NNP T_NNP Kinn_NNP ._.
+2011_CD ._.
+Technology-based_JJ suicide_NN prevention_NN :_: current_JJ applications_NNS and_CC future_JJ directions_NNS ._.
+Telemedicine_NNP and_CC e-Health_NNP ,_, 17_CD -LRB-_-LRB- 1_CD -RRB-_-RRB- :50_CD --_: 54_CD ._.
+Leonard_NNP L_NNP Martin_NNP ,_, David_NNP W_NNP Ward_NNP ,_, John_NNP W_NNP Achee_NNP ,_, and_CC Robert_NNP S_NNP Wyer_NNP ._.
+1993_CD ._.
+Mood_NN as_IN input_NN :_: People_NNS have_VBP to_TO interpret_VB the_DT motivational_JJ implications_NNS of_IN their_PRP$ moods_NNS ._.
+Journal_NNP of_IN Personality_NNP and_CC Social_NNP Psychology_NNP ,_, 64_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :317_CD ._.
+Andrew_NNP Kachites_NNP McCallum_NNP ._.
+2002_CD ._.
+Mallet_NNP :_: A_NNP machine_NN learning_VBG for_IN language_NN toolkit_NN ._.
+Qiaozhu_NNP Mei_NNP ,_, Xu_NNP Ling_NNP ,_, Matthew_NNP Wondra_NNP ,_, Hang_NNP Su_NNP ,_, and_CC ChengXiang_NNP Zhai_NNP ._.
+2007_CD ._.
+Topic_NN sentiment_NN mixture_NN :_: modeling_NN facets_NNS and_CC opinions_NNS in_IN weblogs_NNS ._.
+In_IN Pro-_JJ ceedings_NNS of_IN the_DT 16th_JJ international_JJ conference_NN on_IN World_NNP Wide_NNP Web_NNP ,_, pages_NNS 171_CD --_: 180_CD ._.
+ACM_NNP ._.
+Tomas_NNP Mikolov_NNP ,_, Ilya_NNP Sutskever_NNP ,_, Kai_NNP Chen_NNP ,_, Greg_NNP S_NNP Cor_NNP -_: rado_NN ,_, and_CC Jeff_NNP Dean_NNP ._.
+2013_CD ._.
+Distributed_VBN representations_NNS of_IN words_NNS and_CC phrases_NNS and_CC their_PRP$ compositionality_NN ._.
+In_IN Advances_NNS in_IN Neural_NNP Information_NNP Processing_NNP Systems_NNPS ,_, pages_NNS 3111_CD --_: 3119_CD ._.
+World_NNP Health_NNP Organization_NNP et_FW al._FW 2014_CD ._.
+Preventing_VBG sui_SYM -_: cide_NN :_: A_DT global_JJ imperative_JJ ._.
+World_NNP Health_NNP Organiza_NNP -_: tion_NN ._.
+Bo_NNP Pang_NNP and_CC Lillian_NNP Lee_NNP ._.
+2008_CD ._.
+Opinion_NN mining_NN and_CC sentiment_NN analysis_NN ._.
+Foundations_NNS and_CC trends_NNS in_IN infor_NN -_: mation_NN retrieval_NN ,_, 2_CD -LRB-_-LRB- 1-2_CD -RRB-_-RRB- :1_CD --_: 135_CD ._.
+John_NNP Pestian_NNP ,_, Henry_NNP Nasrallah_NNP ,_, Pawel_NNP Matykiewicz_NNP ,_, Au_NNP -_: rora_NN Bennett_NNP ,_, and_CC Antoon_NNP Leenaars_NNP ._.
+2010_CD ._.
+Suicide_NNP note_NN classification_NN using_VBG natural_JJ language_NN processing_NN :_: A_DT content_JJ analysis_NN ._.
+Biomedical_JJ informatics_NNS insights_NNS ,_, 2010_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :19_CD ._.
+John_NNP P_NNP Pestian_NNP ,_, Pawel_NNP Matykiewicz_NNP ,_, Michelle_NNP Linn-Gust_NNP ,_, Brett_NNP South_NNP ,_, Ozlem_NNP Uzuner_NNP ,_, Jan_NNP Wiebe_NNP ,_, K_NNP Bretonnel_NNP Cohen_NNP ,_, John_NNP Hurdle_NNP ,_, and_CC Christopher_NNP Brew_NNP ._.
+2012_CD ._.
+Sentiment_NN analysis_NN of_IN suicide_NN notes_NNS :_: A_DT shared_VBN task_NN ._.
+Biomedical_JJ informatics_NNS insights_NNS ,_, 5_CD -LRB-_-LRB- Suppl_NN 1_CD -RRB-_-RRB- :3_CD ._.
+Philip_NNP Resnik_NNP ,_, Anderson_NNP Garron_NNP ,_, and_CC Rebecca_NNP Resnik_NNP ._.
+2013_CD ._.
+Using_VBG topic_NN modeling_NN to_TO improve_VB prediction_NN of_IN neuroticism_NN and_CC depression_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 2013_CD Conference_NN on_IN Empirical_JJ Methods_NNS in_IN Natural_NNP ,_, pages_NNS 1348_CD --_: 1353_CD ._.
+Association_NNP for_IN Computational_NNP Lin_NNP -_: guistics_NNS ._.
+M_NNP David_NNP Rudd_NNP ,_, Alan_NNP L_NNP Berman_NNP ,_, Thomas_NNP E_NNP Joiner_NNP ,_, Matthew_NNP K_NNP Nock_NNP ,_, Morton_NNP M_NNP Silverman_NNP ,_, Michael_NNP Mandrusiak_NNP ,_, Kimberly_NNP Van_NNP Orden_NNP ,_, and_CC Tracy_NNP Witte_NNP ._.
+2006_CD ._.
+Warning_NN signs_NNS for_IN suicide_NN :_: Theory_NNP ,_, re_SYM -_: search_NN ,_, and_CC clinical_JJ applications_NNS ._.
+Suicide_NNP and_CC Life_NNP -_: Threatening_VBG Behavior_NNP ,_, 36_CD -LRB-_-LRB- 3_LS -RRB-_-RRB- :255_CD --_: 262_CD ._.
+Jian_NNP Sun_NNP ._.
+2014_CD ._.
+Ansj_NNP Chinese_NNP Lexical_NNP Analysis_NNP System_NNP ._.
+Website_NN ._.
+http://ansj.org/_NN ._.
+Kristina_NNP Toutanova_NNP ,_, Dan_NNP Klein_NNP ,_, Christopher_NNP D._NNP Man_NNP -_: ning_NN ,_, and_CC Yoram_NNP Singer_NNP ._.
+2003_CD ._.
+Feature-Rich_NNP Part_NNP -_: of-Speech_NNP Tagging_VBG with_IN a_DT Cyclic_NNP Dependency_NNP Net_NN -_: work_NN ._.
+In_IN North_JJ American_JJ Chapter_NN of_IN the_DT Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
+Peter_NNP D._NNP Turney_NNP and_CC Patrick_NNP Pantel_NNP ._.
+2010_CD ._.
+From_IN Fre_SYM -_: quency_NN to_TO Meaning_NNP :_: Vector_NNP Space_NNP Models_NNPS of_IN Seman_NNP -_: tics_NNS ._.
+Computing_NNP Research_NNP Repository_NNP ,_, abs/1003_CD .1_CD ._.
+Hongning_NNP Wang_NNP ,_, Yue_NNP Lu_NNP ,_, and_CC Chengxiang_NNP Zhai_NNP ._.
+2010_CD ._.
+Latent_NN aspect_NN rating_NN analysis_NN on_IN review_NN text_NN data_NNS :_: a_DT rat_NN -_: ing_NN regression_NN approach_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 16th_JJ ACM_NNP SIGKDD_NNP international_JJ conference_NN on_IN Knowl_NNP -_: edge_NN discovery_NN and_CC data_NNS mining_NN ,_, pages_NNS 783_CD --_: 792_CD ._.
+ACM_NNP ._.
+Xinyu_NNP Wang_NNP ,_, Chunhong_NNP Zhang_NNP ,_, Yang_NNP Ji_NNP ,_, Li_NNP Sun_NNP ,_, Lei_NNP -_: jia_NN Wu_NNP ,_, and_CC Zhana_NNP Bao_NNP ._.
+2013_CD ._.
+A_DT depression_NN de_IN -_: tection_NN model_NN based_VBN on_IN sentiment_NN analysis_NN in_IN micro_NN -_: blog_NN social_JJ network_NN ._.
+In_IN Trends_NNPS and_CC Applications_NNS in_IN Knowledge_NNP Discovery_NNP and_CC Data_NNP Mining_NNP ,_, pages_NNS 201_CD --_: 213_CD ._.
+Springer_NNP ._.
+Casey_NNP Whitelaw_NNP ,_, Navendu_NNP Garg_NNP ,_, and_CC Shlomo_NNP Argamon_NNP ._.
+2005_CD ._.
+Using_VBG appraisal_NN groups_NNS for_IN sentiment_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN the_DT 14th_JJ ACM_JJ international_JJ con_NN -_: ference_NN on_IN Information_NN and_CC knowledge_NN management_NN ,_, pages_NNS 625_CD --_: 631_CD ._.
+ACM_NNP ._.
+Chung-Hsien_NNP Wu_NNP ,_, Liang-Chih_NNP Yu_NNP ,_, and_CC Fong-Lin_NNP Jang_NNP ._.
+2005_CD ._.
+Using_VBG semantic_JJ dependencies_NNS to_TO mine_JJ depres_NNS -_: sive_JJ symptoms_NNS from_IN consultation_NN records_NNS ._.
+Intelligent_NNP Systems_NNPS ,_, IEEE_NNP ,_, 20_CD -LRB-_-LRB- 6_CD -RRB-_-RRB- :50_CD --_: 58_CD ._.
+Liang-Chih_NNP Yu_NNP and_CC Chun-Yuan_NNP Ho_NNP ._.
+2014_CD ._.
+Identify_VB -_: ing_NN emotion_NN labels_NNS from_IN psychiatric_JJ social_JJ texts_NNS using_VBG independent_JJ component_NN analysis_NN ._.
+In_IN Proceedings_NNP of_IN COLING_NNP 2014_CD ,_, the_DT 25th_JJ International_NNP Conference_NNP on_IN Computational_NNP Linguistics_NNPS :_: Technical_NNP Papers_NNP ,_, pages_NNS 837_CD --_: 847_CD ,_, Dublin_NNP ,_, Ireland_NNP ,_, August_NNP ._.
+Dublin_NNP City_NNP Uni_NNP -_: versity_NN and_CC Association_NNP for_IN Computational_NNP Linguistics_NNP ._.
